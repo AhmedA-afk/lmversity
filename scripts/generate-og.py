@@ -59,6 +59,28 @@ def wrap(draw, text: str, f, max_width: int, max_lines: int) -> list[str]:
     return lines
 
 
+_MONO = None
+
+
+def monogram() -> Image.Image:
+    """The LMV monogram in ink, rendered once through headless Chrome (the
+    export's clip-paths do not survive the Python SVG renderers)."""
+    global _MONO
+    if _MONO is None:
+        import importlib.util, tempfile, subprocess
+        spec = importlib.util.spec_from_file_location("icons", ROOT / "scripts" / "generate-icons.py")
+        icons = importlib.util.module_from_spec(spec); spec.loader.exec_module(icons)
+        src = (ROOT / "public" / "brand" / "monogram.svg").read_text().replace("<svg ", f'<svg style="color:{INK}" ', 1)
+        with tempfile.TemporaryDirectory() as tmp:
+            svg = pathlib.Path(tmp) / "mono.svg"; svg.write_text(src)
+            big = icons.render(svg, 1024)   # square canvas; the mark sits centred at its own aspect
+        bbox = big.getchannel("A").getbbox()
+        big = big.crop(bbox)
+        h = 44
+        _MONO = big.resize((round(big.width * h / big.height), h), Image.LANCZOS)
+    return _MONO
+
+
 def card(eyebrow: str, title: str, meta: str) -> Image.Image:
     img = Image.new("RGB", (W, H), PAPER)
     d = ImageDraw.Draw(img)
@@ -67,10 +89,10 @@ def card(eyebrow: str, title: str, meta: str) -> Image.Image:
     # Wordmark: two-tone tick, then the two words in their own colours —
     # the same construction as the site header, so a shared card and the site
     # read as one thing.
-    mark = Image.open(ROOT / "public" / "icons" / "icon-512.png").convert("RGBA").resize((56, 56), Image.LANCZOS)
-    img.paste(mark, (MARGIN, 90), mark)
+    mono = monogram()
+    img.paste(mono, (MARGIN, 96), mono)
     wm = font(SERIF_BOLD, 38)
-    d.text((MARGIN + 72, 97), "LMVersity", font=wm, fill=INK)
+    d.text((MARGIN + mono.width + 18, 97), "LMVersity", font=wm, fill=INK)
 
     d.text((MARGIN, 196), " ".join(eyebrow.upper()), font=font(MONO, 17), fill=MUTED)
 

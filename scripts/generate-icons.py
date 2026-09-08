@@ -4,9 +4,11 @@
     python3 scripts/generate-icons.py
 
 Sources are the hand-maintained SVGs in public/brand/:
-  mark-cloud.svg   the LMV monogram knocked out of the indigo cloud (favicon, icons)
-  mark-bleed.svg   the monogram on a full-bleed indigo square (apple-touch, maskable)
-public/favicon.svg is a copy of mark-cloud.svg.
+  mark-asterisk.svg  the brand asterisk, ink on a rounded paper tile (favicon, icons)
+  mark-bleed.svg     the asterisk on a full-bleed paper square (apple-touch, maskable)
+Black and white only: the favicon is the one place the brand colours are not
+used, so the mark reads on any tab strip. public/favicon.svg is the same mark
+with a prefers-color-scheme flip to paper-on-ink.
 
 Rendering goes through headless Chrome, not ImageMagick or a Python SVG
 library: the exported paths use clip-paths that those renderers drop. Chrome
@@ -43,19 +45,19 @@ def render(svg: pathlib.Path, size: int = 1024) -> Image.Image:
 
 def main() -> None:
     (OUT / "icons").mkdir(parents=True, exist_ok=True)
-    cloud = render(BRAND / "mark-cloud.svg")
+    mark = render(BRAND / "mark-asterisk.svg")
     bleed = render(BRAND / "mark-bleed.svg")
     fit = lambda im, n: im.resize((n, n), Image.LANCZOS)
 
-    fit(cloud, 16).save(OUT / "favicon-16.png")
-    fit(cloud, 32).save(OUT / "favicon-32.png")
-    fit(cloud, 48).save(OUT / "favicon.ico", sizes=[(16, 16), (32, 32), (48, 48)])
+    fit(mark, 16).save(OUT / "favicon-16.png")
+    fit(mark, 32).save(OUT / "favicon-32.png")
+    fit(mark, 48).save(OUT / "favicon.ico", sizes=[(16, 16), (32, 32), (48, 48)])
 
     # iOS masks the corners itself, so ship a square with no transparency.
     fit(bleed, 180).convert("RGB").save(OUT / "apple-touch-icon.png")
 
     for n in (192, 512):
-        fit(cloud, n).save(OUT / "icons" / f"icon-{n}.png")
+        fit(mark, n).save(OUT / "icons" / f"icon-{n}.png")
         fit(bleed, n).save(OUT / "icons" / f"maskable-{n}.png")
 
     print("icons written to public/")
