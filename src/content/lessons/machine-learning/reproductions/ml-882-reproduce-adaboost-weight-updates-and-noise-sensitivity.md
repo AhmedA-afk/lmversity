@@ -10,7 +10,7 @@ updated: "2026-08-30"
 
 ## Research question
 
-**Executable project package:** [student starter, deterministic fixture, and public checks](/classical-ml-projects/reproductions/adaboost-noise-sensitivity/).
+**Executable project package:** not published yet. Everything on this page is self-contained; a starter repository with a deterministic fixture and public checks will be linked here when it exists.
 
 When decision stumps are weak learners, can you reproduce AdaBoost’s adaptive reweighting mechanism, and how does its behaviour change under deliberately injected label noise? The goal is an auditable experiment, not a claim that boosting is universally better than any competitor.
 

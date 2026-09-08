@@ -38,7 +38,7 @@ export const site = {
   /** Where corrections and security reports go. */
   contact: {
     /** General corrections and errors. */
-    email: '',
+    email: 'ahmedraza1ansari@gmail.com',
     /** Security reports. Falls back to `email` when empty. */
     security: '',
   },

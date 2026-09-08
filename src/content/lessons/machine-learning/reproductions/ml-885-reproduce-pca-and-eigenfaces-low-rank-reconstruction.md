@@ -10,7 +10,7 @@ updated: "2026-08-30"
 
 ## Research question
 
-**Executable project package:** [student starter, deterministic fixture, and public checks](/classical-ml-projects/reproductions/pca-low-rank-reconstruction/).
+**Executable project package:** not published yet. Everything on this page is self-contained; a starter repository with a deterministic fixture and public checks will be linked here when it exists.
 
 Can you reproduce the central low-rank reconstruction behaviour of an eigenfaces-style pipeline: centring an image matrix, finding principal directions, and trading reconstruction error against retained components? The project is about representation and reconstruction—not a claim that face recognition is harmless, reliable, or appropriate in deployment.
 

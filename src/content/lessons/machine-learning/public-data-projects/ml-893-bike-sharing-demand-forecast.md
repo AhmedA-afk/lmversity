@@ -10,7 +10,7 @@ updated: "2026-08-30"
 
 ## Project brief
 
-**Executable project package:** [student starter, deterministic fixture, and public checks](/classical-ml-projects/public-data/bike-sharing/).
+**Executable project package:** not published yet. Everything on this page is self-contained; a starter repository with a deterministic fixture and public checks will be linked here when it exists.
 
 Build a one-step-ahead demand forecasting study with the [UCI Bike Sharing dataset](https://archive.ics.uci.edu/dataset/275/bike%2Bsharing%2Bdataset). UCI provides hourly and daily rental counts for 2011–2012 with weather and seasonal information from Capital Bikeshare. Choose one granularity and one operational question, for example: “How many rentals should be expected next hour given information available before that hour?”
 

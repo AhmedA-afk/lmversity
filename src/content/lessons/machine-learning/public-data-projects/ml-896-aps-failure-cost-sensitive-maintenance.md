@@ -10,7 +10,7 @@ updated: "2026-08-30"
 
 ## Project brief
 
-**Executable project package:** [student starter, deterministic fixture, and public checks](/classical-ml-projects/public-data/aps-failure/).
+**Executable project package:** not published yet. Everything on this page is self-contained; a starter repository with a deterministic fixture and public checks will be linked here when it exists.
 
 Use [UCI APS Failure at Scania Trucks](https://archive.ics.uci.edu/dataset/421/aps%2Bfailure%2Bat%2Bscania%2Btrucks) for a highly imbalanced classification and missing-data project. The positive class denotes failures of one APS-system component; negative-class records involve failures of components not related to APS. Frame the model as a **review-prioritisation exercise**, not a replacement for inspection, diagnosis, or safety engineering.
 

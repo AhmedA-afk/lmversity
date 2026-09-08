@@ -10,7 +10,7 @@ updated: "2026-08-30"
 
 ## Project brief
 
-**Executable project package:** [student starter, deterministic fixture, and public checks](/classical-ml-projects/public-data/adult-income/).
+**Executable project package:** not published yet. Everything on this page is self-contained; a starter repository with a deterministic fixture and public checks will be linked here when it exists.
 
 Develop a reproducible classification study using the [UCI Adult dataset](https://archive.ics.uci.edu/dataset/2/adult). The narrow technical task is to estimate the recorded label `>50K` versus `<=50K` from the supplied census attributes. The educational task is more important: distinguish predictive performance from a claim that income, opportunity, creditworthiness, hiring merit, or entitlement should be predicted or decided from these attributes.
 

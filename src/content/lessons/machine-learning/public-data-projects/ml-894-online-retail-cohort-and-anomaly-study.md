@@ -10,7 +10,7 @@ updated: "2026-08-30"
 
 ## Project brief
 
-**Executable project package:** [student starter, deterministic fixture, and public checks](/classical-ml-projects/public-data/online-retail/).
+**Executable project package:** not published yet. Everything on this page is self-contained; a starter repository with a deterministic fixture and public checks will be linked here when it exists.
 
 Use [UCI Online Retail II](https://archive.ics.uci.edu/dataset/502/online%2Bretail) to investigate one scoped problem: next-period customer activity, product-level demand forecasting, or transaction-anomaly triage. It is not acceptable to mix all three tasks without a clear target and prediction time. This two-year transactional dataset contains purchases from a UK-based non-store retailer and includes missing values and cancellations.
 

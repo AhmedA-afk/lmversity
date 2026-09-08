@@ -10,7 +10,7 @@ updated: "2026-08-30"
 
 ## Research question
 
-**Executable project package:** [student starter, deterministic fixture, and public checks](/classical-ml-projects/reproductions/kernel-svm-selection/).
+**Executable project package:** not published yet. Everything on this page is self-contained; a starter repository with a deterministic fixture and public checks will be linked here when it exists.
 
 Under an explicit selection procedure, when does a nonlinear kernel SVM outperform a linear SVM, and how do margin, support-vector count, and feature scaling change the answer? This is a comparison study, not a search for the most flattering kernel.
 

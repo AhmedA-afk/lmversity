@@ -10,7 +10,7 @@ updated: "2026-08-30"
 
 ## Project brief
 
-**Executable project package:** [student starter, deterministic fixture, and public checks](/classical-ml-projects/public-data/bank-marketing/).
+**Executable project package:** not published yet. Everything on this page is self-contained; a starter repository with a deterministic fixture and public checks will be linked here when it exists.
 
 Use the [UCI Bank Marketing dataset](https://archive.ics.uci.edu/dataset/222/bank%2Bmarketing) to build a decision-support prototype for whether to contact a customer about a term deposit. Your report must make a precise prediction-time contract: **before a campaign call is placed**. That contract is the heart of this project. A high-scoring model that uses facts produced during or after a call is a leakage demonstration, not a valid campaign model.
 

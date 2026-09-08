@@ -10,7 +10,7 @@ updated: "2026-08-30"
 
 ## Research question
 
-**Executable project package:** [student starter, deterministic fixture, and public checks](/classical-ml-projects/reproductions/random-forest-oob-correlation/).
+**Executable project package:** not published yet. Everything on this page is self-contained; a starter repository with a deterministic fixture and public checks will be linked here when it exists.
 
 Can a learner reproduce the two mechanisms that define Breiman’s random forests—bootstrap samples and random feature selection—and measure how feature subsampling changes tree correlation, tree strength, and out-of-bag (OOB) performance?
 

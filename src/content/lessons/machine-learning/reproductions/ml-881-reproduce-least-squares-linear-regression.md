@@ -10,7 +10,7 @@ updated: "2026-08-30"
 
 ## Research question
 
-**Executable project package:** [student starter, deterministic fixture, and public checks](/classical-ml-projects/reproductions/least-squares/).
+**Executable project package:** not published yet. Everything on this page is self-contained; a starter repository with a deterministic fixture and public checks will be linked here when it exists.
 
 Can you reproduce the defining behaviour of ordinary least squares (OLS): among linear predictions, it chooses coefficients whose residual vector is orthogonal to every included feature? This is a reproduction of a mathematical claim and an empirical workflow, not a promise that a particular dataset will produce a particular score.
 

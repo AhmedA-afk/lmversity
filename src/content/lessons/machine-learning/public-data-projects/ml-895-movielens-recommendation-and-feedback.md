@@ -10,7 +10,7 @@ updated: "2026-08-30"
 
 ## Project brief
 
-**Executable project package:** [student starter, deterministic fixture, and public checks](/classical-ml-projects/public-data/movielens/).
+**Executable project package:** not published yet. Everything on this page is self-contained; a starter repository with a deterministic fixture and public checks will be linked here when it exists.
 
 Build an offline recommender evaluation using the stable [MovieLens 25M dataset from GroupLens](https://grouplens.org/datasets/movielens/25m/). Choose either rating prediction or top-*k* ranking as the primary task; do not report one metric as proof of the other. Your report must explain why offline ratings from self-selected users cannot establish user satisfaction, platform value, or the effect of deploying recommendations.
 
