@@ -4,10 +4,9 @@
     python3 scripts/generate-icons.py
 
 Sources are the hand-maintained SVGs in public/brand/:
-  mark-asterisk.svg  the brand asterisk, ink on a rounded paper tile (favicon, icons)
-  mark-bleed.svg     the asterisk on a full-bleed paper square (apple-touch, maskable)
-Black and white only: the favicon is the one place the brand colours are not
-used, so the mark reads on any tab strip. public/favicon.svg is the same mark
+  mark-monogram-tile.svg  the full LMV monogram with its brass asterisk, ink on a rounded paper tile (favicon, icons)
+  mark-bleed.svg          the monogram on a full-bleed paper square (apple-touch, maskable)
+Black and white plus the brass asterisk: no indigo, so the mark reads on any tab strip. public/favicon.svg is the same mark
 with a prefers-color-scheme flip to paper-on-ink.
 
 Rendering goes through headless Chrome, not ImageMagick or a Python SVG
@@ -45,7 +44,7 @@ def render(svg: pathlib.Path, size: int = 1024) -> Image.Image:
 
 def main() -> None:
     (OUT / "icons").mkdir(parents=True, exist_ok=True)
-    mark = render(BRAND / "mark-asterisk.svg")
+    mark = render(BRAND / "mark-monogram-tile.svg")
     bleed = render(BRAND / "mark-bleed.svg")
     fit = lambda im, n: im.resize((n, n), Image.LANCZOS)
 
