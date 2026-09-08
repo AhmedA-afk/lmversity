@@ -37,6 +37,8 @@ LMV is the short name for LMVersity, a free, hands-on curriculum for learning AI
 
 ## What LMV actually is
 
+People find the site by searching for LMV AI, LMV learn AI, LMV courses, or the full name LMVersity. All of those point here, and they all mean the same thing: the AI engineering curriculum at lmversity.com.
+
 LMVersity is a website of lessons, guides, quizzes, scenarios and interview questions about building software with large language models. The material is written for people who can already get a model to do something interesting in a chat window and now want to know what happens when that becomes a feature with real users, real data, real permissions and a real budget.
 
 The curriculum is grouped into technical tracks, ordered so that each one builds on the last. The early tracks cover how language models work and how to prompt them well. The middle covers retrieval, tool use, and evaluation. The later tracks cover agents, the harnesses that make them safe to run, and the operational work of keeping them running. The full map is on the [curriculum page](/learn).
