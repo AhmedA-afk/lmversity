@@ -67,15 +67,10 @@ def card(eyebrow: str, title: str, meta: str) -> Image.Image:
     # Wordmark: two-tone tick, then the two words in their own colours —
     # the same construction as the site header, so a shared card and the site
     # read as one thing.
-    d.rectangle([MARGIN, 100, MARGIN + 8, 119], fill=WARM)
-    d.rectangle([MARGIN, 119, MARGIN + 8, 138], fill=COOL)
+    mark = Image.open(ROOT / "public" / "icons" / "icon-512.png").convert("RGBA").resize((56, 56), Image.LANCZOS)
+    img.paste(mark, (MARGIN, 90), mark)
     wm = font(SERIF_BOLD, 38)
-    # One word, two colours — no gap between the halves, so it reads as a
-    # single word built from two parts rather than as two words.
-    x = MARGIN + 24
-    d.text((x, 97), "LM", font=wm, fill=WARM)
-    x += d.textlength("LM", font=wm)
-    d.text((x, 97), "Versity", font=wm, fill=COOL)
+    d.text((MARGIN + 72, 97), "LMVersity", font=wm, fill=INK)
 
     d.text((MARGIN, 196), " ".join(eyebrow.upper()), font=font(MONO, 17), fill=MUTED)
 

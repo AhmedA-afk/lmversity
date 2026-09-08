@@ -3,73 +3,60 @@
 
     python3 scripts/generate-icons.py
 
-The mark is a paper "LM" on the cool indigo, with a band of the warm brass along
-the bottom — the same two-tone split as the wordmark's tick. Two bold sans
-capitals, fitted to the tile's width, because a serif pair smears at 16px,
-which is the only size a favicon is really judged at.
+Sources are the hand-maintained SVGs in public/brand/:
+  mark-cloud.svg   the LMV monogram knocked out of the indigo cloud (favicon, icons)
+  mark-bleed.svg   the monogram on a full-bleed indigo square (apple-touch, maskable)
+public/favicon.svg is a copy of mark-cloud.svg.
 
-public/favicon.svg is maintained by hand alongside this.
+Rendering goes through headless Chrome, not ImageMagick or a Python SVG
+library: the exported paths use clip-paths that those renderers drop. Chrome
+opens each source SVG directly (an <img> from a file: page stays blank) at
+1024px; Pillow downsamples, which is sharper than asking Chrome for each size.
 """
 import pathlib
+import subprocess
+import tempfile
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "public"
-
-COOL = (59, 84, 163)        # --brand-cool, ink indigo
-WARM = (168, 116, 28)       # --brand-warm, brass
-PAPER = (251, 250, 248)     # --bg
-SANS = "/usr/share/fonts/truetype/noto/NotoSans-Bold.ttf"
-
-BAND = 0.26                 # brass band height, as a fraction of the tile
+BRAND = OUT / "brand"
+CHROME = "google-chrome"
 
 
-def mark(size: int, radius_ratio: float = 0.22, bleed: bool = False) -> Image.Image:
-    """Render at 8× and downsample, so the serif stems stay clean."""
-    scale = 8
-    s = size * scale
-    radius = 0 if bleed else int(s * radius_ratio)
-
-    tile = Image.new("RGBA", (s, s), (*COOL, 255))
-    ImageDraw.Draw(tile).rectangle([0, int(s * (1 - BAND)), s, s], fill=(*WARM, 255))
-
-    # Round the corners by masking, so the band follows the tile's shape.
-    mask = Image.new("L", (s, s), 0)
-    ImageDraw.Draw(mask).rounded_rectangle([0, 0, s - 1, s - 1], radius=radius, fill=255)
-    img = Image.new("RGBA", (s, s), (0, 0, 0, 0))
-    img.paste(tile, (0, 0), mask)
-
-    d = ImageDraw.Draw(img)
-    # Fit "LM" to ~78% of the tile width; the pair is wider than it is tall.
-    size_px = int(s * 0.60)
-    while size_px > 8:
-        font = ImageFont.truetype(SANS, size_px)
-        box = d.textbbox((0, 0), "LM", font=font)
-        if box[2] - box[0] <= s * 0.78:
-            break
-        size_px -= max(1, s // 100)
-    w, h = box[2] - box[0], box[3] - box[1]
-    # Centre the letters in the indigo field, not the whole tile.
-    cy = s * (1 - BAND) / 2
-    d.text(((s - w) / 2 - box[0], cy - h / 2 - box[1]), "LM", font=font, fill=PAPER)
-
-    return img.resize((size, size), Image.LANCZOS)
+def render(svg: pathlib.Path, size: int = 1024) -> Image.Image:
+    """Open the SVG itself in Chrome with an explicit pixel size and screenshot it."""
+    with tempfile.TemporaryDirectory() as tmp:
+        sized = pathlib.Path(tmp) / "mark.svg"
+        text = svg.read_text()
+        text = text.replace("<svg ", f'<svg width="{size}" height="{size}" ', 1)
+        sized.write_text(text)
+        png = pathlib.Path(tmp) / "out.png"
+        subprocess.run([
+            CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars",
+            "--default-background-color=00000000",
+            f"--window-size={size},{size}", f"--screenshot={png}", f"file://{sized}",
+        ], check=True, capture_output=True)
+        return Image.open(png).convert("RGBA")
 
 
 def main() -> None:
     (OUT / "icons").mkdir(parents=True, exist_ok=True)
+    cloud = render(BRAND / "mark-cloud.svg")
+    bleed = render(BRAND / "mark-bleed.svg")
+    fit = lambda im, n: im.resize((n, n), Image.LANCZOS)
 
-    mark(16).save(OUT / "favicon-16.png")
-    mark(32).save(OUT / "favicon-32.png")
-    mark(32).save(OUT / "favicon.ico", sizes=[(16, 16), (32, 32), (48, 48)])
+    fit(cloud, 16).save(OUT / "favicon-16.png")
+    fit(cloud, 32).save(OUT / "favicon-32.png")
+    fit(cloud, 48).save(OUT / "favicon.ico", sizes=[(16, 16), (32, 32), (48, 48)])
 
     # iOS masks the corners itself, so ship a square with no transparency.
-    mark(180, bleed=True).convert("RGB").save(OUT / "apple-touch-icon.png")
+    fit(bleed, 180).convert("RGB").save(OUT / "apple-touch-icon.png")
 
     for n in (192, 512):
-        mark(n).save(OUT / "icons" / f"icon-{n}.png")
-        mark(n, bleed=True).save(OUT / "icons" / f"maskable-{n}.png")
+        fit(cloud, n).save(OUT / "icons" / f"icon-{n}.png")
+        fit(bleed, n).save(OUT / "icons" / f"maskable-{n}.png")
 
     print("icons written to public/")
 
