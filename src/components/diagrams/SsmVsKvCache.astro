@@ -1,0 +1,74 @@
+---
+import Figure from './Figure.astro';
+
+/**
+ * Attention's KV cache growing step over step, against Mamba's fixed-size
+ * state staying put — the one contrast the lesson's decision table and cost
+ * sections both make in words. Two rows, three time steps each, six primary
+ * shapes total, under the seven-shape ceiling.
+ *
+ * Brass carries the whole attention row on purpose: the growing cache is the
+ * literal cost problem this lesson's decision table is about, not a single
+ * incidental detail, so the row that grows is the row that is brass.
+ */
+const STEPS = [90, 230, 380];
+
+const attnWidths = [70, 110, 160];
+const mambaWidth = 70;
+const ATTN_Y = 70;
+const MAMBA_Y = 180;
+const ROW_H = 40;
+---
+<Figure
+  title="Attention's growing key-value cache against Mamba's fixed-size state"
+  caption="Attention's key-value cache grows with every step; Mamba's state stays the same fixed size regardless of how many steps have run."
+  desc="Two rows, each with three time steps running left to right. In the attention row, the box standing for the key-value cache grows wider at each step. In the Mamba row, the box standing for the state stays the same width at every step."
+>
+  <svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <marker id="svk-tip" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 z" class="dg-arrow" />
+      </marker>
+      <marker id="svk-tip-warn" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 z" class="dg-arrow-warn" />
+      </marker>
+    </defs>
+
+    <text x="20" y={ATTN_Y + ROW_H / 2 + 4} class="dg-note">Attention</text>
+    <text x="20" y={MAMBA_Y + ROW_H / 2 + 4} class="dg-note">Mamba</text>
+
+    {STEPS.map((cx, i) => (
+      <text x={cx} y="30" class="dg-note">{`Step ${i + 1}`}</text>
+    ))}
+
+    {STEPS.slice(0, 2).map((cx, i) => (
+      <line
+        x1={cx + attnWidths[i] / 2}
+        y1={ATTN_Y + ROW_H / 2}
+        x2={STEPS[i + 1] - attnWidths[i + 1] / 2}
+        y2={ATTN_Y + ROW_H / 2}
+        class="dg-line-warn"
+        marker-end="url(#svk-tip-warn)"
+      />
+    ))}
+
+    {STEPS.slice(0, 2).map((cx, i) => (
+      <line
+        x1={cx + mambaWidth / 2}
+        y1={MAMBA_Y + ROW_H / 2}
+        x2={STEPS[i + 1] - mambaWidth / 2}
+        y2={MAMBA_Y + ROW_H / 2}
+        class="dg-line"
+        marker-end="url(#svk-tip)"
+      />
+    ))}
+
+    {STEPS.map((cx, i) => (
+      <rect x={cx - attnWidths[i] / 2} y={ATTN_Y} width={attnWidths[i]} height={ROW_H} rx="6" class="dg-box-warn" />
+    ))}
+
+    {STEPS.map((cx) => (
+      <rect x={cx - mambaWidth / 2} y={MAMBA_Y} width={mambaWidth} height={ROW_H} rx="6" class="dg-box" />
+    ))}
+  </svg>
+</Figure>

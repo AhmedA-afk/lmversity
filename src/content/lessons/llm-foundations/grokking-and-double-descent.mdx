@@ -6,7 +6,21 @@ summary: "Two training-curve surprises where more training or a bigger model mak
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Both phenomena break the tidy story of training curves that only get better with more data, more steps, or more parameters. Each has a real mechanism behind it, and each has practical consequences for how you read a loss curve.
+
+<Compare title="Two training-curve surprises">
+  <Pane title="Grokking" tone="neutral">
+    Training accuracy hits 100% almost immediately, validation accuracy sits near chance for a long time, then jumps to near 100% too — generalization arrives late, and suddenly.
+  </Pane>
+  <Pane title="Double descent" tone="neutral">
+    Test error rises near the interpolation threshold as classical statistics predicts, but then, with even more capacity, it falls again — often below the first minimum.
+  </Pane>
+</Compare>
 
 ## Grokking: generalization arrives late, and suddenly
 
@@ -16,14 +30,38 @@ The mechanism, as best understood: the network first finds a memorizing solution
 
 Grokking was first documented clearly on small algorithmic datasets, not on production language models, so don't expect to watch it happen during a normal pretraining run. Its relevance is what it reveals: a model with 100% train accuracy and flat validation accuracy hasn't necessarily failed — it may be mid-transition, and its internal representation is still changing even though the loss curve looks stuck. See [Generalization vs. Overfitting](/learn/ai-foundations/generalization-and-overfitting) for the baseline story this complicates.
 
+<InlineCheck
+  question="A model has 100% training accuracy and flat, near-chance validation accuracy. What does grokking suggest about this situation?"
+  options={[
+    'The model may be mid-transition — its internal representation can still be changing even though the loss curve looks stuck',
+    'The model has definitely finished training and will never generalize',
+    'The validation set must be mislabeled, since training accuracy is already perfect'
+  ]}
+  answer={0}
+  explanation="Grokking shows a model can sit at 100% training accuracy and near-chance validation accuracy for a long stretch and then generalize abruptly. A flat validation curve alone isn't proof the model has failed."
+/>
+
 ## Double descent: more capacity can un-hurt you
 
 Classical statistics predicts a U-shaped curve: test error falls as a model gets more expressive, then rises again once the model is complex enough to overfit — the textbook [bias-variance tradeoff](/learn/ai-foundations/bias-variance-tradeoff). Double descent is what happens when you keep increasing capacity (model size, or training epochs) past that point. Test error rises as expected near the interpolation threshold — the point where the model has just enough capacity to fit the training data exactly — but then, past that threshold, it falls again, often below the first minimum.
 
 The same shape shows up along three different axes: model size (more parameters than needed to fit the data), training time (train far longer than the point where you'd normally stop), and even data size for a fixed model. The mechanism is roughly that right at the interpolation threshold, the model has to contort itself into one fragile fit — small changes in the data produce wildly different fits, which is high variance. With more capacity beyond that point, there are many ways to fit the training data, and gradient descent tends to land on flatter, simpler ones among them, which generalize better again.
 
+<InlineCheck
+  question="Along which axes does the double descent shape show up?"
+  options={[
+    'Model size, training time, and data size for a fixed model',
+    'Only model size — training time and data size follow the classical U-shaped curve',
+    'Only the learning rate schedule'
+  ]}
+  answer={0}
+  explanation="The lesson describes the same double-descent shape appearing along three different axes: more parameters than needed, training far longer than the usual stopping point, and even more data for a fixed model."
+/>
+
 ## Why this matters for practice
 
+<Callout kind="production" title="Don't read a single curve shape as a verdict">
 Neither effect means "bigger is free" or "just keep training forever" — both are sensitive to regularization, learning rate, and task structure, and can fail to appear at all outside the settings where they were shown. The practical takeaway is narrower: a validation curve that gets worse mid-training isn't proof you should stop, and a model that looks overparameterized for its dataset isn't automatically overfit. Confirm behavior on held-out data using proper [train/validation/test splits](/learn/ai-foundations/train-validation-test-splits) rather than reading a single curve shape as a verdict.
+</Callout>
 
 **Related:** [Generalization vs. Overfitting](/learn/ai-foundations/generalization-and-overfitting), [The Bias-Variance Tradeoff](/learn/ai-foundations/bias-variance-tradeoff), [Train/Validation/Test Splits, Done Right](/learn/ai-foundations/train-validation-test-splits)

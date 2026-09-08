@@ -6,6 +6,8 @@ summary: "Self-attention lets every token weigh every other token, replacing rec
 duration: "5 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Before a model can predict the next word, every token in its input needs to figure out which other tokens actually matter to it. That's the whole job of attention: for each token, look at all the others and decide how much to weigh them.
 
 ## The problem attention solves
@@ -30,6 +32,13 @@ weight(i, j) = softmax(score(i, :))
 output_i = Σ_j weight(i, j) * V_j
 ```
 
+<InlineCheck
+  question="In the trophy/suitcase example, why does “it” end up with a high attention weight on “trophy”?"
+  options={['Because the query vector for “it” and the key vector for “trophy” happen to align, producing a high dot-product score', 'Because “trophy” appears earlier in the sentence than “suitcase”', 'Because RNNs process “trophy” before “it” and pass it forward unchanged']}
+  answer={0}
+  explanation="Attention scores come from a dot product between a token's query and every other token's key. A high score for “it” against “trophy” means those two vectors align, not that position or word order alone decides it."
+/>
+
 ## Why it's parallelizable
 
 Every token's attention computation only depends on the full set of keys and values, not on the output of the token before it. That means every position in the sequence can be computed at the same time, on a GPU, as one big matrix multiplication — instead of the strictly sequential, one-token-at-a-time loop an RNN required. That single property is why transformers scaled to the sizes they have: training time stopped being bound by sequence length and became bound by compute you could throw at parallel matrix math.
@@ -37,6 +46,13 @@ Every token's attention computation only depends on the full set of keys and val
 ## Multi-head attention
 
 In practice, a model doesn't do this once — it does it several times in parallel, each with its own learned Q/K/V projections, called "heads." One head might specialize in tracking pronoun references, another in verb-subject agreement, another in something with no clean English name at all. The outputs of all heads are concatenated and passed on. This gives the model several independent "attention patterns" to draw on per layer, rather than forcing everything through one relevance calculation.
+
+<InlineCheck
+  question="What does having multiple attention heads give a model that a single head does not?"
+  options={['Several independent attention patterns per layer, each with its own learned Q/K/V projections, instead of one relevance calculation for everything', 'A larger vocabulary of tokens to choose from', 'A way to process tokens sequentially instead of in parallel']}
+  answer={0}
+  explanation="Each head has its own learned Q/K/V projections and can specialize — one on pronoun references, another on verb-subject agreement. Concatenating their outputs gives the model several attention patterns per layer instead of forcing everything through one."
+/>
 
 Stack enough of these attention layers with feed-forward layers in between, and you get [the transformer architecture](/learn/llm-foundations/the-transformer-architecture) — the design behind every major LLM today.
 

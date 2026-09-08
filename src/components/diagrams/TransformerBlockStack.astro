@@ -1,0 +1,57 @@
+---
+import Figure from './Figure.astro';
+
+/**
+ * Two pre-norm transformer blocks stacked, drawn to make one property visible:
+ * every box is the same width, because a block's output is the same shape as
+ * its input. That's the whole reason stacking needs no adapter between blocks
+ * — the lesson's own claim, not an added one.
+ *
+ * Vertical flow, top to bottom, matching how the lesson describes it: input,
+ * then block 1, then block 2, then output. Four primary shapes, well under
+ * the seven-shape ceiling. Nothing breaks in this mechanism, so nothing here
+ * is brass — every box and arrow is indigo, the working path.
+ */
+const W = 360;
+const BOX_X = 100;
+const BOX_W = 160;
+
+const boxes = [
+  { key: 'input', y: 20, h: 46, label: 'INPUT', cls: 'dg-box-mute' },
+  { key: 'block1', y: 104, h: 64, label: 'BLOCK 1', cls: 'dg-box' },
+  { key: 'block2', y: 226, h: 64, label: 'BLOCK 2', cls: 'dg-box' },
+  { key: 'output', y: 348, h: 46, label: 'OUTPUT', cls: 'dg-box-mute' },
+];
+
+const arrows = [
+  { x: W / 2, y1: 66, y2: 104 },
+  { x: W / 2, y1: 168, y2: 226 },
+  { x: W / 2, y1: 290, y2: 348 },
+];
+---
+<Figure
+  title="Two transformer blocks stacked, input and output the same shape"
+  caption="A transformer block returns the same shape it receives, so block 1's output feeds directly into block 2 with no adapter in between."
+  desc="An input box flows down into Block 1, which flows into Block 2, which flows into an output box. All four boxes are drawn the same width, showing that each block preserves the shape of its input."
+>
+  <svg viewBox={`0 0 ${W} 420`} xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <marker id="tbs-tip" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 z" class="dg-arrow" />
+      </marker>
+    </defs>
+
+    {arrows.map((a) => (
+      <line x1={a.x} y1={a.y1} x2={a.x} y2={a.y2} class="dg-line" marker-end="url(#tbs-tip)" />
+    ))}
+
+    {boxes.map((b) => (
+      <>
+        <rect x={BOX_X} y={b.y} width={BOX_W} height={b.h} rx="6" class={b.cls} />
+        <text x={BOX_X + BOX_W / 2} y={b.y + b.h / 2 + 4} class="dg-label">{b.label}</text>
+      </>
+    ))}
+
+    <text x={W / 2 + 70} y="139" class="dg-note">same shape in, same shape out</text>
+  </svg>
+</Figure>

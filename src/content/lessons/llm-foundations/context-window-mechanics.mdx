@@ -6,7 +6,13 @@ summary: "The context window is a hard architectural limit on how many tokens a 
 duration: "6 min read"
 ---
 
+import Tokenizer from '../../../components/widgets/Tokenizer.astro';
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Every time you send a prompt, the model doesn't read your text — it reads a fixed-size buffer of tokens. Once that buffer is full, something has to give: older tokens fall out, or the request fails. That buffer is the context window, and its size is baked into the model, not chosen per request.
+
+<Tokenizer />
 
 ## Why the limit exists
 
@@ -14,11 +20,27 @@ The mechanism doing the reading is [attention](/learn/llm-foundations/attention-
 
 This is also why the window is symmetric — it's not "how much you can paste in," it's the combined size of everything the model reads and writes for that turn: your prompt, any system instructions, retrieved documents, prior conversation turns fed back in, and the reply it's about to generate. A conversation that grows across many turns is quietly re-consuming window space on every single call, because chat isn't stateful on the model's side — the full history gets re-sent each time.
 
+<InlineCheck
+  question="Why does doubling a model's context window take real architectural work rather than just a config change?"
+  options={['Because the number of pairwise attention comparisons roughly quadruples, along with the memory to store them', 'Because tokenizers need to be retrained for every window size', 'Because the window only counts the prompt, not the reply, so doubling it has no compute cost']}
+  answer={0}
+  explanation="Attention computes a relationship score between every pair of tokens in the window, so doubling the window roughly quadruples that pairwise cost — this is why longer windows required real work like sparse attention and better KV-cache management, not just a larger number."
+/>
+
 ## What happens when you hit the ceiling
 
 Context windows don't degrade gracefully by default. Depending on the interface, you'll see one of a few behaviors: the API rejects the request outright, or the client silently truncates or drops older turns to make room for new ones. Neither is "the model getting worse" in the way people often describe it — it's tokens physically falling outside the window before the model ever sees them.
 
+<Callout kind="breaks" title="A full window doesn't mean even attention across it">
 There's a separate, subtler failure mode worth knowing about: even well inside the limit, models don't attend to all positions equally. Performance on information buried in the middle of a very long context tends to be worse than on information near the start or end — an effect sometimes called "lost in the middle." A generous window doesn't guarantee the model actually uses all of it well; see [context rot](/learn/context-engineering/context-rot) for more on how quality degrades as you fill the window, independent of whether you've technically exceeded it.
+</Callout>
+
+<InlineCheck
+  question="A request exceeds the context window. What is actually happening, according to this lesson?"
+  options={['The model reasons more poorly because the topic is too complex', 'Tokens are physically falling outside the window before the model ever sees them — the request is rejected or older turns are truncated', 'The model automatically compresses the conversation into a shorter equivalent with no information loss']}
+  answer={1}
+  explanation="Hitting the ceiling isn't the model getting worse at reasoning — it's tokens being cut off or the request failing outright, because the buffer has a fixed size that content has physically stopped fitting inside."
+/>
 
 ## Working with a fixed budget
 

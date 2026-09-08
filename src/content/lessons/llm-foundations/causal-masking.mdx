@@ -6,6 +6,10 @@ summary: "The triangular mask that blocks a token from attending to the future, 
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+import CausalMaskLeak from '../../../components/diagrams/CausalMaskLeak.astro';
+
 Self-attention lets every token look at every other token in the sequence. That's a problem if you're training a model to predict the next word — a token could just "cheat" by attending to the answer sitting right after it. Causal masking is the fix: a simple rule that blocks each position from seeing anything ahead of it.
 
 ## The mask itself
@@ -22,6 +26,15 @@ position 4 [ 0.1   0.2   0.3   0.4 ]
 
 After softmax, `-inf` becomes exactly zero probability — those future tokens contribute nothing to the output at that position. This lower-triangular pattern is why people call it a "triangular mask." It's applied identically in every attention layer, at every head, throughout the network — see [Multi-Head Attention](/learn/llm-foundations/multi-head-attention) for how heads combine.
 
+<CausalMaskLeak />
+
+<InlineCheck
+  question="What happens to a masked position's score once softmax runs?"
+  options={["It becomes exactly zero probability, since exp(-inf) is 0.0", "It becomes a small but nonzero probability", "It stays at its original, unmasked value"]}
+  answer={0}
+  explanation="exp(-inf) is exactly 0.0 in floating point, so a masked score contributes exactly zero to the resulting distribution after softmax, not just a small weight."
+/>
+
 ## Why this is what makes generation autoregressive
 
 Pretraining trains on the objective in [Next-Token Prediction](/learn/llm-foundations/next-token-prediction): given tokens 1 through n, predict token n+1. Without the mask, the model computing a prediction for position 3 could attend directly to position 4 — the very answer it's supposed to predict — and training loss would collapse to near zero while the model learned nothing useful. Causal masking guarantees the loss at every position is an honest test of prediction from the past alone.
@@ -32,6 +45,8 @@ That constraint is also exactly what makes text generation autoregressive at inf
 
 Causal masking is a design choice, not a law of attention. BERT-style encoder models use full, unmasked (bidirectional) attention, since they're trained to fill in masked words using context from both sides — great for understanding text, useless for generating it token by token. Modern LLMs like GPT and Claude are decoder-only and use causal masking throughout, because the product is generation.
 
-One subtlety worth knowing: masking doesn't need extra layers or a separate mechanism to become "smart" — it's a static, fixed pattern added to attention scores before softmax. All the real intelligence still comes from [The Attention Mechanism](/learn/llm-foundations/attention-mechanism-explained) deciding, among the *allowed* positions, which ones actually matter.
+<Callout kind="note" title="Masking doesn't add intelligence">
+Masking doesn't need extra layers or a separate mechanism to become "smart" — it's a static, fixed pattern added to attention scores before softmax. All the real intelligence still comes from [The Attention Mechanism](/learn/llm-foundations/attention-mechanism-explained) deciding, among the *allowed* positions, which ones actually matter.
+</Callout>
 
 **Related:** [The Attention Mechanism, Explained](/learn/llm-foundations/attention-mechanism-explained), [Next-Token Prediction: The One Objective](/learn/llm-foundations/next-token-prediction), [Multi-Head Attention](/learn/llm-foundations/multi-head-attention)

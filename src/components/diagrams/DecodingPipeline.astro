@@ -1,0 +1,64 @@
+---
+import Figure from './Figure.astro';
+
+/**
+ * The decoding pipeline: one logit vector becomes one token through four
+ * fixed stages, always in this order.
+ *
+ * Every box is indigo — nothing here is a failure path, the pipeline itself is
+ * the working path every generation step runs. The two annotations name the
+ * knob each stage exposes (temperature; top-k and top-p) without stating any
+ * number, matching what the lesson's own prose already says.
+ *
+ * Six primary elements, under the seven-element ceiling.
+ */
+const stages = [
+  { label: 'LOGITS' },
+  { label: 'SCALE' },
+  { label: 'FILTER' },
+  { label: 'RENORM' },
+  { label: 'SAMPLE' },
+  { label: 'TOKEN' },
+];
+
+const BOX_W = 84;
+const BOX_H = 42;
+const GAP = 14;
+const X0 = 6;
+const Y = 44;
+const step = BOX_W + GAP;
+const width = X0 * 2 + stages.length * BOX_W + (stages.length - 1) * GAP;
+---
+<Figure
+  title="The decoding pipeline, in four fixed stages"
+  caption="Every generated token passes through the same four stages in the same order: scale the logits, filter the candidates, renormalize, then sample."
+  desc="Six boxes run left to right: logits, scale, filter, renorm, sample, token. An annotation below scale reads temperature; an annotation below filter reads top-k, top-p."
+>
+  <svg viewBox={`0 0 ${width} 118`} xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <marker id="dp-tip" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 z" class="dg-arrow" />
+      </marker>
+    </defs>
+
+    {stages.map((s, i) => {
+      const x = X0 + i * step;
+      return (
+        <>
+          <rect x={x} y={Y} width={BOX_W} height={BOX_H} rx="6" class="dg-box" />
+          <text x={x + BOX_W / 2} y={Y + BOX_H / 2 + 4} class="dg-label">{s.label}</text>
+          {i < stages.length - 1 && (
+            <line
+              x1={x + BOX_W} y1={Y + BOX_H / 2}
+              x2={x + BOX_W + GAP - 4} y2={Y + BOX_H / 2}
+              class="dg-line" marker-end="url(#dp-tip)"
+            />
+          )}
+        </>
+      );
+    })}
+
+    <text x={X0 + 1 * step + BOX_W / 2} y={Y - 14} class="dg-note">temperature</text>
+    <text x={X0 + 2 * step + BOX_W / 2} y={Y - 14} class="dg-note">top-k, top-p</text>
+  </svg>
+</Figure>
