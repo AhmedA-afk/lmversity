@@ -7,6 +7,10 @@ duration: "8 min read"
 ---
 
 import PreNormPostNorm from '../../../components/diagrams/PreNormPostNorm.astro';
+import Callout from '../../../components/kit/Callout.astro';
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
 
 *This is a deep-dive on one placement decision introduced in [The Residual Stream and Layer Norm](/learn/llm-foundations/residual-stream-and-layer-norm) — where exactly `norm()` sits relative to the `+`. It's optional depth; the practical takeaway is short: modern LLMs default to pre-norm, almost always with RMSNorm specifically.*
 
@@ -27,13 +31,38 @@ Post-norm is what the original "Attention Is All You Need" transformer used: run
 
 Take the gradient of the output with respect to the stream several layers back, and trace what each placement forces it to pass through.
 
+<Compare title="Gradient flow, post-norm vs pre-norm">
+  <Pane title="Post-norm" tone="bad">
+
 **In post-norm**, the residual path itself is inside the normalization: the quantity that gets passed to the next layer is `LayerNorm(x + Sublayer(x))`, so *every single layer*, the gradient flowing backward through the `+` still has to flow through that layer's `LayerNorm`'s Jacobian before it reaches the previous layer. LayerNorm's Jacobian isn't the identity — it depends on the input's own mean and variance, and its magnitude isn't guaranteed to stay near 1 across every layer. Multiply a gradient through dozens of these non-identity Jacobians in sequence, and the same vanishing/exploding risk that residual connections were introduced to solve creeps back in, just one level removed from where it started. In practice this is exactly why deep post-norm transformers are reported as sensitive to the learning-rate warmup schedule: without a slow ramp-up, the accumulated effect of many non-identity norm Jacobians early in training tends to destabilize the network before it settles into a good region.
+
+  </Pane>
+  <Pane title="Pre-norm" tone="good">
 
 **In pre-norm**, the residual path is `x = x + Sublayer(LayerNorm(x))` — notice that the `x` being added is the *raw* stream value, untouched by any normalization. `LayerNorm` only ever appears inside the branch feeding the sublayer, never on the path the `+` operates on directly. Backpropagating through an addition copies the gradient unchanged to both branches, so the gradient reaching the residual stream at any earlier layer is the *direct* gradient from the final loss, with zero normalization Jacobians multiplied in along that specific path — a genuinely clean "gradient highway," end to end, from the last layer's output back to the embeddings. This is the property that lets pre-norm transformers train stably at far greater depth, typically with a much gentler warmup requirement than post-norm needs at the same depth.
 
+  </Pane>
+</Compare>
+
+<InlineCheck
+  question="Why does a gradient flowing backward through pre-norm's residual path avoid passing through any normalization Jacobian, when post-norm's does?"
+  options={["Because pre-norm's addition adds the raw, un-normalized stream value directly, with LayerNorm appearing only inside the sublayer branch rather than on the path the + operates on", "Because pre-norm models are always shallower than post-norm models", "Because pre-norm uses a different backpropagation algorithm than post-norm"]}
+  answer={0}
+  explanation="In post-norm, LayerNorm(x + Sublayer(x)) puts the residual path itself inside the normalization, so every layer's backward pass crosses a non-identity Jacobian. In pre-norm, x = x + Sublayer(LayerNorm(x)) adds the raw stream value directly, so LayerNorm only ever sits inside the branch, never on the path the addition operates on."
+/>
+
 ## The tradeoff pre-norm doesn't erase
 
+<Callout kind="breaks" title="The residual stream can grow unboundedly with depth">
 Pre-norm isn't strictly better in every respect, and stating that precisely matters: because the residual path is never rescaled, nothing stops the *magnitude* of the stream itself from growing steadily with depth — each layer's un-normalized contribution keeps landing on top of an already-large running sum. Very deep pre-norm models can end up with activation norms that grow roughly with depth, which shows up as a practical wrinkle: outputs from very early layers and very late layers can differ enormously in scale, which is part of why a final `LayerNorm` (or `RMSNorm`) is still applied once, right before the unembedding step, regardless of which placement a model uses throughout its blocks — the stream needs rescaling at the exit even though it flowed unrescaled all the way through. Post-norm doesn't have this particular growth issue, because every layer's output gets renormalized on the spot — its cost is purely in how much harder that renormalization makes early training.
+</Callout>
+
+<InlineCheck
+  question="If pre-norm never rescales the residual stream inside its blocks, why does a pre-norm model still need one final LayerNorm or RMSNorm before the unembedding step?"
+  options={["Because activation norms can grow roughly with depth in pre-norm, so early- and late-layer outputs can differ enormously in scale by the time the stream reaches the exit", "Because the unembedding matrix requires normalized inputs by definition, regardless of architecture", "Because RMSNorm is required for the softmax step, not for the residual stream"]}
+  answer={0}
+  explanation="Because the residual path is never rescaled inside pre-norm blocks, activation norms can grow roughly with depth, so very early and very late layer outputs can differ enormously in scale — a final norm right before unembedding rescales the stream at the exit even though it flowed unrescaled all the way through."
+/>
 
 ## RMSNorm: what gets dropped
 
@@ -49,11 +78,22 @@ RMSNorm drops the mean-centering step entirely and rescales only by the root-mea
 RMSNorm(x) = (x / sqrt(mean(x^2) + eps)) * gamma
 ```
 
+<Callout kind="note" title="No beta, no mean-centering">
 There's no `beta` shift term in the standard formulation either — RMSNorm only rescales magnitude, it never re-centers or shifts the vector's direction. The justification for dropping mean-centering is empirical and specific: across the models it's been tested on, most of LayerNorm's stabilizing benefit comes from controlling the *scale* of activations, not from forcing their mean to exactly zero, so removing the mean computation (and the `beta` parameter that went with it) measurably cuts compute — one fewer statistic to compute, one fewer parameter tensor — for a quality difference reported as negligible relative to standard LayerNorm.
+</Callout>
+
+<InlineCheck
+  question="What does RMSNorm drop relative to full LayerNorm?"
+  options={["The scale rescaling step entirely, keeping only mean-centering", "The mean-centering step and the beta shift parameter, keeping only rescaling by the root-mean-square", "Nothing — RMSNorm computes the same two statistics as LayerNorm, just in a different order"]}
+  answer={1}
+  explanation="RMSNorm drops the mean-centering step entirely and rescales only by the root-mean-square of the vector's components, with no beta shift term in the standard formulation — it only rescales magnitude, it never re-centers or shifts the vector's direction."
+/>
 
 ## Why modern LLMs default to pre-RMSNorm
 
+<Callout kind="production" title="Pre-RMSNorm is the default to expect">
 Put the two results together and the pairing that dominates recent open model families (LLaMA, Mistral, and others) follows directly: pre-norm because the gradient-highway argument makes stacking many dozens of layers reliable, and RMSNorm specifically (rather than full LayerNorm) in that pre-norm slot because it delivers most of the same stabilization for less compute, applied at every one of those many layers where the saved computation adds up. Neither piece is a law of nature — some architectures still use post-norm variants, or hybrid placements, and research into other normalization schemes continues — but "pre-RMSNorm" is the specific combination you should expect to see as the default when you open a recent model's config, which [Reading a Real Model Config](/learn/llm-foundations/reading-a-real-model-config) shows you how to actually go find.
+</Callout>
 
 ## Where this leaves you
 

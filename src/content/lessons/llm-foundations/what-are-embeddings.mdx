@@ -6,6 +6,9 @@ summary: "Every token maps to a learned vector — the layer that turns discrete
 duration: "5 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+import Similarity from '../../../components/widgets/Similarity.astro';
+
 A neural network can't do math on the word "cat." So before anything else happens inside a transformer, every token gets swapped for a list of numbers — a vector — and that swap is where meaning starts to become computable.
 
 ## From ID to vector
@@ -20,9 +23,25 @@ Training pushes tokens that show up in similar contexts toward similar vectors. 
 
 The useful part is that the *directions* in this space carry meaning too, not just distances. The classic (if slightly idealized) example: the vector from "man" to "woman" points roughly the same way as the vector from "king" to "queen." Relationships between concepts become arithmetic between vectors. You can measure how close two tokens are with [cosine similarity](/learn/maths-foundations/cosine-similarity), and that similarity score is doing real work downstream — it's the same mechanism that lets [semantic search](/learn/rag/embeddings-and-semantic-similarity) find a document that never contains your exact search words.
 
+<Similarity />
+
+<InlineCheck
+  question="What does training actually push toward similar vectors in embedding space?"
+  options={['Tokens that show up in similar contexts, such as “dog” and “puppy”', 'Tokens that are alphabetically close to each other', 'Tokens that have the same number of letters']}
+  answer={0}
+  explanation="Training pushes tokens that appear in similar contexts toward similar vectors, because a model that predicts text well has to notice when words are interchangeable in a lot of sentences. Nothing about spelling or letter count is involved."
+/>
+
 ## Why a vector and not one number
 
 A single number could rank tokens on one axis — say, formality. But words differ across dozens of axes at once: topic, sentiment, tense, part of speech, register. A high-dimensional vector gives the model room to encode all of these independently. One coordinate might end up loosely tracking "is this a plural," another "is this related to finance," without anyone designing it that way. This is also why [high-dimensional spaces](/learn/maths-foundations/high-dimensional-spaces) behave in ways that feel unintuitive — geometry with thousands of dimensions doesn't work like geometry with three.
+
+<InlineCheck
+  question="Why does a token need a whole vector of numbers rather than one single number?"
+  options={['Words differ across many axes at once — topic, sentiment, tense, part of speech — and a high-dimensional vector lets the model encode all of these independently', 'A single number would take up more memory than a vector', 'Vectors are required because tokens are represented as integers before embedding']}
+  answer={0}
+  explanation="One number could only rank tokens along a single axis, like formality. Words vary along dozens of axes simultaneously, so a vector gives the model room to encode each of those independently, without anyone designing which coordinate means what."
+/>
 
 ## Where they go next
 

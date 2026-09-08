@@ -6,6 +6,9 @@ summary: "The per-token MLP sandwiched between attention layers, which quietly h
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Every transformer layer has two sub-blocks: attention, which lets tokens exchange information, and a feed-forward network (FFN), which processes each token alone. The FFN gets less attention (pun intended) than the attention mechanism, but it typically holds two-thirds or more of a model's parameters.
 
 ## What it actually does
@@ -20,7 +23,18 @@ y = W2 @ h          # project back down, 4d -> d
 
 The "up-project, nonlinearity, down-project" shape is the whole trick. The up-projection expands each token into a much wider space (often 4x the model's hidden size, though modern models tune this ratio), the nonlinearity lets the network carve that wider space into useful, non-linear regions, and the down-projection compresses back to the residual stream's width so the result can be added back in.
 
-Because it runs on one token at a time, the FFN can't look at neighbors, order, or context the way attention does. Attention decides what information a token gets to see; the FFN decides what to do with it. Together they form the "communicate, then compute" rhythm repeated at every layer — see [The Transformer Architecture](/learn/llm-foundations/the-transformer-architecture) for how the two fit together, and [The Attention Mechanism, Explained](/learn/llm-foundations/attention-mechanism-explained) for the other half.
+<Callout kind="breaks" title="The FFN never looks sideways">
+Because it runs on one token at a time, the FFN can't look at neighbors, order, or context the way attention does. Attention decides what information a token gets to see; the FFN decides what to do with it.
+</Callout>
+
+Together they form the "communicate, then compute" rhythm repeated at every layer — see [The Transformer Architecture](/learn/llm-foundations/the-transformer-architecture) for how the two fit together, and [The Attention Mechanism, Explained](/learn/llm-foundations/attention-mechanism-explained) for the other half.
+
+<InlineCheck
+  question="Can the FFN's computation at one token's position use information from a neighboring token?"
+  options={['Yes, it attends lightly to nearby tokens', 'No — it runs on one token at a time, with no mixing across positions', 'Only for the first and last tokens in a sequence']}
+  answer={1}
+  explanation="The FFN is applied independently to every token's vector, with no mixing across positions. Attention is the only sublayer that lets one token's output depend on another token's input."
+/>
 
 ## Why it holds most of the parameters
 
@@ -28,7 +42,18 @@ Attention's weight matrices scale with `d^2` (query, key, value, and output proj
 
 ## Why the nonlinearity matters
 
-Without an activation function between the two linear projections, the whole block would collapse into one linear map — no matter how wide the hidden layer, stacking two linear layers is still linear. The nonlinearity is what lets the FFN approximate genuinely complex, curved functions of a token's representation instead of a rigid transformation. Researchers describe the FFN as a place where the model stores and retrieves factual and pattern-like associations: the up-projection acts like a bank of pattern detectors, and the down-projection recombines whichever detectors fired into an update for the residual stream.
+<Callout kind="breaks" title="No nonlinearity, and two linear layers collapse into one">
+Without an activation function between the two linear projections, the whole block would collapse into one linear map — no matter how wide the hidden layer, stacking two linear layers is still linear.
+</Callout>
+
+The nonlinearity is what lets the FFN approximate genuinely complex, curved functions of a token's representation instead of a rigid transformation. Researchers describe the FFN as a place where the model stores and retrieves factual and pattern-like associations: the up-projection acts like a bank of pattern detectors, and the down-projection recombines whichever detectors fired into an update for the residual stream.
+
+<InlineCheck
+  question="What would happen to the FFN if the nonlinearity between the up- and down-projection were removed?"
+  options={['It would still work, just more slowly', 'The two linear projections would collapse into a single linear map, no matter how wide the hidden layer is', 'It would become identical to the attention sublayer']}
+  answer={1}
+  explanation="Stacking two linear layers with nothing nonlinear between them is mathematically still just one linear map, regardless of the hidden layer's width. The nonlinearity is what lets the FFN express genuinely curved, non-linear transformations."
+/>
 
 ## Where it sits in the layer
 

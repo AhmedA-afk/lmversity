@@ -41,7 +41,8 @@ for (const file of files) {
     else { const n = (opts.match(/'(?:[^'\\]|\\.)*'|"(?:[^"\\]|\\.)*"/g) || []).length; if (!(ans >= 0 && ans < n)) problems.push(`InlineCheck answer ${ans} out of range for ${n} options`); }
     if (!/explanation=/.test(m[0])) problems.push('InlineCheck without explanation');
   }
-  const used = new Set([...body.matchAll(/<([A-Z]\w+)/g)].map((m) => m[1]));
+  const noCode = body.replace(/```[\s\S]*?```/g, '').replace(/`[^`\n]*`/g, '');
+  const used = new Set([...noCode.matchAll(/<([A-Z]\w+)/g)].map((m) => m[1]));
   const imported = new Set([...body.matchAll(/^import\s+(\w+)/gm)].map((m) => m[1]));
   for (const u of used) if (!imported.has(u)) problems.push(`<${u}> used but not imported`);
   const twin = file.replace(/\.mdx$/, '.md');
