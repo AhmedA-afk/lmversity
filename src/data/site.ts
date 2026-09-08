@@ -63,7 +63,7 @@ export const site = {
    * run as auto-format responsive ads under the client id.
    */
   ads: {
-    client: '',
+    client: 'ca-pub-2004809158099634',
     slots: { lesson: '', guide: '', blog: '' } as { lesson: string; guide: string; blog: string },
   },
 
