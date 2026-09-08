@@ -1,0 +1,27 @@
+---
+import Figure from './Figure.astro';
+
+/**
+ * The product-feedback artifact every capstone ends with.
+ */
+---
+<Figure
+  title="The generalise-or-one-off memo"
+  caption="Every build gets sorted into one of three buckets: stays bespoke with the FDE team, becomes a configuration option, or goes to core engineering as product. The brass shortcut, generalising before a second customer exists, builds a platform nobody asked for."
+  desc="A box labelled one build on the left leads to a box labelled memo, which fans out to three boxes: one-off, config option, product. A dashed brass line runs directly from one build to product."
+>
+  <svg viewBox="0 0 640 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs><marker id="gm-tip" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" class="dg-arrow" /></marker><marker id="gm-tip-warn" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" class="dg-arrow-warn" /></marker></defs>
+    <rect x="20" y="89" width="120" height="42" rx="6" class="dg-box" /><text x="80" y="114" class="dg-label">ONE BUILD</text>
+    <rect x="220" y="89" width="110" height="42" rx="6" class="dg-box" /><text x="275" y="114" class="dg-label">MEMO</text>
+    <rect x="460" y="20" width="150" height="42" rx="6" class="dg-box" /><text x="535" y="45" class="dg-label">ONE-OFF</text>
+    <rect x="460" y="89" width="150" height="42" rx="6" class="dg-box" /><text x="535" y="114" class="dg-label">CONFIG OPTION</text>
+    <rect x="460" y="158" width="150" height="42" rx="6" class="dg-box" /><text x="535" y="183" class="dg-label">PRODUCT</text>
+    <line x1="140" y1="110" x2="216" y2="110" class="dg-line" marker-end="url(#gm-tip)" />
+    <line x1="330" y1="110" x2="456" y2="41" class="dg-line" marker-end="url(#gm-tip)" />
+    <line x1="330" y1="110" x2="456" y2="110" class="dg-line" marker-end="url(#gm-tip)" />
+    <line x1="330" y1="110" x2="456" y2="179" class="dg-line" marker-end="url(#gm-tip)" />
+    <path d="M80 131 V205 H456" class="dg-line-warn" marker-end="url(#gm-tip-warn)" />
+    <text x="250" y="198" class="dg-note dg-note-warn">generalising too early</text>
+  </svg>
+</Figure>

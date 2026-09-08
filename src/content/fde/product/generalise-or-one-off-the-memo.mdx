@@ -20,6 +20,8 @@ sources:
   - https://tedmabrey.substack.com/p/sorry-that-isnt-an-fde
   - https://deepengineering.net/p/forward-deployed-engineer-jobs-hiring
 ---
+import FdeGeneraliseMemo from '../../../components/diagrams/FdeGeneraliseMemo.astro';
+
 
 At the end of a deployment you are holding a pile of code that works for exactly one company. Some of it should stay that way forever. Some of it is the next release of your product wearing a customer's logo. Telling the two apart is the judgement the role is actually paid for, and it is the one thing on this path that no amount of engineering skill substitutes for.
 
@@ -28,6 +30,8 @@ There are two ways to get it wrong and they cost different things.
 **Generalising too early** is the one practitioners name most often. Colin Jarvis, who leads OpenAI's forward deployed function, calls it the biggest error in the work: you build the configurable engine after one customer, ship a platform nobody asked for, and then spend a year maintaining abstractions that fit one real case and zero hypothetical ones. The tell is that your configuration options have exactly one value each in production.
 
 **Never generalising** is the quieter failure and it is worse for you personally. Ritika Singh's line, quoted in Deep Engineering's piece on FDE hiring, is the summary: shipping without extracting the pattern makes you a very expensive contractor. Ted Mabrey's argument against companies copying the FDE title is the organisational version of the same point: most are replicating the form and not the function. A team that never generalises is a services team that costs product-engineering salaries.
+
+<FdeGeneraliseMemo />
 
 ## The three buckets
 

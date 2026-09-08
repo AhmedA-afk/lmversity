@@ -2,6 +2,15 @@
 import Layout from '../../../components/Layout.astro';
 import { getCollection } from 'astro:content';
 import { fdeRole, fdePhases, fdeSchedule, fdeNodeCount, fdeKindLabel } from '../../../data/fde';
+import { fdeArtAlt } from '../../../data/fde-art';
+import FdeThirtySixWeeks from '../../../components/diagrams/FdeThirtySixWeeks.astro';
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
+
+// Decorative, but with real alt text. Guarded on the file so a missing image
+// renders as no image rather than a broken one.
+const hasArt = existsSync(join(process.cwd(), 'public/img/roles/fde-hub.webp'));
+const artAlt = fdeArtAlt['fde-hub'];
 
 const entries = await getCollection('fde');
 const live = new Set(entries.map((e) => e.id));
@@ -40,8 +49,15 @@ const firstLive = (() => {
   <section class="head container">
     <a href="/roles" class="back mono">← Roles</a>
     <div class="row"><span class="node-dot" aria-hidden="true"></span><span class="eyebrow">Role path · built from zero</span></div>
-    <h1>{fdeRole.name}</h1>
-    <p class="desc">{fdeRole.description}</p>
+    <div class="head-grid">
+      <div>
+        <h1>{fdeRole.name}</h1>
+        <p class="desc">{fdeRole.description}</p>
+      </div>
+      {hasArt && artAlt && (
+        <img class="art" src="/img/roles/fde-hub.webp" alt={artAlt} width="1024" height="1024" loading="eager" decoding="async" />
+      )}
+    </div>
     <div class="chips">
       <span class="chip">{fdeRole.length.months} months · {fdeRole.length.weeks} weeks</span>
       <span class="chip">{fdeRole.length.hoursPerWeek} hours a week · {fdeRole.length.totalHours} total</span>
@@ -144,6 +160,7 @@ const firstLive = (() => {
   <section class="container schedule">
     <div class="eyebrow">Week by week</div>
     <h2>The 36-week plan</h2>
+    <FdeThirtySixWeeks />
     <div class="table-wrap">
       <table>
         <thead><tr><th>Weeks</th><th>Focus</th><th>Phase</th><th>Practice</th></tr></thead>
@@ -178,6 +195,11 @@ const firstLive = (() => {
   .back:hover { color: var(--accent); text-decoration: none; }
   .row { display: flex; align-items: center; gap: 10px; margin: 20px 0 10px; }
   .head h1 { font-size: clamp(32px, 5vw, 48px); letter-spacing: -.02em; }
+  .head-grid { display: grid; grid-template-columns: minmax(0, 1fr) 208px; gap: 48px; align-items: start; }
+  /* Light-ground raster: on dark it is a bright panel, so a hairline makes it
+     read as a deliberate inset plate. Same treatment as the role pages. */
+  .art { width: 208px; height: 208px; border-radius: 10px; justify-self: end; border: 1px solid var(--rule); }
+  @media (max-width: 760px) { .head-grid { grid-template-columns: 1fr; gap: 26px; } .art { width: 132px; height: 132px; justify-self: start; order: -1; } }
   .desc { margin-top: 16px; font-size: 16px; line-height: 1.6; color: var(--muted); max-width: 64ch; }
   .chips { margin-top: 18px; }
   .head-meter { margin-top: 16px; max-width: 420px; }

@@ -16,12 +16,16 @@ sources:
   - https://job-boards.greenhouse.io/anthropic/jobs/5302966008
   - https://newsletter.eng-leadership.com/p/inside-openais-forward-deployed-engineer
 ---
+import FdeEvalFirstLoop from '../../../components/diagrams/FdeEvalFirstLoop.astro';
+
 
 You have a demo. It runs on the six documents the customer emailed you, it produces a clean answer, and the room is impressed. Then the head of operations asks the only question that matters: "How do we know it is right?"
 
 If you do not have an answer, the next four months are pilots, anecdotes, one loud user who found a bad output, and a slow slide into "let us revisit this next quarter". If you do have an answer, and the answer is a number the customer helped choose, the conversation moves to deployment.
 
 That answer is the eval. Colin Jarvis, who runs OpenAI's Forward Deployed Engineering team, calls the practice **eval-driven development**, and lists "evaluation frameworks and labeled datasets" first among the things his FDEs actually build. Anthropic's Forward Deployed Engineer posting lists "evaluation frameworks" as a hard requirement alongside production application work. Across the job postings this path is built from, evals appear more often than RAG and far more often than prompt engineering. The distinguishing competence is not "can build a retrieval system". It is "can build the eval that proves the retrieval system is good enough for a regulator".
+
+<FdeEvalFirstLoop />
 
 ## What an eval actually is
 

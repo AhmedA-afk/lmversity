@@ -12,8 +12,12 @@ outcomes:
   - Design a fallback path that hands off to a human cleanly when an agent cannot converge.
 artifact: An agent loop with a hard iteration cap, a cost tracker, and a fallback handoff, tested against one input you construct specifically to make it fail to converge.
 ---
+import AgentLoop from '../../../components/diagrams/AgentLoop.astro';
+
 
 The agent loop itself is a dozen lines of code: call the model with the conversation and the available tools, if it asks for a tool run it and append the result, if it produces a final answer stop, repeat. Every framework ships this loop. What separates a demo agent from one you can put in front of a customer is everything the naive version leaves out: what happens when it does not converge, what it costs while it tries, and who gets told when it gives up.
+
+<AgentLoop />
 
 ## The loop, made explicit
 

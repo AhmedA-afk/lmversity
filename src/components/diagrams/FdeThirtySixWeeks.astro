@@ -1,0 +1,25 @@
+---
+import Figure from './Figure.astro';
+
+/**
+ * The plan on the hub page, sized honestly.
+ */
+---
+<Figure
+  title="The 36-week plan"
+  caption="Four stages sized to their weeks: foundations, build, the field, and getting hired. The brass bar is the weekly decomposition drill, which runs from week eight to the end alongside everything else."
+  desc="Four boxes in a row whose widths are proportional to their length in weeks, above a brass bar that begins under the first stage and runs to the end, labelled weekly drill."
+>
+  <svg viewBox="0 0 680 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="10" y="40" width="216" height="42" rx="6" class="dg-box" /><text x="118" y="65" class="dg-label">FOUNDATIONS</text>
+    <rect x="232" y="40" width="216" height="42" rx="6" class="dg-box" /><text x="340" y="65" class="dg-label">BUILD</text>
+    <rect x="454" y="40" width="144" height="42" rx="6" class="dg-box" /><text x="526" y="65" class="dg-label">THE FIELD</text>
+    <rect x="604" y="40" width="66" height="42" rx="6" class="dg-box" /><text x="637" y="65" class="dg-label">HIRED</text>
+    <text x="118" y="106" class="dg-note">weeks 1–12</text>
+    <text x="340" y="106" class="dg-note">weeks 13–24</text>
+    <text x="526" y="106" class="dg-note">weeks 25–32</text>
+    <text x="637" y="106" class="dg-note">33–36</text>
+    <rect x="136" y="126" width="534" height="10" rx="5" class="dg-box-warn" />
+    <text x="403" y="158" class="dg-note dg-note-warn">weekly decomposition drill, from week 8</text>
+  </svg>
+</Figure>

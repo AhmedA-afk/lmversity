@@ -1,0 +1,30 @@
+---
+import Figure from './Figure.astro';
+
+/**
+ * The spine of the field phase and of every FDE interview loop.
+ */
+---
+<Figure
+  title="The six-stage decomposition method"
+  caption="Clarify, then stakeholders and metrics, then inputs and data, then decompose, then a walking skeleton, then risks. The dashed brass jump is the rejection pattern interviewers name most: proposing a solution before the problem is scoped."
+  desc="Six boxes in a row connected left to right. A dashed brass line arcs from the first box directly to the fifth, labelled solving before scoping."
+>
+  <svg viewBox="0 0 680 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs><marker id="dm-tip" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" class="dg-arrow" /></marker><marker id="dm-tip-warn" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" class="dg-arrow-warn" /></marker></defs>
+    <rect x="10" y="80" width="96" height="42" rx="6" class="dg-box" /><text x="58" y="105" class="dg-label">CLARIFY</text>
+    <rect x="124" y="80" width="96" height="42" rx="6" class="dg-box" /><text x="172" y="100" class="dg-label">STAKE-</text><text x="172" y="113" class="dg-label">HOLDERS</text>
+    <rect x="238" y="80" width="96" height="42" rx="6" class="dg-box" /><text x="286" y="105" class="dg-label">INPUTS</text>
+    <rect x="352" y="80" width="96" height="42" rx="6" class="dg-box" /><text x="400" y="105" class="dg-label">DECOMPOSE</text>
+    <rect x="466" y="80" width="96" height="42" rx="6" class="dg-box" /><text x="514" y="105" class="dg-label">SKELETON</text>
+    <rect x="580" y="80" width="90" height="42" rx="6" class="dg-box" /><text x="625" y="105" class="dg-label">RISKS</text>
+    <line x1="106" y1="101" x2="120" y2="101" class="dg-line" marker-end="url(#dm-tip)" />
+    <line x1="220" y1="101" x2="234" y2="101" class="dg-line" marker-end="url(#dm-tip)" />
+    <line x1="334" y1="101" x2="348" y2="101" class="dg-line" marker-end="url(#dm-tip)" />
+    <line x1="448" y1="101" x2="462" y2="101" class="dg-line" marker-end="url(#dm-tip)" />
+    <line x1="562" y1="101" x2="576" y2="101" class="dg-line" marker-end="url(#dm-tip)" />
+    <path d="M58 80 V36 H514 V76" class="dg-line-warn" marker-end="url(#dm-tip-warn)" />
+    <text x="286" y="28" class="dg-note dg-note-warn">solving before scoping</text>
+    <text x="340" y="160" class="dg-note">45 minutes, in this order</text>
+  </svg>
+</Figure>

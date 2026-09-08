@@ -1,0 +1,28 @@
+---
+import Figure from './Figure.astro';
+
+/**
+ * Where an FDE deploys; the right-hand end is what no ordinary engineering path covers.
+ */
+---
+<Figure
+  title="The deployment spectrum"
+  caption="Five places the same artifact can run, with control moving from the vendor to the customer as you go right. Air-gapped is brass because every assumption about connectivity breaks there."
+  desc="Five boxes in a row: SaaS, VPC, BYOC, on-prem, air-gapped. A rule beneath them is labelled control moves to the customer. The last box is brass."
+>
+  <svg viewBox="0 0 660 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs><marker id="ds-tip" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" class="dg-arrow" /></marker></defs>
+    <rect x="10" y="40" width="112" height="42" rx="6" class="dg-box" /><text x="66" y="65" class="dg-label">SAAS</text>
+    <rect x="142" y="40" width="112" height="42" rx="6" class="dg-box" /><text x="198" y="65" class="dg-label">VPC</text>
+    <rect x="274" y="40" width="112" height="42" rx="6" class="dg-box" /><text x="330" y="65" class="dg-label">BYOC</text>
+    <rect x="406" y="40" width="112" height="42" rx="6" class="dg-box" /><text x="462" y="65" class="dg-label">ON-PREM</text>
+    <rect x="538" y="40" width="112" height="42" rx="6" class="dg-box-warn" /><text x="594" y="65" class="dg-label dg-label-warn">AIR-GAPPED</text>
+    <text x="66" y="106" class="dg-note">their cloud</text>
+    <text x="198" y="106" class="dg-note">your account, their VPC</text>
+    <text x="330" y="106" class="dg-note">their cloud, your Helm</text>
+    <text x="462" y="106" class="dg-note">their metal</text>
+    <text x="594" y="106" class="dg-note">no internet at all</text>
+    <line x1="20" y1="140" x2="636" y2="140" class="dg-line" marker-end="url(#ds-tip)" />
+    <text x="330" y="160" class="dg-note">control moves to the customer</text>
+  </svg>
+</Figure>

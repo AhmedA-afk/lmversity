@@ -1,0 +1,25 @@
+---
+import Figure from './Figure.astro';
+
+/**
+ * The Palantir-style bootcamp format used for every simulated customer.
+ */
+---
+<Figure
+  title="The five-day bootcamp"
+  caption="Prepare on day zero, connect the data and model the domain on day one, build workflows with users in the room on days two and three, demo and decide on days four and five. Day one is brass because skipping it makes the demo lie."
+  desc="Four boxes in a row labelled day 0 prep, day 1 data and ontology, days 2 to 3 workflows, days 4 to 5 demo and decision. The second box is brass."
+>
+  <svg viewBox="0 0 660 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs><marker id="bw-tip" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" class="dg-arrow" /></marker></defs>
+    <rect x="10" y="50" width="130" height="42" rx="6" class="dg-box" /><text x="75" y="75" class="dg-label">DAY 0 PREP</text>
+    <rect x="170" y="50" width="150" height="42" rx="6" class="dg-box-warn" /><text x="245" y="69" class="dg-label dg-label-warn">DAY 1 DATA</text><text x="245" y="82" class="dg-label dg-label-warn">+ ONTOLOGY</text>
+    <rect x="350" y="50" width="130" height="42" rx="6" class="dg-box" /><text x="415" y="69" class="dg-label">DAYS 2–3</text><text x="415" y="82" class="dg-label">WORKFLOWS</text>
+    <rect x="510" y="50" width="140" height="42" rx="6" class="dg-box" /><text x="580" y="69" class="dg-label">DAYS 4–5</text><text x="580" y="82" class="dg-label">DEMO + DECIDE</text>
+    <line x1="140" y1="71" x2="166" y2="71" class="dg-line" marker-end="url(#bw-tip)" />
+    <line x1="320" y1="71" x2="346" y2="71" class="dg-line" marker-end="url(#bw-tip)" />
+    <line x1="480" y1="71" x2="506" y2="71" class="dg-line" marker-end="url(#bw-tip)" />
+    <text x="245" y="122" class="dg-note dg-note-warn">skip this and the demo lies</text>
+    <text x="415" y="122" class="dg-note">users in the room</text>
+  </svg>
+</Figure>

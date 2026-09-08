@@ -1,0 +1,32 @@
+---
+import Figure from './Figure.astro';
+
+/**
+ * The loop that makes the role legitimate; brass on the return path because it is the part companies drop.
+ */
+---
+<Figure
+  title="The FDE feedback loop"
+  caption="Scope, build and drive adoption inside the customer; the findings are required to change the product so the next customer needs less of you. Without the return path the same work is professional services."
+  desc="A container labelled customer environment holds three boxes in a row: scope, build, adopt. A solid line leads from adopt out to a product box. A dashed brass line returns from product to scope, labelled next customer needs less."
+>
+  <svg viewBox="0 0 640 230" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs><marker id="fl-tip" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" class="dg-arrow" /></marker><marker id="fl-tip-warn" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" class="dg-arrow-warn" /></marker></defs>
+    <rect x="20" y="30" width="400" height="120" rx="6" class="dg-box-mute" />
+    <text x="220" y="52" class="dg-note">customer environment</text>
+    <rect x="40" y="76" width="100" height="42" rx="6" class="dg-box" />
+    <text x="90" y="101" class="dg-label">SCOPE</text>
+    <rect x="170" y="76" width="100" height="42" rx="6" class="dg-box" />
+    <text x="220" y="101" class="dg-label">BUILD</text>
+    <rect x="300" y="76" width="100" height="42" rx="6" class="dg-box" />
+    <text x="350" y="101" class="dg-label">ADOPT</text>
+    <line x1="140" y1="97" x2="166" y2="97" class="dg-line" marker-end="url(#fl-tip)" />
+    <line x1="270" y1="97" x2="296" y2="97" class="dg-line" marker-end="url(#fl-tip)" />
+    <rect x="500" y="76" width="110" height="42" rx="6" class="dg-box" />
+    <text x="555" y="101" class="dg-label">PRODUCT</text>
+    <line x1="400" y1="97" x2="496" y2="97" class="dg-line" marker-end="url(#fl-tip)" />
+    <text x="450" y="88" class="dg-note">findings</text>
+    <path d="M555 118 V190 H90 V122" class="dg-line-warn" marker-end="url(#fl-tip-warn)" />
+    <text x="322" y="207" class="dg-note dg-note-warn">the return path: next customer needs less of you</text>
+  </svg>
+</Figure>

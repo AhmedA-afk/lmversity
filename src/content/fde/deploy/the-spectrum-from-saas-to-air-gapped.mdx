@@ -19,12 +19,16 @@ sources:
   - https://jobs.accel.com/companies/scale-ai/jobs/85127893-forward-deployed-software-engineer-public-sector
   - https://www.theforwarddeployed.io/engagements/airbus
 ---
+import FdeDeploymentSpectrum from '../../../components/diagrams/FdeDeploymentSpectrum.astro';
+
 
 A generic engineer deploys to their own company's cloud. They own the account, the pipeline, the on-call rota and the observability stack. They can push a fix and see it live in eleven minutes.
 
 An FDE deploys to a stranger's cloud. Sometimes to a rack in a stranger's basement. Sometimes to a room with a guard on the door and no cable leaving it.
 
 The mistake beginners make is treating this as a binary: "SaaS or on-prem". It is not a binary. It is a spectrum, and every step down it moves a specific boundary. If you know which boundary moved, you know what just broke in your architecture and what you now have to write down.
+
+<FdeDeploymentSpectrum />
 
 ## The five points
 

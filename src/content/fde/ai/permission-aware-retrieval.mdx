@@ -12,8 +12,12 @@ outcomes:
   - Name at least two ways permission data itself goes stale, and what that does to a system that trusted it once.
 artifact: A retrieval function that filters a document index by a caller's permissions before ranking, with a test proving a restricted document never surfaces even indirectly, for a caller who lacks access.
 ---
+import PreFilterVsPostFilter from '../../../components/diagrams/PreFilterVsPostFilter.astro';
+
 
 A hospital chain builds a RAG assistant over its clinical and administrative documents. A nurse asks a question that, for a doctor, would retrieve a chunk from a restricted clinical-override policy. If the system ranks across the whole index first and checks permissions only when it is about to display a result, something worse than "wrong answer" can happen: the system's response can be shaped by a document the nurse was never meant to see, even if that exact chunk is filtered out of the final display. The fix is not filtering better. It is filtering earlier.
+
+<PreFilterVsPostFilter />
 
 ## Why filter-after-rank leaks even when it "works"
 

@@ -14,8 +14,12 @@ artifact: A short design note for one workflow from a lab in this path, marking 
 sources:
   - https://www.zenml.io/llmops-database/forward-deployed-engineering-bringing-enterprise-llm-applications-to-production
 ---
+import FdeRulesVsModel from '../../../components/diagrams/FdeRulesVsModel.astro';
+
 
 A model can read a supply disruption, reason about which suppliers could plausibly cover the shortfall, and draft a persuasive reallocation plan. It should not be the thing that decides whether that plan violates a supplier's minimum order quantity, because that is not a judgment call — it is a fact, sitting in a database, that either is or is not violated. Ask the model to check it and it will usually get it right and occasionally, confidently, get it wrong. Ask code to check it and it will get it right every time, because that is what code is for.
+
+<FdeRulesVsModel />
 
 ## The test: does this have one correct answer
 

@@ -1,6 +1,6 @@
 # Visual system
 
-How anything visual on Oddversity is made, and by which of the two production
+How anything visual on LMVersity is made, and by which of the two production
 paths. Read this before generating a single image.
 
 ---
@@ -120,6 +120,7 @@ in exactly one place today:
 | Surface | Why it earns its place |
 |---|---|
 | **Role landing pages** (`/roles/*`) | A non-technical reader arriving at "AI for designers" gets a warm human signal that type alone does not carry. Eleven pages, one image each. |
+| **The FDE path hub and its phase pages** (`/roles/forward-deployed-engineer`, `/roles/forward-deployed-engineer/<phase>`) | The path's own landing surfaces, same reasoning. One image on the hub and one per phase, eleven in all. Lesson, drill, bootcamp and capstone bodies stay type-led, with hand-authored diagrams where a mechanism needs a second way in. |
 
 Explicitly **not** used: lesson bodies, track pages, guides, the home page,
 reference pages. Those are type-led and stay that way.

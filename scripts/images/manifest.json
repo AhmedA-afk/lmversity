@@ -66,6 +66,72 @@
       "target": "/roles/student",
       "alt": "Abstract illustration: evenly spaced horizontal rungs ascending like a ladder, the lowest rung in brass.",
       "subject": "Six evenly spaced horizontal bars stacked vertically and ascending in a staircase, each bar slightly offset to the right of the one below. Indigo bars, the lowest bar in brass."
+    },
+    {
+      "id": "fde-hub",
+      "target": "/roles/forward-deployed-engineer",
+      "alt": "Abstract illustration: a large indigo rectangle with a smaller rectangle set inside its boundary, and a single brass line leading from the inner shape back out through the edge.",
+      "subject": "One large indigo rectangle outline standing for a building. Inside it, near the lower right, a smaller solid indigo rectangle. A single thin brass line starts at the small rectangle and runs out through the large rectangle's edge to the outside, ending in a small brass square. Suggests something shipped inside a customer's walls that feeds back out."
+    },
+    {
+      "id": "fde-orientation",
+      "target": "/roles/forward-deployed-engineer/orientation",
+      "alt": "Abstract illustration: two overlapping indigo rectangles with the overlap filled in brass.",
+      "subject": "Two equal indigo rectangles overlapping by about a third, side by side and slightly offset vertically. The overlapping region is filled in brass. Suggests two roles that share a middle."
+    },
+    {
+      "id": "fde-foundations",
+      "target": "/roles/forward-deployed-engineer/foundations",
+      "alt": "Abstract illustration: a grid of square tiles, the bottom row solid, the bottom-left tile in brass.",
+      "subject": "A five by four grid of small squares with even gaps. The bottom row of squares is solid indigo, the rows above are outlined indigo only. The single bottom-left square is solid brass. Suggests a foundation course laid first."
+    },
+    {
+      "id": "fde-craft",
+      "target": "/roles/forward-deployed-engineer/craft",
+      "alt": "Abstract illustration: a rectangle assembled from four pieces with one missing piece outlined in brass.",
+      "subject": "A large rectangle composed of four smaller rectangular pieces that fit together with thin gaps between them. Three pieces are solid indigo; the fourth piece's position is empty and shown only as a brass outline. Suggests assembly with one part still to fit."
+    },
+    {
+      "id": "fde-data",
+      "target": "/roles/forward-deployed-engineer/data",
+      "alt": "Abstract illustration: several irregular rounded shapes narrowing into one channel, one small brass shape left outside.",
+      "subject": "Several irregular rounded indigo blobs of different sizes on the left, narrowing into a single straight indigo channel that runs to the right edge. One small brass blob sits outside the channel, left behind. Suggests messy inputs being brought into one clean stream with something excluded."
+    },
+    {
+      "id": "fde-ai",
+      "target": "/roles/forward-deployed-engineer/ai",
+      "alt": "Abstract illustration: a solid indigo rectangle resting on a brass measuring bar with evenly spaced ticks.",
+      "subject": "A solid indigo rectangle sitting on top of a long thin brass horizontal bar that has small evenly spaced tick marks along its length, like a ruler with no numbers. Suggests a thing measured before it is trusted."
+    },
+    {
+      "id": "fde-deploy",
+      "target": "/roles/forward-deployed-engineer/deploy",
+      "alt": "Abstract illustration: a thick indigo perimeter with a single brass gap, a small square inside.",
+      "subject": "A thick square perimeter drawn in indigo, like a wall seen from above, with one narrow gap in the wall marked in brass. A small solid indigo square sits inside the perimeter. Suggests getting something inside a guarded boundary through one door."
+    },
+    {
+      "id": "fde-field",
+      "target": "/roles/forward-deployed-engineer/field",
+      "alt": "Abstract illustration: two indigo rectangles facing each other joined by a single brass line.",
+      "subject": "Two upright indigo rectangles of different heights facing each other with space between them, joined across the gap by one thin horizontal brass line at mid height. Suggests two parties in conversation."
+    },
+    {
+      "id": "fde-product",
+      "target": "/roles/forward-deployed-engineer/product",
+      "alt": "Abstract illustration: three small indigo squares on the left and one larger brass square on the right.",
+      "subject": "Three small solid indigo squares stacked vertically on the left with even gaps, and one larger solid brass square on the right at the same vertical centre. Suggests many one-offs becoming one general thing."
+    },
+    {
+      "id": "fde-career",
+      "target": "/roles/forward-deployed-engineer/career",
+      "alt": "Abstract illustration: a long horizontal indigo band with a single brass marker standing at its end.",
+      "subject": "One long horizontal indigo band running most of the width, with a single short vertical brass bar standing on the band at its right end. Suggests a path arriving somewhere."
+    },
+    {
+      "id": "fde-practice",
+      "target": "/roles/forward-deployed-engineer/practice",
+      "alt": "Abstract illustration: a ring of small indigo squares around a single brass square.",
+      "subject": "Eight small solid indigo squares arranged evenly in a ring around a single slightly larger solid brass square at the centre. Suggests repeated practice around one thing."
     }
   ]
 }

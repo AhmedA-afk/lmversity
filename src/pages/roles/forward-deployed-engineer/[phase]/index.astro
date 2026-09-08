@@ -2,6 +2,9 @@
 import Layout from '../../../../components/Layout.astro';
 import { getCollection } from 'astro:content';
 import { fdeRole, fdePhases, getFdePhase, fdeKindLabel } from '../../../../data/fde';
+import { fdeArtAlt } from '../../../../data/fde-art';
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
 
 export function getStaticPaths() {
   return fdePhases.map((p) => ({ params: { phase: p.id } }));
@@ -25,6 +28,9 @@ const minutes = entries.reduce((total, e) => {
 }, 0);
 const hours = minutes ? Math.max(1, Math.round(minutes / 60)) : 0;
 const first = nodes.find((n) => byId.has(`${phase.id}/${n.slug}`));
+const artId = `fde-${phase.id}`;
+const artAlt = fdeArtAlt[artId];
+const hasArt = existsSync(join(process.cwd(), 'public/img/roles', `${artId}.webp`));
 ---
 <Layout
   title={`${phase.n} ${phase.name} · ${fdeRole.short} path`}
@@ -37,9 +43,16 @@ const first = nodes.find((n) => byId.has(`${phase.id}/${n.slug}`));
   <section class="head container">
     <a href={base} class="back mono">← {fdeRole.name}</a>
     <div class="row"><span class="node-dot" aria-hidden="true"></span><span class="eyebrow">Phase {phase.n} · Stage {phase.stage} · {phase.weeks}</span></div>
-    <h1>{phase.name}</h1>
-    <p class="desc">{phase.summary}</p>
-    <p class="note"><span class="mono">Field note</span> {phase.fieldNote}</p>
+    <div class="head-grid">
+      <div>
+        <h1>{phase.name}</h1>
+        <p class="desc">{phase.summary}</p>
+        <p class="note"><span class="mono">Field note</span> {phase.fieldNote}</p>
+      </div>
+      {hasArt && artAlt && (
+        <img class="art" src={`/img/roles/${artId}.webp`} alt={artAlt} width="1024" height="1024" loading="eager" decoding="async" />
+      )}
+    </div>
     <div class="chips">
       <span class="chip">{phase.modules.length} modules</span>
       <span class="chip">{liveCount} of {nodes.length} pages live</span>
@@ -104,6 +117,9 @@ const first = nodes.find((n) => byId.has(`${phase.id}/${n.slug}`));
   .back:hover { color: var(--accent); text-decoration: none; }
   .row { display: flex; align-items: center; gap: 10px; margin: 20px 0 10px; }
   .head h1 { font-size: clamp(30px, 4.5vw, 42px); letter-spacing: -.02em; }
+  .head-grid { display: grid; grid-template-columns: minmax(0, 1fr) 176px; gap: 40px; align-items: start; }
+  .art { width: 176px; height: 176px; border-radius: 10px; justify-self: end; border: 1px solid var(--rule); }
+  @media (max-width: 760px) { .head-grid { grid-template-columns: 1fr; gap: 22px; } .art { width: 120px; height: 120px; justify-self: start; order: -1; } }
   .desc { margin-top: 16px; font-size: 16px; line-height: 1.6; color: var(--muted); max-width: 66ch; }
   .note { margin-top: 12px; font-size: 14px; line-height: 1.55; color: var(--text); max-width: 66ch; }
   .note .mono { font-size: 10px; color: var(--accent); letter-spacing: .06em; text-transform: uppercase; margin-right: 8px; }
