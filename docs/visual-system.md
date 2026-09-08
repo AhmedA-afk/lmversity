@@ -122,8 +122,13 @@ in exactly one place today:
 | **Role landing pages** (`/roles/*`) | A non-technical reader arriving at "AI for designers" gets a warm human signal that type alone does not carry. Eleven pages, one image each. |
 | **The FDE path hub and its phase pages** (`/roles/forward-deployed-engineer`, `/roles/forward-deployed-engineer/<phase>`) | The path's own landing surfaces, same reasoning. One image on the hub and one per phase, eleven in all. Lesson, drill, bootcamp and capstone bodies stay type-led, with hand-authored diagrams where a mechanism needs a second way in. |
 
-Explicitly **not** used: lesson bodies, track pages, guides, the home page,
-reference pages. Those are type-led and stay that way.
+Explicitly **not** used: lesson bodies, track pages, guides, reference pages.
+Those are type-led and stay that way.
+
+The home-page hero is not an illustration: it is the logo itself, built in three
+dimensions from the monogram's own SVG paths (`src/scripts/hero-scene.ts`),
+face-on, flat-shaded, in the two brand colours, following the theme tokens. It
+asserts nothing and loads only after idle, over an inline SVG fallback.
 
 Social cards are generated programmatically by `scripts/generate-og.py` and stay
 that way — deterministic, exact, and regenerated from content on every change.
