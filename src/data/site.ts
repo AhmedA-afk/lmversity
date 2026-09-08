@@ -21,17 +21,17 @@ export const site = {
    * here is invented or guessed.
    */
   author: {
-    name: '',            // e.g. 'Ada Lovelace'
+    name: 'Ahmed Ansari',
     role: 'Editor',
     /** Profile URLs used for schema `sameAs`. Add only real ones. */
-    sameAs: [] as string[],
+    sameAs: ['https://ahmedansari.me', 'https://github.com/AhmedA-afk', 'https://www.linkedin.com/in/ahmed-1-ansari'] as string[],
   },
 
   /** Social handles, without the @. Empty values are omitted. */
   social: {
     x: '',
-    github: '',
-    linkedin: '',
+    github: 'AhmedA-afk',
+    linkedin: 'ahmed-1-ansari',
     mastodon: '',
   },
 
@@ -57,7 +57,7 @@ export const site = {
 
   /** Repository, for "edit this page" links. Empty hides them. */
   repo: {
-    url: '',
+    url: 'https://github.com/AhmedA-afk/lmversity',
     branch: 'main',
   },
 } as const;
