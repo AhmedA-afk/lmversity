@@ -1,4 +1,4 @@
-# Oddversity — a free, open AI curriculum. Everything here is meant to be read,
+# LMVersity — a free, open AI curriculum. Everything here is meant to be read,
 # indexed, cited and learned from, by people and by machines alike.
 
 User-agent: *
@@ -48,6 +48,6 @@ User-agent: meta-externalagent
 Allow: /
 
 # Machine-readable index of the site, written for language models.
-# See: https://oddversity.com/llms.txt
+# See: https://lmversity.com/llms.txt
 
-Sitemap: https://oddversity.com/sitemap-index.xml
+Sitemap: https://lmversity.com/sitemap-index.xml

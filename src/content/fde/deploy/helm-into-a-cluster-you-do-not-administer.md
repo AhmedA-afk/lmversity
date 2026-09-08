@@ -44,7 +44,7 @@ Two rules. **Expose every environment-shaped thing.** And **expose nothing else.
 # values.yaml — Atlas, the retrieval service
 image:
   # Set to the customer's mirror. Never assume our registry is reachable.
-  repository: ghcr.io/oddversity/atlas
+  repository: ghcr.io/lmversity/atlas
   tag: "2.4.1"
   digest: ""           # if set, takes precedence over tag
   pullPolicy: IfNotPresent
@@ -143,7 +143,7 @@ Ship a second values file for hardened clusters and test against it in CI. This 
 ```yaml
 # values-restricted.yaml — PodSecurity "restricted", mirrored registry, no egress
 image:
-  repository: harbor.northline.internal/vendors/oddversity/atlas
+  repository: harbor.northline.internal/vendors/lmversity/atlas
   digest: "sha256:8c1f...e3a9"
 imagePullSecrets: [{ name: harbor-pull }]
 

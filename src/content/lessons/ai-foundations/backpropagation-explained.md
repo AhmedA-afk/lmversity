@@ -2,7 +2,7 @@
 title: "Backpropagation: Credit Assignment via the Chain Rule"
 track: "ai-foundations"
 status: live
-summary: "A CONCEPT-page lesson on backpropagation for Oddversity's AI Foundations track, explaining it as chain-rule bookkeeping for credit assignment, with a fully worked 2-2-1 network exa"
+summary: "A CONCEPT-page lesson on backpropagation for LMVersity's AI Foundations track, explaining it as chain-rule bookkeeping for credit assignment, with a fully worked 2-2-1 network exa"
 duration: "2 min read"
 ---
 

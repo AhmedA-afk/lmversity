@@ -1,4 +1,4 @@
-# Oddversity
+# LMVersity
 
 A free, hands-on learning platform for the agentic-AI era. A complete, structured
 path from your first prompt to production agents — plus guides, quizzes, interview
@@ -145,7 +145,7 @@ degrades to plain HTML without it.
 
 Warm-paper palette, ink-indigo accent, Source Serif 4 / IBM Plex Sans / IBM Plex Mono.
 Tokens are CSS variables in `src/styles/global.css` (light + dark). Full IA and design
-brief live in `../get_money_xD/oddversity/`.
+brief live in `../get_money_xD/lmversity/`.
 
 **Scope note:** this is a pure curriculum/learning product. The "StillWorks"
 freshness-verification concept is intentionally **not** shipped.

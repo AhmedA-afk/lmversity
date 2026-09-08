@@ -47,7 +47,7 @@ const summaryFor = new Map(allLessons.map((l) => [l.id, l.data.summary ?? '']));
   description={entry.data.summary}
   type="learning-resource"
   image={track ? ogImage(`track-${track.id}`) : undefined}
-  imageAlt={track ? `${entry.data.title} — ${track.name} on Oddversity` : undefined}
+  imageAlt={track ? `${entry.data.title} — ${track.name} on LMVersity` : undefined}
   modifiedTime={entry.data.updated}
   breadcrumbs={[
     { name: 'Home', url: '/' },

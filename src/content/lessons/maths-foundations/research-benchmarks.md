@@ -13,7 +13,7 @@ Course: overview · atomic checklist · assignments
 
 ## Decision
 
-Oddversity will not copy a provider syllabus or impose a page ceiling. It will
+LMVersity will not copy a provider syllabus or impose a page ceiling. It will
 use a **layered, AI-relevant 129-core / 28-specialist curriculum**, authoring
 incrementally whenever a concept needs a separate derivation, example family,
 lab, misconception clinic, or reference page. The checklist is allowed to grow
@@ -21,7 +21,7 @@ when research reveals a prerequisite or a distinct failure mode.
 
 ## What the browser review found
 
-| Source | What it offers | What Oddversity adopts | What it must add or avoid |
+| Source | What it offers | What LMVersity adopts | What it must add or avoid |
 |---|---|---|---|
 | [GeeksforGeeks AI–ML–DS](https://www.geeksforgeeks.org/category/ai-ml-ds/) | a large, highly granular category archive; the reviewed page exposed 6.7K+ posts alongside overlapping ML, Python, DL, and AI categories | grouped navigation and room for narrow references | a raw archive is not a prerequisite graph or an assessment model; never equate category count with course depth |
 | [freeCodeCamp College Algebra with Python](https://www.freecodecamp.org/learn/college-algebra-with-python/) | one-semester sequencing, instructional videos, Colab notebooks, assignments, projects, and a personal calculator notebook | a computational notebook that grows with the course; recurring projects rather than isolated quizzes | it is algebra-first, so add vector/matrix, probability, inference, optimisation, and AI failure analysis |
@@ -53,7 +53,7 @@ specialist units**. The additions are intentionally atomic:
 
 ## Authoring implications
 
-Use sources for curriculum shape, not as text to paraphrase. Each Oddversity
+Use sources for curriculum shape, not as text to paraphrase. Each LMVersity
 unit must independently teach the mechanism and retain the course contract:
 four worked scenarios, derivation/proof intuition where appropriate, symbolic +
 visual + computational views, a deliberately broken case, and observable

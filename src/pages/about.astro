@@ -7,8 +7,8 @@ const lessons = await getCollection('lessons');
 const guides = await getCollection('guides');
 ---
 <Layout
-  title="About Oddversity"
-  description="What Oddversity is, who it's for, how it's built, and what it deliberately doesn't do. A free, open AI engineering curriculum with no paywall and no account requirement."
+  title="About LMVersity"
+  description="What LMVersity is, who it's for, how it's built, and what it deliberately doesn't do. A free, open AI engineering curriculum with no paywall and no account requirement."
   breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'About', url: '/about' }]}
 >
   <article class="wrap">
@@ -16,7 +16,7 @@ const guides = await getCollection('guides');
       <span class="eyebrow">About</span>
       <h1>A free, complete curriculum for building with AI.</h1>
       <p class="lede">
-        Oddversity is {lessons.length} lessons, {guides.length} guides, and a set of quizzes,
+        LMVersity is {lessons.length} lessons, {guides.length} guides, and a set of quizzes,
         scenarios and interview questions covering the path from your first prompt to running
         agents in production. All of it is open, none of it is gated, and you never need an
         account to read a page.
@@ -26,18 +26,26 @@ const guides = await getCollection('guides');
     <div class="prose">
       <h2>The name</h2>
       <p>
-        A university it isn't. There is no accreditation here, no admission, no
-        fee and no certificate — that last one deliberately, and there's
-        <a href="/blog/why-there-is-no-certificate">a whole page on why</a>.
+        Two parts. <strong>LM</strong> is language models: the thing this whole
+        era is built on, and the thing worth understanding one layer deeper than
+        the API you call. <strong>Versity</strong> is the shape of what's here: a
+        structured course of study, in dependency order, that starts at the
+        foundations and ends in production.
       </p>
       <p>
-        The odd half is the more honest one. Most courses teach the path where
-        everything works, then leave you at the edge of it. The material here is
-        organised the other way round, around the cases that don't fit: the
-        table that lost its headers during chunking, the agent that goes quiet
-        at 3am because a token expired and nothing refreshed it, the eval score
-        that climbed while quality fell. Those are the odd ones, and they are
-        where the learning actually is.
+        A university it isn't. There is no accreditation here, no admission, no
+        fee and no certificate — that last one deliberately, and there's
+        <a href="/blog/why-there-is-no-certificate">a whole page on why</a>. What
+        it keeps from a university is the sequencing; what it drops is everything
+        else.
+      </p>
+      <p>
+        Most courses teach the path where everything works, then leave you at the
+        edge of it. The material here is organised the other way round, around
+        the cases that don't fit: the table that lost its headers during
+        chunking, the agent that goes quiet at 3am because a token expired and
+        nothing refreshed it, the eval score that climbed while quality fell.
+        Those are where the learning actually is.
       </p>
 
       <h2>Who it's for</h2>

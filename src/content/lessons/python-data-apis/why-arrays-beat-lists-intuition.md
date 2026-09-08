@@ -2,7 +2,7 @@
 title: "Why Arrays Are Fast (and Lists Aren't)"
 track: "python-data-apis"
 status: live
-summary: "Wrote the full INTUITION-page lesson body (Markdown, no frontmatter/H1) for 'Why Arrays Are Fast (and Lists Aren't)' in Oddversity's Python & Data / NumPy Arrays module: a runnable"
+summary: "Wrote the full INTUITION-page lesson body (Markdown, no frontmatter/H1) for 'Why Arrays Are Fast (and Lists Aren't)' in LMVersity's Python & Data / NumPy Arrays module: a runnable"
 duration: "14 min read"
 ---
 

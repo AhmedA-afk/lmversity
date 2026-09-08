@@ -1,4 +1,4 @@
-/* Oddversity client runtime.
+/* LMVersity client runtime.
    Four small features, no dependencies, no backend:
      1. ⌘K search over a static JSON index (fetched on first open)
      2. Copy buttons on code blocks

@@ -18,7 +18,7 @@ const totalQuestions = topics.reduce((n, t) => n + t.count, 0);
   breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Interview', url: '/interview' }]}
   itemList={topics.map((t) => ({ name: t.entry.data.title, url: `/interview/${t.entry.id}` }))}
   image={ogImage('page-interview')}
-  imageAlt="Oddversity interview questions"
+  imageAlt="LMVersity interview questions"
 >
   <section class="interview-hero container">
     <span class="eyebrow">Interview desk</span>

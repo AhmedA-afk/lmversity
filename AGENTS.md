@@ -1,4 +1,4 @@
-# AGENTS.md — Oddversity
+# AGENTS.md — LMVersity
 
 Rules for any agent working in this repository. These are not preferences.
 

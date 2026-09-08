@@ -2,7 +2,7 @@
 title: "Gradient Descent: The Engine of Learning"
 track: "ai-foundations"
 status: live
-summary: "Deep CONCEPT lesson on gradient descent for Oddversity's AI Foundations track, covering the update rule, the bowl mental model, a worked single-parameter example with three learnin"
+summary: "Deep CONCEPT lesson on gradient descent for LMVersity's AI Foundations track, covering the update rule, the bowl mental model, a worked single-parameter example with three learnin"
 duration: "3 min read"
 ---
 

@@ -2,7 +2,7 @@
 title: "Four Prompts That Reveal the Edges"
 track: "ai-foundations"
 status: live
-summary: "Worked-example lesson for Oddversity's AI Foundations track: runs one model through four contrasting prompts (fluent summary, 13-digit multiplication, citation request, multi-step "
+summary: "Worked-example lesson for LMVersity's AI Foundations track: runs one model through four contrasting prompts (fluent summary, 13-digit multiplication, citation request, multi-step "
 duration: "14 min read"
 ---
 

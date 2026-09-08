@@ -2,7 +2,7 @@
 title: "The Whole Game: Messy Data to a Model-Ready Pipeline"
 track: "python-data-apis"
 status: live
-summary: "Whole-game overview lesson for Oddversity's Python & Data track: walks one end-to-end pipeline (messy CSV tickets to pandas to cleaning/validation to LLM sentiment classification t"
+summary: "Whole-game overview lesson for LMVersity's Python & Data track: walks one end-to-end pipeline (messy CSV tickets to pandas to cleaning/validation to LLM sentiment classification t"
 duration: "2 min read"
 ---
 

@@ -70,11 +70,11 @@ const itemList = families.flatMap((f) => f.rows.map((r) => ({ name: r.title, url
 ---
 <Layout
   title="Reference & cheatsheets"
-  description={`${total} reference pages pulled out of the Oddversity curriculum — quick guides, cheatsheets, side-by-side comparisons, worked examples, debugging clinics and self-checks. Plus a glossary of AI engineering terms.`}
+  description={`${total} reference pages pulled out of the LMVersity curriculum — quick guides, cheatsheets, side-by-side comparisons, worked examples, debugging clinics and self-checks. Plus a glossary of AI engineering terms.`}
   breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Reference', url: '/reference' }]}
   itemList={[...guides.map(({ track }) => ({ name: `${track.name} quick guide`, url: `/learn/${track.id}/quick-guide` })), ...itemList]}
   image={ogImage('page-reference')}
-  imageAlt="Oddversity reference"
+  imageAlt="LMVersity reference"
 >
   <section class="head container">
     <span class="eyebrow">Reference</span>

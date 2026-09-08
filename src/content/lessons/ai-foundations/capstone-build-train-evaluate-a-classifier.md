@@ -2,7 +2,7 @@
 title: "Capstone: Train and Evaluate a Classifier From Scratch"
 track: "ai-foundations"
 status: live
-summary: "Wrote the Capstone project page for Oddversity's AI Foundations track: a from-scratch NumPy 2-layer classifier build on two-moons or digits, covering brief, measurable acceptance c"
+summary: "Wrote the Capstone project page for LMVersity's AI Foundations track: a from-scratch NumPy 2-layer classifier build on two-moons or digits, covering brief, measurable acceptance c"
 duration: "4 min read"
 ---
 

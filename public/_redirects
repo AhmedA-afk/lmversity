@@ -1,5 +1,5 @@
 # Canonicalise on the apex domain. Enable once DNS for both names exists.
-# https://www.oddversity.com/*  https://oddversity.com/:splat  301!
+# https://www.lmversity.com/*  https://lmversity.com/:splat  301!
 
 # Stable shortcuts worth keeping working if they are ever shared.
 /curriculum      /learn           301

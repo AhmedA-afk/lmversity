@@ -1,7 +1,7 @@
 /* TEAM */
 
   Editor: see /about
-  Site: https://oddversity.com
+  Site: https://lmversity.com
 
 /* THANKS */
 
@@ -11,10 +11,11 @@
 
 /* NAME */
 
-  A university it isn't — no accreditation, no admission, no fee, no
-  certificate. The odd half is the honest one: this material is organised
-  around the cases that don't fit the happy path, because that is where the
-  learning is.
+  LM for language models; versity for the shape of the thing, a structured
+  course of study in dependency order. A university it isn't — no
+  accreditation, no admission, no fee, no certificate. The material is
+  organised around the cases that don't fit the happy path, because that is
+  where the learning is.
 
 /* SITE */
 

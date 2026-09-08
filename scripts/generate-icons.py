@@ -3,10 +3,10 @@
 
     python3 scripts/generate-icons.py
 
-The mark is a paper 'O' on the cool indigo, with a band of the warm brass along
-the bottom — the same two-tone split as the wordmark's tick. A single round
-letter was chosen because it holds its shape at 16px, which is the only size a
-favicon is really judged at.
+The mark is a paper "LM" on the cool indigo, with a band of the warm brass along
+the bottom — the same two-tone split as the wordmark's tick. Two bold sans
+capitals, fitted to the tile's width, because a serif pair smears at 16px,
+which is the only size a favicon is really judged at.
 
 public/favicon.svg is maintained by hand alongside this.
 """
@@ -20,7 +20,7 @@ OUT = ROOT / "public"
 COOL = (59, 84, 163)        # --brand-cool, ink indigo
 WARM = (168, 116, 28)       # --brand-warm, brass
 PAPER = (251, 250, 248)     # --bg
-SERIF = "/usr/share/fonts/truetype/noto/NotoSerif-Bold.ttf"
+SANS = "/usr/share/fonts/truetype/noto/NotoSans-Bold.ttf"
 
 BAND = 0.26                 # brass band height, as a fraction of the tile
 
@@ -41,12 +41,18 @@ def mark(size: int, radius_ratio: float = 0.22, bleed: bool = False) -> Image.Im
     img.paste(tile, (0, 0), mask)
 
     d = ImageDraw.Draw(img)
-    font = ImageFont.truetype(SERIF, int(s * 0.60))
-    box = d.textbbox((0, 0), "O", font=font)
+    # Fit "LM" to ~78% of the tile width; the pair is wider than it is tall.
+    size_px = int(s * 0.60)
+    while size_px > 8:
+        font = ImageFont.truetype(SANS, size_px)
+        box = d.textbbox((0, 0), "LM", font=font)
+        if box[2] - box[0] <= s * 0.78:
+            break
+        size_px -= max(1, s // 100)
     w, h = box[2] - box[0], box[3] - box[1]
-    # Centre the E in the indigo field, not the whole tile.
+    # Centre the letters in the indigo field, not the whole tile.
     cy = s * (1 - BAND) / 2
-    d.text(((s - w) / 2 - box[0], cy - h / 2 - box[1]), "O", font=font, fill=PAPER)
+    d.text(((s - w) / 2 - box[0], cy - h / 2 - box[1]), "LM", font=font, fill=PAPER)
 
     return img.resize((size, size), Image.LANCZOS)
 

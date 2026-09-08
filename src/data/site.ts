@@ -4,9 +4,9 @@
  * in a template — if a value appears twice, it belongs in this file.
  */
 export const site = {
-  name: 'Oddversity',
+  name: 'LMVersity',
   /** No trailing slash. Used for canonicals, schema @id values and feeds. */
-  url: 'https://oddversity.com',
+  url: 'https://lmversity.com',
   tagline: 'Learn to actually build with AI.',
   description:
     'A free, hands-on learning platform for the agentic-AI era. A structured path from your first prompt to production agents.',

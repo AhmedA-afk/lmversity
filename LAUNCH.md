@@ -51,7 +51,7 @@ than rendered blank.
 
 ## 2. Domain and DNS — **blocking**
 
-> **`oddversity.com` is a placeholder.** It was set across the codebase
+> **`lmversity.com` is a placeholder.** It was set across the codebase
 > during the rename but has not been checked for availability or registered.
 > Confirm it — or pick the actual domain — and change `url` in
 > `src/data/site.ts`. Everything else (canonicals, schema `@id`s, the sitemap,
@@ -70,7 +70,7 @@ than rendered blank.
 
 `_headers` is a Cloudflare Pages / Netlify convention. Other hosts ignore it.
 
-- [ ] `curl -sI https://oddversity.com | grep -i -E 'content-security|strict-transport|x-frame'`
+- [ ] `curl -sI https://lmversity.com | grep -i -E 'content-security|strict-transport|x-frame'`
 - [ ] If the host ignores `_headers`, port the rules to its own mechanism before launch.
 - [ ] If you later enable analytics, **add the vendor's domain to `script-src`
       and `connect-src`** in the CSP or the script will be blocked silently.
@@ -81,7 +81,7 @@ than rendered blank.
 - [ ] Bing Webmaster Tools — verify, submit the sitemap. This also feeds several
       AI answer engines.
 - [ ] Request indexing for the home page, `/learn`, `/guides` and `/reference`.
-- [ ] Confirm `https://oddversity.com/llms.txt` resolves and reads correctly.
+- [ ] Confirm `https://lmversity.com/llms.txt` resolves and reads correctly.
 
 ## 5. Check how it looks when shared
 

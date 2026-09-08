@@ -2,7 +2,7 @@
 title: "Calling an LLM Chat API"
 track: "python-data-apis"
 status: live
-summary: "Deep implementation walkthrough for Oddversity's Python & Data track: builds a runnable ticket-triage script against the Anthropic Messages API, covering system/user messages, read"
+summary: "Deep implementation walkthrough for LMVersity's Python & Data track: builds a runnable ticket-triage script against the Anthropic Messages API, covering system/user messages, read"
 duration: "3 min read"
 ---
 

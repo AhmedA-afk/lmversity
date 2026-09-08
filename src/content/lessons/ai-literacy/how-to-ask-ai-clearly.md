@@ -2,7 +2,7 @@
 title: "How to ask AI for exactly what you want"
 track: "ai-literacy"
 status: live
-summary: "A CONCEPT lesson for Oddversity's AI Literacy track establishing the four-lever anatomy of a good AI request — task, context, format, tone — anchored by the 'write about dogs' vs. "
+summary: "A CONCEPT lesson for LMVersity's AI Literacy track establishing the four-lever anatomy of a good AI request — task, context, format, tone — anchored by the 'write about dogs' vs. "
 duration: "9 min read"
 ---
 

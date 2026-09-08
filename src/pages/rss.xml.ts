@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 
-const SITE = 'https://oddversity.com';
+const SITE = 'https://lmversity.com';
 
 const escape = (s: string) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -31,9 +31,9 @@ export const GET: APIRoute = async () => {
   const body = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Oddversity — guides and notes on building with AI</title>
+    <title>LMVersity — guides and notes on building with AI</title>
     <link>${SITE}</link>
-    <description>New guides and articles from Oddversity, a free hands-on curriculum for the agentic-AI era.</description>
+    <description>New guides and articles from LMVersity, a free hands-on curriculum for the agentic-AI era.</description>
     <language>en</language>
     <atom:link href="${SITE}/rss.xml" rel="self" type="application/rss+xml" />
 ${items

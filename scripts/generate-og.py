@@ -73,9 +73,9 @@ def card(eyebrow: str, title: str, meta: str) -> Image.Image:
     # One word, two colours — no gap between the halves, so it reads as a
     # single word built from two parts rather than as two words.
     x = MARGIN + 24
-    d.text((x, 97), "Odd", font=wm, fill=WARM)
-    x += d.textlength("Odd", font=wm)
-    d.text((x, 97), "versity", font=wm, fill=COOL)
+    d.text((x, 97), "LM", font=wm, fill=WARM)
+    x += d.textlength("LM", font=wm)
+    d.text((x, 97), "Versity", font=wm, fill=COOL)
 
     d.text((MARGIN, 196), " ".join(eyebrow.upper()), font=font(MONO, 17), fill=MUTED)
 
@@ -99,7 +99,7 @@ def card(eyebrow: str, title: str, meta: str) -> Image.Image:
     d.line([MARGIN, H - 150, W - MARGIN, H - 150], fill=RULE, width=1)
     if meta:
         d.text((MARGIN, H - 128), meta, font=font(SERIF, 27), fill=MUTED)
-    d.text((MARGIN, H - 86), "oddversity.com", font=font(MONO, 22), fill=COOL)
+    d.text((MARGIN, H - 86), "lmversity.com", font=font(MONO, 22), fill=COOL)
     return img
 
 

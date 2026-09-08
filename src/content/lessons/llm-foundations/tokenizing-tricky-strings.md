@@ -17,7 +17,7 @@ import tiktoken
 enc = tiktoken.get_encoding("cl100k_base")
 
 for s in ["🎉", "👨‍👩‍👧‍👦", "12345",
-          "https://oddversity.com/learn/llm-foundations",
+          "https://lmversity.com/learn/llm-foundations",
           "kütüphanecilerimizden"]:
     ids = enc.encode(s)
     print(f"{s!r:45} -> {len(ids)} tokens: {[enc.decode([i]) for i in ids]}")
@@ -47,7 +47,7 @@ Byte-level BPE tokenizers built for GPT-3.5/4-class models deliberately cap how 
 
 ### A URL
 
-`https://oddversity.com/learn/llm-foundations` is one visual "word" with no spaces, but it's built from pieces that rarely co-occur verbatim in training text: a scheme (`https`), a separator (`://`), a domain in parts, slashes, and a path. Expect something in the range of 12–16 tokens — `https`, `://`, `exploration`, `bonus`, `.com`, `/learn`, `/ll`, `m`, `-`, `found`, `ations`, roughly — more tokens than a clean English phrase of the same character length would need, because URLs fragment into many rare sub-pieces.
+`https://lmversity.com/learn/llm-foundations` is one visual "word" with no spaces, but it's built from pieces that rarely co-occur verbatim in training text: a scheme (`https`), a separator (`://`), a domain in parts, slashes, and a path. Expect something in the range of 12–16 tokens — `https`, `://`, `exploration`, `bonus`, `.com`, `/learn`, `/ll`, `m`, `-`, `found`, `ations`, roughly — more tokens than a clean English phrase of the same character length would need, because URLs fragment into many rare sub-pieces.
 
 > **Why this step?** Punctuation-dense, low-frequency strings are exactly what subword tokenization is worst at compressing — vocabulary slots got spent on frequent natural-language substrings, and a specific URL wasn't one of them. This is also why pasting file paths, hashes, or IDs into a prompt eats context faster than the visible text length suggests.
 

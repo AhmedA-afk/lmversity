@@ -2,7 +2,7 @@
 title: "How Modern AI Fits Together"
 track: "ai-foundations"
 status: live
-summary: "Whole-game overview lesson for Oddversity's AI Foundations Orientation module: traces 'why does ChatGPT answer this way?' down through AI > ML > deep learning > training > foundati"
+summary: "Whole-game overview lesson for LMVersity's AI Foundations Orientation module: traces 'why does ChatGPT answer this way?' down through AI > ML > deep learning > training > foundati"
 duration: "4 min read"
 ---
 

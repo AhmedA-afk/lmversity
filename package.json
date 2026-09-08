@@ -1,9 +1,9 @@
 {
-  "name": "oddversity",
+  "name": "lmversity",
   "type": "module",
   "version": "0.1.0",
   "private": true,
-  "description": "Oddversity \u2014 a free, hands-on learning platform for the agentic-AI era.",
+  "description": "LMVersity \u2014 a free, hands-on learning platform for the agentic-AI era.",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -26,6 +26,6 @@
     "rehype-katex": "^7.0.1",
     "remark-math": "^6.0.0"
   },
-  "homepage": "https://oddversity.com",
+  "homepage": "https://lmversity.com",
   "license": "UNLICENSED"
 }

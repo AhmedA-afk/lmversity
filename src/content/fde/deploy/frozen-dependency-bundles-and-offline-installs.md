@@ -60,12 +60,12 @@ python -m venv /opt/atlas/venv
 
 ```bash
 # connected machine: pull, tag, and flatten the images you need
-docker pull ghcr.io/oddversity/atlas:2.4.1
+docker pull ghcr.io/lmversity/atlas:2.4.1
 docker pull postgres:16.4
 docker pull otel/opentelemetry-collector-contrib:0.108.0
 
 docker save \
-  ghcr.io/oddversity/atlas:2.4.1 \
+  ghcr.io/lmversity/atlas:2.4.1 \
   postgres:16.4 \
   otel/opentelemetry-collector-contrib:0.108.0 \
   -o atlas-bundle-2.4.1.tar
@@ -78,9 +78,9 @@ On the isolated machine, after the transfer and before anything else runs:
 ```bash
 sha256sum -c atlas-bundle-2.4.1.tar.sha256   # fails loudly if one byte moved
 docker load -i atlas-bundle-2.4.1.tar
-docker tag ghcr.io/oddversity/atlas:2.4.1 \
-  registry.northline.internal/vendors/oddversity/atlas:2.4.1
-docker push registry.northline.internal/vendors/oddversity/atlas:2.4.1
+docker tag ghcr.io/lmversity/atlas:2.4.1 \
+  registry.northline.internal/vendors/lmversity/atlas:2.4.1
+docker push registry.northline.internal/vendors/lmversity/atlas:2.4.1
 ```
 
 That last pair of commands matters as much as the load: the image now lives in the customer's own registry, addressed by their hostname, which is what your Helm chart's `image.repository` value should point at. See the earlier lesson on Helm charts for why every image reference, including init containers and migration jobs, has to be overridable to a customer registry.

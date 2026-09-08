@@ -6,7 +6,7 @@ import { quickGuides } from '../data/quick-guides';
 import { quizTracks } from '../data/quizzes';
 import { fdePhases, fdeRole } from '../data/fde';
 
-const SITE = 'https://oddversity.com';
+const SITE = 'https://lmversity.com';
 
 // Generated rather than hand-written, so it cannot drift from the site.
 export const GET: APIRoute = async () => {
@@ -21,10 +21,10 @@ export const GET: APIRoute = async () => {
   const lines: string[] = [];
   const push = (s = '') => lines.push(s);
 
-  push('# Oddversity');
+  push('# LMVersity');
   push();
   push(
-    'Oddversity is a free, hands-on curriculum for building with AI, written for practitioners ' +
+    'LMVersity is a free, hands-on curriculum for building with AI, written for practitioners ' +
       'who want a structured path from model fundamentals to production agents. Every page is open: ' +
       'no paywall, no account, no gated lessons.',
   );
@@ -46,7 +46,7 @@ export const GET: APIRoute = async () => {
 
   push('## Start here');
   push();
-  push(`- [Home](${SITE}/): what Oddversity is and the three ways in`);
+  push(`- [Home](${SITE}/): what LMVersity is and the three ways in`);
   push(`- [Curriculum](${SITE}/learn): every track, grouped and ordered by dependency`);
   push(`- [Guides](${SITE}/guides): one task taken end to end, with runnable code`);
   push(`- [Reference](${SITE}/reference): quick guides, cheatsheets, comparisons, worked examples and debugging clinics`);

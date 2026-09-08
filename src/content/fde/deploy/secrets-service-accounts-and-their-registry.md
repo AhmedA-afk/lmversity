@@ -126,8 +126,8 @@ In any serious enterprise environment your images will not be pulled from your r
 **Publish a manifest of what a release contains.** A plain file the customer's platform team runs against their mirroring tool:
 
 ```
-ghcr.io/oddversity/atlas@sha256:8c1f...e3a9
-ghcr.io/oddversity/atlas-migrate@sha256:41bd...77c2
+ghcr.io/lmversity/atlas@sha256:8c1f...e3a9
+ghcr.io/lmversity/atlas-migrate@sha256:41bd...77c2
 docker.io/library/redis@sha256:9a2f...10de
 ```
 
@@ -136,8 +136,8 @@ Then mirroring is a loop, not a scavenger hunt:
 ```bash
 while read -r src; do
   name=$(basename "${src%@*}")
-  dst="harbor.northline.internal/vendors/oddversity/${name}@${src#*@}"
-  crane copy "$src" "harbor.northline.internal/vendors/oddversity/${name}:$(date +%Y%m%d)"
+  dst="harbor.northline.internal/vendors/lmversity/${name}@${src#*@}"
+  crane copy "$src" "harbor.northline.internal/vendors/lmversity/${name}:$(date +%Y%m%d)"
   echo "mirrored $src"
 done < images.txt
 ```

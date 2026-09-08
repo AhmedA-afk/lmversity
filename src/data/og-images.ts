@@ -6,7 +6,7 @@
 export const ogImages = new Set<string>([
   'blog-agents-need-a-harness',
   'blog-how-to-learn-ai-in-2026',
-  'blog-oddversity-launch-note',
+  'blog-lmversity-launch-note',
   'blog-rag-is-not-a-truth-machine',
   'blog-read-the-loop-before-you-pick-a-framework',
   'blog-stopping-conditions-for-agents',
