@@ -7,6 +7,7 @@ import { emblemGround, emblemAsterisk } from '../data/emblem';
 
 const lessons = await getCollection('lessons');
 const guides = await getCollection('guides');
+const answers = (await getCollection('answers')).filter(a => a.data.featured).slice(0, 6);
 const guideIds = ['build-a-rag-pipeline-over-your-own-documents', 'build-a-tool-calling-agent-from-scratch', 'build-an-mcp-server-in-python'];
 const featured = guideIds.map(id => guides.find(g => g.id === id)).filter(Boolean);
 const paths = [
@@ -23,10 +24,6 @@ const entryPoints = [
 <Layout landing description={`Learn to actually build with AI. ${lessons.length.toLocaleString('en-US')} free lessons across ${tracks.length} tracks, from your first prompt to production agents. No paywall, no account.`}>
   <div class="landing">
     <section class="opening shell" aria-labelledby="hero-title">
-      <div class="opening-meta" data-hero-line>
-        <span>An open education in AI.</span>
-        <span>Independent. Free. Yours.</span>
-      </div>
       <div class="hero-grid">
         <div class="hero-copy">
           <h1 id="hero-title">
@@ -108,6 +105,13 @@ const entryPoints = [
       <div class="practice-line"><p>And when you think you’ve got it, put it to the test.</p><div><a href="/practice">Practice quizzes</a><a href="/scenarios">Real-world scenarios</a><a href="/interview">Interview prep</a></div></div>
     </section>
 
+    {answers.length > 0 && (
+      <section class="guides shell section-space answers" aria-labelledby="answers-title">
+        <div class="section-intro guide-intro"><h2 id="answers-title" data-reveal>Ask the question.<br />Get the answer first.</h2><div class="section-description"><p>How to become an AI engineer. What a harness is. RAG or fine-tuning. How to use Claude Code. One page each, answered in the first paragraph, then taught properly.</p><a href="/answers" class="text-link">All straight answers <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" /></svg></a></div></div>
+        <div class="guide-list">{answers.map((a) => <a href={`/answers/${a.id}`} class="guide-row"><span class="guide-kind">{a.data.intent === 'pillar' ? 'The path' : a.data.intent === 'howto' ? 'How to' : a.data.intent === 'comparison' ? 'Compared' : 'Explained'}</span><h3>{a.data.title}</h3><span class="guide-duration">Answer first</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" /></svg></a>)}</div>
+      </section>
+    )}
+
     <section class="closing" aria-labelledby="closing-title">
       <div class="shell closing-inner">
         <div data-reveal><h2 id="closing-title">Build something<br />you understand.</h2><a href="/learn" class="action action-primary">Start learning <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" /></svg></a><p>Free. Open. Ready when you are.</p></div>
@@ -128,7 +132,6 @@ const entryPoints = [
   .landing a > svg, .resume a svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.5; }
   .landing a:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; }
   .opening { padding-top: 33px; }
-  .opening-meta { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); letter-spacing: .015em; }
   .hero-grid { display: grid; grid-template-columns: 1.05fr 1fr; align-items: center; gap: 28px; min-height: 650px; padding-block: 40px 54px; }
   .hero-copy { position: relative; z-index: 2; }
   h1 { font-size: clamp(64px, 6.5vw, 96px); line-height: .98; }
@@ -156,6 +159,7 @@ const entryPoints = [
   .manifesto { background: var(--home-indigo); color: var(--home-paper); margin-top: 64px; }
   .manifesto-inner { display: grid; grid-template-columns: 56px 1.2fr 1fr; gap: 45px; padding-block: 96px; align-items: start; }
   .manifesto h2 { color: inherit; }
+  .manifesto a:focus-visible { outline-color: var(--home-paper); }
   .manifesto-symbol svg { width: 54px; fill: var(--home-brass); }
   .manifesto-lead { font-size: 16px; margin-top: 24px; color: var(--home-on-indigo); }
   .manifesto-copy { max-width: 360px; justify-self: end; }
@@ -220,7 +224,6 @@ const entryPoints = [
   @media (max-width: 760px) {
     .shell { width: calc(100% - 40px); }
     .opening { padding-top: 22px; }
-    .opening-meta { font-size: 10px; }
     .hero-grid { grid-template-columns: 1fr; padding-block: 42px 26px; }
     h1 { font-size: clamp(56px, 11.5vw, 84px); }
     .hero-description { margin-top: 24px; font-size: 16px; max-width: 440px; }

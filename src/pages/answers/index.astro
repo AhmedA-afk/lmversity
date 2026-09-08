@@ -1,0 +1,51 @@
+---
+import Layout from '../../components/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const all = (await getCollection('answers')).sort((a, b) => a.data.title.localeCompare(b.data.title));
+const groups: Array<[string, string, typeof all]> = [
+  ['Paths and careers', 'pillar', all.filter((a) => a.data.intent === 'pillar')],
+  ['How to', 'howto', all.filter((a) => a.data.intent === 'howto')],
+  ['What is', 'definition', all.filter((a) => a.data.intent === 'definition')],
+  ['This versus that', 'comparison', all.filter((a) => a.data.intent === 'comparison')],
+];
+---
+<Layout
+  title="Straight answers to AI engineering questions"
+  description="Direct answers to the questions people ask about AI engineering: how to become an AI engineer, what RAG, MCP, agents and harnesses are, how to fine-tune an LLM, and where to learn it all free."
+  type="collection"
+  breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Answers', url: '/answers' }]}
+  itemList={all.map((a) => ({ name: a.data.title, url: `/answers/${a.id}` }))}
+>
+  <section class="head container">
+    <span class="eyebrow">Straight answers</span>
+    <h1>The question, answered first. The curriculum, after.</h1>
+    <p class="sub">Each page opens with the answer in one paragraph, then goes as deep as the question deserves, then points at the lessons that teach it properly. Free, no account, no certificate.</p>
+  </section>
+  {groups.map(([name, key, items]) => items.length > 0 && (
+    <section class="container group" id={key}>
+      <h2>{name}</h2>
+      <ul class="list">
+        {items.map((a) => (
+          <li>
+            <a href={`/answers/${a.id}`}>{a.data.title}</a>
+            <span>{a.data.description}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+</Layout>
+
+<style>
+  .head { padding-block: 56px 8px; }
+  .head h1 { font-size: clamp(30px, 4.5vw, 42px); letter-spacing: -.02em; margin-top: 14px; max-width: 22ch; }
+  .sub { margin-top: 16px; color: var(--muted); max-width: 64ch; font-size: 15px; line-height: 1.6; }
+  .group { padding-top: 40px; }
+  .group h2 { font-size: 20px; letter-spacing: -.012em; }
+  .list { list-style: none; padding: 0; margin: 14px 0 0; border-top: 1px solid var(--rule); }
+  .list li { display: flex; flex-direction: column; gap: 4px; padding: 14px 4px; border-bottom: 1px solid var(--rule); }
+  .list a { font: 500 16px/1.35 'IBM Plex Sans', 'IBM Plex Sans Fallback', sans-serif; color: var(--text); }
+  .list a:hover { color: var(--accent); text-decoration: none; }
+  .list span { font-size: 13.5px; line-height: 1.5; color: var(--muted); max-width: 80ch; }
+</style>

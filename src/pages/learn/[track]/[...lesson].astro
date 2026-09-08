@@ -44,7 +44,7 @@ const allLessons = await getCollection('lessons');
 const summaryFor = new Map(allLessons.map((l) => [l.id, l.data.summary ?? '']));
 ---
 <Layout
-  title={entry.data.title}
+  title={track ? `${entry.data.title} · ${track.name}` : entry.data.title}
   description={entry.data.summary}
   type="learning-resource"
   image={track ? ogImage(`track-${track.id}`) : undefined}

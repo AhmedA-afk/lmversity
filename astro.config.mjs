@@ -11,7 +11,7 @@ function lastModified(path) {
   const candidates = [];
   if (parts[0] === 'learn' && parts.length === 3) {
     candidates.push(`src/content/lessons/${parts[1]}/${parts[2]}.md`, `src/content/lessons/${parts[1]}/${parts[2]}.mdx`);
-  } else if (['guides', 'blog', 'scenarios'].includes(parts[0]) && parts.length === 2) {
+  } else if (['guides', 'blog', 'scenarios', 'answers'].includes(parts[0]) && parts.length === 2) {
     candidates.push(`src/content/${parts[0]}/${parts[1]}.md`, `src/content/${parts[0]}/${parts[1]}.mdx`);
   } else if (parts[0] === 'interview' && parts.length === 2) {
     candidates.push(`src/content/questions/${parts[1]}.mdx`);
@@ -45,10 +45,10 @@ export default defineConfig({
         if (path === '/') {
           item.priority = 1.0;
           item.changefreq = 'daily';
-        } else if (/^\/(learn|guides|reference|practice|interview|scenarios|blog|roles)\/?$/.test(path)) {
+        } else if (/^\/(learn|guides|reference|practice|interview|scenarios|blog|roles|answers)\/?$/.test(path)) {
           item.priority = 0.9;
           item.changefreq = 'weekly';
-        } else if (path.startsWith('/guides/') || path.startsWith('/blog/')) {
+        } else if (path.startsWith('/guides/') || path.startsWith('/blog/') || path.startsWith('/answers/')) {
           item.priority = 0.8;
           item.changefreq = 'weekly';
         } else if (path.startsWith('/learn/') && path.split('/').length === 3) {

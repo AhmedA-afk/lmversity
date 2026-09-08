@@ -43,7 +43,7 @@ const levelForGroup: Record<string, string> = {
 const level = levelForGroup[track.group] ?? 'All levels';
 ---
 <Layout
-  title={track.name}
+  title={`${track.name}: ${inTrack.length} free lessons`}
   description={`${track.summary} ${inTrack.length} free lessons, about ${hours} hours. No paywall, no sign-up.`}
   type="course"
   course={{ level, lessonCount: inTrack.length, sections: modules?.map((m) => m.name) }}

@@ -49,7 +49,7 @@ const {
 } = Astro.props;
 
 const SITE = site.url;
-const fullTitle = title === site.name ? `${site.name} — learn to build with AI` : `${title} · LMVersity`;
+const fullTitle = title === site.name ? `${site.name}: learn AI engineering, free` : `${title} · LMVersity`;
 const canonical = new URL(Astro.url.pathname.replace(/\/$/, '') || '/', SITE).href;
 const imageUrl = new URL(image, SITE).href;
 const abs = (u: string) => new URL(u, SITE).href;

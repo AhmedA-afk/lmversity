@@ -40,6 +40,11 @@ export const GET: APIRoute = async () => {
     rows.push({ t: `FDE · ${p.name}`, u: `/roles/${fdeRole.id}/${p.id}`, k: 'FDE phase', c: fdeRole.name, s: p.summary.slice(0, 130) });
   }
 
+  const answers = await getCollection('answers');
+  for (const a of answers) {
+    rows.push({ t: a.data.title, u: `/answers/${a.id}`, k: 'Answer', c: 'Straight answers', s: a.data.description.slice(0, 130) });
+  }
+
   const guides = await getCollection('guides');
   for (const g of guides) {
     rows.push({ t: g.data.title, u: `/guides/${g.id}`, k: 'Guide', c: 'Guides', s: g.data.description.slice(0, 130) });

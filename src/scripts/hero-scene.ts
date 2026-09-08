@@ -37,7 +37,7 @@ export async function mountHero(container: HTMLElement): Promise<() => void> {
     const cls = path.userData?.node?.getAttribute('class') || '';
     const isGround = cls.includes('ground');
     const star = cls.includes('asterisk');
-    const geometry = new ExtrudeGeometry(SVGLoader.createShapes(path), {
+    const geometry = new ExtrudeGeometry(path.toShapes(), {
       depth: isGround ? 55 : 26, bevelEnabled: true,
       bevelThickness: isGround ? 12 : 2.5, bevelSize: isGround ? 10 : 2.5,
       bevelSegments: 4, curveSegments: 28, steps: 1,

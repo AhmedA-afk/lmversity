@@ -91,4 +91,19 @@ const fde = defineCollection({
   }),
 });
 
-export const collections = { lessons, questions, scenarios, blog, guides, fde };
+// Straight answers: one page per query people actually type. The first
+// paragraph answers it outright; the rest leads into the curriculum.
+const answers = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/answers' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    intent: z.enum(['pillar', 'definition', 'howto', 'comparison']).default('definition'),
+    updated: z.union([z.string(), z.date()]).transform((v) => (typeof v === 'string' ? v : v.toISOString().slice(0, 10))),
+    featured: z.boolean().default(false),
+    faq: z.array(z.object({ q: z.string(), a: z.string() })).default([]),
+    related: z.array(z.string()).default([]),
+  }),
+});
+
+export const collections = { lessons, questions, scenarios, blog, guides, fde, answers };

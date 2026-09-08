@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.1.0",
   "private": true,
-  "description": "LMVersity — a free, hands-on learning platform for the agentic-AI era.",
+  "description": "LMVersity \u2014 a free, hands-on learning platform for the agentic-AI era.",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -16,7 +16,8 @@
     "assets": "npm run fonts && npm run icons && npm run og",
     "check:links": "node scripts/check-links.mjs",
     "prelaunch": "npm run og && npm run build && npm run check:links",
-    "illustrations": "python3 scripts/generate-illustrations.py"
+    "illustrations": "python3 scripts/generate-illustrations.py",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.2.3",

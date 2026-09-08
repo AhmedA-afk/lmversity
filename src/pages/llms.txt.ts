@@ -48,6 +48,7 @@ export const GET: APIRoute = async () => {
   push();
   push(`- [Home](${SITE}/): what LMVersity is and the three ways in`);
   push(`- [Curriculum](${SITE}/learn): every track, grouped and ordered by dependency`);
+  push(`- [Straight answers](${SITE}/answers): direct answers to common questions (how to become an AI engineer, what RAG, MCP, agents and harnesses are), each leading into the curriculum`);
   push(`- [Guides](${SITE}/guides): one task taken end to end, with runnable code`);
   push(`- [Reference](${SITE}/reference): quick guides, cheatsheets, comparisons, worked examples and debugging clinics`);
   push(`- [Glossary](${SITE}/reference/glossary): ${terms.length} terms defined plainly`);
@@ -57,6 +58,14 @@ export const GET: APIRoute = async () => {
   push(`- [Blog](${SITE}/blog): notes on building with AI ([RSS](${SITE}/rss.xml))`);
   push(`- [About](${SITE}/about): what this is and what it deliberately is not`);
   push();
+
+  const answers = (await getCollection('answers')).sort((a, b) => a.data.title.localeCompare(b.data.title));
+  if (answers.length) {
+    push('## Straight answers');
+    push();
+    for (const a of answers) push(`- [${a.data.title}](${SITE}/answers/${a.id}): ${a.data.description}`);
+    push();
+  }
 
   const fde = await getCollection('fde');
   push('## Forward Deployed Engineer path');
