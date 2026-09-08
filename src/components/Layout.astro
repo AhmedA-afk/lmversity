@@ -7,6 +7,7 @@ import TopBar from './TopBar.astro';
 import Footer from './Footer.astro';
 
 export interface Props {
+  landing?: boolean;
   title?: string;
   description?: string;
   type?: 'website' | 'article' | 'learning-resource' | 'course' | 'collection';
@@ -31,6 +32,7 @@ export interface Props {
 }
 
 const {
+  landing = false,
   title = site.name,
   description = 'A free, hands-on learning platform for the agentic-AI era. A structured path from your first prompt to production agents — 680+ lessons, quizzes, guides and interview prep.',
   type = 'website',
@@ -258,7 +260,8 @@ const jsonLd = { '@context': 'https://schema.org', '@graph': graph };
       })();
     </script>
   </head>
-  <body>
+  <body class:list={{ "home-page": landing }}>
+    <!-- LMV-SCULPTURE-2026: THESIS: A sculptural open university. OWN-WORLD: exact four-lobed logo, indigo, brass, paper, large editorial type. STORY: understand, find a path, build. FIRST VIEWPORT: typography left, dimensional original emblem right, curriculum action beside the invitation. FORM: original-logo gallery, user-directed. FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance -->
     <a href="#main" class="skip">Skip to content</a>
     <TopBar />
     <main id="main"><slot /></main>
@@ -267,6 +270,12 @@ const jsonLd = { '@context': 'https://schema.org', '@graph': graph };
     {/* Analytics is opt-in via src/data/site.ts and cookieless by construction.
         With no provider configured, no third-party script loads at all — which
         is what the privacy page says, so it must stay true. */}
+    {site.ads.client && (
+      <>
+        <meta name="google-adsense-account" content={site.ads.client} />
+        <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${site.ads.client}`} crossorigin="anonymous"></script>
+      </>
+    )}
     {site.analytics.provider === 'plausible' && site.analytics.id && (
       <script
         is:inline

@@ -1,4 +1,5 @@
 ---
+import AdSlot from '../../../components/AdSlot.astro';
 import Layout from '../../../components/Layout.astro';
 import { getCollection, render } from 'astro:content';
 import { getTrack } from '../../../data/curriculum.ts';
@@ -179,6 +180,8 @@ const summaryFor = new Map(allLessons.map((l) => [l.id, l.data.summary ?? '']));
         </button>
         <span class="note">Saved in this browser only — no account, nothing sent anywhere. <a href="/saved">Your saved page →</a></span>
       </div>
+
+      <AdSlot kind="lesson" />
 
       <nav class="pager" aria-label="Lesson navigation">
         {prev?.slug ? (

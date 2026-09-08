@@ -27,6 +27,7 @@ const guides = (await getCollection('guides')).slice(0, 2);
       <h1>{entry.data.title}</h1>
       <p class="lede">{entry.data.description}</p>
       <div class="prose"><Content /></div>
+      <AdSlot kind="blog" />
 
       <div class="tagrow chips">{entry.data.tags.map((t) => <span class="chip">{t}</span>)}</div>
 

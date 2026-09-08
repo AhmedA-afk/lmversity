@@ -312,3 +312,16 @@ a.card:hover h3 { color: var(--accent); }
 .saved-btn { position: relative; text-decoration: none; }
 .saved-btn:hover { text-decoration: none; }
 .saved-btn .badge { position: absolute; top: -6px; right: -6px; min-width: 16px; height: 16px; padding: 0 4px; border-radius: 8px; background: var(--accent); color: var(--accent-contrast, #fff); font: 600 9.5px/16px 'IBM Plex Mono', 'IBM Plex Mono Fallback', monospace; text-align: center; }
+
+/* Homepage art direction. Existing lesson and catalog surfaces retain their tokens. */
+:root { --home-indigo: #2E4387; --home-paper: #FBFAF8; --home-brass: #E0B25C; --home-on-indigo: #E0E5F4; --home-rule-indigo: #6D7DAC; }
+:root[data-theme="dark"] { --home-indigo: #26376D; --home-paper: #FBFAF8; --home-brass: #E0B25C; --home-on-indigo: #E0E5F4; --home-rule-indigo: #6D7DAC; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --home-indigo: #26376D; --home-paper: #FBFAF8; --home-brass: #E0B25C; --home-on-indigo: #E0E5F4; --home-rule-indigo: #6D7DAC; } }
+.home-page { scrollbar-color: var(--spine-arrow) var(--bg); }
+.home-page ::selection { background: var(--brand-cool); color: var(--accent-contrast); }
+.home-page .bar .inner { max-width: 1440px; height: 82px; padding-inline: 56px; }
+.home-page .bar .search { background: transparent; width: 180px; }
+.home-page .bar .nlink { font-size: 13px; }
+.home-page .bar .nav { margin-left: 24px; }
+@media (max-width: 1100px) { .home-page .bar .inner { padding-inline: 32px; gap: 18px; } .home-page .bar .nav { margin-left: 0; gap: 13px; } .home-page .bar .search { width: 36px; justify-content: center; padding: 0; } .home-page .bar .search .kbd { display: none; } }
+@media (max-width: 900px) { .home-page .bar .inner { height: 68px; padding-inline: 20px; } }

@@ -54,7 +54,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; manifest-src 'self'; upgrade-insecure-requests"
+          "value": "default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.adtrafficquality.google https://fundingchoicesmessages.google.com https://*.google.com https://*.doubleclick.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.googlesyndication.com https://*.google.com https://*.doubleclick.net https://*.googleusercontent.com https://*.gstatic.com https://*.adtrafficquality.google; font-src 'self'; connect-src 'self' https://*.googlesyndication.com https://*.google.com https://*.doubleclick.net https://*.adtrafficquality.google https://fundingchoicesmessages.google.com; frame-src https://googleads.g.doubleclick.net https://*.googlesyndication.com https://*.google.com https://*.adtrafficquality.google https://fundingchoicesmessages.google.com; manifest-src 'self'; upgrade-insecure-requests"
         }
       ]
     },
@@ -136,6 +136,17 @@
     }
   ],
   "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.lmversity.com"
+        }
+      ],
+      "destination": "https://lmversity.com/",
+      "permanent": true
+    },
     {
       "source": "/:path*",
       "has": [

@@ -1,4 +1,5 @@
 ---
+import AdSlot from '../../../../components/AdSlot.astro';
 import Layout from '../../../../components/Layout.astro';
 import { getCollection, render } from 'astro:content';
 import { fdeRole, fdePhases, getFdePhase, fdeKindLabel } from '../../../../data/fde';
@@ -148,6 +149,8 @@ const related = currentModule
         </button>
         <span class="note">Saved in this browser only — no account, nothing sent anywhere. <a href="/saved">Your saved page →</a></span>
       </div>
+
+      <AdSlot kind="lesson" />
 
       <nav class="pager" aria-label="Page navigation">
         {prev ? <a href={`${base}/${phaseId}/${prev.slug}`} class="pg"><span class="mono">← Previous</span><span class="pt">{prev.title}</span></a> : <span></span>}

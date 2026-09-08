@@ -55,6 +55,18 @@ export const site = {
     host: '',
   },
 
+  /**
+   * Google AdSense. Leave `client` empty and nothing ad-related ships: no
+   * script, no slots, no ads.txt. Set it to the publisher id ("ca-pub-…") and
+   * the head script, the slots and /ads.txt switch on together, and /privacy
+   * describes what that means. Slot ids are optional: without them the units
+   * run as auto-format responsive ads under the client id.
+   */
+  ads: {
+    client: '',
+    slots: { lesson: '', guide: '', blog: '' } as { lesson: string; guide: string; blog: string },
+  },
+
   /** Repository, for "edit this page" links. Empty hides them. */
   repo: {
     url: 'https://github.com/AhmedA-afk/lmversity',

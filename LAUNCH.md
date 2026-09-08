@@ -101,6 +101,24 @@ than rendered blank.
 - [ ] Read `/privacy` against reality one more time. If analytics is on, the page
       must name the provider.
 
+## 7a. Google AdSense — optional
+
+Everything is wired and off. To turn it on:
+
+- [ ] Create the AdSense account at adsense.google.com with the Google account
+      that should receive payment, add `lmversity.com` as the site, and copy the
+      publisher id (`ca-pub-…`).
+- [ ] Set `ads.client` in `src/data/site.ts` and deploy. That single field ships
+      the head script, one labelled unit below the content on lessons, guides and
+      posts, `/ads.txt`, and the advertising section on `/privacy`.
+- [ ] Back in AdSense, click **Verify**; then wait for the site review (days to
+      a few weeks). Set `contact.email` first: reviewers look for a way to reach
+      the owner.
+- [ ] In AdSense → Privacy & messaging, publish the EU consent message. It is
+      served through the same script; the CSP already allows its domains.
+- [ ] Once units are created in AdSense, paste their ids into `ads.slots` so
+      each placement reports separately.
+
 ## 7. Decide on analytics — optional
 
 Off by default, and `/privacy` currently says so in as many words. If you turn it

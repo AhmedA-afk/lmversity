@@ -105,6 +105,8 @@ scripts/
 
 ## Third parties
 
+One optional exception: Google AdSense, off until `ads.client` is set in `src/data/site.ts` (see LAUNCH.md §7a). The CSP already lists its domains.
+
 There are none in the page. Fonts are self-hosted, there is no analytics script
 by default, no tag manager, no embeds and no external images. That claim is
 load-bearing — `/privacy` states it — so keep it true.

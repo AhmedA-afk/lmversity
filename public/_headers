@@ -24,7 +24,7 @@
   # script, no external image host and no embedded frames.
   # 'unsafe-inline' for styles covers Astro's scoped <style> blocks; the
   # inline scripts are the theme bootstrap and the quiz island.
-  Content-Security-Policy: default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; manifest-src 'self'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.adtrafficquality.google https://fundingchoicesmessages.google.com https://*.google.com https://*.doubleclick.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.googlesyndication.com https://*.google.com https://*.doubleclick.net https://*.googleusercontent.com https://*.gstatic.com https://*.adtrafficquality.google; font-src 'self'; connect-src 'self' https://*.googlesyndication.com https://*.google.com https://*.doubleclick.net https://*.adtrafficquality.google https://fundingchoicesmessages.google.com; frame-src https://googleads.g.doubleclick.net https://*.googlesyndication.com https://*.google.com https://*.adtrafficquality.google https://fundingchoicesmessages.google.com; manifest-src 'self'; upgrade-insecure-requests
 
 # Hashed build assets are immutable.
 /_astro/*

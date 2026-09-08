@@ -1,18 +1,36 @@
 ---
-interface Props {
-  label?: string;
-}
+/**
+ * One ad unit, below the primary content. Renders nothing unless
+ * site.ads.client is set, so a site without AdSense has no placeholder, no
+ * reserved space and no script. Labelled, because readers deserve to know.
+ */
+import { site } from '../data/site';
 
-const { label = 'Sponsored' } = Astro.props;
+interface Props {
+  /** Which slot id to use from site.ads.slots. */
+  kind: 'lesson' | 'guide' | 'blog';
+}
+const { kind } = Astro.props;
+const client = site.ads.client;
+const slot = client ? site.ads.slots[kind] : '';
 ---
-<!-- Placement note: keep this below the primary content on blog posts and stats only. -->
-<aside class="ad-slot" aria-label={label}>
-  <span class="eyebrow">{label}</span>
-  <p>A quiet space for a relevant tool or learning partner.</p>
-</aside>
+{client && (
+  <aside class="ad" aria-label="Advertisement">
+    <span class="ad-label mono">Advertisement</span>
+    <ins
+      class="adsbygoogle"
+      style="display:block"
+      data-ad-client={client}
+      data-ad-slot={slot || undefined}
+      data-ad-format="auto"
+      data-full-width-responsive="true"
+    ></ins>
+    <script is:inline>(window.adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </aside>
+)}
 
 <style>
-  .ad-slot { margin-top: 58px; min-height: 96px; border: 1px dashed var(--rule); background: var(--paper); padding: 20px 22px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-  .ad-slot p { color: var(--faint); font-size: 12.5px; }
-  @media (max-width: 560px) { .ad-slot { align-items: flex-start; flex-direction: column; gap: 8px; } }
+  .ad { margin-top: 40px; padding-top: 14px; border-top: 1px solid var(--rule); }
+  .ad-label { display: block; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); margin-bottom: 8px; }
+  .ad :global(.adsbygoogle) { min-height: 90px; }
 </style>

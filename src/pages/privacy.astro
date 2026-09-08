@@ -52,11 +52,50 @@ const updated = '2026-08-30';
       </p>
 
       <h2>Cookies</h2>
-      <p>
-        The site sets none. Not for analytics, not for preferences, not for
-        anything. <code>localStorage</code> is not a cookie: it is never attached to
-        a request, so it cannot be read by this server or by anyone else.
-      </p>
+      {site.ads.client ? (
+        <p>
+          The site itself sets none. The advertising script described below is
+          served by Google and may set cookies or use similar identifiers for ad
+          delivery and measurement; that is the only source of cookies on this
+          domain. <code>localStorage</code> is not a cookie: it is never attached to
+          a request, so it cannot be read by this server or by anyone else.
+        </p>
+      ) : (
+        <p>
+          The site sets none. Not for analytics, not for preferences, not for
+          anything. <code>localStorage</code> is not a cookie: it is never attached to
+          a request, so it cannot be read by this server or by anyone else.
+        </p>
+      )}
+
+      <h2>Advertising</h2>
+      {site.ads.client ? (
+        <>
+          <p>
+            Pages carry one clearly labelled advertisement, placed below the
+            content, served by <strong>Google AdSense</strong>. To do that Google
+            loads a script on the page and may use cookies and device identifiers
+            to show and measure ads, including ads based on your interests and
+            your visits to this and other sites. This site does not send Google
+            anything you type or save here; your reading progress and bookmarks
+            stay in your own browser.
+          </p>
+          <p>
+            You can opt out of personalised advertising in
+            <a href="https://adssettings.google.com" rel="noopener">Google's Ads Settings</a>
+            or through <a href="https://www.aboutads.info/choices/" rel="noopener">aboutads.info</a>.
+            Readers in the EEA, UK and Switzerland are asked for consent before any
+            personalised ad is shown. Google's own policy is at
+            <a href="https://policies.google.com/technologies/ads" rel="noopener">policies.google.com/technologies/ads</a>.
+          </p>
+        </>
+      ) : (
+        <p>
+          There are no advertisements and no advertising scripts. If that changes,
+          this section will describe the provider, what it collects, and how to
+          opt out, before the first ad is shown.
+        </p>
+      )}
 
       <h2>Analytics</h2>
       {site.analytics.provider ? (
@@ -80,7 +119,7 @@ const updated = '2026-08-30';
         There are none in the page. Fonts are self-hosted on this domain rather than
         loaded from a font CDN, so no third party sees your IP address as a
         side effect of rendering text. There are no embedded videos, no tag
-        managers, no chat widgets, no advertising scripts and no external images.
+        managers, no chat widgets, {site.ads.client ? 'one advertising script (Google AdSense, described above)' : 'no advertising scripts'} and no external images.
       </p>
       <p>
         Two ordinary exceptions apply. Your DNS resolver and the hosting provider
