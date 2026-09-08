@@ -1,0 +1,36 @@
+---
+/** Frame shared by every interactive widget: a label, a title, and a note that
+ * says plainly what the widget is and is not (a real tokenizer; an illustrative
+ * distribution; a scripted trace). */
+interface Props { title: string; note?: string }
+const { title, note } = Astro.props;
+---
+<div class="widget">
+  <div class="widget-head">
+    <span class="widget-eyebrow">Try it</span>
+    <span class="widget-title">{title}</span>
+  </div>
+  <div class="widget-body"><slot /></div>
+  {note && <p class="widget-note">{note}</p>}
+</div>
+
+<style is:global>
+  .widget { margin: 1.8em 0; border: 1px solid var(--rule); border-radius: 10px; background: var(--bg); overflow: hidden; }
+  .widget-head { display: flex; align-items: baseline; gap: 12px; padding: 12px 16px; background: var(--paper); border-bottom: 1px solid var(--rule); }
+  .widget-eyebrow { font: 500 11px/1 'IBM Plex Mono', 'IBM Plex Mono Fallback', monospace; letter-spacing: .08em; text-transform: uppercase; color: var(--brand-cool); }
+  .widget-title { font-weight: 600; font-size: 14.5px; }
+  .widget-body { padding: 14px 16px 16px; font-size: 14px; }
+  .widget-note { margin: 0; padding: 10px 16px 12px; border-top: 1px solid var(--rule); font-size: 12.5px; line-height: 1.55; color: var(--muted); }
+  .widget-controls { display: flex; flex-wrap: wrap; gap: 14px 22px; align-items: center; margin-bottom: 12px; }
+  .widget-controls label { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); }
+  .widget-controls input[type=range] { width: 130px; accent-color: var(--brand-cool); }
+  .widget-controls select, .widget textarea, .widget input[type=text] {
+    font: 400 13.5px/1.5 'IBM Plex Sans', 'IBM Plex Sans Fallback', sans-serif; color: var(--text);
+    background: var(--bg); border: 1px solid var(--rule); border-radius: 6px; padding: 6px 8px;
+  }
+  .widget textarea { width: 100%; min-height: 84px; resize: vertical; box-sizing: border-box; }
+  .widget textarea:focus, .widget input:focus, .widget select:focus { outline: 2px solid var(--brand-cool); outline-offset: 0; }
+  .widget-stats { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 10px; font: 400 12px/1.6 'IBM Plex Mono', 'IBM Plex Mono Fallback', monospace; color: var(--muted); }
+  .widget-stats b { color: var(--text); font-weight: 500; }
+  .widget .btn { height: 32px; font-size: 12.5px; padding: 0 12px; }
+</style>

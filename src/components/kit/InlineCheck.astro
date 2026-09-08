@@ -1,0 +1,74 @@
+---
+/**
+ * One question in the flow of a lesson, answered in place. The explanation
+ * shows after an answer, whichever option was chosen, because the point is
+ * the reasoning, not the score. Nothing is sent anywhere.
+ */
+interface Props {
+  question: string;
+  options: string[];
+  /** Zero-based index of the correct option. */
+  answer: number;
+  explanation: string;
+}
+const { question, options, answer, explanation } = Astro.props;
+const name = `check-${Math.random().toString(36).slice(2, 8)}`;
+---
+<div class="icheck" data-icheck data-answer={answer}>
+  <div class="icheck-eyebrow">Check yourself</div>
+  <fieldset>
+    <legend>{question}</legend>
+    {options.map((opt, i) => (
+      <label class="icheck-opt"><input type="radio" name={name} value={i} /><span>{opt}</span></label>
+    ))}
+  </fieldset>
+  <div class="icheck-actions">
+    <button type="button" class="btn btn-ghost" data-check disabled>Check</button>
+    <span class="icheck-verdict mono" data-verdict aria-live="polite"></span>
+  </div>
+  <div class="icheck-explain" data-explain hidden>{explanation}</div>
+</div>
+
+<script>
+  for (const root of document.querySelectorAll<HTMLElement>('[data-icheck]')) {
+    const answer = Number(root.dataset.answer);
+    const button = root.querySelector<HTMLButtonElement>('[data-check]');
+    const verdict = root.querySelector<HTMLElement>('[data-verdict]');
+    const explain = root.querySelector<HTMLElement>('[data-explain]');
+    const radios = Array.from(root.querySelectorAll<HTMLInputElement>('input[type=radio]'));
+    if (!button || !verdict || !explain) continue;
+    radios.forEach((r) => r.addEventListener('change', () => { button.disabled = false; }));
+    button.addEventListener('click', () => {
+      const chosen = radios.findIndex((r) => r.checked);
+      if (chosen < 0) return;
+      const ok = chosen === answer;
+      root.classList.toggle('is-right', ok); root.classList.toggle('is-wrong', !ok);
+      radios.forEach((r, i) => {
+        const label = r.closest('label');
+        label?.classList.toggle('is-answer', i === answer);
+        label?.classList.toggle('is-chosen', i === chosen);
+        r.disabled = true;
+      });
+      verdict.textContent = ok ? 'Right.' : 'Not quite.';
+      explain.hidden = false; button.disabled = true;
+    });
+  }
+</script>
+
+<style>
+  .icheck { margin: 1.8em 0; padding: 16px 18px 16px; border: 1px solid var(--rule); border-radius: 8px; background: var(--paper); }
+  .icheck-eyebrow { font: 500 11px/1 'IBM Plex Mono', 'IBM Plex Mono Fallback', monospace; letter-spacing: .08em; text-transform: uppercase; color: var(--brand-cool); margin-bottom: 8px; }
+  fieldset { border: 0; padding: 0; margin: 0; }
+  legend { font-weight: 600; font-size: 15px; line-height: 1.5; padding: 0; margin-bottom: 10px; }
+  .icheck-opt { display: flex; gap: 10px; align-items: flex-start; padding: 8px 10px; border: 1px solid var(--rule); border-radius: 6px; background: var(--bg); cursor: pointer; font-size: 14px; line-height: 1.5; }
+  .icheck-opt + .icheck-opt { margin-top: 6px; }
+  .icheck-opt input { margin-top: 4px; accent-color: var(--brand-cool); }
+  .icheck-opt.is-answer { border-color: var(--brand-cool); }
+  .icheck-opt.is-chosen:not(.is-answer) { border-color: var(--brand-warm); }
+  .icheck-actions { display: flex; align-items: center; gap: 14px; margin-top: 12px; }
+  .icheck-actions .btn { height: 34px; font-size: 12.5px; }
+  .icheck-verdict { font-size: 12.5px; color: var(--muted); }
+  .is-right .icheck-verdict { color: var(--brand-cool); }
+  .is-wrong .icheck-verdict { color: var(--brand-warm); }
+  .icheck-explain { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--rule); font-size: 14px; line-height: 1.6; color: var(--text); }
+</style>

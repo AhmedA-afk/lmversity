@@ -1,0 +1,99 @@
+---
+/**
+ * A scripted agent trace, stepped one event at a time: what enters the
+ * context, which phase the loop is in, and where it stops. A toggle replays
+ * the same task with a failing tool so the error branch is visible. It is a
+ * script, not a live model, and the note says so.
+ */
+import Widget from './Widget.astro';
+type Ev = { who: 'user' | 'model' | 'tool' | 'stop'; phase: 'PLAN' | 'ACT' | 'OBSERVE' | 'STOP'; title: string; text: string; tokens: number };
+const ok: Ev[] = [
+  { who: 'user', phase: 'PLAN', title: 'User', text: 'Order 48213 arrived damaged. Can I get a refund?', tokens: 14 },
+  { who: 'model', phase: 'PLAN', title: 'Model decides', text: 'Needs the order record before promising anything. Calls get_order.', tokens: 38 },
+  { who: 'tool', phase: 'ACT', title: 'Tool call · get_order', text: '{"order_id": "48213"}', tokens: 12 },
+  { who: 'tool', phase: 'OBSERVE', title: 'Tool result', text: '{"status": "delivered", "delivered_on": "2026-09-01", "item": "desk lamp", "total": 1899}', tokens: 41 },
+  { who: 'model', phase: 'PLAN', title: 'Model decides', text: 'Delivered seven days ago, inside the return window. Checks the damage policy before deciding.', tokens: 44 },
+  { who: 'tool', phase: 'ACT', title: 'Tool call · lookup_policy', text: '{"topic": "damaged on arrival"}', tokens: 11 },
+  { who: 'tool', phase: 'OBSERVE', title: 'Tool result', text: 'Damaged-on-arrival: full refund or replacement within 30 days, photo required.', tokens: 27 },
+  { who: 'model', phase: 'PLAN', title: 'Model decides', text: 'Has enough to answer. No further tool needed, so it produces the final message.', tokens: 30 },
+  { who: 'stop', phase: 'STOP', title: 'Final answer', text: 'Sorry about the lamp. A damaged-on-arrival refund is covered. Please reply with a photo and I will raise the refund of ₹1,899 to your original payment method.', tokens: 52 },
+];
+const fail: Ev[] = [
+  ...ok.slice(0, 3),
+  { who: 'tool', phase: 'OBSERVE', title: 'Tool result · error', text: '{"error": "upstream timeout", "retryable": true}', tokens: 16 },
+  { who: 'model', phase: 'PLAN', title: 'Model decides', text: 'Error is marked retryable. Harness policy allows one retry, so it calls get_order again.', tokens: 36 },
+  { who: 'tool', phase: 'ACT', title: 'Tool call · get_order (retry)', text: '{"order_id": "48213"}', tokens: 12 },
+  { who: 'tool', phase: 'OBSERVE', title: 'Tool result · error', text: '{"error": "upstream timeout", "retryable": true}', tokens: 16 },
+  { who: 'model', phase: 'PLAN', title: 'Model decides', text: 'Retry budget exhausted. Must not guess the order state. Escalates rather than inventing a refund.', tokens: 40 },
+  { who: 'stop', phase: 'STOP', title: 'Final answer · escalation', text: 'I cannot reach the order system right now, so I have not changed anything. I have raised a ticket for a colleague to complete the refund and you will hear back within one business day.', tokens: 55 },
+];
+---
+<Widget title="The agent loop, one event at a time" note="A scripted trace of a fictional support agent, not a live model. Token counts are approximate and exist to show the context growing. The loop is the same one every agent harness runs: decide, act, observe, until a stop condition holds.">
+  <div class="al" data-agentloop data-ok={JSON.stringify(ok)} data-fail={JSON.stringify(fail)}>
+    <div class="widget-controls">
+      <button type="button" class="btn btn-ghost" data-prev disabled>Back</button>
+      <button type="button" class="btn btn-primary" data-next>Next event</button>
+      <button type="button" class="btn btn-ghost" data-reset>Reset</button>
+      <label><input type="checkbox" data-failmode /> the order tool times out</label>
+    </div>
+    <div class="al-phases" aria-label="Loop phase">
+      <span data-phase="PLAN">DECIDE</span><span class="al-arrow">→</span><span data-phase="ACT">ACT</span><span class="al-arrow">→</span><span data-phase="OBSERVE">OBSERVE</span><span class="al-arrow">→</span><span data-phase="STOP">STOP</span>
+    </div>
+    <div class="al-context">
+      <span class="mono" data-ctx>context: 0 tokens</span>
+      <span class="al-meter"><span data-meter></span></span>
+    </div>
+    <ol class="al-log" data-log aria-live="polite"><li class="al-empty">Press Next event to start the trace.</li></ol>
+  </div>
+</Widget>
+
+<script>
+  for (const root of document.querySelectorAll<HTMLElement>('[data-agentloop]')) {
+    const q = <T extends Element>(s: string) => root.querySelector<T>(s)!;
+    const traces = { ok: JSON.parse(root.dataset.ok || '[]'), fail: JSON.parse(root.dataset.fail || '[]') };
+    const prev = q<HTMLButtonElement>('[data-prev]'), next = q<HTMLButtonElement>('[data-next]'), reset = q<HTMLButtonElement>('[data-reset]');
+    const failmode = q<HTMLInputElement>('[data-failmode]'), log = q<HTMLOListElement>('[data-log]'), ctx = q<HTMLElement>('[data-ctx]'), meter = q<HTMLElement>('[data-meter]');
+    const MAX = 400;
+    let i = 0;
+    const trace = () => (failmode.checked ? traces.fail : traces.ok) as { who: string; phase: string; title: string; text: string; tokens: number }[];
+    const render = () => {
+      const t = trace(), shown = t.slice(0, i);
+      log.innerHTML = shown.length ? shown.map((e, n) => `<li class="al-ev al-${e.who} ${n === shown.length - 1 ? 'is-latest' : ''}"><span class="al-who mono">${e.title}</span><span class="al-text">${e.text}</span><span class="al-tok mono">+${e.tokens}</span></li>`).join('') : '<li class="al-empty">Press Next event to start the trace.</li>';
+      const total = shown.reduce((a, e) => a + e.tokens, 0);
+      ctx.textContent = `context: ${total} tokens`;
+      meter.style.width = `${Math.min(100, total / MAX * 100)}%`;
+      const phase = shown.length ? shown[shown.length - 1].phase : '';
+      root.querySelectorAll<HTMLElement>('[data-phase]').forEach((p) => p.classList.toggle('is-on', p.dataset.phase === phase));
+      prev.disabled = i === 0; next.disabled = i >= t.length;
+      next.textContent = i >= t.length ? 'Loop stopped' : 'Next event';
+      log.lastElementChild?.scrollIntoView({ block: 'nearest' });
+    };
+    next.addEventListener('click', () => { if (i < trace().length) i++; render(); });
+    prev.addEventListener('click', () => { if (i > 0) i--; render(); });
+    reset.addEventListener('click', () => { i = 0; render(); });
+    failmode.addEventListener('change', () => { i = Math.min(i, 3); render(); });
+    render();
+  }
+</script>
+
+<style>
+  .al-phases { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 4px 0 10px; font: 500 11px/1 'IBM Plex Mono', 'IBM Plex Mono Fallback', monospace; letter-spacing: .08em; }
+  .al-phases span[data-phase] { padding: 6px 10px; border: 1.5px solid var(--rule); border-radius: 6px; color: var(--muted); }
+  .al-phases span.is-on { border-color: var(--brand-cool); color: var(--brand-cool); background: var(--accent-wash); }
+  .al-phases span[data-phase="STOP"].is-on { border-color: var(--brand-warm); color: var(--brand-warm); background: rgba(168, 116, 28, .12); }
+  .al-arrow { color: var(--spine-arrow); }
+  .al-context { display: flex; align-items: center; gap: 12px; font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+  .al-meter { flex: 1; height: 8px; background: var(--paper); border: 1px solid var(--rule); border-radius: 4px; overflow: hidden; }
+  .al-meter span { display: block; height: 100%; width: 0; background: var(--brand-cool); transition: width .2s ease-out; }
+  .al-log { list-style: none; margin: 0; padding: 0; max-height: 340px; overflow-y: auto; border: 1px solid var(--rule); border-radius: 6px; background: var(--paper); }
+  .al-log :global(li) { display: grid; grid-template-columns: 150px 1fr 44px; gap: 10px; padding: 9px 12px; border-bottom: 1px solid var(--rule); font-size: 13px; line-height: 1.5; }
+  .al-log :global(li:last-child) { border-bottom: 0; }
+  .al-log :global(.al-empty) { display: block; color: var(--muted); }
+  .al-log :global(.al-who) { font-size: 11px; letter-spacing: .04em; color: var(--muted); padding-top: 2px; }
+  .al-log :global(.al-model .al-who) { color: var(--brand-cool); }
+  .al-log :global(.al-stop .al-who) { color: var(--brand-warm); }
+  .al-log :global(.al-tool .al-text) { font-family: 'IBM Plex Mono', 'IBM Plex Mono Fallback', monospace; font-size: 12px; word-break: break-word; }
+  .al-log :global(.al-tok) { text-align: right; font-size: 11px; color: var(--muted); }
+  .al-log :global(.is-latest) { background: var(--bg); }
+  @media (max-width: 600px) { .al-log :global(li) { grid-template-columns: 1fr; gap: 3px; } .al-log :global(.al-tok) { text-align: left; } }
+</style>

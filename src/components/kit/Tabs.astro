@@ -1,0 +1,81 @@
+---
+/**
+ * Tabbed panels. Children are <Tab label="…">. Without JavaScript every panel
+ * shows, stacked, under its label, so nothing is hidden from a reader or a
+ * crawler. With JavaScript the labels become a tablist. `group` syncs the
+ * chosen tab across every Tabs on the site with the same group name (for
+ * example, a reader who picks "Anthropic" once sees Anthropic everywhere).
+ */
+interface Props { group?: string }
+const { group } = Astro.props;
+---
+<div class="tabs" data-tabs data-group={group}>
+  <div class="tabs-list" role="tablist" data-list hidden></div>
+  <div class="tabs-panels"><slot /></div>
+</div>
+
+<script>
+  const KEY = 'fg-tabs';
+  const read = (): Record<string, string> => { try { return JSON.parse(localStorage.getItem(KEY) || '{}'); } catch { return {}; } };
+  const write = (v: Record<string, string>) => { try { localStorage.setItem(KEY, JSON.stringify(v)); } catch {} };
+  const all = Array.from(document.querySelectorAll<HTMLElement>('[data-tabs]'));
+  let uid = 0;
+  for (const root of all) {
+    const list = root.querySelector<HTMLElement>('[data-list]');
+    const panels = Array.from(root.querySelectorAll<HTMLElement>(':scope > .tabs-panels > [data-tab]'));
+    if (!list || panels.length < 2) continue;
+    const group = root.dataset.group || '';
+    const id = `tabs-${++uid}`;
+    const buttons = panels.map((panel, i) => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.role = 'tab'; b.id = `${id}-t${i}`; b.textContent = panel.dataset.label || `Tab ${i + 1}`;
+      panel.id = `${id}-p${i}`; panel.setAttribute('role', 'tabpanel'); panel.setAttribute('aria-labelledby', b.id);
+      panel.querySelector('.tab-heading')?.setAttribute('hidden', '');
+      b.setAttribute('aria-controls', panel.id);
+      list.appendChild(b);
+      return b;
+    });
+    list.hidden = false;
+    root.classList.add('is-enhanced');
+    const select = (i: number, persist: boolean) => {
+      buttons.forEach((b, j) => { b.setAttribute('aria-selected', String(i === j)); b.tabIndex = i === j ? 0 : -1; });
+      panels.forEach((p, j) => { p.hidden = i !== j; });
+      if (persist && group) { const s = read(); s[group] = panels[i].dataset.label || ''; write(s); }
+    };
+    buttons.forEach((b, i) => {
+      b.addEventListener('click', () => {
+        select(i, true);
+        if (group) document.dispatchEvent(new CustomEvent('fg-tabs', { detail: { group, label: panels[i].dataset.label } }));
+      });
+      b.addEventListener('keydown', (e) => {
+        const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+        if (!d) return; e.preventDefault();
+        const n = (i + d + buttons.length) % buttons.length; buttons[n].focus(); buttons[n].click();
+      });
+    });
+    const remembered = group ? read()[group] : '';
+    const start = Math.max(0, panels.findIndex((p) => p.dataset.label === remembered));
+    select(start, false);
+    if (group) document.addEventListener('fg-tabs', (e) => {
+      const d = (e as CustomEvent).detail; if (d.group !== group) return;
+      const i = panels.findIndex((p) => p.dataset.label === d.label); if (i >= 0) select(i, false);
+    });
+  }
+</script>
+
+<style>
+  .tabs { margin: 1.6em 0; border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; }
+  .tabs-list { display: flex; flex-wrap: wrap; gap: 0; background: var(--paper); border-bottom: 1px solid var(--rule); }
+  .tabs-list :global(button) {
+    appearance: none; background: none; border: 0; border-bottom: 2px solid transparent; margin-bottom: -1px;
+    padding: 10px 14px; cursor: pointer; color: var(--muted);
+    font: 500 12.5px/1 'IBM Plex Sans', 'IBM Plex Sans Fallback', sans-serif;
+  }
+  .tabs-list :global(button[aria-selected="true"]) { color: var(--text); border-bottom-color: var(--brand-cool); background: var(--bg); }
+  .tabs-list :global(button:focus-visible) { outline: 2px solid var(--brand-cool); outline-offset: -2px; }
+  .tabs-panels { padding: 14px 16px 16px; }
+  .tabs-panels :global([data-tab]) { font-size: 14.5px; line-height: 1.65; }
+  .tabs-panels :global([data-tab] > * + *) { margin-top: .7em; }
+  .tabs-panels :global(.tab-heading) { font: 500 11px/1 'IBM Plex Mono', 'IBM Plex Mono Fallback', monospace; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; }
+  .tabs:not(.is-enhanced) .tabs-panels :global([data-tab] + [data-tab]) { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--rule); }
+</style>

@@ -1,0 +1,54 @@
+---
+/** Visual check page for the component kit and widgets. Not indexed, not linked. */
+import Layout from '../components/Layout.astro';
+import Callout from '../components/kit/Callout.astro';
+import Steps from '../components/kit/Steps.astro';
+import Step from '../components/kit/Step.astro';
+import Compare from '../components/kit/Compare.astro';
+import Pane from '../components/kit/Pane.astro';
+import Tabs from '../components/kit/Tabs.astro';
+import Tab from '../components/kit/Tab.astro';
+import InlineCheck from '../components/kit/InlineCheck.astro';
+import Tokenizer from '../components/widgets/Tokenizer.astro';
+import Sampler from '../components/widgets/Sampler.astro';
+import Chunker from '../components/widgets/Chunker.astro';
+import Similarity from '../components/widgets/Similarity.astro';
+import AgentLoop from '../components/widgets/AgentLoop.astro';
+---
+<Layout title="Component kit" description="Internal check page for the lesson component kit." noindex>
+  <article class="wrap" style="max-width: 760px; margin: 40px auto; padding: 0 24px;">
+    <div class="prose">
+      <h1>Component kit</h1>
+      <p>Every block below is what a lesson can use. This page exists so the pieces can be looked at together.</p>
+      <h2>Callouts</h2>
+      <Callout kind="breaks" title="Overlap hides the boundary, it does not remove it"><p>A chunk boundary inside a table still splits the header from its rows. Overlap only means both halves carry a copy of the seam.</p></Callout>
+      <Callout kind="production"><p>Size chunks in tokens, with the same tokenizer your embedding model uses, and log the distribution of chunk lengths at index time.</p></Callout>
+      <Callout kind="vendors"><p>OpenAI counts tokens with tiktoken. Anthropic exposes a count-tokens endpoint. Google's Gemini API reports usage in the response. Same idea, three different numbers for the same text.</p></Callout>
+      <h2>Steps</h2>
+      <Steps>
+        <Step title="Label twenty examples first"><p>Before any prompt work, write the answers you would accept. This is the eval.</p></Step>
+        <Step title="Run the baseline"><p>One plain prompt, no retrieval. Record the score.</p></Step>
+        <Step title="Change one thing"><p>Add retrieval, or change the chunker, never both in the same run.</p></Step>
+      </Steps>
+      <h2>Compare</h2>
+      <Compare title="Post-filter vs pre-filter">
+        <Pane title="Post-filter" tone="bad"><p>Retrieve top-k, then drop what the user cannot see. When permissions correlate with relevance, the list empties.</p></Pane>
+        <Pane title="Pre-filter" tone="good"><p>Pass the user's permissions into the search itself. Restricted chunks are never candidates.</p></Pane>
+      </Compare>
+      <h2>Tabs</h2>
+      <Tabs group="vendor">
+        <Tab label="Anthropic"><p>Tools are declared in the request; the model returns a tool_use block and the harness replies with tool_result.</p></Tab>
+        <Tab label="OpenAI"><p>Functions are declared as tools; the model returns tool_calls and the harness appends a tool message.</p></Tab>
+        <Tab label="Open models"><p>Formats vary by model family and serving stack. Check the chat template.</p></Tab>
+      </Tabs>
+      <h2>Inline check</h2>
+      <InlineCheck question="Where must permission filtering happen in a RAG system?" options={['In the system prompt', 'In retrieval, before anything reaches the prompt', 'In a post-processing step on the answer']} answer={1} explanation="By the time a chunk is in the prompt the model has read it. Only retrieval can guarantee a restricted chunk is never a candidate." />
+      <h2>Widgets</h2>
+      <Tokenizer />
+      <Sampler />
+      <Chunker />
+      <Similarity />
+      <AgentLoop />
+    </div>
+  </article>
+</Layout>

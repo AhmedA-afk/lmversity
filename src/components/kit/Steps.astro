@@ -1,0 +1,20 @@
+---
+/** Numbered procedure with a rail. Children are <Step title="…">. */
+---
+<ol class="steps"><slot /></ol>
+
+<style>
+  .steps { list-style: none; counter-reset: step; margin: 1.6em 0; padding: 0; }
+  .steps :global(.step) { position: relative; padding: 0 0 22px 46px; counter-increment: step; }
+  .steps :global(.step::before) {
+    content: counter(step); position: absolute; left: 0; top: 0;
+    width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center;
+    border: 1.5px solid var(--brand-cool); color: var(--brand-cool); background: var(--bg);
+    font: 500 12px/1 'IBM Plex Mono', 'IBM Plex Mono Fallback', monospace;
+  }
+  .steps :global(.step:not(:last-child)::after) { content: ''; position: absolute; left: 13.5px; top: 30px; bottom: 0; border-left: 1.5px solid var(--rule); }
+  .steps :global(.step-title) { font-weight: 600; font-size: 15px; margin: 4px 0 4px; }
+  .steps :global(.step-body) { font-size: 14.5px; line-height: 1.65; color: var(--text); }
+  .steps :global(.step-body > * + *) { margin-top: .7em; }
+  .steps :global(.step-body pre.astro-code) { margin-top: .8em; }
+</style>

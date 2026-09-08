@@ -1,0 +1,19 @@
+---
+interface Props { title: string; tone?: 'good' | 'bad' | 'neutral' }
+const { title, tone = 'neutral' } = Astro.props;
+---
+<section class={`pane pane-${tone}`}>
+  <div class="pane-head">{title}</div>
+  <div class="pane-body"><slot /></div>
+</section>
+
+<style>
+  .pane { background: var(--bg); padding: 14px 16px 16px; min-width: 0; }
+  .pane-head { font: 500 11px/1 'IBM Plex Mono', 'IBM Plex Mono Fallback', monospace; letter-spacing: .08em; text-transform: uppercase; padding-bottom: 8px; margin-bottom: 10px; border-bottom: 1.5px solid var(--rule); color: var(--muted); }
+  .pane-good .pane-head { color: var(--brand-cool); border-bottom-color: var(--brand-cool); }
+  .pane-bad .pane-head { color: var(--brand-warm); border-bottom-color: var(--brand-warm); }
+  .pane-body { font-size: 14px; line-height: 1.62; }
+  .pane-body :global(> * + *) { margin-top: .7em; }
+  .pane-body :global(pre.astro-code) { font-size: 12.5px; padding: 12px 14px; }
+  .pane-body :global(ul), .pane-body :global(ol) { padding-left: 1.3em; }
+</style>

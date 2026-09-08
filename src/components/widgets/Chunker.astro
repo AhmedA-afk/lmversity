@@ -1,0 +1,106 @@
+---
+/**
+ * Chunk size, overlap and boundary strategy on a real paragraph. Shows every
+ * chunk, the overlap it shares with its predecessor, and what the choices
+ * cost in stored characters.
+ */
+import Widget from './Widget.astro';
+interface Props { text?: string }
+const { text = `Returns are accepted within 30 days of delivery. Items must be unused and in their original packaging. Refunds go back to the original payment method within 5 business days of the item reaching our warehouse.
+
+Exceptions apply. Perishable goods, personalised items and gift cards cannot be returned. Electronics that have been activated can be exchanged but not refunded.
+
+To start a return, open the order in your account and choose Return. A prepaid label is generated for orders over 500 rupees; smaller orders are charged 60 rupees for the label, deducted from the refund.` } = Astro.props;
+---
+<Widget title="Chunking: size, overlap, boundaries" note="Sizes are in characters here so the effect is visible without a tokenizer. Production pipelines usually size chunks in tokens; the trade-offs are the same. The sample text is fictional.">
+  <div class="chunk" data-chunker>
+    <div class="widget-controls">
+      <label>Size <input type="range" data-size min="60" max="600" step="10" value="220" /><b class="mono" data-size-v>220</b></label>
+      <label>Overlap <input type="range" data-ov min="0" max="50" step="5" value="15" /><b class="mono" data-ov-v>15%</b></label>
+      <label>Split at
+        <select data-strat>
+          <option value="fixed">fixed length</option>
+          <option value="sentence" selected>sentence boundary</option>
+          <option value="paragraph">paragraph boundary</option>
+        </select>
+      </label>
+    </div>
+    <textarea data-input spellcheck="false">{text}</textarea>
+    <div class="chunk-out" data-out></div>
+    <div class="widget-stats" data-stats></div>
+  </div>
+</Widget>
+
+<script>
+  for (const root of document.querySelectorAll<HTMLElement>('[data-chunker]')) {
+    const q = <T extends Element>(s: string) => root.querySelector<T>(s)!;
+    const input = q<HTMLTextAreaElement>('[data-input]'), out = q<HTMLElement>('[data-out]'), stats = q<HTMLElement>('[data-stats]');
+    const size = q<HTMLInputElement>('[data-size]'), ov = q<HTMLInputElement>('[data-ov]'), strat = q<HTMLSelectElement>('[data-strat]');
+    const esc = (s: string) => s.replace(/[&<>]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c] as string));
+    const units = (text: string, mode: string): string[] => {
+      if (mode === 'paragraph') return text.split(/\n\s*\n/).map((s) => s.trim()).filter(Boolean);
+      if (mode === 'sentence') return (text.replace(/\s+/g, ' ').match(/[^.!?]+[.!?]+["')\]]*\s*|[^.!?]+$/g) || []).map((s) => s.trim()).filter(Boolean);
+      return [text.replace(/\s+/g, ' ').trim()];
+    };
+    const chunk = (text: string, max: number, overlapFrac: number, mode: string) => {
+      const chunks: { text: string; overlap: number }[] = [];
+      if (mode === 'fixed') {
+        const flat = units(text, 'fixed')[0] || '';
+        const step = Math.max(1, Math.round(max * (1 - overlapFrac)));
+        for (let i = 0; i < flat.length; i += step) {
+          chunks.push({ text: flat.slice(i, i + max), overlap: i === 0 ? 0 : Math.min(max - step, flat.length - i) });
+          if (i + max >= flat.length) break;
+        }
+        return chunks;
+      }
+      const parts = units(text, mode);
+      let current: string[] = [];
+      const len = (arr: string[]) => arr.join(' ').length;
+      const flush = () => {
+        if (!current.length) return;
+        const body = current.join(' ');
+        const target = Math.round(max * overlapFrac);
+        let carry: string[] = [], carryLen = 0;
+        for (let i = current.length - 1; i >= 0 && carryLen + current[i].length <= target; i--) { carry.unshift(current[i]); carryLen += current[i].length + 1; }
+        chunks.push({ text: body, overlap: chunks.length ? lastCarry : 0 });
+        lastCarry = carry.join(' ').length;
+        current = carry;
+      };
+      let lastCarry = 0;
+      for (const part of parts) {
+        if (part.length > max) { flush(); current = []; chunks.push({ text: part, overlap: 0 }); lastCarry = 0; continue; }
+        if (len([...current, part]) > max) flush();
+        current.push(part);
+      }
+      if (current.length && (chunks.length === 0 || current.join(' ') !== chunks[chunks.length - 1].text)) {
+        chunks.push({ text: current.join(' '), overlap: chunks.length ? lastCarry : 0 });
+      }
+      return chunks;
+    };
+    const render = () => {
+      const max = Number(size.value), overlapFrac = Number(ov.value) / 100;
+      q<HTMLElement>('[data-size-v]').textContent = String(max);
+      q<HTMLElement>('[data-ov-v]').textContent = `${ov.value}%`;
+      const chunks = chunk(input.value, max, overlapFrac, strat.value);
+      out.innerHTML = chunks.map((c, i) => {
+        const o = Math.min(c.overlap, c.text.length);
+        return `<div class="chunk-card"><span class="chunk-idx mono">${i + 1} · ${c.text.length} chars</span><p>${o ? `<mark>${esc(c.text.slice(0, o))}</mark>` : ''}${esc(c.text.slice(o))}</p></div>`;
+      }).join('');
+      const stored = chunks.reduce((a, c) => a + c.text.length, 0);
+      const original = input.value.replace(/\s+/g, ' ').trim().length || 1;
+      const mean = chunks.length ? Math.round(stored / chunks.length) : 0;
+      stats.innerHTML = `<span><b>${chunks.length}</b> chunks</span><span><b>${mean}</b> mean chars</span><span><b>${(stored / original).toFixed(2)}×</b> stored vs original</span>`;
+    };
+    [size, ov, strat].forEach((el) => el.addEventListener('input', render));
+    input.addEventListener('input', render);
+    render();
+  }
+</script>
+
+<style>
+  .chunk-out { display: grid; gap: 8px; margin-top: 10px; }
+  .chunk-out :global(.chunk-card) { border: 1px solid var(--rule); border-left: 3px solid var(--brand-cool); border-radius: 6px; padding: 8px 12px 10px; background: var(--paper); }
+  .chunk-out :global(.chunk-idx) { display: block; font-size: 11px; letter-spacing: .06em; color: var(--muted); margin-bottom: 4px; }
+  .chunk-out :global(p) { margin: 0; font-size: 13px; line-height: 1.6; }
+  .chunk-out :global(mark) { background: rgba(168, 116, 28, .18); color: inherit; border-bottom: 1.5px solid var(--brand-warm); }
+</style>

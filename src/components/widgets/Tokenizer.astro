@@ -1,0 +1,89 @@
+---
+/**
+ * A real tokenizer, run in the browser. Uses the published cl100k_base and
+ * o200k_base vocabularies (OpenAI's GPT-4 and GPT-4o families) via the
+ * gpt-tokenizer package, loaded only when the reader interacts. Anthropic and
+ * Google tokenizers differ and are not bundled, and the note says so.
+ */
+import Widget from './Widget.astro';
+interface Props { text?: string }
+const { text = 'Tokenization is not the same as splitting on spaces. Unusual words, code, and non-English text cost more tokens: नमस्ते, naïveté, function_name_v2.' } = Astro.props;
+---
+<Widget title="Tokenizer" note="Live encoding with the published cl100k_base (GPT-4, GPT-3.5) and o200k_base (GPT-4o and later) vocabularies. Claude and Gemini use their own tokenizers, so counts there differ, usually within the same order of magnitude.">
+  <div class="tok" data-tokenizer>
+    <div class="widget-controls">
+      <label>Vocabulary
+        <select data-enc>
+          <option value="cl100k_base">cl100k_base (GPT-4)</option>
+          <option value="o200k_base">o200k_base (GPT-4o)</option>
+        </select>
+      </label>
+      <label><input type="checkbox" data-ids /> show token ids</label>
+    </div>
+    <textarea data-input spellcheck="false">{text}</textarea>
+    <div class="tok-out" data-out aria-live="polite"><span class="tok-hint">Type or edit the text to tokenize it.</span></div>
+    <div class="widget-stats" data-stats></div>
+  </div>
+</Widget>
+
+<script>
+  type Enc = { encode: (s: string) => number[]; decode: (ids: number[]) => string };
+  const loaders: Record<string, () => Promise<Enc>> = {
+    cl100k_base: () => import('gpt-tokenizer/encoding/cl100k_base'),
+    o200k_base: () => import('gpt-tokenizer/encoding/o200k_base'),
+  };
+  const cache: Record<string, Promise<Enc>> = {};
+  const load = (name: string) => (cache[name] ??= loaders[name]());
+  for (const root of document.querySelectorAll<HTMLElement>('[data-tokenizer]')) {
+    const input = root.querySelector<HTMLTextAreaElement>('[data-input]');
+    const out = root.querySelector<HTMLElement>('[data-out]');
+    const stats = root.querySelector<HTMLElement>('[data-stats]');
+    const encSel = root.querySelector<HTMLSelectElement>('[data-enc]');
+    const showIds = root.querySelector<HTMLInputElement>('[data-ids]');
+    if (!input || !out || !stats || !encSel || !showIds) continue;
+    let timer = 0;
+    const run = async () => {
+      const name = encSel.value;
+      out.classList.add('is-loading');
+      const enc = await load(name);
+      if (encSel.value !== name) return;
+      const text = input.value;
+      const ids = enc.encode(text);
+      const frag = document.createDocumentFragment();
+      ids.forEach((id, i) => {
+        const span = document.createElement('span');
+        span.className = `tok-t tok-${i % 5}`;
+        const piece = enc.decode([id]);
+        span.textContent = piece.replace(/ /g, '␣').replace(/\n/g, '↵');
+        if (showIds.checked) span.title = String(id), span.dataset.id = String(id);
+        frag.appendChild(span);
+      });
+      out.replaceChildren(frag);
+      out.classList.remove('is-loading');
+      out.classList.toggle('show-ids', showIds.checked);
+      const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+      stats.innerHTML = `<span><b>${ids.length}</b> tokens</span><span><b>${text.length}</b> characters</span><span><b>${words}</b> words</span><span><b>${ids.length ? (text.length / ids.length).toFixed(2) : '0'}</b> chars per token</span>`;
+    };
+    const schedule = () => { clearTimeout(timer); timer = window.setTimeout(run, 120); };
+    input.addEventListener('input', schedule);
+    encSel.addEventListener('change', run);
+    showIds.addEventListener('change', run);
+    const once = () => { run(); input.removeEventListener('focus', once); io.disconnect(); };
+    input.addEventListener('focus', once);
+    const io = new IntersectionObserver(([e]) => { if (e.isIntersecting) once(); }, { rootMargin: '200px' });
+    io.observe(root);
+  }
+</script>
+
+<style>
+  .tok-out { margin-top: 10px; min-height: 48px; padding: 10px 12px; border: 1px solid var(--rule); border-radius: 6px; background: var(--paper); font: 400 13.5px/1.9 'IBM Plex Mono', 'IBM Plex Mono Fallback', monospace; white-space: pre-wrap; word-break: break-word; }
+  .tok-out.is-loading { opacity: .6; }
+  .tok-hint { color: var(--muted); font-family: 'IBM Plex Sans', 'IBM Plex Sans Fallback', sans-serif; }
+  .tok-out :global(.tok-t) { display: inline-block; padding: 0 2px; margin: 1px 0; border-radius: 3px; border-bottom: 2px solid transparent; }
+  .tok-out :global(.tok-0) { background: rgba(59, 84, 163, .14); border-bottom-color: rgba(59, 84, 163, .55); }
+  .tok-out :global(.tok-1) { background: rgba(168, 116, 28, .14); border-bottom-color: rgba(168, 116, 28, .55); }
+  .tok-out :global(.tok-2) { background: rgba(59, 84, 163, .07); border-bottom-color: rgba(59, 84, 163, .3); }
+  .tok-out :global(.tok-3) { background: rgba(168, 116, 28, .07); border-bottom-color: rgba(168, 116, 28, .3); }
+  .tok-out :global(.tok-4) { background: var(--chip-bg); border-bottom-color: var(--spine-arrow); }
+  .tok-out.show-ids :global(.tok-t::after) { content: attr(data-id); display: block; font-size: 9.5px; line-height: 1; color: var(--muted); text-align: center; padding-bottom: 2px; }
+</style>

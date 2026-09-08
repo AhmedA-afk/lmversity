@@ -1,0 +1,35 @@
+---
+/**
+ * A labelled aside inside lesson prose. Four kinds, one visual rule: brass
+ * marks what breaks, indigo marks what to do. Never the only place a fact
+ * lives; the prose around it carries the same point.
+ */
+interface Props {
+  kind?: 'breaks' | 'production' | 'vendors' | 'note' | 'try';
+  title?: string;
+}
+const labels = { breaks: 'Why it breaks', production: 'In production', vendors: 'Vendor differences', note: 'Note', try: 'Try it' };
+const { kind = 'note', title } = Astro.props;
+---
+<aside class={`callout callout-${kind}`}>
+  <div class="callout-head">
+    <span class="callout-eyebrow">{labels[kind]}</span>
+    {title && <span class="callout-title">{title}</span>}
+  </div>
+  <div class="callout-body"><slot /></div>
+</aside>
+
+<style>
+  .callout { margin: 1.6em 0; padding: 14px 18px 15px; border: 1px solid var(--rule); border-left-width: 3px; border-radius: 8px; background: var(--paper); }
+  .callout-breaks { border-left-color: var(--brand-warm); }
+  .callout-production, .callout-note, .callout-try { border-left-color: var(--brand-cool); }
+  .callout-vendors { border-left-color: var(--brand-cool); border-left-style: dashed; }
+  .callout-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+  .callout-eyebrow { font: 500 11px/1 'IBM Plex Mono', 'IBM Plex Mono Fallback', monospace; letter-spacing: .08em; text-transform: uppercase; color: var(--brand-cool); }
+  .callout-breaks .callout-eyebrow { color: var(--brand-warm); }
+  .callout-title { font-weight: 600; font-size: 14.5px; }
+  .callout-body { font-size: 14.5px; line-height: 1.65; }
+  .callout-body :global(> * + *) { margin-top: .7em; }
+  .callout-body :global(p:first-child) { margin-top: 0; }
+  .callout-body :global(ul), .callout-body :global(ol) { padding-left: 1.3em; }
+</style>
