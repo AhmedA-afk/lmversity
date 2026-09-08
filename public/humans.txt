@@ -11,7 +11,7 @@
 
 /* NAME */
 
-  LM for language models; versity for the shape of the thing, a structured
+  LMV for short. LM for language models; versity for the shape of the thing, a structured
   course of study in dependency order. A university it isn't — no
   accreditation, no admission, no fee, no certificate. The material is
   organised around the cases that don't fit the happy path, because that is

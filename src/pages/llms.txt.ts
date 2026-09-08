@@ -21,10 +21,10 @@ export const GET: APIRoute = async () => {
   const lines: string[] = [];
   const push = (s = '') => lines.push(s);
 
-  push('# LMVersity');
+  push('# LMVersity (LMV)');
   push();
   push(
-    'LMVersity is a free, hands-on curriculum for building with AI, written for practitioners ' +
+    'LMVersity, LMV for short, is a free, hands-on curriculum for building with AI, written for practitioners ' +
       'who want a structured path from model fundamentals to production agents. Every page is open: ' +
       'no paywall, no account, no gated lessons.',
   );
@@ -57,6 +57,7 @@ export const GET: APIRoute = async () => {
   push(`- [Scenarios](${SITE}/scenarios): realistic build decisions walked through`);
   push(`- [Blog](${SITE}/blog): notes on building with AI ([RSS](${SITE}/rss.xml))`);
   push(`- [About](${SITE}/about): what this is and what it deliberately is not`);
+  push(`- [What is LMV](${SITE}/answers/what-is-lmv): the name, the abbreviation, and what the site is`);
   push();
 
   const answers = (await getCollection('answers')).sort((a, b) => a.data.title.localeCompare(b.data.title));

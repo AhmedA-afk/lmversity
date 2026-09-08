@@ -5,6 +5,12 @@
  */
 export const site = {
   name: 'LMVersity',
+  /** The spoken name. Three letters, one syllable each: "L-M-V". Used as the
+   *  manifest short_name and as schema alternateName so the abbreviation
+   *  resolves to this site in search. */
+  shortName: 'LMV',
+  /** Every spelling people search or say. All map to this one site. */
+  alternateNames: ['LMV', 'LM Versity', 'LMVersity.com', 'lmversity'] as string[],
   /** No trailing slash. Used for canonicals, schema @id values and feeds. */
   url: 'https://lmversity.com',
   tagline: 'Learn to actually build with AI.',
