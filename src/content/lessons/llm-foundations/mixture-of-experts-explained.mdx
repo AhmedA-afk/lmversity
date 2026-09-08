@@ -6,6 +6,9 @@ summary: "How MoE models route each token to a few specialized sub-networks inst
 duration: "6 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A dense model runs every parameter on every token. A mixture-of-experts (MoE) model doesn't — it keeps a huge pool of parameters but only activates a small slice of them per token, which is how models like Mixtral, DeepSeek-V3, and GPT-4-class systems get frontier quality without frontier-sized compute per token.
 
 ## The core trick: routing, not running everything
@@ -16,17 +19,35 @@ This is the whole idea in one sentence: **total parameters can be enormous, but 
 
 Compare this to a dense model covered in [The Transformer Architecture](/learn/llm-foundations/the-transformer-architecture), where the feed-forward block is a single network every token must pass through in full.
 
+<InlineCheck
+  question="A model has 400 billion total parameters but only touches 15-20 billion to produce any given token. What does this describe?"
+  options={['A dense model with an unusually small feed-forward block', 'A mixture-of-experts model, where a router activates only a handful of experts per token', 'A model that has been quantized to reduce its active memory footprint']}
+  answer={1}
+  explanation="Total parameters can be enormous in an MoE model while active parameters per token stay small, because the router sends each token to only a small handful of experts — the rest sit idle for that token."
+/>
+
 ## Why "experts" is a slightly misleading name
 
 It's tempting to picture one expert for math, another for poetry, another for code. In practice, routing is rarely that clean. Analyses of trained MoE models usually find experts specializing in shallower patterns — token types, syntax, local statistics — rather than tidy subject domains. The router is learned end-to-end via [gradient descent](/learn/maths-foundations/gradient-descent-intuition), and it settles wherever it finds a path that reduces loss, not wherever a human would draw the boundaries.
 
 The name is really about the architecture (many candidate sub-networks, a gate that picks a few) rather than a promise about what those sub-networks conceptually "know."
 
+<InlineCheck
+  question="Why is 'experts' a somewhat misleading name for the sub-networks in an MoE model?"
+  options={['Because the sub-networks are not actually trained, only the router is', 'Because trained routers usually specialize on shallower statistical patterns, not tidy human subject domains like math or poetry', 'Because MoE models only have one expert active at a time']}
+  answer={1}
+  explanation="It's tempting to picture one expert for math, another for poetry, and so on, but analyses of trained MoE models usually find experts specializing in shallower patterns — token types, syntax, local statistics — rather than clean subject domains."
+/>
+
 ## The catch: load balancing
 
+<Callout kind="breaks" title="Left alone, routing collapses onto a favorite few">
 If left alone, a router tends to converge on a small favorite set of experts and ignore the rest — wasted capacity, and a bottleneck on the popular ones. MoE training adds an auxiliary load-balancing loss that penalizes uneven usage, nudging the router toward spreading tokens across experts more evenly. Get this wrong and you effectively paid for a huge model but are only using a fraction of it.
+</Callout>
 
+<Callout kind="production" title="MoE saves compute, not memory">
 There's also an infrastructure cost that dense models don't have: all those experts still need to be loaded into memory (or spread across devices), even though only a couple run per token. MoE mainly saves compute and inference latency — it does not save memory the way it saves FLOPs.
+</Callout>
 
 ## Why this matters for inference cost
 

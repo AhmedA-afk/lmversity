@@ -6,30 +6,67 @@ summary: "Base, instruct, chat, and reasoning variants share weights but behave 
 duration: "5 min read"
 ---
 
+import Steps from '../../../components/kit/Steps.astro';
+import Step from '../../../components/kit/Step.astro';
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Download two checkpoints from the same model family and you can get two completely different tools: one that finishes your sentence, and one that answers your question. The difference isn't the architecture. It's what happened *after* pretraining.
 
-## Base models: pure next-token prediction
+<Steps>
+
+<Step title="Base models: pure next-token prediction">
 
 A base model comes straight out of [pretraining](/learn/llm-foundations/pretraining-explained) — trained on huge amounts of text with one objective: predict the next token. Give it "The capital of France is" and it completes the sentence. Give it "How do I center a div?" and it might not answer at all — it might continue the sentence with more questions, because that's what a forum post full of unanswered questions looks like in the training data.
 
 Base models are completions engines, not assistants. They have no notion of "answer the user" baked in — they only know what's statistically likely to follow given text. That's genuinely useful for creative continuation, few-shot pattern completion, and research, but it's a rough tool for anyone expecting a helpful reply.
 
-## Instruct models: taught to follow directions
+</Step>
+
+<Step title="Instruct models: taught to follow directions">
 
 An instruct model takes that same base model and fine-tunes it on examples of instructions paired with good responses — "Summarize this," "Write a function that...," "Explain X like I'm five" — so the model learns the *shape* of following a request rather than merely continuing text. This is instruction tuning, one half of what [Instruction Tuning and RLHF](/learn/llm-foundations/instruction-tuning-and-rlhf) covers.
 
 An instruct model still isn't necessarily built for back-and-forth conversation. It's tuned to take one instruction and produce one useful output — which is exactly why it shows up so often as the workhorse behind single-shot API calls: extraction, classification, rewriting.
 
-## Chat models: tuned for the back-and-forth
+</Step>
+
+<Step title="Chat models: tuned for the back-and-forth">
 
 Chat models add another layer: training on multi-turn conversations, plus (usually) RLHF or a similar preference-tuning step that pushes the model toward responses humans actually rate as helpful, honest, and safe — not just responses that look instruction-shaped. This is the layer that gives you a model that remembers it's mid-conversation, refuses politely instead of complying with something harmful, and asks a clarifying question instead of guessing. Most consumer-facing products — the chat window you actually type into — are running a chat-tuned variant.
 
-## Reasoning models: trained to think before answering
+</Step>
+
+<Step title="Reasoning models: trained to think before answering">
 
 The newest branch trains models to generate an extended chain of intermediate reasoning before producing a final answer, often with reinforcement learning against verifiable outcomes (a correct math answer, passing tests) rather than only human preference labels. The visible effect: on hard multi-step problems — math, code, planning — these models are dramatically more reliable, at the cost of higher latency and token spend per response. They're not strictly "better" at everything; for a one-line factual lookup, a reasoning model is often slower for no real gain.
 
+</Step>
+
+</Steps>
+
+<InlineCheck
+  question="An instruct model is tuned to take one instruction and produce one useful output. What does a chat model add on top of that?"
+  options={['A larger vocabulary and longer context window', 'Training on multi-turn conversations plus (usually) a preference-tuning step like RLHF, so it stays coherent mid-conversation and responds the way humans rate as helpful and safe', 'Nothing — chat and instruct models are trained identically']}
+  answer={1}
+  explanation="Chat models add multi-turn conversation training plus, usually, RLHF or similar preference tuning, which is what lets the model remember it's mid-conversation, refuse politely, and ask clarifying questions rather than just producing one instruction-shaped output."
+/>
+
 ## Why this matters when you're picking a model
 
-The name on a model card ("base," "instruct," "chat," or a reasoning-specific label) tells you what training stages it went through — which tells you what it's actually for. Using a base model where you wanted a chat model gets you rambling completions. Using a heavyweight reasoning model for simple extraction burns latency and cost for nothing. [Choosing a Model](/learn/ai-foundations/choosing-a-model) covers picking within a family; this is about knowing which variant to even start from.
+The name on a model card ("base," "instruct," "chat," or a reasoning-specific label) tells you what training stages it went through — which tells you what it's actually for.
+
+<Callout kind="breaks" title="Picking the wrong variant has a real cost">
+Using a base model where you wanted a chat model gets you rambling completions. Using a heavyweight reasoning model for simple extraction burns latency and cost for nothing.
+</Callout>
+
+[Choosing a Model](/learn/ai-foundations/choosing-a-model) covers picking within a family; this is about knowing which variant to even start from.
+
+<InlineCheck
+  question="Why might a reasoning model be a poor choice for a one-line factual lookup?"
+  options={['Reasoning models cannot answer factual questions at all', 'Reasoning models generate an extended chain of intermediate reasoning before answering, which costs latency and token spend for no real gain on a task that needs none of that', 'Reasoning models only work with multi-turn conversations, not single questions']}
+  answer={1}
+  explanation="Reasoning models trade higher latency and token spend for dramatically better reliability on hard multi-step problems. On a simple one-line factual lookup, that extended reasoning buys nothing, so a reasoning model is often just slower for no real gain."
+/>
 
 **Related:** [Instruction Tuning and RLHF](/learn/llm-foundations/instruction-tuning-and-rlhf), [Pretraining: Learning From the Whole Internet](/learn/llm-foundations/pretraining-explained), [Choosing a Model](/learn/ai-foundations/choosing-a-model)

@@ -6,6 +6,11 @@ summary: "Why transformers split attention into parallel heads instead of comput
 duration: "6 min read"
 ---
 
+import Steps from '../../../components/kit/Steps.astro';
+import Step from '../../../components/kit/Step.astro';
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A single attention operation produces one weighted average per token — one answer to "what should I look at." A sentence usually needs several answers at once: which word does this pronoun refer to, which word does this verb agree with, which word sets the topic. Multi-head attention runs several smaller attention operations in parallel, each free to specialize in a different kind of relationship, then combines the results.
 
 ## What a single head can and can't do
@@ -18,21 +23,57 @@ The problem: a single softmax over one query-key comparison can only express one
 
 Multi-head attention fixes this by not doing attention in the full embedding space at all. If the model dimension is 4096 and it uses 32 heads, each head gets its own slice — a 128-dimensional projection of the queries, keys, and values, built with its own learned weight matrices. Each head then runs full attention independently, in that smaller subspace.
 
+<Steps>
+
+<Step title="Split into per-head projections">
+
 ```
 input embedding (dim 4096)
-  → head 1: project to dim 128, attend, produce dim 128 output
-  → head 2: project to dim 128, attend, produce dim 128 output
+  → head 1: project to dim 128
+  → head 2: project to dim 128
   ...
-  → head 32: project to dim 128, attend, produce dim 128 output
-  → concatenate all 32 outputs back to dim 4096
+  → head 32: project to dim 128
+```
+
+Each head gets its own 128-dimensional slice, built with its own learned weight matrices.
+
+</Step>
+
+<Step title="Attend independently, per head">
+
+Each head runs full attention in its own smaller subspace and produces its own dim-128 output — 32 independent attention computations, all in parallel.
+
+</Step>
+
+<Step title="Concatenate and mix">
+
+```
+concatenate all 32 outputs back to dim 4096
   → one more learned linear layer mixes them together
 ```
 
+</Step>
+
+</Steps>
+
 Because each head has its own projection weights, gradient descent is free to push different heads toward different jobs. In trained transformers, researchers have found heads that consistently track syntactic dependencies, heads that attend to the previous token, heads that track long-range coreference, and plenty that resist any clean human label. Nobody assigns heads their jobs — specialization is an emergent side effect of having separate parameter subspaces competing to reduce the same loss.
+
+<InlineCheck
+  question="Why do different heads end up specializing in different kinds of relationships, if nobody assigns them a job?"
+  options={['Each head is manually initialized to track a specific relationship type', 'Specialization is an emergent side effect of separate parameter subspaces competing to reduce the same loss via gradient descent', 'Heads are randomly reassigned new jobs during each training epoch']}
+  answer={1}
+  explanation="Because each head has its own projection weights, gradient descent is free to push different heads toward different jobs — nobody assigns heads their roles, specialization emerges from separate parameter subspaces competing to reduce the same loss."
+/>
 
 ## Why not just use one wide head
 
-You could imagine skipping the split and running one attention operation over the full 4096 dimensions. The catch is that a single softmax still yields one weighting per query, no matter how wide the vectors are — width doesn't buy you a second, independent pattern. Splitting into subspaces before the softmax is what buys multiplicity. It also comes essentially free: the total compute is close to one wide head, since each head does less work over a smaller dimension, and everything after the split runs in parallel on a GPU.
+You could imagine skipping the split and running one attention operation over the full 4096 dimensions.
+
+<Callout kind="breaks" title="Width alone doesn't buy a second pattern">
+The catch is that a single softmax still yields one weighting per query, no matter how wide the vectors are — width doesn't buy you a second, independent pattern. Splitting into subspaces before the softmax is what buys multiplicity.
+</Callout>
+
+It also comes essentially free: the total compute is close to one wide head, since each head does less work over a smaller dimension, and everything after the split runs in parallel on a GPU.
 
 This is also why serving multi-head attention efficiently at inference time is its own engineering problem — every head needs its own cached keys and values per token, which is a large share of what the [KV cache](/learn/llm-foundations/the-kv-cache) has to store, and why variants like [grouped-query attention](/learn/llm-foundations/grouped-query-attention) exist to cut that cost by sharing keys and values across groups of heads.
 

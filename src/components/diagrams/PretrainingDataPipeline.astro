@@ -1,0 +1,70 @@
+---
+import Figure from './Figure.astro';
+
+/**
+ * The pretraining corpus pipeline. Packing is marked in brass: it is the one
+ * stage where, without a document separator, a model can attend across the
+ * boundary from one unrelated document into the next.
+ */
+const stages = [
+  { label: 'CRAWL' },
+  { label: 'DEDUP' },
+  { label: 'FILTER' },
+  { label: 'MIX' },
+  { label: 'PACK', warn: true },
+];
+
+const BOX_W = 88;
+const BOX_H = 42;
+const GAP = 14;
+const X0 = 6;
+const Y = 44;
+const step = BOX_W + GAP;
+const width = X0 * 2 + stages.length * BOX_W + (stages.length - 1) * GAP;
+---
+<Figure
+  title="The pretraining data pipeline, in five stages"
+  caption="Raw crawl text moves through dedup, quality and safety filtering, and mixture weighting before it is packed into training sequences, where a missing document boundary lets attention leak from one document into the next."
+  desc="Five stages run left to right: crawl, dedup, filter, mix, pack. The pack stage is highlighted as the one where a missing document separator lets a model attend across an unrelated document boundary."
+>
+  <svg viewBox={`0 0 ${width} 128`} xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <marker id="pdp-tip" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 z" class="dg-arrow" />
+      </marker>
+    </defs>
+
+    {stages.map((s, i) => {
+      const x = X0 + i * step;
+      return (
+        <>
+          <rect
+            x={x} y={Y} width={BOX_W} height={BOX_H} rx="6"
+            class={s.warn ? 'dg-box-warn' : 'dg-box'}
+          />
+          <text x={x + BOX_W / 2} y={Y + BOX_H / 2 + 4} class:list={['dg-label', { 'dg-label-warn': s.warn }]}>
+            {s.label}
+          </text>
+          {i < stages.length - 1 && (
+            <line
+              x1={x + BOX_W} y1={Y + BOX_H / 2}
+              x2={x + BOX_W + GAP - 4} y2={Y + BOX_H / 2}
+              class="dg-line" marker-end="url(#pdp-tip)"
+            />
+          )}
+        </>
+      );
+    })}
+
+    {/* The annotation sits outside the shape, per the grammar. */}
+    <line
+      x1={X0 + 4 * step + BOX_W / 2} y1={Y + BOX_H + 6}
+      x2={X0 + 4 * step + BOX_W / 2} y2={Y + BOX_H + 22}
+      class="dg-line-warn"
+    />
+    <text x={X0 + 4 * step + BOX_W / 2} y={Y + BOX_H + 38} class="dg-note dg-note-warn">
+      boundary can leak without a separator
+    </text>
+    <text x={X0 + 1.5 * step} y={Y - 14} class="dg-note">corpus construction</text>
+  </svg>
+</Figure>

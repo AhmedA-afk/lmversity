@@ -6,6 +6,9 @@ summary: "Images, audio, and video become tokens too — one transformer, multip
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A "multimodal" model isn't a text model with an image plugin bolted on. It's a single transformer where pixels, sound, and words all get converted into the same kind of object — a vector — before anything else happens.
 
 ## Everything becomes a token
@@ -20,12 +23,34 @@ This unification is what makes multimodal models different from older pipelines 
 
 This is also why context windows quietly shrink when you paste in images. Those image patches count as tokens against the same [context window](/learn/llm-foundations/context-window-mechanics) as your text — a single high-resolution image can easily cost more tokens than a page of prose.
 
+<InlineCheck
+  question="Why do context windows quietly shrink when you paste images into a multimodal prompt?"
+  options={['Images are stored separately and don’t affect the context window at all', 'Image patches count as tokens against the same context window as text, and a single high-resolution image can cost more tokens than a page of prose', 'The model automatically reduces max output length whenever an image is present']}
+  answer={1}
+  explanation="Once patchified and projected, image tokens sit in the same sequence as text tokens and are counted against the same context window — they are real token consumers, not free attachments."
+/>
+
 ## Output is a different story
 
-Understanding images and audio is one capability; generating them is another. Most "multimodal" chat models are multimodal on the *input* side (they read images/audio/video) but still only produce text tokens as output, using [next-token prediction](/learn/llm-foundations/next-token-prediction) over a text vocabulary. True any-to-any models that generate images or audio typically add a separate decoder — a diffusion model or an audio vocoder — downstream of the shared transformer, rather than predicting pixels one at a time the way they predict text.
+Understanding images and audio is one capability; generating them is another.
+
+<Callout kind="breaks" title="Reading images and generating them are different capabilities">
+Most "multimodal" chat models are multimodal on the *input* side (they read images/audio/video) but still only produce text tokens as output, using [next-token prediction](/learn/llm-foundations/next-token-prediction) over a text vocabulary. True any-to-any models that generate images or audio typically add a separate decoder — a diffusion model or an audio vocoder — downstream of the shared transformer, rather than predicting pixels one at a time the way they predict text.
+</Callout>
+
+<InlineCheck
+  question="Does a typical multimodal chat model that can read an image also generate images as output?"
+  options={['Yes, always — reading and generating images use the same mechanism', 'Not usually — most are multimodal on the input side only and still emit text via ordinary next-token prediction; true any-to-any models add a separate downstream decoder', 'No multimodal model can ever generate images, under any architecture']}
+  answer={1}
+  explanation="Understanding and generating are different capabilities. Most multimodal chat models consume image tokens on input but still only produce text tokens on output; generating pixels or audio typically requires a separate decoder, like a diffusion model or audio vocoder, downstream of the shared transformer."
+/>
 
 ## What this unlocks in practice
 
-Because everything shares one embedding space, a multimodal model can be asked to compare a photo against a paragraph of text, describe a chart, transcribe and summarize a voice memo, or answer a question about a specific frame of video — all without a separate specialized model per modality. The tradeoff is cost and latency: encoding a video's worth of frames into tokens is expensive, which is why most multimodal products sample frames sparsely rather than feeding in every one.
+Because everything shares one embedding space, a multimodal model can be asked to compare a photo against a paragraph of text, describe a chart, transcribe and summarize a voice memo, or answer a question about a specific frame of video — all without a separate specialized model per modality.
+
+<Callout kind="production" title="Sample frames sparsely for video">
+The tradeoff is cost and latency: encoding a video's worth of frames into tokens is expensive, which is why most multimodal products sample frames sparsely rather than feeding in every one.
+</Callout>
 
 **Related:** [Tokenization: How Text Becomes Tokens](/learn/llm-foundations/tokenization-explained), [Embeddings: Turning Tokens Into Geometry](/learn/llm-foundations/what-are-embeddings), [Context Window Mechanics](/learn/llm-foundations/context-window-mechanics)

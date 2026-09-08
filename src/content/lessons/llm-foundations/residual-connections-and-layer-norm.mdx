@@ -6,6 +6,10 @@ summary: "Why skip connections and normalization are what let transformers stack
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+import PreNormPostNorm from '../../../components/diagrams/PreNormPostNorm.astro';
+
 Attention and the feed-forward block get the credit, but the plumbing around them is what actually lets a transformer stack 40, 80, or 100+ layers deep. Strip out residual connections and layer norm and the same architecture stops training past a handful of layers — the gradients either vanish or explode long before they reach the bottom.
 
 ## The residual connection: add, don't replace
@@ -20,6 +24,13 @@ That `x +` is the whole idea. Instead of forcing every layer to output a complet
 
 This matters most for gradients during backpropagation. In a plain stack of transformations, a gradient flowing backward gets multiplied by each layer's Jacobian in turn, and across dozens of layers that product tends toward zero (vanishing) or blows up (exploding). The `+x` term gives gradients a direct, unimpeded path back to every earlier layer — often called a "gradient highway." Backprop through an addition just copies the gradient to both branches, so even if a sublayer's own gradient is tiny, the signal still reaches the layers below undamaged. This is the same fix ResNets introduced for image models in 2015, and it's the reason transformers can go as deep as they do — see [Backpropagation: How Networks Assign Blame](/learn/maths-foundations/backpropagation-intuition) for the underlying mechanics.
 
+<InlineCheck
+  question="During backpropagation, what does the `+x` in `output = x + Sublayer(x)` do to the gradient?"
+  options={['It gives the gradient a direct, unimpeded path back to earlier layers, since backprop through an addition copies the gradient to both branches', 'It multiplies the gradient by the sublayer’s Jacobian before passing it back', 'It has no effect on the gradient; it only changes the forward-pass output']}
+  answer={0}
+  explanation="Backprop through an addition copies the gradient unchanged to both branches, so the +x term gives gradients a direct path back to every earlier layer even when a sublayer's own gradient is tiny."
+/>
+
 ## Layer norm: keeping the numbers in range
 
 Residuals solve the gradient problem, but they create a new one: if you keep adding updates on top of a running sum, activation magnitudes can drift and grow with every layer. Layer normalization keeps that from happening by rescaling the activations at each position back to a stable distribution — zero mean, unit variance across the feature dimension — then applying a learned scale and shift.
@@ -31,6 +42,19 @@ Unlike batch normalization, layer norm normalizes across the features of a singl
 The original "Attention Is All You Need" transformer applied norm *after* the residual add (post-norm): `LayerNorm(x + Sublayer(x))`. It works, but it's notoriously touchy to train at depth — deep post-norm stacks need careful learning-rate warmup or they diverge early in training.
 
 Virtually every modern LLM instead uses pre-norm: normalize the input *before* it enters the sublayer, and add the raw, unnormalized residual afterward — `x + Sublayer(LayerNorm(x))`. This keeps the residual path completely clean of any normalization, so the gradient highway from the earlier section stays truly unobstructed all the way from the output back to the embedding layer. Pre-norm is a big part of why 100+ layer models train stably at all. Many recent models (LLaMA, Mistral, and others) go a step further and use RMSNorm, a simplified variant that drops the mean-centering step and just rescales by the root-mean-square of the activations — cheaper to compute, and in practice just as effective.
+
+<PreNormPostNorm />
+
+<Callout kind="breaks" title="Post-norm leaves a norm standing on the residual path">
+Post-norm applies `LayerNorm` *after* the residual add. It works, but it's notoriously touchy to train at depth — deep post-norm stacks need careful learning-rate warmup or they diverge early in training.
+</Callout>
+
+<InlineCheck
+  question="What structurally distinguishes pre-norm from post-norm?"
+  options={['Pre-norm keeps the residual path free of any normalization by normalizing only inside the sublayer branch; post-norm places LayerNorm directly on the residual path after the addition', 'Pre-norm and post-norm apply the same computation, just with the parameters initialized differently', 'Post-norm skips normalization for the first several layers and only applies it near the output']}
+  answer={0}
+  explanation="Pre-norm computes x + Sublayer(LayerNorm(x)), so the residual stream itself is never normalized. Post-norm computes LayerNorm(x + Sublayer(x)), putting a norm directly on the path every backward pass has to cross."
+/>
 
 ## Why it's easy to overlook
 

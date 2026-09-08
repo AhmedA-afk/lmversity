@@ -6,6 +6,10 @@ summary: "Greedy, temperature, top-k, and top-p turn next-token probabilities in
 duration: "6 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+import Sampler from '../../../components/widgets/Sampler.astro';
+
 A model doesn't output words — it outputs a probability distribution over its whole vocabulary for what token comes next. Sampling is the rule that turns that distribution into an actual choice, and which rule you pick changes how the text reads.
 
 ## Greedy decoding: always the top pick
@@ -14,9 +18,20 @@ The simplest strategy is greedy decoding: at every step, take the single most pr
 
 ## Temperature: reshaping the distribution
 
-Temperature is applied before sampling, inside the [softmax function](/learn/maths-foundations/the-softmax-function) that turns raw scores into probabilities. Formally it divides the logits by a value T before the softmax. At `T = 1`, the distribution is unchanged. Lower it toward 0 and the distribution sharpens — the top token's probability climbs and the model behaves more like greedy decoding. Raise it above 1 and the distribution flattens, giving low-probability tokens a real shot and making output more varied, sometimes to the point of incoherence. There's a deeper walkthrough of the mechanics in [Temperature: Reshaping a Probability Distribution](/learn/maths-foundations/temperature-in-sampling). Practically: 0–0.3 for tasks with a right answer (extraction, code, math), 0.7–1.0 for brainstorming or creative writing.
+Temperature is applied before sampling, inside the [softmax function](/learn/maths-foundations/the-softmax-function) that turns raw scores into probabilities. Formally it divides the logits by a value T before the softmax. At `T = 1`, the distribution is unchanged. Lower it toward 0 and the distribution sharpens — the top token's probability climbs and the model behaves more like greedy decoding. Raise it above 1 and the distribution flattens, giving low-probability tokens a real shot and making output more varied, sometimes to the point of incoherence. There's a deeper walkthrough of the mechanics in [Temperature: Reshaping a Probability Distribution](/learn/maths-foundations/temperature-in-sampling).
+
+<Callout kind="production" title="Practical ranges">
+0–0.3 for tasks with a right answer (extraction, code, math), 0.7–1.0 for brainstorming or creative writing.
+</Callout>
 
 Temperature alone has a flaw: even at low temperature, it still considers every token in the vocabulary, including absurd ones. If a bad token has even 0.01% probability, a long enough generation will eventually hit it. Top-k and top-p fix this by truncating the candidate pool before temperature is applied.
+
+<InlineCheck
+  question="Why does temperature alone fail to rule out absurd tokens, even at a low setting?"
+  options={['Because temperature only reshapes probabilities, it never removes tokens from consideration — every token in the vocabulary, however unlikely, still has a nonzero chance of being sampled', 'Because low temperature increases the probability of rare tokens', 'Because temperature is only applied to the top 40 tokens by default']}
+  answer={0}
+  explanation="Temperature rescales the whole distribution but never zeroes anything out. Even at low temperature, every vocabulary token keeps a nonzero probability, so a long enough generation can still eventually sample a bad one."
+/>
 
 ## Top-k: a fixed shortlist
 
@@ -25,6 +40,15 @@ Top-k keeps only the k highest-probability tokens and zeroes out everything else
 ## Top-p: an adaptive shortlist
 
 Top-p (nucleus sampling) fixes that by choosing the shortlist dynamically. Instead of a fixed count, it takes the smallest set of tokens whose cumulative probability exceeds p — commonly 0.9 or 0.95. When the model is confident, that set might be just two or three tokens; when it's uncertain, it naturally expands to include more. This is why top-p is the default sampling strategy in most production APIs today, often used together with a modest temperature rather than in place of it.
+
+<InlineCheck
+  question="Why does top-p adapt better to the model's confidence than top-k?"
+  options={['Top-p keeps the smallest set of tokens whose cumulative probability exceeds a threshold, so the shortlist shrinks when the model is confident and expands when it is uncertain, while top-k’s shortlist size never changes', 'Top-p and top-k both use a fixed shortlist size, but top-p recalculates it every token', 'Top-p ignores the model’s probabilities entirely and samples uniformly from the vocabulary']}
+  answer={0}
+  explanation="Top-k always keeps exactly k tokens regardless of context. Top-p instead keeps however many tokens are needed to reach a cumulative probability threshold, so the shortlist naturally shrinks when the model is confident and grows when it is uncertain."
+/>
+
+<Sampler />
 
 In practice, temperature and top-p are usually tuned together, not treated as alternatives: temperature sets the general risk level, top-p caps how far into the distribution's tail the model is allowed to reach. Getting this pair right matters more than most people expect for anything downstream that expects consistent behavior, including [evals](/learn/evals-red-teaming/why-evals-matter) and [structured output](/learn/structured-outputs/why-structured-output), where high temperature can quietly break format reliability.
 

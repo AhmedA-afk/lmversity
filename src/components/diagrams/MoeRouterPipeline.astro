@@ -1,0 +1,75 @@
+---
+import Figure from './Figure.astro';
+
+/**
+ * The router's pipeline for one token: score every expert, keep only the
+ * top-k, renormalize, combine. The lesson's own concrete example (4 experts,
+ * top-2) is the source for this shape — nothing here states a number the
+ * prose doesn't already give.
+ *
+ * Five boxes on the working path (indigo), plus one brass box for the
+ * experts the top-k cutoff discards — the detail the lesson calls out
+ * explicitly ("every expert not in the top-k does not run at all"). The
+ * branch to it is dashed brass, since it is the path work does *not* take.
+ * Six primary shapes, under the seven-shape ceiling. Horizontal flow only,
+ * one branch straight down — no diagonals.
+ */
+const stages = [
+  { label: 'HIDDEN STATE' },
+  { label: 'ROUTER' },
+  { label: 'SOFTMAX' },
+  { label: 'TOP-K' },
+  { label: 'WEIGHTED SUM' },
+];
+
+const BOX_W = 96;
+const BOX_H = 42;
+const GAP = 16;
+const X0 = 6;
+const Y = 40;
+const step = BOX_W + GAP;
+const width = X0 * 2 + stages.length * BOX_W + (stages.length - 1) * GAP;
+const topkX = X0 + 3 * step;
+---
+<Figure
+  title="The router's pipeline: score, keep the top-k, renormalize, combine"
+  caption="The router scores every expert, keeps only the top-k by weight, and renormalizes; the discarded experts do no work for this token."
+  desc="Five boxes run left to right: hidden state, router, softmax, top-k, weighted sum. A dashed branch drops straight down from top-k to a sixth box labelled discarded experts, showing that unselected experts never run."
+>
+  <svg viewBox={`0 0 ${width} 168`} xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <marker id="mrp-tip" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 z" class="dg-arrow" />
+      </marker>
+      <marker id="mrp-tip-warn" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 z" class="dg-arrow-warn" />
+      </marker>
+    </defs>
+
+    {stages.map((s, i) => {
+      const x = X0 + i * step;
+      return (
+        <>
+          <rect x={x} y={Y} width={BOX_W} height={BOX_H} rx="6" class="dg-box" />
+          <text x={x + BOX_W / 2} y={Y + BOX_H / 2 + 4} class="dg-label">{s.label}</text>
+          {i < stages.length - 1 && (
+            <line
+              x1={x + BOX_W} y1={Y + BOX_H / 2}
+              x2={x + BOX_W + GAP - 4} y2={Y + BOX_H / 2}
+              class="dg-line" marker-end="url(#mrp-tip)"
+            />
+          )}
+        </>
+      );
+    })}
+
+    <line
+      x1={topkX + BOX_W / 2} y1={Y + BOX_H}
+      x2={topkX + BOX_W / 2} y2={Y + BOX_H + 34}
+      class="dg-line-warn" marker-end="url(#mrp-tip-warn)"
+    />
+
+    <rect x={topkX - 10} y={Y + BOX_H + 38} width={BOX_W + 20} height={BOX_H} rx="6" class="dg-box-warn" />
+    <text x={topkX + BOX_W / 2} y={Y + BOX_H + 38 + BOX_H / 2 + 4} class="dg-label dg-label-warn">DISCARDED</text>
+  </svg>
+</Figure>

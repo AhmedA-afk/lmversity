@@ -6,23 +6,53 @@ summary: "Why 'thinking' models spend extra compute at inference time, and how t
 duration: "6 min read"
 ---
 
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Ask a standard chat model a hard math or logic problem and it answers in one forward pass, token by token, with no chance to backtrack. Ask a reasoning model the same question and it first generates a long chain of intermediate tokens — trying an approach, checking it, discarding it, trying another — before committing to a final answer. That extra generation is test-time compute: spending more inference cycles per query to get a better answer, instead of spending more compute once during training.
 
 ## Two different knobs
 
-Model capability has historically come from one knob: make the model bigger, train it on more data, and pretraining [scaling laws](/learn/ai-foundations/scaling-laws) say performance improves predictably. That knob is fixed once training ends — every query pays the same forward-pass cost regardless of difficulty.
+<Compare title="Pretraining scale vs. test-time compute">
+  <Pane title="Pretraining scale" tone="neutral">Make the model bigger, train it on more data, and pretraining scaling laws say performance improves predictably. That knob is fixed once training ends — every query pays the same forward-pass cost regardless of difficulty.</Pane>
+  <Pane title="Test-time compute" tone="neutral">The model's weights stay the same, but how much it "thinks" before answering varies per query. Because it's spent per-query rather than baked into the weights, you can trade latency and cost for accuracy at inference time.</Pane>
+</Compare>
 
-Test-time compute is a second, independent knob. The model's weights stay the same, but how much it "thinks" before answering varies per query. A simple factual question might use a short chain of reasoning; a multi-step proof or a tricky debugging task might use thousands of tokens of intermediate reasoning. Because it's spent per-query rather than baked into the weights, you can trade latency and cost for accuracy at inference time — something a bigger model alone can't offer.
+A simple factual question might use a short chain of reasoning; a multi-step proof or a tricky debugging task might use thousands of tokens of intermediate reasoning — something a bigger model alone can't offer, since [scaling laws](/learn/ai-foundations/scaling-laws) fix capability at training time.
+
+<InlineCheck
+  question="What makes test-time compute a genuinely independent knob from pretraining scale, rather than just another way to make the model bigger?"
+  options={['It changes the model’s weights per query, the same way fine-tuning would', 'It leaves the weights fixed but varies how much the model "thinks" per query, so cost and latency are spent per-query instead of being baked in once at training time', 'It only works on models that were never pretrained at scale']}
+  answer={1}
+  explanation="Pretraining scale is fixed once training ends and every query pays the same cost. Test-time compute keeps the weights the same but varies how much reasoning is spent per query, trading latency and cost for accuracy at inference time."
+/>
 
 ## What's actually happening under the hood
 
-Reasoning models are typically trained with reinforcement learning on verifiable tasks — math, code, logic puzzles with checkable answers — so the model learns which reasoning strategies actually lead to correct results, rather than just imitating plausible-looking reasoning text. The output includes an extended chain of thought: exploring a path, noticing an error ("wait, that's wrong because..."), backtracking, and retrying, before producing a final answer. This is distinct from prompting a regular model to "think step by step" (see [chain-of-thought prompting](/learn/prompt-engineering/chain-of-thought-prompting)) — that elicits reasoning-shaped text from a model that was never trained to use it productively. A true reasoning model has learned, through training, that spending more tokens on exploration before committing actually raises its odds of being right.
+Reasoning models are typically trained with reinforcement learning on verifiable tasks — math, code, logic puzzles with checkable answers — so the model learns which reasoning strategies actually lead to correct results, rather than just imitating plausible-looking reasoning text. The output includes an extended chain of thought: exploring a path, noticing an error ("wait, that's wrong because..."), backtracking, and retrying, before producing a final answer.
+
+<Callout kind="breaks" title="Prompted chain-of-thought is not the same as a trained reasoning model">
+This is distinct from prompting a regular model to "think step by step" (see [chain-of-thought prompting](/learn/prompt-engineering/chain-of-thought-prompting)) — that elicits reasoning-shaped text from a model that was never trained to use it productively. A true reasoning model has learned, through training, that spending more tokens on exploration before committing actually raises its odds of being right.
+</Callout>
 
 Some systems expose a dial for this: you can request more or less reasoning effort, trading latency and token cost against answer quality on harder problems. See [extended thinking and reasoning effort](/learn/prompt-engineering/extended-thinking-and-reasoning-effort) for how that control actually works.
 
 ## Where it helps — and where it doesn't
 
-Test-time compute pays off on tasks with a real search space: competition math, multi-step code generation, planning problems, anything where the first idea often isn't the right one and verifying an intermediate step is possible. It buys much less on tasks that are more about retrieval or style than multi-step derivation — a factual lookup or a rewrite doesn't get better from more "thinking," it just gets slower and more expensive. Treat reasoning mode as a tool you reach for when a problem has the shape of a puzzle, not a default you leave on for everything.
+Test-time compute pays off on tasks with a real search space: competition math, multi-step code generation, planning problems, anything where the first idea often isn't the right one and verifying an intermediate step is possible. It buys much less on tasks that are more about retrieval or style than multi-step derivation — a factual lookup or a rewrite doesn't get better from more "thinking," it just gets slower and more expensive.
+
+<Callout kind="production" title="Reach for reasoning mode, don't leave it on by default">
+Treat reasoning mode as a tool you reach for when a problem has the shape of a puzzle, not a default you leave on for everything.
+</Callout>
+
+<InlineCheck
+  question="A task is a straightforward factual lookup with no multi-step derivation. What does this section say happens if you run it through a reasoning model's extended thinking anyway?"
+  options={['It reliably becomes more accurate, since more thinking never hurts', 'It doesn’t get better from the extra "thinking" — it just gets slower and more expensive', 'The model automatically skips reasoning mode for factual lookups']}
+  answer={1}
+  explanation="Test-time compute buys the most on tasks with a real search space to explore. On a factual lookup or a rewrite, extra reasoning tokens don't improve the answer — they just add latency and cost."
+/>
 
 The practical upshot: model choice is no longer just "which model," it's "which model, and how much compute do I let it spend per query." That's a cost and latency decision as much as a capability one, and it's the same tradeoff behind [model routing by task complexity](/learn/production/model-routing-by-task-complexity) in production systems.
 

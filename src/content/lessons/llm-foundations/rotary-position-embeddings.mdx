@@ -6,6 +6,9 @@ summary: "How rotating query and key vectors by a position-dependent angle becam
 duration: "6 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 [Positional encoding](/learn/llm-foundations/positional-encoding-explained) mentions RoPE as the current default; this lesson is about how the rotation trick actually works, and why "rotate the vectors" turned out to beat "add a position signal."
 
 ## The core trick: rotation instead of addition
@@ -15,6 +18,13 @@ Sinusoidal encoding adds a position-dependent vector to the token embedding befo
 Take a query vector at position `m` and a key vector at position `n`. Pair up their dimensions into 2D planes, and rotate each pair by `m * theta` for the query and `n * theta` for the key, where `theta` is a fixed frequency assigned to that dimension pair (lower dimension pairs rotate fast, higher pairs rotate slowly — the same multi-frequency idea sinusoidal encoding uses, just applied as a rotation rather than an offset).
 
 The payoff shows up when you take the dot product of the rotated query and key. Rotation matrices have a property additive encodings don't: rotating two vectors by `m` and `n` respectively and then taking their dot product gives the same result as rotating one vector by the difference `m - n` and dot-producting with the other, unrotated. So the attention score between position `m` and position `n` ends up depending only on `m - n` — the relative distance between them — not on `m` and `n` individually. Two tokens 5 apart produce the same rotational relationship whether they're at positions 3 and 8 or positions 3000 and 3005.
+
+<InlineCheck
+  question="Why does the attention score between two RoPE-rotated vectors depend only on m - n, not on m and n individually?"
+  options={['Because rotating two vectors by m and n and then taking their dot product gives the same result as rotating one vector by the difference m - n and dot-producting with the other, unrotated', 'Because RoPE averages the query and key vectors before computing the dot product', 'Because the rotation angle is capped at a fixed maximum regardless of position']}
+  answer={0}
+  explanation="This is a property of rotation matrices that additive encodings don't have: rotating by m and n and then dot-producting is equivalent to rotating by the offset m - n alone. That's why the resulting score only ever depends on relative distance."
+/>
 
 ## Why relative position beats absolute
 
@@ -26,6 +36,15 @@ This is also why RoPE composes cleanly with context-extension tricks after the f
 
 RoPE isn't applied to the embedding once at the input layer — it's applied fresh, per layer, right before the query-key dot product inside every attention head, to the query and key projections specifically (never to the value vectors, which carry content, not position). This is also why it interacts directly with the [KV cache](/learn/llm-foundations/the-kv-cache): the cached keys already have their rotation baked in for their fixed position, so nothing needs to be recomputed as new tokens are generated — a new query just gets rotated by its own position and compared against keys rotated at theirs.
 
+<Callout kind="note" title="No extra parameters, decided at design time">
 No extra parameters are learned; the rotation angles are a fixed geometric function of position and dimension index, decided at architecture-design time, not during training. That combination — free extrapolation behavior, no parameter cost, and clean composition with the attention math already in place — is why RoPE displaced sinusoidal and learned absolute encodings as the default across most production LLMs.
+</Callout>
+
+<InlineCheck
+  question="RoPE is applied to which vectors, and at what point in the model?"
+  options={['Fresh at every layer, to the query and key projections only, right before the query-key dot product — never to the value vectors', 'Once, to the token embedding, before the first attention layer', 'To the value vectors at every layer, since they carry the content that needs a position tag']}
+  answer={0}
+  explanation="RoPE rotates query and key vectors inside the attention computation at every layer, right before the dot product. Value vectors carry content, not position, so RoPE is never applied to them."
+/>
 
 **Related:** [Positional Encoding: How Transformers Track Order](/learn/llm-foundations/positional-encoding-explained), [The Attention Mechanism, Explained](/learn/llm-foundations/attention-mechanism-explained), [The KV Cache: How LLMs Avoid Recomputing the Past](/learn/llm-foundations/the-kv-cache)

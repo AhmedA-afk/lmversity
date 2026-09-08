@@ -1,0 +1,69 @@
+---
+import Figure from './Figure.astro';
+
+/**
+ * The rich-get-richer loop behind expert collapse, drawn as a row of three
+ * causes running left to right with an orthogonal dashed return path
+ * carrying the loop back to the start — no diagonals, per the grammar.
+ *
+ * The forward path (more tokens -> more updates -> router favors it) is
+ * indigo: it is not itself a failure, just training doing what it does.
+ * Brass belongs to two things: the dashed return path, because that is the
+ * self-reinforcing mechanism the lesson blames for collapse, and the
+ * UNUSED EXPERTS box, the consequence the lesson names directly. Four
+ * primary shapes, well under the seven-shape ceiling.
+ */
+const boxes = [
+  { key: 'tokens', label: 'MORE TOKENS', x: 10 },
+  { key: 'updates', label: 'MORE UPDATES', x: 176 },
+  { key: 'favors', label: 'ROUTER FAVORS', x: 342 },
+];
+const BOX_W = 132;
+const BOX_H = 42;
+const Y = 26;
+---
+<Figure
+  title="The rich-get-richer loop behind expert collapse"
+  caption="An expert that gets slightly more tokens gets more gradient updates, which makes the router favor it even more next batch — a loop that, left alone, starves the rest of the experts."
+  desc="Three boxes run left to right: more tokens, more updates, router favors it. A dashed line loops back from router favors it to more tokens, labelled self-reinforcing. A fourth box below, unused experts, is connected by a dashed line and marks the experts the loop starves."
+>
+  <svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <marker id="mcl-tip" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 z" class="dg-arrow" />
+      </marker>
+      <marker id="mcl-tip-warn" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L6,3 L0,6 z" class="dg-arrow-warn" />
+      </marker>
+    </defs>
+
+    {boxes.map((b, i) => (
+      <>
+        <rect x={b.x} y={Y} width={BOX_W} height={BOX_H} rx="6" class="dg-box" />
+        <text x={b.x + BOX_W / 2} y={Y + BOX_H / 2 + 4} class="dg-label">{b.label}</text>
+        {i < boxes.length - 1 && (
+          <line
+            x1={b.x + BOX_W} y1={Y + BOX_H / 2}
+            x2={boxes[i + 1].x} y2={Y + BOX_H / 2}
+            class="dg-line" marker-end="url(#mcl-tip)"
+          />
+        )}
+      </>
+    ))}
+
+    {/* Orthogonal dashed return path: down, left, up. */}
+    <path
+      d={`M ${boxes[2].x + BOX_W / 2},${Y + BOX_H} V ${Y + BOX_H + 40} H ${boxes[0].x + BOX_W / 2} V ${Y + BOX_H + 4}`}
+      class="dg-line-warn" marker-end="url(#mcl-tip-warn)"
+    />
+    <text x="250" y={Y + BOX_H + 58} class="dg-note dg-note-warn">self-reinforcing</text>
+
+    <line
+      x1={boxes[2].x + BOX_W / 2} y1={Y + BOX_H + 40}
+      x2={boxes[2].x + BOX_W / 2} y2={Y + BOX_H + 78}
+      class="dg-line-warn"
+    />
+    <rect x={boxes[2].x - 6} y={Y + BOX_H + 82} width={BOX_W + 12} height={BOX_H} rx="6" class="dg-box-warn" />
+    <text x={boxes[2].x + BOX_W / 2} y={Y + BOX_H + 82 + BOX_H / 2 + 4} class="dg-label dg-label-warn">UNUSED EXPERTS</text>
+  </svg>
+</Figure>

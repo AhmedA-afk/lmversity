@@ -6,6 +6,12 @@ summary: "Every LLM is trained to do one thing — predict the next token given 
 duration: "6 min read"
 ---
 
+import Steps from '../../../components/kit/Steps.astro';
+import Step from '../../../components/kit/Step.astro';
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+import Sampler from '../../../components/widgets/Sampler.astro';
+
 For all their apparent variety, large language models are trained on a single, almost absurdly simple objective: given a sequence of tokens, predict the next one. Everything else — answering questions, writing code, holding a conversation — falls out of doing that one thing extremely well.
 
 ## How the objective works
@@ -14,22 +20,42 @@ During training the model reads enormous amounts of text. At every position it m
 
 The output is not a single word; it's a **distribution** over every possible next token, turned into probabilities by [the softmax function](/learn/maths-foundations/the-softmax-function).
 
+<InlineCheck
+  question="What does one forward pass of the model actually output at a given position?"
+  options={['A single next word, chosen directly', 'A probability distribution over every token in the vocabulary', 'The full rest of the sentence, generated at once']}
+  answer={1}
+  explanation="The model outputs a distribution — a probability for every token in the vocabulary — turned into probabilities by softmax. A specific token is only chosen afterward, by sampling from that distribution."
+/>
+
 ## Generation is prediction in a loop
 
 At inference time the same machinery generates text:
 
-```text
-1. feed in the prompt (as tokens)
-2. predict a distribution over the next token
-3. sample one token from it
-4. append it to the sequence
-5. go back to step 2
-```
+<Steps>
+  <Step title="Feed in the prompt">The prompt is supplied to the model as tokens.</Step>
+  <Step title="Predict a distribution">The model predicts a distribution over the next token.</Step>
+  <Step title="Sample one token">One token is sampled from that distribution.</Step>
+  <Step title="Append it to the sequence">The sampled token is appended to the running sequence.</Step>
+  <Step title="Go back to step 2">The loop repeats, predicting a new distribution over what follows.</Step>
+</Steps>
 
 That loop is the whole of "the model is typing." A chat reply is just this running until the model predicts a stop token.
 
+<Sampler />
+
+<InlineCheck
+  question="In the generation loop, what happens immediately after the model predicts a distribution over the next token?"
+  options={['The loop stops and returns the distribution itself as the answer', 'One token is sampled from that distribution and appended to the sequence', 'The prompt is fed in again from scratch with different tokens']}
+  answer={1}
+  explanation="The loop samples one token from the predicted distribution, appends it to the sequence, and goes back to predicting a distribution over what comes next — repeating until a stop token is produced."
+/>
+
 ## Why one objective is enough
 
-It feels too simple to explain reasoning — but predicting the next token in *hard* text (a proof, a working function, a coherent argument) requires actually modelling the structure underneath it. Push that far enough, at scale, and useful capabilities emerge. It also explains the failure modes: a fluent, probable-sounding continuation can be confidently wrong, which is exactly where [hallucinations](/learn/hallucinations/why-models-hallucinate) come from.
+It feels too simple to explain reasoning — but predicting the next token in *hard* text (a proof, a working function, a coherent argument) requires actually modelling the structure underneath it. Push that far enough, at scale, and useful capabilities emerge.
+
+<Callout kind="breaks" title="Fluent is not the same as correct">
+A fluent, probable-sounding continuation can be confidently wrong, which is exactly where [hallucinations](/learn/hallucinations/why-models-hallucinate) come from.
+</Callout>
 
 **Related:** [Tokenization](/learn/llm-foundations/tokenization-explained), [How LLMs Work](/learn/ai-foundations/how-llms-work)

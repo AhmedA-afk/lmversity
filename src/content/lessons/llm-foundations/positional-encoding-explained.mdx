@@ -6,11 +6,23 @@ summary: "Attention treats input as a bag of tokens, so transformers inject posi
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Run "dog bites man" through raw [attention](/learn/llm-foundations/attention-mechanism-explained) and it looks identical to "man bites dog" — attention scores are computed from token content, not position. Positional encoding is the fix: a signal added to each token's [embedding](/learn/llm-foundations/what-are-embeddings) that tells the model where in the sequence it sits.
 
 ## The problem attention creates
 
 A transformer layer computes attention as a weighted sum over all tokens, and that sum is a set operation — shuffle the input tokens and, without positional information, you'd get the same weighted combination back, just relabeled. That's fine for a bag-of-words model, but language depends on order. Recurrent networks got position for free, one step at a time. Transformers process every token in parallel, so they need position encoded explicitly, before the first attention computation ever runs.
+
+<InlineCheck
+  question="Why can't a transformer layer tell 'dog bites man' apart from 'man bites dog' using raw attention alone?"
+  options={['Attention scores are computed from token content, and a weighted sum over all tokens is a set operation that ignores order without added positional information', 'Attention only processes the first and last token in a sequence', 'Recurrent connections inside attention already encode order, so this never actually happens']}
+  answer={0}
+  explanation="Attention's weighted sum over all tokens is a set operation: shuffle the tokens and, without positional information, you get the same combination back, just relabeled. That's why position has to be encoded explicitly."
+/>
 
 ## Sinusoidal encoding: the original fix
 
@@ -25,10 +37,21 @@ Here `pos` is the token's position and `i` indexes the embedding dimension. Low 
 
 ## Learned and relative alternatives
 
-Many models instead learn a position embedding table directly, the same way they learn token embeddings — simpler, but it can't generalize past the maximum position seen in training. Others encode position *relatively*, injecting the offset between the query and key tokens into the attention computation itself rather than adding anything to the embeddings up front. Rotary Position Embedding (RoPE), used in most current open-weight and production LLMs, rotates each query and key vector in a way that makes their dot product depend only on their relative distance — it tends to extrapolate to longer sequences more gracefully than either sinusoidal or learned absolute encodings, which is a big part of why it's the default choice behind the long [context windows](/learn/llm-foundations/context-window-mechanics) shipping today.
+<Compare title="Fixed vs. relative position signals">
+  <Pane title="Sinusoidal / learned" tone="neutral">Sinusoidal encoding is a fixed function of position, no parameters to learn. Many models instead learn a position embedding table directly, the same way they learn token embeddings — simpler, but it can't generalize past the maximum position seen in training.</Pane>
+  <Pane title="RoPE (relative)" tone="good">Rotary Position Embedding rotates each query and key vector so their dot product depends only on relative distance. Used in most current open-weight and production LLMs, it tends to extrapolate to longer sequences more gracefully than either sinusoidal or learned absolute encodings.</Pane>
+</Compare>
+
+Others encode position *relatively* in general, injecting the offset between the query and key tokens into the attention computation itself rather than adding anything to the embeddings up front — RoPE is the dominant example, and it's a big part of why it's the default choice behind the long [context windows](/learn/llm-foundations/context-window-mechanics) shipping today.
 
 ## Why this still matters
 
-Positional encoding is the quiet piece of the [transformer architecture](/learn/llm-foundations/the-transformer-architecture) that makes everything else legible. Get it wrong or push a model past the position range it was trained on, and quality degrades in specific, recognizable ways — the model starts losing track of where it is in a long document, confusing early and late context, or repeating itself. That's the mechanism underneath why extending a model's usable context is its own engineering problem, not just a bigger number in a config file.
+Positional encoding is the quiet piece of the [transformer architecture](/learn/llm-foundations/the-transformer-architecture) that makes everything else legible.
+
+<Callout kind="breaks" title="Push past the trained position range and quality degrades in specific ways">
+Get it wrong or push a model past the position range it was trained on, and quality degrades in specific, recognizable ways — the model starts losing track of where it is in a long document, confusing early and late context, or repeating itself.
+</Callout>
+
+That's the mechanism underneath why extending a model's usable context is its own engineering problem, not just a bigger number in a config file.
 
 **Related:** [The Attention Mechanism, Explained](/learn/llm-foundations/attention-mechanism-explained), [The Transformer Architecture](/learn/llm-foundations/the-transformer-architecture), [Context Window Mechanics](/learn/llm-foundations/context-window-mechanics)

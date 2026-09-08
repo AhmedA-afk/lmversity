@@ -6,6 +6,9 @@ summary: "A small draft model guesses several tokens ahead; the big model verifi
 duration: "6 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Autoregressive generation is slow because it's serial: to produce token N, the model needs token N-1 already in its context. One forward pass, one token, repeat. Speculative decoding breaks that bottleneck without changing a single output token.
 
 ## The core trick
@@ -16,9 +19,20 @@ Wherever the draft and target agree, you keep the token — for free, essentiall
 
 This works because checking N tokens in one pass costs roughly the same as generating 1 token in one pass — the expensive part of a forward pass is loading the model's weights, not the number of tokens scored against them. So verifying 5 guesses costs about as much as generating 1 token normally, and if 3 or 4 of the 5 guesses are correct, you've just gotten multiple tokens for the price of one target-model pass.
 
+<InlineCheck
+  question="Why does verifying 5 draft tokens in one target-model pass cost about as much as generating a single token normally?"
+  options={['Because the expensive part of a forward pass is loading the model’s weights, not the number of tokens scored against them, so checking N tokens costs about the same as checking 1', 'Because the draft model does all the expensive computation instead of the target model', 'Because the target model only checks the first and last of the 5 candidate tokens']}
+  answer={0}
+  explanation="A forward pass is dominated by the cost of loading weights, not by how many tokens are scored against them in that pass. That's why checking several candidate tokens in parallel costs roughly the same as generating one token the normal way."
+/>
+
 ## Why the output doesn't change
 
 The important guarantee: this is not a quality tradeoff. The target model's [sampling](/learn/llm-foundations/sampling-temperature-top-p) rule decides which draft tokens survive. For greedy decoding, a token is accepted only if it matches what the target would have picked itself. For sampled decoding, there's a rejection-sampling scheme that preserves the target's exact output distribution — a candidate token gets accepted with a probability derived from comparing the draft's and target's probabilities for it, and rejected tokens get resampled from a corrected distribution. Either way, the sequence you end up with is statistically identical to what the target model would have produced generating token-by-token on its own. Speculative decoding is a latency optimization, not an approximation.
+
+<Callout kind="production" title="A latency optimization, not an approximation">
+The sequence you end up with is statistically identical to what the target model would have produced generating token-by-token on its own. Speculative decoding is a latency optimization, not an approximation.
+</Callout>
 
 ## What decides the speedup
 

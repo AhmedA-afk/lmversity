@@ -1,0 +1,84 @@
+---
+title: "Myths About How LLMs Work"
+track: "llm-foundations"
+status: live
+summary: "Four persistent myths about how LLMs work, corrected against what the forward pass actually does."
+duration: "7 min read"
+---
+
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
+Four claims about LLMs get repeated so often they start to feel like established fact. All four fall apart the moment you trace them back to what actually happens inside [a forward pass](/learn/llm-foundations/what-a-language-model-actually-computes).
+
+### The mistake: "It looks the answer up in a database"
+
+**Why it's wrong:** there is no stored table of facts or passages the model consults while generating. A forward pass is the same fixed sequence of matrix multiplications on every single call, regardless of what's being asked — nothing resembling a query against a document store happens inside it. What the model "knows" was compressed into its weights during training, and the original text is gone by inference time — see [parameters, activations, and data](/learn/llm-foundations/parameters-activations-and-data) for exactly what does and doesn't survive past training.
+
+<Callout kind="breaks" title="It looks the answer up in a database">
+Someone asks the model to "cite its source" the way a search engine would, or is surprised that it produces a plausible-sounding but nonexistent citation.
+</Callout>
+
+**Fix:** treat the model's knowledge as *compressed and interpolated*, not stored and indexed — accurate for common, well-represented facts, unreliable for anything that needed to be looked up rather than learned as a pattern. If you actually need retrieval and citations, that's a separate system bolted on top of the model, covered in [fine-tuning vs. prompting vs. RAG](/learn/llm-foundations/fine-tuning-vs-prompting-vs-rag).
+
+### The mistake: "It plans the whole sentence before writing the first word"
+
+**Why it's wrong:** [the autoregressive loop](/learn/llm-foundations/the-autoregressive-generation-loop) produces a distribution over exactly one next token per call. There's no buffer anywhere holding "the rest of the sentence" — the fifteenth word is decided in its own forward pass, after the first fourteen have already been sampled and appended, with no access to some earlier "plan."
+
+<Callout kind="breaks" title="It plans the whole sentence before writing the first word">
+A well-structured, multi-clause answer looks like it must have been outlined in advance, the way a person drafts before writing.
+</Callout>
+
+**Fix:** the structure you're seeing emerges from token-by-token momentum — each token shifts what's most probable next, and coherent structure is a side effect of a well-trained distribution, not evidence of lookahead. Where models genuinely do get something like a scratchpad, it's because extra tokens are generated *before* the final answer and fed back in as context — that's [chain-of-thought and test-time compute](/learn/llm-foundations/chain-of-thought-and-test-time-compute), and it's still the same one-token-at-a-time loop, just given more steps to work with.
+
+<InlineCheck
+  question="According to this section, why can a well-structured, multi-clause answer come out of a model that only ever predicts one token at a time?"
+  options={['The model secretly buffers an outline of the full sentence before starting to write', 'Token-by-token momentum from a well-trained distribution produces coherent structure as a side effect, with no buffer holding a plan', 'Chain-of-thought always runs first and silently plans the sentence']}
+  answer={1}
+  explanation="There is no buffer holding the rest of the sentence. Each token is decided in its own forward pass, and coherent structure emerges from a well-trained distribution shifting what is probable next, not from lookahead."
+/>
+
+### The mistake: "Temperature changes what the model knows"
+
+**Why it's wrong:** temperature reshapes the softmax distribution *after* the logits are already fixed by the forward pass — it makes the distribution flatter (values pushed toward uniform, more random picks) or sharper (values pushed toward the max, more deterministic picks). Nothing about turning temperature up or down changes a single weight or recomputes a single logit.
+
+<Callout kind="breaks" title="Temperature changes what the model knows">
+Setting temperature to 0 expecting "the smartest, most accurate" answer, or turning it up expecting "more creative facts" — as if new information could appear from a sampling parameter.
+</Callout>
+
+**Fix:** temperature governs how deterministically you sample from a distribution the model already computed — it can make a wrong logit *less* likely to be picked, but it cannot supply a correct logit that wasn't there. See [sampling, temperature, and top-p](/learn/llm-foundations/sampling-temperature-top-p) for the full mechanics, including why temperature 0 isn't magic either — it's just always taking the top of a distribution that can itself be wrong.
+
+<InlineCheck
+  question="A logit for the correct answer is low because the forward pass under-weighted it. What does raising or lowering temperature do about that?"
+  options={['It recomputes the logits so the correct answer scores higher', 'It reshapes how the already-fixed logits are sampled, and cannot supply a logit that was never there', 'It changes a single weight in the model to fix the underlying error']}
+  answer={1}
+  explanation="Temperature reshapes the softmax distribution after the logits are already fixed. It can change how deterministically a token is picked, but it cannot add a correct logit the forward pass never produced."
+/>
+
+### The mistake: "A bigger context window means it remembers past chats"
+
+**Why it's wrong:** a context window is the number of tokens one forward pass can attend to *in that single call* — it's supplied fresh with every request. There is nothing persistent left inside the model's weights after a conversation ends; activations are computed and discarded per call (see [parameters, activations, and data](/learn/llm-foundations/parameters-activations-and-data)), and the model has no side channel for storing "what happened last week."
+
+<Callout kind="breaks" title="A bigger context window means it remembers past chats">
+Expecting a brand-new conversation to somehow know who you are or what you discussed previously, purely because the model supports a large context window.
+</Callout>
+
+**Fix:** cross-session memory, where it exists, is a product feature built *around* the model — a system that retrieves and re-inserts prior transcripts into a new prompt. It has nothing to do with context window *size*; a 128k-token window with no re-inserted history remembers exactly as much about a previous session as a 4k-token one: nothing. See [context window mechanics](/learn/llm-foundations/context-window-mechanics) for what the window actually governs.
+
+<InlineCheck
+  question="A model with a 128k-token context window starts a brand-new conversation with no memory system attached. How much does it know about yesterday's separate conversation with the same user?"
+  options={['Nothing, because activations from the previous call were discarded and nothing was re-inserted into this prompt', 'Whatever fits in 128k tokens, drawn automatically from the earlier session', 'Only the facts that came up most often across sessions']}
+  answer={0}
+  explanation="A context window is per-call: it is supplied fresh with every request and nothing persists in the weights between calls. Remembering a previous session requires a separate system that re-inserts old transcripts into the new prompt."
+/>
+
+## Pre-flight checklist
+
+Before making a claim about how a model "knows," "plans," "gets smarter," or "remembers," check:
+
+- [ ] Am I describing something in the fixed weights, or something in one forward pass's activations?
+- [ ] Would "it's just predicting the next token, one at a time" already explain this behavior?
+- [ ] Am I mistaking the context window for persistent, cross-session memory?
+- [ ] Am I attributing a change in knowledge to what's actually just a change in a sampling parameter?
+
+**Related:** [The Autoregressive Generation Loop](/learn/llm-foundations/the-autoregressive-generation-loop), [Sampling, Temperature, and Top-p](/learn/llm-foundations/sampling-temperature-top-p), [Context Window Mechanics](/learn/llm-foundations/context-window-mechanics)
