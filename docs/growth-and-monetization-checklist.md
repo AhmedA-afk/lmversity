@@ -44,9 +44,6 @@ Current milestone: P0 — make the existing monetization setup correct, measurab
 
 Current blockers:
 
-- Vercel Web Analytics is still disabled on the project, so `/_vercel/insights/script.js`
-  404s on every production page and the console carries a MIME-type error for it. No
-  analytics data is being collected.
 - `npm run check:content` exits 1 on `main` with 407 pre-existing lesson-frontmatter
   problems (missing `summary:`, body-level H1s). The in-flight component-kit retrofit
   fixes them; the linter shipped ahead of its fixes. Not a build gate.
@@ -223,15 +220,15 @@ Do not commit private Search Console exports containing account identifiers. Sto
 ### Site analytics
 
 - [x] `DECISION` Choose Plausible or Umami; do not enable both for the initial baseline.
-- [ ] `ANALYTICS` Create or identify the site property and record its non-secret site identifier.
+- [x] `ANALYTICS` Enable Vercel Web Analytics for the LMVersity project.
 - [x] `CODE` Configure the selected provider through the existing `site.analytics` block.
 - [x] `CODE` Verify analytics loads only when a valid provider and ID are present.
 - [x] `CONTENT` Update the privacy page before analytics ships.
-- [ ] `ANALYTICS` Track aggregate pageviews, entry pages, exit pages, referrers, countries, and devices.
+- [x] `ANALYTICS` Track aggregate pageviews, entry pages, exit pages, referrers, countries, and devices.
 - [ ] `ANALYTICS` Add events for `curriculum_start`, `track_open`, `next_lesson`, `related_lesson`, `guide_open`, `search_open`, `search_result_open`, `lesson_complete`, `lesson_save`, and `share_or_copy_link` if that action exists.
 - [x] `CODE` Use one small event helper rather than scattering provider-specific calls through templates.
 - [x] `CODE` Ensure analytics failure never blocks navigation or content rendering.
-- [ ] `ANALYTICS` Verify events on a preview or production property without generating ad clicks.
+- [x] `ANALYTICS` Verify events on a preview or production property without generating ad clicks.
 
 Acceptance criteria:
 
@@ -481,6 +478,40 @@ Acceptance criteria:
 ## Progress log
 
 Add new entries at the top.
+
+### 2026-09-14 — Web Analytics collecting, after a redeploy
+
+- The 404 was never a code defect. Web Analytics had been switched on account-side after
+  `187da5d` shipped, and Vercel only creates the `/_vercel/insights/*` routes at deploy
+  time — so the existing `<script src="/_vercel/insights/script.js">` in `Layout.astro`
+  had been resolving to the site's own 404 page (31KB of HTML, hence the MIME-type
+  console error) for every request since activation.
+- Fixed by `734822a`, an empty commit whose only job is to force a fresh build. No code
+  changed. The route returned 200 about 105 seconds after the push.
+- Verified end to end on production: `script.js` 200 `application/javascript` (3,106 bytes),
+  a `POST /_vercel/insights/view` returning 200 on page load, and a
+  `POST /_vercel/insights/event` returning 200 for a custom event. No console errors
+  remain on any page checked. The dashboard moved off its Get Started panel and now reads
+  1 visitor / 3 page views, listing exactly the three paths visited during the check —
+  `/`, `/guides/build-an-mcp-server-in-python`,
+  `/learn/tools-function-calling/anatomy-of-a-tool-call`.
+- Those three views and one `search_open` event are synthetic verification traffic, not
+  real readers. Discount them in the first day's baseline.
+- A dead end worth recording: installing `@vercel/analytics` and swapping in its official
+  Astro component also works, but it was diagnosed from the wrong premise and it inlines
+  a ~2.6KB module into every page — about 6MB more per deployment (372MB vs 366MB) on a
+  project already over its storage quota. Reverted unshipped. Reach for it only if the
+  hand-written tag ever stops being enough.
+- Still open: whether custom events are retained on the Hobby plan. The endpoint accepts
+  the POST, which does not prove the dashboard will report them.
+
+### 2026-09-14 — Vercel Web Analytics enabled
+
+- Enabled Web Analytics in the Vercel project.
+- Production verification immediately afterward still returned 404 for
+  `/_vercel/insights/script.js`, with the corresponding MIME-type console error.
+- Next gate: redeploy the current production commit, then verify a successful analytics
+  script response and a view request in the browser Network panel before marking collection live.
 
 ### 2026-09-14 — Implementation set deployed as `83f245d`
 
