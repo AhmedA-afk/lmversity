@@ -1,8 +1,10 @@
 ---
 import AdSlot from '../../components/AdSlot.astro';
 import Layout from '../../components/Layout.astro';
+import ReportError from '../../components/ReportError.astro';
 import { getCollection, render } from 'astro:content';
 import { ogImage } from '../../data/og-images';
+import { site } from '../../data/site';
 
 export async function getStaticPaths() {
   const guides = await getCollection('guides');
@@ -57,6 +59,7 @@ const related = entry.data.related
       <h1>{entry.data.title}</h1>
       <p class="q">Answers: “{entry.data.question}”</p>
       <div class="meta mono">
+        {site.author.name && <><span>By <a href="/about">{site.author.name}</a></span><span aria-hidden="true">·</span></>}
         <span>{entry.data.duration}</span><span aria-hidden="true">·</span>
         <span>{entry.data.level}</span><span aria-hidden="true">·</span>
         <span>Updated {entry.data.updated ?? entry.data.published}</span>
@@ -71,8 +74,6 @@ const related = entry.data.related
       )}
 
       <div class="prose"><Content /></div>
-
-      <AdSlot kind="guide" />
 
       {related.length > 0 && (
         <section class="related">
@@ -101,6 +102,12 @@ const related = entry.data.related
           </ul>
         </section>
       )}
+
+      <ReportError title={entry.data.title} url={`${site.url}/guides/${entry.id}`} />
+
+      {/* After every link list — a unit between prose and onward links reads
+          as navigation and risks invalid clicks. */}
+      <AdSlot kind="guide" />
     </article>
 
     <aside class="toc" aria-label="On this page">

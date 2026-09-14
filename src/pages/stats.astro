@@ -1,0 +1,243 @@
+---
+import Layout from '../components/Layout.astro';
+import AdSlot from '../components/AdSlot.astro';
+import { site } from '../data/site';
+
+// One source for both the prose claim and the schema date — they cannot drift.
+const VERIFIED = '29 August 2026';
+const VERIFIED_ISO = '2026-08-29';
+
+// Distilled from the tables below — every answer names its source and date.
+const faq = [
+  {
+    q: 'How much more do jobs that require AI skills pay?',
+    a: `PwC reports a 56% average wage premium for jobs requiring AI skills (2025). The World Bank reports roughly 28% for AI-focused roles, and the World Economic Forum reports 23% for AI-related skills in UK job postings. These measure job postings, not the causal effect of taking a course.`,
+  },
+  {
+    q: 'How big is the market for AI-skills training?',
+    a: `There is no single standardized figure. The practical addressable estimate for GenAI-skills training and content is $2B–$5B for 2024/25, growing at an estimated 25%–40% a year — a low-confidence estimate derived by LMVersity from the GenAI share of IT and corporate training spend. Adjacent published proxies range from $21.5B (global IT training, IDC, 2024) to $104.3B (corporate e-learning, Grand View Research, 2024).`,
+  },
+  {
+    q: 'How many people are actively learning AI?',
+    a: `An estimated 20M–40M people worldwide began structured AI or GenAI learning in a 12-month period — a low-confidence estimate. Firmer published anchors: Coursera reported 197M registered learners as of December 2025 and over 10M cumulative GenAI enrollments; Udemy reported 700M+ minutes of AI content consumed in 2025.`,
+  },
+  {
+    q: 'Which AI skills carry the highest premium?',
+    a: `Rare, demonstrable capability: shipping AI systems, automating workflows, evaluating model output, governance, and measurable productivity gains. Estimated premiums run highest for data scientists, ML engineers and GenAI engineers (25%–56%, $25k–$80k+ annual upside in US terms), followed by software developers using AI effectively (15%–30%, $15k–$40k).`,
+  },
+  {
+    q: `Who publishes these figures and when were they last checked?`,
+    a: `Compiled by ${site.name} (${site.author.name}, editor) from the public sources linked beside each figure. Last verified ${VERIFIED}. Figures are approximate and definitions differ between sources; confidence grades (high/medium/low) are shown for every number.`,
+  },
+];
+---
+<Layout
+  title="AI learning, by the numbers"
+  description="The AI-skills market, who is learning, and what AI capability is worth — every figure sourced, date-labelled and marked by confidence. The honest version of the AI education boom."
+  modifiedTime={VERIFIED_ISO}
+  breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Stats', url: '/stats' }]}
+  faq={faq}
+>
+  <article class="wrap">
+    <header>
+      <span class="eyebrow">Stats</span>
+      <h1>AI learning, by the numbers.</h1>
+      <p class="lede">
+        How big the AI-skills market is, who is learning, and what the skill is
+        worth — presented the way this site tries to present everything: with the
+        source next to the number and a date next to the claim. Figures were last
+        verified <strong>{VERIFIED}</strong>; where a study measured something
+        narrower than the headline suggests, the page says so.
+      </p>
+      <p class="legend mono">
+        Confidence: <b>H</b> high · <b>M</b> medium · <b>L</b> low &nbsp;—&nbsp;
+        Type: <b>P</b> published · <b>E</b> estimate · <b>D</b> derived
+      </p>
+    </header>
+
+    <div class="statgrid">
+      <div class="stat" id="genai-enrollments">
+        <span class="n mono">10M+</span>
+        <span class="l">cumulative GenAI enrollments on Coursera, ~12 per minute through 2025</span>
+        <a class="s" href="https://blog.coursera.org/celebrating-10-million-genai-enrollments-on-ai-appreciation-day/">Coursera · 2025</a>
+      </div>
+      <div class="stat" id="ai-wage-premium">
+        <span class="n mono">56%</span>
+        <span class="l">average wage premium for jobs that require AI skills</span>
+        <a class="s" href="https://www.pwc.com/gx/en/news-room/press-releases/2025/ai-linked-to-a-fourfold-increase-in-productivity-growth.html">PwC · 2025</a>
+      </div>
+      <div class="stat" id="genai-skills-market">
+        <span class="n mono">$2B–$5B</span>
+        <span class="l">estimated practical market for GenAI-skills training and content, 2024/25</span>
+        <span class="s">Low-confidence estimate · see below</span>
+      </div>
+      <div class="stat" id="udemy-ai-minutes">
+        <span class="n mono">700M+</span>
+        <span class="l">minutes of AI content consumed on Udemy in 2025, up 120% year over year</span>
+        <a class="s" href="https://udemy.gcs-web.com/news-releases/news-release-details/udemy-reports-fourth-quarter-and-full-year-2025-results">Udemy · FY2025 results</a>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h2 id="market">The market</h2>
+      <p>
+        There is no single "AI training market" figure — the categories below overlap and
+        use different definitions, so <strong>do not add them together</strong>. Read them
+        as proxies for the same underlying shift: training budgets moving toward AI.
+      </p>
+      <table>
+        <thead>
+          <tr><th>Market proxy</th><th>Current size</th><th>Forecast</th><th>CAGR</th><th>Conf.</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Global IT/technology training spend</td><td>$21.5B · 2024</td><td>$26.6B · 2029</td><td>4.3% <span class="tag">derived</span></td><td>M · P+D</td></tr>
+          <tr><td>Global corporate e-learning</td><td>$104.3B · 2024</td><td>$335B · 2030</td><td>21.7%</td><td>M · P</td></tr>
+          <tr><td>Global corporate training</td><td>$123.3B · 2024</td><td>$199.4B · 2030</td><td>8.3%</td><td>M · P</td></tr>
+          <tr><td>Global digital education</td><td>$26.0B · 2024</td><td>$133.7B · 2030</td><td>31.5%</td><td>M · P</td></tr>
+          <tr><td>AI-in-education software <em>(software proxy — not skills training)</em></td><td>$2.21B · 2024</td><td>$5.82B · 2030</td><td>17.5%</td><td>M · P</td></tr>
+          <tr><td><strong>GenAI-skills training &amp; content — practical addressable estimate</strong></td><td>$2B–$5B · 2024/25</td><td>$8B–$37B · 2030</td><td>25%–40% est.</td><td>L · E</td></tr>
+        </tbody>
+      </table>
+      <p class="src">
+        Sources: <a href="https://www.itpro.com/business/careers-and-training/the-rise-of-the-vendor-academy">IDC IT-training figures</a> ·
+        <a href="https://www.grandviewresearch.com/industry-analysis/corporate-e-learning-market-report">Grand View, corporate e-learning</a> ·
+        <a href="https://www.giiresearch.com/report/go1644095-corporate-training.html">corporate-training market</a> ·
+        <a href="https://www.grandviewresearch.com/industry-analysis/digital-education-market-report">Grand View, digital education</a> ·
+        <a href="https://www.marketsandmarkets.com/Market-Reports/ai-in-education-market-200371366.html">MarketsandMarkets, AI in education</a>
+      </p>
+      <p>
+        The $2B–$5B GenAI-skills figure is not a standardized published category — it is
+        derived from GenAI's share of IT and corporate training plus observed demand, and
+        it is the least confident number on this page. What is published and hard: Coursera
+        crossed <a href="https://blog.coursera.org/celebrating-10-million-genai-enrollments-on-ai-appreciation-day">10 million cumulative GenAI enrollments</a>,
+        and Udemy reported <a href="https://udemy.gcs-web.com/news-releases/news-release-details/udemy-reports-fourth-quarter-and-full-year-2025-results">120% year-over-year growth in AI-content consumption in 2025</a>.
+      </p>
+
+      <h2 id="who-is-learning">Who is learning</h2>
+      <p>
+        "Active learner" here means someone who started structured AI/GenAI learning in the
+        preceding 12 months — de-duplicated approximately across platforms. It excludes
+        people who merely use a chatbot at work. These are estimates, and the published
+        anchors below them are firmer ground.
+      </p>
+      <table>
+        <thead>
+          <tr><th>Geography</th><th>Active learners / year</th><th>Per month</th><th>YoY growth est.</th><th>Conf.</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Global</td><td>20M–40M</td><td>8M–15M</td><td>40%–80%</td><td>L · E</td></tr>
+          <tr><td>India</td><td>3M–6M</td><td>1M–2M</td><td>60%–120%</td><td>L · E</td></tr>
+          <tr><td>United States</td><td>3M–6M</td><td>1M–2M</td><td>30%–70%</td><td>L · E</td></tr>
+          <tr><td>Rest of world</td><td>14M–28M</td><td>5M–11M</td><td>30%–70%</td><td>L · E</td></tr>
+        </tbody>
+      </table>
+      <table>
+        <thead>
+          <tr><th>Published anchor</th><th>Figure</th><th>As of</th><th>Conf.</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><a href="https://www.sec.gov/Archives/edgar/data/1651562/000165156226000015/cour-20251231.htm">Coursera registered learners</a></td><td>197M</td><td>Dec 2025</td><td>H · P</td></tr>
+          <tr><td><a href="https://blog.coursera.org/celebrating-10-million-genai-enrollments-on-ai-appreciation-day/">Coursera GenAI enrollments</a></td><td>10M+ cumulative · ~12/minute</td><td>2025</td><td>H · P</td></tr>
+          <tr><td><a href="https://blog.coursera.org/presenting-courseras-2025-global-skills-report/">India Coursera GenAI enrollments</a></td><td>1.3M+ — highest country total</td><td>2024</td><td>H · P</td></tr>
+          <tr><td><a href="https://news.microsoft.com/en-in/microsoft-announces-us-3bn-investment-over-two-years-in-india-cloud-and-ai-infrastructure-to-accelerate-adoption-of-ai-skilling-and-innovation/">Microsoft India AI-skilling initiative</a></td><td>2.4M people trained in under one year</td><td>—</td><td>H · P</td></tr>
+          <tr><td><a href="https://udemy.gcs-web.com/news-releases/news-release-details/udemy-reports-fourth-quarter-and-full-year-2025-results">Udemy AI-content consumption</a></td><td>700M+ minutes · +120% YoY</td><td>2025</td><td>H · P</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="what-ai-skills-pay">What AI skills pay</h2>
+      <p>
+        The published studies measure job postings and AI-heavy roles — <strong>not</strong>
+        the causal effect of taking a course. Read them as "the market pays more for roles
+        that require this," not as "this course adds this much to your salary."
+      </p>
+      <table>
+        <thead>
+          <tr><th>Study</th><th>Premium measured</th><th>Scope</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><a href="https://www.pwc.com/gx/en/news-room/press-releases/2025/ai-linked-to-a-fourfold-increase-in-productivity-growth.html">PwC · 2025</a></td><td>56% average wage premium</td><td>Jobs requiring AI skills</td></tr>
+          <tr><td><a href="https://documents1.worldbank.org/curated/en/099520310212533663/pdf/IDU-1bf9cfe2-ce51-4c62-b46e-613807362ae4.pdf">World Bank</a></td><td>~28%</td><td>AI-focused roles</td></tr>
+          <tr><td><a href="https://www.weforum.org/stories/artificial-intelligence/ai-improving-wages-job-quality/">World Economic Forum</a></td><td>23%</td><td>AI-related skills, UK job postings</td></tr>
+        </tbody>
+      </table>
+      <table>
+        <thead>
+          <tr><th>Segment</th><th>Plausible incremental premium</th><th>Approx. annual upside, US terms</th><th>Conf.</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Software developers using AI effectively</td><td>15%–30%</td><td>$15k–$40k</td><td>M · E</td></tr>
+          <tr><td>Data scientists / ML engineers / GenAI engineers</td><td>25%–56%</td><td>$25k–$80k+</td><td>M · E, anchored to P</td></tr>
+          <tr><td>Designers using AI in production workflows</td><td>5%–15%</td><td>$3k–$15k</td><td>L · E</td></tr>
+          <tr><td>Marketers / content professionals</td><td>5%–20%</td><td>$3k–$20k</td><td>L · E</td></tr>
+          <tr><td>Managers with implementation capability</td><td>0%–10% base · 10%–25% promotion/scope upside</td><td>$0–$50k</td><td>L · E</td></tr>
+        </tbody>
+      </table>
+      <p>
+        The premium concentrates on <strong>rare, demonstrable capability</strong> —
+        shipping AI systems, automating workflows, evaluating model output, governance,
+        measurable productivity. Listing "prompt engineering" on a résumé is not it. That
+        is the entire reason this site's <a href="/learn">curriculum</a> is built around
+        production work rather than prompt tricks.
+      </p>
+
+      <h2 id="faq">Quick answers</h2>
+      {faq.map((f) => (
+        <details>
+          <summary>{f.q}</summary>
+          <p>{f.a}</p>
+        </details>
+      ))}
+
+      <hr />
+
+      <p class="fineprint">
+        All figures above were compiled with a knowledge cutoff of {VERIFIED} and web
+        checks. Figures are approximate, definitions differ between sources, and several
+        market estimates may already be dated. If a number here looks wrong,
+        the most useful report names the figure and the source — see
+        <a href="/about">corrections</a>.
+      </p>
+
+      <p class="fineprint cite">
+        Cite this page: {site.author.name}, "AI learning, by the numbers", {site.name},
+        https://lmversity.com/stats (verified {VERIFIED}).
+      </p>
+    </div>
+
+    <!-- Ad placement per CODEX-BRIEF #7: blog templates and this page only — never lessons. -->
+    <AdSlot kind="stats" />
+
+    <div class="cta">
+      <a href="/learn" class="btn btn-primary">Browse the curriculum</a>
+      <a href="/roles" class="btn btn-ghost">Find your role path</a>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .wrap { max-width: 860px; margin-inline: auto; padding: 56px 32px 8px; }
+  h1 { font-size: clamp(30px, 4.6vw, 44px); letter-spacing: -.022em; margin-top: 14px; }
+  .lede { margin-top: 20px; font-size: 17px; line-height: 1.65; color: var(--muted); }
+  .legend { margin-top: 18px; font-size: 11.5px; color: var(--faint); letter-spacing: .02em; }
+  .legend b { color: var(--muted); }
+
+  .statgrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; margin-top: 34px; }
+  .stat { background: var(--paper); padding: 22px 24px; display: flex; flex-direction: column; gap: 8px; }
+  .stat .n { font-size: 30px; font-weight: 600; letter-spacing: -.02em; color: var(--text); }
+  .stat .l { font-size: 13.5px; line-height: 1.5; color: var(--muted); }
+  .stat .s { font-size: 11px; color: var(--faint); margin-top: auto; }
+  .stat a.s:hover { color: var(--text); }
+
+  .prose { margin-top: 44px; }
+  .prose table { font-size: 13px; }
+  .prose th { white-space: nowrap; }
+  .prose .tag { font-size: 10px; color: var(--faint); background: var(--chip-bg); border: 1px solid var(--rule); border-radius: 3px; padding: 2px 5px; white-space: nowrap; }
+  .src { font-size: 12.5px; color: var(--faint); margin-top: -8px; }
+  .fineprint { font-size: 12.5px; color: var(--faint); }
+  .cta { margin-top: 44px; display: flex; gap: 12px; flex-wrap: wrap; }
+
+  @media (max-width: 640px) {
+    .wrap { padding: 36px 20px 8px; }
+    .statgrid { grid-template-columns: 1fr; }
+  }
+</style>

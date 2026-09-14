@@ -1,5 +1,5 @@
-# Canonicalise on the apex domain. Enable once DNS for both names exists.
-# https://www.lmversity.com/*  https://lmversity.com/:splat  301!
+# Canonicalise on the apex domain. Mirrors the host redirect in vercel.json.
+https://www.lmversity.com/*  https://lmversity.com/:splat  301!
 
 # Stable shortcuts worth keeping working if they are ever shared.
 /curriculum      /learn           301
@@ -9,3 +9,7 @@
 /feed.xml        /rss.xml         301
 /rss             /rss.xml         301
 /security.txt    /.well-known/security.txt  301
+
+# Internal authoring docs mistakenly published as lessons; moved to docs/internal/.
+/learn/maths-foundations/lesson-index          /learn/maths-foundations  301
+/learn/maths-foundations/research-benchmarks   /learn/maths-foundations  301

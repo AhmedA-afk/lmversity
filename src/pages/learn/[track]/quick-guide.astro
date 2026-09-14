@@ -5,6 +5,7 @@ import { tracks, getTrack } from '../../../data/curriculum.ts';
 import { groupTrack } from '../../../data/modules';
 import { quickGuides } from '../../../data/quick-guides';
 import { ogImage } from '../../../data/og-images';
+import contentDates from '../../../data/content-dates.json';
 
 export function getStaticPaths() {
   // Only tracks with an authored guide get a page. An auto-assembled one would
@@ -34,9 +35,25 @@ const minutes = inTrack.reduce((total, l) => {
   return total + (Number.isFinite(n) ? n : 6);
 }, 0);
 const trackHours = Math.max(1, Math.round(minutes / 60));
+
+const dataDates = (contentDates as Record<string, { published?: string; updated?: string }>)['data/quick-guides'];
+const quickFaq = [
+  {
+    q: `Is there a shorter version of the ${track.name} track?`,
+    a: `This page is it — ${track.name} condensed to about ${guide.minutes} minutes of reading. The full track is ${inTrack.length} lessons, about ${trackHours} hours.`,
+  },
+  {
+    q: `What are the most important lessons in ${track.name}?`,
+    a: `The lessons that carry the most weight: ${essential.map((e) => titleFor.get(e.slug)).join('; ')}.`,
+  },
+];
 ---
 <Layout
   title={`${track.name} in ${guide.minutes} minutes`}
+  type="article"
+  publishedTime={dataDates?.published}
+  modifiedTime={dataDates?.updated}
+  faq={quickFaq}
   description={`${track.name}, condensed: what each module establishes, the three lessons that carry the most weight, and what the track deliberately doesn't cover. ${inTrack.length} lessons summarised in one page.`}
   breadcrumbs={[
     { name: 'Home', url: '/' },

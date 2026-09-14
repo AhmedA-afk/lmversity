@@ -38,7 +38,7 @@ const hasArt = existsSync(join(process.cwd(), 'public/img/roles', `${artId}.webp
   type="course"
   breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Roles', url: '/roles' }, { name: fdeRole.name, url: base }, { name: phase.name, url: `${base}/${phase.id}` }]}
   itemList={nodes.filter((n) => byId.has(`${phase.id}/${n.slug}`)).map((n) => ({ name: n.title, url: `${base}/${phase.id}/${n.slug}` }))}
-  course={{ level: `Stage ${phase.stage}`, lessonCount: nodes.length, sections: phase.modules.map((m) => m.name) }}
+  course={{ level: `Stage ${phase.stage}`, lessonCount: liveCount, sections: phase.modules.map((m) => m.name), workload: hours ? `PT${hours}H` : undefined }}
 >
   <section class="head container">
     <a href={base} class="back mono">← {fdeRole.name}</a>

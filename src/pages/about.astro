@@ -2,6 +2,7 @@
 import Layout from '../components/Layout.astro';
 import { getCollection } from 'astro:content';
 import { tracks, roleTracks } from '../data/curriculum.ts';
+import { site } from '../data/site';
 
 const lessons = await getCollection('lessons');
 const guides = await getCollection('guides');
@@ -97,6 +98,18 @@ const guides = await getCollection('guides');
         credential anyone should treat as one. It isn't a news feed — model releases are
         covered where they change how you should build, not as announcements. And it isn't
         vendor-aligned: where providers differ, the difference is the content.
+      </p>
+
+      <h2>Who writes it</h2>
+      <p>
+        The site is written and edited by <strong>{site.author.name}</strong>
+        {site.author.sameAs.length > 0 && (
+          <> ({site.author.sameAs.map((url, i) => (
+            <>{i > 0 && ', '}<a href={url}>{url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')}</a></>
+          ))})</>
+        )}. One editor, one editorial
+        standard: no invented numbers, no invented sources, and corrections are
+        treated as the highest-value contribution anyone can make.
       </p>
 
       <h2>How it's built</h2>

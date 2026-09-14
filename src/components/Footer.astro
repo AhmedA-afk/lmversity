@@ -1,5 +1,6 @@
 ---
 import Wordmark from './Wordmark.astro';
+import { site } from '../data/site';
 
 const cols = [
   {
@@ -25,6 +26,7 @@ const cols = [
     head: 'Project',
     links: [
       ['Blog', '/blog'],
+      ['Stats & market data', '/stats'],
       ['About LMVersity', '/about'],
       ['RSS feed', '/rss.xml'],
     ],
@@ -59,7 +61,11 @@ const year = new Date().getFullYear();
   </div>
   <div class="base">
     <span>© {year} LMVersity · <abbr title="LMVersity">LMV</abbr></span>
-    <span class="mono note">No cookies · no tracking · no account required</span>
+    <span class="mono note">
+      {site.ads.client
+        ? <>No account required · ads by Google — <a href="/privacy">privacy</a></>
+        : <>No cookies · no tracking · no account required</>}
+    </span>
   </div>
 </footer>
 

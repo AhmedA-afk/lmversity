@@ -9,8 +9,9 @@ const BUILD_TIME = new Date().toISOString();
 function lastModified(path) {
   const parts = path.replace(/^\/|\/$/g, '').split('/');
   const candidates = [];
-  if (parts[0] === 'learn' && parts.length === 3) {
-    candidates.push(`src/content/lessons/${parts[1]}/${parts[2]}.md`, `src/content/lessons/${parts[1]}/${parts[2]}.mdx`);
+  if (parts[0] === 'learn' && parts.length >= 3) {
+    const slug = parts.slice(1).join('/');
+    candidates.push(`src/content/lessons/${slug}.md`, `src/content/lessons/${slug}.mdx`);
   } else if (['guides', 'blog', 'scenarios', 'answers'].includes(parts[0]) && parts.length === 2) {
     candidates.push(`src/content/${parts[0]}/${parts[1]}.md`, `src/content/${parts[0]}/${parts[1]}.mdx`);
   } else if (parts[0] === 'interview' && parts.length === 2) {
@@ -21,6 +22,8 @@ function lastModified(path) {
     candidates.push('src/data/fde.ts');
   } else if (parts[0] === 'learn' && parts.length === 2) {
     candidates.push('src/data/curriculum.ts');
+  } else if (parts.length === 1) {
+    candidates.push(`src/pages/${parts[0]}.astro`, `src/pages/${parts[0]}/index.astro`);
   }
   let newest = 0;
   for (const file of candidates) {
@@ -38,6 +41,8 @@ export default defineConfig({
   integrations: [
     mdx(),
     sitemap({
+      // Keep noindex routes out of the sitemap — the two signals contradict.
+      filter: (page) => !['/kit', '/saved'].includes(new URL(page).pathname.replace(/\/$/, '')),
       // Hub pages and guides are the entry points worth crawling most often;
       // lessons are stable reference material.
       serialize(item) {

@@ -19,7 +19,15 @@ npm-debug.log*
 # a human byline.
 CODEX-BRIEF.md
 STRATEGY.md
+GAMEPLAN.md
 CURRICULUM-CHECKLIST.md
 docs-maths-foundations-overview.md
 .vercel
 .env*
+
+# Third-party reference clone (msitarzewski/agency-agents) — local reading
+# material only, not part of the site. Kept out so its nested .git can never
+# be staged as a dangling gitlink.
+agency-agents/
+__pycache__/
+*.pyc

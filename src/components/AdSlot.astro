@@ -1,27 +1,34 @@
 ---
 /**
- * One ad unit, below the primary content. Renders nothing unless
- * site.ads.client is set, so a site without AdSense has no placeholder, no
- * reserved space and no script. Labelled, because readers deserve to know.
+ * One labelled manual ad unit below the primary content.
+ *
+ * Implementation: manual responsive units (Auto ads disabled while the
+ * baseline is collected). A unit renders only when BOTH site.ads.client and a
+ * real per-kind slot id exist in site.ads.slots — a configured publisher id
+ * with empty slots ships no unit, no placeholder and no reserved space.
  */
 import { site } from '../data/site';
 
 interface Props {
-  /** Which slot id to use from site.ads.slots. */
-  kind: 'lesson' | 'guide' | 'blog';
+  /** Which slot id to use from site.ads.slots. Unknown kinds fail the build. */
+  kind: keyof typeof site.ads.slots;
 }
 const { kind } = Astro.props;
+if (!(kind in site.ads.slots)) {
+  throw new Error(`AdSlot: unknown kind "${kind}" — add it to site.ads.slots in src/data/site.ts`);
+}
 const client = site.ads.client;
-const slot = client ? site.ads.slots[kind] : '';
+const slot = site.ads.slots[kind];
+const show = Boolean(client && slot);
 ---
-{client && (
+{show && (
   <aside class="ad" aria-label="Advertisement">
     <span class="ad-label mono">Advertisement</span>
     <ins
       class="adsbygoogle"
       style="display:block"
       data-ad-client={client}
-      data-ad-slot={slot || undefined}
+      data-ad-slot={slot}
       data-ad-format="auto"
       data-full-width-responsive="true"
     ></ins>
@@ -32,5 +39,11 @@ const slot = client ? site.ads.slots[kind] : '';
 <style>
   .ad { margin-top: 40px; padding-top: 14px; border-top: 1px solid var(--rule); }
   .ad-label { display: block; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); margin-bottom: 8px; }
-  .ad :global(.adsbygoogle) { min-height: 90px; }
+  /* Reserve close-to-real responsive heights so a filled ad does not shift the
+     page; collapse entirely when AdSense reports the unit unfilled or a blocker
+     left the ins empty (handled in site.js). */
+  .ad :global(.adsbygoogle) { min-height: 100px; }
+  @media (min-width: 720px) { .ad :global(.adsbygoogle) { min-height: 250px; } }
+  .ad:has(.adsbygoogle[data-ad-status="unfilled"]),
+  .ad[data-collapsed] { display: none; }
 </style>

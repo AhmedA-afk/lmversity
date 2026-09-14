@@ -8,6 +8,18 @@
 (function () {
   'use strict';
 
+  /* -------------------------------------------------------------- analytics */
+  /* One funnel entry point: stable event names, provider-pluggable sink.
+     With no provider configured none of the globals exist and every call is
+     a no-op — events never block or break anything they measure. */
+  function track(name, props) {
+    try {
+      if (window.plausible) window.plausible(name, props ? { props: props } : undefined);
+      else if (window.umami && window.umami.track) window.umami.track(name, props);
+      else if (window.va) window.va('event', props ? { name: name, data: props } : { name: name });
+    } catch (e) {}
+  }
+
   /* ---------------------------------------------------------------- storage */
   var PKEY = 'fg-progress';
   var LKEY = 'fg-last';
@@ -112,8 +124,13 @@
     render(scored.slice(0, 30).map(function (p) { return p[1]; }), q);
   }
 
+  // Where focus was before the dialog took it, so Escape can hand it back.
+  var searchReturnFocus = null;
+
   function openSearch() {
     if (!dialog) return;
+    var prev = document.activeElement;
+    if (prev && prev !== document.body && !dialog.contains(prev)) searchReturnFocus = prev;
     dialog.hidden = false;
     document.body.style.overflow = 'hidden';
     loadIndex().then(function () { runQuery(); });
@@ -125,6 +142,26 @@
     if (!dialog) return;
     dialog.hidden = true;
     document.body.style.overflow = '';
+    // A keyboard reader who opened search from the toolbar should land back on
+    // the button, not at the top of the document.
+    if (searchReturnFocus && document.contains(searchReturnFocus)) {
+      try { searchReturnFocus.focus(); } catch (e) {}
+    }
+    searchReturnFocus = null;
+  }
+
+  // aria-modal tells assistive tech the page behind is inert; Tab has to agree.
+  function trapTab(e) {
+    var panel = dialog.querySelector('.spanel') || dialog;
+    var items = panel.querySelectorAll('a[href], button, input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    if (!items.length) return;
+    var first = items[0];
+    var last = items[items.length - 1];
+    if (e.shiftKey && (document.activeElement === first || !panel.contains(document.activeElement))) {
+      e.preventDefault(); last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault(); first.focus();
+    }
   }
 
   function moveActive(delta) {
@@ -137,20 +174,25 @@
   }
 
   document.addEventListener('click', function (e) {
-    if (e.target.closest('[data-search-open]')) { e.preventDefault(); openSearch(); }
+    if (e.target.closest('[data-search-open]')) { e.preventDefault(); openSearch(); track('search_open'); }
     if (e.target.closest('[data-search-close]')) closeSearch();
+    var tEl = e.target.closest('[data-event]');
+    if (tEl) track(tEl.getAttribute('data-event'));
+    var sr = e.target.closest('a.sresult');
+    if (sr) track('search_result_open');
   });
 
   document.addEventListener('keydown', function (e) {
     if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); openSearch(); return; }
     if (dialog && !dialog.hidden) {
       if (e.key === 'Escape') { closeSearch(); return; }
+      if (e.key === 'Tab') { trapTab(e); return; }
       if (e.key === 'ArrowDown') { e.preventDefault(); moveActive(1); return; }
       if (e.key === 'ArrowUp') { e.preventDefault(); moveActive(-1); return; }
       if (e.key === 'Enter') {
         var items = results ? results.querySelectorAll('.sresult') : [];
         var target = active >= 0 ? items[active] : items[0];
-        if (target) { e.preventDefault(); window.location.href = target.getAttribute('href'); }
+        if (target) { e.preventDefault(); track('search_result_open'); window.location.href = target.getAttribute('href'); }
       }
     }
     if (e.key === '/' && document.activeElement === document.body) { e.preventDefault(); openSearch(); }
@@ -178,6 +220,7 @@
       btn.textContent = 'Copy';
       btn.setAttribute('aria-label', 'Copy code to clipboard');
       btn.addEventListener('click', function () {
+        track('copy_code');
         var text = pre.innerText;
         var done = function () {
           btn.textContent = 'Copied';
@@ -241,7 +284,7 @@
     };
     if (toggle) {
       setDone(!!progress[lessonId]);
-      toggle.addEventListener('click', function () { setDone(!progress[lessonId]); });
+      toggle.addEventListener('click', function () { var on = !progress[lessonId]; setDone(on); if (on) track('lesson_complete'); });
     }
 
     var bm = document.querySelector('[data-bookmark-toggle]');
@@ -257,7 +300,7 @@
     };
     if (bm) {
       setSaved(!!bookmarks[lessonId]);
-      bm.addEventListener('click', function () { setSaved(!bookmarks[lessonId]); });
+      bm.addEventListener('click', function () { var on = !bookmarks[lessonId]; setSaved(on); if (on) track('lesson_save'); });
     }
   }
 
@@ -629,4 +672,22 @@
       apply(false);
     }
   }
+
+  /* ------------------------------------------------------------ ad slots */
+  /* Collapse a unit that AdSense left unfilled or that a blocker prevented
+     from ever initialising, so the reserved space does not stay a hole.
+     Runs twice: once after the usual fill window, once as a slow-network
+     backstop. The slot re-expands on its own if a late fill lands (the
+     [data-collapsed] style is re-applied idempotently before each check). */
+  function collapseEmptyAds() {
+    var ads = document.querySelectorAll('aside.ad');
+    for (var i = 0; i < ads.length; i++) {
+      var ins = ads[i].querySelector('ins.adsbygoogle');
+      var filled = ins && (ins.getAttribute('data-ad-status') === 'filled' || ins.querySelector('iframe'));
+      if (filled) ads[i].removeAttribute('data-collapsed');
+      else ads[i].setAttribute('data-collapsed', '');
+    }
+  }
+  setTimeout(collapseEmptyAds, 3000);
+  setTimeout(collapseEmptyAds, 8000);
 })();

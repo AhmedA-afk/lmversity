@@ -6,7 +6,6 @@ summary: "Research pass: browser-reviewed 2026-08-29."
 duration: "4 min read"
 ---
 
-# Mathematics Foundations for AI · research benchmark and scope decisions
 
 Research pass: browser-reviewed 2026-08-29  
 Course: overview · atomic checklist · assignments

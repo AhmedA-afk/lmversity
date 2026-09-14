@@ -1,6 +1,9 @@
 ---
 import Layout from '../../components/Layout.astro';
+import ReportError from '../../components/ReportError.astro';
 import { getCollection, render } from 'astro:content';
+import { site } from '../../data/site';
+import contentDates from '../../data/content-dates.json';
 
 export async function getStaticPaths() {
   const entries = await getCollection('answers');
@@ -10,16 +13,25 @@ const { entry } = Astro.props;
 const { Content, headings } = await render(entry);
 const toc = headings.filter((h) => h.depth === 2);
 const all = await getCollection('answers');
-const titleFor = new Map(all.map((a) => [`/answers/${a.id}`, a.data.title]));
+const lessons = await getCollection('lessons');
+const titleFor = new Map([
+  ...all.map((a) => [`/answers/${a.id}`, a.data.title] as const),
+  ...lessons.map((l) => [`/learn/${l.id}`, l.data.title] as const),
+]);
 const siblings = all.filter((a) => a.id !== entry.id && a.data.intent === entry.data.intent).slice(0, 5);
 const kindLabel: Record<string, string> = { pillar: 'The path', howto: 'How to', definition: 'What it is', comparison: 'Compared' };
+
+// Frontmatter wins; otherwise real git-history dates from content-dates.json.
+const fileDates = (contentDates as Record<string, { published?: string; updated?: string }>)[`answers/${entry.id}`];
+const published = entry.data.published ?? fileDates?.published ?? entry.data.updated;
+const modified = entry.data.updated ?? fileDates?.updated;
 ---
 <Layout
   title={entry.data.title}
   description={entry.data.description}
   type="article"
-  modifiedTime={entry.data.updated}
-  publishedTime={entry.data.updated}
+  modifiedTime={modified}
+  publishedTime={published}
   faq={entry.data.faq}
   breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Answers', url: '/answers' }, { name: entry.data.title, url: `/answers/${entry.id}` }]}
 >
@@ -27,7 +39,7 @@ const kindLabel: Record<string, string> = { pillar: 'The path', howto: 'How to',
     <article class="doc">
       <nav class="crumb mono" aria-label="Breadcrumb"><a href="/answers">Answers</a> <span>/</span> {kindLabel[entry.data.intent]}</nav>
       <h1>{entry.data.title}</h1>
-      <p class="meta mono">Updated {entry.data.updated} · free, no account</p>
+      <p class="meta mono">{site.author.name && <>By <a href="/about">{site.author.name}</a> · </>}Updated {entry.data.updated} · free, no account</p>
       <div class="prose"><Content /></div>
 
       {entry.data.faq.length > 0 && (
@@ -45,6 +57,9 @@ const kindLabel: Record<string, string> = { pillar: 'The path', howto: 'How to',
           <ul>{entry.data.related.map((u) => <li><a href={u}>{titleFor.get(u) ?? u.replace(/^\/learn\//, '').replace(/-/g, ' ').replace(/\//g, ' · ')}</a></li>)}</ul>
         </section>
       )}
+
+      <p class="cite mono">Cite this page: {site.author.name ? `${site.author.name}, ` : ''}"{entry.data.title}", {site.name}, {`${site.url}/answers/${entry.id}`}{modified ? ` (updated ${modified})` : ''}.</p>
+      <ReportError title={entry.data.title} url={`${site.url}/answers/${entry.id}`} />
     </article>
     <aside class="toc" aria-label="On this page">
       <div class="toc-inner">
@@ -71,6 +86,7 @@ const kindLabel: Record<string, string> = { pillar: 'The path', howto: 'How to',
   .faq details { border-bottom: 1px solid var(--rule); padding: 12px 0; }
   .faq summary { cursor: pointer; font: 500 15px/1.4 'IBM Plex Sans', 'IBM Plex Sans Fallback', sans-serif; }
   .faq p { margin-top: 8px; font-size: 14.5px; line-height: 1.6; color: var(--muted); }
+  .cite { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--rule); font-size: 11px; color: var(--faint); letter-spacing: .03em; }
   .related { margin-top: 36px; }
   .related ul { margin: 10px 0 0; padding-left: 18px; font-size: 14.5px; line-height: 1.8; }
   .toc-inner { position: sticky; top: 84px; }

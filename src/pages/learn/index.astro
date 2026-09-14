@@ -171,6 +171,7 @@ const itemList = tracks.map((t) => ({ name: t.name, url: `/learn/${t.id}` }));
             <a
               class="tcard"
               href={`/learn/${t.id}`}
+              data-event="track_open"
               data-catalog-card
               data-search={`${t.name} ${t.summary} ${t.group}`}
               data-level={levelOf(t)}

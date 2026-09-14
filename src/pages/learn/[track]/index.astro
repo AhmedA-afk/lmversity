@@ -41,12 +41,20 @@ const levelForGroup: Record<string, string> = {
   Production: 'Advanced',
 };
 const level = levelForGroup[track.group] ?? 'All levels';
+
+// The same facts the chips show, in extractable form — schema and markup can't drift.
+const trackFaq = [
+  { q: `Is the ${track.name} track free?`, a: `Yes — all ${inTrack.length} lessons are free, with no account and no paywall.` },
+  { q: `How long does ${track.name} take?`, a: `About ${hours} hours across ${inTrack.length} lessons. Work through it in order or jump to the lesson you need.` },
+  { q: `What level is the ${track.name} track?`, a: `${level}. ${track.summary}` },
+];
 ---
 <Layout
   title={`${track.name}: ${inTrack.length} free lessons`}
   description={`${track.summary} ${inTrack.length} free lessons, about ${hours} hours. No paywall, no sign-up.`}
   type="course"
-  course={{ level, lessonCount: inTrack.length, sections: modules?.map((m) => m.name) }}
+  course={{ level, lessonCount: inTrack.length, sections: modules?.map((m) => m.name), workload: `PT${hours}H` }}
+  faq={trackFaq}
   image={ogImage(`track-${track.id}`)}
   imageAlt={`${track.name} — ${inTrack.length} free lessons on LMVersity`}
   breadcrumbs={[

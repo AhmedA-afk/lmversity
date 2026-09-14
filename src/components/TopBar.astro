@@ -40,20 +40,22 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
         <svg class="moon" width="17" height="17" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.5 11.2A6.8 6.8 0 1 1 8.8 3.5a5.4 5.4 0 0 0 7.7 7.7Z"></path></svg>
       </button>
 
-      <button type="button" class="icon-btn menu-btn" data-menu-toggle aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-        <svg width="17" height="17" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"></path></svg>
-      </button>
+      <details class="menu-details">
+        <summary class="icon-btn menu-btn" aria-label="Open menu">
+          <svg width="17" height="17" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"></path></svg>
+        </summary>
+        <div class="mobile">
+          <nav aria-label="Mobile">
+            {nav.map((n) => (<a href={n.href} class:list={['mlink', { active: isActive(n.href) }]}>{n.label}</a>))}
+            <a href="/roles" class="mlink">Role paths</a>
+            <a href="/saved" class="mlink">Saved</a>
+            <a href="/scenarios" class="mlink">Scenarios</a>
+            <a href="/stats" class="mlink">Stats</a>
+            <a href="/about" class="mlink">About</a>
+          </nav>
+        </div>
+      </details>
     </div>
-  </div>
-
-  <div class="mobile" id="mobile-menu" hidden>
-    <nav aria-label="Mobile">
-      {nav.map((n) => (<a href={n.href} class:list={['mlink', { active: isActive(n.href) }]}>{n.label}</a>))}
-      <a href="/roles" class="mlink">Role paths</a>
-      <a href="/saved" class="mlink">Saved</a>
-      <a href="/scenarios" class="mlink">Scenarios</a>
-      <a href="/about" class="mlink">About</a>
-    </nav>
   </div>
 </header>
 
@@ -95,9 +97,13 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
     :root:not([data-theme="light"]) .icon-btn .sun { display: none; }
     :root:not([data-theme="light"]) .icon-btn .moon { display: block; }
   }
-  .menu-btn { display: none; }
+  .menu-details { display: none; }
+  .menu-btn { list-style: none; }
+  .menu-btn::-webkit-details-marker { display: none; }
 
-  .mobile { border-top: 1px solid var(--rule); background: var(--bg); padding: 8px 20px 16px; }
+  /* Positioned against .bar (the sticky ancestor) so the open panel spans the
+     full header width even though the details element lives in .right. */
+  .mobile { position: absolute; top: 65px; left: 0; right: 0; z-index: 60; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); background: var(--bg); padding: 8px 20px 16px; }
   .mobile nav { display: flex; flex-direction: column; }
   .mlink { padding: 11px 4px; font: 500 15px/1 'IBM Plex Sans', 'IBM Plex Sans Fallback', sans-serif; color: var(--muted); border-bottom: 1px solid var(--rule); }
   .mlink:last-child { border-bottom: 0; }
@@ -107,11 +113,18 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
   @media (max-width: 900px) {
     .inner { padding: 0 20px; gap: 12px; }
     .nav { display: none; }
-    .menu-btn { display: inline-flex; }
+    .menu-details { display: block; }
     .search { width: 34px; padding: 0; justify-content: center; }
     .search .ph, .search .kbd { display: none; }
   }
-  @media (min-width: 901px) { .mobile { display: none !important; } }
+  /* 320–420px phones: wordmark + four icon buttons exceed the width. Saved is
+     in the mobile menu, so the separate icon can go; min-width lets the rest
+     shrink instead of overflowing the page. */
+  @media (max-width: 420px) {
+    .inner { gap: 8px; min-width: 0; }
+    .right { min-width: 0; gap: 8px; }
+    .saved-btn { display: none; }
+  }
 
   /* Search dialog */
   .sdlg { position: fixed; inset: 0; z-index: 120; display: flex; justify-content: center; align-items: flex-start; padding: 10vh 16px 16px; }
@@ -138,13 +151,6 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
       var next = cur === 'dark' ? 'light' : 'dark';
       root.setAttribute('data-theme', next);
       try { localStorage.setItem('fg-theme', next); } catch (e) {}
-    });
-    var mt = document.querySelector('[data-menu-toggle]');
-    var mm = document.getElementById('mobile-menu');
-    if (mt && mm) mt.addEventListener('click', function () {
-      var open = mm.hidden;
-      mm.hidden = !open;
-      mt.setAttribute('aria-expanded', String(open));
     });
   })();
 </script>

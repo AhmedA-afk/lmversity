@@ -54,8 +54,8 @@ export const site = {
    * all — the site works fully without it and no third-party script loads.
    */
   analytics: {
-    provider: '' as '' | 'plausible' | 'umami',
-    /** Plausible: the domain. Umami: the website id. */
+    provider: 'vercel' as '' | 'plausible' | 'umami' | 'vercel',
+    /** Plausible: the domain. Umami: the website id. Vercel: unused. */
     id: '',
     /** Self-hosted instance origin. Empty uses the vendor's cloud. */
     host: '',
@@ -63,14 +63,21 @@ export const site = {
 
   /**
    * Google AdSense. Leave `client` empty and nothing ad-related ships: no
-   * script, no slots, no ads.txt. Set it to the publisher id ("ca-pub-…") and
-   * the head script, the slots and /ads.txt switch on together, and /privacy
-   * describes what that means. Slot ids are optional: without them the units
-   * run as auto-format responsive ads under the client id.
+   * script, no slots, no ads.txt. With the publisher id ("ca-pub-…") set, the
+   * head script and /ads.txt switch on — Auto ads is enabled in the AdSense
+   * account and serves through that script alone. `slots` are optional manual
+   * responsive units for controlled placements: a unit renders only where its
+   * slot id is filled in, so an empty `slots` map adds no markup.
    */
   ads: {
     client: 'ca-pub-2004809158099634',
-    slots: { lesson: '', guide: '', blog: '' } as { lesson: string; guide: string; blog: string },
+    slots: { lesson: '', guide: '', blog: '', stats: '' } as { lesson: string; guide: string; blog: string; stats: string },
+    /**
+     * Set true once a Google-certified CMP (AdSense → Privacy & Messaging,
+     * e.g. Funding Choices) is configured for EEA/UK/CH traffic. Drives the
+     * consent sentence on /privacy so it never asserts a flow that isn't live.
+     */
+    consent: false,
   },
 
   /** Repository, for "edit this page" links. Empty hides them. */

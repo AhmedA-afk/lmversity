@@ -21,8 +21,9 @@ export interface Props {
   howto?: { name: string; description: string; steps: string[]; totalTime?: string };
   /** Renders an ItemList block — use on index/hub pages so engines see the set. */
   itemList?: Array<{ name: string; url: string }>;
-  /** Extra Course fields for track pages. */
-  course?: { provider?: string; level?: string; lessonCount?: number; sections?: string[] };
+  /** Extra Course fields for track pages. `workload` is an ISO-8601 duration
+   * (e.g. "PT40H") — pass the real summed duration when the page has it. */
+  course?: { provider?: string; level?: string; lessonCount?: number; sections?: string[]; workload?: string };
   /** Set true on thin or duplicative routes. */
   noindex?: boolean;
   /** Alternative text for the social card. */
@@ -34,7 +35,7 @@ export interface Props {
 const {
   landing = false,
   title = site.name,
-  description = 'A free, hands-on learning platform for the agentic-AI era. A structured path from your first prompt to production agents — 680+ lessons, quizzes, guides and interview prep.',
+  description = site.description,
   type = 'website',
   breadcrumbs = [],
   publishedTime,
@@ -54,12 +55,10 @@ const canonical = new URL(Astro.url.pathname.replace(/\/$/, '') || '/', SITE).hr
 const imageUrl = new URL(image, SITE).href;
 const abs = (u: string) => new URL(u, SITE).href;
 
-const socialLinks = [
-  site.social.x && `https://x.com/${site.social.x}`,
-  site.social.github && `https://github.com/${site.social.github}`,
-  site.social.linkedin && `https://www.linkedin.com/in/${site.social.linkedin}`,
-  site.social.mastodon,
-].filter(Boolean) as string[];
+// Auto ads is enabled account-side, so the loader script must ship whenever a
+// publisher id is configured — even with no manual slots. Manual units stay
+// dormant until their slot ids are filled in src/data/site.ts.
+const adsEnabled = Boolean(site.ads.client);
 
 const publisher = {
   '@type': 'Organization',
@@ -69,22 +68,45 @@ const publisher = {
   url: SITE,
   description: site.description,
   logo: { '@type': 'ImageObject', url: absoluteUrl('/icons/icon-512.png'), width: 512, height: 512 },
-  ...(socialLinks.length ? { sameAs: socialLinks } : {}),
+  // The org's sameAs is the project itself — the editor's personal profiles
+  // belong on the Person node below, not here.
+  ...(site.repo.url ? { sameAs: [site.repo.url] } : {}),
   ...(site.contact.email ? { email: site.contact.email } : {}),
 };
 
 // A named byline is the strongest authorship signal there is, so use one the
 // moment site.ts has a name in it — and fall back to the organization until then.
+// The Person's url resolves to the editor's own site so the entity resolves to
+// the person, not back to this site.
 const person = site.author.name
   ? {
       '@type': 'Person',
       '@id': `${SITE}/#author`,
       name: site.author.name,
-      url: SITE,
+      url: site.author.sameAs[0] || SITE,
+      ...(site.author.role ? { jobTitle: site.author.role } : {}),
+      worksFor: { '@id': `${SITE}/#organization` },
       ...(site.author.sameAs.length ? { sameAs: [...site.author.sameAs] } : {}),
     }
   : null;
 const authorRef = person ? { '@id': `${SITE}/#author` } : { '@id': `${SITE}/#organization` };
+
+// Every page emits a WebPage node describing itself — it's the anchor that
+// lets answer engines connect the content node (Article, Course, ItemList)
+// to the URL they're looking at.
+const pageNode: Record<string, unknown> = {
+  '@type': type === 'collection' ? 'CollectionPage' : 'WebPage',
+  '@id': canonical,
+  url: canonical,
+  name: fullTitle,
+  description,
+  inLanguage: site.locale,
+  isPartOf: { '@id': `${SITE}/#website` },
+  primaryImageOfPage: imageUrl,
+  ...(breadcrumbs.length ? { breadcrumb: { '@id': `${canonical}#breadcrumbs` } } : {}),
+  ...(publishedTime ? { datePublished: publishedTime } : {}),
+  ...(modifiedTime ? { dateModified: modifiedTime } : {}),
+};
 
 const graph: Record<string, unknown>[] = [
   {
@@ -97,6 +119,7 @@ const graph: Record<string, unknown>[] = [
     inLanguage: site.locale,
     publisher: { '@id': `${SITE}/#organization` },
   },
+  pageNode,
   publisher,
   ...(person ? [person] : []),
 ];
@@ -121,6 +144,7 @@ if (type === 'article' || type === 'learning-resource') {
     ...(publishedTime ? { datePublished: publishedTime } : {}),
     ...(modifiedTime ? { dateModified: modifiedTime } : {}),
   });
+  pageNode.mainEntity = { '@id': `${canonical}#content` };
 }
 
 if (type === 'course' && course) {
@@ -137,7 +161,9 @@ if (type === 'course' && course) {
     hasCourseInstance: {
       '@type': 'CourseInstance',
       courseMode: 'online',
-      courseWorkload: course.lessonCount ? `PT${Math.max(1, Math.round(course.lessonCount * 0.15))}H` : undefined,
+      courseWorkload:
+        course.workload ||
+        (course.lessonCount ? `PT${Math.max(1, Math.round(course.lessonCount * 0.15))}H` : undefined),
     },
     ...(course.level ? { educationalLevel: course.level } : {}),
     ...(course.sections && course.sections.length
@@ -150,6 +176,11 @@ if (type === 'course' && course) {
         }
       : {}),
   });
+  pageNode.mainEntity = { '@id': `${canonical}#course` };
+}
+
+if (type === 'collection' && itemList && itemList.length > 0) {
+  pageNode.mainEntity = { '@id': `${canonical}#list` };
 }
 
 if (faq && faq.length > 0) {
@@ -211,15 +242,16 @@ const jsonLd = { '@context': 'https://schema.org', '@graph': graph };
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    {noindex && <meta name="robots" content="noindex, follow" />}
-    <meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    {noindex
+      ? <meta name="robots" content="noindex, follow" />
+      : <meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1" />}
     <meta name="theme-color" content="#FBFAF8" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#18181A" media="(prefers-color-scheme: dark)" />
     <meta name="color-scheme" content="light dark" />
     <meta name="application-name" content={site.shortName} />
     <meta name="apple-mobile-web-app-title" content={site.shortName} />
 
-    <meta property="og:type" content={type === 'article' ? 'article' : 'website'} />
+    <meta property="og:type" content={type === 'article' || type === 'learning-resource' ? 'article' : 'website'} />
     <meta property="og:site_name" content={site.name} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
@@ -254,6 +286,17 @@ const jsonLd = { '@context': 'https://schema.org', '@graph': graph };
 
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
+    {/* AdSense is opt-in via src/data/site.ts: an empty client ships nothing.
+        Auto ads is enabled in the account and works through this script alone;
+        manual units additionally need their slot ids. Script lives in <head>
+        per Google's implementation guide and is emitted exactly once, here. */}
+    {adsEnabled && (
+      <>
+        <meta name="google-adsense-account" content={site.ads.client} />
+        <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${site.ads.client}`} crossorigin="anonymous"></script>
+      </>
+    )}
+
     <meta name="generator" content={Astro.generator} />
     <script is:inline>
       (function () {
@@ -274,12 +317,6 @@ const jsonLd = { '@context': 'https://schema.org', '@graph': graph };
     {/* Analytics is opt-in via src/data/site.ts and cookieless by construction.
         With no provider configured, no third-party script loads at all — which
         is what the privacy page says, so it must stay true. */}
-    {site.ads.client && (
-      <>
-        <meta name="google-adsense-account" content={site.ads.client} />
-        <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${site.ads.client}`} crossorigin="anonymous"></script>
-      </>
-    )}
     {site.analytics.provider === 'plausible' && site.analytics.id && (
       <script
         is:inline
@@ -295,6 +332,17 @@ const jsonLd = { '@context': 'https://schema.org', '@graph': graph };
         data-website-id={site.analytics.id}
         src={`${site.analytics.host || 'https://cloud.umami.is'}/script.js`}
       />
+    )}
+    {/* Vercel Web Analytics — same-origin script, no id needed. Requires Web
+        Analytics enabled on the Vercel project; until then the script 404s
+        and the va() calls below harmlessly queue. */}
+    {site.analytics.provider === 'vercel' && (
+      <>
+        <script is:inline>
+          window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+        </script>
+        <script is:inline defer src="/_vercel/insights/script.js"></script>
+      </>
     )}
     <style>
       .skip {

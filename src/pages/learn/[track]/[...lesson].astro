@@ -1,10 +1,13 @@
 ---
 import AdSlot from '../../../components/AdSlot.astro';
 import Layout from '../../../components/Layout.astro';
+import ReportError from '../../../components/ReportError.astro';
 import { getCollection, render } from 'astro:content';
 import { getTrack } from '../../../data/curriculum.ts';
 import { groupTrack } from '../../../data/modules';
 import { ogImage } from '../../../data/og-images';
+import { site } from '../../../data/site';
+import contentDates from '../../../data/content-dates.json';
 
 export async function getStaticPaths() {
   const lessons = await getCollection('lessons');
@@ -42,6 +45,11 @@ const neighbours = relatedPool
 
 const allLessons = await getCollection('lessons');
 const summaryFor = new Map(allLessons.map((l) => [l.id, l.data.summary ?? '']));
+
+// Frontmatter dates win; otherwise fall back to real git-history dates.
+const fileDates = (contentDates as Record<string, { published?: string; updated?: string }>)[`lessons/${entry.id}`];
+const published = entry.data.published ?? fileDates?.published;
+const modified = entry.data.updated ?? fileDates?.updated;
 ---
 <Layout
   title={track ? `${entry.data.title} · ${track.name}` : entry.data.title}
@@ -49,7 +57,8 @@ const summaryFor = new Map(allLessons.map((l) => [l.id, l.data.summary ?? '']));
   type="learning-resource"
   image={track ? ogImage(`track-${track.id}`) : undefined}
   imageAlt={track ? `${entry.data.title} — ${track.name} on LMVersity` : undefined}
-  modifiedTime={entry.data.updated}
+  publishedTime={published}
+  modifiedTime={modified}
   breadcrumbs={[
     { name: 'Home', url: '/' },
     { name: 'Learn', url: '/learn' },
@@ -158,10 +167,11 @@ const summaryFor = new Map(allLessons.map((l) => [l.id, l.data.summary ?? '']));
 
       <h1>{entry.data.title}</h1>
       <div class="meta mono">
-        {entry.data.duration && <span>{entry.data.duration}</span>}
+        {site.author.name && <span>By <a href="/about">{site.author.name}</a></span>}
+        {entry.data.duration && <><span aria-hidden="true">·</span><span>{entry.data.duration}</span></>}
         {curIndex >= 0 && <><span aria-hidden="true">·</span><span>Lesson {curIndex + 1} of {pageNodes.length}</span></>}
         {currentModule && <><span aria-hidden="true">·</span><span>{currentModule.name}</span></>}
-        {entry.data.updated && <><span aria-hidden="true">·</span><span>Updated {entry.data.updated}</span></>}
+        {modified && <><span aria-hidden="true">·</span><span>Updated {modified}</span></>}
       </div>
       {entry.data.summary && <p class="lede">{entry.data.summary}</p>}
 
@@ -181,14 +191,12 @@ const summaryFor = new Map(allLessons.map((l) => [l.id, l.data.summary ?? '']));
         <span class="note">Saved in this browser only — no account, nothing sent anywhere. <a href="/saved">Your saved page →</a></span>
       </div>
 
-      <AdSlot kind="lesson" />
-
       <nav class="pager" aria-label="Lesson navigation">
         {prev?.slug ? (
           <a href={`/learn/${track!.id}/${prev.slug}`} class="pg"><span class="mono">← Previous</span><span class="pt">{prev.title}</span></a>
         ) : <span></span>}
         {next?.slug ? (
-          <a href={`/learn/${track!.id}/${next.slug}`} class="pg alignr"><span class="mono">Next →</span><span class="pt">{next.title}</span></a>
+          <a href={`/learn/${track!.id}/${next.slug}`} class="pg alignr" data-event="next_lesson"><span class="mono">Next →</span><span class="pt">{next.title}</span></a>
         ) : <span></span>}
       </nav>
 
@@ -198,13 +206,19 @@ const summaryFor = new Map(allLessons.map((l) => [l.id, l.data.summary ?? '']));
           <ul>
             {neighbours.map((n) => (
               <li>
-                <a href={`/learn/${track.id}/${n.slug}`}>{n.title}</a>
+                <a href={`/learn/${track.id}/${n.slug}`} data-event="related_lesson">{n.title}</a>
                 <span>{summaryFor.get(`${track.id}/${n.slug}`)}</span>
               </li>
             ))}
           </ul>
         </section>
       )}
+
+      <ReportError title={entry.data.title} url={`${site.url}/learn/${trackId}/${slug}`} />
+
+      {/* Below every interactive element — actions, pager and related links —
+          so the unit can never be mistaken for curriculum navigation. */}
+      <AdSlot kind="lesson" />
     </article>
 
     <aside class="toc" aria-label="On this page">

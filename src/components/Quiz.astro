@@ -6,6 +6,18 @@ interface Props {
 }
 
 const { questions } = Astro.props;
+
+const quizSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Quiz',
+  hasPart: questions.map((q, i) => ({
+    '@type': 'Question',
+    position: i + 1,
+    name: q.prompt,
+    acceptedAnswer: { '@type': 'Answer', text: q.options[q.answer] ?? '' },
+    ...(q.explanation ? { comment: { '@type': 'Comment', text: q.explanation } } : {}),
+  })),
+};
 ---
 <div class="quiz" data-quiz data-questions={JSON.stringify(questions)}>
   <div class="quiz-topline">
@@ -19,7 +31,28 @@ const { questions } = Astro.props;
   <div class="quiz-actions">
     <button class="btn btn-primary" type="button" data-next disabled>Choose an answer</button>
   </div>
+
+  {/* Static fallback: the whole quiz, readable without JavaScript and
+      extractable by agents. The script removes it when it takes over. */}
+  <div class="quiz-static" data-static>
+    {questions.map((q, i) => (
+      <details class="qs">
+        <summary>
+          <span class="mono qn">{String(i + 1).padStart(2, '0')}</span> {q.prompt}
+        </summary>
+        <ol class="qs-opts" type="A">
+          {q.options.map((opt, j) => (
+            <li class:list={[{ correct: j === q.answer }]}>{opt}</li>
+          ))}
+        </ol>
+        <p class="qs-answer"><strong>Answer: {String.fromCharCode(65 + q.answer)}.</strong> {q.why?.[q.answer] || q.explanation}</p>
+        {q.explanation && <p class="qs-takeaway">{q.explanation}</p>}
+        {q.lesson && <a class="qs-link" href={q.lesson}>Read the lesson →</a>}
+      </details>
+    ))}
+  </div>
 </div>
+<script type="application/ld+json" set:html={JSON.stringify(quizSchema)} />
 
 <script>
   const quiz = document.querySelector('[data-quiz]');
@@ -34,6 +67,9 @@ const { questions } = Astro.props;
     let current = 0;
     let score = 0;
     let answered = false;
+
+    // JS is running — the interactive flow replaces the static fallback.
+    quiz.querySelector('[data-static]')?.remove();
 
     const showQuestion = () => {
       const item = questions[current];
@@ -162,6 +198,19 @@ const { questions } = Astro.props;
   .quiz .quiz-feedback .takeaway { padding-top: 9px; border-top: 1px solid var(--rule); font-size: 13.5px; }
   .quiz .quiz-feedback .feedback-link { font: 500 12.5px/1 'IBM Plex Mono', 'IBM Plex Mono Fallback', monospace; color: var(--accent); }
   .quiz .quiz-count { font-size: 11px; color: var(--muted); }
+
+  /* Static fallback — visible only until the script takes over. */
+  .quiz .quiz-static { margin-top: 24px; border-top: 1px solid var(--rule); }
+  .quiz .qs { border-bottom: 1px solid var(--rule); padding: 12px 2px; }
+  .quiz .qs summary { cursor: pointer; font: 500 15px/1.45 'IBM Plex Sans', 'IBM Plex Sans Fallback', sans-serif; color: var(--text); }
+  .quiz .qs .qn { font-size: 11px; color: var(--muted); margin-right: 6px; }
+  .quiz .qs-opts { margin: 12px 0 0; padding-left: 22px; display: flex; flex-direction: column; gap: 5px; font-size: 14px; color: var(--muted); }
+  .quiz .qs-opts li.correct { color: var(--text); font-weight: 500; }
+  .quiz .qs-answer { margin: 12px 0 0; font-size: 13.5px; line-height: 1.6; color: var(--muted); }
+  .quiz .qs-answer strong { color: var(--text); }
+  .quiz .qs-takeaway { margin: 8px 0 0; padding-top: 8px; border-top: 1px solid var(--rule); font-size: 13px; line-height: 1.6; color: var(--muted); }
+  .quiz .qs-link { display: inline-block; margin-top: 8px; font: 500 12.5px/1 'IBM Plex Mono', 'IBM Plex Mono Fallback', monospace; color: var(--accent); }
+
   .quiz .quiz-actions { margin-top: 22px; }
   .quiz .quiz-actions .btn:disabled { opacity: .5; cursor: not-allowed; }
   @media (max-width: 540px) { .quiz { padding: 18px; } .quiz-question { font-size: 20px; } }

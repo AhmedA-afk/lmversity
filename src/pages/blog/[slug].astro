@@ -1,8 +1,10 @@
 ---
 import Layout from '../../components/Layout.astro';
 import AdSlot from '../../components/AdSlot.astro';
+import ReportError from '../../components/ReportError.astro';
 import { getCollection, render } from 'astro:content';
 import { ogImage } from '../../data/og-images';
+import { site } from '../../data/site';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -19,15 +21,15 @@ const all = (await getCollection('blog')).sort(
 const more = all.filter((p) => p.id !== entry.id).slice(0, 3);
 const guides = (await getCollection('guides')).slice(0, 2);
 ---
-<Layout title={entry.data.title} description={entry.data.description} type="article" image={ogImage(`blog-${entry.id}`)} imageAlt={entry.data.title} publishedTime={entry.data.published} modifiedTime={entry.data.updated} breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/blog' }, { name: entry.data.title, url: `/blog/${entry.id}` }]}>
+<Layout title={entry.data.title} description={entry.data.description} type="article" image={ogImage(`blog-${entry.id}`)} imageAlt={entry.data.title} publishedTime={entry.data.published} modifiedTime={entry.data.updated ?? entry.data.published} breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blog', url: '/blog' }, { name: entry.data.title, url: `/blog/${entry.id}` }]}>
   <div class="blog-layout container">
     <article class="blog-doc">
       <a class="back mono" href="/blog">← All notes</a>
       <time class="mono date" datetime={entry.data.published}>{entry.data.published}</time>
       <h1>{entry.data.title}</h1>
+      {site.author.name && <p class="byline mono">By <a href="/about">{site.author.name}</a></p>}
       <p class="lede">{entry.data.description}</p>
       <div class="prose"><Content /></div>
-      <AdSlot kind="blog" />
 
       <div class="tagrow chips">{entry.data.tags.map((t) => <span class="chip">{t}</span>)}</div>
 
@@ -53,7 +55,12 @@ const guides = (await getCollection('guides')).slice(0, 2);
         </section>
       )}
 
-      <AdSlot />
+      <p class="feed-line mono"><a href="/rss.xml">Subscribe by RSS →</a></p>
+
+      <ReportError title={entry.data.title} url={`${site.url}/blog/${entry.id}`} />
+
+      {/* Last element in the article — after tags and onward links. */}
+      <AdSlot kind="blog" />
     </article>
     <aside class="toc" aria-label="On this page">
       {toc.length > 0 && <><div class="eyebrow">On this page</div><ul>{toc.map((heading) => <li><a href={`#${heading.slug}`}>{heading.text}</a></li>)}</ul></>}
@@ -67,12 +74,15 @@ const guides = (await getCollection('guides')).slice(0, 2);
   .blog-doc .back { display: block; margin-bottom: 34px; color: var(--muted); font-size: 11px; }
   .blog-doc .back:hover { color: var(--accent); text-decoration: none; }
   .blog-doc .date { display: block; color: var(--muted); font-size: 11px; }
+  .blog-doc .byline { margin-top: 10px; color: var(--faint); font-size: 11px; letter-spacing: .04em; }
   .blog-doc .tagrow { margin-top: 34px; }
   .blog-doc .more { margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--rule); }
   .blog-doc .more ul { list-style: none; padding: 0; margin: 14px 0 0; display: flex; flex-direction: column; gap: 12px; }
   .blog-doc .more li { display: flex; flex-direction: column; gap: 3px; }
   .blog-doc .more a { font: 500 14.5px/1.35 'IBM Plex Sans', 'IBM Plex Sans Fallback', sans-serif; }
   .blog-doc .more span { font-size: 12.5px; line-height: 1.5; color: var(--muted); }
+  .blog-doc .feed-line { margin-top: 30px; font-size: 11.5px; }
+  .blog-doc .feed-line a { color: var(--accent); }
   .blog-doc h1 { margin-top: 13px; font-size: clamp(36px, 5vw, 52px); max-width: 17ch; }
   .blog-doc .lede { margin-top: 16px; color: var(--muted); font-size: 17px; line-height: 1.65; }
   .blog-doc .prose { margin-top: 42px; font-size: 16px; line-height: 1.75; }

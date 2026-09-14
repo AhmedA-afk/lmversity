@@ -21,6 +21,7 @@ const groups: Array<[string, string, typeof all]> = [
     <span class="eyebrow">Straight answers</span>
     <h1>The question, answered first. The curriculum, after.</h1>
     <p class="sub">Each page opens with the answer in one paragraph, then goes as deep as the question deserves, then points at the lessons that teach it properly. Free, no account, no certificate.</p>
+    <a class="feed mono" href="/rss.xml">Subscribe by RSS →</a>
   </section>
   {groups.map(([name, key, items]) => items.length > 0 && (
     <section class="container group" id={key}>
@@ -41,6 +42,7 @@ const groups: Array<[string, string, typeof all]> = [
   .head { padding-block: 56px 8px; }
   .head h1 { font-size: clamp(30px, 4.5vw, 42px); letter-spacing: -.02em; margin-top: 14px; max-width: 22ch; }
   .sub { margin-top: 16px; color: var(--muted); max-width: 64ch; font-size: 15px; line-height: 1.6; }
+  .feed { display: inline-block; margin-top: 16px; font-size: 12px; color: var(--accent); }
   .group { padding-top: 40px; }
   .group h2 { font-size: 20px; letter-spacing: -.012em; }
   .list { list-style: none; padding: 0; margin: 14px 0 0; border-top: 1px solid var(--rule); }

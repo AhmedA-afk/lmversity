@@ -55,9 +55,18 @@ export const GET: APIRoute = async () => {
   push(`- [Interview questions](${SITE}/interview): worked answers linked back into the curriculum`);
   push(`- [Practice](${SITE}/practice): quizzes with per-answer explanations`);
   push(`- [Scenarios](${SITE}/scenarios): realistic build decisions walked through`);
+  push(`- [Stats](${SITE}/stats): the AI-skills market, learner demand and wage premiums — every figure carries a named source, a date and a confidence grade`);
   push(`- [Blog](${SITE}/blog): notes on building with AI ([RSS](${SITE}/rss.xml))`);
   push(`- [About](${SITE}/about): what this is and what it deliberately is not`);
   push(`- [What is LMV](${SITE}/answers/what-is-lmv): the name, the abbreviation, and what the site is`);
+  push();
+  push('## Machine-readable resources');
+  push();
+  push(`- [Search index](${SITE}/search-index.json): title, description and URL for every page`);
+  push(`- [RSS feed](${SITE}/rss.xml): guides and articles`);
+  push(`- [Sitemap](${SITE}/sitemap-index.xml): the full route list with per-file lastmod dates`);
+  push();
+  push(`Quoting with a link back is welcome; wholesale republication is not — see [Terms](${SITE}/terms).`);
   push();
 
   const answers = (await getCollection('answers')).sort((a, b) => a.data.title.localeCompare(b.data.title));

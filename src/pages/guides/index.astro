@@ -28,6 +28,7 @@ const faq = guides.map((g) => ({ q: g.data.question, a: g.data.description }));
       ship the MCP server, write the first eval — and walks it end to end, with the decisions
       explained and the failure modes named. Code you can run, not pseudocode.
     </p>
+    <a class="feed mono" href="/rss.xml">Subscribe by RSS →</a>
   </section>
 
   {byLevel.map(({ level, items }) => items.length > 0 && (
@@ -39,7 +40,7 @@ const faq = guides.map((g) => ({ q: g.data.question, a: g.data.description }));
       </div>
       <div class="list">
         {items.map((g) => (
-          <a class="guide" href={`/guides/${g.id}`}>
+          <a class="guide" href={`/guides/${g.id}`} data-event="guide_open">
             <div class="gmain">
               <span class="q mono">“{g.data.question}”</span>
               <h3>{g.data.title}</h3>
@@ -63,6 +64,7 @@ const faq = guides.map((g) => ({ q: g.data.question, a: g.data.description }));
   .head { padding-block: 56px 12px; }
   .head h1 { font-size: clamp(32px, 5vw, 46px); letter-spacing: -.022em; margin-top: 14px; }
   .sub { margin-top: 18px; color: var(--muted); max-width: 64ch; font-size: 15.5px; line-height: 1.7; }
+  .feed { display: inline-block; margin-top: 18px; font-size: 12px; color: var(--accent); }
   .grp { padding-top: 48px; }
   .grp-head { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
   .grp-head h2 { font-size: 20px; letter-spacing: -.014em; }

@@ -33,7 +33,7 @@ const entryPoints = [
           </h1>
           <p class="hero-description" data-hero-line>A structured path from your first prompt to production agents. The ideas, the code, and the decisions that make it work.</p>
           <div class="hero-actions" data-hero-line>
-            <a href="/learn" class="action action-primary">Explore the curriculum <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" /></svg></a>
+            <a href="/learn" class="action action-primary" data-event="curriculum_start">Explore the curriculum <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" /></svg></a>
             <a href="#find-your-start" class="text-link">Find your starting point</a>
           </div>
           <p class="access-note" data-hero-line>No account. No paywall. Just a place to begin.</p>
@@ -101,7 +101,7 @@ const entryPoints = [
 
     <section class="guides shell section-space" aria-labelledby="guides-title">
       <div class="section-intro guide-intro"><h2 id="guides-title" data-reveal>Less watching.<br />More making.</h2><div class="section-description"><p>One real task. One working result. Practical guides with code you can run and the decisions explained as you go.</p><a href="/guides" class="text-link">All hands-on guides <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" /></svg></a></div></div>
-      <div class="guide-list">{featured.map((guide, i) => guide && <a href={`/guides/${guide.id}`} class="guide-row"><span class="guide-kind">{['Retrieval', 'Agents', 'Tools'][i]}</span><h3>{guide.data.title}</h3><span class="guide-duration">{guide.data.duration}</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" /></svg></a>)}</div>
+      <div class="guide-list">{featured.map((guide, i) => guide && <a href={`/guides/${guide.id}`} class="guide-row" data-event="guide_open"><span class="guide-kind">{['Retrieval', 'Agents', 'Tools'][i]}</span><h3>{guide.data.title}</h3><span class="guide-duration">{guide.data.duration}</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" /></svg></a>)}</div>
       <div class="practice-line"><p>And when you think you’ve got it, put it to the test.</p><div><a href="/practice">Practice quizzes</a><a href="/scenarios">Real-world scenarios</a><a href="/interview">Interview prep</a></div></div>
     </section>
 

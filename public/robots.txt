@@ -47,6 +47,34 @@ Allow: /
 User-agent: meta-externalagent
 Allow: /
 
+# Current-generation fetch and search crawlers.
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+User-agent: AI2Bot
+Allow: /
+
+User-agent: iaskspider
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
 # Machine-readable index of the site, written for language models.
 # See: https://lmversity.com/llms.txt
 

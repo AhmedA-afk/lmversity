@@ -13,7 +13,13 @@ import emblem from '../../public/brand/emblem-sculpture.svg?raw';
   let mounted = false;
   let closed = false;
   const start = async () => {
-    if (!el || mounted || closed || preference.matches) return;
+    // Skip the 575KB WebGL scene where it adds little: narrow screens, reduced
+    // motion, Save-Data, and constrained connections keep the authored SVG.
+    const conn = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }).connection;
+    if (!el || mounted || closed || preference.matches
+        || matchMedia('(max-width: 760px)').matches
+        || conn?.saveData
+        || conn?.effectiveType === 'slow-2g' || conn?.effectiveType === '2g') return;
     mounted = true;
     try {
       const { mountHero } = await import('../scripts/hero-scene');

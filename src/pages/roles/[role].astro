@@ -34,7 +34,13 @@ const steps = role.path.map((ref) => {
   };
 });
 ---
-<Layout title={`AI for ${role.name}s`} description={role.description}>
+<Layout
+  title={`AI for ${role.name}s`}
+  description={role.description}
+  type="collection"
+  breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Roles', url: '/roles' }, { name: `AI for ${role.name}s`, url: `/roles/${role.id}` }]}
+  itemList={steps.filter((s) => s.hasPage).map((s) => ({ name: s.title, url: s.href }))}
+>
   <section class="head container">
     <a href="/roles" class="back mono">← Roles</a>
     <div class="row"><span class="node-dot" aria-hidden="true"></span><span class="eyebrow">Role path</span></div>

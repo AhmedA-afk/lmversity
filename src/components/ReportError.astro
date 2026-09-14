@@ -1,0 +1,28 @@
+---
+/**
+ * "Report an error" link — opens a GitHub issue pre-filled with the page URL
+ * so the report names the page and the claim without collecting reader data.
+ * Renders nothing when no repo is configured.
+ */
+import { site } from '../data/site';
+
+interface Props {
+  /** Page title as readers see it. */
+  title: string;
+  /** Absolute page URL. */
+  url: string;
+}
+const { title, url } = Astro.props;
+const href = site.repo.url
+  ? `${site.repo.url}/issues/new?title=${encodeURIComponent(`Correction: ${title}`)}&body=${encodeURIComponent(`Page: ${url}\n\nThe claim or error:\n\n`)}`
+  : '';
+---
+{href && (
+  <p class="report mono"><a href={href} rel="noopener">Report an error on this page ↗</a></p>
+)}
+
+<style>
+  .report { margin-top: 36px; font-size: 11px; letter-spacing: .03em; }
+  .report a { color: var(--faint); }
+  .report a:hover { color: var(--accent); text-decoration: none; }
+</style>

@@ -11,6 +11,9 @@ const lessons = defineCollection({
     summary: z.string().optional(),
     duration: z.string().optional(),
     updated: z.string().optional(),
+    /** First-published date. When absent the build falls back to the real
+     *  git-derived value in src/data/content-dates.json — never invented. */
+    published: z.string().optional(),
   }),
 });
 
@@ -100,6 +103,7 @@ const answers = defineCollection({
     description: z.string(),
     intent: z.enum(['pillar', 'definition', 'howto', 'comparison']).default('definition'),
     updated: z.union([z.string(), z.date()]).transform((v) => (typeof v === 'string' ? v : v.toISOString().slice(0, 10))),
+    published: z.union([z.string(), z.date()]).transform((v) => (typeof v === 'string' ? v : v.toISOString().slice(0, 10))).optional(),
     featured: z.boolean().default(false),
     faq: z.array(z.object({ q: z.string(), a: z.string() })).default([]),
     related: z.array(z.string()).default([]),

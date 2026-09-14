@@ -2,11 +2,12 @@
 import Layout from '../components/Layout.astro';
 import { site } from '../data/site';
 
-const updated = '2026-08-30';
+const updated = '2026-09-14';
+const providerName = { plausible: 'Plausible', umami: 'Umami', vercel: 'Vercel Web Analytics' }[site.analytics.provider] || site.analytics.provider;
 ---
 <Layout
   title="Privacy"
-  description="What LMVersity stores, what it does not, and where your reading progress actually lives. No accounts, no tracking cookies, no personal data on any server."
+  description="What LMVersity stores, what it does not, and where your reading progress actually lives. No accounts, no first-party cookies, no personal data on any server."
   breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Privacy', url: '/privacy' }]}
 >
   <article class="wrap">
@@ -84,8 +85,10 @@ const updated = '2026-08-30';
             You can opt out of personalised advertising in
             <a href="https://adssettings.google.com" rel="noopener">Google's Ads Settings</a>
             or through <a href="https://www.aboutads.info/choices/" rel="noopener">aboutads.info</a>.
-            Readers in the EEA, UK and Switzerland are asked for consent before any
-            personalised ad is shown. Google's own policy is at
+            {site.ads.consent
+              ? 'Readers in the EEA, UK and Switzerland are asked for consent before any personalised ad is shown. '
+              : 'If you are in the EEA, UK or Switzerland, a consent prompt may appear before personalised ads are served — Google requires certified consent management for that traffic. '}
+            Google's own policy is at
             <a href="https://policies.google.com/technologies/ads" rel="noopener">policies.google.com/technologies/ads</a>.
           </p>
         </>
@@ -100,7 +103,7 @@ const updated = '2026-08-30';
       <h2>Analytics</h2>
       {site.analytics.provider ? (
         <p>
-          The site uses <strong>{site.analytics.provider}</strong>, configured
+          The site uses <strong>{providerName}</strong>, configured
           without cookies and without cross-site identifiers. It records aggregate
           page views and referrers. It does not build a profile of you, follow you
           to other sites, or collect anything that identifies you individually.

@@ -20,11 +20,13 @@
   # every subdomain are confirmed HTTPS-only.
   Strict-Transport-Security: max-age=63072000; includeSubDomains
 
-  # Everything is first-party. Fonts are self-hosted, there is no analytics
-  # script, no external image host and no embedded frames.
+  # Fonts are self-hosted; data: covers the KaTeX faces Vite inlines into the
+  # CSS bundle, which font-src 'self' alone blocks. The Google ad and consent
+  # domains are the only third parties, and they need script, img, connect and
+  # frame access. Vercel Web Analytics is same-origin, so 'self' covers it.
   # 'unsafe-inline' for styles covers Astro's scoped <style> blocks; the
   # inline scripts are the theme bootstrap and the quiz island.
-  Content-Security-Policy: default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.adtrafficquality.google https://fundingchoicesmessages.google.com https://*.google.com https://*.doubleclick.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.googlesyndication.com https://*.google.com https://*.doubleclick.net https://*.googleusercontent.com https://*.gstatic.com https://*.adtrafficquality.google; font-src 'self'; connect-src 'self' https://*.googlesyndication.com https://*.google.com https://*.doubleclick.net https://*.adtrafficquality.google https://fundingchoicesmessages.google.com; frame-src https://googleads.g.doubleclick.net https://*.googlesyndication.com https://*.google.com https://*.adtrafficquality.google https://fundingchoicesmessages.google.com; manifest-src 'self'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.adtrafficquality.google https://fundingchoicesmessages.google.com https://*.google.com https://*.doubleclick.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.googlesyndication.com https://*.google.com https://*.doubleclick.net https://*.googleusercontent.com https://*.gstatic.com https://*.adtrafficquality.google; font-src 'self' data:; connect-src 'self' https://*.googlesyndication.com https://*.google.com https://*.doubleclick.net https://*.adtrafficquality.google https://fundingchoicesmessages.google.com; frame-src https://googleads.g.doubleclick.net https://*.googlesyndication.com https://*.google.com https://*.adtrafficquality.google https://fundingchoicesmessages.google.com; manifest-src 'self'; upgrade-insecure-requests
 
 # Hashed build assets are immutable.
 /_astro/*

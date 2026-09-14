@@ -621,11 +621,6 @@ const unsortedTracks: Track[] = [
         "status": "live"
       },
       {
-        "title": "Lesson Index",
-        "slug": "lesson-index",
-        "status": "live"
-      },
-      {
         "title": "Scalars, arrays, tensors, axes, shapes, and broadcasting",
         "slug": "scalars-arrays-tensors-axes-shapes-and-broadcasting",
         "status": "live"
@@ -1138,11 +1133,6 @@ const unsortedTracks: Track[] = [
       {
         "title": "Exponential families, sufficient statistics, and GLM intuition",
         "slug": "exponential-families-sufficient-statistics-and-glm",
-        "status": "live"
-      },
-      {
-        "title": "Research Benchmarks",
-        "slug": "research-benchmarks",
         "status": "live"
       },
       {
@@ -2381,7 +2371,7 @@ const unsortedTracks: Track[] = [
         "status": "live"
       },
       {
-        "title": "Why LLMs Hallucinate",
+        "title": "Why LLMs Hallucinate, Derived From the Training Objective",
         "slug": "why-llms-hallucinate",
         "status": "live"
       },
@@ -4496,37 +4486,37 @@ const unsortedTracks: Track[] = [
         "status": "live"
       },
       {
-        "title": "Deep lecture: Linear and logistic regression—from objective to deployment",
+        "title": "Linear and logistic regression—from objective to deployment",
         "slug": "deep-lectures/901-linear-and-logistic-regression-from-objective-to-deployment",
         "status": "live"
       },
       {
-        "title": "Deep lecture: Regularisation and model selection as controlled generalisation",
+        "title": "Regularisation and model selection as controlled generalisation",
         "slug": "deep-lectures/902-regularisation-and-model-selection-as-controlled-generalisation",
         "status": "live"
       },
       {
-        "title": "Deep lecture: Trees, random forests, and boosting—from split objective to deployment",
+        "title": "Trees, random forests, and boosting—from split objective to deployment",
         "slug": "deep-lectures/903-trees-random-forests-and-boosting-from-split-objective-to-deployment",
         "status": "live"
       },
       {
-        "title": "Deep lecture: Probabilistic modelling, MLE/MAP, Bayesian inference, calibration, and uncertainty",
+        "title": "Probabilistic modelling: MLE/MAP, Bayesian inference, and calibration",
         "slug": "deep-lectures/904-probabilistic-modelling-mle-map-bayesian-inference-calibration-and-uncertainty",
         "status": "live"
       },
       {
-        "title": "Deep lecture: Statistical inference, resampling, multiple comparison, and decision thresholds",
+        "title": "Statistical inference: resampling, multiple comparisons, and decision thresholds",
         "slug": "deep-lectures/905-statistical-inference-resampling-multiple-comparison-and-decision-thresholds",
         "status": "live"
       },
       {
-        "title": "Deep lecture: Causal estimation—from DAGs through matching, IPW, doubly robust methods, and sensitivity",
+        "title": "Causal estimation: DAGs, matching, IPW, doubly robust methods, and sensitivity",
         "slug": "deep-lectures/906-causal-estimation-from-dags-through-matching-ipw-doubly-robust-methods-and-sensitivity",
         "status": "live"
       },
       {
-        "title": "Deep lecture: Time series, ranking, and recommender systems under temporal exposure feedback",
+        "title": "Time series, ranking, and recommenders under temporal and exposure feedback",
         "slug": "deep-lectures/907-time-series-ranking-and-recommender-systems-under-temporal-exposure-feedback",
         "status": "live"
       }
@@ -6281,7 +6271,7 @@ const unsortedTracks: Track[] = [
         "status": "live"
       },
       {
-        "title": "Foundations Quiz",
+        "title": "Context Engineering: Foundations Quiz",
         "slug": "foundations-quiz",
         "status": "live"
       },
@@ -8116,7 +8106,7 @@ const unsortedTracks: Track[] = [
         "status": "live"
       },
       {
-        "title": "Prompt Caching for Speed and Cost",
+        "title": "What Makes a Prompt Prefix Cacheable",
         "slug": "prompt-caching",
         "status": "live"
       },
@@ -8221,7 +8211,7 @@ const unsortedTracks: Track[] = [
         "status": "live"
       },
       {
-        "title": "Handling API Keys and Secrets Safely",
+        "title": "The Threat Model Behind API Key Storage",
         "slug": "secrets-and-key-management",
         "status": "live"
       },
@@ -8341,7 +8331,7 @@ const unsortedTracks: Track[] = [
         "status": "live"
       },
       {
-        "title": "Prompt Versioning and Safe Rollbacks",
+        "title": "Prompt Versioning: Pin, Diff, and Roll Back",
         "slug": "prompt-versioning-and-rollback",
         "status": "live"
       },
@@ -8926,7 +8916,7 @@ const unsortedTracks: Track[] = [
         "status": "live"
       },
       {
-        "title": "Foundations Quiz",
+        "title": "Tool Calling: Foundations Quiz",
         "slug": "foundations-quiz",
         "status": "live"
       },
@@ -8971,7 +8961,7 @@ const unsortedTracks: Track[] = [
         "status": "live"
       },
       {
-        "title": "The Token Cost of Tool Schemas",
+        "title": "Tool Schemas Are Re-Sent on Every Call",
         "slug": "token-cost-of-schemas-deep",
         "status": "live"
       },
@@ -9091,7 +9081,7 @@ const unsortedTracks: Track[] = [
         "status": "live"
       },
       {
-        "title": "Caching Tool Results Across Calls",
+        "title": "Which Tool Calls Are Safe to Cache",
         "slug": "caching-tool-results",
         "status": "live"
       },
@@ -9126,7 +9116,7 @@ const unsortedTracks: Track[] = [
         "status": "live"
       },
       {
-        "title": "Handling Tool Errors and Retries",
+        "title": "When a Tool Call Fails: Code, Model, or Human",
         "slug": "handling-errors-and-retries",
         "status": "live"
       },
@@ -9311,7 +9301,7 @@ const unsortedTracks: Track[] = [
         "status": "live"
       },
       {
-        "title": "Parallel Tool Calls",
+        "title": "Parallel Tool Calls: The Wire-Level Contract",
         "slug": "parallel-tool-calls-mechanics",
         "status": "live"
       },
@@ -9341,7 +9331,7 @@ const unsortedTracks: Track[] = [
         "status": "live"
       },
       {
-        "title": "Streaming Partial Tool Calls",
+        "title": "Streaming Tool Calls: Partial JSON Is Never Input",
         "slug": "streaming-partial-tool-calls-concept",
         "status": "live"
       },
@@ -9391,7 +9381,7 @@ const unsortedTracks: Track[] = [
         "status": "live"
       },
       {
-        "title": "Code Execution as a Tool",
+        "title": "The Code Interpreter Tool: Highest Leverage, Least Trust",
         "slug": "code-execution-as-a-tool-concept",
         "status": "live"
       },
@@ -9406,7 +9396,7 @@ const unsortedTracks: Track[] = [
         "status": "live"
       },
       {
-        "title": "Computer-Use and Browser-Control Tools",
+        "title": "Computer Use: The Screenshot-and-Click Loop",
         "slug": "computer-use-and-browser-tools-concept",
         "status": "live"
       },

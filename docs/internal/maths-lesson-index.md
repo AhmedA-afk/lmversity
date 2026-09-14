@@ -6,7 +6,6 @@ summary: "Status: 157 draft lessons, linked as a complete route · 2026-08-30."
 duration: "3 min read"
 ---
 
-# Mathematics Foundations for AI · lesson route index
 
 Status: **157 draft lessons, linked as a complete route** · 2026-08-30  
 Start at the relevant module, then use each lesson’s **Continue** route. This

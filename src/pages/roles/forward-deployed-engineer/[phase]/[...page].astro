@@ -1,6 +1,8 @@
 ---
 import AdSlot from '../../../../components/AdSlot.astro';
 import Layout from '../../../../components/Layout.astro';
+import ReportError from '../../../../components/ReportError.astro';
+import { site } from '../../../../data/site';
 import { getCollection, render } from 'astro:content';
 import { fdeRole, fdePhases, getFdePhase, fdeKindLabel } from '../../../../data/fde';
 
@@ -106,6 +108,7 @@ const related = currentModule
       <span class:list={['kind mono', `kind-${entry.data.kind}`]}>{fdeKindLabel[entry.data.kind]}</span>
       <h1>{entry.data.title}</h1>
       <div class="meta mono">
+        {site.author.name && <span>By <a href="/about">{site.author.name}</a></span>}
         {entry.data.duration && <span>{entry.data.duration}</span>}
         {cur >= 0 && <><span aria-hidden="true">·</span><span>{cur + 1} of {playable.length} live in this phase</span></>}
         {currentModule && <><span aria-hidden="true">·</span><span>{currentModule.name}</span></>}
@@ -150,8 +153,6 @@ const related = currentModule
         <span class="note">Saved in this browser only — no account, nothing sent anywhere. <a href="/saved">Your saved page →</a></span>
       </div>
 
-      <AdSlot kind="lesson" />
-
       <nav class="pager" aria-label="Page navigation">
         {prev ? <a href={`${base}/${phaseId}/${prev.slug}`} class="pg"><span class="mono">← Previous</span><span class="pt">{prev.title}</span></a> : <span></span>}
         {next ? <a href={`${base}/${phaseId}/${next.slug}`} class="pg alignr"><span class="mono">Next →</span><span class="pt">{next.title}</span></a> : (
@@ -169,6 +170,11 @@ const related = currentModule
           </ul>
         </section>
       )}
+
+      <ReportError title={entry.data.title} url={`${site.url}${base}/${phaseId}/${slug}`} />
+
+      {/* Below actions, pager and related links — never mistaken for nav. */}
+      <AdSlot kind="lesson" />
     </article>
 
     <aside class="toc" aria-label="On this page">

@@ -35,6 +35,12 @@ for (const file of files) {
   routes.add(rel);
 }
 
+// Paths the hosting platform injects at request time — they exist on Vercel's
+// edge, never in dist/. Vercel Web Analytics serves /_vercel/insights/* only
+// once the feature is enabled on the project.
+const PLATFORM_PREFIXES = ['/_vercel/'];
+const isPlatform = (p) => PLATFORM_PREFIXES.some((prefix) => p.startsWith(prefix));
+
 const dead = new Map();
 const pages = files.filter((f) => f.endsWith('.html'));
 
@@ -44,6 +50,7 @@ for (const file of pages) {
   for (const match of html.matchAll(/(?:href|src)="(\/[^"#?]*)"/g)) {
     const target = match[1].replace(/\/$/, '') || '/';
     if (routes.has(target) || routes.has(target.slice(1))) continue;
+    if (isPlatform(target)) continue;
     if (!dead.has(target)) dead.set(target, new Set());
     dead.get(target).add(from);
   }
