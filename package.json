@@ -16,6 +16,7 @@
     "assets": "npm run fonts && npm run icons && npm run og",
     "check:links": "node scripts/check-links.mjs",
     "check:content": "node scripts/check-content.mjs",
+    "registry": "node scripts/build-content-registry.mjs",
     "dates": "node scripts/build-content-dates.mjs",
     "prelaunch": "npm run og && npm run build && npm run check:links",
     "illustrations": "python3 scripts/generate-illustrations.py",

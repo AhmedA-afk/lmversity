@@ -14,6 +14,11 @@ import { writeFileSync } from 'node:fs';
 const ROOTS = [
   'src/content/lessons',
   'src/content/answers',
+  'src/content/questions',
+  'src/content/scenarios',
+  'src/content/blog',
+  'src/content/guides',
+  'src/content/fde',
   // Data files that back whole page types — their mtime is the honest date.
   'src/data/quick-guides.ts',
   'src/data/glossary.ts',
