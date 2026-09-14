@@ -44,12 +44,14 @@ Current milestone: P0 — make the existing monetization setup correct, measurab
 
 Current blockers:
 
-- **The 2026-09-14 implementation pass is not deployed.** Every P0/P1 fix is an
-  uncommitted working-tree change; `main` matches `origin/main` at `bf38c15`, and
-  production still serves the 2026-09-08 build. Until it ships, the live site keeps
-  all three P0 defects (invalid ad unit, ad beside Previous/Next, footer claiming
-  "no cookies · no tracking" while AdSense loads). See the 2026-09-14 verification
-  entry in the progress log.
+- Vercel Web Analytics is still disabled on the project, so `/_vercel/insights/script.js`
+  404s on every production page and the console carries a MIME-type error for it. No
+  analytics data is being collected.
+- `npm run check:content` exits 1 on `main` with 407 pre-existing lesson-frontmatter
+  problems (missing `summary:`, body-level H1s). The in-flight component-kit retrofit
+  fixes them; the linter shipped ahead of its fixes. Not a build gate.
+- `/stats` still renders with `type="article"` and emits an `Article` node, which
+  contradicts the recorded decision to keep it a `WebPage` with only a `dateModified`.
 - AdSense account access is needed to decide whether Auto ads are enabled and to create or retrieve responsive ad-unit IDs.
 - AdSense account access is needed to verify Privacy & Messaging and the consent-management configuration.
 - Search Console and analytics account access will be needed for query, CTR, indexing, and behavior baselines.
@@ -73,35 +75,39 @@ These were confirmed during the 2026-09-14 audit and do not count as implementat
 
 ## P0 — Ship the implementation pass
 
-Every fix below already exists in the working tree. None of it is on the live site, so
-production still carries all three original P0 defects. This section outranks the rest.
+The implementation set shipped on 2026-09-14 as `83f245d` and is live. The content
+retrofit deliberately stayed behind and is still in the working tree.
 
-- [ ] `CODE` Commit the working-tree changes to `public/site.js`, `src/components/AdSlot.astro`,
+- [x] `CODE` Commit the working-tree changes to `public/site.js`, `src/components/AdSlot.astro`,
       `src/components/Footer.astro`, `src/components/Layout.astro`, `src/components/TopBar.astro`,
       `src/data/site.ts`, `src/pages/blog/[slug].astro`, `src/styles/global.css`, `vercel.json`
       and `public/_headers`.
-- [ ] `CODE` Add the untracked files that belong in the repository, including `src/pages/stats.astro`
+- [x] `CODE` Add the untracked files that belong in the repository, including `src/pages/stats.astro`
       and this checklist.
-- [ ] `CODE` Create a release branch from the current `main` before committing this
-      500+ file working tree; do not stage with a blanket `git add .` until every untracked
-      file and deletion has been classified as intentional.
-- [ ] `CODE` Commit the coherent implementation/content groups and push the release branch.
-- [ ] `CODE` Confirm the Vercel preview deployment succeeds and repeat the production
-      smoke checks below against its preview URL.
-- [ ] `CODE` Merge the reviewed release branch to `main` and confirm the production Vercel
-      deployment succeeds.
-- [ ] `CODE` Re-fetch a lesson page from production and confirm no `<ins class="adsbygoogle">`
+- [ ] `CODE` ~~Create a release branch…~~ **Not followed.** On the owner's instruction the
+      implementation set was committed directly to `main` as `83f245d` and pushed. Every
+      untracked file and deletion was classified first, nothing was staged with a blanket
+      `git add .`, the content retrofit was held back in a pathspec stash, and the isolated
+      set was built and link-checked before the push. The remaining ~450-file content
+      retrofit still warrants this branch-and-preview flow.
+- [ ] `CODE` Put the component-kit content retrofit through the release-branch and preview
+      flow above; it is still uncommitted.
+- [x] `CODE` Confirm the production Vercel deployment succeeds.
+- [x] `CODE` Re-fetch a lesson page from production and confirm no `<ins class="adsbygoogle">`
       without a `data-ad-slot` remains.
-- [ ] `CODE` Re-fetch the homepage from production and confirm the footer no longer claims
+- [x] `CODE` Re-fetch the homepage from production and confirm the footer no longer claims
       "No cookies · no tracking" while AdSense loads.
-- [ ] `CODE` Reload a page carrying the KaTeX bundle and confirm the `font-src` violation is gone.
+- [x] `CODE` Reload a page carrying the KaTeX bundle and confirm the `font-src` violation is gone.
 - [x] `DECISION` Keep `/stats` as a `WebPage` with its sourced verification date as
       `dateModified`; no reliable publication date exists for an `Article` node.
+- [ ] `CODE` Make `/stats` match that decision — it still passes `type="article"` to
+      `Layout`, so the live page emits an `Article` node with `dateModified` and no
+      `datePublished`.
 
 Acceptance criteria:
 
-- [ ] The live site and the repository agree on ad markup, placement, footer wording and CSP.
-- [ ] The production console reports no CSP violation on a page containing maths.
+- [x] The live site and the repository agree on ad markup, placement, footer wording and CSP.
+- [x] The production console reports no CSP violation on a page containing maths.
 
 ## P0 — Repair ad delivery
 
@@ -454,7 +460,7 @@ Acceptance criteria:
 - [x] Check browser console and network logs for ad, consent, analytics, CSP, mixed-content, and runtime failures.
 - [x] Confirm page-level horizontal overflow is absent at supported widths.
 - [ ] Confirm ads remain distinct from navigation and interactive controls.
-- [ ] Confirm footer and privacy claims match actual network behavior.
+- [x] Confirm footer and privacy claims match actual network behavior.
 - [x] Confirm no account identifier, secret, export containing private data, or credential was committed.
 - [x] Add the final measurement baseline and remaining account-side blockers to the progress log.
 
@@ -475,6 +481,40 @@ Acceptance criteria:
 ## Progress log
 
 Add new entries at the top.
+
+### 2026-09-14 — Implementation set deployed as `83f245d`
+
+- Pushed `bf38c15..83f245d` to `origin/main`; Vercel served the new build ~60s later.
+- Scope: 85 files — the ad, privacy, SEO, mobile and a11y set, the two maths-foundations
+  authoring docs moved to `docs/internal/` with their redirects, and 41 tracked `.pyc`
+  files removed to match the new `.gitignore` rules. `.github/workflows/check.yml` and
+  `.devin/mcp_config.json` were deliberately left untracked.
+- Held back: the component-kit content retrofit (~426 lesson files, 11 `.md`→`.mdx`
+  conversions, `kit/InlineCheck.astro`, `fix-lesson-heads.mjs`), stashed by pathspec,
+  restored afterwards with no conflicts. The working tree reconciles exactly: 537
+  baseline entries = 452 still dirty + 85 committed.
+- **Caught before the push:** the pathspec stash silently reverted the deletion half of
+  the staged `maths-foundations` rename, so the isolated build produced 2,393 pages with
+  `/learn/maths-foundations/lesson-index` and `research-benchmarks` still live while
+  `_redirects` was adding 301s for those exact URLs — a redirect shadowing a live page.
+  The rename was re-completed and the build re-run: 2,391 pages, `check:links` clean over
+  5,161 routes, both URLs absent from `dist/`.
+- Production confirmed after the deploy: zero authored `<ins class="adsbygoogle">` on a
+  lesson page, one loader script, one ad request, footer reading "No account required ·
+  ads by Google — privacy", `font-src 'self' data:` live with the KaTeX violation gone
+  from the console, `/learn/maths-foundations/lesson-index` returning a permanent redirect
+  (308, Vercel's default for `vercel.json` redirects) to the track page, and `/robots.txt`,
+  `/sitemap-index.xml`, `/ads.txt`, `/rss.xml` all 200.
+- Still failing in production: `/_vercel/insights/script.js` 404s and logs a MIME-type
+  error because Web Analytics is not enabled on the Vercel project.
+- `npm run check:content` exits 1 on `main` with 407 pre-existing lesson problems. The
+  linter itself is new in this commit and the retrofit that fixes them is still unpushed,
+  so the content lint is red until that lands. Build and link check both pass.
+- Note: this checklist was edited concurrently while the work was in progress — the
+  "Ship the implementation pass" section gained a release-branch/preview flow and the
+  `/stats` decision was resolved — and those edits were committed along with everything
+  else. The direct-to-`main` push was made on the owner's instruction, before that flow
+  was recorded.
 
 ### 2026-09-14 — Browser verification pass (local dev + production spot-check)
 
