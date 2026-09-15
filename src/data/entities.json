@@ -1140,5 +1140,130 @@
       "sarvam-api-docs"
     ],
     "changeNote": "2026-09-15: Saaras v3 STT (23 langs, realtime), Bulbul v3 TTS (11), Sarvam-105B chat (128K), Mayura translation (11), Sarvam Vision docs (23)."
+  },
+  "qwen": {
+    "name": "Alibaba Qwen",
+    "kind": "vendor",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "hf-qwen"
+    ]
+  },
+  "ibm": {
+    "name": "IBM",
+    "kind": "vendor",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "hf-ibm-granite"
+    ]
+  },
+  "ai2": {
+    "name": "Allen Institute for AI",
+    "kind": "vendor",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "hf-allenai-olmo"
+    ]
+  },
+  "tii": {
+    "name": "Technology Innovation Institute",
+    "kind": "vendor",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "hf-tii-falcon"
+    ]
+  },
+  "bigscience": {
+    "name": "BigScience workshop",
+    "kind": "vendor",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "hf-bigscience-bloom"
+    ]
+  },
+  "qwen-family": {
+    "name": "Qwen family",
+    "kind": "model-family",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "hf-qwen"
+    ],
+    "changeNote": "2026-09-15: Qwen 3.8 line; mixed licenses — apache-2.0 smaller, qwen3.8-max (attribution clause >100M MAU/$20M mo) flagship."
+  },
+  "microsoft-phi": {
+    "name": "Phi family",
+    "kind": "model-family",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "hf-microsoft-phi"
+    ],
+    "changeNote": "2026-09-15: MIT-licensed Phi-4 line incl. reasoning-vision-15B."
+  },
+  "ibm-granite-family": {
+    "name": "Granite family",
+    "kind": "model-family",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "hf-ibm-granite"
+    ],
+    "changeNote": "2026-09-15: Apache-2.0 granite-4.2 line (3b/8b/30b + quants)."
+  },
+  "nvidia-nemotron": {
+    "name": "Nemotron family",
+    "kind": "model-family",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "hf-nvidia-nemotron"
+    ],
+    "changeNote": "2026-09-15: openmdw-1.1/other per release; NVFP4 NVIDIA-tuned builds."
+  },
+  "ai2-olmo": {
+    "name": "OLMo family",
+    "kind": "model-family",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "hf-allenai-olmo"
+    ],
+    "changeNote": "2026-09-15: Apache-2.0 main line; full data/code/logs published."
+  },
+  "tii-falcon": {
+    "name": "Falcon family",
+    "kind": "model-family",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "hf-tii-falcon"
+    ],
+    "changeNote": "2026-09-15: falcon-llm-license; relevance faded vs newer families — covered as legacy."
+  },
+  "bigscience-bloom": {
+    "name": "BLOOM",
+    "kind": "model-family",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "hf-bigscience-bloom"
+    ],
+    "changeNote": "2026-09-15: bigscience-bloom-rail-1.0; historical/educational placement."
+  },
+  "cohere-aya": {
+    "name": "Aya family",
+    "kind": "model-family",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "cohere-model-docs"
+    ],
+    "changeNote": "2026-09-15: cc-by-nc-4.0 — non-commercial; 23-language focus."
   }
 }

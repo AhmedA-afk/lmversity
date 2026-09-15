@@ -1,15 +1,15 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T15:41:39.525Z",
+  "generatedAt": "2026-09-15T15:49:01.203Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2485,
+  "itemCount": 2494,
   "counts": {
    "byFamily": {
     "lesson": 2111,
     "project": 32,
     "quiz": 89,
-    "reference": 69,
+    "reference": 78,
     "lab": 71,
     "interview": 7,
     "scenario": 6,
@@ -22,7 +22,7 @@
     "glossary": 1
    },
    "byStatus": {
-    "live": 2485
+    "live": 2494
    },
    "byKind": {
     "concept": 1810,
@@ -40,7 +40,7 @@
     "howto": 20,
     "pillar": 4,
     "definition": 12,
-    "provider-hub": 14,
+    "provider-hub": 23,
     "lesson": 131,
     "reference": 7,
     "bootcamp": 6,
@@ -107,7 +107,7 @@
     "policy-sensitive": 82,
     "certification-sensitive": 104,
     "durable": 266,
-    "volatile": 14
+    "volatile": 23
    }
   },
   "analyticsNote": "Analytics fields are null until Search Console / analytics exports are wired in.",
@@ -193543,6 +193543,86 @@
    }
   },
   {
+   "id": "pro-0015",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "BLOOM (historical open model)",
+   "slug": "bloom",
+   "route": "/providers/bloom",
+   "collection": "providers",
+   "path": "src/content/providers/bloom.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "BigScience BLOOM: the first big multilingual open model — historically important as the proof that open science could build a frontier-class model, and where it still matters as context.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 252,
+   "headings": [
+    "What this page covers",
+    "Why it still matters",
+    "License",
+    "Where it fits today",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/providers/ai4bharat",
+    "/providers/olmo"
+   ],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "bigscience",
+    "covers": [
+     "open-model"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "hf-bigscience-bloom"
+    ],
+    "related": [
+     "/providers/olmo",
+     "/learn/llm-foundations"
+    ],
+    "numericClaims": 3
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "BigScience BLOOM: the first big multilingual open model — historically important as the proof that open science could build a frontier-class model, and where it still matters as context.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "policy/license mention",
+    "vendor/tool mentions: Hugging Face, AI4Bharat"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "pro-0005",
    "family": "reference",
    "kind": "provider-hub",
@@ -193712,6 +193792,161 @@
    }
   },
   {
+   "id": "pro-0016",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Falcon (open weights)",
+   "slug": "falcon",
+   "route": "/providers/falcon",
+   "collection": "providers",
+   "path": "src/content/providers/falcon.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "TII's Falcon family: early open-weight leaders whose relevance has faded — where they still fit, the custom license, and the honest assessment of when to pick newer families instead.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 266,
+   "headings": [
+    "What this page covers",
+    "Family and license map",
+    "Where Falcon still fits",
+    "Serving and hardware",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "tii",
+    "covers": [
+     "open-model"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "hf-tii-falcon"
+    ],
+    "related": [
+     "/learn/local-inference/ollama-first-run"
+    ],
+    "numericClaims": 3
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "TII's Falcon family: early open-weight leaders whose relevance has faded — where they still fit, the custom license, and the honest assessment of when to pick newer families instead.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "policy/license mention",
+    "vendor/tool mentions: Hugging Face, Llama, Qwen, DeepSeek, Mistral"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0017",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Gemma (open weights)",
+   "slug": "gemma",
+   "route": "/providers/gemma",
+   "collection": "providers",
+   "path": "src/content/providers/gemma.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Google's Gemma open-model family: Apache-2.0 licensed weights distilling Gemini-class architecture, current sizes, prompt format, serving paths — and where it fits against Llama and Qwen.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 361,
+   "headings": [
+    "What this page covers",
+    "Family and license map",
+    "Model cards and prompt format",
+    "Quantization, serving, hardware",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "google",
+    "covers": [
+     "open-model"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "google-gemma-docs",
+     "hf-google-gemma"
+    ],
+    "related": [
+     "/providers/google",
+     "/learn/local-inference/ollama-first-run",
+     "/learn/local-inference/mlx-lm-on-apple-silicon"
+    ],
+    "numericClaims": 3
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Google's Gemma open-model family: Apache-2.0 licensed weights distilling Gemini-class architecture, current sizes, prompt format, serving paths — and where it fits against Llama and Qwen.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "policy/license mention",
+    "vendor/tool mentions: Gemini, Llama, Qwen, Sarvam, Ollama, llama.cpp, vLLM, SGLang, MLX, DeepSeek"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "pro-0002",
    "family": "reference",
    "kind": "provider-hub",
@@ -193811,6 +194046,83 @@
    }
   },
   {
+   "id": "pro-0018",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Granite (open weights)",
+   "slug": "granite",
+   "route": "/providers/granite",
+   "collection": "providers",
+   "path": "src/content/providers/granite.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "IBM's Granite open-model family: Apache-2.0 enterprise-grade open models with indemnification posture, current 4.x lineup, and the conservative enterprise angle on open weights.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 288,
+   "headings": [
+    "What this page covers",
+    "Family and license map",
+    "Model cards and prompt format",
+    "Quantization, serving, hardware",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "ibm",
+    "covers": [
+     "open-model"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "hf-ibm-granite"
+    ],
+    "related": [
+     "/learn/local-inference/vllm-production-serving",
+     "/learn/llm-security/llm-supply-chain-security"
+    ],
+    "numericClaims": 6
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "IBM's Granite open-model family: Apache-2.0 enterprise-grade open models with indemnification posture, current 4.x lineup, and the conservative enterprise angle on open weights.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "policy/license mention",
+    "vendor/tool mentions: watsonx, Hugging Face, vLLM, llama.cpp, Ollama, Llama, Qwen"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "pro-0013",
    "family": "reference",
    "kind": "provider-hub",
@@ -193880,6 +194192,88 @@
     "intentClarity": null,
     "correctnessSources": null,
     "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0019",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Llama (open weights)",
+   "slug": "llama",
+   "route": "/providers/llama",
+   "collection": "providers",
+   "path": "src/content/providers/llama.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Meta's Llama open-model family: the community-license reality, gated repos, current lineup, prompt format, quantization and serving paths — and when downloadable weights beat an API.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 395,
+   "headings": [
+    "What this page covers",
+    "Family and license map",
+    "Model cards and prompt format",
+    "Quantization, serving, hardware",
+    "When to choose it"
+   ],
+   "internalLinks": [
+    "/providers/meta"
+   ],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "meta",
+    "covers": [
+     "open-model"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "meta-llama-resources",
+     "hf-meta-llama",
+     "purple-llama-repo"
+    ],
+    "related": [
+     "/providers/meta",
+     "/learn/local-inference/ollama-first-run",
+     "/learn/local-inference/vllm-production-serving"
+    ],
+    "numericClaims": 3
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Meta's Llama open-model family: the community-license reality, gated repos, current lineup, prompt format, quantization and serving paths — and when downloadable weights beat an API.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "policy/license mention",
+    "vendor/tool mentions: Llama, Ollama, llama.cpp, vLLM, SGLang, MLX, Qwen"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
     "prerequisiteFit": null,
     "handsOn": null,
     "explanationQuality": null,
@@ -194062,6 +194456,161 @@
    }
   },
   {
+   "id": "pro-0020",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Nemotron (open weights)",
+   "slug": "nemotron",
+   "route": "/providers/nemotron",
+   "collection": "providers",
+   "path": "src/content/providers/nemotron.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "NVIDIA's Nemotron open-model family: OpenMDW-licensed models tuned for NVIDIA hardware, reasoning and specialist variants, and the GPU-vendor angle on open weights.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 307,
+   "headings": [
+    "What this page covers",
+    "Family and license map",
+    "Model cards and prompt format",
+    "Quantization, serving, hardware",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "nvidia",
+    "covers": [
+     "open-model"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "hf-nvidia-nemotron",
+     "nvidia-dli"
+    ],
+    "related": [
+     "/learn/local-inference/vllm-production-serving",
+     "/learn/fine-tuning/pinning-your-training-stack-lab"
+    ],
+    "numericClaims": 1
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "NVIDIA's Nemotron open-model family: OpenMDW-licensed models tuned for NVIDIA hardware, reasoning and specialist variants, and the GPU-vendor angle on open weights.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "policy/license mention",
+    "vendor/tool mentions: Hugging Face, DeepSeek, Llama, Qwen"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0021",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "OLMo (open weights)",
+   "slug": "olmo",
+   "route": "/providers/olmo",
+   "collection": "providers",
+   "path": "src/content/providers/olmo.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "AI2's OLMo family: the fully-open option — weights, training data, code, and logs published — Apache-2.0, built for research and audit rather than leaderboard-chasing.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 278,
+   "headings": [
+    "What this page covers",
+    "Family and license map",
+    "Model cards and prompt format",
+    "Quantization, serving, hardware",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "ai2",
+    "covers": [
+     "open-model"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "hf-allenai-olmo"
+    ],
+    "related": [
+     "/learn/llm-foundations",
+     "/learn/llm-security/llm-supply-chain-security"
+    ],
+    "numericClaims": 1
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "AI2's OLMo family: the fully-open option — weights, training data, code, and logs published — Apache-2.0, built for research and audit rather than leaderboard-chasing.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "policy/license mention",
+    "vendor/tool mentions: Hugging Face, Ollama, llama.cpp, vLLM, Llama, Qwen"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "pro-0003",
    "family": "reference",
    "kind": "provider-hub",
@@ -194145,6 +194694,160 @@
     "intentClarity": null,
     "correctnessSources": null,
     "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0022",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Phi (open weights)",
+   "slug": "phi",
+   "route": "/providers/phi",
+   "collection": "providers",
+   "path": "src/content/providers/phi.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Microsoft's Phi open-model family: MIT-licensed small models built on curated 'textbook-quality' data — the case study in capability-per-parameter for edge and cheap serving.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 308,
+   "headings": [
+    "What this page covers",
+    "Family and license map",
+    "Model cards and prompt format",
+    "Quantization, serving, hardware",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "microsoft",
+    "covers": [
+     "open-model"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "hf-microsoft-phi"
+    ],
+    "related": [
+     "/learn/local-inference/mlx-lm-on-apple-silicon",
+     "/learn/local-inference/ollama-first-run"
+    ],
+    "numericClaims": 3
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Microsoft's Phi open-model family: MIT-licensed small models built on curated 'textbook-quality' data — the case study in capability-per-parameter for edge and cheap serving.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "policy/license mention",
+    "vendor/tool mentions: Hugging Face, Ollama, llama.cpp, ONNX, vLLM, MLX"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0023",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Qwen (open weights)",
+   "slug": "qwen",
+   "route": "/providers/qwen",
+   "collection": "providers",
+   "path": "src/content/providers/qwen.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Alibaba's Qwen open-model family: the widest size range in open weights, a mixed license map (Apache-2.0 on smaller releases, an attribution-clause license on the flagship), and the serving story.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 396,
+   "headings": [
+    "What this page covers",
+    "Family and license map — the mixed picture",
+    "Model cards and prompt format",
+    "Quantization, serving, hardware",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "qwen",
+    "covers": [
+     "open-model"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "hf-qwen"
+    ],
+    "related": [
+     "/learn/local-inference/ollama-first-run",
+     "/learn/local-inference/vllm-production-serving"
+    ],
+    "numericClaims": 8
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Alibaba's Qwen open-model family: the widest size range in open weights, a mixed license map (Apache-2.0 on smaller releases, an attribution-clause license on the flagship), and the serving story.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "policy/license mention",
+    "vendor/tool mentions: Qwen, Hugging Face, Ollama, llama.cpp, vLLM, SGLang"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
     "prerequisiteFit": null,
     "handsOn": null,
     "explanationQuality": null,

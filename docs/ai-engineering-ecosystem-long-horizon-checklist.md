@@ -895,22 +895,29 @@ consolidation into a parent track, or a clearer curated-path role.
 
 ### Open and open-weight model families
 
-- [ ] Meta Llama.
-- [ ] Google Gemma.
-- [ ] Alibaba Qwen.
-- [ ] Mistral and Ministral open releases.
-- [ ] DeepSeek open releases.
-- [ ] Z.ai GLM open releases.
-- [ ] Microsoft Phi.
-- [ ] IBM Granite.
-- [ ] NVIDIA Nemotron.
-- [ ] Cohere Aya and other confirmed open releases.
-- [ ] AllenAI OLMo.
-- [ ] TII Falcon where still relevant.
-- [ ] BigScience BLOOM as historical context where educationally useful.
-- [ ] Record exact license terms per release; do not label all downloadable weights “open source.”
-- [ ] Cover model cards, prompt formats, quantization, serving support, hardware needs,
-      safety tooling, fine-tuning, and evaluation.
+- [x] Meta Llama. *(`/providers/llama` — gated-repo + Llama Community License reality stated plainly)*
+- [x] Google Gemma. *(`/providers/gemma` — Gemma-4 apache-2.0 verified on card)*
+- [x] Alibaba Qwen. *(`/providers/qwen` — mixed license map verified: apache-2.0 smaller, qwen3.8-max scale-attribution clause on flagship)*
+- [x] Mistral and Ministral open releases. *(covered in `/providers/mistral` — per-release license map incl. Apache-2.0/Modified MIT/Premier/CC-BY-NC flags)*
+- [x] DeepSeek open releases. *(covered in `/providers/deepseek` — MIT-licensed V4 family verified on HF cards)*
+- [x] Z.ai GLM open releases. *(covered in `/providers/zai` — glm-5.3 custom permissive license verified; Mistral-hosted GLM-5.2 noted)*
+- [x] Microsoft Phi. *(`/providers/phi` — MIT-licensed Phi-4 line incl. reasoning-vision-15B)*
+- [x] IBM Granite. *(`/providers/granite` — Apache-2.0 granite-4.2 line, enterprise/indemnification angle)*
+- [x] NVIDIA Nemotron. *(`/providers/nemotron` — openmdw-1.1/other per-card variance flagged; NVFP4 builds)*
+- [x] Cohere Aya and other confirmed open releases. *(covered in `/providers/cohere` — cc-by-nc-4.0 non-commercial flag on Aya cards verified)*
+- [x] AllenAI OLMo. *(`/providers/olmo` — fully-open positioning: weights+data+code+logs)*
+- [x] TII Falcon where still relevant. *(`/providers/falcon` — honest placement: legacy/regional fit, falcon-llm-license)*
+- [x] BigScience BLOOM as historical context where educationally useful. *(`/providers/bloom` — RAIL license as ancestor of 'permissive+conditions' family)*
+- [x] Record exact license terms per release; do not label all downloadable weights “open source.”
+      *(verified per-card on HF 2026-09-15: llama4 custom/gated, apache-2.0
+      (Gemma-4, Mistral open, Qwen smaller, Granite-4.2, OLMo), MIT (DeepSeek-V4,
+      Phi-4), qwen3.8-max scale-clause, glm-5.3 custom, openmdw-1.1 (Nemotron),
+      cc-by-nc-4.0 (Aya — non-commercial), falcon-llm-license, bloom-rail-1.0 —
+      every hub states 'check the card' as the rule)*
+- [x] Cover model cards, prompt formats, quantization, serving support, hardware needs,
+      safety tooling, fine-tuning, and evaluation. *(each open-model hub covers
+      cards/format/quantization/serving/hardware; safety tooling via Llama Guard
+      + supply-chain lesson; fine-tuning covered by the fine-tuning track)*
 
 ### Cloud model platforms and gateways
 
@@ -2152,6 +2159,28 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-15 — Phase 6: open-model family hubs + license audit (15 rows)
+
+- Commit: `970f50d`. Status: complete.
+- Content: 9 new open-model hubs — `/providers/llama` (gated + Community
+  License reality), `gemma` (Gemma-4 apache-2.0), `qwen` (mixed-license map
+  incl. qwen3.8-max scale-attribution clause), `phi` (MIT), `granite`
+  (Apache-2.0 + enterprise posture), `nemotron` (openmdw-1.1/other per
+  release + NVFP4 builds), `olmo` (fully-open disclosure), `falcon`
+  (honest faded-relevance placement), `bloom` (RAIL ancestor, historical).
+- Already-covered rows ticked via provider hubs: Mistral/Ministral,
+  DeepSeek (MIT verified), GLM (glm-5.3 license verified), Aya (cc-by-nc).
+- License audit: every family's license read from its actual HF model card
+  via the HF API — `license_name` fields quoted per release. Non-OSI
+  licenses flagged everywhere; 'check the card' stated as the rule.
+- Data: +10 source records (HF org pages, model-card type; 228 total),
+  +13 entities (5 vendors + 8 model families; 133 total).
+- Validation: build 2,537 pages; check:links 0 dead (5,453 routes);
+  registry 2,494 items.
+- Rows ticked (15): all open-model family rows + both mechanism rows.
+- Next: cloud platforms/gateways (15 rows), coding agents (13),
+  consumer products (10).
 
 ### 2026-09-15 — Phase 6: India + multilingual providers section complete (7 rows)
 

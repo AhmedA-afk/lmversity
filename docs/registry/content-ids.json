@@ -14,7 +14,7 @@
   "trk": 29,
   "qgd": 4,
   "stb": 25,
-  "pro": 14
+  "pro": 23
  },
  "entries": {
   "lessons/agentic-ai/agent-benchmarks.mdx": {
@@ -9914,6 +9914,42 @@
   "providers/sarvam.md": {
    "id": "pro-0014",
    "fp": "c395db24ed0c7f8173a3f6b314c35e20ae0f23d6"
+  },
+  "providers/bloom.md": {
+   "id": "pro-0015",
+   "fp": "c9b83499db1066029c2135f713d75fe43a07271e"
+  },
+  "providers/falcon.md": {
+   "id": "pro-0016",
+   "fp": "924822a95dd98e5f60e7045ec39adeda149e8532"
+  },
+  "providers/gemma.md": {
+   "id": "pro-0017",
+   "fp": "d7c0c379a2a3c84dd95778c64a1d041d0af43e7c"
+  },
+  "providers/granite.md": {
+   "id": "pro-0018",
+   "fp": "643cbdd70e05edda18280bd9ec475f6501e29286"
+  },
+  "providers/llama.md": {
+   "id": "pro-0019",
+   "fp": "c8b4276719d304500fc6fdf8be22310aa533e958"
+  },
+  "providers/nemotron.md": {
+   "id": "pro-0020",
+   "fp": "65cec28b3978017a109f18ec6a1520d3c67b1b13"
+  },
+  "providers/olmo.md": {
+   "id": "pro-0021",
+   "fp": "722128949349b81406da5def00f121f5719b0cac"
+  },
+  "providers/phi.md": {
+   "id": "pro-0022",
+   "fp": "122bd45ee2edbf481ee99433c63d31ca2efd612d"
+  },
+  "providers/qwen.md": {
+   "id": "pro-0023",
+   "fp": "d1c0dd77830f25cee6822d3c3b7a4213db4e2180"
   }
  },
  "retired": {

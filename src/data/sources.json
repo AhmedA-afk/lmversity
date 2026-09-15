@@ -2365,5 +2365,115 @@
       "Public language-infrastructure platform"
     ],
     "status": "current"
+  },
+  "hf-meta-llama": {
+    "title": "Meta Llama models on Hugging Face",
+    "publisher": "Meta / Hugging Face",
+    "accessedAt": "2026-09-15",
+    "url": "https://huggingface.co/meta-llama",
+    "type": "model-card",
+    "claims": [
+      "Llama model cards, llama4 license, gated repos"
+    ],
+    "status": "current"
+  },
+  "hf-google-gemma": {
+    "title": "Gemma models on Hugging Face",
+    "publisher": "Google / Hugging Face",
+    "accessedAt": "2026-09-15",
+    "url": "https://huggingface.co/google",
+    "type": "model-card",
+    "claims": [
+      "Gemma-4 cards, apache-2.0 license"
+    ],
+    "status": "current"
+  },
+  "hf-qwen": {
+    "title": "Qwen models on Hugging Face",
+    "publisher": "Alibaba / Hugging Face",
+    "accessedAt": "2026-09-15",
+    "url": "https://huggingface.co/Qwen",
+    "type": "model-card",
+    "claims": [
+      "Qwen 3.8 cards, mixed apache-2.0/qwen3.8-max licenses"
+    ],
+    "status": "current"
+  },
+  "hf-microsoft-phi": {
+    "title": "Phi models on Hugging Face",
+    "publisher": "Microsoft / Hugging Face",
+    "accessedAt": "2026-09-15",
+    "url": "https://huggingface.co/microsoft",
+    "type": "model-card",
+    "claims": [
+      "Phi-4 cards, MIT license"
+    ],
+    "status": "current"
+  },
+  "hf-ibm-granite": {
+    "title": "Granite models on Hugging Face",
+    "publisher": "IBM / Hugging Face",
+    "accessedAt": "2026-09-15",
+    "url": "https://huggingface.co/ibm-granite",
+    "type": "model-card",
+    "claims": [
+      "Granite 4.2 cards, apache-2.0"
+    ],
+    "status": "current"
+  },
+  "hf-nvidia-nemotron": {
+    "title": "Nemotron models on Hugging Face",
+    "publisher": "NVIDIA / Hugging Face",
+    "accessedAt": "2026-09-15",
+    "url": "https://huggingface.co/nvidia",
+    "type": "model-card",
+    "claims": [
+      "Nemotron-3 cards, openmdw-1.1 license"
+    ],
+    "status": "current"
+  },
+  "hf-allenai-olmo": {
+    "title": "OLMo models on Hugging Face",
+    "publisher": "AI2 / Hugging Face",
+    "accessedAt": "2026-09-15",
+    "url": "https://huggingface.co/allenai",
+    "type": "model-card",
+    "claims": [
+      "OLMo cards, apache-2.0, full disclosure"
+    ],
+    "status": "current"
+  },
+  "hf-tii-falcon": {
+    "title": "Falcon models on Hugging Face",
+    "publisher": "TII / Hugging Face",
+    "accessedAt": "2026-09-15",
+    "url": "https://huggingface.co/tiiuae",
+    "type": "model-card",
+    "claims": [
+      "Falcon3 cards, falcon-llm-license"
+    ],
+    "status": "current"
+  },
+  "hf-bigscience-bloom": {
+    "title": "BLOOM on Hugging Face",
+    "publisher": "BigScience / Hugging Face",
+    "accessedAt": "2026-09-15",
+    "url": "https://huggingface.co/bigscience/bloom",
+    "type": "model-card",
+    "claims": [
+      "BLOOM card, bigscience-bloom-rail-1.0 license"
+    ],
+    "status": "current"
+  },
+  "nvidia-dli": {
+    "title": "NVIDIA Deep Learning Institute",
+    "publisher": "NVIDIA",
+    "accessedAt": "2026-09-15",
+    "url": "https://www.nvidia.com/en-us/training/",
+    "type": "official-docs",
+    "claims": [
+      "NVIDIA training resources"
+    ],
+    "status": "current"
   }
 }
