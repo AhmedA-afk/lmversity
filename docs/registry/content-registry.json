@@ -1,16 +1,16 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T15:33:45.311Z",
+  "generatedAt": "2026-09-15T15:41:39.525Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2478,
+  "itemCount": 2485,
   "counts": {
    "byFamily": {
-    "lesson": 2109,
+    "lesson": 2111,
     "project": 32,
     "quiz": 89,
-    "reference": 65,
-    "lab": 70,
+    "reference": 69,
+    "lab": 71,
     "interview": 7,
     "scenario": 6,
     "blog": 10,
@@ -22,16 +22,16 @@
     "glossary": 1
    },
    "byStatus": {
-    "live": 2478
+    "live": 2485
    },
    "byKind": {
-    "concept": 1808,
+    "concept": 1810,
     "comparison": 104,
     "capstone": 32,
     "worked-example": 29,
     "quiz": 83,
     "cheatsheet": 48,
-    "lab": 70,
+    "lab": 71,
     "drill": 14,
     "common-mistakes": 24,
     "topic": 7,
@@ -40,7 +40,7 @@
     "howto": 20,
     "pillar": 4,
     "definition": 12,
-    "provider-hub": 10,
+    "provider-hub": 14,
     "lesson": 131,
     "reference": 7,
     "bootcamp": 6,
@@ -66,9 +66,9 @@
     "cli-agents": 7,
     "context-engineering": 132,
     "deep-learning": 136,
-    "evals-red-teaming": 28,
+    "evals-red-teaming": 29,
     "fine-tuning": 27,
-    "genai-app-dev": 131,
+    "genai-app-dev": 133,
     "hallucinations": 132,
     "harness-design": 31,
     "llm-foundations": 133,
@@ -101,13 +101,13 @@
     "fde": 193
    },
    "byFreshness": {
-    "release-sensitive": 339,
+    "release-sensitive": 342,
     "pricing-sensitive": 347,
     "periodic": 1330,
     "policy-sensitive": 82,
     "certification-sensitive": 104,
     "durable": 266,
-    "volatile": 10
+    "volatile": 14
    }
   },
   "analyticsNote": "Analytics fields are null until Search Console / analytics exports are wired in.",
@@ -55647,6 +55647,91 @@
    }
   },
   {
+   "id": "les-2167",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Designing multilingual evaluations",
+   "slug": "evals-red-teaming/multilingual-evaluation-design",
+   "route": "/learn/evals-red-teaming/multilingual-evaluation-design",
+   "collection": "lessons",
+   "path": "src/content/lessons/evals-red-teaming/multilingual-evaluation-design.md",
+   "track": "evals-red-teaming",
+   "module": null,
+   "status": "live",
+   "summary": "Why translating your English eval set doesn't produce a multilingual eval — and how to design per-language evaluation that catches what English benchmarks structurally miss.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 494,
+   "headings": [
+    "The assumption that breaks",
+    "What a real multilingual eval needs",
+    "Failure modes to specifically probe",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/evals-red-teaming/datasets-rubrics-and-judges",
+    "/learn/evals-red-teaming/regression-gates-and-online-signals",
+    "/providers/ai4bharat",
+    "/providers/sarvam"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": true,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 7,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Why translating your English eval set doesn't produce a multilingual eval — and how to design per-language evaluation that catches what English benchmarks structurally miss.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/evals-red-teaming",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Sarvam, AI4Bharat"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-0613",
    "family": "lesson",
    "kind": "concept",
@@ -59597,6 +59682,92 @@
    }
   },
   {
+   "id": "les-2168",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Building for Indic scripts, fonts, and segmentation",
+   "slug": "genai-app-dev/building-for-indic-scripts-and-segmentation",
+   "route": "/learn/genai-app-dev/building-for-indic-scripts-and-segmentation",
+   "collection": "lessons",
+   "path": "src/content/lessons/genai-app-dev/building-for-indic-scripts-and-segmentation.md",
+   "track": "genai-app-dev",
+   "module": null,
+   "status": "live",
+   "summary": "The engineering concerns English-first pipelines miss: Indic script rendering, grapheme-aware text handling, segmentation and tokenization differences, and moderation coverage across 22 languages.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 613,
+   "headings": [
+    "The English-default bugs",
+    "Moderation across languages",
+    "Accessibility considerations",
+    "The checklist in practice",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/ai-literacy/ai-across-languages-and-accessibility",
+    "/learn/evals-red-teaming/multilingual-evaluation-design",
+    "/learn/genai-app-dev/indic-language-pipeline-lab",
+    "/providers/ai4bharat"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 12,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "The engineering concerns English-first pipelines miss: Indic script rendering, grapheme-aware text handling, segmentation and tokenization differences, and moderation coverage across 22 languages.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/genai-app-dev",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: AI4Bharat"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-0659",
    "family": "lesson",
    "kind": "concept",
@@ -62828,6 +62999,97 @@
     "explanationQuality": 2,
     "metadata": 2,
     "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2169",
+   "family": "lab",
+   "kind": "lab",
+   "title": "Lab: build an Indic-language pipeline end to end",
+   "slug": "genai-app-dev/indic-language-pipeline-lab",
+   "route": "/learn/genai-app-dev/indic-language-pipeline-lab",
+   "collection": "lessons",
+   "path": "src/content/lessons/genai-app-dev/indic-language-pipeline-lab.md",
+   "track": "genai-app-dev",
+   "module": null,
+   "status": "live",
+   "summary": "Hands-on lab: code-mixed speech in, translated and synthesized speech out, plus Indic document extraction — the pipeline pattern that powers real Indian-language features.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 539,
+   "headings": [
+    "What you're building",
+    "Step 1 — Code-mixed speech-to-text",
+    "Step 2 — Language detection and transliteration",
+    "Step 3 — Response generation in-language",
+    "Step 4 — Speech synthesis back",
+    "Step 5 — The document branch",
+    "Evaluation hook",
+    "Common mistakes",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/evals-red-teaming/multilingual-evaluation-design",
+    "/learn/genai-app-dev/realtime-voice-agent-project",
+    "/providers/ai4bharat",
+    "/providers/bhashini",
+    "/providers/sarvam"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": true,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 11,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "build",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Hands-on lab: code-mixed speech in, translated and synthesized speech out, plus Indic document extraction — the pipeline pattern that powers real Indian-language features.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/genai-app-dev",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Sarvam, AI4Bharat, Bhashini"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -193030,6 +193292,86 @@
    }
   },
   {
+   "id": "pro-0011",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "AI4Bharat (IIT Madras)",
+   "slug": "ai4bharat",
+   "route": "/providers/ai4bharat",
+   "collection": "providers",
+   "path": "src/content/providers/ai4bharat.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "AI4Bharat mapped: the open research lab behind IndicTrans, Indic speech/language datasets, and benchmark corpora for 22 Indian languages — the resources the Indic-AI ecosystem is built on.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 379,
+   "headings": [
+    "What this page covers",
+    "Resource map",
+    "Official links",
+    "How to use it",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "ai4bharat",
+    "covers": [
+     "open-model"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "ai4bharat-site",
+     "ai4bharat-indicnlp"
+    ],
+    "related": [
+     "/providers/sarvam",
+     "/providers/bhashini",
+     "/learn/llm-foundations"
+    ],
+    "numericClaims": 1
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "AI4Bharat mapped: the open research lab behind IndicTrans, Indic speech/language datasets, and benchmark corpora for 22 Indian languages — the resources the Indic-AI ecosystem is built on.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "pricing/cost mention",
+    "policy/license mention",
+    "vendor/tool mentions: AI4Bharat, Sarvam, Hugging Face"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "pro-0001",
    "family": "reference",
    "kind": "provider-hub",
@@ -193112,6 +193454,83 @@
     "intentClarity": null,
     "correctnessSources": null,
     "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0012",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Bhashini (Govt. of India)",
+   "slug": "bhashini",
+   "route": "/providers/bhashini",
+   "collection": "providers",
+   "path": "src/content/providers/bhashini.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Bhashini mapped: India's National Language Translation Mission — government-run translation, speech, and language APIs across scheduled Indian languages, built as public digital infrastructure.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 380,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "Official links",
+    "Data policy and governance",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "bhashini",
+    "covers": [
+     "api",
+     "consumer-app"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "bhashini-site"
+    ],
+    "related": [
+     "/providers/sarvam",
+     "/providers/ai4bharat"
+    ],
+    "numericClaims": 1
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Bhashini mapped: India's National Language Translation Mission — government-run translation, speech, and language APIs across scheduled Indian languages, built as public digital infrastructure.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "vendor/tool mentions: Bhashini, AI4Bharat, Sarvam"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
     "prerequisiteFit": null,
     "handsOn": null,
     "explanationQuality": null,
@@ -193392,6 +193811,87 @@
    }
   },
   {
+   "id": "pro-0013",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Krutrim (Ola)",
+   "slug": "krutrim",
+   "route": "/providers/krutrim",
+   "collection": "providers",
+   "path": "src/content/providers/krutrim.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Krutrim mapped honestly: it's an India-first AI *cloud* platform — GPU clusters, managed inference, fine-tuning, Kubernetes — plus AI Studio and Ola Maps, not primarily a model vendor. Verified against official docs.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 488,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "Official links",
+    "Getting started shape",
+    "Data policy and enterprise controls",
+    "Minimal lab",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "krutrim",
+    "covers": [
+     "cloud-platform",
+     "api"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "krutrim-cloud",
+     "krutrim-cloud-docs"
+    ],
+    "related": [
+     "/learn/production/deployment-variants-cloud-and-portable",
+     "/learn/local-inference/vllm-production-serving"
+    ],
+    "numericClaims": 7
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Krutrim mapped honestly: it's an India-first AI *cloud* platform — GPU clusters, managed inference, fine-tuning, Kubernetes — plus AI Studio and Ola Maps, not primarily a model vendor. Verified against official docs.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "pricing/cost mention",
+    "vendor/tool mentions: Krutrim, AI Studio, AWS, MCP, Azure"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "pro-0007",
    "family": "reference",
    "kind": "provider-hub",
@@ -193633,6 +194133,90 @@
    "freshnessSignals": [
     "pricing/cost mention",
     "vendor/tool mentions: OpenAI, ChatGPT, Codex, MCP, GPT-6"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0014",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Sarvam AI",
+   "slug": "sarvam",
+   "route": "/providers/sarvam",
+   "collection": "providers",
+   "path": "src/content/providers/sarvam.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Sarvam's Indus platform mapped: Saaras STT, Bulbul TTS, Sarvam-105B chat, Mayura translation, Sarvam Vision document AI — trained for 22 Indian languages plus English, not adapted from an English-first baseline.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 599,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "Official links",
+    "Getting started shape",
+    "Naming, aliases, deprecation",
+    "Data policy and enterprise controls",
+    "Minimal lab",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "sarvam",
+    "covers": [
+     "consumer-app",
+     "api",
+     "coding-agent"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "sarvam-api-docs",
+     "sarvam-status"
+    ],
+    "related": [
+     "/learn/genai-app-dev/realtime-voice-agent-project",
+     "/learn/genai-app-dev/provider-layer-cheatsheet"
+    ],
+    "numericClaims": 9
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Sarvam's Indus platform mapped: Saaras STT, Bulbul TTS, Sarvam-105B chat, Mayura translation, Sarvam Vision document AI — trained for 22 Indian languages plus English, not adapted from an English-first baseline.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "pricing/cost mention",
+    "policy/license mention",
+    "vendor/tool mentions: Sarvam, AWS, SageMaker, MCP, LangChain, n8n"
    ],
    "owner": null,
    "reviewer": null,
@@ -218494,12 +219078,30 @@
    ]
   },
   {
+   "route": "/learn/evals-red-teaming/multilingual-evaluation-design",
+   "slug": "evals-red-teaming/multilingual-evaluation-design",
+   "title": "Designing multilingual evaluations",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
    "route": "/learn/fine-tuning/context-length-extension-rope-scaling",
    "slug": "fine-tuning/context-length-extension-rope-scaling",
    "title": "Extend Context Length with RoPE Scaling and YaRN",
    "family": "lesson",
    "flags": [
     "8 numeric claims with no sources section or external link"
+   ]
+  },
+  {
+   "route": "/learn/genai-app-dev/building-for-indic-scripts-and-segmentation",
+   "slug": "genai-app-dev/building-for-indic-scripts-and-segmentation",
+   "title": "Building for Indic scripts, fonts, and segmentation",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
    ]
   },
   {
@@ -218536,6 +219138,15 @@
    "family": "lesson",
    "flags": [
     "9 numeric claims with no sources section or external link"
+   ]
+  },
+  {
+   "route": "/learn/genai-app-dev/indic-language-pipeline-lab",
+   "slug": "genai-app-dev/indic-language-pipeline-lab",
+   "title": "Lab: build an Indic-language pipeline end to end",
+   "family": "lab",
+   "flags": [
+    "release-sensitive page with no updated/review date"
    ]
   },
   {

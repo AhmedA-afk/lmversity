@@ -1,7 +1,7 @@
 {
  "version": 1,
  "next": {
-  "les": 2166,
+  "les": 2169,
   "que": 7,
   "sce": 6,
   "blo": 10,
@@ -14,7 +14,7 @@
   "trk": 29,
   "qgd": 4,
   "stb": 25,
-  "pro": 10
+  "pro": 14
  },
  "entries": {
   "lessons/agentic-ai/agent-benchmarks.mdx": {
@@ -9886,6 +9886,34 @@
   "providers/zai.md": {
    "id": "pro-0010",
    "fp": "641ca7e8ebe84dd13e0517ae3d88bdae027764e0"
+  },
+  "lessons/evals-red-teaming/multilingual-evaluation-design.md": {
+   "id": "les-2167",
+   "fp": "ca6098f4bcdebef14f7f1e13df558c7ddc763c56"
+  },
+  "lessons/genai-app-dev/building-for-indic-scripts-and-segmentation.md": {
+   "id": "les-2168",
+   "fp": "985266cf3ec173126e07bf27b4a9e25c72901dfa"
+  },
+  "lessons/genai-app-dev/indic-language-pipeline-lab.md": {
+   "id": "les-2169",
+   "fp": "d71982b6993946df8e565b197f2fb048dc0cbd87"
+  },
+  "providers/ai4bharat.md": {
+   "id": "pro-0011",
+   "fp": "62f2e0783905982377222688378e655e02b256d0"
+  },
+  "providers/bhashini.md": {
+   "id": "pro-0012",
+   "fp": "0a5a9fcab0401cf656c88b9edfe4b6ad020e496d"
+  },
+  "providers/krutrim.md": {
+   "id": "pro-0013",
+   "fp": "fa5b878318cafb5b3e2d7f6878622766009a88be"
+  },
+  "providers/sarvam.md": {
+   "id": "pro-0014",
+   "fp": "c395db24ed0c7f8173a3f6b314c35e20ae0f23d6"
   }
  },
  "retired": {

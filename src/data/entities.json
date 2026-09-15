@@ -125,7 +125,8 @@
     "status": "current",
     "verifiedAt": "2026-09-15",
     "officialSources": [
-      "sarvam-api-docs"
+      "sarvam-api-docs",
+      "sarvam-status"
     ]
   },
   "huggingface": {
@@ -1100,5 +1101,44 @@
       "ai21-docs"
     ],
     "changeNote": "2026-09-15: hybrid SSM-transformer open weights; Maestro is the orchestration layer above."
+  },
+  "krutrim": {
+    "name": "Krutrim (Ola)",
+    "kind": "vendor",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "krutrim-cloud",
+      "krutrim-cloud-docs"
+    ]
+  },
+  "ai4bharat": {
+    "name": "AI4Bharat (IIT Madras)",
+    "kind": "vendor",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "ai4bharat-site",
+      "ai4bharat-indicnlp"
+    ]
+  },
+  "bhashini": {
+    "name": "Bhashini — National Language Translation Mission",
+    "kind": "vendor",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "bhashini-site"
+    ]
+  },
+  "sarvam-family": {
+    "name": "Sarvam model families",
+    "kind": "model-family",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "sarvam-api-docs"
+    ],
+    "changeNote": "2026-09-15: Saaras v3 STT (23 langs, realtime), Bulbul v3 TTS (11), Sarvam-105B chat (128K), Mayura translation (11), Sarvam Vision docs (23)."
   }
 }

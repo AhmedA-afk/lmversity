@@ -2299,5 +2299,71 @@
       "Security posture, certifications"
     ],
     "status": "current"
+  },
+  "sarvam-status": {
+    "title": "Sarvam AI status page",
+    "publisher": "Sarvam AI",
+    "accessedAt": "2026-09-15",
+    "url": "https://status.sarvam.ai",
+    "type": "official-docs",
+    "claims": [
+      "Service status"
+    ],
+    "status": "current"
+  },
+  "krutrim-cloud": {
+    "title": "Krutrim Cloud platform",
+    "publisher": "Krutrim (Ola)",
+    "accessedAt": "2026-09-15",
+    "url": "https://cloud.olakrutrim.com",
+    "type": "official-docs",
+    "claims": [
+      "AI cloud platform surface, certifications, India residency"
+    ],
+    "status": "current"
+  },
+  "krutrim-cloud-docs": {
+    "title": "Krutrim Cloud documentation",
+    "publisher": "Krutrim (Ola)",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.cloud.olakrutrim.com",
+    "type": "official-docs",
+    "claims": [
+      "Cloud and inference documentation"
+    ],
+    "status": "current"
+  },
+  "ai4bharat-site": {
+    "title": "AI4Bharat lab site",
+    "publisher": "AI4Bharat, IIT Madras",
+    "accessedAt": "2026-09-15",
+    "url": "https://ai4bharat.iitm.ac.in",
+    "type": "official-docs",
+    "claims": [
+      "Open Indic models, datasets, benchmarks"
+    ],
+    "status": "current"
+  },
+  "ai4bharat-indicnlp": {
+    "title": "Indic NLP resources",
+    "publisher": "AI4Bharat",
+    "accessedAt": "2026-09-15",
+    "url": "https://indicnlp.ai4bharat.org",
+    "type": "official-docs",
+    "claims": [
+      "Indic NLP library, language resources"
+    ],
+    "status": "current"
+  },
+  "bhashini-site": {
+    "title": "Bhashini — National Language Translation Mission",
+    "publisher": "Government of India (MeitY)",
+    "accessedAt": "2026-09-15",
+    "url": "https://bhashini.gov.in",
+    "type": "official-docs",
+    "claims": [
+      "Public language-infrastructure platform"
+    ],
+    "status": "current"
   }
 }

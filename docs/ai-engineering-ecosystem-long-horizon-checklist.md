@@ -874,15 +874,24 @@ consolidation into a parent track, or a clearer curated-path role.
 
 ### India and multilingual providers
 
-- [ ] Sarvam hub: chat, speech-to-text, text-to-speech, translation, document AI,
+- [x] Sarvam hub: chat, speech-to-text, text-to-speech, translation, document AI,
       Indic-language coverage, SDKs, integrations, and current platform products.
-- [ ] AI4Bharat hub: open language, speech, translation, and dataset resources.
-- [ ] Krutrim hub after official API and model documentation is verified.
-- [ ] Bhashini ecosystem overview using official government sources.
-- [ ] Compare multilingual evaluation design without assuming English benchmarks transfer.
-- [ ] Build hands-on labs for code-mixed input, transliteration, translation, speech,
+      *(`/providers/sarvam` — Indus platform verified: Saaras v3 (23 langs,
+      realtime), Bulbul v3 (11), Sarvam-105B (128K), Mayura (11), Sarvam Vision
+      (23), voice-agent telephony integrations, SageMaker self-hosted path)*
+- [x] AI4Bharat hub: open language, speech, translation, and dataset resources.
+      *(`/providers/ai4bharat` — framed honestly as the upstream research lab:
+      open models/datasets/benchmarks + IndicNLP tooling, no commercial API)*
+- [x] Krutrim hub after official API and model documentation is verified. *(`/providers/krutrim` — honest scope correction: it's an AI-first *cloud* platform (GPU/managed inference/K8s + AI Studio + Ola Maps), India-residency + INR billing are the differentiators)*
+- [x] Bhashini ecosystem overview using official government sources. *(`/providers/bhashini` — National Language Translation Mission framed as public digital infrastructure, bhashini.gov.in verified)*
+- [x] Compare multilingual evaluation design without assuming English benchmarks transfer. *(`evals-red-teaming/multilingual-evaluation-design` — translated-vs-native evals, code-mix as category, per-language scorecards, native-review floor)*
+- [x] Build hands-on labs for code-mixed input, transliteration, translation, speech,
       document extraction, and culturally appropriate evaluation.
-- [ ] Include Indian-language accessibility, scripts, fonts, segmentation, and moderation concerns.
+      *(`genai-app-dev/indic-language-pipeline-lab` — speech-in→speech-out
+      pipeline + doc extraction branch, provider-neutral with Sarvam concrete)*
+- [x] Include Indian-language accessibility, scripts, fonts, segmentation, and moderation concerns.
+      *(`genai-app-dev/building-for-indic-scripts-and-segmentation` — shaping,
+      grapheme clusters, token inflation, per-language moderation gaps, a11y)*
 
 ### Open and open-weight model families
 
@@ -2143,6 +2152,30 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-15 — Phase 6: India + multilingual providers section complete (7 rows)
+
+- Commit: `fbb0521`. Status: complete.
+- Content: `/providers/sarvam` (Indus platform — Saaras v3 realtime STT,
+  Bulbul v3 TTS, Sarvam-105B, Mayura, Sarvam Vision, voice-agent telephony,
+  SageMaker self-hosted), `/providers/krutrim` (honest scope: AI-first
+  *cloud* platform + AI Studio + Ola Maps, India residency differentiator),
+  `/providers/ai4bharat` (upstream research lab framing — open models/
+  datasets/benchmarks, no commercial API), `/providers/bhashini` (govt
+  language-infrastructure framing).
+- Lessons: `evals-red-teaming/multilingual-evaluation-design` (translated
+  vs native evals, code-mix category, per-language scorecards),
+  `genai-app-dev/indic-language-pipeline-lab` + `building-for-indic-scripts-
+  and-segmentation` (shaping, grapheme clusters, token inflation, moderation
+  asymmetry).
+- Data: +7 source records (218 total post-dedupe — found+merged a
+  pre-existing sarvam-api-docs id), +4 entities (3 vendors + sarvam-family;
+  120 total).
+- Validation: check:content clean (2,169); build 2,528 pages; check:links
+  0 dead (5,435 routes); registry 2,485 items.
+- Rows ticked (7): the full India/multilingual section.
+- Next: open-model family hubs (13 rows), cloud platforms/gateways (15),
+  coding agents (13), consumer products (10).
 
 ### 2026-09-15 — Phase 6: remaining frontier provider hubs (7 rows)
 

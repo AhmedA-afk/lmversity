@@ -7968,7 +7968,7 @@ const unsortedTracks: Track[] = [
     "n": "13",
     "name": "GenAI App Dev",
     "group": "Building",
-    "meta": "130 lessons",
+    "meta": "132 lessons",
     "summary": "Turn a working prompt into a shipped product: streaming UX, cost and latency budgets, and the plumbing that keeps a GenAI feature alive in production.",
     "nodes": [
       {
@@ -8624,6 +8624,16 @@ const unsortedTracks: Track[] = [
         {
           "title": "Project: realtime voice agent with interruption handling",
           "slug": "realtime-voice-agent-project"
+        },
+        {
+          "title": "Building for Indic scripts, fonts, and segmentation",
+          "slug": "building-for-indic-scripts-and-segmentation",
+          "status": "live"
+        },
+        {
+          "title": "Lab: build an Indic-language pipeline end to end",
+          "slug": "indic-language-pipeline-lab",
+          "status": "live"
         },
       ]
   },
@@ -10251,7 +10261,7 @@ const unsortedTracks: Track[] = [
     "n": "19",
     "name": "Evals & Red-teaming",
     "group": "Agentic",
-    "meta": "28 lessons",
+    "meta": "29 lessons",
     "summary": "How to measure whether your agent actually works, and how to break it before an attacker does.",
     "nodes": [
       {
@@ -10392,6 +10402,11 @@ const unsortedTracks: Track[] = [
       {
         "title": "Turn evaluation into release gates and live signals",
         "slug": "regression-gates-and-online-signals",
+        "status": "live"
+      },
+      {
+        "title": "Designing multilingual evaluations",
+        "slug": "multilingual-evaluation-design",
         "status": "live"
       }
     ]

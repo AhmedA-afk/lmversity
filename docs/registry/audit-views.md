@@ -1,15 +1,15 @@
 # Content registry — audit views
 
-Generated 2026-09-15T15:33:45.311Z by `scripts/build-content-registry.mjs`.
-2478 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T15:41:39.525Z by `scripts/build-content-registry.mjs`.
+2485 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
 
-- lesson: 2109
+- lesson: 2111
 - quiz: 89
-- lab: 70
-- reference: 65
+- lab: 71
+- reference: 69
 - answer: 34
 - project: 32
 - page: 24
@@ -23,15 +23,15 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By status
 
-- live: 2478
+- live: 2485
 
 ## By search intent (heuristic)
 
-- concept: 1939
+- concept: 1941
 - comparison: 108
-- build: 102
+- build: 103
 - practice: 89
-- reference: 66
+- reference: 70
 - answer: 34
 - worked-example: 29
 - troubleshooting: 24
@@ -47,10 +47,10 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By primary audience (heuristic)
 
-- ai-engineer: 1688
+- ai-engineer: 1691
 - beginner-engineer: 440
 - forward-deployed-engineer: 194
-- general: 138
+- general: 142
 - job-candidate: 7
 - developer: 1
 - ml-engineer: 1
@@ -82,28 +82,28 @@ and split always need a written human reason (see checklist).
 
 | disposition | items |
 |---|---:|
-| investigate | 2262 |
-| keep | 213 |
+| investigate | 2265 |
+| keep | 217 |
 | expand | 3 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2264 | 1.91 | 0 | 210 | 2054 |
+| intentClarity | 2266 | 1.91 | 0 | 210 | 2056 |
 | correctnessSources | 46 | 1.28 | 0 | 33 | 13 |
-| completeness | 2425 | 1.64 | 45 | 784 | 1596 |
-| prerequisiteFit | 2349 | 0.15 | 2169 | 0 | 180 |
-| handsOn | 2264 | 1.48 | 566 | 54 | 1644 |
-| explanationQuality | 2264 | 1.96 | 20 | 56 | 2188 |
-| metadata | 2264 | 1.84 | 0 | 362 | 1902 |
-| linking | 2175 | 1.50 | 382 | 322 | 1471 |
-| freshnessHealth | 2478 | 0.76 | 872 | 1330 | 276 |
+| completeness | 2432 | 1.64 | 45 | 788 | 1599 |
+| prerequisiteFit | 2352 | 0.15 | 2172 | 0 | 180 |
+| handsOn | 2266 | 1.47 | 568 | 54 | 1644 |
+| explanationQuality | 2266 | 1.96 | 20 | 56 | 2190 |
+| metadata | 2266 | 1.84 | 0 | 364 | 1902 |
+| linking | 2177 | 1.50 | 382 | 322 | 1473 |
+| freshnessHealth | 2485 | 0.76 | 875 | 1330 | 280 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
 
 ### Non-keep dispositions
 
-#### investigate: live lesson not registered in curriculum (2166)
+#### investigate: live lesson not registered in curriculum (2169)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -145,7 +145,7 @@ and split always need a written human reason (see checklist).
 - /learn/agentic-ai/cost-aware-agent-loops — Cost-Aware Agents: Budgeting Tokens Across a Long-Running Loop
 - /learn/agentic-ai/error-handling-and-retries — Recovering When Tools Fail
 - /learn/agentic-ai/evaluating-agent-behavior-in-dev — Reading an Agent's Trace
-- … 2126 more in content-registry.json
+- … 2129 more in content-registry.json
 
 #### investigate: zero in-body internal links (96)
 
@@ -282,7 +282,7 @@ _… 286 more pairs in content-registry.json (`duplicates`)_
 
 ## Sourcing review flags
 
-225 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
+228 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
 
 | item | flags |
 |---|---|
@@ -347,7 +347,7 @@ _… 286 more pairs in content-registry.json (`duplicates`)_
 | /learn/context-engineering/just-in-time-context-loading-pattern | 4 numeric claims with no sources section or external link |
 | /learn/context-engineering/measuring-cache-savings | 26 numeric claims with no sources section or external link |
 
-_… 165 more in content-registry.json (`sourcingFlags`)_
+_… 168 more in content-registry.json (`sourcingFlags`)_
 
 ## Freshness queues
 
@@ -355,11 +355,11 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 
 - periodic: 1330
 - pricing-sensitive: 347
-- release-sensitive: 339
+- release-sensitive: 342
 - durable: 266
 - certification-sensitive: 104
 - policy-sensitive: 82
-- volatile: 10
+- volatile: 14
 
 ### certification-sensitive (104) — oldest-verified first
 
@@ -463,7 +463,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/machine-learning/ml-114-lab-from-question-to-evaluation-plan — Lab: from question to evaluation plan *(verified 2026-08-30)*
 - … 52 more in content-registry.json
 
-### release-sensitive (339) — oldest-verified first
+### release-sensitive (342) — oldest-verified first
 
 Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno, LangGraph *(verified undated)*
@@ -489,21 +489,21 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/cli-agents/headless-runs-and-automation — MCP *(verified undated)*
 - /learn/cli-agents/permissions-sandboxes-and-git-workflow — Claude, Codex, Gemini *(verified undated)*
 - /learn/cli-agents/planning-modes-and-patch-review — Claude, Aider, Codex, Gemini *(verified undated)*
+- /learn/evals-red-teaming/multilingual-evaluation-design — Sarvam, AI4Bharat *(verified undated)*
+- /learn/genai-app-dev/building-for-indic-scripts-and-segmentation — AI4Bharat *(verified undated)*
+- /learn/genai-app-dev/indic-language-pipeline-lab — Sarvam, AI4Bharat, Bhashini *(verified undated)*
 - /learn/harness-design/agent-stack-vocabulary — MCP, Model Context Protocol *(verified undated)*
 - /learn/harness-design/harness-skill-and-mcp-integrations — MCP *(verified undated)*
 - /learn/llm-security/prompt-injection-testing-and-threat-models — Promptfoo *(verified undated)*
 - /learn/llm-security/provider-moderation-and-safety-apis — OpenAI *(verified undated)*
-- /learn/local-inference/hardware-sizing-measurement-guide — llama.cpp, Ollama, vLLM *(verified undated)*
-- /learn/local-inference/huggingface-tgi-and-tei — Hugging Face, OpenAI, vLLM, llama.cpp *(verified undated)*
-- /learn/local-inference/huggingface-transformers-pipelines — Hugging Face, vLLM, llama.cpp, Ollama *(verified undated)*
-- … 309 more
+- … 312 more
 
 ## Missing-data queues
 
 ### no summary/meta description (0)
 
 
-### no published or updated date (105)
+### no published or updated date (108)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -542,12 +542,12 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/cli-agents/multi-agent-and-recovery — Multi-agent decomposition, failure recovery, and handoff notes
 - /learn/cli-agents/permissions-sandboxes-and-git-workflow — Permissions, sandbox boundaries, and git workflow with CLI agents
 - /learn/cli-agents/planning-modes-and-patch-review — Planning modes and patch review: the two halves of safe agent work
+- /learn/evals-red-teaming/multilingual-evaluation-design — Designing multilingual evaluations
 - /learn/fine-tuning/pinning-your-training-stack-lab — Lab: pin your fine-tuning stack so it still runs next quarter
-- /learn/genai-app-dev/realtime-voice-agent-project — Project: realtime voice agent with interruption handling
-- /learn/harness-design/agent-stack-vocabulary — The agent stack vocabulary: model, loop, harness, tool, skill, MCP, instruction, hook, subagent, workflow
-- … 65 more
+- /learn/genai-app-dev/building-for-indic-scripts-and-segmentation — Building for Indic scripts, fonts, and segmentation
+- … 68 more
 
-### zero in-body internal links (template nav still applies) (443)
+### zero in-body internal links (template nav still applies) (447)
 
 - /learn/agentic-ai/agents-vs-workflows — Choose an agent only when a workflow is not enough
 - /learn/ai-foundations/applied-ai/301-ai-product-discovery-outcomes-and-harm — AI Product Discovery: Outcomes, Users, and Harm
@@ -589,9 +589,9 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-foundations/reliable-ai/219-incident-response-rollback-and-learning — AI Incidents, Rollback, and Organisational Learning
 - /learn/ai-foundations/reliable-ai/220-human-in-the-loop-and-meaningful-oversight — Human-in-the-Loop and Meaningful Oversight
 - /learn/ai-foundations/reliable-ai/221-contestability-appeals-and-recource — Contestability, Appeals, and Recourse
-- … 403 more
+- … 407 more
 
-### live file not in curriculum (2166)
+### live file not in curriculum (2169)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -633,7 +633,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agentic-ai/cost-aware-agent-loops — Cost-Aware Agents: Budgeting Tokens Across a Long-Running Loop
 - /learn/agentic-ai/error-handling-and-retries — Recovering When Tools Fail
 - /learn/agentic-ai/evaluating-agent-behavior-in-dev — Reading an Agent's Trace
-- … 2126 more
+- … 2129 more
 
 ### live curriculum node missing file (0)
 
@@ -644,7 +644,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 ### lesson files with status coming (0)
 
 
-### release-sensitive, no date at all (83)
+### release-sensitive, no date at all (86)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -676,6 +676,9 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/cli-agents/headless-runs-and-automation — Headless runs, structured output, and scheduled agent tasks
 - /learn/cli-agents/permissions-sandboxes-and-git-workflow — Permissions, sandbox boundaries, and git workflow with CLI agents
 - /learn/cli-agents/planning-modes-and-patch-review — Planning modes and patch review: the two halves of safe agent work
+- /learn/evals-red-teaming/multilingual-evaluation-design — Designing multilingual evaluations
+- /learn/genai-app-dev/building-for-indic-scripts-and-segmentation — Building for Indic scripts, fonts, and segmentation
+- /learn/genai-app-dev/indic-language-pipeline-lab — Lab: build an Indic-language pipeline end to end
 - /learn/harness-design/agent-stack-vocabulary — The agent stack vocabulary: model, loop, harness, tool, skill, MCP, instruction, hook, subagent, workflow
 - /learn/harness-design/harness-skill-and-mcp-integrations — Wiring MCP servers and Agent Skills into a harness
 - /learn/harness-design/web-harness-case-study — Case study: a web-navigation harness end to end
@@ -683,10 +686,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/llm-security/audit-logs-and-accountability — Audit logs, approval records, and data deletion: the accountability layer
 - /learn/llm-security/guardrails-frameworks-in-practice — Guardrails AI, NeMo Guardrails, and Llama Guard: the filter layer in depth
 - /learn/llm-security/llm-supply-chain-security — LLM supply-chain security: secrets, dependencies, and model artifacts
-- /learn/llm-security/owasp-llm-and-agentic-top-10 — OWASP Top 10 for LLM and agentic applications
-- /learn/llm-security/prompt-injection-testing-and-threat-models — Prompt-injection testing tools and a threat-model template that works
-- /learn/llm-security/provider-moderation-and-safety-apis — Provider moderation and safety APIs: the cheap filter layer
-- … 43 more
+- … 46 more
 
 ## Role paths
 
