@@ -202,27 +202,33 @@ consolidation into a parent track, or a clearer curated-path role.
       policy-sensitive, or certification-sensitive.
       (keyword/vendor-signal heuristic; firing signals recorded per item for reviewer override)
 - [x] Record owner, reviewer, next review date, blockers, and disposition.
-      (fields present; all items start `disposition: "unscored"`)
+      (fields present; disposition assigned by the mechanical scoring pass,
+      overridable in the editorial pass)
 - [x] Generate audit views by track, content family, search intent, freshness, and status.
       (`docs/registry/audit-views.md`)
 
 ### Score every item
 
-- [ ] Score intent clarity: one page, one primary learner need.
-- [ ] Score correctness and source quality.
-- [ ] Score completeness relative to the stated promise.
-- [ ] Score originality and practical value.
-- [ ] Score prerequisite fit and course sequence.
-- [ ] Score hands-on depth.
-- [ ] Score explanation quality and failure coverage.
-- [ ] Score metadata and search-snippet clarity.
-- [ ] Score internal linking and continuation.
-- [ ] Score accessibility and mobile readability.
-- [ ] Score freshness risk.
+- [x] Score intent clarity: one page, one primary learner need.
+- [ ] Score correctness and source quality. *(source-presence signal recorded as
+      `scores.correctnessSources`; correctness itself needs the editorial pass)*
+- [x] Score completeness relative to the stated promise.
+- [ ] Score originality and practical value. *(editorial — recorded as `scores.originality: null`)*
+- [x] Score prerequisite fit and course sequence.
+- [x] Score hands-on depth.
+- [x] Score explanation quality and failure coverage. *(structural proxy — error-case/worked-example
+      flags + heading depth; prose quality still editorial)*
+- [x] Score metadata and search-snippet clarity.
+- [x] Score internal linking and continuation.
+- [ ] Score accessibility and mobile readability. *(editorial — `scores.accessibility: null`)*
+- [x] Score freshness risk. *(recorded inverted as `scores.freshnessHealth`)*
 - [ ] Score observed demand and engagement separately from editorial quality.
-- [ ] Assign one disposition: keep, refresh, expand, merge, split, redirect, noindex, archive,
+      *(blocked on analytics — `scores.demand: null` until Search Console/analytics are wired)*
+- [x] Assign one disposition: keep, refresh, expand, merge, split, redirect, noindex, archive,
       replace, or investigate.
-- [ ] Require a written reason and evidence for merge, redirect, archive, or noindex decisions.
+- [x] Require a written reason and evidence for merge, redirect, archive, or noindex decisions.
+      *(auto-pass assigns only keep/expand/refresh/investigate; destructive dispositions
+      remain manual and reasoned)*
 
 ### Audit every course and role path
 
@@ -1524,7 +1530,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-15 — Lesson-quiz answer-position rebalance and rationale audit repair
 
-- Commit: `2a51574`. Backlog items 5–6. Scope: 83 quiz files, 603 questions
+- Commit: `f2d30da`. Backlog items 5–6. Scope: 83 quiz files, 603 questions
   across `src/content/lessons/`.
 - Answer positions rebalanced by an AST-free transform script (`/tmp`, not
   committed): for each question it permutes the option lines, moves the correct
@@ -1565,6 +1571,34 @@ validation, deployment status, measured result when available, blockers, and nex
   registry's `disposition: "unscored"` fields, starting with the 885 lessons
   lacking in-body links and the acquisition families' intent/evidence/tone
   dimensions.
+
+### 2026-09-15 — Mechanical scoring pass over the registry
+
+- Phase 0 "Score every item". `scripts/build-content-registry.mjs` now scores
+  every registry item on 9 of 12 checklist dimensions (0/1/2 scale, `null` =
+  editorial judgement required) and assigns a disposition:
+  `intentClarity`, `correctnessSources` (source presence only — correctness
+  itself is editorial), `completeness` (vs family-median word count),
+  `prerequisiteFit` (curriculum or FDE-plan registration), `handsOn`,
+  `explanationQuality` (structural proxy), `metadata` (summary in meta range),
+  `linking` (in-body internal links), `freshnessHealth` (inverted freshness
+  risk, minus staleness >180d). `originality`, `accessibility`, `demand` stay
+  null — the checklist items for them remain unticked deliberately.
+- Auto-dispositions are restricted to keep/expand/refresh/investigate;
+  merge/redirect/noindex/archive/replace/split stay manual per the checklist's
+  written-reason requirement.
+- Measured result across 2,406 items: **keep 1,568 / investigate 768 /
+  expand 70**. The investigate queue is almost entirely "zero in-body internal
+  links" (653 lessons + 115 FDE pages). Expand = 26 planned stubs + 44 items
+  thin vs family median. Scoring also surfaced 3 FDE files on disk but absent
+  from the `fde.ts` phase plan (`typescript-enough-to-read-their-frontend`,
+  `sso-saml-oidc-and-the-customers-idp`, `pull-requests-in-a-customers-repo`) —
+  real orphan pages, equivalent to unregistered lessons.
+- Validation: `npm run registry` regenerates cleanly; `npm run check:content`
+  clean; `npm run check:links` clean; `git diff --check` clean.
+- Next batch: work the investigate queue — wire in-body curriculum links into
+  the 653 island lessons (batchable by track; mechanical insertion at
+  concept-mention points, same approach as the guides pass).
 
 ### 2026-09-14 — Master ecosystem backlog created
 

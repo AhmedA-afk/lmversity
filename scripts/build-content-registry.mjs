@@ -730,6 +730,116 @@ for (const [file, meta] of Object.entries(STATIC_FAMILY)) {
 assignIds(pendingIds);
 pendingIds.forEach((p, i) => { items[i].id = p.id ?? null; });
 
+// ---------------------------------------------------------------------------
+// scoring pass — mechanical proxies for the checklist's editorial dimensions.
+// Scale 0 (weak) / 1 (partial) / 2 (strong); null = needs editorial judgement.
+// Auto-assigned dispositions are restricted to keep/expand/refresh/investigate —
+// merge, redirect, noindex, archive, replace, split all need a human reason.
+
+const STALE_MS = 180 * 24 * 60 * 60 * 1000;
+const NOW = Date.now();
+const familyMedian = {};
+for (const it of items) {
+  if (it.wordCount == null) continue;
+  (familyMedian[it.family] ??= []).push(it.wordCount);
+}
+for (const k of Object.keys(familyMedian)) {
+  const a = familyMedian[k].sort((x, y) => x - y);
+  familyMedian[k] = a[Math.floor(a.length / 2)];
+}
+const fdePlannedSet = new Set(fdePhases.flatMap((p) => p.modules.flatMap((m) => m.nodes.map((n) => `${p.id}/${n.slug}`))));
+const LINKABLE = new Set(['lesson', 'guide', 'blog', 'answer', 'scenario', 'interview', 'fde']);
+const CONTENT_FAMILY = new Set([...LINKABLE, 'quiz']);
+const VOLATILE = new Set(['pricing-sensitive', 'release-sensitive', 'certification-sensitive', 'policy-sensitive']);
+
+function scoreItem(it) {
+  const f = it.features ?? {};
+  const s = {};
+  const isContent = CONTENT_FAMILY.has(it.family);
+  const summary = it.summary ?? it.promisedOutcome;
+
+  // intent clarity — one page, one need: title + a single complete summary line
+  if (!isContent) s.intentClarity = null;
+  else if (summary && it.title) s.intentClarity = summary.length <= 200 ? 2 : 1;
+  else s.intentClarity = 0;
+
+  // correctness is editorial; only the presence of sourcing is mechanical
+  if (!isContent) s.correctnessSources = null;
+  else if (f.sourcesSection) s.correctnessSources = 2;
+  else if ((it.externalLinks ?? []).length > 0) s.correctnessSources = 1;
+  else s.correctnessSources = null;
+
+  // completeness vs family median word count
+  const med = familyMedian[it.family];
+  if (it.wordCount == null || !med) s.completeness = null;
+  else if (it.wordCount >= med * 0.8) s.completeness = 2;
+  else if (it.wordCount >= med * 0.4) s.completeness = 1;
+  else s.completeness = 0;
+
+  // prerequisite fit — sits inside a registered sequence
+  if (it.collection === 'lessons')
+    s.prerequisiteFit = it.status === 'coming' ? 1 : f.curriculumRegistered ? 2 : 0;
+  else if (it.collection === 'fde')
+    s.prerequisiteFit = fdePlannedSet.has((it.slug ?? '').replace(/^fde\//, '')) ? 2 : 0;
+  else s.prerequisiteFit = null;
+
+  // hands-on depth — code, interactive check, or worked example present
+  const handsOn = f.codeBlocks > 0 || f.interactiveCheck || f.workedExample;
+  if (!isContent) s.handsOn = null;
+  else if (handsOn) s.handsOn = 2;
+  else if (['lesson', 'guide', 'fde', 'quiz'].includes(it.family)) s.handsOn = 0;
+  else s.handsOn = 1;
+
+  // explanation quality proxy — structure depth and failure coverage
+  if (!isContent) s.explanationQuality = null;
+  else if ((f.errorCase || f.workedExample) && (it.headings ?? []).length >= 2) s.explanationQuality = 2;
+  else if ((it.headings ?? []).length >= 3) s.explanationQuality = 2;
+  else if ((it.headings ?? []).length >= 1) s.explanationQuality = 1;
+  else s.explanationQuality = 0;
+
+  // metadata — summary in meta-description range
+  if (!isContent) s.metadata = null;
+  else if (summary && summary.length >= 40 && summary.length <= 170) s.metadata = 2;
+  else if (summary) s.metadata = 1;
+  else s.metadata = 0;
+
+  // internal linking and continuation
+  const nLinks = (it.internalLinks ?? []).length;
+  if (!LINKABLE.has(it.family)) s.linking = null;
+  else if (nLinks >= 3) s.linking = 2;
+  else if (nLinks >= 1) s.linking = 1;
+  else s.linking = 0;
+
+  // freshness health — inverted risk, minus staleness
+  if (!it.freshnessClass) s.freshnessHealth = null;
+  else {
+    let v = VOLATILE.has(it.freshnessClass) ? 0 : it.freshnessClass === 'periodic' ? 1 : 2;
+    const updated = it.updated ? Date.parse(it.updated) : NaN;
+    if (!Number.isNaN(updated) && NOW - updated > STALE_MS) v = Math.max(0, v - 1);
+    s.freshnessHealth = v;
+  }
+
+  // editorial-only dimensions
+  s.originality = null;
+  s.accessibility = null;
+  s.demand = null;
+
+  // disposition
+  let disposition = 'keep', reason = null;
+  if (it.status === 'coming') { disposition = 'expand'; reason = 'planned stub — no content yet'; }
+  else if (isContent && !summary) { disposition = 'investigate'; reason = 'missing summary/meta description'; }
+  else if (it.collection === 'lessons' && f.curriculumRegistered === false) { disposition = 'investigate'; reason = 'live lesson not registered in curriculum'; }
+  else if (s.completeness === 0) { disposition = 'expand'; reason = `thin vs family median (${it.wordCount}w vs ~${Math.round(med)}w)`; }
+  else if (s.linking === 0) { disposition = 'investigate'; reason = 'zero in-body internal links'; }
+  else if (s.freshnessHealth === 0 && it.updated && NOW - Date.parse(it.updated) > STALE_MS) {
+    disposition = 'refresh'; reason = `${it.freshnessClass} content stale (>180d since update)`;
+  }
+  it.scores = s;
+  it.disposition = disposition;
+  it.dispositionReason = reason;
+}
+for (const it of items) scoreItem(it);
+
 const byFamily = {}, byTrack = {}, byFresh = {}, byStatus = {}, byKind = {};
 for (const it of items) {
   byFamily[it.family] = (byFamily[it.family] ?? 0) + 1;
@@ -803,6 +913,40 @@ for (const t of tracks) {
   md.push(`| ${t.id} | ${files.length} | ${k('concept')} | ${k('worked-example')} | ${k('common-mistakes')} | ${k('comparison')} | ${k('cheatsheet')} | ${k('quiz')} | ${k('lab')} | ${k('capstone')} | ${pct((i) => i.features.codeBlocks > 0)}% | ${pct((i) => i.features.interactiveCheck)}% | ${pct((i) => i.features.sourcesSection || i.externalLinks.length > 0)}% | ${med} | ${quickGuideTracks.has(t.id) ? 'yes' : '—'} | ${hasBank ? 'yes' : '—'} |`);
 }
 md.push('');
+md.push('## Scores and dispositions (mechanical pass)');
+md.push('');
+md.push('Scale 0/1/2 per dimension; `null` = editorial judgement required. Auto-dispositions are');
+md.push('limited to keep/expand/refresh/investigate — merge, redirect, noindex, archive, replace');
+md.push('and split always need a written human reason (see checklist).');
+md.push('');
+const byDisp = {};
+for (const i of items) byDisp[i.disposition] = (byDisp[i.disposition] ?? 0) + 1;
+md.push('| disposition | items |');
+md.push('|---|---:|');
+for (const [d, n] of Object.entries(byDisp).sort((a, b) => b[1] - a[1])) md.push(`| ${d} | ${n} |`);
+md.push('');
+const DIMS = ['intentClarity', 'correctnessSources', 'completeness', 'prerequisiteFit', 'handsOn', 'explanationQuality', 'metadata', 'linking', 'freshnessHealth', 'originality', 'accessibility', 'demand'];
+md.push('| dimension | scored | mean | 0 | 1 | 2 |');
+md.push('|---|---:|---:|---:|---:|---:|');
+for (const d of DIMS) {
+  const vals = items.map((i) => i.scores?.[d]).filter((v) => v != null);
+  if (!vals.length) { md.push(`| ${d} | 0 | — | — | — | — |`); continue; }
+  const mean = (vals.reduce((a, b) => a + b, 0) / vals.length).toFixed(2);
+  md.push(`| ${d} | ${vals.length} | ${mean} | ${vals.filter((v) => v === 0).length} | ${vals.filter((v) => v === 1).length} | ${vals.filter((v) => v === 2).length} |`);
+}
+md.push('');
+md.push('### Non-keep dispositions');
+md.push('');
+const nonKeep = items.filter((i) => i.disposition !== 'keep' && i.disposition !== 'unscored');
+const dispGroups = {};
+for (const i of nonKeep) (dispGroups[`${i.disposition}: ${i.dispositionReason}`] ??= []).push(i);
+for (const [why, list] of Object.entries(dispGroups).sort((a, b) => b[1].length - a[1].length)) {
+  md.push(`#### ${why} (${list.length})`);
+  md.push('');
+  for (const i of list.slice(0, 40)) md.push(`- ${i.route ?? i.slug ?? '(no route)'}${i.title ? ` — ${i.title}` : ''}`);
+  if (list.length > 40) md.push(`- … ${list.length - 40} more in content-registry.json`);
+  md.push('');
+}
 md.push('## Freshness queues');
 md.push('');
 for (const [c, n] of Object.entries(byFresh).sort((a, b) => b[1] - a[1])) md.push(`- ${c}: ${n}`);

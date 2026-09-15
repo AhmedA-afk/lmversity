@@ -1,6 +1,6 @@
 # Content registry — audit views
 
-Generated 2026-09-14T17:21:25.072Z by `scripts/build-content-registry.mjs`.
+Generated 2026-09-15T07:20:37.911Z by `scripts/build-content-registry.mjs`.
 2406 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
@@ -92,6 +92,269 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 | fine-tuning | 26 | 21 | 0 | 0 | 5 | 0 | 0 | 0 | 0 | 27% | 0% | 8% | 557 | — | — |
 | responsible-ai | 6 | 5 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 17% | 0% | 17% | 392 | — | — |
 | ai-for-designers | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0% | 0% | 0% | 0 | — | — |
+
+## Scores and dispositions (mechanical pass)
+
+Scale 0/1/2 per dimension; `null` = editorial judgement required. Auto-dispositions are
+limited to keep/expand/refresh/investigate — merge, redirect, noindex, archive, replace
+and split always need a written human reason (see checklist).
+
+| disposition | items |
+|---|---:|
+| keep | 1568 |
+| investigate | 768 |
+| expand | 70 |
+
+| dimension | scored | mean | 0 | 1 | 2 |
+|---|---:|---:|---:|---:|---:|
+| intentClarity | 2189 | 1.89 | 25 | 184 | 1980 |
+| correctnessSources | 43 | 1.28 | 0 | 31 | 12 |
+| completeness | 2304 | 1.65 | 44 | 715 | 1545 |
+| prerequisiteFit | 2243 | 2.00 | 3 | 0 | 2240 |
+| handsOn | 2189 | 1.48 | 550 | 49 | 1590 |
+| explanationQuality | 2189 | 1.93 | 45 | 56 | 2088 |
+| metadata | 2189 | 1.85 | 25 | 281 | 1883 |
+| linking | 2100 | 1.19 | 815 | 78 | 1207 |
+| freshnessHealth | 2406 | 0.78 | 786 | 1357 | 263 |
+| originality | 0 | — | — | — | — |
+| accessibility | 0 | — | — | — | — |
+| demand | 0 | — | — | — | — |
+
+### Non-keep dispositions
+
+#### investigate: zero in-body internal links (768)
+
+- /learn/agentic-ai/agents-vs-workflows — Choose an agent only when a workflow is not enough
+- /learn/agentic-ai/state-memory-and-recovery — Design agent state, memory, and recovery explicitly
+- /learn/ai-foundations/ai-systems/101-ai-problem-framing-and-rational-action — AI Problem Framing and Rational Action
+- /learn/ai-foundations/ai-systems/102-intelligent-agents-observations-and-action-loops — Intelligent Agents: Observations and Action Loops
+- /learn/ai-foundations/ai-systems/103-state-spaces-and-search-problem-design — State Spaces and Search Problem Design
+- /learn/ai-foundations/ai-systems/104-breadth-first-search-and-layered-exploration — Breadth-First Search and Layered Exploration
+- /learn/ai-foundations/ai-systems/105-depth-first-search-backtracking-and-cycle-safety — Depth-First Search, Backtracking, and Cycle Safety
+- /learn/ai-foundations/ai-systems/106-uniform-cost-search-and-cost-sensitive-planning — Uniform-Cost Search and Cost-Sensitive Planning
+- /learn/ai-foundations/ai-systems/107-a-star-search-admissibility-and-consistency — A* Search: Admissibility, Consistency, and Reopening
+- /learn/ai-foundations/ai-systems/108-heuristic-design-relaxations-and-search-diagnostics — Heuristic Design, Relaxations, and Search Diagnostics
+- /learn/ai-foundations/ai-systems/109-local-search-hill-climbing-and-stochastic-optimization — Local Search, Hill Climbing, and Stochastic Optimization
+- /learn/ai-foundations/ai-systems/110-adversarial-search-minimax-and-game-values — Adversarial Search: Minimax and Game Values
+- /learn/ai-foundations/ai-systems/111-alpha-beta-pruning-and-move-ordering — Alpha-Beta Pruning and Move Ordering
+- /learn/ai-foundations/ai-systems/112-imperfect-information-and-utility-under-risk — Imperfect Information and Utility Under Risk
+- /learn/ai-foundations/ai-systems/113-constraint-satisfaction-models-and-propagation — Constraint Satisfaction Problems and Propagation
+- /learn/ai-foundations/ai-systems/114-backtracking-mrv-lcv-and-constraint-learning — Backtracking, MRV, LCV, and Constraint Learning
+- /learn/ai-foundations/ai-systems/115-classical-planning-strips-and-plan-graphs — Classical Planning: STRIPS and Plan Graphs
+- /learn/ai-foundations/ai-systems/116-planning-under-time-resources-and-uncertainty — Planning Under Time, Resources, and Uncertainty
+- /learn/ai-foundations/ai-systems/117-knowledge-representation-ontologies-and-rules — Knowledge Representation: Ontologies and Rules
+- /learn/ai-foundations/ai-systems/118-propositional-logic-satisfiability-and-resolution — Propositional Logic, Satisfiability, and Resolution
+- /learn/ai-foundations/ai-systems/119-first-order-logic-unification-and-rule-inference — First-Order Logic, Unification, and Rule Inference
+- /learn/ai-foundations/ai-systems/120-reasoning-with-uncertainty-probability-and-utility — Reasoning with Uncertainty: Probability and Utility
+- /learn/ai-foundations/ai-systems/121-bayesian-networks-conditional-independence-and-inference — Bayesian Networks, Conditional Independence, and Inference
+- /learn/ai-foundations/ai-systems/122-probabilistic-inference-sampling-and-approximation — Probabilistic Inference, Sampling, and Approximation
+- /learn/ai-foundations/ai-systems/123-symbolic-statistical-and-neuro-symbolic-ai — Symbolic, Statistical, and Neuro-Symbolic AI
+- /learn/ai-foundations/ai-systems/124-expert-systems-explanations-and-maintenance — Expert Systems, Explanations, and Maintenance
+- /learn/ai-foundations/ai-systems/125-robotics-perception-state-estimation-and-sensor-fusion — Robotics Perception, State Estimation, and Sensor Fusion
+- /learn/ai-foundations/ai-systems/126-robot-motion-planning-and-collision-safety — Robot Motion Planning and Collision Safety
+- /learn/ai-foundations/ai-systems/127-robot-control-feedback-and-safety-envelopes — Robot Control, Feedback, and Safety Envelopes
+- /learn/ai-foundations/ai-systems/128-multi-agent-coordination-communication-and-allocation — Multi-Agent Coordination, Communication, and Allocation
+- /learn/ai-foundations/ai-systems/129-multi-agent-strategic-behavior-mechanisms-and-safety — Multi-Agent Strategic Behavior, Mechanisms, and Safety
+- /learn/ai-foundations/applied-ai/301-ai-product-discovery-outcomes-and-harm — AI Product Discovery: Outcomes, Users, and Harm
+- /learn/ai-foundations/applied-ai/302-choosing-rules-classical-ml-deep-learning-or-llm — Choosing Rules, Classical ML, Deep Learning, or an LLM
+- /learn/ai-foundations/applied-ai/303-data-pipelines-lineage-and-data-contracts — Data Pipelines, Lineage, and Data Contracts
+- /learn/ai-foundations/applied-ai/304-supervised-learning-product-loop — Supervised Learning in the Product Loop
+- /learn/ai-foundations/applied-ai/305-unsupervised-learning-discovery-and-guardrails — Unsupervised Learning for Discovery, Not Automatic Truth
+- /learn/ai-foundations/applied-ai/306-self-supervised-learning-data-and-transfer — Self-Supervised Learning: Data, Representations, and Transfer
+- /learn/ai-foundations/applied-ai/307-reinforcement-learning-product-suitability — Reinforcement Learning: Product Suitability and Safe Constraints
+- /learn/ai-foundations/applied-ai/308-training-and-inference-economics — Training and Inference Economics
+- /learn/ai-foundations/applied-ai/309-embeddings-similarity-and-index-design — Embeddings, Similarity, and Index Design
+- … 728 more in content-registry.json
+
+#### expand: planned stub — no content yet (26)
+
+- /learn/ai-for-designers — AI for Designers
+- ai-for-designers/ai-for-designers-course-guide — Start here: the two lanes, the artifacts, the case study
+- ai-for-designers/designer-mental-model-for-generative-ai — A designer's mental model for generative AI
+- ai-for-designers/deterministic-vs-probabilistic-interfaces-compared — Deterministic vs probabilistic interfaces, compared
+- ai-for-designers/choosing-where-ai-belongs-worked-example — Choose where AI belongs: a worked example
+- ai-for-designers/ai-product-design-common-mistakes — AI product design: common mistakes
+- ai-for-designers/ai-product-design-foundations-quiz — Quiz: AI product design foundations
+- ai-for-designers/designing-the-ai-behavior-contract — Design the AI behavior contract
+- ai-for-designers/mapping-ai-capabilities-to-user-tasks — Map AI capabilities to user tasks
+- ai-for-designers/ai-feature-state-model-worked-example — Model every state an AI feature can be in
+- ai-for-designers/ai-interaction-state-cheatsheet — AI interaction states: cheatsheet
+- ai-for-designers/prompt-as-interaction-spec — Treat the prompt as an interaction spec
+- ai-for-designers/behavior-before-interface-quiz — Quiz: behavior before interface
+- ai-for-designers/designing-for-uncertainty — Design for uncertainty, not around it
+- ai-for-designers/sources-confidence-and-explanations-compared — Sources, confidence, and explanations compared
+- ai-for-designers/correction-undo-and-recovery-patterns — Correction, undo, and recovery patterns
+- ai-for-designers/human-review-and-approval-boundaries — Draw the line: recommend, confirm, or act
+- ai-for-designers/trust-patterns-worked-example — Fix an overconfident assistant: a worked example
+- ai-for-designers/trust-and-recovery-quiz — Quiz: trust and recovery
+- ai-for-designers/prototype-ai-behavior-without-a-model — Prototype AI behavior without a model
+- ai-for-designers/creating-a-realistic-ai-test-set — Create a realistic AI test set
+- ai-for-designers/designing-a-ux-evaluation-rubric — Design a UX evaluation rubric
+- ai-for-designers/test-an-ai-prototype-worked-example — Test an AI prototype: a worked example
+- ai-for-designers/ai-prototype-testing-common-mistakes — AI prototype testing: common mistakes
+- ai-for-designers/prototype-and-evaluation-quiz — Quiz: prototype and evaluation
+- ai-for-designers/capstone-design-a-trustworthy-ai-feature — Capstone: design a trustworthy AI feature end to end
+
+#### expand: thin vs family median (193w vs ~782w) (3)
+
+- /learn/machine-learning/public-data-projects/bank-marketing-project — Public-data project: Bank Marketing decision support
+- /learn/machine-learning/public-data-projects/bike-sharing-project — Public-data project: Bike Sharing forecasting
+- /learn/machine-learning/public-data-projects/online-retail-project — Public-data project: Online Retail customer analysis
+
+#### expand: thin vs family median (264w vs ~782w) (2)
+
+- /learn/machine-learning/assessments/ml-845-assignment-04-unsupervised-decision-support — Assignment 4: unsupervised learning without inventing stories
+- /learn/machine-learning/assessments/ml-846-assignment-05-temporal-risk-aware-system — Assignment 5: build a time-aware, risk-aware ML system
+
+#### expand: thin vs family median (226w vs ~782w) (2)
+
+- /learn/machine-learning/assessments/ml-847-model-report-template — Model report template: predictive system review
+- /learn/machine-learning/reproductions/adaboost-reproduction — Paper reproduction: AdaBoost and the training-error bound
+
+#### expand: thin vs family median (191w vs ~782w) (2)
+
+- /learn/machine-learning/public-data-projects/aps-failure-project — Public-data project: APS Failure under imbalance
+- /learn/machine-learning/public-data-projects/movielens-project — Public-data project: MovieLens recommendation
+
+#### expand: thin vs family median (238w vs ~782w) (1)
+
+- /learn/ai-foundations/choosing-a-model — Choosing a model in 2026
+
+#### expand: thin vs family median (231w vs ~782w) (1)
+
+- /learn/ai-foundations/tokens-context-cost — Tokens, context & cost
+
+#### expand: thin vs family median (277w vs ~782w) (1)
+
+- /learn/llm-foundations/next-token-prediction — Next-Token Prediction: The One Objective
+
+#### expand: thin vs family median (269w vs ~782w) (1)
+
+- /learn/llm-foundations/tokenization-explained — Tokenization: How Text Becomes Tokens
+
+#### expand: thin vs family median (281w vs ~782w) (1)
+
+- /learn/machine-learning/assessments/ml-843-assignment-02-linear-models-calibration — Assignment 2: derive, implement, and calibrate a linear decision model
+
+#### expand: thin vs family median (246w vs ~782w) (1)
+
+- /learn/machine-learning/assessments/ml-844-assignment-03-tree-ensemble-debugging — Assignment 3: compare trees and ensembles through a debugging clinic
+
+#### expand: thin vs family median (233w vs ~782w) (1)
+
+- /learn/machine-learning/assessments/ml-848-model-report-template-high-stakes — Model report template: high-stakes review and human oversight
+
+#### expand: thin vs family median (368w vs ~1011w) (1)
+
+- /learn/machine-learning/assessments/ml-849-staged-capstone-handbook — Staged capstone handbook: from proposal to production review
+
+#### expand: thin vs family median (291w vs ~782w) (1)
+
+- /learn/machine-learning/derivations/01-linear-regression-normal-equations-and-geometry — Linear regression: normal equations and geometry
+
+#### expand: thin vs family median (296w vs ~782w) (1)
+
+- /learn/machine-learning/derivations/02-gradient-descent-and-convergence-for-linear-models — Gradient descent and convergence for linear models
+
+#### expand: thin vs family median (283w vs ~782w) (1)
+
+- /learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian — Logistic regression: likelihood, gradient, and Hessian
+
+#### expand: thin vs family median (300w vs ~782w) (1)
+
+- /learn/machine-learning/derivations/04-map-mle-and-regularization-as-priors — MAP, MLE, and regularization as priors
+
+#### expand: thin vs family median (290w vs ~782w) (1)
+
+- /learn/machine-learning/derivations/08-pca-svd-and-best-low-rank-approximation — PCA, SVD, and best low-rank approximation
+
+#### expand: thin vs family median (317w vs ~886w) (1)
+
+- /learn/machine-learning/ml-215-lab-linear-model-diagnostic-notebook — Lab: linear-model diagnostic notebook
+
+#### expand: thin vs family median (354w vs ~886w) (1)
+
+- /learn/machine-learning/ml-705-lab-fraud-detection-under-class-imbalance — Lab: fraud detection under class imbalance
+
+#### expand: thin vs family median (348w vs ~886w) (1)
+
+- /learn/machine-learning/ml-706-lab-demand-forecasting-with-delayed-labels — Lab: demand forecasting with delayed labels
+
+#### expand: thin vs family median (350w vs ~886w) (1)
+
+- /learn/machine-learning/ml-707-lab-content-ranking-with-feedback — Lab: content ranking with feedback
+
+#### expand: thin vs family median (335w vs ~886w) (1)
+
+- /learn/machine-learning/ml-708-lab-clustering-for-exploration — Lab: clustering for exploration
+
+#### expand: thin vs family median (334w vs ~886w) (1)
+
+- /learn/machine-learning/ml-709-lab-anomaly-detection-with-investigation-queues — Lab: anomaly detection with investigation queues
+
+#### expand: thin vs family median (349w vs ~886w) (1)
+
+- /learn/machine-learning/ml-710-lab-causal-question-triage — Lab: causal question triage
+
+#### expand: thin vs family median (345w vs ~886w) (1)
+
+- /learn/machine-learning/ml-712-lab-reproducible-training-pipeline — Lab: reproducible training pipeline
+
+#### expand: thin vs family median (344w vs ~886w) (1)
+
+- /learn/machine-learning/ml-713-lab-production-readiness-review — Lab: production readiness review
+
+#### expand: thin vs family median (378w vs ~1011w) (1)
+
+- /learn/machine-learning/ml-714-capstone-classical-ml-system-defense — Capstone: classical ML system defense
+
+#### expand: thin vs family median (215w vs ~886w) (1)
+
+- /learn/machine-learning/ml-871-executable-lab-studio — Executable Classical ML lab studio
+
+#### expand: thin vs family median (201w vs ~782w) (1)
+
+- /learn/machine-learning/public-data-projects/adult-income-project — Public-data project: Adult income prediction
+
+#### expand: thin vs family median (212w vs ~782w) (1)
+
+- /learn/machine-learning/reproductions/linear-regression-reproduction — Paper reproduction: least squares, shrinkage, and prediction
+
+#### expand: thin vs family median (210w vs ~782w) (1)
+
+- /learn/machine-learning/reproductions/pca-reconstruction-reproduction — Paper reproduction: low-rank reconstruction
+
+#### expand: thin vs family median (208w vs ~782w) (1)
+
+- /learn/machine-learning/reproductions/random-forest-reproduction — Paper reproduction: random forests and out-of-bag evidence
+
+#### expand: thin vs family median (214w vs ~782w) (1)
+
+- /learn/machine-learning/reproductions/svm-kernel-reproduction — Paper reproduction: margins and kernels
+
+#### expand: thin vs family median (288w vs ~782w) (1)
+
+- /learn/mcp/first-mcp-server — Build your first MCP server in Python (20 min)
+
+#### expand: thin vs family median (196w vs ~782w) (1)
+
+- /learn/prompt-engineering/answer-first-prompting — Answer-first prompting
+
+#### expand: thin vs family median (362w vs ~1011w) (1)
+
+- /learn/prompt-engineering/prompt-library-capstone — Capstone: build a prompt library that can survive a change
+
+#### expand: thin vs family median (325w vs ~886w) (1)
+
+- /learn/responsible-ai/adversarial-testing-lab — Lab: turn a prompt injection finding into a regression test
+
+#### expand: thin vs family median (149w vs ~782w) (1)
+
+- /learn/structured-outputs/incremental-json-repair — Incremental JSON Repair: Fixing Truncated Output Instead of Discarding It
+
+#### expand: thin vs family median (191w vs ~525w) (1)
+
+- /blog/agents-need-a-harness — Agents need a harness, not just a prompt
 
 ## Freshness queues
 
@@ -247,7 +510,7 @@ Largest queue; full list in JSON. Vendor-signal sample:
 ### no published or updated date (0)
 
 
-### zero in-body internal links (template nav still applies) (885)
+### zero in-body internal links (template nav still applies) (876)
 
 - /learn/agentic-ai/agents-vs-workflows — Choose an agent only when a workflow is not enough
 - /learn/agentic-ai/state-memory-and-recovery — Design agent state, memory, and recovery explicitly
@@ -289,7 +552,7 @@ Largest queue; full list in JSON. Vendor-signal sample:
 - /learn/ai-foundations/applied-ai/306-self-supervised-learning-data-and-transfer — Self-Supervised Learning: Data, Representations, and Transfer
 - /learn/ai-foundations/applied-ai/307-reinforcement-learning-product-suitability — Reinforcement Learning: Product Suitability and Safe Constraints
 - /learn/ai-foundations/applied-ai/308-training-and-inference-economics — Training and Inference Economics
-- … 845 more
+- … 836 more
 
 ### live file not in curriculum (0)
 
@@ -363,45 +626,45 @@ Largest queue; full list in JSON. Vendor-signal sample:
 
 ## Practice banks
 
-- /practice/ai-foundations — 8 questions, 1 lesson links
-- /practice/prompt-engineering — 8 questions, 0 lesson links
-- /practice/rag — 8 questions, 0 lesson links
-- /practice/agents — 8 questions, 0 lesson links
-- /practice/mcp — 8 questions, 0 lesson links
-- /practice/evals — 8 questions, 0 lesson links
+- /practice/ai-foundations — 8 questions, 8 lesson links
+- /practice/prompt-engineering — 8 questions, 8 lesson links
+- /practice/rag — 8 questions, 8 lesson links
+- /practice/agents — 8 questions, 8 lesson links
+- /practice/mcp — 8 questions, 8 lesson links
+- /practice/evals — 8 questions, 8 lesson links
 
 ## Non-lesson collections
 
 ### interview (7)
 
-- /interview/agents — AI agents interview questions (531 words, updated 2026-09-08)
-- /interview/ai-system-design — AI system design interview questions (494 words, updated 2026-09-08)
-- /interview/evals — LLM evaluation interview questions (527 words, updated 2026-08-30)
-- /interview/llm-basics — LLM basics interview questions (575 words, updated 2026-09-08)
-- /interview/mcp — MCP interview questions (496 words, updated 2026-09-08)
-- /interview/prompt-engineering — Prompt engineering interview questions (553 words, updated 2026-09-08)
-- /interview/rag — RAG interview questions (510 words, updated 2026-08-30)
+- /interview/agents — AI agents interview questions (755 words, updated 2026-09-08)
+- /interview/ai-system-design — AI system design interview questions (727 words, updated 2026-09-08)
+- /interview/evals — LLM evaluation interview questions (732 words, updated 2026-08-30)
+- /interview/llm-basics — LLM basics interview questions (764 words, updated 2026-09-08)
+- /interview/mcp — MCP interview questions (692 words, updated 2026-09-08)
+- /interview/prompt-engineering — Prompt engineering interview questions (731 words, updated 2026-09-08)
+- /interview/rag — RAG interview questions (700 words, updated 2026-08-30)
 
 ### scenario (6)
 
-- /scenarios/agent-approval — An agent that can update customer records (199 words, updated 2026-08-30)
-- /scenarios/document-qa — Document Q&A with permissions intact (190 words, updated 2026-08-30)
-- /scenarios/eval-release — A release that improves quality but raises cost (189 words, updated 2026-08-30)
-- /scenarios/mcp-team-server — An MCP server for a small engineering team (187 words, updated 2026-08-30)
-- /scenarios/streaming-research — A research feature that streams useful work (172 words, updated 2026-08-30)
-- /scenarios/support-assistant — A support assistant that must show its work (213 words, updated 2026-08-30)
+- /scenarios/agent-approval — An agent that can update customer records (459 words, updated 2026-08-30)
+- /scenarios/document-qa — Document Q&A with permissions intact (428 words, updated 2026-08-30)
+- /scenarios/eval-release — A release that improves quality but raises cost (436 words, updated 2026-08-30)
+- /scenarios/mcp-team-server — An MCP server for a small engineering team (459 words, updated 2026-08-30)
+- /scenarios/streaming-research — A research feature that streams useful work (434 words, updated 2026-08-30)
+- /scenarios/support-assistant — A support assistant that must show its work (490 words, updated 2026-08-30)
 
 ### guide (9)
 
-- /guides/build-a-rag-pipeline-over-your-own-documents — Build a RAG pipeline over your own documents (761 words, updated 2026-08-30)
-- /guides/build-a-tool-calling-agent-from-scratch — Build a tool-calling agent from scratch, no framework (538 words, updated 2026-08-30)
-- /guides/build-an-mcp-server-in-python — Build an MCP server in Python and connect it to Claude (703 words, updated 2026-08-30)
-- /guides/cut-your-llm-bill — Cut your LLM bill without hurting quality (803 words, updated 2026-08-30)
-- /guides/defend-against-prompt-injection — Defend a tool-using app against prompt injection (778 words, updated 2026-08-30)
-- /guides/get-reliable-json-out-of-an-llm — Get reliable JSON out of an LLM (621 words, updated 2026-08-30)
-- /guides/rag-fine-tuning-or-a-longer-prompt — RAG, fine-tuning, or a longer prompt? (859 words, updated 2026-08-30)
-- /guides/ship-your-first-ai-feature-to-production — Ship your first AI feature to production (834 words, updated 2026-08-30)
-- /guides/write-your-first-eval-for-an-ai-feature — Write your first eval for an AI feature (686 words, updated 2026-08-30)
+- /guides/build-a-rag-pipeline-over-your-own-documents — Build a RAG pipeline over your own documents (773 words, updated 2026-08-30)
+- /guides/build-a-tool-calling-agent-from-scratch — Build a tool-calling agent from scratch, no framework (534 words, updated 2026-08-30)
+- /guides/build-an-mcp-server-in-python — Build an MCP server in Python and connect it to Claude (725 words, updated 2026-08-30)
+- /guides/cut-your-llm-bill — Cut your LLM bill without hurting quality (833 words, updated 2026-08-30)
+- /guides/defend-against-prompt-injection — Defend a tool-using app against prompt injection (795 words, updated 2026-08-30)
+- /guides/get-reliable-json-out-of-an-llm — Get reliable JSON out of an LLM (638 words, updated 2026-08-30)
+- /guides/rag-fine-tuning-or-a-longer-prompt — RAG, fine-tuning, or a longer prompt? (881 words, updated 2026-08-30)
+- /guides/ship-your-first-ai-feature-to-production — Ship your first AI feature to production (851 words, updated 2026-08-30)
+- /guides/write-your-first-eval-for-an-ai-feature — Write your first eval for an AI feature (703 words, updated 2026-08-30)
 
 ### blog (10)
 
@@ -413,7 +676,7 @@ Largest queue; full list in JSON. Vendor-signal sample:
 - /blog/stopping-conditions-for-agents — Every agent loop needs five stopping conditions (537 words, updated 2026-08-30)
 - /blog/the-context-window-got-bigger-and-it-did-not-fix-this — The context window got bigger. It didn't fix what you think. (578 words, updated 2026-08-30)
 - /blog/the-mcp-mistakes-that-show-up-at-3am — The MCP server mistakes that show up at 3am (631 words, updated 2026-08-30)
-- /blog/why-there-is-no-certificate — Why there's no certificate here (522 words, updated 2026-09-08)
+- /blog/why-there-is-no-certificate — Why there's no certificate here (520 words, updated 2026-09-08)
 - /blog/your-rag-problem-is-a-retrieval-problem — Your RAG problem is a retrieval problem (700 words, updated 2026-08-30)
 
 ### answer (29)

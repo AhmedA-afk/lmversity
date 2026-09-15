@@ -418,7 +418,7 @@
   },
   "lessons/ai-foundations/capabilities-and-eval-quiz.md": {
    "id": "les-0101",
-   "fp": "eaa52dc91667ce07e291498a98f8a09da1a50a4d"
+   "fp": "76cf1ae3c7ebae59ccbd7e089d94da4ff518e8e7"
   },
   "lessons/ai-foundations/capstone-build-train-evaluate-a-classifier.md": {
    "id": "les-0102",
@@ -446,7 +446,7 @@
   },
   "lessons/ai-foundations/embeddings-quiz.md": {
    "id": "les-0108",
-   "fp": "cb4661aa92fd3c8792a7854162763fab11164bb3"
+   "fp": "b9e792f1eff711447b1d5beebf4e94544a4e8fbb"
   },
   "lessons/ai-foundations/embeddings-word-analogies-example.md": {
    "id": "les-0109",
@@ -454,7 +454,7 @@
   },
   "lessons/ai-foundations/foundation-models-and-llms-quiz.md": {
    "id": "les-0110",
-   "fp": "0908b97ff2a90b43faf595ebb9494cc88887350c"
+   "fp": "4e3320e11fc767d53436d0922952b6ac233072eb"
   },
   "lessons/ai-foundations/foundation-models-explained.mdx": {
    "id": "les-0111",
@@ -502,7 +502,7 @@
   },
   "lessons/ai-foundations/learning-paradigms-quiz.md": {
    "id": "les-0122",
-   "fp": "5e5cf2e9659945a56de14ba331b25d4bc6c5ced6"
+   "fp": "61b7699409893aa57f711349ea4c8f77ffb181fa"
   },
   "lessons/ai-foundations/loss-functions-explained.mdx": {
    "id": "les-0123",
@@ -526,7 +526,7 @@
   },
   "lessons/ai-foundations/neural-networks-quiz.md": {
    "id": "les-0128",
-   "fp": "c22505283baad9c80495cd3c6647088fef8c0f2b"
+   "fp": "26b21f1cc21fbcacaae2b281cf354788f27125aa"
   },
   "lessons/ai-foundations/open-vs-closed-and-hardware-tradeoffs.md": {
    "id": "les-0129",
@@ -538,7 +538,7 @@
   },
   "lessons/ai-foundations/orientation-quiz.md": {
    "id": "les-0131",
-   "fp": "80aabee354bbffda5925d7b08b34bdeb6154f7cf"
+   "fp": "ca2c005ae0f65d8f613b4e8dba642d893de91a56"
   },
   "lessons/ai-foundations/overfitting-visual-intuition.md": {
    "id": "les-0132",
@@ -546,7 +546,7 @@
   },
   "lessons/ai-foundations/practical-models-quiz.md": {
    "id": "les-0133",
-   "fp": "ba94af6083115b8ad5173c52ba0ee542ce01feca"
+   "fp": "a327aef62934d421f10b955d6bfd118b20724d65"
   },
   "lessons/ai-foundations/pretraining-vs-finetuning.md": {
    "id": "les-0134",
@@ -726,7 +726,7 @@
   },
   "lessons/ai-foundations/training-and-optimization-quiz.md": {
    "id": "les-0178",
-   "fp": "c18057f4a476e8c952901c3bcc489f5a5f643042"
+   "fp": "53d8e3f8def3e10282c223eb6312832d7a416738"
   },
   "lessons/ai-foundations/training-vs-inference.mdx": {
    "id": "les-0179",
@@ -802,7 +802,7 @@
   },
   "lessons/ai-literacy/cost-and-limits-quiz.md": {
    "id": "les-0197",
-   "fp": "b06d80d1ada846e6f42e1d093bff22819e23d9d3"
+   "fp": "b7eec1ad4e1fbb9b7a28b61d31832ca6562333f4"
   },
   "lessons/ai-literacy/data-model-output-loop.md": {
    "id": "les-0198",
@@ -814,7 +814,7 @@
   },
   "lessons/ai-literacy/deciding-when-and-which-ai-quiz.md": {
    "id": "les-0200",
-   "fp": "33fd33d2a65764b044a6f3962c4bf5063155d385"
+   "fp": "ae3c9c87fb08298611268b5cb5be29efa412535c"
   },
   "lessons/ai-literacy/everyday-prompting-cheatsheet.md": {
    "id": "les-0201",
@@ -846,7 +846,7 @@
   },
   "lessons/ai-literacy/how-ai-produces-answers-quiz.md": {
    "id": "les-0208",
-   "fp": "8e309b8002bdefe9b66bebcfeb060282317e4854"
+   "fp": "cf3711dc36cdf9d78be05c29d39e392e2b38483c"
   },
   "lessons/ai-literacy/how-language-models-produce-text.md": {
    "id": "les-0209",
@@ -866,7 +866,7 @@
   },
   "lessons/ai-literacy/judging-and-verifying-quiz.md": {
    "id": "les-0213",
-   "fp": "c7c441668432aeafc453ad63d0d1fa28bc2e8888"
+   "fp": "1301af0d5d919f0fbdaed7d84ddef551f693c28c"
   },
   "lessons/ai-literacy/matching-the-ai-tool-to-the-job.md": {
    "id": "les-0214",
@@ -874,7 +874,7 @@
   },
   "lessons/ai-literacy/privacy-bias-and-ethics-quiz.md": {
    "id": "les-0215",
-   "fp": "6ceaff87e277b8e290c5a2f26e1cb3ae4de57156"
+   "fp": "2f524690a814aed8e484b5d4d66764dd7cc6e132"
   },
   "lessons/ai-literacy/prompt-patterns-for-everyday-tasks.md": {
    "id": "les-0216",
@@ -886,7 +886,7 @@
   },
   "lessons/ai-literacy/prompting-quiz.md": {
    "id": "les-0218",
-   "fp": "b661cffbe516cfd77fc7ee73c06667adf84dfbff"
+   "fp": "8a27507fd40bc9be269f91f3851f31970bc0cb4e"
   },
   "lessons/ai-literacy/run-a-real-task-end-to-end-with-verification.md": {
    "id": "les-0219",
@@ -946,7 +946,7 @@
   },
   "lessons/ai-literacy/what-ai-actually-is-quiz.md": {
    "id": "les-0233",
-   "fp": "bd7232f1479a47784a179146816c4fc3be33f266"
+   "fp": "73e491a5a747a3b66e8542a3fe09a3c60a1a3bd5"
   },
   "lessons/ai-literacy/what-ai-actually-is.md": {
    "id": "les-0234",
@@ -1334,7 +1334,7 @@
   },
   "lessons/context-engineering/budgeting-and-observability-quiz.md": {
    "id": "les-0330",
-   "fp": "5f8840019f0f2ba8db4c40a0529d8f13c3e5e313"
+   "fp": "3fd8a55b176e4fc7d8d4dc7e84229d4b8b71a641"
   },
   "lessons/context-engineering/budgeting-common-mistakes.md": {
    "id": "les-0331",
@@ -1382,7 +1382,7 @@
   },
   "lessons/context-engineering/compaction-memory-quiz.md": {
    "id": "les-0342",
-   "fp": "005d31d84a3f8a0d38d11edfce3f958b5cbe5901"
+   "fp": "f05289629b48babecb5f57562d130f0d3e7d4073"
   },
   "lessons/context-engineering/compaction-that-drops-key-facts.md": {
    "id": "les-0343",
@@ -1502,7 +1502,7 @@
   },
   "lessons/context-engineering/failure-modes-quiz.md": {
    "id": "les-0372",
-   "fp": "50274dd7a1d274ee235e970f2a7df82893bb82a7"
+   "fp": "2d7b831d9e0d4a88d1a2b5e8816b7d856411ad3c"
   },
   "lessons/context-engineering/filtering-vs-reranking.md": {
    "id": "les-0373",
@@ -1510,7 +1510,7 @@
   },
   "lessons/context-engineering/foundations-quiz.md": {
    "id": "les-0374",
-   "fp": "147944e5f09c792f21497fdad808e3c0446846ff"
+   "fp": "290c63edb693ba92cd110febbe025ee63651e480"
   },
   "lessons/context-engineering/handoff-payload-design.md": {
    "id": "les-0375",
@@ -1586,7 +1586,7 @@
   },
   "lessons/context-engineering/multi-agent-and-capstone-quiz.md": {
    "id": "les-0393",
-   "fp": "cf6c391b39afc99593eac8fa96847bb95c73490d"
+   "fp": "5a888632ce8f2e33e32ea23a86cad709f01b969f"
   },
   "lessons/context-engineering/multi-agent-context-mistakes.md": {
    "id": "les-0394",
@@ -1674,7 +1674,7 @@
   },
   "lessons/context-engineering/retrieval-and-jit-quiz.md": {
    "id": "les-0415",
-   "fp": "818c7a9d706a538a09582ee53f71193f2c7ee99b"
+   "fp": "1ee1b635107387bb0cfd021c6843045a1589c8df"
   },
   "lessons/context-engineering/retrieval-budget-interaction.md": {
    "id": "les-0416",
@@ -1706,7 +1706,7 @@
   },
   "lessons/context-engineering/selection-ordering-quiz.md": {
    "id": "les-0423",
-   "fp": "604851d5183c74e606d76b2274de86ecc874919a"
+   "fp": "0f7d2ae904ca10247e32784b216bf71d932dd5fe"
   },
   "lessons/context-engineering/setting-per-segment-budgets.md": {
    "id": "les-0424",
@@ -1814,7 +1814,7 @@
   },
   "lessons/context-engineering/tools-caching-quiz.md": {
    "id": "les-0450",
-   "fp": "64ad70cb90c005cf319788a53a083c44f72122ad"
+   "fp": "ed22b203837e3f8b1aaa6074669dba4d2d2ac450"
   },
   "lessons/context-engineering/what-a-subagent-should-return.md": {
    "id": "les-0451",
@@ -2910,31 +2910,31 @@
   },
   "lessons/genai-app-dev/quiz-genai-foundations.md": {
    "id": "les-0724",
-   "fp": "97838ca5c82625a5d4ca270833d4d3c39a66fd3c"
+   "fp": "3f8124d919ff6cb8acd0a46f667b1be191ca0174"
   },
   "lessons/genai-app-dev/quiz-performance-cost.md": {
    "id": "les-0725",
-   "fp": "72ed8c6e1e10e2c1c2c7c06f6a119025e647a92f"
+   "fp": "8eb5bbc684fc5daaedc9fd4db006b40b34e24b09"
   },
   "lessons/genai-app-dev/quiz-provider-layer.md": {
    "id": "les-0726",
-   "fp": "a768682cda9bfe72ba9a651e682c7c486641afe9"
+   "fp": "c12b782b39809fd1ffe9a83bc9260d60da085f6e"
   },
   "lessons/genai-app-dev/quiz-reliability-safety.md": {
    "id": "les-0727",
-   "fp": "970d5488a3a3912aa19f280b6fc2b3b0185da6c3"
+   "fp": "e7aff6ea4c06171c6d035e72ac1972e65e3fbab2"
   },
   "lessons/genai-app-dev/quiz-shipping-operating.md": {
    "id": "les-0728",
-   "fp": "be95736b7a1d055fd25f8f9036e0c02a1123688f"
+   "fp": "0e448d333efa761560e52d4f74a2727473420630"
   },
   "lessons/genai-app-dev/quiz-state-structured-tools.md": {
    "id": "les-0729",
-   "fp": "c69297c7051846f005e4ab801197dab8117fb71e"
+   "fp": "395eb462adc10cb4b3c16a5ec3474a5ced4675ed"
   },
   "lessons/genai-app-dev/quiz-streaming-ux.md": {
    "id": "les-0730",
-   "fp": "e4b43a86f461869afc1d7e91cdcbb0e0b80a15b1"
+   "fp": "f90abc1af8de3f340f32a6b672d1c250bf84d980"
   },
   "lessons/genai-app-dev/rate-limits-and-retry-strategies.mdx": {
    "id": "les-0731",
@@ -3246,7 +3246,7 @@
   },
   "lessons/hallucinations/detection-quiz.md": {
    "id": "les-0808",
-   "fp": "8feb17eb3b223026acf2a0e935329190e1f9b29c"
+   "fp": "bebacbee1303eed912fac1d892bf4c16bc3db508"
   },
   "lessons/hallucinations/domain-specific-hallucination-variants.md": {
    "id": "les-0809",
@@ -3286,7 +3286,7 @@
   },
   "lessons/hallucinations/evaluation-quiz.md": {
    "id": "les-0818",
-   "fp": "db0fa8bef457c4ed853f4fe607bdc9b5d8fb9696"
+   "fp": "97eb99d162c5c8c1deee59b979dcdd063230f785"
   },
   "lessons/hallucinations/fabricated-citations-deep-dive.md": {
    "id": "les-0819",
@@ -3314,7 +3314,7 @@
   },
   "lessons/hallucinations/foundations-quiz.md": {
    "id": "les-0825",
-   "fp": "a70797fb56fde4642ab400c9133c706ae646c376"
+   "fp": "501ca61682c57343319fc969dd3f6219bffbc856"
   },
   "lessons/hallucinations/grounding-fundamentals.md": {
    "id": "les-0826",
@@ -3426,7 +3426,7 @@
   },
   "lessons/hallucinations/mitigation-quiz.md": {
    "id": "les-0853",
-   "fp": "e4861f7797157f4cc33fa496d043cb0c4c8f691e"
+   "fp": "ec4ff8aa4a606cac9d2f5aa2b5502f286c5bf02f"
   },
   "lessons/hallucinations/mitigation-strategy-landscape.md": {
    "id": "les-0854",
@@ -3474,7 +3474,7 @@
   },
   "lessons/hallucinations/production-quiz.md": {
    "id": "les-0865",
-   "fp": "8ab2b8e457a1366f6a0d1cdb310eba585cd72b14"
+   "fp": "e56c4f92862abea9e7b7429627beed127b941261"
   },
   "lessons/hallucinations/production-reliability-cheatsheet.md": {
    "id": "les-0866",
@@ -3578,7 +3578,7 @@
   },
   "lessons/hallucinations/taxonomy-quiz.md": {
    "id": "les-0891",
-   "fp": "e3dd261b2d5d56337f93d425d3d761427d360b9a"
+   "fp": "4993082043864ed3ac8d5a3ff161121ed5a68a36"
   },
   "lessons/hallucinations/teaching-abstention-via-prompting-impl.md": {
    "id": "les-0892",
@@ -3622,7 +3622,7 @@
   },
   "lessons/hallucinations/uncertainty-quiz.md": {
    "id": "les-0902",
-   "fp": "0c896f8f6ab09535049f9dd4ece5d8ae7e15fe72"
+   "fp": "419571ca13a29adffdc8e08122127cc493dba8b6"
   },
   "lessons/hallucinations/ux-of-uncertainty.md": {
    "id": "les-0903",
@@ -3790,7 +3790,7 @@
   },
   "lessons/llm-foundations/behavior-and-capstone-quiz.mdx": {
    "id": "les-0944",
-   "fp": "9982246412ab2bb8942b677a096387daadd67550"
+   "fp": "f5fdad1047bed306c344439173d7103891bd2b85"
   },
   "lessons/llm-foundations/bpe-vs-wordpiece-vs-unigram.mdx": {
    "id": "les-0945",
@@ -3842,7 +3842,7 @@
   },
   "lessons/llm-foundations/decoding-inference-quiz.mdx": {
    "id": "les-0957",
-   "fp": "af5474c914e78a1ac6be2871f721b8eae079b69d"
+   "fp": "11b7007daa7fd1daa0f24ce4b4d6013236817575"
   },
   "lessons/llm-foundations/dense-vs-moe-vs-gqa-design-choices.mdx": {
    "id": "les-0958",
@@ -3850,7 +3850,7 @@
   },
   "lessons/llm-foundations/efficient-architectures-quiz.mdx": {
    "id": "les-0959",
-   "fp": "0759cd9f8bb42167ceab8ccff7f6d1ddbbb88944"
+   "fp": "3507164a0e280d1a42e26513489d275cd9f0c1ea"
   },
   "lessons/llm-foundations/emergent-abilities-and-the-mirage-debate.mdx": {
    "id": "les-0960",
@@ -4202,7 +4202,7 @@
   },
   "lessons/llm-foundations/training-pipeline-quiz.mdx": {
    "id": "les-1047",
-   "fp": "645b75194b952bed0200f8257485ceafe4c3b595"
+   "fp": "5f8fc3219cfd66149cbbe451f0dd5e7168926a68"
   },
   "lessons/llm-foundations/training-time-vs-inference-time.mdx": {
    "id": "les-1048",
@@ -4210,7 +4210,7 @@
   },
   "lessons/llm-foundations/transformer-block-quiz.mdx": {
    "id": "les-1049",
-   "fp": "a522a9e51aff836ae6296e632ccdb76b3204a969"
+   "fp": "75474d9156c580fed851dc61066694721d3d4a67"
   },
   "lessons/llm-foundations/transformer-block-wiring-bugs.mdx": {
    "id": "les-1050",
@@ -4254,7 +4254,7 @@
   },
   "lessons/llm-foundations/whole-game-quiz.mdx": {
    "id": "les-1060",
-   "fp": "0beb470dd4bb270e5c9bb04e34618c748ec00ee3"
+   "fp": "d7b0023b41b5493cc431eb0321d6a6f532f7e84d"
   },
   "lessons/llm-foundations/why-divide-by-sqrt-dk.mdx": {
    "id": "les-1061",
@@ -5938,7 +5938,7 @@
   },
   "lessons/mcp/mcp-auth-quiz.md": {
    "id": "les-1481",
-   "fp": "225e252efe9a59edd83626785e8b01089ffe4255"
+   "fp": "f7e2eb23110383d5908e557d61f155fddffc2c9a"
   },
   "lessons/mcp/mcp-auth-worked-example.md": {
    "id": "les-1482",
@@ -5958,7 +5958,7 @@
   },
   "lessons/mcp/mcp-debugging-quiz.md": {
    "id": "les-1486",
-   "fp": "4b98280d6db65445f837bd95fd0bcb0cb7d836a7"
+   "fp": "0ed04acfa0461da1f058c0b1cef62676f0cae9b4"
   },
   "lessons/mcp/mcp-debugging-worked-example.md": {
    "id": "les-1487",
@@ -5978,7 +5978,7 @@
   },
   "lessons/mcp/mcp-deployment-quiz.md": {
    "id": "les-1491",
-   "fp": "fa6461893e818a0560dc9919311b05af70ff545f"
+   "fp": "2679bfb52893ccad706fd33993be57129a3fef98"
   },
   "lessons/mcp/mcp-deployment-worked-example.md": {
    "id": "les-1492",
@@ -6002,7 +6002,7 @@
   },
   "lessons/mcp/mcp-primitives-quiz.md": {
    "id": "les-1497",
-   "fp": "16378f198b90e3111290961e3929607a6d23f286"
+   "fp": "c93c6bda9c7a2332d8d3439383df5b487f69e44b"
   },
   "lessons/mcp/mcp-primitives-worked-example.md": {
    "id": "les-1498",
@@ -6030,7 +6030,7 @@
   },
   "lessons/mcp/mcp-server-quiz.md": {
    "id": "les-1504",
-   "fp": "ac039f7d759261988e1d6e32934d456e46e748b3"
+   "fp": "37851279ce52675250af8b7a89a933e2e87fbcbf"
   },
   "lessons/mcp/mcp-server-worked-example.md": {
    "id": "les-1505",
@@ -6058,7 +6058,7 @@
   },
   "lessons/mcp/mcp-transports-quiz.md": {
    "id": "les-1511",
-   "fp": "d03babd8a6b30f5a314034a736eec4c9138ab33c"
+   "fp": "bec20eef77039c7e1a3e7dd2753614ad1ff03272"
   },
   "lessons/mcp/mcp-transports-stdio-vs-http.mdx": {
    "id": "les-1512",
@@ -6346,7 +6346,7 @@
   },
   "lessons/prompt-engineering/eval-shipping-quiz.md": {
    "id": "les-1583",
-   "fp": "0bf166d05e9853cf616aed22a75a5830b0fc5c25"
+   "fp": "3564e971fb5906ef875a74f6f46981e0a8ac51ee"
   },
   "lessons/prompt-engineering/eval-versioning-cheatsheet.md": {
    "id": "les-1584",
@@ -6362,7 +6362,7 @@
   },
   "lessons/prompt-engineering/examples-icl-quiz.md": {
    "id": "les-1587",
-   "fp": "d629828b620e3d8f08dd873c397ff0714ce7d4c0"
+   "fp": "7b146d6426586cc6c208b1510537b7517767ef60"
   },
   "lessons/prompt-engineering/extended-thinking-and-reasoning-effort.mdx": {
    "id": "les-1588",
@@ -6406,7 +6406,7 @@
   },
   "lessons/prompt-engineering/foundations-quiz.md": {
    "id": "les-1598",
-   "fp": "8719e673929eab005880daab37ef16831918428a"
+   "fp": "0023b5a028fac3078e2eae1f3dc94f8f388af766"
   },
   "lessons/prompt-engineering/handling-refusals-and-safety-boundaries.md": {
    "id": "les-1599",
@@ -6602,7 +6602,7 @@
   },
   "lessons/prompt-engineering/reasoning-quiz.md": {
    "id": "les-1647",
-   "fp": "086b62400acd624423f9583215a95ff4b41082e6"
+   "fp": "40f2af89f3682e2ede2f1c5603c060d45559a3ae"
   },
   "lessons/prompt-engineering/reasoning-technique-decision-guide.md": {
    "id": "les-1648",
@@ -6626,7 +6626,7 @@
   },
   "lessons/prompt-engineering/robustness-capstone-quiz.md": {
    "id": "les-1653",
-   "fp": "fc50a05d86b73955c9b790cb60fa7f8e315aaee3"
+   "fp": "fc8e08c7b286a1f3297efd088d7a6e8ca29cd837"
   },
   "lessons/prompt-engineering/robustness-common-mistakes.md": {
    "id": "les-1654",
@@ -6646,7 +6646,7 @@
   },
   "lessons/prompt-engineering/roles-steering-quiz.md": {
    "id": "les-1658",
-   "fp": "1f06feaa08becb81059c6885a006a1d122237161"
+   "fp": "639f8f80a114cdced589c7435b5f80103ae44512"
   },
   "lessons/prompt-engineering/rubric-and-llm-judge.md": {
    "id": "les-1659",
@@ -6674,7 +6674,7 @@
   },
   "lessons/prompt-engineering/structure-formatting-quiz.md": {
    "id": "les-1665",
-   "fp": "14865cc48c8fa5aeee87104f75c97f6e901426ed"
+   "fp": "0be732444617ebe89fcd098cc54e17caf08a1099"
   },
   "lessons/prompt-engineering/structured-output-contracts.md": {
    "id": "les-1666",
@@ -6810,11 +6810,11 @@
   },
   "lessons/python-data-apis/api-calling-quiz.md": {
    "id": "les-1699",
-   "fp": "0c49d31a68c3023e9e30cbc26208fe4fdaa86265"
+   "fp": "8467b53f466cbae16b88f6a32cc10f1d886df8ee"
   },
   "lessons/python-data-apis/async-and-batching-quiz.md": {
    "id": "les-1700",
-   "fp": "b8e60a6c80a8d7bfb798524f3e6655f6b3f0dc70"
+   "fp": "5fae4897456d558ca9e81a73e18920fe82fd3702"
   },
   "lessons/python-data-apis/async-python-for-io.md": {
    "id": "les-1701",
@@ -6854,7 +6854,7 @@
   },
   "lessons/python-data-apis/data-cleaning-quiz.md": {
    "id": "les-1710",
-   "fp": "2a38cd0c02f03512f60202c7606040598b79a63a"
+   "fp": "cad9eb972399a7ed382026b9c9915aaae66d26b5"
   },
   "lessons/python-data-apis/data-cleaning-workflow.md": {
    "id": "les-1711",
@@ -6866,7 +6866,7 @@
   },
   "lessons/python-data-apis/environments-tooling-quiz.md": {
    "id": "les-1713",
-   "fp": "783b66f4da1c4fdc7677b4fbbcfb1cb732ff2668"
+   "fp": "6d6ae0aeaf8dcc9f44b4d8e97c2758015387bc5d"
   },
   "lessons/python-data-apis/files-and-data-formats-overview.md": {
    "id": "les-1714",
@@ -6874,7 +6874,7 @@
   },
   "lessons/python-data-apis/files-and-formats-quiz.md": {
    "id": "les-1715",
-   "fp": "9b2254071ed71e15880ce644fd337bb1ca9c15d1"
+   "fp": "337b12fea59750c9bb80cb4f8c465b21410e5c4c"
   },
   "lessons/python-data-apis/groupby-and-aggregation.md": {
    "id": "les-1716",
@@ -6926,7 +6926,7 @@
   },
   "lessons/python-data-apis/numpy-quiz.md": {
    "id": "les-1728",
-   "fp": "26ef7e649219acdd6f9bb3811519a000fff81c37"
+   "fp": "a6024bec707c006d23464b212226d79d9019f6bd"
   },
   "lessons/python-data-apis/pagination-patterns.md": {
    "id": "les-1729",
@@ -6938,7 +6938,7 @@
   },
   "lessons/python-data-apis/pandas-quiz.md": {
    "id": "les-1731",
-   "fp": "36f900e93046df766fc76f32534647b1b82324ee"
+   "fp": "0d0e41c72a0827fb4b0958f273c9a1a3ace276e1"
   },
   "lessons/python-data-apis/pandas-settingwithcopy-mistakes.mdx": {
    "id": "les-1732",
@@ -6962,7 +6962,7 @@
   },
   "lessons/python-data-apis/python-data-structures-quiz.md": {
    "id": "les-1737",
-   "fp": "ca87b164440f90b23282b2488a7ae279074b05bc"
+   "fp": "2cc90ee30de09d5a47b6956504cc7b351c966944"
   },
   "lessons/python-data-apis/python-environments-and-venv.md": {
    "id": "les-1738",
@@ -6986,7 +6986,7 @@
   },
   "lessons/python-data-apis/secrets-config-quiz.md": {
    "id": "les-1743",
-   "fp": "702dfa5941c2df20efe9862d850a85b343e767f7"
+   "fp": "3ac75d6b79da969c691429ae4dc0c9cb50c6cd6f"
   },
   "lessons/python-data-apis/selecting-filtering-indexing.md": {
    "id": "les-1744",
@@ -7054,7 +7054,7 @@
   },
   "lessons/rag/chunking-quiz.md": {
    "id": "les-1760",
-   "fp": "e65e9b70e6ceb1cff921c57679525b6d25aedb29"
+   "fp": "f205ca2b9a1d23de538d09a95450d9a5d1074aef"
   },
   "lessons/rag/chunking-strategies-compared.md": {
    "id": "les-1761",
@@ -7110,7 +7110,7 @@
   },
   "lessons/rag/hybrid-search-quiz.md": {
    "id": "les-1774",
-   "fp": "33c0797cee70cb9ba60284154b81700914941819"
+   "fp": "9de04c29dbec5a15e508f360b5251b17a1c4b642"
   },
   "lessons/rag/hybrid-search-worked-example.md": {
    "id": "les-1775",
@@ -7166,7 +7166,7 @@
   },
   "lessons/rag/rag-eval-quiz.md": {
    "id": "les-1788",
-   "fp": "79bfc3308030f5e0ff901db67abca440e728e748"
+   "fp": "0a44d9e85fccfd8ff3053d9fbd3208ac32e358a9"
   },
   "lessons/rag/rag-eval-worked-example.md": {
    "id": "les-1789",
@@ -7190,7 +7190,7 @@
   },
   "lessons/rag/reranking-quiz.md": {
    "id": "les-1794",
-   "fp": "e1406f89edb8c19e2215b22724d71745bfee0e30"
+   "fp": "9e9a084f3dbf098f555dc89ad06c3976a17b02fc"
   },
   "lessons/rag/reranking-retrieved-results.mdx": {
    "id": "les-1795",
@@ -7214,7 +7214,7 @@
   },
   "lessons/rag/retrieval-quiz.md": {
    "id": "les-1800",
-   "fp": "3e4ce4e65b40466d88fff82a6481ab88b699d458"
+   "fp": "b7e1c1049e0f56e9fcfc22505441457fa21ea87f"
   },
   "lessons/rag/retrieval-worked-example.md": {
    "id": "les-1801",
@@ -7238,7 +7238,7 @@
   },
   "lessons/rag/vector-db-quiz.md": {
    "id": "les-1806",
-   "fp": "a0aaab60a374f5069f76e1580b37e597c6671cb2"
+   "fp": "616f2bae8eebdb054c4db109cfca669e98cf138f"
   },
   "lessons/rag/vector-db-worked-example.md": {
    "id": "les-1807",
@@ -7298,7 +7298,7 @@
   },
   "lessons/structured-outputs/capstone-and-eval-quiz.md": {
    "id": "les-1821",
-   "fp": "724939ad6de1cef75248cf49924d4f6f94c48f34"
+   "fp": "91d0dc8c01cc0f474fb3de1f59acbfe496cc6f74"
   },
   "lessons/structured-outputs/chunk-and-merge-extraction.md": {
    "id": "les-1822",
@@ -7402,7 +7402,7 @@
   },
   "lessons/structured-outputs/extraction-quiz.md": {
    "id": "les-1847",
-   "fp": "7a21ad056b43437ed2d5fd38cabd5615bd1fad36"
+   "fp": "ffce5c3ee8dae4fdd8a94e71d8f686f7012dfaf4"
   },
   "lessons/structured-outputs/failure-and-repair-cheatsheet.md": {
    "id": "les-1848",
@@ -7430,7 +7430,7 @@
   },
   "lessons/structured-outputs/foundations-quiz.md": {
    "id": "les-1854",
-   "fp": "5689108fd3deb05922950f0c136a4fa5eebc19d5"
+   "fp": "193e4b6d24f5613f09a6b076d53c367ec28370d5"
   },
   "lessons/structured-outputs/from-prose-to-parsed-worked-example.md": {
    "id": "les-1855",
@@ -7506,7 +7506,7 @@
   },
   "lessons/structured-outputs/mechanisms-quiz.md": {
    "id": "les-1873",
-   "fp": "4853f69baf8e0330a32fbe7c50e981f8e0be36c5"
+   "fp": "faa090ea542fedb70c211c193ed0feed607a99a3"
   },
   "lessons/structured-outputs/migrating-a-schema-version.md": {
    "id": "les-1874",
@@ -7594,7 +7594,7 @@
   },
   "lessons/structured-outputs/reliability-design-quiz.md": {
    "id": "les-1895",
-   "fp": "5c00ab01d85ff8443bcff226cb1995c2530011dc"
+   "fp": "70e7d5d69ca4cb8139c57452f0c9fc7f7f5145a4"
   },
   "lessons/structured-outputs/reliable-schema-checklist.md": {
    "id": "les-1896",
@@ -7614,7 +7614,7 @@
   },
   "lessons/structured-outputs/runtime-quiz.md": {
    "id": "les-1900",
-   "fp": "e5d5f0d478696c89befb2091d9a6de967a3b0dbc"
+   "fp": "dcf18b24a7827b8303c510a005c3cd5d9df32fc5"
   },
   "lessons/structured-outputs/same-schema-three-providers-example.md": {
    "id": "les-1901",
@@ -7638,7 +7638,7 @@
   },
   "lessons/structured-outputs/schema-design-quiz.md": {
    "id": "les-1906",
-   "fp": "5428a7d4d0ec64aa71568821833b624c0d088329"
+   "fp": "e8f8f3f375bad745a605f3dbf693a7b262f82d24"
   },
   "lessons/structured-outputs/schema-shape-antipatterns.md": {
    "id": "les-1907",
@@ -7770,7 +7770,7 @@
   },
   "lessons/tools-function-calling/advanced-tools-quiz.md": {
    "id": "les-1939",
-   "fp": "3d2ed36a9b5b95dd23b11792015243caffee56eb"
+   "fp": "50bdfa493ba292b503eec357a45e17c07eb38ee5"
   },
   "lessons/tools-function-calling/anatomy-of-a-tool-call.md": {
    "id": "les-1940",
@@ -7910,7 +7910,7 @@
   },
   "lessons/tools-function-calling/execution-safety-quiz.md": {
    "id": "les-1974",
-   "fp": "b216198181b6db8ca34736479549921ddc29a100"
+   "fp": "cfbcf063fa6fe7eca7f93ed0cbe7f07e8d12b40b"
   },
   "lessons/tools-function-calling/first-tool-call-walkthrough.md": {
    "id": "les-1975",
@@ -7930,7 +7930,7 @@
   },
   "lessons/tools-function-calling/foundations-quiz.md": {
    "id": "les-1979",
-   "fp": "7a38abd304995660c59fc9ff64215b50956eeb53"
+   "fp": "ce1a7ee1b8cddd62ab21e672add144cd3fa48606"
   },
   "lessons/tools-function-calling/good-vs-bad-tool-descriptions.md": {
    "id": "les-1980",
@@ -7994,7 +7994,7 @@
   },
   "lessons/tools-function-calling/orchestration-quiz.md": {
    "id": "les-1995",
-   "fp": "5817d8a9b3a1b38d3bb0b57df1d0efd9999c2a72"
+   "fp": "0535e669013fb476f355c58914cc84345105b909"
   },
   "lessons/tools-function-calling/parallel-tool-calls-mechanics.md": {
    "id": "les-1996",
@@ -8034,7 +8034,7 @@
   },
   "lessons/tools-function-calling/reliability-quiz.md": {
    "id": "les-2005",
-   "fp": "646a1d5722762da1a7b0b87ff961a5320c611e7f"
+   "fp": "570d797106c6953e29eaf2f62a06077c658dfe4c"
   },
   "lessons/tools-function-calling/retry-strategies-for-tools.md": {
    "id": "les-2006",
@@ -8218,7 +8218,7 @@
   },
   "lessons/tools-function-calling/tool-selection-quiz.md": {
    "id": "les-2051",
-   "fp": "93197b6cdb8319fb68d3e81df140ffdb2cd20034"
+   "fp": "d2e4f84014ec4c106d616cb3206fc56e3c3e0067"
   },
   "lessons/tools-function-calling/tools-as-the-models-hands.md": {
    "id": "les-2052",
@@ -8258,55 +8258,55 @@
   },
   "questions/agents.mdx": {
    "id": "que-0001",
-   "fp": "3f214777ffb168892eaac352eacbe2bf32c7d46a"
+   "fp": "05fb4ab3b1bc4f92c70e8637d42e5da4ab5db04b"
   },
   "questions/ai-system-design.mdx": {
    "id": "que-0002",
-   "fp": "4e87b19e3b8b1821363c499d5436bd4ef50149a7"
+   "fp": "074c78282d6418c403f4c4f873d721c00e656683"
   },
   "questions/evals.mdx": {
    "id": "que-0003",
-   "fp": "89ba117cc9d5a17d109980bb8fda55300ffe0423"
+   "fp": "bf36ec04e461b2ff6b8b86cb2cf9aac752492d71"
   },
   "questions/llm-basics.mdx": {
    "id": "que-0004",
-   "fp": "90ea65b9529a2f56b7991c01819b6100676f5c8b"
+   "fp": "36eb24578e2e99629e6c623cf509b77e30191827"
   },
   "questions/mcp.mdx": {
    "id": "que-0005",
-   "fp": "ec37da93b679502c3a1b6edba61af41e0b27135d"
+   "fp": "fed3cdd75719ab2816452279aa11410bbdaf1806"
   },
   "questions/prompt-engineering.mdx": {
    "id": "que-0006",
-   "fp": "adf0a9d18d32cc965a3c29adaea7fee03595e4cf"
+   "fp": "4a7e17eb42f354b8da8b6c4c9e4c4fdc426095ca"
   },
   "questions/rag.mdx": {
    "id": "que-0007",
-   "fp": "ba495025b2d98208edefa049d46f515a02b6aa1a"
+   "fp": "b1246fb85d64bdc5820247a65cd3d9a8d3e45f78"
   },
   "scenarios/agent-approval.mdx": {
    "id": "sce-0001",
-   "fp": "e3b1df96523a979f5d451ce31947fc9e0e7c4b7d"
+   "fp": "b891d7f82e70e006e07331d78571c3fe9397713e"
   },
   "scenarios/document-qa.mdx": {
    "id": "sce-0002",
-   "fp": "6ed915fd0aa3a34482dc4baa53e3b84f6c1555f3"
+   "fp": "be23955672f89bc438794e54a24f61c3d6217813"
   },
   "scenarios/eval-release.mdx": {
    "id": "sce-0003",
-   "fp": "1084445314a9dcbd588fab6a2de0a4aeb5b5655f"
+   "fp": "f3e1cd685957e8411e1fa215425743ac43333182"
   },
   "scenarios/mcp-team-server.mdx": {
    "id": "sce-0004",
-   "fp": "04369731ef507f6e7a3167942b9c205a2cd103a3"
+   "fp": "fa4cf8170dff16f6eb91a1c76069edd08563936c"
   },
   "scenarios/streaming-research.mdx": {
    "id": "sce-0005",
-   "fp": "ceec69a4ee1ac7a36ea037e4affa49a1259a1466"
+   "fp": "6e69208c5a403d1c8f30f4d830b6e9d84eece5e8"
   },
   "scenarios/support-assistant.mdx": {
    "id": "sce-0006",
-   "fp": "8049c62af8c5f7bf9365b9f924ee942b20cf7826"
+   "fp": "20d5c47c821f09e58937c3527dc1559f230c9163"
   },
   "blog/agents-need-a-harness.mdx": {
    "id": "blo-0001",
@@ -8342,7 +8342,7 @@
   },
   "blog/why-there-is-no-certificate.mdx": {
    "id": "blo-0009",
-   "fp": "b7b5517ffa18e34a4024f451d3ad859c359b2eea"
+   "fp": "fcb2c96044e5b02c3327c6cda22ca7ca5b5789f6"
   },
   "blog/your-rag-problem-is-a-retrieval-problem.mdx": {
    "id": "blo-0010",
@@ -8350,39 +8350,39 @@
   },
   "guides/build-a-rag-pipeline-over-your-own-documents.md": {
    "id": "gui-0001",
-   "fp": "7268ef1c917330800e4dad2e1e1d8e3f2bf3c511"
+   "fp": "04ef8d8e0ebcdb4fccef0d0e37b71c417e4ffaa1"
   },
   "guides/build-a-tool-calling-agent-from-scratch.md": {
    "id": "gui-0002",
-   "fp": "306b4bd77ac92b6b3c0c990920c09fa9c063cbf2"
+   "fp": "684d53fd5eb14d419f1542aa32222ea1747506b6"
   },
   "guides/build-an-mcp-server-in-python.md": {
    "id": "gui-0003",
-   "fp": "0073d7e693e19ea944e1cfffa62b66016cbe7083"
+   "fp": "dda46336996bd5a042384c577f9a01a8bbc1350b"
   },
   "guides/cut-your-llm-bill.md": {
    "id": "gui-0004",
-   "fp": "0f6d0a53974c64c523cc360bbf6ad8faf0a6c61c"
+   "fp": "3776a9676f4748c9139a963794772a193b40a1f8"
   },
   "guides/defend-against-prompt-injection.md": {
    "id": "gui-0005",
-   "fp": "0221eaaff5a9fd49098b7a6301d05c0d4f744d25"
+   "fp": "923a87929490a172c3da7252071736122125c69b"
   },
   "guides/get-reliable-json-out-of-an-llm.md": {
    "id": "gui-0006",
-   "fp": "56e48e4f22915c8a858a82809922623dddd0c058"
+   "fp": "88bbc25e23fe1f2363f14ccfe0c85a88b32fa5ef"
   },
   "guides/rag-fine-tuning-or-a-longer-prompt.md": {
    "id": "gui-0007",
-   "fp": "594b97fae32664230c9ce19b2adcb022fba5d2ae"
+   "fp": "54c9e17a768a49f45fe322f9379cc79be15aefa0"
   },
   "guides/ship-your-first-ai-feature-to-production.md": {
    "id": "gui-0008",
-   "fp": "e86f752adcf1e325d1affeaa2e1c5e28a49e9487"
+   "fp": "e9ff5755b39da41fc0136c22570374c42865890e"
   },
   "guides/write-your-first-eval-for-an-ai-feature.md": {
    "id": "gui-0009",
-   "fp": "1ec939511f8b4b0d513109352c9ce773797de84e"
+   "fp": "0272dd0085a4eff79312224021f76f254fce854b"
   },
   "answers/ai-engineer-interview-questions.md": {
    "id": "ans-0001",
