@@ -36,3 +36,4 @@ Reproducibility and data provenance 25%; valid comparison and calculations 30%; 
 
 Do not report invented leaderboard results. Compare the reproduced observation with the stated claim, then explain plausible threats: version drift, selection, preprocessing leakage, compute constraints, dependence, measurement error, and external validity.
 
+**Related:** [Public-data project: Online Retail cohort, demand, and anomaly study](/learn/machine-learning/public-data-projects/ml-894-online-retail-cohort-and-anomaly-study)

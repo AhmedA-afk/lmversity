@@ -265,15 +265,15 @@ consolidation into a parent track, or a clearer curated-path role.
       projects, and a capstone where appropriate.
       *(coverage matrix + per-track "missing kinds" flags)*
 - [x] Verify repeated concepts link to a canonical explanation. (The six
-      strongest same-topic pairs now cross-link in both directions; 137 of 357
-      candidate pairs already link. ~220 remain in the review queue — the
+      strongest same-topic pairs now cross-link in both directions; 215 of 334
+      candidate pairs already link. ~119 remain in the review queue — the
       detector emits them but verdicts stay editorial.)
-- [x] Identify duplicate or conflicting explanations across tracks. (357
-      candidate pairs emitted by the title/slug-similarity detector; verdicts
-      recorded as they are reviewed — merge/redirect stay gated on written
-      evidence.)
-      *(candidate detection done — `registry.duplicates`: 357 fuzzy title/slug pairs,
-      220 not already cross-linked; merge/redirect verdicts need the editorial pass)*
+- [x] Identify duplicate or conflicting explanations across tracks. (334
+      candidate pairs emitted by the title/slug-similarity detector after the
+      distinctive-token fix; verdicts recorded as they are reviewed —
+      merge/redirect stay gated on written evidence.)
+      *(candidate detection done — `registry.duplicates`: 334 fuzzy title/slug pairs,
+      119 not already cross-linked; merge/redirect verdicts need the editorial pass)*
 - [ ] Identify abrupt jumps, orphan modules, missing bridges, and dead-end final lessons.
       *(dead-end finishes and orphan module boundaries now flagged mechanically;
       abrupt-jump detection between consecutive lessons still editorial)*
@@ -1972,7 +1972,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-15 — Expand-queue review + completeness gate
 
-- Reviewed the 45-item live expand queue. Finding: the wordCount-vs-median
+- Commit: `3ac0691`. Reviewed the 45-item live expand queue. Finding: the wordCount-vs-median
   signal systematically over-fires on dense formats — spec documents
   (assessments, public-data projects, reproductions, capstone handbook),
   the ML lab template (short answer / how it works / hands-on / checkpoint),
@@ -1990,6 +1990,30 @@ validation, deployment status, measured result when available, blockers, and nex
   investigate 468 / expand 31 (26 planned stubs + 5 live candidates).
 - Next batch: duplicate-pair verdicts (~220 unlinked), then the canonical
   content model.
+
+### 2026-09-15 — Duplicate-detector precision fix + 74 same-topic cross-links
+
+- Fixed a systematic false positive in the dup detector: sibling kind pages
+  (`mcp-auth-quiz` <> `mcp-transports-quiz`, `mcp-X-cheatsheet` <>
+  `mcp-Y-cheatsheet`) scored high on shared kind/track tokens alone. Pairs now
+  require at least one *distinctive* shared token (outside the kind/domain
+  stoplist). First attempt — stoplisting those tokens outright — made it worse
+  (smaller denominators → easier thresholds: 357→418); the gate-not-stoplist
+  version landed at **334 pairs**.
+- Reviewed the unlinked queue by kind: 136 same-kind pairs are the real
+  review set; ~57 complementary-kind pairs (concept↔quiz/mistakes) are
+  keep-both by design. Confirmed a systematic two-batches-coexist pattern:
+  numbered-course files vs named lessons on identical topics
+  (computation-graphs, RLHF/reward-models, lost-in-the-middle, causal-masking,
+  reverse-mode-autodiff), plus six same-directory public-data project twins
+  (adult-income, bike-sharing, bank-marketing, aps-failure, movielens,
+  online-retail each specified twice).
+- Cross-linked all 74 strong same-topic pairs in both directions via the
+  `**Related:**` convention (139 files edited). Unlinked queue: 193 → 119.
+  Verdicts (merge/redirect/canonical-choice) remain gated on written evidence.
+- Validation: `npm run registry` clean; `check:content` clean.
+- Next batch: remaining ~119 unlinked pairs (mostly cross-batch twins needing
+  canonical-choice verdicts), then Phase 1 canonical content model.
 
 ### 2026-09-14 — Master ecosystem backlog created
 

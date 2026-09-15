@@ -111,3 +111,5 @@ Sketch a nested cross-validation procedure for choosing model degree and lambda.
 Add a stability table across folds: validation score, coefficient norm, selected-feature set, and worst slice. It stops a slightly better mean score from hiding a model whose behavior changes whenever the sample changes.
 
 Also document the chosen penalty scale and preprocessing version.
+
+**Related:** [The Bias-Variance Tradeoff](/learn/ai-foundations/bias-variance-tradeoff)

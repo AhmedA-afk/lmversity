@@ -122,3 +122,5 @@ the gallery, and a short decision memo. Grade **30% mathematical and shape corre
 **20% operational judgement**. A submission fails if it reports only one aggregate
 metric, cannot reproduce a calculation, omits failed examples, or claims safety,
 causality, or explanation beyond what the experiment establishes.
+
+**Related:** [Transfer Learning, Fine-tuning, and Domain Shift](/learn/deep-learning/core/129-transfer-learning-fine-tuning-and-domain-shift)

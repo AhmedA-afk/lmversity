@@ -47,3 +47,5 @@ Additivity does not remove confounding, guarantee stable curves under correlated
 ## Continue, go deeper, apply it
 
 Use GAMs as interpretable challengers to boosting. Continue with survival outcomes when target observation itself is incomplete.
+
+**Related:** [Generalized linear models](/learn/machine-learning/ml-205-generalized-linear-models)

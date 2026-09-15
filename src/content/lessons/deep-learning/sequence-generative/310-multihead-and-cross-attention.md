@@ -90,3 +90,4 @@ Build at least four named cases: a nominal case, a length/scale extreme, a corru
 
 Submit a reproducible notebook or script, the unit tests, an experiment card, and a two-page technical memo. The memo must derive the key objective, show one numerical calculation, interpret three distinct scenarios, present an ablation, and make a release/no-release recommendation with a rollback condition. Grade derivation and assumptions (25%), correctness of implementation and tests (30%), quality of diagnostics and error analysis (25%), and the decision memo’s evidence, limitations, and safety reasoning (20%).
 
+**Related:** [Implement Multi-Head Attention](/learn/llm-foundations/implement-multi-head-attention)

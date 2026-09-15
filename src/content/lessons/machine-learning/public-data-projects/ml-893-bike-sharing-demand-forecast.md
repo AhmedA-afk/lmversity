@@ -72,3 +72,5 @@ Include a deliberately invalid random cross-validation experiment and quantify w
 ## Responsible-use constraints
 
 Do not use the project to make claims about particular riders or neighbourhoods. Describe forecasts as uncertain planning inputs that require capacity, equity, safety, and local-domain review—not automated allocation decisions.
+
+**Related:** [Public-data project: Bike Sharing forecasting](/learn/machine-learning/public-data-projects/bike-sharing-project)

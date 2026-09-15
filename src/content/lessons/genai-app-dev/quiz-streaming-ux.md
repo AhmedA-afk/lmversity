@@ -19,7 +19,7 @@ D. Raw chunked HTTP with a custom framing format, to avoid any SSE overhead.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [SSE vs WebSockets: Choosing a Transport](/learn/genai-app-dev/sse-vs-websockets-deep) is explicit that SSE is the default for exactly this shape — ask once, receive a stream of chunks until done — because it rides plain HTTP that proxies, load balancers, and browser tooling already understand.
+**Correct: C.** [SSE vs WebSockets: Choosing a Transport](/learn/genai-app-dev/sse-vs-websockets-deep) is explicit that SSE is the default for exactly this shape — ask once, receive a stream of chunks until done — because it rides plain HTTP that proxies, load balancers, and browser tooling already understand.
 
 **A** reaches for the more expensive option (stateful, sticky sessions, protocol upgrade) for a feature that never needs the client to send anything mid-stream — WebSockets solve a problem this feature doesn't have.
 
@@ -40,7 +40,7 @@ D. No — SSE connections can't actually be closed by the client once opened.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [SSE vs. WebSockets for Streaming LLM Output](/learn/genai-app-dev/sse-vs-websockets) and [Backpressure, Cancellation, and Abort Propagation](/learn/genai-app-dev/backpressure-and-cancellation) both cover this — stopping doesn't require sending a message *on* the stream; closing the connection (via `AbortController.abort()`) is itself the signal, and the server's disconnect handler is what turns that into an upstream cancellation.
+**Correct: C.** [SSE vs. WebSockets for Streaming LLM Output](/learn/genai-app-dev/sse-vs-websockets) and [Backpressure, Cancellation, and Abort Propagation](/learn/genai-app-dev/backpressure-and-cancellation) both cover this — stopping doesn't require sending a message *on* the stream; closing the connection (via `AbortController.abort()`) is itself the signal, and the server's disconnect handler is what turns that into an upstream cancellation.
 
 **A** overstates SSE's one-way limitation — a stop action doesn't need a reply channel, only a close signal, which SSE supports.
 
@@ -61,7 +61,7 @@ D. SSE requires a dedicated port that wasn't opened in production.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** This is the exact scenario [Streaming Failure Modes and How to Survive Them](/learn/genai-app-dev/streaming-failure-modes) opens with — code that streams correctly locally (no proxy in the path) breaks once a buffering proxy or a too-short idle timeout sits in front of it in production. The fix is `proxy_buffering off` plus `X-Accel-Buffering: no`, and a heartbeat comment for the idle-timeout case.
+**Correct: C.** This is the exact scenario [Streaming Failure Modes and How to Survive Them](/learn/genai-app-dev/streaming-failure-modes) opens with — code that streams correctly locally (no proxy in the path) breaks once a buffering proxy or a too-short idle timeout sits in front of it in production. The fix is `proxy_buffering off` plus `X-Accel-Buffering: no`, and a heartbeat comment for the idle-timeout case.
 
 **A** assumes a model-side cause with no evidence, when the symptom (works locally, breaks only behind the proxy) points directly at the infrastructure layer that differs between the two environments.
 
@@ -82,7 +82,7 @@ D. `Transfer-Encoding: chunked`
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [A Streaming SSE Endpoint in Next.js](/learn/genai-app-dev/streaming-sse-nextjs-endpoint) calls this out specifically — nginx checks `X-Accel-Buffering: no` and disables its own response buffering for that route when it sees it.
+**Correct: C.** [A Streaming SSE Endpoint in Next.js](/learn/genai-app-dev/streaming-sse-nextjs-endpoint) calls this out specifically — nginx checks `X-Accel-Buffering: no` and disables its own response buffering for that route when it sees it.
 
 **A** is a real and useful header for a streaming response, but it controls caching behavior, not buffering.
 
@@ -103,7 +103,7 @@ D. The browser displays a native "stream failed" dialog to the user.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [Streaming Failure Modes and How to Survive Them](/learn/genai-app-dev/streaming-failure-modes) names this directly — without a guaranteed terminal event on every code path, a mid-stream exception leaves the client with no way to distinguish "still generating" from "silently failed."
+**Correct: C.** [Streaming Failure Modes and How to Survive Them](/learn/genai-app-dev/streaming-failure-modes) names this directly — without a guaranteed terminal event on every code path, a mid-stream exception leaves the client with no way to distinguish "still generating" from "silently failed."
 
 **A** is false — a closed connection with no terminal event tells the client nothing about *why* it closed or whether more was expected; the client has to infer failure, not detect it directly, which is exactly the gap the terminal event closes.
 
@@ -124,7 +124,7 @@ D. The fix is to switch markdown libraries, since this is a bug specific to one 
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [Stop, Regenerate, and Rendering Partial Output](/learn/genai-app-dev/stop-regenerate-and-partial-render) works through this exact scenario — an unbalanced fence breaks rendering, and a simple fence-counting pass that closes any odd-numbered fence before rendering fixes it without needing to understand markdown structure at all.
+**Correct: C.** [Stop, Regenerate, and Rendering Partial Output](/learn/genai-app-dev/stop-regenerate-and-partial-render) works through this exact scenario — an unbalanced fence breaks rendering, and a simple fence-counting pass that closes any odd-numbered fence before rendering fixes it without needing to understand markdown structure at all.
 
 **A** is false for most lightweight markdown renderers — they render what's given, they don't validate or repair structural balance on their own.
 
@@ -145,7 +145,7 @@ D. Token usage will be identical to a normal turn, since resending history never
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [Stop, Regenerate, and Rendering Partial Output](/learn/genai-app-dev/stop-regenerate-and-partial-render) shows this precisely — leaving the stale assistant turn in context before regenerating means the model sees its own broken or mediocre answer as prior conversation and can continue from it instead of starting over. The fix is to splice that turn out before resending.
+**Correct: C.** [Stop, Regenerate, and Rendering Partial Output](/learn/genai-app-dev/stop-regenerate-and-partial-render) shows this precisely — leaving the stale assistant turn in context before regenerating means the model sees its own broken or mediocre answer as prior conversation and can continue from it instead of starting over. The fix is to splice that turn out before resending.
 
 **A** is the misconception the lesson corrects — resending everything unmodified reintroduces the exact content regenerate is supposed to replace.
 
@@ -166,7 +166,7 @@ D. This can only happen if `onClick` is bound twice by mistake.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [Chat UX That Doesn't Feel Broken](/learn/genai-app-dev/chat-ux-that-doesnt-feel-broken) walks through exactly this race — a guard that updates only after an `await` leaves a real window open, and the fix is a synchronous guard (a ref, checked and set instantly on click) rather than a state update that lands after the network call has already started.
+**Correct: C.** [Chat UX That Doesn't Feel Broken](/learn/genai-app-dev/chat-ux-that-doesnt-feel-broken) walks through exactly this race — a guard that updates only after an `await` leaves a real window open, and the fix is a synchronous guard (a ref, checked and set instantly on click) rather than a state update that lands after the network call has already started.
 
 **A** misdiagnoses the cause as a general React ordering issue rather than the specific timing gap between the click and the guard taking effect.
 
@@ -187,7 +187,7 @@ D. This is expected and unavoidable behavior for all streaming endpoints.
 
 <details><summary>Answer</summary>
 
-**Correct: A.** [Backpressure, Cancellation, and Abort Propagation](/learn/genai-app-dev/backpressure-and-cancellation) is built around exactly this gap — detecting a disconnect (`req.signal` firing) and *acting* on it (forwarding that into the provider call's `signal` option) are two separate steps, and skipping the second leaves the upstream call running even though the disconnect was technically observed.
+**Correct: C.** [Backpressure, Cancellation, and Abort Propagation](/learn/genai-app-dev/backpressure-and-cancellation) is built around exactly this gap — detecting a disconnect (`req.signal` firing) and *acting* on it (forwarding that into the provider call's `signal` option) are two separate steps, and skipping the second leaves the upstream call running even though the disconnect was technically observed.
 
 **B** is false — `AbortController`/`AbortSignal` are standard and supported; the scenario already shows `req.signal` being read.
 
@@ -208,7 +208,7 @@ D. It doesn't matter — all three shapes cost the same regardless of how many t
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [Accepting Multimodal Input: Images, Audio, Files](/learn/genai-app-dev/multimodal-input-images-audio-files) frames the decision exactly this way — the question that matters is how many times an asset will be sent, and a file reference is the shape built for "reused across many requests," trading one upload for zero marginal resend cost afterward.
+**Correct: C.** [Accepting Multimodal Input: Images, Audio, Files](/learn/genai-app-dev/multimodal-input-images-audio-files) frames the decision exactly this way — the question that matters is how many times an asset will be sent, and a file reference is the shape built for "reused across many requests," trading one upload for zero marginal resend cost afterward.
 
 **A** repeats the ~33% base64 inflation and the full transfer cost on every one of the fifteen calls — the most expensive option for a reused asset.
 

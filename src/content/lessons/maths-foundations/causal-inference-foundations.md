@@ -91,3 +91,5 @@ Randomisation does not solve interference, noncompliance, missing outcomes, or a
 - Continue: [Self-information and coding intuition](/learn/maths-foundations/self-information-and-coding-intuition)
 - Go deeper: [Data-generating processes, sampling, and selection bias](/learn/maths-foundations/data-generating-processes-sampling-and-selection-bias)
 - Apply it: Causal questions versus predictive models
+
+**Related:** [Causal graphs: confounding, interventions, and counterfactuals](/learn/classical-ai/knowledge-uncertainty/225-causal-graphs-confounding-interventions-and-counterfactuals)

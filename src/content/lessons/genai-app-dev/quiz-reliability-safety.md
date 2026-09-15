@@ -60,7 +60,7 @@ D. It guarantees every client gets a different delay, which the small-offset ver
 <details>
 <summary>Answer</summary>
 
-**Correct: B.** When many clients fail at the same instant, a small offset near a shared exponential value still lands most of them close together in time — they resynchronize and hit the provider as a group again. Drawing uniformly across the full range spreads retries out enough that the group doesn't reform. See [Exponential Backoff With Jitter](/learn/genai-app-dev/exponential-backoff-with-jitter).
+**Correct: C.** When many clients fail at the same instant, a small offset near a shared exponential value still lands most of them close together in time — they resynchronize and hit the provider as a group again. Drawing uniformly across the full range spreads retries out enough that the group doesn't reform. See [Exponential Backoff With Jitter](/learn/genai-app-dev/exponential-backoff-with-jitter).
 
 - A is wrong: full jitter isn't chosen for average latency — some clients do get a longer wait than a small-offset scheme would give them, and that's fine because the goal is spread, not speed.
 - C is wrong: both versions require exactly the same exponential calculation; the only difference is the range the random draw comes from.
@@ -80,7 +80,7 @@ D. Truncating the document before the injected text can appear
 <details>
 <summary>Answer</summary>
 
-**Correct: B.** The core defense is giving the model a structural, not just verbal, reason to read the embedded text as data rather than as a live instruction — a tagged boundary plus an explicit sentence about what the boundary means. See [Input Validation and Prompt-Injection Defense](/learn/genai-app-dev/input-validation-and-injection-defense).
+**Correct: C.** The core defense is giving the model a structural, not just verbal, reason to read the embedded text as data rather than as a live instruction — a tagged boundary plus an explicit sentence about what the boundary means. See [Input Validation and Prompt-Injection Defense](/learn/genai-app-dev/input-validation-and-injection-defense).
 
 - A is wrong: a keyword blocklist is a useful tripwire for logging and visibility, but it's trivially bypassed by rephrasing — it's not the actual defense, just a supplement to one.
 - C is wrong: temperature affects sampling randomness in the model's output, not whether it treats embedded text as an instruction — it has no bearing on injection susceptibility.
@@ -100,7 +100,7 @@ D. The policy should use RPM and TPM limits instead of a confidence score
 <details>
 <summary>Answer</summary>
 
-**Correct: B.** Routing needs both axes. A model can be highly confident and still be operating in a domain where the cost of being wrong is severe enough that even a low error rate is unacceptable — stakes caps what confidence alone is allowed to auto-approve. See [When to Put a Human in the Loop](/learn/genai-app-dev/human-in-the-loop-review).
+**Correct: C.** Routing needs both axes. A model can be highly confident and still be operating in a domain where the cost of being wrong is severe enough that even a low error rate is unacceptable — stakes caps what confidence alone is allowed to auto-approve. See [When to Put a Human in the Loop](/learn/genai-app-dev/human-in-the-loop-review).
 
 - A is wrong: raising the threshold doesn't fix the underlying problem — the policy would still route purely on confidence and still miss a high-stakes, high-confidence case at whatever number you pick.
 - C is wrong: this is the exact framing the lesson argues against — confidence and stakes are independent questions, and a policy that only asks one of them routes the wrong things through.

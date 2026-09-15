@@ -47,3 +47,5 @@ A contract cannot guarantee labels are correct, remove bias, or stop intentional
 ## Continue, go deeper, apply it
 
 Apply contracts to offline training tables, online feature APIs, labels, and prediction logs. Link each contract version to model lineage and release approvals.
+
+**Related:** [Data contracts and schema audits](/learn/deep-learning/practice/401-data-contracts-and-schema-audits)

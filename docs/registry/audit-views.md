@@ -1,6 +1,6 @@
 # Content registry — audit views
 
-Generated 2026-09-15T09:00:44.505Z by `scripts/build-content-registry.mjs`.
+Generated 2026-09-15T09:11:59.283Z by `scripts/build-content-registry.mjs`.
 2410 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
@@ -74,7 +74,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 | python-data-apis | 57 | 44 | 0 | 2 | 0 | 0 | 10 | 0 | 1 | 98% | 0% | 4% | 1615 | — | — |
 | ai-foundations | 160 | 127 | 9 | 0 | 10 | 0 | 10 | 0 | 4 | 68% | 0% | 1% | 1009 | — | yes |
 | llm-foundations | 131 | 113 | 0 | 0 | 10 | 0 | 7 | 0 | 1 | 48% | 94% | 0% | 796 | — | — |
-| classical-ai | 83 | 80 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 96% | 0% | 0% | 901 | — | — |
+| classical-ai | 83 | 80 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 96% | 0% | 0% | 902 | — | — |
 | machine-learning | 208 | 185 | 0 | 0 | 1 | 0 | 0 | 19 | 3 | 19% | 0% | 6% | 407 | — | — |
 | deep-learning | 136 | 125 | 0 | 0 | 0 | 0 | 0 | 8 | 3 | 98% | 0% | 0% | 852 | — | — |
 | prompt-engineering | 142 | 117 | 1 | 1 | 8 | 5 | 8 | 0 | 2 | 70% | 0% | 0% | 700 | — | yes |
@@ -102,7 +102,7 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 
 - missing kinds: common-mistakes
 - 6 island lessons (no in-body links)
-- 5 duplicate-candidate pairs in track
+- 2 duplicate-candidate pairs in track
 - promise gap: no live node title covers "no code required"
 
 ### maths-foundations — 193 files, 17 modules — starts: "Vectors: The Basic Unit of Data"
@@ -110,7 +110,7 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - modules without practice ending: "The essential maths for AI" ends on convexity-and-loss-landscapes (concept); "Single-variable calculus" ends on one-dimensional-optimisation-clinic (concept); "Decompositions and numerical linear algebra" ends on kernel-matrices-and-kernel-trick (concept); "Mathematical language and computation" ends on sequences-recurrences-polynomials-quadratics-and-growth-rates (concept) +12 more
 - dead-end finish: last live lesson is s4-6-causal-graphical-models-do-calculus-and-identifiability-limits (concept)
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet
-- 7 island lessons (no in-body links)
+- 6 island lessons (no in-body links)
 - 10 duplicate-candidate pairs in track
 - promise gap: no live node title covers "The minimum maths"
 
@@ -126,7 +126,7 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - modules without practice ending: "How models work" ends on ai-ml-dl-as-nested-fields (concept); "Inside the network" ends on ai-alignment-and-safety-basics (concept); "The wider picture" ends on why-nonlinearity-matters (concept)
 - dead-end finish: last live lesson is why-nonlinearity-matters (concept)
 - missing kinds: common-mistakes, cheatsheet
-- 48 island lessons (no in-body links)
+- 46 island lessons (no in-body links)
 - 1 thin vs family median
 - 4 duplicate-candidate pairs in track
 
@@ -142,7 +142,7 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - modules without practice ending: "Agents, robotics, and hybrid systems" ends on constraint-satisfaction (concept); "Original concept recaps" ends on uncertainty-and-decision (concept)
 - dead-end finish: last live lesson is uncertainty-and-decision (concept)
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet
-- 78 island lessons (no in-body links)
+- 72 island lessons (no in-body links)
 - 2 duplicate-candidate pairs in track
 
 ### machine-learning — 208 files, 12 modules — starts: "How to use the Classical ML course"
@@ -150,7 +150,7 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - modules without practice ending: "Orientation and problem framing" ends on generalization-and-evaluation (concept); "Data, features, and decisions" ends on ml-115-case-study-triage-under-review-capacity (concept); "Maths, objectives, and generalisation" ends on regularization-and-bias-variance (concept); "Linear and generalised models" ends on ml-216-case-study-demand-forecast-with-uncertainty (concept) +7 more
 - dead-end finish: last live lesson is deep-lectures/907-time-series-ranking-and-recommender-systems-under-temporal-exposure-feedback (concept)
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet
-- 128 island lessons (no in-body links)
+- 112 island lessons (no in-body links)
 - 13 duplicate-candidate pairs in track
 - promise gap: no live node title covers "model families"
 
@@ -159,13 +159,13 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - modules without practice ending: "Programme orientation" ends on dl-001-how-to-use-the-deep-learning-program (concept); "Sequences, transformers, generation, and RL" ends on sequence-generative/338-rlhf-preference-optimization-and-alignment-bridge (concept); "Concept recaps" ends on neural-networks-and-representations (concept)
 - dead-end finish: last live lesson is neural-networks-and-representations (concept)
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet
-- 74 island lessons (no in-body links)
+- 64 island lessons (no in-body links)
 - 3 duplicate-candidate pairs in track
 
 ### prompt-engineering — 142 files, 7 modules — starts: "The Whole Game: One Task From Vague Ask to Reliable Prompt"
 
 - modules without practice ending: "Prompt anatomy" ends on role-prompting (concept); "Examples and reasoning" ends on negative-instructions-pitfall (concept); "Reliability and iteration" ends on multi-turn-prompt-design (concept); "Prompts in production" ends on extended-thinking-and-reasoning-effort (concept) +2 more
-- 10 island lessons (no in-body links)
+- 6 island lessons (no in-body links)
 - 23 duplicate-candidate pairs in track
 
 ### context-engineering — 132 files, 5 modules — starts: "The Whole Game of Context Engineering"
@@ -196,7 +196,7 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 ### rag — 56 files, 0 modules — starts: "RAG, End to End: The Whole Game"
 
 - 2 island lessons (no in-body links)
-- 6 duplicate-candidate pairs in track
+- 5 duplicate-candidate pairs in track
 
 ### tools-function-calling — 123 files, 5 modules — starts: "The Whole Game: A Tool Call From Question to Answer"
 
@@ -208,7 +208,7 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - dead-end finish: last live lesson is server-design-and-permissions (concept)
 - missing kinds: capstone
 - 3 island lessons (no in-body links)
-- 43 duplicate-candidate pairs in track
+- 19 duplicate-candidate pairs in track
 
 ### agentic-ai — 28 files, 7 modules — starts: "What Makes Something an Agent"
 
@@ -267,8 +267,8 @@ and split always need a written human reason (see checklist).
 
 | disposition | items |
 |---|---:|
-| keep | 1911 |
-| investigate | 468 |
+| keep | 1950 |
+| investigate | 429 |
 | expand | 31 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
@@ -280,7 +280,7 @@ and split always need a written human reason (see checklist).
 | handsOn | 2193 | 1.47 | 550 | 53 | 1590 |
 | explanationQuality | 2193 | 1.93 | 45 | 56 | 2092 |
 | metadata | 2193 | 1.85 | 25 | 284 | 1884 |
-| linking | 2104 | 1.37 | 493 | 340 | 1271 |
+| linking | 2104 | 1.39 | 454 | 371 | 1279 |
 | freshnessHealth | 2410 | 0.78 | 789 | 1358 | 263 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
@@ -288,7 +288,7 @@ and split always need a written human reason (see checklist).
 
 ### Non-keep dispositions
 
-#### investigate: zero in-body internal links (468)
+#### investigate: zero in-body internal links (429)
 
 - /learn/agentic-ai/agents-vs-workflows — Choose an agent only when a workflow is not enough
 - /learn/agentic-ai/state-memory-and-recovery — Design agent state, memory, and recovery explicitly
@@ -328,9 +328,9 @@ and split always need a written human reason (see checklist).
 - /learn/ai-foundations/reliable-ai/210-privacy-threat-modeling-and-minimization — Privacy Threat Modeling and Data Minimization
 - /learn/ai-foundations/reliable-ai/211-privacy-preserving-learning-and-release — Privacy-Preserving Learning and Release
 - /learn/ai-foundations/reliable-ai/212-adversarial-ml-and-input-security — Adversarial ML and Input Security
-- /learn/ai-foundations/reliable-ai/213-model-supply-chain-and-artifact-security — Model Supply Chain and Artifact Security
-- /learn/ai-foundations/reliable-ai/214-alignment-objectives-and-reward-hacking — Alignment Objectives and Reward Hacking
-- … 428 more in content-registry.json
+- /learn/ai-foundations/reliable-ai/215-human-feedback-preference-data-and-rlhf — Human Feedback, Preference Data, and RLHF
+- /learn/ai-foundations/reliable-ai/216-red-teaming-and-misuse-evaluation — Red Teaming and Misuse Evaluation
+- … 389 more in content-registry.json
 
 #### expand: planned stub — no content yet (26)
 
@@ -383,7 +383,7 @@ and split always need a written human reason (see checklist).
 
 ## Duplicate candidates
 
-364 pairs by title/slug similarity (223 not already cross-linked) — candidates for the merge/redirect editorial pass, not verdicts. Pairs where one already links to the other are marked linked — often deliberate two-part lessons.
+334 pairs by title/slug similarity (119 not already cross-linked) — candidates for the merge/redirect editorial pass, not verdicts. Pairs where one already links to the other are marked linked — often deliberate two-part lessons.
 
 | item A | item B | jac | contain | stem | linked | scope |
 |---|---|---:|---:|---|---|---|
@@ -401,54 +401,54 @@ and split always need a written human reason (see checklist).
 | /learn/genai-app-dev/tool-calling-and-authority | /learn/genai-app-dev/tool-calling-as-authority | 0.8 | 1 |  | yes | same track |
 | /learn/prompt-engineering/ab-testing-in-production | /learn/prompt-engineering/ab-testing-prompts-in-production | 0.8 | 1 |  | yes | same track |
 | /learn/structured-outputs/json-schema-essentials-for-outputs | /learn/tools-function-calling/json-schema-for-tools-essentials | 0.8 | 1 |  | yes | structured-outputs × tools-function-calling |
-| /learn/harness-design/the-control-loop | /learn/tools-function-calling/building-a-browser-tool-loop | 0.75 | 1 |  |  | harness-design × tools-function-calling |
+| /learn/harness-design/the-control-loop | /learn/tools-function-calling/building-a-browser-tool-loop | 0.75 | 1 |  | yes | harness-design × tools-function-calling |
 | /learn/context-engineering/context-engineering-vs-prompting | /answers/prompt-engineering-vs-context-engineering | 0.75 | 1 |  | yes | context-engineering × answers |
 | /learn/llm-foundations/context-window-mechanics-and-limits | /learn/llm-foundations/context-window-mechanics | 0.75 | 1 | yes | yes | same track |
 | /learn/harness-design/subprocess-isolation-and-sandboxing | /learn/tools-function-calling/sandboxing-tool-execution | 0.75 | 1 |  | yes | harness-design × tools-function-calling |
 | /learn/tools-function-calling/testing-and-debugging-tool-calls | /learn/tools-function-calling/testing-tool-calls-strategies | 0.75 | 1 |  | yes | same track |
 | /learn/ai-foundations/narrow-ai-vs-general-ai | /learn/ai-foundations/narrow-vs-general-ai-in-practice | 0.75 | 1 |  | yes | same track |
-| /learn/structured-outputs/building-an-extraction-eval-harness | /learn/tools-function-calling/building-a-tool-use-eval-harness | 0.75 | 1 |  |  | structured-outputs × tools-function-calling |
+| /learn/structured-outputs/building-an-extraction-eval-harness | /learn/tools-function-calling/building-a-tool-use-eval-harness | 0.75 | 1 |  | yes | structured-outputs × tools-function-calling |
 | /learn/llm-foundations/grokking-and-double-descent-mechanics | /learn/llm-foundations/grokking-and-double-descent | 0.75 | 1 | yes | yes | same track |
 | /learn/genai-app-dev/rate-limits-and-retry-strategies | /learn/genai-app-dev/rate-limits-and-retry | 0.75 | 1 | yes | yes | same track |
 | /learn/prompt-engineering/negative-instructions-pitfall | /learn/prompt-engineering/negative-instructions-problem | 0.75 | 1 |  | yes | same track |
 | /learn/tools-function-calling/schema-versioning-strategies | /learn/tools-function-calling/tool-schema-versioning | 0.71 | 1 |  | yes | same track |
-| /learn/ai-foundations/ai-systems/111-alpha-beta-pruning-and-move-ordering | /learn/classical-ai/search-planning/113-alpha-beta-pruning-bounds-move-ordering-and-exactness | 0.71 | 1 |  |  | ai-foundations × classical-ai |
+| /learn/ai-foundations/ai-systems/111-alpha-beta-pruning-and-move-ordering | /learn/classical-ai/search-planning/113-alpha-beta-pruning-bounds-move-ordering-and-exactness | 0.71 | 1 |  | yes | ai-foundations × classical-ai |
 | /learn/structured-outputs/schema-versioning-and-migration | /learn/structured-outputs/schema-versioning-basics | 0.71 | 1 |  | yes | same track |
 | /learn/context-engineering/cache-aware-context-design-deep | /learn/context-engineering/cache-aware-context-design | 0.67 | 1 | yes | yes | same track |
 | /learn/ai-foundations/ai-vs-ml-vs-deep-learning | /answers/difference-between-ai-and-machine-learning | 0.67 | 1 |  | yes | ai-foundations × answers |
-| /learn/ai-literacy/deciding-when-and-which-ai-quiz | /learn/ai-literacy/what-ai-actually-is-quiz | 0.67 | 1 |  |  | same track |
-| /learn/deep-learning/core/129-transfer-learning-fine-tuning-and-domain-shift | /learn/deep-learning/vision/211-transfer-learning-and-fine-tuning | 0.67 | 1 |  |  | same track |
+| /learn/deep-learning/core/129-transfer-learning-fine-tuning-and-domain-shift | /learn/deep-learning/vision/211-transfer-learning-and-fine-tuning | 0.67 | 1 |  | yes | same track |
 | /learn/prompt-engineering/automatic-prompt-optimization-dspy | /learn/prompt-engineering/automatic-prompt-optimization | 0.67 | 1 | yes | yes | same track |
 | /learn/ai-foundations/applied-ai/308-training-and-inference-economics | /learn/ai-foundations/training-vs-inference | 0.67 | 1 |  |  | same track |
 | /learn/ai-foundations/training-vs-inference | /learn/llm-foundations/training-time-vs-inference-time | 0.67 | 1 |  | yes | ai-foundations × llm-foundations |
 | /learn/ai-foundations/embeddings-quiz | /learn/maths-foundations/the-geometry-of-embeddings | 0.67 | 1 |  | yes | ai-foundations × maths-foundations |
 | /learn/context-engineering/context-engineering-vs-prompting | /learn/prompt-engineering/what-prompt-engineering-is | 0.67 | 1 |  |  | context-engineering × prompt-engineering |
-| /learn/prompt-engineering/what-prompt-engineering-is | /learn/tools-function-calling/descriptions-are-prompts | 0.67 | 1 |  |  | prompt-engineering × tools-function-calling |
+| /learn/prompt-engineering/what-prompt-engineering-is | /learn/tools-function-calling/descriptions-are-prompts | 0.67 | 1 |  | yes | prompt-engineering × tools-function-calling |
 | /learn/context-engineering/long-context-strategies | /learn/context-engineering/million-token-window-strategies | 0.67 | 1 |  | yes | same track |
 | /learn/genai-app-dev/quiz-reliability-safety | /learn/tools-function-calling/reliability-quiz | 0.67 | 1 |  |  | genai-app-dev × tools-function-calling |
 | /learn/tools-function-calling/chaining-into-dag-workflows | /learn/tools-function-calling/chaining-tools-into-workflows | 0.67 | 1 |  | yes | same track |
 | /learn/structured-outputs/reliability-design-mistakes | /learn/tools-function-calling/reliability-common-mistakes | 0.67 | 1 |  |  | structured-outputs × tools-function-calling |
-| /learn/hallucinations/why-rlhf-hurts-calibration | /learn/llm-foundations/instruction-tuning-and-rlhf | 0.6 | 1 |  |  | hallucinations × llm-foundations |
+| /learn/hallucinations/why-rlhf-hurts-calibration | /learn/llm-foundations/instruction-tuning-and-rlhf | 0.6 | 1 |  | yes | hallucinations × llm-foundations |
 | /learn/tools-function-calling/benchmarking-tool-use | /learn/tools-function-calling/benchmarking-with-bfcl | 0.57 | 1 |  | yes | same track |
 | /learn/tools-function-calling/streaming-partial-tool-calls-concept | /learn/tools-function-calling/streaming-partial-tool-calls | 0.57 | 1 | yes | yes | same track |
-| /learn/machine-learning/public-data-projects/ml-895-movielens-recommendation-and-feedback | /learn/machine-learning/public-data-projects/movielens-project | 0.56 | 1 |  |  | same track |
+| /learn/machine-learning/public-data-projects/ml-895-movielens-recommendation-and-feedback | /learn/machine-learning/public-data-projects/movielens-project | 0.56 | 1 |  | yes | same track |
 | /learn/context-engineering/context-handoff-between-agents-deep | /learn/context-engineering/context-handoff-between-agents | 0.5 | 1 | yes | yes | same track |
-| /learn/context-engineering/conversation-memory-and-state | /learn/context-engineering/cross-session-memory-architecture | 0.5 | 1 |  |  | same track |
-| /learn/context-engineering/tokens-are-not-words | /learn/llm-foundations/why-models-need-tokens-not-characters | 0.5 | 1 |  |  | context-engineering × llm-foundations |
-| /learn/ai-foundations/what-a-model-actually-is | /learn/llm-foundations/what-a-language-model-actually-computes | 0.5 | 1 |  |  | ai-foundations × llm-foundations |
-| /learn/ai-foundations/what-a-model-actually-is | /learn/llm-foundations/what-the-internet-teaches-a-model | 0.5 | 1 |  |  | ai-foundations × llm-foundations |
-| /learn/prompt-engineering/what-prompting-is | /learn/prompt-engineering/what-role-prompting-changes | 0.5 | 1 |  |  | same track |
-| /learn/genai-app-dev/tool-call-authority-mistakes | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  |  | genai-app-dev × tools-function-calling |
+| /learn/context-engineering/conversation-memory-and-state | /learn/context-engineering/cross-session-memory-architecture | 0.5 | 1 |  | yes | same track |
+| /learn/context-engineering/tokens-are-not-words | /learn/llm-foundations/why-models-need-tokens-not-characters | 0.5 | 1 |  | yes | context-engineering × llm-foundations |
+| /learn/ai-foundations/what-a-model-actually-is | /learn/llm-foundations/what-a-language-model-actually-computes | 0.5 | 1 |  | yes | ai-foundations × llm-foundations |
+| /learn/ai-foundations/what-a-model-actually-is | /learn/llm-foundations/what-the-internet-teaches-a-model | 0.5 | 1 |  | yes | ai-foundations × llm-foundations |
+| /learn/prompt-engineering/what-prompting-is | /learn/prompt-engineering/what-role-prompting-changes | 0.5 | 1 |  | yes | same track |
+| /learn/genai-app-dev/tool-call-authority-mistakes | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  | yes | genai-app-dev × tools-function-calling |
 | /learn/harness-design/parallel-tool-scheduling | /learn/tools-function-calling/parallel-tool-calls | 0.5 | 1 |  | yes | harness-design × tools-function-calling |
-| /learn/structured-outputs/tool-and-function-schemas-for-extraction | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  |  | structured-outputs × tools-function-calling |
+| /learn/structured-outputs/tool-and-function-schemas-for-extraction | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  | yes | structured-outputs × tools-function-calling |
 | /learn/tools-function-calling/foundations-common-mistakes | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  |  | same track |
 | /learn/tools-function-calling/foundations-quiz | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  |  | same track |
 | /learn/tools-function-calling/parallel-tool-calls-mechanics | /learn/tools-function-calling/parallel-tool-calls | 0.5 | 1 | yes | yes | same track |
-| /learn/tools-function-calling/taxonomy-of-tool-failures | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  |  | same track |
-| /learn/tools-function-calling/tool-calling-across-providers | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  |  | same track |
+| /learn/tools-function-calling/taxonomy-of-tool-failures | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  | yes | same track |
+| /learn/tools-function-calling/tool-calling-across-providers | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  | yes | same track |
 | /learn/tools-function-calling/tool-calling-glossary-cheatsheet | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  | yes | same track |
+| /learn/context-engineering/cache-aware-context-design | /learn/context-engineering/ordering-for-cache-hits | 0.5 | 1 |  | yes | same track |
 
-_… 304 more pairs in content-registry.json (`duplicates`)_
+_… 274 more pairs in content-registry.json (`duplicates`)_
 
 ## Title-overpromise candidates
 
@@ -612,7 +612,7 @@ Largest queue; full list in JSON. Vendor-signal sample:
 ### no published or updated date (0)
 
 
-### zero in-body internal links (template nav still applies) (522)
+### zero in-body internal links (template nav still applies) (483)
 
 - /learn/agentic-ai/agents-vs-workflows — Choose an agent only when a workflow is not enough
 - /learn/agentic-ai/state-memory-and-recovery — Design agent state, memory, and recovery explicitly
@@ -653,8 +653,8 @@ Largest queue; full list in JSON. Vendor-signal sample:
 - /learn/ai-foundations/reliable-ai/210-privacy-threat-modeling-and-minimization — Privacy Threat Modeling and Data Minimization
 - /learn/ai-foundations/reliable-ai/211-privacy-preserving-learning-and-release — Privacy-Preserving Learning and Release
 - /learn/ai-foundations/reliable-ai/212-adversarial-ml-and-input-security — Adversarial ML and Input Security
-- /learn/ai-foundations/reliable-ai/213-model-supply-chain-and-artifact-security — Model Supply Chain and Artifact Security
-- … 482 more
+- /learn/ai-foundations/reliable-ai/215-human-feedback-preference-data-and-rlhf — Human Feedback, Preference Data, and RLHF
+- … 443 more
 
 ### live file not in curriculum (0)
 

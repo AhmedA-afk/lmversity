@@ -69,3 +69,5 @@ Evaluate the primary task with time-held-out metrics. Show performance by countr
 ## Responsible-use constraints
 
 Never expose CustomerID-level outputs or infer a customer's value, trustworthiness, or fraud propensity. Anomaly scores must be presented as a limited, human-reviewed operations signal with documented false-positive harm.
+
+**Related:** [Public-data project: Online Retail customer analysis](/learn/machine-learning/public-data-projects/online-retail-project)

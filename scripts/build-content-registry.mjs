@@ -861,6 +861,12 @@ for (const it of items) scoreItem(it);
 // decide merge/redirect with evidence. Candidates only; nothing auto-decided.
 
 const STOPWORDS = new Set('a an and are as at be by for from how in is it its of on or that the this to vs what when where which who why with your'.split(' '));
+// kind/format and domain-generic tokens: shared occurrences are not evidence
+// of duplication — a pair must share at least one token outside this set.
+const GENERIC_TOKENS = new Set(('quiz quizzes cheatsheet mistakes mistake common worked example examples explained essentials compared deep dive '
+  + 'overview introduction intro fundamentals basics guide lesson lessons course part questions answers '
+  + 'ai ml llm llms model models agent agents tool tools prompt prompts prompting mcp rag api apis data '
+  + 'system systems app apps feature features not no do does can using use used build building').split(' '));
 const titleToks = (t) => new Set((t ?? '').toLowerCase().replace(/['’]/g, '').replace(/[^a-z0-9]+/g, ' ').split(/\s+/).filter((w) => w.length > 1 && !STOPWORDS.has(w)));
 const dupScored = items.filter((i) => i.title && ['lessons', 'fde', 'answers', 'guides', 'blog'].includes(i.collection));
 const tokenIndex = new Map();
@@ -885,7 +891,8 @@ for (const idxList of tokenIndex.values()) {
       pairSeen.add(key);
       const A = dupScored[i], B = dupScored[j];
       const ta = itemToks.get(i), tb = itemToks.get(j);
-      const inter = [...ta].filter((w) => tb.has(w)).length;
+      const interToks = [...ta].filter((w) => tb.has(w));
+      const inter = interToks.length;
       if (inter < 2) continue;
       const union = ta.size + tb.size - inter;
       const jaccard = inter / union;
@@ -893,7 +900,10 @@ for (const idxList of tokenIndex.values()) {
       // slug-stem containment: cosine-similarity ⊂ cosine-similarity-angular-distance-…
       const sa = (A.slug ?? '').split('/').pop(), sb = (B.slug ?? '').split('/').pop();
       const slugStem = sa !== sb && sa.length >= 8 && (sb.startsWith(sa + '-') || sa.startsWith(sb + '-'));
-      if (jaccard >= 0.5 || containment >= 0.7 || slugStem) {
+      // require a distinctive shared token — sibling quizzes/cheatsheets
+      // sharing only "mcp" + "quiz" are not duplicate candidates
+      const distinctive = interToks.some((w) => !GENERIC_TOKENS.has(w));
+      if ((jaccard >= 0.5 || containment >= 0.7 || slugStem) && distinctive) {
         const linked = (A.internalLinks ?? []).includes(B.route) || (B.internalLinks ?? []).includes(A.route);
         duplicates.push({
           a: { route: A.route, slug: A.slug, title: A.title, track: A.track ?? A.collection },

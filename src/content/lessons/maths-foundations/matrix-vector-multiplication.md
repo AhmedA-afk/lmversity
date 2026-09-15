@@ -130,3 +130,5 @@ linear or affine calculation combines the coordinates.
 - Continue: [Matrix–matrix multiplication and batching](/learn/maths-foundations/matrix-matrix-multiplication-and-batching)
 - Go deeper: [Matrix addition, scaling, transpose, and symmetry](/learn/maths-foundations/matrix-addition-scaling-transpose-and-symmetry)
 - Apply it: Linear algebra for ML
+
+**Related:** [Matrix Multiplication, Step by Step](/learn/maths-foundations/matrix-multiplication-mechanics)

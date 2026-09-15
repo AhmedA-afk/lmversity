@@ -86,3 +86,4 @@ Design and implement a local search solver or planner for one of the scenarios a
 
 You can move on when you can explain the model before naming the algorithm, derive one decision trace by hand, and state exactly what guarantee depends on which assumption. You should also be able to say what the system does when those assumptions fail. That is the difference between invoking local search and engineering a classical AI component that another person can inspect and trust.
 
+**Related:** [Local Search, Hill Climbing, and Stochastic Optimization](/learn/ai-foundations/ai-systems/109-local-search-hill-climbing-and-stochastic-optimization)

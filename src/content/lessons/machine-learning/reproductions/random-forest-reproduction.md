@@ -36,3 +36,4 @@ Reproducibility and data provenance 25%; valid comparison and calculations 30%; 
 
 Do not report invented leaderboard results. Compare the reproduced observation with the stated claim, then explain plausible threats: version drift, selection, preprocessing leakage, compute constraints, dependence, measurement error, and external validity.
 
+**Related:** [Random forests and out-of-bag evaluation](/learn/machine-learning/ml-307-random-forests-and-out-of-bag-evaluation)

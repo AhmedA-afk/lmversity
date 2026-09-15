@@ -79,3 +79,4 @@ Choose a small decision domain such as fault triage, eligibility review, or inve
 
 You are ready to continue when you can explain which parts of a result are observed, inferred, estimated, and chosen by policy. You should be able to reproduce the worked calculation, identify one assumption whose failure would invalidate it, and design a safe fallback when the system cannot justify a conclusion.
 
+**Related:** [Hidden Markov models, filtering, and decoding](/learn/maths-foundations/s2-9-hidden-markov-models-filtering-and-decoding)

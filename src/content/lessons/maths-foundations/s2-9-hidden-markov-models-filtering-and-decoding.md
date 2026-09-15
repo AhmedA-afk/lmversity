@@ -115,3 +115,5 @@ mis-specified model rather than strong evidence.
 - Continue: [Graph notation, adjacency, incidence, and degree matrices](/learn/maths-foundations/s3-1-graph-notation-adjacency-incidence-and-degree-matrices)
 - Go deeper: Bayesian posterior inference and predictive checks
 - Apply it: Probabilistic modelling in ML
+
+**Related:** [Hidden Markov models: filtering, smoothing, and Viterbi](/learn/classical-ai/knowledge-uncertainty/220-hidden-markov-models-filtering-smoothing-and-viterbi)

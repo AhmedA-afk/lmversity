@@ -67,3 +67,4 @@ Tune a PID controller from a logged step response and demonstrate bounded recove
 - Is an effect checked independently after action?
 - Can another engineer replay the trace and understand the safe fallback?
 
+**Related:** [Robot Control, Feedback, and Safety Envelopes](/learn/ai-foundations/ai-systems/127-robot-control-feedback-and-safety-envelopes)

@@ -68,3 +68,5 @@ For ranking, report Recall@K, NDCG@K, coverage, novelty/popularity distribution,
 ## Responsible-use constraints
 
 Do not infer identity, demographics, or sensitive preferences. Do not describe offline metric gains as user benefit, and do not deploy or personalise from this data. Explicitly discuss popularity concentration, filter bubbles, and the absence of exposure/randomisation data.
+
+**Related:** [Public-data project: MovieLens recommendation](/learn/machine-learning/public-data-projects/movielens-project)

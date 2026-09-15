@@ -69,3 +69,5 @@ Tests depend on their sampling assumptions and cannot establish causation from a
 ## Continue, go deeper, apply it
 
 Continue with multiple comparisons and research degrees of freedom. Go deeper with sequential testing and Bayesian decision analysis. Apply this by adding a practical-effect threshold to experiment templates.
+
+**Related:** [Hypothesis tests, p-values, and permutation tests](/learn/maths-foundations/hypothesis-tests-p-values-and-permutation-tests)

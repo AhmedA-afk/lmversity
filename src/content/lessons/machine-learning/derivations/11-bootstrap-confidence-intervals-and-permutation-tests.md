@@ -48,3 +48,5 @@ Small samples, heavy tails, dependent data, tuning-induced selection, and out-of
 ## Nearby course topics
 
 Continue with resampling/bootstrap confidence intervals, statistical testing for ML, multiple comparisons, and experimental design.
+
+**Related:** [Resampling, bootstrap, and confidence intervals](/learn/machine-learning/ml-502-resampling-bootstrap-and-confidence-intervals)

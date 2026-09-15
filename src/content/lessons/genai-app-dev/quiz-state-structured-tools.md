@@ -35,7 +35,7 @@ D. Only the first message of a conversation needs to be resent; later ones can b
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [Session and State for Multi-Turn Features](/learn/genai-app-dev/session-and-state-management) frames this directly: statelessness is what lets providers scale requests across any server without pinning a session to one machine — the cost is that your application, not the provider, is responsible for reconstructing continuity on every call.
+**Correct: C.** [Session and State for Multi-Turn Features](/learn/genai-app-dev/session-and-state-management) frames this directly: statelessness is what lets providers scale requests across any server without pinning a session to one machine — the cost is that your application, not the provider, is responsible for reconstructing continuity on every call.
 
 - A dismisses a real architectural reason as a habit.
 - B is correct.
@@ -53,7 +53,7 @@ D. Both approaches keep every turn, just reformatted
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [Trimming: Sliding Windows and Rolling Summaries](/learn/genai-app-dev/sliding-window-and-summarization-trim) builds exactly this contrast — at a tight budget, the window strategy drops the fact that a fix was already tried, while the summary strategy keeps a compressed version of it, at the cost of one extra model call and some precision.
+**Correct: C.** [Trimming: Sliding Windows and Rolling Summaries](/learn/genai-app-dev/sliding-window-and-summarization-trim) builds exactly this contrast — at a tight budget, the window strategy drops the fact that a fix was already tried, while the summary strategy keeps a compressed version of it, at the cost of one extra model call and some precision.
 
 - A is wrong: dropped information is not equivalent between the two — one is a clean loss, the other a lossy-but-present compression.
 - B is correct.
@@ -71,7 +71,7 @@ D. It prevents the conversation from ever being summarized
 
 <details><summary>Answer</summary>
 
-**Correct: B.** As stated directly in [Trimming: Sliding Windows and Rolling Summaries](/learn/genai-app-dev/sliding-window-and-summarization-trim): check first, trim only when you have to — the rolling-summary path in particular costs a real extra model call, and most turns simply don't need it yet.
+**Correct: C.** As stated directly in [Trimming: Sliding Windows and Rolling Summaries](/learn/genai-app-dev/sliding-window-and-summarization-trim): check first, trim only when you have to — the rolling-summary path in particular costs a real extra model call, and most turns simply don't need it yet.
 
 - A undersells the cost: the summary strategy specifically involves an extra model call, which is not free to run unconditionally.
 - B is correct.
@@ -89,7 +89,7 @@ D. There's no risk as long as the prompt asks for a number
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [Structured Output Failures and Repair Traps](/learn/genai-app-dev/structured-output-failures) opens with exactly this failure: a schema answers "is this the JSON I asked for," where `JSON.parse` only answers "is this JSON at all."
+**Correct: C.** [Structured Output Failures and Repair Traps](/learn/genai-app-dev/structured-output-failures) opens with exactly this failure: a schema answers "is this the JSON I asked for," where `JSON.parse` only answers "is this JSON at all."
 
 - A is the core misconception the mistake is built on.
 - B is correct.
@@ -107,7 +107,7 @@ D. The cap prevents the model from ever seeing its own validation errors
 
 <details><summary>Answer</summary>
 
-**Correct: A.** [Schema, Validation, and Auto-Repair](/learn/genai-app-dev/json-schema-and-validation) is explicit that the cap is "the difference between a bug and an incident" — an uncapped loop against an unsatisfiable schema or a genuinely ambiguous input has no natural stopping point.
+**Correct: C.** [Schema, Validation, and Auto-Repair](/learn/genai-app-dev/json-schema-and-validation) is explicit that the cap is "the difference between a bug and an incident" — an uncapped loop against an unsatisfiable schema or a genuinely ambiguous input has no natural stopping point.
 
 - A is correct.
 - B misattributes the reason — it's about bounding cost and failure mode, not rate-limit compliance specifically.
@@ -125,7 +125,7 @@ D. This only matters for numeric fields, never for string enums
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [Structured Output Failures and Repair Traps](/learn/genai-app-dev/structured-output-failures) names this directly: a prose-described constraint is not an enforced one, and the fix is to use the provider's native schema/tool-calling enum mechanism, then validate again in code.
+**Correct: C.** [Structured Output Failures and Repair Traps](/learn/genai-app-dev/structured-output-failures) names this directly: a prose-described constraint is not an enforced one, and the fix is to use the provider's native schema/tool-calling enum mechanism, then validate again in code.
 
 - A is the mistake itself, restated as if it were safe.
 - B is correct.
@@ -143,7 +143,7 @@ D. There's no functional difference between the two for this use case
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [Implementing the Tool-Call Loop](/learn/genai-app-dev/implementing-a-tool-call-loop) makes this exact point: a model asking for weather in three cities shouldn't have all three fail because one city's lookup threw — each result is matched back by `tool_use_id` and a failure becomes a handled `is_error` result, not an uncaught exception.
+**Correct: C.** [Implementing the Tool-Call Loop](/learn/genai-app-dev/implementing-a-tool-call-loop) makes this exact point: a model asking for weather in three cities shouldn't have all three fail because one city's lookup threw — each result is matched back by `tool_use_id` and a failure becomes a handled `is_error` result, not an uncaught exception.
 
 - A misdescribes what `allSettled` does — it doesn't skip error handling, it captures each outcome individually.
 - B is correct.
@@ -183,7 +183,7 @@ D. The problem is that the read tool is too slow, not that the write tool is ung
 
 <details><summary>Answer</summary>
 
-**Correct: B.** This is the exact asymmetry from [Tool Calls Are Requests for Authority](/learn/genai-app-dev/tool-calling-as-authority) and [Two Tools: A Read API and a Guarded DB Write](/learn/genai-app-dev/building-a-weather-and-db-tool): identical tool-declaration shape does not imply identical execution risk, and here `adjustBalance` runs directly on `args.amount` with no range check, no confirmation, and no audit entry — a wrong or manipulated amount changes real account state immediately, exactly the gap [Tool-Calling Authority Mistakes](/learn/genai-app-dev/tool-call-authority-mistakes) catalogs as "executing a write tool with only schema validation."
+**Correct: C.** This is the exact asymmetry from [Tool Calls Are Requests for Authority](/learn/genai-app-dev/tool-calling-as-authority) and [Two Tools: A Read API and a Guarded DB Write](/learn/genai-app-dev/building-a-weather-and-db-tool): identical tool-declaration shape does not imply identical execution risk, and here `adjustBalance` runs directly on `args.amount` with no range check, no confirmation, and no audit entry — a wrong or manipulated amount changes real account state immediately, exactly the gap [Tool-Calling Authority Mistakes](/learn/genai-app-dev/tool-call-authority-mistakes) catalogs as "executing a write tool with only schema validation."
 
 - A is wrong: scoping to `ctx.userId` prevents touching *another* user's account, but does nothing to validate the amount or record what happened — the write itself is still ungated.
 - B is correct.
@@ -201,7 +201,7 @@ D. It only matters for read tools, never for consequential write-capable loops
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [Multi-Step Tool Loops and Where They Go Wrong](/learn/genai-app-dev/multi-step-agentic-tool-loops) makes this distinction directly: "the model stopped" is not the same fact as "the model succeeded," and for a consequential loop, only an explicit signal tells the two apart.
+**Correct: C.** [Multi-Step Tool Loops and Where They Go Wrong](/learn/genai-app-dev/multi-step-agentic-tool-loops) makes this distinction directly: "the model stopped" is not the same fact as "the model succeeded," and for a consequential loop, only an explicit signal tells the two apart.
 
 - A is the exact conflation this stopping condition is designed to catch.
 - B is correct.

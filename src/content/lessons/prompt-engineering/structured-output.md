@@ -70,3 +70,5 @@ Schemas do not guarantee truth, protect against prompt injection, or verify that
 - Continue: Reasoning and decomposition
 - Go deeper: Tool calling
 - Apply it: Red-team output contracts
+
+**Related:** [Structured Output Failures and Repair Traps](/learn/genai-app-dev/structured-output-failures), [Why Application Code Needs Structured Output](/learn/genai-app-dev/structured-output-in-apps), [Structured Output Failure Modes and How to Spot Them](/learn/structured-outputs/structured-output-failure-modes)

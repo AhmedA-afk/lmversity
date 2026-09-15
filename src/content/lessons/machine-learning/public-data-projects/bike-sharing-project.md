@@ -36,3 +36,4 @@ Reproducibility and data provenance 25%; valid comparison and calculations 30%; 
 
 Do not report invented leaderboard results. Compare the reproduced observation with the stated claim, then explain plausible threats: version drift, selection, preprocessing leakage, compute constraints, dependence, measurement error, and external validity.
 
+**Related:** [Public-data project: Bike-sharing demand forecast under temporal leakage](/learn/machine-learning/public-data-projects/ml-893-bike-sharing-demand-forecast)

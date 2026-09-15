@@ -47,3 +47,5 @@ A correct range does not guarantee a correct feature set, independent observatio
 ## Continue, go deeper, apply it
 
 Proceed to logistic likelihood, count models, and robust alternatives. Use GLMs when the target's support should shape the model.
+
+**Related:** [Generalized additive models](/learn/machine-learning/ml-210-generalized-additive-models)

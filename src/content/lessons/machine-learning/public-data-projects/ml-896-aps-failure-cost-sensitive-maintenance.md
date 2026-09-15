@@ -75,3 +75,5 @@ Report metric uncertainty or fold variation. Include an ablation removing missin
 ## Responsible-use constraints
 
 This project must never recommend a vehicle be released, grounded, or serviced autonomously. Treat scores as hypothetical queue-prioritisation inputs whose false negatives and false positives both require safety-engineering, human inspection, and process-level accountability beyond what this dataset can support.
+
+**Related:** [Public-data project: APS Failure under imbalance](/learn/machine-learning/public-data-projects/aps-failure-project)

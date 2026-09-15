@@ -19,7 +19,7 @@ D. A longer system prompt
 
 <details><summary>Answer</summary>
 
-**Correct: B.** Without a version id, a hash, and a history of past versions, there's no way to say what the prompt said before the edit or to revert to it — the exact gap [Prompt Versioning and Safe Rollbacks](/learn/genai-app-dev/prompt-versioning-and-rollback) opens with.
+**Correct: C.** Without a version id, a hash, and a history of past versions, there's no way to say what the prompt said before the edit or to revert to it — the exact gap [Prompt Versioning and Safe Rollbacks](/learn/genai-app-dev/prompt-versioning-and-rollback) opens with.
 
 - A: A faster model doesn't address an unreviewable, unversioned edit — the problem is process, not model speed.
 - B: Correct — an untracked prompt edit is an unreviewable production change with no undo.
@@ -39,7 +39,7 @@ D. It reduces the number of database writes
 
 <details><summary>Answer</summary>
 
-**Correct: B.** Stable bucketing is what makes both an auto-halt reading a meaningful error rate and an A/B comparison possible — see [Canary and Percentage-Based Rollout](/learn/genai-app-dev/canary-and-percentage-rollout) and [A/B Testing Two Prompt Versions](/learn/genai-app-dev/a-b-testing-two-prompts).
+**Correct: C.** Stable bucketing is what makes both an auto-halt reading a meaningful error rate and an A/B comparison possible — see [Canary and Percentage-Based Rollout](/learn/genai-app-dev/canary-and-percentage-rollout) and [A/B Testing Two Prompt Versions](/learn/genai-app-dev/a-b-testing-two-prompts).
 
 - A: Both approaches are cheap; cost isn't the reason for stable bucketing.
 - B: Correct — random-per-request assignment makes both consistency and comparison impossible.
@@ -79,7 +79,7 @@ D. Lower token costs
 
 <details><summary>Answer</summary>
 
-**Correct: B.** Three manually-checked chats catch obviously broken cases, not a regression in a category nobody happened to try. A golden dataset with edge cases run every time is what catches that. See [Evals and Regression Testing for Prompts](/learn/genai-app-dev/evals-and-regression-testing).
+**Correct: C.** Three manually-checked chats catch obviously broken cases, not a regression in a category nobody happened to try. A golden dataset with edge cases run every time is what catches that. See [Evals and Regression Testing for Prompts](/learn/genai-app-dev/evals-and-regression-testing).
 
 - A: An eval harness adds a CI step, which if anything slows a merge down slightly — it's not about deploy speed.
 - B: Correct — repeatability and coverage across known-hard cases is exactly what ad hoc review lacks.
@@ -99,7 +99,7 @@ D. Guardrails are always the inverse of the primary metric
 
 <details><summary>Answer</summary>
 
-**Correct: B.** The primary metric is what you're optimizing for; the guardrail protects against damage that can't be undone even while the primary metric looks fine — see [A/B Testing Two Prompt Versions](/learn/genai-app-dev/a-b-testing-two-prompts).
+**Correct: C.** The primary metric is what you're optimizing for; the guardrail protects against damage that can't be undone even while the primary metric looks fine — see [A/B Testing Two Prompt Versions](/learn/genai-app-dev/a-b-testing-two-prompts).
 
 - A: Ease of measurement isn't the reason — both are loggable per request.
 - B: Correct — a guardrail is chosen for irreversible downside, independent of what you're trying to maximize.
@@ -119,7 +119,7 @@ D. Add more few-shot examples to reduce errors
 
 <details><summary>Answer</summary>
 
-**Correct: B.** No prompt version changed and the errors are on the provider-call span specifically — this is a provider outage, and failover keeps the feature working instead of turning it off. See [Incident Response for AI Features](/learn/genai-app-dev/incident-response-for-ai-features).
+**Correct: C.** No prompt version changed and the errors are on the provider-call span specifically — this is a provider outage, and failover keeps the feature working instead of turning it off. See [Incident Response for AI Features](/learn/genai-app-dev/incident-response-for-ai-features).
 
 - A: Rolling back the prompt does nothing for provider-side errors — the prompt didn't change.
 - B: Correct — a provider-specific error spike with no prompt change points at an outage, and failover is the narrowest lever that fully addresses it.

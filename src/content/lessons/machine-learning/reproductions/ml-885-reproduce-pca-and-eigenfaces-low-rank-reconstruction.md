@@ -66,3 +66,5 @@ Use paired per-image reconstruction differences for comparisons of two SVD proce
 ## Extension and critique
 
 Compare PCA with a nonnegative or sparse representation only if you state the changed objective and evaluation trade-off. Then critique eigenfaces as a research artefact: the low-rank approximation result is powerful and reproducible, but turning that representation into a recognition system introduces population, consent, security, and social questions that reconstruction metrics cannot answer.
+
+**Related:** [Paper reproduction: low-rank reconstruction](/learn/machine-learning/reproductions/pca-reconstruction-reproduction)

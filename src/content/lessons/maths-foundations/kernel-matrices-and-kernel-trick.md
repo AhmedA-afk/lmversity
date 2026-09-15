@@ -188,3 +188,5 @@ distribution shift still require task-level evaluation.
 - Continue: Nearest neighbours and kernels
 - Go deeper: PCA and dimensionality reduction
 - Apply it: Generalisation and evaluation
+
+**Related:** [Kernel methods and the kernel trick](/learn/machine-learning/ml-303-kernel-methods-and-the-kernel-trick)

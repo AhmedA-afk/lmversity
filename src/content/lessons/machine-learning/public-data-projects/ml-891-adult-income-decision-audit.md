@@ -78,3 +78,5 @@ Compare models with the same split and a table of discrimination, calibration, t
 ## Responsible-use constraints
 
 Do not publish row-level data, infer protected traits not supplied, rank individuals, or claim the model is fair because one metric is similar across groups. Your conclusion must name at least two reasons this benchmark should not become a real-world decision system.
+
+**Related:** [Public-data project: Adult income prediction](/learn/machine-learning/public-data-projects/adult-income-project)

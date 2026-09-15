@@ -36,3 +36,4 @@ Reproducibility and data provenance 25%; valid comparison and calculations 30%; 
 
 Do not report invented leaderboard results. Compare the reproduced observation with the stated claim, then explain plausible threats: version drift, selection, preprocessing leakage, compute constraints, dependence, measurement error, and external validity.
 
+**Related:** [Reproduction study: PCA, eigenfaces, and low-rank reconstruction](/learn/machine-learning/reproductions/ml-885-reproduce-pca-and-eigenfaces-low-rank-reconstruction)

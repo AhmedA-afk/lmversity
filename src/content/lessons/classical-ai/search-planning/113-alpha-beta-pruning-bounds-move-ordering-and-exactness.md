@@ -86,3 +86,4 @@ Design and implement a alpha-beta pruning solver or planner for one of the scena
 
 You can move on when you can explain the model before naming the algorithm, derive one decision trace by hand, and state exactly what guarantee depends on which assumption. You should also be able to say what the system does when those assumptions fail. That is the difference between invoking alpha-beta pruning and engineering a classical AI component that another person can inspect and trust.
 
+**Related:** [Alpha-Beta Pruning and Move Ordering](/learn/ai-foundations/ai-systems/111-alpha-beta-pruning-and-move-ordering)

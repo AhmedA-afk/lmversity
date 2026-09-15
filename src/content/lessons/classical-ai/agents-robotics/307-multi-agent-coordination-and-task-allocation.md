@@ -67,3 +67,4 @@ Compare greedy and cost-aware allocation under a lost-agent scenario. Submit a o
 - Is an effect checked independently after action?
 - Can another engineer replay the trace and understand the safe fallback?
 
+**Related:** [Multi-Agent Coordination, Communication, and Allocation](/learn/ai-foundations/ai-systems/128-multi-agent-coordination-communication-and-allocation)

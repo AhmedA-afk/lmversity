@@ -97,3 +97,5 @@ Tests do not establish practical value, causality without design assumptions, or
 - Continue: [Effect sizes](/learn/maths-foundations/effect-sizes-power-and-sample-size-planning), power, and sample-size planning
 - Go deeper: [A/B experiments, sequential testing, and multiple comparisons](/learn/maths-foundations/ab-experiments-sequential-testing-and-multiple-comparisons)
 - Apply it: Cross-validation and experimental design
+
+**Related:** [Hypothesis tests, permutation tests, and effect sizes](/learn/machine-learning/ml-503-hypothesis-tests-permutation-tests-and-effect-sizes)

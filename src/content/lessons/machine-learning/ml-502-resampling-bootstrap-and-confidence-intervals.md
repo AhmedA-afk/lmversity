@@ -69,3 +69,5 @@ Resampling cannot repair leakage, label error, distribution shift, or an irrelev
 ## Continue, go deeper, apply it
 
 Continue with [hypothesis tests](/learn/machine-learning/ml-503-hypothesis-tests-permutation-tests-and-effect-sizes) and effect sizes. Go deeper with hierarchical and Bayesian uncertainty models. Apply this by requiring intervals for every model-change proposal.
+
+**Related:** [Bootstrap confidence intervals and permutation tests](/learn/machine-learning/derivations/11-bootstrap-confidence-intervals-and-permutation-tests)

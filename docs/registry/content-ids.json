@@ -190,7 +190,7 @@
   },
   "lessons/ai-foundations/ai-systems/109-local-search-hill-climbing-and-stochastic-optimization.md": {
    "id": "les-0044",
-   "fp": "2823a0f214fcdab217d53197fbd548ef7b9d1edf"
+   "fp": "4a67a4b2511c3ac8b11e01bea626d09afd300db2"
   },
   "lessons/ai-foundations/ai-systems/110-adversarial-search-minimax-and-game-values.md": {
    "id": "les-0045",
@@ -198,7 +198,7 @@
   },
   "lessons/ai-foundations/ai-systems/111-alpha-beta-pruning-and-move-ordering.md": {
    "id": "les-0046",
-   "fp": "6defa9618e2033d8ce83dfe4a53df5f0cd1bccc4"
+   "fp": "5ac2951e038bc0e5ec1445a9b1fbc0b7c77c910d"
   },
   "lessons/ai-foundations/ai-systems/112-imperfect-information-and-utility-under-risk.md": {
    "id": "les-0047",
@@ -262,11 +262,11 @@
   },
   "lessons/ai-foundations/ai-systems/127-robot-control-feedback-and-safety-envelopes.md": {
    "id": "les-0062",
-   "fp": "05a38358de2d01a46c8e2e48debb5c076542dfb5"
+   "fp": "b287b41620b217ddce2217c6a2a4cc2e1614c126"
   },
   "lessons/ai-foundations/ai-systems/128-multi-agent-coordination-communication-and-allocation.md": {
    "id": "les-0063",
-   "fp": "e8e2c6cb135c59a0b3bce4dcb36eb23851561ea6"
+   "fp": "cc96db687f32a17dd65ab518d0f4020bda037209"
   },
   "lessons/ai-foundations/ai-systems/129-multi-agent-strategic-behavior-mechanisms-and-safety.md": {
    "id": "les-0064",
@@ -282,7 +282,7 @@
   },
   "lessons/ai-foundations/alignment-failure-case-studies.md": {
    "id": "les-0067",
-   "fp": "79dbcbc2745c6adcb5c4e2aab549ec3b6011a523"
+   "fp": "af06d1f68f8eac08bc2081ce0157435046be3e4e"
   },
   "lessons/ai-foundations/alignment-specifying-what-we-want.md": {
    "id": "les-0068",
@@ -402,7 +402,7 @@
   },
   "lessons/ai-foundations/bias-variance-tradeoff.mdx": {
    "id": "les-0097",
-   "fp": "ea0e59f2803a646c559d47c4d03a4fba49393b63"
+   "fp": "aa352cd7cd889708b0ec82de4d85f53eebec0631"
   },
   "lessons/ai-foundations/bias-variance-worked-example.md": {
    "id": "les-0098",
@@ -470,7 +470,7 @@
   },
   "lessons/ai-foundations/gradient-descent-explained.md": {
    "id": "les-0114",
-   "fp": "a50cfa2ec634976b0fb344e9a1dc78af16d5b4c3"
+   "fp": "f9e1d16ee516e63fe51bdb796b1aa96fb37367af"
   },
   "lessons/ai-foundations/gradient-descent-in-numpy.md": {
    "id": "les-0115",
@@ -614,11 +614,11 @@
   },
   "lessons/ai-foundations/reliable-ai/213-model-supply-chain-and-artifact-security.md": {
    "id": "les-0150",
-   "fp": "2114b26a892a9200d1a99d33dda8f723b11f3837"
+   "fp": "8c4098b73bdecaec0d7ab0016e0ba100057ee8f3"
   },
   "lessons/ai-foundations/reliable-ai/214-alignment-objectives-and-reward-hacking.md": {
    "id": "les-0151",
-   "fp": "5a7b2ae25aa615fbfc6bd442af746f161b3debfa"
+   "fp": "dc76e19c368e07790631947fdf4f50e2d1680fbc"
   },
   "lessons/ai-foundations/reliable-ai/215-human-feedback-preference-data-and-rlhf.md": {
    "id": "les-0152",
@@ -742,7 +742,7 @@
   },
   "lessons/ai-foundations/what-a-model-actually-is.md": {
    "id": "les-0182",
-   "fp": "77c32c3c19b6dc1d647e6d7e4ad8fd3f75f68a70"
+   "fp": "4a285756d40fe2ccbdf0f6d861c172db15f6ef87"
   },
   "lessons/ai-foundations/what-embeddings-are.md": {
    "id": "les-0183",
@@ -878,7 +878,7 @@
   },
   "lessons/ai-literacy/prompt-patterns-for-everyday-tasks.md": {
    "id": "les-0216",
-   "fp": "5172d515e2ffe624959839e92a8edb8a687a8fad"
+   "fp": "b4378413ea6d6f306bb720cd801c15e96b0f6fe6"
   },
   "lessons/ai-literacy/prompting-is-delegating-to-an-eager-intern.md": {
    "id": "les-0217",
@@ -1018,7 +1018,7 @@
   },
   "lessons/classical-ai/agents-robotics/307-multi-agent-coordination-and-task-allocation.md": {
    "id": "les-0251",
-   "fp": "9e19923ae372175275ceee56b24bd0401cce4da2"
+   "fp": "3db2310459ca3c3abaee9b0f76abddfe004e4048"
   },
   "lessons/classical-ai/agents-robotics/308-communication-protocols-and-shared-beliefs.md": {
    "id": "les-0252",
@@ -1058,7 +1058,7 @@
   },
   "lessons/classical-ai/agents-robotics/317-robot-control-feedback-and-stability.md": {
    "id": "les-0261",
-   "fp": "23463dd48bd6ea420addeb3bd3a6f9733601ee27"
+   "fp": "01b98dc7caab8ba09a918b840d976b7c2c4e0624"
   },
   "lessons/classical-ai/agents-robotics/318-task-planning-and-execution-monitoring.md": {
    "id": "les-0262",
@@ -1174,7 +1174,7 @@
   },
   "lessons/classical-ai/knowledge-uncertainty/220-hidden-markov-models-filtering-smoothing-and-viterbi.md": {
    "id": "les-0290",
-   "fp": "0b7582c8db58534f77fba5e2f4fe5b1cc807021a"
+   "fp": "29ec4b2f10891f2669c6d167d21e7381d0ad9871"
   },
   "lessons/classical-ai/knowledge-uncertainty/221-dynamic-bayesian-networks-pomdps-and-state-estimation.md": {
    "id": "les-0291",
@@ -1194,7 +1194,7 @@
   },
   "lessons/classical-ai/knowledge-uncertainty/225-causal-graphs-confounding-interventions-and-counterfactuals.md": {
    "id": "les-0295",
-   "fp": "4df8a8721b7f6fc2d8858665c4009b8d96f0d2f8"
+   "fp": "703146de1775966bef6a5a183243b788c233f08f"
   },
   "lessons/classical-ai/knowledge-uncertainty/226-probabilistic-diagnosis-abduction-and-evidence-fusion.md": {
    "id": "les-0296",
@@ -1246,7 +1246,7 @@
   },
   "lessons/classical-ai/search-planning/110-local-search-hill-climbing-plateaus-and-restarts.md": {
    "id": "les-0308",
-   "fp": "736dee7caa4752288d3f42cc80b1a03b16544888"
+   "fp": "b8482f5b6ce8d7044372787819b59b5bf13b39c7"
   },
   "lessons/classical-ai/search-planning/111-stochastic-search-simulated-annealing-beam-search-and-evolutionary-methods.md": {
    "id": "les-0309",
@@ -1258,7 +1258,7 @@
   },
   "lessons/classical-ai/search-planning/113-alpha-beta-pruning-bounds-move-ordering-and-exactness.md": {
    "id": "les-0311",
-   "fp": "7db3392da8cdc50f1fd6371b0595ecf5c24fd4e5"
+   "fp": "1d11f1581d70ea5b7a952acb9822625410569484"
   },
   "lessons/classical-ai/search-planning/114-monte-carlo-tree-search-selection-expansion-rollouts-and-backup.md": {
    "id": "les-0312",
@@ -1370,7 +1370,7 @@
   },
   "lessons/context-engineering/cache-aware-context-design.mdx": {
    "id": "les-0339",
-   "fp": "c31bbb5126242b1f7fcc8ed8df334fd53d59b822"
+   "fp": "900fca48ed576e32b2d73e153b1065a69e00cc9e"
   },
   "lessons/context-engineering/cache-invalidation-mistakes.md": {
    "id": "les-0340",
@@ -1454,11 +1454,11 @@
   },
   "lessons/context-engineering/conversation-memory-and-state.mdx": {
    "id": "les-0360",
-   "fp": "86a23b622285f84e1c64f6a025b52bcc851bb485"
+   "fp": "7bb1ca903d4de662e2a0cb148bd7935824368a62"
   },
   "lessons/context-engineering/cost-latency-quality-tradeoff-curve.md": {
    "id": "les-0361",
-   "fp": "073a5a006791d656e3094aec1be49a78d7cd3aa1"
+   "fp": "4ed8c259dd0c76980a42838ff11aa1f3bbaf5288"
   },
   "lessons/context-engineering/counting-tokens-in-practice.md": {
    "id": "les-0362",
@@ -1466,7 +1466,7 @@
   },
   "lessons/context-engineering/cross-session-memory-architecture.md": {
    "id": "les-0363",
-   "fp": "f4545dc836071b9901dfa0ba1d517531a7c1507a"
+   "fp": "55139c29151ba587aa43c54ac074308393448105"
   },
   "lessons/context-engineering/deduping-overlapping-tool-results.md": {
    "id": "les-0364",
@@ -1518,11 +1518,11 @@
   },
   "lessons/context-engineering/hierarchical-summarization-explained.md": {
    "id": "les-0376",
-   "fp": "64039089e99916de8494d22be6dd24911708b380"
+   "fp": "8db003709dc0df3d47adba07cc223635d83b4f2d"
   },
   "lessons/context-engineering/hierarchical-summarization.mdx": {
    "id": "les-0377",
-   "fp": "0e0bf9aece70b7c2d8986afcde82454d4def2477"
+   "fp": "a7d0135bc872d1a65939ee6feaa84609150657c2"
   },
   "lessons/context-engineering/instrumenting-token-spend-in-production.md": {
    "id": "les-0378",
@@ -1550,7 +1550,7 @@
   },
   "lessons/context-engineering/lost-in-the-middle-explained.md": {
    "id": "les-0384",
-   "fp": "760d0f0859a73e5c5931143624bd6e6201f4b91e"
+   "fp": "15dd3ae7c95582f4b5ef594233ded07167c7ac10"
   },
   "lessons/context-engineering/lost-in-the-middle.mdx": {
    "id": "les-0385",
@@ -1590,11 +1590,11 @@
   },
   "lessons/context-engineering/multi-agent-context-mistakes.md": {
    "id": "les-0394",
-   "fp": "b11fbcd6576ddbdf30d0a6ab83a42fc2fbc5c4bc"
+   "fp": "b96e236456d6d40f60788733bb4740ae977f73ce"
   },
   "lessons/context-engineering/multi-agent-context-problem.md": {
    "id": "les-0395",
-   "fp": "a43436e59788512a1914cf0bf8814e8be9a8b50c"
+   "fp": "a1877b20bf50310edca33a6201742d1bf90a307f"
   },
   "lessons/context-engineering/multi-source-context-merging.mdx": {
    "id": "les-0396",
@@ -1630,7 +1630,7 @@
   },
   "lessons/context-engineering/progressive-tool-disclosure-in-depth.md": {
    "id": "les-0404",
-   "fp": "5cbbdd000bc994a8d7b86565fc8d1b16d5524d33"
+   "fp": "d604e6835a1b5508ccb35bba61032163574a8808"
   },
   "lessons/context-engineering/progressive-tool-disclosure.mdx": {
    "id": "les-0405",
@@ -1638,7 +1638,7 @@
   },
   "lessons/context-engineering/prompt-caching-mechanics.md": {
    "id": "les-0406",
-   "fp": "415478f14b30bc05e3b928867424cb7257a6b383"
+   "fp": "c640ac815b2d7a23fbee899488a361947281da7f"
   },
   "lessons/context-engineering/prompt-injection-via-retrieved-content.md": {
    "id": "les-0407",
@@ -1794,7 +1794,7 @@
   },
   "lessons/context-engineering/tokens-are-not-words.md": {
    "id": "les-0445",
-   "fp": "819e22d885232d2c04d85287edd358a04d47d477"
+   "fp": "2241214fe17925268c223b69062b9907a16a9fc6"
   },
   "lessons/context-engineering/tool-output-deduplication-deep.md": {
    "id": "les-0446",
@@ -1858,7 +1858,7 @@
   },
   "lessons/deep-learning/core/101-tensors-shapes-and-broadcasting.md": {
    "id": "les-0461",
-   "fp": "8b46c9e3bdce9ec8a89c007caacd4b05a0f1b738"
+   "fp": "e7673b5e48c0b4ffd96c11496c22c2c0c6bc54c4"
   },
   "lessons/deep-learning/core/102-perceptrons-linear-separability-and-geometric-margins.md": {
    "id": "les-0462",
@@ -1886,7 +1886,7 @@
   },
   "lessons/deep-learning/core/108-computation-graphs-and-local-derivatives.md": {
    "id": "les-0468",
-   "fp": "422bc5d645437a7f9544b53024a80f4b040b0dd9"
+   "fp": "9b538b14eaee166030b24b0de63519ac2964550b"
   },
   "lessons/deep-learning/core/109-reverse-mode-autodiff-and-vector-jacobian-products.md": {
    "id": "les-0469",
@@ -1922,7 +1922,7 @@
   },
   "lessons/deep-learning/core/117-regularization-weight-decay-early-stopping-and-label-smoothing.md": {
    "id": "les-0477",
-   "fp": "02fb9a76ef6788169a6f7e0d868a4586b799b95c"
+   "fp": "6b3473ab100969183dade9dcd8ff2bf3573d47fa"
   },
   "lessons/deep-learning/core/118-dropout-ensembles-and-training-evaluation-semantics.md": {
    "id": "les-0478",
@@ -1930,7 +1930,7 @@
   },
   "lessons/deep-learning/core/119-data-augmentation-invariances-and-leakage.md": {
    "id": "les-0479",
-   "fp": "ab17dc0ad46d403f8a446b298bc5c1234ea701f0"
+   "fp": "ac7f4e6fc97bb75c09be93ea99e50290eefe1277"
   },
   "lessons/deep-learning/core/120-overfitting-underfitting-and-double-descent.md": {
    "id": "les-0480",
@@ -1970,7 +1970,7 @@
   },
   "lessons/deep-learning/core/129-transfer-learning-fine-tuning-and-domain-shift.md": {
    "id": "les-0489",
-   "fp": "e32eb713404d59436ca7ebfe694f101a6d221304"
+   "fp": "945b5b25b58319443fe776a50ef825a76b190ef7"
   },
   "lessons/deep-learning/core/130-representation-probing-and-diagnostic-evaluation.md": {
    "id": "les-0490",
@@ -2006,7 +2006,7 @@
   },
   "lessons/deep-learning/practice/401-data-contracts-and-schema-audits.md": {
    "id": "les-0498",
-   "fp": "67cb5279fcd140b399ab8a760e0d17833591b69e"
+   "fp": "d9e2f201e2bd45a21d1fd3086dce7ab87c1cd92d"
   },
   "lessons/deep-learning/practice/402-splits-groups-and-temporal-validation.md": {
    "id": "les-0499",
@@ -2090,11 +2090,11 @@
   },
   "lessons/deep-learning/practice/422-calibration-abstention-and-human-in-the-loop-design.md": {
    "id": "les-0519",
-   "fp": "e089902704b6893eaf5b1f3db17e70ef911dd441"
+   "fp": "c77795aefcf794bcba0acb612ec3ef76f46c7cfb"
   },
   "lessons/deep-learning/practice/423-adversarial-security-and-model-supply-chain-risk.md": {
    "id": "les-0520",
-   "fp": "797bf826041c69d1f2ecc2be93e4cdb85607932a"
+   "fp": "cd9af8e7e69f66b6707c63fa8704c952f8092e33"
   },
   "lessons/deep-learning/practice/424-privacy-preserving-training-and-inference.md": {
    "id": "les-0521",
@@ -2158,11 +2158,11 @@
   },
   "lessons/deep-learning/sequence-generative/309-attention-derivation.md": {
    "id": "les-0536",
-   "fp": "594d56008a4738091e7f0f7abe76997eccfa3447"
+   "fp": "0e5a0b8a71caaf38f8b1fa6d4ea8faa205b96e4e"
   },
   "lessons/deep-learning/sequence-generative/310-multihead-and-cross-attention.md": {
    "id": "les-0537",
-   "fp": "183a2296ee2f773b6c4948ab934bc97b3d5c8824"
+   "fp": "61826c71d77dcad68a3bdf69734eb045c8fb6919"
   },
   "lessons/deep-learning/sequence-generative/311-transformer-blocks-residuals-and-normalization.md": {
    "id": "les-0538",
@@ -2202,7 +2202,7 @@
   },
   "lessons/deep-learning/sequence-generative/320-language-model-evaluation-calibration-and-behavior.md": {
    "id": "les-0547",
-   "fp": "c003475aa549f28ff229b8819c5017801e02e858"
+   "fp": "4c713b88598817d271c37693b2124825bc76f086"
   },
   "lessons/deep-learning/sequence-generative/321-embedding-spaces-and-contrastive-learning.md": {
    "id": "les-0548",
@@ -2314,11 +2314,11 @@
   },
   "lessons/deep-learning/vision/210-data-augmentation-and-invariance.md": {
    "id": "les-0575",
-   "fp": "674fbad7db500c67555a9d1569d9a99bd230ad48"
+   "fp": "a47cc5cab7bc4616017551c3ddd69361fbcf8034"
   },
   "lessons/deep-learning/vision/211-transfer-learning-and-fine-tuning.md": {
    "id": "les-0576",
-   "fp": "8170bd3209ea83a5d035a308d165bb002948a2d8"
+   "fp": "df6f686dba7331ada1a60df501b85a5ff91b460a"
   },
   "lessons/deep-learning/vision/212-object-detection-boxes-and-iou.md": {
    "id": "les-0577",
@@ -2458,7 +2458,7 @@
   },
   "lessons/evals-red-teaming/llm-as-judge.mdx": {
    "id": "les-0611",
-   "fp": "27c1c379cf956715ceb3018b89191285fbb55580"
+   "fp": "de5215558faabfc00b261471e49f0cbc706f0c65"
   },
   "lessons/evals-red-teaming/llm-judge-bias-and-calibration.mdx": {
    "id": "les-0612",
@@ -2790,7 +2790,7 @@
   },
   "lessons/genai-app-dev/implementing-prompt-caching.md": {
    "id": "les-0694",
-   "fp": "023bc491c23c1efc645aeddc0f88d5eaf7a843c2"
+   "fp": "bd50171490e3e3749a4ed6096dedd7edd13ea757"
   },
   "lessons/genai-app-dev/incident-response-for-ai-features.md": {
    "id": "les-0695",
@@ -2898,7 +2898,7 @@
   },
   "lessons/genai-app-dev/provider-landscape-and-tradeoffs.md": {
    "id": "les-0721",
-   "fp": "7bdd40fe30cdeb2ca5afcc2841cd17aee0199281"
+   "fp": "9d71f796b50b10ca730d942517aaf3642d790996"
   },
   "lessons/genai-app-dev/provider-layer-cheatsheet.md": {
    "id": "les-0722",
@@ -3054,11 +3054,11 @@
   },
   "lessons/genai-app-dev/structured-output-failures.md": {
    "id": "les-0760",
-   "fp": "84442a767cbdba926198ece547c0804fc7e50a88"
+   "fp": "fdfd3652dd339bac44a91cbef88374569822535a"
   },
   "lessons/genai-app-dev/structured-output-in-apps.md": {
    "id": "les-0761",
-   "fp": "58169c15c46bc38d2818636911e2ab38a6c97cf7"
+   "fp": "587eace8270433f1c235d8796a9362bf56865283"
   },
   "lessons/genai-app-dev/the-whole-game-genai-feature-tour.md": {
    "id": "les-0762",
@@ -3074,7 +3074,7 @@
   },
   "lessons/genai-app-dev/tool-call-authority-mistakes.md": {
    "id": "les-0765",
-   "fp": "3a1719a37c8c03fa757907e7d6467c6ba44a0e55"
+   "fp": "02b101cbbc19ff7b80a6e603bddac5eaa4542935"
   },
   "lessons/genai-app-dev/tool-calling-and-authority.md": {
    "id": "les-0766",
@@ -3194,7 +3194,7 @@
   },
   "lessons/hallucinations/confidence-antipatterns.md": {
    "id": "les-0795",
-   "fp": "1a2638746b1364514b40c2fd7506bf1b3460a515"
+   "fp": "67b319e4cf8cccd2cafd709e3c7fea4bcb539474"
   },
   "lessons/hallucinations/confidence-gated-escalation-impl.md": {
    "id": "les-0796",
@@ -3270,7 +3270,7 @@
   },
   "lessons/hallucinations/escalation-human-in-the-loop.md": {
    "id": "les-0814",
-   "fp": "41d18b0c3eb633d1199c208a44313584e8086e8f"
+   "fp": "11ae3c5c6ab8b5ff66107b648c4bc96820f85a9f"
   },
   "lessons/hallucinations/evaluating-your-detector.md": {
    "id": "les-0815",
@@ -3398,7 +3398,7 @@
   },
   "lessons/hallucinations/llm-as-judge-for-faithfulness.md": {
    "id": "les-0846",
-   "fp": "bcbf899f7f3ab22198068f754f4cd2c81fa9b622"
+   "fp": "a1c537bb0c4c82391496ab038018d52df596e3e9"
   },
   "lessons/hallucinations/llm-judge-eval-harness-impl.md": {
    "id": "les-0847",
@@ -3438,7 +3438,7 @@
   },
   "lessons/hallucinations/monitoring-hallucination-in-prod.md": {
    "id": "les-0856",
-   "fp": "023271c0dad2fc7575b1be4f75396fa393dd47cd"
+   "fp": "4e696136e1f48016422f052eb97628bd4c7ba00d"
   },
   "lessons/hallucinations/multi-hop-compounding-deep-dive.md": {
    "id": "les-0857",
@@ -3470,7 +3470,7 @@
   },
   "lessons/hallucinations/production-antipatterns.md": {
    "id": "les-0864",
-   "fp": "3e7d198ff28feb245a1f81d05c80889cd6211265"
+   "fp": "f9e133d62df4b9daa5225d3802253f1d206bb846"
   },
   "lessons/hallucinations/production-quiz.md": {
    "id": "les-0865",
@@ -3586,7 +3586,7 @@
   },
   "lessons/hallucinations/teaching-models-to-say-i-dont-know.mdx": {
    "id": "les-0893",
-   "fp": "5b5a2136f0967240a0408fcfa0f87cd6b2d02081"
+   "fp": "1d4f618b88dadfa6b9ca485229d3c3a5fe7fb6a7"
   },
   "lessons/hallucinations/temporal-hallucination-cases.md": {
    "id": "les-0894",
@@ -3658,7 +3658,7 @@
   },
   "lessons/hallucinations/why-rlhf-hurts-calibration.md": {
    "id": "les-0911",
-   "fp": "bebe431006a6bcb1d73074af2fec9aea85dca38a"
+   "fp": "6deeea9cf4556c7836e5ea536a5165503a9a5878"
   },
   "lessons/harness-design/config-layering.mdx": {
    "id": "les-0912",
@@ -3750,7 +3750,7 @@
   },
   "lessons/harness-design/the-control-loop.mdx": {
    "id": "les-0934",
-   "fp": "9b3b74cba2bf23cbc2013e36613d78b970f1a9b5"
+   "fp": "f3fde5434de1e414a0124d188bc9dbe990de1748"
   },
   "lessons/harness-design/tool-output-truncation.mdx": {
    "id": "les-0935",
@@ -3766,7 +3766,7 @@
   },
   "lessons/llm-foundations/alignment-tax-reward-hacking-sycophancy.mdx": {
    "id": "les-0938",
-   "fp": "b67e394d6ab02f6d2d512d7d2e13c5a6039db10c"
+   "fp": "f7a888a897eb9b8353c2636b1babb757092714cf"
   },
   "lessons/llm-foundations/assemble-one-full-transformer-block.mdx": {
    "id": "les-0939",
@@ -3810,11 +3810,11 @@
   },
   "lessons/llm-foundations/causal-masking-mechanics.mdx": {
    "id": "les-0949",
-   "fp": "555ca486483b7627e32f53e90f326c0a67ff9ffc"
+   "fp": "46d94528c7d02a93265b4614ada9c22a9521cda6"
   },
   "lessons/llm-foundations/causal-masking.mdx": {
    "id": "les-0950",
-   "fp": "7d6d40a2d1df99eed1007e7689c31564e247ff44"
+   "fp": "2c11167da4a73555ab1589ae5da6480312d45cb3"
   },
   "lessons/llm-foundations/chain-of-thought-and-test-time-compute.mdx": {
    "id": "les-0951",
@@ -3830,7 +3830,7 @@
   },
   "lessons/llm-foundations/context-window-mechanics.mdx": {
    "id": "les-0954",
-   "fp": "3a204c6b575e4d4e5b8ea38003290a77d3338663"
+   "fp": "9e72bcac7fabbddc61e4c411406af02073250286"
   },
   "lessons/llm-foundations/counting-the-flops-of-one-token.mdx": {
    "id": "les-0955",
@@ -3918,7 +3918,7 @@
   },
   "lessons/llm-foundations/implement-multi-head-attention.mdx": {
    "id": "les-0976",
-   "fp": "ac5065f369896869cd730642a652af285a777461"
+   "fp": "d56dcb46eebadd7a379c37e359bd1ad27188fb9c"
   },
   "lessons/llm-foundations/implement-rope-in-numpy.mdx": {
    "id": "les-0977",
@@ -3930,7 +3930,7 @@
   },
   "lessons/llm-foundations/in-context-learning-mechanics.mdx": {
    "id": "les-0979",
-   "fp": "5fe092429104b26f2d1d98b49533f342fb20db75"
+   "fp": "9fdfae596394746b55eb44f0b69132a87299acd2"
   },
   "lessons/llm-foundations/in-context-learning.mdx": {
    "id": "les-0980",
@@ -3938,11 +3938,11 @@
   },
   "lessons/llm-foundations/instruction-tuning-and-rlhf.mdx": {
    "id": "les-0981",
-   "fp": "5dc401b462241d0ddb8d6e594ef207b0bb520e06"
+   "fp": "ba88902d1e201ac2ae47d6da651e89a3abf6821b"
   },
   "lessons/llm-foundations/is-in-context-learning-gradient-descent.mdx": {
    "id": "les-0982",
-   "fp": "c54ad06b8ce278a5dfd7ffa2de67d2f267534825"
+   "fp": "330ee43f354efc70685d7214dc39aa3b8eada443"
   },
   "lessons/llm-foundations/kv-cache-memory-mha-vs-gqa.mdx": {
    "id": "les-0983",
@@ -3986,11 +3986,11 @@
   },
   "lessons/llm-foundations/multi-head-attention-why-many-heads.mdx": {
    "id": "les-0993",
-   "fp": "cb75a4a02c380ee0d2e7c80099b467a54d2076ae"
+   "fp": "3e8d55af893a27c5228c76652d61afbecbfef592"
   },
   "lessons/llm-foundations/multi-head-attention.mdx": {
    "id": "les-0994",
-   "fp": "ba37d600225fe02046238cd2e03f547b5bd6e0f3"
+   "fp": "97a8189af6def19b4b7fdb04bead18bcacdd9ded"
   },
   "lessons/llm-foundations/multi-query-and-grouped-query-attention.mdx": {
    "id": "les-0995",
@@ -4026,7 +4026,7 @@
   },
   "lessons/llm-foundations/positional-encoding-explained.mdx": {
    "id": "les-1003",
-   "fp": "55e81b6cc675066040727b6bc3ac3994682890ef"
+   "fp": "d508e9d02f154e4a31203bef77f74f6a7a203b18"
   },
   "lessons/llm-foundations/prefill-vs-decode-memory-bound.mdx": {
    "id": "les-1004",
@@ -4094,7 +4094,7 @@
   },
   "lessons/llm-foundations/scaled-dot-product-attention-in-numpy.mdx": {
    "id": "les-1020",
-   "fp": "b328130f0715e021af685204a9f4be6731dd03f6"
+   "fp": "7302c970f22d8747bbb65db700c422a00ae35315"
   },
   "lessons/llm-foundations/scaling-laws-what-they-predict.mdx": {
    "id": "les-1021",
@@ -4158,7 +4158,7 @@
   },
   "lessons/llm-foundations/the-lost-in-the-middle-effect.mdx": {
    "id": "les-1036",
-   "fp": "6a3074c680cb8423db3df5cbdcda42b9189c6b1e"
+   "fp": "ddddfa3832bf63ba46a40f2b0b7c57f8acf858f4"
   },
   "lessons/llm-foundations/the-pretraining-objective-and-loss.mdx": {
    "id": "les-1037",
@@ -4230,7 +4230,7 @@
   },
   "lessons/llm-foundations/what-a-language-model-actually-computes.mdx": {
    "id": "les-1054",
-   "fp": "d74eeb0648a6fd82b7e02cfa43d1edd242fdef02"
+   "fp": "66304fe1e6ac49660bfa124515c1c4b16ba90c62"
   },
   "lessons/llm-foundations/what-are-embeddings.mdx": {
    "id": "les-1055",
@@ -4246,11 +4246,11 @@
   },
   "lessons/llm-foundations/what-the-internet-teaches-a-model.mdx": {
    "id": "les-1058",
-   "fp": "912888ea887ed3140b13932350387a8c0a31c038"
+   "fp": "7953fa49ac592741658ba72916b27ff555c6cab5"
   },
   "lessons/llm-foundations/whole-game-one-token-end-to-end.mdx": {
    "id": "les-1059",
-   "fp": "80c82e94f21540e067cb26446bac5ad3faac3bbc"
+   "fp": "9abaddffb1155de7e5b8377217d237b9c8a5e06c"
   },
   "lessons/llm-foundations/whole-game-quiz.mdx": {
    "id": "les-1060",
@@ -4270,7 +4270,7 @@
   },
   "lessons/llm-foundations/why-models-need-tokens-not-characters.mdx": {
    "id": "les-1064",
-   "fp": "6d0c30f43d23b7797e19cb94530b6e12a6d86b9e"
+   "fp": "cd492ca6c39687fb4338b531b41244f284f29f73"
   },
   "lessons/llm-foundations/why-moe-buys-capacity-without-compute.mdx": {
    "id": "les-1065",
@@ -4282,7 +4282,7 @@
   },
   "lessons/llm-foundations/why-order-needs-positional-encoding.mdx": {
    "id": "les-1067",
-   "fp": "a550754379aa5103420509ed3f9cd7edc726615a"
+   "fp": "b1766d680da2b9282c46e9ca2788d9c43de06d16"
   },
   "lessons/llm-foundations/why-pre-norm-won-and-rmsnorm.mdx": {
    "id": "les-1068",
@@ -4426,7 +4426,7 @@
   },
   "lessons/machine-learning/derivations/11-bootstrap-confidence-intervals-and-permutation-tests.md": {
    "id": "les-1103",
-   "fp": "79ffa2a3e80b5e8a208180c4a8d46b8895c8edc9"
+   "fp": "176aa3a65bcf819ae0b1c0374cdeee4455232ff1"
   },
   "lessons/machine-learning/derivations/12-hmms-forward-backward-and-viterbi.md": {
    "id": "les-1104",
@@ -4566,7 +4566,7 @@
   },
   "lessons/machine-learning/ml-205-generalized-linear-models.md": {
    "id": "les-1138",
-   "fp": "2aa95e9900f8d0e6f2985e303a47b82073f0e39a"
+   "fp": "a6aa31bfb51963138e9cf382ff4a599007e7c132"
   },
   "lessons/machine-learning/ml-206-logistic-regression-likelihood-and-odds.md": {
    "id": "les-1139",
@@ -4586,7 +4586,7 @@
   },
   "lessons/machine-learning/ml-210-generalized-additive-models.md": {
    "id": "les-1143",
-   "fp": "7d68f2e5fb0ed10b4b424c531df64599f01db4dd"
+   "fp": "ac488c64609eb2b3583f43d39762caa518592647"
   },
   "lessons/machine-learning/ml-211-survival-analysis-and-censored-outcomes.md": {
    "id": "les-1144",
@@ -4622,7 +4622,7 @@
   },
   "lessons/machine-learning/ml-303-kernel-methods-and-the-kernel-trick.md": {
    "id": "les-1152",
-   "fp": "20f8adb5dc5c1c326884c9fc9294eb0fca2db37b"
+   "fp": "9821b3e537782c5c19c1590fa253e0fb6f492bdc"
   },
   "lessons/machine-learning/ml-304-support-vector-machines-and-margins.md": {
    "id": "les-1153",
@@ -4638,7 +4638,7 @@
   },
   "lessons/machine-learning/ml-307-random-forests-and-out-of-bag-evaluation.md": {
    "id": "les-1156",
-   "fp": "40ea4d2499c59835ddcae7d8aa119024be98b878"
+   "fp": "ee7f8754d5f0a4e55a284660a86912c1446dc302"
   },
   "lessons/machine-learning/ml-308-gradient-boosting-from-residuals.md": {
    "id": "les-1157",
@@ -4746,11 +4746,11 @@
   },
   "lessons/machine-learning/ml-502-resampling-bootstrap-and-confidence-intervals.md": {
    "id": "les-1183",
-   "fp": "999f63d3c99984b38f24904e288a672067ed75c6"
+   "fp": "e519afd36314a98b876f0a2d516d89ac9c0ccc4f"
   },
   "lessons/machine-learning/ml-503-hypothesis-tests-permutation-tests-and-effect-sizes.md": {
    "id": "les-1184",
-   "fp": "24b95defa8e0d2beb9f5f18261fe4e462eb23305"
+   "fp": "33e2c06eebdd3b7bd0baee0b7fbe58173ce38a8e"
   },
   "lessons/machine-learning/ml-504-multiple-comparisons-and-researcher-degrees-of-freedom.md": {
    "id": "les-1185",
@@ -4822,7 +4822,7 @@
   },
   "lessons/machine-learning/ml-605-data-contracts-and-schema-evolution.md": {
    "id": "les-1202",
-   "fp": "5eb27f1f1f1a84e20b3847fc615ed03549713a06"
+   "fp": "748dabc9b0695ea96630a9b740ebc6acbe0cb650"
   },
   "lessons/machine-learning/ml-606-training-serving-skew.md": {
    "id": "les-1203",
@@ -5010,11 +5010,11 @@
   },
   "lessons/machine-learning/public-data-projects/adult-income-project.md": {
    "id": "les-1249",
-   "fp": "81d6ca30093ec18fac8774adae4f6e01aa8cb616"
+   "fp": "73b470a5aa411b756da0e47f5a6516a87965ddaa"
   },
   "lessons/machine-learning/public-data-projects/aps-failure-project.md": {
    "id": "les-1250",
-   "fp": "2236954870eaffec9d90b9d0d1d3453fe0901628"
+   "fp": "c9b79112b9944194e8d02f8c50e2253c27bac098"
   },
   "lessons/machine-learning/public-data-projects/bank-marketing-project.md": {
    "id": "les-1251",
@@ -5022,11 +5022,11 @@
   },
   "lessons/machine-learning/public-data-projects/bike-sharing-project.md": {
    "id": "les-1252",
-   "fp": "65be915970da4b8c90e177fd12f11d78e2773f52"
+   "fp": "e655f0dc33848b74a3d3081890c8c3d525d0739a"
   },
   "lessons/machine-learning/public-data-projects/ml-891-adult-income-decision-audit.md": {
    "id": "les-1253",
-   "fp": "0c4fec95f6a577a35a8fa21d2c6cd382e92d1d94"
+   "fp": "32700b988231f24db4feee5f32f93a5a1cfe6705"
   },
   "lessons/machine-learning/public-data-projects/ml-892-bank-marketing-temporal-campaign.md": {
    "id": "les-1254",
@@ -5034,27 +5034,27 @@
   },
   "lessons/machine-learning/public-data-projects/ml-893-bike-sharing-demand-forecast.md": {
    "id": "les-1255",
-   "fp": "fbca1671b320bb2d1eee44ad753e1198dac3400b"
+   "fp": "21646554154aef54f1311140d51f0adb85b9ce20"
   },
   "lessons/machine-learning/public-data-projects/ml-894-online-retail-cohort-and-anomaly-study.md": {
    "id": "les-1256",
-   "fp": "4b1eccc766ca62cdcea28990189769dd4e79c8de"
+   "fp": "e5cf69caf3b60291834437b0e78550e48d876be8"
   },
   "lessons/machine-learning/public-data-projects/ml-895-movielens-recommendation-and-feedback.md": {
    "id": "les-1257",
-   "fp": "babeda6cb8d32db3e632dc480d5814161721feb4"
+   "fp": "684eb5aa4a02122d35141a94adf9afe20609d6be"
   },
   "lessons/machine-learning/public-data-projects/ml-896-aps-failure-cost-sensitive-maintenance.md": {
    "id": "les-1258",
-   "fp": "33c623ee55683eaf4dca5ce9b074086cc8280ea3"
+   "fp": "d31bc9b749d5b0e6738aa65cff39a069abc6b6f2"
   },
   "lessons/machine-learning/public-data-projects/movielens-project.md": {
    "id": "les-1259",
-   "fp": "8a12019895dd7292f258dc974964fc7e277b1cc9"
+   "fp": "d800017255c8744a306f5cbcf7c451bbfb6f52af"
   },
   "lessons/machine-learning/public-data-projects/online-retail-project.md": {
    "id": "les-1260",
-   "fp": "4d07bfc98f989c37caca185239ea0d23783a5041"
+   "fp": "927ae4233fa14f0da51e8c1528b4c48c832871e6"
   },
   "lessons/machine-learning/recommenders-and-ranking.md": {
    "id": "les-1261",
@@ -5062,7 +5062,7 @@
   },
   "lessons/machine-learning/regularization-and-bias-variance.md": {
    "id": "les-1262",
-   "fp": "ef6cd655bba91b20622acbc97bbfdeb714f94a44"
+   "fp": "992d8cbb9d6f20ed877c9612ac4e70e6413e0b2a"
   },
   "lessons/machine-learning/reinforcement-learning-and-reward.md": {
    "id": "les-1263",
@@ -5094,15 +5094,15 @@
   },
   "lessons/machine-learning/reproductions/ml-885-reproduce-pca-and-eigenfaces-low-rank-reconstruction.md": {
    "id": "les-1270",
-   "fp": "135148520127f7a8f7a153c7ecd91ad13e6e2f38"
+   "fp": "83a6a96815fb9ee81b3cd749fb1073a91f1400ab"
   },
   "lessons/machine-learning/reproductions/pca-reconstruction-reproduction.md": {
    "id": "les-1271",
-   "fp": "112837a0026c52a2b45b9245a7c6bb7e374705bb"
+   "fp": "12badcf5899527bd93748faee2a4aeb5b2149a3a"
   },
   "lessons/machine-learning/reproductions/random-forest-reproduction.md": {
    "id": "les-1272",
-   "fp": "5c86b0d0099af8d89980500e5b2619f52b35f760"
+   "fp": "fdde1dda85bdef970d27a5186b17d94b445c860d"
   },
   "lessons/machine-learning/reproductions/svm-kernel-reproduction.md": {
    "id": "les-1273",
@@ -5170,11 +5170,11 @@
   },
   "lessons/maths-foundations/causal-inference-foundations.md": {
    "id": "les-1289",
-   "fp": "1f2e189e1bb8b423f96f011e3a967e82acf6b40c"
+   "fp": "4ef7c6a530790e2aa2cc17ba60a0e1dddedd9e77"
   },
   "lessons/maths-foundations/computational-graphs-and-local-derivatives.md": {
    "id": "les-1290",
-   "fp": "1b382203bc8ddddfb7fb7c5942335016991ad949"
+   "fp": "e27a8d874ca55dab78a47daee9f2fceeb7c75c85"
   },
   "lessons/maths-foundations/concentration-tail-risk-and-rare-events.md": {
    "id": "les-1291",
@@ -5362,7 +5362,7 @@
   },
   "lessons/maths-foundations/hypothesis-tests-p-values-and-permutation-tests.md": {
    "id": "les-1337",
-   "fp": "b06cbd9a384d2f5174c9ed01ee2b8036ec35f88b"
+   "fp": "90da963e71021c241e4f6f5c35006970af8e492c"
   },
   "lessons/maths-foundations/importance-sampling-and-weighted-estimates.md": {
    "id": "les-1338",
@@ -5394,7 +5394,7 @@
   },
   "lessons/maths-foundations/kernel-matrices-and-kernel-trick.md": {
    "id": "les-1345",
-   "fp": "e74eb562e0dc27e1c47a1883d6067405a522d5de"
+   "fp": "a3f8967ad38827f147d71f77d863b1eded820f36"
   },
   "lessons/maths-foundations/kl-divergence-and-distribution-mismatch.md": {
    "id": "les-1346",
@@ -5530,11 +5530,11 @@
   },
   "lessons/maths-foundations/matrix-multiplication-mechanics.mdx": {
    "id": "les-1379",
-   "fp": "ef5a3f4f002fc2fa5131868ef3dda3ab2ae3561b"
+   "fp": "f7105a28e1d1ffdb31c35a8b0d2d22219644a6dc"
   },
   "lessons/maths-foundations/matrix-vector-multiplication.md": {
    "id": "les-1380",
-   "fp": "2b65032ccf7a3b3472d1c50e15fdb9f1393e4743"
+   "fp": "34b07c33ac0d8a83f2a4a0d67b0eb45042368d89"
   },
   "lessons/maths-foundations/maximum-likelihood-estimation.md": {
    "id": "les-1381",
@@ -5582,11 +5582,11 @@
   },
   "lessons/maths-foundations/numerical-stability-log-sum-exp.mdx": {
    "id": "les-1392",
-   "fp": "32239c37f7e36a08f9eaa7d6647a40b3a12db6b5"
+   "fp": "a7065b47466111459773b7dbf5d03b0b6517e981"
   },
   "lessons/maths-foundations/numerical-stability-softmax-logsumexp-and-safe-probabilities.md": {
    "id": "les-1393",
-   "fp": "df6f53873442b89da0f01c0dce3aa15a52ce5738"
+   "fp": "12fe09fb196350e99571f34846f6071d602c79cc"
   },
   "lessons/maths-foundations/objectives-losses-empirical-risk-and-constraints.md": {
    "id": "les-1394",
@@ -5610,7 +5610,7 @@
   },
   "lessons/maths-foundations/partial-derivatives-and-chain-rule.mdx": {
    "id": "les-1399",
-   "fp": "50c32456f6a192b0abe2a94725d8ef89f6bbb7e8"
+   "fp": "573650f27c3f61ec93cbf64fef641bbbe237b0d3"
   },
   "lessons/maths-foundations/partial-derivatives-and-coordinate-wise-sensitivity.md": {
    "id": "les-1400",
@@ -5622,7 +5622,7 @@
   },
   "lessons/maths-foundations/perplexity-explained.mdx": {
    "id": "les-1402",
-   "fp": "840d14d66003d5227975a38587c0c0c9adcd51db"
+   "fp": "343a327b43de4dd697adb7cbd75af802d9d98dc6"
   },
   "lessons/maths-foundations/pmfs-cdfs-pdfs-and-mass-versus-density.md": {
    "id": "les-1403",
@@ -5662,7 +5662,7 @@
   },
   "lessons/maths-foundations/regularisation-geometry-l1-l2-weight-decay-and-early-stopping.md": {
    "id": "les-1412",
-   "fp": "c4913a2f33d9a163dc1a1f8430e9727dce6eb911"
+   "fp": "de8a49b5e1a1abb067fb0ef3a2b5e4ec1f87808b"
   },
   "lessons/maths-foundations/reverse-mode-autodiff-and-backpropagation.md": {
    "id": "les-1413",
@@ -5734,7 +5734,7 @@
   },
   "lessons/maths-foundations/s2-9-hidden-markov-models-filtering-and-decoding.md": {
    "id": "les-1430",
-   "fp": "e106b60f92e7adde3b5258fc239c357cbe49774c"
+   "fp": "3948da8f4c277f7e9586a12a2e0a97ae8178b11f"
   },
   "lessons/maths-foundations/s3-1-graph-notation-adjacency-incidence-and-degree-matrices.md": {
    "id": "les-1431",
@@ -5790,7 +5790,7 @@
   },
   "lessons/maths-foundations/scalars-arrays-tensors-axes-shapes-and-broadcasting.md": {
    "id": "les-1444",
-   "fp": "cdba6cb4757ebfe1d89d5501029cc50b370d4b6c"
+   "fp": "b26895aae3a993255f6c3e45284115c2e0e499d2"
   },
   "lessons/maths-foundations/second-derivatives-curvature-and-local-quadratic-models.md": {
    "id": "les-1445",
@@ -5842,7 +5842,7 @@
   },
   "lessons/maths-foundations/the-chain-rule.md": {
    "id": "les-1457",
-   "fp": "edb40186a180ed920f23885b6e3a512e3a10b4ad"
+   "fp": "df5cc3090c7ba5da493bcfc2e82569e821e1ee37"
   },
   "lessons/maths-foundations/the-geometry-of-embeddings.mdx": {
    "id": "les-1458",
@@ -6158,7 +6158,7 @@
   },
   "lessons/production/latency-and-cost-slos.mdx": {
    "id": "les-1536",
-   "fp": "9e9d0024dc2248ca1e48b5c9454d78ff9c2f1e82"
+   "fp": "a9be79e7c24b8e1c7134e81cb0a8bbec70d113ff"
   },
   "lessons/production/llm-gateway-and-provider-abstraction.mdx": {
    "id": "les-1537",
@@ -6550,7 +6550,7 @@
   },
   "lessons/prompt-engineering/prompt-patterns.md": {
    "id": "les-1634",
-   "fp": "7fcddb611cb99dca9188cf51540fe70ecd6269fe"
+   "fp": "bdbc5f5a544a3c9723b12ade3907de68903be8db"
   },
   "lessons/prompt-engineering/prompt-portability-across-models-strategy.md": {
    "id": "les-1635",
@@ -6682,7 +6682,7 @@
   },
   "lessons/prompt-engineering/structured-output.md": {
    "id": "les-1667",
-   "fp": "cfd95299c1c5233df163045a77543032456f4fc9"
+   "fp": "9108637c172d7219e0e0ef16e86264b03facf605"
   },
   "lessons/prompt-engineering/structured-prompt-worked-example.md": {
    "id": "les-1668",
@@ -6742,7 +6742,7 @@
   },
   "lessons/prompt-engineering/what-prompt-engineering-is.md": {
    "id": "les-1682",
-   "fp": "8509a8ad6cd8efa45c5db8ac1c567d3a05b84c1e"
+   "fp": "857b72ffe5ea0545f2ab46b8e3401cbbf4f2d205"
   },
   "lessons/prompt-engineering/what-prompting-cannot-fix.md": {
    "id": "les-1683",
@@ -6750,11 +6750,11 @@
   },
   "lessons/prompt-engineering/what-prompting-is.md": {
    "id": "les-1684",
-   "fp": "ec0ae92b24a8f86e56c6c251d33e535b81d56e7a"
+   "fp": "2e7ac9d902d42e5cf0564907400db8194abf7fd4"
   },
   "lessons/prompt-engineering/what-role-prompting-changes.md": {
    "id": "les-1685",
-   "fp": "86e305dffcba703c876770bccdb9d7a34a995407"
+   "fp": "01767907de0ddf3fea1b035be69f2b2372dae2c7"
   },
   "lessons/prompt-engineering/when-cot-hurts-accuracy.md": {
    "id": "les-1686",
@@ -7062,7 +7062,7 @@
   },
   "lessons/rag/chunking-strategies-for-documents.mdx": {
    "id": "les-1762",
-   "fp": "be9cd61207b51b01ab651d0fedeacf2e44fb9d90"
+   "fp": "53ec46c15d736fdeee502b81c8578bc86aa31cb9"
   },
   "lessons/rag/chunking-worked-example.md": {
    "id": "les-1763",
@@ -7174,7 +7174,7 @@
   },
   "lessons/rag/rag-whole-game.mdx": {
    "id": "les-1790",
-   "fp": "aa3ae9b18c27bdebc88b6ba5ee4a60006c8dce90"
+   "fp": "2545c268ace2ec1fc6c319e6fa590bec5b1e0ac3"
   },
   "lessons/rag/reranking-cheatsheet.md": {
    "id": "les-1791",
@@ -7294,7 +7294,7 @@
   },
   "lessons/structured-outputs/building-an-extraction-eval-harness.md": {
    "id": "les-1820",
-   "fp": "a237096f6a0299ca213b3b915694401cd672d618"
+   "fp": "bb985c5817d1a7ef30ceb0ea4a70ee92faab04e7"
   },
   "lessons/structured-outputs/capstone-and-eval-quiz.md": {
    "id": "les-1821",
@@ -7330,7 +7330,7 @@
   },
   "lessons/structured-outputs/cross-provider-landscape.md": {
    "id": "les-1829",
-   "fp": "cace5092db91b0644782abd9aeb9992d38e95b3b"
+   "fp": "7bd2b7b50b0e4b144dde348f0eb872e0333ad18b"
   },
   "lessons/structured-outputs/cross-provider-structured-output-differences.mdx": {
    "id": "les-1830",
@@ -7410,7 +7410,7 @@
   },
   "lessons/structured-outputs/failure-modes-taxonomy.md": {
    "id": "les-1849",
-   "fp": "4b763613a8e26fcaee03e0d6ccecc4d36349a775"
+   "fp": "2d5cd3dd6677832c10a47c5d266a852af7f6805b"
   },
   "lessons/structured-outputs/field-descriptions-as-prompts.md": {
    "id": "les-1850",
@@ -7494,7 +7494,7 @@
   },
   "lessons/structured-outputs/long-document-extraction-strategies.mdx": {
    "id": "les-1870",
-   "fp": "5f162afb4310a8e8ee420f524c24036319e75e4d"
+   "fp": "9f7891112be1fb88b3fb302ed20ab32e0cab1815"
   },
   "lessons/structured-outputs/long-document-structured-extraction.mdx": {
    "id": "les-1871",
@@ -7514,7 +7514,7 @@
   },
   "lessons/structured-outputs/monitoring-structured-output-in-production.md": {
    "id": "les-1875",
-   "fp": "dfab04b6cc0084ebde6c04828cc39cc83f73d981"
+   "fp": "9a0d246bfeff39cffdfb94e3ce8e5b4616a87a25"
   },
   "lessons/structured-outputs/multi-field-tables-from-documents.md": {
    "id": "les-1876",
@@ -7610,7 +7610,7 @@
   },
   "lessons/structured-outputs/representing-uncertainty-in-schemas.md": {
    "id": "les-1899",
-   "fp": "59f9e9b5fe8ce6c3269fea7f57bcfe86a13e58ea"
+   "fp": "8964458e60f7daa5598934b7bf193071ada9ef4b"
   },
   "lessons/structured-outputs/runtime-quiz.md": {
    "id": "les-1900",
@@ -7686,7 +7686,7 @@
   },
   "lessons/structured-outputs/structured-output-failure-modes.mdx": {
    "id": "les-1918",
-   "fp": "e88cd2846fd1cd3d118cfadb96eac657541fde3e"
+   "fp": "d38f21fc48b0f904bd9d68a2064e759f1cb245a7"
   },
   "lessons/structured-outputs/the-contract-between-model-and-code.md": {
    "id": "les-1919",
@@ -7714,7 +7714,7 @@
   },
   "lessons/structured-outputs/tool-and-function-schemas-for-extraction.md": {
    "id": "les-1925",
-   "fp": "f2b70207cd0f9bcc38038e685c970b9a8053b899"
+   "fp": "c801f02c648b046bb054499cb43ee41e5c87479b"
   },
   "lessons/structured-outputs/tool-function-schemas.mdx": {
    "id": "les-1926",
@@ -7774,7 +7774,7 @@
   },
   "lessons/tools-function-calling/anatomy-of-a-tool-call.md": {
    "id": "les-1940",
-   "fp": "bdb599355ad15895b295a9dd908704562009b326"
+   "fp": "3dffee95972b441555f0a311e70818838bf1dd7b"
   },
   "lessons/tools-function-calling/api-tools-vs-computer-use.md": {
    "id": "les-1941",
@@ -7798,7 +7798,7 @@
   },
   "lessons/tools-function-calling/building-a-browser-tool-loop.md": {
    "id": "les-1946",
-   "fp": "e3c548431dac662cf7c688544a86911ceeb21595"
+   "fp": "fa251a4616b3dcf45d697359efcc2b4aa383a976"
   },
   "lessons/tools-function-calling/building-a-code-interpreter-tool.md": {
    "id": "les-1947",
@@ -7814,7 +7814,7 @@
   },
   "lessons/tools-function-calling/building-a-tool-use-eval-harness.md": {
    "id": "les-1950",
-   "fp": "1b1e468672fcfa80a478f558da1bdbb121bf7ba6"
+   "fp": "7cae8d8936bf0fbe3251c63e208e169bf38d6173"
   },
   "lessons/tools-function-calling/caching-tool-results.md": {
    "id": "les-1951",
@@ -7838,11 +7838,11 @@
   },
   "lessons/tools-function-calling/code-execution-as-a-tool-concept.md": {
    "id": "les-1956",
-   "fp": "a4ff567ce99c3839e0fded30aeeda360de34ff6d"
+   "fp": "52d1ac84ff1ad78a83eff70a2e8cf1b5436a856f"
   },
   "lessons/tools-function-calling/code-execution-as-a-tool.mdx": {
    "id": "les-1957",
-   "fp": "dff594b37546c9be0aa1a60302294b2490bdefba"
+   "fp": "d0211eca3114eb759c008490f8e99a2c1932d17a"
   },
   "lessons/tools-function-calling/code-execution-vs-many-tools.md": {
    "id": "les-1958",
@@ -7870,7 +7870,7 @@
   },
   "lessons/tools-function-calling/descriptions-are-prompts.md": {
    "id": "les-1964",
-   "fp": "e7fc6ead0e81ebf3ffdf9b39c6314364d5fdf345"
+   "fp": "403f80c4f9ca55ee10165d82a1fab5a56ac72bcd"
   },
   "lessons/tools-function-calling/designing-a-tool-schema-walkthrough.md": {
    "id": "les-1965",
@@ -7902,7 +7902,7 @@
   },
   "lessons/tools-function-calling/execution-authority-model.md": {
    "id": "les-1972",
-   "fp": "ddc147869b6d17eb5672cbec5050f53882709d27"
+   "fp": "7293ce49ac2d8b1f40e9047bd600ec42f9af3129"
   },
   "lessons/tools-function-calling/execution-safety-common-mistakes.md": {
    "id": "les-1973",
@@ -8002,7 +8002,7 @@
   },
   "lessons/tools-function-calling/parallel-tool-calls.mdx": {
    "id": "les-1997",
-   "fp": "c49a6368684d708a70cd8476ecee0cfa37b06a0d"
+   "fp": "83b08adad1cd8d370a3864783629acf878ed72d5"
   },
   "lessons/tools-function-calling/parallel-vs-sequential-decision.md": {
    "id": "les-1998",
@@ -8018,7 +8018,7 @@
   },
   "lessons/tools-function-calling/progressive-tool-disclosure-patterns.md": {
    "id": "les-2001",
-   "fp": "2e5c8a18d0c52ac5fdbdbbdf0475dcf084d935e1"
+   "fp": "017731e7853ccba7ce48fdb76c69c676bdb64331"
   },
   "lessons/tools-function-calling/rag-over-tools-retrieval.md": {
    "id": "les-2002",
@@ -8130,7 +8130,7 @@
   },
   "lessons/tools-function-calling/taxonomy-of-tool-failures.md": {
    "id": "les-2029",
-   "fp": "4fb8aed0b2bd0f51adee2e5d0e382235b38360e9"
+   "fp": "afd347a03f95002a5e51b5f2254d8589afd2b966"
   },
   "lessons/tools-function-calling/testing-and-debugging-tool-calls.mdx": {
    "id": "les-2030",
@@ -8138,7 +8138,7 @@
   },
   "lessons/tools-function-calling/testing-tool-calls-strategies.md": {
    "id": "les-2031",
-   "fp": "c8baed8c7c3e6830eab92f1f383ccbb86805aafb"
+   "fp": "4fd4042a547419c5da942855ec98e4dc85f21133"
   },
   "lessons/tools-function-calling/the-authority-problem.md": {
    "id": "les-2032",
@@ -8162,7 +8162,7 @@
   },
   "lessons/tools-function-calling/tool-calling-across-providers.md": {
    "id": "les-2037",
-   "fp": "f247ae597591a91f6256e25594166a3c53c60c4a"
+   "fp": "991fdd0c6d72d281cb29be3cd416b9bcc4312e89"
   },
   "lessons/tools-function-calling/tool-calling-glossary-cheatsheet.md": {
    "id": "les-2038",
@@ -8238,7 +8238,7 @@
   },
   "lessons/tools-function-calling/what-is-tool-calling.mdx": {
    "id": "les-2056",
-   "fp": "d183d67aad02125f32ba08b8c34ae3f6a5e66671"
+   "fp": "0f552b029affb70c0843308e62b07877b873e49c"
   },
   "lessons/tools-function-calling/when-to-force-vs-auto.md": {
    "id": "les-2057",

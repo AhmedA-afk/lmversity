@@ -101,3 +101,5 @@ Stable arithmetic does not fix a wrong class order, exploding model scale, poor 
 - Continue: [Optimisation diagnostics and second-order perspective](/learn/maths-foundations/optimisation-diagnostics-and-second-order-perspective)
 - Go deeper: Cross-entropy and negative log-likelihood
 - Apply it: API lifecycle and structured output
+
+**Related:** [Numerical Stability and the Log-Sum-Exp Trick](/learn/maths-foundations/numerical-stability-log-sum-exp)

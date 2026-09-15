@@ -1,7 +1,7 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T09:00:44.505Z",
+  "generatedAt": "2026-09-15T09:11:59.283Z",
   "generator": "scripts/build-content-registry.mjs",
   "itemCount": 2410,
   "counts": {
@@ -3667,7 +3667,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 994,
+   "wordCount": 995,
    "headings": [
     "Why this matters",
     "Core model and worked trace",
@@ -3677,7 +3677,8 @@
     "Assignment and rubric"
    ],
    "internalLinks": [
-    "/learn/ai-foundations/reliable-ai/204-distribution-shift-and-robustness"
+    "/learn/ai-foundations/reliable-ai/204-distribution-shift-and-robustness",
+    "/learn/classical-ai/search-planning/110-local-search-hill-climbing-plateaus-and-restarts"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -3831,7 +3832,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1001,
+   "wordCount": 1002,
    "headings": [
     "Why this matters",
     "Core model and worked trace",
@@ -3841,7 +3842,8 @@
     "Assignment and rubric"
    ],
    "internalLinks": [
-    "/learn/ai-foundations/reliable-ai/204-distribution-shift-and-robustness"
+    "/learn/ai-foundations/reliable-ai/204-distribution-shift-and-robustness",
+    "/learn/classical-ai/search-planning/113-alpha-beta-pruning-bounds-move-ordering-and-exactness"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -5127,7 +5129,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 990,
+   "wordCount": 991,
    "headings": [
     "Why this matters",
     "Core model and worked trace",
@@ -5137,7 +5139,8 @@
     "Assignment and rubric"
    ],
    "internalLinks": [
-    "/learn/ai-foundations/reliable-ai/204-distribution-shift-and-robustness"
+    "/learn/ai-foundations/reliable-ai/204-distribution-shift-and-robustness",
+    "/learn/classical-ai/agents-robotics/317-robot-control-feedback-and-stability"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -5208,7 +5211,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 991,
+   "wordCount": 992,
    "headings": [
     "Why this matters",
     "Core model and worked trace",
@@ -5218,7 +5221,8 @@
     "Assignment and rubric"
    ],
    "internalLinks": [
-    "/learn/ai-foundations/reliable-ai/204-distribution-shift-and-robustness"
+    "/learn/ai-foundations/reliable-ai/204-distribution-shift-and-robustness",
+    "/learn/classical-ai/agents-robotics/307-multi-agent-coordination-and-task-allocation"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -5548,7 +5552,8 @@
     "/learn/ai-foundations/interpretability-methods-overview",
     "/learn/ai-foundations/pretraining-vs-finetuning",
     "/learn/ai-foundations/reinforcement-learning-basics",
-    "/learn/ai-foundations/rlhf-and-instruction-tuning"
+    "/learn/ai-foundations/rlhf-and-instruction-tuning",
+    "/learn/llm-foundations/alignment-tax-reward-hacking-sycophancy"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -7947,6 +7952,7 @@
    "internalLinks": [
     "/learn/ai-foundations/generalization-and-overfitting",
     "/learn/ai-foundations/train-validation-test-splits",
+    "/learn/machine-learning/regularization-and-bias-variance",
     "/learn/maths-foundations/l1-vs-l2-regularization"
    ],
    "externalLinks": [],
@@ -9452,7 +9458,8 @@
     "/learn/ai-foundations/rlhf-and-instruction-tuning",
     "/learn/ai-foundations/training-and-optimization-quiz",
     "/learn/ai-foundations/training-vs-inference",
-    "/learn/ai-foundations/what-is-a-neural-network"
+    "/learn/ai-foundations/what-is-a-neural-network",
+    "/learn/llm-foundations/is-in-context-learning-gradient-descent"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -12546,7 +12553,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1280,
+   "wordCount": 1281,
    "headings": [
     "What must be true before a claim is credible",
     "Technical model and worked calculation",
@@ -12556,7 +12563,9 @@
     "Assignment: build and defend a reliability case",
     "Exercises: evidence before assertion"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/deep-learning/practice/423-adversarial-security-and-model-supply-chain-risk"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -12592,8 +12601,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -12604,7 +12613,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 1,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -12628,7 +12637,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1277,
+   "wordCount": 1278,
    "headings": [
     "What must be true before a claim is credible",
     "Technical model and worked calculation",
@@ -12638,7 +12647,9 @@
     "Assignment: build and defend a reliability case",
     "Exercises: evidence before assertion"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/llm-foundations/alignment-tax-reward-hacking-sycophancy"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -12674,8 +12685,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -12686,7 +12697,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 1,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -15257,7 +15268,9 @@
     "/learn/ai-foundations/open-weight-vs-closed-models",
     "/learn/ai-foundations/scaling-laws",
     "/learn/ai-foundations/supervised-learning-explained",
-    "/learn/ai-foundations/what-is-a-neural-network"
+    "/learn/ai-foundations/what-is-a-neural-network",
+    "/learn/llm-foundations/what-a-language-model-actually-computes",
+    "/learn/llm-foundations/what-the-internet-teaches-a-model"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -18306,7 +18319,8 @@
     "/learn/ai-literacy/the-verification-checklist",
     "/learn/ai-literacy/turn-a-vague-request-into-a-clear-one",
     "/learn/ai-literacy/what-not-to-paste-into-ai",
-    "/learn/prompt-engineering/chain-of-density-summarization"
+    "/learn/prompt-engineering/chain-of-density-summarization",
+    "/learn/prompt-engineering/prompt-patterns"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -21413,7 +21427,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 857,
+   "wordCount": 858,
    "headings": [
     "Learning objective",
     "Model, trace, and calculation",
@@ -21423,7 +21437,9 @@
     "Graded exercise",
     "Mastery check"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/ai-foundations/ai-systems/128-multi-agent-coordination-communication-and-allocation"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -21457,8 +21473,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -21469,7 +21485,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -22213,7 +22229,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 876,
+   "wordCount": 877,
    "headings": [
     "Learning objective",
     "Model, trace, and calculation",
@@ -22223,7 +22239,9 @@
     "Graded exercise",
     "Mastery check"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/ai-foundations/ai-systems/127-robot-control-feedback-and-safety-envelopes"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -22257,8 +22275,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -22269,7 +22287,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -24541,7 +24559,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 901,
+   "wordCount": 902,
    "headings": [
     "Why this lesson matters",
     "Core model and worked calculation",
@@ -24551,7 +24569,9 @@
     "Practice assignment — 20 points",
     "Mastery check"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/maths-foundations/s2-9-hidden-markov-models-filtering-and-decoding"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -24585,8 +24605,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -24597,7 +24617,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -24941,7 +24961,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 901,
+   "wordCount": 902,
    "headings": [
     "Why this lesson matters",
     "Core model and worked calculation",
@@ -24951,7 +24971,9 @@
     "Practice assignment — 20 points",
     "Mastery check"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/maths-foundations/causal-inference-foundations"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -24987,8 +25009,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -24999,7 +25021,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -25994,7 +26016,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1147,
+   "wordCount": 1148,
    "headings": [
     "Why this lesson matters",
     "Formal model and calculation",
@@ -26005,7 +26027,9 @@
     "Graded exercise",
     "Mastery checkpoint"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/ai-foundations/ai-systems/109-local-search-hill-climbing-and-stochastic-optimization"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -26039,8 +26063,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -26051,7 +26075,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -26239,7 +26263,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1158,
+   "wordCount": 1159,
    "headings": [
     "Why this lesson matters",
     "Formal model and calculation",
@@ -26250,7 +26274,9 @@
     "Graded exercise",
     "Mastery checkpoint"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/ai-foundations/ai-systems/111-alpha-beta-pruning-and-move-ordering"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -26284,8 +26310,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -26296,7 +26322,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -28582,6 +28608,7 @@
    ],
    "internalLinks": [
     "/learn/context-engineering/context-ordering-and-recency-effects",
+    "/learn/context-engineering/ordering-for-cache-hits",
     "/learn/context-engineering/summarization-for-compaction",
     "/learn/context-engineering/token-budgeting-strategies",
     "/learn/genai-app-dev/prompt-caching-for-speed-and-cost",
@@ -30385,6 +30412,7 @@
    ],
    "internalLinks": [
     "/learn/agentic-ai/agent-memory-short-vs-long-term",
+    "/learn/context-engineering/cross-session-memory-architecture",
     "/learn/context-engineering/retrieval-vs-context-stuffing",
     "/learn/context-engineering/summarization-for-compaction"
    ],
@@ -30473,7 +30501,8 @@
     "/learn/context-engineering/the-budget-allocation-mental-model",
     "/learn/context-engineering/token-budget-cheatsheet",
     "/learn/context-engineering/when-long-context-beats-rag",
-    "/learn/context-engineering/why-more-tokens-hurt"
+    "/learn/context-engineering/why-more-tokens-hurt",
+    "/learn/production/latency-and-cost-slos"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -30643,6 +30672,7 @@
     "The precise tradeoff at re-entry"
    ],
    "internalLinks": [
+    "/learn/context-engineering/conversation-memory-and-state",
     "/learn/context-engineering/just-in-time-context-loading",
     "/learn/context-engineering/memory-vs-state-distinction",
     "/learn/context-engineering/retrieval-vs-context-stuffing",
@@ -31784,6 +31814,7 @@
    ],
    "internalLinks": [
     "/learn/context-engineering/building-a-rolling-summarizer",
+    "/learn/context-engineering/hierarchical-summarization",
     "/learn/context-engineering/just-in-time-context-loading",
     "/learn/context-engineering/memory-vs-state-distinction",
     "/learn/context-engineering/structured-context-injection",
@@ -31867,6 +31898,7 @@
    ],
    "internalLinks": [
     "/learn/context-engineering/conversation-memory-and-state",
+    "/learn/context-engineering/hierarchical-summarization-explained",
     "/learn/context-engineering/structured-context-injection",
     "/learn/context-engineering/structured-memory-stores",
     "/learn/context-engineering/summarization-for-compaction"
@@ -32461,7 +32493,8 @@
     "/learn/context-engineering/ordering-context-for-attention",
     "/learn/context-engineering/recency-and-primacy-effects",
     "/learn/context-engineering/reproducing-lost-in-the-middle",
-    "/learn/context-engineering/signal-to-noise-in-context"
+    "/learn/context-engineering/signal-to-noise-in-context",
+    "/learn/llm-foundations/the-lost-in-the-middle-effect"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -33314,6 +33347,7 @@
    ],
    "internalLinks": [
     "/learn/context-engineering/handoff-payload-design",
+    "/learn/context-engineering/multi-agent-context-problem",
     "/learn/context-engineering/orchestrator-worker-context-flow",
     "/learn/context-engineering/shared-vs-private-context-stores",
     "/learn/context-engineering/subagent-context-isolation"
@@ -33402,6 +33436,7 @@
     "/learn/context-engineering/context-rot",
     "/learn/context-engineering/conversation-memory-and-state",
     "/learn/context-engineering/handoff-payload-design",
+    "/learn/context-engineering/multi-agent-context-mistakes",
     "/learn/context-engineering/orchestrator-worker-context-flow",
     "/learn/context-engineering/subagent-context-isolation"
    ],
@@ -34169,7 +34204,8 @@
     "/learn/context-engineering/just-in-time-context-loading-pattern",
     "/learn/context-engineering/progressive-tool-disclosure",
     "/learn/context-engineering/signal-to-noise-in-context",
-    "/learn/context-engineering/subagent-context-isolation"
+    "/learn/context-engineering/subagent-context-isolation",
+    "/learn/tools-function-calling/progressive-tool-disclosure-patterns"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -34342,6 +34378,7 @@
     "/learn/context-engineering/ordering-for-cache-hits",
     "/learn/context-engineering/stateless-model-stateful-agent",
     "/learn/context-engineering/token-budgeting-strategies",
+    "/learn/genai-app-dev/implementing-prompt-caching",
     "/learn/llm-foundations/the-kv-cache"
    ],
    "externalLinks": [],
@@ -37733,7 +37770,8 @@
     "/learn/context-engineering/context-window-anatomy",
     "/learn/context-engineering/counting-tokens-in-practice",
     "/learn/context-engineering/relevance-filtering",
-    "/learn/llm-foundations/context-window-mechanics"
+    "/learn/llm-foundations/context-window-mechanics",
+    "/learn/llm-foundations/why-models-need-tokens-not-characters"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -39117,7 +39155,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 851,
+   "wordCount": 852,
    "headings": [
     "Why this matters",
     "Core derivation",
@@ -39131,7 +39169,9 @@
     "Practice set and rubric",
     "Evidence standard and counterfactual check"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/maths-foundations/scalars-arrays-tensors-axes-shapes-and-broadcasting"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -39165,8 +39205,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -39177,7 +39217,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -39707,7 +39747,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 817,
+   "wordCount": 818,
    "headings": [
     "Why this matters",
     "Core derivation",
@@ -39721,7 +39761,9 @@
     "Practice set and rubric",
     "Evidence standard and counterfactual check"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/maths-foundations/computational-graphs-and-local-derivatives"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -39757,8 +39799,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -39769,7 +39811,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -40469,7 +40511,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 830,
+   "wordCount": 831,
    "headings": [
     "Why this matters",
     "Core derivation",
@@ -40483,7 +40525,9 @@
     "Practice set and rubric",
     "Evidence standard and counterfactual check"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/maths-foundations/regularisation-geometry-l1-l2-weight-decay-and-early-stopping"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -40517,8 +40561,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -40529,7 +40573,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -40637,7 +40681,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 845,
+   "wordCount": 846,
    "headings": [
     "Why this matters",
     "Core derivation",
@@ -40651,7 +40695,9 @@
     "Practice set and rubric",
     "Evidence standard and counterfactual check"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/deep-learning/vision/210-data-augmentation-and-invariance"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -40685,8 +40731,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -40697,7 +40743,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -41483,7 +41529,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 854,
+   "wordCount": 855,
    "headings": [
     "Why this matters",
     "Core derivation",
@@ -41497,7 +41543,9 @@
     "Practice set and rubric",
     "Evidence standard and counterfactual check"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/deep-learning/vision/211-transfer-learning-and-fine-tuning"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -41531,8 +41579,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -41543,7 +41591,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -42238,7 +42286,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 894,
+   "wordCount": 895,
    "headings": [
     "Technical calculation and derivation",
     "Three distinct worked scenarios",
@@ -42254,7 +42302,9 @@
     "Evidence checklist",
     "Further challenge"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/ml-605-data-contracts-and-schema-evolution"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -42288,8 +42338,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -42300,7 +42350,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -44070,7 +44120,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 830,
+   "wordCount": 831,
    "headings": [
     "Technical calculation and derivation",
     "Three distinct worked scenarios",
@@ -44086,7 +44136,9 @@
     "Evidence checklist",
     "Further challenge"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/hallucinations/escalation-human-in-the-loop"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -44120,8 +44172,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -44132,7 +44184,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -44156,7 +44208,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 802,
+   "wordCount": 803,
    "headings": [
     "Technical calculation and derivation",
     "Three distinct worked scenarios",
@@ -44172,7 +44224,9 @@
     "Evidence checklist",
     "Further challenge"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/ai-foundations/reliable-ai/213-model-supply-chain-and-artifact-security"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -44206,8 +44260,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -44218,7 +44272,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -45503,7 +45557,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 927,
+   "wordCount": 928,
    "headings": [
     "Why this lesson matters",
     "Derivation and calculation",
@@ -45514,7 +45568,8 @@
     "Advanced laboratory: attention calculation"
    ],
    "internalLinks": [
-    "/learn/deep-learning/core/124-numerical-stability-logsumexp-and-mixed-precision"
+    "/learn/deep-learning/core/124-numerical-stability-logsumexp-and-mixed-precision",
+    "/learn/llm-foundations/scaled-dot-product-attention-in-numpy"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -45585,7 +45640,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 921,
+   "wordCount": 922,
    "headings": [
     "Why this lesson matters",
     "Derivation and calculation",
@@ -45596,7 +45651,8 @@
     "Advanced laboratory: multi-head routing"
    ],
    "internalLinks": [
-    "/learn/deep-learning/core/124-numerical-stability-logsumexp-and-mixed-precision"
+    "/learn/deep-learning/core/124-numerical-stability-logsumexp-and-mixed-precision",
+    "/learn/llm-foundations/implement-multi-head-attention"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -46411,7 +46467,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 909,
+   "wordCount": 910,
    "headings": [
     "Why this lesson matters",
     "Derivation and calculation",
@@ -46422,7 +46478,8 @@
     "Advanced laboratory: LM evaluation"
    ],
    "internalLinks": [
-    "/learn/deep-learning/core/124-numerical-stability-logsumexp-and-mixed-precision"
+    "/learn/deep-learning/core/124-numerical-stability-logsumexp-and-mixed-precision",
+    "/learn/maths-foundations/perplexity-explained"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -48664,12 +48721,14 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 781,
+   "wordCount": 782,
    "headings": [
     "Diagnostics and assignment",
     "Advanced studio: calculation, implementation, and decision evidence"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/deep-learning/core/119-data-augmentation-invariances-and-leakage"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -48703,8 +48762,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -48715,7 +48774,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -48739,13 +48798,15 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 829,
+   "wordCount": 830,
    "headings": [
     "Diagnostics",
     "Assignment",
     "Advanced studio: calculation, implementation, and decision evidence"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/deep-learning/core/129-transfer-learning-fine-tuning-and-domain-shift"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -48781,8 +48842,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -48793,7 +48854,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -51506,6 +51567,7 @@
     "/learn/evals-red-teaming/building-a-golden-dataset",
     "/learn/evals-red-teaming/human-evaluation-and-annotation",
     "/learn/evals-red-teaming/writing-eval-metrics",
+    "/learn/hallucinations/llm-as-judge-for-faithfulness",
     "/learn/prompt-engineering/prompt-templates-and-variables"
    ],
    "externalLinks": [],
@@ -58502,6 +58564,7 @@
     "Extend it"
    ],
    "internalLinks": [
+    "/learn/context-engineering/prompt-caching-mechanics",
     "/learn/genai-app-dev/cutting-cost-with-model-cascade",
     "/learn/genai-app-dev/prompt-caching",
     "/learn/genai-app-dev/streaming-caching-batching-together",
@@ -60858,7 +60921,8 @@
     "/learn/genai-app-dev/gateway-vs-in-app-abstraction",
     "/learn/genai-app-dev/provider-abstraction-layers",
     "/learn/genai-app-dev/sdk-vs-raw-api",
-    "/learn/genai-app-dev/why-abstract-the-provider"
+    "/learn/genai-app-dev/why-abstract-the-provider",
+    "/learn/structured-outputs/cross-provider-landscape"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -64290,6 +64354,8 @@
     "/learn/genai-app-dev/extracting-typed-data-from-freeform",
     "/learn/genai-app-dev/json-schema-and-validation",
     "/learn/genai-app-dev/structured-output-in-apps",
+    "/learn/prompt-engineering/structured-output",
+    "/learn/structured-outputs/failure-modes-taxonomy",
     "/learn/structured-outputs/validation-and-auto-repair"
    ],
    "externalLinks": [],
@@ -64377,6 +64443,7 @@
     "/learn/genai-app-dev/generative-ui",
     "/learn/genai-app-dev/json-schema-and-validation",
     "/learn/genai-app-dev/structured-output-failures",
+    "/learn/prompt-engineering/structured-output",
     "/learn/structured-outputs/why-structured-output"
    ],
    "externalLinks": [],
@@ -64735,7 +64802,8 @@
     "/learn/genai-app-dev/implementing-a-tool-call-loop",
     "/learn/genai-app-dev/multi-step-agentic-tool-loops",
     "/learn/genai-app-dev/structured-output-failures",
-    "/learn/genai-app-dev/tool-calling-as-authority"
+    "/learn/genai-app-dev/tool-calling-as-authority",
+    "/learn/tools-function-calling/what-is-tool-calling"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -67285,6 +67353,7 @@
     "/learn/hallucinations/confidence-uncertainty-calibration-defs",
     "/learn/hallucinations/grounding-with-source-documents",
     "/learn/hallucinations/measuring-plotting-calibration-impl",
+    "/learn/hallucinations/production-antipatterns",
     "/learn/hallucinations/semantic-entropy-clustering-impl",
     "/learn/hallucinations/token-logprob-confidence-impl",
     "/learn/hallucinations/uncertainty-in-practice-triage",
@@ -68957,6 +69026,7 @@
     "Where next"
    ],
    "internalLinks": [
+    "/learn/deep-learning/practice/422-calibration-abstention-and-human-in-the-loop-design",
     "/learn/hallucinations/calibration-error-reliability-diagrams",
     "/learn/hallucinations/confidence-gated-escalation-impl",
     "/learn/hallucinations/escalation-design-for-uncertain-answers",
@@ -71715,6 +71785,7 @@
     "Where next"
    ],
    "internalLinks": [
+    "/learn/evals-red-teaming/llm-as-judge",
     "/learn/hallucinations/chainpoll-detector-impl",
     "/learn/hallucinations/citations-and-attribution",
     "/learn/hallucinations/detection-methods-compared",
@@ -72634,7 +72705,8 @@
     "/learn/hallucinations/incident-response-for-hallucination",
     "/learn/hallucinations/latency-cost-reliability-tradeoffs",
     "/learn/hallucinations/reliability-architecture-overview",
-    "/learn/hallucinations/tracking-hallucination-in-ci"
+    "/learn/hallucinations/tracking-hallucination-in-ci",
+    "/learn/structured-outputs/monitoring-structured-output-in-production"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -73302,6 +73374,7 @@
    ],
    "internalLinks": [
     "/learn/hallucinations/calibration-error-reliability-diagrams",
+    "/learn/hallucinations/confidence-antipatterns",
     "/learn/hallucinations/confidence-gated-escalation-impl",
     "/learn/hallucinations/ensemble-cross-checking",
     "/learn/hallucinations/escalation-human-in-the-loop",
@@ -75827,7 +75900,8 @@
    "internalLinks": [
     "/learn/evals-red-teaming/building-a-golden-dataset",
     "/learn/hallucinations/grounding-with-source-documents",
-    "/learn/hallucinations/why-models-hallucinate"
+    "/learn/hallucinations/why-models-hallucinate",
+    "/learn/structured-outputs/representing-uncertainty-in-schemas"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -77377,6 +77451,7 @@
     "/learn/hallucinations/confidence-uncertainty-calibration-defs",
     "/learn/hallucinations/measuring-plotting-calibration-impl",
     "/learn/hallucinations/verbalized-vs-elicited-confidence",
+    "/learn/llm-foundations/instruction-tuning-and-rlhf",
     "/learn/llm-foundations/next-token-prediction"
    ],
    "externalLinks": [],
@@ -79264,7 +79339,8 @@
    "internalLinks": [
     "/learn/harness-design/deny-floors-and-policy-layers",
     "/learn/harness-design/permission-and-approval-systems",
-    "/learn/harness-design/what-is-a-harness"
+    "/learn/harness-design/what-is-a-harness",
+    "/learn/tools-function-calling/building-a-browser-tool-loop"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -79593,6 +79669,8 @@
     "Where next"
    ],
    "internalLinks": [
+    "/learn/ai-foundations/alignment-failure-case-studies",
+    "/learn/ai-foundations/reliable-ai/214-alignment-objectives-and-reward-hacking",
     "/learn/llm-foundations/fine-tuning-mistakes-forgetting",
     "/learn/llm-foundations/instruction-tuning-and-rlhf",
     "/learn/llm-foundations/rlhf-reward-models-and-ppo",
@@ -80537,6 +80615,7 @@
    ],
    "internalLinks": [
     "/learn/llm-foundations/attention-as-soft-lookup",
+    "/learn/llm-foundations/causal-masking",
     "/learn/llm-foundations/next-token-prediction",
     "/learn/llm-foundations/scaled-dot-product-attention-in-numpy",
     "/learn/llm-foundations/the-autoregressive-generation-loop",
@@ -80622,6 +80701,7 @@
    ],
    "internalLinks": [
     "/learn/llm-foundations/attention-mechanism-explained",
+    "/learn/llm-foundations/causal-masking-mechanics",
     "/learn/llm-foundations/multi-head-attention",
     "/learn/llm-foundations/next-token-prediction"
    ],
@@ -80966,7 +81046,8 @@
     "/learn/context-engineering/retrieval-vs-context-stuffing",
     "/learn/context-engineering/summarization-for-compaction",
     "/learn/context-engineering/token-budgeting-strategies",
-    "/learn/llm-foundations/attention-mechanism-explained"
+    "/learn/llm-foundations/attention-mechanism-explained",
+    "/learn/llm-foundations/in-context-learning-mechanics"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -82827,6 +82908,7 @@
     "Extend it"
    ],
    "internalLinks": [
+    "/learn/deep-learning/sequence-generative/310-multihead-and-cross-attention",
     "/learn/llm-foundations/assemble-one-full-transformer-block",
     "/learn/llm-foundations/grouped-query-attention",
     "/learn/llm-foundations/multi-head-attention-why-many-heads",
@@ -83087,6 +83169,7 @@
    "internalLinks": [
     "/learn/llm-foundations/attention-mechanism-explained",
     "/learn/llm-foundations/causal-masking",
+    "/learn/llm-foundations/context-window-mechanics",
     "/learn/llm-foundations/few-shot-vs-zero-shot-worked",
     "/learn/llm-foundations/in-context-learning",
     "/learn/llm-foundations/is-in-context-learning-gradient-descent",
@@ -83253,6 +83336,7 @@
    ],
    "internalLinks": [
     "/learn/fine-tuning/supervised-fine-tuning-vs-preference-tuning",
+    "/learn/hallucinations/why-rlhf-hurts-calibration",
     "/learn/llm-foundations/emergent-abilities-in-llms",
     "/learn/llm-foundations/model-families-and-variants",
     "/learn/llm-foundations/next-token-prediction",
@@ -83336,6 +83420,7 @@
     "Open questions"
    ],
    "internalLinks": [
+    "/learn/ai-foundations/gradient-descent-explained",
     "/learn/llm-foundations/attention-mechanism-explained",
     "/learn/llm-foundations/few-shot-vs-zero-shot-worked",
     "/learn/llm-foundations/in-context-learning",
@@ -84259,6 +84344,7 @@
     "/learn/llm-foundations/causal-masking-mechanics",
     "/learn/llm-foundations/grouped-query-attention",
     "/learn/llm-foundations/implement-multi-head-attention",
+    "/learn/llm-foundations/multi-head-attention",
     "/learn/llm-foundations/scaled-dot-product-attention-in-numpy",
     "/learn/llm-foundations/the-kv-cache",
     "/learn/llm-foundations/transformer-block-wiring-bugs",
@@ -84342,6 +84428,7 @@
    "internalLinks": [
     "/learn/llm-foundations/attention-mechanism-explained",
     "/learn/llm-foundations/grouped-query-attention",
+    "/learn/llm-foundations/multi-head-attention-why-many-heads",
     "/learn/llm-foundations/the-kv-cache",
     "/learn/llm-foundations/the-transformer-architecture"
    ],
@@ -85103,7 +85190,8 @@
     "/learn/llm-foundations/attention-mechanism-explained",
     "/learn/llm-foundations/context-window-mechanics",
     "/learn/llm-foundations/the-transformer-architecture",
-    "/learn/llm-foundations/what-are-embeddings"
+    "/learn/llm-foundations/what-are-embeddings",
+    "/learn/llm-foundations/why-order-needs-positional-encoding"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -86531,6 +86619,7 @@
     "Extend it"
    ],
    "internalLinks": [
+    "/learn/deep-learning/sequence-generative/309-attention-derivation",
     "/learn/llm-foundations/attention-as-soft-lookup",
     "/learn/llm-foundations/implement-multi-head-attention",
     "/learn/llm-foundations/transformer-block-wiring-bugs",
@@ -87909,6 +87998,7 @@
     "The one thing this doesn't mean"
    ],
    "internalLinks": [
+    "/learn/context-engineering/lost-in-the-middle-explained",
     "/learn/llm-foundations/context-extrapolation-and-rope-scaling",
     "/learn/llm-foundations/context-window-mechanics",
     "/learn/llm-foundations/context-window-mechanics-and-limits",
@@ -89444,6 +89534,7 @@
     "Where next"
    ],
    "internalLinks": [
+    "/learn/ai-foundations/what-a-model-actually-is",
     "/learn/llm-foundations/in-context-learning",
     "/learn/llm-foundations/logits-to-probabilities-by-hand",
     "/learn/llm-foundations/myths-about-how-llms-work",
@@ -89783,6 +89874,7 @@
    ],
    "internalLinks": [
     "/learn/ai-foundations/self-supervised-learning",
+    "/learn/ai-foundations/what-a-model-actually-is",
     "/learn/llm-foundations/next-token-prediction",
     "/learn/llm-foundations/pretraining-data-pipeline",
     "/learn/llm-foundations/the-pretraining-objective-and-loss",
@@ -89886,7 +89978,8 @@
     "/learn/llm-foundations/what-a-language-model-actually-computes",
     "/learn/llm-foundations/what-are-embeddings",
     "/learn/llm-foundations/whole-game-quiz",
-    "/learn/llm-foundations/why-next-word-prediction-is-enough"
+    "/learn/llm-foundations/why-next-word-prediction-is-enough",
+    "/learn/rag/rag-whole-game"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -90311,6 +90404,7 @@
    ],
    "internalLinks": [
     "/learn/ai-foundations/tokens-context-cost",
+    "/learn/context-engineering/tokens-are-not-words",
     "/learn/llm-foundations/bpe-vs-wordpiece-vs-unigram",
     "/learn/llm-foundations/build-bpe-from-scratch",
     "/learn/llm-foundations/byte-pair-encoding",
@@ -90571,6 +90665,7 @@
     "/learn/llm-foundations/attention-mechanism-explained",
     "/learn/llm-foundations/causal-masking",
     "/learn/llm-foundations/implement-rope-in-numpy",
+    "/learn/llm-foundations/positional-encoding-explained",
     "/learn/llm-foundations/sinusoidal-vs-learned-vs-rope-vs-alibi",
     "/learn/llm-foundations/the-embedding-lookup-table",
     "/learn/llm-foundations/the-forward-pass-as-a-stack-of-blocks"
@@ -93541,7 +93636,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 349,
+   "wordCount": 350,
    "headings": [
     "Notation and preconditions",
     "Step-by-step derivation",
@@ -93552,7 +93647,9 @@
     "Limitations",
     "Nearby course topics"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/ml-502-resampling-bootstrap-and-confidence-intervals"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -93586,8 +93683,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -93598,7 +93695,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -96508,7 +96605,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 345,
+   "wordCount": 346,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -96522,7 +96619,8 @@
    ],
    "internalLinks": [
     "/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian",
-    "/learn/machine-learning/ml-206-logistic-regression-likelihood-and-odds"
+    "/learn/machine-learning/ml-206-logistic-regression-likelihood-and-odds",
+    "/learn/machine-learning/ml-210-generalized-additive-models"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -96569,7 +96667,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -96925,7 +97023,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 334,
+   "wordCount": 335,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -96937,7 +97035,9 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/ml-205-generalized-linear-models"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -96971,8 +97071,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -96983,7 +97083,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -97671,7 +97771,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 385,
+   "wordCount": 386,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -97683,7 +97783,9 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/maths-foundations/kernel-matrices-and-kernel-trick"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -97717,8 +97819,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -97729,7 +97831,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -98005,7 +98107,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 391,
+   "wordCount": 392,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -98017,7 +98119,9 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/reproductions/random-forest-reproduction"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -98051,8 +98155,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -98063,7 +98167,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -100233,7 +100337,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 611,
+   "wordCount": 612,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -100247,6 +100351,7 @@
    ],
    "internalLinks": [
     "/learn/machine-learning/deep-lectures/907-time-series-ranking-and-recommender-systems-under-temporal-exposure-feedback",
+    "/learn/machine-learning/derivations/11-bootstrap-confidence-intervals-and-permutation-tests",
     "/learn/machine-learning/ml-503-hypothesis-tests-permutation-tests-and-effect-sizes"
    ],
    "externalLinks": [],
@@ -100294,7 +100399,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -100318,7 +100423,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 600,
+   "wordCount": 601,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -100330,7 +100435,9 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/maths-foundations/hypothesis-tests-p-values-and-permutation-tests"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -100364,8 +100471,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -100376,7 +100483,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -101829,7 +101936,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 412,
+   "wordCount": 413,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -101841,7 +101948,9 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/deep-learning/practice/401-data-contracts-and-schema-audits"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -101875,8 +101984,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -101887,7 +101996,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -105731,7 +105840,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 201,
+   "wordCount": 202,
    "headings": [
     "Question and evidence boundary",
     "Protocol",
@@ -105739,7 +105848,9 @@
     "Grading rubric",
     "Critical reflection"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/public-data-projects/ml-891-adult-income-decision-audit"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -105775,8 +105886,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -105787,7 +105898,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -105811,7 +105922,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 191,
+   "wordCount": 192,
    "headings": [
     "Question and evidence boundary",
     "Protocol",
@@ -105819,7 +105930,9 @@
     "Grading rubric",
     "Critical reflection"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/public-data-projects/ml-896-aps-failure-cost-sensitive-maintenance"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -105855,8 +105968,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -105867,7 +105980,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -105971,7 +106084,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 193,
+   "wordCount": 194,
    "headings": [
     "Question and evidence boundary",
     "Protocol",
@@ -105979,7 +106092,9 @@
     "Grading rubric",
     "Critical reflection"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/public-data-projects/ml-893-bike-sharing-demand-forecast"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -106015,8 +106130,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -106027,7 +106142,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -106051,7 +106166,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 796,
+   "wordCount": 797,
    "headings": [
     "Project brief",
     "Authoritative source, licence, and provenance",
@@ -106064,7 +106179,8 @@
     "Responsible-use constraints"
    ],
    "internalLinks": [
-    "/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian"
+    "/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian",
+    "/learn/machine-learning/public-data-projects/adult-income-project"
    ],
    "externalLinks": [
     "https://archive.ics.uci.edu/dataset/2/adult"
@@ -106227,7 +106343,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 608,
+   "wordCount": 609,
    "headings": [
     "Project brief",
     "Authoritative source, licence, and provenance",
@@ -106240,7 +106356,8 @@
     "Responsible-use constraints"
    ],
    "internalLinks": [
-    "/learn/machine-learning/derivations/01-linear-regression-normal-equations-and-geometry"
+    "/learn/machine-learning/derivations/01-linear-regression-normal-equations-and-geometry",
+    "/learn/machine-learning/public-data-projects/bike-sharing-project"
    ],
    "externalLinks": [
     "https://archive.ics.uci.edu/dataset/275/bike%2Bsharing%2Bdataset"
@@ -106316,7 +106433,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 577,
+   "wordCount": 578,
    "headings": [
     "Project brief",
     "Authoritative source, licence, and provenance",
@@ -106327,7 +106444,9 @@
     "Rubric (100 points)",
     "Responsible-use constraints"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/public-data-projects/online-retail-project"
+   ],
    "externalLinks": [
     "https://archive.ics.uci.edu/dataset/502/online%2Bretail"
    ],
@@ -106365,8 +106484,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -106377,7 +106496,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -106401,7 +106520,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 588,
+   "wordCount": 589,
    "headings": [
     "Project brief",
     "Authoritative source, licence, and provenance",
@@ -106412,7 +106531,9 @@
     "Rubric (100 points)",
     "Responsible-use constraints"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/public-data-projects/movielens-project"
+   ],
    "externalLinks": [
     "https://grouplens.org/datasets/movielens/25m/"
    ],
@@ -106450,8 +106571,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -106462,7 +106583,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -106486,7 +106607,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 694,
+   "wordCount": 695,
    "headings": [
     "Project brief",
     "Authoritative source, licence, and provenance",
@@ -106500,7 +106621,8 @@
    ],
    "internalLinks": [
     "/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian",
-    "/learn/machine-learning/ml-509-class-imbalance-resampling-and-class-weights"
+    "/learn/machine-learning/ml-509-class-imbalance-resampling-and-class-weights",
+    "/learn/machine-learning/public-data-projects/aps-failure-project"
    ],
    "externalLinks": [
     "https://archive.ics.uci.edu/dataset/421/aps%2Bfailure%2Bat%2Bscania%2Btrucks"
@@ -106552,7 +106674,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -106576,7 +106698,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 191,
+   "wordCount": 192,
    "headings": [
     "Question and evidence boundary",
     "Protocol",
@@ -106584,7 +106706,9 @@
     "Grading rubric",
     "Critical reflection"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/public-data-projects/ml-895-movielens-recommendation-and-feedback"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -106620,8 +106744,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -106632,7 +106756,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -106656,7 +106780,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 193,
+   "wordCount": 194,
    "headings": [
     "Question and evidence boundary",
     "Protocol",
@@ -106664,7 +106788,9 @@
     "Grading rubric",
     "Critical reflection"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/public-data-projects/ml-894-online-retail-cohort-and-anomaly-study"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -106700,8 +106826,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -106712,7 +106838,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -106824,7 +106950,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 831,
+   "wordCount": 832,
    "headings": [
     "The short answer",
     "The mechanism",
@@ -106842,6 +106968,7 @@
     "Assessment: tune without contaminating a test set"
    ],
    "internalLinks": [
+    "/learn/ai-foundations/bias-variance-tradeoff",
     "/learn/machine-learning/derivations/06-decision-tree-impurity-and-information-gain-calculations",
     "/learn/machine-learning/ml-203-ridge-lasso-and-elastic-net"
    ],
@@ -106892,7 +107019,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -107510,7 +107637,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 843,
+   "wordCount": 844,
    "headings": [
     "Research question",
     "Primary source and claim",
@@ -107522,7 +107649,9 @@
     "Replication rubric",
     "Extension and critique"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/reproductions/pca-reconstruction-reproduction"
+   ],
    "externalLinks": [
     "https://direct.mit.edu/jocn/article/3/1/71/3025/Eigenfaces-for-Recognition",
     "https://scikit-learn.org/stable/datasets/real_world.html#olivetti-faces-dataset",
@@ -107562,8 +107691,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -107574,7 +107703,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -107598,7 +107727,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 210,
+   "wordCount": 211,
    "headings": [
     "Question and evidence boundary",
     "Protocol",
@@ -107606,7 +107735,9 @@
     "Grading rubric",
     "Critical reflection"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/reproductions/ml-885-reproduce-pca-and-eigenfaces-low-rank-reconstruction"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -107642,8 +107773,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -107654,7 +107785,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -107678,7 +107809,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 208,
+   "wordCount": 209,
    "headings": [
     "Question and evidence boundary",
     "Protocol",
@@ -107686,7 +107817,9 @@
     "Grading rubric",
     "Critical reflection"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/ml-307-random-forests-and-out-of-bag-evaluation"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -107722,8 +107855,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -107734,7 +107867,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -109111,7 +109244,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 794,
+   "wordCount": 795,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -109126,6 +109259,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/classical-ai/knowledge-uncertainty/225-causal-graphs-confounding-interventions-and-counterfactuals",
     "/learn/maths-foundations/data-generating-processes-sampling-and-selection-bias",
     "/learn/maths-foundations/self-information-and-coding-intuition"
    ],
@@ -109174,7 +109308,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -109198,7 +109332,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 500,
+   "wordCount": 501,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -109211,6 +109345,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/deep-learning/core/108-computation-graphs-and-local-derivatives",
     "/learn/maths-foundations/forward-mode-automatic-differentiation",
     "/learn/maths-foundations/reverse-mode-autodiff-and-backpropagation",
     "/learn/maths-foundations/the-chain-rule"
@@ -113186,7 +113321,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 802,
+   "wordCount": 803,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -113201,6 +113336,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/ml-503-hypothesis-tests-permutation-tests-and-effect-sizes",
     "/learn/maths-foundations/ab-experiments-sequential-testing-and-multiple-comparisons",
     "/learn/maths-foundations/effect-sizes-power-and-sample-size-planning"
    ],
@@ -113249,7 +113385,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -113864,7 +114000,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 962,
+   "wordCount": 963,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -113877,7 +114013,9 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/ml-303-kernel-methods-and-the-kernel-trick"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -113911,8 +114049,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -113923,7 +114061,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -116833,7 +116971,8 @@
    "internalLinks": [
     "/learn/llm-foundations/attention-mechanism-explained",
     "/learn/maths-foundations/dot-product-explained",
-    "/learn/maths-foundations/matrices-as-transformations"
+    "/learn/maths-foundations/matrices-as-transformations",
+    "/learn/maths-foundations/matrix-vector-multiplication"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -116904,7 +117043,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 759,
+   "wordCount": 760,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -116919,7 +117058,8 @@
    "internalLinks": [
     "/learn/maths-foundations/dot-product-explained",
     "/learn/maths-foundations/matrix-addition-scaling-transpose-and-symmetry",
-    "/learn/maths-foundations/matrix-matrix-multiplication-and-batching"
+    "/learn/maths-foundations/matrix-matrix-multiplication-and-batching",
+    "/learn/maths-foundations/matrix-multiplication-mechanics"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -117941,6 +118081,7 @@
    "internalLinks": [
     "/learn/maths-foundations/entropy-and-cross-entropy",
     "/learn/maths-foundations/logarithms-for-ml",
+    "/learn/maths-foundations/numerical-stability-softmax-logsumexp-and-safe-probabilities",
     "/learn/maths-foundations/the-softmax-function"
    ],
    "externalLinks": [],
@@ -118012,7 +118153,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 741,
+   "wordCount": 742,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -118027,6 +118168,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/maths-foundations/numerical-stability-log-sum-exp",
     "/learn/maths-foundations/optimisation-diagnostics-and-second-order-perspective"
    ],
    "externalLinks": [],
@@ -118539,7 +118681,8 @@
    "internalLinks": [
     "/learn/maths-foundations/backpropagation-intuition",
     "/learn/maths-foundations/gradient-descent-intuition",
-    "/learn/maths-foundations/gradients-and-slopes"
+    "/learn/maths-foundations/gradients-and-slopes",
+    "/learn/maths-foundations/the-chain-rule"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -118788,6 +118931,7 @@
    ],
    "internalLinks": [
     "/learn/ai-foundations/benchmarks-and-what-they-miss",
+    "/learn/deep-learning/sequence-generative/320-language-model-evaluation-calibration-and-behavior",
     "/learn/maths-foundations/logarithms-for-ml",
     "/learn/maths-foundations/the-softmax-function"
    ],
@@ -119615,7 +119759,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 786,
+   "wordCount": 787,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -119630,6 +119774,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/deep-learning/core/117-regularization-weight-decay-early-stopping-and-label-smoothing",
     "/learn/maths-foundations/conditioning-scaling-initialisation-and-normalisation",
     "/learn/maths-foundations/learning-rate-schedules-warmup-and-gradient-clipping"
    ],
@@ -119678,7 +119823,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -121166,7 +121311,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 639,
+   "wordCount": 640,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -121180,6 +121325,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/classical-ai/knowledge-uncertainty/220-hidden-markov-models-filtering-smoothing-and-viterbi",
     "/learn/maths-foundations/s3-1-graph-notation-adjacency-incidence-and-degree-matrices"
    ],
    "externalLinks": [],
@@ -122366,7 +122512,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 933,
+   "wordCount": 934,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -122379,6 +122525,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/deep-learning/core/101-tensors-shapes-and-broadcasting",
     "/learn/maths-foundations/units-scales-normalisation"
    ],
    "externalLinks": [],
@@ -123460,7 +123607,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 530,
+   "wordCount": 531,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -123475,7 +123622,8 @@
    "internalLinks": [
     "/learn/maths-foundations/computational-graphs-and-local-derivatives",
     "/learn/maths-foundations/critical-points-monotonicity-and-extrema",
-    "/learn/maths-foundations/gradient-descent-intuition"
+    "/learn/maths-foundations/gradient-descent-intuition",
+    "/learn/maths-foundations/partial-derivatives-and-chain-rule"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -130096,6 +130244,7 @@
     "Turning SLOs into alerts"
    ],
    "internalLinks": [
+    "/learn/context-engineering/cost-latency-quality-tradeoff-curve",
     "/learn/genai-app-dev/streaming-responses-to-the-ui",
     "/learn/production/eval-based-regression-testing",
     "/learn/production/on-call-playbooks-for-ai",
@@ -138432,7 +138581,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 426,
+   "wordCount": 427,
    "headings": [
     "The short answer",
     "Compare the patterns",
@@ -138445,7 +138594,9 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/ai-literacy/prompt-patterns-for-everyday-tasks"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -138479,8 +138630,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -138491,7 +138642,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -141245,7 +141396,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 358,
+   "wordCount": 359,
    "headings": [
     "The short answer",
     "Syntax versus semantics",
@@ -141258,7 +141409,11 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/genai-app-dev/structured-output-failures",
+    "/learn/genai-app-dev/structured-output-in-apps",
+    "/learn/structured-outputs/structured-output-failure-modes"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -141292,8 +141447,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -141304,7 +141459,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -142524,7 +142679,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 411,
+   "wordCount": 412,
    "headings": [
     "The short answer",
     "The loop",
@@ -142537,7 +142692,9 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/tools-function-calling/descriptions-are-prompts"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -142571,8 +142728,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -142583,7 +142740,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -142694,7 +142851,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 399,
+   "wordCount": 400,
    "headings": [
     "The short answer",
     "A prompt is an input program",
@@ -142706,7 +142863,9 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/prompt-engineering/what-role-prompting-changes"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -142742,8 +142901,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -142754,7 +142913,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -142794,7 +142953,8 @@
     "/learn/prompt-engineering/prompt-as-conditioning-intuition",
     "/learn/prompt-engineering/role-prompt-before-after",
     "/learn/prompt-engineering/role-prompting",
-    "/learn/prompt-engineering/system-vs-user-message-roles"
+    "/learn/prompt-engineering/system-vs-user-message-roles",
+    "/learn/prompt-engineering/what-prompting-is"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -149615,7 +149775,8 @@
    "internalLinks": [
     "/learn/rag/embeddings-and-semantic-similarity",
     "/learn/rag/evaluating-rag-quality",
-    "/learn/rag/what-is-rag-and-when-to-use-it"
+    "/learn/rag/what-is-rag-and-when-to-use-it",
+    "/learn/structured-outputs/long-document-extraction-strategies"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -151995,6 +152156,7 @@
     "Where to start"
    ],
    "internalLinks": [
+    "/learn/llm-foundations/whole-game-one-token-end-to-end",
     "/learn/maths-foundations/cosine-similarity-angular-distance-embedding-retrieval",
     "/learn/maths-foundations/the-geometry-of-embeddings",
     "/learn/rag/agentic-rag",
@@ -154583,7 +154745,8 @@
     "/learn/structured-outputs/evaluating-structured-output-quality-metrics",
     "/learn/structured-outputs/field-level-scorecard-example",
     "/learn/structured-outputs/provider-adapter-implementation",
-    "/learn/structured-outputs/regression-testing-schemas-and-prompts"
+    "/learn/structured-outputs/regression-testing-schemas-and-prompts",
+    "/learn/tools-function-calling/building-a-tool-use-eval-harness"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -155355,6 +155518,7 @@
     "Where next"
    ],
    "internalLinks": [
+    "/learn/genai-app-dev/provider-landscape-and-tradeoffs",
     "/learn/structured-outputs/cross-provider-structured-output-differences",
     "/learn/structured-outputs/grammar-constrained-generation",
     "/learn/structured-outputs/same-schema-three-providers-example",
@@ -157089,6 +157253,7 @@
     "Where next"
    ],
    "internalLinks": [
+    "/learn/genai-app-dev/structured-output-failures",
     "/learn/structured-outputs/auto-repair-strategies",
     "/learn/structured-outputs/diagnosing-five-real-failures",
     "/learn/structured-outputs/failure-and-repair-cheatsheet",
@@ -158894,6 +159059,7 @@
     "Where next"
    ],
    "internalLinks": [
+    "/learn/rag/chunking-strategies-for-documents",
     "/learn/structured-outputs/bank-statement-transactions-example",
     "/learn/structured-outputs/chunk-and-merge-extraction",
     "/learn/structured-outputs/contract-clause-extraction-example",
@@ -159315,6 +159481,7 @@
     "Where next"
    ],
    "internalLinks": [
+    "/learn/hallucinations/monitoring-hallucination-in-prod",
     "/learn/structured-outputs/building-an-extraction-eval-harness",
     "/learn/structured-outputs/eval-and-provider-mistakes",
     "/learn/structured-outputs/field-level-scorecard-example",
@@ -161384,6 +161551,7 @@
     "Where next"
    ],
    "internalLinks": [
+    "/learn/hallucinations/teaching-models-to-say-i-dont-know",
     "/learn/structured-outputs/discriminated-unions-in-schemas",
     "/learn/structured-outputs/extraction-confidence-and-review-routing",
     "/learn/structured-outputs/not-found-sentinel-example",
@@ -162997,6 +163165,7 @@
     "Silent enum violations"
    ],
    "internalLinks": [
+    "/learn/prompt-engineering/structured-output",
     "/learn/structured-outputs/constrained-decoding-under-the-hood",
     "/learn/structured-outputs/enums-and-constrained-fields",
     "/learn/structured-outputs/json-schema-for-outputs",
@@ -163633,7 +163802,8 @@
     "/learn/structured-outputs/function-calling-extraction-implementation",
     "/learn/structured-outputs/json-mode-basics",
     "/learn/structured-outputs/tool-function-schemas",
-    "/learn/structured-outputs/validation-and-auto-repair"
+    "/learn/structured-outputs/validation-and-auto-repair",
+    "/learn/tools-function-calling/what-is-tool-calling"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -164936,6 +165106,7 @@
    ],
    "internalLinks": [
     "/learn/structured-outputs/why-structured-output",
+    "/learn/tools-function-calling/execution-authority-model",
     "/learn/tools-function-calling/first-tool-call-walkthrough",
     "/learn/tools-function-calling/handling-tool-errors-and-retries",
     "/learn/tools-function-calling/parallel-tool-calls",
@@ -165442,6 +165613,7 @@
     "Extend it"
    ],
    "internalLinks": [
+    "/learn/harness-design/the-control-loop",
     "/learn/tools-function-calling/approval-gates-for-sensitive-tools",
     "/learn/tools-function-calling/computer-use-and-browser-tools",
     "/learn/tools-function-calling/computer-use-and-browser-tools-concept",
@@ -165794,6 +165966,7 @@
     "Extend it"
    ],
    "internalLinks": [
+    "/learn/structured-outputs/building-an-extraction-eval-harness",
     "/learn/tools-function-calling/benchmarking-with-bfcl",
     "/learn/tools-function-calling/building-a-tool-dispatcher",
     "/learn/tools-function-calling/reading-bfcl-leaderboard",
@@ -166329,6 +166502,7 @@
    "internalLinks": [
     "/learn/tools-function-calling/approval-gates-for-sensitive-tools",
     "/learn/tools-function-calling/building-a-code-interpreter-tool",
+    "/learn/tools-function-calling/code-execution-as-a-tool",
     "/learn/tools-function-calling/code-execution-vs-many-tools",
     "/learn/tools-function-calling/sandboxing-tool-execution"
    ],
@@ -166410,6 +166584,7 @@
    "internalLinks": [
     "/learn/tools-function-calling/approval-gates-for-sensitive-tools",
     "/learn/tools-function-calling/chaining-tools-into-workflows",
+    "/learn/tools-function-calling/code-execution-as-a-tool-concept",
     "/learn/tools-function-calling/executing-tool-calls-safely",
     "/learn/tools-function-calling/sandboxing-tool-execution"
    ],
@@ -166996,6 +167171,7 @@
     "When this technique reaches its limit"
    ],
    "internalLinks": [
+    "/learn/prompt-engineering/what-prompt-engineering-is",
     "/learn/tools-function-calling/approval-gates-for-sensitive-tools",
     "/learn/tools-function-calling/common-tool-calling-failure-modes",
     "/learn/tools-function-calling/good-vs-bad-tool-descriptions",
@@ -167690,6 +167866,7 @@
    "internalLinks": [
     "/learn/genai-app-dev/tool-calling-and-authority",
     "/learn/llm-foundations/next-token-prediction",
+    "/learn/tools-function-calling/anatomy-of-a-tool-call",
     "/learn/tools-function-calling/approval-gates-design",
     "/learn/tools-function-calling/building-a-tool-dispatcher",
     "/learn/tools-function-calling/executing-tool-calls-safely",
@@ -169855,6 +170032,7 @@
     "/learn/tools-function-calling/handling-tool-errors-and-retries",
     "/learn/tools-function-calling/sandboxing-tool-execution",
     "/learn/tools-function-calling/sequential-multi-step-tool-use",
+    "/learn/tools-function-calling/testing-tool-calls-strategies",
     "/learn/tools-function-calling/tool-choice-and-forcing-tool-use"
    ],
    "externalLinks": [],
@@ -170192,6 +170370,7 @@
    ],
    "internalLinks": [
     "/learn/context-engineering/progressive-tool-disclosure",
+    "/learn/context-engineering/progressive-tool-disclosure-in-depth",
     "/learn/tools-function-calling/rag-over-tools-retrieval",
     "/learn/tools-function-calling/tool-namespacing-and-grouping",
     "/learn/tools-function-calling/tool-selection-at-scale-strategies"
@@ -172604,7 +172783,8 @@
     "/learn/tools-function-calling/handling-errors-and-retries",
     "/learn/tools-function-calling/handling-tool-errors-and-retries",
     "/learn/tools-function-calling/infinite-loop-and-retry-caps",
-    "/learn/tools-function-calling/retry-strategies-for-tools"
+    "/learn/tools-function-calling/retry-strategies-for-tools",
+    "/learn/tools-function-calling/what-is-tool-calling"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -172770,6 +172950,7 @@
     "/learn/tools-function-calling/benchmarking-with-bfcl",
     "/learn/tools-function-calling/debugging-with-trace-logging",
     "/learn/tools-function-calling/handling-tool-errors-and-retries",
+    "/learn/tools-function-calling/parallel-tool-calls",
     "/learn/tools-function-calling/testing-and-debugging-tool-calls",
     "/learn/tools-function-calling/unit-testing-tool-handlers",
     "/learn/tools-function-calling/writing-tool-descriptions-models-follow"
@@ -173297,7 +173478,8 @@
     "/learn/tools-function-calling/first-tool-call-walkthrough",
     "/learn/tools-function-calling/how-models-learn-to-call-tools",
     "/learn/tools-function-calling/tool-calling-still-text-in-text-out",
-    "/learn/tools-function-calling/validating-tool-arguments"
+    "/learn/tools-function-calling/validating-tool-arguments",
+    "/learn/tools-function-calling/what-is-tool-calling"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -174942,8 +175124,12 @@
    ],
    "internalLinks": [
     "/learn/agentic-ai/react-pattern",
+    "/learn/genai-app-dev/tool-call-authority-mistakes",
+    "/learn/structured-outputs/tool-and-function-schemas-for-extraction",
     "/learn/structured-outputs/why-structured-output",
     "/learn/tools-function-calling/designing-a-tool-schema",
+    "/learn/tools-function-calling/taxonomy-of-tool-failures",
+    "/learn/tools-function-calling/tool-calling-across-providers",
     "/learn/tools-function-calling/writing-tool-descriptions-models-follow"
    ],
    "externalLinks": [],
@@ -201590,7 +201776,7 @@
    "jaccard": 0.75,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -201704,7 +201890,7 @@
    "jaccard": 0.75,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -201799,7 +201985,7 @@
    "jaccard": 0.71,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -201861,25 +202047,6 @@
   },
   {
    "a": {
-    "route": "/learn/ai-literacy/deciding-when-and-which-ai-quiz",
-    "slug": "ai-literacy/deciding-when-and-which-ai-quiz",
-    "title": "Quiz: when and which AI",
-    "track": "ai-literacy"
-   },
-   "b": {
-    "route": "/learn/ai-literacy/what-ai-actually-is-quiz",
-    "slug": "ai-literacy/what-ai-actually-is-quiz",
-    "title": "Quiz: what AI is and isn't",
-    "track": "ai-literacy"
-   },
-   "jaccard": 0.67,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
     "route": "/learn/deep-learning/core/129-transfer-learning-fine-tuning-and-domain-shift",
     "slug": "deep-learning/core/129-transfer-learning-fine-tuning-and-domain-shift",
     "title": "Transfer Learning, Fine-tuning, and Domain Shift",
@@ -201894,7 +202061,7 @@
    "jaccard": 0.67,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -202008,7 +202175,7 @@
    "jaccard": 0.67,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -202103,7 +202270,7 @@
    "jaccard": 0.6,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -202160,7 +202327,7 @@
    "jaccard": 0.56,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -202198,7 +202365,7 @@
    "jaccard": 0.5,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -202217,7 +202384,7 @@
    "jaccard": 0.5,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -202236,7 +202403,7 @@
    "jaccard": 0.5,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -202255,7 +202422,7 @@
    "jaccard": 0.5,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -202274,7 +202441,7 @@
    "jaccard": 0.5,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -202293,7 +202460,7 @@
    "jaccard": 0.5,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -202331,7 +202498,7 @@
    "jaccard": 0.5,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -202407,7 +202574,7 @@
    "jaccard": 0.5,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -202426,7 +202593,7 @@
    "jaccard": 0.5,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -202450,44 +202617,6 @@
   },
   {
    "a": {
-    "route": "/learn/ai-literacy/deciding-when-and-which-ai-quiz",
-    "slug": "ai-literacy/deciding-when-and-which-ai-quiz",
-    "title": "Quiz: when and which AI",
-    "track": "ai-literacy"
-   },
-   "b": {
-    "route": "/learn/ai-literacy/how-ai-produces-answers-quiz",
-    "slug": "ai-literacy/how-ai-produces-answers-quiz",
-    "title": "Quiz: how AI produces answers",
-    "track": "ai-literacy"
-   },
-   "jaccard": 0.5,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/ai-literacy/deciding-when-and-which-ai-quiz",
-    "slug": "ai-literacy/deciding-when-and-which-ai-quiz",
-    "title": "Quiz: when and which AI",
-    "track": "ai-literacy"
-   },
-   "b": {
-    "route": "/learn/ai-literacy/prompting-quiz",
-    "slug": "ai-literacy/prompting-quiz",
-    "title": "Quiz: asking AI well",
-    "track": "ai-literacy"
-   },
-   "jaccard": 0.5,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
     "route": "/learn/context-engineering/cache-aware-context-design",
     "slug": "context-engineering/cache-aware-context-design",
     "title": "Cache-Aware Context Design: Ordering for Cache Hits",
@@ -202502,7 +202631,7 @@
    "jaccard": 0.5,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -202521,7 +202650,7 @@
    "jaccard": 0.5,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -202578,7 +202707,7 @@
    "jaccard": 0.5,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -202597,7 +202726,7 @@
    "jaccard": 0.5,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -202635,7 +202764,7 @@
    "jaccard": 0.5,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -202716,25 +202845,6 @@
   },
   {
    "a": {
-    "route": "/learn/llm-foundations/fine-tuning-vs-prompting-vs-rag",
-    "slug": "llm-foundations/fine-tuning-vs-prompting-vs-rag",
-    "title": "Fine-Tuning vs Prompting vs RAG: When to Use What",
-    "track": "llm-foundations"
-   },
-   "b": {
-    "route": "/learn/rag/what-is-rag-and-when-to-use-it",
-    "slug": "rag/what-is-rag-and-when-to-use-it",
-    "title": "What Is RAG and When to Use It",
-    "track": "rag"
-   },
-   "jaccard": 0.4,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": false
-  },
-  {
-   "a": {
     "route": "/learn/context-engineering/hierarchical-summarization-explained",
     "slug": "context-engineering/hierarchical-summarization-explained",
     "title": "Hierarchical Summarization",
@@ -202749,7 +202859,7 @@
    "jaccard": 0.4,
    "containment": 1,
    "slugStem": true,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -203452,7 +203562,7 @@
    "jaccard": 0.63,
    "containment": 0.83,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -203471,7 +203581,7 @@
    "jaccard": 0.56,
    "containment": 0.83,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -203490,7 +203600,7 @@
    "jaccard": 0.45,
    "containment": 0.83,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -203509,7 +203619,7 @@
    "jaccard": 0.67,
    "containment": 0.8,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -203547,7 +203657,7 @@
    "jaccard": 0.67,
    "containment": 0.8,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -203585,7 +203695,7 @@
    "jaccard": 0.67,
    "containment": 0.8,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -203661,7 +203771,7 @@
    "jaccard": 0.57,
    "containment": 0.8,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -203794,7 +203904,7 @@
    "jaccard": 0.57,
    "containment": 0.8,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -203832,7 +203942,7 @@
    "jaccard": 0.5,
    "containment": 0.8,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -203851,7 +203961,7 @@
    "jaccard": 0.5,
    "containment": 0.8,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -203870,7 +203980,7 @@
    "jaccard": 0.5,
    "containment": 0.8,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -203927,7 +204037,7 @@
    "jaccard": 0.6,
    "containment": 0.75,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -203984,7 +204094,7 @@
    "jaccard": 0.6,
    "containment": 0.75,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -204003,7 +204113,7 @@
    "jaccard": 0.6,
    "containment": 0.75,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -204022,7 +204132,7 @@
    "jaccard": 0.6,
    "containment": 0.75,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -204103,25 +204213,6 @@
   },
   {
    "a": {
-    "route": "/learn/mcp/mcp-primitives-common-mistakes",
-    "slug": "mcp/mcp-primitives-common-mistakes",
-    "title": "MCP Primitives: Common Mistakes",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-transports-common-mistakes",
-    "slug": "mcp/mcp-transports-common-mistakes",
-    "title": "MCP Transports: Common Mistakes",
-    "track": "mcp"
-   },
-   "jaccard": 0.6,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
     "route": "/learn/deep-learning/sequence-generative/310-multihead-and-cross-attention",
     "slug": "deep-learning/sequence-generative/310-multihead-and-cross-attention",
     "title": "Understand multi-head and cross-attention",
@@ -204136,7 +204227,7 @@
    "jaccard": 0.5,
    "containment": 0.75,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -204231,7 +204322,7 @@
    "jaccard": 0.5,
    "containment": 0.75,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -204307,7 +204398,7 @@
    "jaccard": 0.5,
    "containment": 0.75,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -204345,7 +204436,7 @@
    "jaccard": 0.5,
    "containment": 0.75,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -204364,7 +204455,7 @@
    "jaccard": 0.5,
    "containment": 0.75,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -204402,7 +204493,7 @@
    "jaccard": 0.5,
    "containment": 0.75,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -204421,7 +204512,7 @@
    "jaccard": 0.5,
    "containment": 0.75,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -204440,7 +204531,7 @@
    "jaccard": 0.5,
    "containment": 0.75,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -204459,7 +204550,7 @@
    "jaccard": 0.5,
    "containment": 0.75,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -204516,7 +204607,7 @@
    "jaccard": 0.5,
    "containment": 0.75,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -204554,7 +204645,7 @@
    "jaccard": 0.5,
    "containment": 0.75,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -204839,7 +204930,7 @@
    "jaccard": 0.5,
    "containment": 0.75,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -204858,7 +204949,7 @@
    "jaccard": 0.5,
    "containment": 0.75,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -204872,158 +204963,6 @@
     "route": "/learn/mcp/mcp-debugging-common-mistakes",
     "slug": "mcp/mcp-debugging-common-mistakes",
     "title": "Debugging and Testing MCP: Common Mistakes",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-auth-common-mistakes",
-    "slug": "mcp/mcp-auth-common-mistakes",
-    "title": "MCP Auth and Security: Common Mistakes",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-primitives-common-mistakes",
-    "slug": "mcp/mcp-primitives-common-mistakes",
-    "title": "MCP Primitives: Common Mistakes",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-auth-common-mistakes",
-    "slug": "mcp/mcp-auth-common-mistakes",
-    "title": "MCP Auth and Security: Common Mistakes",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-transports-common-mistakes",
-    "slug": "mcp/mcp-transports-common-mistakes",
-    "title": "MCP Transports: Common Mistakes",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-debugging-common-mistakes",
-    "slug": "mcp/mcp-debugging-common-mistakes",
-    "title": "Debugging and Testing MCP: Common Mistakes",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-primitives-common-mistakes",
-    "slug": "mcp/mcp-primitives-common-mistakes",
-    "title": "MCP Primitives: Common Mistakes",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-debugging-common-mistakes",
-    "slug": "mcp/mcp-debugging-common-mistakes",
-    "title": "Debugging and Testing MCP: Common Mistakes",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-transports-common-mistakes",
-    "slug": "mcp/mcp-transports-common-mistakes",
-    "title": "MCP Transports: Common Mistakes",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-deployment-common-mistakes",
-    "slug": "mcp/mcp-deployment-common-mistakes",
-    "title": "Running MCP Servers: Common Mistakes",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-primitives-common-mistakes",
-    "slug": "mcp/mcp-primitives-common-mistakes",
-    "title": "MCP Primitives: Common Mistakes",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-deployment-common-mistakes",
-    "slug": "mcp/mcp-deployment-common-mistakes",
-    "title": "Running MCP Servers: Common Mistakes",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-transports-common-mistakes",
-    "slug": "mcp/mcp-transports-common-mistakes",
-    "title": "MCP Transports: Common Mistakes",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-primitives-common-mistakes",
-    "slug": "mcp/mcp-primitives-common-mistakes",
-    "title": "MCP Primitives: Common Mistakes",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-server-common-mistakes",
-    "slug": "mcp/mcp-server-common-mistakes",
-    "title": "Building an MCP Server: Common Mistakes",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-server-common-mistakes",
-    "slug": "mcp/mcp-server-common-mistakes",
-    "title": "Building an MCP Server: Common Mistakes",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-transports-common-mistakes",
-    "slug": "mcp/mcp-transports-common-mistakes",
-    "title": "MCP Transports: Common Mistakes",
     "track": "mcp"
    },
    "jaccard": 0.5,
@@ -205143,7 +205082,7 @@
    "jaccard": 0.5,
    "containment": 0.75,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -205979,7 +205918,7 @@
    "jaccard": 0.5,
    "containment": 0.71,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -205998,7 +205937,7 @@
    "jaccard": 0.45,
    "containment": 0.71,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -206017,7 +205956,7 @@
    "jaccard": 0.45,
    "containment": 0.71,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -206212,25 +206151,6 @@
   },
   {
    "a": {
-    "route": "/learn/context-engineering/tools-and-caching-cheatsheet",
-    "slug": "context-engineering/tools-and-caching-cheatsheet",
-    "title": "Tools and Caching Cheatsheet",
-    "track": "context-engineering"
-   },
-   "b": {
-    "route": "/learn/tools-function-calling/scaling-tools-cheatsheet",
-    "slug": "tools-function-calling/scaling-tools-cheatsheet",
-    "title": "Scaling Tools Cheatsheet",
-    "track": "tools-function-calling"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": false
-  },
-  {
-   "a": {
     "route": "/learn/context-engineering/context-engineering-vocabulary",
     "slug": "context-engineering/context-engineering-vocabulary",
     "title": "Context Engineering Vocabulary",
@@ -206264,7 +206184,7 @@
    "jaccard": 0.5,
    "containment": 0.67,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -206321,7 +206241,7 @@
    "jaccard": 0.5,
    "containment": 0.67,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -206340,7 +206260,7 @@
    "jaccard": 0.5,
    "containment": 0.67,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -206378,7 +206298,7 @@
    "jaccard": 0.5,
    "containment": 0.67,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -206701,7 +206621,7 @@
    "jaccard": 0.5,
    "containment": 0.67,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -206758,7 +206678,7 @@
    "jaccard": 0.5,
    "containment": 0.67,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -206839,291 +206759,6 @@
   },
   {
    "a": {
-    "route": "/learn/mcp/mcp-auth-cheatsheet",
-    "slug": "mcp/mcp-auth-cheatsheet",
-    "title": "MCP Auth Cheatsheet",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-debugging-cheatsheet",
-    "slug": "mcp/mcp-debugging-cheatsheet",
-    "title": "MCP Debugging Cheatsheet",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-auth-cheatsheet",
-    "slug": "mcp/mcp-auth-cheatsheet",
-    "title": "MCP Auth Cheatsheet",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-deployment-cheatsheet",
-    "slug": "mcp/mcp-deployment-cheatsheet",
-    "title": "MCP Operations Cheatsheet",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-auth-cheatsheet",
-    "slug": "mcp/mcp-auth-cheatsheet",
-    "title": "MCP Auth Cheatsheet",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-primitives-cheatsheet",
-    "slug": "mcp/mcp-primitives-cheatsheet",
-    "title": "MCP Primitives Cheatsheet",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-auth-cheatsheet",
-    "slug": "mcp/mcp-auth-cheatsheet",
-    "title": "MCP Auth Cheatsheet",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-server-cheatsheet",
-    "slug": "mcp/mcp-server-cheatsheet",
-    "title": "MCP Server Cheatsheet",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-auth-cheatsheet",
-    "slug": "mcp/mcp-auth-cheatsheet",
-    "title": "MCP Auth Cheatsheet",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-transports-cheatsheet",
-    "slug": "mcp/mcp-transports-cheatsheet",
-    "title": "MCP Transports Cheatsheet",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-debugging-cheatsheet",
-    "slug": "mcp/mcp-debugging-cheatsheet",
-    "title": "MCP Debugging Cheatsheet",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-deployment-cheatsheet",
-    "slug": "mcp/mcp-deployment-cheatsheet",
-    "title": "MCP Operations Cheatsheet",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-debugging-cheatsheet",
-    "slug": "mcp/mcp-debugging-cheatsheet",
-    "title": "MCP Debugging Cheatsheet",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-primitives-cheatsheet",
-    "slug": "mcp/mcp-primitives-cheatsheet",
-    "title": "MCP Primitives Cheatsheet",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-debugging-cheatsheet",
-    "slug": "mcp/mcp-debugging-cheatsheet",
-    "title": "MCP Debugging Cheatsheet",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-server-cheatsheet",
-    "slug": "mcp/mcp-server-cheatsheet",
-    "title": "MCP Server Cheatsheet",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-debugging-cheatsheet",
-    "slug": "mcp/mcp-debugging-cheatsheet",
-    "title": "MCP Debugging Cheatsheet",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-transports-cheatsheet",
-    "slug": "mcp/mcp-transports-cheatsheet",
-    "title": "MCP Transports Cheatsheet",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-deployment-cheatsheet",
-    "slug": "mcp/mcp-deployment-cheatsheet",
-    "title": "MCP Operations Cheatsheet",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-primitives-cheatsheet",
-    "slug": "mcp/mcp-primitives-cheatsheet",
-    "title": "MCP Primitives Cheatsheet",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-deployment-cheatsheet",
-    "slug": "mcp/mcp-deployment-cheatsheet",
-    "title": "MCP Operations Cheatsheet",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-server-cheatsheet",
-    "slug": "mcp/mcp-server-cheatsheet",
-    "title": "MCP Server Cheatsheet",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-deployment-cheatsheet",
-    "slug": "mcp/mcp-deployment-cheatsheet",
-    "title": "MCP Operations Cheatsheet",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-transports-cheatsheet",
-    "slug": "mcp/mcp-transports-cheatsheet",
-    "title": "MCP Transports Cheatsheet",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-primitives-cheatsheet",
-    "slug": "mcp/mcp-primitives-cheatsheet",
-    "title": "MCP Primitives Cheatsheet",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-server-cheatsheet",
-    "slug": "mcp/mcp-server-cheatsheet",
-    "title": "MCP Server Cheatsheet",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-primitives-cheatsheet",
-    "slug": "mcp/mcp-primitives-cheatsheet",
-    "title": "MCP Primitives Cheatsheet",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-transports-cheatsheet",
-    "slug": "mcp/mcp-transports-cheatsheet",
-    "title": "MCP Transports Cheatsheet",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-server-cheatsheet",
-    "slug": "mcp/mcp-server-cheatsheet",
-    "title": "MCP Server Cheatsheet",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-transports-cheatsheet",
-    "slug": "mcp/mcp-transports-cheatsheet",
-    "title": "MCP Transports Cheatsheet",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
     "route": "/learn/rag/retrieval-cheatsheet",
     "slug": "rag/retrieval-cheatsheet",
     "title": "Vector Retrieval Cheatsheet",
@@ -207159,25 +206794,6 @@
    "slugStem": false,
    "alreadyLinked": false,
    "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/rag/chunking-common-mistakes",
-    "slug": "rag/chunking-common-mistakes",
-    "title": "Chunking: Common Mistakes",
-    "track": "rag"
-   },
-   "b": {
-    "route": "/learn/rag/reranking-common-mistakes",
-    "slug": "rag/reranking-common-mistakes",
-    "title": "Reranking: Common Mistakes",
-    "track": "rag"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
   },
   {
    "a": {
@@ -207233,7 +206849,7 @@
    "jaccard": 0.5,
    "containment": 0.67,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -207252,7 +206868,7 @@
    "jaccard": 0.5,
    "containment": 0.67,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -207271,7 +206887,7 @@
    "jaccard": 0.5,
    "containment": 0.67,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -207328,7 +206944,7 @@
    "jaccard": 0.5,
    "containment": 0.67,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -207366,7 +206982,7 @@
    "jaccard": 0.5,
    "containment": 0.67,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -207442,7 +207058,7 @@
    "jaccard": 0.5,
    "containment": 0.67,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -207651,7 +207267,7 @@
    "jaccard": 0.29,
    "containment": 0.67,
    "slugStem": true,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -207689,7 +207305,7 @@
    "jaccard": 0.25,
    "containment": 0.67,
    "slugStem": true,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -207841,7 +207457,7 @@
    "jaccard": 0.33,
    "containment": 0.6,
    "slugStem": true,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -207879,7 +207495,7 @@
    "jaccard": 0.29,
    "containment": 0.5,
    "slugStem": true,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -208126,7 +207742,7 @@
    "jaccard": 0.22,
    "containment": 0.4,
    "slugStem": true,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -208145,7 +207761,7 @@
    "jaccard": 0.22,
    "containment": 0.4,
    "slugStem": true,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -208183,7 +207799,7 @@
    "jaccard": 0.2,
    "containment": 0.33,
    "slugStem": true,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -208202,7 +207818,7 @@
    "jaccard": 0.18,
    "containment": 0.33,
    "slugStem": true,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {

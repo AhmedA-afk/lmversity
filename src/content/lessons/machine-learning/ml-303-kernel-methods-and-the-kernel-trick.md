@@ -51,3 +51,5 @@ Kernels do not create information, make a target causal, or make a custom simila
 ## Continue, go deeper, apply it
 
 Continue to margins and SVM optimization; apply a linear baseline before adding a nonlinear kernel.
+
+**Related:** [Kernel matrices and the kernel trick](/learn/maths-foundations/kernel-matrices-and-kernel-trick)
