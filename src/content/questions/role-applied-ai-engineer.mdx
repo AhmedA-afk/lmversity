@@ -1,0 +1,54 @@
+---
+title: "Applied AI engineer interview questions"
+topic: "Role: Applied AI Engineer"
+description: "The interview map for applied AI engineer roles — product-facing AI work where breadth and shipping judgment matter more than depth in any one technique."
+order: 21
+---
+
+## What the role interview tests
+
+"Applied" means the interview weights *integration judgment*: picking the right technique for a product problem, shipping it behind real constraints, and knowing enough of each area to be dangerous in all of them. Breadth is the point — but they probe for a floor of depth everywhere.
+
+**Core topic hubs:** [AI foundations](/interview/ai-foundations) · [LLM basics](/interview/llm-basics) · [RAG](/interview/rag) · [Structured outputs](/interview/structured-outputs) · [Evals](/interview/evals) · [Production and observability](/interview/production-and-observability) · [AI system design](/interview/ai-system-design) · [Safety and security](/interview/safety-and-security)
+
+## Mock set — junior
+
+1. AI foundations Q1–Q3 (what models are, capabilities vs limits)
+2. LLM basics Q1–Q3
+3. RAG Q1–Q3
+4. Structured outputs Q1–Q2
+5. Defend-project on any shipped AI feature
+
+*Pass bar:* accurate mechanics across the breadth, no bluffing at the edges.
+
+## Mock set — mid
+
+1. RAG Q4–Q6 (diagnosis, eval, chunking tradeoffs)
+2. Evals Q3–Q5 (regression suites, sampling cost)
+3. Production — choose-tradeoff (cost vs quality, cache vs freshness)
+4. Safety Q1–Q3 (injection basics, why guardrails layer)
+5. Design-this-system: a scoped AI feature
+
+*Pass bar:* chooses techniques by constraint not fashion, names the eval before the architecture.
+
+## Mock set — senior
+
+1. Design-this-system: a multi-feature AI product surface
+2. Explain-trace: a failing agentic workflow in production
+3. Choose-tradeoff: build vs buy across model, framework, and eval stack
+4. Safety — threat-model a feature with untrusted input
+5. Defend-project on a cross-functional launch
+
+*Pass bar:* product-shaped reasoning — they design for the user's failure modes, not the model's capabilities.
+
+## What interviewers probe for this role
+
+- **Technique-selection judgment.** "Why RAG and not fine-tuning, why a workflow and not an agent" — the *choosing* is the skill.
+- **Shipping pragmatism.** The best answer is often the boring one that ships; flag when they'd prototype vs build properly.
+- **Floor of depth.** Breadth candidates fail on depth checks — be solid on RAG internals and eval design specifically; those are where the probing concentrates.
+
+## Project defense
+
+Expect: why this technique for this problem, what you tried first and abandoned, how you evaluated without ground truth, and what the cost/latency/quality tradeoff looked like in numbers.
+
+**Role path:** [AI for developers](/roles/developer) covers the building blocks; pair it with the evals and production tracks.

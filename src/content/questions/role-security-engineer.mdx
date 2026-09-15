@@ -1,0 +1,54 @@
+---
+title: "Security engineer interview questions (AI track)"
+topic: "Role: Security Engineer"
+description: "The interview map for security engineers working on AI systems — the new attack surface, where old controls still apply, and the judgment calls AI introduces."
+order: 27
+---
+
+## What the role interview tests
+
+AI-security interviews test whether you can threat-model systems whose components are *persuadable*: prompt injection, tool abuse, data exfiltration through retrieval, agent sandboxing — plus where classical controls (auth, least privilege, egress filtering) still carry the load. The differentiator is understanding the model as an attack surface, not just the infrastructure around it.
+
+**Core topic hubs:** [Safety and security](/interview/safety-and-security) · [Agents](/interview/agents) · [MCP](/interview/mcp) · [Production and observability](/interview/production-and-observability) · [RAG](/interview/rag) · [AI system design](/interview/ai-system-design)
+
+## Mock set — junior
+
+1. Safety Q1–Q3 (what prompt injection is, why it's structurally hard)
+2. Agents Q6 (securing an agent with tools)
+3. Production Q1–Q2 (what gets logged, why it matters)
+4. One explain-trace: spot the injection attempt in a transcript
+5. Defend-project on any security work
+
+*Pass bar:* understands injection isn't a filterable bug, knows the trust-boundary vocabulary.
+
+## Mock set — mid
+
+1. Safety Q4–Q6 (injection through tools and retrieved content, defense layering)
+2. MCP — threat-model a tool server: what can a malicious server do, what can a malicious *tool description* do
+3. Design-this-system: sandboxing for a code-executing agent
+4. Explain-trace: an exfiltration attempt via a retrieval path
+5. Choose-tradeoff: usability vs lockdown for an internal agent
+
+*Pass bar:* models the model as a semi-trusted component; knows which controls are AI-specific and which are classical controls doing the real work.
+
+## Mock set — senior
+
+1. Design-this-system: security architecture for an agent platform — tools, credentials, sandboxing, audit
+2. Explain-trace: a multi-step attack through chained tools
+3. Choose-tradeoff: where to enforce policy — prompt, gateway, sandbox, or audit
+4. Safety — design a red-team exercise for an agentic feature
+5. Defend-project on a control you designed that held or failed
+
+*Pass bar:* thinks in kill-chains and blast radii; honest that injection mitigation is probabilistic and designs for the residual risk.
+
+## What interviewers probe for this role
+
+- **Injection is not SQL injection.** It's not patchable by escaping — the strong answer treats the model as a confused deputy inside a capability perimeter, and builds walls around what it can *do*.
+- **Classical controls still carry load.** Auth on tools, least privilege on credentials, egress filtering, audit logs — knowing the boring controls are most of the defense is senior judgment.
+- **Probabilistic mitigations.** Guardrails reduce risk, they don't eliminate it — the design must assume some attacks land and bound the damage.
+
+## Project defense
+
+Expect: your threat model, which attacks you accepted residual risk on and why, what your audit trail captures, and how you'd detect the attack you can't prevent. The [LLM security track](/learn/llm-security) — threat models, sandboxing, supply chain — is the defense material.
+
+**Role path:** [AI for security engineers](/roles/security-engineer) resequences the curriculum for this track.

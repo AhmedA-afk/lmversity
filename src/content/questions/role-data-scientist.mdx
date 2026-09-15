@@ -1,0 +1,54 @@
+---
+title: "Data scientist interview questions (AI track)"
+topic: "Role: Data Scientist"
+description: "The interview map for data scientists moving into AI work — statistics and experimentation depth plus the LLM-era topics the role now touches."
+order: 24
+---
+
+## What the role interview tests
+
+Data science interviews test inference and experimentation judgment — and increasingly, whether you can work with generative systems: evaluating outputs you can't label cleanly, using LLMs as tools, and knowing when a model call beats a model build. Your advantage is rigor; the gap to close is the engineering surface.
+
+**Core topic hubs:** [Maths foundations](/interview/maths-foundations) · [Classical ML](/interview/classical-ml) · [Evals](/interview/evals) · [AI foundations](/interview/ai-foundations) · [LLM basics](/interview/llm-basics) · [Deep learning](/interview/deep-learning) · [Production and observability](/interview/production-and-observability)
+
+## Mock set — junior
+
+1. Maths foundations Q1–Q4 (probability, distributions, why correlation isn't causation)
+2. Classical ML Q1–Q3 (metrics, leakage, baselines)
+3. AI foundations Q1–Q3 (what generative models are and aren't)
+4. Evals Q1–Q2 (what an eval is)
+5. Defend-project on an analysis or model
+
+*Pass bar:* statistical instinct intact, honest about the generative side being newer territory.
+
+## Mock set — mid
+
+1. Classical ML Q4–Q6 (when ML is the wrong tool)
+2. Evals Q3–Q5 — designing evaluation for generative outputs (this is your leverage: it's experiment design)
+3. LLM basics Q4–Q6 (failure modes, when to prompt vs fine-tune vs retrieve)
+4. Choose-tradeoff: a metric that optimizes the wrong thing
+5. Debug-output: an A/B result that contradicts the offline metric
+
+*Pass bar:* treats LLM eval as a measurement problem — sampling, rater agreement, bias — not a vibes problem.
+
+## Mock set — senior
+
+1. Design-this-system: an evaluation framework for a generative product
+2. Explain-trace: a model-quality regression after a prompt change — isolate cause from correlation
+3. Choose-tradeoff: offline metrics vs online experiments for AI features
+4. Classical ML — defend a simple analysis against an over-built model
+5. Defend-project on a decision your analysis changed
+
+*Pass bar:* they design the measurement before the model, and they're the person who catches the metric that lies.
+
+## What interviewers probe for this role
+
+- **Evaluation as experiment design.** LLM evals reward exactly your training — labeling schemes, inter-rater agreement, sampling bias, powered comparisons. Lead with it.
+- **The honesty edge.** "The model can't answer that question" or "that metric doesn't measure the thing" is a senior DS answer.
+- **Engineering breadth.** The common DS gap: production awareness. Know the observability and deployment basics even if they're not your depth.
+
+## Project defense
+
+Expect: how you validated, what the confidence in the result actually was, what you'd measure differently now — and for generative work, how you handled evaluation without clean labels.
+
+**Role path:** [AI for data scientists](/roles/data-scientist) resequences the curriculum for this track.

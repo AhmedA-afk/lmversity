@@ -2,7 +2,7 @@
  "version": 1,
  "next": {
   "les": 2229,
-  "que": 18,
+  "que": 27,
   "sce": 12,
   "blo": 19,
   "gui": 14,
@@ -10433,6 +10433,42 @@
   "questions/take-home-exercises.mdx": {
    "id": "que-0018",
    "fp": "6ddc6a68d918d5a15080e9b3c2ff629b78b392c2"
+  },
+  "questions/role-ai-engineer.mdx": {
+   "id": "que-0019",
+   "fp": "d6868d5a8c6e164cc18a900b64e98f4b84401920"
+  },
+  "questions/role-ai-platform-engineer.mdx": {
+   "id": "que-0020",
+   "fp": "ac9c8cacd990dbd2f4befb12eb584d4d2742b04a"
+  },
+  "questions/role-applied-ai-engineer.mdx": {
+   "id": "que-0021",
+   "fp": "0cfb55bd7f5321e9b4673da0ab17f9cf8a753850"
+  },
+  "questions/role-data-scientist.mdx": {
+   "id": "que-0022",
+   "fp": "30f6c10b72d7a4f28628be3b5cd3338b15c1cc55"
+  },
+  "questions/role-designer.mdx": {
+   "id": "que-0023",
+   "fp": "f43bad129ce80974dd0b571ae0e95711d43f12e0"
+  },
+  "questions/role-forward-deployed-engineer.mdx": {
+   "id": "que-0024",
+   "fp": "44eecefe971ae6993ed0de7ac3584940001acb85"
+  },
+  "questions/role-ml-engineer.mdx": {
+   "id": "que-0025",
+   "fp": "0c9e59c8905b12dc7d3a0d7786e59278771b2d67"
+  },
+  "questions/role-product-manager.mdx": {
+   "id": "que-0026",
+   "fp": "6ab3402b9ced2aec516112d53d9fc7376648cbb5"
+  },
+  "questions/role-security-engineer.mdx": {
+   "id": "que-0027",
+   "fp": "22245eaefadc4b4c7a3af4b42015d6ebb5776f62"
   }
  },
  "retired": {

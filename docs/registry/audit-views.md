@@ -1,7 +1,7 @@
 # Content registry — audit views
 
-Generated 2026-09-15T17:42:28.544Z by `scripts/build-content-registry.mjs`.
-2615 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T17:49:16.869Z by `scripts/build-content-registry.mjs`.
+2624 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
@@ -12,9 +12,9 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 - lab: 76
 - answer: 35
 - project: 33
+- interview: 27
 - page: 25
 - blog: 19
-- interview: 18
 - guide: 14
 - scenario: 12
 - role: 12
@@ -23,7 +23,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By status
 
-- live: 2615
+- live: 2624
 
 ## By search intent (heuristic)
 
@@ -34,10 +34,10 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 - practice: 93
 - answer: 35
 - worked-example: 33
+- interview-prep: 27
 - troubleshooting: 26
 - how-to: 20
 - read: 19
-- interview-prep: 18
 - hub: 13
 - scenario: 12
 - role-path: 12
@@ -51,7 +51,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 - beginner-engineer: 440
 - forward-deployed-engineer: 194
 - general: 190
-- job-candidate: 18
+- job-candidate: 27
 - developer: 1
 - ml-engineer: 1
 - data-scientist: 1
@@ -83,20 +83,20 @@ and split always need a written human reason (see checklist).
 | disposition | items |
 |---|---:|
 | investigate | 2326 |
-| keep | 286 |
+| keep | 295 |
 | expand | 3 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2351 | 1.91 | 0 | 211 | 2140 |
+| intentClarity | 2360 | 1.91 | 0 | 211 | 2149 |
 | correctnessSources | 50 | 1.26 | 0 | 37 | 13 |
-| completeness | 2561 | 1.63 | 49 | 844 | 1668 |
+| completeness | 2570 | 1.63 | 49 | 853 | 1668 |
 | prerequisiteFit | 2412 | 0.15 | 2232 | 0 | 180 |
-| handsOn | 2351 | 1.44 | 619 | 81 | 1651 |
-| explanationQuality | 2351 | 1.96 | 20 | 56 | 2275 |
-| metadata | 2351 | 1.84 | 0 | 375 | 1976 |
-| linking | 2258 | 1.50 | 397 | 332 | 1529 |
-| freshnessHealth | 2615 | 0.77 | 918 | 1380 | 317 |
+| handsOn | 2360 | 1.44 | 619 | 90 | 1651 |
+| explanationQuality | 2360 | 1.96 | 20 | 56 | 2284 |
+| metadata | 2360 | 1.84 | 0 | 375 | 1985 |
+| linking | 2267 | 1.50 | 397 | 332 | 1538 |
+| freshnessHealth | 2624 | 0.77 | 921 | 1386 | 317 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
@@ -282,7 +282,7 @@ _… 293 more pairs in content-registry.json (`duplicates`)_
 
 ## Sourcing review flags
 
-270 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
+273 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
 
 | item | flags |
 |---|---|
@@ -347,15 +347,15 @@ _… 293 more pairs in content-registry.json (`duplicates`)_
 | /learn/cli-agents/customizing-the-agent-surface | release-sensitive page with no updated/review date |
 | /learn/cli-agents/getting-the-agent-oriented | release-sensitive page with no updated/review date |
 
-_… 210 more in content-registry.json (`sourcingFlags`)_
+_… 213 more in content-registry.json (`sourcingFlags`)_
 
 ## Freshness queues
 
 Review order: volatile classes first, oldest last-verified date first; undated items lead each queue. `verified`/`updated`/`published` supply the last-verified date — git-derived when frontmatter is absent.
 
-- periodic: 1380
-- pricing-sensitive: 363
-- release-sensitive: 357
+- periodic: 1386
+- pricing-sensitive: 365
+- release-sensitive: 358
 - durable: 266
 - certification-sensitive: 104
 - policy-sensitive: 94
@@ -395,7 +395,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-foundations/reliable-ai/223-environmental-impact-and-compute-governance — Environmental Impact and Compute Governance *(verified 2026-08-30)*
 - … 74 more in content-registry.json
 
-### pricing-sensitive (363) — oldest-verified first
+### pricing-sensitive (365) — oldest-verified first
 
 - /learn/agent-frameworks/mastra-typescript-agents — Mastra: the TypeScript agent framework *(verified undated)*
 - /learn/agent-frameworks/microsoft-agent-frameworks — Microsoft's agent frameworks: Semantic Kernel, AutoGen, and the convergence *(verified undated)*
@@ -419,15 +419,15 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/web-agents/extraction-and-evaluation — Extraction with schemas, and evaluating whether the browser task worked *(verified undated)*
 - /interview/ai-foundations — AI foundations interview questions *(verified undated)*
 - /interview/behavioral-and-project-defense — Behavioral and project-defense interview questions *(verified undated)*
+- /interview/role-ai-platform-engineer — AI platform engineer interview questions *(verified undated)*
+- /interview/role-product-manager — Product manager interview questions (AI track) *(verified undated)*
 - /scenarios/browser-agent-permissions — A research agent that wandered into a checkout page *(verified undated)*
 - /learn/ai-foundations/choosing-a-model — Choosing a model in 2026 *(verified 2026-08-29)*
 - /learn/ai-foundations/tokens-context-cost — Tokens, context & cost *(verified 2026-08-29)*
 - /learn/evals-red-teaming/building-a-golden-dataset — Building a Golden Dataset *(verified 2026-08-29)*
 - /learn/production/token-and-cost-tracking — Track Cost Per Request and Per User *(verified 2026-08-29)*
 - /learn/prompt-engineering/chain-of-thought-prompting — Chain-of-Thought: Getting the Model to Show Its Work *(verified 2026-08-29)*
-- /learn/prompt-engineering/few-shot-prompting — Few-Shot Prompting: Teaching by Example *(verified 2026-08-29)*
-- /learn/prompt-engineering/system-vs-user-prompts — System Prompts vs User Prompts *(verified 2026-08-29)*
-- … 333 more in content-registry.json
+- … 335 more in content-registry.json
 
 ### policy-sensitive (94) — oldest-verified first
 
@@ -463,7 +463,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/deep-learning/sequence-generative/318-language-model-training-data-and-scaling — Train language models with data governance and scaling discipline *(verified 2026-08-30)*
 - … 64 more in content-registry.json
 
-### release-sensitive (357) — oldest-verified first
+### release-sensitive (358) — oldest-verified first
 
 Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno, LangGraph *(verified undated)*
@@ -496,14 +496,14 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/genai-app-dev/indic-language-pipeline-lab — Sarvam, AI4Bharat, Bhashini *(verified undated)*
 - /learn/harness-design/agent-stack-vocabulary — MCP, Model Context Protocol *(verified undated)*
 - /learn/harness-design/harness-skill-and-mcp-integrations — MCP *(verified undated)*
-- … 327 more
+- … 328 more
 
 ## Missing-data queues
 
 ### no summary/meta description (0)
 
 
-### no published or updated date (185)
+### no published or updated date (194)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -545,7 +545,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-for-designers/ai-product-design-common-mistakes — AI product design: common mistakes
 - /learn/ai-for-designers/ai-product-design-foundations-quiz — Quiz: AI product design foundations
 - /learn/ai-for-designers/ai-prototype-testing-common-mistakes — AI prototype testing: common mistakes
-- … 145 more
+- … 154 more
 
 ### zero in-body internal links (template nav still applies) (491)
 
@@ -644,7 +644,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 ### lesson files with status coming (0)
 
 
-### release-sensitive, no date at all (119)
+### release-sensitive, no date at all (122)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -686,7 +686,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-literacy/meet-skills-connectors-and-agents — Meet skills, connectors, and agents — safely
 - /learn/cli-agents/cli-agent-labs — Labs: the untrusted-repo security drill and the comparative harness run
 - /learn/cli-agents/customizing-the-agent-surface — Customizing the agent: MCP config, skills, commands, rules, hooks, and subagents
-- … 79 more
+- … 82 more
 
 ## Role paths
 
@@ -727,7 +727,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 
 ## Non-lesson collections
 
-### interview (18)
+### interview (27)
 
 - /interview/agents — AI agents interview questions (776 words, updated 2026-09-08)
 - /interview/ai-foundations — AI foundations interview questions (708 words)
@@ -744,6 +744,15 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /interview/production-and-observability — Production and observability interview questions (705 words)
 - /interview/prompt-engineering — Prompt engineering interview questions (752 words, updated 2026-09-08)
 - /interview/rag — RAG interview questions (721 words, updated 2026-08-30)
+- /interview/role-ai-engineer — AI engineer interview questions (348 words)
+- /interview/role-ai-platform-engineer — AI platform engineer interview questions (387 words)
+- /interview/role-applied-ai-engineer — Applied AI engineer interview questions (336 words)
+- /interview/role-data-scientist — Data scientist interview questions (AI track) (382 words)
+- /interview/role-designer — Designer interview questions (AI track) (428 words)
+- /interview/role-forward-deployed-engineer — Forward-deployed engineer interview questions (390 words)
+- /interview/role-ml-engineer — ML engineer interview questions (357 words)
+- /interview/role-product-manager — Product manager interview questions (AI track) (410 words)
+- /interview/role-security-engineer — Security engineer interview questions (AI track) (428 words)
 - /interview/safety-and-security — AI safety and security interview questions (748 words)
 - /interview/structured-outputs — Structured outputs interview questions (689 words)
 - /interview/take-home-exercises — Take-home exercises and integrity (479 words)

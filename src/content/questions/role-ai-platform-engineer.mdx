@@ -1,0 +1,54 @@
+---
+title: "AI platform engineer interview questions"
+topic: "Role: AI Platform Engineer"
+description: "The interview map for AI platform roles — infrastructure, gateways, observability, and the leverage questions of serving many teams' AI needs."
+order: 22
+---
+
+## What the role interview tests
+
+Platform interviews test whether you can build the *substrate* other teams ship on: model gateways, eval infrastructure, observability, cost governance, and guardrails-as-a-service. The probing is infrastructure-shaped — reliability, multi-tenancy, and the tradeoffs of centralizing AI concerns.
+
+**Core topic hubs:** [Production and observability](/interview/production-and-observability) · [AI system design](/interview/ai-system-design) · [Structured outputs](/interview/structured-outputs) · [Context engineering](/interview/context-engineering) · [Safety and security](/interview/safety-and-security) · [Evals](/interview/evals) · [LLM basics](/interview/llm-basics)
+
+## Mock set — junior
+
+1. Production Q1–Q3 (what observability is, why AI needs it specifically)
+2. Structured outputs Q1–Q3 (contracts between services)
+3. AI system design Q1–Q3 (components of an AI feature)
+4. One debug-output: a latency spike across all model calls — where do you look
+5. Defend-project on any infrastructure work
+
+*Pass bar:* understands the request path end to end, thinks in interfaces not features.
+
+## Mock set — mid
+
+1. Production Q4–Q6 (tracing multi-step systems, cost attribution, alerting)
+2. Design-this-system: a model gateway — routing, fallbacks, rate limits, key management
+3. Safety Q4–Q6 (where guardrails live in a platform, injection at the boundary)
+4. Evals — choose-tradeoff: centralized eval service vs team-owned evals
+5. Explain-trace on a cross-provider failover
+
+*Pass bar:* designs for the second team, not just theirs; prices the platform's failure modes.
+
+## Mock set — senior
+
+1. Design-this-system: an internal AI platform — gateway, eval service, observability, policy enforcement
+2. Choose-tradeoff: build vs buy at each layer, and what the exit cost is
+3. Explain-trace: a subtle cross-tenant cost leak
+4. Safety — threat-model a shared tool/MCP layer
+5. Defend-project on a platform adoption that failed or stuck
+
+*Pass bar:* they talk about adoption, deprecation, and governance as engineering problems — the platform judgment, not just the plumbing.
+
+## What interviewers probe for this role
+
+- **Multi-tenant thinking.** One team's retry storm is everyone's outage — do they design for noisy neighbors, quotas, and blameless attribution?
+- **The leverage question.** Platforms earn their cost by making many teams faster — strong candidates measure that, weak ones just centralize.
+- **Boundary placement.** Guardrails at the gateway vs in the app vs in the prompt — there's no single right answer, but they must argue one.
+
+## Project defense
+
+Expect: who the platform serves and what they stopped doing, what you chose not to centralize, how you priced the exit cost for teams that leave, and what the platform's own observability looks like.
+
+**Role path:** [AI for ML engineers](/roles/ml-engineer) is the closest path; pair with the production and llm-security tracks.

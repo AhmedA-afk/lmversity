@@ -1,0 +1,54 @@
+---
+title: "AI engineer interview questions"
+topic: "Role: AI Engineer"
+description: "The interview map for AI engineer roles — which topics carry the weight, mock sets by level, and what interviewers actually probe."
+order: 19
+---
+
+## What the role interview tests
+
+AI engineer interviews weight the *building* topics: LLM behavior, prompting, RAG, agents, structured outputs, context, evals, and production judgment. The interviewer is checking whether you can ship a reliable feature on top of a model — not whether you can train one.
+
+**Core topic hubs:** [LLM basics](/interview/llm-basics) · [Prompt engineering](/interview/prompt-engineering) · [RAG](/interview/rag) · [Agents](/interview/agents) · [Structured outputs](/interview/structured-outputs) · [Context engineering](/interview/context-engineering) · [Evals](/interview/evals) · [Production and observability](/interview/production-and-observability) · [AI system design](/interview/ai-system-design)
+
+## Mock set — junior
+
+1. LLM basics Q1–Q3 (tokens, temperature, hallucination)
+2. Prompt engineering Q1–Q3 (what a prompt is, why prompts drift)
+3. RAG Q1–Q3 (what RAG is, why retrieval fails)
+4. Structured outputs Q1–Q2 (why JSON mode isn't enough)
+5. One defend-project: walk a project you built; every "why" gets probed
+
+*Pass bar:* correct mechanics, honest uncertainty, follows a hint without collapsing.
+
+## Mock set — mid
+
+1. RAG Q4–Q6 (chunking tradeoffs, eval, failure diagnosis)
+2. Agents Q3–Q5 (tool definitions, stopping, human-in-the-loop)
+3. Context engineering — explain-trace question (diagnose a rot pattern)
+4. Evals Q3–Q5 (build vs buy, regression suites)
+5. Production — choose-tradeoff (cache vs freshness, cost vs latency)
+
+*Pass bar:* tradeoff language unprompted, diagnoses before prescribing, names what they'd measure.
+
+## Mock set — senior
+
+1. AI system design — design-this-system end to end (45 min, they push back twice)
+2. Production and observability — explain-trace on a real failure
+3. Safety and security Q4–Q6 (injection through tools, sandboxing)
+4. Evals — design an eval strategy for a system with no ground truth
+5. Defend-project on something that failed in production
+
+*Pass bar:* they argue *with* you credibly, surface requirements you didn't state, and their design has explicit failure paths.
+
+## What interviewers probe for this role
+
+- **Shipped judgment over recited concepts.** Every answer gets "and what happened when you did that?" — have real stories.
+- **Eval instinct.** "How would you know it works?" should be reflexive, not an afterthought.
+- **Boundary honesty.** "I haven't run that in production" beats a confident guess — then reason from what you do know.
+
+## Project defense
+
+The capstones — [ship a GenAI assistant](/learn/genai-app-dev/capstone-ship-a-genai-assistant), [build a tool-using agent](/learn/tools-function-calling/capstone-build-a-tool-using-agent) — are the defense material. Expect: why this retrieval strategy, why this eval set, what breaks at 10x traffic, what you'd monitor first. The [behavioral and project-defense](/interview/behavioral-and-project-defense) hub has the format.
+
+**Role path:** [AI for developers](/roles/developer) resequences the curriculum for this track.

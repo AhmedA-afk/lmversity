@@ -566,7 +566,9 @@ consolidation into a parent track, or a clearer curated-path role.
 
 ## Phase 3 — Interview preparation ecosystem
 
-- [ ] Expand from 7 interview topics into a taxonomy aligned with every technical track and role.
+- [x] Expand from 7 interview topics into a taxonomy aligned with every technical track and role.
+      *(16 topic hubs + 9 role hubs — every technical track has a hub;
+      every listed role maps topic hubs + mock sets)*
 - [x] Add topic hubs for AI foundations, maths, classical ML, deep learning, LLMs, prompting,
       RAG, agents, tools, MCP, structured outputs, context, evals, safety, production,
       observability, system design, and behavioral/project defense.
@@ -574,8 +576,10 @@ consolidation into a parent track, or a clearer curated-path role.
       deep-learning, structured-outputs, context-engineering,
       safety-and-security, production-and-observability,
       behavioral-and-project-defense; tools covered inside the agents hub)*
-- [ ] Add role hubs for AI engineer, ML engineer, applied AI engineer, AI platform engineer,
+- [x] Add role hubs for AI engineer, ML engineer, applied AI engineer, AI platform engineer,
       forward-deployed engineer, data scientist, product manager, designer, and security engineer.
+      *(all 9 live as `role-*.mdx` — topic weighting, probes, project
+      defense, and links to role paths)*
 - [ ] Give each question a concise answer, deep answer, common weak answer, follow-up questions,
       evaluation rubric, and curriculum links.
 - [x] Add “explain this trace,” “debug this output,” “design this system,” “choose the tradeoff,”
@@ -588,7 +592,9 @@ consolidation into a parent track, or a clearer curated-path role.
 - [x] Add candidate mode with progressive hints.
       *(served: `interview-modes` — cover-answer-compare method, timed
       practice, self-scoring via weak-answer descriptions)*
-- [ ] Add mock interview sets by role and level.
+- [x] Add mock interview sets by role and level.
+      *(junior/mid/senior mock sets inside each of the 9 role hubs —
+      question sequences drawn from the topic hubs with pass bars)*
 - [x] Add take-home exercise examples with explicit integrity guidance.
       *(served: `take-home-exercises` — exercise shapes, doing-them-well,
       AI-assistance disclosure + defend-every-line integrity rules)*
@@ -2337,6 +2343,22 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-16 — Phase 3: role hubs + mock sets (3 rows)
+
+- Commit: `PENDING`. Status: complete.
+- Scope: 9 role hubs (ai-engineer, ml-engineer, applied-ai-engineer,
+  ai-platform-engineer, forward-deployed-engineer, data-scientist,
+  product-manager, designer, security-engineer) — each carries topic
+  weighting, junior/mid/senior mock sets with pass bars, interviewer
+  probes, project-defense framing, and a role-path link.
+- Files: 9 new `src/content/questions/role-*.mdx`; route prefix fix
+  (/practice → /interview for topic-hub cross-links).
+- Validation: `check:content` clean; build 2,672 pages; `check:links`
+  0 dead / 5,723 routes; interview family now 27 items.
+- Open in Phase 3: per-question deep/weak/rubric depth; project-defense
+  questions embedded on every capstone.
+- Next: Phase 2 question-bank schema or capstone project-defense pass.
 
 ### 2026-09-16 — Phase 3: interview taxonomy + modes (5 rows)
 

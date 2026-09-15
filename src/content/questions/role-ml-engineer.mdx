@@ -1,0 +1,54 @@
+---
+title: "ML engineer interview questions"
+topic: "Role: ML Engineer"
+description: "The interview map for ML engineer roles — classical ML and deep learning depth plus the production questions that separate builders from trainees."
+order: 20
+---
+
+## What the role interview tests
+
+ML engineer interviews still weight fundamentals: classical ML, deep learning, and the math underneath — plus the engineering question of whether your models survive contact with production. LLM questions appear increasingly, but the differentiator is modeling judgment, not API fluency.
+
+**Core topic hubs:** [Classical ML](/interview/classical-ml) · [Deep learning](/interview/deep-learning) · [Maths foundations](/interview/maths-foundations) · [Evals](/interview/evals) · [Production and observability](/interview/production-and-observability) · [AI system design](/interview/ai-system-design) · [AI foundations](/interview/ai-foundations)
+
+## Mock set — junior
+
+1. Classical ML Q1–Q3 (bias-variance, leakage, metrics)
+2. Maths foundations Q1–Q3 (what a gradient is, why probability matters)
+3. Deep learning Q1–Q3 (what a neural net learns, overfitting)
+4. One debug-output: a training curve that plateaus — what do you check first
+5. Defend-project on any modeling work
+
+*Pass bar:* mechanics right, knows why leakage is the silent killer, can read a curve.
+
+## Mock set — mid
+
+1. Classical ML Q4–Q6 (feature engineering judgment, when not to use ML)
+2. Deep learning Q4–Q6 (architecture choice, debugging training)
+3. Evals — choose-tradeoff (precision vs recall for a real cost asymmetry)
+4. Production Q3–Q5 (drift, monitoring, retraining triggers)
+5. Design-this-system: an ML feature end to end
+
+*Pass bar:* picks baselines before architectures, quantifies before optimizing, treats data quality as the real problem.
+
+## Mock set — senior
+
+1. Design-this-system: ML platform or a high-stakes model with regulatory exposure
+2. Production — explain-trace on a model degrading in prod
+3. Classical ML — defend a "boring" model choice against a fashionable one
+4. Evals — design validation for a shifting distribution
+5. Defend-project on a model that failed and what the postmortem found
+
+*Pass bar:* skepticism as a default, infrastructure awareness, and the honesty to say "ML is the wrong tool here."
+
+## What interviewers probe for this role
+
+- **Baseline discipline.** Strong candidates reach for the simple model first and justify complexity — weak ones reach for the architecture.
+- **Data over model.** The senior signal is treating data quality, labeling, and leakage as the engineering problem.
+- **Production realism.** Training curves are easy; drift, skew, and monitoring are the job.
+
+## Project defense
+
+Expect: why this model class, how you validated, what the leakage surface was, what you'd monitor in week one, and what a 10% metric drop would make you check first.
+
+**Role path:** [AI for ML engineers](/roles/ml-engineer) resequences the curriculum for this track.

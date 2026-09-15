@@ -1,0 +1,54 @@
+---
+title: "Forward-deployed engineer interview questions"
+topic: "Role: Forward-Deployed Engineer"
+description: "The interview map for FDE roles — scoping under ambiguity, shipping into someone else's constraints, and the client-facing judgment the role exists for."
+order: 23
+---
+
+## What the role interview tests
+
+FDE interviews test the *deployment* skill set: entering an unfamiliar domain, scoping a problem the customer can't fully articulate, shipping something that works inside their constraints — their data, their security posture, their workflows. Technical depth matters, but the differentiator is ambiguity tolerance and judgment about what to build *first*.
+
+**Core topic hubs:** [AI system design](/interview/ai-system-design) · [Production and observability](/interview/production-and-observability) · [Safety and security](/interview/safety-and-security) · [Context engineering](/interview/context-engineering) · [Behavioral and project defense](/interview/behavioral-and-project-defense) · [Evals](/interview/evals) · [RAG](/interview/rag)
+
+## Mock set — junior
+
+1. AI system design Q1–Q3 (components, where AI fits)
+2. Production Q1–Q3 (why production AI differs from a demo)
+3. Behavioral Q1–Q3 (a time you shipped under ambiguity)
+4. One debug-output: an integration failing on customer data you've never seen
+5. Defend-project on anything shipped to a real user
+
+*Pass bar:* asks about constraints before proposing, comfortable saying "depends — on what?"
+
+## Mock set — mid
+
+1. Design-this-system: an AI feature for a described customer environment (sparse brief on purpose)
+2. Safety — threat-model a deployment inside a customer's security perimeter
+3. Behavioral — choose-tradeoff under a deadline with a watching client
+4. Evals — how do you evaluate success when the customer can't define it
+5. Explain-trace on a production incident at a customer site
+
+*Pass bar:* scopes before building, surfaces the unstated constraint, treats the customer's definition of success as the spec.
+
+## Mock set — senior
+
+1. Design-this-system: first-90-days engagement — discovery, pilot, production, handoff
+2. Behavioral — a deployment that failed; what the postmortem changed
+3. Choose-tradeoff: customize vs generalize when one customer wants off-roadmap work
+4. Production — observability for a system you don't fully control
+5. Defend-project on the messiest thing you shipped
+
+*Pass bar:* talks about stakeholders and adoption as readily as architecture; knows that the technical problem is usually the easy part.
+
+## What interviewers probe for this role
+
+- **Ambiguity as the medium.** They'll under-specify deliberately — the candidate who asks "what does success look like to *them*" is answering correctly.
+- **Scope discipline.** FDE work dies of over-building; the strong answer ships the wedge first.
+- **Customer-shaped engineering.** "Their SSO, their data residency, their ops team's skill level" — constraints arrive from outside, and the design absorbs them.
+
+## Project defense
+
+Expect: how you scoped, what the customer actually needed vs asked for, what you deliberately didn't build, and what handoff looked like — the [behavioral and project-defense](/interview/behavioral-and-project-defense) hub's formats apply directly.
+
+**Role path:** the [forward-deployed engineer path](/roles/forward-deployed-engineer) is its own curriculum tree, built for exactly this.
