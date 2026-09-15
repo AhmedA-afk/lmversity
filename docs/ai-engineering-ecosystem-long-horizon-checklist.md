@@ -1440,9 +1440,29 @@ validation, deployment status, measured result when available, blockers, and nex
   intent, originality, evidence and tone still need the editorial scoring pass. A first-pass
   backlog order (value + dependency) is in the audit doc; demand ordering awaits analytics.
 - Validation: `npm run check:content` clean; `git diff --check` clean; `check:links` clean —
-  no content files touched. Commit: `34a26b8`.
+  no content files touched. Commit: `7190bc2`.
 - Next batch: backlog item 1 — reshuffle centralized-bank answer positions and wire each
   question to its remediation lesson (bounded: one data file).
+
+### 2026-09-15 — Centralized practice-bank integrity fix
+
+- Reshuffled all 48 centralized practice questions in `src/data/quizzes.ts`: correct answers
+  moved from 100%-at-index-0-or-1 to a uniform 12/12/12/12 spread across positions 0–3
+  (2 per position per bank). `why[]` arrays were permuted with their options — verified
+  mechanically that every `why[answer]` still starts with the "Right" convention.
+- Wired every question to a remediation `lesson` route (0 → 48 lesson links): e.g. agent
+  questions now point into `agentic-ai`, evals into `evals-red-teaming`, the temperature
+  question into `llm-foundations/sampling-temperature-top-p`. The Quiz component renders
+  options in array order (no runtime shuffle) and shows "Read the lesson →" per question,
+  so both fixes are user-visible.
+- Verification: bespoke parser re-read all 48 calls post-transform (0 mismatches);
+  `npm run check:content` clean; `npm run check:links` clean (all new `/learn/` routes
+  resolve); file imports cleanly under `node --experimental-strip-types`.
+  `git diff --check` clean. Commit: `81b5f86`.
+- Still open from the audit: distractor/difficulty *quality* scoring (editorial), the 66%-B
+  skew in lesson quizzes, 11 files with thin per-option rationale.
+- Next batch: backlog item 2 — scenario depth pass (6 files, add missing
+  constraints/options/postmortem sections).
 
 ### 2026-09-14 — Master ecosystem backlog created
 

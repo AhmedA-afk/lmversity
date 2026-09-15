@@ -1,6 +1,6 @@
 # Acquisition & practice family audit — mechanical pass
 
-Generated 2026-09-15T06:02:55.759Z by `scripts/audit-families.mjs`.
+Generated 2026-09-15T06:18:50.940Z by `scripts/audit-families.mjs`.
 Structural checks only; originality/correctness are scored in the review pass.
 
 ## Findings
@@ -10,7 +10,7 @@ Structural checks only; originality/correctness are scored in the review pass.
 - **Blog (10)**: all dated; `why-there-is-no-certificate` never link into the curriculum.
 - **Interview (7)**: 8 questions each; 5/7 have **no follow-up prompts or rubric** — the checklist asks for both.
 - **Scenarios (6)**: ~192 words avg; missing sections: constraints, options, postmortem, implementation.
-- **Centralized practice banks**: 48 questions across 6 tracks, 1 total lesson links; **100% of correct answers sit at option index 0 or 1 in every bank** — positional bias a learner can exploit.
+- **Centralized practice banks**: 48 questions across 6 tracks, 48 total lesson links.
 - **Lesson quiz pages (83 files, 603 questions)**: all questions carry a marked correct answer; 0 duplicate stems corpus-wide; correct-answer positions skew B 66%, C 19%, A 11%, D 3%; 11 files have answer blocks that don't discuss every option.
 - **Worked examples (29)**: 0 flagged — every file has runnable code and an inspectable outcome.
 - **Cheatsheets (48)**: 1 flagged for scanability/length.
@@ -115,12 +115,12 @@ Structural checks only; originality/correctness are scored in the review pass.
 
 | track | questions | avg options | answers at idx 0–1 | lesson links | flags |
 |---|---|---|---|---|---|
-| ai-foundations | 8 | 4.0 | 100% | 1 | — |
-| prompt-engineering | 8 | 4.0 | 100% | 0 | — |
-| rag | 8 | 4.0 | 100% | 0 | — |
-| agents | 8 | 4.0 | 100% | 0 | — |
-| mcp | 8 | 4.0 | 100% | 0 | — |
-| evals | 8 | 4.0 | 100% | 0 | — |
+| ai-foundations | 8 | 4.0 | 50% | 8 | — |
+| prompt-engineering | 8 | 4.0 | 50% | 8 | — |
+| rag | 8 | 4.0 | 50% | 8 | — |
+| agents | 8 | 4.0 | 50% | 8 | — |
+| mcp | 8 | 4.0 | 50% | 8 | — |
+| evals | 8 | 4.0 | 50% | 8 | — |
 
 ## Lesson quiz pages (83 files, 603 questions)
 
