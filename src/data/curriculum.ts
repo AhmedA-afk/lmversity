@@ -10637,6 +10637,51 @@ const unsortedTracks: Track[] = [
     ]
   },
   {
+    "id": "agent-skills",
+    "n": "28",
+    "name": "Agent Skills",
+    "group": "Agentic",
+    "meta": "6 lessons",
+    "summary": "The Agent Skills open spec — SKILL.md anatomy, progressive disclosure, the mechanism chooser, security auditing, fixture-based eval, porting, and two hands-on projects.",
+    "nodes": [
+      {
+        "title": "The Agent Skills Spec and Progressive Disclosure",
+        "slug": "agent-skills-spec-and-progressive-disclosure",
+        "status": "live"
+      },
+      {
+        "title": "SKILL.md Anatomy: Frontmatter, Body, and Bundled Resources",
+        "slug": "skill-md-anatomy",
+        "status": "live",
+        "prereq": ["agent-skills-spec-and-progressive-disclosure"]
+      },
+      {
+        "title": "Skill vs Prompt vs Project Rule vs Hook vs MCP vs Subagent",
+        "slug": "skill-vs-prompt-rule-hook-mcp-subagent",
+        "status": "live",
+        "prereq": ["agent-skills-spec-and-progressive-disclosure"]
+      },
+      {
+        "title": "Skill Provenance, Review, and the Safe-Installation Checklist",
+        "slug": "skill-security-and-provenance",
+        "status": "live",
+        "prereq": ["skill-md-anatomy"]
+      },
+      {
+        "title": "Evaluating Skills with Fixtures, and Porting Them Across Agents",
+        "slug": "evaluating-and-porting-skills",
+        "status": "live",
+        "prereq": ["skill-md-anatomy"]
+      },
+      {
+        "title": "Projects: Build Your First Skill, Then Turn a Workflow into a Tested One",
+        "slug": "skills-projects-first-skill-and-capstone",
+        "status": "live",
+        "prereq": ["evaluating-and-porting-skills"]
+      }
+    ]
+  },
+  {
     "id": "llm-security",
     "n": "25",
     "name": "LLM Security & Governance",

@@ -1126,16 +1126,16 @@ consolidation into a parent track, or a clearer curated-path role.
 
 ### Agent Skills curriculum and task catalog
 
-- [ ] Teach the Agent Skills open specification and progressive disclosure.
-- [ ] Teach `SKILL.md` frontmatter, description design, body scope, scripts, references,
+- [x] Teach the Agent Skills open specification and progressive disclosure.
+- [x] Teach `SKILL.md` frontmatter, description design, body scope, scripts, references,
       assets, metadata, dependencies, installation, and versioning.
-- [ ] Teach skill versus prompt versus project rule versus hook versus MCP versus subagent.
-- [ ] Teach skill provenance, code review, permissions, and malicious-skill risks.
-- [ ] Teach skill evaluation using fixtures and expected artifacts.
-- [ ] Teach porting a skill across compatible agents without assuming identical behavior.
-- [ ] Build a LMVersity skill-audit checklist and safe installation guide.
-- [ ] Build a “create your first skill” project.
-- [ ] Build a “turn a repeated workflow into a tested skill” capstone.
+- [x] Teach skill versus prompt versus project rule versus hook versus MCP versus subagent.
+- [x] Teach skill provenance, code review, permissions, and malicious-skill risks.
+- [x] Teach skill evaluation using fixtures and expected artifacts.
+- [x] Teach porting a skill across compatible agents without assuming identical behavior.
+- [x] Build a LMVersity skill-audit checklist and safe installation guide.
+- [x] Build a “create your first skill” project.
+- [x] Build a “turn a repeated workflow into a tested skill” capstone.
 
 Popular task-skill guides to research, test, and publish:
 
@@ -2926,7 +2926,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-15 — MCP curriculum complete (all 10 rows)
 
-- Commit: pending. The `mcp` track already carried near-complete
+- Commit: `520e695`. The `mcp` track already carried near-complete
   coverage (57 lessons): lifecycle/transports, all primitives incl.
   roots/sampling/elicitation, client+server builds, the full auth
   family, trust/injection/supply-chain security, registries,
@@ -2943,6 +2943,29 @@ validation, deployment status, measured result when available, blockers, and nex
   `check:links` 0 dead (5,351 routes); registry 2,475 items.
 - Next batch: Agent Skills curriculum (9 rows) — spec, SKILL.md
   anatomy, provenance/security, eval, porting, projects/capstone.
+
+### 2026-09-15 — Agent Skills curriculum complete (all 9 rows) — Phase 6C done
+
+- Commit: pending. New `agent-skills` track (n:28, Agentic group, 6
+  lessons): `agent-skills-spec-and-progressive-disclosure` (spec + the
+  three disclosure levels — row 1), `skill-md-anatomy` (frontmatter,
+  description-as-trigger-copy, scoped body, scripts/references/assets,
+  install/versioning — row 2), `skill-vs-prompt-rule-hook-mcp-subagent`
+  (the who-triggers-what chooser — row 3),
+  `skill-security-and-provenance` (threat model + the printable
+  skill-audit checklist + safe-install practice — rows 4+7),
+  `evaluating-and-porting-skills` (task→artifact fixtures, trigger
+  rate, per-host verification — rows 5+6), and
+  `skills-projects-first-skill-and-capstone` (first-skill project +
+  workflow→tested-skill capstone — rows 8+9).
+- Sources: 2 new verified records (agentskills.io spec, anthropics/
+  skills repo).
+- Validation: `check:content` clean (2,152); build 2,493 pages;
+  `check:links` 0 dead (5,365 routes); registry 2,482 items.
+- Phase 6C fully closed: foundations 6 + CLI 14 + web 14 + MCP 10 +
+  skills 9 = 53 rows across 3 new tracks + 2 added lessons.
+- Next: the task-skill guide catalog rows below, then Phase 6D
+  (provider/model/framework reference expansion).
 
 ### 2026-09-14 — Master ecosystem backlog created
 

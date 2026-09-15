@@ -1,13 +1,13 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T14:27:49.575Z",
+  "generatedAt": "2026-09-15T14:32:27.387Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2475,
+  "itemCount": 2482,
   "counts": {
    "byFamily": {
-    "lesson": 2093,
-    "project": 31,
+    "lesson": 2098,
+    "project": 32,
     "quiz": 89,
     "reference": 59,
     "lab": 67,
@@ -16,19 +16,19 @@
     "blog": 10,
     "guide": 9,
     "answer": 33,
-    "track": 37,
+    "track": 38,
     "role": 12,
     "page": 21,
     "glossary": 1
    },
    "byStatus": {
-    "live": 2475
+    "live": 2482
    },
    "byKind": {
-    "concept": 1793,
-    "comparison": 102,
+    "concept": 1797,
+    "comparison": 103,
+    "capstone": 32,
     "worked-example": 29,
-    "capstone": 31,
     "quiz": 83,
     "cheatsheet": 48,
     "lab": 67,
@@ -43,7 +43,7 @@
     "lesson": 131,
     "reference": 7,
     "bootcamp": 6,
-    "track": 27,
+    "track": 28,
     "quick-guide": 4,
     "role-path": 12,
     "fde-phase": 10,
@@ -59,6 +59,7 @@
    },
    "byTrack": {
     "agent-frameworks": 19,
+    "agent-skills": 7,
     "agentic-ai": 31,
     "ai-foundations": 161,
     "ai-literacy": 60,
@@ -101,11 +102,11 @@
     "fde": 193
    },
    "byFreshness": {
-    "release-sensitive": 335,
+    "release-sensitive": 337,
     "pricing-sensitive": 345,
-    "periodic": 1350,
-    "certification-sensitive": 102,
-    "policy-sensitive": 80,
+    "periodic": 1352,
+    "policy-sensitive": 82,
+    "certification-sensitive": 103,
     "durable": 263
    }
   },
@@ -1680,6 +1681,537 @@
     "metadata": 1,
     "linking": 2,
     "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2147",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "The Agent Skills spec and progressive disclosure",
+   "slug": "agent-skills/agent-skills-spec-and-progressive-disclosure",
+   "route": "/learn/agent-skills/agent-skills-spec-and-progressive-disclosure",
+   "collection": "lessons",
+   "path": "src/content/lessons/agent-skills/agent-skills-spec-and-progressive-disclosure.md",
+   "track": "agent-skills",
+   "module": null,
+   "status": "live",
+   "summary": "Agent Skills is an open specification for packaged know-how — a SKILL.md plus resources that agents load progressively: metadata always, body on trigger, files on demand.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 426,
+   "headings": [
+    "The short answer",
+    "Why skills exist",
+    "The three disclosure levels",
+    "Skill in the stack",
+    "The honest limits",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agent-skills/evaluating-and-porting-skills",
+    "/learn/agent-skills/skill-md-anatomy",
+    "/learn/agent-skills/skill-vs-prompt-rule-hook-mcp-subagent",
+    "/learn/harness-design/agent-stack-vocabulary"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 3,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Agent Skills is an open specification for packaged know-how — a SKILL.md plus resources that agents load progressively: metadata always, body on trigger, files on demand.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/agent-skills/skill-md-anatomy",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Anthropic, MCP"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2148",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Evaluating skills with fixtures, and porting them across agents",
+   "slug": "agent-skills/evaluating-and-porting-skills",
+   "route": "/learn/agent-skills/evaluating-and-porting-skills",
+   "collection": "lessons",
+   "path": "src/content/lessons/agent-skills/evaluating-and-porting-skills.md",
+   "track": "agent-skills",
+   "module": null,
+   "status": "live",
+   "summary": "A skill is behavior, so test it like behavior — fixture tasks with expected artifacts measure whether it triggers and performs — and porting across agents means checking what each host actually supports, not assuming.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 457,
+   "headings": [
+    "The short answer",
+    "The fixture-based eval",
+    "Porting across agents",
+    "The honest limits",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agent-skills/skill-md-anatomy",
+    "/learn/agent-skills/skill-security-and-provenance",
+    "/learn/agent-skills/skills-projects-first-skill-and-capstone",
+    "/learn/evals-red-teaming/building-a-regression-suite"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 10,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "A skill is behavior, so test it like behavior — fixture tasks with expected artifacts measure whether it triggers and performs — and porting across agents means checking what each host actually supports, not assuming.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/agent-skills/skills-projects-first-skill-and-capstone",
+   "practiceType": "none",
+   "freshnessClass": "policy-sensitive",
+   "freshnessSignals": [
+    "policy/license mention",
+    "vendor/tool mentions: Claude, Codex, Gemini"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 1,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2149",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "SKILL.md anatomy: frontmatter, body, and bundled resources",
+   "slug": "agent-skills/skill-md-anatomy",
+   "route": "/learn/agent-skills/skill-md-anatomy",
+   "collection": "lessons",
+   "path": "src/content/lessons/agent-skills/skill-md-anatomy.md",
+   "track": "agent-skills",
+   "module": null,
+   "status": "live",
+   "summary": "Every part of a skill package — the name/description frontmatter that decides triggering, the body's scope, and how scripts, references, and assets keep the context lean.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 527,
+   "headings": [
+    "The short answer",
+    "The frontmatter",
+    "The body",
+    "Scripts, references, assets",
+    "Versioning and installation",
+    "The honest limits",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agent-skills/agent-skills-spec-and-progressive-disclosure",
+    "/learn/agent-skills/evaluating-and-porting-skills",
+    "/learn/agent-skills/skill-security-and-provenance",
+    "/learn/agent-skills/skills-projects-first-skill-and-capstone"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": true,
+    "runnableSignals": false,
+    "listItems": 11,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Every part of a skill package — the name/description frontmatter that decides triggering, the body's scope, and how scripts, references, and assets keep the context lean.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/agent-skills/skill-vs-prompt-rule-hook-mcp-subagent",
+   "practiceType": "none",
+   "freshnessClass": "policy-sensitive",
+   "freshnessSignals": [
+    "policy/license mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": 2,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2150",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Skill provenance, review, and the safe-installation checklist",
+   "slug": "agent-skills/skill-security-and-provenance",
+   "route": "/learn/agent-skills/skill-security-and-provenance",
+   "collection": "lessons",
+   "path": "src/content/lessons/agent-skills/skill-security-and-provenance.md",
+   "track": "agent-skills",
+   "module": null,
+   "status": "live",
+   "summary": "A skill is instructions and code that run with your agent's authority — provenance checks, code review of bundled scripts, permission scoping, and the audit checklist to run before installing.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 420,
+   "headings": [
+    "The short answer",
+    "The threat model",
+    "The skill-audit checklist",
+    "Safe installation practice",
+    "The honest limits",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agent-skills/evaluating-and-porting-skills",
+    "/learn/agent-skills/skill-md-anatomy",
+    "/learn/cli-agents/permissions-sandboxes-and-git-workflow",
+    "/learn/llm-security/llm-supply-chain-security",
+    "/learn/llm-security/prompt-injection-testing-and-threat-models"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 10,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "A skill is instructions and code that run with your agent's authority — provenance checks, code review of bundled scripts, permission scoping, and the audit checklist to run before installing.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/agent-skills/evaluating-and-porting-skills",
+   "practiceType": "none",
+   "freshnessClass": "certification-sensitive",
+   "freshnessSignals": [
+    "certification/exam mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2151",
+   "family": "lesson",
+   "kind": "comparison",
+   "title": "Skill vs prompt vs project rule vs hook vs MCP vs subagent",
+   "slug": "agent-skills/skill-vs-prompt-rule-hook-mcp-subagent",
+   "route": "/learn/agent-skills/skill-vs-prompt-rule-hook-mcp-subagent",
+   "collection": "lessons",
+   "path": "src/content/lessons/agent-skills/skill-vs-prompt-rule-hook-mcp-subagent.md",
+   "track": "agent-skills",
+   "module": null,
+   "status": "live",
+   "summary": "Six mechanisms that all 'extend the agent' in different ways — the chooser for when repeated behavior should become a skill and when it should be something else entirely.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 586,
+   "headings": [
+    "The short answer",
+    "The decision table",
+    "Where each one wins — and fails",
+    "The common confusions",
+    "The honest limits",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agent-skills/evaluating-and-porting-skills",
+    "/learn/agent-skills/skill-security-and-provenance",
+    "/learn/agent-skills/skills-projects-first-skill-and-capstone",
+    "/learn/cli-agents/customizing-the-agent-surface",
+    "/learn/harness-design/agent-stack-vocabulary",
+    "/learn/harness-design/subagent-and-task-delegation"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": true,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 13,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "comparison",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Six mechanisms that all 'extend the agent' in different ways — the chooser for when repeated behavior should become a skill and when it should be something else entirely.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/agent-skills/skill-security-and-provenance",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: MCP"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2152",
+   "family": "project",
+   "kind": "capstone",
+   "title": "Projects: build your first skill, then turn a workflow into a tested one",
+   "slug": "agent-skills/skills-projects-first-skill-and-capstone",
+   "route": "/learn/agent-skills/skills-projects-first-skill-and-capstone",
+   "collection": "lessons",
+   "path": "src/content/lessons/agent-skills/skills-projects-first-skill-and-capstone.md",
+   "track": "agent-skills",
+   "module": null,
+   "status": "live",
+   "summary": "Two builds — a small first skill to learn the mechanics end to end, and a capstone that takes a real repeated workflow through authoring, fixtures, audit, and porting.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 506,
+   "headings": [
+    "The short answer",
+    "Project 1 — your first skill",
+    "Project 2 — workflow to tested skill (capstone)",
+    "What a pass looks like",
+    "The honest limits",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agent-skills/agent-skills-spec-and-progressive-disclosure",
+    "/learn/agent-skills/evaluating-and-porting-skills",
+    "/learn/agent-skills/skill-md-anatomy",
+    "/learn/agent-skills/skill-security-and-provenance",
+    "/learn/cli-agents/customizing-the-agent-surface",
+    "/learn/evals-red-teaming/building-a-regression-suite"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 19,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "build",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Two builds — a small first skill to learn the mechanics end to end, and a capstone that takes a real repeated workflow through authoring, fixtures, audit, and porting.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/agent-skills",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
     "demand": null
@@ -10486,7 +11018,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (238w vs ~766w)",
+   "dispositionReason": "thin vs family median (238w vs ~765w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -80856,7 +81388,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 0,
     "explanationQuality": 2,
@@ -88855,7 +89387,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (277w vs ~766w)",
+   "dispositionReason": "thin vs family median (277w vs ~765w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -92573,7 +93105,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (269w vs ~766w)",
+   "dispositionReason": "thin vs family median (269w vs ~765w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -106546,7 +107078,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -180732,7 +181264,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -207253,6 +207785,83 @@
    }
   },
   {
+   "id": "trk-0029",
+   "family": "track",
+   "kind": "track",
+   "title": "Agent Skills",
+   "slug": "agent-skills",
+   "route": "/learn/agent-skills",
+   "collection": null,
+   "path": "src/data/curriculum.ts",
+   "track": "agent-skills",
+   "module": null,
+   "status": "live",
+   "summary": "The Agent Skills open spec — SKILL.md anatomy, progressive disclosure, the mechanism chooser, security auditing, fixture-based eval, porting, and two hands-on projects.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": null,
+   "headings": [],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [
+    "Course",
+    "CourseInstance",
+    "Syllabus",
+    "Offer",
+    "FAQPage",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "group": "Agentic",
+    "declaredMeta": "6 lessons",
+    "nodeCount": 6,
+    "liveNodes": 6,
+    "comingNodes": 0,
+    "headingOnlyNodes": 0,
+    "fileCount": 6,
+    "kinds": {
+     "concept": 4,
+     "comparison": 1,
+     "capstone": 1
+    },
+    "modules": 0,
+    "quickGuide": false
+   },
+   "searchIntent": "course-hub",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "The Agent Skills open spec — SKILL.md anatomy, progressive disclosure, the mechanism chooser, security auditing, fixture-based eval, porting, and two hands-on projects.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": null,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "trk-0026",
    "family": "track",
    "kind": "track",
@@ -210842,6 +211451,25 @@
   },
   {
    "a": {
+    "route": "/learn/tools-function-calling/openapi-to-schema-conversion",
+    "slug": "tools-function-calling/openapi-to-schema-conversion",
+    "title": "Converting an OpenAPI Spec to Tool Schemas",
+    "track": "tools-function-calling"
+   },
+   "b": {
+    "route": "/learn/tools-function-calling/openapi-to-tool-schema",
+    "slug": "tools-function-calling/openapi-to-tool-schema",
+    "title": "Converting an OpenAPI Spec into Tool Schemas",
+    "track": "tools-function-calling"
+   },
+   "jaccard": 0.83,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
     "route": "/learn/context-engineering/context-window-testing-and-eval",
     "slug": "context-engineering/context-window-testing-and-eval",
     "title": "Testing Whether More Context Actually Helps",
@@ -210870,25 +211498,6 @@
     "route": "/learn/tools-function-calling/writing-tool-descriptions-models-follow",
     "slug": "tools-function-calling/writing-tool-descriptions-models-follow",
     "title": "Writing Tool Descriptions Models Actually Follow",
-    "track": "tools-function-calling"
-   },
-   "jaccard": 0.83,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/tools-function-calling/openapi-to-schema-conversion",
-    "slug": "tools-function-calling/openapi-to-schema-conversion",
-    "title": "Converting an OpenAPI Spec to Tool Schemas",
-    "track": "tools-function-calling"
-   },
-   "b": {
-    "route": "/learn/tools-function-calling/openapi-to-tool-schema",
-    "slug": "tools-function-calling/openapi-to-tool-schema",
-    "title": "Converting an OpenAPI Spec into Tool Schemas",
     "track": "tools-function-calling"
    },
    "jaccard": 0.83,
@@ -211032,25 +211641,6 @@
   },
   {
    "a": {
-    "route": "/learn/harness-design/the-control-loop",
-    "slug": "harness-design/the-control-loop",
-    "title": "Building the Control Loop",
-    "track": "harness-design"
-   },
-   "b": {
-    "route": "/learn/tools-function-calling/building-a-browser-tool-loop",
-    "slug": "tools-function-calling/building-a-browser-tool-loop",
-    "title": "Building a Browser-Control Loop",
-    "track": "tools-function-calling"
-   },
-   "jaccard": 0.75,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": false
-  },
-  {
-   "a": {
     "route": "/learn/context-engineering/context-engineering-vs-prompting",
     "slug": "context-engineering/context-engineering-vs-prompting",
     "title": "Context Engineering vs Prompt Engineering",
@@ -211061,6 +211651,25 @@
     "slug": "prompt-engineering-vs-context-engineering",
     "title": "Prompt engineering vs context engineering: what changed",
     "track": "answers"
+   },
+   "jaccard": 0.75,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/harness-design/the-control-loop",
+    "slug": "harness-design/the-control-loop",
+    "title": "Building the Control Loop",
+    "track": "harness-design"
+   },
+   "b": {
+    "route": "/learn/tools-function-calling/building-a-browser-tool-loop",
+    "slug": "tools-function-calling/building-a-browser-tool-loop",
+    "title": "Building a Browser-Control Loop",
+    "track": "tools-function-calling"
    },
    "jaccard": 0.75,
    "containment": 1,
@@ -211279,6 +211888,63 @@
   },
   {
    "a": {
+    "route": "/learn/context-engineering/context-engineering-vs-prompting",
+    "slug": "context-engineering/context-engineering-vs-prompting",
+    "title": "Context Engineering vs Prompt Engineering",
+    "track": "context-engineering"
+   },
+   "b": {
+    "route": "/learn/prompt-engineering/what-prompt-engineering-is",
+    "slug": "prompt-engineering/what-prompt-engineering-is",
+    "title": "What prompt engineering is",
+    "track": "prompt-engineering"
+   },
+   "jaccard": 0.67,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/prompt-engineering/what-prompt-engineering-is",
+    "slug": "prompt-engineering/what-prompt-engineering-is",
+    "title": "What prompt engineering is",
+    "track": "prompt-engineering"
+   },
+   "b": {
+    "route": "/learn/tools-function-calling/descriptions-are-prompts",
+    "slug": "tools-function-calling/descriptions-are-prompts",
+    "title": "Descriptions Are Prompt Engineering",
+    "track": "tools-function-calling"
+   },
+   "jaccard": 0.67,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/tools-function-calling/chaining-into-dag-workflows",
+    "slug": "tools-function-calling/chaining-into-dag-workflows",
+    "title": "Chaining Calls Into a DAG",
+    "track": "tools-function-calling"
+   },
+   "b": {
+    "route": "/learn/tools-function-calling/chaining-tools-into-workflows",
+    "slug": "tools-function-calling/chaining-tools-into-workflows",
+    "title": "Chaining Tool Calls into a DAG Workflow",
+    "track": "tools-function-calling"
+   },
+   "jaccard": 0.67,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
     "route": "/learn/context-engineering/cache-aware-context-design-deep",
     "slug": "context-engineering/cache-aware-context-design-deep",
     "title": "Cache-Aware Context Design",
@@ -211374,44 +212040,6 @@
   },
   {
    "a": {
-    "route": "/learn/context-engineering/context-engineering-vs-prompting",
-    "slug": "context-engineering/context-engineering-vs-prompting",
-    "title": "Context Engineering vs Prompt Engineering",
-    "track": "context-engineering"
-   },
-   "b": {
-    "route": "/learn/prompt-engineering/what-prompt-engineering-is",
-    "slug": "prompt-engineering/what-prompt-engineering-is",
-    "title": "What prompt engineering is",
-    "track": "prompt-engineering"
-   },
-   "jaccard": 0.67,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/prompt-engineering/what-prompt-engineering-is",
-    "slug": "prompt-engineering/what-prompt-engineering-is",
-    "title": "What prompt engineering is",
-    "track": "prompt-engineering"
-   },
-   "b": {
-    "route": "/learn/tools-function-calling/descriptions-are-prompts",
-    "slug": "tools-function-calling/descriptions-are-prompts",
-    "title": "Descriptions Are Prompt Engineering",
-    "track": "tools-function-calling"
-   },
-   "jaccard": 0.67,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": false
-  },
-  {
-   "a": {
     "route": "/learn/context-engineering/long-context-strategies",
     "slug": "context-engineering/long-context-strategies",
     "title": "Long-Context Strategies for Million-Token Windows",
@@ -211447,25 +212075,6 @@
    "slugStem": false,
    "alreadyLinked": false,
    "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/tools-function-calling/chaining-into-dag-workflows",
-    "slug": "tools-function-calling/chaining-into-dag-workflows",
-    "title": "Chaining Calls Into a DAG",
-    "track": "tools-function-calling"
-   },
-   "b": {
-    "route": "/learn/tools-function-calling/chaining-tools-into-workflows",
-    "slug": "tools-function-calling/chaining-tools-into-workflows",
-    "title": "Chaining Tool Calls into a DAG Workflow",
-    "track": "tools-function-calling"
-   },
-   "jaccard": 0.67,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
   },
   {
    "a": {
@@ -211631,6 +212240,44 @@
     "slug": "context-engineering/cross-session-memory-architecture",
     "title": "Memory Across Sessions",
     "track": "context-engineering"
+   },
+   "jaccard": 0.5,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/prompt-engineering/what-prompt-engineering-is",
+    "slug": "prompt-engineering/what-prompt-engineering-is",
+    "title": "What prompt engineering is",
+    "track": "prompt-engineering"
+   },
+   "b": {
+    "route": "/answers/prompt-engineering-vs-context-engineering",
+    "slug": "prompt-engineering-vs-context-engineering",
+    "title": "Prompt engineering vs context engineering: what changed",
+    "track": "answers"
+   },
+   "jaccard": 0.5,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/maths-foundations/partial-derivatives-and-chain-rule",
+    "slug": "maths-foundations/partial-derivatives-and-chain-rule",
+    "title": "Partial Derivatives and the Chain Rule",
+    "track": "maths-foundations"
+   },
+   "b": {
+    "route": "/learn/maths-foundations/the-chain-rule",
+    "slug": "maths-foundations/the-chain-rule",
+    "title": "The chain rule",
+    "track": "maths-foundations"
    },
    "jaccard": 0.5,
    "containment": 1,
@@ -211868,25 +212515,6 @@
   },
   {
    "a": {
-    "route": "/learn/maths-foundations/partial-derivatives-and-chain-rule",
-    "slug": "maths-foundations/partial-derivatives-and-chain-rule",
-    "title": "Partial Derivatives and the Chain Rule",
-    "track": "maths-foundations"
-   },
-   "b": {
-    "route": "/learn/maths-foundations/the-chain-rule",
-    "slug": "maths-foundations/the-chain-rule",
-    "title": "The chain rule",
-    "track": "maths-foundations"
-   },
-   "jaccard": 0.5,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
     "route": "/learn/ai-foundations/training-vs-inference",
     "slug": "ai-foundations/training-vs-inference",
     "title": "Training vs. Inference",
@@ -211954,25 +212582,6 @@
     "slug": "machine-learning/regularization-and-bias-variance",
     "title": "Use regularization to control the bias-variance tradeoff",
     "track": "machine-learning"
-   },
-   "jaccard": 0.5,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/prompt-engineering/what-prompt-engineering-is",
-    "slug": "prompt-engineering/what-prompt-engineering-is",
-    "title": "What prompt engineering is",
-    "track": "prompt-engineering"
-   },
-   "b": {
-    "route": "/answers/prompt-engineering-vs-context-engineering",
-    "slug": "prompt-engineering-vs-context-engineering",
-    "title": "Prompt engineering vs context engineering: what changed",
-    "track": "answers"
    },
    "jaccard": 0.5,
    "containment": 1,
@@ -212068,6 +212677,82 @@
     "slug": "context-engineering/memory-vs-state-distinction",
     "title": "Memory vs State",
     "track": "context-engineering"
+   },
+   "jaccard": 0.4,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/evals-red-teaming/prompt-injection-basics",
+    "slug": "evals-red-teaming/prompt-injection-basics",
+    "title": "Prompt Injection: When Content Becomes Instructions",
+    "track": "evals-red-teaming"
+   },
+   "b": {
+    "route": "/answers/what-is-prompt-injection",
+    "slug": "what-is-prompt-injection",
+    "title": "What is prompt injection?",
+    "track": "answers"
+   },
+   "jaccard": 0.4,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/genai-app-dev/input-validation-and-injection-defense",
+    "slug": "genai-app-dev/input-validation-and-injection-defense",
+    "title": "Input Validation and Prompt-Injection Defense",
+    "track": "genai-app-dev"
+   },
+   "b": {
+    "route": "/answers/what-is-prompt-injection",
+    "slug": "what-is-prompt-injection",
+    "title": "What is prompt injection?",
+    "track": "answers"
+   },
+   "jaccard": 0.4,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/prompt-engineering/prompt-injection-basics",
+    "slug": "prompt-engineering/prompt-injection-basics",
+    "title": "Prompt Injection: When the Input Fights Your Instructions",
+    "track": "prompt-engineering"
+   },
+   "b": {
+    "route": "/answers/what-is-prompt-injection",
+    "slug": "what-is-prompt-injection",
+    "title": "What is prompt injection?",
+    "track": "answers"
+   },
+   "jaccard": 0.4,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/web-agents/web-prompt-injection",
+    "slug": "web-agents/web-prompt-injection",
+    "title": "Web prompt injection: the page is the attacker",
+    "track": "web-agents"
+   },
+   "b": {
+    "route": "/answers/what-is-prompt-injection",
+    "slug": "what-is-prompt-injection",
+    "title": "What is prompt injection?",
+    "track": "answers"
    },
    "jaccard": 0.4,
    "containment": 1,
@@ -212248,82 +212933,6 @@
   },
   {
    "a": {
-    "route": "/learn/evals-red-teaming/prompt-injection-basics",
-    "slug": "evals-red-teaming/prompt-injection-basics",
-    "title": "Prompt Injection: When Content Becomes Instructions",
-    "track": "evals-red-teaming"
-   },
-   "b": {
-    "route": "/answers/what-is-prompt-injection",
-    "slug": "what-is-prompt-injection",
-    "title": "What is prompt injection?",
-    "track": "answers"
-   },
-   "jaccard": 0.4,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/genai-app-dev/input-validation-and-injection-defense",
-    "slug": "genai-app-dev/input-validation-and-injection-defense",
-    "title": "Input Validation and Prompt-Injection Defense",
-    "track": "genai-app-dev"
-   },
-   "b": {
-    "route": "/answers/what-is-prompt-injection",
-    "slug": "what-is-prompt-injection",
-    "title": "What is prompt injection?",
-    "track": "answers"
-   },
-   "jaccard": 0.4,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/prompt-engineering/prompt-injection-basics",
-    "slug": "prompt-engineering/prompt-injection-basics",
-    "title": "Prompt Injection: When the Input Fights Your Instructions",
-    "track": "prompt-engineering"
-   },
-   "b": {
-    "route": "/answers/what-is-prompt-injection",
-    "slug": "what-is-prompt-injection",
-    "title": "What is prompt injection?",
-    "track": "answers"
-   },
-   "jaccard": 0.4,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/web-agents/web-prompt-injection",
-    "slug": "web-agents/web-prompt-injection",
-    "title": "Web prompt injection: the page is the attacker",
-    "track": "web-agents"
-   },
-   "b": {
-    "route": "/answers/what-is-prompt-injection",
-    "slug": "what-is-prompt-injection",
-    "title": "What is prompt injection?",
-    "track": "answers"
-   },
-   "jaccard": 0.4,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": false
-  },
-  {
-   "a": {
     "route": "/learn/hallucinations/production-antipatterns",
     "slug": "hallucinations/production-antipatterns",
     "title": "Common Mistakes: Production Reliability Antipatterns",
@@ -212457,6 +213066,63 @@
   },
   {
    "a": {
+    "route": "/learn/mcp/securing-mcp-servers-against-prompt-injection",
+    "slug": "mcp/securing-mcp-servers-against-prompt-injection",
+    "title": "Securing MCP Servers Against Prompt Injection",
+    "track": "mcp"
+   },
+   "b": {
+    "route": "/answers/what-is-prompt-injection",
+    "slug": "what-is-prompt-injection",
+    "title": "What is prompt injection?",
+    "track": "answers"
+   },
+   "jaccard": 0.33,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/production/prompt-injection-monitoring",
+    "slug": "production/prompt-injection-monitoring",
+    "title": "Monitor Production Traffic for Prompt Injection and Abuse",
+    "track": "production"
+   },
+   "b": {
+    "route": "/answers/what-is-prompt-injection",
+    "slug": "what-is-prompt-injection",
+    "title": "What is prompt injection?",
+    "track": "answers"
+   },
+   "jaccard": 0.33,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/ai-foundations/backpropagation-explained",
+    "slug": "ai-foundations/backpropagation-explained",
+    "title": "Backpropagation: Credit Assignment via the Chain Rule",
+    "track": "ai-foundations"
+   },
+   "b": {
+    "route": "/learn/maths-foundations/the-chain-rule",
+    "slug": "maths-foundations/the-chain-rule",
+    "title": "The chain rule",
+    "track": "maths-foundations"
+   },
+   "jaccard": 0.33,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": false
+  },
+  {
+   "a": {
     "route": "/learn/structured-outputs/json-schema-for-outputs",
     "slug": "structured-outputs/json-schema-for-outputs",
     "title": "JSON Schema: Specifying Your Exact Data Contract",
@@ -212514,25 +213180,6 @@
   },
   {
    "a": {
-    "route": "/learn/ai-foundations/backpropagation-explained",
-    "slug": "ai-foundations/backpropagation-explained",
-    "title": "Backpropagation: Credit Assignment via the Chain Rule",
-    "track": "ai-foundations"
-   },
-   "b": {
-    "route": "/learn/maths-foundations/the-chain-rule",
-    "slug": "maths-foundations/the-chain-rule",
-    "title": "The chain rule",
-    "track": "maths-foundations"
-   },
-   "jaccard": 0.33,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": false
-  },
-  {
-   "a": {
     "route": "/learn/classical-ai/knowledge-uncertainty/216-probability-for-ai-conditional-independence-and-bayes-rule",
     "slug": "classical-ai/knowledge-uncertainty/216-probability-for-ai-conditional-independence-and-bayes-rule",
     "title": "Probability for AI: conditional independence and Bayes’ rule",
@@ -212571,44 +213218,6 @@
   },
   {
    "a": {
-    "route": "/learn/mcp/securing-mcp-servers-against-prompt-injection",
-    "slug": "mcp/securing-mcp-servers-against-prompt-injection",
-    "title": "Securing MCP Servers Against Prompt Injection",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/answers/what-is-prompt-injection",
-    "slug": "what-is-prompt-injection",
-    "title": "What is prompt injection?",
-    "track": "answers"
-   },
-   "jaccard": 0.33,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/production/prompt-injection-monitoring",
-    "slug": "production/prompt-injection-monitoring",
-    "title": "Monitor Production Traffic for Prompt Injection and Abuse",
-    "track": "production"
-   },
-   "b": {
-    "route": "/answers/what-is-prompt-injection",
-    "slug": "what-is-prompt-injection",
-    "title": "What is prompt injection?",
-    "track": "answers"
-   },
-   "jaccard": 0.33,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": false
-  },
-  {
-   "a": {
     "route": "/learn/maths-foundations/cross-entropy-and-negative-log-likelihood",
     "slug": "maths-foundations/cross-entropy-and-negative-log-likelihood",
     "title": "Cross-entropy from expected negative log-likelihood",
@@ -212643,6 +213252,25 @@
    "containment": 1,
    "slugStem": false,
    "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/guides/defend-against-prompt-injection",
+    "slug": "defend-against-prompt-injection",
+    "title": "Defend a tool-using app against prompt injection",
+    "track": "guides"
+   },
+   "b": {
+    "route": "/answers/what-is-prompt-injection",
+    "slug": "what-is-prompt-injection",
+    "title": "What is prompt injection?",
+    "track": "answers"
+   },
+   "jaccard": 0.29,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -212742,44 +213370,6 @@
   },
   {
    "a": {
-    "route": "/guides/defend-against-prompt-injection",
-    "slug": "defend-against-prompt-injection",
-    "title": "Defend a tool-using app against prompt injection",
-    "track": "guides"
-   },
-   "b": {
-    "route": "/answers/what-is-prompt-injection",
-    "slug": "what-is-prompt-injection",
-    "title": "What is prompt injection?",
-    "track": "answers"
-   },
-   "jaccard": 0.29,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/ai-foundations/what-a-model-actually-is",
-    "slug": "ai-foundations/what-a-model-actually-is",
-    "title": "What a Model Actually Is",
-    "track": "ai-foundations"
-   },
-   "b": {
-    "route": "/learn/context-engineering/structured-context-injection",
-    "slug": "context-engineering/structured-context-injection",
-    "title": "Structuring Injected Context So the Model Can Actually Use It",
-    "track": "context-engineering"
-   },
-   "jaccard": 0.25,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": false
-  },
-  {
-   "a": {
     "route": "/learn/llm-security/prompt-injection-testing-and-threat-models",
     "slug": "llm-security/prompt-injection-testing-and-threat-models",
     "title": "Prompt-injection testing tools and a threat-model template that works",
@@ -212814,6 +213404,25 @@
    "containment": 1,
    "slugStem": false,
    "alreadyLinked": true,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/ai-foundations/what-a-model-actually-is",
+    "slug": "ai-foundations/what-a-model-actually-is",
+    "title": "What a Model Actually Is",
+    "track": "ai-foundations"
+   },
+   "b": {
+    "route": "/learn/context-engineering/structured-context-injection",
+    "slug": "context-engineering/structured-context-injection",
+    "title": "Structuring Injected Context So the Model Can Actually Use It",
+    "track": "context-engineering"
+   },
+   "jaccard": 0.25,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": false,
    "sameTrack": false
   },
   {
@@ -213939,6 +214548,82 @@
   },
   {
    "a": {
+    "route": "/learn/prompt-engineering/adapting-prompts-across-languages",
+    "slug": "prompt-engineering/adapting-prompts-across-languages",
+    "title": "Adapting Prompts Across Languages",
+    "track": "prompt-engineering"
+   },
+   "b": {
+    "route": "/learn/prompt-engineering/multimodal-and-localized-prompts",
+    "slug": "prompt-engineering/multimodal-and-localized-prompts",
+    "title": "Adapt prompts across modalities and languages",
+    "track": "prompt-engineering"
+   },
+   "jaccard": 0.5,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/mcp/debugging-common-mcp-failures",
+    "slug": "mcp/debugging-common-mcp-failures",
+    "title": "Debugging Common MCP Failures",
+    "track": "mcp"
+   },
+   "b": {
+    "route": "/learn/mcp/mcp-debugging-common-mistakes",
+    "slug": "mcp/mcp-debugging-common-mistakes",
+    "title": "Debugging and Testing MCP: Common Mistakes",
+    "track": "mcp"
+   },
+   "jaccard": 0.5,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/mcp/mcp-deployment-common-mistakes",
+    "slug": "mcp/mcp-deployment-common-mistakes",
+    "title": "Running MCP Servers: Common Mistakes",
+    "track": "mcp"
+   },
+   "b": {
+    "route": "/learn/mcp/running-mcp-servers-in-production",
+    "slug": "mcp/running-mcp-servers-in-production",
+    "title": "Running MCP Servers in Production",
+    "track": "mcp"
+   },
+   "jaccard": 0.5,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/mcp/mcp-deployment-quiz",
+    "slug": "mcp/mcp-deployment-quiz",
+    "title": "Running MCP Servers: Check Yourself",
+    "track": "mcp"
+   },
+   "b": {
+    "route": "/learn/mcp/running-mcp-servers-in-production",
+    "slug": "mcp/running-mcp-servers-in-production",
+    "title": "Running MCP Servers in Production",
+    "track": "mcp"
+   },
+   "jaccard": 0.5,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
     "route": "/learn/tools-function-calling/sequential-multi-step-basics",
     "slug": "tools-function-calling/sequential-multi-step-basics",
     "title": "Sequential, Dependent Tool Use",
@@ -213993,63 +214678,6 @@
    "slugStem": false,
    "alreadyLinked": true,
    "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/prompt-engineering/adapting-prompts-across-languages",
-    "slug": "prompt-engineering/adapting-prompts-across-languages",
-    "title": "Adapting Prompts Across Languages",
-    "track": "prompt-engineering"
-   },
-   "b": {
-    "route": "/learn/prompt-engineering/multimodal-and-localized-prompts",
-    "slug": "prompt-engineering/multimodal-and-localized-prompts",
-    "title": "Adapt prompts across modalities and languages",
-    "track": "prompt-engineering"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-deployment-common-mistakes",
-    "slug": "mcp/mcp-deployment-common-mistakes",
-    "title": "Running MCP Servers: Common Mistakes",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/running-mcp-servers-in-production",
-    "slug": "mcp/running-mcp-servers-in-production",
-    "title": "Running MCP Servers in Production",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-deployment-quiz",
-    "slug": "mcp/mcp-deployment-quiz",
-    "title": "Running MCP Servers: Check Yourself",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/running-mcp-servers-in-production",
-    "slug": "mcp/running-mcp-servers-in-production",
-    "title": "Running MCP Servers in Production",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
   },
   {
    "a": {
@@ -214334,25 +214962,6 @@
    "containment": 0.75,
    "slugStem": false,
    "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/debugging-common-mcp-failures",
-    "slug": "mcp/debugging-common-mcp-failures",
-    "title": "Debugging Common MCP Failures",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-debugging-common-mistakes",
-    "slug": "mcp/mcp-debugging-common-mistakes",
-    "title": "Debugging and Testing MCP: Common Mistakes",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
    "sameTrack": true
   },
   {
@@ -214946,6 +215555,44 @@
   },
   {
    "a": {
+    "route": "/learn/mcp/debugging-common-mcp-failures",
+    "slug": "mcp/debugging-common-mcp-failures",
+    "title": "Debugging Common MCP Failures",
+    "track": "mcp"
+   },
+   "b": {
+    "route": "/learn/mcp/mcp-debugging-worked-example",
+    "slug": "mcp/mcp-debugging-worked-example",
+    "title": "Debugging MCP, Worked: Four Failures From Symptom to Cause",
+    "track": "mcp"
+   },
+   "jaccard": 0.38,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/genai-app-dev/your-first-llm-api-call",
+    "slug": "genai-app-dev/your-first-llm-api-call",
+    "title": "Your First LLM API Call",
+    "track": "genai-app-dev"
+   },
+   "b": {
+    "route": "/learn/local-inference/ollama-first-run",
+    "slug": "local-inference/ollama-first-run",
+    "title": "Ollama: install, pull, run, and the first API call",
+    "track": "local-inference"
+   },
+   "jaccard": 0.38,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
     "route": "/learn/llm-foundations/what-a-language-model-actually-computes",
     "slug": "llm-foundations/what-a-language-model-actually-computes",
     "title": "What a Language Model Actually Computes",
@@ -215057,25 +215704,6 @@
    "slugStem": false,
    "alreadyLinked": false,
    "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/genai-app-dev/your-first-llm-api-call",
-    "slug": "genai-app-dev/your-first-llm-api-call",
-    "title": "Your First LLM API Call",
-    "track": "genai-app-dev"
-   },
-   "b": {
-    "route": "/learn/local-inference/ollama-first-run",
-    "slug": "local-inference/ollama-first-run",
-    "title": "Ollama: install, pull, run, and the first API call",
-    "track": "local-inference"
-   },
-   "jaccard": 0.38,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": false
   },
   {
    "a": {
@@ -215209,25 +215837,6 @@
    "slugStem": false,
    "alreadyLinked": false,
    "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/debugging-common-mcp-failures",
-    "slug": "mcp/debugging-common-mcp-failures",
-    "title": "Debugging Common MCP Failures",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-debugging-worked-example",
-    "slug": "mcp/mcp-debugging-worked-example",
-    "title": "Debugging MCP, Worked: Four Failures From Symptom to Cause",
-    "track": "mcp"
-   },
-   "jaccard": 0.38,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
   },
   {
    "a": {
@@ -215507,6 +216116,101 @@
     "slug": "context-engineering/tools-caching-quiz",
     "title": "Tools and Caching Quiz",
     "track": "context-engineering"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/context-engineering/progressive-tool-disclosure-in-depth",
+    "slug": "context-engineering/progressive-tool-disclosure-in-depth",
+    "title": "Progressive Tool Disclosure",
+    "track": "context-engineering"
+   },
+   "b": {
+    "route": "/learn/tools-function-calling/progressive-tool-disclosure-patterns",
+    "slug": "tools-function-calling/progressive-tool-disclosure-patterns",
+    "title": "Progressive Disclosure and Namespacing",
+    "track": "tools-function-calling"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/context-engineering/context-engineering-vs-prompting",
+    "slug": "context-engineering/context-engineering-vs-prompting",
+    "title": "Context Engineering vs Prompt Engineering",
+    "track": "context-engineering"
+   },
+   "b": {
+    "route": "/learn/tools-function-calling/descriptions-are-prompts",
+    "slug": "tools-function-calling/descriptions-are-prompts",
+    "title": "Descriptions Are Prompt Engineering",
+    "track": "tools-function-calling"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/context-engineering/prompt-caching-mechanics",
+    "slug": "context-engineering/prompt-caching-mechanics",
+    "title": "How Prompt Caching Works",
+    "track": "context-engineering"
+   },
+   "b": {
+    "route": "/learn/genai-app-dev/implementing-prompt-caching",
+    "slug": "genai-app-dev/implementing-prompt-caching",
+    "title": "Implementing Prompt Caching",
+    "track": "genai-app-dev"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/mcp/mcp-auth-cheatsheet",
+    "slug": "mcp/mcp-auth-cheatsheet",
+    "title": "MCP Auth Cheatsheet",
+    "track": "mcp"
+   },
+   "b": {
+    "route": "/learn/mcp/mcp-auth-fundamentals",
+    "slug": "mcp/mcp-auth-fundamentals",
+    "title": "MCP Auth Fundamentals",
+    "track": "mcp"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/mcp/mcp-transports-cheatsheet",
+    "slug": "mcp/mcp-transports-cheatsheet",
+    "title": "MCP Transports Cheatsheet",
+    "track": "mcp"
+   },
+   "b": {
+    "route": "/learn/mcp/mcp-transports-compared",
+    "slug": "mcp/mcp-transports-compared",
+    "title": "MCP Transports Compared",
+    "track": "mcp"
    },
    "jaccard": 0.5,
    "containment": 0.67,
@@ -216067,44 +216771,6 @@
   },
   {
    "a": {
-    "route": "/learn/context-engineering/context-engineering-vs-prompting",
-    "slug": "context-engineering/context-engineering-vs-prompting",
-    "title": "Context Engineering vs Prompt Engineering",
-    "track": "context-engineering"
-   },
-   "b": {
-    "route": "/learn/tools-function-calling/descriptions-are-prompts",
-    "slug": "tools-function-calling/descriptions-are-prompts",
-    "title": "Descriptions Are Prompt Engineering",
-    "track": "tools-function-calling"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/context-engineering/prompt-caching-mechanics",
-    "slug": "context-engineering/prompt-caching-mechanics",
-    "title": "How Prompt Caching Works",
-    "track": "context-engineering"
-   },
-   "b": {
-    "route": "/learn/genai-app-dev/implementing-prompt-caching",
-    "slug": "genai-app-dev/implementing-prompt-caching",
-    "title": "Implementing Prompt Caching",
-    "track": "genai-app-dev"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": false
-  },
-  {
-   "a": {
     "route": "/learn/context-engineering/token-budget-cheatsheet",
     "slug": "context-engineering/token-budget-cheatsheet",
     "title": "Token Budget Cheatsheet",
@@ -216219,44 +216885,6 @@
   },
   {
    "a": {
-    "route": "/learn/mcp/mcp-auth-cheatsheet",
-    "slug": "mcp/mcp-auth-cheatsheet",
-    "title": "MCP Auth Cheatsheet",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-auth-fundamentals",
-    "slug": "mcp/mcp-auth-fundamentals",
-    "title": "MCP Auth Fundamentals",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-transports-cheatsheet",
-    "slug": "mcp/mcp-transports-cheatsheet",
-    "title": "MCP Transports Cheatsheet",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-transports-compared",
-    "slug": "mcp/mcp-transports-compared",
-    "title": "MCP Transports Compared",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
     "route": "/learn/llm-foundations/kv-cache-step-by-step-shapes",
     "slug": "llm-foundations/kv-cache-step-by-step-shapes",
     "title": "The KV Cache Step by Step",
@@ -216324,25 +216952,6 @@
     "slug": "llm-foundations/the-lost-in-the-middle-effect",
     "title": "The Lost-in-the-Middle Effect",
     "track": "llm-foundations"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/context-engineering/progressive-tool-disclosure-in-depth",
-    "slug": "context-engineering/progressive-tool-disclosure-in-depth",
-    "title": "Progressive Tool Disclosure",
-    "track": "context-engineering"
-   },
-   "b": {
-    "route": "/learn/tools-function-calling/progressive-tool-disclosure-patterns",
-    "slug": "tools-function-calling/progressive-tool-disclosure-patterns",
-    "title": "Progressive Disclosure and Namespacing",
-    "track": "tools-function-calling"
    },
    "jaccard": 0.5,
    "containment": 0.67,
@@ -216770,6 +217379,25 @@
   },
   {
    "a": {
+    "route": "/learn/context-engineering/progressive-tool-disclosure",
+    "slug": "context-engineering/progressive-tool-disclosure",
+    "title": "Progressive Tool Disclosure: Hiding Tools Until They're Needed",
+    "track": "context-engineering"
+   },
+   "b": {
+    "route": "/learn/tools-function-calling/progressive-tool-disclosure-patterns",
+    "slug": "tools-function-calling/progressive-tool-disclosure-patterns",
+    "title": "Progressive Disclosure and Namespacing",
+    "track": "tools-function-calling"
+   },
+   "jaccard": 0.22,
+   "containment": 0.67,
+   "slugStem": true,
+   "alreadyLinked": true,
+   "sameTrack": false
+  },
+  {
+   "a": {
     "route": "/learn/context-engineering/context-poisoning-and-distraction-deep",
     "slug": "context-engineering/context-poisoning-and-distraction-deep",
     "title": "Context Poisoning and Distraction",
@@ -216805,25 +217433,6 @@
    "slugStem": true,
    "alreadyLinked": true,
    "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/context-engineering/progressive-tool-disclosure",
-    "slug": "context-engineering/progressive-tool-disclosure",
-    "title": "Progressive Tool Disclosure: Hiding Tools Until They're Needed",
-    "track": "context-engineering"
-   },
-   "b": {
-    "route": "/learn/tools-function-calling/progressive-tool-disclosure-patterns",
-    "slug": "tools-function-calling/progressive-tool-disclosure-patterns",
-    "title": "Progressive Disclosure and Namespacing",
-    "track": "tools-function-calling"
-   },
-   "jaccard": 0.22,
-   "containment": 0.67,
-   "slugStem": true,
-   "alreadyLinked": true,
-   "sameTrack": false
   },
   {
    "a": {
@@ -217405,6 +218014,51 @@
    "route": "/learn/agent-frameworks/vercel-ai-sdk",
    "slug": "agent-frameworks/vercel-ai-sdk",
    "title": "Vercel AI SDK: streaming, tools, and generative UI",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/agent-skills/agent-skills-spec-and-progressive-disclosure",
+   "slug": "agent-skills/agent-skills-spec-and-progressive-disclosure",
+   "title": "The Agent Skills spec and progressive disclosure",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/agent-skills/evaluating-and-porting-skills",
+   "slug": "agent-skills/evaluating-and-porting-skills",
+   "title": "Evaluating skills with fixtures, and porting them across agents",
+   "family": "lesson",
+   "flags": [
+    "policy-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/agent-skills/skill-md-anatomy",
+   "slug": "agent-skills/skill-md-anatomy",
+   "title": "SKILL.md anatomy: frontmatter, body, and bundled resources",
+   "family": "lesson",
+   "flags": [
+    "policy-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/agent-skills/skill-security-and-provenance",
+   "slug": "agent-skills/skill-security-and-provenance",
+   "title": "Skill provenance, review, and the safe-installation checklist",
+   "family": "lesson",
+   "flags": [
+    "certification-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/agent-skills/skill-vs-prompt-rule-hook-mcp-subagent",
+   "slug": "agent-skills/skill-vs-prompt-rule-hook-mcp-subagent",
+   "title": "Skill vs prompt vs project rule vs hook vs MCP vs subagent",
    "family": "lesson",
    "flags": [
     "release-sensitive page with no updated/review date"

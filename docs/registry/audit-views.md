@@ -1,18 +1,18 @@
 # Content registry — audit views
 
-Generated 2026-09-15T14:27:49.575Z by `scripts/build-content-registry.mjs`.
-2475 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T14:32:27.387Z by `scripts/build-content-registry.mjs`.
+2482 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
 
-- lesson: 2093
+- lesson: 2098
 - quiz: 89
 - lab: 67
 - reference: 59
-- track: 37
+- track: 38
 - answer: 33
-- project: 31
+- project: 32
 - page: 21
 - role: 12
 - blog: 10
@@ -23,16 +23,16 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By status
 
-- live: 2475
+- live: 2482
 
 ## By search intent (heuristic)
 
-- concept: 1924
-- comparison: 107
-- build: 98
+- concept: 1928
+- comparison: 108
+- build: 99
 - practice: 89
 - reference: 60
-- course-hub: 37
+- course-hub: 38
 - answer: 33
 - worked-example: 29
 - troubleshooting: 24
@@ -47,7 +47,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By primary audience (heuristic)
 
-- ai-engineer: 1699
+- ai-engineer: 1706
 - beginner-engineer: 439
 - forward-deployed-engineer: 194
 - general: 125
@@ -90,6 +90,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 | production | 34 | 33 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 53% | 82% | 3% | 510 | yes | — |
 | cli-agents | 7 | 6 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 29% | 0% | 0% | 495 | — | — |
 | web-agents | 7 | 7 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 43% | 0% | 0% | 491 | — | — |
+| agent-skills | 6 | 4 | 0 | 0 | 1 | 0 | 0 | 0 | 1 | 67% | 0% | 17% | 506 | — | — |
 | llm-security | 8 | 8 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 38% | 0% | 0% | 479 | — | — |
 | fine-tuning | 26 | 21 | 0 | 0 | 5 | 0 | 0 | 0 | 0 | 27% | 0% | 8% | 557 | — | — |
 | responsible-ai | 7 | 6 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 14% | 0% | 14% | 392 | — | — |
@@ -252,6 +253,11 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - dead-end finish: last live lesson is extraction-and-evaluation (concept)
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
 
+### agent-skills — 6 files, 0 modules — starts: "The Agent Skills Spec and Progressive Disclosure"
+
+- missing kinds: quiz, worked-example, common-mistakes, cheatsheet
+- promise gap: no live node title covers "the mechanism chooser"
+
 ### llm-security — 8 files, 0 modules — starts: "OWASP Top 10 for LLM and agentic applications"
 
 - dead-end finish: last live lesson is audit-logs-and-accountability (concept)
@@ -290,21 +296,21 @@ and split always need a written human reason (see checklist).
 
 | disposition | items |
 |---|---:|
-| keep | 2088 |
+| keep | 2095 |
 | investigate | 382 |
 | expand | 5 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2247 | 1.91 | 0 | 206 | 2041 |
-| correctnessSources | 45 | 1.27 | 0 | 33 | 12 |
-| completeness | 2394 | 1.64 | 39 | 780 | 1575 |
-| prerequisiteFit | 2329 | 2.00 | 3 | 0 | 2326 |
-| handsOn | 2247 | 1.48 | 558 | 53 | 1636 |
-| explanationQuality | 2247 | 1.96 | 20 | 56 | 2171 |
-| metadata | 2247 | 1.84 | 0 | 349 | 1898 |
-| linking | 2158 | 1.50 | 382 | 321 | 1455 |
-| freshnessHealth | 2475 | 0.76 | 862 | 1350 | 263 |
+| intentClarity | 2252 | 1.91 | 0 | 207 | 2045 |
+| correctnessSources | 46 | 1.28 | 0 | 33 | 13 |
+| completeness | 2400 | 1.64 | 39 | 783 | 1578 |
+| prerequisiteFit | 2335 | 2.00 | 3 | 0 | 2332 |
+| handsOn | 2252 | 1.48 | 559 | 53 | 1640 |
+| explanationQuality | 2252 | 1.96 | 20 | 56 | 2176 |
+| metadata | 2252 | 1.84 | 0 | 351 | 1901 |
+| linking | 2163 | 1.50 | 382 | 321 | 1460 |
+| freshnessHealth | 2482 | 0.76 | 867 | 1352 | 263 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
@@ -355,15 +361,15 @@ and split always need a written human reason (see checklist).
 - /learn/ai-foundations/reliable-ai/221-contestability-appeals-and-recource — Contestability, Appeals, and Recourse
 - … 342 more in content-registry.json
 
-#### expand: thin vs family median (238w vs ~766w) (1)
+#### expand: thin vs family median (238w vs ~765w) (1)
 
 - /learn/ai-foundations/choosing-a-model — Choosing a model in 2026
 
-#### expand: thin vs family median (277w vs ~766w) (1)
+#### expand: thin vs family median (277w vs ~765w) (1)
 
 - /learn/llm-foundations/next-token-prediction — Next-Token Prediction: The One Objective
 
-#### expand: thin vs family median (269w vs ~766w) (1)
+#### expand: thin vs family median (269w vs ~765w) (1)
 
 - /learn/llm-foundations/tokenization-explained — Tokenization: How Text Becomes Tokens
 
@@ -387,9 +393,9 @@ and split always need a written human reason (see checklist).
 | /learn/tools-function-calling/structured-output-vs-tool-calls-when | /learn/tools-function-calling/structured-output-vs-tool-calls | 1 | 1 | yes | yes | same track |
 | /learn/prompt-engineering/task-framing-intent-constraints-criteria | /learn/prompt-engineering/task-framing | 1 | 1 | yes | yes | same track |
 | /learn/genai-app-dev/session-and-state-management | /learn/genai-app-dev/session-state-multi-turn | 0.83 | 1 |  | yes | same track |
+| /learn/tools-function-calling/openapi-to-schema-conversion | /learn/tools-function-calling/openapi-to-tool-schema | 0.83 | 1 |  | yes | same track |
 | /learn/context-engineering/context-window-testing-and-eval | /learn/context-engineering/testing-whether-context-helps | 0.83 | 1 |  | yes | same track |
 | /learn/tools-function-calling/writing-descriptions-models-follow-deep | /learn/tools-function-calling/writing-tool-descriptions-models-follow | 0.83 | 1 |  | yes | same track |
-| /learn/tools-function-calling/openapi-to-schema-conversion | /learn/tools-function-calling/openapi-to-tool-schema | 0.83 | 1 |  | yes | same track |
 | /learn/genai-app-dev/chat-ux-that-doesnt-feel-broken | /learn/genai-app-dev/designing-chat-ux | 0.83 | 1 |  | yes | same track |
 | /learn/genai-app-dev/function-calling-across-providers | /learn/tools-function-calling/tool-calling-across-providers | 0.8 | 1 |  | yes | genai-app-dev × tools-function-calling |
 | /learn/genai-app-dev/tool-calling-and-authority | /learn/genai-app-dev/tool-calling-as-authority | 0.8 | 1 |  | yes | same track |
@@ -397,8 +403,8 @@ and split always need a written human reason (see checklist).
 | /learn/structured-outputs/json-schema-essentials-for-outputs | /learn/tools-function-calling/json-schema-for-tools-essentials | 0.8 | 1 |  | yes | structured-outputs × tools-function-calling |
 | /learn/structured-outputs/building-an-extraction-eval-harness | /learn/tools-function-calling/building-a-tool-use-eval-harness | 0.75 | 1 |  | yes | structured-outputs × tools-function-calling |
 | /learn/ai-foundations/narrow-ai-vs-general-ai | /learn/ai-foundations/narrow-vs-general-ai-in-practice | 0.75 | 1 |  | yes | same track |
-| /learn/harness-design/the-control-loop | /learn/tools-function-calling/building-a-browser-tool-loop | 0.75 | 1 |  | yes | harness-design × tools-function-calling |
 | /learn/context-engineering/context-engineering-vs-prompting | /answers/prompt-engineering-vs-context-engineering | 0.75 | 1 |  | yes | context-engineering × answers |
+| /learn/harness-design/the-control-loop | /learn/tools-function-calling/building-a-browser-tool-loop | 0.75 | 1 |  | yes | harness-design × tools-function-calling |
 | /learn/llm-foundations/context-window-mechanics-and-limits | /learn/llm-foundations/context-window-mechanics | 0.75 | 1 | yes | yes | same track |
 | /learn/harness-design/subprocess-isolation-and-sandboxing | /learn/tools-function-calling/sandboxing-tool-execution | 0.75 | 1 |  | yes | harness-design × tools-function-calling |
 | /learn/tools-function-calling/testing-and-debugging-tool-calls | /learn/tools-function-calling/testing-tool-calls-strategies | 0.75 | 1 |  | yes | same track |
@@ -410,16 +416,16 @@ and split always need a written human reason (see checklist).
 | /learn/structured-outputs/schema-versioning-and-migration | /learn/structured-outputs/schema-versioning-basics | 0.71 | 1 |  | yes | same track |
 | /learn/prompt-engineering/automatic-prompt-optimization-dspy | /learn/prompt-engineering/automatic-prompt-optimization | 0.67 | 1 | yes | yes | same track |
 | /learn/ai-foundations/ai-vs-ml-vs-deep-learning | /answers/difference-between-ai-and-machine-learning | 0.67 | 1 |  | yes | ai-foundations × answers |
+| /learn/context-engineering/context-engineering-vs-prompting | /learn/prompt-engineering/what-prompt-engineering-is | 0.67 | 1 |  |  | context-engineering × prompt-engineering |
+| /learn/prompt-engineering/what-prompt-engineering-is | /learn/tools-function-calling/descriptions-are-prompts | 0.67 | 1 |  | yes | prompt-engineering × tools-function-calling |
+| /learn/tools-function-calling/chaining-into-dag-workflows | /learn/tools-function-calling/chaining-tools-into-workflows | 0.67 | 1 |  | yes | same track |
 | /learn/context-engineering/cache-aware-context-design-deep | /learn/context-engineering/cache-aware-context-design | 0.67 | 1 | yes | yes | same track |
 | /learn/deep-learning/core/129-transfer-learning-fine-tuning-and-domain-shift | /learn/deep-learning/vision/211-transfer-learning-and-fine-tuning | 0.67 | 1 |  | yes | same track |
 | /learn/ai-foundations/applied-ai/308-training-and-inference-economics | /learn/ai-foundations/training-vs-inference | 0.67 | 1 |  | yes | same track |
 | /learn/ai-foundations/training-vs-inference | /learn/llm-foundations/training-time-vs-inference-time | 0.67 | 1 |  | yes | ai-foundations × llm-foundations |
 | /learn/ai-foundations/embeddings-quiz | /learn/maths-foundations/the-geometry-of-embeddings | 0.67 | 1 |  | yes | ai-foundations × maths-foundations |
-| /learn/context-engineering/context-engineering-vs-prompting | /learn/prompt-engineering/what-prompt-engineering-is | 0.67 | 1 |  |  | context-engineering × prompt-engineering |
-| /learn/prompt-engineering/what-prompt-engineering-is | /learn/tools-function-calling/descriptions-are-prompts | 0.67 | 1 |  | yes | prompt-engineering × tools-function-calling |
 | /learn/context-engineering/long-context-strategies | /learn/context-engineering/million-token-window-strategies | 0.67 | 1 |  | yes | same track |
 | /learn/genai-app-dev/quiz-reliability-safety | /learn/tools-function-calling/reliability-quiz | 0.67 | 1 |  |  | genai-app-dev × tools-function-calling |
-| /learn/tools-function-calling/chaining-into-dag-workflows | /learn/tools-function-calling/chaining-tools-into-workflows | 0.67 | 1 |  | yes | same track |
 | /learn/structured-outputs/reliability-design-mistakes | /learn/tools-function-calling/reliability-common-mistakes | 0.67 | 1 |  |  | structured-outputs × tools-function-calling |
 | /learn/hallucinations/why-rlhf-hurts-calibration | /learn/llm-foundations/instruction-tuning-and-rlhf | 0.6 | 1 |  | yes | hallucinations × llm-foundations |
 | /learn/tools-function-calling/streaming-partial-tool-calls-concept | /learn/tools-function-calling/streaming-partial-tool-calls | 0.57 | 1 | yes | yes | same track |
@@ -429,6 +435,8 @@ and split always need a written human reason (see checklist).
 | /learn/context-engineering/tokens-are-not-words | /learn/llm-foundations/why-models-need-tokens-not-characters | 0.5 | 1 |  | yes | context-engineering × llm-foundations |
 | /learn/prompt-engineering/what-prompting-is | /learn/prompt-engineering/what-role-prompting-changes | 0.5 | 1 |  | yes | same track |
 | /learn/context-engineering/conversation-memory-and-state | /learn/context-engineering/cross-session-memory-architecture | 0.5 | 1 |  | yes | same track |
+| /learn/prompt-engineering/what-prompt-engineering-is | /answers/prompt-engineering-vs-context-engineering | 0.5 | 1 |  | yes | prompt-engineering × answers |
+| /learn/maths-foundations/partial-derivatives-and-chain-rule | /learn/maths-foundations/the-chain-rule | 0.5 | 1 |  | yes | same track |
 | /learn/ai-foundations/what-a-model-actually-is | /learn/llm-foundations/what-a-language-model-actually-computes | 0.5 | 1 |  | yes | ai-foundations × llm-foundations |
 | /learn/ai-foundations/what-a-model-actually-is | /learn/llm-foundations/what-the-internet-teaches-a-model | 0.5 | 1 |  | yes | ai-foundations × llm-foundations |
 | /learn/genai-app-dev/tool-call-authority-mistakes | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  | yes | genai-app-dev × tools-function-calling |
@@ -439,8 +447,6 @@ and split always need a written human reason (see checklist).
 | /learn/tools-function-calling/parallel-tool-calls-mechanics | /learn/tools-function-calling/parallel-tool-calls | 0.5 | 1 | yes | yes | same track |
 | /learn/tools-function-calling/taxonomy-of-tool-failures | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  | yes | same track |
 | /learn/tools-function-calling/tool-calling-across-providers | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  | yes | same track |
-| /learn/tools-function-calling/tool-calling-glossary-cheatsheet | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  | yes | same track |
-| /learn/context-engineering/cache-aware-context-design | /learn/context-engineering/ordering-for-cache-hits | 0.5 | 1 |  | yes | same track |
 
 _… 283 more pairs in content-registry.json (`duplicates`)_
 
@@ -454,7 +460,7 @@ _… 283 more pairs in content-registry.json (`duplicates`)_
 
 ## Sourcing review flags
 
-216 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
+221 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
 
 | item | flags |
 |---|---|
@@ -475,6 +481,11 @@ _… 283 more pairs in content-registry.json (`duplicates`)_
 | /learn/agent-frameworks/pydanticai-typed-agents | release-sensitive page with no updated/review date |
 | /learn/agent-frameworks/structured-output-libraries | release-sensitive page with no updated/review date |
 | /learn/agent-frameworks/vercel-ai-sdk | release-sensitive page with no updated/review date |
+| /learn/agent-skills/agent-skills-spec-and-progressive-disclosure | release-sensitive page with no updated/review date |
+| /learn/agent-skills/evaluating-and-porting-skills | policy-sensitive page with no updated/review date |
+| /learn/agent-skills/skill-md-anatomy | policy-sensitive page with no updated/review date |
+| /learn/agent-skills/skill-security-and-provenance | certification-sensitive page with no updated/review date |
+| /learn/agent-skills/skill-vs-prompt-rule-hook-mcp-subagent | release-sensitive page with no updated/review date |
 | /learn/agentic-ai/agent-permissions-and-authorization | certification-sensitive page with no updated/review date |
 | /learn/ai-foundations/building-an-eval-set-worked-example | 18 numeric claims with no sources section or external link |
 | /learn/ai-foundations/capabilities-and-eval-quiz | 28 numeric claims with no sources section or external link |
@@ -513,27 +524,23 @@ _… 283 more pairs in content-registry.json (`duplicates`)_
 | /learn/context-engineering/instrumenting-token-spend-in-production | 8 numeric claims with no sources section or external link |
 | /learn/context-engineering/just-in-time-context-loading-pattern | 4 numeric claims with no sources section or external link |
 | /learn/context-engineering/measuring-cache-savings | 26 numeric claims with no sources section or external link |
-| /learn/context-engineering/poisoning-real-world-scenarios | 4 numeric claims with no sources section or external link |
-| /learn/context-engineering/prompt-caching-mechanics | 6 numeric claims with no sources section or external link |
-| /learn/context-engineering/reading-a-context-budget-pie | 33 numeric claims with no sources section or external link |
-| /learn/context-engineering/retrieving-then-filtering-pipeline | 4 numeric claims with no sources section or external link |
-| /learn/context-engineering/selection-ordering-quiz | 10 numeric claims with no sources section or external link |
 
-_… 156 more in content-registry.json (`sourcingFlags`)_
+_… 161 more in content-registry.json (`sourcingFlags`)_
 
 ## Freshness queues
 
 Review order: volatile classes first, oldest last-verified date first; undated items lead each queue. `verified`/`updated`/`published` supply the last-verified date — git-derived when frontmatter is absent.
 
-- periodic: 1350
+- periodic: 1352
 - pricing-sensitive: 345
-- release-sensitive: 335
+- release-sensitive: 337
 - durable: 263
-- certification-sensitive: 102
-- policy-sensitive: 80
+- certification-sensitive: 103
+- policy-sensitive: 82
 
-### certification-sensitive (102) — oldest-verified first
+### certification-sensitive (103) — oldest-verified first
 
+- /learn/agent-skills/skill-security-and-provenance — Skill provenance, review, and the safe-installation checklist *(verified undated)*
 - /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access *(verified undated)*
 - /learn/llm-security/owasp-llm-and-agentic-top-10 — OWASP Top 10 for LLM and agentic applications *(verified undated)*
 - /learn/llm-security/sandboxing-code-execution-and-browser-use — Sandboxing code execution and browser use *(verified undated)*
@@ -563,8 +570,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-foundations/reliable-ai/221-contestability-appeals-and-recource — Contestability, Appeals, and Recourse *(verified 2026-08-30)*
 - /learn/ai-foundations/reliable-ai/222-societal-impact-labor-and-power — Societal Impact, Labour, and Power *(verified 2026-08-30)*
 - /learn/ai-foundations/reliable-ai/223-environmental-impact-and-compute-governance — Environmental Impact and Compute Governance *(verified 2026-08-30)*
-- /learn/ai-foundations/reliable-ai/224-safety-cases-and-deployment-assurance — Safety Cases and Deployment Assurance *(verified 2026-08-30)*
-- … 72 more in content-registry.json
+- … 73 more in content-registry.json
 
 ### pricing-sensitive (345) — oldest-verified first
 
@@ -600,8 +606,10 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-foundations/orientation-quiz — Orientation: Check Your Map *(verified 2026-08-30)*
 - … 315 more in content-registry.json
 
-### policy-sensitive (80) — oldest-verified first
+### policy-sensitive (82) — oldest-verified first
 
+- /learn/agent-skills/evaluating-and-porting-skills — Evaluating skills with fixtures, and porting them across agents *(verified undated)*
+- /learn/agent-skills/skill-md-anatomy — SKILL.md anatomy: frontmatter, body, and bundled resources *(verified undated)*
 - /learn/llm-foundations/read-a-model-card-lab — Lab: read a model card like an engineer *(verified undated)*
 - /learn/llm-security/audit-logs-and-accountability — Audit logs, approval records, and data deletion: the accountability layer *(verified undated)*
 - /learn/llm-security/llm-supply-chain-security — LLM supply-chain security: secrets, dependencies, and model artifacts *(verified undated)*
@@ -630,11 +638,9 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/machine-learning/assessments/ml-848-model-report-template-high-stakes — Model report template: high-stakes review and human oversight *(verified 2026-08-30)*
 - /learn/machine-learning/assessments/ml-849-staged-capstone-handbook — Staged capstone handbook: from proposal to production review *(verified 2026-08-30)*
 - /learn/machine-learning/ml-114-lab-from-question-to-evaluation-plan — Lab: from question to evaluation plan *(verified 2026-08-30)*
-- /learn/machine-learning/ml-512-randomized-experiments-and-online-ab-tests — Randomized experiments and online A/B tests *(verified 2026-08-30)*
-- /learn/machine-learning/ml-707-lab-content-ranking-with-feedback — Lab: content ranking with feedback *(verified 2026-08-30)*
-- … 50 more in content-registry.json
+- … 52 more in content-registry.json
 
-### release-sensitive (335) — oldest-verified first
+### release-sensitive (337) — oldest-verified first
 
 Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno, LangGraph *(verified undated)*
@@ -651,6 +657,8 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agent-frameworks/pydanticai-typed-agents — PydanticAI, LangGraph, OpenTelemetry *(verified undated)*
 - /learn/agent-frameworks/structured-output-libraries — Instructor, Outlines, OpenAI, vLLM, llama.cpp, Anthropic, SGLang, Gemini *(verified undated)*
 - /learn/agent-frameworks/vercel-ai-sdk — Mastra, PydanticAI, LangGraph *(verified undated)*
+- /learn/agent-skills/agent-skills-spec-and-progressive-disclosure — Anthropic, MCP *(verified undated)*
+- /learn/agent-skills/skill-vs-prompt-rule-hook-mcp-subagent — MCP *(verified undated)*
 - /learn/ai-literacy/meet-skills-connectors-and-agents — MCP *(verified undated)*
 - /learn/cli-agents/cli-agent-labs — Codex, Claude, Gemini, Aider *(verified undated)*
 - /learn/cli-agents/customizing-the-agent-surface — MCP, Model Context Protocol *(verified undated)*
@@ -665,16 +673,14 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/local-inference/huggingface-tgi-and-tei — Hugging Face, OpenAI, vLLM, llama.cpp *(verified undated)*
 - /learn/local-inference/huggingface-transformers-pipelines — Hugging Face, vLLM, llama.cpp, Ollama *(verified undated)*
 - /learn/local-inference/llama-cpp-build-quantize-serve — llama.cpp, Ollama, LM Studio, OpenAI *(verified undated)*
-- /learn/local-inference/lm-studio-local-server — LM Studio, OpenAI, Ollama, Hugging Face, vLLM, MLX, llama.cpp *(verified undated)*
-- /learn/local-inference/mlx-lm-on-apple-silicon — MLX, OpenAI, Hugging Face, Ollama, vLLM, llama.cpp, LM Studio, ONNX *(verified undated)*
-- … 305 more
+- … 307 more
 
 ## Missing-data queues
 
 ### no summary/meta description (0)
 
 
-### no published or updated date (85)
+### no published or updated date (91)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -694,6 +700,12 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agent-frameworks/raw-sdk-agent-baseline — The raw-SDK baseline every framework wraps
 - /learn/agent-frameworks/structured-output-libraries — Instructor, Outlines, Guidance: the constrained-output libraries
 - /learn/agent-frameworks/vercel-ai-sdk — Vercel AI SDK: streaming, tools, and generative UI
+- /learn/agent-skills/agent-skills-spec-and-progressive-disclosure — The Agent Skills spec and progressive disclosure
+- /learn/agent-skills/evaluating-and-porting-skills — Evaluating skills with fixtures, and porting them across agents
+- /learn/agent-skills/skill-md-anatomy — SKILL.md anatomy: frontmatter, body, and bundled resources
+- /learn/agent-skills/skill-security-and-provenance — Skill provenance, review, and the safe-installation checklist
+- /learn/agent-skills/skill-vs-prompt-rule-hook-mcp-subagent — Skill vs prompt vs project rule vs hook vs MCP vs subagent
+- /learn/agent-skills/skills-projects-first-skill-and-capstone — Projects: build your first skill, then turn a workflow into a tested one
 - /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access
 - /learn/agentic-ai/agent-task-contracts — Write a task contract for an agent
 - /learn/ai-literacy/ai-across-languages-and-accessibility — Use AI across languages and accessibility needs
@@ -710,13 +722,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/llm-foundations/inspect-a-real-tokenizer-lab — Lab: inspect a real tokenizer
 - /learn/llm-foundations/read-a-model-card-lab — Lab: read a model card like an engineer
 - /learn/llm-security/audit-logs-and-accountability — Audit logs, approval records, and data deletion: the accountability layer
-- /learn/llm-security/guardrails-frameworks-in-practice — Guardrails AI, NeMo Guardrails, and Llama Guard: the filter layer in depth
-- /learn/llm-security/llm-supply-chain-security — LLM supply-chain security: secrets, dependencies, and model artifacts
-- /learn/llm-security/nist-ai-rmf-and-mitre-atlas — NIST AI RMF and MITRE ATLAS: governance frameworks and adversary tactics
-- /learn/llm-security/owasp-llm-and-agentic-top-10 — OWASP Top 10 for LLM and agentic applications
-- /learn/llm-security/prompt-injection-testing-and-threat-models — Prompt-injection testing tools and a threat-model template that works
-- /learn/llm-security/provider-moderation-and-safety-apis — Provider moderation and safety APIs: the cheap filter layer
-- … 45 more
+- … 51 more
 
 ### zero in-body internal links (template nav still applies) (433)
 
@@ -774,7 +780,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 ### lesson files with status coming (0)
 
 
-### release-sensitive, no date at all (74)
+### release-sensitive, no date at all (79)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -793,6 +799,11 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agent-frameworks/pydanticai-typed-agents — PydanticAI: agents that type-check
 - /learn/agent-frameworks/structured-output-libraries — Instructor, Outlines, Guidance: the constrained-output libraries
 - /learn/agent-frameworks/vercel-ai-sdk — Vercel AI SDK: streaming, tools, and generative UI
+- /learn/agent-skills/agent-skills-spec-and-progressive-disclosure — The Agent Skills spec and progressive disclosure
+- /learn/agent-skills/evaluating-and-porting-skills — Evaluating skills with fixtures, and porting them across agents
+- /learn/agent-skills/skill-md-anatomy — SKILL.md anatomy: frontmatter, body, and bundled resources
+- /learn/agent-skills/skill-security-and-provenance — Skill provenance, review, and the safe-installation checklist
+- /learn/agent-skills/skill-vs-prompt-rule-hook-mcp-subagent — Skill vs prompt vs project rule vs hook vs MCP vs subagent
 - /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access
 - /learn/ai-literacy/meet-skills-connectors-and-agents — Meet skills, connectors, and agents — safely
 - /learn/cli-agents/cli-agent-labs — Labs: the untrusted-repo security drill and the comparative harness run
@@ -811,12 +822,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/llm-security/provider-moderation-and-safety-apis — Provider moderation and safety APIs: the cheap filter layer
 - /learn/llm-security/sandboxing-code-execution-and-browser-use — Sandboxing code execution and browser use
 - /learn/local-inference/hardware-sizing-measurement-guide — Size hardware for local inference by measuring it
-- /learn/local-inference/huggingface-tgi-and-tei — Hugging Face TGI and TEI: the ecosystem's own serving layer
-- /learn/local-inference/huggingface-transformers-pipelines — Hugging Face Transformers: pipelines and AutoModel
-- /learn/local-inference/llama-cpp-build-quantize-serve — llama.cpp: build, quantize, and serve
-- /learn/local-inference/lm-studio-local-server — LM Studio: the GUI path to a local OpenAI-compatible server
-- /learn/local-inference/mlx-lm-on-apple-silicon — MLX and mlx-lm on Apple Silicon
-- … 34 more
+- … 39 more
 
 ## Role paths
 

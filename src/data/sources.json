@@ -802,6 +802,24 @@
     "claims": ["interactive UI returned from tool results", "draft-stage extension"],
     "status": "current"
   },
+  "agent-skills-spec": {
+    "title": "Agent Skills specification",
+    "publisher": "Agent Skills",
+    "accessedAt": "2026-09-15",
+    "url": "https://agentskills.io/specification",
+    "type": "official-docs",
+    "claims": ["SKILL.md format, progressive disclosure", "open cross-vendor spec"],
+    "status": "current"
+  },
+  "anthropic-skills-repo": {
+    "title": "Anthropic skills repository",
+    "publisher": "Anthropic",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/anthropics/skills",
+    "type": "official-docs",
+    "claims": ["reference skill packages and conventions"],
+    "status": "current"
+  },
   "mcpui-site": {
     "title": "MCP-UI project",
     "publisher": "MCP-UI",

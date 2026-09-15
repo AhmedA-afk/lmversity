@@ -1,7 +1,7 @@
 {
  "version": 1,
  "next": {
-  "les": 2146,
+  "les": 2152,
   "que": 7,
   "sce": 6,
   "blo": 10,
@@ -11,7 +11,7 @@
   "rol": 12,
   "prc": 6,
   "pag": 22,
-  "trk": 28,
+  "trk": 29,
   "qgd": 4,
   "stb": 25
  },
@@ -9845,6 +9845,33 @@
   "lessons/mcp/mcp-apps-and-ui-extensions.mdx": {
    "id": "les-2146",
    "fp": "71dd81d976afb9aa186f861634d38c41583012e6"
+  },
+  "lessons/agent-skills/agent-skills-spec-and-progressive-disclosure.md": {
+   "id": "les-2147",
+   "fp": "6361c1d02877497cbe871745a5e2dd7af07a0401"
+  },
+  "lessons/agent-skills/evaluating-and-porting-skills.md": {
+   "id": "les-2148",
+   "fp": "c9a611b6865394b219da978259a7da5d9e2ce3ad"
+  },
+  "lessons/agent-skills/skill-md-anatomy.md": {
+   "id": "les-2149",
+   "fp": "1fc1fb9f319ac896dca01d553dcbfc46ff697dd5"
+  },
+  "lessons/agent-skills/skill-security-and-provenance.md": {
+   "id": "les-2150",
+   "fp": "e8aa86635356604c4889b19c60ef4b47aea17e4a"
+  },
+  "lessons/agent-skills/skill-vs-prompt-rule-hook-mcp-subagent.md": {
+   "id": "les-2151",
+   "fp": "3f0bfb768ed11a4ff8a02f87a04cdfc9f41c71d3"
+  },
+  "lessons/agent-skills/skills-projects-first-skill-and-capstone.md": {
+   "id": "les-2152",
+   "fp": "6849a9e842fca67f48952e5300743c68ba819d0d"
+  },
+  "data:track/agent-skills": {
+   "id": "trk-0029"
   }
  },
  "retired": {
