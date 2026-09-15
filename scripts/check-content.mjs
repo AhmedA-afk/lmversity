@@ -59,22 +59,28 @@ function bodyH1s(body) {
 // shape, so regex extraction is reliable enough for a lint gate.
 const curSrc = readFileSync(CURRICULUM, 'utf8');
 const trackNodes = new Map(); // trackId -> Map(slug -> status)
-let curTrack = null;
-let pendingSlug = null; // slug waiting on its "status" line (status sits on the next line)
-for (const line of curSrc.split('\n')) {
-  const t = line.match(/^\s*"id":\s*"([\w-]+)",\s*$/);
-  if (t) { curTrack = t[1]; pendingSlug = null; if (!trackNodes.has(curTrack)) trackNodes.set(curTrack, new Map()); continue; }
-  const s = line.match(/"slug":\s*"([^"]+)"/);
-  if (s && curTrack) {
-    trackNodes.get(curTrack).set(s[1], 'live');
-    pendingSlug = s[1];
-    continue;
+const trackOrder = new Map(); // trackId -> slug[] in declared order
+const nodePrereq = new Map(); // "track/slug" -> prereq slugs
+// locate each track's block by its `"id":` line position, then parse node
+// objects inside that span — order is the declaration order
+const trackSpans = [...curSrc.matchAll(/^\s*"id":\s*"([\w-]+)",\s*$/gm)]
+  .map((m, i, arr) => ({ id: m[1], from: m.index, to: arr[i + 1]?.index ?? curSrc.length }));
+for (const { id, from, to } of trackSpans) {
+  const seg = curSrc.slice(from, to);
+  if (!trackNodes.has(id)) trackNodes.set(id, new Map());
+  const order = [];
+  for (const nb of seg.matchAll(/\{[^{}]*?"slug":\s*"([^"]+)"[^{}]*?\}/gs)) {
+    const block = nb[0], slug = nb[1];
+    const status = block.match(/"status":\s*"(\w+)"/)?.[1] ?? 'live';
+    trackNodes.get(id).set(slug, status);
+    order.push(slug);
+    const pr = block.match(/"prereq":\s*\[([^\]]*)\]/);
+    if (pr) {
+      nodePrereq.set(`${id}/${slug}`,
+        [...pr[1].matchAll(/"([^"]+)"/g)].map((m) => m[1]));
+    }
   }
-  const st = line.match(/"status":\s*"(\w+)"/);
-  if (st && curTrack && pendingSlug) {
-    trackNodes.get(curTrack).set(pendingSlug, st[1]);
-    pendingSlug = null;
-  }
+  trackOrder.set(id, order);
 }
 
 const problems = [];
@@ -104,6 +110,15 @@ for (const file of walk(LESSONS_DIR)) {
   const h1 = bodyH1s(body);
   if (h1 > 0) problems.push(`${rel}: ${h1} body-level H1 outside code — the template already emits the title`);
 
+  // dates must not be in the future — a future "updated" is a freshness lie
+  for (const dk of ['updated', 'published']) {
+    const v = fm[dk];
+    if (!v) continue;
+    const t = Date.parse(v);
+    if (Number.isNaN(t)) problems.push(`${rel}: unparseable "${dk}:" date "${v}"`);
+    else if (t > Date.now() + 86400000) problems.push(`${rel}: "${dk}:" is in the future (${v})`);
+  }
+
   // bare internal paths render as literal text, not links — must be [title](/learn/x)
   const unfenced = body.replace(/```[\s\S]*?```/g, '');
   const barePaths = unfenced.match(/[^\w`(\["']\/(?:learn|interview|scenarios|guides|answers|practice|fde)\/[a-z0-9-]+(\/[a-z0-9-]+)*/g);
@@ -123,6 +138,35 @@ for (const [track, nodes] of trackNodes) {
       const exists = existsSync(join(LESSONS_DIR, track, `${slug}.md`)) || existsSync(join(LESSONS_DIR, track, `${slug}.mdx`));
       if (!exists) problems.push(`${track}/${slug}: live curriculum node has no lesson file — dead nav link`);
     }
+  }
+}
+
+// prerequisite edges: the prereq slug must exist in the same track and be
+// declared earlier — a later or unknown prereq is unreachable or circular
+for (const [key, prereqs] of nodePrereq) {
+  const [track, slug] = key.split('/');
+  const order = trackOrder.get(track) ?? [];
+  const idx = order.indexOf(slug);
+  for (const p of prereqs) {
+    const pi = order.indexOf(p);
+    if (pi === -1) problems.push(`${key}: prereq "${p}" is not a node in ${track}`);
+    else if (pi >= idx) problems.push(`${key}: prereq "${p}" is declared after it — ordering must put prerequisites first`);
+  }
+}
+
+// duplicate normalized answer titles — two pages competing for one intent
+const ANSWERS_DIR = join(ROOT, 'src/content/answers');
+const ANSWER_STOP = new Set('a an and are as at be by can could do does for from how i in is it its of on or should that the this to vs what when where which who why will with would you your'.split(' '));
+const intentSeen = new Map();
+if (existsSync(ANSWERS_DIR)) {
+  for (const file of walk(ANSWERS_DIR)) {
+    const { fm } = parseFrontmatter(readFileSync(file, 'utf8'));
+    const norm = (fm.title ?? '').toLowerCase().replace(/['’]/g, '').replace(/[^a-z0-9]+/g, ' ')
+      .split(/\s+/).filter((w) => w && !ANSWER_STOP.has(w)).sort().join(' ');
+    if (!norm) continue;
+    const rel = relative(ANSWERS_DIR, file);
+    if (intentSeen.has(norm)) problems.push(`answers: "${fm.title}" duplicates the normalized intent of ${intentSeen.get(norm)}`);
+    else intentSeen.set(norm, rel);
   }
 }
 

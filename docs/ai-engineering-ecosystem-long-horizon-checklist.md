@@ -253,8 +253,10 @@ consolidation into a parent track, or a clearer curated-path role.
       this course"; each brief header now shows `starts: "<title>"` for review;
       no track opens on quiz/lab/capstone)*
 - [ ] Verify prerequisites are explicit and reachable.
-      *(blocked by schema — `TrackNode` has no prerequisite field; needs the
-      canonical content-model work first)*
+      *(schema unblocked — `TrackNode.prereq?: string[]` added and check-content
+      rejects unknown/out-of-order prereqs; 3 seed edges landed
+      (bpe-variants←build-bpe, tool-call-loop←anatomy, mcp-architecture←
+      what-is-mcp). Coverage across ~2,000 nodes remains the editorial work)*
 - [ ] Verify concepts appear before dependent implementations.
       *(mechanical half passed — every `-quiz` node sits after its stem lesson;
       deeper concept-ordering remains editorial)*
@@ -1993,7 +1995,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-15 — Duplicate-detector precision fix + 74 same-topic cross-links
 
-- Fixed a systematic false positive in the dup detector: sibling kind pages
+- Commit: `8609f40`. Fixed a systematic false positive in the dup detector: sibling kind pages
   (`mcp-auth-quiz` <> `mcp-transports-quiz`, `mcp-X-cheatsheet` <>
   `mcp-Y-cheatsheet`) scored high on shared kind/track tokens alone. Pairs now
   require at least one *distinctive* shared token (outside the kind/domain
@@ -2014,6 +2016,27 @@ validation, deployment status, measured result when available, blockers, and nex
 - Validation: `npm run registry` clean; `check:content` clean.
 - Next batch: remaining ~119 unlinked pairs (mostly cross-batch twins needing
   canonical-choice verdicts), then Phase 1 canonical content model.
+
+### 2026-09-15 — Phase 1 slice: prereq schema + validation rules
+
+- `TrackNode.prereq?: string[]` added to `src/data/curriculum.ts`;
+  `check-content` now validates each edge: prereq must be a node in the same
+  track AND declared earlier (catches unreachable/circular deps). Verified by
+  fault injection — both violation types fail the gate.
+- Rewrote the curriculum parser as block-based (node objects per track span),
+  which also captures declaration order for the ordering checks.
+- Added two more canonical-model validations: future `updated:`/`published:`
+  dates are rejected (a future "updated" is a freshness lie), and answer files
+  with duplicate normalized titles are flagged (intent collision).
+- Seeded 3 true prereq edges to exercise the field (mcp-architecture ←
+  what-is-mcp, the-tool-call-loop ← anatomy-of-a-tool-call,
+  bpe-vs-wordpiece ← build-bpe-from-scratch). Coverage is now a data-entry
+  task, not a schema blocker.
+- Validation: `check:content` clean (2,060 nodes); `npm run build` clean
+  (2,395 pages).
+- Next batch: remaining Phase 1 validations (volatile-without-review-date,
+  provider-comparison sourcing, numeric-claim sourcing) or the ~119
+  duplicate verdicts.
 
 ### 2026-09-14 — Master ecosystem backlog created
 

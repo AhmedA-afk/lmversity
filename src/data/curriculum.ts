@@ -1,6 +1,6 @@
 // AUTO-GENERATED unified taxonomy (22 tracks; Codex content ported).
 export type NodeStatus = 'live' | 'curated' | 'coming';
-export interface TrackNode { title: string; slug?: string; status: NodeStatus; eta?: string; }
+export interface TrackNode { title: string; slug?: string; status: NodeStatus; eta?: string; prereq?: string[]; }
 export interface Track { id: string; n: string; name: string; group: string; meta: string; summary: string; nodes: TrackNode[]; }
 export interface RoleTrack { id: string; name: string; blurb: string; status: NodeStatus; }
 export const groups: string[] = [
@@ -2423,7 +2423,8 @@ const unsortedTracks: Track[] = [
       {
         "title": "BPE vs WordPiece vs Unigram vs Byte-Level",
         "slug": "bpe-vs-wordpiece-vs-unigram",
-        "status": "live"
+        "status": "live",
+        "prereq": ["build-bpe-from-scratch"]
       },
       {
         "title": "Tokenization Gotchas That Break Prompts",
@@ -8873,7 +8874,8 @@ const unsortedTracks: Track[] = [
       {
         "title": "The Agent Loop",
         "slug": "the-tool-call-loop",
-        "status": "live"
+        "status": "live",
+        "prereq": ["anatomy-of-a-tool-call"]
       },
       {
         "title": "Your First Tool Call, End to End",
@@ -9508,7 +9510,8 @@ const unsortedTracks: Track[] = [
       {
         "title": "MCP Architecture: Hosts, Clients, Servers",
         "slug": "mcp-architecture-hosts-clients-servers",
-        "status": "live"
+        "status": "live",
+        "prereq": ["what-is-mcp"]
       },
       {
         "title": "MCP Tools, Resources, and Prompts",
