@@ -1,7 +1,7 @@
 {
  "version": 1,
  "next": {
-  "les": 2069,
+  "les": 2077,
   "que": 7,
   "sce": 6,
   "blo": 10,
@@ -9522,6 +9522,38 @@
   "lessons/structured-outputs/refusals-and-partial-outputs.md": {
    "id": "les-2069",
    "fp": "fff6024a1b5346926d27459b1f9b20ec31457e61"
+  },
+  "lessons/rag/diagnosing-rag-failures-end-to-end.md": {
+   "id": "les-2070",
+   "fp": "13f084f173d4d15b43875b4d8a0f78a9fc563893"
+  },
+  "lessons/tools-function-calling/building-a-database-tool.md": {
+   "id": "les-2071",
+   "fp": "13873f6e0f5f4b136b7546ca901ec4ea10ed71a8"
+  },
+  "lessons/tools-function-calling/idempotent-tool-design.md": {
+   "id": "les-2072",
+   "fp": "cdafc3f464f105f47b35d1e4164384a26e7225ac"
+  },
+  "lessons/tools-function-calling/tool-discovery-at-runtime.md": {
+   "id": "les-2073",
+   "fp": "25e0cd43653b183f84632c513b341b9227793f94"
+  },
+  "lessons/agentic-ai/agent-permissions-and-authorization.md": {
+   "id": "les-2074",
+   "fp": "746b72ca38ca51377f70ced9edfb61a9d0dbac90"
+  },
+  "lessons/agentic-ai/agent-task-contracts.md": {
+   "id": "les-2075",
+   "fp": "beb443cdb5e408f1a45fc1c6c8211a1e05272541"
+  },
+  "lessons/python-data-apis/observability-for-ai-services.md": {
+   "id": "les-2076",
+   "fp": "478891ddd82e3285ed6a3ba77ea3f03e48cc7c9e"
+  },
+  "lessons/responsible-ai/consent-contestability-and-impact.md": {
+   "id": "les-2077",
+   "fp": "03a8979eee1c59683d1f161c271d2f7c7868693d"
   }
  },
  "retired": {

@@ -1,16 +1,16 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T10:53:27.518Z",
+  "generatedAt": "2026-09-15T11:25:16.079Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2393,
+  "itemCount": 2401,
   "counts": {
    "byFamily": {
-    "lesson": 2019,
+    "lesson": 2026,
     "project": 31,
     "quiz": 89,
     "reference": 59,
-    "lab": 64,
+    "lab": 65,
     "interview": 7,
     "scenario": 6,
     "blog": 10,
@@ -22,16 +22,16 @@
     "glossary": 1
    },
    "byStatus": {
-    "live": 2393
+    "live": 2401
    },
    "byKind": {
-    "concept": 1720,
+    "concept": 1727,
     "comparison": 102,
     "worked-example": 29,
     "capstone": 31,
     "quiz": 83,
     "cheatsheet": 48,
-    "lab": 64,
+    "lab": 65,
     "common-mistakes": 24,
     "topic": 7,
     "scenario": 6,
@@ -58,7 +58,7 @@
     "endpoint": 4
    },
    "byTrack": {
-    "agentic-ai": 29,
+    "agentic-ai": 31,
     "ai-foundations": 161,
     "ai-literacy": 60,
     "classical-ai": 84,
@@ -75,11 +75,11 @@
     "mcp": 59,
     "production": 30,
     "prompt-engineering": 144,
-    "python-data-apis": 58,
-    "rag": 58,
-    "responsible-ai": 7,
+    "python-data-apis": 59,
+    "rag": 59,
+    "responsible-ai": 8,
     "structured-outputs": 125,
-    "tools-function-calling": 124,
+    "tools-function-calling": 127,
     "Agents": 1,
     "System design for AI": 1,
     "Evals and red teaming": 1,
@@ -96,11 +96,11 @@
     "fde": 193
    },
    "byFreshness": {
-    "release-sensitive": 284,
-    "periodic": 1338,
-    "policy-sensitive": 74,
+    "release-sensitive": 286,
+    "periodic": 1341,
+    "certification-sensitive": 99,
+    "policy-sensitive": 75,
     "pricing-sensitive": 337,
-    "certification-sensitive": 97,
     "durable": 263
    }
   },
@@ -358,6 +358,180 @@
     "metadata": 2,
     "linking": 2,
     "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2074",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Give an agent permissions, not access",
+   "slug": "agentic-ai/agent-permissions-and-authorization",
+   "route": "/learn/agentic-ai/agent-permissions-and-authorization",
+   "collection": "lessons",
+   "path": "src/content/lessons/agentic-ai/agent-permissions-and-authorization.md",
+   "track": "agentic-ai",
+   "module": "Foundations",
+   "status": "live",
+   "summary": "Scope an agent's authorization to the task — least-privilege credentials, approval gates on irreversible actions, and a permission model that assumes the agent will be talked into things.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 496,
+   "headings": [
+    "The short answer",
+    "Why this matters",
+    "The model",
+    "Where this bites",
+    "The practice",
+    "The lab version",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agentic-ai/autonomy-vs-control",
+    "/learn/agentic-ai/the-agent-loop",
+    "/learn/tools-function-calling/approval-gates-for-sensitive-tools",
+    "/learn/tools-function-calling/classifying-tool-risk-tiers"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 7,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Scope an agent's authorization to the task — least-privilege credentials, approval gates on irreversible actions, and a permission model that assumes the agent will be talked into things.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/agentic-ai",
+   "practiceType": "none",
+   "freshnessClass": "certification-sensitive",
+   "freshnessSignals": [
+    "certification/exam mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2075",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Write a task contract for an agent",
+   "slug": "agentic-ai/agent-task-contracts",
+   "route": "/learn/agentic-ai/agent-task-contracts",
+   "collection": "lessons",
+   "path": "src/content/lessons/agentic-ai/agent-task-contracts.md",
+   "track": "agentic-ai",
+   "module": "Foundations",
+   "status": "live",
+   "summary": "Define what an agent must produce before it runs — done conditions, scope boundaries, budget limits, and the artifact — so autonomy has a spec, not a vibe.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 471,
+   "headings": [
+    "The short answer",
+    "Why this matters",
+    "The contract fields",
+    "What a contract prevents",
+    "Writing one",
+    "The lab version",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agentic-ai/autonomy-vs-control",
+    "/learn/agentic-ai/evaluating-agent-behavior-in-dev",
+    "/learn/agentic-ai/stopping-conditions-for-agents",
+    "/learn/agentic-ai/the-agent-loop"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 8,
+    "numericClaims": 2,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Define what an agent must produce before it runs — done conditions, scope boundaries, budget limits, and the artifact — so autonomy has a spec, not a vibe.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/agentic-ai/agent-permissions-and-authorization",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
     "demand": null
@@ -1847,7 +2021,7 @@
    "promisedOutcome": "State is what the current run needs to continue; memory is information carried across runs.",
    "jobToBeDone": null,
    "prerequisite": null,
-   "nextAction": "/learn/agentic-ai",
+   "nextAction": "/learn/agentic-ai/agent-task-contracts",
    "practiceType": "none",
    "freshnessClass": "policy-sensitive",
    "freshnessSignals": [
@@ -8736,7 +8910,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (238w vs ~778w)",
+   "dispositionReason": "thin vs family median (238w vs ~777w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -51728,7 +51902,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -86403,7 +86577,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (277w vs ~778w)",
+   "dispositionReason": "thin vs family median (277w vs ~777w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -90121,7 +90295,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (269w vs ~778w)",
+   "dispositionReason": "thin vs family median (269w vs ~777w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -105691,7 +105865,7 @@
    "scores": {
     "intentClarity": null,
     "correctnessSources": null,
-    "completeness": 0,
+    "completeness": 1,
     "prerequisiteFit": 2,
     "handsOn": null,
     "explanationQuality": null,
@@ -105774,7 +105948,7 @@
    "scores": {
     "intentClarity": null,
     "correctnessSources": null,
-    "completeness": 0,
+    "completeness": 1,
     "prerequisiteFit": 2,
     "handsOn": null,
     "explanationQuality": null,
@@ -149548,6 +149722,94 @@
    }
   },
   {
+   "id": "les-2076",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Add observability to a Python AI service",
+   "slug": "python-data-apis/observability-for-ai-services",
+   "route": "/learn/python-data-apis/observability-for-ai-services",
+   "collection": "lessons",
+   "path": "src/content/lessons/python-data-apis/observability-for-ai-services.md",
+   "track": "python-data-apis",
+   "module": "Data contracts and cleaning",
+   "status": "live",
+   "summary": "Instrument a Python service that calls a model with structured logs, traces, and metrics — so a bad answer is debuggable from data, not from a user complaint.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 381,
+   "headings": [
+    "The short answer",
+    "What to record per model call",
+    "Traces show where the time went",
+    "Metrics aggregate what logs can't",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/production/opentelemetry-genai-semantic-conventions",
+    "/learn/production/pii-redaction-in-llm-logs",
+    "/learn/production/structured-logging-for-llm-calls",
+    "/learn/production/token-and-cost-tracking",
+    "/learn/python-data-apis/structuring-a-python-ai-service"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 4,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Instrument a Python service that calls a model with structured logs, traces, and metrics — so a bad answer is debuggable from data, not from a user complaint.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/python-data-apis/ai-service-quiz",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: OpenTelemetry"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-1729",
    "family": "lesson",
    "kind": "concept",
@@ -151248,7 +151510,7 @@
    "promisedOutcome": "A pipeline that calls an LLM on every row has two ways to ruin your afternoon: a test suite that hits the real API and fails on a rate limit, and a malformed row that slips past your checks and burns a request on garbage input.",
    "jobToBeDone": null,
    "prerequisite": null,
-   "nextAction": "/learn/python-data-apis/ai-service-quiz",
+   "nextAction": "/learn/python-data-apis/observability-for-ai-services",
    "practiceType": "none",
    "freshnessClass": "periodic",
    "freshnessSignals": [],
@@ -152843,6 +153105,92 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2070",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Diagnose a RAG failure from ingestion to synthesis",
+   "slug": "rag/diagnosing-rag-failures-end-to-end",
+   "route": "/learn/rag/diagnosing-rag-failures-end-to-end",
+   "collection": "lessons",
+   "path": "src/content/lessons/rag/diagnosing-rag-failures-end-to-end.md",
+   "track": "rag",
+   "module": null,
+   "status": "live",
+   "summary": "Trace a wrong RAG answer backward through synthesis, retrieval, chunking, and ingestion to find which stage actually failed — most 'RAG bugs' are diagnosed at the wrong stage.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 539,
+   "headings": [
+    "The short answer",
+    "Why this matters",
+    "The pipeline, as places to look",
+    "The backward trace",
+    "The tell-tale at each stage",
+    "The instrumentation that makes this possible",
+    "The lab version",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/rag/chunking-strategies-compared",
+    "/learn/rag/incremental-indexing-freshness",
+    "/learn/rag/rag-eval-worked-example"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 3,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Trace a wrong RAG answer backward through synthesis, retrieval, chunking, and ingestion to find which stage actually failed — most 'RAG bugs' are diagnosed at the wrong stage.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/rag/when-rag-is-the-wrong-tool",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
     "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
@@ -154807,7 +155155,7 @@
    "promisedOutcome": "Six MCQs that test whether you can tell faithfulness, relevance, and context recall apart, and pinpoint where a RAG answer actually broke.",
    "jobToBeDone": null,
    "prerequisite": null,
-   "nextAction": "/learn/rag/when-rag-is-the-wrong-tool",
+   "nextAction": "/learn/rag/diagnosing-rag-failures-end-to-end",
    "practiceType": "quiz-page",
    "freshnessClass": "release-sensitive",
    "freshnessSignals": [
@@ -156764,6 +157112,93 @@
    }
   },
   {
+   "id": "les-2077",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Consent, contestability, and the costs nobody measures",
+   "slug": "responsible-ai/consent-contestability-and-impact",
+   "route": "/learn/responsible-ai/consent-contestability-and-impact",
+   "collection": "lessons",
+   "path": "src/content/lessons/responsible-ai/consent-contestability-and-impact.md",
+   "track": "responsible-ai",
+   "module": null,
+   "status": "live",
+   "summary": "Consent governs what data a system may use, contestability governs whether a person can challenge its output, and environmental cost is the footprint most AI teams never record — all three are design decisions, not compliance afterthoughts.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 468,
+   "headings": [
+    "The short answer",
+    "Consent is about provenance, not just permission",
+    "Contestability is an output property",
+    "Environmental impact is a line item you don't have yet",
+    "Where these live",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/production/human-escalation-queues-for-low-confidence-output",
+    "/learn/production/token-and-cost-tracking",
+    "/learn/responsible-ai/governance-artifacts",
+    "/learn/responsible-ai/privacy-fairness-and-accessibility"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 7,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Consent governs what data a system may use, contestability governs whether a person can challenge its output, and environmental cost is the footprint most AI teams never record — all three are design decisions, not compliance afterthoughts.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/responsible-ai",
+   "practiceType": "none",
+   "freshnessClass": "policy-sensitive",
+   "freshnessSignals": [
+    "policy/license mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 1,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-1811",
    "family": "lesson",
    "kind": "concept",
@@ -156904,7 +157339,7 @@
    "promisedOutcome": "Privacy, fairness, and accessibility are properties of the data, model, interface, workflow, and outcome together.",
    "jobToBeDone": null,
    "prerequisite": null,
-   "nextAction": "/learn/responsible-ai",
+   "nextAction": "/learn/responsible-ai/consent-contestability-and-impact",
    "practiceType": "none",
    "freshnessClass": "periodic",
    "freshnessSignals": [],
@@ -168869,7 +169304,7 @@
    "promisedOutcome": "Wire a run_python tool into a real container sandbox and watch the model fix its own traceback without help.",
    "jobToBeDone": null,
    "prerequisite": null,
-   "nextAction": "/learn/tools-function-calling/code-execution-vs-many-tools",
+   "nextAction": "/learn/tools-function-calling/building-a-database-tool",
    "practiceType": "none",
    "freshnessClass": "periodic",
    "freshnessSignals": [],
@@ -168890,6 +169325,93 @@
     "metadata": 2,
     "linking": 2,
     "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2071",
+   "family": "lab",
+   "kind": "lab",
+   "title": "Lab: build a read-only database tool",
+   "slug": "tools-function-calling/building-a-database-tool",
+   "route": "/learn/tools-function-calling/building-a-database-tool",
+   "collection": "lessons",
+   "path": "src/content/lessons/tools-function-calling/building-a-database-tool.md",
+   "track": "tools-function-calling",
+   "module": "Advanced tool use",
+   "status": "live",
+   "summary": "Build a parameterized, read-only database tool with allowlisted tables, result-size caps, and per-call logging — the template for every data-access tool you'll write.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 405,
+   "headings": [
+    "The short answer",
+    "Why this matters",
+    "The build",
+    "The schema the model sees",
+    "Extend it",
+    "The checkpoint",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/tools-function-calling/designing-a-tool-schema",
+    "/learn/tools-function-calling/executing-tool-calls-safely",
+    "/learn/tools-function-calling/tool-results-as-injection-vector"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 3,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 3,
+    "numericClaims": 1,
+    "specFormat": true,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "build",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Build a parameterized, read-only database tool with allowlisted tables, result-size caps, and per-call logging — the template for every data-access tool you'll write.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/tools-function-calling/code-execution-vs-many-tools",
+   "practiceType": "none",
+   "freshnessClass": "certification-sensitive",
+   "freshnessSignals": [
+    "certification/exam mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
     "demand": null
@@ -172132,6 +172654,92 @@
    }
   },
   {
+   "id": "les-2072",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Design idempotent tools so retries can't double-act",
+   "slug": "tools-function-calling/idempotent-tool-design",
+   "route": "/learn/tools-function-calling/idempotent-tool-design",
+   "collection": "lessons",
+   "path": "src/content/lessons/tools-function-calling/idempotent-tool-design.md",
+   "track": "tools-function-calling",
+   "module": "Executing safely",
+   "status": "live",
+   "summary": "Make retried tool calls safe: idempotency keys, natural dedup points, and the difference between a retry-safe tool and one that sends the same invoice twice.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 428,
+   "headings": [
+    "The short answer",
+    "Why this matters",
+    "The mechanism",
+    "Where the boundary sits",
+    "How it interacts with the rest of the loop",
+    "The lab version",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/tools-function-calling/approval-gates-for-sensitive-tools",
+    "/learn/tools-function-calling/classifying-tool-risk-tiers",
+    "/learn/tools-function-calling/executing-tool-calls-safely",
+    "/learn/tools-function-calling/handling-errors-and-retries"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 7,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Make retried tool calls safe: idempotency keys, natural dedup points, and the difference between a retry-safe tool and one that sends the same invoice twice.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/tools-function-calling/tool-discovery-at-runtime",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-1985",
    "family": "lesson",
    "kind": "concept",
@@ -174027,7 +174635,7 @@
    "promisedOutcome": "A decision tree for telling transient failures worth retrying apart from deterministic ones that never will succeed.",
    "jobToBeDone": null,
    "prerequisite": null,
-   "nextAction": "/learn/tools-function-calling/self-correction-mechanics",
+   "nextAction": "/learn/tools-function-calling/idempotent-tool-design",
    "practiceType": "none",
    "freshnessClass": "periodic",
    "freshnessSignals": [],
@@ -177198,6 +177806,92 @@
     "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2073",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Tool discovery at runtime: how an agent learns what it can call",
+   "slug": "tools-function-calling/tool-discovery-at-runtime",
+   "route": "/learn/tools-function-calling/tool-discovery-at-runtime",
+   "collection": "lessons",
+   "path": "src/content/lessons/tools-function-calling/tool-discovery-at-runtime.md",
+   "track": "tools-function-calling",
+   "module": "Executing safely",
+   "status": "live",
+   "summary": "Choose between a static tool list, a filtered subset per task, and runtime discovery over a registry — and the failure modes each invites.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 422,
+   "headings": [
+    "The short answer",
+    "Why this matters",
+    "The three models",
+    "The failure modes by model",
+    "The lab version",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/mcp/what-is-mcp",
+    "/learn/tools-function-calling/descriptions-are-prompts",
+    "/learn/tools-function-calling/the-tool-call-loop"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": true,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 3,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Choose between a static tool list, a filtered subset per task, and runtime discovery over a registry — and the failure modes each invites.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/tools-function-calling/self-correction-mechanics",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: MCP"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
     "linking": 2,
@@ -198709,15 +199403,15 @@
    "features": {
     "group": "Foundations",
     "declaredMeta": "57 lessons",
-    "nodeCount": 57,
-    "liveNodes": 57,
+    "nodeCount": 58,
+    "liveNodes": 58,
     "comingNodes": 0,
     "headingOnlyNodes": 0,
-    "fileCount": 57,
+    "fileCount": 58,
     "kinds": {
      "quiz": 10,
      "common-mistakes": 2,
-     "concept": 44,
+     "concept": 45,
      "capstone": 1
     },
     "modules": 7,
@@ -199634,13 +200328,13 @@
    "features": {
     "group": "Building",
     "declaredMeta": "56 lessons",
-    "nodeCount": 56,
-    "liveNodes": 56,
+    "nodeCount": 57,
+    "liveNodes": 57,
     "comingNodes": 0,
     "headingOnlyNodes": 0,
-    "fileCount": 56,
+    "fileCount": 57,
     "kinds": {
-     "concept": 28,
+     "concept": 29,
      "cheatsheet": 6,
      "common-mistakes": 6,
      "quiz": 6,
@@ -199774,16 +200468,17 @@
    "features": {
     "group": "Building",
     "declaredMeta": "123 lessons",
-    "nodeCount": 123,
-    "liveNodes": 123,
+    "nodeCount": 126,
+    "liveNodes": 126,
     "comingNodes": 0,
     "headingOnlyNodes": 0,
-    "fileCount": 123,
+    "fileCount": 126,
     "kinds": {
      "common-mistakes": 7,
      "quiz": 7,
-     "concept": 91,
+     "concept": 93,
      "comparison": 11,
+     "lab": 1,
      "capstone": 1,
      "cheatsheet": 5,
      "worked-example": 1
@@ -199994,13 +200689,13 @@
    "features": {
     "group": "Agentic",
     "declaredMeta": "28 lessons",
-    "nodeCount": 28,
-    "liveNodes": 28,
+    "nodeCount": 30,
+    "liveNodes": 30,
     "comingNodes": 0,
     "headingOnlyNodes": 0,
-    "fileCount": 28,
+    "fileCount": 30,
     "kinds": {
-     "concept": 25,
+     "concept": 27,
      "comparison": 3
     },
     "modules": 7,
@@ -200431,14 +201126,14 @@
    "features": {
     "group": "Production",
     "declaredMeta": "6 lessons",
-    "nodeCount": 6,
-    "liveNodes": 6,
+    "nodeCount": 7,
+    "liveNodes": 7,
     "comingNodes": 0,
     "headingOnlyNodes": 0,
-    "fileCount": 6,
+    "fileCount": 7,
     "kinds": {
      "lab": 1,
-     "concept": 5
+     "concept": 6
     },
     "modules": 0,
     "quickGuide": false
@@ -203572,44 +204267,6 @@
  "duplicates": [
   {
    "a": {
-    "route": "/learn/llm-foundations/grouped-query-attention",
-    "slug": "llm-foundations/grouped-query-attention",
-    "title": "Grouped-Query and Multi-Query Attention",
-    "track": "llm-foundations"
-   },
-   "b": {
-    "route": "/learn/llm-foundations/multi-query-and-grouped-query-attention",
-    "slug": "llm-foundations/multi-query-and-grouped-query-attention",
-    "title": "Multi-Query and Grouped-Query Attention",
-    "track": "llm-foundations"
-   },
-   "jaccard": 1,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/genai-app-dev/generative-ui-rendering-components",
-    "slug": "genai-app-dev/generative-ui-rendering-components",
-    "title": "Generative UI: Rendering Components From Model Output",
-    "track": "genai-app-dev"
-   },
-   "b": {
-    "route": "/learn/genai-app-dev/generative-ui",
-    "slug": "genai-app-dev/generative-ui",
-    "title": "Generative UI: Rendering Components from Model Output",
-    "track": "genai-app-dev"
-   },
-   "jaccard": 1,
-   "containment": 1,
-   "slugStem": true,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
     "route": "/learn/prompt-engineering/meta-prompting-to-draft-prompts",
     "slug": "prompt-engineering/meta-prompting-to-draft-prompts",
     "title": "Meta-Prompting: Using a Model to Write Prompts",
@@ -203639,6 +204296,44 @@
     "slug": "prompt-engineering/task-framing",
     "title": "Task framing: intent, constraints, and acceptance criteria",
     "track": "prompt-engineering"
+   },
+   "jaccard": 1,
+   "containment": 1,
+   "slugStem": true,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/llm-foundations/grouped-query-attention",
+    "slug": "llm-foundations/grouped-query-attention",
+    "title": "Grouped-Query and Multi-Query Attention",
+    "track": "llm-foundations"
+   },
+   "b": {
+    "route": "/learn/llm-foundations/multi-query-and-grouped-query-attention",
+    "slug": "llm-foundations/multi-query-and-grouped-query-attention",
+    "title": "Multi-Query and Grouped-Query Attention",
+    "track": "llm-foundations"
+   },
+   "jaccard": 1,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/genai-app-dev/generative-ui-rendering-components",
+    "slug": "genai-app-dev/generative-ui-rendering-components",
+    "title": "Generative UI: Rendering Components From Model Output",
+    "track": "genai-app-dev"
+   },
+   "b": {
+    "route": "/learn/genai-app-dev/generative-ui",
+    "slug": "genai-app-dev/generative-ui",
+    "title": "Generative UI: Rendering Components from Model Output",
+    "track": "genai-app-dev"
    },
    "jaccard": 1,
    "containment": 1,
@@ -205244,6 +205939,25 @@
   },
   {
    "a": {
+    "route": "/learn/structured-outputs/json-schema-for-outputs",
+    "slug": "structured-outputs/json-schema-for-outputs",
+    "title": "JSON Schema: Specifying Your Exact Data Contract",
+    "track": "structured-outputs"
+   },
+   "b": {
+    "route": "/learn/structured-outputs/the-contract-between-model-and-code",
+    "slug": "structured-outputs/the-contract-between-model-and-code",
+    "title": "The Schema as a Contract",
+    "track": "structured-outputs"
+   },
+   "jaccard": 0.33,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
     "route": "/learn/ai-foundations/what-a-model-actually-is",
     "slug": "ai-foundations/what-a-model-actually-is",
     "title": "What a Model Actually Is",
@@ -205396,25 +206110,6 @@
   },
   {
    "a": {
-    "route": "/learn/structured-outputs/json-schema-for-outputs",
-    "slug": "structured-outputs/json-schema-for-outputs",
-    "title": "JSON Schema: Specifying Your Exact Data Contract",
-    "track": "structured-outputs"
-   },
-   "b": {
-    "route": "/learn/structured-outputs/the-contract-between-model-and-code",
-    "slug": "structured-outputs/the-contract-between-model-and-code",
-    "title": "The Schema as a Contract",
-    "track": "structured-outputs"
-   },
-   "jaccard": 0.33,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
     "route": "/learn/tools-function-calling/the-tool-call-loop",
     "slug": "tools-function-calling/the-tool-call-loop",
     "title": "The Agent Loop",
@@ -205431,6 +206126,25 @@
    "slugStem": false,
    "alreadyLinked": false,
    "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/structured-outputs/schema-versioning-and-migration",
+    "slug": "structured-outputs/schema-versioning-and-migration",
+    "title": "Schema Versioning: Evolving a Contract Without Breaking Consumers",
+    "track": "structured-outputs"
+   },
+   "b": {
+    "route": "/learn/structured-outputs/the-contract-between-model-and-code",
+    "slug": "structured-outputs/the-contract-between-model-and-code",
+    "title": "The Schema as a Contract",
+    "track": "structured-outputs"
+   },
+   "jaccard": 0.29,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
   },
   {
    "a": {
@@ -205526,25 +206240,6 @@
    "slugStem": false,
    "alreadyLinked": true,
    "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/structured-outputs/schema-versioning-and-migration",
-    "slug": "structured-outputs/schema-versioning-and-migration",
-    "title": "Schema Versioning: Evolving a Contract Without Breaking Consumers",
-    "track": "structured-outputs"
-   },
-   "b": {
-    "route": "/learn/structured-outputs/the-contract-between-model-and-code",
-    "slug": "structured-outputs/the-contract-between-model-and-code",
-    "title": "The Schema as a Contract",
-    "track": "structured-outputs"
-   },
-   "jaccard": 0.29,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
   },
   {
    "a": {
@@ -209931,6 +210626,15 @@
  ],
  "sourcingFlags": [
   {
+   "route": "/learn/agentic-ai/agent-permissions-and-authorization",
+   "slug": "agentic-ai/agent-permissions-and-authorization",
+   "title": "Give an agent permissions, not access",
+   "family": "lesson",
+   "flags": [
+    "certification-sensitive page with no updated/review date"
+   ]
+  },
+  {
    "route": "/learn/ai-foundations/building-an-eval-set-worked-example",
    "slug": "ai-foundations/building-an-eval-set-worked-example",
    "title": "Building a Small Eval You Can Trust",
@@ -210967,6 +211671,15 @@
    ]
   },
   {
+   "route": "/learn/python-data-apis/observability-for-ai-services",
+   "slug": "python-data-apis/observability-for-ai-services",
+   "title": "Add observability to a Python AI service",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
    "route": "/learn/python-data-apis/pagination-patterns",
    "slug": "python-data-apis/pagination-patterns",
    "title": "Pagination: Collecting Every Page",
@@ -211093,6 +211806,24 @@
    ]
   },
   {
+   "route": "/learn/responsible-ai/consent-contestability-and-impact",
+   "slug": "responsible-ai/consent-contestability-and-impact",
+   "title": "Consent, contestability, and the costs nobody measures",
+   "family": "lesson",
+   "flags": [
+    "policy-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/tools-function-calling/building-a-database-tool",
+   "slug": "tools-function-calling/building-a-database-tool",
+   "title": "Lab: build a read-only database tool",
+   "family": "lab",
+   "flags": [
+    "certification-sensitive page with no updated/review date"
+   ]
+  },
+  {
    "route": "/learn/tools-function-calling/openapi-to-schema-conversion",
    "slug": "tools-function-calling/openapi-to-schema-conversion",
    "title": "Converting an OpenAPI Spec to Tool Schemas",
@@ -211153,6 +211884,15 @@
    "family": "lesson",
    "flags": [
     "5 numeric claims with no sources section or external link"
+   ]
+  },
+  {
+   "route": "/learn/tools-function-calling/tool-discovery-at-runtime",
+   "slug": "tools-function-calling/tool-discovery-at-runtime",
+   "title": "Tool discovery at runtime: how an agent learns what it can call",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
    ]
   },
   {

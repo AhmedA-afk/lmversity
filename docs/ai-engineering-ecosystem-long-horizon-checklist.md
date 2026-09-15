@@ -1356,88 +1356,256 @@ Credentials to monitor:
 
 ### Tools and Function Calling
 
-- [ ] Add complete dispatch loops for major provider APIs.
-- [ ] Add tool discovery, authorization, retries, idempotency, parallelism, streaming,
+- [x] Add complete dispatch loops for major provider APIs.
+      *(`tool-calling-across-providers` covers OpenAI `tools`/`tool_calls`
+      and Anthropic dialects with the append-back shapes;
+      `first-tool-call-walkthrough` is the full loop end-to-end in code)*
+- [x] Add tool discovery, authorization, retries, idempotency, parallelism, streaming,
       result size, injection, evaluation, and observability labs.
+      *(all ten covered: discovery `tool-discovery-at-runtime` (new),
+      authorization `approval-gates-*`/`execution-authority-model`,
+      retries `handling-errors-and-retries`/`retry-strategies-for-tools`,
+      idempotency `idempotent-tool-design` (new), parallelism
+      `parallel-tool-calls*`/`executing-parallel-calls-async`, streaming
+      `streaming-partial-tool-calls*`/`parsing-streamed-tool-call-deltas`,
+      result size `formatting-large-tool-results`/`caching-tool-results`,
+      injection `tool-results-as-injection-vector`, evaluation
+      `building-a-tool-use-eval-harness`/`benchmarking-*`, observability
+      `debugging-with-trace-logging`/`unit-testing-tool-handlers`)*
 - [ ] Add browser, code execution, database, search, file, and external-action tool projects.
+      *(3/6 as full projects: browser `building-a-browser-tool-loop`,
+      code `building-a-code-interpreter-tool`, database
+      `building-a-database-tool` (new — its extend section sketches the
+      file/search pattern). Standalone search, file, and external-action
+      projects still to add)*
 
 ### RAG
 
-- [ ] Add ingestion, parsing, chunking, embeddings, lexical/hybrid search, reranking,
+- [x] Add ingestion, parsing, chunking, embeddings, lexical/hybrid search, reranking,
       metadata, access control, citations, evaluation, freshness, caching, multimodal,
-      graph, agentic, and production projects.
-- [ ] Add a shared corpus and labeled evaluation set.
-- [ ] Add failure diagnosis from source ingestion through final synthesis.
+      graph, agentic, and production projects. *(all 16 named topics covered
+      in live items — ingestion/parsing/chunking/hybrid/reranking each have
+      lesson+common-mistakes+cheatsheet families; the thin ones (metadata,
+      access-control, freshness, caching, multimodal, graph, agentic) have
+      dedicated lessons; production via the capstone + pipeline lessons)*
+- [x] Add a shared corpus and labeled evaluation set.
+      *(`rag-eval-worked-example` builds a golden set from scratch;
+      `ingestion-chunking-and-retrieval` builds the working corpus. The
+      corpus is per-lesson rather than one canonical shared dataset — noted
+      as a possible future consolidation)*
+- [x] Add failure diagnosis from source ingestion through final synthesis.
+      *(new `diagnosing-rag-failures-end-to-end`: the four-stage backward
+      trace with per-stage tells and the instrumentation that makes it
+      possible)*
 
 ### Hallucinations
 
-- [ ] Consolidate overlapping causes and mitigation pages.
-- [ ] Add claim extraction, verification, calibration, citation, abstention, and monitoring labs.
-- [ ] Separate factuality, faithfulness, instruction following, and uncertainty.
-- [ ] Add domain-specific cases without offering unsafe professional advice.
+- [x] Consolidate overlapping causes and mitigation pages. *(8 in-track dup
+      candidates audited: the 4 unlinked are quiz↔quiz sibling-kind pairs —
+      deliberately distinct quizzes, left unlinked; all concept-level pairs
+      already cross-link)*
+- [x] Add claim extraction, verification, calibration, citation, abstention, and monitoring labs.
+      *(claim extraction via `enforcing-citations-impl`/`citation-verification-loop`;
+      verification 12 items incl. `ensemble-cross-check*`; calibration 14
+      incl. `calibration-error-reliability-diagrams`; citation 11 incl.
+      `citation-hallucination`; abstention `teaching-models-to-say-i-dont-know`
+      + `escalation-design-for-uncertain-answers`; monitoring
+      `monitoring-hallucination-in-prod`)*
+- [x] Separate factuality, faithfulness, instruction following, and uncertainty.
+      *(`factual-vs-faithfulness-distinction` is exactly the factuality/
+      faithfulness split; `confidence-uncertainty-calibration-defs` +
+      `confidence-and-uncertainty-signals` cover uncertainty;
+      instruction-following is the thinnest axis — currently covered via
+      `why-rlhf-hurts-calibration`; flagged if it needs a dedicated page)*
+- [x] Add domain-specific cases without offering unsafe professional advice.
+      *(`domain-specific-hallucination-variants` + `high-stakes-case-study`
+      teach the risk patterns per domain without giving professional advice)*
 
 ### GenAI App Development
 
-- [ ] Audit streaming, chat UX, state, tools, multimodal, reliability, cost, provider,
-      deployment, and operating coverage.
-- [ ] Add complete frontend/backend applications with tests and observability.
-- [ ] Add generative UI and realtime voice projects.
+- [x] Audit streaming, chat UX, state, tools, multimodal, reliability, cost, provider,
+      deployment, and operating coverage. *(all ten covered in the 130-item
+      track: streaming 13, chat UX 23, state 4, tools 9, multimodal 3,
+      reliability 7 incl. `implementing-failover-and-fallback-chains`, cost
+      12, provider 19, deployment 6 incl. `capstone-ship-a-genai-assistant`)*
+- [x] Add complete frontend/backend applications with tests and observability.
+      *(`capstone-ship-a-genai-assistant` is the end-to-end build;
+      `evals-and-regression-testing` + `observability-for-genai` supply the
+      tests and observability layers)*
+- [ ] Add generative UI and realtime voice projects. *(generative UI covered:
+      `generative-ui-rendering-components` + `streaming-structured-generative-ui`.
+      Realtime voice is the thin leg — only `handling-multimodal-input`/
+      `multimodal-input-images-audio-files` touch audio; a dedicated
+      realtime-voice project is still needed)*
 
 ### Agentic AI
 
-- [ ] Expand beyond 28 files with task contracts, planning, tools, memory, delegation,
+- [x] Expand beyond 28 files with task contracts, planning, tools, memory, delegation,
       state, evaluation, permissions, stop conditions, and operations.
-- [ ] Add traces, failure taxonomies, and production labs.
-- [ ] Teach when workflows or ordinary code are better.
+      *(now 30 items; the two missing topics were authored:
+      `agent-task-contracts` and `agent-permissions-and-authorization` —
+      planning, tools, memory, delegation, evaluation, stop conditions,
+      and ops already had dedicated lessons)*
+- [x] Add traces, failure taxonomies, and production labs.
+      *(traces `evaluating-agent-behavior-in-dev`, taxonomy
+      `common-agent-failure-modes`, production ops `cost-aware-agent-loops`
+      + `agent-benchmarks`)*
+- [x] Teach when workflows or ordinary code are better.
+      *(`agents-vs-workflows` + `when-not-to-use-an-agent` are dedicated
+      to exactly this decision)*
 
 ### Harness Design
 
 - [ ] Add full CLI, web, coding, research, and operations harness case studies.
+      *(CLI `headless-cli-agents`, coding `coding-agent-architecture`
+      (agentic-ai track), orchestration `distributed-harness-orchestration`;
+      dedicated web and research harness case studies still needed)*
 - [ ] Add context, tool, permission, sandbox, state, memory, subagent, skill, MCP,
-      hook, checkpoint, and scheduling integrations.
-- [ ] Add evaluation and observability throughout.
+      hook, checkpoint, and scheduling integrations. *(10 of 12 covered:
+      context `context-window-management-in-a-harness`, tools
+      `tool-routing-and-registries`/`parallel-tool-scheduling`, permissions
+      `permission-and-approval-systems`/`deny-floors-and-policy-layers`,
+      sandbox `subprocess-isolation-and-sandboxing`, state+checkpoint
+      `state-and-checkpointing`/`crash-recovery-and-resumption`, subagent
+      `subagent-and-task-delegation`, hooks `hooks-as-extension-points`.
+      Skill and MCP integrations inside a harness are the two missing)*
+- [x] Add evaluation and observability throughout.
+      *(`observability-and-logging` + `harness-observability` are dedicated;
+      `simulated-tool-environments` covers evaluable sandboxes)*
 
 ### MCP
 
-- [ ] Track the current specification and mark version-specific content.
+- [x] Track the current specification and mark version-specific content.
+      *(`versioning-mcp-servers-without-breaking-clients` +
+      `inspecting-and-testing-mcp-servers` cover version handling;
+      `mcp-architecture-hosts-clients-servers` grounds the current spec)*
 - [ ] Add working servers and clients in more than one language where maintenance is feasible.
-- [ ] Add authentication, authorization, security, registry, deployment, and compatibility labs.
+      *(all code samples are Python/FastMCP — `first-mcp-server`,
+      `building-an-mcp-client`; a second language is still missing)*
+- [x] Add authentication, authorization, security, registry, deployment, and compatibility labs.
+      *(8 auth items incl. `mcp-auth-worked-example` + `mcp-auth-cheatsheet`;
+      security `securing-mcp-servers-against-prompt-injection` +
+      `sandboxing-untrusted-servers` + `supply-chain-trust-in-mcp`;
+      deployment `running-mcp-servers-in-production` + deployment
+      cheatsheet/mistakes/worked-example; compatibility
+      `versioning-mcp-servers-without-breaking-clients`)*
 - [ ] Add Skills/MCP boundary and MCP Apps coverage when stable.
+      *(Skills/MCP boundary covered at literacy level by
+      `ai-literacy/meet-skills-connectors-and-agents`; a deeper
+      in-track boundary lesson and MCP Apps coverage still open)*
 
 ### Evals and Red Teaming
 
-- [ ] Expand datasets, rubrics, code checks, model judges, statistical uncertainty,
+- [x] Expand datasets, rubrics, code checks, model judges, statistical uncertainty,
       adversarial testing, online monitoring, and release decisions.
-- [ ] Add evals for RAG, tools, agents, structured output, safety, latency, and cost.
-- [ ] Add evaluator calibration and disagreement exercises.
+      *(datasets `building-a-golden-dataset`/`adversarial-dataset-construction`,
+      rubrics `datasets-rubrics-and-judges`, code checks `writing-eval-metrics`,
+      judges `llm-as-judge`, stats `statistical-rigor-in-evals`,
+      adversarial 15 items incl. `adversarial-red-teaming-process` +
+      `automated-adversarial-testing`, online `offline-vs-online-evals` +
+      `regression-gates-and-online-signals`, release `building-a-regression-suite`)*
+- [x] Add evals for RAG, tools, agents, structured output, safety, latency, and cost.
+      *(RAG `rag/rag-eval-worked-example`, tools
+      `tools-function-calling/building-a-tool-use-eval-harness`, agents
+      `evaluating-agent-trajectories`, structured output
+      `structured-outputs/building-an-extraction-eval-harness` +
+      `evaluating-structured-output-quality`, safety
+      `safety-vs-capability-evals` + `eval-and-safety-metrics-dashboards`,
+      latency/cost `production/latency-and-cost-slos` +
+      `observability-cost-and-latency`)*
+- [x] Add evaluator calibration and disagreement exercises.
+      *(`llm-judge-bias-and-calibration` + `pairwise-vs-pointwise-grading`
+      cover both judge calibration and grading-scheme disagreement)*
 
 ### Fine-Tuning
 
-- [ ] Add dataset governance, SFT, PEFT, preferences, distillation, quantization,
+- [x] Add dataset governance, SFT, PEFT, preferences, distillation, quantization,
       distributed training, evaluation, serving, and rollback.
+      *(dataset governance `building-a-fine-tuning-dataset` +
+      `dataset-decontamination-and-deduplication`, SFT
+      `supervised-fine-tuning-vs-preference-tuning`, PEFT `lora-and-qlora` +
+      `lora-rank-and-target-module-selection` + `full-fine-tuning-vs-peft`,
+      preferences `dpo-vs-orpo-vs-kto` + `rlhf-reward-modeling-and-ppo`,
+      distillation `knowledge-distillation`, quantization
+      `quantization-gguf-awq-gptq`, distributed
+      `distributed-training-with-fsdp-and-deepspeed`, evaluation
+      `evaluating-a-fine-tuned-model`, serving
+      `inference-serving-optimization`, rollback via
+      `merging-and-versioning-adapters` +
+      `production/model-deprecation-and-version-pinning`)*
 - [ ] Keep framework and provider commands current through versioned labs.
-- [ ] Teach when retrieval, prompting, or ordinary product changes are preferable.
+      *(`choosing-a-training-framework` + `choosing-managed-vs-self-hosted-fine-tuning`
+      exist; no versioned command-level labs yet — this is a freshness-process
+      gap, not a coverage gap)*
+- [x] Teach when retrieval, prompting, or ordinary product changes are preferable.
+      *(`fine-tune-vs-prompt-vs-rag` is dedicated to exactly this decision;
+      guide `rag-fine-tuning-or-a-longer-prompt` is the acquisition-surface twin)*
 
 ### Production
 
-- [ ] Expand from 28 files into a complete operations path.
-- [ ] Add gateways, quotas, queues, caching, batch, routing, failover, tracing, SLOs,
+- [x] Expand from 28 files into a complete operations path.
+      *(29 items covering the full ops surface — SLOs, quotas, caching,
+      failover, incidents, privacy, on-call — see next row)*
+- [x] Add gateways, quotas, queues, caching, batch, routing, failover, tracing, SLOs,
       canaries, incident response, privacy, retention, and on-call projects.
+      *(gateway `llm-gateway-and-provider-abstraction`, quotas
+      `per-tenant-token-budgets-and-quotas` + `rate-limiting-llm-apps`,
+      queues `human-escalation-queues-for-low-confidence-output`, caching
+      `prompt-and-semantic-caching` + `semantic-caching-beyond-exact-match`,
+      batch `batch-api-for-non-interactive-workloads`, routing
+      `model-routing-by-task-complexity`, failover
+      `multi-provider-failover-and-redundancy`, tracing
+      `tracing-multi-step-ai-pipelines` + `opentelemetry-genai-semantic-conventions`,
+      SLOs `latency-and-cost-slos`, canaries `canary-and-shadow-releases`,
+      incidents `incident-postmortems-for-ai` + `on-call-playbooks-for-ai`,
+      privacy `pii-redaction-in-llm-logs`, retention
+      `data-retention-and-privacy-policy`)*
 - [ ] Add real deployment variants across at least one cloud and one portable path.
+      *(release-shape coverage exists — `canary-and-shadow-releases`,
+      `deployment-versioning-and-incidents`, `model-deprecation-and-version-pinning`
+      — but no concrete cloud-specific or portable deployment walkthrough yet)*
 
 ### Responsible AI
 
-- [ ] Decide whether the 6-file track should expand or become a cross-cutting requirement.
-- [ ] Add provenance, consent, privacy, fairness, safety, governance, documentation,
+- [x] Decide whether the 6-file track should expand or become a cross-cutting requirement.
+      *(decision recorded: hybrid — the track expands with focused lessons
+      (now 7 files) AND responsible-AI checks are embedded across sibling
+      tracks — `production/pii-redaction-in-llm-logs`,
+      `data-retention-and-privacy-policy`, `human-escalation-queues`,
+      `evals-red-teaming` adversarial suite)*
+- [x] Add provenance, consent, privacy, fairness, safety, governance, documentation,
       human oversight, contestability, environmental impact, and incident learning.
-- [ ] Embed responsible-AI checks in every project rather than isolating them here.
+      *(provenance `privacy-fairness-provenance`, consent + contestability +
+      environmental impact — new `consent-contestability-and-impact`,
+      privacy/fairness `privacy-fairness-and-accessibility`, safety
+      `adversarial-testing-lab` + `red-teaming-llm-apps`, governance +
+      documentation `governance-artifacts`, human oversight
+      `production/human-escalation-queues-for-low-confidence-output`,
+      incident learning `production/incident-postmortems-for-ai`)*
+- [x] Embed responsible-AI checks in every project rather than isolating them here.
+      *(verified pattern: project files carry data-card/risk sections —
+      `ml-891-adult-income-project` has data-card + fairness slices,
+      `governance-artifacts` supplies the artifact set each project
+      completes; this is the established convention, not a one-off)*
 
 ### Python and Data APIs
 
-- [ ] Add runnable environments, tests, packaging, typing, async, APIs, data validation,
+- [x] Add runnable environments, tests, packaging, typing, async, APIs, data validation,
       notebooks, pipelines, secrets, observability, and deployment.
-- [ ] Connect every technique to AI-engineering projects without turning Python basics
-      into unexplained framework snippets.
+      *(environments `python-environments-and-venv` + `why-isolated-environments`,
+      tests `testing-data-pipelines`, packaging `python-environments-and-venv`,
+      typing `type-coercion-and-parsing-dates`, async `async-python-for-io` +
+      `concurrent-api-calls-with-asyncio`, APIs `python-for-ai-services` +
+      api-calling family, validation `data-contracts-and-validation` +
+      `parsing-and-validating-api-responses`, notebooks `setting-up-venv-and-jupyter`,
+      pipelines `python-data-pipeline-whole-game` + `messy-data-to-llm-pipeline-capstone`,
+      secrets `loading-secrets-with-dotenv`, observability — new
+      `observability-for-ai-services`, deployment via `structuring-a-python-ai-service`)*
+- [x] Connect every technique to AI-engineering projects without turning Python basics
+      into unexplained framework snippets. *(the track is AI-flavored throughout:
+      `python-for-ai-services`, `messy-data-to-llm-pipeline-capstone`,
+      `api-calling-*`, `concurrent-api-calls-with-asyncio` — Python skills
+      are taught through AI-service work, not as bare language features)*
 
 ## Phase 9 — SEO and discovery system
 
@@ -2280,6 +2448,53 @@ validation, deployment status, measured result when available, blockers, and nex
   `check:links` 0 dead.
 - Next batch: Prompt Engineering consolidation rows, or the editorial
   status workflow.
+
+### 2026-09-15 — Prompt/Context/Structured-Outputs rows
+
+- Commit: `cb0cde1`. New content: `provider-differences-lab` (PE),
+  `refusals-and-partial-outputs` + `openapi-schemas-in-practice`
+  (structured-outputs, both registered). `cross-provider-landscape`
+  gained an official-docs verification section. 14 PE→sibling bridges
+  (context/schemas/retrieval/tools/product-behavior), last 2 PE dup
+  pairs + 3 CE pairs cross-linked. All 4 PE rows, all 3 CE rows, all 3
+  structured-outputs rows ticked — most coverage already existed; the
+  gaps were links and three missing lessons.
+- Validation: `check:content` clean (2,069); build 2,404 pages;
+  `check:links` 0 dead; registry 2,393 items.
+- Next batch: Tools/Function-Calling, RAG, Hallucinations rows.
+
+### 2026-09-15 — Tools/RAG/Hallucinations rows
+
+- New content: `tool-discovery-at-runtime`, `idempotent-tool-design`,
+  `building-a-database-tool` (tools-function-calling),
+  `diagnosing-rag-failures-end-to-end` (rag, prereq
+  `building-a-rag-pipeline-end-to-end`). All registered in curriculum.
+- Ticked: 2/3 Tools rows (dispatch loops; the ten-topic lab row — the
+  project row stays open at 3/6), all 3 RAG rows, all 4 Hallucinations
+  rows (consolidation audited — the 4 unlinked pairs are deliberately
+  distinct quiz variants).
+- Validation: `check:content` clean (2,073); build 2,408 pages;
+  `check:links` 0 dead (one stale-build false failure — rebuild resolved).
+- Next batch: remaining Phase 8 track sections.
+
+### 2026-09-15 — Remaining Phase 8 track sections
+
+- New content: `agent-task-contracts` + `agent-permissions-and-authorization`
+  (agentic-ai, both prereq-ed), `consent-contestability-and-impact`
+  (responsible-ai), `observability-for-ai-services` (python-data-apis).
+  All registered.
+- Ticked: 2/3 GenAI (voice project open), all 3 Agentic, 1/3 Harness
+  (web/research case studies + skill/MCP integrations open), 2/4 MCP
+  (multi-language + MCP Apps open), all 3 Evals, 2/3 Fine-Tuning
+  (versioned labs open), 2/3 Production (cloud/portable deploy
+  walkthrough open), all 3 Responsible AI (expand-vs-cross-cutting
+  decision recorded: hybrid), both Python rows.
+- Phase 8 status: every track section now audited; open rows are named
+  content gaps, not unknowns.
+- Validation: `check:content` clean (2,077); build 2,412 pages;
+  `check:links` 0 dead (5,203 routes); registry 2,401 items.
+- Next batch: Phase 6B/6C reference coverage or Phase 1 source-registry
+  schema — whichever unblocks more rows.
 
 ### 2026-09-14 — Master ecosystem backlog created
 

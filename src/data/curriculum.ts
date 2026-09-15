@@ -1361,6 +1361,12 @@ const unsortedTracks: Track[] = [
         "status": "live"
       },
       {
+        "title": "Add observability to a Python AI service",
+        "slug": "observability-for-ai-services",
+        "status": "live",
+        "prereq": ["structuring-a-python-ai-service"]
+      },
+      {
         "title": "Quiz: Building the Service",
         "slug": "ai-service-quiz",
         "status": "live"
@@ -8810,6 +8816,12 @@ const unsortedTracks: Track[] = [
         "status": "live"
       },
       {
+        "title": "Diagnose a RAG Failure from Ingestion to Synthesis",
+        "slug": "diagnosing-rag-failures-end-to-end",
+        "status": "live",
+        "prereq": ["building-a-rag-pipeline-end-to-end"]
+      },
+      {
         "title": "When RAG Is the Wrong Tool",
         "slug": "when-rag-is-the-wrong-tool",
         "status": "live"
@@ -9181,6 +9193,17 @@ const unsortedTracks: Track[] = [
         "status": "live"
       },
       {
+        "title": "Design idempotent tools so retries can't double-act",
+        "slug": "idempotent-tool-design",
+        "status": "live",
+        "prereq": ["handling-errors-and-retries"]
+      },
+      {
+        "title": "Tool discovery at runtime: how an agent learns what it can call",
+        "slug": "tool-discovery-at-runtime",
+        "status": "live"
+      },
+      {
         "title": "How a Model Corrects Its Own Call",
         "slug": "self-correction-mechanics",
         "status": "live"
@@ -9439,6 +9462,12 @@ const unsortedTracks: Track[] = [
         "title": "Building a Sandboxed Code Interpreter",
         "slug": "building-a-code-interpreter-tool",
         "status": "live"
+      },
+      {
+        "title": "Lab: build a read-only database tool",
+        "slug": "building-a-database-tool",
+        "status": "live",
+        "prereq": ["building-a-code-interpreter-tool"]
       },
       {
         "title": "One Code Tool vs. Dozens of API Tools",
@@ -9960,6 +9989,18 @@ const unsortedTracks: Track[] = [
         "title": "Design agent state, memory, and recovery explicitly",
         "slug": "state-memory-and-recovery",
         "status": "live"
+      },
+      {
+        "title": "Write a task contract for an agent",
+        "slug": "agent-task-contracts",
+        "status": "live",
+        "prereq": ["when-not-to-use-an-agent"]
+      },
+      {
+        "title": "Give an agent permissions, not access",
+        "slug": "agent-permissions-and-authorization",
+        "status": "live",
+        "prereq": ["autonomy-vs-control"]
       }
     ]
   },
@@ -10580,6 +10621,12 @@ const unsortedTracks: Track[] = [
         "title": "Treat privacy, fairness, and accessibility as system properties",
         "slug": "privacy-fairness-and-accessibility",
         "status": "live"
+      },
+      {
+        "title": "Consent, contestability, and the costs nobody measures",
+        "slug": "consent-contestability-and-impact",
+        "status": "live",
+        "prereq": ["governance-artifacts"]
       }
     ]
   }

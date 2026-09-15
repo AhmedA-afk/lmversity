@@ -1,14 +1,14 @@
 # Content registry — audit views
 
-Generated 2026-09-15T10:53:27.518Z by `scripts/build-content-registry.mjs`.
-2393 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T11:25:16.079Z by `scripts/build-content-registry.mjs`.
+2401 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
 
-- lesson: 2019
+- lesson: 2026
 - quiz: 89
-- lab: 64
+- lab: 65
 - reference: 59
 - answer: 33
 - track: 32
@@ -23,13 +23,13 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By status
 
-- live: 2393
+- live: 2401
 
 ## By search intent (heuristic)
 
-- concept: 1850
+- concept: 1857
 - comparison: 107
-- build: 95
+- build: 96
 - practice: 89
 - reference: 60
 - answer: 33
@@ -47,7 +47,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By primary audience (heuristic)
 
-- ai-engineer: 1617
+- ai-engineer: 1625
 - beginner-engineer: 439
 - forward-deployed-engineer: 194
 - general: 125
@@ -70,7 +70,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | ai-literacy | 59 | 43 | 2 | 0 | 2 | 2 | 7 | 1 | 2 | 61% | 0% | 2% | 1513 | — | — |
 | maths-foundations | 193 | 179 | 0 | 0 | 2 | 0 | 0 | 11 | 1 | 71% | 0% | 0% | 763 | — | — |
-| python-data-apis | 57 | 44 | 0 | 2 | 0 | 0 | 10 | 0 | 1 | 98% | 0% | 4% | 1615 | — | — |
+| python-data-apis | 58 | 45 | 0 | 2 | 0 | 0 | 10 | 0 | 1 | 98% | 0% | 3% | 1615 | — | — |
 | ai-foundations | 160 | 127 | 9 | 0 | 10 | 0 | 10 | 0 | 4 | 68% | 0% | 1% | 1009 | — | yes |
 | llm-foundations | 133 | 113 | 0 | 0 | 10 | 0 | 7 | 2 | 1 | 48% | 92% | 0% | 793 | — | — |
 | classical-ai | 83 | 80 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 96% | 0% | 0% | 902 | — | — |
@@ -81,15 +81,15 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 | structured-outputs | 124 | 103 | 4 | 0 | 4 | 5 | 7 | 0 | 1 | 77% | 0% | 3% | 684 | — | — |
 | hallucinations | 132 | 108 | 0 | 0 | 10 | 6 | 7 | 0 | 1 | 48% | 0% | 2% | 734 | yes | — |
 | genai-app-dev | 130 | 118 | 0 | 0 | 5 | 6 | 0 | 0 | 1 | 78% | 0% | 0% | 692 | — | — |
-| rag | 56 | 28 | 6 | 6 | 3 | 6 | 6 | 0 | 1 | 48% | 48% | 2% | 991 | yes | yes |
-| tools-function-calling | 123 | 91 | 1 | 7 | 11 | 5 | 7 | 0 | 1 | 74% | 0% | 0% | 710 | — | — |
+| rag | 57 | 29 | 6 | 6 | 3 | 6 | 6 | 0 | 1 | 49% | 47% | 2% | 922 | yes | yes |
+| tools-function-calling | 126 | 93 | 1 | 7 | 11 | 5 | 7 | 1 | 1 | 74% | 0% | 0% | 691 | — | — |
 | mcp | 57 | 28 | 6 | 6 | 5 | 6 | 6 | 0 | 0 | 60% | 53% | 5% | 553 | yes | yes |
-| agentic-ai | 28 | 25 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 25% | 93% | 0% | 545 | — | yes |
+| agentic-ai | 30 | 27 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 23% | 87% | 0% | 544 | — | yes |
 | harness-design | 26 | 26 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 65% | 100% | 4% | 505 | — | — |
 | evals-red-teaming | 28 | 25 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 21% | 100% | 4% | 595 | — | yes |
 | production | 28 | 28 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 54% | 100% | 4% | 520 | yes | — |
 | fine-tuning | 26 | 21 | 0 | 0 | 5 | 0 | 0 | 0 | 0 | 27% | 0% | 8% | 557 | — | — |
-| responsible-ai | 6 | 5 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 17% | 0% | 17% | 392 | — | — |
+| responsible-ai | 7 | 6 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 14% | 0% | 14% | 392 | — | — |
 
 ## Track gap briefs
 
@@ -112,7 +112,7 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - 10 duplicate-candidate pairs in track
 - promise gap: no live node title covers "The minimum maths"
 
-### python-data-apis — 57 files, 7 modules — starts: "The Whole Game: Messy Data to a Model-Ready Pipeline"
+### python-data-apis — 58 files, 7 modules — starts: "The Whole Game: Messy Data to a Model-Ready Pipeline"
 
 - modules without practice ending: "Getting started" ends on python-data-pipeline-whole-game (concept); "NumPy" ends on selecting-filtering-indexing (concept)
 - missing kinds: worked-example, cheatsheet
@@ -191,12 +191,12 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - 2 island lessons (no in-body links)
 - 19 duplicate-candidate pairs in track
 
-### rag — 56 files, 0 modules — starts: "RAG, End to End: The Whole Game"
+### rag — 57 files, 0 modules — starts: "RAG, End to End: The Whole Game"
 
 - 1 island lesson (no in-body links)
 - 5 duplicate-candidate pairs in track
 
-### tools-function-calling — 123 files, 5 modules — starts: "The Whole Game: A Tool Call From Question to Answer"
+### tools-function-calling — 126 files, 5 modules — starts: "The Whole Game: A Tool Call From Question to Answer"
 
 - modules without practice ending: "Tool calling basics" ends on tool-choice-and-forcing-tool-use (concept); "Multi-step and parallel use" ends on testing-and-debugging-tool-calls (concept); "Schemas at scale" ends on streaming-partial-tool-calls (concept)
 - 29 duplicate-candidate pairs in track
@@ -208,10 +208,10 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - 3 island lessons (no in-body links)
 - 19 duplicate-candidate pairs in track
 
-### agentic-ai — 28 files, 7 modules — starts: "What Makes Something an Agent"
+### agentic-ai — 30 files, 7 modules — starts: "What Makes Something an Agent"
 
 - modules without practice ending: "What an agent is" ends on react-pattern (concept); "Planning and memory" ends on error-handling-and-retries (concept); "Orchestration and control" ends on when-not-to-use-an-agent (concept); "Failure and evaluation" ends on stopping-conditions-for-agents (concept) +3 more
-- dead-end finish: last live lesson is state-memory-and-recovery (concept)
+- dead-end finish: last live lesson is agent-permissions-and-authorization (concept)
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
 - 1 island lesson (no in-body links)
 - promise gap: no live node title covers "when to reach for one instead of a plain prompt"
@@ -244,9 +244,9 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
 - promise gap: no live node title covers "shrink"
 
-### responsible-ai — 6 files, 0 modules — starts: "Risk before model: frame the system, not just the prompt"
+### responsible-ai — 7 files, 0 modules — starts: "Risk before model: frame the system, not just the prompt"
 
-- dead-end finish: last live lesson is privacy-fairness-and-accessibility (concept)
+- dead-end finish: last live lesson is consent-contestability-and-impact (concept)
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
 - 5 island lessons (no in-body links)
 - 1 duplicate-candidate pairs in track
@@ -260,21 +260,21 @@ and split always need a written human reason (see checklist).
 
 | disposition | items |
 |---|---:|
-| keep | 2006 |
+| keep | 2014 |
 | investigate | 382 |
 | expand | 5 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2173 | 1.92 | 0 | 184 | 1989 |
+| intentClarity | 2180 | 1.92 | 0 | 185 | 1995 |
 | correctnessSources | 44 | 1.27 | 0 | 32 | 12 |
-| completeness | 2317 | 1.65 | 41 | 724 | 1552 |
-| prerequisiteFit | 2252 | 2.00 | 3 | 0 | 2249 |
-| handsOn | 2173 | 1.49 | 528 | 53 | 1592 |
-| explanationQuality | 2173 | 1.96 | 20 | 56 | 2097 |
-| metadata | 2173 | 1.87 | 0 | 286 | 1887 |
-| linking | 2084 | 1.48 | 382 | 321 | 1381 |
-| freshnessHealth | 2393 | 0.78 | 792 | 1338 | 263 |
+| completeness | 2325 | 1.65 | 39 | 733 | 1553 |
+| prerequisiteFit | 2260 | 2.00 | 3 | 0 | 2257 |
+| handsOn | 2180 | 1.49 | 532 | 53 | 1595 |
+| explanationQuality | 2180 | 1.96 | 20 | 56 | 2104 |
+| metadata | 2180 | 1.87 | 0 | 289 | 1891 |
+| linking | 2091 | 1.48 | 382 | 321 | 1388 |
+| freshnessHealth | 2401 | 0.78 | 797 | 1341 | 263 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
@@ -325,15 +325,15 @@ and split always need a written human reason (see checklist).
 - /learn/ai-foundations/reliable-ai/221-contestability-appeals-and-recource — Contestability, Appeals, and Recourse
 - … 342 more in content-registry.json
 
-#### expand: thin vs family median (238w vs ~778w) (1)
+#### expand: thin vs family median (238w vs ~777w) (1)
 
 - /learn/ai-foundations/choosing-a-model — Choosing a model in 2026
 
-#### expand: thin vs family median (277w vs ~778w) (1)
+#### expand: thin vs family median (277w vs ~777w) (1)
 
 - /learn/llm-foundations/next-token-prediction — Next-Token Prediction: The One Objective
 
-#### expand: thin vs family median (269w vs ~778w) (1)
+#### expand: thin vs family median (269w vs ~777w) (1)
 
 - /learn/llm-foundations/tokenization-explained — Tokenization: How Text Becomes Tokens
 
@@ -351,10 +351,10 @@ and split always need a written human reason (see checklist).
 
 | item A | item B | jac | contain | stem | linked | scope |
 |---|---|---:|---:|---|---|---|
-| /learn/llm-foundations/grouped-query-attention | /learn/llm-foundations/multi-query-and-grouped-query-attention | 1 | 1 |  | yes | same track |
-| /learn/genai-app-dev/generative-ui-rendering-components | /learn/genai-app-dev/generative-ui | 1 | 1 | yes | yes | same track |
 | /learn/prompt-engineering/meta-prompting-to-draft-prompts | /learn/prompt-engineering/meta-prompting-with-models | 1 | 1 |  | yes | same track |
 | /learn/prompt-engineering/task-framing-intent-constraints-criteria | /learn/prompt-engineering/task-framing | 1 | 1 | yes | yes | same track |
+| /learn/llm-foundations/grouped-query-attention | /learn/llm-foundations/multi-query-and-grouped-query-attention | 1 | 1 |  | yes | same track |
+| /learn/genai-app-dev/generative-ui-rendering-components | /learn/genai-app-dev/generative-ui | 1 | 1 | yes | yes | same track |
 | /learn/tools-function-calling/structured-output-vs-tool-calls-when | /learn/tools-function-calling/structured-output-vs-tool-calls | 1 | 1 | yes | yes | same track |
 | /learn/genai-app-dev/session-and-state-management | /learn/genai-app-dev/session-state-multi-turn | 0.83 | 1 |  | yes | same track |
 | /learn/context-engineering/context-window-testing-and-eval | /learn/context-engineering/testing-whether-context-helps | 0.83 | 1 |  | yes | same track |
@@ -424,10 +424,11 @@ _… 274 more pairs in content-registry.json (`duplicates`)_
 
 ## Sourcing review flags
 
-147 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
+152 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
 
 | item | flags |
 |---|---|
+| /learn/agentic-ai/agent-permissions-and-authorization | certification-sensitive page with no updated/review date |
 | /learn/ai-foundations/building-an-eval-set-worked-example | 18 numeric claims with no sources section or external link |
 | /learn/ai-foundations/capabilities-and-eval-quiz | 28 numeric claims with no sources section or external link |
 | /learn/ai-foundations/choosing-a-model-decision-framework | 10 numeric claims with no sources section or external link |
@@ -487,21 +488,21 @@ _… 274 more pairs in content-registry.json (`duplicates`)_
 | /learn/hallucinations/escalation-human-in-the-loop | 5 numeric claims with no sources section or external link |
 | /learn/hallucinations/intrinsic-vs-extrinsic-hallucination | 7 numeric claims with no sources section or external link |
 | /learn/hallucinations/latency-cost-reliability-tradeoffs | 15 numeric claims with no sources section or external link |
-| /learn/hallucinations/mitigation-quiz | 5 numeric claims with no sources section or external link |
 
-_… 87 more in content-registry.json (`sourcingFlags`)_
+_… 92 more in content-registry.json (`sourcingFlags`)_
 
 ## Freshness queues
 
-- periodic: 1338
+- periodic: 1341
 - pricing-sensitive: 337
-- release-sensitive: 284
+- release-sensitive: 286
 - durable: 263
-- certification-sensitive: 97
-- policy-sensitive: 74
+- certification-sensitive: 99
+- policy-sensitive: 75
 
-### certification-sensitive (97)
+### certification-sensitive (99)
 
+- /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access
 - /learn/ai-foundations/reliable-ai/201-provenance-consent-and-data-rights — Provenance, Consent, and Data Rights
 - /learn/ai-foundations/reliable-ai/202-labels-annotation-and-ground-truth — Labels, Annotation, and the Limits of Ground Truth
 - /learn/ai-foundations/reliable-ai/203-benchmarks-evaluations-and-capability-claims — Benchmarks, Evaluations, and Defensible Capability Claims
@@ -531,8 +532,7 @@ _… 87 more in content-registry.json (`sourcingFlags`)_
 - /learn/ai-foundations/reliable-ai/227-case-study-generative-agents-and-critical-workflows — Case Study: Generative Agents in Critical Workflows
 - /learn/ai-foundations/reliable-ai/228-reliable-ai-capstone-and-technical-defense — Reliable AI Capstone and Technical Defense
 - /learn/ai-foundations/safety-and-interpretability-quiz — Safety & Interpretability: Reason About Risk
-- /learn/ai-literacy/fact-check-an-ai-answer-step-by-step — Fact-checking an AI answer, step by step
-- … 67 more in content-registry.json
+- … 69 more in content-registry.json
 
 ### pricing-sensitive (337)
 
@@ -568,7 +568,7 @@ _… 87 more in content-registry.json (`sourcingFlags`)_
 - /learn/ai-literacy/judging-and-verifying-quiz — Quiz: judging and verifying
 - … 307 more in content-registry.json
 
-### policy-sensitive (74)
+### policy-sensitive (75)
 
 - /learn/agentic-ai/state-memory-and-recovery — Design agent state, memory, and recovery explicitly
 - /learn/ai-foundations/open-weight-vs-closed-models — Open-Weight vs. Closed Models
@@ -600,9 +600,9 @@ _… 87 more in content-registry.json (`sourcingFlags`)_
 - /learn/machine-learning/public-data-projects/ml-891-adult-income-decision-audit — Public-data project: Adult income decision audit
 - /learn/machine-learning/public-data-projects/ml-892-bank-marketing-temporal-campaign — Public-data project: Bank marketing campaign under time and contact constraints
 - /learn/machine-learning/public-data-projects/ml-894-online-retail-cohort-and-anomaly-study — Public-data project: Online Retail cohort, demand, and anomaly study
-- … 44 more in content-registry.json
+- … 45 more in content-registry.json
 
-### release-sensitive (284)
+### release-sensitive (286)
 
 Largest queue; full list in JSON. Vendor-signal sample:
 - /learn/agentic-ai/agent-benchmarks — Claude
@@ -635,15 +635,17 @@ Largest queue; full list in JSON. Vendor-signal sample:
 - /learn/deep-learning/vision/223-pruning-sparsity-and-quantization — Unstructured
 - /learn/evals-red-teaming/eval-tooling-landscape — Promptfoo, Braintrust, Ragas, OpenAI, Anthropic
 - /learn/evals-red-teaming/evaluating-agent-trajectories — LangSmith, Braintrust
-- … 254 more
+- … 256 more
 
 ## Missing-data queues
 
 ### no summary/meta description (0)
 
 
-### no published or updated date (9)
+### no published or updated date (17)
 
+- /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access
+- /learn/agentic-ai/agent-task-contracts — Write a task contract for an agent
 - /learn/ai-literacy/ai-across-languages-and-accessibility — Use AI across languages and accessibility needs
 - /learn/ai-literacy/meet-skills-connectors-and-agents — Meet skills, connectors, and agents — safely
 - /learn/ai-literacy/seven-first-ai-workflows-lab — Lab: seven first AI workflows for everyday work
@@ -651,8 +653,14 @@ Largest queue; full list in JSON. Vendor-signal sample:
 - /learn/llm-foundations/read-a-model-card-lab — Lab: read a model card like an engineer
 - /learn/machine-learning/predictive-ml-vs-generative-ai — Separate predictive-ML choices from generative-AI choices
 - /learn/prompt-engineering/provider-differences-lab — Lab: measure how the same prompt behaves across providers
+- /learn/python-data-apis/observability-for-ai-services — Add observability to a Python AI service
+- /learn/rag/diagnosing-rag-failures-end-to-end — Diagnose a RAG failure from ingestion to synthesis
+- /learn/responsible-ai/consent-contestability-and-impact — Consent, contestability, and the costs nobody measures
 - /learn/structured-outputs/openapi-schemas-in-practice — Use OpenAPI schemas for tool and output validation
 - /learn/structured-outputs/refusals-and-partial-outputs — Handle refusals and partial structured outputs
+- /learn/tools-function-calling/building-a-database-tool — Lab: build a read-only database tool
+- /learn/tools-function-calling/idempotent-tool-design — Design idempotent tools so retries can't double-act
+- /learn/tools-function-calling/tool-discovery-at-runtime — Tool discovery at runtime: how an agent learns what it can call
 
 ### zero in-body internal links (template nav still applies) (433)
 
@@ -710,11 +718,16 @@ Largest queue; full list in JSON. Vendor-signal sample:
 ### lesson files with status coming (0)
 
 
-### release-sensitive, no date at all (5)
+### release-sensitive, no date at all (10)
 
+- /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access
 - /learn/ai-literacy/meet-skills-connectors-and-agents — Meet skills, connectors, and agents — safely
 - /learn/llm-foundations/read-a-model-card-lab — Lab: read a model card like an engineer
 - /learn/machine-learning/predictive-ml-vs-generative-ai — Separate predictive-ML choices from generative-AI choices
+- /learn/python-data-apis/observability-for-ai-services — Add observability to a Python AI service
+- /learn/responsible-ai/consent-contestability-and-impact — Consent, contestability, and the costs nobody measures
+- /learn/tools-function-calling/building-a-database-tool — Lab: build a read-only database tool
+- /learn/tools-function-calling/tool-discovery-at-runtime — Tool discovery at runtime: how an agent learns what it can call
 - /privacy — Privacy
 - /terms — Terms
 
