@@ -921,21 +921,34 @@ consolidation into a parent track, or a clearer curated-path role.
 
 ### Cloud model platforms and gateways
 
-- [ ] Microsoft Azure AI Foundry and Azure OpenAI.
-- [ ] Amazon Bedrock, SageMaker AI, and relevant agent/evaluation services.
-- [ ] Google Vertex AI and Model Garden.
-- [ ] Databricks Mosaic AI.
-- [ ] Snowflake Cortex AI.
-- [ ] Oracle Cloud Infrastructure Generative AI.
-- [ ] IBM watsonx.ai.
-- [ ] Cloudflare Workers AI and AI Gateway.
-- [ ] Vercel AI Gateway and AI SDK provider ecosystem.
-- [ ] OpenRouter after official docs, routing behavior, privacy, and provider attribution review.
-- [ ] Together AI, Fireworks AI, Groq, Cerebras, Replicate, and Modal as hosted inference
+- [x] Microsoft Azure AI Foundry and Azure OpenAI.
+      *(via /providers/microsoft-foundry — covers the Foundry rebrand, unified resource, catalog, agent rungs, Azure OpenAI→Foundry upgrade path)*
+- [x] Amazon Bedrock, SageMaker AI, and relevant agent/evaluation services.
+      *(via /providers/aws-bedrock — five API shapes, namespaced model IDs, CRIS, agents/eval/guardrails; SageMaker boundary stated)*
+- [x] Google Vertex AI and Model Garden.
+      *(covered inside /providers/google — Vertex AI + Model Garden section)*
+- [x] Databricks Mosaic AI.
+      *(via /providers/databricks-mosaic — Foundation Model APIs, serving, AI Gateway, Unity Catalog)*
+- [x] Snowflake Cortex AI.
+      *(via /providers/snowflake-cortex — SQL-native functions, in-perimeter models, REST path)*
+- [x] Oracle Cloud Infrastructure Generative AI.
+      *(via /providers/oci-generative-ai — pretrained+imported models, agent runtime, vector stores)*
+- [x] IBM watsonx.ai.
+      *(via /providers/ibm-watsonx — product-family level; IBM docs domain bot-protected, caveat noted)*
+- [x] Cloudflare Workers AI and AI Gateway.
+      *(via /providers/cloudflare-workers-ai — inference vs control-plane products separated)*
+- [x] Vercel AI Gateway and AI SDK provider ecosystem.
+      *(via /providers/vercel-ai-gateway + /learn/agent-frameworks/vercel-ai-sdk)*
+- [x] OpenRouter after official docs, routing behavior, privacy, and provider attribution review.
+      *(via /providers/openrouter — third-party routing, attribution headers, alias pinning tradeoff all reviewed)*
+- [x] Together AI, Fireworks AI, Groq, Cerebras, Replicate, and Modal as hosted inference
       candidates after evidence and learner-demand review.
-- [ ] Hugging Face Hub, Inference Providers, and dedicated Inference Endpoints.
-- [ ] Compare managed API, dedicated endpoint, serverless inference, self-hosted inference,
+      *(via /providers/hosted-inference — six vendor shapes distinguished)*
+- [x] Hugging Face Hub, Inference Providers, and dedicated Inference Endpoints.
+      *(via /providers/huggingface — three surfaces separated + supply-chain angle)*
+- [x] Compare managed API, dedicated endpoint, serverless inference, self-hosted inference,
       and on-device inference as architectures rather than only vendors.
+      *(four-tier table in /providers/hosted-inference; on-device covered by local-inference track)*
 
 ### Coding agents and development products
 
@@ -2159,6 +2172,32 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-15 — Phase 6: cloud platforms and gateways (13 rows)
+
+- Commit: `42ae428`. Status: complete.
+- Content: 11 new provider hubs — `/providers/microsoft-foundry` (Azure AI
+  Foundry→Microsoft Foundry rebrand, unified resource, Azure OpenAI upgrade
+  path), `aws-bedrock` (five API shapes incl. vendor-native Messages/Responses
+  paths, namespaced model IDs, CRIS; SageMaker boundary stated),
+  `databricks-mosaic`, `snowflake-cortex` (SQL-native AI functions,
+  in-perimeter models), `oci-generative-ai`, `ibm-watsonx` (product-family
+  level — IBM docs domain returns HTTP 403 to automated fetch; caveat on page),
+  `cloudflare-workers-ai` (Workers AI inference vs AI Gateway control plane
+  separated), `vercel-ai-gateway` (infra-agnostic managed gateway, BYOK,
+  budgets), `openrouter` (third-party routing + attribution-header + alias-pin
+  review), `huggingface` (Hub vs Inference Providers vs dedicated Endpoints),
+  `hosted-inference` (Together/Fireworks/Groq/Cerebras/Replicate/Modal — six
+  shapes distinguished + four-tier serving-architecture comparison table).
+  Vertex row ticked via existing `/providers/google`.
+- Data: 12 new vendor entities (amazon, oracle, databricks, snowflake,
+  cloudflare, openrouter, together, fireworks, groq, cerebras, replicate,
+  modal); 17 new source records (all URLs verified 2026-09-15; IBM docs 403
+  retained with caveat per convention).
+- Validation: `check:content` clean (2169 lessons); build 2548 pages;
+  `check:links` 2548 pages / 5475 routes, 0 dead; registry 2505 items.
+- Next: coding agents and development products (13 rows) or consumer
+  research/work products (15 rows).
 
 ### 2026-09-15 — Phase 6: open-model family hubs + license audit (15 rows)
 

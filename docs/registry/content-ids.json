@@ -14,7 +14,7 @@
   "trk": 29,
   "qgd": 4,
   "stb": 25,
-  "pro": 23
+  "pro": 34
  },
  "entries": {
   "lessons/agentic-ai/agent-benchmarks.mdx": {
@@ -9950,6 +9950,50 @@
   "providers/qwen.md": {
    "id": "pro-0023",
    "fp": "d1c0dd77830f25cee6822d3c3b7a4213db4e2180"
+  },
+  "providers/aws-bedrock.md": {
+   "id": "pro-0024",
+   "fp": "03a95a37f0eff11bfa3a874bd0d50ac4fa5129b4"
+  },
+  "providers/cloudflare-workers-ai.md": {
+   "id": "pro-0025",
+   "fp": "9a1c75dc6a1977454813ebb6cce3b929276f2496"
+  },
+  "providers/databricks-mosaic.md": {
+   "id": "pro-0026",
+   "fp": "7bfa95cfd7cafa17d8cfc6d24b346e58765f0384"
+  },
+  "providers/hosted-inference.md": {
+   "id": "pro-0027",
+   "fp": "fe533e27c91028701e4863693019860fc2997931"
+  },
+  "providers/huggingface.md": {
+   "id": "pro-0028",
+   "fp": "1be7708af8c11bc13ead39ae85c87874c0f9f078"
+  },
+  "providers/ibm-watsonx.md": {
+   "id": "pro-0029",
+   "fp": "3477d3e2d2a91add137c39f903c32f420056bc05"
+  },
+  "providers/microsoft-foundry.md": {
+   "id": "pro-0030",
+   "fp": "d849ef42f55ea5349277d76dd814fa673d875dc0"
+  },
+  "providers/oci-generative-ai.md": {
+   "id": "pro-0031",
+   "fp": "89d7099cbf12d6a20d2fb0ae43fcd81801e2ce8a"
+  },
+  "providers/openrouter.md": {
+   "id": "pro-0032",
+   "fp": "ebae13fa2cd293badf36adc6e6c06e03ed96d004"
+  },
+  "providers/snowflake-cortex.md": {
+   "id": "pro-0033",
+   "fp": "ac270a64cdd2c3bc8416c77541cb4772dbe3fbbd"
+  },
+  "providers/vercel-ai-gateway.md": {
+   "id": "pro-0034",
+   "fp": "feb2f979556cf10f2ced0c4b4f1e2389ad02003f"
   }
  },
  "retired": {

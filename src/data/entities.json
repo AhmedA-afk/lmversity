@@ -1,1269 +1,1380 @@
 {
-  "$comment": "Entity registry — shared records for vendors, model families, tools, frameworks, certification programs, and standards. Volatile facts (status, official doc links) live here so a correction propagates everywhere the entity is cited. `officialSources` must reference ids in sources.json; `verifiedAt` is when the record was last checked against them; `status`: current | deprecated | superseded | retired. Optional `changeNote` records material vendor-page changes (claim added/removed/renamed) with a date.",
-  "anthropic": {
-    "name": "Anthropic",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "anthropic-docs",
-      "claude-agent-sdk-docs",
-      "claude-code-docs",
-      "anthropic-computer-use",
-      "anthropic-skills-repo"
-    ]
-  },
-  "openai": {
-    "name": "OpenAI",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "openai-platform-docs",
-      "openai-agents-sdk-docs",
-      "openai-codex-repo",
-      "openai-moderation",
-      "openai-academy-skills"
-    ]
-  },
-  "google": {
-    "name": "Google",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "google-adk-docs",
-      "google-gemini-docs",
-      "gemini-cli-repo",
-      "google-gemma-docs",
-      "google-cloud-certifications"
-    ]
-  },
-  "meta": {
-    "name": "Meta",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "meta-llama-resources",
-      "purple-llama-repo"
-    ]
-  },
-  "mistral": {
-    "name": "Mistral AI",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "mistral-model-docs"
-    ]
-  },
-  "xai": {
-    "name": "xAI",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "xai-grok-docs"
-    ]
-  },
-  "deepseek": {
-    "name": "DeepSeek",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "deepseek-api-docs"
-    ]
-  },
-  "cohere": {
-    "name": "Cohere",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "cohere-model-docs",
-      "cohere-rerank-docs"
-    ]
-  },
-  "microsoft": {
-    "name": "Microsoft",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "semantic-kernel-docs",
-      "autogen-docs",
-      "microsoft-credential-directory",
-      "playwright-docs",
-      "onnxruntime-docs"
-    ]
-  },
-  "nvidia": {
-    "name": "NVIDIA",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "nemo-guardrails-repo",
-      "garak-repo",
-      "nvidia-certifications"
-    ]
-  },
-  "vercel": {
-    "name": "Vercel",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "vercel-ai-sdk-docs"
-    ]
-  },
-  "sarvam": {
-    "name": "Sarvam AI",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "sarvam-api-docs",
-      "sarvam-status"
-    ]
-  },
-  "huggingface": {
-    "name": "Hugging Face",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "hf-transformers-docs",
-      "hf-tgi-docs",
-      "hf-tei-docs",
-      "huggingface-inference-endpoints"
-    ]
-  },
-  "cognition": {
-    "name": "Cognition",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "cognition-devin-kb"
-    ]
-  },
-  "browserbase": {
-    "name": "Browserbase",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "browserbase-docs",
-      "stagehand-repo",
-      "stagehand-docs"
-    ]
-  },
-  "arize": {
-    "name": "Arize",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "phoenix-docs"
-    ]
-  },
-  "langchain-co": {
-    "name": "LangChain",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "langchain-docs",
-      "langchain-langgraph-docs",
-      "langsmith-docs"
-    ]
-  },
-  "wandb": {
-    "name": "Weights & Biases",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "weave-docs"
-    ]
-  },
-  "helicone-co": {
-    "name": "Helicone",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "helicone-docs"
-    ]
-  },
-  "langfuse-co": {
-    "name": "Langfuse",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "langfuse-docs"
-    ]
-  },
-  "confident-ai": {
-    "name": "Confident AI",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "deepeval-docs"
-    ]
-  },
-  "truera": {
-    "name": "TruEra",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "trulens-docs"
-    ]
-  },
-  "guardrails-ai": {
-    "name": "Guardrails AI",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "guardrails-ai-repo"
-    ]
-  },
-  "promptfoo-co": {
-    "name": "Promptfoo",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "promptfoo-redteam"
-    ]
-  },
-  "traceloop": {
-    "name": "Traceloop",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "openllmetry-repo"
-    ]
-  },
-  "e2b-co": {
-    "name": "E2B",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "e2b-docs"
-    ]
-  },
-  "portkey": {
-    "name": "Portkey",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "portkey-docs"
-    ]
-  },
-  "n8n": {
-    "name": "n8n",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "n8n-docs"
-    ]
-  },
-  "ollama": {
-    "name": "Ollama",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "ollama-docs"
-    ]
-  },
-  "llama-cpp": {
-    "name": "llama.cpp",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "llamacpp-grammars"
-    ]
-  },
-  "lm-studio": {
-    "name": "LM Studio",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "lmstudio-docs"
-    ]
-  },
-  "vllm": {
-    "name": "vLLM",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "vllm-repo"
-    ]
-  },
-  "sglang": {
-    "name": "SGLang",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "sglang-docs"
-    ]
-  },
-  "mlx": {
-    "name": "MLX",
-    "kind": "framework",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "mlx-docs",
-      "mlx-lm-repo"
-    ]
-  },
-  "onnx-runtime": {
-    "name": "ONNX Runtime",
-    "kind": "framework",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "onnxruntime-docs"
-    ]
-  },
-  "litellm": {
-    "name": "LiteLLM",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "litellm-repo"
-    ]
-  },
-  "langchain": {
-    "name": "LangChain",
-    "kind": "framework",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "langchain-docs"
-    ]
-  },
-  "langgraph": {
-    "name": "LangGraph",
-    "kind": "framework",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "langchain-langgraph-docs"
-    ]
-  },
-  "llamaindex": {
-    "name": "LlamaIndex",
-    "kind": "framework",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "llamaindex-docs",
-      "llamaparse-docs"
-    ]
-  },
-  "openai-agents-sdk": {
-    "name": "OpenAI Agents SDK",
-    "kind": "framework",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "openai-agents-sdk-docs"
-    ]
-  },
-  "claude-agent-sdk": {
-    "name": "Claude Agent SDK",
-    "kind": "framework",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "claude-agent-sdk-docs"
-    ]
-  },
-  "google-adk": {
-    "name": "Google ADK",
-    "kind": "framework",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "google-adk-docs"
-    ]
-  },
-  "agno": {
-    "name": "Agno",
-    "kind": "framework",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "agno-docs"
-    ]
-  },
-  "pydantic-ai": {
-    "name": "PydanticAI",
-    "kind": "framework",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "pydanticai-docs"
-    ]
-  },
-  "semantic-kernel": {
-    "name": "Semantic Kernel",
-    "kind": "framework",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "semantic-kernel-docs"
-    ]
-  },
-  "autogen": {
-    "name": "AutoGen",
-    "kind": "framework",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "autogen-docs"
-    ]
-  },
-  "crewai": {
-    "name": "CrewAI",
-    "kind": "framework",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "crewai-docs"
-    ]
-  },
-  "mastra": {
-    "name": "Mastra",
-    "kind": "framework",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "mastra-docs"
-    ]
-  },
-  "vercel-ai-sdk": {
-    "name": "Vercel AI SDK",
-    "kind": "framework",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "vercel-ai-sdk-docs"
-    ]
-  },
-  "dspy": {
-    "name": "DSPy",
-    "kind": "framework",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "dspy-docs"
-    ]
-  },
-  "haystack": {
-    "name": "Haystack",
-    "kind": "framework",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "haystack-docs"
-    ]
-  },
-  "instructor": {
-    "name": "Instructor",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "instructor-docs"
-    ]
-  },
-  "outlines": {
-    "name": "Outlines",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "outlines-repo"
-    ]
-  },
-  "langfuse": {
-    "name": "Langfuse",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "langfuse-docs"
-    ]
-  },
-  "langsmith": {
-    "name": "LangSmith",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "langsmith-docs"
-    ]
-  },
-  "phoenix": {
-    "name": "Arize Phoenix",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "phoenix-docs"
-    ]
-  },
-  "weave": {
-    "name": "W&B Weave",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "weave-docs"
-    ]
-  },
-  "helicone": {
-    "name": "Helicone",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "helicone-docs"
-    ]
-  },
-  "deepeval": {
-    "name": "DeepEval",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "deepeval-docs"
-    ]
-  },
-  "trulens": {
-    "name": "TruLens",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "trulens-docs"
-    ]
-  },
-  "promptfoo": {
-    "name": "Promptfoo",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "promptfoo-redteam"
-    ]
-  },
-  "openllmetry": {
-    "name": "OpenLLMetry",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "openllmetry-repo"
-    ]
-  },
-  "garak": {
-    "name": "garak",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "garak-repo"
-    ]
-  },
-  "guardrails-ai-lib": {
-    "name": "Guardrails AI (library)",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "guardrails-ai-repo"
-    ]
-  },
-  "nemo-guardrails": {
-    "name": "NeMo Guardrails",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "nemo-guardrails-repo"
-    ]
-  },
-  "llama-guard": {
-    "name": "Llama Guard",
-    "kind": "model-family",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "purple-llama-repo"
-    ]
-  },
-  "gitleaks": {
-    "name": "gitleaks",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "gitleaks-repo"
-    ]
-  },
-  "e2b": {
-    "name": "E2B sandboxes",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "e2b-docs"
-    ]
-  },
-  "sigstore-model-signing": {
-    "name": "Sigstore model signing",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "sigstore-model-transparency"
-    ]
-  },
-  "pgvector": {
-    "name": "pgvector",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "pgvector-repo"
-    ]
-  },
-  "pinecone": {
-    "name": "Pinecone",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "pinecone-docs"
-    ]
-  },
-  "weaviate": {
-    "name": "Weaviate",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "weaviate-docs"
-    ]
-  },
-  "qdrant": {
-    "name": "Qdrant",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "qdrant-docs"
-    ]
-  },
-  "milvus": {
-    "name": "Milvus",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "milvus-docs"
-    ]
-  },
-  "chroma": {
-    "name": "Chroma",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "chroma-docs"
-    ]
-  },
-  "lancedb": {
-    "name": "LanceDB",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "lancedb-docs"
-    ]
-  },
-  "elasticsearch": {
-    "name": "Elasticsearch",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "elasticsearch-dense-vector-docs"
-    ]
-  },
-  "vespa": {
-    "name": "Vespa",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "vespa-docs"
-    ]
-  },
-  "unstructured": {
-    "name": "Unstructured",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "unstructured-docs"
-    ]
-  },
-  "docling": {
-    "name": "Docling",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "docling-docs"
-    ]
-  },
-  "llamaparse": {
-    "name": "LlamaParse",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "llamaparse-docs"
-    ]
-  },
-  "playwright": {
-    "name": "Playwright",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "playwright-docs"
-    ]
-  },
-  "puppeteer": {
-    "name": "Puppeteer",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "puppeteer-docs"
-    ]
-  },
-  "selenium": {
-    "name": "Selenium",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "selenium-docs"
-    ]
-  },
-  "chrome-devtools-mcp": {
-    "name": "Chrome DevTools MCP",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "chrome-devtools-mcp-repo",
-      "cdp-docs"
-    ]
-  },
-  "browser-use": {
-    "name": "Browser Use",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "browser-use-repo"
-    ]
-  },
-  "stagehand": {
-    "name": "Stagehand",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "stagehand-repo",
-      "stagehand-docs"
-    ]
-  },
-  "mergekit": {
-    "name": "MergeKit",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "mergekit-repo"
-    ]
-  },
-  "mcp-inspector": {
-    "name": "MCP Inspector",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "mcp-inspector-repo"
-    ]
-  },
-  "claude-code": {
-    "name": "Claude Code",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "claude-code-docs",
-      "anthropic-claude-code-docs"
-    ]
-  },
-  "openai-codex": {
-    "name": "OpenAI Codex",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "openai-codex-repo",
-      "openai-codex-docs"
-    ]
-  },
-  "gemini-cli": {
-    "name": "Gemini CLI",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "gemini-cli-repo"
-    ]
-  },
-  "aider": {
-    "name": "Aider",
-    "kind": "tool",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "aider-docs"
-    ]
-  },
-  "mcp": {
-    "name": "Model Context Protocol",
-    "kind": "standard",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "mcp-spec",
-      "mcp-specification",
-      "mcp-ext-apps",
-      "mcpui-site",
-      "mcp-registry"
-    ]
-  },
-  "agent-skills": {
-    "name": "Agent Skills specification",
-    "kind": "standard",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "agent-skills-spec",
-      "agentskills-spec",
-      "anthropic-skills-repo",
-      "github-agent-skills-docs",
-      "openai-academy-skills"
-    ]
-  },
-  "owasp-genai-top10": {
-    "name": "OWASP Top 10 for LLM/GenAI",
-    "kind": "standard",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "owasp-genai",
-      "owasp-llm-top10"
-    ]
-  },
-  "nist-ai-rmf": {
-    "name": "NIST AI Risk Management Framework",
-    "kind": "standard",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "nist-ai-rmf"
-    ]
-  },
-  "mitre-atlas": {
-    "name": "MITRE ATLAS",
-    "kind": "standard",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "mitre-atlas"
-    ]
-  },
-  "cdp": {
-    "name": "Chrome DevTools Protocol",
-    "kind": "standard",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "cdp-docs"
-    ]
-  },
-  "aws-certs": {
-    "name": "AWS certification directory",
-    "kind": "certification-program",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "aws-certification-directory"
-    ]
-  },
-  "google-certs": {
-    "name": "Google Cloud certifications",
-    "kind": "certification-program",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "google-cloud-certifications"
-    ]
-  },
-  "microsoft-certs": {
-    "name": "Microsoft credentials",
-    "kind": "certification-program",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "microsoft-credential-directory"
-    ]
-  },
-  "nvidia-certs": {
-    "name": "NVIDIA certifications",
-    "kind": "certification-program",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "nvidia-certifications"
-    ]
-  },
-  "openai-gpt": {
-    "name": "OpenAI GPT family",
-    "kind": "model-family",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "openai-models-docs",
-      "openai-deprecations"
-    ],
-    "changeNote": "2026-09-15: Quickstart steers to GPT-6 Astra; catalog is authoritative for current IDs."
-  },
-  "anthropic-claude": {
-    "name": "Claude family",
-    "kind": "model-family",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "anthropic-models-overview",
-      "anthropic-model-deprecations"
-    ],
-    "changeNote": "2026-09-15: Lineup Fable 5.1 / Opus 5 / Sonnet 5 / Haiku 4.5; aliases + dated IDs coexist; per-model 'not sooner than' retirement dates published."
-  },
-  "google-gemini": {
-    "name": "Gemini family",
-    "kind": "model-family",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "google-gemini-models",
-      "google-gemini-deprecations"
-    ],
-    "changeNote": "2026-09-15: Gemini 3.x — 3.8 Flash newest stable; Stable/Preview/Legacy labels per model; endpoint strings gemini-<version>-<tier>."
-  },
-  "zai": {
-    "name": "Z.ai / Zhipu",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "zai-docs",
-      "zai-platform"
-    ]
-  },
-  "ai21": {
-    "name": "AI21 Labs",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "ai21-docs",
-      "ai21-trust"
-    ]
-  },
-  "meta-muse": {
-    "name": "Muse family",
-    "kind": "model-family",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "meta-model-api-docs"
-    ],
-    "changeNote": "2026-09-15: Spark (API, 1M ctx) / Image / Voice Transcribe / Glimmer (open weights, Apache 2.0)."
-  },
-  "meta-llama": {
-    "name": "Llama family",
-    "kind": "model-family",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "meta-llama-resources"
-    ]
-  },
-  "xai-grok": {
-    "name": "Grok family",
-    "kind": "model-family",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "xai-grok-docs"
-    ],
-    "changeNote": "2026-09-15: 4.x line — 4.6 newest (500k ctx); documented alias conventions (plain/-latest/-date)."
-  },
-  "mistral-family": {
-    "name": "Mistral families",
-    "kind": "model-family",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "mistral-model-docs"
-    ],
-    "changeNote": "2026-09-15: Medium 3.5 (Modified MIT), Large 3 + Small 4 + Ministral 3 (Apache 2.0), Codestral/Voxtral/OCR specialist lines; lifecycle policy publishes deprecation dates."
-  },
-  "deepseek-family": {
-    "name": "DeepSeek family",
-    "kind": "model-family",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "deepseek-api-reference"
-    ],
-    "changeNote": "2026-09-15: aliases deepseek-flash→V4.1-Flash, deepseek-v4-pro→V4-Pro-0813; thinking/non-thinking modes."
-  },
-  "zai-glm": {
-    "name": "GLM family",
-    "kind": "model-family",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "zai-docs"
-    ],
-    "changeNote": "2026-09-15: GLM-5.3 flagship, 5.3-FLASH multimodal coding, GLM-Image, CogVideoX-3; open GLM releases also hosted by Mistral."
-  },
-  "cohere-command": {
-    "name": "Command/Aya families",
-    "kind": "model-family",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "cohere-model-docs"
-    ],
-    "changeNote": "2026-09-15: Command A+ (MoE) flagship; Aya Expanse/Vision multilingual; Rerank/Embed/Parse/Transcribe endpoints; date-versioned IDs."
-  },
-  "ai21-jamba": {
-    "name": "Jamba family",
-    "kind": "model-family",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "ai21-docs"
-    ],
-    "changeNote": "2026-09-15: hybrid SSM-transformer open weights; Maestro is the orchestration layer above."
-  },
-  "krutrim": {
-    "name": "Krutrim (Ola)",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "krutrim-cloud",
-      "krutrim-cloud-docs"
-    ]
-  },
-  "ai4bharat": {
-    "name": "AI4Bharat (IIT Madras)",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "ai4bharat-site",
-      "ai4bharat-indicnlp"
-    ]
-  },
-  "bhashini": {
-    "name": "Bhashini — National Language Translation Mission",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "bhashini-site"
-    ]
-  },
-  "sarvam-family": {
-    "name": "Sarvam model families",
-    "kind": "model-family",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "sarvam-api-docs"
-    ],
-    "changeNote": "2026-09-15: Saaras v3 STT (23 langs, realtime), Bulbul v3 TTS (11), Sarvam-105B chat (128K), Mayura translation (11), Sarvam Vision docs (23)."
-  },
-  "qwen": {
-    "name": "Alibaba Qwen",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "hf-qwen"
-    ]
-  },
-  "ibm": {
-    "name": "IBM",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "hf-ibm-granite"
-    ]
-  },
-  "ai2": {
-    "name": "Allen Institute for AI",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "hf-allenai-olmo"
-    ]
-  },
-  "tii": {
-    "name": "Technology Innovation Institute",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "hf-tii-falcon"
-    ]
-  },
-  "bigscience": {
-    "name": "BigScience workshop",
-    "kind": "vendor",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "hf-bigscience-bloom"
-    ]
-  },
-  "qwen-family": {
-    "name": "Qwen family",
-    "kind": "model-family",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "hf-qwen"
-    ],
-    "changeNote": "2026-09-15: Qwen 3.8 line; mixed licenses — apache-2.0 smaller, qwen3.8-max (attribution clause >100M MAU/$20M mo) flagship."
-  },
-  "microsoft-phi": {
-    "name": "Phi family",
-    "kind": "model-family",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "hf-microsoft-phi"
-    ],
-    "changeNote": "2026-09-15: MIT-licensed Phi-4 line incl. reasoning-vision-15B."
-  },
-  "ibm-granite-family": {
-    "name": "Granite family",
-    "kind": "model-family",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "hf-ibm-granite"
-    ],
-    "changeNote": "2026-09-15: Apache-2.0 granite-4.2 line (3b/8b/30b + quants)."
-  },
-  "nvidia-nemotron": {
-    "name": "Nemotron family",
-    "kind": "model-family",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "hf-nvidia-nemotron"
-    ],
-    "changeNote": "2026-09-15: openmdw-1.1/other per release; NVFP4 NVIDIA-tuned builds."
-  },
-  "ai2-olmo": {
-    "name": "OLMo family",
-    "kind": "model-family",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "hf-allenai-olmo"
-    ],
-    "changeNote": "2026-09-15: Apache-2.0 main line; full data/code/logs published."
-  },
-  "tii-falcon": {
-    "name": "Falcon family",
-    "kind": "model-family",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "hf-tii-falcon"
-    ],
-    "changeNote": "2026-09-15: falcon-llm-license; relevance faded vs newer families — covered as legacy."
-  },
-  "bigscience-bloom": {
-    "name": "BLOOM",
-    "kind": "model-family",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "hf-bigscience-bloom"
-    ],
-    "changeNote": "2026-09-15: bigscience-bloom-rail-1.0; historical/educational placement."
-  },
-  "cohere-aya": {
-    "name": "Aya family",
-    "kind": "model-family",
-    "status": "current",
-    "verifiedAt": "2026-09-15",
-    "officialSources": [
-      "cohere-model-docs"
-    ],
-    "changeNote": "2026-09-15: cc-by-nc-4.0 — non-commercial; 23-language focus."
-  }
+ "$comment": "Entity registry — shared records for vendors, model families, tools, frameworks, certification programs, and standards. Volatile facts (status, official doc links) live here so a correction propagates everywhere the entity is cited. `officialSources` must reference ids in sources.json; `verifiedAt` is when the record was last checked against them; `status`: current | deprecated | superseded | retired. Optional `changeNote` records material vendor-page changes (claim added/removed/renamed) with a date.",
+ "anthropic": {
+  "name": "Anthropic",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "anthropic-docs",
+   "claude-agent-sdk-docs",
+   "claude-code-docs",
+   "anthropic-computer-use",
+   "anthropic-skills-repo"
+  ]
+ },
+ "openai": {
+  "name": "OpenAI",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "openai-platform-docs",
+   "openai-agents-sdk-docs",
+   "openai-codex-repo",
+   "openai-moderation",
+   "openai-academy-skills"
+  ]
+ },
+ "google": {
+  "name": "Google",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "google-adk-docs",
+   "google-gemini-docs",
+   "gemini-cli-repo",
+   "google-gemma-docs",
+   "google-cloud-certifications"
+  ]
+ },
+ "meta": {
+  "name": "Meta",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "meta-llama-resources",
+   "purple-llama-repo"
+  ]
+ },
+ "mistral": {
+  "name": "Mistral AI",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "mistral-model-docs"
+  ]
+ },
+ "xai": {
+  "name": "xAI",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "xai-grok-docs"
+  ]
+ },
+ "deepseek": {
+  "name": "DeepSeek",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "deepseek-api-docs"
+  ]
+ },
+ "cohere": {
+  "name": "Cohere",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "cohere-model-docs",
+   "cohere-rerank-docs"
+  ]
+ },
+ "microsoft": {
+  "name": "Microsoft",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "semantic-kernel-docs",
+   "autogen-docs",
+   "microsoft-credential-directory",
+   "playwright-docs",
+   "onnxruntime-docs"
+  ]
+ },
+ "nvidia": {
+  "name": "NVIDIA",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "nemo-guardrails-repo",
+   "garak-repo",
+   "nvidia-certifications"
+  ]
+ },
+ "vercel": {
+  "name": "Vercel",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "vercel-ai-sdk-docs"
+  ]
+ },
+ "sarvam": {
+  "name": "Sarvam AI",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "sarvam-api-docs",
+   "sarvam-status"
+  ]
+ },
+ "huggingface": {
+  "name": "Hugging Face",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "hf-transformers-docs",
+   "hf-tgi-docs",
+   "hf-tei-docs",
+   "huggingface-inference-endpoints",
+   "huggingface-inference-providers-docs",
+   "huggingface-inference-endpoints-docs"
+  ]
+ },
+ "cognition": {
+  "name": "Cognition",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "cognition-devin-kb"
+  ]
+ },
+ "browserbase": {
+  "name": "Browserbase",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "browserbase-docs",
+   "stagehand-repo",
+   "stagehand-docs"
+  ]
+ },
+ "arize": {
+  "name": "Arize",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "phoenix-docs"
+  ]
+ },
+ "langchain-co": {
+  "name": "LangChain",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "langchain-docs",
+   "langchain-langgraph-docs",
+   "langsmith-docs"
+  ]
+ },
+ "wandb": {
+  "name": "Weights & Biases",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "weave-docs"
+  ]
+ },
+ "helicone-co": {
+  "name": "Helicone",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "helicone-docs"
+  ]
+ },
+ "langfuse-co": {
+  "name": "Langfuse",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "langfuse-docs"
+  ]
+ },
+ "confident-ai": {
+  "name": "Confident AI",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "deepeval-docs"
+  ]
+ },
+ "truera": {
+  "name": "TruEra",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "trulens-docs"
+  ]
+ },
+ "guardrails-ai": {
+  "name": "Guardrails AI",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "guardrails-ai-repo"
+  ]
+ },
+ "promptfoo-co": {
+  "name": "Promptfoo",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "promptfoo-redteam"
+  ]
+ },
+ "traceloop": {
+  "name": "Traceloop",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "openllmetry-repo"
+  ]
+ },
+ "e2b-co": {
+  "name": "E2B",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "e2b-docs"
+  ]
+ },
+ "portkey": {
+  "name": "Portkey",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "portkey-docs"
+  ]
+ },
+ "n8n": {
+  "name": "n8n",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "n8n-docs"
+  ]
+ },
+ "ollama": {
+  "name": "Ollama",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "ollama-docs"
+  ]
+ },
+ "llama-cpp": {
+  "name": "llama.cpp",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "llamacpp-grammars"
+  ]
+ },
+ "lm-studio": {
+  "name": "LM Studio",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "lmstudio-docs"
+  ]
+ },
+ "vllm": {
+  "name": "vLLM",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "vllm-repo"
+  ]
+ },
+ "sglang": {
+  "name": "SGLang",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "sglang-docs"
+  ]
+ },
+ "mlx": {
+  "name": "MLX",
+  "kind": "framework",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "mlx-docs",
+   "mlx-lm-repo"
+  ]
+ },
+ "onnx-runtime": {
+  "name": "ONNX Runtime",
+  "kind": "framework",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "onnxruntime-docs"
+  ]
+ },
+ "litellm": {
+  "name": "LiteLLM",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "litellm-repo"
+  ]
+ },
+ "langchain": {
+  "name": "LangChain",
+  "kind": "framework",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "langchain-docs"
+  ]
+ },
+ "langgraph": {
+  "name": "LangGraph",
+  "kind": "framework",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "langchain-langgraph-docs"
+  ]
+ },
+ "llamaindex": {
+  "name": "LlamaIndex",
+  "kind": "framework",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "llamaindex-docs",
+   "llamaparse-docs"
+  ]
+ },
+ "openai-agents-sdk": {
+  "name": "OpenAI Agents SDK",
+  "kind": "framework",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "openai-agents-sdk-docs"
+  ]
+ },
+ "claude-agent-sdk": {
+  "name": "Claude Agent SDK",
+  "kind": "framework",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "claude-agent-sdk-docs"
+  ]
+ },
+ "google-adk": {
+  "name": "Google ADK",
+  "kind": "framework",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "google-adk-docs"
+  ]
+ },
+ "agno": {
+  "name": "Agno",
+  "kind": "framework",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "agno-docs"
+  ]
+ },
+ "pydantic-ai": {
+  "name": "PydanticAI",
+  "kind": "framework",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "pydanticai-docs"
+  ]
+ },
+ "semantic-kernel": {
+  "name": "Semantic Kernel",
+  "kind": "framework",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "semantic-kernel-docs"
+  ]
+ },
+ "autogen": {
+  "name": "AutoGen",
+  "kind": "framework",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "autogen-docs"
+  ]
+ },
+ "crewai": {
+  "name": "CrewAI",
+  "kind": "framework",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "crewai-docs"
+  ]
+ },
+ "mastra": {
+  "name": "Mastra",
+  "kind": "framework",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "mastra-docs"
+  ]
+ },
+ "vercel-ai-sdk": {
+  "name": "Vercel AI SDK",
+  "kind": "framework",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "vercel-ai-sdk-docs"
+  ]
+ },
+ "dspy": {
+  "name": "DSPy",
+  "kind": "framework",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "dspy-docs"
+  ]
+ },
+ "haystack": {
+  "name": "Haystack",
+  "kind": "framework",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "haystack-docs"
+  ]
+ },
+ "instructor": {
+  "name": "Instructor",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "instructor-docs"
+  ]
+ },
+ "outlines": {
+  "name": "Outlines",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "outlines-repo"
+  ]
+ },
+ "langfuse": {
+  "name": "Langfuse",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "langfuse-docs"
+  ]
+ },
+ "langsmith": {
+  "name": "LangSmith",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "langsmith-docs"
+  ]
+ },
+ "phoenix": {
+  "name": "Arize Phoenix",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "phoenix-docs"
+  ]
+ },
+ "weave": {
+  "name": "W&B Weave",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "weave-docs"
+  ]
+ },
+ "helicone": {
+  "name": "Helicone",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "helicone-docs"
+  ]
+ },
+ "deepeval": {
+  "name": "DeepEval",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "deepeval-docs"
+  ]
+ },
+ "trulens": {
+  "name": "TruLens",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "trulens-docs"
+  ]
+ },
+ "promptfoo": {
+  "name": "Promptfoo",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "promptfoo-redteam"
+  ]
+ },
+ "openllmetry": {
+  "name": "OpenLLMetry",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "openllmetry-repo"
+  ]
+ },
+ "garak": {
+  "name": "garak",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "garak-repo"
+  ]
+ },
+ "guardrails-ai-lib": {
+  "name": "Guardrails AI (library)",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "guardrails-ai-repo"
+  ]
+ },
+ "nemo-guardrails": {
+  "name": "NeMo Guardrails",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "nemo-guardrails-repo"
+  ]
+ },
+ "llama-guard": {
+  "name": "Llama Guard",
+  "kind": "model-family",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "purple-llama-repo"
+  ]
+ },
+ "gitleaks": {
+  "name": "gitleaks",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "gitleaks-repo"
+  ]
+ },
+ "e2b": {
+  "name": "E2B sandboxes",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "e2b-docs"
+  ]
+ },
+ "sigstore-model-signing": {
+  "name": "Sigstore model signing",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "sigstore-model-transparency"
+  ]
+ },
+ "pgvector": {
+  "name": "pgvector",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "pgvector-repo"
+  ]
+ },
+ "pinecone": {
+  "name": "Pinecone",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "pinecone-docs"
+  ]
+ },
+ "weaviate": {
+  "name": "Weaviate",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "weaviate-docs"
+  ]
+ },
+ "qdrant": {
+  "name": "Qdrant",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "qdrant-docs"
+  ]
+ },
+ "milvus": {
+  "name": "Milvus",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "milvus-docs"
+  ]
+ },
+ "chroma": {
+  "name": "Chroma",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "chroma-docs"
+  ]
+ },
+ "lancedb": {
+  "name": "LanceDB",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "lancedb-docs"
+  ]
+ },
+ "elasticsearch": {
+  "name": "Elasticsearch",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "elasticsearch-dense-vector-docs"
+  ]
+ },
+ "vespa": {
+  "name": "Vespa",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "vespa-docs"
+  ]
+ },
+ "unstructured": {
+  "name": "Unstructured",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "unstructured-docs"
+  ]
+ },
+ "docling": {
+  "name": "Docling",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "docling-docs"
+  ]
+ },
+ "llamaparse": {
+  "name": "LlamaParse",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "llamaparse-docs"
+  ]
+ },
+ "playwright": {
+  "name": "Playwright",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "playwright-docs"
+  ]
+ },
+ "puppeteer": {
+  "name": "Puppeteer",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "puppeteer-docs"
+  ]
+ },
+ "selenium": {
+  "name": "Selenium",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "selenium-docs"
+  ]
+ },
+ "chrome-devtools-mcp": {
+  "name": "Chrome DevTools MCP",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "chrome-devtools-mcp-repo",
+   "cdp-docs"
+  ]
+ },
+ "browser-use": {
+  "name": "Browser Use",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "browser-use-repo"
+  ]
+ },
+ "stagehand": {
+  "name": "Stagehand",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "stagehand-repo",
+   "stagehand-docs"
+  ]
+ },
+ "mergekit": {
+  "name": "MergeKit",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "mergekit-repo"
+  ]
+ },
+ "mcp-inspector": {
+  "name": "MCP Inspector",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "mcp-inspector-repo"
+  ]
+ },
+ "claude-code": {
+  "name": "Claude Code",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "claude-code-docs",
+   "anthropic-claude-code-docs"
+  ]
+ },
+ "openai-codex": {
+  "name": "OpenAI Codex",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "openai-codex-repo",
+   "openai-codex-docs"
+  ]
+ },
+ "gemini-cli": {
+  "name": "Gemini CLI",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "gemini-cli-repo"
+  ]
+ },
+ "aider": {
+  "name": "Aider",
+  "kind": "tool",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "aider-docs"
+  ]
+ },
+ "mcp": {
+  "name": "Model Context Protocol",
+  "kind": "standard",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "mcp-spec",
+   "mcp-specification",
+   "mcp-ext-apps",
+   "mcpui-site",
+   "mcp-registry"
+  ]
+ },
+ "agent-skills": {
+  "name": "Agent Skills specification",
+  "kind": "standard",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "agent-skills-spec",
+   "agentskills-spec",
+   "anthropic-skills-repo",
+   "github-agent-skills-docs",
+   "openai-academy-skills"
+  ]
+ },
+ "owasp-genai-top10": {
+  "name": "OWASP Top 10 for LLM/GenAI",
+  "kind": "standard",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "owasp-genai",
+   "owasp-llm-top10"
+  ]
+ },
+ "nist-ai-rmf": {
+  "name": "NIST AI Risk Management Framework",
+  "kind": "standard",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "nist-ai-rmf"
+  ]
+ },
+ "mitre-atlas": {
+  "name": "MITRE ATLAS",
+  "kind": "standard",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "mitre-atlas"
+  ]
+ },
+ "cdp": {
+  "name": "Chrome DevTools Protocol",
+  "kind": "standard",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "cdp-docs"
+  ]
+ },
+ "aws-certs": {
+  "name": "AWS certification directory",
+  "kind": "certification-program",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "aws-certification-directory"
+  ]
+ },
+ "google-certs": {
+  "name": "Google Cloud certifications",
+  "kind": "certification-program",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "google-cloud-certifications"
+  ]
+ },
+ "microsoft-certs": {
+  "name": "Microsoft credentials",
+  "kind": "certification-program",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "microsoft-credential-directory"
+  ]
+ },
+ "nvidia-certs": {
+  "name": "NVIDIA certifications",
+  "kind": "certification-program",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "nvidia-certifications"
+  ]
+ },
+ "openai-gpt": {
+  "name": "OpenAI GPT family",
+  "kind": "model-family",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "openai-models-docs",
+   "openai-deprecations"
+  ],
+  "changeNote": "2026-09-15: Quickstart steers to GPT-6 Astra; catalog is authoritative for current IDs."
+ },
+ "anthropic-claude": {
+  "name": "Claude family",
+  "kind": "model-family",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "anthropic-models-overview",
+   "anthropic-model-deprecations"
+  ],
+  "changeNote": "2026-09-15: Lineup Fable 5.1 / Opus 5 / Sonnet 5 / Haiku 4.5; aliases + dated IDs coexist; per-model 'not sooner than' retirement dates published."
+ },
+ "google-gemini": {
+  "name": "Gemini family",
+  "kind": "model-family",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "google-gemini-models",
+   "google-gemini-deprecations"
+  ],
+  "changeNote": "2026-09-15: Gemini 3.x — 3.8 Flash newest stable; Stable/Preview/Legacy labels per model; endpoint strings gemini-<version>-<tier>."
+ },
+ "zai": {
+  "name": "Z.ai / Zhipu",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "zai-docs",
+   "zai-platform"
+  ]
+ },
+ "ai21": {
+  "name": "AI21 Labs",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "ai21-docs",
+   "ai21-trust"
+  ]
+ },
+ "meta-muse": {
+  "name": "Muse family",
+  "kind": "model-family",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "meta-model-api-docs"
+  ],
+  "changeNote": "2026-09-15: Spark (API, 1M ctx) / Image / Voice Transcribe / Glimmer (open weights, Apache 2.0)."
+ },
+ "meta-llama": {
+  "name": "Llama family",
+  "kind": "model-family",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "meta-llama-resources"
+  ]
+ },
+ "xai-grok": {
+  "name": "Grok family",
+  "kind": "model-family",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "xai-grok-docs"
+  ],
+  "changeNote": "2026-09-15: 4.x line — 4.6 newest (500k ctx); documented alias conventions (plain/-latest/-date)."
+ },
+ "mistral-family": {
+  "name": "Mistral families",
+  "kind": "model-family",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "mistral-model-docs"
+  ],
+  "changeNote": "2026-09-15: Medium 3.5 (Modified MIT), Large 3 + Small 4 + Ministral 3 (Apache 2.0), Codestral/Voxtral/OCR specialist lines; lifecycle policy publishes deprecation dates."
+ },
+ "deepseek-family": {
+  "name": "DeepSeek family",
+  "kind": "model-family",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "deepseek-api-reference"
+  ],
+  "changeNote": "2026-09-15: aliases deepseek-flash→V4.1-Flash, deepseek-v4-pro→V4-Pro-0813; thinking/non-thinking modes."
+ },
+ "zai-glm": {
+  "name": "GLM family",
+  "kind": "model-family",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "zai-docs"
+  ],
+  "changeNote": "2026-09-15: GLM-5.3 flagship, 5.3-FLASH multimodal coding, GLM-Image, CogVideoX-3; open GLM releases also hosted by Mistral."
+ },
+ "cohere-command": {
+  "name": "Command/Aya families",
+  "kind": "model-family",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "cohere-model-docs"
+  ],
+  "changeNote": "2026-09-15: Command A+ (MoE) flagship; Aya Expanse/Vision multilingual; Rerank/Embed/Parse/Transcribe endpoints; date-versioned IDs."
+ },
+ "ai21-jamba": {
+  "name": "Jamba family",
+  "kind": "model-family",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "ai21-docs"
+  ],
+  "changeNote": "2026-09-15: hybrid SSM-transformer open weights; Maestro is the orchestration layer above."
+ },
+ "krutrim": {
+  "name": "Krutrim (Ola)",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "krutrim-cloud",
+   "krutrim-cloud-docs"
+  ]
+ },
+ "ai4bharat": {
+  "name": "AI4Bharat (IIT Madras)",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "ai4bharat-site",
+   "ai4bharat-indicnlp"
+  ]
+ },
+ "bhashini": {
+  "name": "Bhashini — National Language Translation Mission",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "bhashini-site"
+  ]
+ },
+ "sarvam-family": {
+  "name": "Sarvam model families",
+  "kind": "model-family",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "sarvam-api-docs"
+  ],
+  "changeNote": "2026-09-15: Saaras v3 STT (23 langs, realtime), Bulbul v3 TTS (11), Sarvam-105B chat (128K), Mayura translation (11), Sarvam Vision docs (23)."
+ },
+ "qwen": {
+  "name": "Alibaba Qwen",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "hf-qwen"
+  ]
+ },
+ "ibm": {
+  "name": "IBM",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "hf-ibm-granite"
+  ]
+ },
+ "ai2": {
+  "name": "Allen Institute for AI",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "hf-allenai-olmo"
+  ]
+ },
+ "tii": {
+  "name": "Technology Innovation Institute",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "hf-tii-falcon"
+  ]
+ },
+ "bigscience": {
+  "name": "BigScience workshop",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "hf-bigscience-bloom"
+  ]
+ },
+ "qwen-family": {
+  "name": "Qwen family",
+  "kind": "model-family",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "hf-qwen"
+  ],
+  "changeNote": "2026-09-15: Qwen 3.8 line; mixed licenses — apache-2.0 smaller, qwen3.8-max (attribution clause >100M MAU/$20M mo) flagship."
+ },
+ "microsoft-phi": {
+  "name": "Phi family",
+  "kind": "model-family",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "hf-microsoft-phi"
+  ],
+  "changeNote": "2026-09-15: MIT-licensed Phi-4 line incl. reasoning-vision-15B."
+ },
+ "ibm-granite-family": {
+  "name": "Granite family",
+  "kind": "model-family",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "hf-ibm-granite"
+  ],
+  "changeNote": "2026-09-15: Apache-2.0 granite-4.2 line (3b/8b/30b + quants)."
+ },
+ "nvidia-nemotron": {
+  "name": "Nemotron family",
+  "kind": "model-family",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "hf-nvidia-nemotron"
+  ],
+  "changeNote": "2026-09-15: openmdw-1.1/other per release; NVFP4 NVIDIA-tuned builds."
+ },
+ "ai2-olmo": {
+  "name": "OLMo family",
+  "kind": "model-family",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "hf-allenai-olmo"
+  ],
+  "changeNote": "2026-09-15: Apache-2.0 main line; full data/code/logs published."
+ },
+ "tii-falcon": {
+  "name": "Falcon family",
+  "kind": "model-family",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "hf-tii-falcon"
+  ],
+  "changeNote": "2026-09-15: falcon-llm-license; relevance faded vs newer families — covered as legacy."
+ },
+ "bigscience-bloom": {
+  "name": "BLOOM",
+  "kind": "model-family",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "hf-bigscience-bloom"
+  ],
+  "changeNote": "2026-09-15: bigscience-bloom-rail-1.0; historical/educational placement."
+ },
+ "cohere-aya": {
+  "name": "Aya family",
+  "kind": "model-family",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "cohere-model-docs"
+  ],
+  "changeNote": "2026-09-15: cc-by-nc-4.0 — non-commercial; 23-language focus."
+ },
+ "amazon": {
+  "name": "Amazon",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "aws-bedrock-docs",
+   "aws-certification-directory"
+  ]
+ },
+ "oracle": {
+  "name": "Oracle",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "oci-genai-docs"
+  ]
+ },
+ "databricks": {
+  "name": "Databricks",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "databricks-ml-docs"
+  ]
+ },
+ "snowflake": {
+  "name": "Snowflake",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "snowflake-cortex-docs"
+  ]
+ },
+ "cloudflare": {
+  "name": "Cloudflare",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "cloudflare-workers-ai-docs"
+  ]
+ },
+ "openrouter": {
+  "name": "OpenRouter",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "openrouter-docs"
+  ]
+ },
+ "together": {
+  "name": "Together AI",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "together-docs"
+  ]
+ },
+ "fireworks": {
+  "name": "Fireworks AI",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "fireworks-docs"
+  ]
+ },
+ "groq": {
+  "name": "Groq",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "groq-docs"
+  ]
+ },
+ "cerebras": {
+  "name": "Cerebras",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "cerebras-docs"
+  ]
+ },
+ "replicate": {
+  "name": "Replicate",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "replicate-docs"
+  ]
+ },
+ "modal": {
+  "name": "Modal",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "modal-docs"
+  ]
+ }
 }

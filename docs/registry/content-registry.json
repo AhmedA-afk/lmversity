@@ -1,15 +1,15 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T15:49:01.203Z",
+  "generatedAt": "2026-09-15T15:58:19.867Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2494,
+  "itemCount": 2505,
   "counts": {
    "byFamily": {
     "lesson": 2111,
     "project": 32,
     "quiz": 89,
-    "reference": 78,
+    "reference": 89,
     "lab": 71,
     "interview": 7,
     "scenario": 6,
@@ -22,7 +22,7 @@
     "glossary": 1
    },
    "byStatus": {
-    "live": 2494
+    "live": 2505
    },
    "byKind": {
     "concept": 1810,
@@ -40,7 +40,7 @@
     "howto": 20,
     "pillar": 4,
     "definition": 12,
-    "provider-hub": 23,
+    "provider-hub": 34,
     "lesson": 131,
     "reference": 7,
     "bootcamp": 6,
@@ -107,7 +107,7 @@
     "policy-sensitive": 82,
     "certification-sensitive": 104,
     "durable": 266,
-    "volatile": 23
+    "volatile": 34
    }
   },
   "analyticsNote": "Analytics fields are null until Search Console / analytics exports are wired in.",
@@ -182811,7 +182811,7 @@
    "scores": {
     "intentClarity": null,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": null,
     "explanationQuality": null,
@@ -193466,6 +193466,85 @@
    }
   },
   {
+   "id": "pro-0024",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Amazon Bedrock",
+   "slug": "aws-bedrock",
+   "route": "/providers/aws-bedrock",
+   "collection": "providers",
+   "path": "src/content/providers/aws-bedrock.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "AWS's managed foundation-model service mapped: 100+ models across vendors, five API shapes (Messages/Responses/Chat/Converse/Invoke), cross-region inference, agent and eval services — plus SageMaker's separate role.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 407,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "Enterprise controls",
+    "Getting started shape",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "amazon",
+    "covers": [
+     "cloud-platform",
+     "api"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "aws-bedrock-docs"
+    ],
+    "related": [
+     "/providers/google",
+     "/learn/production/deployment-variants-cloud-and-portable",
+     "/learn/genai-app-dev/provider-layer-cheatsheet"
+    ],
+    "numericClaims": 4
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "AWS's managed foundation-model service mapped: 100+ models across vendors, five API shapes (Messages/Responses/Chat/Converse/Invoke), cross-region inference, agent and eval services — plus SageMaker's separate role.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "pricing/cost mention",
+    "vendor/tool mentions: Bedrock, AWS, SageMaker, Anthropic, DeepSeek, OpenAI, xAI, Claude"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "pro-0012",
    "family": "reference",
    "kind": "provider-hub",
@@ -193623,6 +193702,85 @@
    }
   },
   {
+   "id": "pro-0025",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Cloudflare Workers AI + AI Gateway",
+   "slug": "cloudflare-workers-ai",
+   "route": "/providers/cloudflare-workers-ai",
+   "collection": "providers",
+   "path": "src/content/providers/cloudflare-workers-ai.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Cloudflare's AI surface mapped: Workers AI serverless GPU inference on the global network, the 50+ open-model catalog, AI Gateway's caching/routing/observability layer, and the Vectorize pairing.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 373,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "The architectural point",
+    "Enterprise controls",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "cloudflare",
+    "covers": [
+     "cloud-platform",
+     "api"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "cloudflare-workers-ai-docs"
+    ],
+    "related": [
+     "/providers/vercel-ai-gateway",
+     "/learn/local-inference/vllm-production-serving",
+     "/learn/production/deployment-variants-cloud-and-portable"
+    ],
+    "numericClaims": 1
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Cloudflare's AI surface mapped: Workers AI serverless GPU inference on the global network, the 50+ open-model catalog, AI Gateway's caching/routing/observability layer, and the Vectorize pairing.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "pricing/cost mention",
+    "vendor/tool mentions: Cloudflare, OpenAI, Anthropic"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "pro-0005",
    "family": "reference",
    "kind": "provider-hub",
@@ -193695,6 +193853,83 @@
     "intentClarity": null,
     "correctnessSources": null,
     "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0026",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Databricks Mosaic AI",
+   "slug": "databricks-mosaic",
+   "route": "/providers/databricks-mosaic",
+   "collection": "providers",
+   "path": "src/content/providers/databricks-mosaic.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Databricks' AI platform mapped: Foundation Model APIs, Model Serving, AI Gateway, agents on Databricks, Unity Catalog governance, and where Mosaic ends and classic Databricks ML begins.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 343,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "The architectural point",
+    "Enterprise controls",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "databricks",
+    "covers": [
+     "cloud-platform"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "databricks-ml-docs"
+    ],
+    "related": [
+     "/providers/aws-bedrock",
+     "/learn/production/deployment-variants-cloud-and-portable",
+     "/learn/production/llm-gateway-and-provider-abstraction"
+    ],
+    "numericClaims": 1
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Databricks' AI platform mapped: Foundation Model APIs, Model Serving, AI Gateway, agents on Databricks, Unity Catalog governance, and where Mosaic ends and classic Databricks ML begins.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "vendor/tool mentions: Databricks, OpenAI"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
     "prerequisiteFit": null,
     "handsOn": null,
     "explanationQuality": null,
@@ -194123,6 +194358,253 @@
    }
   },
   {
+   "id": "pro-0027",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Hosted Inference: Together, Fireworks, Groq, Cerebras, Replicate, Modal",
+   "slug": "hosted-inference",
+   "route": "/providers/hosted-inference",
+   "collection": "providers",
+   "path": "src/content/providers/hosted-inference.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "The hosted-inference providers mapped as a category: per-vendor shapes (serverless open-model APIs, custom silicon, model marketplaces, GPU compute) and the managed-API vs dedicated vs serverless vs self-host decision.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 464,
+   "headings": [
+    "What this page covers",
+    "The six shapes",
+    "The four-tier serving decision — the real comparison",
+    "When to choose hosted inference"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "together",
+    "covers": [
+     "api",
+     "cloud-platform"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "together-docs",
+     "fireworks-docs",
+     "groq-docs",
+     "cerebras-docs",
+     "replicate-docs",
+     "modal-docs"
+    ],
+    "related": [
+     "/providers/huggingface",
+     "/learn/local-inference/vllm-production-serving",
+     "/learn/production/deployment-variants-cloud-and-portable"
+    ],
+    "numericClaims": 1
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "The hosted-inference providers mapped as a category: per-vendor shapes (serverless open-model APIs, custom silicon, model marketplaces, GPU compute) and the managed-API vs dedicated vs serverless vs self-host decision.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "vendor/tool mentions: Fireworks, Groq, Cerebras, Replicate, Modal, Together AI, OpenAI, Anthropic, Gemini, Bedrock, vLLM, SGLang"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0028",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Hugging Face Hub + Inference",
+   "slug": "huggingface",
+   "route": "/providers/huggingface",
+   "collection": "providers",
+   "path": "src/content/providers/huggingface.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Hugging Face mapped: the Hub as model/dataset/space registry, Inference Providers (serverless, multi-backend), dedicated Inference Endpoints, and where HF sits in the serving-decision landscape.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 407,
+   "headings": [
+    "What this page covers",
+    "Product map — three surfaces, three roles",
+    "The positioning point",
+    "The supply-chain angle",
+    "When to choose it"
+   ],
+   "internalLinks": [
+    "/learn/llm-security/llm-supply-chain-security",
+    "/learn/local-inference/huggingface-tgi-and-tei",
+    "/providers"
+   ],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "huggingface",
+    "covers": [
+     "cloud-platform",
+     "api",
+     "open-model"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "huggingface-inference-providers-docs",
+     "huggingface-inference-endpoints-docs",
+     "hf-transformers-docs"
+    ],
+    "related": [
+     "/providers/hosted-inference",
+     "/learn/local-inference/huggingface-tgi-and-tei",
+     "/learn/llm-security/llm-supply-chain-security"
+    ],
+    "numericClaims": 1
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Hugging Face mapped: the Hub as model/dataset/space registry, Inference Providers (serverless, multi-backend), dedicated Inference Endpoints, and where HF sits in the serving-decision landscape.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "policy/license mention",
+    "vendor/tool mentions: Hugging Face, Fireworks, Groq, Replicate, Cerebras, OpenAI"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0029",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "IBM watsonx.ai",
+   "slug": "ibm-watsonx",
+   "route": "/providers/ibm-watsonx",
+   "collection": "providers",
+   "path": "src/content/providers/ibm-watsonx.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "IBM's AI platform mapped: watsonx.ai studio, Granite and third-party model hosting, agentic tooling, and the governance layer that is IBM's actual pitch — with a verification caveat on IBM's docs.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 355,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "The positioning point",
+    "Enterprise controls",
+    "When to choose it"
+   ],
+   "internalLinks": [
+    "/providers/granite"
+   ],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "ibm",
+    "covers": [
+     "cloud-platform"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "ibm-watsonx-docs"
+    ],
+    "related": [
+     "/providers/granite",
+     "/providers/databricks-mosaic"
+    ],
+    "numericClaims": 2
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "IBM's AI platform mapped: watsonx.ai studio, Granite and third-party model hosting, agentic tooling, and the governance layer that is IBM's actual pitch — with a verification caveat on IBM's docs.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "policy/license mention",
+    "vendor/tool mentions: watsonx, OpenAI"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "pro-0013",
    "family": "reference",
    "kind": "provider-hub",
@@ -194372,6 +194854,85 @@
    }
   },
   {
+   "id": "pro-0030",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Microsoft Foundry (Azure)",
+   "slug": "microsoft-foundry",
+   "route": "/providers/microsoft-foundry",
+   "collection": "providers",
+   "path": "src/content/providers/microsoft-foundry.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Microsoft's AI platform mapped: Foundry's unified agents+models+tools resource, the 10,000+ model catalog, prompt vs hosted agents, the Azure OpenAI→Foundry migration path, and enterprise controls.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 429,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "The migration story — the thing docs won't stress enough",
+    "Enterprise controls",
+    "Getting started shape",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "microsoft",
+    "covers": [
+     "cloud-platform",
+     "api"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "microsoft-foundry-docs"
+    ],
+    "related": [
+     "/learn/agent-frameworks/microsoft-agent-frameworks",
+     "/providers/google",
+     "/learn/production/deployment-variants-cloud-and-portable"
+    ],
+    "numericClaims": 2
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Microsoft's AI platform mapped: Foundry's unified agents+models+tools resource, the 10,000+ model catalog, prompt vs hosted agents, the Azure OpenAI→Foundry migration path, and enterprise controls.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "vendor/tool mentions: Azure, OpenAI, AI Studio, Anthropic, LangGraph, Semantic Kernel, MCP"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "pro-0008",
    "family": "reference",
    "kind": "provider-hub",
@@ -194510,6 +195071,83 @@
    "freshnessSignals": [
     "policy/license mention",
     "vendor/tool mentions: Hugging Face, DeepSeek, Llama, Qwen"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0031",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Oracle OCI Generative AI",
+   "slug": "oci-generative-ai",
+   "route": "/providers/oci-generative-ai",
+   "collection": "providers",
+   "path": "src/content/providers/oci-generative-ai.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "OCI's Generative AI service mapped: frontier-model hosting, Enterprise AI agent features (vector stores, MCP tools, NL2SQL), model import, guardrails, and the OpenAI-compatible API surface.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 338,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "The architectural point",
+    "Enterprise controls",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "oracle",
+    "covers": [
+     "cloud-platform",
+     "api"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "oci-genai-docs"
+    ],
+    "related": [
+     "/providers/aws-bedrock",
+     "/learn/production/deployment-variants-cloud-and-portable"
+    ],
+    "numericClaims": 1
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "OCI's Generative AI service mapped: frontier-model hosting, Enterprise AI agent features (vector stores, MCP tools, NL2SQL), model import, guardrails, and the OpenAI-compatible API surface.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "vendor/tool mentions: MCP, OpenAI, Cohere, Hugging Face, Bedrock, AWS, Azure"
    ],
    "owner": null,
    "reviewer": null,
@@ -194694,6 +195332,82 @@
     "intentClarity": null,
     "correctnessSources": null,
     "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0032",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "OpenRouter",
+   "slug": "openrouter",
+   "route": "/providers/openrouter",
+   "collection": "providers",
+   "path": "src/content/providers/openrouter.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "OpenRouter mapped: one API over hundreds of models with automatic fallbacks and cost routing, the latest-alias convention, app attribution, and the privacy/provider-selection considerations the checklist requires.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 400,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "The privacy and attribution review — do it before adopting",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "openrouter",
+    "covers": [
+     "api"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "openrouter-docs"
+    ],
+    "related": [
+     "/providers/vercel-ai-gateway",
+     "/learn/genai-app-dev/provider-layer-cheatsheet",
+     "/learn/production/llm-gateway-and-provider-abstraction"
+    ],
+    "numericClaims": 1
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "OpenRouter mapped: one API over hundreds of models with automatic fallbacks and cost routing, the latest-alias convention, app attribution, and the privacy/provider-selection considerations the checklist requires.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "vendor/tool mentions: OpenRouter, OpenAI"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
     "prerequisiteFit": null,
     "handsOn": null,
     "explanationQuality": null,
@@ -194932,6 +195646,165 @@
     "intentClarity": null,
     "correctnessSources": null,
     "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0033",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Snowflake Cortex AI",
+   "slug": "snowflake-cortex",
+   "route": "/providers/snowflake-cortex",
+   "collection": "providers",
+   "path": "src/content/providers/snowflake-cortex.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Snowflake's AI layer mapped: SQL-native AI functions (COMPLETE/CLASSIFY/FILTER/EMBED/EXTRACT), in-perimeter model deployment, the REST low-latency path, and what Cortex is — and isn't — for.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 312,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "The governance point — and the limits",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "snowflake",
+    "covers": [
+     "cloud-platform",
+     "api"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "snowflake-cortex-docs"
+    ],
+    "related": [
+     "/providers/databricks-mosaic",
+     "/learn/genai-app-dev/provider-landscape-and-tradeoffs",
+     "/learn/production/llm-gateway-and-provider-abstraction"
+    ],
+    "numericClaims": 1
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Snowflake's AI layer mapped: SQL-native AI functions (COMPLETE/CLASSIFY/FILTER/EMBED/EXTRACT), in-perimeter model deployment, the REST low-latency path, and what Cortex is — and isn't — for.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "vendor/tool mentions: Snowflake, OpenAI, Anthropic, Mistral, DeepSeek"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0034",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Vercel AI Gateway",
+   "slug": "vercel-ai-gateway",
+   "route": "/providers/vercel-ai-gateway",
+   "collection": "providers",
+   "path": "src/content/providers/vercel-ai-gateway.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Vercel's AI Gateway mapped: one managed gateway to models across providers, routing/fallback, budgets, BYOK, request logging, the AI SDK ecosystem — usable from any infrastructure, not just Vercel.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 373,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "The architectural point",
+    "The AI SDK ecosystem",
+    "When to choose it"
+   ],
+   "internalLinks": [
+    "/learn/agent-frameworks/vercel-ai-sdk"
+   ],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "vercel",
+    "covers": [
+     "api",
+     "cloud-platform"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "vercel-ai-gateway-docs"
+    ],
+    "related": [
+     "/providers/openrouter",
+     "/providers/cloudflare-workers-ai",
+     "/learn/agent-frameworks/vercel-ai-sdk"
+    ],
+    "numericClaims": 1
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Vercel's AI Gateway mapped: one managed gateway to models across providers, routing/fallback, budgets, BYOK, request logging, the AI SDK ecosystem — usable from any infrastructure, not just Vercel.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "certification/exam mention",
+    "pricing/cost mention",
+    "vendor/tool mentions: OpenAI, Anthropic, OpenRouter, Cloudflare"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
     "prerequisiteFit": null,
     "handsOn": null,
     "explanationQuality": null,
