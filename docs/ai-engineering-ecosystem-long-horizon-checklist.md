@@ -2511,7 +2511,7 @@ validation, deployment status, measured result when available, blockers, and nex
   pathways live; Designers course execution remains open, in flight).
 - Validation: check-content clean (2,229 lessons), 2,724 pages built,
   0 dead links across 5,828 routes, registry 2,676 items.
-- Commit: pending.
+- Commit: `69acc06`
 - Next: Phase 0 editorial scoring, Phase 5 project standards, Phase 9/10
   external-infra rows remain open.
 
