@@ -219,7 +219,9 @@ consolidation into a parent track, or a clearer curated-path role.
 - [x] Score intent clarity: one page, one primary learner need.
 - [ ] Score correctness and source quality. *(source-presence signal recorded as
       `scores.correctnessSources`; correctness itself needs the editorial pass)*
-- [x] Score completeness relative to the stated promise.
+- [x] Score completeness relative to the stated promise. *(wordCount vs family
+      median; the expand disposition is gated on spec/math/code formats so dense
+      briefs and derivations don't over-fire — reviewed queue: 5 live prose items)*
 - [ ] Score originality and practical value. *(editorial — recorded as `scores.originality: null`)*
 - [x] Score prerequisite fit and course sequence.
 - [x] Score hands-on depth.
@@ -1953,7 +1955,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-15 — Interview structure verification + practice links
 
-- Verified all 56 interview questions carry the intended structure: a concise
+- Commit: `1240927`. Verified all 56 interview questions carry the intended structure: a concise
   direct answer, a deeper paragraph (with curriculum links), and a
   `**Follow-up:**` prompt — uniform across all 7 files, no rewrites needed.
 - Closed the verified gap: interview files linked to curriculum but not to
@@ -1967,6 +1969,27 @@ validation, deployment status, measured result when available, blockers, and nex
   `audit:families` flags 0.
 - Next batch: the 44-item expand queue (thin vs family median) or remaining
   duplicate-pair verdicts.
+
+### 2026-09-15 — Expand-queue review + completeness gate
+
+- Reviewed the 45-item live expand queue. Finding: the wordCount-vs-median
+  signal systematically over-fires on dense formats — spec documents
+  (assessments, public-data projects, reproductions, capstone handbook),
+  the ML lab template (short answer / how it works / hands-on / checkpoint),
+  LaTeX derivations (word count misses math), and code-bearing lessons
+  (code blocks are stripped before counting).
+- Added `specFormat` (rubric/protocol/deliverable/checkpoint headings) and
+  `mathDense` (LaTeX density) features; `expand` now requires thin prose AND
+  no spec/math/code substance. Live queue: 45 → 5 candidates
+  (choosing-a-model, next-token-prediction, tokenization-explained,
+  agents-need-a-harness, deploy-an-llm-app-to-production) — all reviewed as
+  tight-but-complete; they stay queued for the editorial pass.
+- Side benefit: spec-format items with zero links now correctly surface as
+  `investigate` (islands) instead of being masked by `expand`.
+- Validation: `npm run registry` clean; dispositions now keep 1,911 /
+  investigate 468 / expand 31 (26 planned stubs + 5 live candidates).
+- Next batch: duplicate-pair verdicts (~220 unlinked), then the canonical
+  content model.
 
 ### 2026-09-14 — Master ecosystem backlog created
 

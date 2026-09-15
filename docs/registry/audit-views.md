@@ -1,6 +1,6 @@
 # Content registry — audit views
 
-Generated 2026-09-15T08:51:01.571Z by `scripts/build-content-registry.mjs`.
+Generated 2026-09-15T09:00:44.505Z by `scripts/build-content-registry.mjs`.
 2410 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
@@ -127,7 +127,7 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - dead-end finish: last live lesson is why-nonlinearity-matters (concept)
 - missing kinds: common-mistakes, cheatsheet
 - 48 island lessons (no in-body links)
-- 2 thin vs family median
+- 1 thin vs family median
 - 4 duplicate-candidate pairs in track
 
 ### llm-foundations — 131 files, 6 modules — starts: "The Whole Game: One Token, End to End"
@@ -150,8 +150,7 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - modules without practice ending: "Orientation and problem framing" ends on generalization-and-evaluation (concept); "Data, features, and decisions" ends on ml-115-case-study-triage-under-review-capacity (concept); "Maths, objectives, and generalisation" ends on regularization-and-bias-variance (concept); "Linear and generalised models" ends on ml-216-case-study-demand-forecast-with-uncertainty (concept) +7 more
 - dead-end finish: last live lesson is deep-lectures/907-time-series-ranking-and-recommender-systems-under-temporal-exposure-feedback (concept)
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet
-- 109 island lessons (no in-body links)
-- 34 thin vs family median
+- 128 island lessons (no in-body links)
 - 13 duplicate-candidate pairs in track
 - promise gap: no live node title covers "model families"
 
@@ -167,7 +166,6 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 
 - modules without practice ending: "Prompt anatomy" ends on role-prompting (concept); "Examples and reasoning" ends on negative-instructions-pitfall (concept); "Reliability and iteration" ends on multi-turn-prompt-design (concept); "Prompts in production" ends on extended-thinking-and-reasoning-effort (concept) +2 more
 - 10 island lessons (no in-body links)
-- 2 thin vs family median
 - 23 duplicate-candidate pairs in track
 
 ### context-engineering — 132 files, 5 modules — starts: "The Whole Game of Context Engineering"
@@ -180,7 +178,6 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 
 - modules without practice ending: "Making it reliable" ends on structured-output-failure-modes (concept); "Harder schema shapes" ends on schema-versioning-and-migration (concept)
 - missing kinds: common-mistakes
-- 1 thin vs family median
 - 10 duplicate-candidate pairs in track
 
 ### hallucinations — 132 files, 0 modules — starts: "The Whole Game: From Fabrication to Trustworthy Systems"
@@ -211,7 +208,6 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - dead-end finish: last live lesson is server-design-and-permissions (concept)
 - missing kinds: capstone
 - 3 island lessons (no in-body links)
-- 1 thin vs family median
 - 43 duplicate-candidate pairs in track
 
 ### agentic-ai — 28 files, 7 modules — starts: "What Makes Something an Agent"
@@ -255,7 +251,6 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - dead-end finish: last live lesson is privacy-fairness-and-accessibility (concept)
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
 - 5 island lessons (no in-body links)
-- 1 thin vs family median
 - 1 duplicate-candidate pairs in track
 - promise gap: no live node title covers "Safety"; "building AI you can defend"
 
@@ -272,9 +267,9 @@ and split always need a written human reason (see checklist).
 
 | disposition | items |
 |---|---:|
-| keep | 1890 |
-| investigate | 449 |
-| expand | 71 |
+| keep | 1911 |
+| investigate | 468 |
+| expand | 31 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
@@ -293,7 +288,7 @@ and split always need a written human reason (see checklist).
 
 ### Non-keep dispositions
 
-#### investigate: zero in-body internal links (449)
+#### investigate: zero in-body internal links (468)
 
 - /learn/agentic-ai/agents-vs-workflows — Choose an agent only when a workflow is not enough
 - /learn/agentic-ai/state-memory-and-recovery — Design agent state, memory, and recovery explicitly
@@ -335,7 +330,7 @@ and split always need a written human reason (see checklist).
 - /learn/ai-foundations/reliable-ai/212-adversarial-ml-and-input-security — Adversarial ML and Input Security
 - /learn/ai-foundations/reliable-ai/213-model-supply-chain-and-artifact-security — Model Supply Chain and Artifact Security
 - /learn/ai-foundations/reliable-ai/214-alignment-objectives-and-reward-hacking — Alignment Objectives and Reward Hacking
-- … 409 more in content-registry.json
+- … 428 more in content-registry.json
 
 #### expand: planned stub — no content yet (26)
 
@@ -366,34 +361,9 @@ and split always need a written human reason (see checklist).
 - ai-for-designers/prototype-and-evaluation-quiz — Quiz: prototype and evaluation
 - ai-for-designers/capstone-design-a-trustworthy-ai-feature — Capstone: design a trustworthy AI feature end to end
 
-#### expand: thin vs family median (193w vs ~779w) (3)
-
-- /learn/machine-learning/public-data-projects/bank-marketing-project — Public-data project: Bank Marketing decision support
-- /learn/machine-learning/public-data-projects/bike-sharing-project — Public-data project: Bike Sharing forecasting
-- /learn/machine-learning/public-data-projects/online-retail-project — Public-data project: Online Retail customer analysis
-
-#### expand: thin vs family median (264w vs ~779w) (2)
-
-- /learn/machine-learning/assessments/ml-845-assignment-04-unsupervised-decision-support — Assignment 4: unsupervised learning without inventing stories
-- /learn/machine-learning/assessments/ml-846-assignment-05-temporal-risk-aware-system — Assignment 5: build a time-aware, risk-aware ML system
-
-#### expand: thin vs family median (226w vs ~779w) (2)
-
-- /learn/machine-learning/assessments/ml-847-model-report-template — Model report template: predictive system review
-- /learn/machine-learning/reproductions/adaboost-reproduction — Paper reproduction: AdaBoost and the training-error bound
-
-#### expand: thin vs family median (191w vs ~779w) (2)
-
-- /learn/machine-learning/public-data-projects/aps-failure-project — Public-data project: APS Failure under imbalance
-- /learn/machine-learning/public-data-projects/movielens-project — Public-data project: MovieLens recommendation
-
 #### expand: thin vs family median (238w vs ~779w) (1)
 
 - /learn/ai-foundations/choosing-a-model — Choosing a model in 2026
-
-#### expand: thin vs family median (231w vs ~779w) (1)
-
-- /learn/ai-foundations/tokens-context-cost — Tokens, context & cost
 
 #### expand: thin vs family median (277w vs ~779w) (1)
 
@@ -402,126 +372,6 @@ and split always need a written human reason (see checklist).
 #### expand: thin vs family median (269w vs ~779w) (1)
 
 - /learn/llm-foundations/tokenization-explained — Tokenization: How Text Becomes Tokens
-
-#### expand: thin vs family median (279w vs ~779w) (1)
-
-- /learn/machine-learning/assessments/ml-843-assignment-02-linear-models-calibration — Assignment 2: derive, implement, and calibrate a linear decision model
-
-#### expand: thin vs family median (246w vs ~779w) (1)
-
-- /learn/machine-learning/assessments/ml-844-assignment-03-tree-ensemble-debugging — Assignment 3: compare trees and ensembles through a debugging clinic
-
-#### expand: thin vs family median (233w vs ~779w) (1)
-
-- /learn/machine-learning/assessments/ml-848-model-report-template-high-stakes — Model report template: high-stakes review and human oversight
-
-#### expand: thin vs family median (368w vs ~1011w) (1)
-
-- /learn/machine-learning/assessments/ml-849-staged-capstone-handbook — Staged capstone handbook: from proposal to production review
-
-#### expand: thin vs family median (291w vs ~779w) (1)
-
-- /learn/machine-learning/derivations/01-linear-regression-normal-equations-and-geometry — Linear regression: normal equations and geometry
-
-#### expand: thin vs family median (296w vs ~779w) (1)
-
-- /learn/machine-learning/derivations/02-gradient-descent-and-convergence-for-linear-models — Gradient descent and convergence for linear models
-
-#### expand: thin vs family median (278w vs ~779w) (1)
-
-- /learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian — Logistic regression: likelihood, gradient, and Hessian
-
-#### expand: thin vs family median (298w vs ~779w) (1)
-
-- /learn/machine-learning/derivations/04-map-mle-and-regularization-as-priors — MAP, MLE, and regularization as priors
-
-#### expand: thin vs family median (290w vs ~779w) (1)
-
-- /learn/machine-learning/derivations/08-pca-svd-and-best-low-rank-approximation — PCA, SVD, and best low-rank approximation
-
-#### expand: thin vs family median (315w vs ~886w) (1)
-
-- /learn/machine-learning/ml-215-lab-linear-model-diagnostic-notebook — Lab: linear-model diagnostic notebook
-
-#### expand: thin vs family median (352w vs ~886w) (1)
-
-- /learn/machine-learning/ml-705-lab-fraud-detection-under-class-imbalance — Lab: fraud detection under class imbalance
-
-#### expand: thin vs family median (348w vs ~886w) (1)
-
-- /learn/machine-learning/ml-706-lab-demand-forecasting-with-delayed-labels — Lab: demand forecasting with delayed labels
-
-#### expand: thin vs family median (350w vs ~886w) (1)
-
-- /learn/machine-learning/ml-707-lab-content-ranking-with-feedback — Lab: content ranking with feedback
-
-#### expand: thin vs family median (335w vs ~886w) (1)
-
-- /learn/machine-learning/ml-708-lab-clustering-for-exploration — Lab: clustering for exploration
-
-#### expand: thin vs family median (334w vs ~886w) (1)
-
-- /learn/machine-learning/ml-709-lab-anomaly-detection-with-investigation-queues — Lab: anomaly detection with investigation queues
-
-#### expand: thin vs family median (349w vs ~886w) (1)
-
-- /learn/machine-learning/ml-710-lab-causal-question-triage — Lab: causal question triage
-
-#### expand: thin vs family median (345w vs ~886w) (1)
-
-- /learn/machine-learning/ml-712-lab-reproducible-training-pipeline — Lab: reproducible training pipeline
-
-#### expand: thin vs family median (344w vs ~886w) (1)
-
-- /learn/machine-learning/ml-713-lab-production-readiness-review — Lab: production readiness review
-
-#### expand: thin vs family median (378w vs ~1011w) (1)
-
-- /learn/machine-learning/ml-714-capstone-classical-ml-system-defense — Capstone: classical ML system defense
-
-#### expand: thin vs family median (215w vs ~886w) (1)
-
-- /learn/machine-learning/ml-871-executable-lab-studio — Executable Classical ML lab studio
-
-#### expand: thin vs family median (201w vs ~779w) (1)
-
-- /learn/machine-learning/public-data-projects/adult-income-project — Public-data project: Adult income prediction
-
-#### expand: thin vs family median (212w vs ~779w) (1)
-
-- /learn/machine-learning/reproductions/linear-regression-reproduction — Paper reproduction: least squares, shrinkage, and prediction
-
-#### expand: thin vs family median (210w vs ~779w) (1)
-
-- /learn/machine-learning/reproductions/pca-reconstruction-reproduction — Paper reproduction: low-rank reconstruction
-
-#### expand: thin vs family median (208w vs ~779w) (1)
-
-- /learn/machine-learning/reproductions/random-forest-reproduction — Paper reproduction: random forests and out-of-bag evidence
-
-#### expand: thin vs family median (214w vs ~779w) (1)
-
-- /learn/machine-learning/reproductions/svm-kernel-reproduction — Paper reproduction: margins and kernels
-
-#### expand: thin vs family median (288w vs ~779w) (1)
-
-- /learn/mcp/first-mcp-server — Build your first MCP server in Python (20 min)
-
-#### expand: thin vs family median (196w vs ~779w) (1)
-
-- /learn/prompt-engineering/answer-first-prompting — Answer-first prompting
-
-#### expand: thin vs family median (362w vs ~1011w) (1)
-
-- /learn/prompt-engineering/prompt-library-capstone — Capstone: build a prompt library that can survive a change
-
-#### expand: thin vs family median (325w vs ~886w) (1)
-
-- /learn/responsible-ai/adversarial-testing-lab — Lab: turn a prompt injection finding into a regression test
-
-#### expand: thin vs family median (149w vs ~779w) (1)
-
-- /learn/structured-outputs/incremental-json-repair — Incremental JSON Repair: Fixing Truncated Output Instead of Discarding It
 
 #### expand: thin vs family median (191w vs ~525w) (1)
 
@@ -889,13 +739,13 @@ Largest queue; full list in JSON. Vendor-signal sample:
 
 ### interview (7)
 
-- /interview/agents — AI agents interview questions (755 words, updated 2026-09-08)
-- /interview/ai-system-design — AI system design interview questions (727 words, updated 2026-09-08)
-- /interview/evals — LLM evaluation interview questions (732 words, updated 2026-08-30)
-- /interview/llm-basics — LLM basics interview questions (764 words, updated 2026-09-08)
-- /interview/mcp — MCP interview questions (692 words, updated 2026-09-08)
-- /interview/prompt-engineering — Prompt engineering interview questions (731 words, updated 2026-09-08)
-- /interview/rag — RAG interview questions (700 words, updated 2026-08-30)
+- /interview/agents — AI agents interview questions (776 words, updated 2026-09-08)
+- /interview/ai-system-design — AI system design interview questions (748 words, updated 2026-09-08)
+- /interview/evals — LLM evaluation interview questions (753 words, updated 2026-08-30)
+- /interview/llm-basics — LLM basics interview questions (785 words, updated 2026-09-08)
+- /interview/mcp — MCP interview questions (713 words, updated 2026-09-08)
+- /interview/prompt-engineering — Prompt engineering interview questions (752 words, updated 2026-09-08)
+- /interview/rag — RAG interview questions (721 words, updated 2026-08-30)
 
 ### scenario (6)
 

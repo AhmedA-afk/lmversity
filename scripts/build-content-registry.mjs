@@ -407,6 +407,8 @@ for (const file of [...walk(LESSONS, /\.(md|mdx)$/)].sort()) {
       sourcesSection: /sources|further reading|references/i.test(a.headings.map((h) => h.text).join(' ')),
       runnableSignals: a.codeBlockCount > 0 && /\b(npm|pip|python3?|node|curl|ollama|docker)\b/i.test(body),
       listItems: a.listItems,
+      specFormat: /rubric|protocol|required artefact|submission artefact|stage gate|deliverable|acceptance criteria|checkpoint/i.test(a.headings.map((h) => h.text).join(' ')),
+      mathDense: (body.match(/\$/g) ?? []).length >= 6 || /\\frac|\\nabla|\\sum|\\prod|\\beta|\\theta|\\alpha|\\partial/.test(body),
       linksToPractice: a.internalLinks.some((l) => l.startsWith('/practice')),
     },
     searchIntent: intent(LESSON_FAMILY[kind] ?? 'lesson', kind, fm.title ?? '', slug),
@@ -566,6 +568,8 @@ for (const file of [...walk(FDE, /\.(md|mdx)$/)].sort()) {
       sources: Array.isArray(fm.sources) ? fm.sources.length : 0,
       artifact: fm.artifact ?? null, outcomes: Array.isArray(fm.outcomes) ? fm.outcomes.length : 0,
       listItems: a.listItems,
+      specFormat: /rubric|protocol|required artefact|submission artefact|stage gate|deliverable|acceptance criteria|checkpoint/i.test(a.headings.map((h) => h.text).join(' ')),
+      mathDense: (body.match(/\$/g) ?? []).length >= 6 || /\\frac|\\nabla|\\sum|\\prod|\\beta|\\theta|\\alpha|\\partial/.test(body),
     },
     searchIntent: intent(FDE_FAMILY[fm.kind] ?? 'lesson', fm.kind ?? 'lesson', fm.title ?? '', slug),
     primaryAudience: 'forward-deployed-engineer',
@@ -841,7 +845,7 @@ function scoreItem(it) {
   if (it.status === 'coming') { disposition = 'expand'; reason = 'planned stub — no content yet'; }
   else if (isContent && !summary) { disposition = 'investigate'; reason = 'missing summary/meta description'; }
   else if (it.collection === 'lessons' && f.curriculumRegistered === false) { disposition = 'investigate'; reason = 'live lesson not registered in curriculum'; }
-  else if (s.completeness === 0) { disposition = 'expand'; reason = `thin vs family median (${it.wordCount}w vs ~${Math.round(med)}w)`; }
+  else if (s.completeness === 0 && !f.specFormat && !f.mathDense && !(f.codeBlocks > 0)) { disposition = 'expand'; reason = `thin vs family median (${it.wordCount}w vs ~${Math.round(med)}w)`; }
   else if (s.linking === 0) { disposition = 'investigate'; reason = 'zero in-body internal links'; }
   else if (s.freshnessHealth === 0 && it.updated && NOW - Date.parse(it.updated) > STALE_MS) {
     disposition = 'refresh'; reason = `${it.freshnessClass} content stale (>180d since update)`;
