@@ -1165,12 +1165,24 @@ Credentials to monitor:
 
 ### AI Literacy
 
-- [ ] Add more everyday task decisions, verification drills, privacy scenarios, and
-      comparative tool exercises.
-- [ ] Add hands-on artifacts for research, writing, planning, spreadsheet, document,
-      presentation, and image workflows.
-- [ ] Add a safe introduction to skills, connectors, and agents.
-- [ ] Add multilingual and accessibility examples.
+- [x] Add more everyday task decisions, verification drills, privacy scenarios, and
+      comparative tool exercises. *(all four categories already covered:
+      `should-i-use-ai-for-this-worked-decisions`, `is-ai-worth-it-for-this-task`;
+      verification via `the-verification-checklist` +
+      `fact-check-an-ai-answer-step-by-step` + 2 quizzes; privacy via
+      `data-privacy-provenance-and-policy` + `privacy-bias-and-ethics-quiz` +
+      `what-not-to-paste-into-ai` + `your-data-can-be-the-price`; comparative
+      exercises via `compare-ai-tools-for-one-real-task` +
+      `free-vs-paid-ai-what-you-get` + `matching-the-ai-tool-to-the-job`)*
+- [x] Add hands-on artifacts for research, writing, planning, spreadsheet, document,
+      presentation, and image workflows. *(`seven-first-ai-workflows-lab`: one
+      complete task→prompt→artifact→check card per workflow)*
+- [x] Add a safe introduction to skills, connectors, and agents.
+      *(`meet-skills-connectors-and-agents`: capability ladder, permission table,
+      three safety defaults, safe first experiment)*
+- [x] Add multilingual and accessibility examples.
+      *(`ai-across-languages-and-accessibility`: three in-language working
+      patterns + four accessibility use-cases, each with verification)*
 
 ### AI Foundations
 
@@ -2055,7 +2067,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-15 — Phase 1 validation cluster
 
-- Registry gains `sourcingFlags` + an audit-views section: volatile pages
+- Commit: `ecd62ca`. Registry gains `sourcingFlags` + an audit-views section: volatile pages
   without `updated` (0 violations), comparison-intent pages whose external
   links are all provider domains (0 violations), and pricing/release-sensitive
   pages with ≥4 numeric claims and no source signal (**144 candidates** —
@@ -2072,6 +2084,21 @@ validation, deployment status, measured result when available, blockers, and nex
   `check:content` clean.
 - Next batch: editorial status workflow (`proposed`→`retired` field +
   validation) or source-registry schema.
+
+### 2026-09-15 — AI Literacy track gaps closed
+
+- Three new lessons: `meet-skills-connectors-and-agents` (capability ladder +
+  permission table + three safety defaults), `seven-first-ai-workflows-lab`
+  (task→prompt→artifact→check card for each of research, writing, planning,
+  spreadsheet, document, presentation, image), and
+  `ai-across-languages-and-accessibility` (three multilingual working patterns
+  + four accessibility use-cases). All registered in curriculum; all four
+  AI-Literacy checklist rows ticked (the "more decisions/drills/scenarios"
+  row was already covered — annotation cites the existing pieces).
+- Validation: `check:content` clean (2,063 files); build 2,398 pages;
+  `check:links` 0 dead; registry + family audit clean.
+- Next batch: next track-section rows (AI Foundations overlap resolution,
+  Maths Foundations diagnostics/practice) or editorial status workflow.
 
 ### 2026-09-14 — Master ecosystem backlog created
 

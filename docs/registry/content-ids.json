@@ -1,7 +1,7 @@
 {
  "version": 1,
  "next": {
-  "les": 2060,
+  "les": 2063,
   "que": 7,
   "sce": 6,
   "blo": 10,
@@ -9486,6 +9486,18 @@
   "answers/what-is-prompt-injection.md": {
    "id": "ans-0033",
    "fp": "0bfe588aade66094f1b81a25a0c1412e4c8759a1"
+  },
+  "lessons/ai-literacy/ai-across-languages-and-accessibility.md": {
+   "id": "les-2061",
+   "fp": "0527a8edaf042a372fc11678fae19abbe8fe27b0"
+  },
+  "lessons/ai-literacy/meet-skills-connectors-and-agents.md": {
+   "id": "les-2062",
+   "fp": "a73ce2c0700bcf84a1e94eddef4fe369a3ed86e1"
+  },
+  "lessons/ai-literacy/seven-first-ai-workflows-lab.md": {
+   "id": "les-2063",
+   "fp": "0f902312e709714ed9e1f639693e4745873fb777"
   }
  },
  "retired": {

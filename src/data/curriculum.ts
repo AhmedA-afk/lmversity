@@ -286,6 +286,21 @@ const unsortedTracks: Track[] = [
         "status": "live"
       },
       {
+        "title": "Meet skills, connectors, and agents — safely",
+        "slug": "meet-skills-connectors-and-agents",
+        "status": "live"
+      },
+      {
+        "title": "Lab: seven first AI workflows for everyday work",
+        "slug": "seven-first-ai-workflows-lab",
+        "status": "live"
+      },
+      {
+        "title": "Use AI across languages and accessibility needs",
+        "slug": "ai-across-languages-and-accessibility",
+        "status": "live"
+      },
+      {
         "title": "Cheatsheet: the AI literacy master reference",
         "slug": "ai-literacy-master-cheatsheet",
         "status": "live"

@@ -1,14 +1,14 @@
 # Content registry — audit views
 
-Generated 2026-09-15T09:29:40.853Z by `scripts/build-content-registry.mjs`.
-2384 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T09:42:18.585Z by `scripts/build-content-registry.mjs`.
+2387 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
 
-- lesson: 2014
+- lesson: 2016
 - quiz: 89
-- lab: 60
+- lab: 61
 - reference: 59
 - answer: 33
 - track: 32
@@ -23,13 +23,13 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By status
 
-- live: 2384
+- live: 2387
 
 ## By search intent (heuristic)
 
-- concept: 1846
+- concept: 1848
 - comparison: 106
-- build: 91
+- build: 92
 - practice: 89
 - reference: 60
 - answer: 33
@@ -50,7 +50,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 - ai-engineer: 1611
 - beginner-engineer: 439
 - forward-deployed-engineer: 194
-- general: 122
+- general: 125
 - job-candidate: 7
 - developer: 1
 - ml-engineer: 1
@@ -68,7 +68,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 | track | files | concept | worked ex. | mistakes | compared | cheatsheet | quiz | lab | capstone | % code | % check | % sources | med. words | quick guide | quiz bank |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ai-literacy | 56 | 41 | 2 | 0 | 2 | 2 | 7 | 0 | 2 | 64% | 0% | 2% | 1549 | — | — |
+| ai-literacy | 59 | 43 | 2 | 0 | 2 | 2 | 7 | 1 | 2 | 61% | 0% | 2% | 1513 | — | — |
 | maths-foundations | 193 | 179 | 0 | 0 | 2 | 0 | 0 | 11 | 1 | 71% | 0% | 0% | 771 | — | — |
 | python-data-apis | 57 | 44 | 0 | 2 | 0 | 0 | 10 | 0 | 1 | 98% | 0% | 4% | 1615 | — | — |
 | ai-foundations | 160 | 127 | 9 | 0 | 10 | 0 | 10 | 0 | 4 | 68% | 0% | 1% | 1009 | — | yes |
@@ -96,7 +96,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 Mechanical per-track audit. Practice-ending = last node of a module is quiz/lab/capstone/worked-example/drill;
 dead-end = the track's final live node is a plain concept; orphan boundary = a module `startsAt` slug absent from the track's nodes.
 
-### ai-literacy — 56 files, 9 modules — starts: "What AI can and can't do: the whole picture"
+### ai-literacy — 59 files, 9 modules — starts: "What AI can and can't do: the whole picture"
 
 - missing kinds: common-mistakes
 - 6 island lessons (no in-body links)
@@ -260,21 +260,21 @@ and split always need a written human reason (see checklist).
 
 | disposition | items |
 |---|---:|
-| keep | 1950 |
+| keep | 1953 |
 | investigate | 429 |
 | expand | 5 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2168 | 1.92 | 0 | 184 | 1984 |
+| intentClarity | 2170 | 1.92 | 0 | 184 | 1986 |
 | correctnessSources | 43 | 1.28 | 0 | 31 | 12 |
-| completeness | 2308 | 1.65 | 45 | 716 | 1547 |
-| prerequisiteFit | 2243 | 2.00 | 3 | 0 | 2240 |
-| handsOn | 2168 | 1.49 | 525 | 53 | 1590 |
-| explanationQuality | 2168 | 1.96 | 20 | 56 | 2092 |
-| metadata | 2168 | 1.87 | 0 | 284 | 1884 |
-| linking | 2079 | 1.41 | 429 | 371 | 1279 |
-| freshnessHealth | 2384 | 0.78 | 789 | 1332 | 263 |
+| completeness | 2311 | 1.65 | 44 | 719 | 1548 |
+| prerequisiteFit | 2246 | 2.00 | 3 | 0 | 2243 |
+| handsOn | 2170 | 1.49 | 527 | 53 | 1590 |
+| explanationQuality | 2170 | 1.96 | 20 | 56 | 2094 |
+| metadata | 2170 | 1.87 | 0 | 284 | 1886 |
+| linking | 2081 | 1.41 | 429 | 371 | 1281 |
+| freshnessHealth | 2387 | 0.78 | 790 | 1334 | 263 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
@@ -424,7 +424,7 @@ _… 274 more pairs in content-registry.json (`duplicates`)_
 
 ## Sourcing review flags
 
-144 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
+145 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
 
 | item | flags |
 |---|---|
@@ -442,6 +442,7 @@ _… 274 more pairs in content-registry.json (`duplicates`)_
 | /learn/ai-literacy/common-myths-about-ai-debunked | 6 numeric claims with no sources section or external link |
 | /learn/ai-literacy/cost-and-limits-quiz | 8 numeric claims with no sources section or external link |
 | /learn/ai-literacy/judging-and-verifying-quiz | 42 numeric claims with no sources section or external link |
+| /learn/ai-literacy/meet-skills-connectors-and-agents | release-sensitive page with no updated/review date |
 | /learn/ai-literacy/the-real-limits-of-ai-today | 5 numeric claims with no sources section or external link |
 | /learn/ai-literacy/what-not-to-paste-into-ai | 10 numeric claims with no sources section or external link |
 | /learn/ai-literacy/what-using-ai-actually-costs | 4 numeric claims with no sources section or external link |
@@ -487,15 +488,14 @@ _… 274 more pairs in content-registry.json (`duplicates`)_
 | /learn/hallucinations/intrinsic-vs-extrinsic-hallucination | 7 numeric claims with no sources section or external link |
 | /learn/hallucinations/latency-cost-reliability-tradeoffs | 15 numeric claims with no sources section or external link |
 | /learn/hallucinations/mitigation-quiz | 5 numeric claims with no sources section or external link |
-| /learn/hallucinations/uncertainty-in-practice-triage | 5 numeric claims with no sources section or external link |
 
-_… 84 more in content-registry.json (`sourcingFlags`)_
+_… 85 more in content-registry.json (`sourcingFlags`)_
 
 ## Freshness queues
 
-- periodic: 1332
+- periodic: 1334
 - pricing-sensitive: 336
-- release-sensitive: 283
+- release-sensitive: 284
 - durable: 263
 - certification-sensitive: 97
 - policy-sensitive: 73
@@ -602,7 +602,7 @@ _… 84 more in content-registry.json (`sourcingFlags`)_
 - /learn/machine-learning/public-data-projects/ml-895-movielens-recommendation-and-feedback — Public-data project: MovieLens recommendation with temporal and feedback-loop audits
 - … 43 more in content-registry.json
 
-### release-sensitive (283)
+### release-sensitive (284)
 
 Largest queue; full list in JSON. Vendor-signal sample:
 - /learn/agentic-ai/agent-benchmarks — Claude
@@ -621,6 +621,7 @@ Largest queue; full list in JSON. Vendor-signal sample:
 - /learn/ai-foundations/scaling-laws — OpenAI, GPT-3
 - /learn/ai-literacy/common-myths-about-ai-debunked — ChatGPT, Copilot
 - /learn/ai-literacy/expecting-too-much-or-too-little — ChatGPT
+- /learn/ai-literacy/meet-skills-connectors-and-agents — MCP
 - /learn/ai-literacy/types-of-ai-you-meet-every-day — ChatGPT, Claude, Gemini
 - /learn/context-engineering/counting-tokens-in-practice — OpenAI, Claude, Anthropic
 - /learn/context-engineering/foundations-quiz — Claude
@@ -634,16 +635,18 @@ Largest queue; full list in JSON. Vendor-signal sample:
 - /learn/deep-learning/vision/223-pruning-sparsity-and-quantization — Unstructured
 - /learn/evals-red-teaming/eval-tooling-landscape — Promptfoo, Braintrust, Ragas, OpenAI, Anthropic
 - /learn/evals-red-teaming/evaluating-agent-trajectories — LangSmith, Braintrust
-- /learn/evals-red-teaming/flaky-eval-mitigation — Promptfoo, Braintrust, Ragas
-- … 253 more
+- … 254 more
 
 ## Missing-data queues
 
 ### no summary/meta description (0)
 
 
-### no published or updated date (0)
+### no published or updated date (3)
 
+- /learn/ai-literacy/ai-across-languages-and-accessibility — Use AI across languages and accessibility needs
+- /learn/ai-literacy/meet-skills-connectors-and-agents — Meet skills, connectors, and agents — safely
+- /learn/ai-literacy/seven-first-ai-workflows-lab — Lab: seven first AI workflows for everyday work
 
 ### zero in-body internal links (template nav still applies) (483)
 
@@ -701,8 +704,9 @@ Largest queue; full list in JSON. Vendor-signal sample:
 ### lesson files with status coming (0)
 
 
-### release-sensitive, no date at all (2)
+### release-sensitive, no date at all (3)
 
+- /learn/ai-literacy/meet-skills-connectors-and-agents — Meet skills, connectors, and agents — safely
 - /privacy — Privacy
 - /terms — Terms
 

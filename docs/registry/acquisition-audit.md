@@ -1,6 +1,6 @@
 # Acquisition & practice family audit — mechanical pass
 
-Generated 2026-09-15T09:32:47.665Z by `scripts/audit-families.mjs`.
+Generated 2026-09-15T09:42:19.009Z by `scripts/audit-families.mjs`.
 Structural checks only; originality/correctness are scored in the review pass.
 
 ## Findings

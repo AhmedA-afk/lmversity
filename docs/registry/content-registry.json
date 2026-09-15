@@ -1,16 +1,16 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T09:29:40.853Z",
+  "generatedAt": "2026-09-15T09:42:18.585Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2384,
+  "itemCount": 2387,
   "counts": {
    "byFamily": {
-    "lesson": 2014,
+    "lesson": 2016,
     "project": 31,
     "quiz": 89,
     "reference": 59,
-    "lab": 60,
+    "lab": 61,
     "interview": 7,
     "scenario": 6,
     "blog": 10,
@@ -22,17 +22,17 @@
     "glossary": 1
    },
    "byStatus": {
-    "live": 2384
+    "live": 2387
    },
    "byKind": {
-    "concept": 1716,
+    "concept": 1718,
     "comparison": 101,
     "worked-example": 29,
     "capstone": 31,
     "quiz": 83,
     "cheatsheet": 48,
+    "lab": 61,
     "common-mistakes": 24,
-    "lab": 60,
     "topic": 7,
     "scenario": 6,
     "post": 10,
@@ -60,7 +60,7 @@
    "byTrack": {
     "agentic-ai": 29,
     "ai-foundations": 161,
-    "ai-literacy": 57,
+    "ai-literacy": 60,
     "classical-ai": 84,
     "context-engineering": 133,
     "deep-learning": 137,
@@ -96,8 +96,8 @@
     "fde": 193
    },
    "byFreshness": {
-    "release-sensitive": 283,
-    "periodic": 1332,
+    "release-sensitive": 284,
+    "periodic": 1334,
     "policy-sensitive": 73,
     "pricing-sensitive": 336,
     "certification-sensitive": 97,
@@ -16029,6 +16029,91 @@
    }
   },
   {
+   "id": "les-2061",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Use AI across languages and accessibility needs",
+   "slug": "ai-literacy/ai-across-languages-and-accessibility",
+   "route": "/learn/ai-literacy/ai-across-languages-and-accessibility",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-literacy/ai-across-languages-and-accessibility.md",
+   "track": "ai-literacy",
+   "module": "Cost, limits and expectations",
+   "status": "live",
+   "summary": "Get good results from AI in languages beyond English and use it as an accessibility assistant — with the verification habits both cases need.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 521,
+   "headings": [
+    "The short answer",
+    "Why this matters",
+    "Working in your own language",
+    "AI as an accessibility assistant",
+    "The shared verification rule",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/ai-literacy/the-verification-checklist",
+    "/learn/ai-literacy/using-ai-honestly-and-responsibly",
+    "/learn/ai-literacy/where-ai-bias-comes-from",
+    "/learn/ai-literacy/where-ai-knowledge-comes-from-and-stops"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 10,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "general",
+   "promisedOutcome": "Get good results from AI in languages beyond English and use it as an accessibility assistant — with the verification habits both cases need.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-literacy/ai-literacy-master-cheatsheet",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-0189",
    "family": "lesson",
    "kind": "concept",
@@ -17294,7 +17379,7 @@
    "promisedOutcome": "Common-mistakes lesson on the two opposite AI failure modes — blind over-trust and reflexive dismissal — using five real, documented incidents (Mata v.",
    "jobToBeDone": null,
    "prerequisite": null,
-   "nextAction": "/learn/ai-literacy/ai-literacy-master-cheatsheet",
+   "nextAction": "/learn/ai-literacy/meet-skills-connectors-and-agents",
    "practiceType": "none",
    "freshnessClass": "release-sensitive",
    "freshnessSignals": [
@@ -18405,6 +18490,93 @@
    }
   },
   {
+   "id": "les-2062",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Meet skills, connectors, and agents — safely",
+   "slug": "ai-literacy/meet-skills-connectors-and-agents",
+   "route": "/learn/ai-literacy/meet-skills-connectors-and-agents",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-literacy/meet-skills-connectors-and-agents.md",
+   "track": "ai-literacy",
+   "module": "Cost, limits and expectations",
+   "status": "live",
+   "summary": "Learn the difference between a chatbot, a connected assistant, and an agent — and how to try each without giving it more power than the task needs.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 450,
+   "headings": [
+    "The short answer",
+    "Why this matters",
+    "How it works",
+    "Three safety defaults",
+    "A safe first experiment",
+    "Where this goes next"
+   ],
+   "internalLinks": [
+    "/learn/ai-literacy/task-or-automation",
+    "/learn/ai-literacy/the-verification-checklist",
+    "/learn/ai-literacy/what-happens-to-what-you-type",
+    "/learn/mcp/what-is-mcp"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 7,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "general",
+   "promisedOutcome": "Learn the difference between a chatbot, a connected assistant, and an agent — and how to try each without giving it more power than the task needs.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-literacy/seven-first-ai-workflows-lab",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: MCP"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-0215",
    "family": "quiz",
    "kind": "quiz",
@@ -18861,6 +19033,91 @@
     "metadata": null,
     "linking": null,
     "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2063",
+   "family": "lab",
+   "kind": "lab",
+   "title": "Lab: seven first AI workflows for everyday work",
+   "slug": "ai-literacy/seven-first-ai-workflows-lab",
+   "route": "/learn/ai-literacy/seven-first-ai-workflows-lab",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-literacy/seven-first-ai-workflows-lab.md",
+   "track": "ai-literacy",
+   "module": "Cost, limits and expectations",
+   "status": "live",
+   "summary": "Seven hands-on mini-projects — research, writing, planning, spreadsheet, document, presentation, and image work — each ending in an artifact you keep and a check that proves it is good.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 790,
+   "headings": [
+    "The short answer",
+    "How to run this lab",
+    "The seven workflows",
+    "What you are actually practicing",
+    "Go further"
+   ],
+   "internalLinks": [
+    "/learn/ai-literacy/fact-check-an-ai-answer-step-by-step",
+    "/learn/ai-literacy/give-ai-context-and-examples",
+    "/learn/ai-literacy/run-a-real-task-end-to-end-with-verification",
+    "/learn/ai-literacy/the-verification-checklist",
+    "/learn/ai-literacy/turn-a-vague-request-into-a-clear-one"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 31,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "build",
+   "primaryAudience": "general",
+   "promisedOutcome": "Seven hands-on mini-projects — research, writing, planning, spreadsheet, document, presentation, and image work — each ending in an artifact you keep and a check that proves it is good.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-literacy/ai-across-languages-and-accessibility",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": 2,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
     "demand": null
@@ -104532,7 +104789,7 @@
    "scores": {
     "intentClarity": null,
     "correctnessSources": null,
-    "completeness": 0,
+    "completeness": 1,
     "prerequisiteFit": 2,
     "handsOn": null,
     "explanationQuality": null,
@@ -197359,18 +197616,19 @@
    "features": {
     "group": "Foundations",
     "declaredMeta": "56 lessons",
-    "nodeCount": 56,
-    "liveNodes": 56,
+    "nodeCount": 59,
+    "liveNodes": 59,
     "comingNodes": 0,
     "headingOnlyNodes": 0,
-    "fileCount": 56,
+    "fileCount": 59,
     "kinds": {
-     "concept": 41,
+     "concept": 43,
      "cheatsheet": 2,
      "comparison": 2,
      "worked-example": 2,
      "quiz": 7,
-     "capstone": 2
+     "capstone": 2,
+     "lab": 1
     },
     "modules": 9,
     "quickGuide": false
@@ -208860,6 +209118,15 @@
    "family": "quiz",
    "flags": [
     "42 numeric claims with no sources section or external link"
+   ]
+  },
+  {
+   "route": "/learn/ai-literacy/meet-skills-connectors-and-agents",
+   "slug": "ai-literacy/meet-skills-connectors-and-agents",
+   "title": "Meet skills, connectors, and agents — safely",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
    ]
   },
   {
