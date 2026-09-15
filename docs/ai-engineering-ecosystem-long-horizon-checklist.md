@@ -2246,7 +2246,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-15 — Phase 7: Voice AI Engineering track (1 candidate row)
 
-- Commit: `5b50f5a`. Status: complete.
+- Commit: `c861ef9`. Status: complete.
 - Content: new `voice-ai` track — 8-lesson MVP: `voice-ai-pipeline-overview`
   (cascade vs S2S, latency budget), `speech-recognition-in-production`
   (streaming/finals/endpointing/domain adaptation), `speech-synthesis-and-
