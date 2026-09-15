@@ -1410,8 +1410,13 @@ template renders all six sections; `/roles` index gained a boundaries section.
       *(served: `web-agents` track (7) — channels, Playwright locators,
       CDP/Puppeteer/Selenium/DevTools-MCP, agentic browsers,
       sessions/act-boundary, web injection, extraction/eval)*
-- [ ] Multilingual and Indic AI Engineering — Sarvam, AI4Bharat, Bhashini, speech,
+- [x] Multilingual and Indic AI Engineering — Sarvam, AI4Bharat, Bhashini, speech,
       translation, code mixing, documents, datasets, and evaluation.
+      *(served: `multilingual-ai` track (10) — coverage matrix, translate-vs-native
+      architectures, code-mixing, cross-lingual retrieval, multilingual
+      OCR/docs, datasets/benchmarks, speech across languages, low-resource
+      strategies, cost/latency, support-assistant lab; Sarvam/AI4Bharat/
+      Bhashini via provider hubs; evals via multilingual-evaluation-design)*
 - [ ] AI Automation for Operations — deterministic workflows, agents, approvals,
       n8n/Zapier/Make/Pipedream candidates, auditability, and maintenance.
 - [x] AI for Data Analysts — querying, notebooks, spreadsheets, chart reasoning,
@@ -2247,6 +2252,26 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-16 — Phase 7: Multilingual/Indic AI track (1 candidate row)
+
+- Commit: `PENDING`. Status: complete.
+- Scope: `multilingual-ai` track — 10 lessons (model landscape/coverage
+  matrix, translate-vs-native-vs-pivot, code-mixing, cross-lingual
+  retrieval, multilingual documents/OCR, datasets/benchmarks, speech
+  across languages, low-resource strategies, cost/latency, support-
+  assistant lab). Registered n:31, group Building.
+- Files: 10 new lessons under `src/content/lessons/multilingual-ai/`;
+  `curriculum.ts`; `sources.json` (+3: MTEB leaderboard, NLLB, OpenAI
+  speech-to-text — all verified HTTP 200).
+- Sources checked: indicnlp.ai4bharat.org, MTEB leaderboard, Meta NLLB,
+  OpenAI STT guide; existing sarvam/ai4bharat/bhashini records reused.
+- Validation: `check:content` clean (2220 lessons); build 2622 pages;
+  `check:links` 2622 pages / 5623 routes, 0 dead; registry regenerated.
+- Blockers: none. IndicGLUE HF dataset returned 401 (access-gated) —
+  cited indicnlp.ai4bharat.org instead.
+- Next: AI Automation for Operations (last candidate-course row);
+  AI-for-Designers sub-checklist continues separately.
 
 ### 2026-09-16 — Phase 7: Multimodal AI Engineering track (1 candidate row)
 

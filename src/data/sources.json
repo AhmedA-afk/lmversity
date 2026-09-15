@@ -3069,5 +3069,38 @@
    "Platform access, API keys, billing"
   ],
   "status": "current"
+ },
+ "mteb-leaderboard": {
+  "title": "MTEB leaderboard",
+  "publisher": "Hugging Face / MTEB",
+  "url": "https://huggingface.co/spaces/mteb/leaderboard",
+  "type": "independent",
+  "status": "current",
+  "accessedAt": "2026-09-16",
+  "claims": [
+   "multilingual embedding benchmark scores"
+  ]
+ },
+ "nllb-meta": {
+  "title": "No Language Left Behind",
+  "publisher": "Meta AI",
+  "url": "https://ai.meta.com/research/no-language-left-behind",
+  "type": "article",
+  "status": "current",
+  "accessedAt": "2026-09-16",
+  "claims": [
+   "low-resource machine translation research program"
+  ]
+ },
+ "openai-speech-docs": {
+  "title": "Speech to text guide",
+  "publisher": "OpenAI",
+  "url": "https://platform.openai.com/docs/guides/speech-to-text",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-16",
+  "claims": [
+   "speech-to-text models and language support"
+  ]
  }
 }

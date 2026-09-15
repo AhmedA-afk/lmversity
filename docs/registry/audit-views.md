@@ -1,15 +1,15 @@
 # Content registry — audit views
 
-Generated 2026-09-15T16:41:05.094Z by `scripts/build-content-registry.mjs`.
-2565 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T16:49:07.562Z by `scripts/build-content-registry.mjs`.
+2575 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
 
-- lesson: 2144
+- lesson: 2153
 - reference: 107
 - quiz: 93
-- lab: 73
+- lab: 74
 - answer: 35
 - project: 33
 - page: 25
@@ -23,14 +23,14 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By status
 
-- live: 2565
+- live: 2575
 
 ## By search intent (heuristic)
 
-- concept: 1962
-- comparison: 114
+- concept: 1970
+- comparison: 115
 - reference: 108
-- build: 106
+- build: 107
 - practice: 93
 - answer: 35
 - worked-example: 33
@@ -47,7 +47,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By primary audience (heuristic)
 
-- ai-engineer: 1732
+- ai-engineer: 1742
 - beginner-engineer: 440
 - forward-deployed-engineer: 194
 - general: 181
@@ -82,28 +82,28 @@ and split always need a written human reason (see checklist).
 
 | disposition | items |
 |---|---:|
-| investigate | 2306 |
+| investigate | 2316 |
 | keep | 255 |
 | expand | 4 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2304 | 1.91 | 0 | 211 | 2093 |
-| correctnessSources | 46 | 1.28 | 0 | 33 | 13 |
-| completeness | 2511 | 1.63 | 50 | 819 | 1642 |
-| prerequisiteFit | 2393 | 0.15 | 2213 | 0 | 180 |
-| handsOn | 2304 | 1.46 | 599 | 55 | 1650 |
-| explanationQuality | 2304 | 1.96 | 20 | 56 | 2228 |
-| metadata | 2304 | 1.84 | 0 | 374 | 1930 |
-| linking | 2211 | 1.50 | 396 | 322 | 1493 |
-| freshnessHealth | 2565 | 0.78 | 891 | 1357 | 317 |
+| intentClarity | 2313 | 1.91 | 0 | 211 | 2102 |
+| correctnessSources | 50 | 1.26 | 0 | 37 | 13 |
+| completeness | 2521 | 1.63 | 50 | 829 | 1642 |
+| prerequisiteFit | 2403 | 0.15 | 2223 | 0 | 180 |
+| handsOn | 2313 | 1.45 | 608 | 55 | 1650 |
+| explanationQuality | 2313 | 1.96 | 20 | 56 | 2237 |
+| metadata | 2313 | 1.84 | 0 | 374 | 1939 |
+| linking | 2220 | 1.50 | 396 | 322 | 1502 |
+| freshnessHealth | 2575 | 0.77 | 898 | 1360 | 317 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
 
 ### Non-keep dispositions
 
-#### investigate: live lesson not registered in curriculum (2210)
+#### investigate: live lesson not registered in curriculum (2220)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -145,7 +145,7 @@ and split always need a written human reason (see checklist).
 - /learn/agentic-ai/cost-aware-agent-loops — Cost-Aware Agents: Budgeting Tokens Across a Long-Running Loop
 - /learn/agentic-ai/error-handling-and-retries — Recovering When Tools Fail
 - /learn/agentic-ai/evaluating-agent-behavior-in-dev — Reading an Agent's Trace
-- … 2170 more in content-registry.json
+- … 2180 more in content-registry.json
 
 #### investigate: zero in-body internal links (96)
 
@@ -286,7 +286,7 @@ _… 288 more pairs in content-registry.json (`duplicates`)_
 
 ## Sourcing review flags
 
-243 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
+250 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
 
 | item | flags |
 |---|---|
@@ -351,18 +351,18 @@ _… 288 more pairs in content-registry.json (`duplicates`)_
 | /learn/context-engineering/cost-latency-quality-tradeoff-curve | 48 numeric claims with no sources section or external link |
 | /learn/context-engineering/deduping-overlapping-tool-results | 10 numeric claims with no sources section or external link |
 
-_… 183 more in content-registry.json (`sourcingFlags`)_
+_… 190 more in content-registry.json (`sourcingFlags`)_
 
 ## Freshness queues
 
 Review order: volatile classes first, oldest last-verified date first; undated items lead each queue. `verified`/`updated`/`published` supply the last-verified date — git-derived when frontmatter is absent.
 
-- periodic: 1357
-- pricing-sensitive: 351
-- release-sensitive: 345
+- periodic: 1360
+- pricing-sensitive: 352
+- release-sensitive: 350
 - durable: 266
 - certification-sensitive: 104
-- policy-sensitive: 91
+- policy-sensitive: 92
 - volatile: 51
 
 ### certification-sensitive (104) — oldest-verified first
@@ -399,7 +399,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-foundations/reliable-ai/223-environmental-impact-and-compute-governance — Environmental Impact and Compute Governance *(verified 2026-08-30)*
 - … 74 more in content-registry.json
 
-### pricing-sensitive (351) — oldest-verified first
+### pricing-sensitive (352) — oldest-verified first
 
 - /learn/agent-frameworks/mastra-typescript-agents — Mastra: the TypeScript agent framework *(verified undated)*
 - /learn/agent-frameworks/microsoft-agent-frameworks — Microsoft's agent frameworks: Semantic Kernel, AutoGen, and the convergence *(verified undated)*
@@ -409,6 +409,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/harness-design/web-harness-case-study — Case study: a web-navigation harness end to end *(verified undated)*
 - /learn/llm-security/guardrails-frameworks-in-practice — Guardrails AI, NeMo Guardrails, and Llama Guard: the filter layer in depth *(verified undated)*
 - /learn/machine-learning/predictive-ml-vs-generative-ai — Separate predictive-ML choices from generative-AI choices *(verified undated)*
+- /learn/multilingual-ai/multilingual-cost-and-latency — Multilingual cost and latency *(verified undated)*
 - /learn/multimodal-ai/image-generation-in-products — Image generation in products: when it serves the product vs decorates it *(verified undated)*
 - /learn/multimodal-ai/multimodal-cost-and-latency — Multimodal cost and latency: the economics of non-text tokens *(verified undated)*
 - /learn/production/deployment-variants-cloud-and-portable — Deployment variants: one managed-cloud path and one portable path *(verified undated)*
@@ -430,10 +431,9 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-foundations/choosing-a-model-decision-framework — A Decision Framework for Picking a Model *(verified 2026-08-30)*
 - /learn/ai-foundations/classification-vs-regression — Classification vs. Regression: The Two Basic Prediction Tasks *(verified 2026-08-30)*
 - /learn/ai-foundations/data-splits-and-leakage-worked-example — Splits, Leakage, and the Lie of a Good Score *(verified 2026-08-30)*
-- /learn/ai-foundations/foundation-models-and-llms-quiz — Foundation Models & LLMs: Check Your Model *(verified 2026-08-30)*
-- … 321 more in content-registry.json
+- … 322 more in content-registry.json
 
-### policy-sensitive (91) — oldest-verified first
+### policy-sensitive (92) — oldest-verified first
 
 - /learn/agent-skills/evaluating-and-porting-skills — Evaluating skills with fixtures, and porting them across agents *(verified undated)*
 - /learn/agent-skills/skill-md-anatomy — SKILL.md anatomy: frontmatter, body, and bundled resources *(verified undated)*
@@ -446,6 +446,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/llm-security/audit-logs-and-accountability — Audit logs, approval records, and data deletion: the accountability layer *(verified undated)*
 - /learn/llm-security/llm-supply-chain-security — LLM supply-chain security: secrets, dependencies, and model artifacts *(verified undated)*
 - /learn/local-inference/the-local-privacy-boundary — The local privacy boundary *(verified undated)*
+- /learn/multilingual-ai/code-mixing-and-code-switching — Code mixing and code-switching *(verified undated)*
 - /learn/multimodal-ai/multimodal-evaluation — Evaluating multimodal systems: accuracy you can't eyeball *(verified undated)*
 - /learn/rag/pgvector-in-postgres — pgvector: vector search inside the Postgres you already run *(verified undated)*
 - /learn/rag/search-engines-with-vectors — Elasticsearch, OpenSearch, Vespa: the search-engine lineage *(verified undated)*
@@ -464,10 +465,9 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/deep-learning/sequence-generative/318-language-model-training-data-and-scaling — Train language models with data governance and scaling discipline *(verified 2026-08-30)*
 - /learn/deep-learning/sequence-generative/325-multimodal-representations-and-fusion — Model text, images, audio, and structured signals together *(verified 2026-08-30)*
 - /learn/deep-learning/sequence-generative/334-generative-safety-copyright-and-provenance — Deploy generative systems with safety, copyright, and provenance controls *(verified 2026-08-30)*
-- /learn/deep-learning/vision/211-transfer-learning-and-fine-tuning — Transfer learning and fine-tuning *(verified 2026-08-30)*
-- … 61 more in content-registry.json
+- … 62 more in content-registry.json
 
-### release-sensitive (345) — oldest-verified first
+### release-sensitive (350) — oldest-verified first
 
 Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno, LangGraph *(verified undated)*
@@ -500,14 +500,14 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/harness-design/harness-skill-and-mcp-integrations — MCP *(verified undated)*
 - /learn/llm-security/prompt-injection-testing-and-threat-models — Promptfoo *(verified undated)*
 - /learn/llm-security/provider-moderation-and-safety-apis — OpenAI *(verified undated)*
-- … 315 more
+- … 320 more
 
 ## Missing-data queues
 
 ### no summary/meta description (0)
 
 
-### no published or updated date (149)
+### no published or updated date (159)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -549,7 +549,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-for-designers/designer-mental-model-for-generative-ai — A designer's mental model for generative AI
 - /learn/ai-for-designers/designing-a-ux-evaluation-rubric — Designing a UX evaluation rubric
 - /learn/ai-for-designers/designing-for-uncertainty — Designing for uncertainty
-- … 109 more
+- … 119 more
 
 ### zero in-body internal links (template nav still applies) (490)
 
@@ -595,7 +595,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-foundations/reliable-ai/221-contestability-appeals-and-recource — Contestability, Appeals, and Recourse
 - … 450 more
 
-### live file not in curriculum (2210)
+### live file not in curriculum (2220)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -637,7 +637,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agentic-ai/cost-aware-agent-loops — Cost-Aware Agents: Budgeting Tokens Across a Long-Running Loop
 - /learn/agentic-ai/error-handling-and-retries — Recovering When Tools Fail
 - /learn/agentic-ai/evaluating-agent-behavior-in-dev — Reading an Agent's Trace
-- … 2170 more
+- … 2180 more
 
 ### live curriculum node missing file (0)
 
@@ -648,7 +648,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 ### lesson files with status coming (0)
 
 
-### release-sensitive, no date at all (101)
+### release-sensitive, no date at all (108)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -690,7 +690,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/evals-red-teaming/multilingual-evaluation-design — Designing multilingual evaluations
 - /learn/genai-app-dev/building-for-indic-scripts-and-segmentation — Building for Indic scripts, fonts, and segmentation
 - /learn/genai-app-dev/indic-language-pipeline-lab — Lab: build an Indic-language pipeline end to end
-- … 61 more
+- … 68 more
 
 ## Role paths
 

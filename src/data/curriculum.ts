@@ -10653,6 +10653,26 @@ const unsortedTracks: Track[] = [
     ]
   },
   {
+    "id": "multilingual-ai",
+    "n": "31",
+    "name": "Multilingual and Indic AI Engineering",
+    "group": "Building",
+    "meta": "10 lessons",
+    "summary": "Serving users across languages: the coverage matrix, translation architectures, code-mixing, cross-lingual retrieval, multilingual documents, datasets, low-resource strategies, and a support-assistant lab.",
+    "nodes": [
+      { "title": "The multilingual model landscape", "slug": "multilingual-model-landscape", "status": "live" },
+      { "title": "Translate-then-LLM versus multilingual-native", "slug": "translation-vs-multilingual-native", "status": "live" },
+      { "title": "Code mixing and code-switching", "slug": "code-mixing-and-code-switching", "status": "live" },
+      { "title": "Cross-lingual retrieval and multilingual embeddings", "slug": "cross-lingual-retrieval", "status": "live" },
+      { "title": "Multilingual documents and OCR", "slug": "multilingual-documents-and-ocr", "status": "live" },
+      { "title": "Multilingual datasets and benchmarks", "slug": "multilingual-datasets-and-benchmarks", "status": "live" },
+      { "title": "Speech across languages", "slug": "speech-across-languages", "status": "live" },
+      { "title": "Low-resource language strategies", "slug": "low-resource-language-strategies", "status": "live" },
+      { "title": "Multilingual cost and latency", "slug": "multilingual-cost-and-latency", "status": "live" },
+      { "title": "Lab: multilingual support assistant", "slug": "multilingual-support-assistant-lab", "status": "live" }
+    ]
+  },
+  {
     "id": "multimodal-ai",
     "n": "30",
     "name": "Multimodal AI Engineering",

@@ -1,7 +1,7 @@
 {
  "version": 1,
  "next": {
-  "les": 2210,
+  "les": 2220,
   "que": 7,
   "sce": 6,
   "blo": 10,
@@ -10233,6 +10233,46 @@
   "lessons/multimodal-ai/multimodal-rag-lab.md": {
    "id": "les-2210",
    "fp": "4ba4590e7bb14f3dfa391835158ba26be7dac5f0"
+  },
+  "lessons/multilingual-ai/code-mixing-and-code-switching.md": {
+   "id": "les-2211",
+   "fp": "9d497837e49087542db026e255579ea3775d2f34"
+  },
+  "lessons/multilingual-ai/cross-lingual-retrieval.md": {
+   "id": "les-2212",
+   "fp": "53f1ae5c19cd3b5f6aa61f393e4fb049d97865a9"
+  },
+  "lessons/multilingual-ai/low-resource-language-strategies.md": {
+   "id": "les-2213",
+   "fp": "42c1ac2b0caca8aef531efb92fd96e06b68dfddc"
+  },
+  "lessons/multilingual-ai/multilingual-cost-and-latency.md": {
+   "id": "les-2214",
+   "fp": "3f7f17f138b6725231ffc9fd8e66680dcd56c34d"
+  },
+  "lessons/multilingual-ai/multilingual-datasets-and-benchmarks.md": {
+   "id": "les-2215",
+   "fp": "22e90ee06316a843ca2728d8783c6ec51aa31e1b"
+  },
+  "lessons/multilingual-ai/multilingual-documents-and-ocr.md": {
+   "id": "les-2216",
+   "fp": "5b5bae41beaf075660fab9b45deab91e9f681535"
+  },
+  "lessons/multilingual-ai/multilingual-model-landscape.md": {
+   "id": "les-2217",
+   "fp": "da6f6689da88cf7398ed225cef8bf2c5617791e8"
+  },
+  "lessons/multilingual-ai/multilingual-support-assistant-lab.md": {
+   "id": "les-2218",
+   "fp": "5197ce552e1ececca477c7dde9344ae1ab74ebfb"
+  },
+  "lessons/multilingual-ai/speech-across-languages.md": {
+   "id": "les-2219",
+   "fp": "e2427f4c6005bd687fcad368f25cc44b8b04fe5c"
+  },
+  "lessons/multilingual-ai/translation-vs-multilingual-native.md": {
+   "id": "les-2220",
+   "fp": "9a8774bc03e9016681edbced7c98d393c9acb36f"
   }
  },
  "retired": {
