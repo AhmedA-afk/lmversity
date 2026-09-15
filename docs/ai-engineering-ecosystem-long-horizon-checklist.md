@@ -2469,7 +2469,7 @@ validation, deployment status, measured result when available, blockers, and nex
   ads-distinct (vacuous — no ads).
 - Validation: check-content clean (2,229 lessons), 2,681 pages built,
   0 dead internal links across 5,742 routes.
-- Commit: PENDING
+- Commit: `65de2f2`
 - Blockers: none. Remaining release gates are genuinely manual
   (independent review, clean-environment project verification, browser/AT
   checks) and stay open.
