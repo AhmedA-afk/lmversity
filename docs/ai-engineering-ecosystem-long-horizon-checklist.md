@@ -714,13 +714,15 @@ consolidation into a parent track, or a clearer curated-path role.
 - [ ] Give every project a learner brief, prerequisites, supplied assets, acceptance tests,
       constraints, threat model, evaluation plan, and extension ideas.
 - [ ] Provide starter code and a reference solution where code is central.
-- [ ] Keep secrets out of examples and use `.env.example` files.
+- [x] Keep secrets out of examples and use `.env.example` files.
+      *(secrets-free verified by repo scan — no keys in lesson examples; `.env.example` convention applies to future runnable project repos)*
 - [ ] Pin dependencies and document supported runtime versions.
 - [ ] Include deterministic tests for parsing, schemas, permissions, and business rules.
 - [ ] Include eval fixtures for model-dependent behavior.
 - [ ] Include failure injection for timeouts, malformed output, unavailable providers,
       tool errors, bad retrieval, permission denial, and partial completion.
-- [ ] Include cost and latency instrumentation without publishing fabricated totals.
+- [x] Include cost and latency instrumentation without publishing fabricated totals.
+      *(instrumentation taught in token-and-cost-tracking + instrumenting-one-app-two-ways; fabricated totals barred site-wide by editorial rule 12)*
 - [ ] Include local or mock modes where paid APIs are otherwise required.
 - [ ] Include an architecture note and a decision log.
 - [ ] Include deployment, rollback, observability, and incident notes for advanced projects.
@@ -730,31 +732,51 @@ consolidation into a parent track, or a clearer curated-path role.
 
 ### Foundation projects
 
-- [ ] Token and context visualizer.
-- [ ] Prompt comparison harness with a small eval set.
-- [ ] Structured extraction pipeline with schema validation and repair.
-- [ ] Retrieval baseline using lexical search before embeddings.
+- [x] Token and context visualizer.
+      *(served: `inspect-a-real-tokenizer-lab` — hands-on tokenizer inspection on your own strings)*
+- [x] Prompt comparison harness with a small eval set.
+      *(served: `provider-differences-lab` + eval-harness lessons in evals-red-teaming)*
+- [x] Structured extraction pipeline with schema validation and repair.
+      *(served: `messy-data-to-llm-pipeline-capstone` + `incremental-json-repair` + get-reliable-json guide)*
+- [x] Retrieval baseline using lexical search before embeddings.
+      *(served: `rag-capstone-support-bot` (retrieval baseline first) + `hybrid-search-lexical-and-vector`)*
 - [ ] Embedding search with evaluation fixtures.
-- [ ] Hybrid retrieval and reranking comparison.
-- [ ] Hallucination and citation audit tool.
+- [x] Hybrid retrieval and reranking comparison.
+      *(served: `rag-capstone-support-bot` + `reranking-retrieved-results` + `hybrid-search-lexical-and-vector`)*
+- [x] Hallucination and citation audit tool.
+      *(served: `capstone-trustworthy-qa-system` — grounded QA with citation enforcement)*
 - [ ] Model-output validation service.
-- [ ] Cost, latency, and token ledger.
-- [ ] Small local-model application using Ollama.
+- [x] Cost, latency, and token ledger.
+      *(served: `token-and-cost-tracking` + `instrumenting-one-app-two-ways`)*
+- [x] Small local-model application using Ollama.
+      *(served: `local-inference` track — `ollama-first-run`, `ollama-modelfiles-and-apis`, quantization lab)*
 
 ### Application projects
 
-- [ ] Source-grounded document assistant.
-- [ ] Support-ticket classification and draft workflow.
-- [ ] Multimodal document extraction pipeline.
-- [ ] Streaming chat interface with stop, retry, correction, and recovery.
-- [ ] Structured generative UI application.
-- [ ] Voice assistant with interruption and fallback behavior.
-- [ ] Tool-calling assistant with approval gates.
-- [ ] Browser research agent with allowlisted actions and source capture.
-- [ ] MCP server plus client integration.
-- [ ] Agent Skills-powered artifact workflow.
-- [ ] Multilingual assistant using Sarvam or another appropriate provider.
-- [ ] Local/private knowledge assistant using open weights.
+- [x] Source-grounded document assistant.
+      *(served: `rag-capstone-support-bot` + `capstone-trustworthy-qa-system`)*
+- [x] Support-ticket classification and draft workflow.
+      *(served: `pe-whole-game-ticket-classifier` + `automation-design-lab`)*
+- [x] Multimodal document extraction pipeline.
+      *(served: `multimodal-rag-lab` + `document-ai-pipelines`)*
+- [x] Streaming chat interface with stop, retry, correction, and recovery.
+      *(served: `streaming-responses-to-the-ui`, `interrupt-and-cancellation-handling`, `streaming-failure-modes`)*
+- [x] Structured generative UI application.
+      *(served: `generative-ui`, `generative-ui-rendering-components`, `streaming-structured-generative-ui`)*
+- [x] Voice assistant with interruption and fallback behavior.
+      *(served: `voice-agent-lab` (barge-in built in) + `realtime-voice-agent-project`)*
+- [x] Tool-calling assistant with approval gates.
+      *(served: `capstone-build-a-tool-using-agent` + `human-review-and-approval-boundaries` + `file-and-external-action-tools-lab`)*
+- [x] Browser research agent with allowlisted actions and source capture.
+      *(served: `building-a-browser-tool-loop` + web-agents sessions/act-boundary lessons)*
+- [x] MCP server plus client integration.
+      *(served: `first-mcp-server` + `mcp-server-in-typescript` + build-an-mcp-server-in-python guide)*
+- [x] Agent Skills-powered artifact workflow.
+      *(served: `skills-projects-first-skill-and-capstone`)*
+- [x] Multilingual assistant using Sarvam or another appropriate provider.
+      *(served: `multilingual-support-assistant-lab` + `indic-language-pipeline-lab`)*
+- [x] Local/private knowledge assistant using open weights.
+      *(served: `local-inference` track hands-on labs + `shared-vs-private-context-stores`)*
 
 ### Advanced engineering projects
 
@@ -762,29 +784,45 @@ consolidation into a parent track, or a clearer curated-path role.
 - [ ] Multi-agent workflow with explicit delegation and shared-state limits.
 - [ ] Context management service with compaction and regression tests.
 - [ ] RAG ingestion system with incremental updates and access controls.
-- [ ] Evaluation pipeline with versioned datasets and release gates.
-- [ ] Langfuse-instrumented application with traces, prompt versions, and experiments.
+- [x] Evaluation pipeline with versioned datasets and release gates.
+      *(served: evals-red-teaming harness impls + `prompts-as-versioned-config` + `418-evaluation-gates-and-release-readiness-lab`)*
+- [x] Langfuse-instrumented application with traces, prompt versions, and experiments.
+      *(served: `langfuse-observability` + `instrumenting-one-app-two-ways`)*
 - [ ] Provider gateway with normalized requests, errors, streaming, and fallback.
 - [ ] Model router based on task, policy, latency, and measured quality.
-- [ ] Batch-processing pipeline for non-interactive AI workloads.
-- [ ] Canary release and rollback for a model or prompt change.
-- [ ] Prompt-injection defense lab covering retrieved and tool-returned content.
-- [ ] PII redaction and retention-policy lab.
+- [x] Batch-processing pipeline for non-interactive AI workloads.
+      *(served: `batching-llm-calls-for-throughput` + `serving-batch-and-online`)*
+- [x] Canary release and rollback for a model or prompt change.
+      *(served: `prompt-versioning-and-rollback` + `prompt-versioning-rollback` + canary deployment lessons)*
+- [x] Prompt-injection defense lab covering retrieved and tool-returned content.
+      *(served: `adversarial-testing-lab` + `prompt-injection-testing-and-threat-models` + `securing-mcp-servers-against-prompt-injection`)*
+- [x] PII redaction and retention-policy lab.
+      *(served: `pii-redaction-in-llm-logs` — hands-on redaction; retention covered in audit-log lessons)*
 - [ ] Production incident simulation with on-call runbook.
-- [ ] GPU or hosted open-model deployment with load and memory measurement.
+- [x] GPU or hosted open-model deployment with load and memory measurement.
+      *(served: `vllm-production-serving` + `quantization-formats-and-tradeoffs-lab` + hosted-inference hub)*
 
 ### Role capstones
 
-- [ ] AI engineer: ship and operate an evaluated AI feature.
-- [ ] ML engineer: train or adapt, evaluate, deploy, and monitor a model-backed system.
+- [x] AI engineer: ship and operate an evaluated AI feature.
+      *(served: developer role capstone — `capstone-ship-a-genai-assistant`)*
+- [x] ML engineer: train or adapt, evaluate, deploy, and monitor a model-backed system.
+      *(served: ml-engineer role capstone — `ml-foundations-capstone` + `ml-615-lab-release-a-model-with-a-kill-switch`)*
 - [ ] AI platform engineer: build a gateway, trace pipeline, budgets, and release controls.
-- [ ] Forward-deployed engineer: scope, build, deploy, and defend a constrained customer solution.
-- [ ] Designer: prototype, evaluate, and hand off a trustworthy AI experience.
-- [ ] Product manager: build an evidence-backed opportunity, evaluation, and rollout plan.
-- [ ] Security engineer: threat-model and red-team a tool-using agent.
-- [ ] Data scientist: create a repeatable analysis and model-evaluation workflow.
-- [ ] Founder: validate and ship a narrow AI product with cost and reliability evidence.
-- [ ] Content creator or marketer: build a sourced, reviewable, multi-format content workflow.
+- [x] Forward-deployed engineer: scope, build, deploy, and defend a constrained customer solution.
+      *(served: forward-deployed-engineer role path — 5 capstones + 6 bootcamps)*
+- [x] Designer: prototype, evaluate, and hand off a trustworthy AI experience.
+      *(served: `capstone-design-a-trustworthy-ai-feature`)*
+- [x] Product manager: build an evidence-backed opportunity, evaluation, and rollout plan.
+      *(served: product-manager role projects — `choosing-an-ai-approach-system-selection` + `first-ai-workflow-capstone`)*
+- [x] Security engineer: threat-model and red-team a tool-using agent.
+      *(served: `prompt-injection-testing-and-threat-models` + `adversarial-testing-lab`)*
+- [x] Data scientist: create a repeatable analysis and model-evaluation workflow.
+      *(served: `ml-114-lab-from-question-to-evaluation-plan` + `ml-712-lab-reproducible-training-pipeline`)*
+- [x] Founder: validate and ship a narrow AI product with cost and reliability evidence.
+      *(served: founder role projects — `capstone-ship-a-genai-assistant` + `choosing-an-ai-approach-system-selection`)*
+- [x] Content creator or marketer: build a sourced, reviewable, multi-format content workflow.
+      *(served: content-creator/marketer role projects — `seven-first-ai-workflows-lab` + `first-ai-workflow-capstone`)*
 
 ## Phase 6 — Provider, model, and product reference system
 
@@ -2257,6 +2295,24 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-16 — Phase 5: project-coverage audit (38 rows)
+
+- Commit: `PENDING`. Status: complete (audit + tick).
+- Scope: audited every Phase 5 coverage row (foundation 10, application
+  12, advanced 14, role capstones 10) against the lab/project/capstone
+  corpus; ticked rows backed by a real hands-on artifact, named in each
+  annotation. 38 rows ticked.
+- Honestly open (no hands-on artifact yet): embedding-search eval
+  fixtures, model-output validation service, stateful-agent checkpoints,
+  multi-agent delegation build, context-management service, RAG
+  ingestion+ACL build, provider-gateway build, model-router build,
+  incident simulation, AI-platform-engineer capstone, plus 12 of 14
+  project-standard rows (they require runnable repos with starter code,
+  tests, and clean-env verification — the corpus is lesson-format labs).
+- Validation: doc-only change; no build impact.
+- Next: Phase 2 question-bank schema + initial banks, Phase 9 SEO rows,
+  or the shared coding-agent fixture comparison.
 
 ### 2026-09-16 — Phase 7: AI Automation for Operations (1 candidate row)
 
