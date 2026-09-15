@@ -1,9 +1,9 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T16:53:47.992Z",
+  "generatedAt": "2026-09-15T17:13:46.523Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2583,
+  "itemCount": 2594,
   "counts": {
    "byFamily": {
     "lesson": 2160,
@@ -12,9 +12,9 @@
     "reference": 107,
     "quiz": 93,
     "interview": 7,
-    "scenario": 6,
+    "scenario": 12,
     "blog": 10,
-    "guide": 9,
+    "guide": 14,
     "answer": 35,
     "role": 12,
     "track": 10,
@@ -22,7 +22,7 @@
     "glossary": 1
    },
    "byStatus": {
-    "live": 2583
+    "live": 2594
    },
    "byKind": {
     "concept": 1849,
@@ -35,9 +35,9 @@
     "quiz": 87,
     "drill": 14,
     "topic": 7,
-    "scenario": 6,
+    "scenario": 12,
     "post": 10,
-    "howto": 20,
+    "howto": 25,
     "pillar": 4,
     "definition": 12,
     "provider-hub": 51,
@@ -98,18 +98,24 @@
     "Prompt engineering": 1,
     "Retrieval-augmented generation": 1,
     "Agent approval loop": 1,
+    "Browser agent permission design": 1,
+    "Coding agent adoption": 1,
     "Document question answering": 1,
     "Eval-driven release": 1,
+    "Production incident response": 1,
     "MCP team server": 1,
+    "RAG migration under production load": 1,
+    "Regulated decision support": 1,
     "Streaming research feature": 1,
     "Support assistant": 1,
+    "Voice agent production tuning": 1,
     "fde": 193
    },
    "byFreshness": {
-    "release-sensitive": 352,
-    "pricing-sensitive": 356,
-    "periodic": 1362,
-    "policy-sensitive": 92,
+    "release-sensitive": 354,
+    "pricing-sensitive": 359,
+    "periodic": 1367,
+    "policy-sensitive": 93,
     "certification-sensitive": 104,
     "durable": 266,
     "volatile": 51
@@ -193145,6 +193151,159 @@
    }
   },
   {
+   "id": "sce-0007",
+   "family": "scenario",
+   "kind": "scenario",
+   "title": "A research agent that wandered into a checkout page",
+   "slug": "browser-agent-permissions",
+   "route": "/scenarios/browser-agent-permissions",
+   "collection": "scenarios",
+   "path": "src/content/scenarios/browser-agent-permissions.mdx",
+   "track": "Browser agent permission design",
+   "module": null,
+   "status": "live",
+   "summary": "Bound a browser agent that must research freely but act almost never.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 642,
+   "headings": [
+    "The situation",
+    "Constraints",
+    "What you don't know",
+    "Options on the table",
+    "The first decision",
+    "Guided reasoning",
+    "What went wrong",
+    "Failure injection"
+   ],
+   "internalLinks": [
+    "/learn/tools-function-calling/building-a-browser-tool-loop",
+    "/learn/web-agents/sessions-credentials-and-act-boundaries",
+    "/learn/web-agents/web-prompt-injection"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "codeBlocks": 0,
+    "sourcesSection": false,
+    "listItems": 18,
+    "numericClaims": 0
+   },
+   "searchIntent": "scenario",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Bound a browser agent that must research freely but act almost never.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "pricing-sensitive",
+   "freshnessSignals": [
+    "pricing/cost mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": 1,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "sce-0008",
+   "family": "scenario",
+   "kind": "scenario",
+   "title": "Rolling out a coding agent without losing the repo",
+   "slug": "coding-agent-rollout",
+   "route": "/scenarios/coding-agent-rollout",
+   "collection": "scenarios",
+   "path": "src/content/scenarios/coding-agent-rollout.mdx",
+   "track": "Coding agent adoption",
+   "module": null,
+   "status": "live",
+   "summary": "Design team-level adoption of a coding agent — permissions, review, and the boundary between suggested and committed code.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 650,
+   "headings": [
+    "The situation",
+    "Constraints",
+    "What you don't know",
+    "Options on the table",
+    "The first decision",
+    "Guided reasoning",
+    "What went wrong",
+    "Failure injection"
+   ],
+   "internalLinks": [
+    "/learn/cli-agents/cli-agent-labs",
+    "/learn/llm-security/sandboxing-code-execution-and-browser-use"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "codeBlocks": 0,
+    "sourcesSection": false,
+    "listItems": 18,
+    "numericClaims": 0
+   },
+   "searchIntent": "scenario",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Design team-level adoption of a coding agent — permissions, review, and the boundary between suggested and committed code.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": 1,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 1,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "sce-0002",
    "family": "scenario",
    "kind": "scenario",
@@ -193300,6 +193459,81 @@
    }
   },
   {
+   "id": "sce-0009",
+   "family": "scenario",
+   "kind": "scenario",
+   "title": "The support bot that started promising refunds",
+   "slug": "incident-response",
+   "route": "/scenarios/incident-response",
+   "collection": "scenarios",
+   "path": "src/content/scenarios/incident-response.mdx",
+   "track": "Production incident response",
+   "module": null,
+   "status": "live",
+   "summary": "Respond to a live incident where an AI feature's behavior changed without a deploy.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 628,
+   "headings": [
+    "The situation",
+    "Constraints",
+    "What you don't know",
+    "Options on the table",
+    "The first decision",
+    "Guided reasoning",
+    "What went wrong",
+    "Failure injection"
+   ],
+   "internalLinks": [
+    "/learn/genai-app-dev/incident-response-for-ai-features",
+    "/learn/genai-app-dev/prompt-versioning-and-rollback"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "codeBlocks": 0,
+    "sourcesSection": false,
+    "listItems": 18,
+    "numericClaims": 0
+   },
+   "searchIntent": "scenario",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Respond to a live incident where an AI feature's behavior changed without a deploy.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": 1,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 1,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "sce-0004",
    "family": "scenario",
    "kind": "scenario",
@@ -193374,6 +193608,158 @@
     "explanationQuality": 2,
     "metadata": 2,
     "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "sce-0010",
+   "family": "scenario",
+   "kind": "scenario",
+   "title": "Migrating the RAG system nobody documented",
+   "slug": "rag-migration",
+   "route": "/scenarios/rag-migration",
+   "collection": "scenarios",
+   "path": "src/content/scenarios/rag-migration.mdx",
+   "track": "RAG migration under production load",
+   "module": null,
+   "status": "live",
+   "summary": "Migrate a legacy RAG pipeline to a new stack without breaking the product that runs on it.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 636,
+   "headings": [
+    "The situation",
+    "Constraints",
+    "What you don't know",
+    "Options on the table",
+    "The first decision",
+    "Guided reasoning",
+    "What went wrong",
+    "Failure injection"
+   ],
+   "internalLinks": [
+    "/learn/evals-red-teaming/eval-driven-iteration",
+    "/learn/rag/incremental-indexing-freshness"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "codeBlocks": 0,
+    "sourcesSection": false,
+    "listItems": 18,
+    "numericClaims": 1
+   },
+   "searchIntent": "scenario",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Migrate a legacy RAG pipeline to a new stack without breaking the product that runs on it.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": 1,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 1,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "sce-0011",
+   "family": "scenario",
+   "kind": "scenario",
+   "title": "An eligibility screener in a regulated workflow",
+   "slug": "regulated-decision-support",
+   "route": "/scenarios/regulated-decision-support",
+   "collection": "scenarios",
+   "path": "src/content/scenarios/regulated-decision-support.mdx",
+   "track": "Regulated decision support",
+   "module": null,
+   "status": "live",
+   "summary": "Design AI assistance for benefit-eligibility screening where the decision must stay explainable and appealable.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 655,
+   "headings": [
+    "The situation",
+    "Constraints",
+    "What you don't know",
+    "Options on the table",
+    "The first decision",
+    "Guided reasoning",
+    "What went wrong",
+    "Failure injection"
+   ],
+   "internalLinks": [
+    "/learn/genai-app-dev/output-validation-and-moderation",
+    "/learn/llm-security/audit-logs-and-accountability"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "codeBlocks": 0,
+    "sourcesSection": false,
+    "listItems": 19,
+    "numericClaims": 0
+   },
+   "searchIntent": "scenario",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Design AI assistance for benefit-eligibility screening where the decision must stay explainable and appealable.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "policy-sensitive",
+   "freshnessSignals": [
+    "policy/license mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": 1,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -193508,6 +193894,82 @@
    "searchIntent": "scenario",
    "primaryAudience": "ai-engineer",
    "promisedOutcome": "Design a helpdesk assistant that drafts grounded answers without quietly inventing policy.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": 1,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "sce-0012",
+   "family": "scenario",
+   "kind": "scenario",
+   "title": "A phone agent that keeps talking over people",
+   "slug": "voice-agent-latency",
+   "route": "/scenarios/voice-agent-latency",
+   "collection": "scenarios",
+   "path": "src/content/scenarios/voice-agent-latency.mdx",
+   "track": "Voice agent production tuning",
+   "module": null,
+   "status": "live",
+   "summary": "Diagnose and fix a voice agent whose turn-taking is broken despite acceptable per-stage latency.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 662,
+   "headings": [
+    "The situation",
+    "Constraints",
+    "What you don't know",
+    "Options on the table",
+    "The first decision",
+    "Guided reasoning",
+    "What went wrong",
+    "Failure injection"
+   ],
+   "internalLinks": [
+    "/learn/voice-ai/realtime-transport-and-turn-taking",
+    "/learn/voice-ai/voice-ai-pipeline-overview",
+    "/learn/voice-ai/voice-evaluation-and-testing"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "codeBlocks": 0,
+    "sourcesSection": false,
+    "listItems": 17,
+    "numericClaims": 1
+   },
+   "searchIntent": "scenario",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Diagnose and fix a voice agent whose turn-taking is broken despite acceptable per-stage latency.",
    "jobToBeDone": null,
    "prerequisite": null,
    "nextAction": null,
@@ -194304,6 +194766,97 @@
    }
   },
   {
+   "id": "gui-0010",
+   "family": "guide",
+   "kind": "howto",
+   "title": "Add observability to an AI feature",
+   "slug": "add-observability-to-an-ai-feature",
+   "route": "/guides/add-observability-to-an-ai-feature",
+   "collection": "guides",
+   "path": "src/content/guides/add-observability-to-an-ai-feature.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Instrument a working AI feature — traces per request, prompt versions, per-user cost, quality signals — with the two-path choice between an LLM observability platform and plain OpenTelemetry.",
+   "author": "Ahmed Ansari",
+   "published": "2026-09-16",
+   "updated": null,
+   "verified": null,
+   "wordCount": 412,
+   "headings": [
+    "1. The questions first",
+    "2. Pick the path",
+    "3. One trace per request",
+    "4. Version everything",
+    "5. Emit the cost and quality signals",
+    "6. Verify against real questions",
+    "Where to go next"
+   ],
+   "internalLinks": [
+    "/guides/write-your-first-eval-for-an-ai-feature",
+    "/learn/production/instrumenting-one-app-two-ways",
+    "/learn/production/langfuse-observability",
+    "/learn/production/llm-observability-foundations",
+    "/learn/production/token-and-cost-tracking"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "Article",
+    "HowTo",
+    "FAQPage",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "level": "intermediate",
+    "duration": "30 min",
+    "steps": 6,
+    "relatedLessons": [
+     "/learn/production/llm-observability-foundations",
+     "/learn/production/langfuse-observability",
+     "/learn/production/instrumenting-one-app-two-ways",
+     "/learn/production/token-and-cost-tracking"
+    ],
+    "codeBlocks": 0,
+    "listItems": 0,
+    "numericClaims": 1,
+    "featured": false
+   },
+   "searchIntent": "how-to",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Instrument a working AI feature — traces per request, prompt versions, per-user cost, quality signals — with the two-path choice between an LLM observability platform and plain OpenTelemetry.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "pricing-sensitive",
+   "freshnessSignals": [
+    "pricing/cost mention",
+    "vendor/tool mentions: OpenTelemetry, Langfuse, LangSmith, Helicone"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "gui-0001",
    "family": "guide",
    "kind": "howto",
@@ -194569,6 +195122,187 @@
    }
   },
   {
+   "id": "gui-0011",
+   "family": "guide",
+   "kind": "howto",
+   "title": "Build your first browser agent",
+   "slug": "build-your-first-browser-agent",
+   "route": "/guides/build-your-first-browser-agent",
+   "collection": "guides",
+   "path": "src/content/guides/build-your-first-browser-agent.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "A working browser agent — Playwright-driven, allowlisted actions, source capture, and the act boundary that keeps it from doing things you didn't approve.",
+   "author": "Ahmed Ansari",
+   "published": "2026-09-16",
+   "updated": null,
+   "verified": null,
+   "wordCount": 413,
+   "headings": [
+    "1. Scope the task and allowlist",
+    "2. Drive with locators, not pixels",
+    "3. The observe-decide-act loop",
+    "4. Capture sources and actions",
+    "5. The act boundary",
+    "6. Test the failure modes, not the happy path",
+    "Where to go next"
+   ],
+   "internalLinks": [
+    "/learn/tools-function-calling/building-a-browser-tool-loop",
+    "/learn/web-agents/extraction-and-evaluation",
+    "/learn/web-agents/playwright-fundamentals-and-locators",
+    "/learn/web-agents/sessions-credentials-and-act-boundaries",
+    "/learn/web-agents/web-prompt-injection",
+    "/learn/web-agents/what-the-browser-exposes"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "Article",
+    "HowTo",
+    "FAQPage",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "level": "intermediate",
+    "duration": "35 min",
+    "steps": 6,
+    "relatedLessons": [
+     "/learn/web-agents/what-the-browser-exposes",
+     "/learn/web-agents/playwright-fundamentals-and-locators",
+     "/learn/web-agents/sessions-credentials-and-act-boundaries",
+     "/learn/tools-function-calling/building-a-browser-tool-loop"
+    ],
+    "codeBlocks": 0,
+    "listItems": 0,
+    "numericClaims": 0,
+    "featured": false
+   },
+   "searchIntent": "how-to",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "A working browser agent — Playwright-driven, allowlisted actions, source capture, and the act boundary that keeps it from doing things you didn't approve.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Playwright, Puppeteer, Selenium"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "gui-0012",
+   "family": "guide",
+   "kind": "howto",
+   "title": "Build your first voice agent",
+   "slug": "build-your-first-voice-agent",
+   "route": "/guides/build-your-first-voice-agent",
+   "collection": "guides",
+   "path": "src/content/guides/build-your-first-voice-agent.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "A working speech-in, speech-out agent — VAD, streaming ASR, LLM, streaming TTS, barge-in — with the latency budget that decides whether it feels like a conversation.",
+   "author": "Ahmed Ansari",
+   "published": "2026-09-16",
+   "updated": null,
+   "verified": null,
+   "wordCount": 382,
+   "headings": [
+    "1. Choose the architecture",
+    "2. Audio in, with VAD",
+    "3. Streaming transcription",
+    "4. Generate and synthesize, both streaming",
+    "5. Barge-in — the feature that makes it a conversation",
+    "6. Measure the silence budget",
+    "Where to go next"
+   ],
+   "internalLinks": [
+    "/learn/voice-ai/realtime-transport-and-turn-taking",
+    "/learn/voice-ai/speech-recognition-in-production",
+    "/learn/voice-ai/speech-synthesis-and-voice-design",
+    "/learn/voice-ai/voice-agent-lab",
+    "/learn/voice-ai/voice-agent-orchestration",
+    "/learn/voice-ai/voice-ai-pipeline-overview",
+    "/learn/voice-ai/voice-evaluation-and-testing"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "Article",
+    "HowTo",
+    "FAQPage",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "level": "intermediate",
+    "duration": "35 min",
+    "steps": 6,
+    "relatedLessons": [
+     "/learn/voice-ai/voice-ai-pipeline-overview",
+     "/learn/voice-ai/voice-agent-lab",
+     "/learn/voice-ai/realtime-transport-and-turn-taking",
+     "/learn/voice-ai/voice-evaluation-and-testing"
+    ],
+    "codeBlocks": 0,
+    "listItems": 0,
+    "numericClaims": 0,
+    "featured": false
+   },
+   "searchIntent": "how-to",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "A working speech-in, speech-out agent — VAD, streaming ASR, LLM, streaming TTS, barge-in — with the latency budget that decides whether it feels like a conversation.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "gui-0004",
    "family": "guide",
    "kind": "howto",
@@ -194821,9 +195555,98 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": null,
     "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "gui-0013",
+   "family": "guide",
+   "kind": "howto",
+   "title": "Migrate between raw SDKs and agent frameworks",
+   "slug": "migrate-between-raw-sdks-and-frameworks",
+   "route": "/guides/migrate-between-raw-sdks-and-frameworks",
+   "collection": "guides",
+   "path": "src/content/guides/migrate-between-raw-sdks-and-frameworks.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Move an LLM feature between a provider SDK and a framework — what the abstraction buys, what it costs, and a staged migration path that keeps the app running.",
+   "author": "Ahmed Ansari",
+   "published": "2026-09-16",
+   "updated": null,
+   "verified": null,
+   "wordCount": 444,
+   "headings": [
+    "1. Inventory before you move",
+    "2. Find the seam",
+    "3. Migrate behind the interface",
+    "4. Port the semantics, not the calls",
+    "5. Diff on logged traffic",
+    "6. Price the exit, not just the entry",
+    "Where to go next"
+   ],
+   "internalLinks": [
+    "/learn/agent-frameworks/framework-comparison-and-escape-hatches",
+    "/learn/agent-frameworks/raw-sdk-agent-baseline",
+    "/learn/ai-automation-ops/auditability-and-run-history",
+    "/learn/production/llm-gateway-and-provider-abstraction",
+    "/learn/structured-outputs/cross-provider-structured-output-differences"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "Article",
+    "HowTo",
+    "FAQPage",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "level": "intermediate",
+    "duration": "25 min",
+    "steps": 6,
+    "relatedLessons": [
+     "/learn/agent-frameworks/framework-comparison-and-escape-hatches",
+     "/learn/agent-frameworks/raw-sdk-agent-baseline",
+     "/learn/agent-frameworks/framework-comparison-and-escape-hatches"
+    ],
+    "codeBlocks": 0,
+    "listItems": 0,
+    "numericClaims": 0,
+    "featured": false
+   },
+   "searchIntent": "how-to",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Move an LLM feature between a provider SDK and a framework — what the abstraction buys, what it costs, and a staged migration path that keeps the app running.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "pricing-sensitive",
+   "freshnessSignals": [
+    "pricing/cost mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
     "linking": 2,
@@ -194917,6 +195740,95 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "gui-0014",
+   "family": "guide",
+   "kind": "howto",
+   "title": "Run your first local model app with Ollama",
+   "slug": "run-your-first-local-model-app",
+   "route": "/guides/run-your-first-local-model-app",
+   "collection": "guides",
+   "path": "src/content/guides/run-your-first-local-model-app.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "A small, working local LLM app — install Ollama, pull a model that fits your hardware, call it from code, and measure what local inference actually costs.",
+   "author": "Ahmed Ansari",
+   "published": "2026-09-16",
+   "updated": null,
+   "verified": null,
+   "wordCount": 356,
+   "headings": [
+    "1. Install and verify",
+    "2. Pick a model that fits",
+    "3. Pull and chat",
+    "4. Call it from code",
+    "5. Measure on YOUR hardware",
+    "6. Decide what it's for",
+    "Where to go next"
+   ],
+   "internalLinks": [
+    "/learn/local-inference/ollama-first-run",
+    "/learn/local-inference/quantization-formats-and-tradeoffs-lab",
+    "/learn/local-inference/what-local-inference-actually-means",
+    "/providers/hosted-inference"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "Article",
+    "HowTo",
+    "FAQPage",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "level": "beginner",
+    "duration": "25 min",
+    "steps": 6,
+    "relatedLessons": [
+     "/learn/local-inference/ollama-first-run",
+     "/learn/local-inference/ollama-modelfiles-and-apis",
+     "/learn/local-inference/what-local-inference-actually-means",
+     "/providers/hosted-inference"
+    ],
+    "codeBlocks": 3,
+    "listItems": 0,
+    "numericClaims": 5,
+    "featured": false
+   },
+   "searchIntent": "how-to",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "A small, working local LLM app — install Ollama, pull a model that fits your hardware, call it from code, and measure what local inference actually costs.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Ollama"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 2,
     "linking": 2,
     "freshnessHealth": 0,
     "originality": null,
@@ -222529,6 +223441,25 @@
   },
   {
    "a": {
+    "route": "/guides/build-your-first-browser-agent",
+    "slug": "build-your-first-browser-agent",
+    "title": "Build your first browser agent",
+    "track": "guides"
+   },
+   "b": {
+    "route": "/guides/build-your-first-voice-agent",
+    "slug": "build-your-first-voice-agent",
+    "title": "Build your first voice agent",
+    "track": "guides"
+   },
+   "jaccard": 0.6,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
     "route": "/learn/llm-foundations/residual-connections-and-layer-norm",
     "slug": "llm-foundations/residual-connections-and-layer-norm",
     "title": "Residual Connections and Layer Norm",
@@ -222805,6 +223736,25 @@
     "slug": "what-is-rag",
     "title": "What is RAG (retrieval-augmented generation)?",
     "track": "answers"
+   },
+   "jaccard": 0.5,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/python-data-apis/observability-for-ai-services",
+    "slug": "python-data-apis/observability-for-ai-services",
+    "title": "Add observability to a Python AI service",
+    "track": "python-data-apis"
+   },
+   "b": {
+    "route": "/guides/add-observability-to-an-ai-feature",
+    "slug": "add-observability-to-an-ai-feature",
+    "title": "Add observability to an AI feature",
+    "track": "guides"
    },
    "jaccard": 0.5,
    "containment": 0.75,
@@ -224045,6 +224995,25 @@
    "containment": 0.75,
    "slugStem": false,
    "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/voice-ai/voice-agent-lab",
+    "slug": "voice-ai/voice-agent-lab",
+    "title": "Lab: build a minimal voice agent (provider-neutral)",
+    "track": "voice-ai"
+   },
+   "b": {
+    "route": "/guides/build-your-first-voice-agent",
+    "slug": "build-your-first-voice-agent",
+    "title": "Build your first voice agent",
+    "track": "guides"
+   },
+   "jaccard": 0.38,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -228691,12 +229660,67 @@
    ]
   },
   {
+   "route": "/scenarios/browser-agent-permissions",
+   "slug": "browser-agent-permissions",
+   "title": "A research agent that wandered into a checkout page",
+   "family": "scenario",
+   "flags": [
+    "pricing-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/scenarios/regulated-decision-support",
+   "slug": "regulated-decision-support",
+   "title": "An eligibility screener in a regulated workflow",
+   "family": "scenario",
+   "flags": [
+    "policy-sensitive page with no updated/review date"
+   ]
+  },
+  {
    "route": "/blog/the-context-window-got-bigger-and-it-did-not-fix-this",
    "slug": "the-context-window-got-bigger-and-it-did-not-fix-this",
    "title": "The context window got bigger. It didn't fix what you think.",
    "family": "blog",
    "flags": [
     "8 numeric claims with no sources section or external link"
+   ]
+  },
+  {
+   "route": "/guides/add-observability-to-an-ai-feature",
+   "slug": "add-observability-to-an-ai-feature",
+   "title": "Add observability to an AI feature",
+   "family": "guide",
+   "flags": [
+    "pricing-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/guides/build-your-first-browser-agent",
+   "slug": "build-your-first-browser-agent",
+   "title": "Build your first browser agent",
+   "family": "guide",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/guides/migrate-between-raw-sdks-and-frameworks",
+   "slug": "migrate-between-raw-sdks-and-frameworks",
+   "title": "Migrate between raw SDKs and agent frameworks",
+   "family": "guide",
+   "flags": [
+    "pricing-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/guides/run-your-first-local-model-app",
+   "slug": "run-your-first-local-model-app",
+   "title": "Run your first local model app with Ollama",
+   "family": "guide",
+   "flags": [
+    "release-sensitive page with no updated/review date",
+    "5 numeric claims with no sources section or external link"
    ]
   },
   {

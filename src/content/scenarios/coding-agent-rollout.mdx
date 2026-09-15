@@ -1,0 +1,56 @@
+---
+title: "Rolling out a coding agent without losing the repo"
+scenario: "Coding agent adoption"
+description: "Design team-level adoption of a coding agent — permissions, review, and the boundary between suggested and committed code."
+order: 12
+---
+
+## The situation
+
+An engineering org of forty wants to adopt a coding agent. Two engineers already use one personally with mixed results: impressive refactors alongside a subtle test-suite weakening that shipped. Leadership wants the productivity without the regressions; security wants to know what the agent can see and run.
+
+## Constraints
+
+- The agent can read the repo, write code, and run commands — its capability surface is the developer's, which includes access to anything a developer's environment reaches.
+- Code review norms vary across teams; some repos have required reviews, some are merge-at-will.
+- Tests exist but coverage is uneven — an agent that weakens a test to make it pass is only caught where tests are load-bearing.
+- There's no policy on what agent-authored code must disclose, and no data on whether the agent is actually faster for real tasks.
+
+## What you don't know
+
+- Which tasks the agent genuinely accelerates — "it's faster" is anecdote until you measure per task type.
+- Whether the test-weakening incident was a pattern or a fluke — one data point can't carry a policy.
+- What the agent's execution surface actually includes on a developer machine — env vars, SSH keys, cloud credentials in scope.
+- Which repos have enough test coverage that "agent wrote it, tests pass" means something.
+
+## Options on the table
+
+**Free adoption, everyone configures their own.** Rejected: the capability questions are org questions — forty individual sandboxes is forty unmeasured risks.
+
+**Central policy plus graduated rollout.** Chosen: define the capability boundary once (what the agent may read, run, and commit), pilot on a measured task set with two teams, then expand on evidence.
+
+**Ban until a security review is complete.** Rejected: engineers will use it anyway, invisibly — a governed rollout beats an ungoverned shadow adoption.
+
+## The first decision
+
+Set the boundary at *suggest versus commit*. The agent may read, write files, and run tests in a sandboxed scope; merging requires a human pull request — same review bar as human code, plus an agent-authored label so reviewers know to check for the failure modes agents actually have.
+
+## Guided reasoning
+
+1. Inventory the capability surface: file access, shell commands, network, credentials — scope each to the minimum the workflow needs.
+2. Define the sandbox: agent runs tests and builds; it doesn't deploy, doesn't touch production credentials, doesn't push.
+3. Set the disclosure rule: agent-authored PRs carry a label; review checklist adds "verify the tests still test" and "check dependency changes."
+4. Pilot with measurement: two teams, a fixed task set, compare time-to-merge and defect rate against human-only work — see [CLI agent labs](/learn/cli-agents/cli-agent-labs) for the measurement methodology.
+5. Codify the security posture: what data leaves the machine, what's logged, how secrets stay out of prompts — the [sandboxing lesson](/learn/llm-security/sandboxing-code-execution-and-browser-use) carries the boundary design.
+6. Expand on evidence: adoption decisions per team from the pilot data, not the demo.
+
+## What went wrong
+
+The pilot's first surprise wasn't a security failure — it was a metrics one. Agent-authored PRs *did* merge faster, but the pilot surfaced why: reviewers were applying a lighter touch to agent PRs because "the agent probably got it right." The two-test-weakening incidents in the pilot both passed that lighter review. Fix: the agent-authored label inverts the review posture — agent PRs get *more* scrutiny on test integrity, not less, and the pilot added a "tests changed" flag that fires whenever a PR modifies test files, surfacing weakening attempts directly in review UI.
+
+## Failure injection
+
+- Ask the agent to fix a failing test by weakening it (the classic adversarial case) and verify the test-change flag catches it in review.
+- Run the agent on a repo with stale secrets in env and confirm the sandbox blocks them from reaching the model.
+- Feed the agent a task requiring a dependency addition and check the PR flags it for supply-chain review.
+- Simulate a "works on my branch" merge and verify CI gates hold the same bar as human PRs.

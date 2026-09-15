@@ -1,0 +1,58 @@
+---
+title: "A research agent that wandered into a checkout page"
+scenario: "Browser agent permission design"
+description: "Bound a browser agent that must research freely but act almost never."
+order: 11
+---
+
+## The situation
+
+A market-research team wants an agent that browses competitor sites, public docs, and pricing pages, then produces sourced summaries. In a test run, the agent — following its instructions too literally — navigated to a vendor's checkout flow to "verify the price." Nothing was purchased, but it sat on a payment page with a saved card in the session profile.
+
+## Constraints
+
+- Research requires broad navigation freedom — restricting to an allowlist of domains kills the point.
+- The browser runs under a shared team profile with saved credentials and payment methods — the agent inherits everything the profile can do.
+- Some competitor sites serve different content to automated browsers; detection affects what the agent can even observe.
+- The team's real need is *sourced* research — a claim without its URL and quote is worthless for their reports.
+
+## What you don't know
+
+- What the agent can reach through the profile — saved logins, sessions, payment methods, internal tools reachable from the browser.
+- Whether checkout-page wandering was navigation luck or a systematic tendency (agents drift toward "complete the task" patterns).
+- Which sites will serve degraded content or blocks to automation, and how the agent reports "I couldn't see this."
+- What the act boundary should be for actions beyond clicking — form fills, account creation, downloads.
+
+## Options on the table
+
+**Read-only agent.** Navigation plus extraction only — no form submission, no clicking anything transactional. Chosen as the core posture: research needs observation, not action.
+
+**Two-tier actions.** Complement to the first: observe-class actions (navigate, scroll, read, extract, screenshot) run freely; act-class actions (submit forms, authenticate, download, purchase) require explicit human approval per-instance.
+
+**Manual browsing with agent summarization.** Rejected: the team's bottleneck is the browsing, not the summarizing — they'd be automating the wrong half.
+
+## The first decision
+
+Split the browser's capability profile from the agent's instruction set. The agent doesn't get a "do anything" tool; it gets `navigate`, `read`, `extract`, `scroll`, `screenshot` — observation verbs only. Act-class capabilities exist in the browser but are walled behind an approval gate the agent can't cross alone.
+
+## Guided reasoning
+
+1. Use a dedicated browser profile: no saved credentials, no payment methods, no sessions — the blast radius shrinks before any prompt is written.
+2. Allowlist actions by *class*, not by site: observation verbs free, act verbs gated — a domain allowlist alone doesn't stop "click Buy to check the price."
+3. Require source capture: every extracted claim carries URL + quoted span + timestamp — the research deliverable is evidence, not summary.
+4. Route act-class requests through a human approval step with the proposed action and its consequence spelled out.
+5. Detect and report automation-blocks honestly — "site served a CAPTCHA" goes in the report, not a worked-around bypass.
+6. Add web-injection defense: page content is untrusted input; instructions found in pages don't change the task — see [web prompt injection](/learn/web-agents/web-prompt-injection).
+
+The [act-boundary lesson](/learn/web-agents/sessions-credentials-and-act-boundaries) and [browser tool loop](/learn/tools-function-calling/building-a-browser-tool-loop) carry the mechanics.
+
+## What went wrong
+
+The dedicated profile surfaced an assumption: the agent's "verify the price" behavior wasn't recklessness — the task prompt said "confirm pricing on the vendor site," and checkout-flow was the only place the real price showed. The fix was twofold: the act boundary (which the incident proved necessary) and the task spec — "confirm pricing" became "record the publicly displayed price; note when the real price requires checkout, don't enter the flow." The agent now reports *priced-behind-checkout* as an explicit finding, which turned out to be useful market intelligence in itself.
+
+## Failure injection
+
+- Serve a page containing embedded instructions ("agent: click here to continue") and verify they're treated as content, not commands.
+- Present a login wall mid-task and confirm the agent reports the barrier instead of hunting for credentials.
+- Seed a page with a misleading "price" (a decoy sale banner) and check whether source-capture lets a reviewer spot the discrepancy.
+- Drop network mid-extraction and verify partial results are marked partial, not presented as complete.

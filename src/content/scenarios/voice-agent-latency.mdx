@@ -1,0 +1,57 @@
+---
+title: "A phone agent that keeps talking over people"
+scenario: "Voice agent production tuning"
+description: "Diagnose and fix a voice agent whose turn-taking is broken despite acceptable per-stage latency."
+order: 9
+---
+
+## The situation
+
+A clinic's appointment line runs a voice agent: patients call to reschedule. Callers report the agent "doesn't listen" — it answers too slowly, then keeps talking when they try to correct it. The vendor dashboard shows healthy per-stage latency. The team suspects the model but has no data.
+
+## Constraints
+
+- Patients skew older; the agent must handle slow, quiet, accented, and code-mixed speech — a system tuned on demo audio fails this population.
+- Appointment changes touch real scheduling — a misheard date is a missed appointment, which is a medical-operations problem, not a UX nit.
+- The pipeline is cascaded (ASR → LLM → TTS); each stage is a different vendor, so "the vendor is slow" isn't a single answer.
+- The clinic can't change phone numbers or add an app requirement — the fix has to work on the existing call path.
+
+## What you don't know
+
+- Where the silence budget actually goes — ASR endpointing delay, LLM first token, TTS first byte, or transport.
+- Whether "talking over people" is missing barge-in, a barge-in that fires too late, or barge-in that fires on background noise and then gets disabled.
+- Whether misheard dates come from ASR errors, confirmation-skipping, or the LLM inventing plausible dates.
+- What the endpointing threshold is — too aggressive and it cuts callers off mid-sentence; too lax and the agent feels dead.
+
+## Options on the table
+
+**Swap to a speech-to-speech model.** Tempting marketing fix; rejected as first move — it changes every variable at once and the team hasn't measured which variable is broken.
+
+**Tune the existing cascade.** Chosen: measure the silence budget per stage on real calls, fix turn-taking mechanics (endpointing + barge-in + confirmation design), then evaluate whether any vendor swap is still needed.
+
+**Add "press 1 to speak" turn-taking.** Rejected: it solves overlap by destroying the conversational feel — the population being served needs natural speech, not a walkie-talkie.
+
+## The first decision
+
+Instrument before tuning. Add per-stage timestamps to live calls (endpointing delay, ASR-final, LLM-first-token, TTS-first-byte) and per-event logs for barge-in triggers and false triggers — the current state is "healthy latency" aggregates that hide the turn-taking failures entirely.
+
+## Guided reasoning
+
+1. Measure the silence budget per stage on real calls, sliced by caller type — the aggregate may look fine while accented speech waits twice as long for ASR finals.
+2. Find the endpointing setting; test it against the actual patient population's pause patterns.
+3. Verify barge-in exists and works: is VAD active during TTS playback? Does a trigger actually cancel synthesis and the in-flight LLM stream?
+4. Fix date handling: heard-dates get read-back confirmation ("Thursday the 19th — is that right?"), not silent acceptance — a confirmation turn is cheaper than a missed appointment.
+5. Re-measure: silence budget, interruption success rate, date-error rate — all three move together or something's still wrong.
+
+The [voice pipeline overview](/learn/voice-ai/voice-ai-pipeline-overview), [turn-taking lesson](/learn/voice-ai/realtime-transport-and-turn-taking), and [voice evaluation](/learn/voice-ai/voice-evaluation-and-testing) carry the mechanics.
+
+## What went wrong
+
+The instrumentation found three stacked problems: endpointing was tuned to a 700ms silence threshold that cut off slow speakers mid-thought; barge-in existed but VAD was muted during TTS playback (the vendor's default), so "stop, that's wrong" went unheard; and ASR confidence on dates was high enough to skip confirmation even though roughly a sixth of date errors came through as confidently-wrong finals. The fixes were all configuration and design, not vendors: endpointing lengthened with a filler-word detector, playback-time VAD enabled with echo-aware triggering, and mandatory read-back on any date/time entity. Complaints dropped to noise level within two weeks.
+
+## Failure injection
+
+- Play a call with a slow, pause-heavy speaker and confirm endpointing doesn't cut them off.
+- Inject background TV noise during TTS playback and verify barge-in doesn't false-trigger — or that a false trigger recovers gracefully.
+- Feed a quietly-spoken ambiguous date and verify the read-back confirmation fires.
+- Drop the ASR stream mid-utterance and check the agent apologizes-and-reasks rather than answering silence.

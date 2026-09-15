@@ -1,0 +1,58 @@
+---
+title: "Migrating the RAG system nobody documented"
+scenario: "RAG migration under production load"
+description: "Migrate a legacy RAG pipeline to a new stack without breaking the product that runs on it."
+order: 10
+---
+
+## The situation
+
+A document-QA feature serves enterprise customers from a RAG pipeline built eighteen months ago: a custom chunker, an embedding model that's since been superseded, a vector store the team wants to leave, and zero documentation. It works — mostly — but retrieval quality complaints are rising and the original author left.
+
+## Constraints
+
+- The system is live for paying customers; "rebuild it right" isn't available — migration must happen under load.
+- No eval suite exists for the current system, so there's no baseline to prove the new pipeline is better — or even equivalent.
+- Documents were chunked and embedded by the old pipeline; the new pipeline's embedding space means re-indexing everything.
+- Some customers' corpora update continuously; a flag-day reindex would serve stale results for hours.
+
+## What you don't know
+
+- Why the original parameters were chosen — chunk sizes, overlap, top-k, the metadata fields that turn out to be load-bearing.
+- Which queries actually fail today — "retrieval complaints" is anecdote, not data.
+- Whether the old vector store's retrieval semantics (filters, ranking quirks) are replicated or relied-upon differently by each customer.
+- Which documents are access-controlled and whether the new pipeline preserves those controls identically.
+
+## Options on the table
+
+**Flag-day rebuild.** Rejected: unmeasurable risk. With no baseline eval and unknown edge cases, a big-bang swap is a hope, not a plan.
+
+**Shadow-then-cutover.** Chosen: run the new pipeline in shadow alongside the old — same queries, both pipelines, logged comparison — build the eval set from real traffic, then migrate customer-by-customer behind a flag.
+
+**Wrap the old system forever.** Rejected: the complaints are real and growing; wrapping adds a second system to maintain without fixing retrieval.
+
+## The first decision
+
+Build the eval before building the replacement. Sample real queries from logs, hand-label which results should have been found, and score the *current* pipeline — you cannot prove the new one is better until you can measure the old one's failure rate per query type.
+
+## Guided reasoning
+
+1. Extract a query log sample stratified by customer, topic, and outcome (answered, abandoned, escalated).
+2. Label expected results for the sample — this becomes the golden set for both pipelines.
+3. Score the legacy pipeline: where does it actually fail — retrieval miss, ranking, or generation? The failures determine what the new stack must fix.
+4. Build the new pipeline to serve the same query contract, run it in shadow, compare per-query.
+5. Reindex in parallel: keep the old index serving while the new one builds; continuous-update corpora need an incremental path, not a bulk load.
+6. Cut over per customer behind a flag with instant rollback; the first customers are the ones whose queries the new pipeline demonstrably serves better.
+
+The [incremental indexing lesson](/learn/rag/incremental-indexing-freshness) and [eval-driven iteration](/learn/evals-red-teaming/eval-driven-iteration) carry the mechanics this depends on.
+
+## What went wrong
+
+Shadow running caught what no review would have: the legacy pipeline silently relied on a metadata filter — `document_type` — that the new schema had renamed, so filtered queries returned correct-but-unfiltered results. On the old system the filter was invisible (a query-param default); the new pipeline made filters explicit, and the renamed field meant a third of queries retrieved across *all* document types. Only the per-query shadow diff surfaced it. Fix: a schema-mapping layer translating legacy filter names, plus an explicit "filter applied" field in the response so missing filters can never again fail silently.
+
+## Failure injection
+
+- Reindex a continuously-updated corpus and measure staleness windows under load — confirm incremental updates land before the staleness budget is breached.
+- Replay a query that depended on the renamed filter and verify both pipelines now return identical scoped results.
+- Kill the new index mid-reindex and verify the old index keeps serving without user-visible impact.
+- Diff 100 random queries across both pipelines and treat every divergence as a question to answer, not noise.

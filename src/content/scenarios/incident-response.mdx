@@ -1,0 +1,58 @@
+---
+title: "The support bot that started promising refunds"
+scenario: "Production incident response"
+description: "Respond to a live incident where an AI feature's behavior changed without a deploy."
+order: 7
+---
+
+## The situation
+
+A support assistant answers questions and drafts replies for agent review. On Tuesday, a customer posts a screenshot: the bot promised a full refund the company's policy doesn't allow. Three more screenshots follow within hours. Nothing was deployed this week.
+
+## Constraints
+
+- The feature drafts replies; a human approves sends — but the promised refunds went out anyway, meaning the approval step either failed or was bypassed.
+- Customer support is already honoring some promises made in messages; rolling back tone-deaf replies to customers who were promised refunds is a second incident, not a fix.
+- The model provider shipped a model update last week; the prompt hasn't changed in a month.
+- Leadership wants a public answer "today"; engineering wants to actually know what happened.
+
+## What you don't know
+
+- Whether the approval step failed technically, or the approvers started rubber-stamping — the screenshots can't tell you which.
+- Whether the refund language came from the model update, a retrieved document (an old draft with refund language in context), or a genuinely new model behavior.
+- How many messages carried the promise before the first screenshot — the blast radius is unknown.
+- Whether the eval suite ever tested "does not offer refunds" at all.
+
+## Options on the table
+
+**Roll back the model immediately.** Reasonable containment, but it answers nothing — if the cause was a poisoned retrieved document, rollback changes nothing and you've lost the ability to reproduce.
+
+**Kill the feature.** Containment maximal; information zero. Held in reserve if the blast radius turns out to be large.
+
+**Quarantine to draft-only while investigating.** Chosen: stop all auto-send paths, force every message through human review with explicit refund-language flagging, and replay the last week of drafts through the pipeline to find where the promise entered.
+
+## The first decision
+
+Contain first, diagnose second, communicate third — in that order. The quarantine keeps the feature alive at degraded speed (humans review everything) while forensic replay isolates the cause: same inputs, replayed against the old and new model versions, plus a check of what retrieval returned in the bad cases.
+
+## Guided reasoning
+
+1. Stop the bleeding: force draft-only mode, add a deterministic refund-language flag to the review queue.
+2. Preserve evidence: freeze the prompt version, model version, retrieval index, and the failing examples.
+3. Reproduce: replay logged inputs through old and new model versions; diff where "refund" enters the text.
+4. Find the approval gap: audit the send path — did sends happen without approval events, or did approvers wave them through?
+5. Fix the actual cause — retrieval hygiene, a prompt clause, an approval-path bug — not the convenient one.
+6. Communicate: what happened, who's affected, what you're honoring, what changed so it doesn't recur.
+
+The [incident response lesson](/learn/genai-app-dev/incident-response-for-ai-features) and [prompt versioning and rollback](/learn/genai-app-dev/prompt-versioning-and-rollback) carry the mechanics this scenario leans on.
+
+## What went wrong
+
+The replay isolated it within a day: the provider's model update had shifted instruction-following such that a retrieval result — a deprecated help-center article about an old refund policy — was being adopted as current policy instead of treated as stale context. The approval gap was social: approvers had been waving through drafts at ~4 seconds each; the refund language was plausible enough to pass a skim. Both fixes landed: retrieval freshness filtering, an explicit "never offer refunds" output rule with a deterministic post-check, and an approval UI that highlights policy-sensitive terms instead of relying on reviewer attention.
+
+## Failure injection
+
+- Replay the incident inputs against the next model update before enabling it — make drift detection a release gate.
+- Plant a stale refund-policy document in retrieval and confirm the output rule blocks it end to end.
+- Simulate an approval event loss mid-send and verify nothing sends on a missing event.
+- Measure approver dwell time; if it drops below a threshold, escalate the queue, not the alerts.

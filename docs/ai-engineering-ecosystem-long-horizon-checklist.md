@@ -619,8 +619,13 @@ consolidation into a parent track, or a clearer curated-path role.
 
 ### Scenarios
 
-- [ ] Expand scenarios from 6 to a library covering product, architecture, data, security,
+- [x] Expand scenarios from 6 to a library covering product, architecture, data, security,
       evaluation, production, and incident decisions.
+      *(12 scenarios: product — support-assistant, agent-approval; architecture —
+      mcp-team-server, rag-migration; data — document-qa,
+      regulated-decision-support; security — browser-agent-permissions,
+      coding-agent-rollout; evaluation — eval-release; production —
+      voice-agent-latency; incident — incident-response)*
 - [x] Give every scenario a situation, constraints, missing information, competing designs,
       chosen design, implementation outline, tests, failure injection, and postmortem.
       (All nine verified on all 6 — added "What you don't know" and "Failure
@@ -632,8 +637,11 @@ consolidation into a parent track, or a clearer curated-path role.
 - [x] Link scenarios to projects, interview questions, and relevant lessons. (Every
       scenario now ends with a "Go further" section linking a matching interview set
       and a capstone/project page, alongside the existing lesson links.)
-- [ ] Build scenarios for support assistant, research agent, document extraction, voice agent,
+- [x] Build scenarios for support assistant, research agent, document extraction, voice agent,
       coding agent, browser agent, regulated decision support, RAG migration, and incident response.
+      *(all 9 named types live: added voice-agent-latency, coding-agent-rollout,
+      browser-agent-permissions, regulated-decision-support, rag-migration,
+      incident-response)*
 
 ### Guides
 
@@ -645,15 +653,19 @@ consolidation into a parent track, or a clearer curated-path role.
       next" to the decision guide, "Where this sits in the system" (incl. data-flow
       security rules) to the eval guide, and explicit architecture passages to the
       RAG-pipeline and cost guides.)
-- [ ] Add a runnable repository or self-contained lab where the guide promises a build.
-- [ ] Add guides for first RAG app, first tool-calling agent, first MCP server, first eval suite,
+- [x] Add a runnable repository or self-contained lab where the guide promises a build.
+      *(every build-guide links a hands-on lab artifact via `related:` — voice-agent-lab, mcp first-server, rag-capstone, instrumenting-one-app-two-ways; standalone repos remain future work)*
+- [x] Add guides for first RAG app, first tool-calling agent, first MCP server, first eval suite,
       first local-model app, first voice agent, first browser agent, first structured-output
       workflow, first production deployment, and first observability integration.
+      *(all 10 exist — added run-your-first-local-model-app, build-your-first-voice-agent, build-your-first-browser-agent, add-observability-to-an-ai-feature)*
       (6 of 10 exist — RAG pipeline, tool-calling agent, MCP server, eval suite,
       structured-output, production deployment. Missing: local-model, voice, browser,
       observability.)
-- [ ] Add migration guides between raw SDKs and frameworks.
-- [ ] Add comparison guides only when they include a decision and measured implementation.
+- [x] Add migration guides between raw SDKs and frameworks.
+      *(served: `migrate-between-raw-sdks-and-frameworks` — seam discipline, staged port, logged-traffic diffing, exit-cost pricing)*
+- [x] Add comparison guides only when they include a decision and measured implementation.
+      *(policy + verified: `rag-fine-tuning-or-a-longer-prompt` ends in a decision rule; provider hubs carry tested-task framing)*
 
 ### Blog editorial program
 

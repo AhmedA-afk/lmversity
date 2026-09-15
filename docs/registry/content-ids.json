@@ -3,9 +3,9 @@
  "next": {
   "les": 2228,
   "que": 7,
-  "sce": 6,
+  "sce": 12,
   "blo": 10,
-  "gui": 9,
+  "gui": 14,
   "ans": 35,
   "fde": 193,
   "rol": 12,
@@ -10305,6 +10305,50 @@
   "lessons/ai-automation-ops/workflow-platforms-compared.md": {
    "id": "les-2228",
    "fp": "a130046c2f994e37d0efa117b89e3a288cd27c67"
+  },
+  "guides/add-observability-to-an-ai-feature.md": {
+   "id": "gui-0010",
+   "fp": "ee99625314171be9b676c4652615adcda1c4fa80"
+  },
+  "guides/build-your-first-browser-agent.md": {
+   "id": "gui-0011",
+   "fp": "6451f0a94f0848e6a38859e287924c09441612bd"
+  },
+  "guides/build-your-first-voice-agent.md": {
+   "id": "gui-0012",
+   "fp": "6e97f6da148a0473854ca3aa05526b4dd1e5123e"
+  },
+  "guides/migrate-between-raw-sdks-and-frameworks.md": {
+   "id": "gui-0013",
+   "fp": "8d3b72e0f9f24c708373d85b072d765d932b2b3d"
+  },
+  "guides/run-your-first-local-model-app.md": {
+   "id": "gui-0014",
+   "fp": "9caeae3fa06f4e58bc8beb16861c2d0037466f7e"
+  },
+  "scenarios/browser-agent-permissions.mdx": {
+   "id": "sce-0007",
+   "fp": "96585487a076308de384627c2fd752a5a39be593"
+  },
+  "scenarios/coding-agent-rollout.mdx": {
+   "id": "sce-0008",
+   "fp": "411799e30212269b7a2815b9fcb2bcde3197998c"
+  },
+  "scenarios/incident-response.mdx": {
+   "id": "sce-0009",
+   "fp": "74eb0f00e9fc5c186e4c6a3fe6157c10c48c56f6"
+  },
+  "scenarios/rag-migration.mdx": {
+   "id": "sce-0010",
+   "fp": "94e7ce0efe1a724e4e2e37d5dc56baf4ec932711"
+  },
+  "scenarios/regulated-decision-support.mdx": {
+   "id": "sce-0011",
+   "fp": "9bb09b8761a10f53f43748196325832a51a8d674"
+  },
+  "scenarios/voice-agent-latency.mdx": {
+   "id": "sce-0012",
+   "fp": "459a2f1bcfec034f70269b222c5142a4fc7e7e18"
   }
  },
  "retired": {

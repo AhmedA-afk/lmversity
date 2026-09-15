@@ -1,0 +1,59 @@
+---
+title: "An eligibility screener in a regulated workflow"
+scenario: "Regulated decision support"
+description: "Design AI assistance for benefit-eligibility screening where the decision must stay explainable and appealable."
+order: 8
+---
+
+## The situation
+
+A regional agency processes benefit applications. Caseworkers spend most of their time locating which of forty-plus eligibility rules apply to each application. Leadership wants AI to "speed up eligibility decisions." Legal has already flagged the phrase "AI decides eligibility" as a non-starter.
+
+## Constraints
+
+- Every decision must be explainable in terms of specific rules — "the model felt this applicant qualified" is not an explanation a regulator or an appeal board accepts.
+- Applicants have appeal rights; the system must support "show me exactly why I was denied."
+- Caseworker judgment is legally required for the actual determination; the AI can only assist.
+- Application documents contain sensitive personal data with retention limits — nothing may be retained that isn't required.
+- Accuracy errors are asymmetric: a wrongly-denied applicant loses benefits; a wrongly-approved one creates an overpayment recovery case that harms the applicant later anyway.
+
+## What you don't know
+
+- How well the forty-plus rules are actually documented — rule text, informal caseworker practice, and actual decisions may be three different standards.
+- The error distribution of the current manual process — the AI's bar is "better than today," not perfect.
+- Whether past decisions can be used as eval data (consent, representativeness, label quality — "decision recorded" is not "decision correct").
+- Which steps in the pipeline handle the sensitive data, and where it must be redacted or excluded.
+
+## Options on the table
+
+**Model makes the determination, human rubber-stamps.** Rejected: legally indefensible — the formal decision-maker must actually decide, and a stamp queue decays into auto-approval.
+
+**Extract-and-match assistant.** Chosen: the model reads the application and produces a structured extraction (facts claimed, documents present, rules potentially applicable with citations to rule text). The caseworker sees a prepared worksheet — the model organizes evidence; a deterministic rules engine or the caseworker applies the rules.
+
+**Full rules engine, no model.** Rejected as scope: deterministic rules already exist for the clear cases; the bottleneck is reading unstructured applications into structured facts — which is the model's job.
+
+## The first decision
+
+Draw the boundary at *extraction versus determination*. The model handles unstructured input → structured facts with provenance (every extracted fact links to the source document span). Determination — which rules apply and what they yield — happens in inspectable code or human judgment, never in the model.
+
+## Guided reasoning
+
+1. Schema first: define the extraction output — each fact typed, sourced to a document span, nullable when absent.
+2. Rule linkage: the model may *suggest* applicable rules with citations to rule text, but cannot *apply* them.
+3. Deterministic validation: every extracted fact checked for type, range, and consistency; conflicts surfaced, not resolved silently.
+4. The caseworker worksheet shows the model's extraction beside the source — review takes seconds, verification is possible.
+5. Denial-path review: any determination that results in denial gets a mandatory human explanation written in the appeal-ready format.
+6. Audit: every run records extraction, validations, caseworker edits, and final determination — reconstructable per case.
+
+The [output validation lesson](/learn/genai-app-dev/output-validation-and-moderation) and [audit logs and accountability](/learn/llm-security/audit-logs-and-accountability) carry the mechanics.
+
+## What went wrong
+
+The pilot caught a subtle failure: the model extracted income figures accurately but normalized currency inconsistently — stipends listed monthly in the document became annual figures in extraction, quietly crossing an eligibility threshold. Validation caught the inconsistency only because a unit field was required per figure; the caseworker who'd have caught it by eyeball had been taught to trust the worksheet. Fix: units are extracted, never normalized — the worksheet shows the figure *as stated* with the unit, and any conversion the rules engine performs is shown as a separate, labeled step.
+
+## Failure injection
+
+- Feed an application with deliberately contradictory income documents and check whether the conflict surfaces or resolves silently.
+- Submit an application missing a required document and verify the extraction says "absent" rather than inferring a value.
+- Replay a denied application end-to-end from logs and confirm the explanation reproduces exactly what the caseworker saw.
+- Inject a rule-text change and verify rule suggestions cite the new version, not memorized old text.

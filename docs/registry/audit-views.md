@@ -1,7 +1,7 @@
 # Content registry — audit views
 
-Generated 2026-09-15T16:53:47.992Z by `scripts/build-content-registry.mjs`.
-2583 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T17:13:46.523Z by `scripts/build-content-registry.mjs`.
+2594 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
@@ -13,17 +13,17 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 - answer: 35
 - project: 33
 - page: 25
+- guide: 14
+- scenario: 12
 - role: 12
 - blog: 10
 - track: 10
-- guide: 9
 - interview: 7
-- scenario: 6
 - glossary: 1
 
 ## By status
 
-- live: 2583
+- live: 2594
 
 ## By search intent (heuristic)
 
@@ -35,19 +35,19 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 - answer: 35
 - worked-example: 33
 - troubleshooting: 26
-- how-to: 15
+- how-to: 20
 - hub: 13
+- scenario: 12
 - role-path: 12
 - nav: 12
 - read: 10
 - course-hub: 10
 - interview-prep: 7
-- scenario: 6
 - definition: 3
 
 ## By primary audience (heuristic)
 
-- ai-engineer: 1750
+- ai-engineer: 1761
 - beginner-engineer: 440
 - forward-deployed-engineer: 194
 - general: 181
@@ -83,20 +83,20 @@ and split always need a written human reason (see checklist).
 | disposition | items |
 |---|---:|
 | investigate | 2324 |
-| keep | 255 |
+| keep | 266 |
 | expand | 4 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2320 | 1.91 | 0 | 211 | 2109 |
+| intentClarity | 2331 | 1.91 | 0 | 211 | 2120 |
 | correctnessSources | 50 | 1.26 | 0 | 37 | 13 |
-| completeness | 2529 | 1.63 | 49 | 838 | 1642 |
+| completeness | 2540 | 1.63 | 49 | 842 | 1649 |
 | prerequisiteFit | 2411 | 0.15 | 2231 | 0 | 180 |
-| handsOn | 2320 | 1.45 | 615 | 55 | 1650 |
-| explanationQuality | 2320 | 1.96 | 20 | 56 | 2244 |
-| metadata | 2320 | 1.84 | 0 | 374 | 1946 |
-| linking | 2227 | 1.50 | 396 | 322 | 1509 |
-| freshnessHealth | 2583 | 0.77 | 904 | 1362 | 317 |
+| handsOn | 2331 | 1.44 | 619 | 61 | 1651 |
+| explanationQuality | 2331 | 1.96 | 20 | 56 | 2255 |
+| metadata | 2331 | 1.84 | 0 | 375 | 1956 |
+| linking | 2238 | 1.50 | 396 | 326 | 1516 |
+| freshnessHealth | 2594 | 0.77 | 910 | 1367 | 317 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
@@ -209,7 +209,7 @@ and split always need a written human reason (see checklist).
 
 ## Duplicate candidates
 
-349 pairs by title/slug similarity (114 not already cross-linked) — candidates for the merge/redirect editorial pass, not verdicts. Pairs where one already links to the other are marked linked — often deliberate two-part lessons.
+352 pairs by title/slug similarity (116 not already cross-linked) — candidates for the merge/redirect editorial pass, not verdicts. Pairs where one already links to the other are marked linked — often deliberate two-part lessons.
 
 | item A | item B | jac | contain | stem | linked | scope |
 |---|---|---:|---:|---|---|---|
@@ -274,7 +274,7 @@ and split always need a written human reason (see checklist).
 | /learn/tools-function-calling/taxonomy-of-tool-failures | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  | yes | same track |
 | /learn/tools-function-calling/tool-calling-across-providers | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  | yes | same track |
 
-_… 289 more pairs in content-registry.json (`duplicates`)_
+_… 292 more pairs in content-registry.json (`duplicates`)_
 
 ## Title-overpromise candidates
 
@@ -286,7 +286,7 @@ _… 289 more pairs in content-registry.json (`duplicates`)_
 
 ## Sourcing review flags
 
-256 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
+262 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
 
 | item | flags |
 |---|---|
@@ -351,18 +351,18 @@ _… 289 more pairs in content-registry.json (`duplicates`)_
 | /learn/cli-agents/getting-the-agent-oriented | release-sensitive page with no updated/review date |
 | /learn/cli-agents/headless-runs-and-automation | release-sensitive page with no updated/review date |
 
-_… 196 more in content-registry.json (`sourcingFlags`)_
+_… 202 more in content-registry.json (`sourcingFlags`)_
 
 ## Freshness queues
 
 Review order: volatile classes first, oldest last-verified date first; undated items lead each queue. `verified`/`updated`/`published` supply the last-verified date — git-derived when frontmatter is absent.
 
-- periodic: 1362
-- pricing-sensitive: 356
-- release-sensitive: 352
+- periodic: 1367
+- pricing-sensitive: 359
+- release-sensitive: 354
 - durable: 266
 - certification-sensitive: 104
-- policy-sensitive: 92
+- policy-sensitive: 93
 - volatile: 51
 
 ### certification-sensitive (104) — oldest-verified first
@@ -399,7 +399,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-foundations/reliable-ai/223-environmental-impact-and-compute-governance — Environmental Impact and Compute Governance *(verified 2026-08-30)*
 - … 74 more in content-registry.json
 
-### pricing-sensitive (356) — oldest-verified first
+### pricing-sensitive (359) — oldest-verified first
 
 - /learn/agent-frameworks/mastra-typescript-agents — Mastra: the TypeScript agent framework *(verified undated)*
 - /learn/agent-frameworks/microsoft-agent-frameworks — Microsoft's agent frameworks: Semantic Kernel, AutoGen, and the convergence *(verified undated)*
@@ -421,6 +421,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/rag/managed-vector-databases — Pinecone, Weaviate, Qdrant, Milvus: the dedicated vector databases *(verified undated)*
 - /learn/web-agents/agentic-browsers-overview — Agentic browsers: Browser Use, Stagehand, Browserbase, and computer-use tools *(verified undated)*
 - /learn/web-agents/extraction-and-evaluation — Extraction with schemas, and evaluating whether the browser task worked *(verified undated)*
+- /scenarios/browser-agent-permissions — A research agent that wandered into a checkout page *(verified undated)*
 - /learn/ai-foundations/choosing-a-model — Choosing a model in 2026 *(verified 2026-08-29)*
 - /learn/ai-foundations/tokens-context-cost — Tokens, context & cost *(verified 2026-08-29)*
 - /learn/evals-red-teaming/building-a-golden-dataset — Building a Golden Dataset *(verified 2026-08-29)*
@@ -430,10 +431,9 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/prompt-engineering/system-vs-user-prompts — System Prompts vs User Prompts *(verified 2026-08-29)*
 - /learn/agentic-ai/stopping-conditions-for-agents — Termination Conditions: Teaching an Agent When It's Done *(verified 2026-08-30)*
 - /learn/ai-foundations/ai-systems/110-adversarial-search-minimax-and-game-values — Adversarial Search: Minimax and Game Values *(verified 2026-08-30)*
-- /learn/ai-foundations/building-an-eval-set-worked-example — Building a Small Eval You Can Trust *(verified 2026-08-30)*
-- … 326 more in content-registry.json
+- … 329 more in content-registry.json
 
-### policy-sensitive (92) — oldest-verified first
+### policy-sensitive (93) — oldest-verified first
 
 - /learn/agent-skills/evaluating-and-porting-skills — Evaluating skills with fixtures, and porting them across agents *(verified undated)*
 - /learn/agent-skills/skill-md-anatomy — SKILL.md anatomy: frontmatter, body, and bundled resources *(verified undated)*
@@ -454,6 +454,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/voice-ai/speech-synthesis-and-voice-design — Speech synthesis and voice design: TTS that doesn't feel like a machine *(verified undated)*
 - /learn/voice-ai/voice-ai-system-design — Voice AI system design: owning the pipeline vs renting it *(verified undated)*
 - /learn/voice-ai/voice-evaluation-and-testing — Evaluating voice agents: the metrics that predict real UX *(verified undated)*
+- /scenarios/regulated-decision-support — An eligibility screener in a regulated workflow *(verified undated)*
 - /privacy — Privacy *(verified undated)*
 - /terms — Terms *(verified undated)*
 - /learn/agentic-ai/state-memory-and-recovery — Design agent state, memory, and recovery explicitly *(verified 2026-08-30)*
@@ -464,10 +465,9 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/deep-learning/practice/416-data-versioning-lineage-and-retention-governance — Data versioning, lineage, and retention governance *(verified 2026-08-30)*
 - /learn/deep-learning/sequence-generative/318-language-model-training-data-and-scaling — Train language models with data governance and scaling discipline *(verified 2026-08-30)*
 - /learn/deep-learning/sequence-generative/325-multimodal-representations-and-fusion — Model text, images, audio, and structured signals together *(verified 2026-08-30)*
-- /learn/deep-learning/sequence-generative/334-generative-safety-copyright-and-provenance — Deploy generative systems with safety, copyright, and provenance controls *(verified 2026-08-30)*
-- … 62 more in content-registry.json
+- … 63 more in content-registry.json
 
-### release-sensitive (352) — oldest-verified first
+### release-sensitive (354) — oldest-verified first
 
 Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno, LangGraph *(verified undated)*
@@ -500,14 +500,14 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/genai-app-dev/indic-language-pipeline-lab — Sarvam, AI4Bharat, Bhashini *(verified undated)*
 - /learn/harness-design/agent-stack-vocabulary — MCP, Model Context Protocol *(verified undated)*
 - /learn/harness-design/harness-skill-and-mcp-integrations — MCP *(verified undated)*
-- … 322 more
+- … 324 more
 
 ## Missing-data queues
 
 ### no summary/meta description (0)
 
 
-### no published or updated date (167)
+### no published or updated date (173)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -549,7 +549,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-for-designers/ai-product-design-common-mistakes — AI product design: common mistakes
 - /learn/ai-for-designers/ai-product-design-foundations-quiz — Quiz: AI product design foundations
 - /learn/ai-for-designers/ai-prototype-testing-common-mistakes — AI prototype testing: common mistakes
-- … 127 more
+- … 133 more
 
 ### zero in-body internal links (template nav still applies) (490)
 
@@ -648,7 +648,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 ### lesson files with status coming (0)
 
 
-### release-sensitive, no date at all (114)
+### release-sensitive, no date at all (116)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -690,7 +690,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/cli-agents/cli-agent-labs — Labs: the untrusted-repo security drill and the comparative harness run
 - /learn/cli-agents/customizing-the-agent-surface — Customizing the agent: MCP config, skills, commands, rules, hooks, and subagents
 - /learn/cli-agents/getting-the-agent-oriented — Getting a CLI agent oriented: repo discovery, instruction files, and context control
-- … 74 more
+- … 76 more
 
 ## Role paths
 
@@ -741,24 +741,35 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /interview/prompt-engineering — Prompt engineering interview questions (752 words, updated 2026-09-08)
 - /interview/rag — RAG interview questions (721 words, updated 2026-08-30)
 
-### scenario (6)
+### scenario (12)
 
 - /scenarios/agent-approval — An agent that can update customer records (656 words, updated 2026-08-30)
+- /scenarios/browser-agent-permissions — A research agent that wandered into a checkout page (642 words)
+- /scenarios/coding-agent-rollout — Rolling out a coding agent without losing the repo (650 words)
 - /scenarios/document-qa — Document Q&A with permissions intact (529 words, updated 2026-08-30)
 - /scenarios/eval-release — A release that improves quality but raises cost (451 words, updated 2026-08-30)
+- /scenarios/incident-response — The support bot that started promising refunds (628 words)
 - /scenarios/mcp-team-server — An MCP server for a small engineering team (584 words, updated 2026-08-30)
+- /scenarios/rag-migration — Migrating the RAG system nobody documented (636 words)
+- /scenarios/regulated-decision-support — An eligibility screener in a regulated workflow (655 words)
 - /scenarios/streaming-research — A research feature that streams useful work (545 words, updated 2026-08-30)
 - /scenarios/support-assistant — A support assistant that must show its work (601 words, updated 2026-08-30)
+- /scenarios/voice-agent-latency — A phone agent that keeps talking over people (662 words)
 
-### guide (9)
+### guide (14)
 
+- /guides/add-observability-to-an-ai-feature — Add observability to an AI feature (412 words)
 - /guides/build-a-rag-pipeline-over-your-own-documents — Build a RAG pipeline over your own documents (838 words, updated 2026-08-30)
 - /guides/build-a-tool-calling-agent-from-scratch — Build a tool-calling agent from scratch, no framework (534 words, updated 2026-08-30)
 - /guides/build-an-mcp-server-in-python — Build an MCP server in Python and connect it to Claude (725 words, updated 2026-08-30)
+- /guides/build-your-first-browser-agent — Build your first browser agent (413 words)
+- /guides/build-your-first-voice-agent — Build your first voice agent (382 words)
 - /guides/cut-your-llm-bill — Cut your LLM bill without hurting quality (875 words, updated 2026-08-30)
 - /guides/defend-against-prompt-injection — Defend a tool-using app against prompt injection (917 words, updated 2026-08-30)
 - /guides/get-reliable-json-out-of-an-llm — Get reliable JSON out of an LLM (638 words, updated 2026-08-30)
+- /guides/migrate-between-raw-sdks-and-frameworks — Migrate between raw SDKs and agent frameworks (444 words)
 - /guides/rag-fine-tuning-or-a-longer-prompt — RAG, fine-tuning, or a longer prompt? (918 words, updated 2026-08-30)
+- /guides/run-your-first-local-model-app — Run your first local model app with Ollama (356 words)
 - /guides/ship-your-first-ai-feature-to-production — Ship your first AI feature to production (851 words, updated 2026-08-30)
 - /guides/write-your-first-eval-for-an-ai-feature — Write your first eval for an AI feature (861 words, updated 2026-08-30)
 
