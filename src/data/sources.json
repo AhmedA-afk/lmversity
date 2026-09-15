@@ -379,6 +379,123 @@
     "claims": ["workflow automation with AI nodes", "self-hostable"],
     "status": "current"
   },
+  "pgvector-repo": {
+    "title": "pgvector repository",
+    "publisher": "pgvector",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/pgvector/pgvector",
+    "type": "repo",
+    "claims": ["vector type and distance operators", "HNSW/IVFFlat indexes"],
+    "status": "current"
+  },
+  "pinecone-docs": {
+    "title": "Pinecone documentation",
+    "publisher": "Pinecone",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.pinecone.io/",
+    "type": "official-docs",
+    "claims": ["Pinecone serverless vector database", "namespaces and metadata filtering"],
+    "status": "current"
+  },
+  "weaviate-docs": {
+    "title": "Weaviate documentation",
+    "publisher": "Weaviate",
+    "accessedAt": "2026-09-15",
+    "url": "https://weaviate.io/developers/weaviate",
+    "type": "official-docs",
+    "claims": ["Weaviate modules and hybrid search", "self-hosted and managed options"],
+    "status": "current"
+  },
+  "qdrant-docs": {
+    "title": "Qdrant documentation",
+    "publisher": "Qdrant",
+    "accessedAt": "2026-09-15",
+    "url": "https://qdrant.tech/documentation/",
+    "type": "official-docs",
+    "claims": ["Qdrant payload filtering", "self-host and cloud deployment"],
+    "status": "current"
+  },
+  "milvus-docs": {
+    "title": "Milvus documentation",
+    "publisher": "Milvus/Zilliz",
+    "accessedAt": "2026-09-15",
+    "url": "https://milvus.io/docs",
+    "type": "official-docs",
+    "claims": ["Milvus distributed vector database", "index types and GPU support"],
+    "status": "current"
+  },
+  "chroma-docs": {
+    "title": "Chroma documentation",
+    "publisher": "Chroma",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.trychroma.com/",
+    "type": "official-docs",
+    "claims": ["Chroma embedded and client modes", "collections API"],
+    "status": "current"
+  },
+  "lancedb-docs": {
+    "title": "LanceDB documentation",
+    "publisher": "LanceDB",
+    "accessedAt": "2026-09-15",
+    "url": "https://lancedb.github.io/lancedb/",
+    "type": "official-docs",
+    "claims": ["Lance columnar format", "embedded vector search and filtering"],
+    "status": "current"
+  },
+  "elasticsearch-dense-vector-docs": {
+    "title": "Elasticsearch dense vector field",
+    "publisher": "Elastic",
+    "accessedAt": "2026-09-15",
+    "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/dense-vector.html",
+    "type": "official-docs",
+    "claims": ["dense_vector field type", "kNN queries with filters"],
+    "status": "current"
+  },
+  "vespa-docs": {
+    "title": "Vespa documentation",
+    "publisher": "Vespa",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.vespa.ai/",
+    "type": "official-docs",
+    "claims": ["Vespa multi-phase ranking", "tensor fields and ANN"],
+    "status": "current"
+  },
+  "unstructured-docs": {
+    "title": "Unstructured documentation",
+    "publisher": "Unstructured",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.unstructured.io/",
+    "type": "official-docs",
+    "claims": ["document partitioning into typed elements", "format coverage"],
+    "status": "current"
+  },
+  "docling-docs": {
+    "title": "Docling documentation",
+    "publisher": "Docling (IBM)",
+    "accessedAt": "2026-09-15",
+    "url": "https://docling-project.github.io/docling/",
+    "type": "official-docs",
+    "claims": ["layout-aware PDF parsing", "table structure recognition"],
+    "status": "current"
+  },
+  "llamaparse-docs": {
+    "title": "LlamaParse getting started",
+    "publisher": "LlamaIndex",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.cloud.llamaindex.ai/llamaparse/getting_started",
+    "type": "official-docs",
+    "claims": ["managed document parsing service"],
+    "status": "current"
+  },
+  "cohere-rerank-docs": {
+    "title": "Cohere Rerank documentation",
+    "publisher": "Cohere",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.cohere.com/docs/rerank-2",
+    "type": "official-docs",
+    "claims": ["Cohere Rerank API", "reranking models"],
+    "status": "current"
+  },
   "google-adk-docs": {
     "title": "Agent Development Kit documentation",
     "publisher": "Google",

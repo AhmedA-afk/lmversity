@@ -995,21 +995,41 @@ consolidation into a parent track, or a clearer curated-path role.
 
 ### RAG and data tooling
 
-- [ ] Vector search concepts before vendor tutorials.
-- [ ] PostgreSQL with pgvector.
-- [ ] Pinecone.
-- [ ] Weaviate.
-- [ ] Qdrant.
-- [ ] Milvus and Zilliz.
-- [ ] Chroma for local learning use.
-- [ ] Elasticsearch and OpenSearch hybrid retrieval.
-- [ ] Vespa for advanced ranking candidates.
-- [ ] LanceDB for local or embedded use.
-- [ ] Redis vector search where demand supports it.
-- [ ] Unstructured, Docling, LlamaParse, and cloud document-intelligence candidates.
-- [ ] Cohere Rerank and other reranking options from verified providers.
-- [ ] Benchmark retrieval on a shared, versioned corpus with labeled questions.
-- [ ] Teach access control, deletion, freshness, provenance, and evaluation with every store.
+- [x] Vector search concepts before vendor tutorials.
+      *(pre-existing: `similarity-search-and-ann-indexes` +
+      `embeddings-and-semantic-similarity` precede all vendor lessons)*
+- [x] PostgreSQL with pgvector. *(2026-09: `pgvector-in-postgres` — vector
+      type, HNSW, hybrid WHERE+ANN, RLS advantage)*
+- [x] Pinecone. *(2026-09: in `managed-vector-databases` — serverless,
+      namespaces, SaaS-only trade)*
+- [x] Weaviate. *(2026-09: same lesson — modules, native hybrid, OSS+managed)*
+- [x] Qdrant. *(2026-09: same lesson — Rust, payload-filtering focus)*
+- [x] Milvus and Zilliz. *(2026-09: same lesson — scale specialist, Zilliz
+      Cloud as managed path)*
+- [x] Chroma for local learning use. *(2026-09: in `embedded-vector-stores` —
+      positioned honestly as the teaching store)*
+- [x] Elasticsearch and OpenSearch hybrid retrieval.
+      *(2026-09: `search-engines-with-vectors` — dense_vector + knn + bool,
+      hybrid as native mode)*
+- [x] Vespa for advanced ranking candidates. *(2026-09: same lesson —
+      multi-phase ranking specialist, adoption cost named)*
+- [x] LanceDB for local or embedded use. *(2026-09: in `embedded-vector-stores`
+      — Lance columnar format, object-storage backends)*
+- [x] Redis vector search where demand supports it. *(2026-09: same lesson —
+      "already-deployed store" framing, honest scope limits)*
+- [x] Unstructured, Docling, LlamaParse, and cloud document-intelligence candidates.
+      *(2026-09: `document-parsing-tools` — all four positioned by failure
+      mode they prevent: reading order, table soup, scans)*
+- [x] Cohere Rerank and other reranking options from verified providers.
+      *(2026-09: `rerankers-in-practice` — Cohere managed vs open
+      cross-encoders vs LLM-as-reranker)*
+- [x] Benchmark retrieval on a shared, versioned corpus with labeled questions.
+      *(2026-09: `benchmarking-retrieval-shared-corpus` — versioned corpus +
+      gold-labeled questions + frozen metrics)*
+- [x] Teach access control, deletion, freshness, provenance, and evaluation with every store.
+      *(2026-09: every store lesson carries an "Operations that matter"
+      section covering all five — plus existing access-controlled-retrieval
+      and incremental-indexing-freshness lessons)*
 
 ### Observability, prompt management, and evaluation
 
@@ -2766,6 +2786,34 @@ validation, deployment status, measured result when available, blockers, and nex
 - Validation: `check:content` clean (2,109); build 2,446 pages;
   `check:links` 0 dead (5,271 routes); registry 2,435 items.
 - Next batch: Phase 6B RAG/data tooling, observability, or security rows.
+
+### 2026-09-15 — RAG & data tooling section complete (all 16 rows)
+
+- Commit: `621adfa`. 7 vendor-layer lessons added to the `rag` track (63
+  lessons): `pgvector-in-postgres`, `managed-vector-databases`
+  (Pinecone/Weaviate/Qdrant/Milvus by deployment model),
+  `embedded-vector-stores` (Chroma/LanceDB/Redis),
+  `search-engines-with-vectors` (ES/OpenSearch/Vespa — hybrid-native
+  lineage), `document-parsing-tools` (Unstructured/Docling/LlamaParse/cloud
+  doc-AI by failure mode prevented), `rerankers-in-practice` (Cohere vs
+  open cross-encoders vs LLM-as-reranker), and
+  `benchmarking-retrieval-shared-corpus` (versioned corpus + gold labels +
+  frozen metrics — the method every store lesson defers to).
+- Checklist: all 16 RAG/data-tooling rows ticked. The "teach ops with every
+  store" row is satisfied by a standing "Operations that matter" section
+  (access control / deletion / freshness / provenance / evaluation) in each
+  store lesson — a convention, like "when plain code is enough" was for
+  frameworks.
+- Sources: 13 new verified records (pgvector repo, Pinecone, Weaviate,
+  Qdrant, Milvus, Chroma, LanceDB, Elastic dense_vector, Vespa,
+  Unstructured, Docling, LlamaParse, Cohere Rerank). Milvus docs 403s for
+  curl but 302s to real docs with a browser UA — bot-block class, source
+  kept.
+- Validation: `check:content` clean (2,116); build 2,453 pages;
+  `check:links` 0 dead (5,285 routes); registry 2,442 items.
+- Next batch: observability/prompt-management/eval tooling (12 rows) —
+  Langfuse, LangSmith, Phoenix, Weave, Helicone, Braintrust, OTel,
+  Promptfoo, eval libs, shared instrumented app.
 
 ### 2026-09-14 — Master ecosystem backlog created
 

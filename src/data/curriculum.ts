@@ -8612,7 +8612,7 @@ const unsortedTracks: Track[] = [
     "n": "14",
     "name": "RAG",
     "group": "Building",
-    "meta": "56 lessons",
+    "meta": "63 lessons",
     "summary": "Ground model answers in your own data — from chunking and embeddings through hybrid retrieval, reranking, and knowing when to skip RAG entirely.",
     "nodes": [
       {
@@ -8895,6 +8895,48 @@ const unsortedTracks: Track[] = [
         "title": "Control grounding, citations, and context budgets",
         "slug": "grounding-citations-and-context-budgets",
         "status": "live"
+      },
+      {
+        "title": "pgvector: vector search inside Postgres",
+        "slug": "pgvector-in-postgres",
+        "status": "live",
+        "prereq": ["choosing-a-vector-database"]
+      },
+      {
+        "title": "Pinecone, Weaviate, Qdrant, Milvus: the dedicated vector databases",
+        "slug": "managed-vector-databases",
+        "status": "live",
+        "prereq": ["pgvector-in-postgres"]
+      },
+      {
+        "title": "Chroma, LanceDB, Redis: embedded and in-process vector stores",
+        "slug": "embedded-vector-stores",
+        "status": "live",
+        "prereq": ["pgvector-in-postgres"]
+      },
+      {
+        "title": "Elasticsearch, OpenSearch, Vespa: the search-engine lineage",
+        "slug": "search-engines-with-vectors",
+        "status": "live",
+        "prereq": ["managed-vector-databases"]
+      },
+      {
+        "title": "Unstructured, Docling, LlamaParse: the document-parsing layer",
+        "slug": "document-parsing-tools",
+        "status": "live",
+        "prereq": ["parsing-documents-for-rag"]
+      },
+      {
+        "title": "Rerankers in practice: Cohere Rerank and the alternatives",
+        "slug": "rerankers-in-practice",
+        "status": "live",
+        "prereq": ["reranking-retrieved-results"]
+      },
+      {
+        "title": "Benchmarking retrieval on a shared, versioned corpus",
+        "slug": "benchmarking-retrieval-shared-corpus",
+        "status": "live",
+        "prereq": ["evaluating-rag-quality"]
       },
       {
         "title": "Capstone: Build a Grounded Support Bot",

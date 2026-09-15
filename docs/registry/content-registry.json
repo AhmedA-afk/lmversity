@@ -1,12 +1,12 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T13:55:06.834Z",
+  "generatedAt": "2026-09-15T13:59:46.452Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2435,
+  "itemCount": 2442,
   "counts": {
    "byFamily": {
-    "lesson": 2057,
+    "lesson": 2064,
     "project": 31,
     "quiz": 89,
     "reference": 59,
@@ -22,10 +22,10 @@
     "glossary": 1
    },
    "byStatus": {
-    "live": 2435
+    "live": 2442
    },
    "byKind": {
-    "concept": 1758,
+    "concept": 1765,
     "comparison": 102,
     "worked-example": 29,
     "capstone": 31,
@@ -78,7 +78,7 @@
     "production": 30,
     "prompt-engineering": 144,
     "python-data-apis": 59,
-    "rag": 59,
+    "rag": 66,
     "responsible-ai": 8,
     "structured-outputs": 125,
     "tools-function-calling": 127,
@@ -98,11 +98,11 @@
     "fde": 193
    },
    "byFreshness": {
-    "release-sensitive": 313,
-    "pricing-sensitive": 340,
+    "release-sensitive": 317,
+    "pricing-sensitive": 341,
     "periodic": 1344,
     "certification-sensitive": 99,
-    "policy-sensitive": 76,
+    "policy-sensitive": 78,
     "durable": 263
    }
   },
@@ -10483,7 +10483,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (238w vs ~771w)",
+   "dispositionReason": "thin vs family median (238w vs ~770w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -88150,7 +88150,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (277w vs ~771w)",
+   "dispositionReason": "thin vs family median (277w vs ~770w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -91868,7 +91868,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (269w vs ~771w)",
+   "dispositionReason": "thin vs family median (269w vs ~770w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -132317,7 +132317,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -155052,6 +155052,96 @@
    }
   },
   {
+   "id": "les-2110",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Benchmarking retrieval on a shared, versioned corpus",
+   "slug": "rag/benchmarking-retrieval-shared-corpus",
+   "route": "/learn/rag/benchmarking-retrieval-shared-corpus",
+   "collection": "lessons",
+   "path": "src/content/lessons/rag/benchmarking-retrieval-shared-corpus.md",
+   "track": "rag",
+   "module": null,
+   "status": "live",
+   "summary": "A fair retrieval benchmark needs a versioned corpus, labeled questions with gold answers, and frozen metrics — built once, every store and config change gets compared honestly against the same fixed target.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 424,
+   "headings": [
+    "The short answer",
+    "The three pieces",
+    "What the benchmark isolates",
+    "The honest limits",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/evals-red-teaming/building-a-golden-dataset",
+    "/learn/rag/diagnosing-rag-failures-end-to-end",
+    "/learn/rag/evaluating-rag-quality",
+    "/learn/rag/hybrid-search-lexical-and-vector",
+    "/learn/rag/managed-vector-databases",
+    "/learn/rag/pgvector-in-postgres",
+    "/learn/rag/rerankers-in-practice"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 10,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "A fair retrieval benchmark needs a versioned corpus, labeled questions with gold answers, and frozen metrics — built once, every store and config change gets compared honestly against the same fixed target.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/rag/rag-capstone-support-bot",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: pgvector"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 1,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-1756",
    "family": "lesson",
    "kind": "concept",
@@ -156005,6 +156095,185 @@
    }
   },
   {
+   "id": "les-2111",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Unstructured, Docling, LlamaParse: the document-parsing layer",
+   "slug": "rag/document-parsing-tools",
+   "route": "/learn/rag/document-parsing-tools",
+   "collection": "lessons",
+   "path": "src/content/lessons/rag/document-parsing-tools.md",
+   "track": "rag",
+   "module": null,
+   "status": "live",
+   "summary": "Document-parsing tools turn PDFs and Office files into structured chunks — Unstructured for breadth, Docling for open-source layout understanding, LlamaParse for managed parsing — the stage that decides retrieval quality before embedding starts.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 443,
+   "headings": [
+    "The short answer",
+    "The landscape",
+    "The decision that actually matters",
+    "Operations that matter",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agent-frameworks/llamaindex-data-framework",
+    "/learn/local-inference/the-local-privacy-boundary",
+    "/learn/local-inference/what-local-inference-actually-means",
+    "/learn/rag/chunking-strategies-for-documents",
+    "/learn/rag/grounding-answers-with-citations",
+    "/learn/rag/incremental-indexing-freshness",
+    "/learn/rag/ingestion-chunking-and-retrieval",
+    "/learn/rag/parsing-documents-for-rag"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 14,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Document-parsing tools turn PDFs and Office files into structured chunks — Unstructured for breadth, Docling for open-source layout understanding, LlamaParse for managed parsing — the stage that decides retrieval quality before embedding starts.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/rag/rerankers-in-practice",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Unstructured, Docling, LlamaParse, LlamaIndex, Azure, AWS"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 1,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2112",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Chroma, LanceDB, Redis: embedded and in-process vector stores",
+   "slug": "rag/embedded-vector-stores",
+   "route": "/learn/rag/embedded-vector-stores",
+   "collection": "lessons",
+   "path": "src/content/lessons/rag/embedded-vector-stores.md",
+   "track": "rag",
+   "module": null,
+   "status": "live",
+   "summary": "Embedded vector stores run inside your process — Chroma for local learning, LanceDB for columnar files on disk, Redis for vectors beside your cache — no server to deploy, different ops surface entirely.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 401,
+   "headings": [
+    "The short answer",
+    "The three shapes",
+    "Where embedded stores fit",
+    "Operations that matter",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/rag/access-controlled-retrieval",
+    "/learn/rag/benchmarking-retrieval-shared-corpus",
+    "/learn/rag/choosing-a-vector-database",
+    "/learn/rag/managed-vector-databases",
+    "/learn/rag/pgvector-in-postgres"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 14,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Embedded vector stores run inside your process — Chroma for local learning, LanceDB for columnar files on disk, Redis for vectors beside your cache — no server to deploy, different ops surface entirely.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/rag/search-engines-with-vectors",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Chroma, LanceDB, Redis, pgvector"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 1,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-1766",
    "family": "lesson",
    "kind": "concept",
@@ -156394,7 +156663,7 @@
    "promisedOutcome": "Grounding means constraining an answer to evidence that the system can identify and inspect.",
    "jobToBeDone": null,
    "prerequisite": null,
-   "nextAction": "/learn/rag/rag-capstone-support-bot",
+   "nextAction": "/learn/rag/pgvector-in-postgres",
    "practiceType": "none",
    "freshnessClass": "periodic",
    "freshnessSignals": [],
@@ -157037,6 +157306,95 @@
    }
   },
   {
+   "id": "les-2113",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Pinecone, Weaviate, Qdrant, Milvus: the dedicated vector databases",
+   "slug": "rag/managed-vector-databases",
+   "route": "/learn/rag/managed-vector-databases",
+   "collection": "lessons",
+   "path": "src/content/lessons/rag/managed-vector-databases.md",
+   "track": "rag",
+   "module": null,
+   "status": "live",
+   "summary": "The dedicated vector stores compared by what actually differs — deployment model, filtering, hybrid search, and ops burden — because index benchmarks from vendors are not a basis for choosing.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 446,
+   "headings": [
+    "The short answer",
+    "The honest comparison axes",
+    "What they share",
+    "Operations that matter",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/rag/access-controlled-retrieval",
+    "/learn/rag/benchmarking-retrieval-shared-corpus",
+    "/learn/rag/embedded-vector-stores",
+    "/learn/rag/hybrid-search-lexical-and-vector",
+    "/learn/rag/pgvector-in-postgres"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 12,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "The dedicated vector stores compared by what actually differs — deployment model, filtering, hybrid search, and ops burden — because index benchmarks from vendors are not a basis for choosing.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/rag/embedded-vector-stores",
+   "practiceType": "none",
+   "freshnessClass": "pricing-sensitive",
+   "freshnessSignals": [
+    "pricing/cost mention",
+    "vendor/tool mentions: Pinecone, Weaviate, Qdrant, Milvus, pgvector, Zilliz"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-1778",
    "family": "lesson",
    "kind": "concept",
@@ -157446,6 +157804,96 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2114",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "pgvector: vector search inside the Postgres you already run",
+   "slug": "rag/pgvector-in-postgres",
+   "route": "/learn/rag/pgvector-in-postgres",
+   "collection": "lessons",
+   "path": "src/content/lessons/rag/pgvector-in-postgres.md",
+   "track": "rag",
+   "module": null,
+   "status": "live",
+   "summary": "pgvector adds embedding columns and ANN indexes to ordinary PostgreSQL — the right answer when your vectors should live next to the data they describe, with real SQL around them.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 334,
+   "headings": [
+    "The short answer",
+    "The shape",
+    "Where it wins and where it stops",
+    "Operations that matter",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/rag/access-controlled-retrieval",
+    "/learn/rag/benchmarking-retrieval-shared-corpus",
+    "/learn/rag/choosing-a-vector-database",
+    "/learn/rag/incremental-indexing-freshness",
+    "/learn/rag/managed-vector-databases",
+    "/learn/rag/similarity-search-and-ann-indexes"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 10,
+    "numericClaims": 1,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "pgvector adds embedding columns and ANN indexes to ordinary PostgreSQL — the right answer when your vectors should live next to the data they describe, with real SQL around them.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/rag/managed-vector-databases",
+   "practiceType": "none",
+   "freshnessClass": "policy-sensitive",
+   "freshnessSignals": [
+    "policy/license mention",
+    "vendor/tool mentions: pgvector"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
     "linking": 2,
     "freshnessHealth": 0,
     "originality": null,
@@ -158177,6 +158625,95 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2115",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Rerankers in practice: Cohere Rerank and the alternatives",
+   "slug": "rag/rerankers-in-practice",
+   "route": "/learn/rag/rerankers-in-practice",
+   "collection": "lessons",
+   "path": "src/content/lessons/rag/rerankers-in-practice.md",
+   "track": "rag",
+   "module": null,
+   "status": "live",
+   "summary": "Rerankers re-score retrieved candidates with a cross-encoder that reads query and document together — Cohere Rerank as the managed option, open models for local reranking, and the honest question of when the second stage pays.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 398,
+   "headings": [
+    "The short answer",
+    "The three options",
+    "When the second stage pays — honestly",
+    "Operations that matter",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/local-inference/onnx-runtime-on-device-inference",
+    "/learn/local-inference/the-local-privacy-boundary",
+    "/learn/rag/benchmarking-retrieval-shared-corpus",
+    "/learn/rag/evaluating-rag-quality",
+    "/learn/rag/reranking-methods-compared",
+    "/learn/rag/reranking-retrieved-results"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 10,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Rerankers re-score retrieved candidates with a cross-encoder that reads query and document together — Cohere Rerank as the managed option, open models for local reranking, and the honest question of when the second stage pays.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/rag/benchmarking-retrieval-shared-corpus",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Cohere, ONNX"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 1,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
     "linking": 2,
     "freshnessHealth": 0,
     "originality": null,
@@ -159142,6 +159679,95 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2116",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Elasticsearch, OpenSearch, Vespa: the search-engine lineage",
+   "slug": "rag/search-engines-with-vectors",
+   "route": "/learn/rag/search-engines-with-vectors",
+   "collection": "lessons",
+   "path": "src/content/lessons/rag/search-engines-with-vectors.md",
+   "track": "rag",
+   "module": null,
+   "status": "live",
+   "summary": "Elasticsearch, OpenSearch, and Vespa grew vector search inside mature lexical-search engines — the pick when hybrid retrieval is the default and your corpus already lives in a search index.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 427,
+   "headings": [
+    "The short answer",
+    "The shapes",
+    "Where they fit",
+    "Operations that matter",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/rag/benchmarking-retrieval-shared-corpus",
+    "/learn/rag/hybrid-search-common-mistakes",
+    "/learn/rag/hybrid-search-lexical-and-vector",
+    "/learn/rag/managed-vector-databases",
+    "/learn/rag/reranking-retrieved-results"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 13,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Elasticsearch, OpenSearch, and Vespa grew vector search inside mature lexical-search engines — the pick when hybrid retrieval is the default and your corpus already lives in a search index.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/rag/document-parsing-tools",
+   "practiceType": "none",
+   "freshnessClass": "policy-sensitive",
+   "freshnessSignals": [
+    "policy/license mention",
+    "vendor/tool mentions: Elasticsearch, OpenSearch, Vespa, pgvector"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
     "linking": 2,
     "freshnessHealth": 0,
     "originality": null,
@@ -203133,14 +203759,14 @@
    ],
    "features": {
     "group": "Building",
-    "declaredMeta": "56 lessons",
-    "nodeCount": 57,
-    "liveNodes": 57,
+    "declaredMeta": "63 lessons",
+    "nodeCount": 64,
+    "liveNodes": 64,
     "comingNodes": 0,
     "headingOnlyNodes": 0,
-    "fileCount": 57,
+    "fileCount": 64,
     "kinds": {
-     "concept": 29,
+     "concept": 36,
      "cheatsheet": 6,
      "common-mistakes": 6,
      "quiz": 6,
@@ -215030,6 +215656,15 @@
    ]
   },
   {
+   "route": "/learn/rag/benchmarking-retrieval-shared-corpus",
+   "slug": "rag/benchmarking-retrieval-shared-corpus",
+   "title": "Benchmarking retrieval on a shared, versioned corpus",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
    "route": "/learn/rag/chunking-common-mistakes",
    "slug": "rag/chunking-common-mistakes",
    "title": "Chunking: Common Mistakes",
@@ -215057,12 +215692,39 @@
    ]
   },
   {
+   "route": "/learn/rag/document-parsing-tools",
+   "slug": "rag/document-parsing-tools",
+   "title": "Unstructured, Docling, LlamaParse: the document-parsing layer",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/rag/embedded-vector-stores",
+   "slug": "rag/embedded-vector-stores",
+   "title": "Chroma, LanceDB, Redis: embedded and in-process vector stores",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
    "route": "/learn/rag/hybrid-search-worked-example",
    "slug": "rag/hybrid-search-worked-example",
    "title": "Hybrid Search, Worked: When Vectors Miss the Exact Term",
    "family": "lesson",
    "flags": [
     "32 numeric claims with no sources section or external link"
+   ]
+  },
+  {
+   "route": "/learn/rag/managed-vector-databases",
+   "slug": "rag/managed-vector-databases",
+   "title": "Pinecone, Weaviate, Qdrant, Milvus: the dedicated vector databases",
+   "family": "lesson",
+   "flags": [
+    "pricing-sensitive page with no updated/review date"
    ]
   },
   {
@@ -215084,6 +215746,24 @@
    ]
   },
   {
+   "route": "/learn/rag/pgvector-in-postgres",
+   "slug": "rag/pgvector-in-postgres",
+   "title": "pgvector: vector search inside the Postgres you already run",
+   "family": "lesson",
+   "flags": [
+    "policy-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/rag/rerankers-in-practice",
+   "slug": "rag/rerankers-in-practice",
+   "title": "Rerankers in practice: Cohere Rerank and the alternatives",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
    "route": "/learn/rag/reranking-methods-compared",
    "slug": "rag/reranking-methods-compared",
    "title": "Reranking Methods Compared",
@@ -215099,6 +215779,15 @@
    "family": "lesson",
    "flags": [
     "11 numeric claims with no sources section or external link"
+   ]
+  },
+  {
+   "route": "/learn/rag/search-engines-with-vectors",
+   "slug": "rag/search-engines-with-vectors",
+   "title": "Elasticsearch, OpenSearch, Vespa: the search-engine lineage",
+   "family": "lesson",
+   "flags": [
+    "policy-sensitive page with no updated/review date"
    ]
   },
   {

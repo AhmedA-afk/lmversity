@@ -1,12 +1,12 @@
 # Content registry — audit views
 
-Generated 2026-09-15T13:55:06.834Z by `scripts/build-content-registry.mjs`.
-2435 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T13:59:46.452Z by `scripts/build-content-registry.mjs`.
+2442 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
 
-- lesson: 2057
+- lesson: 2064
 - quiz: 89
 - lab: 66
 - reference: 59
@@ -23,11 +23,11 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By status
 
-- live: 2435
+- live: 2442
 
 ## By search intent (heuristic)
 
-- concept: 1888
+- concept: 1895
 - comparison: 107
 - build: 97
 - practice: 89
@@ -47,7 +47,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By primary audience (heuristic)
 
-- ai-engineer: 1659
+- ai-engineer: 1666
 - beginner-engineer: 439
 - forward-deployed-engineer: 194
 - general: 125
@@ -81,7 +81,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 | structured-outputs | 124 | 103 | 4 | 0 | 4 | 5 | 7 | 0 | 1 | 77% | 0% | 3% | 684 | — | — |
 | hallucinations | 132 | 108 | 0 | 0 | 10 | 6 | 7 | 0 | 1 | 48% | 0% | 2% | 734 | yes | — |
 | genai-app-dev | 130 | 118 | 0 | 0 | 5 | 6 | 0 | 0 | 1 | 78% | 0% | 0% | 692 | — | — |
-| rag | 57 | 29 | 6 | 6 | 3 | 6 | 6 | 0 | 1 | 49% | 47% | 2% | 922 | yes | yes |
+| rag | 64 | 36 | 6 | 6 | 3 | 6 | 6 | 0 | 1 | 50% | 42% | 2% | 633 | yes | yes |
 | tools-function-calling | 126 | 93 | 1 | 7 | 11 | 5 | 7 | 1 | 1 | 74% | 0% | 0% | 691 | — | — |
 | mcp | 57 | 28 | 6 | 6 | 5 | 6 | 6 | 0 | 0 | 60% | 53% | 5% | 553 | yes | yes |
 | agentic-ai | 30 | 27 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 23% | 87% | 0% | 544 | — | yes |
@@ -193,7 +193,7 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - 2 island lessons (no in-body links)
 - 19 duplicate-candidate pairs in track
 
-### rag — 57 files, 0 modules — starts: "RAG, End to End: The Whole Game"
+### rag — 64 files, 0 modules — starts: "RAG, End to End: The Whole Game"
 
 - 1 island lesson (no in-body links)
 - 5 duplicate-candidate pairs in track
@@ -272,21 +272,21 @@ and split always need a written human reason (see checklist).
 
 | disposition | items |
 |---|---:|
-| keep | 2048 |
+| keep | 2055 |
 | investigate | 382 |
 | expand | 5 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2211 | 1.91 | 0 | 191 | 2020 |
+| intentClarity | 2218 | 1.91 | 0 | 195 | 2023 |
 | correctnessSources | 45 | 1.27 | 0 | 33 | 12 |
-| completeness | 2357 | 1.65 | 39 | 752 | 1566 |
-| prerequisiteFit | 2292 | 2.00 | 3 | 0 | 2289 |
-| handsOn | 2211 | 1.49 | 537 | 53 | 1621 |
-| explanationQuality | 2211 | 1.96 | 20 | 56 | 2135 |
-| metadata | 2211 | 1.86 | 0 | 314 | 1897 |
-| linking | 2122 | 1.49 | 382 | 321 | 1419 |
-| freshnessHealth | 2435 | 0.77 | 828 | 1344 | 263 |
+| completeness | 2364 | 1.65 | 39 | 758 | 1567 |
+| prerequisiteFit | 2299 | 2.00 | 3 | 0 | 2296 |
+| handsOn | 2218 | 1.49 | 540 | 53 | 1625 |
+| explanationQuality | 2218 | 1.96 | 20 | 56 | 2142 |
+| metadata | 2218 | 1.86 | 0 | 321 | 1897 |
+| linking | 2129 | 1.49 | 382 | 321 | 1426 |
+| freshnessHealth | 2442 | 0.77 | 835 | 1344 | 263 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
@@ -337,15 +337,15 @@ and split always need a written human reason (see checklist).
 - /learn/ai-foundations/reliable-ai/221-contestability-appeals-and-recource — Contestability, Appeals, and Recourse
 - … 342 more in content-registry.json
 
-#### expand: thin vs family median (238w vs ~771w) (1)
+#### expand: thin vs family median (238w vs ~770w) (1)
 
 - /learn/ai-foundations/choosing-a-model — Choosing a model in 2026
 
-#### expand: thin vs family median (277w vs ~771w) (1)
+#### expand: thin vs family median (277w vs ~770w) (1)
 
 - /learn/llm-foundations/next-token-prediction — Next-Token Prediction: The One Objective
 
-#### expand: thin vs family median (269w vs ~771w) (1)
+#### expand: thin vs family median (269w vs ~770w) (1)
 
 - /learn/llm-foundations/tokenization-explained — Tokenization: How Text Becomes Tokens
 
@@ -436,7 +436,7 @@ _… 278 more pairs in content-registry.json (`duplicates`)_
 
 ## Sourcing review flags
 
-183 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
+190 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
 
 | item | flags |
 |---|---|
@@ -501,18 +501,18 @@ _… 278 more pairs in content-registry.json (`duplicates`)_
 | /learn/context-engineering/why-context-is-the-real-bottleneck | 7 numeric claims with no sources section or external link |
 | /learn/deep-learning/sequence-generative/317-language-model-objectives-and-tokenization | 9 numeric claims with no sources section or external link |
 
-_… 123 more in content-registry.json (`sourcingFlags`)_
+_… 130 more in content-registry.json (`sourcingFlags`)_
 
 ## Freshness queues
 
 Review order: volatile classes first, oldest last-verified date first; undated items lead each queue. `verified`/`updated`/`published` supply the last-verified date — git-derived when frontmatter is absent.
 
 - periodic: 1344
-- pricing-sensitive: 340
-- release-sensitive: 313
+- pricing-sensitive: 341
+- release-sensitive: 317
 - durable: 263
 - certification-sensitive: 99
-- policy-sensitive: 76
+- policy-sensitive: 78
 
 ### certification-sensitive (99) — oldest-verified first
 
@@ -548,12 +548,13 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-foundations/reliable-ai/227-case-study-generative-agents-and-critical-workflows — Case Study: Generative Agents in Critical Workflows *(verified 2026-08-30)*
 - … 69 more in content-registry.json
 
-### pricing-sensitive (340) — oldest-verified first
+### pricing-sensitive (341) — oldest-verified first
 
 - /learn/agent-frameworks/mastra-typescript-agents — Mastra: the TypeScript agent framework *(verified undated)*
 - /learn/agent-frameworks/microsoft-agent-frameworks — Microsoft's agent frameworks: Semantic Kernel, AutoGen, and the convergence *(verified undated)*
 - /learn/agent-frameworks/openai-agents-sdk — OpenAI Agents SDK: agents, handoffs, and guardrails *(verified undated)*
 - /learn/machine-learning/predictive-ml-vs-generative-ai — Separate predictive-ML choices from generative-AI choices *(verified undated)*
+- /learn/rag/managed-vector-databases — Pinecone, Weaviate, Qdrant, Milvus: the dedicated vector databases *(verified undated)*
 - /learn/ai-foundations/choosing-a-model — Choosing a model in 2026 *(verified 2026-08-29)*
 - /learn/ai-foundations/tokens-context-cost — Tokens, context & cost *(verified 2026-08-29)*
 - /learn/evals-red-teaming/building-a-golden-dataset — Building a Golden Dataset *(verified 2026-08-29)*
@@ -579,13 +580,14 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-foundations/pretraining-vs-finetuning — Pretraining vs. Fine-Tuning: Two Different Jobs *(verified 2026-08-30)*
 - /learn/ai-foundations/supervised-learning-explained — Supervised Learning, Explained *(verified 2026-08-30)*
 - /learn/ai-foundations/tokens-and-cost-worked-example — Counting Tokens and Pricing a Call *(verified 2026-08-30)*
-- /learn/ai-foundations/what-a-model-actually-is — What a Model Actually Is *(verified 2026-08-30)*
-- … 310 more in content-registry.json
+- … 311 more in content-registry.json
 
-### policy-sensitive (76) — oldest-verified first
+### policy-sensitive (78) — oldest-verified first
 
 - /learn/llm-foundations/read-a-model-card-lab — Lab: read a model card like an engineer *(verified undated)*
 - /learn/local-inference/the-local-privacy-boundary — The local privacy boundary *(verified undated)*
+- /learn/rag/pgvector-in-postgres — pgvector: vector search inside the Postgres you already run *(verified undated)*
+- /learn/rag/search-engines-with-vectors — Elasticsearch, OpenSearch, Vespa: the search-engine lineage *(verified undated)*
 - /learn/responsible-ai/consent-contestability-and-impact — Consent, contestability, and the costs nobody measures *(verified undated)*
 - /privacy — Privacy *(verified undated)*
 - /terms — Terms *(verified undated)*
@@ -612,11 +614,9 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/machine-learning/ml-707-lab-content-ranking-with-feedback — Lab: content ranking with feedback *(verified 2026-08-30)*
 - /learn/machine-learning/problem-sets/10-comprehensive-classical-ml-qualifying-exam — Problem Set 10: Comprehensive Classical ML Qualifying Exam *(verified 2026-08-30)*
 - /learn/machine-learning/public-data-projects/adult-income-project — Public-data project: Adult income prediction *(verified 2026-08-30)*
-- /learn/machine-learning/public-data-projects/aps-failure-project — Public-data project: APS Failure under imbalance *(verified 2026-08-30)*
-- /learn/machine-learning/public-data-projects/bank-marketing-project — Public-data project: Bank Marketing decision support *(verified 2026-08-30)*
-- … 46 more in content-registry.json
+- … 48 more in content-registry.json
 
-### release-sensitive (313) — oldest-verified first
+### release-sensitive (317) — oldest-verified first
 
 Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno, LangGraph *(verified undated)*
@@ -648,15 +648,15 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/local-inference/vllm-production-serving — vLLM, OpenAI, Ollama, llama.cpp, Llama *(verified undated)*
 - /learn/local-inference/what-local-inference-actually-means — Ollama *(verified undated)*
 - /learn/python-data-apis/observability-for-ai-services — OpenTelemetry *(verified undated)*
-- /learn/tools-function-calling/tool-discovery-at-runtime — MCP *(verified undated)*
-- … 283 more
+- /learn/rag/benchmarking-retrieval-shared-corpus — pgvector *(verified undated)*
+- … 287 more
 
 ## Missing-data queues
 
 ### no summary/meta description (0)
 
 
-### no published or updated date (49)
+### no published or updated date (56)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -698,7 +698,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/local-inference/vllm-production-serving — vLLM: serving a model to real traffic
 - /learn/local-inference/what-local-inference-actually-means — What 'running a model locally' actually means
 - /learn/machine-learning/predictive-ml-vs-generative-ai — Separate predictive-ML choices from generative-AI choices
-- … 9 more
+- … 16 more
 
 ### zero in-body internal links (template nav still applies) (433)
 
@@ -756,7 +756,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 ### lesson files with status coming (0)
 
 
-### release-sensitive, no date at all (41)
+### release-sensitive, no date at all (48)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -794,11 +794,11 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/local-inference/what-local-inference-actually-means — What 'running a model locally' actually means
 - /learn/machine-learning/predictive-ml-vs-generative-ai — Separate predictive-ML choices from generative-AI choices
 - /learn/python-data-apis/observability-for-ai-services — Add observability to a Python AI service
-- /learn/responsible-ai/consent-contestability-and-impact — Consent, contestability, and the costs nobody measures
-- /learn/tools-function-calling/building-a-database-tool — Lab: build a read-only database tool
-- /learn/tools-function-calling/tool-discovery-at-runtime — Tool discovery at runtime: how an agent learns what it can call
-- /privacy — Privacy
-- … 1 more
+- /learn/rag/benchmarking-retrieval-shared-corpus — Benchmarking retrieval on a shared, versioned corpus
+- /learn/rag/document-parsing-tools — Unstructured, Docling, LlamaParse: the document-parsing layer
+- /learn/rag/embedded-vector-stores — Chroma, LanceDB, Redis: embedded and in-process vector stores
+- /learn/rag/managed-vector-databases — Pinecone, Weaviate, Qdrant, Milvus: the dedicated vector databases
+- … 8 more
 
 ## Role paths
 

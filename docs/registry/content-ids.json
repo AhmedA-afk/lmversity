@@ -1,7 +1,7 @@
 {
  "version": 1,
  "next": {
-  "les": 2109,
+  "les": 2116,
   "que": 7,
   "sce": 6,
   "blo": 10,
@@ -9688,6 +9688,34 @@
   "lessons/agent-frameworks/structured-output-libraries.md": {
    "id": "les-2109",
    "fp": "344aaaea6e7d8dc88482a9cfdb34d0ff6b054807"
+  },
+  "lessons/rag/benchmarking-retrieval-shared-corpus.md": {
+   "id": "les-2110",
+   "fp": "2307ce1771e248ac5456e5041b3f8d932168f80d"
+  },
+  "lessons/rag/document-parsing-tools.md": {
+   "id": "les-2111",
+   "fp": "bdfaebb2b3e618aba31e3e825bddcdf67c46d3f3"
+  },
+  "lessons/rag/embedded-vector-stores.md": {
+   "id": "les-2112",
+   "fp": "a939a33d3bc0a6ae72fd64d0f057e710b7d080ec"
+  },
+  "lessons/rag/managed-vector-databases.md": {
+   "id": "les-2113",
+   "fp": "858bb0834a210eea088eb97b10ef8f2c927d9344"
+  },
+  "lessons/rag/pgvector-in-postgres.md": {
+   "id": "les-2114",
+   "fp": "23f852a775a7bed74e014c97d3d2e9cd79639046"
+  },
+  "lessons/rag/rerankers-in-practice.md": {
+   "id": "les-2115",
+   "fp": "257429d1c1196c7999fb4176368f98d2a31b5b32"
+  },
+  "lessons/rag/search-engines-with-vectors.md": {
+   "id": "les-2116",
+   "fp": "8adc6052dbcfb54a4759192c84daf76adf9718c8"
   }
  },
  "retired": {
