@@ -11,11 +11,15 @@ An AI agent is a system in which a model helps choose actions toward a goal, obs
 
 A chat response is not automatically an agent. The [agent loop](/learn/agentic-ai/the-agent-loop) and [what is an agent](/learn/agentic-ai/what-is-an-agent) lessons separate the model from the harness around it.
 
+**Follow-up:** what is the smallest change that would stop this system from being an agent?
+
 ## 2. How is an agent different from a workflow?
 
 A workflow has mostly predetermined steps and transitions. An agent chooses among actions or decides what information to seek at runtime. Many good products combine both: deterministic guardrails around a small amount of model-driven choice.
 
 Choose the least flexible design that meets the need. Predictability, testing, and approvals are easier when the path is explicit.
+
+**Follow-up:** name a task you would keep as a workflow even though an agent could do it — what tips the balance?
 
 ## 3. What makes a good tool definition?
 
@@ -23,11 +27,15 @@ A good tool has a narrow purpose, explicit inputs and outputs, useful descriptio
 
 Validate arguments and results outside the model. LMVersity's [tool schema lesson](/learn/tools-function-calling/designing-a-tool-schema) covers the interface details.
 
+**Follow-up:** a tool call succeeds but returns malformed data — where does your design catch it?
+
 ## 4. How should an agent stop?
 
 Give it explicit stop conditions: a successful result, an approved final action, a maximum number of turns, a token or cost budget, a timeout, and a repeated-error limit. Return a typed status so callers can distinguish success, refusal, timeout, and partial completion.
 
 An agent that can always keep trying is an incident waiting to happen. Make the budget visible in logs and tests.
+
+**Follow-up:** the agent hits its turn budget mid-task — what should the caller receive back?
 
 ## 5. What is human-in-the-loop control?
 
@@ -35,11 +43,15 @@ Human-in-the-loop means a person reviews or approves a defined decision before t
 
 Good approval requests show the proposed action, inputs, expected effect, and an easy way to reject or edit it. The [permission and approval lesson](/learn/harness-design/permission-and-approval-systems) explores the pattern.
 
+**Follow-up:** when does an approval step become theater rather than control?
+
 ## 6. How do you secure an agent with tools?
 
 Use least-privilege credentials, per-tool authorization, input validation, output validation, isolation for risky work, audit logs, rate limits, and approval for irreversible actions. Treat tool results and retrieved content as untrusted input.
 
 Also test indirect prompt injection and confused-deputy paths. OWASP lists excessive agency and prompt injection as distinct risks in its [LLM application guidance](https://owasp.org/www-project-top-10-for-large-language-model-applications/).
+
+**Follow-up:** walk an indirect injection through your design — where does the hostile text enter, and which control fires first?
 
 ## 7. When should you not use an agent?
 
@@ -47,8 +59,18 @@ Do not use one when a deterministic function, query, or short workflow solves th
 
 Use an agent when the task has meaningful uncertainty, changing steps, or natural-language tool selection, and when you can bound and evaluate that uncertainty. See [when not to use an agent](/learn/agentic-ai/when-not-to-use-an-agent).
 
+**Follow-up:** a stakeholder wants an agent for something a scheduled job could do — what is your argument against it?
+
 ## 8. How do you debug an agent failure?
 
 Capture a trace of model inputs, selected tools, validated arguments, tool outputs, state transitions, retries, approvals, and final status. Reproduce with the same model and tool versions, then classify the failure as planning, retrieval, tool, permission, state, or synthesis related.
 
 Avoid logging secrets or raw sensitive content by default. A useful trace is structured, redacted, and tied to a test case that can prevent regression.
+
+**Follow-up:** the trace shows fourteen turns and a bad final action — how do you tell a planning failure from a tool failure from a permissions failure?
+
+## How to score your answers
+
+- **Strong answers** name the mechanism and its boundary: what the loop, tool, or approval actually controls, and where it stops controlling it.
+- **Weak answers** recite a definition without the failure mode it exists to prevent — "agents use tools" says nothing about what breaks when they do.
+- Follow-up questions are the real test. If your answer survives "when does this break?", it was reasoned; if it collapses, it was memorized.

@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-15T06:30:21.575Z",
+ "generatedAt": "2026-09-15T06:47:15.941Z",
  "findings": {
   "answers": [
    {
@@ -571,33 +571,29 @@
     "questions": 8,
     "withLinks": 4,
     "thinAnswers": 0,
-    "hasFollowUps": false,
-    "hasRubric": false,
-    "words": 531,
-    "flags": [
-     "no follow-up prompts or rubric (checklist wants both)"
-    ]
+    "followUps": 8,
+    "hasRubric": true,
+    "words": 755,
+    "flags": []
    },
    {
     "slug": "ai-system-design",
     "questions": 8,
     "withLinks": 3,
     "thinAnswers": 0,
-    "hasFollowUps": false,
-    "hasRubric": false,
-    "words": 494,
-    "flags": [
-     "no follow-up prompts or rubric (checklist wants both)"
-    ]
+    "followUps": 8,
+    "hasRubric": true,
+    "words": 727,
+    "flags": []
    },
    {
     "slug": "evals",
     "questions": 8,
     "withLinks": 3,
     "thinAnswers": 0,
-    "hasFollowUps": false,
+    "followUps": 8,
     "hasRubric": true,
-    "words": 527,
+    "words": 732,
     "flags": []
    },
    {
@@ -605,48 +601,40 @@
     "questions": 8,
     "withLinks": 5,
     "thinAnswers": 0,
-    "hasFollowUps": false,
-    "hasRubric": false,
-    "words": 575,
-    "flags": [
-     "no follow-up prompts or rubric (checklist wants both)"
-    ]
+    "followUps": 8,
+    "hasRubric": true,
+    "words": 764,
+    "flags": []
    },
    {
     "slug": "mcp",
     "questions": 8,
     "withLinks": 3,
     "thinAnswers": 0,
-    "hasFollowUps": false,
-    "hasRubric": false,
-    "words": 496,
-    "flags": [
-     "no follow-up prompts or rubric (checklist wants both)"
-    ]
+    "followUps": 8,
+    "hasRubric": true,
+    "words": 692,
+    "flags": []
    },
    {
     "slug": "prompt-engineering",
     "questions": 8,
     "withLinks": 6,
     "thinAnswers": 0,
-    "hasFollowUps": false,
-    "hasRubric": false,
-    "words": 553,
-    "flags": [
-     "no follow-up prompts or rubric (checklist wants both)"
-    ]
+    "followUps": 8,
+    "hasRubric": true,
+    "words": 731,
+    "flags": []
    },
    {
     "slug": "rag",
     "questions": 8,
     "withLinks": 4,
     "thinAnswers": 0,
-    "hasFollowUps": false,
+    "followUps": 8,
     "hasRubric": true,
-    "words": 510,
-    "flags": [
-     "no follow-up prompts or rubric (checklist wants both)"
-    ]
+    "words": 700,
+    "flags": []
    }
   ],
   "scenarios": [

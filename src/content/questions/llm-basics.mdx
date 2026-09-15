@@ -11,11 +11,15 @@ A large language model is a neural network trained to assign probabilities to se
 
 The practical distinction matters: a model can produce a fluent answer without having retrieved a verified fact. Start with [how LLMs work](/learn/ai-foundations/how-llms-work) and [next-token prediction](/learn/llm-foundations/next-token-prediction).
 
+**Follow-up:** if the model only predicts the next token, why does its output look like reasoning?
+
 ## 2. What is a token?
 
 A token is a unit chosen by a tokenizer. It may represent a whole word, part of a word, punctuation, or whitespace. Tokenization is model-specific, so the same text can consume different numbers of tokens across model families.
 
 Tokens affect context limits, latency, and cost. A good answer names all three instead of treating tokens as characters. See [tokenization](/learn/llm-foundations/tokenization-explained) and [tokens, context, and cost](/learn/ai-foundations/tokens-context-cost).
+
+**Follow-up:** where does "a token is a word" break — give a concrete example.
 
 ## 3. Why can an LLM hallucinate?
 
@@ -23,11 +27,15 @@ The training objective rewards plausible continuations, not truth. If the prompt
 
 Mitigations include retrieval with citations, constrained outputs, abstention rules, and evaluation against a representative test set. None is a universal fix. LMVersity covers [why models hallucinate](/learn/hallucinations/why-models-hallucinate) and [teaching models to say I do not know](/learn/hallucinations/teaching-models-to-say-i-dont-know).
 
+**Follow-up:** why does retrieval reduce hallucinations without eliminating them?
+
 ## 4. What is the difference between training and inference?
 
 Training updates model parameters using many examples and an optimization procedure. Inference uses fixed parameters to compute an output for a given input. Prompting, retrieval, and tool calls change the input or surrounding application state; they do not retrain the base model.
 
 This distinction helps with debugging. If a behavior changes after adding documents to a request, investigate the context pipeline before proposing fine-tuning.
+
+**Follow-up:** which of the two does prompting change, and which does fine-tuning change?
 
 ## 5. What is a context window?
 
@@ -35,11 +43,15 @@ A context window is the bounded amount of tokenized input and generated output a
 
 Treat context as a budget: retrieve relevant material, remove repetition, preserve provenance, and reserve room for the answer or tool results. The [context engineering track](/learn/context-engineering) develops that mental model.
 
+**Follow-up:** the model seems to forget an instruction mid-conversation — what actually happened?
+
 ## 6. What does temperature change?
 
 Temperature changes how sharply the model samples from its next-token probability distribution. Lower values usually make high-probability choices more likely; higher values spread probability across more alternatives.
 
 It does not add knowledge or make a model reason better. Use lower randomness for extraction and routing, then measure whether any setting improves the actual task rather than relying on a “creative” label.
+
+**Follow-up:** when is temperature 0 the right setting — and what does it not fix?
 
 ## 7. Why do transformers use attention?
 
@@ -47,8 +59,18 @@ Attention lets each position compute weighted relationships with other positions
 
 The original Transformer paper introduced an architecture based on attention rather than recurrence. The [attention lesson](/learn/llm-foundations/attention-mechanism-explained) gives the implementation intuition, and the [paper](https://arxiv.org/abs/1706.03762) is the primary source.
 
+**Follow-up:** why is attention a finite resource — what does a bigger context window not buy you?
+
 ## 8. When should you use a smaller model?
 
 Use the smallest model that meets the task's quality, latency, and safety requirements. Smaller models can be cheaper and faster, and they may be easier to run privately. A larger model can still win when the task needs broad knowledge, complex synthesis, or robust instruction following.
 
 Decide with a fixed evaluation set and production-like inputs. Compare total system cost, including retries, retrieval, tool calls, and human review, not just the per-token price.
+
+**Follow-up:** how would you actually find out whether a smaller model is good enough for this task?
+
+## How to score your answers
+
+- **Strong answers** define the term by what it constrains: tokens bound cost and context, the window bounds what fits, temperature bounds sampling — each has an operational consequence.
+- **Weak answers** stop at the analogy ("it's like autocomplete") without saying where the analogy breaks.
+- Interviewers use the follow-up to check whether your mental model is mechanical or metaphorical — be ready to say what literally happens.

@@ -1458,7 +1458,7 @@ validation, deployment status, measured result when available, blockers, and nex
 - Verification: bespoke parser re-read all 48 calls post-transform (0 mismatches);
   `npm run check:content` clean; `npm run check:links` clean (all new `/learn/` routes
   resolve); file imports cleanly under `node --experimental-strip-types`.
-  `git diff --check` clean. Commit: `81b5f86`.
+  `git diff --check` clean. Commit: `6592938`.
 - Still open from the audit: distractor/difficulty *quality* scoring (editorial), the 66%-B
   skew in lesson quizzes, 11 files with thin per-option rationale.
 - Next batch: backlog item 2 — scenario depth pass (6 files, add missing
@@ -1478,6 +1478,28 @@ validation, deployment status, measured result when available, blockers, and nex
   `git diff --check` clean. Audit now reports 0 missing scenario sections. Commit: `79d4f2f`.
 - Next batch: backlog item 3 — interview follow-up prompts + weak-vs-strong rubric
   (7 topic files, ~56 questions).
+
+### 2026-09-15 — Interview follow-ups and scoring rubric
+
+- All 7 interview topic files now carry a `**Follow-up:**` prompt on every question
+  (56/56) plus a closing `## How to score your answers` rubric section. Follow-ups
+  are inline bold paragraphs rather than headings so `src/pages/interview/[topic].astro`
+  keeps parsing exactly 8 FAQ questions per topic; the rubric is the one intended
+  extra H2 (a legitimate TOC/FAQ entry).
+- Follow-ups probe reasoning, not recall: mechanism boundaries, failure modes,
+  trade-offs, decision criteria (e.g. "the agent works but a fixed workflow does
+  the same job — what justifies the agent?", "valid JSON with a wrong value —
+  what catches it?"). Rubrics distinguish strong answers (mechanism + boundary +
+  failure mode) from weak ones (definition recital, box-drawing, incantations).
+- `scripts/audit-families.mjs` updated to match the new format: counts inline
+  follow-up prompts per question, detects the rubric by its exact heading, and
+  excludes it from the question count (was reporting 9). Backlog items 1–3 marked
+  done in the generated report.
+- Audit result: 7/7 topics — 8 questions, 8/8 follow-ups, rubric ✓, zero flags.
+- Validation: `npm run check:content` clean; `npm run check:links` clean
+  (2,392 pages); `git diff --check` clean. Commit: `74078bb`.
+- Next batch: backlog item 4 — guide in-body links (9 guides) plus the blog post
+  `why-there-is-no-certificate` curriculum link.
 
 ### 2026-09-14 — Master ecosystem backlog created
 

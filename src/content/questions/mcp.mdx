@@ -11,11 +11,15 @@ Model Context Protocol standardizes how an AI application can connect to externa
 
 MCP does not replace authorization, business logic, or a model provider. It defines a protocol boundary. See [what MCP is](/learn/mcp/what-is-mcp) and the [official specification](https://modelcontextprotocol.io/specification/2025-06-18/).
 
+**Follow-up:** what did integrations look like before MCP, and which problem does it deliberately leave unsolved?
+
 ## 2. What is the host, client, and server in MCP?
 
 The host is the application coordinating the model and user experience. It creates clients, usually one per server connection, and applies permission and lifecycle policies. A server exposes focused tools, resources, or prompts.
 
 Keeping those roles distinct helps with trust boundaries. The [MCP architecture lesson](/learn/mcp/mcp-architecture-hosts-clients-servers) walks through the relationship.
+
+**Follow-up:** where should user-facing consent policy live — host, client, or server — and why?
 
 ## 3. How are tools, resources, and prompts different?
 
@@ -23,11 +27,15 @@ Tools are executable functions that a model may invoke. Resources are data or co
 
 The official MCP overview describes tools as model-controlled, resources as application-controlled, and prompts as user-controlled primitives. That control distinction is useful when designing consent and audit flows.
 
+**Follow-up:** why does the model-controlled versus user-controlled distinction matter when you design consent?
+
 ## 4. Is MCP just function calling?
 
 No. MCP can carry tool definitions and calls, but it also standardizes resources, prompts, capability negotiation, lifecycle messages, and transport behavior. A function-calling API can be one part of an MCP integration without covering the whole protocol.
 
 Use direct provider APIs when a single application needs a narrow integration. MCP becomes more useful when interoperability and reusable servers matter.
+
+**Follow-up:** what does MCP give you that a provider's own function-calling API does not?
 
 ## 5. How should an MCP server expose tools safely?
 
@@ -35,11 +43,15 @@ Expose narrow, composable actions with clear descriptions and schemas. Validate 
 
 The [MCP tools specification](https://modelcontextprotocol.io/specification/2025-06-18/server/tools) defines the protocol shape; application owners still need threat modeling and operational controls.
 
+**Follow-up:** a tool takes a free-text parameter the model fills in — what can go wrong?
+
 ## 6. What is capability negotiation?
 
 During initialization, clients and servers announce supported protocol features. Each side should only use capabilities that were negotiated and should handle unsupported or partially implemented features clearly.
 
 Capability negotiation lets implementations grow without making every server support every feature. It is part of the base protocol, not an optional convention.
+
+**Follow-up:** the client lacks a feature the server expects — what should happen at initialization versus at call time?
 
 ## 7. How do you handle MCP context-window pressure?
 
@@ -47,8 +59,18 @@ Do not expose every resource or tool to every request. Select relevant tools, su
 
 LMVersity's [MCP context window lesson](/learn/mcp/mcp-context-window) covers why a technically connected server can still degrade an application.
 
+**Follow-up:** your server exposes forty tools — what does that cost on every single request?
+
 ## 8. What should an MCP security review ask?
 
 Ask who can connect, what data can leave the system, which actions can change state, how consent is recorded, how server identity and updates are trusted, and how failures are contained. Review local and remote transports separately.
 
 MCP is powerful because it creates data and execution paths. The specification emphasizes user consent and control; treat that as a design requirement, not a checkbox.
+
+**Follow-up:** what is the first question you ask about a server before you connect it?
+
+## How to score your answers
+
+- **Strong answers** separate the protocol boundary from the application's responsibilities: MCP defines the pipe; you still own authorization, data minimization, and consent.
+- **Weak answers** describe the roles without the trust boundary — knowing what a host is matters less than knowing what it must never delegate.
+- Follow-ups push on "who decides" — control paths, not component names, are the tested material.

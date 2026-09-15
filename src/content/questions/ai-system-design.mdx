@@ -11,11 +11,15 @@ Start with a narrow set of support intents and a clear escalation path. Retrieve
 
 Define success in terms of resolution quality, groundedness, escalation accuracy, latency, and cost. Avoid presenting a fluent answer as a resolution metric.
 
+**Follow-up:** resolution rate is up but escalations doubled — is that a success or a failure, and how do you find out?
+
 ## 2. How would you design document question answering?
 
 Ingest documents with stable IDs and access controls, parse them into structure-aware chunks, index both lexical and semantic signals, retrieve with permissions applied, and return answers with source locations. Include a “not found” path.
 
 Test updates, conflicting versions, tables, scanned pages, and unauthorized documents. RAG is only correct if retrieval and access control are correct.
+
+**Follow-up:** a user's permissions changed between indexing and query time — where does your design catch that?
 
 ## 3. How would you design a tool-using agent?
 
@@ -23,11 +27,15 @@ Wrap a bounded loop around a model, a small tool registry, typed argument valida
 
 Begin with a workflow baseline so you can show what the agent adds. See [the control loop](/learn/harness-design/the-control-loop).
 
+**Follow-up:** the agent works, but a fixed workflow does the same job — what would justify the agent over the workflow?
+
 ## 4. How would you manage model and prompt changes?
 
 Version model choice, prompt, schema, retrieval settings, and tool definitions together. Run offline evals, shadow or canary a release where possible, compare cost and latency, and keep a fast rollback path.
 
 Do not change several high-leverage variables at once unless the release is treated as a new configuration with its own baseline.
+
+**Follow-up:** you changed the model and the prompt together and the evals improved — why is that still a problem?
 
 ## 5. How would you design for rate limits?
 
@@ -35,11 +43,15 @@ Use bounded retries with exponential backoff and jitter, honor provider retry gu
 
 Track attempts and provider response classes so retries do not become invisible cost. LMVersity's [rate-limit lesson](/learn/genai-app-dev/rate-limits-and-retry-strategies) covers the mechanics.
 
+**Follow-up:** which provider errors should never be retried, and what does the user see while the queue drains?
+
 ## 6. How would you observe an LLM feature?
 
 Log request IDs, configuration versions, latency, token usage, cost, tool calls, retrieval IDs, validation outcomes, and user-visible status. Redact secrets and sensitive content, and sample traces when full payload capture is not justified.
 
 Pair operational telemetry with quality signals from evals, user feedback, and targeted review. A healthy API can still produce poor answers.
+
+**Follow-up:** every operational metric is green but users say answers got worse — which signal was missing?
 
 ## 7. How would you make an AI feature private?
 
@@ -47,8 +59,18 @@ Map data flows first. Minimize retention, isolate tenants, apply access checks b
 
 Privacy is a system property, not a prompt instruction. Test cross-tenant retrieval and leakage explicitly.
 
+**Follow-up:** where does a cross-tenant leak most plausibly enter this pipeline — name the component.
+
 ## 8. How would you estimate cost before launch?
 
 Estimate requests by path, input and output tokens, model price, retrieval and storage, tool calls, retries, cache hit rate, and human review. Multiply by realistic traffic distributions and include worst-case loops or long contexts.
 
 Then instrument actual usage and compare it with the model. [Token and cost tracking](/learn/production/token-and-cost-tracking) is the operational follow-through.
+
+**Follow-up:** production cost comes in at several times your estimate — which assumption most likely broke?
+
+## How to score your answers
+
+- **Strong answers** start from constraints: who can see what, what can fail, what costs what — then reach for components. They name the boundary each mechanism controls.
+- **Weak answers** draw boxes: "add a vector DB, add a cache, add a queue" without saying which requirement each box serves or what happens when it fails.
+- Follow-ups simulate the second interview round — interviewers push on the seam between two components, so be ready to trace one concrete failure through your whole design.

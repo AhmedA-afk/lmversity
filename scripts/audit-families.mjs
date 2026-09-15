@@ -118,24 +118,26 @@ for (const f of list(join(CONTENT, 'blog'), /\.mdx$/)) {
 for (const f of list(join(CONTENT, 'questions'), /\.mdx$/)) {
   const src = readFileSync(f, 'utf8');
   const { body } = fmBody(src);
-  const sections = ('\n' + noCode(body)).split(/\n## /).slice(1);
+  const sections = ('\n' + noCode(body)).split(/\n## /).slice(1)
+    .filter((s) => !/^how to score your answers/i.test(s));
   let linked = 0, thin = 0;
   for (const s of sections) {
     if (internalLinks(s).length) linked++;
     const paras = s.split(/\n\s*\n/).filter((p) => p.trim() && !p.startsWith('#')).length;
     if (paras < 2) thin++;
   }
-  const heads = h2s(body);
+  const followUps = (body.match(/\*\*Follow-up:\*\*/gi) || []).length;
+  const hasRubric = /^## how to score your answers$/im.test(body);
   findings.interview.push({
     slug: relative(join(CONTENT, 'questions'), f).replace(/\.mdx$/, ''),
     questions: sections.length,
     withLinks: linked, thinAnswers: thin,
-    hasFollowUps: heads.some((h) => /follow/i.test(h)),
-    hasRubric: /rubric|weak answer|strong answer|score/i.test(body),
+    followUps, hasRubric,
     words: words(body),
     flags: [
       ...(thin ? [`${thin} question(s) with a single short answer paragraph`] : []),
-      ...(!heads.some((h) => /follow/i.test(h)) && !/rubric|weak answer|strong answer/i.test(body) ? ['no follow-up prompts or rubric (checklist wants both)'] : []),
+      ...(followUps < sections.length ? [`${sections.length - followUps} question(s) missing a follow-up prompt`] : []),
+      ...(!hasRubric ? ['missing "How to score your answers" rubric section'] : []),
     ],
   });
 }
@@ -353,7 +355,7 @@ const md = ['# Acquisition & practice family audit — mechanical pass', '', `Ge
   md.push(`- **Straight answers (${findings.answers.length})**: ${flagged(findings.answers).length} flagged — answer-first openings, FAQ and related metadata hold across the family.`);
   md.push(`- **Guides (${findings.guides.length})**: all have \`related\` lesson lists and ordered steps; ${findings.guides.filter((g) => g.internal === 0).length}/${findings.guides.length} have **zero in-body internal links** (continuation lives only in the frontmatter block); ${findings.guides.filter((g) => g.codeBlocks === 0).map((g) => `\`${g.slug}\``).join(', ') || 'none'} have no code.`);
   md.push(`- **Blog (${findings.blog.length})**: all dated; ${findings.blog.filter((b) => b.learnLinks === 0).map((b) => `\`${b.slug}\``).join(', ') || 'none'} never link into the curriculum.`);
-  md.push(`- **Interview (${findings.interview.length})**: 8 questions each; ${findings.interview.filter((i) => !i.hasFollowUps && !i.hasRubric).length}/${findings.interview.length} have **no follow-up prompts or rubric** — the checklist asks for both.`);
+  md.push(`- **Interview (${findings.interview.length})**: ${findings.interview.filter((i) => i.followUps >= i.questions && i.hasRubric).length}/${findings.interview.length} topics have a follow-up prompt on every question plus a weak-vs-strong rubric.`);
   md.push(`- **Scenarios (${findings.scenarios.length})**: ~${Math.round(findings.scenarios.reduce((s, r) => s + r.words, 0) / findings.scenarios.length)} words avg; missing sections: ${[...new Set(findings.scenarios.flatMap((s) => s.missing))].join(', ') || 'none'}.`);
   md.push(`- **Centralized practice banks**: ${totalQ} questions across ${findings.practice.length} tracks, ${totalQLinks} total lesson links${allBiased ? `; **100% of correct answers sit at option index 0 or 1 in every bank** — positional bias a learner can exploit` : ''}.`);
   md.push(`- **Lesson quiz pages (${findings.lessonQuizzes.length} files, ${findings.lessonQuizzes.reduce((s, q) => s + q.questions, 0)} questions)**: all questions carry a marked correct answer; ${duplicateStems.length} duplicate stems corpus-wide; correct-answer positions skew ${Object.entries(bPos).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${k} ${Math.round((v / Object.values(bPos).reduce((x, y) => x + y, 0)) * 100)}%`).join(', ')}; ${flagged(findings.lessonQuizzes).length} files have answer blocks that don't discuss every option.`);
@@ -362,9 +364,9 @@ const md = ['# Acquisition & practice family audit — mechanical pass', '', `Ge
   md.push(`- **Common-mistake pages (${findings.mistakes.length})**: ${flagged(findings.mistakes).length} flagged; the symptom→cause→fix pattern holds elsewhere.`);
   md.push('');
   md.push('## Suggested backlog order', '');
-  md.push('1. **Shuffle centralized-bank answer positions** — cheapest fix, highest integrity gain; then add a lesson link per question.');
-  md.push('2. **Scenario depth pass** — add the missing constraints/options/postmortem sections; at ~200 words they under-deliver the "system design walkthrough" promise.');
-  md.push('3. **Interview follow-ups + rubric** — add per-topic follow-up prompts and a weak-vs-strong answer rubric.');
+  md.push('1. ~~Shuffle centralized-bank answer positions~~ — **done**: uniform spread + a lesson link per question.');
+  md.push('2. ~~Scenario depth pass~~ — **done**: constraints/options/postmortem added to all six.');
+  md.push('3. ~~Interview follow-ups + rubric~~ — **done**: follow-up prompt per question + "How to score your answers" rubric per topic.');
   md.push('4. **Guide in-body links** — weave curriculum links into guide prose where a step references a concept a lesson teaches.');
   const totalMarked = Object.values(bPos).reduce((a, b) => a + b, 0);
   const topPos = Object.entries(bPos).sort((a, b) => b[1] - a[1])[0];
@@ -397,7 +399,7 @@ table('Blog', findings.blog, [
 ]);
 table('Interview topics', findings.interview, [
   ['questions', (r) => r.questions], ['with links', (r) => r.withLinks],
-  ['thin answers', (r) => r.thinAnswers], ['follow-ups/rubric', (r) => (r.hasFollowUps || r.hasRubric ? '✓' : '✗')],
+  ['thin answers', (r) => r.thinAnswers], ['follow-ups', (r) => `${r.followUps}/${r.questions}`], ['rubric', (r) => (r.hasRubric ? '✓' : '✗')],
   ['words', (r) => r.words],
 ]);
 table('Scenarios', findings.scenarios, [

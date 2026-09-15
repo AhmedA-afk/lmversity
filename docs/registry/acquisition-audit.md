@@ -1,6 +1,6 @@
 # Acquisition & practice family audit — mechanical pass
 
-Generated 2026-09-15T06:30:21.575Z by `scripts/audit-families.mjs`.
+Generated 2026-09-15T06:47:15.942Z by `scripts/audit-families.mjs`.
 Structural checks only; originality/correctness are scored in the review pass.
 
 ## Findings
@@ -8,7 +8,7 @@ Structural checks only; originality/correctness are scored in the review pass.
 - **Straight answers (29)**: 0 flagged — answer-first openings, FAQ and related metadata hold across the family.
 - **Guides (9)**: all have `related` lesson lists and ordered steps; 9/9 have **zero in-body internal links** (continuation lives only in the frontmatter block); `rag-fine-tuning-or-a-longer-prompt` have no code.
 - **Blog (10)**: all dated; `why-there-is-no-certificate` never link into the curriculum.
-- **Interview (7)**: 8 questions each; 5/7 have **no follow-up prompts or rubric** — the checklist asks for both.
+- **Interview (7)**: 7/7 topics have a follow-up prompt on every question plus a weak-vs-strong rubric.
 - **Scenarios (6)**: ~451 words avg; missing sections: none.
 - **Centralized practice banks**: 48 questions across 6 tracks, 48 total lesson links.
 - **Lesson quiz pages (83 files, 603 questions)**: all questions carry a marked correct answer; 0 duplicate stems corpus-wide; correct-answer positions skew B 66%, C 19%, A 11%, D 3%; 11 files have answer blocks that don't discuss every option.
@@ -18,9 +18,9 @@ Structural checks only; originality/correctness are scored in the review pass.
 
 ## Suggested backlog order
 
-1. **Shuffle centralized-bank answer positions** — cheapest fix, highest integrity gain; then add a lesson link per question.
-2. **Scenario depth pass** — add the missing constraints/options/postmortem sections; at ~200 words they under-deliver the "system design walkthrough" promise.
-3. **Interview follow-ups + rubric** — add per-topic follow-up prompts and a weak-vs-strong answer rubric.
+1. ~~Shuffle centralized-bank answer positions~~ — **done**: uniform spread + a lesson link per question.
+2. ~~Scenario depth pass~~ — **done**: constraints/options/postmortem added to all six.
+3. ~~Interview follow-ups + rubric~~ — **done**: follow-up prompt per question + "How to score your answers" rubric per topic.
 4. **Guide in-body links** — weave curriculum links into guide prose where a step references a concept a lesson teaches.
 5. **Quiz answer-position rebalance** — 66% of correct answers sit at B across 603 lesson-quiz questions; redistribute when files are next touched.
 6. **Per-option rationale gaps** — 11 quiz files where some answers state a letter without walking the options.
@@ -90,15 +90,15 @@ Structural checks only; originality/correctness are scored in the review pass.
 
 ## Interview topics (7)
 
-| item | questions | with links | thin answers | follow-ups/rubric | words | flags |
-|---|---------------|---|
-| agents | 8 | 4 | 0 | ✗ | 531 | no follow-up prompts or rubric (checklist wants both) |
-| ai-system-design | 8 | 3 | 0 | ✗ | 494 | no follow-up prompts or rubric (checklist wants both) |
-| evals | 8 | 3 | 0 | ✓ | 527 | — |
-| llm-basics | 8 | 5 | 0 | ✗ | 575 | no follow-up prompts or rubric (checklist wants both) |
-| mcp | 8 | 3 | 0 | ✗ | 496 | no follow-up prompts or rubric (checklist wants both) |
-| prompt-engineering | 8 | 6 | 0 | ✗ | 553 | no follow-up prompts or rubric (checklist wants both) |
-| rag | 8 | 4 | 0 | ✓ | 510 | no follow-up prompts or rubric (checklist wants both) |
+| item | questions | with links | thin answers | follow-ups | rubric | words | flags |
+|---|------------------|---|
+| agents | 8 | 4 | 0 | 8/8 | ✓ | 755 | — |
+| ai-system-design | 8 | 3 | 0 | 8/8 | ✓ | 727 | — |
+| evals | 8 | 3 | 0 | 8/8 | ✓ | 732 | — |
+| llm-basics | 8 | 5 | 0 | 8/8 | ✓ | 764 | — |
+| mcp | 8 | 3 | 0 | 8/8 | ✓ | 692 | — |
+| prompt-engineering | 8 | 6 | 0 | 8/8 | ✓ | 731 | — |
+| rag | 8 | 4 | 0 | 8/8 | ✓ | 700 | — |
 
 ## Scenarios (6)
 
