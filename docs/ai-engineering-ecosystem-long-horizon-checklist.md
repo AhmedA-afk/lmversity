@@ -1095,21 +1095,21 @@ consolidation into a parent track, or a clearer curated-path role.
 
 ### Web and browser harness course
 
-- [ ] Browser DOM, accessibility tree, screenshots, network, console, storage, cookies,
+- [x] Browser DOM, accessibility tree, screenshots, network, console, storage, cookies,
       sessions, frames, downloads, and dialogs.
-- [ ] Playwright fundamentals before AI browser agents.
-- [ ] Chrome DevTools Protocol and Chrome DevTools MCP.
-- [ ] Browser Use.
-- [ ] Stagehand and Browserbase.
-- [ ] Puppeteer and Selenium as deterministic alternatives where appropriate.
-- [ ] Provider computer-use tools after official verification.
-- [ ] Authenticated-session handling without exposing credentials.
-- [ ] Semantic locators, accessible names, and resilient selectors.
-- [ ] Observe versus act boundaries and approval before consequential actions.
-- [ ] Prompt injection from page content, downloads, and tool results.
-- [ ] Data extraction with schemas and source capture.
-- [ ] Browser task evaluation, replay, screenshots, traces, and failure classification.
-- [ ] Agentic browsing only where deterministic automation cannot handle the variation.
+- [x] Playwright fundamentals before AI browser agents.
+- [x] Chrome DevTools Protocol and Chrome DevTools MCP.
+- [x] Browser Use.
+- [x] Stagehand and Browserbase.
+- [x] Puppeteer and Selenium as deterministic alternatives where appropriate.
+- [x] Provider computer-use tools after official verification.
+- [x] Authenticated-session handling without exposing credentials.
+- [x] Semantic locators, accessible names, and resilient selectors.
+- [x] Observe versus act boundaries and approval before consequential actions.
+- [x] Prompt injection from page content, downloads, and tool results.
+- [x] Data extraction with schemas and source capture.
+- [x] Browser task evaluation, replay, screenshots, traces, and failure classification.
+- [x] Agentic browsing only where deterministic automation cannot handle the variation.
 
 ### MCP curriculum
 
@@ -2874,7 +2874,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-15 — Harness foundations + CLI harness course complete (all 20 rows)
 
-- Commit: pending. New `cli-agents` track (n:26, Agentic group, 7
+- Commit: `74d344c`. New `cli-agents` track (n:26, Agentic group, 7
   lessons): `getting-the-agent-oriented` (repo discovery + instruction
   files + context control — rows 1–2), `planning-modes-and-patch-review`
   (plan/read-only modes + diff review — rows 3–4),
@@ -2901,6 +2901,28 @@ validation, deployment status, measured result when available, blockers, and nex
   `check:links` 0 dead (5,333 routes); registry 2,466 items.
 - Next batch: web/browser harness course (14 rows), MCP curriculum
   (10 rows), Agent Skills curriculum (9 rows).
+
+### 2026-09-15 — Web & browser harness course complete (all 14 rows)
+
+- Commit: pending. New `web-agents` track (n:27, Agentic group, 7
+  lessons): `what-the-browser-exposes` (all perception + state/event
+  channels — row 1), `playwright-fundamentals-and-locators` (auto-waits
+  + semantic locators, deterministic baseline — rows 2+9),
+  `cdp-puppeteer-selenium-devtools-mcp` (protocol layer cake — rows
+  3+6), `agentic-browsers-overview` (Browser Use / Stagehand+Browserbase
+  / provider computer-use + the deterministic-first chooser — rows
+  4+5+7+14), `sessions-credentials-and-act-boundaries` (stored contexts
+  over typed passwords, observe/low-stakes/consequential gate — rows
+  8+10), `web-prompt-injection` (page/downloads/tool results as
+  attacker — row 11), `extraction-and-evaluation` (schema extraction +
+  source capture, replay/traces + failure taxonomy — rows 12+13).
+- Computer-use mechanism was already covered by
+  `computer-use-agents`; vendor tooling was the gap.
+- Sources: 8 new verified records (Playwright, CDP, chrome-devtools-mcp,
+  Browser Use, Stagehand, Anthropic computer-use, Puppeteer, Selenium).
+- Validation: `check:content` clean (2,145); build 2,485 pages;
+  `check:links` 0 dead (5,349 routes); registry 2,474 items.
+- Next batch: MCP curriculum (10 rows), Agent Skills curriculum (9 rows).
 
 ### 2026-09-14 — Master ecosystem backlog created
 

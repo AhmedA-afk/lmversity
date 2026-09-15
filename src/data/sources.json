@@ -712,6 +712,78 @@
     "claims": ["architect/editor model split", "--message non-interactive mode"],
     "status": "current"
   },
+  "playwright-docs": {
+    "title": "Playwright documentation",
+    "publisher": "Microsoft",
+    "accessedAt": "2026-09-15",
+    "url": "https://playwright.dev/docs/intro",
+    "type": "official-docs",
+    "claims": ["auto-waiting actions", "semantic locators (get_by_role)", "storage_state contexts", "tracing"],
+    "status": "current"
+  },
+  "cdp-docs": {
+    "title": "Chrome DevTools Protocol",
+    "publisher": "Chrome DevTools",
+    "accessedAt": "2026-09-15",
+    "url": "https://chromedevtools.github.io/devtools-protocol/",
+    "type": "official-docs",
+    "claims": ["protocol domains (Page, Network, DOM, Runtime)"],
+    "status": "current"
+  },
+  "chrome-devtools-mcp-repo": {
+    "title": "Chrome DevTools MCP repository",
+    "publisher": "ChromeDevTools",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+    "type": "official-docs",
+    "claims": ["MCP server exposing DevTools to agents"],
+    "status": "current"
+  },
+  "browser-use-repo": {
+    "title": "Browser Use repository",
+    "publisher": "Browser Use",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/browser-use/browser-use",
+    "type": "official-docs",
+    "claims": ["agent loop driving Playwright from natural-language tasks"],
+    "status": "current"
+  },
+  "stagehand-repo": {
+    "title": "Stagehand repository",
+    "publisher": "Browserbase",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/browserbase/stagehand",
+    "type": "official-docs",
+    "claims": ["act/extract/observe primitives over deterministic scripts"],
+    "status": "current"
+  },
+  "anthropic-computer-use": {
+    "title": "Anthropic computer use documentation",
+    "publisher": "Anthropic",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.claude.com/en/docs/agents-and-tools/computer-use",
+    "type": "official-docs",
+    "claims": ["screenshot + synthetic input desktop control"],
+    "status": "current"
+  },
+  "puppeteer-docs": {
+    "title": "Puppeteer documentation",
+    "publisher": "Chrome",
+    "accessedAt": "2026-09-15",
+    "url": "https://pptr.dev/",
+    "type": "official-docs",
+    "claims": ["CDP-first browser automation library"],
+    "status": "current"
+  },
+  "selenium-docs": {
+    "title": "Selenium documentation",
+    "publisher": "Selenium",
+    "accessedAt": "2026-09-15",
+    "url": "https://www.selenium.dev/documentation/",
+    "type": "official-docs",
+    "claims": ["WebDriver cross-browser standard"],
+    "status": "current"
+  },
   "mcp-spec": {
     "title": "Model Context Protocol specification",
     "publisher": "Model Context Protocol",

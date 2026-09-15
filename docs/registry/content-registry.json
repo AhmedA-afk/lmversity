@@ -1,12 +1,12 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T14:19:55.477Z",
+  "generatedAt": "2026-09-15T14:24:14.186Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2466,
+  "itemCount": 2474,
   "counts": {
    "byFamily": {
-    "lesson": 2085,
+    "lesson": 2092,
     "project": 31,
     "quiz": 89,
     "reference": 59,
@@ -16,16 +16,16 @@
     "blog": 10,
     "guide": 9,
     "answer": 33,
-    "track": 36,
+    "track": 37,
     "role": 12,
     "page": 21,
     "glossary": 1
    },
    "byStatus": {
-    "live": 2466
+    "live": 2474
    },
    "byKind": {
-    "concept": 1785,
+    "concept": 1792,
     "comparison": 102,
     "worked-example": 29,
     "capstone": 31,
@@ -43,7 +43,7 @@
     "lesson": 131,
     "reference": 7,
     "bootcamp": 6,
-    "track": 26,
+    "track": 27,
     "quick-guide": 4,
     "role-path": 12,
     "fde-phase": 10,
@@ -84,6 +84,7 @@
     "responsible-ai": 8,
     "structured-outputs": 125,
     "tools-function-calling": 127,
+    "web-agents": 8,
     "Agents": 1,
     "System design for AI": 1,
     "Evals and red teaming": 1,
@@ -100,10 +101,10 @@
     "fde": 193
    },
    "byFreshness": {
-    "release-sensitive": 331,
-    "pricing-sensitive": 343,
-    "periodic": 1348,
-    "certification-sensitive": 101,
+    "release-sensitive": 334,
+    "pricing-sensitive": 345,
+    "periodic": 1350,
+    "certification-sensitive": 102,
     "policy-sensitive": 80,
     "durable": 263
    }
@@ -10485,7 +10486,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (238w vs ~768w)",
+   "dispositionReason": "thin vs family median (238w vs ~767w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -45457,7 +45458,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -88854,7 +88855,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (277w vs ~768w)",
+   "dispositionReason": "thin vs family median (277w vs ~767w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -92572,7 +92573,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (269w vs ~768w)",
+   "dispositionReason": "thin vs family median (269w vs ~767w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -184847,6 +184848,620 @@
    }
   },
   {
+   "id": "les-2139",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Agentic browsers: Browser Use, Stagehand, Browserbase, and computer-use tools",
+   "slug": "web-agents/agentic-browsers-overview",
+   "route": "/learn/web-agents/agentic-browsers-overview",
+   "collection": "lessons",
+   "path": "src/content/lessons/web-agents/agentic-browsers-overview.md",
+   "track": "web-agents",
+   "module": null,
+   "status": "live",
+   "summary": "When deterministic automation can't handle the variation — Browser Use's agent loop over Playwright, Stagehand's act/extract/observe primitives on Browserbase, and providers' native computer-use.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 491,
+   "headings": [
+    "The short answer",
+    "The three shapes",
+    "When each is justified",
+    "The honest limits",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agentic-ai/computer-use-agents",
+    "/learn/web-agents/extraction-and-evaluation",
+    "/learn/web-agents/playwright-fundamentals-and-locators",
+    "/learn/web-agents/sessions-credentials-and-act-boundaries",
+    "/learn/web-agents/web-prompt-injection"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 7,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "When deterministic automation can't handle the variation — Browser Use's agent loop over Playwright, Stagehand's act/extract/observe primitives on Browserbase, and providers' native computer-use.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/web-agents/sessions-credentials-and-act-boundaries",
+   "practiceType": "none",
+   "freshnessClass": "pricing-sensitive",
+   "freshnessSignals": [
+    "pricing/cost mention",
+    "vendor/tool mentions: Stagehand, Browserbase, Playwright, Anthropic, OpenAI"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2140",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "CDP, Puppeteer, Selenium, and Chrome DevTools MCP: the protocol layer",
+   "slug": "web-agents/cdp-puppeteer-selenium-devtools-mcp",
+   "route": "/learn/web-agents/cdp-puppeteer-selenium-devtools-mcp",
+   "collection": "lessons",
+   "path": "src/content/lessons/web-agents/cdp-puppeteer-selenium-devtools-mcp.md",
+   "track": "web-agents",
+   "module": null,
+   "status": "live",
+   "summary": "The Chrome DevTools Protocol is the raw wire every Chromium tool sits on — Puppeteer drives it directly, Selenium takes the cross-browser WebDriver standard, and Chrome DevTools MCP exposes it to agents.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 462,
+   "headings": [
+    "The short answer",
+    "The stack, bottom to top",
+    "Choosing",
+    "The honest limits",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/mcp/mcp-architecture-hosts-clients-servers",
+    "/learn/web-agents/agentic-browsers-overview",
+    "/learn/web-agents/playwright-fundamentals-and-locators"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 7,
+    "numericClaims": 2,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "The Chrome DevTools Protocol is the raw wire every Chromium tool sits on — Puppeteer drives it directly, Selenium takes the cross-browser WebDriver standard, and Chrome DevTools MCP exposes it to agents.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/web-agents/agentic-browsers-overview",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Puppeteer, Selenium, MCP, Playwright, Stagehand"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 1,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2141",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Extraction with schemas, and evaluating whether the browser task worked",
+   "slug": "web-agents/extraction-and-evaluation",
+   "route": "/learn/web-agents/extraction-and-evaluation",
+   "collection": "lessons",
+   "path": "src/content/lessons/web-agents/extraction-and-evaluation.md",
+   "track": "web-agents",
+   "module": null,
+   "status": "live",
+   "summary": "The two closing disciplines of browser automation — pulling data out as validated schema-shaped records with source capture, and judging agent runs with replays, traces, and failure classification.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 498,
+   "headings": [
+    "The short answer",
+    "Extraction: schemas and provenance",
+    "Evaluation: did it work, and how did it break?",
+    "The honest limits",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/evals-red-teaming/why-evals-matter",
+    "/learn/harness-design/harness-observability",
+    "/learn/web-agents/playwright-fundamentals-and-locators",
+    "/learn/web-agents/sessions-credentials-and-act-boundaries",
+    "/learn/web-agents/web-prompt-injection"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 11,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "The two closing disciplines of browser automation — pulling data out as validated schema-shaped records with source capture, and judging agent runs with replays, traces, and failure classification.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/web-agents",
+   "practiceType": "none",
+   "freshnessClass": "pricing-sensitive",
+   "freshnessSignals": [
+    "pricing/cost mention",
+    "vendor/tool mentions: Stagehand, Playwright"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2142",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Playwright fundamentals: deterministic browser control before agents",
+   "slug": "web-agents/playwright-fundamentals-and-locators",
+   "route": "/learn/web-agents/playwright-fundamentals-and-locators",
+   "collection": "lessons",
+   "path": "src/content/lessons/web-agents/playwright-fundamentals-and-locators.md",
+   "track": "web-agents",
+   "module": null,
+   "status": "live",
+   "summary": "Playwright is the deterministic baseline every browser agent should be measured against — auto-waiting actions, and semantic locators that survive redesigns while CSS selectors don't.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 441,
+   "headings": [
+    "The short answer",
+    "The mental model",
+    "Semantic locators: the skill that matters everywhere",
+    "The honest limits",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/web-agents/agentic-browsers-overview",
+    "/learn/web-agents/cdp-puppeteer-selenium-devtools-mcp",
+    "/learn/web-agents/extraction-and-evaluation",
+    "/learn/web-agents/sessions-credentials-and-act-boundaries",
+    "/learn/web-agents/what-the-browser-exposes"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 9,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Playwright is the deterministic baseline every browser agent should be measured against — auto-waiting actions, and semantic locators that survive redesigns while CSS selectors don't.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/web-agents/cdp-puppeteer-selenium-devtools-mcp",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Playwright, Puppeteer, Selenium, MCP"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2143",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Sessions, credentials, and the observe/act boundary",
+   "slug": "web-agents/sessions-credentials-and-act-boundaries",
+   "route": "/learn/web-agents/sessions-credentials-and-act-boundaries",
+   "collection": "lessons",
+   "path": "src/content/lessons/web-agents/sessions-credentials-and-act-boundaries.md",
+   "track": "web-agents",
+   "module": null,
+   "status": "live",
+   "summary": "Authenticated browsing without leaking credentials — stored contexts over typed passwords — and the line between actions an agent may take freely and ones that need approval first.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 520,
+   "headings": [
+    "The short answer",
+    "Sessions without exposing credentials",
+    "The observe/act boundary",
+    "The honest limits",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/llm-security/audit-logs-and-accountability",
+    "/learn/tools-function-calling/approval-gates-design",
+    "/learn/web-agents/web-prompt-injection",
+    "/learn/web-agents/what-the-browser-exposes"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 10,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Authenticated browsing without leaking credentials — stored contexts over typed passwords — and the line between actions an agent may take freely and ones that need approval first.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/web-agents/web-prompt-injection",
+   "practiceType": "none",
+   "freshnessClass": "certification-sensitive",
+   "freshnessSignals": [
+    "certification/exam mention",
+    "vendor/tool mentions: Playwright, Browserbase"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2144",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Web prompt injection: the page is the attacker",
+   "slug": "web-agents/web-prompt-injection",
+   "route": "/learn/web-agents/web-prompt-injection",
+   "collection": "lessons",
+   "path": "src/content/lessons/web-agents/web-prompt-injection.md",
+   "track": "web-agents",
+   "module": null,
+   "status": "live",
+   "summary": "Every page a browser agent visits is untrusted input that can carry instructions — hidden text, malicious downloads, poisoned tool results — and the defense is treating web content as data, never as commands.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 548,
+   "headings": [
+    "The short answer",
+    "The attack shapes",
+    "Why it's worse in a browser",
+    "The defenses",
+    "The honest limits",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/cli-agents/cli-agent-labs",
+    "/learn/llm-security/prompt-injection-testing-and-threat-models",
+    "/learn/llm-security/sandboxing-code-execution-and-browser-use",
+    "/learn/tools-function-calling/tool-results-as-injection-vector",
+    "/learn/web-agents/sessions-credentials-and-act-boundaries"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 13,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Every page a browser agent visits is untrusted input that can carry instructions — hidden text, malicious downloads, poisoned tool results — and the defense is treating web content as data, never as commands.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/web-agents/extraction-and-evaluation",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 1,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2145",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "What the browser exposes: DOM, accessibility tree, and every other channel",
+   "slug": "web-agents/what-the-browser-exposes",
+   "route": "/learn/web-agents/what-the-browser-exposes",
+   "collection": "lessons",
+   "path": "src/content/lessons/web-agents/what-the-browser-exposes.md",
+   "track": "web-agents",
+   "module": null,
+   "status": "live",
+   "summary": "The full surface a browser agent can see and touch — DOM and the accessibility tree, screenshots, network, console, storage, cookies, sessions, frames, downloads, and dialogs — and what each channel is good for.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 444,
+   "headings": [
+    "The short answer",
+    "The perception channels",
+    "The state and event channels",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agentic-ai/computer-use-agents",
+    "/learn/web-agents/cdp-puppeteer-selenium-devtools-mcp",
+    "/learn/web-agents/playwright-fundamentals-and-locators",
+    "/learn/web-agents/sessions-credentials-and-act-boundaries",
+    "/learn/web-agents/web-prompt-injection"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 12,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "The full surface a browser agent can see and touch — DOM and the accessibility tree, screenshots, network, console, storage, cookies, sessions, frames, downloads, and dialogs — and what each channel is good for.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/web-agents/playwright-fundamentals-and-locators",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Playwright, Puppeteer, Selenium, MCP"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 1,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "que-0001",
    "family": "interview",
    "kind": "topic",
@@ -206475,6 +207090,81 @@
    }
   },
   {
+   "id": "trk-0028",
+   "family": "track",
+   "kind": "track",
+   "title": "Web & Browser Agents",
+   "slug": "web-agents",
+   "route": "/learn/web-agents",
+   "collection": null,
+   "path": "src/data/curriculum.ts",
+   "track": "web-agents",
+   "module": null,
+   "status": "live",
+   "summary": "Driving browsers deterministically first — Playwright, CDP, Puppeteer, Selenium — then agentic tools (Browser Use, Stagehand, computer-use) where scripts can't cope, with sessions, injection, and eval covered.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": null,
+   "headings": [],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [
+    "Course",
+    "CourseInstance",
+    "Syllabus",
+    "Offer",
+    "FAQPage",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "group": "Agentic",
+    "declaredMeta": "7 lessons",
+    "nodeCount": 7,
+    "liveNodes": 7,
+    "comingNodes": 0,
+    "headingOnlyNodes": 0,
+    "fileCount": 7,
+    "kinds": {
+     "concept": 7
+    },
+    "modules": 0,
+    "quickGuide": false
+   },
+   "searchIntent": "course-hub",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Driving browsers deterministically first — Playwright, CDP, Puppeteer, Selenium — then agentic tools (Browser Use, Stagehand, computer-use) where scripts can't cope, with sessions, injection, and eval covered.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": null,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "trk-0026",
    "family": "track",
    "kind": "track",
@@ -211527,6 +212217,25 @@
   },
   {
    "a": {
+    "route": "/learn/web-agents/web-prompt-injection",
+    "slug": "web-agents/web-prompt-injection",
+    "title": "Web prompt injection: the page is the attacker",
+    "track": "web-agents"
+   },
+   "b": {
+    "route": "/answers/what-is-prompt-injection",
+    "slug": "what-is-prompt-injection",
+    "title": "What is prompt injection?",
+    "track": "answers"
+   },
+   "jaccard": 0.4,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
     "route": "/learn/hallucinations/production-antipatterns",
     "slug": "hallucinations/production-antipatterns",
     "title": "Common Mistakes: Production Reliability Antipatterns",
@@ -212512,6 +213221,25 @@
    "slugStem": false,
    "alreadyLinked": true,
    "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/tools-function-calling/computer-use-and-browser-tools",
+    "slug": "tools-function-calling/computer-use-and-browser-tools",
+    "title": "Computer-Use and Browser-Control Tools",
+    "track": "tools-function-calling"
+   },
+   "b": {
+    "route": "/learn/web-agents/agentic-browsers-overview",
+    "slug": "web-agents/agentic-browsers-overview",
+    "title": "Agentic browsers: Browser Use, Stagehand, Browserbase, and computer-use tools",
+    "track": "web-agents"
+   },
+   "jaccard": 0.44,
+   "containment": 0.8,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
   },
   {
    "a": {
@@ -218260,6 +218988,60 @@
    "family": "quiz",
    "flags": [
     "5 numeric claims with no sources section or external link"
+   ]
+  },
+  {
+   "route": "/learn/web-agents/agentic-browsers-overview",
+   "slug": "web-agents/agentic-browsers-overview",
+   "title": "Agentic browsers: Browser Use, Stagehand, Browserbase, and computer-use tools",
+   "family": "lesson",
+   "flags": [
+    "pricing-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/web-agents/cdp-puppeteer-selenium-devtools-mcp",
+   "slug": "web-agents/cdp-puppeteer-selenium-devtools-mcp",
+   "title": "CDP, Puppeteer, Selenium, and Chrome DevTools MCP: the protocol layer",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/web-agents/extraction-and-evaluation",
+   "slug": "web-agents/extraction-and-evaluation",
+   "title": "Extraction with schemas, and evaluating whether the browser task worked",
+   "family": "lesson",
+   "flags": [
+    "pricing-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/web-agents/playwright-fundamentals-and-locators",
+   "slug": "web-agents/playwright-fundamentals-and-locators",
+   "title": "Playwright fundamentals: deterministic browser control before agents",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/web-agents/sessions-credentials-and-act-boundaries",
+   "slug": "web-agents/sessions-credentials-and-act-boundaries",
+   "title": "Sessions, credentials, and the observe/act boundary",
+   "family": "lesson",
+   "flags": [
+    "certification-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/web-agents/what-the-browser-exposes",
+   "slug": "web-agents/what-the-browser-exposes",
+   "title": "What the browser exposes: DOM, accessibility tree, and every other channel",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
    ]
   },
   {

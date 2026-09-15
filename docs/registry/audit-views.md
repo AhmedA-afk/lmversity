@@ -1,16 +1,16 @@
 # Content registry — audit views
 
-Generated 2026-09-15T14:19:55.477Z by `scripts/build-content-registry.mjs`.
-2466 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T14:24:14.186Z by `scripts/build-content-registry.mjs`.
+2474 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
 
-- lesson: 2085
+- lesson: 2092
 - quiz: 89
 - lab: 67
 - reference: 59
-- track: 36
+- track: 37
 - answer: 33
 - project: 31
 - page: 21
@@ -23,16 +23,16 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By status
 
-- live: 2466
+- live: 2474
 
 ## By search intent (heuristic)
 
-- concept: 1916
+- concept: 1923
 - comparison: 107
 - build: 98
 - practice: 89
 - reference: 60
-- course-hub: 36
+- course-hub: 37
 - answer: 33
 - worked-example: 29
 - troubleshooting: 24
@@ -47,7 +47,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By primary audience (heuristic)
 
-- ai-engineer: 1690
+- ai-engineer: 1698
 - beginner-engineer: 439
 - forward-deployed-engineer: 194
 - general: 125
@@ -89,6 +89,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 | evals-red-teaming | 28 | 25 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 21% | 100% | 4% | 595 | — | yes |
 | production | 34 | 33 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 53% | 82% | 3% | 510 | yes | — |
 | cli-agents | 7 | 6 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 29% | 0% | 0% | 495 | — | — |
+| web-agents | 7 | 7 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 43% | 0% | 0% | 491 | — | — |
 | llm-security | 8 | 8 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 38% | 0% | 0% | 479 | — | — |
 | fine-tuning | 26 | 21 | 0 | 0 | 5 | 0 | 0 | 0 | 0 | 27% | 0% | 8% | 557 | — | — |
 | responsible-ai | 7 | 6 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 14% | 0% | 14% | 392 | — | — |
@@ -246,6 +247,11 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
 - promise gap: no live node title covers "Using Codex"; "Claude Code"; "Aider well"
 
+### web-agents — 7 files, 0 modules — starts: "What the Browser Exposes: DOM, Accessibility Tree, and Every Other Channel"
+
+- dead-end finish: last live lesson is extraction-and-evaluation (concept)
+- missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
+
 ### llm-security — 8 files, 0 modules — starts: "OWASP Top 10 for LLM and agentic applications"
 
 - dead-end finish: last live lesson is audit-logs-and-accountability (concept)
@@ -284,21 +290,21 @@ and split always need a written human reason (see checklist).
 
 | disposition | items |
 |---|---:|
-| keep | 2079 |
+| keep | 2087 |
 | investigate | 382 |
 | expand | 5 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2239 | 1.91 | 0 | 203 | 2036 |
+| intentClarity | 2246 | 1.91 | 0 | 206 | 2040 |
 | correctnessSources | 45 | 1.27 | 0 | 33 | 12 |
-| completeness | 2386 | 1.64 | 39 | 776 | 1571 |
-| prerequisiteFit | 2321 | 2.00 | 3 | 0 | 2318 |
-| handsOn | 2239 | 1.48 | 554 | 53 | 1632 |
-| explanationQuality | 2239 | 1.96 | 20 | 56 | 2163 |
-| metadata | 2239 | 1.85 | 0 | 341 | 1898 |
-| linking | 2150 | 1.50 | 382 | 321 | 1447 |
-| freshnessHealth | 2466 | 0.76 | 855 | 1348 | 263 |
+| completeness | 2393 | 1.64 | 39 | 782 | 1572 |
+| prerequisiteFit | 2328 | 2.00 | 3 | 0 | 2325 |
+| handsOn | 2246 | 1.48 | 558 | 53 | 1635 |
+| explanationQuality | 2246 | 1.96 | 20 | 56 | 2170 |
+| metadata | 2246 | 1.85 | 0 | 348 | 1898 |
+| linking | 2157 | 1.50 | 382 | 321 | 1454 |
+| freshnessHealth | 2474 | 0.76 | 861 | 1350 | 263 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
@@ -349,15 +355,15 @@ and split always need a written human reason (see checklist).
 - /learn/ai-foundations/reliable-ai/221-contestability-appeals-and-recource — Contestability, Appeals, and Recourse
 - … 342 more in content-registry.json
 
-#### expand: thin vs family median (238w vs ~768w) (1)
+#### expand: thin vs family median (238w vs ~767w) (1)
 
 - /learn/ai-foundations/choosing-a-model — Choosing a model in 2026
 
-#### expand: thin vs family median (277w vs ~768w) (1)
+#### expand: thin vs family median (277w vs ~767w) (1)
 
 - /learn/llm-foundations/next-token-prediction — Next-Token Prediction: The One Objective
 
-#### expand: thin vs family median (269w vs ~768w) (1)
+#### expand: thin vs family median (269w vs ~767w) (1)
 
 - /learn/llm-foundations/tokenization-explained — Tokenization: How Text Becomes Tokens
 
@@ -371,7 +377,7 @@ and split always need a written human reason (see checklist).
 
 ## Duplicate candidates
 
-341 pairs by title/slug similarity (107 not already cross-linked) — candidates for the merge/redirect editorial pass, not verdicts. Pairs where one already links to the other are marked linked — often deliberate two-part lessons.
+343 pairs by title/slug similarity (109 not already cross-linked) — candidates for the merge/redirect editorial pass, not verdicts. Pairs where one already links to the other are marked linked — often deliberate two-part lessons.
 
 | item A | item B | jac | contain | stem | linked | scope |
 |---|---|---:|---:|---|---|---|
@@ -436,7 +442,7 @@ and split always need a written human reason (see checklist).
 | /learn/tools-function-calling/tool-calling-glossary-cheatsheet | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  | yes | same track |
 | /learn/context-engineering/cache-aware-context-design | /learn/context-engineering/ordering-for-cache-hits | 0.5 | 1 |  | yes | same track |
 
-_… 281 more pairs in content-registry.json (`duplicates`)_
+_… 283 more pairs in content-registry.json (`duplicates`)_
 
 ## Title-overpromise candidates
 
@@ -448,7 +454,7 @@ _… 281 more pairs in content-registry.json (`duplicates`)_
 
 ## Sourcing review flags
 
-210 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
+216 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
 
 | item | flags |
 |---|---|
@@ -513,25 +519,26 @@ _… 281 more pairs in content-registry.json (`duplicates`)_
 | /learn/context-engineering/retrieving-then-filtering-pipeline | 4 numeric claims with no sources section or external link |
 | /learn/context-engineering/selection-ordering-quiz | 10 numeric claims with no sources section or external link |
 
-_… 150 more in content-registry.json (`sourcingFlags`)_
+_… 156 more in content-registry.json (`sourcingFlags`)_
 
 ## Freshness queues
 
 Review order: volatile classes first, oldest last-verified date first; undated items lead each queue. `verified`/`updated`/`published` supply the last-verified date — git-derived when frontmatter is absent.
 
-- periodic: 1348
-- pricing-sensitive: 343
-- release-sensitive: 331
+- periodic: 1350
+- pricing-sensitive: 345
+- release-sensitive: 334
 - durable: 263
-- certification-sensitive: 101
+- certification-sensitive: 102
 - policy-sensitive: 80
 
-### certification-sensitive (101) — oldest-verified first
+### certification-sensitive (102) — oldest-verified first
 
 - /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access *(verified undated)*
 - /learn/llm-security/owasp-llm-and-agentic-top-10 — OWASP Top 10 for LLM and agentic applications *(verified undated)*
 - /learn/llm-security/sandboxing-code-execution-and-browser-use — Sandboxing code execution and browser use *(verified undated)*
 - /learn/tools-function-calling/building-a-database-tool — Lab: build a read-only database tool *(verified undated)*
+- /learn/web-agents/sessions-credentials-and-act-boundaries — Sessions, credentials, and the observe/act boundary *(verified undated)*
 - /learn/harness-design/deny-floors-and-policy-layers — Deny-Floors: Rules No Prompt Can Override *(verified 2026-08-29)*
 - /learn/ai-foundations/reliable-ai/201-provenance-consent-and-data-rights — Provenance, Consent, and Data Rights *(verified 2026-08-30)*
 - /learn/ai-foundations/reliable-ai/202-labels-annotation-and-ground-truth — Labels, Annotation, and the Limits of Ground Truth *(verified 2026-08-30)*
@@ -557,10 +564,9 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-foundations/reliable-ai/222-societal-impact-labor-and-power — Societal Impact, Labour, and Power *(verified 2026-08-30)*
 - /learn/ai-foundations/reliable-ai/223-environmental-impact-and-compute-governance — Environmental Impact and Compute Governance *(verified 2026-08-30)*
 - /learn/ai-foundations/reliable-ai/224-safety-cases-and-deployment-assurance — Safety Cases and Deployment Assurance *(verified 2026-08-30)*
-- /learn/ai-foundations/reliable-ai/225-case-study-health-and-clinical-support — Case Study: Health and Clinical Support *(verified 2026-08-30)*
-- … 71 more in content-registry.json
+- … 72 more in content-registry.json
 
-### pricing-sensitive (343) — oldest-verified first
+### pricing-sensitive (345) — oldest-verified first
 
 - /learn/agent-frameworks/mastra-typescript-agents — Mastra: the TypeScript agent framework *(verified undated)*
 - /learn/agent-frameworks/microsoft-agent-frameworks — Microsoft's agent frameworks: Semantic Kernel, AutoGen, and the convergence *(verified undated)*
@@ -569,6 +575,8 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/machine-learning/predictive-ml-vs-generative-ai — Separate predictive-ML choices from generative-AI choices *(verified undated)*
 - /learn/production/langfuse-observability — Langfuse: the open-source observability platform *(verified undated)*
 - /learn/rag/managed-vector-databases — Pinecone, Weaviate, Qdrant, Milvus: the dedicated vector databases *(verified undated)*
+- /learn/web-agents/agentic-browsers-overview — Agentic browsers: Browser Use, Stagehand, Browserbase, and computer-use tools *(verified undated)*
+- /learn/web-agents/extraction-and-evaluation — Extraction with schemas, and evaluating whether the browser task worked *(verified undated)*
 - /learn/ai-foundations/choosing-a-model — Choosing a model in 2026 *(verified 2026-08-29)*
 - /learn/ai-foundations/tokens-context-cost — Tokens, context & cost *(verified 2026-08-29)*
 - /learn/evals-red-teaming/building-a-golden-dataset — Building a Golden Dataset *(verified 2026-08-29)*
@@ -590,9 +598,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-foundations/learning-paradigms-quiz — Which Kind of Learning Is This? *(verified 2026-08-30)*
 - /learn/ai-foundations/open-vs-closed-and-hardware-tradeoffs — Open Weights or an API? Two Scenarios *(verified 2026-08-30)*
 - /learn/ai-foundations/orientation-quiz — Orientation: Check Your Map *(verified 2026-08-30)*
-- /learn/ai-foundations/practical-models-quiz — Choosing & Running: Make the Call *(verified 2026-08-30)*
-- /learn/ai-foundations/pretraining-vs-finetuning — Pretraining vs. Fine-Tuning: Two Different Jobs *(verified 2026-08-30)*
-- … 313 more in content-registry.json
+- … 315 more in content-registry.json
 
 ### policy-sensitive (80) — oldest-verified first
 
@@ -628,7 +634,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/machine-learning/ml-707-lab-content-ranking-with-feedback — Lab: content ranking with feedback *(verified 2026-08-30)*
 - … 50 more in content-registry.json
 
-### release-sensitive (331) — oldest-verified first
+### release-sensitive (334) — oldest-verified first
 
 Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno, LangGraph *(verified undated)*
@@ -661,14 +667,14 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/local-inference/llama-cpp-build-quantize-serve — llama.cpp, Ollama, LM Studio, OpenAI *(verified undated)*
 - /learn/local-inference/lm-studio-local-server — LM Studio, OpenAI, Ollama, Hugging Face, vLLM, MLX, llama.cpp *(verified undated)*
 - /learn/local-inference/mlx-lm-on-apple-silicon — MLX, OpenAI, Hugging Face, Ollama, vLLM, llama.cpp, LM Studio, ONNX *(verified undated)*
-- … 301 more
+- … 304 more
 
 ## Missing-data queues
 
 ### no summary/meta description (0)
 
 
-### no published or updated date (78)
+### no published or updated date (85)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -710,7 +716,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/llm-security/owasp-llm-and-agentic-top-10 — OWASP Top 10 for LLM and agentic applications
 - /learn/llm-security/prompt-injection-testing-and-threat-models — Prompt-injection testing tools and a threat-model template that works
 - /learn/llm-security/provider-moderation-and-safety-apis — Provider moderation and safety APIs: the cheap filter layer
-- … 38 more
+- … 45 more
 
 ### zero in-body internal links (template nav still applies) (433)
 
@@ -768,7 +774,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 ### lesson files with status coming (0)
 
 
-### release-sensitive, no date at all (68)
+### release-sensitive, no date at all (74)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -810,7 +816,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/local-inference/llama-cpp-build-quantize-serve — llama.cpp: build, quantize, and serve
 - /learn/local-inference/lm-studio-local-server — LM Studio: the GUI path to a local OpenAI-compatible server
 - /learn/local-inference/mlx-lm-on-apple-silicon — MLX and mlx-lm on Apple Silicon
-- … 28 more
+- … 34 more
 
 ## Role paths
 

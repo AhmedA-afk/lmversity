@@ -10580,6 +10580,57 @@ const unsortedTracks: Track[] = [
     ]
   },
   {
+    "id": "web-agents",
+    "n": "27",
+    "name": "Web & Browser Agents",
+    "group": "Agentic",
+    "meta": "7 lessons",
+    "summary": "Driving browsers deterministically first — Playwright, CDP, Puppeteer, Selenium — then agentic tools (Browser Use, Stagehand, computer-use) where scripts can't cope, with sessions, injection, and eval covered.",
+    "nodes": [
+      {
+        "title": "What the Browser Exposes: DOM, Accessibility Tree, and Every Other Channel",
+        "slug": "what-the-browser-exposes",
+        "status": "live"
+      },
+      {
+        "title": "Playwright Fundamentals: Deterministic Browser Control Before Agents",
+        "slug": "playwright-fundamentals-and-locators",
+        "status": "live",
+        "prereq": ["what-the-browser-exposes"]
+      },
+      {
+        "title": "CDP, Puppeteer, Selenium, and Chrome DevTools MCP: The Protocol Layer",
+        "slug": "cdp-puppeteer-selenium-devtools-mcp",
+        "status": "live",
+        "prereq": ["playwright-fundamentals-and-locators"]
+      },
+      {
+        "title": "Agentic Browsers: Browser Use, Stagehand, Browserbase, and Computer-Use Tools",
+        "slug": "agentic-browsers-overview",
+        "status": "live",
+        "prereq": ["cdp-puppeteer-selenium-devtools-mcp"]
+      },
+      {
+        "title": "Sessions, Credentials, and the Observe/Act Boundary",
+        "slug": "sessions-credentials-and-act-boundaries",
+        "status": "live",
+        "prereq": ["what-the-browser-exposes"]
+      },
+      {
+        "title": "Web Prompt Injection: The Page Is the Attacker",
+        "slug": "web-prompt-injection",
+        "status": "live",
+        "prereq": ["sessions-credentials-and-act-boundaries"]
+      },
+      {
+        "title": "Extraction with Schemas, and Evaluating Whether the Browser Task Worked",
+        "slug": "extraction-and-evaluation",
+        "status": "live",
+        "prereq": ["agentic-browsers-overview"]
+      }
+    ]
+  },
+  {
     "id": "llm-security",
     "n": "25",
     "name": "LLM Security & Governance",

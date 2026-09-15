@@ -1,7 +1,7 @@
 {
  "version": 1,
  "next": {
-  "les": 2138,
+  "les": 2145,
   "que": 7,
   "sce": 6,
   "blo": 10,
@@ -11,7 +11,7 @@
   "rol": 12,
   "prc": 6,
   "pag": 22,
-  "trk": 27,
+  "trk": 28,
   "qgd": 4,
   "stb": 25
  },
@@ -9810,6 +9810,37 @@
   },
   "data:track/cli-agents": {
    "id": "trk-0027"
+  },
+  "lessons/web-agents/agentic-browsers-overview.md": {
+   "id": "les-2139",
+   "fp": "40e406d088a9a8e78c9459fb9e43d7a1fa56f8d3"
+  },
+  "lessons/web-agents/cdp-puppeteer-selenium-devtools-mcp.md": {
+   "id": "les-2140",
+   "fp": "991cdbaeea62fa8582307aa3b513abd34442acbe"
+  },
+  "lessons/web-agents/extraction-and-evaluation.md": {
+   "id": "les-2141",
+   "fp": "1f1ca7a2498a806016a42d9c1542058441757386"
+  },
+  "lessons/web-agents/playwright-fundamentals-and-locators.md": {
+   "id": "les-2142",
+   "fp": "29fd040b0f2ef302790f887ec84211b990ff2329"
+  },
+  "lessons/web-agents/sessions-credentials-and-act-boundaries.md": {
+   "id": "les-2143",
+   "fp": "3a1cb596490e4536ab64feca08e41b6d72e9d84d"
+  },
+  "lessons/web-agents/web-prompt-injection.md": {
+   "id": "les-2144",
+   "fp": "8ecdc6408b0771d73a285f2f8b069159aac7d9fc"
+  },
+  "lessons/web-agents/what-the-browser-exposes.md": {
+   "id": "les-2145",
+   "fp": "a271b362baff99124708e7f14e4890411157d8da"
+  },
+  "data:track/web-agents": {
+   "id": "trk-0028"
   }
  },
  "retired": {
