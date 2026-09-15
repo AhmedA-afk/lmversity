@@ -2340,7 +2340,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-16 — Phase 3: interview taxonomy + modes (5 rows)
 
-- Commit: `PENDING`. Status: complete.
+- Commit: `26b269b`. Status: complete.
 - Scope: interview corpus expanded 7 → 16 topic hubs (added
   ai-foundations, maths-foundations, classical-ml, deep-learning,
   structured-outputs, context-engineering, safety-and-security,
