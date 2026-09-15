@@ -50,3 +50,20 @@ Test a prompt-injection attempt, a missing citation, a slow provider response, a
 ## Go further
 
 Practice defending release decisions in the [evals interview set](/interview/evals), or ship a gated feature in the [production capstone](/learn/genai-app-dev/capstone-ship-a-genai-assistant).
+
+## Variants
+
+- **Startup:** the release gate is a spreadsheet and a saved set — the discipline matters more than the tooling: same set, same rubric, every release.
+- **Enterprise:** eval ownership is contested — who maintains the golden set, whose rubric wins when product and safety disagree, and how eval results get into the release checklist.
+- **Regulated:** eval records become compliance evidence — the set version, the scores, and the human sign-off need retention, not just a green CI badge.
+- **Low-connectivity:** evals that depend on hosted judges are fragile — a local judge or rubric-scored sample keeps the release gate working when the API is the thing being tested.
+
+## Two ways to run this
+
+**Whiteboard mode** — read only the situation and constraints, then stop. Sketch your options, decision, and failure plan before opening the rest; the scenario's choices become a grading key for your reasoning, not just a story.
+
+**Guided mode** — read straight through. The options and guided-reasoning sections walk the decision step by step; use them to compare your instinct with the documented one.
+
+## Evaluation rubric
+
+A strong answer treats the eval as a release gate with a versioned set, separates quality from safety thresholds, and knows what the eval *can't* see (novel failure modes still need red-teaming). Weak answers gate on vibes, let the eval set leak into prompt iteration until it measures nothing, or treat a passing score as proof of safety.

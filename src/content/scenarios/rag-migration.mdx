@@ -56,3 +56,20 @@ Shadow running caught what no review would have: the legacy pipeline silently re
 - Replay a query that depended on the renamed filter and verify both pipelines now return identical scoped results.
 - Kill the new index mid-reindex and verify the old index keeps serving without user-visible impact.
 - Diff 100 random queries across both pipelines and treat every divergence as a question to answer, not noise.
+
+## Variants
+
+- **Startup:** migration is a rewrite with a deadline — run old and new side by side on the golden set and cut over when the new one stops losing; skip the strangler plumbing.
+- **Enterprise:** the migration is a multi-quarter program — embedding-version compatibility, index rebuild windows, per-team cutover order, and the conversation about who owns retrieval quality during the overlap.
+- **Regulated:** the old index can't just be dropped — retention rules may require keeping the retired retrieval path reproducible for a window, and the migration needs a documented equivalence argument.
+- **Multilingual:** a retrieval stack that worked in English may fail silently on mixed-script corpora — the migration eval needs per-language slices, or the regression hides inside the aggregate score.
+
+## Two ways to run this
+
+**Whiteboard mode** — read only the situation and constraints, then stop. Sketch your options, decision, and failure plan before opening the rest; the scenario's choices become a grading key for your reasoning, not just a story.
+
+**Guided mode** — read straight through. The options and guided-reasoning sections walk the decision step by step; use them to compare your instinct with the documented one.
+
+## Evaluation rubric
+
+A strong answer migrates behind an eval: same golden set on both stacks, per-language or per-domain slices, and a rollback plan that isn't "restore the backup and hope." Weak answers switch infra and re-run the demo, migrate the index and the eval set at once (two variables, no attribution), or discover embedding-version incompatibility in production.

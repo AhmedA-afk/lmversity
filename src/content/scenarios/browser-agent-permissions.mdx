@@ -56,3 +56,20 @@ The dedicated profile surfaced an assumption: the agent's "verify the price" beh
 - Present a login wall mid-task and confirm the agent reports the barrier instead of hunting for credentials.
 - Seed a page with a misleading "price" (a decoy sale banner) and check whether source-capture lets a reviewer spot the discrepancy.
 - Drop network mid-extraction and verify partial results are marked partial, not presented as complete.
+
+## Variants
+
+- **Startup:** a single allowlist and the act boundary carry the whole design — skip the policy engine, keep the split between observe-class and act-class actions explicit in code.
+- **Enterprise:** sessions and credentials become the hard part — whose account, which SSO, what happens to saved cookies when the agent's operator leaves.
+- **Regulated:** page reads can be data egress — the allowlist doubles as a data-residency boundary, and the trace log becomes evidence you may have to produce.
+- **Multilingual:** permission prompts and allowlist entries must survive non-English DOMs — locator strategies that key on English button text fail exactly where the act boundary matters most.
+
+## Two ways to run this
+
+**Whiteboard mode** — read only the situation and constraints, then stop. Sketch your options, decision, and failure plan before opening the rest; the scenario's choices become a grading key for your reasoning, not just a story.
+
+**Guided mode** — read straight through. The options and guided-reasoning sections walk the decision step by step; use them to compare your instinct with the documented one.
+
+## Evaluation rubric
+
+A strong answer separates observe-class from act-class actions before discussing tools, keeps credentials out of the agent's reach, and designs the failure response (stale locator, CAPTCHA, session expiry) as policy rather than retry logic. Weak answers trust the model's judgment at the act boundary, or treat allowlists as a UX nicety rather than the security perimeter.

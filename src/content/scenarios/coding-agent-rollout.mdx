@@ -54,3 +54,20 @@ The pilot's first surprise wasn't a security failure — it was a metrics one. A
 - Run the agent on a repo with stale secrets in env and confirm the sandbox blocks them from reaching the model.
 - Feed the agent a task requiring a dependency addition and check the PR flags it for supply-chain review.
 - Simulate a "works on my branch" merge and verify CI gates hold the same bar as human PRs.
+
+## Variants
+
+- **Startup:** rollout is a week, not a program — the real decisions are repo allowlists and what the agent may touch unreviewed; the policy doc fits on one page.
+- **Enterprise:** the pilot-vs-scale gap dominates — license seats, org-level allowlists, IP indemnity questions, and a measurement plan agreed before the pilot so "is it faster" isn't argued after.
+- **Regulated:** generated code needs provenance — which agent, which model version, which review — because the auditor will ask who wrote this line and "the agent" is not an acceptable answer by itself.
+- **Low-connectivity / air-gapped:** hosted agents may be simply unavailable — the design question becomes local models and what quality tradeoff the team accepts for isolation.
+
+## Two ways to run this
+
+**Whiteboard mode** — read only the situation and constraints, then stop. Sketch your options, decision, and failure plan before opening the rest; the scenario's choices become a grading key for your reasoning, not just a story.
+
+**Guided mode** — read straight through. The options and guided-reasoning sections walk the decision step by step; use them to compare your instinct with the documented one.
+
+## Evaluation rubric
+
+A strong answer treats rollout as a measurement-and-boundary problem: scoped permissions first, an agreed evaluation method before the pilot, and explicit ownership rules (what the agent may open a PR on vs what stays human). Weak answers roll out by enthusiasm, measure by vibes, or discover the IP and review questions after the pilot is already running.

@@ -57,3 +57,20 @@ Test a user whose access was revoked, a document updated after indexing, two doc
 ## Go further
 
 Pressure-test the design with the [RAG interview set](/interview/rag), or apply the same grounding discipline in the [trustworthy Q&A capstone](/learn/hallucinations/capstone-trustworthy-qa-system).
+
+## Variants
+
+- **Startup:** one corpus, one retrieval path — the design effort goes into eval examples from real user questions, not pipeline sophistication.
+- **Enterprise:** the corpus is a dozen systems with ACLs — per-user retrieval filtering becomes the security feature, and "it found the answer" includes "in a document you weren't allowed to see."
+- **Regulated:** every answer needs a citation that resolves to a specific versioned document — retrieval without provenance fails the audit even when it's right.
+- **Multilingual:** mixed-language corpora break naive chunking and matching — cross-lingual retrieval and script-aware text extraction join the design, as does an eval set in the users' actual languages.
+
+## Two ways to run this
+
+**Whiteboard mode** — read only the situation and constraints, then stop. Sketch your options, decision, and failure plan before opening the rest; the scenario's choices become a grading key for your reasoning, not just a story.
+
+**Guided mode** — read straight through. The options and guided-reasoning sections walk the decision step by step; use them to compare your instinct with the documented one.
+
+## Evaluation rubric
+
+A strong answer builds the eval set from real questions before tuning anything, scopes retrieval per user permissions, and requires citations that survive audit. Weak answers benchmark on synthetic questions, return answers without sources, or treat "the document existed" as "the user may see it."

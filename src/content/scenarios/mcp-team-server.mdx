@@ -59,3 +59,20 @@ Test an unauthorized repository, a malicious issue body, a huge log result, a de
 ## Go further
 
 Work the protocol boundary questions in the [MCP interview set](/interview/mcp), or build a scoped tool surface in the [tool-using agent capstone](/learn/tools-function-calling/capstone-build-a-tool-using-agent).
+
+## Variants
+
+- **Startup:** one server, three tools, a README — the discipline that matters is still the contract: typed schemas, narrow tools, and no credentials in descriptions.
+- **Enterprise:** the server becomes shared infrastructure — versioning policy, per-team tool namespaces, auth on every tool, and a deprecation path that doesn't break forty agents at once.
+- **Regulated:** tool calls are auditable actions — which agent called what with which arguments is a record you keep deliberately, and tool descriptions get reviewed like code.
+- **Low-connectivity:** MCP over a flaky link means timeouts and retries at the tool layer — idempotent tools and resumable operations matter more than protocol elegance.
+
+## Two ways to run this
+
+**Whiteboard mode** — read only the situation and constraints, then stop. Sketch your options, decision, and failure plan before opening the rest; the scenario's choices become a grading key for your reasoning, not just a story.
+
+**Guided mode** — read straight through. The options and guided-reasoning sections walk the decision step by step; use them to compare your instinct with the documented one.
+
+## Evaluation rubric
+
+A strong answer designs tool contracts narrowly (one verb per tool, typed arguments), treats the description text as an injection surface, and plans auth and versioning before the second consumer exists. Weak answers ship a do-everything tool, embed secrets in descriptions, or assume MCP trust is transitive because the transport is local.

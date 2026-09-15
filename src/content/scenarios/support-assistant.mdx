@@ -57,3 +57,20 @@ Test outdated articles, conflicting plan rules, missing evidence, angry messages
 ## Go further
 
 Drill the retrieval side with the [RAG interview set](/interview/rag), or build the grounded-support shape end to end in the [support-bot capstone](/learn/rag/rag-capstone-support-bot).
+
+## Variants
+
+- **Startup:** a handful of macros and honest escalation beat cleverness — the assistant's job is knowing what it shouldn't answer, and a handoff that keeps the transcript is the whole feature.
+- **Enterprise:** support is segmented by tier, region, and product — the assistant inherits routing logic and entitlement rules, and "did it help" is measured per segment, not in aggregate.
+- **Regulated:** advice boundaries are legal boundaries — what the assistant may promise (refunds, medical/financial guidance) needs deterministic post-checks, because a plausible sentence can create a liability.
+- **Multilingual:** deflection detection breaks across languages — an assistant that escalates correctly in English may confidently answer nonsense in Hindi; evals and handoff UX need per-language coverage.
+
+## Two ways to run this
+
+**Whiteboard mode** — read only the situation and constraints, then stop. Sketch your options, decision, and failure plan before opening the rest; the scenario's choices become a grading key for your reasoning, not just a story.
+
+**Guided mode** — read straight through. The options and guided-reasoning sections walk the decision step by step; use them to compare your instinct with the documented one.
+
+## Evaluation rubric
+
+A strong answer designs escalation as a feature (clean handoff with context, honest "I can't" moments), grounds answers in controlled content with freshness rules, and measures deflection quality per language and segment. Weak answers optimise for deflection rate alone, let the assistant improvise policy, or hand off to a human with no transcript and make the user start over.

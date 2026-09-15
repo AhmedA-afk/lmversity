@@ -1,0 +1,43 @@
+---
+title: "Teardown: Playwright MCP's tool contracts"
+description: "Reading a production MCP server's tool list as a design document — what the parameters, read-only flags, and snapshot model reveal about agent-tool design."
+published: "2026-09-16"
+tags: ["teardown", "mcp", "agents", "tools"]
+sources: ["playwright-mcp-readme"]
+---
+
+The fastest way to learn agent-tool design isn't to build a tool — it's to read a production server's tool list like a contract. Microsoft's Playwright MCP server is a good specimen: it wraps a real browser for arbitrary agents, and its [tool reference](https://github.com/microsoft/playwright-mcp) is generated straight from the implementation. Every design choice is inspectable. This teardown pulls five lessons out of the actual parameter lists.
+
+## 1. The act boundary lives in metadata
+
+Every tool in the list carries a **Read-only** annotation: `browser_snapshot` is `Read-only: true`; `browser_click`, `browser_navigate`, `browser_close` are `false`. That's the observe-class/act-class split the [browser-agent guide](/guides/build-your-first-browser-agent) draws as architecture — implemented here as a per-tool declaration the harness can enforce mechanically. A policy layer doesn't have to guess which tools change state; the server tells it.
+
+The lesson generalizes: if your tools can't say whether they mutate the world, your act boundary is a naming convention. Declared mutability is what turns "be careful" into an enforceable rule.
+
+## 2. The `element` parameter is a permission mechanism
+
+`browser_click` takes two interesting parameters: `target` — "exact target element reference from the page snapshot" — and `element` — "human-readable element description **used to obtain permission to interact** with the element."
+
+Read that again. The tool asks the model to state, in natural language, what it believes it's clicking — separate from the technical reference of what it *will* click. That description exists so something downstream (a verifier, a reviewer, an audit log) can check stated intent against the resolved target. It's a declaration-of-intent field: cheap for the model, invaluable for the harness.
+
+When your tool's parameters make the agent *say what it's doing*, verification becomes possible. A bare `click(x, y)` carries no intent to check.
+
+## 3. Snapshot over screenshot — and the tool says why
+
+`browser_snapshot` returns the page as an accessibility tree — structured, text-cheap, reference-stable. `browser_take_screenshot` exists too, but its description does something unusual: "You can't perform actions based on the screenshot, **use browser_snapshot for actions**." The tool contract actively steers the model away from the expensive, brittle modality toward the cheap, actable one — at the exact moment the model is choosing.
+
+This is tool-description-as-UX. The model reads descriptions when selecting tools; putting the routing advice *in the description* shapes behavior where the decision happens, not in a system prompt it might scroll past. It also encodes the real tradeoff: pixels are for showing a human, the a11y tree is for acting on — and snapshots even offer `depth` limits and a save-to-file option, because the author knows the observation channel is also a context-window budget.
+
+## 4. Refs make actions deterministic
+
+`snapshot` emits element references; `click`, `type`, and friends resolve `target` as "exact target element reference from the page snapshot, or a unique element selector." The loop is: observe → get refs → act on a ref → re-observe. If a ref went stale, the action fails loudly and the agent re-snapshots rather than guessing at coordinates.
+
+That's the difference between an agent that *describes* page interaction and one that *executes* it. Pixel coordinates break on any re-render; a ref is a name the driver resolves at act time. The [harness vocabulary](/learn/harness-design/agent-stack-vocabulary) calls this the act executor's job — Playwright MCP builds it into the parameter contract.
+
+## 5. Even the README admits the boundary
+
+The project's own docs compare the MCP server against a CLI+SKILLS alternative and state the tradeoff plainly: MCP's persistent state and rich introspection versus CLI's token efficiency for high-throughput coding agents. A tool that documents its own "when not to use this" is more trustworthy than one that doesn't — the boundary is part of the spec.
+
+## The meta-lesson
+
+A tool list is a design document whether the author meant it as one or not. Mutability flags, intent-declaration params, modality-steering descriptions, resolvable references, context-budget knobs — each is a decision about where reliability lives, and the answer is consistently *the contract, not the model*. The [MCP track](/learn/mcp) covers the protocol underneath; this teardown is what the protocol looks like when someone gets it right.

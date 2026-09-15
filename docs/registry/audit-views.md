@@ -1,7 +1,7 @@
 # Content registry — audit views
 
-Generated 2026-09-15T18:04:06.973Z by `scripts/build-content-registry.mjs`.
-2632 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T18:09:26.600Z by `scripts/build-content-registry.mjs`.
+2633 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
@@ -14,7 +14,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 - project: 33
 - interview: 27
 - page: 25
-- blog: 19
+- blog: 20
 - guide: 14
 - scenario: 12
 - role: 12
@@ -23,7 +23,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By status
 
-- live: 2632
+- live: 2633
 
 ## By search intent (heuristic)
 
@@ -37,7 +37,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 - interview-prep: 27
 - troubleshooting: 26
 - how-to: 20
-- read: 19
+- read: 20
 - hub: 13
 - scenario: 12
 - role-path: 12
@@ -50,7 +50,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 - ai-engineer: 1770
 - beginner-engineer: 440
 - forward-deployed-engineer: 194
-- general: 190
+- general: 191
 - job-candidate: 27
 - developer: 1
 - ml-engineer: 1
@@ -83,20 +83,20 @@ and split always need a written human reason (see checklist).
 | disposition | items |
 |---|---:|
 | investigate | 2326 |
-| keep | 303 |
+| keep | 304 |
 | expand | 3 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2368 | 1.91 | 0 | 211 | 2157 |
-| correctnessSources | 50 | 1.26 | 0 | 37 | 13 |
-| completeness | 2570 | 1.63 | 49 | 853 | 1668 |
+| intentClarity | 2369 | 1.91 | 0 | 211 | 2158 |
+| correctnessSources | 51 | 1.25 | 0 | 38 | 13 |
+| completeness | 2571 | 1.63 | 49 | 853 | 1669 |
 | prerequisiteFit | 2412 | 0.15 | 2232 | 0 | 180 |
-| handsOn | 2368 | 1.43 | 627 | 90 | 1651 |
-| explanationQuality | 2368 | 1.95 | 28 | 56 | 2284 |
-| metadata | 2368 | 1.84 | 0 | 375 | 1993 |
-| linking | 2267 | 1.50 | 397 | 332 | 1538 |
-| freshnessHealth | 2632 | 0.77 | 921 | 1394 | 317 |
+| handsOn | 2369 | 1.43 | 627 | 91 | 1651 |
+| explanationQuality | 2369 | 1.95 | 28 | 56 | 2285 |
+| metadata | 2369 | 1.84 | 0 | 375 | 1994 |
+| linking | 2268 | 1.50 | 397 | 332 | 1539 |
+| freshnessHealth | 2633 | 0.77 | 924 | 1392 | 317 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
@@ -282,7 +282,7 @@ _… 293 more pairs in content-registry.json (`duplicates`)_
 
 ## Sourcing review flags
 
-273 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
+276 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
 
 | item | flags |
 |---|---|
@@ -347,18 +347,18 @@ _… 293 more pairs in content-registry.json (`duplicates`)_
 | /learn/cli-agents/customizing-the-agent-surface | release-sensitive page with no updated/review date |
 | /learn/cli-agents/getting-the-agent-oriented | release-sensitive page with no updated/review date |
 
-_… 213 more in content-registry.json (`sourcingFlags`)_
+_… 216 more in content-registry.json (`sourcingFlags`)_
 
 ## Freshness queues
 
 Review order: volatile classes first, oldest last-verified date first; undated items lead each queue. `verified`/`updated`/`published` supply the last-verified date — git-derived when frontmatter is absent.
 
-- periodic: 1394
+- periodic: 1392
 - pricing-sensitive: 365
-- release-sensitive: 358
+- release-sensitive: 359
 - durable: 266
 - certification-sensitive: 104
-- policy-sensitive: 94
+- policy-sensitive: 96
 - volatile: 51
 
 ### certification-sensitive (104) — oldest-verified first
@@ -429,7 +429,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/prompt-engineering/chain-of-thought-prompting — Chain-of-Thought: Getting the Model to Show Its Work *(verified 2026-08-29)*
 - … 335 more in content-registry.json
 
-### policy-sensitive (94) — oldest-verified first
+### policy-sensitive (96) — oldest-verified first
 
 - /learn/agent-skills/evaluating-and-porting-skills — Evaluating skills with fixtures, and porting them across agents *(verified undated)*
 - /learn/agent-skills/skill-md-anatomy — SKILL.md anatomy: frontmatter, body, and bundled resources *(verified undated)*
@@ -451,7 +451,9 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/voice-ai/speech-synthesis-and-voice-design — Speech synthesis and voice design: TTS that doesn't feel like a machine *(verified undated)*
 - /learn/voice-ai/voice-ai-system-design — Voice AI system design: owning the pipeline vs renting it *(verified undated)*
 - /learn/voice-ai/voice-evaluation-and-testing — Evaluating voice agents: the metrics that predict real UX *(verified undated)*
+- /scenarios/coding-agent-rollout — Rolling out a coding agent without losing the repo *(verified undated)*
 - /scenarios/regulated-decision-support — An eligibility screener in a regulated workflow *(verified undated)*
+- /scenarios/voice-agent-latency — A phone agent that keeps talking over people *(verified undated)*
 - /privacy — Privacy *(verified undated)*
 - /terms — Terms *(verified undated)*
 - /learn/agentic-ai/state-memory-and-recovery — Design agent state, memory, and recovery explicitly *(verified 2026-08-30)*
@@ -459,11 +461,9 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-literacy/ai-vs-human-thinking-compared — AI vs. a human expert: a side-by-side *(verified 2026-08-30)*
 - /learn/ai-literacy/data-privacy-provenance-and-policy — Protect data with privacy, provenance, and policy boundaries *(verified 2026-08-30)*
 - /learn/classical-ai/knowledge-uncertainty/215-knowledge-graphs-queries-provenance-and-embeddings — Knowledge graphs: queries, provenance, and embeddings *(verified 2026-08-30)*
-- /learn/deep-learning/practice/416-data-versioning-lineage-and-retention-governance — Data versioning, lineage, and retention governance *(verified 2026-08-30)*
-- /learn/deep-learning/sequence-generative/318-language-model-training-data-and-scaling — Train language models with data governance and scaling discipline *(verified 2026-08-30)*
-- … 64 more in content-registry.json
+- … 66 more in content-registry.json
 
-### release-sensitive (358) — oldest-verified first
+### release-sensitive (359) — oldest-verified first
 
 Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno, LangGraph *(verified undated)*
@@ -496,7 +496,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/genai-app-dev/indic-language-pipeline-lab — Sarvam, AI4Bharat, Bhashini *(verified undated)*
 - /learn/harness-design/agent-stack-vocabulary — MCP, Model Context Protocol *(verified undated)*
 - /learn/harness-design/harness-skill-and-mcp-integrations — MCP *(verified undated)*
-- … 328 more
+- … 329 more
 
 ## Missing-data queues
 
@@ -644,7 +644,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 ### lesson files with status coming (0)
 
 
-### release-sensitive, no date at all (122)
+### release-sensitive, no date at all (124)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -686,7 +686,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-literacy/meet-skills-connectors-and-agents — Meet skills, connectors, and agents — safely
 - /learn/cli-agents/cli-agent-labs — Labs: the untrusted-repo security drill and the comparative harness run
 - /learn/cli-agents/customizing-the-agent-surface — Customizing the agent: MCP config, skills, commands, rules, hooks, and subagents
-- … 82 more
+- … 84 more
 
 ## Role paths
 
@@ -767,18 +767,18 @@ Largest queue; full list in JSON. Oldest-verified sample:
 
 ### scenario (12)
 
-- /scenarios/agent-approval — An agent that can update customer records (656 words, updated 2026-08-30)
-- /scenarios/browser-agent-permissions — A research agent that wandered into a checkout page (642 words)
-- /scenarios/coding-agent-rollout — Rolling out a coding agent without losing the repo (650 words)
-- /scenarios/document-qa — Document Q&A with permissions intact (529 words, updated 2026-08-30)
-- /scenarios/eval-release — A release that improves quality but raises cost (451 words, updated 2026-08-30)
-- /scenarios/incident-response — The support bot that started promising refunds (628 words)
-- /scenarios/mcp-team-server — An MCP server for a small engineering team (584 words, updated 2026-08-30)
-- /scenarios/rag-migration — Migrating the RAG system nobody documented (636 words)
-- /scenarios/regulated-decision-support — An eligibility screener in a regulated workflow (655 words)
-- /scenarios/streaming-research — A research feature that streams useful work (545 words, updated 2026-08-30)
-- /scenarios/support-assistant — A support assistant that must show its work (601 words, updated 2026-08-30)
-- /scenarios/voice-agent-latency — A phone agent that keeps talking over people (662 words)
+- /scenarios/agent-approval — An agent that can update customer records (886 words, updated 2026-08-30)
+- /scenarios/browser-agent-permissions — A research agent that wandered into a checkout page (874 words)
+- /scenarios/coding-agent-rollout — Rolling out a coding agent without losing the repo (893 words)
+- /scenarios/document-qa — Document Q&A with permissions intact (748 words, updated 2026-08-30)
+- /scenarios/eval-release — A release that improves quality but raises cost (685 words, updated 2026-08-30)
+- /scenarios/incident-response — The support bot that started promising refunds (869 words)
+- /scenarios/mcp-team-server — An MCP server for a small engineering team (809 words, updated 2026-08-30)
+- /scenarios/rag-migration — Migrating the RAG system nobody documented (885 words)
+- /scenarios/regulated-decision-support — An eligibility screener in a regulated workflow (896 words)
+- /scenarios/streaming-research — A research feature that streams useful work (772 words, updated 2026-08-30)
+- /scenarios/support-assistant — A support assistant that must show its work (841 words, updated 2026-08-30)
+- /scenarios/voice-agent-latency — A phone agent that keeps talking over people (890 words)
 
 ### guide (14)
 
@@ -797,7 +797,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /guides/ship-your-first-ai-feature-to-production — Ship your first AI feature to production (851 words, updated 2026-08-30)
 - /guides/write-your-first-eval-for-an-ai-feature — Write your first eval for an AI feature (861 words, updated 2026-08-30)
 
-### blog (19)
+### blog (20)
 
 - /blog/agent-skills-vs-prompts-rules-mcp-hooks-subagents — Agent Skills vs prompts, rules, MCP, hooks, and subagents (504 words)
 - /blog/agents-need-a-harness — Agents need a harness, not just a prompt (191 words, updated 2026-08-30)
@@ -811,6 +811,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /blog/rag-is-not-a-truth-machine — RAG is not a truth machine (219 words, updated 2026-08-30)
 - /blog/read-the-loop-before-you-pick-a-framework — Read the loop before you pick a framework (525 words, updated 2026-08-30)
 - /blog/stopping-conditions-for-agents — Every agent loop needs five stopping conditions (537 words, updated 2026-08-30)
+- /blog/teardown-playwright-mcp-tool-contracts — Teardown: Playwright MCP's tool contracts (679 words)
 - /blog/the-context-window-got-bigger-and-it-did-not-fix-this — The context window got bigger. It didn't fix what you think. (578 words, updated 2026-08-30)
 - /blog/the-mcp-mistakes-that-show-up-at-3am — The MCP server mistakes that show up at 3am (631 words, updated 2026-08-30)
 - /blog/what-ai-coding-agents-can-and-cannot-safely-own — What AI coding agents can and cannot safely own (422 words)

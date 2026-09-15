@@ -55,3 +55,20 @@ The instrumentation found three stacked problems: endpointing was tuned to a 700
 - Inject background TV noise during TTS playback and verify barge-in doesn't false-trigger — or that a false trigger recovers gracefully.
 - Feed a quietly-spoken ambiguous date and verify the read-back confirmation fires.
 - Drop the ASR stream mid-utterance and check the agent apologizes-and-reasks rather than answering silence.
+
+## Variants
+
+- **Startup:** pick the managed speech API, accept the lock-in, and spend the design effort on the turn-taking UX — that's where the felt latency lives.
+- **Enterprise:** telephony integration and call-recording compliance join the problem — the latency budget now includes SIP legs and legal-hold storage, and the vendor negotiation is part of the architecture.
+- **Regulated:** voice is biometric data in some jurisdictions — consent, recording disclosure, and retention shape the pipeline before latency does.
+- **Low-connectivity:** the network is the variance, not the mean — design for degraded mode (smaller models, barge-in tolerance, honest "repeat that" paths) because the p95 is the product.
+
+## Two ways to run this
+
+**Whiteboard mode** — read only the situation and constraints, then stop. Sketch your options, decision, and failure plan before opening the rest; the scenario's choices become a grading key for your reasoning, not just a story.
+
+**Guided mode** — read straight through. The options and guided-reasoning sections walk the decision step by step; use them to compare your instinct with the documented one.
+
+## Evaluation rubric
+
+A strong answer budgets latency across the whole turn (ASR, LLM, TTS, network), designs turn-taking and barge-in as UX features not afterthoughts, and measures p95 not mean. Weak answers optimise the model call and ignore the pipeline, treat silence gaps as unavoidable, or benchmark on a clean connection and ship the p50.

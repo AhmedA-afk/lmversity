@@ -56,3 +56,20 @@ The replay isolated it within a day: the provider's model update had shifted ins
 - Plant a stale refund-policy document in retrieval and confirm the output rule blocks it end to end.
 - Simulate an approval event loss mid-send and verify nothing sends on a missing event.
 - Measure approver dwell time; if it drops below a threshold, escalate the queue, not the alerts.
+
+## Variants
+
+- **Startup:** the runbook is a paragraph and the on-call is whoever is awake — the quarantine path still needs to exist before the incident, because designing containment mid-incident is how the bad version stays live.
+- **Enterprise:** incident comms have a legal review step — the timeline is slower, the wording is negotiated, and the engineering team needs a parallel channel that isn't blocked on messaging approval.
+- **Regulated:** notification duties have clocks — the incident response must know which exposures trigger which disclosure windows, and the evidence freeze happens before cleanup.
+- **Low-connectivity:** "replay the last week of drafts" assumes you kept them — data-retention choices made for privacy can collide with forensic needs, so the design picks the retention window deliberately.
+
+## Two ways to run this
+
+**Whiteboard mode** — read only the situation and constraints, then stop. Sketch your options, decision, and failure plan before opening the rest; the scenario's choices become a grading key for your reasoning, not just a story.
+
+**Guided mode** — read straight through. The options and guided-reasoning sections walk the decision step by step; use them to compare your instinct with the documented one.
+
+## Evaluation rubric
+
+A strong answer contains before diagnosing, freezes versions and evidence before fixing, and treats silent-wrongness incidents (plausible bad output) differently from outages. Weak answers roll back first and investigate never, communicate before they know the blast radius, or fix the convenient cause while the real one ships again next release.

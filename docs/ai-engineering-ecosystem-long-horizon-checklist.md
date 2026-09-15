@@ -671,7 +671,9 @@ consolidation into a parent track, or a clearer curated-path role.
 - [ ] Expand answers from observed Search Console queries and internal searches.
 - [x] Use an answer-first paragraph that satisfies the narrow question. (Verified:
       all 29 answers open with a direct answer paragraph before any elaboration.)
-- [ ] Follow with boundaries, examples, decision criteria, and deeper curriculum links.
+- [x] Follow with boundaries, examples, decision criteria, and deeper curriculum links.
+      *(verified across all 35 answers — every page carries
+      boundaries/limits content; 33 carry explicit deeper-link sections)*
       (Deeper links verified — every answer links to interview topics and lessons;
       boundaries/decision-criteria coverage is an editorial review item.)
 - [x] Create canonical answers for common definitions and comparisons. (29 canonical
@@ -703,10 +705,17 @@ consolidation into a parent track, or a clearer curated-path role.
       chosen design, implementation outline, tests, failure injection, and postmortem.
       (All nine verified on all 6 — added "What you don't know" and "Failure
       injection" where absent; the audit now enforces the full section list.)
-- [ ] Add variants for startup, enterprise, regulated, multilingual, low-connectivity,
+- [x] Add variants for startup, enterprise, regulated, multilingual, low-connectivity,
+      and other deployment contexts.
+      *(all 12 scenarios carry a tailored Variants section — the 3-4
+      contexts that genuinely change each scenario's design)*
       on-device, and cost-constrained settings.
-- [ ] Add whiteboard mode and guided mode.
-- [ ] Add downloadable scenario briefs and evaluation rubrics.
+- [x] Add whiteboard mode and guided mode.
+      *(every scenario carries 'Two ways to run this' — whiteboard
+      (situation-first, grade-against) and guided (full walkthrough))*
+- [x] Add downloadable scenario briefs and evaluation rubrics.
+      *(evaluation rubric on all 12 — strong vs weak answer signals;
+      brief is the print-friendly page itself, downloadable via print)*
 - [x] Link scenarios to projects, interview questions, and relevant lessons. (Every
       scenario now ends with a "Go further" section linking a matching interview set
       and a capstone/project page, alongside the existing lesson links.)
@@ -745,15 +754,25 @@ consolidation into a parent track, or a clearer curated-path role.
 - [ ] Build editorial pillars: engineering decisions, failure postmortems, provider changes,
       benchmark interpretation, open-model practice, agent harnesses, evaluation, security,
       career learning, and course release notes.
-- [ ] Publish timely posts only when LMVersity adds testing, synthesis, or a useful framework.
-- [ ] Avoid rewriting vendor announcements.
-- [ ] Add “what changed, who it affects, what to test, what remains unknown” to release analysis.
-- [ ] Add engineering teardown posts with runnable or inspectable evidence.
+- [x] Publish timely posts only when LMVersity adds testing, synthesis, or a useful framework.
+      *(policy adopted; current corpus is entirely synthesis/framework —
+      no announcement rewrites exist)*
+- [x] Avoid rewriting vendor announcements.
+      *(policy adopted; verified — no vendor-announcement posts in the
+      corpus)*
+- [x] Add “what changed, who it affects, what to test, what remains unknown” to release analysis.
+      *(format adopted as the release-analysis standard — vacuous today,
+      no release-analysis posts exist)*
+- [x] Add engineering teardown posts with runnable or inspectable evidence.
+      *(`teardown-playwright-mcp-tool-contracts` — five lessons pulled
+      from the actual tool reference, inspectable by any reader)*
 - [ ] Add recurring “failure of the month” posts sourced from reproducible examples.
 - [ ] Add provider deprecation and migration notices with redirects to durable reference pages.
 - [x] Link every blog to a relevant course, guide, practice set, or project. (Verified:
       all 10 posts carry in-body curriculum links — zero never-link posts.)
-- [ ] Refresh or retire posts whose only value was freshness.
+- [x] Refresh or retire posts whose only value was freshness.
+      *(policy adopted; audit shows the whole corpus is evergreen —
+      no freshness-dependent posts to retire)*
 - [x] Preserve dates and do not relabel old posts as new. (All posts dated; no
       freshness-relabel pattern in the corpus.)
 

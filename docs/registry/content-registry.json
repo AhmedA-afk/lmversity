@@ -1,9 +1,9 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T18:04:06.973Z",
+  "generatedAt": "2026-09-15T18:09:26.600Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2632,
+  "itemCount": 2633,
   "counts": {
    "byFamily": {
     "lesson": 2160,
@@ -13,7 +13,7 @@
     "quiz": 101,
     "interview": 27,
     "scenario": 12,
-    "blog": 19,
+    "blog": 20,
     "guide": 14,
     "answer": 35,
     "role": 12,
@@ -22,7 +22,7 @@
     "glossary": 1
    },
    "byStatus": {
-    "live": 2632
+    "live": 2633
    },
    "byKind": {
     "concept": 1849,
@@ -36,7 +36,7 @@
     "drill": 14,
     "topic": 27,
     "scenario": 12,
-    "post": 19,
+    "post": 20,
     "howto": 25,
     "pillar": 4,
     "definition": 12,
@@ -132,10 +132,10 @@
     "fde": 193
    },
    "byFreshness": {
-    "release-sensitive": 358,
+    "release-sensitive": 359,
     "pricing-sensitive": 365,
-    "periodic": 1394,
-    "policy-sensitive": 94,
+    "periodic": 1392,
+    "policy-sensitive": 96,
     "certification-sensitive": 104,
     "durable": 266,
     "volatile": 51
@@ -194774,7 +194774,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 656,
+   "wordCount": 886,
    "headings": [
     "The situation",
     "Constraints",
@@ -194785,7 +194785,10 @@
     "What went wrong",
     "Failure injection",
     "What to test first",
-    "Go further"
+    "Go further",
+    "Variants",
+    "Two ways to run this",
+    "Evaluation rubric"
    ],
    "internalLinks": [
     "/interview/agents",
@@ -194802,7 +194805,7 @@
    "features": {
     "codeBlocks": 0,
     "sourcesSection": false,
-    "listItems": 20,
+    "listItems": 24,
     "numericClaims": 0
    },
    "searchIntent": "scenario",
@@ -194855,7 +194858,7 @@
    "published": null,
    "updated": null,
    "verified": null,
-   "wordCount": 642,
+   "wordCount": 874,
    "headings": [
     "The situation",
     "Constraints",
@@ -194864,7 +194867,10 @@
     "The first decision",
     "Guided reasoning",
     "What went wrong",
-    "Failure injection"
+    "Failure injection",
+    "Variants",
+    "Two ways to run this",
+    "Evaluation rubric"
    ],
    "internalLinks": [
     "/learn/tools-function-calling/building-a-browser-tool-loop",
@@ -194880,7 +194886,7 @@
    "features": {
     "codeBlocks": 0,
     "sourcesSection": false,
-    "listItems": 18,
+    "listItems": 22,
     "numericClaims": 0
    },
    "searchIntent": "scenario",
@@ -194933,7 +194939,7 @@
    "published": null,
    "updated": null,
    "verified": null,
-   "wordCount": 650,
+   "wordCount": 893,
    "headings": [
     "The situation",
     "Constraints",
@@ -194942,7 +194948,10 @@
     "The first decision",
     "Guided reasoning",
     "What went wrong",
-    "Failure injection"
+    "Failure injection",
+    "Variants",
+    "Two ways to run this",
+    "Evaluation rubric"
    ],
    "internalLinks": [
     "/learn/cli-agents/cli-agent-labs",
@@ -194957,7 +194966,7 @@
    "features": {
     "codeBlocks": 0,
     "sourcesSection": false,
-    "listItems": 18,
+    "listItems": 22,
     "numericClaims": 0
    },
    "searchIntent": "scenario",
@@ -194967,8 +194976,10 @@
    "prerequisite": null,
    "nextAction": null,
    "practiceType": null,
-   "freshnessClass": "periodic",
-   "freshnessSignals": [],
+   "freshnessClass": "policy-sensitive",
+   "freshnessSignals": [
+    "policy/license mention"
+   ],
    "owner": null,
    "reviewer": null,
    "nextReview": null,
@@ -194985,7 +194996,7 @@
     "explanationQuality": 2,
     "metadata": 2,
     "linking": 1,
-    "freshnessHealth": 1,
+    "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
     "demand": null
@@ -195008,7 +195019,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 529,
+   "wordCount": 748,
    "headings": [
     "The situation",
     "Constraints",
@@ -195018,7 +195029,10 @@
     "Guided reasoning",
     "What went wrong",
     "What to test first",
-    "Go further"
+    "Go further",
+    "Variants",
+    "Two ways to run this",
+    "Evaluation rubric"
    ],
    "internalLinks": [
     "/interview/rag",
@@ -195035,7 +195049,7 @@
    "features": {
     "codeBlocks": 0,
     "sourcesSection": false,
-    "listItems": 14,
+    "listItems": 18,
     "numericClaims": 0
    },
    "searchIntent": "scenario",
@@ -195086,7 +195100,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 451,
+   "wordCount": 685,
    "headings": [
     "The situation",
     "Constraints",
@@ -195095,7 +195109,10 @@
     "Guided reasoning",
     "What went wrong",
     "What to test first",
-    "Go further"
+    "Go further",
+    "Variants",
+    "Two ways to run this",
+    "Evaluation rubric"
    ],
    "internalLinks": [
     "/interview/evals",
@@ -195112,7 +195129,7 @@
    "features": {
     "codeBlocks": 0,
     "sourcesSection": false,
-    "listItems": 10,
+    "listItems": 14,
     "numericClaims": 0
    },
    "searchIntent": "scenario",
@@ -195163,7 +195180,7 @@
    "published": null,
    "updated": null,
    "verified": null,
-   "wordCount": 628,
+   "wordCount": 869,
    "headings": [
     "The situation",
     "Constraints",
@@ -195172,7 +195189,10 @@
     "The first decision",
     "Guided reasoning",
     "What went wrong",
-    "Failure injection"
+    "Failure injection",
+    "Variants",
+    "Two ways to run this",
+    "Evaluation rubric"
    ],
    "internalLinks": [
     "/learn/genai-app-dev/incident-response-for-ai-features",
@@ -195187,7 +195207,7 @@
    "features": {
     "codeBlocks": 0,
     "sourcesSection": false,
-    "listItems": 18,
+    "listItems": 22,
     "numericClaims": 0
    },
    "searchIntent": "scenario",
@@ -195238,7 +195258,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 584,
+   "wordCount": 809,
    "headings": [
     "The situation",
     "Constraints",
@@ -195248,7 +195268,10 @@
     "What went wrong",
     "Failure injection",
     "What to test first",
-    "Go further"
+    "Go further",
+    "Variants",
+    "Two ways to run this",
+    "Evaluation rubric"
    ],
    "internalLinks": [
     "/interview/mcp",
@@ -195266,7 +195289,7 @@
    "features": {
     "codeBlocks": 0,
     "sourcesSection": false,
-    "listItems": 15,
+    "listItems": 19,
     "numericClaims": 1
    },
    "searchIntent": "scenario",
@@ -195319,7 +195342,7 @@
    "published": null,
    "updated": null,
    "verified": null,
-   "wordCount": 636,
+   "wordCount": 885,
    "headings": [
     "The situation",
     "Constraints",
@@ -195328,7 +195351,10 @@
     "The first decision",
     "Guided reasoning",
     "What went wrong",
-    "Failure injection"
+    "Failure injection",
+    "Variants",
+    "Two ways to run this",
+    "Evaluation rubric"
    ],
    "internalLinks": [
     "/learn/evals-red-teaming/eval-driven-iteration",
@@ -195343,7 +195369,7 @@
    "features": {
     "codeBlocks": 0,
     "sourcesSection": false,
-    "listItems": 18,
+    "listItems": 22,
     "numericClaims": 1
    },
    "searchIntent": "scenario",
@@ -195394,7 +195420,7 @@
    "published": null,
    "updated": null,
    "verified": null,
-   "wordCount": 655,
+   "wordCount": 896,
    "headings": [
     "The situation",
     "Constraints",
@@ -195403,7 +195429,10 @@
     "The first decision",
     "Guided reasoning",
     "What went wrong",
-    "Failure injection"
+    "Failure injection",
+    "Variants",
+    "Two ways to run this",
+    "Evaluation rubric"
    ],
    "internalLinks": [
     "/learn/genai-app-dev/output-validation-and-moderation",
@@ -195418,7 +195447,7 @@
    "features": {
     "codeBlocks": 0,
     "sourcesSection": false,
-    "listItems": 19,
+    "listItems": 23,
     "numericClaims": 0
    },
    "searchIntent": "scenario",
@@ -195471,7 +195500,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 545,
+   "wordCount": 772,
    "headings": [
     "The situation",
     "Constraints",
@@ -195481,7 +195510,10 @@
     "What went wrong",
     "Failure injection",
     "What to test first",
-    "Go further"
+    "Go further",
+    "Variants",
+    "Two ways to run this",
+    "Evaluation rubric"
    ],
    "internalLinks": [
     "/interview/agents",
@@ -195498,8 +195530,8 @@
    "features": {
     "codeBlocks": 0,
     "sourcesSection": false,
-    "listItems": 14,
-    "numericClaims": 1
+    "listItems": 18,
+    "numericClaims": 2
    },
    "searchIntent": "scenario",
    "primaryAudience": "ai-engineer",
@@ -195549,7 +195581,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 601,
+   "wordCount": 841,
    "headings": [
     "The situation",
     "Constraints",
@@ -195559,7 +195591,10 @@
     "What went wrong",
     "Failure injection",
     "What to test first",
-    "Go further"
+    "Go further",
+    "Variants",
+    "Two ways to run this",
+    "Evaluation rubric"
    ],
    "internalLinks": [
     "/interview/rag",
@@ -195576,7 +195611,7 @@
    "features": {
     "codeBlocks": 0,
     "sourcesSection": false,
-    "listItems": 14,
+    "listItems": 18,
     "numericClaims": 0
    },
    "searchIntent": "scenario",
@@ -195627,7 +195662,7 @@
    "published": null,
    "updated": null,
    "verified": null,
-   "wordCount": 662,
+   "wordCount": 890,
    "headings": [
     "The situation",
     "Constraints",
@@ -195636,7 +195671,10 @@
     "The first decision",
     "Guided reasoning",
     "What went wrong",
-    "Failure injection"
+    "Failure injection",
+    "Variants",
+    "Two ways to run this",
+    "Evaluation rubric"
    ],
    "internalLinks": [
     "/learn/voice-ai/realtime-transport-and-turn-taking",
@@ -195652,7 +195690,7 @@
    "features": {
     "codeBlocks": 0,
     "sourcesSection": false,
-    "listItems": 17,
+    "listItems": 21,
     "numericClaims": 1
    },
    "searchIntent": "scenario",
@@ -195662,8 +195700,10 @@
    "prerequisite": null,
    "nextAction": null,
    "practiceType": null,
-   "freshnessClass": "periodic",
-   "freshnessSignals": [],
+   "freshnessClass": "policy-sensitive",
+   "freshnessSignals": [
+    "policy/license mention"
+   ],
    "owner": null,
    "reviewer": null,
    "nextReview": null,
@@ -195680,7 +195720,7 @@
     "explanationQuality": 2,
     "metadata": 2,
     "linking": 2,
-    "freshnessHealth": 1,
+    "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
     "demand": null
@@ -196617,6 +196657,89 @@
     "metadata": 2,
     "linking": 2,
     "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "blo-0020",
+   "family": "blog",
+   "kind": "post",
+   "title": "Teardown: Playwright MCP's tool contracts",
+   "slug": "teardown-playwright-mcp-tool-contracts",
+   "route": "/blog/teardown-playwright-mcp-tool-contracts",
+   "collection": "blog",
+   "path": "src/content/blog/teardown-playwright-mcp-tool-contracts.mdx",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Reading a production MCP server's tool list as a design document — what the parameters, read-only flags, and snapshot model reveal about agent-tool design.",
+   "author": "Ahmed Ansari",
+   "published": "2026-09-16",
+   "updated": null,
+   "verified": null,
+   "wordCount": 679,
+   "headings": [
+    "1. The act boundary lives in metadata",
+    "2. The element parameter is a permission mechanism",
+    "3. Snapshot over screenshot — and the tool says why",
+    "4. Refs make actions deterministic",
+    "5. Even the README admits the boundary",
+    "The meta-lesson"
+   ],
+   "internalLinks": [
+    "/guides/build-your-first-browser-agent",
+    "/learn/harness-design/agent-stack-vocabulary",
+    "/learn/mcp"
+   ],
+   "externalLinks": [
+    "https://github.com/microsoft/playwright-mcp"
+   ],
+   "structuredData": [
+    "Article",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "tags": [
+     "teardown",
+     "mcp",
+     "agents",
+     "tools"
+    ],
+    "codeBlocks": 0,
+    "listItems": 0,
+    "numericClaims": 0
+   },
+   "searchIntent": "read",
+   "primaryAudience": "general",
+   "promisedOutcome": "Reading a production MCP server's tool list as a design document — what the parameters, read-only flags, and snapshot model reveal about agent-tool design.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Playwright, MCP"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": 1,
+    "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": 1,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
     "demand": null
@@ -232693,9 +232816,27 @@
    ]
   },
   {
+   "route": "/scenarios/coding-agent-rollout",
+   "slug": "coding-agent-rollout",
+   "title": "Rolling out a coding agent without losing the repo",
+   "family": "scenario",
+   "flags": [
+    "policy-sensitive page with no updated/review date"
+   ]
+  },
+  {
    "route": "/scenarios/regulated-decision-support",
    "slug": "regulated-decision-support",
    "title": "An eligibility screener in a regulated workflow",
+   "family": "scenario",
+   "flags": [
+    "policy-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/scenarios/voice-agent-latency",
+   "slug": "voice-agent-latency",
+   "title": "A phone agent that keeps talking over people",
    "family": "scenario",
    "flags": [
     "policy-sensitive page with no updated/review date"
@@ -232736,6 +232877,15 @@
    "flags": [
     "pricing-sensitive page with no updated/review date",
     "8 numeric claims with no sources section or external link"
+   ]
+  },
+  {
+   "route": "/blog/teardown-playwright-mcp-tool-contracts",
+   "slug": "teardown-playwright-mcp-tool-contracts",
+   "title": "Teardown: Playwright MCP's tool contracts",
+   "family": "blog",
+   "flags": [
+    "release-sensitive page with no updated/review date"
    ]
   },
   {

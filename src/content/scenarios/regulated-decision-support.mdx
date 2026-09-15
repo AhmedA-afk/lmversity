@@ -57,3 +57,20 @@ The pilot caught a subtle failure: the model extracted income figures accurately
 - Submit an application missing a required document and verify the extraction says "absent" rather than inferring a value.
 - Replay a denied application end-to-end from logs and confirm the explanation reproduces exactly what the caseworker saw.
 - Inject a rule-text change and verify rule suggestions cite the new version, not memorized old text.
+
+## Variants
+
+- **Startup:** even unregulated, the pattern is worth copying — confidence display, escalation path, and a logged human override cost little and age well.
+- **Enterprise:** the model sits inside a decision process with existing audit trails — the integration questions (case management, records systems, override workflows) dominate the model questions.
+- **Regulated:** the core design constraint — the model advises, a named human decides, and the record must show the human could and did override. "The model recommended it" is not a defense; the documentation of independent judgment is.
+- **Low-connectivity:** decision support that needs a live model call fails exactly where decisions can't wait — cached guidance and clear "system unavailable" states are part of the design, not edge cases.
+
+## Two ways to run this
+
+**Whiteboard mode** — read only the situation and constraints, then stop. Sketch your options, decision, and failure plan before opening the rest; the scenario's choices become a grading key for your reasoning, not just a story.
+
+**Guided mode** — read straight through. The options and guided-reasoning sections walk the decision step by step; use them to compare your instinct with the documented one.
+
+## Evaluation rubric
+
+A strong answer keeps a named human as the decision-maker of record, designs the override path so disagreement is easy and recorded, and shows uncertainty as decision input rather than decoration. Weak answers let the model's confidence substitute for the human's judgment, bury the override, or audit-trail only the decisions the system agreed with.

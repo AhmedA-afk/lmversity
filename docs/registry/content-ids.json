@@ -4,7 +4,7 @@
   "les": 2229,
   "que": 27,
   "sce": 12,
-  "blo": 19,
+  "blo": 20,
   "gui": 14,
   "ans": 35,
   "fde": 193,
@@ -8287,27 +8287,27 @@
   },
   "scenarios/agent-approval.mdx": {
    "id": "sce-0001",
-   "fp": "d81dab007fc1bdc5edd19a9877529573786ad810"
+   "fp": "2405e07b8256afa17c6117520705b5714a9cbd8d"
   },
   "scenarios/document-qa.mdx": {
    "id": "sce-0002",
-   "fp": "02f48c6f89e1c0b42948604bade4bd9687cb131e"
+   "fp": "383eab25dfe7c6c278d20abf49930d4fadc152fd"
   },
   "scenarios/eval-release.mdx": {
    "id": "sce-0003",
-   "fp": "0fd4502e741ff37a6e6488d327d77049f62328d8"
+   "fp": "9fe8114866cdc04909143b6bf261d554245628f5"
   },
   "scenarios/mcp-team-server.mdx": {
    "id": "sce-0004",
-   "fp": "ab45e8d4a173cc1acae2491537eacbf7316f297b"
+   "fp": "02f394e6ca6bfe362983aa9d9712687441dff2d8"
   },
   "scenarios/streaming-research.mdx": {
    "id": "sce-0005",
-   "fp": "242e98f5f61e830e1c9d38d7579c421e3a2a02f5"
+   "fp": "f5f97413f5b20163b9e12bc3341a022aebf940c2"
   },
   "scenarios/support-assistant.mdx": {
    "id": "sce-0006",
-   "fp": "742545c86a001374dcbda84738d6d85ecc064bae"
+   "fp": "a6cca71826d2ffeb3d90b9272dd7f56b11258ae0"
   },
   "blog/agents-need-a-harness.mdx": {
    "id": "blo-0001",
@@ -10328,27 +10328,27 @@
   },
   "scenarios/browser-agent-permissions.mdx": {
    "id": "sce-0007",
-   "fp": "96585487a076308de384627c2fd752a5a39be593"
+   "fp": "791b7b378042a939ef1a9c787d2ab6892c23f913"
   },
   "scenarios/coding-agent-rollout.mdx": {
    "id": "sce-0008",
-   "fp": "411799e30212269b7a2815b9fcb2bcde3197998c"
+   "fp": "faf47b96e422d2cbae4cd517bfaa697fa920a371"
   },
   "scenarios/incident-response.mdx": {
    "id": "sce-0009",
-   "fp": "74eb0f00e9fc5c186e4c6a3fe6157c10c48c56f6"
+   "fp": "ad8ea10b82a19c2795cab440dcf2d7cd9db57f23"
   },
   "scenarios/rag-migration.mdx": {
    "id": "sce-0010",
-   "fp": "94e7ce0efe1a724e4e2e37d5dc56baf4ec932711"
+   "fp": "4899b972aa44496f7d17ed48de86522a834ebd6a"
   },
   "scenarios/regulated-decision-support.mdx": {
    "id": "sce-0011",
-   "fp": "9bb09b8761a10f53f43748196325832a51a8d674"
+   "fp": "ad024bcf27782e2c9fa9ad37e3c7d96d967fafec"
   },
   "scenarios/voice-agent-latency.mdx": {
    "id": "sce-0012",
-   "fp": "459a2f1bcfec034f70269b222c5142a4fc7e7e18"
+   "fp": "f48f1209a3d0e91a72a0fafe472682dc3c612415"
   },
   "lessons/ai-for-designers/research-synthesis-lab.md": {
    "id": "les-2229",
@@ -10493,6 +10493,10 @@
   },
   "data:practice/fine-tuning": {
    "id": "prc-0014"
+  },
+  "blog/teardown-playwright-mcp-tool-contracts.mdx": {
+   "id": "blo-0020",
+   "fp": "ed8f1d86d4443d17485a1688c8bdf830443b2e82"
   }
  },
  "retired": {

@@ -57,3 +57,20 @@ Test cancellation during retrieval, a source that disappears, conflicting source
 ## Go further
 
 Rehearse the streaming and trace questions in the [agents interview set](/interview/agents), or build a bounded research agent in the [context-managed agent project](/learn/context-engineering/build-a-budgeted-context-managed-agent).
+
+## Variants
+
+- **Startup:** one researcher, one queue — the whole system can be an agent loop plus a spreadsheet of sources; the discipline is keeping claims attached to citations.
+- **Enterprise:** research feeds downstream consumers — output contracts matter more than speed: what does the report guarantee about source coverage, and what does "the agent checked" actually mean.
+- **Regulated:** sources need provenance and retention — a cited claim must resolve to the version that was read, which means archiving sources at fetch time, not linking to live pages.
+- **Low-connectivity / long-horizon:** long research runs fail mid-way — resumable checkpoints and partial-result quality (what do you show when 60% done) become the design.
+
+## Two ways to run this
+
+**Whiteboard mode** — read only the situation and constraints, then stop. Sketch your options, decision, and failure plan before opening the rest; the scenario's choices become a grading key for your reasoning, not just a story.
+
+**Guided mode** — read straight through. The options and guided-reasoning sections walk the decision step by step; use them to compare your instinct with the documented one.
+
+## Evaluation rubric
+
+A strong answer keeps citations attached to claims end to end, distinguishes "searched" from "verified," and degrades gracefully when sources disagree or run out. Weak answers stream confident prose with sources bolted on after, count pages fetched as coverage, or let the synthesis layer silently drop the inconvenient source.
