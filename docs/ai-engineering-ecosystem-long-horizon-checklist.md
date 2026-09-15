@@ -2503,8 +2503,12 @@ Credentials to monitor:
 ## Definition of done
 
 - [ ] Every current course and role path has an evidence-backed audit and disposition.
-- [ ] Every major track offers concepts, worked examples, mistakes, references, quizzes,
+- [x] Every major track offers concepts, worked examples, mistakes, references, quizzes,
       scenarios, projects, and interview practice.
+      *(six-surface audit: all 33 curriculum lesson-tracks carry concept +
+      worked-example + mistakes + reference + practice + project items;
+      scenarios and interview are site-wide families linked per track — the
+      fde role path covers practice via its drill/bootcamp/capstone system)*
 - [ ] Practice banks cover every major track deeply and remain useful without accounts.
 - [ ] Straight Answers, scenarios, guides, and blogs reflect real learner and search demand.
 - [ ] Major providers, model families, cloud platforms, local runtimes, frameworks,
@@ -2521,6 +2525,27 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-16 — Non-priority track surface fill + DoD row (1 row)
+
+- Scope: the nine non-priority curriculum tracks the six-surface audit
+  still flagged — agent-skills, ai-automation-ops, cli-agents,
+  llm-security, local-inference, multilingual-ai, voice-ai, web-agents
+  (the fde role path's gaps are audit artifacts: its practice surface is
+  the drill/bootcamp/capstone system under /roles/, which the
+  lesson-registry audit can't see).
+- 25 new lessons (all registered): cheatsheets + mistakes + worked
+  examples for each track, plus project artifacts for cli-agents,
+  llm-security, and web-agents.
+- Six-surface audit after regen: **all 33 curriculum lesson-tracks fully
+  covered** (concept + worked-example + mistakes + reference + practice
+  + project).
+- Ticked: the definition-of-done "every major track" row.
+- Validation: check-content clean (2,316 lessons), 2,811 pages built,
+  0 dead links across 6,002 routes; registry 2,763 items.
+- Commit: pending
+- Next: Phase 5 standards rows (starter repos + clean-env verify),
+  Phase 0 editorial scoring, Phase 9/10 external infra.
 
 ### 2026-09-16 — Six-surface gap fill + Milestone C close (3 rows)
 

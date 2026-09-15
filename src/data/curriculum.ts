@@ -10874,6 +10874,26 @@ const unsortedTracks: Track[] = [
         "slug": "cli-agent-labs",
         "status": "live",
         "prereq": ["multi-agent-and-recovery"]
+      },
+      {
+        "title": "CLI agents cheatsheet",
+        "slug": "cli-agents-cheatsheet",
+        "status": "live"
+      },
+      {
+        "title": "CLI agents: common mistakes",
+        "slug": "cli-agents-mistakes",
+        "status": "live"
+      },
+      {
+        "title": "Worked example: a headless agent run with real bounds",
+        "slug": "cli-agent-workflow-worked-example",
+        "status": "live"
+      },
+      {
+        "title": "Project: a governed CLI-agent setup for a real repo",
+        "slug": "cli-agent-setup-project",
+        "status": "live"
       }
     ]
   },
@@ -10892,7 +10912,22 @@ const unsortedTracks: Track[] = [
       { "title": "Approvals and human-in-the-loop", "slug": "approvals-and-human-in-the-loop", "status": "live" },
       { "title": "Auditability and run history", "slug": "auditability-and-run-history", "status": "live" },
       { "title": "Maintaining automations", "slug": "maintaining-automations", "status": "live" },
-      { "title": "Lab: design an ops automation", "slug": "automation-design-lab", "status": "live" }
+      { "title": "Lab: design an ops automation", "slug": "automation-design-lab", "status": "live" },
+      {
+        "title": "Automation ops cheatsheet",
+        "slug": "automation-ops-cheatsheet",
+        "status": "live"
+      },
+      {
+        "title": "AI automation for ops: common mistakes",
+        "slug": "automation-ops-mistakes",
+        "status": "live"
+      },
+      {
+        "title": "Worked example: an invoice-triage automation that earned its autonomy",
+        "slug": "automation-ops-worked-example",
+        "status": "live"
+      }
     ]
   },
   {
@@ -10912,7 +10947,22 @@ const unsortedTracks: Track[] = [
       { "title": "Speech across languages", "slug": "speech-across-languages", "status": "live" },
       { "title": "Low-resource language strategies", "slug": "low-resource-language-strategies", "status": "live" },
       { "title": "Multilingual cost and latency", "slug": "multilingual-cost-and-latency", "status": "live" },
-      { "title": "Lab: multilingual support assistant", "slug": "multilingual-support-assistant-lab", "status": "live" }
+      { "title": "Lab: multilingual support assistant", "slug": "multilingual-support-assistant-lab", "status": "live" },
+      {
+        "title": "Multilingual AI cheatsheet",
+        "slug": "multilingual-cheatsheet",
+        "status": "live"
+      },
+      {
+        "title": "Multilingual AI: common mistakes",
+        "slug": "multilingual-mistakes",
+        "status": "live"
+      },
+      {
+        "title": "Worked example: the multilingual launch that only worked in English",
+        "slug": "multilingual-eval-worked-example",
+        "status": "live"
+      }
     ]
   },
   {
@@ -10963,7 +11013,22 @@ const unsortedTracks: Track[] = [
       { "title": "Voice agent orchestration", "slug": "voice-agent-orchestration", "status": "live" },
       { "title": "Evaluating voice agents", "slug": "voice-evaluation-and-testing", "status": "live" },
       { "title": "Voice AI system design", "slug": "voice-ai-system-design", "status": "live" },
-      { "title": "Lab: build a minimal voice agent", "slug": "voice-agent-lab", "status": "live" }
+      { "title": "Lab: build a minimal voice agent", "slug": "voice-agent-lab", "status": "live" },
+      {
+        "title": "Voice AI cheatsheet",
+        "slug": "voice-ai-cheatsheet",
+        "status": "live"
+      },
+      {
+        "title": "Voice AI: common mistakes",
+        "slug": "voice-ai-mistakes",
+        "status": "live"
+      },
+      {
+        "title": "Worked example: cutting a voice agent latency by two-thirds",
+        "slug": "voice-latency-worked-example",
+        "status": "live"
+      }
     ]
   },
   {
@@ -11014,6 +11079,26 @@ const unsortedTracks: Track[] = [
         "slug": "extraction-and-evaluation",
         "status": "live",
         "prereq": ["agentic-browsers-overview"]
+      },
+      {
+        "title": "Web agents cheatsheet",
+        "slug": "web-agents-cheatsheet",
+        "status": "live"
+      },
+      {
+        "title": "Web agents: common mistakes",
+        "slug": "web-agents-mistakes",
+        "status": "live"
+      },
+      {
+        "title": "Worked example: a web agent that clicked the wrong button",
+        "slug": "web-agent-boundary-worked-example",
+        "status": "live"
+      },
+      {
+        "title": "Project: a bounded web agent for a real task",
+        "slug": "web-agent-project",
+        "status": "live"
       }
     ]
   },
@@ -11059,6 +11144,21 @@ const unsortedTracks: Track[] = [
         "slug": "skills-projects-first-skill-and-capstone",
         "status": "live",
         "prereq": ["evaluating-and-porting-skills"]
+      },
+      {
+        "title": "Agent skills cheatsheet",
+        "slug": "agent-skills-cheatsheet",
+        "status": "live"
+      },
+      {
+        "title": "Agent skills: common mistakes",
+        "slug": "agent-skills-mistakes",
+        "status": "live"
+      },
+      {
+        "title": "Worked example: authoring a skill that actually fires",
+        "slug": "skill-authoring-worked-example",
+        "status": "live"
       }
     ]
   },
@@ -11116,6 +11216,26 @@ const unsortedTracks: Track[] = [
         "slug": "audit-logs-and-accountability",
         "status": "live",
         "prereq": ["sandboxing-code-execution-and-browser-use"]
+      },
+      {
+        "title": "LLM security cheatsheet",
+        "slug": "llm-security-cheatsheet",
+        "status": "live"
+      },
+      {
+        "title": "LLM security: common mistakes",
+        "slug": "llm-security-mistakes",
+        "status": "live"
+      },
+      {
+        "title": "Worked example: an indirect injection that almost worked",
+        "slug": "prompt-injection-worked-example",
+        "status": "live"
+      },
+      {
+        "title": "Project: a security review of a real LLM feature",
+        "slug": "security-review-project",
+        "status": "live"
       }
     ]
   },
@@ -11439,6 +11559,21 @@ const unsortedTracks: Track[] = [
         "slug": "the-local-privacy-boundary",
         "status": "live",
         "prereq": ["what-local-inference-actually-means"]
+      },
+      {
+        "title": "Local inference cheatsheet",
+        "slug": "local-inference-cheatsheet",
+        "status": "live"
+      },
+      {
+        "title": "Local inference: common mistakes",
+        "slug": "local-inference-mistakes",
+        "status": "live"
+      },
+      {
+        "title": "Worked example: the local setup that was not private",
+        "slug": "local-inference-worked-example",
+        "status": "live"
       }
     ]
   },

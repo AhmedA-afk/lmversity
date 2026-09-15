@@ -1,7 +1,7 @@
 {
  "version": 1,
  "next": {
-  "les": 2289,
+  "les": 2316,
   "que": 27,
   "sce": 12,
   "blo": 20,
@@ -10866,6 +10866,114 @@
   "lessons/responsible-ai/contestability-worked-example.md": {
    "id": "les-2289",
    "fp": "59ffa78e6d003a4cee7d7c0a3dc3f9ff2b3d3082"
+  },
+  "lessons/agent-skills/agent-skills-cheatsheet.md": {
+   "id": "les-2290",
+   "fp": "89ed5b4fe3a05430404ef9c9be90baa7c0b76649"
+  },
+  "lessons/agent-skills/agent-skills-mistakes.md": {
+   "id": "les-2291",
+   "fp": "013c056e0646a44b120832f0637db5d0ab784442"
+  },
+  "lessons/agent-skills/skill-authoring-worked-example.md": {
+   "id": "les-2292",
+   "fp": "ed5a2ca29988db70356065926311f7944553cac9"
+  },
+  "lessons/ai-automation-ops/automation-ops-cheatsheet.md": {
+   "id": "les-2293",
+   "fp": "ce7a6875da278a01391381276fce9f9efa3ce31e"
+  },
+  "lessons/ai-automation-ops/automation-ops-mistakes.md": {
+   "id": "les-2294",
+   "fp": "2526ad59c2ab3ab026d0192cc3b7ba7720634dcf"
+  },
+  "lessons/ai-automation-ops/automation-ops-worked-example.md": {
+   "id": "les-2295",
+   "fp": "757da79bbfb053908253247827394edad8845830"
+  },
+  "lessons/cli-agents/cli-agent-setup-project.md": {
+   "id": "les-2296",
+   "fp": "4ec0b31a8ebaae8db2ea9a17c4e552d61aabee2d"
+  },
+  "lessons/cli-agents/cli-agent-workflow-worked-example.md": {
+   "id": "les-2297",
+   "fp": "673b72d6188f62c095ad8714516044f11a917ca9"
+  },
+  "lessons/cli-agents/cli-agents-cheatsheet.md": {
+   "id": "les-2298",
+   "fp": "0db751ca24889d4ca197f51be0fedb70f02373db"
+  },
+  "lessons/cli-agents/cli-agents-mistakes.md": {
+   "id": "les-2299",
+   "fp": "92dc2e3089a87993704eceb144aa5828707c6ee5"
+  },
+  "lessons/llm-security/llm-security-cheatsheet.md": {
+   "id": "les-2300",
+   "fp": "fe72d328f58f7a8670b9dc3864409318c316109d"
+  },
+  "lessons/llm-security/llm-security-mistakes.md": {
+   "id": "les-2301",
+   "fp": "6d5598f73fc7e3d32b7e808d17224de2c8cf0e82"
+  },
+  "lessons/llm-security/prompt-injection-worked-example.md": {
+   "id": "les-2302",
+   "fp": "52262e75552fc4c591ccd31963a2448a8eaf655b"
+  },
+  "lessons/llm-security/security-review-project.md": {
+   "id": "les-2303",
+   "fp": "a509429c3008b2a29a2858f31544b2778cd57b65"
+  },
+  "lessons/local-inference/local-inference-cheatsheet.md": {
+   "id": "les-2304",
+   "fp": "d7ba4486ba90653e454fa28ccaf4ee8119cf31be"
+  },
+  "lessons/local-inference/local-inference-mistakes.md": {
+   "id": "les-2305",
+   "fp": "449b3997e68d85a6c8ddf47fc10eb11134cd81b8"
+  },
+  "lessons/local-inference/local-inference-worked-example.md": {
+   "id": "les-2306",
+   "fp": "d64bcfe09ec065c03c5849a0fadb35112cdd77e6"
+  },
+  "lessons/multilingual-ai/multilingual-cheatsheet.md": {
+   "id": "les-2307",
+   "fp": "76f1c8873ce3a228d675636202bf08979bdf1554"
+  },
+  "lessons/multilingual-ai/multilingual-eval-worked-example.md": {
+   "id": "les-2308",
+   "fp": "053213542ca2a1362d0af4945e5502fa6bad62a4"
+  },
+  "lessons/multilingual-ai/multilingual-mistakes.md": {
+   "id": "les-2309",
+   "fp": "71e57e6fb9b43390e46adab6c8011b8d88693ef7"
+  },
+  "lessons/voice-ai/voice-ai-cheatsheet.md": {
+   "id": "les-2310",
+   "fp": "13a4f2098ca8b720019277bdc90121b438c6bc87"
+  },
+  "lessons/voice-ai/voice-ai-mistakes.md": {
+   "id": "les-2311",
+   "fp": "4eabe05ccd973372e45617bdf4b15f161e04c912"
+  },
+  "lessons/voice-ai/voice-latency-worked-example.md": {
+   "id": "les-2312",
+   "fp": "7ede7c7dd0d18ea8812c32dca8dee66ef924c2a5"
+  },
+  "lessons/web-agents/web-agent-boundary-worked-example.md": {
+   "id": "les-2313",
+   "fp": "be26ed8ef6d2c5fb47b669c5aa51a8393657f63d"
+  },
+  "lessons/web-agents/web-agent-project.md": {
+   "id": "les-2314",
+   "fp": "4eb5f7a840d761b3bb8a6b9fcd9849dc1961b1be"
+  },
+  "lessons/web-agents/web-agents-cheatsheet.md": {
+   "id": "les-2315",
+   "fp": "2080530f642bba20774749251c6ba808024690ff"
+  },
+  "lessons/web-agents/web-agents-mistakes.md": {
+   "id": "les-2316",
+   "fp": "54befdce563ea3d9bb8a8a80b01623237fd09c94"
   }
  },
  "retired": {
