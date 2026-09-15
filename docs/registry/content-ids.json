@@ -9,7 +9,7 @@
   "ans": 35,
   "fde": 193,
   "rol": 12,
-  "prc": 6,
+  "prc": 14,
   "pag": 26,
   "trk": 29,
   "qgd": 4,
@@ -10469,6 +10469,30 @@
   "questions/role-security-engineer.mdx": {
    "id": "que-0027",
    "fp": "22245eaefadc4b4c7a3af4b42015d6ebb5776f62"
+  },
+  "data:practice/classical-ai": {
+   "id": "prc-0007"
+  },
+  "data:practice/machine-learning": {
+   "id": "prc-0008"
+  },
+  "data:practice/deep-learning": {
+   "id": "prc-0009"
+  },
+  "data:practice/responsible-ai": {
+   "id": "prc-0010"
+  },
+  "data:practice/production": {
+   "id": "prc-0011"
+  },
+  "data:practice/agentic-ai": {
+   "id": "prc-0012"
+  },
+  "data:practice/harness-design": {
+   "id": "prc-0013"
+  },
+  "data:practice/fine-tuning": {
+   "id": "prc-0014"
   }
  },
  "retired": {

@@ -1,14 +1,14 @@
 # Content registry — audit views
 
-Generated 2026-09-15T17:49:16.869Z by `scripts/build-content-registry.mjs`.
-2624 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T18:04:06.973Z by `scripts/build-content-registry.mjs`.
+2632 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
 
 - lesson: 2160
 - reference: 107
-- quiz: 93
+- quiz: 101
 - lab: 76
 - answer: 35
 - project: 33
@@ -23,7 +23,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By status
 
-- live: 2624
+- live: 2632
 
 ## By search intent (heuristic)
 
@@ -31,7 +31,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 - comparison: 116
 - build: 109
 - reference: 108
-- practice: 93
+- practice: 101
 - answer: 35
 - worked-example: 33
 - interview-prep: 27
@@ -47,7 +47,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By primary audience (heuristic)
 
-- ai-engineer: 1762
+- ai-engineer: 1770
 - beginner-engineer: 440
 - forward-deployed-engineer: 194
 - general: 190
@@ -83,20 +83,20 @@ and split always need a written human reason (see checklist).
 | disposition | items |
 |---|---:|
 | investigate | 2326 |
-| keep | 295 |
+| keep | 303 |
 | expand | 3 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2360 | 1.91 | 0 | 211 | 2149 |
+| intentClarity | 2368 | 1.91 | 0 | 211 | 2157 |
 | correctnessSources | 50 | 1.26 | 0 | 37 | 13 |
 | completeness | 2570 | 1.63 | 49 | 853 | 1668 |
 | prerequisiteFit | 2412 | 0.15 | 2232 | 0 | 180 |
-| handsOn | 2360 | 1.44 | 619 | 90 | 1651 |
-| explanationQuality | 2360 | 1.96 | 20 | 56 | 2284 |
-| metadata | 2360 | 1.84 | 0 | 375 | 1985 |
+| handsOn | 2368 | 1.43 | 627 | 90 | 1651 |
+| explanationQuality | 2368 | 1.95 | 28 | 56 | 2284 |
+| metadata | 2368 | 1.84 | 0 | 375 | 1993 |
 | linking | 2267 | 1.50 | 397 | 332 | 1538 |
-| freshnessHealth | 2624 | 0.77 | 921 | 1386 | 317 |
+| freshnessHealth | 2632 | 0.77 | 921 | 1394 | 317 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
@@ -353,7 +353,7 @@ _… 213 more in content-registry.json (`sourcingFlags`)_
 
 Review order: volatile classes first, oldest last-verified date first; undated items lead each queue. `verified`/`updated`/`published` supply the last-verified date — git-derived when frontmatter is absent.
 
-- periodic: 1386
+- periodic: 1394
 - pricing-sensitive: 365
 - release-sensitive: 358
 - durable: 266
@@ -724,6 +724,14 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /practice/agents — 8 questions, 8 lesson links
 - /practice/mcp — 8 questions, 8 lesson links
 - /practice/evals — 8 questions, 8 lesson links
+- /practice/classical-ai — 8 questions, 8 lesson links
+- /practice/machine-learning — 8 questions, 8 lesson links
+- /practice/deep-learning — 8 questions, 8 lesson links
+- /practice/responsible-ai — 8 questions, 8 lesson links
+- /practice/production — 8 questions, 8 lesson links
+- /practice/agentic-ai — 8 questions, 8 lesson links
+- /practice/harness-design — 8 questions, 8 lesson links
+- /practice/fine-tuning — 8 questions, 8 lesson links
 
 ## Non-lesson collections
 

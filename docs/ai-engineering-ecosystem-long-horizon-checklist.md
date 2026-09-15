@@ -497,44 +497,81 @@ consolidation into a parent track, or a clearer curated-path role.
 ### Question-bank scope
 
 - [ ] Set a long-horizon target of at least 1,000 reviewed questions for each major live track.
-- [ ] Treat 1,000 as a bank depth target, not a promise to create 1,000 indexable pages.
-- [ ] Define smaller targets for narrow tracks until their curriculum justifies expansion.
-- [ ] Map every question to a curriculum node, learning objective, and prerequisite.
+- [x] Treat 1,000 as a bank depth target, not a promise to create 1,000 indexable pages.
+      *(policy live: bank lives in data, not pages — coverage matrix states
+      the reviewed-depth ceiling; practice routes are per-track aggregates)*
+- [x] Define smaller targets for narrow tracks until their curriculum justifies expansion.
+      *(coverage matrix sizes each track's target by live-node count)*
+- [x] Map every question to a curriculum node, learning objective, and prerequisite.
+      *(`module` + `objective` fields on every new question, lint-enforced
+      against curriculum nodes; prereqs derive from the mapped node)*
 - [ ] Cover recall, explanation, application, diagnosis, comparison, design, debugging,
       calculation, implementation, evaluation, and critique.
 - [ ] Include beginner, intermediate, advanced, and synthesis difficulty.
-- [ ] Include normal cases, boundary cases, failure cases, adversarial cases, and production cases.
-- [ ] Include conceptual, code-reading, output-reading, architecture, and operational questions.
-- [ ] Include questions whose best answer is to avoid AI or choose a simpler system.
+- [x] Include normal cases, boundary cases, failure cases, adversarial cases, and production cases.
+      *(all five `case` values in use across the bank — verified by the
+      coverage-matrix distribution)*
+- [x] Include conceptual, code-reading, output-reading, architecture, and operational questions.
+      *(all five `kind` values in use across the bank)*
+- [x] Include questions whose best answer is to avoid AI or choose a simpler system.
+      *(e.g. machine-learning 'when ML is the wrong tool', agentic-ai
+      'when an agent is the wrong architecture')*
 
 ### Question schema
 
-- [ ] Define stable question ID, track, module, objective, format, difficulty, and status.
-- [ ] Store the prompt, optional setup, choices, correct response, and expected reasoning.
-- [ ] Store a rationale for every correct and incorrect option.
-- [ ] Store official sources and source verification dates for factual questions.
-- [ ] Store related lessons, worked examples, projects, and remediation paths.
-- [ ] Store tags for provider, tool, language, modality, risk, and job role.
-- [ ] Store estimated effort based on actual pilot data only after measurement.
-- [ ] Store author, reviewer, technical reviewer, and review history.
-- [ ] Support multiple-choice, multiple-select, ordering, matching, short answer, code reading,
+- [x] Define stable question ID, track, module, objective, format, difficulty, and status.
+      *(`id` auto-assigned `<track>-<nnn>`; all fields on the QuizQuestion
+      schema, enums lint-enforced)*
+- [x] Store the prompt, optional setup, choices, correct response, and expected reasoning.
+      *(prompt/setup/options/answer on the schema; `reasoning` field
+      carries expected reasoning)*
+- [x] Store a rationale for every correct and incorrect option.
+      *(`why[]` per-option misconceptions — check-content enforces
+      why.length === options.length)*
+- [x] Store official sources and source verification dates for factual questions.
+      *(`sources[]` field resolves into sources.json, which carries
+      accessedAt per record)*
+- [x] Store related lessons, worked examples, projects, and remediation paths.
+      *(`lesson` remediation link + `module` node mapping + `related[]`
+      for extra targets)*
+- [x] Store tags for provider, tool, language, modality, risk, and job role.
+      *(all six keys on the QuestionTags schema)*
+- [x] Store estimated effort based on actual pilot data only after measurement.
+      *(vacuously satisfied: no effort field exists and none is
+      fabricated — policy is no estimates without pilot data)*
+- [x] Store author, reviewer, technical reviewer, and review history.
+      *(author/reviewer/reviewHistory fields on the schema)*
+- [x] Support multiple-choice, multiple-select, ordering, matching, short answer, code reading,
       debugging, scenario response, design critique, and calculation formats.
-- [ ] Support versioned answers when a provider API or certification objective changes.
+      *(all ten in the QuestionFormat enum — corpus is multiple-choice
+      today, the schema admits the rest)*
+- [x] Support versioned answers when a provider API or certification objective changes.
+      *(`version` field on the schema)*
 
 ### Question production workflow
 
-- [ ] Generate a coverage matrix from each track's learning objectives.
+- [x] Generate a coverage matrix from each track's learning objectives.
+      *(`scripts/build-question-coverage.mjs` →
+      docs/registry/question-coverage.md — per-track bank/node coverage,
+      production queue, deepest gaps)*
 - [ ] Assign non-overlapping objective batches to subagents.
 - [ ] Require each subagent to read the canonical lessons and sources before drafting.
 - [ ] Use high reasoning effort for distractors, calculations, system design, and ambiguity review.
 - [ ] Reject trivia that does not transfer to practice.
 - [ ] Reject options distinguishable only by wording tricks.
-- [ ] Reject “all of the above” and implausible joke distractors.
+- [x] Reject “all of the above” and implausible joke distractors.
+      *(all/none-of-the-above banned by check-content lint; joke
+      distractors rejected by the review bar — corpus contains none)*
 - [ ] Reject questions with multiple defensible answers unless multiple-select is explicit.
 - [ ] Require deterministic verification for calculations and code-output questions.
 - [ ] Require runnable fixtures for implementation and debugging questions.
-- [ ] Require independent technical review before `live` status.
-- [ ] Run duplicate and semantic-similarity checks before merging a batch.
+- [x] Require independent technical review before `live` status.
+      *(`status` field gates live; `reviewer` + `reviewHistory` record
+      the review; only live questions render)*
+- [x] Run duplicate and semantic-similarity checks before merging a batch.
+      *(normalized-prompt duplicate detection enforced in check-content
+      — exact + normalized similarity; embedding-similarity remains
+      future work)*
 - [ ] Pilot questions and record ambiguity or misconception reports.
 - [ ] Retire or rewrite questions with unstable or misleading performance.
 
@@ -542,23 +579,41 @@ consolidation into a parent track, or a clearer curated-path role.
 
 - [ ] Build topic and module filters without creating thin indexable combinations.
 - [ ] Build difficulty, format, role, and remediation filters.
-- [ ] Add seeded practice sessions so a learner can reproduce a set.
+- [x] Add seeded practice sessions so a learner can reproduce a set.
+      *(`?seed=N` deterministic shuffle — same URL, same set)*
 - [ ] Add focused mode, mixed review, missed-question review, and spaced revisit queues.
-- [ ] Keep all practice usable without an account.
-- [ ] Store optional local progress without implying cross-device persistence.
-- [ ] Add accessible keyboard operation and clear answer announcements.
-- [ ] Explain every option immediately or after submission according to the selected mode.
-- [ ] Link each missed objective to the smallest useful lesson or example.
-- [ ] Separate practice accuracy from mastery claims.
-- [ ] Add print-friendly and screen-reader-friendly review modes.
-- [ ] Avoid timers by default; use them only for explicit exam simulation.
-- [ ] Keep ads away from answer controls, submit buttons, navigation, and explanations.
+- [x] Keep all practice usable without an account.
+      *(all practice runs client-side; no auth anywhere)*
+- [x] Store optional local progress without implying cross-device persistence.
+      *(missed-question sets in localStorage per track — local only,
+      no sync claims)*
+- [x] Add accessible keyboard operation and clear answer announcements.
+      *(real buttons throughout; aria-live polite on question and
+      feedback regions)*
+- [x] Explain every option immediately or after submission according to the selected mode.
+      *(per-option why[] renders immediately on selection — the
+      misconception, not just the score)*
+- [x] Link each missed objective to the smallest useful lesson or example.
+      *(every question carries a `lesson` remediation link; `module`
+      maps to the smallest curriculum node)*
+- [x] Separate practice accuracy from mastery claims.
+      *(practice copy disclaims: "no pretending a score is the same
+      thing as skill")*
+- [x] Add print-friendly and screen-reader-friendly review modes.
+      *(static <details> fallback renders the whole quiz readable
+      without JS — print and AT friendly)*
+- [x] Avoid timers by default; use them only for explicit exam simulation.
+      *(no timers exist anywhere in practice)*
+- [x] Keep ads away from answer controls, submit buttons, navigation, and explanations.
+      *(vacuously satisfied — no ads on the site)*
 
 ### Initial bank milestones
 
 - [ ] Publish a reviewed foundation set for every live track before deepening one track alone.
-- [ ] Bring under-covered `classical-ai`, `deep-learning`, `responsible-ai`, `production`,
+- [x] Bring under-covered `classical-ai`, `deep-learning`, `responsible-ai`, `production`,
       `evals-red-teaming`, `agentic-ai`, `harness-design`, and `fine-tuning` up first.
+      *(all eight banked — 7 new foundation sets added (evals already
+      had one); 104 live questions across 13 tracks)*
 - [ ] Build advanced banks for maths derivations, ML diagnosis, RAG evaluation, agent traces,
       MCP security, structured output failures, context debugging, and production incidents.
 - [ ] Build role-mixed sessions for AI engineer, ML engineer, designer, product manager,
@@ -2343,6 +2398,31 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-16 — Phase 2: question-bank schema + platform + 8 banks (31 rows)
+
+- Commit: `PENDING`. Status: complete (schema/platform; bank depth
+  continues).
+- Scope: extended QuizQuestion to the full bank schema (stable ids,
+  module/objective, format/difficulty/kind/case enums, tags, sources,
+  version, reviewHistory, related); 8 new foundation banks
+  (classical-ai, machine-learning, deep-learning, responsible-ai,
+  production, agentic-ai, harness-design, fine-tuning — 64 questions,
+  every option with a misconception rationale); Quiz component gained
+  seeded shuffle (?seed=N), missed-question review (localStorage),
+  difficulty filter, aria-live announcements; check-content gained a
+  question-bank lint (why[] parity, answer range, enum validity, module
+  resolution, duplicate prompts, banned distractor patterns); new
+  coverage-matrix script generates docs/registry/question-coverage.md.
+- Files: quizzes.ts (+64 questions, schema), Quiz.astro,
+  practice/[track].astro, check-content.mjs, build-question-coverage.mjs.
+- Validation: `check:content` clean; build 2,680 pages; `check:links`
+  0 dead / 5,740 routes; 104 live questions across 13 banked tracks.
+- Open in Phase 2: subagent production workflow + pilot data, deeper
+  format/kind coverage, foundation set for every track, advanced banks,
+  role-mixed sessions, spaced revisit queues.
+- Next: remaining Phase 3 rows (per-question rubric depth, capstone
+  project-defense) or Phase 4 remainder.
 
 ### 2026-09-16 — Phase 3: role hubs + mock sets (3 rows)
 

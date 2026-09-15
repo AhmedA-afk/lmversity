@@ -323,6 +323,66 @@ for (const dirName of ['questions', 'scenarios', 'answers', 'guides', 'blog', 'p
   }
 }
 
+// --- question bank validation ------------------------------------------------
+// src/data/quizzes.ts is the bank. Each q(...) call is one line; the regex
+// mirrors the file's stable shape rather than importing TS.
+const QUIZZES = join(ROOT, 'src/data/quizzes.ts');
+if (existsSync(QUIZZES)) {
+  const qsrc = readFileSync(QUIZZES, 'utf8');
+  const STR = /'(?:[^'\\]|\\.)*'/g;
+  const VALID = {
+    difficulty: new Set(['beginner', 'intermediate', 'advanced', 'synthesis']),
+    kind: new Set(['conceptual', 'code-reading', 'output-reading', 'architecture', 'operational']),
+    case: new Set(['normal', 'boundary', 'failure', 'adversarial', 'production']),
+    format: new Set(['multiple-choice', 'multiple-select', 'ordering', 'matching', 'short-answer', 'code-reading', 'debugging', 'scenario', 'design-critique', 'calculation']),
+    status: new Set(['draft', 'review', 'live', 'retired']),
+  };
+  const qTrackSpans = [...qsrc.matchAll(/id:\s*'([\w-]+)',\s*\n\s*name:/g)]
+    .map((m, i, arr) => ({ id: m[1], from: m.index, to: arr[i + 1]?.index ?? qsrc.indexOf('];', m.index) }));
+  const seenPrompts = new Map();
+  for (const { id, from, to } of qTrackSpans) {
+    const seg = qsrc.slice(from, to);
+    for (const line of seg.split('\n')) {
+      const qs = line.indexOf('q(');
+      if (qs === -1) continue;
+      const call = line.slice(qs);
+      const strings = [...call.matchAll(STR)].map((m) => m[0]);
+      // q('prompt', [opts], N, 'expl', [why], 'lesson', {meta})
+      const prompt = strings[0];
+      const optBlock = call.match(/,\s*\[((?:'(?:[^'\\]|\\.)*'\s*,?\s*)+)\]\s*,\s*(\d+)/);
+      if (!optBlock) { problems.push(`quizzes/${id}: malformed q() call — ${call.slice(0, 60)}`); continue; }
+      const nOpts = (optBlock[1].match(STR) || []).length;
+      const answer = Number(optBlock[2]);
+      if (answer >= nOpts) problems.push(`quizzes/${id}: answer index ${answer} out of range (${nOpts} options) — ${call.slice(0, 60)}`);
+      // the why[] array is the second bracketed string-list after the answer
+      const whyBlock = call.slice(optBlock.index + optBlock[0].length).match(/,\s*\[((?:'(?:[^'\\]|\\.)*'\s*,?\s*)+)\]/);
+      if (whyBlock) {
+        const nWhy = (whyBlock[1].match(STR) || []).length;
+        if (nWhy !== nOpts) problems.push(`quizzes/${id}: why[] has ${nWhy} entries for ${nOpts} options — every option needs a rationale`);
+      } else {
+        problems.push(`quizzes/${id}: missing why[] rationale array`);
+      }
+      // metadata enums + module resolution into curriculum nodes
+      for (const key of Object.keys(VALID)) {
+        const v = call.match(new RegExp(`${key}:\\s*'(\\w[\\w-]*)'`))?.[1];
+        if (v && !VALID[key].has(v)) problems.push(`quizzes/${id}: invalid ${key} "${v}"`);
+      }
+      const mod = call.match(/module:\s*'([^']+)'/)?.[1];
+      if (mod && !trackNodes.get(id)?.has(mod)) {
+        problems.push(`quizzes/${id}: module "${mod}" is not a curriculum node in ${id}`);
+      }
+      // duplicate detection on the normalized prompt
+      const norm = prompt.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+      if (seenPrompts.has(norm)) problems.push(`quizzes/${id}: duplicate prompt of ${seenPrompts.get(norm)}`);
+      else seenPrompts.set(norm, `${id}`);
+      // banned option patterns — wording tricks that test reading, not knowledge
+      if (/all of the above|none of the above/i.test(call)) {
+        problems.push(`quizzes/${id}: "all/none of the above" option — banned distractor pattern`);
+      }
+    }
+  }
+}
+
 if (problems.length) {
   console.error(`check-content: ${problems.length} problem${problems.length === 1 ? '' : 's'}\n  ${problems.join('\n  ')}`);
   process.exit(1);

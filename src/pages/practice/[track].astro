@@ -1,7 +1,7 @@
 ---
 import Layout from '../../components/Layout.astro';
 import Quiz from '../../components/Quiz.astro';
-import { getQuizTrack, quizTracks } from '../../data/quizzes';
+import { getQuizTrack, liveQuestions, quizTracks } from '../../data/quizzes';
 
 export function getStaticPaths() {
   return quizTracks.map((track) => ({ params: { track: track.id } }));
@@ -17,11 +17,11 @@ const next = quizTracks[index + 1];
 <Layout title={`${track.name} practice quiz`} description={track.summary} type="learning-resource" breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Practice', url: '/practice' }, { name: track.name, url: `/practice/${track.id}` }]}>
   <section class="quiz-head container">
     <a class="back mono" href="/practice">← Practice room</a>
-    <span class="eyebrow">{track.questions.length} questions · instant explanations</span>
+    <span class="eyebrow">{liveQuestions(track).length} questions · instant explanations</span>
     <h1>{track.name} quiz</h1>
     <p>{track.summary} Take it once cold, then follow the linked lessons for anything that needs another pass.</p>
   </section>
-  <section class="quiz-wrap container"><Quiz questions={track.questions} /></section>
+  <section class="quiz-wrap container"><Quiz questions={liveQuestions(track)} trackId={track.id} /></section>
   <nav class="quiz-pager container" aria-label="Quiz navigation">
     {prev ? <a href={`/practice/${prev.id}`} class="pg"><span class="mono">← Previous quiz</span><span class="pt">{prev.name}</span></a> : <span></span>}
     {next ? <a href={`/practice/${next.id}`} class="pg alignr"><span class="mono">Next quiz →</span><span class="pt">{next.name}</span></a> : <span></span>}
