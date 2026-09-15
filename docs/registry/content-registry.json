@@ -1,14 +1,14 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T19:48:58.803Z",
+  "generatedAt": "2026-09-15T20:18:03.033Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2676,
+  "itemCount": 2686,
   "counts": {
    "byFamily": {
-    "lesson": 2160,
-    "project": 33,
-    "lab": 76,
+    "lesson": 2167,
+    "project": 34,
+    "lab": 78,
     "reference": 107,
     "quiz": 143,
     "interview": 27,
@@ -22,13 +22,13 @@
     "glossary": 1
    },
    "byStatus": {
-    "live": 2676
+    "live": 2686
    },
    "byKind": {
-    "concept": 1849,
+    "concept": 1856,
     "comparison": 109,
-    "capstone": 33,
-    "lab": 76,
+    "capstone": 34,
+    "lab": 78,
     "worked-example": 33,
     "cheatsheet": 49,
     "common-mistakes": 26,
@@ -59,14 +59,14 @@
    "byTrack": {
     "agent-frameworks": 18,
     "agent-skills": 6,
-    "agentic-ai": 30,
+    "agentic-ai": 32,
     "ai-automation-ops": 8,
     "ai-for-designers": 26,
     "ai-foundations": 161,
     "ai-literacy": 59,
     "classical-ai": 83,
     "cli-agents": 7,
-    "context-engineering": 132,
+    "context-engineering": 133,
     "deep-learning": 136,
     "evals-red-teaming": 29,
     "fine-tuning": 27,
@@ -81,12 +81,12 @@
     "mcp": 59,
     "multilingual-ai": 10,
     "multimodal-ai": 8,
-    "production": 35,
+    "production": 39,
     "prompt-engineering": 143,
     "python-data-apis": 58,
-    "rag": 64,
+    "rag": 66,
     "responsible-ai": 7,
-    "structured-outputs": 124,
+    "structured-outputs": 125,
     "tools-function-calling": 128,
     "voice-ai": 8,
     "web-agents": 7,
@@ -132,9 +132,9 @@
     "fde": 193
    },
    "byFreshness": {
-    "release-sensitive": 359,
-    "pricing-sensitive": 366,
-    "periodic": 1434,
+    "release-sensitive": 360,
+    "pricing-sensitive": 368,
+    "periodic": 1441,
     "policy-sensitive": 96,
     "certification-sensitive": 104,
     "durable": 266,
@@ -3771,6 +3771,97 @@
    }
   },
   {
+   "id": "les-2230",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Project: A Multi-Agent Workflow With Explicit Delegation and Shared-State Limits",
+   "slug": "agentic-ai/multi-agent-workflow-project",
+   "route": "/learn/agentic-ai/multi-agent-workflow-project",
+   "collection": "lessons",
+   "path": "src/content/lessons/agentic-ai/multi-agent-workflow-project.md",
+   "track": "agentic-ai",
+   "module": null,
+   "status": "live",
+   "summary": "Build a small multi-agent system where delegation is a contract, shared state has owners, and the run can't ping-pong forever.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 590,
+   "headings": [
+    "The brief",
+    "Prerequisites",
+    "Supplied assets and mock mode",
+    "Acceptance criteria",
+    "Failure injection (required)",
+    "Milestones",
+    "What good looks like",
+    "For your portfolio",
+    "Defend this build"
+   ],
+   "internalLinks": [
+    "/learn/agentic-ai/agent-task-contracts",
+    "/learn/agentic-ai/cost-aware-agent-loops",
+    "/learn/agentic-ai/hierarchical-task-decomposition",
+    "/learn/agentic-ai/multi-agent-patterns",
+    "/learn/agentic-ai/when-not-to-use-an-agent"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": true,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 21,
+    "numericClaims": 1,
+    "specFormat": true,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Build a small multi-agent system where delegation is a contract, shared state has owners, and the run can't ping-pong forever.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/agentic-ai",
+   "practiceType": "none",
+   "freshnessClass": "pricing-sensitive",
+   "freshnessSignals": [
+    "pricing/cost mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-0017",
    "family": "lesson",
    "kind": "concept",
@@ -4184,6 +4275,95 @@
     "metadata": 2,
     "linking": 1,
     "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2231",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Project: A Stateful Agent With Checkpoints and Resumable Execution",
+   "slug": "agentic-ai/stateful-agent-checkpoints-project",
+   "route": "/learn/agentic-ai/stateful-agent-checkpoints-project",
+   "collection": "lessons",
+   "path": "src/content/lessons/agentic-ai/stateful-agent-checkpoints-project.md",
+   "track": "agentic-ai",
+   "module": null,
+   "status": "live",
+   "summary": "Build an agent that survives crashes — durable checkpoints, deterministic resume, and a test that kills it mid-task.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 620,
+   "headings": [
+    "The brief",
+    "Prerequisites",
+    "Supplied assets and mock mode",
+    "Acceptance criteria",
+    "Failure injection (required)",
+    "Milestones",
+    "What good looks like",
+    "For your portfolio",
+    "Defend this build"
+   ],
+   "internalLinks": [
+    "/learn/agentic-ai/common-agent-failure-modes",
+    "/learn/agentic-ai/error-handling-and-retries",
+    "/learn/agentic-ai/state-memory-and-recovery",
+    "/learn/agentic-ai/the-agent-loop",
+    "/learn/tools-function-calling/handling-tool-errors-and-retries"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": true,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 20,
+    "numericClaims": 0,
+    "specFormat": true,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Build an agent that survives crashes — durable checkpoints, deterministic resume, and a test that kills it mid-task.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/agentic-ai",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
     "demand": null
@@ -36222,6 +36402,95 @@
    }
   },
   {
+   "id": "les-2232",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Project: A Context Management Service With Compaction and Regression Tests",
+   "slug": "context-engineering/context-management-service-project",
+   "route": "/learn/context-engineering/context-management-service-project",
+   "collection": "lessons",
+   "path": "src/content/lessons/context-engineering/context-management-service-project.md",
+   "track": "context-engineering",
+   "module": null,
+   "status": "live",
+   "summary": "Build the service that decides what the model sees — assembly, compaction, audit — and the regression suite that catches silent context rot.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 618,
+   "headings": [
+    "The brief",
+    "Prerequisites",
+    "Supplied assets and mock mode",
+    "Acceptance criteria",
+    "Failure injection (required)",
+    "Milestones",
+    "What good looks like",
+    "For your portfolio",
+    "Defend this build"
+   ],
+   "internalLinks": [
+    "/learn/context-engineering/context-rot",
+    "/learn/context-engineering/detecting-context-degradation",
+    "/learn/context-engineering/multi-agent-context-problem",
+    "/learn/context-engineering/summarization-for-compaction",
+    "/learn/context-engineering/token-budgeting-strategies"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": true,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 20,
+    "numericClaims": 0,
+    "specFormat": true,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Build the service that decides what the model sees — assembly, compaction, audit — and the regression suite that catches silent context rot.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/context-engineering",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-0351",
    "family": "lesson",
    "kind": "concept",
@@ -37503,7 +37772,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -103478,7 +103747,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 0,
+    "completeness": 1,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -114165,7 +114434,7 @@
    "scores": {
     "intentClarity": null,
     "correctnessSources": null,
-    "completeness": 0,
+    "completeness": 1,
     "prerequisiteFit": 0,
     "handsOn": null,
     "explanationQuality": null,
@@ -132286,7 +132555,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -141037,7 +141306,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -142864,7 +143133,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -143552,6 +143821,94 @@
     "explanationQuality": 2,
     "metadata": 2,
     "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2233",
+   "family": "lab",
+   "kind": "lab",
+   "title": "Lab: Production Incident Simulation With an On-Call Runbook",
+   "slug": "production/incident-simulation-lab",
+   "route": "/learn/production/incident-simulation-lab",
+   "collection": "lessons",
+   "path": "src/content/lessons/production/incident-simulation-lab.md",
+   "track": "production",
+   "module": null,
+   "status": "live",
+   "summary": "Break a model-backed service on purpose, then page yourself — detect it, triage it, write the runbook that would have saved you.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 617,
+   "headings": [
+    "The brief",
+    "Prerequisites",
+    "Supplied assets and mock mode",
+    "Scenario 1: provider outage",
+    "Scenario 2: silent quality regression",
+    "Scenario 3: cost runaway",
+    "Acceptance criteria",
+    "What good looks like",
+    "For your portfolio",
+    "Defend this build"
+   ],
+   "internalLinks": [
+    "/learn/production/latency-and-cost-slos",
+    "/learn/production/llm-observability-foundations",
+    "/learn/production/load-shedding-and-graceful-degradation"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 23,
+    "numericClaims": 2,
+    "specFormat": true,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "build",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Break a model-backed service on purpose, then page yourself — detect it, triage it, write the runbook that would have saved you.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/production",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -144257,6 +144614,94 @@
    }
   },
   {
+   "id": "les-2234",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Project: A Model Router by Task, Policy, Latency, and Measured Quality",
+   "slug": "production/model-router-project",
+   "route": "/learn/production/model-router-project",
+   "collection": "lessons",
+   "path": "src/content/lessons/production/model-router-project.md",
+   "track": "production",
+   "module": null,
+   "status": "live",
+   "summary": "Build routing that earns its complexity — policy as data, measured quality per task, and a fallback path that doesn't just pick the expensive model.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 710,
+   "headings": [
+    "The brief",
+    "Prerequisites",
+    "Supplied assets and mock mode",
+    "Acceptance criteria",
+    "Failure injection (required)",
+    "Milestones",
+    "What good looks like",
+    "For your portfolio",
+    "Defend this build"
+   ],
+   "internalLinks": [
+    "/learn/production/latency-and-cost-slos",
+    "/learn/production/llm-gateway-and-provider-abstraction",
+    "/learn/production/model-routing-by-task-complexity",
+    "/learn/production/token-and-cost-tracking"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": true,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 21,
+    "numericClaims": 1,
+    "specFormat": true,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Build routing that earns its complexity — policy as data, measured quality per task, and a fallback path that doesn't just pick the expensive model.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/production",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-1540",
    "family": "lesson",
    "kind": "concept",
@@ -144845,6 +145290,96 @@
    }
   },
   {
+   "id": "les-2235",
+   "family": "project",
+   "kind": "capstone",
+   "title": "Capstone: The AI Platform — Gateway, Trace Pipeline, Budgets, Release Controls",
+   "slug": "production/platform-engineer-capstone",
+   "route": "/learn/production/platform-engineer-capstone",
+   "collection": "lessons",
+   "path": "src/content/lessons/production/platform-engineer-capstone.md",
+   "track": "production",
+   "module": null,
+   "status": "live",
+   "summary": "The platform-engineer capstone: assemble the four systems that make model-backed products operable — and defend the seams between them.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 691,
+   "headings": [
+    "The brief",
+    "Prerequisites",
+    "Supplied assets and mock mode",
+    "Acceptance criteria",
+    "Failure injection (required)",
+    "Milestones",
+    "What good looks like",
+    "For your portfolio",
+    "Defend this build"
+   ],
+   "internalLinks": [
+    "/learn/production/canary-and-shadow-releases",
+    "/learn/production/deployment-versioning-and-incidents",
+    "/learn/production/llm-gateway-and-provider-abstraction",
+    "/learn/production/per-tenant-token-budgets-and-quotas",
+    "/learn/production/provider-gateway-project",
+    "/learn/production/tracing-multi-step-ai-pipelines"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": true,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 22,
+    "numericClaims": 1,
+    "specFormat": true,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "build",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "The platform-engineer capstone: assemble the four systems that make model-backed products operable — and defend the seams between them.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/production",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-1547",
    "family": "lesson",
    "kind": "concept",
@@ -145084,6 +145619,96 @@
     "completeness": 1,
     "prerequisiteFit": 0,
     "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2236",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Project: A Provider Gateway — Normalized Requests, Errors, Streaming, Fallback",
+   "slug": "production/provider-gateway-project",
+   "route": "/learn/production/provider-gateway-project",
+   "collection": "lessons",
+   "path": "src/content/lessons/production/provider-gateway-project.md",
+   "track": "production",
+   "module": null,
+   "status": "live",
+   "summary": "Build the layer that decouples your app from any one model provider — one request format, one error vocabulary, streaming that survives failure.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 662,
+   "headings": [
+    "The brief",
+    "Prerequisites",
+    "Supplied assets and mock mode",
+    "Acceptance criteria",
+    "Failure injection (required)",
+    "Milestones",
+    "What good looks like",
+    "For your portfolio",
+    "Defend this build"
+   ],
+   "internalLinks": [
+    "/learn/production/latency-and-cost-slos",
+    "/learn/production/llm-gateway-and-provider-abstraction",
+    "/learn/production/multi-provider-failover-and-redundancy",
+    "/learn/production/rate-limiting-llm-apps"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": true,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 21,
+    "numericClaims": 1,
+    "specFormat": true,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Build the layer that decouples your app from any one model provider — one request format, one error vocabulary, streaming that survives failure.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/production",
+   "practiceType": "none",
+   "freshnessClass": "pricing-sensitive",
+   "freshnessSignals": [
+    "pricing/cost mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
     "linking": 2,
@@ -164563,6 +165188,96 @@
    }
   },
   {
+   "id": "les-2237",
+   "family": "lab",
+   "kind": "lab",
+   "title": "Lab: Embedding Search With Evaluation Fixtures",
+   "slug": "rag/embedding-search-eval-lab",
+   "route": "/learn/rag/embedding-search-eval-lab",
+   "collection": "lessons",
+   "path": "src/content/lessons/rag/embedding-search-eval-lab.md",
+   "track": "rag",
+   "module": null,
+   "status": "live",
+   "summary": "Build a minimal embedding-search index, then prove it works with a frozen fixture set — recall@k numbers, not vibes.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 620,
+   "headings": [
+    "The brief",
+    "Prerequisites",
+    "Supplied assets and mock mode",
+    "The fixture set",
+    "Acceptance criteria",
+    "Milestones",
+    "What good looks like",
+    "For your portfolio",
+    "Defend this build"
+   ],
+   "internalLinks": [
+    "/learn/rag/benchmarking-retrieval-shared-corpus",
+    "/learn/rag/chunking-strategies-for-documents",
+    "/learn/rag/embeddings-and-semantic-similarity",
+    "/learn/rag/evaluating-rag-quality",
+    "/learn/rag/hybrid-search-lexical-and-vector",
+    "/learn/rag/similarity-search-and-ann-indexes"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 19,
+    "numericClaims": 5,
+    "specFormat": true,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "build",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Build a minimal embedding-search index, then prove it works with a frozen fixture set — recall@k numbers, not vibes.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/rag",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-1766",
    "family": "lesson",
    "kind": "concept",
@@ -166816,6 +167531,97 @@
    }
   },
   {
+   "id": "les-2238",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Project: RAG Ingestion With Incremental Updates and Access Control",
+   "slug": "rag/rag-ingestion-incremental-project",
+   "route": "/learn/rag/rag-ingestion-incremental-project",
+   "collection": "lessons",
+   "path": "src/content/lessons/rag/rag-ingestion-incremental-project.md",
+   "track": "rag",
+   "module": null,
+   "status": "live",
+   "summary": "Build the ingestion side nobody demos: incremental re-indexing without downtime, and retrieval that respects who may see what.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 656,
+   "headings": [
+    "The brief",
+    "Prerequisites",
+    "Supplied assets and mock mode",
+    "Acceptance criteria",
+    "Failure injection (required)",
+    "Milestones",
+    "What good looks like",
+    "For your portfolio",
+    "Defend this build"
+   ],
+   "internalLinks": [
+    "/learn/rag/access-controlled-retrieval",
+    "/learn/rag/building-a-rag-pipeline-end-to-end",
+    "/learn/rag/diagnosing-rag-failures-end-to-end",
+    "/learn/rag/embedding-search-eval-lab",
+    "/learn/rag/incremental-indexing-freshness"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": true,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 21,
+    "numericClaims": 1,
+    "specFormat": true,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Build the ingestion side nobody demos: incremental re-indexing without downtime, and retrieval that respects who may see what.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/rag",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: pgvector"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-1790",
    "family": "lesson",
    "kind": "concept",
@@ -168220,7 +169026,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -175270,6 +176076,97 @@
     "prerequisiteFit": 0,
     "handsOn": 0,
     "explanationQuality": 1,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2239",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Project: A Model-Output Validation Service",
+   "slug": "structured-outputs/output-validation-service-project",
+   "route": "/learn/structured-outputs/output-validation-service-project",
+   "collection": "lessons",
+   "path": "src/content/lessons/structured-outputs/output-validation-service-project.md",
+   "track": "structured-outputs",
+   "module": null,
+   "status": "live",
+   "summary": "Build the layer that stands between model output and your code — parse, validate, repair, route, and count every failure class.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 591,
+   "headings": [
+    "The brief",
+    "Prerequisites",
+    "Supplied assets and mock mode",
+    "Acceptance criteria",
+    "Failure injection (required)",
+    "Milestones",
+    "What good looks like",
+    "For your portfolio",
+    "Defend this build"
+   ],
+   "internalLinks": [
+    "/learn/structured-outputs/diagnosing-five-real-failures",
+    "/learn/structured-outputs/incremental-json-repair-explained",
+    "/learn/structured-outputs/monitoring-structured-output-in-production",
+    "/learn/structured-outputs/refusals-and-partial-outputs",
+    "/learn/structured-outputs/schema-versioning-and-migration",
+    "/learn/structured-outputs/the-contract-between-model-and-code",
+    "/learn/structured-outputs/when-not-to-repair"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": true,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 21,
+    "numericClaims": 0,
+    "specFormat": true,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Build the layer that stands between model output and your code — parse, validate, repair, route, and count every failure class.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/structured-outputs",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
     "metadata": 2,
     "linking": 2,
     "freshnessHealth": 1,
@@ -226994,6 +227891,25 @@
   },
   {
    "a": {
+    "route": "/learn/genai-app-dev/rate-limits-and-retry-strategies",
+    "slug": "genai-app-dev/rate-limits-and-retry-strategies",
+    "title": "Rate Limits and Retry Strategies",
+    "track": "genai-app-dev"
+   },
+   "b": {
+    "route": "/learn/genai-app-dev/rate-limits-and-retry",
+    "slug": "genai-app-dev/rate-limits-and-retry",
+    "title": "Rate Limits and When to Retry",
+    "track": "genai-app-dev"
+   },
+   "jaccard": 0.75,
+   "containment": 1,
+   "slugStem": true,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
     "route": "/learn/llm-foundations/context-window-mechanics-and-limits",
     "slug": "llm-foundations/context-window-mechanics-and-limits",
     "title": "Context Window Mechanics and Limits",
@@ -227008,25 +227924,6 @@
    "jaccard": 0.75,
    "containment": 1,
    "slugStem": true,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/tools-function-calling/testing-and-debugging-tool-calls",
-    "slug": "tools-function-calling/testing-and-debugging-tool-calls",
-    "title": "Testing and Debugging Tool Calls",
-    "track": "tools-function-calling"
-   },
-   "b": {
-    "route": "/learn/tools-function-calling/testing-tool-calls-strategies",
-    "slug": "tools-function-calling/testing-tool-calls-strategies",
-    "title": "Testing Tool Calls",
-    "track": "tools-function-calling"
-   },
-   "jaccard": 0.75,
-   "containment": 1,
-   "slugStem": false,
    "alreadyLinked": true,
    "sameTrack": true
   },
@@ -227051,6 +227948,25 @@
   },
   {
    "a": {
+    "route": "/learn/tools-function-calling/testing-and-debugging-tool-calls",
+    "slug": "tools-function-calling/testing-and-debugging-tool-calls",
+    "title": "Testing and Debugging Tool Calls",
+    "track": "tools-function-calling"
+   },
+   "b": {
+    "route": "/learn/tools-function-calling/testing-tool-calls-strategies",
+    "slug": "tools-function-calling/testing-tool-calls-strategies",
+    "title": "Testing Tool Calls",
+    "track": "tools-function-calling"
+   },
+   "jaccard": 0.75,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
     "route": "/learn/llm-foundations/grokking-and-double-descent-mechanics",
     "slug": "llm-foundations/grokking-and-double-descent-mechanics",
     "title": "Grokking and Double Descent Mechanics",
@@ -227061,25 +227977,6 @@
     "slug": "llm-foundations/grokking-and-double-descent",
     "title": "Grokking and Double Descent",
     "track": "llm-foundations"
-   },
-   "jaccard": 0.75,
-   "containment": 1,
-   "slugStem": true,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/genai-app-dev/rate-limits-and-retry-strategies",
-    "slug": "genai-app-dev/rate-limits-and-retry-strategies",
-    "title": "Rate Limits and Retry Strategies",
-    "track": "genai-app-dev"
-   },
-   "b": {
-    "route": "/learn/genai-app-dev/rate-limits-and-retry",
-    "slug": "genai-app-dev/rate-limits-and-retry",
-    "title": "Rate Limits and When to Retry",
-    "track": "genai-app-dev"
    },
    "jaccard": 0.75,
    "containment": 1,
@@ -231915,6 +232812,44 @@
   },
   {
    "a": {
+    "route": "/learn/tools-function-calling/code-execution-as-a-tool",
+    "slug": "tools-function-calling/code-execution-as-a-tool",
+    "title": "Code Execution as a Tool",
+    "track": "tools-function-calling"
+   },
+   "b": {
+    "route": "/learn/tools-function-calling/sandboxing-tool-execution",
+    "slug": "tools-function-calling/sandboxing-tool-execution",
+    "title": "Sandboxing Tool Execution",
+    "track": "tools-function-calling"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/tools-function-calling/execution-safety-common-mistakes",
+    "slug": "tools-function-calling/execution-safety-common-mistakes",
+    "title": "Execution Safety Mistakes",
+    "track": "tools-function-calling"
+   },
+   "b": {
+    "route": "/learn/tools-function-calling/execution-safety-quiz",
+    "slug": "tools-function-calling/execution-safety-quiz",
+    "title": "Execution Safety Quiz",
+    "track": "tools-function-calling"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
     "route": "/learn/ai-foundations/ai-systems/109-local-search-hill-climbing-and-stochastic-optimization",
     "slug": "ai-foundations/ai-systems/109-local-search-hill-climbing-and-stochastic-optimization",
     "title": "Local Search, Hill Climbing, and Stochastic Optimization",
@@ -232181,25 +233116,6 @@
   },
   {
    "a": {
-    "route": "/learn/tools-function-calling/code-execution-as-a-tool",
-    "slug": "tools-function-calling/code-execution-as-a-tool",
-    "title": "Code Execution as a Tool",
-    "track": "tools-function-calling"
-   },
-   "b": {
-    "route": "/learn/tools-function-calling/sandboxing-tool-execution",
-    "slug": "tools-function-calling/sandboxing-tool-execution",
-    "title": "Sandboxing Tool Execution",
-    "track": "tools-function-calling"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
     "route": "/learn/tools-function-calling/parallel-tool-calls",
     "slug": "tools-function-calling/parallel-tool-calls",
     "title": "Parallel Tool Calls",
@@ -232253,25 +233169,6 @@
    "containment": 0.67,
    "slugStem": false,
    "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/tools-function-calling/execution-safety-common-mistakes",
-    "slug": "tools-function-calling/execution-safety-common-mistakes",
-    "title": "Execution Safety Mistakes",
-    "track": "tools-function-calling"
-   },
-   "b": {
-    "route": "/learn/tools-function-calling/execution-safety-quiz",
-    "slug": "tools-function-calling/execution-safety-quiz",
-    "title": "Execution Safety Quiz",
-    "track": "tools-function-calling"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
    "sameTrack": true
   },
   {
@@ -233576,6 +234473,15 @@
    "family": "lesson",
    "flags": [
     "certification-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/agentic-ai/multi-agent-workflow-project",
+   "slug": "agentic-ai/multi-agent-workflow-project",
+   "title": "Project: A Multi-Agent Workflow With Explicit Delegation and Shared-State Limits",
+   "family": "lesson",
+   "flags": [
+    "pricing-sensitive page with no updated/review date"
    ]
   },
   {
@@ -235031,6 +235937,15 @@
    ]
   },
   {
+   "route": "/learn/production/provider-gateway-project",
+   "slug": "production/provider-gateway-project",
+   "title": "Project: A Provider Gateway — Normalized Requests, Errors, Streaming, Fallback",
+   "family": "lesson",
+   "flags": [
+    "pricing-sensitive page with no updated/review date"
+   ]
+  },
+  {
    "route": "/learn/prompt-engineering/chain-of-density-summarization-explained",
    "slug": "prompt-engineering/chain-of-density-summarization-explained",
    "title": "Chain-of-Density: Iterative Summary Refinement",
@@ -235361,6 +236276,15 @@
    "family": "lesson",
    "flags": [
     "policy-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/rag/rag-ingestion-incremental-project",
+   "slug": "rag/rag-ingestion-incremental-project",
+   "title": "Project: RAG Ingestion With Incremental Updates and Access Control",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
    ]
   },
   {

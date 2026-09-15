@@ -1,7 +1,7 @@
 {
  "version": 1,
  "next": {
-  "les": 2229,
+  "les": 2239,
   "que": 27,
   "sce": 12,
   "blo": 20,
@@ -10626,6 +10626,46 @@
   },
   "data:practice/production-incidents": {
    "id": "prc-0056"
+  },
+  "lessons/agentic-ai/multi-agent-workflow-project.md": {
+   "id": "les-2230",
+   "fp": "cc15a32406a54f9c3fe4582afdb11ee2b6c1db18"
+  },
+  "lessons/agentic-ai/stateful-agent-checkpoints-project.md": {
+   "id": "les-2231",
+   "fp": "8a4a22d4dbd0c4a34358645041ba6fc76742c1d6"
+  },
+  "lessons/context-engineering/context-management-service-project.md": {
+   "id": "les-2232",
+   "fp": "93e18c1eb992d9445b02affa8efedf71cccaf93a"
+  },
+  "lessons/production/incident-simulation-lab.md": {
+   "id": "les-2233",
+   "fp": "90eb3b821cd299e41b6401a8f8fd924b44d63c98"
+  },
+  "lessons/production/model-router-project.md": {
+   "id": "les-2234",
+   "fp": "6a321dbad2a77fd1411c20cc34cd82523090bf5f"
+  },
+  "lessons/production/platform-engineer-capstone.md": {
+   "id": "les-2235",
+   "fp": "f4e3f79a17025fc0d74d3ec6e8a8637d7b59c0b6"
+  },
+  "lessons/production/provider-gateway-project.md": {
+   "id": "les-2236",
+   "fp": "7376c55fd23ad93ada146dc5cfe98a27caf3005b"
+  },
+  "lessons/rag/embedding-search-eval-lab.md": {
+   "id": "les-2237",
+   "fp": "2963eb7fbb5c6fc8436eb1a38e13001aa85409f3"
+  },
+  "lessons/rag/rag-ingestion-incremental-project.md": {
+   "id": "les-2238",
+   "fp": "db4c4a2d3804f9eb1e7073e95a68dd3dc8c2615e"
+  },
+  "lessons/structured-outputs/output-validation-service-project.md": {
+   "id": "les-2239",
+   "fp": "128f809e63f1bd78762342b858360dec2ffcdf92"
   }
  },
  "retired": {

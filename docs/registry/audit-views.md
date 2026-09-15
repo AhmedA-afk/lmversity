@@ -1,17 +1,17 @@
 # Content registry — audit views
 
-Generated 2026-09-15T19:48:58.803Z by `scripts/build-content-registry.mjs`.
-2676 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T20:18:03.033Z by `scripts/build-content-registry.mjs`.
+2686 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
 
-- lesson: 2160
+- lesson: 2167
 - quiz: 143
 - reference: 107
-- lab: 76
+- lab: 78
 - answer: 35
-- project: 33
+- project: 34
 - interview: 27
 - page: 26
 - blog: 20
@@ -23,14 +23,14 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By status
 
-- live: 2676
+- live: 2686
 
 ## By search intent (heuristic)
 
-- concept: 1976
+- concept: 1983
 - practice: 143
 - comparison: 116
-- build: 109
+- build: 112
 - reference: 108
 - answer: 35
 - worked-example: 33
@@ -47,7 +47,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By primary audience (heuristic)
 
-- ai-engineer: 1799
+- ai-engineer: 1809
 - beginner-engineer: 440
 - forward-deployed-engineer: 195
 - general: 192
@@ -86,28 +86,28 @@ and split always need a written human reason (see checklist).
 
 | disposition | items |
 |---|---:|
-| investigate | 2326 |
+| investigate | 2336 |
 | keep | 345 |
 | expand | 5 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2411 | 1.91 | 0 | 211 | 2200 |
+| intentClarity | 2418 | 1.91 | 0 | 211 | 2207 |
 | correctnessSources | 51 | 1.25 | 0 | 38 | 13 |
-| completeness | 2571 | 1.63 | 50 | 850 | 1671 |
-| prerequisiteFit | 2412 | 0.15 | 2232 | 0 | 180 |
-| handsOn | 2411 | 1.41 | 669 | 91 | 1651 |
-| explanationQuality | 2411 | 1.92 | 68 | 58 | 2285 |
-| metadata | 2411 | 1.84 | 0 | 375 | 2036 |
-| linking | 2268 | 1.50 | 397 | 332 | 1539 |
-| freshnessHealth | 2676 | 0.77 | 925 | 1434 | 317 |
+| completeness | 2581 | 1.63 | 48 | 852 | 1681 |
+| prerequisiteFit | 2422 | 0.15 | 2242 | 0 | 180 |
+| handsOn | 2418 | 1.40 | 676 | 91 | 1651 |
+| explanationQuality | 2418 | 1.92 | 68 | 58 | 2292 |
+| metadata | 2418 | 1.84 | 0 | 375 | 2043 |
+| linking | 2275 | 1.51 | 397 | 332 | 1546 |
+| freshnessHealth | 2686 | 0.77 | 928 | 1441 | 317 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
 
 ### Non-keep dispositions
 
-#### investigate: live lesson not registered in curriculum (2229)
+#### investigate: live lesson not registered in curriculum (2239)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -149,7 +149,7 @@ and split always need a written human reason (see checklist).
 - /learn/agentic-ai/cost-aware-agent-loops — Cost-Aware Agents: Budgeting Tokens Across a Long-Running Loop
 - /learn/agentic-ai/error-handling-and-retries — Recovering When Tools Fail
 - /learn/agentic-ai/evaluating-agent-behavior-in-dev — Reading an Agent's Trace
-- … 2189 more in content-registry.json
+- … 2199 more in content-registry.json
 
 #### investigate: zero in-body internal links (97)
 
@@ -239,11 +239,11 @@ and split always need a written human reason (see checklist).
 | /learn/ai-foundations/narrow-ai-vs-general-ai | /learn/ai-foundations/narrow-vs-general-ai-in-practice | 0.75 | 1 |  | yes | same track |
 | /learn/context-engineering/context-engineering-vs-prompting | /answers/prompt-engineering-vs-context-engineering | 0.75 | 1 |  | yes | context-engineering × answers |
 | /learn/harness-design/the-control-loop | /learn/tools-function-calling/building-a-browser-tool-loop | 0.75 | 1 |  | yes | harness-design × tools-function-calling |
-| /learn/llm-foundations/context-window-mechanics-and-limits | /learn/llm-foundations/context-window-mechanics | 0.75 | 1 | yes | yes | same track |
-| /learn/tools-function-calling/testing-and-debugging-tool-calls | /learn/tools-function-calling/testing-tool-calls-strategies | 0.75 | 1 |  | yes | same track |
-| /learn/harness-design/subprocess-isolation-and-sandboxing | /learn/tools-function-calling/sandboxing-tool-execution | 0.75 | 1 |  | yes | harness-design × tools-function-calling |
-| /learn/llm-foundations/grokking-and-double-descent-mechanics | /learn/llm-foundations/grokking-and-double-descent | 0.75 | 1 | yes | yes | same track |
 | /learn/genai-app-dev/rate-limits-and-retry-strategies | /learn/genai-app-dev/rate-limits-and-retry | 0.75 | 1 | yes | yes | same track |
+| /learn/llm-foundations/context-window-mechanics-and-limits | /learn/llm-foundations/context-window-mechanics | 0.75 | 1 | yes | yes | same track |
+| /learn/harness-design/subprocess-isolation-and-sandboxing | /learn/tools-function-calling/sandboxing-tool-execution | 0.75 | 1 |  | yes | harness-design × tools-function-calling |
+| /learn/tools-function-calling/testing-and-debugging-tool-calls | /learn/tools-function-calling/testing-tool-calls-strategies | 0.75 | 1 |  | yes | same track |
+| /learn/llm-foundations/grokking-and-double-descent-mechanics | /learn/llm-foundations/grokking-and-double-descent | 0.75 | 1 | yes | yes | same track |
 | /learn/prompt-engineering/negative-instructions-pitfall | /learn/prompt-engineering/negative-instructions-problem | 0.75 | 1 |  | yes | same track |
 | /learn/tools-function-calling/schema-versioning-strategies | /learn/tools-function-calling/tool-schema-versioning | 0.71 | 1 |  | yes | same track |
 | /learn/structured-outputs/schema-versioning-and-migration | /learn/structured-outputs/schema-versioning-basics | 0.71 | 1 |  | yes | same track |
@@ -294,7 +294,7 @@ _… 293 more pairs in content-registry.json (`duplicates`)_
 
 ## Sourcing review flags
 
-276 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
+279 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
 
 | item | flags |
 |---|---|
@@ -321,6 +321,7 @@ _… 293 more pairs in content-registry.json (`duplicates`)_
 | /learn/agent-skills/skill-security-and-provenance | certification-sensitive page with no updated/review date |
 | /learn/agent-skills/skill-vs-prompt-rule-hook-mcp-subagent | release-sensitive page with no updated/review date |
 | /learn/agentic-ai/agent-permissions-and-authorization | certification-sensitive page with no updated/review date |
+| /learn/agentic-ai/multi-agent-workflow-project | pricing-sensitive page with no updated/review date |
 | /learn/ai-automation-ops/auditability-and-run-history | release-sensitive page with no updated/review date |
 | /learn/ai-automation-ops/automation-design-lab | pricing-sensitive page with no updated/review date |
 | /learn/ai-automation-ops/automation-landscape-deterministic-to-agentic | release-sensitive page with no updated/review date |
@@ -357,17 +358,16 @@ _… 293 more pairs in content-registry.json (`duplicates`)_
 | /learn/classical-ai/search-planning/112-adversarial-search-games-utilities-and-minimax | 4 numeric claims with no sources section or external link |
 | /learn/cli-agents/cli-agent-labs | release-sensitive page with no updated/review date |
 | /learn/cli-agents/customizing-the-agent-surface | release-sensitive page with no updated/review date |
-| /learn/cli-agents/getting-the-agent-oriented | release-sensitive page with no updated/review date |
 
-_… 216 more in content-registry.json (`sourcingFlags`)_
+_… 219 more in content-registry.json (`sourcingFlags`)_
 
 ## Freshness queues
 
 Review order: volatile classes first, oldest last-verified date first; undated items lead each queue. `verified`/`updated`/`published` supply the last-verified date — git-derived when frontmatter is absent.
 
-- periodic: 1434
-- pricing-sensitive: 366
-- release-sensitive: 359
+- periodic: 1441
+- pricing-sensitive: 368
+- release-sensitive: 360
 - durable: 266
 - certification-sensitive: 104
 - policy-sensitive: 96
@@ -407,11 +407,12 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-foundations/reliable-ai/223-environmental-impact-and-compute-governance — Environmental Impact and Compute Governance *(verified 2026-08-30)*
 - … 74 more in content-registry.json
 
-### pricing-sensitive (366) — oldest-verified first
+### pricing-sensitive (368) — oldest-verified first
 
 - /learn/agent-frameworks/mastra-typescript-agents — Mastra: the TypeScript agent framework *(verified undated)*
 - /learn/agent-frameworks/microsoft-agent-frameworks — Microsoft's agent frameworks: Semantic Kernel, AutoGen, and the convergence *(verified undated)*
 - /learn/agent-frameworks/openai-agents-sdk — OpenAI Agents SDK: agents, handoffs, and guardrails *(verified undated)*
+- /learn/agentic-ai/multi-agent-workflow-project — Project: A Multi-Agent Workflow With Explicit Delegation and Shared-State Limits *(verified undated)*
 - /learn/ai-automation-ops/automation-design-lab — Lab: design an ops automation *(verified undated)*
 - /learn/ai-automation-ops/llm-steps-in-automation — LLM steps in automation *(verified undated)*
 - /learn/ai-automation-ops/where-ai-belongs-in-a-workflow — Where AI belongs in a workflow *(verified undated)*
@@ -426,6 +427,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/multimodal-ai/multimodal-cost-and-latency — Multimodal cost and latency: the economics of non-text tokens *(verified undated)*
 - /learn/production/deployment-variants-cloud-and-portable — Deployment variants: one managed-cloud path and one portable path *(verified undated)*
 - /learn/production/langfuse-observability — Langfuse: the open-source observability platform *(verified undated)*
+- /learn/production/provider-gateway-project — Project: A Provider Gateway — Normalized Requests, Errors, Streaming, Fallback *(verified undated)*
 - /learn/rag/managed-vector-databases — Pinecone, Weaviate, Qdrant, Milvus: the dedicated vector databases *(verified undated)*
 - /learn/web-agents/agentic-browsers-overview — Agentic browsers: Browser Use, Stagehand, Browserbase, and computer-use tools *(verified undated)*
 - /learn/web-agents/extraction-and-evaluation — Extraction with schemas, and evaluating whether the browser task worked *(verified undated)*
@@ -437,9 +439,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-foundations/choosing-a-model — Choosing a model in 2026 *(verified 2026-08-29)*
 - /learn/ai-foundations/tokens-context-cost — Tokens, context & cost *(verified 2026-08-29)*
 - /learn/evals-red-teaming/building-a-golden-dataset — Building a Golden Dataset *(verified 2026-08-29)*
-- /learn/production/token-and-cost-tracking — Track Cost Per Request and Per User *(verified 2026-08-29)*
-- /learn/prompt-engineering/chain-of-thought-prompting — Chain-of-Thought: Getting the Model to Show Its Work *(verified 2026-08-29)*
-- … 336 more in content-registry.json
+- … 338 more in content-registry.json
 
 ### policy-sensitive (96) — oldest-verified first
 
@@ -475,7 +475,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/classical-ai/knowledge-uncertainty/215-knowledge-graphs-queries-provenance-and-embeddings — Knowledge graphs: queries, provenance, and embeddings *(verified 2026-08-30)*
 - … 66 more in content-registry.json
 
-### release-sensitive (359) — oldest-verified first
+### release-sensitive (360) — oldest-verified first
 
 Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno, LangGraph *(verified undated)*
@@ -508,14 +508,14 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/genai-app-dev/indic-language-pipeline-lab — Sarvam, AI4Bharat, Bhashini *(verified undated)*
 - /learn/harness-design/agent-stack-vocabulary — MCP, Model Context Protocol *(verified undated)*
 - /learn/harness-design/harness-skill-and-mcp-integrations — MCP *(verified undated)*
-- … 329 more
+- … 330 more
 
 ## Missing-data queues
 
 ### no summary/meta description (0)
 
 
-### no published or updated date (194)
+### no published or updated date (204)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -543,6 +543,8 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agent-skills/skills-projects-first-skill-and-capstone — Projects: build your first skill, then turn a workflow into a tested one
 - /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access
 - /learn/agentic-ai/agent-task-contracts — Write a task contract for an agent
+- /learn/agentic-ai/multi-agent-workflow-project — Project: A Multi-Agent Workflow With Explicit Delegation and Shared-State Limits
+- /learn/agentic-ai/stateful-agent-checkpoints-project — Project: A Stateful Agent With Checkpoints and Resumable Execution
 - /learn/ai-automation-ops/approvals-and-human-in-the-loop — Approvals and human-in-the-loop
 - /learn/ai-automation-ops/auditability-and-run-history — Auditability and run history
 - /learn/ai-automation-ops/automation-design-lab — Lab: design an ops automation
@@ -555,9 +557,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-for-designers/ai-for-designers-course-guide — AI for Designers: course guide, lanes, and your first case study
 - /learn/ai-for-designers/ai-interaction-state-cheatsheet — AI interaction states cheatsheet
 - /learn/ai-for-designers/ai-product-design-common-mistakes — AI product design: common mistakes
-- /learn/ai-for-designers/ai-product-design-foundations-quiz — Quiz: AI product design foundations
-- /learn/ai-for-designers/ai-prototype-testing-common-mistakes — AI prototype testing: common mistakes
-- … 154 more
+- … 164 more
 
 ### zero in-body internal links (template nav still applies) (491)
 
@@ -603,7 +603,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-foundations/reliable-ai/221-contestability-appeals-and-recource — Contestability, Appeals, and Recourse
 - … 451 more
 
-### live file not in curriculum (2229)
+### live file not in curriculum (2239)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -645,7 +645,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agentic-ai/cost-aware-agent-loops — Cost-Aware Agents: Budgeting Tokens Across a Long-Running Loop
 - /learn/agentic-ai/error-handling-and-retries — Recovering When Tools Fail
 - /learn/agentic-ai/evaluating-agent-behavior-in-dev — Reading an Agent's Trace
-- … 2189 more
+- … 2199 more
 
 ### live curriculum node missing file (0)
 
@@ -656,7 +656,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 ### lesson files with status coming (0)
 
 
-### release-sensitive, no date at all (124)
+### release-sensitive, no date at all (127)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -681,6 +681,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agent-skills/skill-security-and-provenance — Skill provenance, review, and the safe-installation checklist
 - /learn/agent-skills/skill-vs-prompt-rule-hook-mcp-subagent — Skill vs prompt vs project rule vs hook vs MCP vs subagent
 - /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access
+- /learn/agentic-ai/multi-agent-workflow-project — Project: A Multi-Agent Workflow With Explicit Delegation and Shared-State Limits
 - /learn/ai-automation-ops/auditability-and-run-history — Auditability and run history
 - /learn/ai-automation-ops/automation-design-lab — Lab: design an ops automation
 - /learn/ai-automation-ops/automation-landscape-deterministic-to-agentic — The automation landscape: deterministic to agentic
@@ -697,8 +698,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-for-designers/trust-and-recovery-quiz — Quiz: trust and recovery
 - /learn/ai-literacy/meet-skills-connectors-and-agents — Meet skills, connectors, and agents — safely
 - /learn/cli-agents/cli-agent-labs — Labs: the untrusted-repo security drill and the comparative harness run
-- /learn/cli-agents/customizing-the-agent-surface — Customizing the agent: MCP config, skills, commands, rules, hooks, and subagents
-- … 84 more
+- … 87 more
 
 ## Role paths
 

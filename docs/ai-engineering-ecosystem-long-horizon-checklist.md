@@ -499,7 +499,10 @@ consolidation into a parent track, or a clearer curated-path role.
 
 ### Question-bank scope
 
-- [ ] Set a long-horizon target of at least 1,000 reviewed questions for each major live track.
+- [x] Set a long-horizon target of at least 1,000 reviewed questions for each major live track.
+      *(target documented at the top of docs/registry/question-coverage.md —
+      "1,000 per major track is the long-horizon ceiling; narrow tracks
+      carry smaller targets until their curriculum justifies more")*
 - [x] Treat 1,000 as a bank depth target, not a promise to create 1,000 indexable pages.
       *(policy live: bank lives in data, not pages — coverage matrix states
       the reviewed-depth ceiling; practice routes are per-track aggregates)*
@@ -2310,10 +2313,16 @@ Credentials to monitor:
 
 ### Ecosystem dashboard
 
-- [ ] Track content inventory and status by family and track.
-- [ ] Track reviewed question count by objective, format, and difficulty.
+- [x] Track content inventory and status by family and track.
+      *(registry meta.counts.byFamily/byStatus/byKind + per-item track
+      field — regenerated via npm run registry)*
+- [x] Track reviewed question count by objective, format, and difficulty.
+      *(docs/registry/question-coverage.md — per-track bank coverage,
+      difficulty and kind mix, node coverage %)*
 - [ ] Track projects with passing clean-environment verification.
-- [ ] Track source coverage and freshness debt.
+- [x] Track source coverage and freshness debt. *(sources.json status/
+      accessedAt per record; registry freshnessClass + sourcingFlags;
+      content-dates.json published/updated for 2,510 entries)*
 - [ ] Track organic impressions, clicks, CTR, and landing pages.
 - [ ] Track internal actions, continuations, practice starts, project starts, and returns.
 - [ ] Track ad coverage, viewability, RPM, and layout impact without optimizing accidental clicks.
@@ -2411,7 +2420,9 @@ Credentials to monitor:
 
 ### Milestone A — Know the corpus
 
-- [ ] Content registry generated.
+- [x] Content registry generated. *(docs/registry/content-registry.json —
+      2,686 items, byFamily/byStatus/byKind counts, per-item track,
+      freshnessClass, scores, sourcingFlags)*
 - [ ] Every track and role scored.
 - [ ] Acquisition and practice families scored.
 - [ ] Duplicate intent and freshness queues created.
@@ -2426,7 +2437,12 @@ Credentials to monitor:
 - [x] Existing 48 centralized questions migrated.
       *(legacy six banks backfilled with stable ids, difficulty/kind/case,
       module + objective where the lesson resolves)*
-- [ ] Lesson quiz questions inventoried and deduplicated.
+- [x] Lesson quiz questions inventoried and deduplicated.
+      *(scripts/build-quiz-inventory.mjs → docs/registry/quiz-inventory.md:
+      87 lesson quizzes / 627 questions inventoried across all four heading
+      formats; 42 banks / 336 questions. Cross-surface: 0 pairs at the 0.55
+      review threshold; lesson-internal: 0; bank-internal: 2 pairs at
+      0.56–0.67 — reviewed, same topic different angle, kept.)*
       *(partial — 135 quiz-family items cataloged in the registry, but
       lesson-embedded prompts have not been cross-deduped against the
       centralized banks)*
@@ -2446,15 +2462,26 @@ Credentials to monitor:
 
 ### Milestone D — Current ecosystem reference
 
-- [ ] Named provider and model hubs live.
-- [ ] Ollama, framework, observability, harness, MCP, and skills paths live.
-- [ ] Volatile pages enter the freshness queue automatically.
+- [x] Named provider and model hubs live. *(51 provider hubs: vendors,
+      model families, cloud platforms, gateways, coding agents, consumer
+      products — all carrying verifiedAt)*
+- [x] Ollama, framework, observability, harness, MCP, and skills paths live.
+      *(local-inference track incl. ollama-modelfiles-and-apis;
+      agent-frameworks; production observability + langfuse/helicone/
+      langsmith-phoenix-weave hubs; harness-design; mcp; agent-skills
+      + /skill-catalog)*
+- [x] Volatile pages enter the freshness queue automatically.
+      *(registry computes freshnessClass per item and sourcingFlags queues
+      volatile pages missing dates — derived on every registry build)*
 - [ ] Comparisons use shared fixtures and honest limits.
 
 ### Milestone E — Career and discovery ecosystem
 
-- [ ] Certification registry and objective maps live.
-- [ ] External course directory live.
+- [x] Certification registry and objective maps live. *(13 certs with
+      domains[] objective maps, prerequisites, languages, renewal,
+      officialPrep — all verifiedAt-stamped)*
+- [x] External course directory live. *(32 external courses incl. 6
+      university open courses — official URLs verified)*
 - [ ] Interview, answer, scenario, guide, and blog coverage reflects measured demand.
 - [ ] Search and analytics guide continuing investment.
 
