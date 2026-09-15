@@ -2346,7 +2346,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-16 — Phase 3: role hubs + mock sets (3 rows)
 
-- Commit: `PENDING`. Status: complete.
+- Commit: `52ae660`. Status: complete.
 - Scope: 9 role hubs (ai-engineer, ml-engineer, applied-ai-engineer,
   ai-platform-engineer, forward-deployed-engineer, data-scientist,
   product-manager, designer, security-engineer) — each carries topic
