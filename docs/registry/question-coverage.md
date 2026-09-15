@@ -19,8 +19,8 @@ explicitly remediates to (`module` field) — one question can cover one node.
 | Deep Learning (`deep-learning`) | ✓ | 8 | 8/136 (6%) | beginner 2, intermediate 4, advanced 2 | conceptual 5, output-reading 1, architecture 1, operational 1 |
 | Prompt Engineering (`prompt-engineering`) | ✓ | 8 | 8/143 (6%) | beginner 4, intermediate 4 | conceptual 6, operational 2 |
 | Context Engineering (`context-engineering`) | ✓ | 8 | 8/132 (6%) | beginner 3, intermediate 2, advanced 2, synthesis 1 | conceptual 4, output-reading 1, architecture 3 |
-| Structured Outputs (`structured-outputs`) | ✓ | 8 | 8/124 (6%) | beginner 2, intermediate 3, advanced 3 | conceptual 2, output-reading 1, architecture 3, operational 2 |
-| Hallucinations & Reliability (`hallucinations`) | ✓ | 8 | 8/132 (6%) | beginner 2, intermediate 3, advanced 3 | conceptual 4, output-reading 1, architecture 2, operational 1 |
+| Structured Outputs (`structured-outputs`) | ✓ | 8 | 8/124 (6%) | beginner 2, intermediate 3, advanced 2, synthesis 1 | conceptual 2, output-reading 1, architecture 3, operational 2 |
+| Hallucinations & Reliability (`hallucinations`) | ✓ | 8 | 8/132 (6%) | beginner 2, intermediate 3, advanced 2, synthesis 1 | conceptual 4, output-reading 1, architecture 2, operational 1 |
 | GenAI App Dev (`genai-app-dev`) | ✓ | 8 | 8/133 (6%) | beginner 2, intermediate 3, advanced 2, synthesis 1 | conceptual 2, architecture 2, operational 4 |
 | RAG (`rag`) | ✓ | 8 | 7/64 (11%) | beginner 2, intermediate 5, advanced 1 | conceptual 3, operational 3, architecture 2 |
 | Tools & Function Calling (`tools-function-calling`) | ✓ | 8 | 8/128 (6%) | beginner 2, intermediate 3, advanced 3 | conceptual 2, architecture 4, output-reading 1, operational 1 |
@@ -53,6 +53,14 @@ explicitly remediates to (`module` field) — one question can cover one node.
 | Marketer (`marketer`) | — | — | 0/0 (0%) | — | — |
 | Security Engineer (`security-engineer`) | — | — | 0/0 (0%) | — | — |
 | Student (`student`) | — | — | 0/0 (0%) | — | — |
+| ⚠ Maths derivations (`maths-derivations`) | ✓ | 8 | no curriculum track | — | — |
+| ⚠ ML diagnosis (`ml-diagnosis`) | ✓ | 8 | no curriculum track | — | — |
+| ⚠ RAG evaluation (`rag-evaluation`) | ✓ | 8 | no curriculum track | — | — |
+| ⚠ Agent traces (`agent-traces`) | ✓ | 8 | no curriculum track | — | — |
+| ⚠ MCP security (`mcp-security`) | ✓ | 8 | no curriculum track | — | — |
+| ⚠ Structured output failures (`structured-output-failures`) | ✓ | 8 | no curriculum track | — | — |
+| ⚠ Context debugging (`context-debugging`) | ✓ | 8 | no curriculum track | — | — |
+| ⚠ Production incidents (`production-incidents`) | ✓ | 8 | no curriculum track | — | — |
 
 **264 live questions across 33 banked tracks; 11 curriculum tracks have no bank yet.**
 

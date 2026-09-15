@@ -371,8 +371,12 @@ if (existsSync(QUIZZES)) {
       }
       const mod = call.match(/module:\s*'([^']+)'/)?.[1];
       const curriculumTrack = BANK_TO_TRACK[id] ?? id;
-      if (mod && !trackNodes.get(curriculumTrack)?.has(mod)) {
-        problems.push(`quizzes/${id}: module "${mod}" is not a curriculum node in ${curriculumTrack}`);
+      // Banks named for a curriculum track must module-tag within it; a
+      // cross-cutting bank (advanced/thematic) may tag any real node.
+      const nodeSet = trackNodes.get(curriculumTrack);
+      const modKnown = nodeSet ? nodeSet.has(mod) : [...trackNodes.values()].some((s) => s.has(mod));
+      if (mod && !modKnown) {
+        problems.push(`quizzes/${id}: module "${mod}" is not a curriculum node${nodeSet ? ` in ${curriculumTrack}` : ''}`);
       }
       // duplicate detection on the normalized prompt
       const norm = prompt.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();

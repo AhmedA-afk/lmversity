@@ -9,7 +9,7 @@
   "ans": 35,
   "fde": 193,
   "rol": 12,
-  "prc": 48,
+  "prc": 56,
   "pag": 27,
   "trk": 29,
   "qgd": 4,
@@ -10602,6 +10602,30 @@
   },
   "page:/practice/mixed": {
    "id": "pag-0027"
+  },
+  "data:practice/maths-derivations": {
+   "id": "prc-0049"
+  },
+  "data:practice/ml-diagnosis": {
+   "id": "prc-0050"
+  },
+  "data:practice/rag-evaluation": {
+   "id": "prc-0051"
+  },
+  "data:practice/agent-traces": {
+   "id": "prc-0052"
+  },
+  "data:practice/mcp-security": {
+   "id": "prc-0053"
+  },
+  "data:practice/structured-output-failures": {
+   "id": "prc-0054"
+  },
+  "data:practice/context-debugging": {
+   "id": "prc-0055"
+  },
+  "data:practice/production-incidents": {
+   "id": "prc-0056"
   }
  },
  "retired": {

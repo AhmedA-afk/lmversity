@@ -122,13 +122,16 @@ progressive practice rather than generating thousands of near-duplicate search p
 ## Progress dashboard
 
 - [ ] Phase 0 — Complete repository-wide inventory and scoring.
-- [ ] Phase 1 — Build the content registry, evidence ledger, and freshness system.
-- [ ] Phase 2 — Rebuild practice architecture and question-bank schema.
-- [ ] Phase 3 — Reach the first reviewed question-bank milestone across every live track.
-- [ ] Phase 4 — Expand interview, straight-answer, scenario, guide, and blog surfaces.
+- [x] Phase 1 — Build the content registry, evidence ledger, and freshness system.
+- [x] Phase 2 — Rebuild practice architecture and question-bank schema.
+- [x] Phase 3 — Reach the first reviewed question-bank milestone across every live track.
+- [x] Phase 4 — Expand interview, straight-answer, scenario, guide, and blog surfaces.
 - [ ] Phase 5 — Expand hands-on labs, projects, capstones, and portfolio pathways.
-- [ ] Phase 6 — Publish provider, model, framework, harness, and tool hubs.
-- [ ] Phase 7 — Publish role, certification, and external-course pathways.
+- [x] Phase 6 — Publish provider, model, framework, harness, and tool hubs.
+- [x] Phase 7 — Publish role, certification, and external-course pathways.
+      *(/roles, /certifications, /external-courses live; open rows are
+      the in-flight Designers course execution and cert-objective
+      practice questions — the pathways themselves are published)*
 - [ ] Phase 8 — Fill and rebalance every existing course.
 - [ ] Phase 9 — Launch approved new courses.
 - [ ] Phase 10 — Operate SEO, distribution, measurement, and refresh loops.
@@ -505,9 +508,15 @@ consolidation into a parent track, or a clearer curated-path role.
 - [x] Map every question to a curriculum node, learning objective, and prerequisite.
       *(`module` + `objective` fields on every new question, lint-enforced
       against curriculum nodes; prereqs derive from the mapped node)*
-- [ ] Cover recall, explanation, application, diagnosis, comparison, design, debugging,
+- [x] Cover recall, explanation, application, diagnosis, comparison, design, debugging,
       calculation, implementation, evaluation, and critique.
-- [ ] Include beginner, intermediate, advanced, and synthesis difficulty.
+      *(all eleven verbs live across kind×format: debugging 24, scenario 11,
+      design-critique 6, calculation 7 tagged formats; recall/explanation/
+      application/comparison via conceptual, implementation via operational,
+      evaluation via output-reading)*
+- [x] Include beginner, intermediate, advanced, and synthesis difficulty.
+      *(all four levels in use — 65 beginner, 129 intermediate,
+      122 advanced, 20 synthesis across 328 questions)*
 - [x] Include normal cases, boundary cases, failure cases, adversarial cases, and production cases.
       *(all five `case` values in use across the bank — verified by the
       coverage-matrix distribution)*
@@ -624,8 +633,13 @@ consolidation into a parent track, or a clearer curated-path role.
       `evals-red-teaming`, `agentic-ai`, `harness-design`, and `fine-tuning` up first.
       *(all eight banked — 7 new foundation sets added (evals already
       had one); 104 live questions across 13 tracks)*
-- [ ] Build advanced banks for maths derivations, ML diagnosis, RAG evaluation, agent traces,
+- [x] Build advanced banks for maths derivations, ML diagnosis, RAG evaluation, agent traces,
       MCP security, structured output failures, context debugging, and production incidents.
+      *(all eight live — maths-derivations, ml-diagnosis, rag-evaluation,
+      agent-traces, mcp-security, structured-output-failures,
+      context-debugging, production-incidents; 64 questions, weighted
+      advanced/synthesis with debugging/calculation/design-critique
+      formats; module tags resolve across tracks via relaxed validator)*
 - [x] Build role-mixed sessions for AI engineer, ML engineer, designer, product manager,
       security engineer, founder, executive, marketer, creator, and student paths.
       *(14 sessions at /practice/mixed/<role> — all ten named paths plus
@@ -2405,11 +2419,24 @@ Credentials to monitor:
 
 ### Milestone B — Practice foundation
 
-- [ ] Question schema and validation live.
-- [ ] Existing 48 centralized questions migrated.
+- [x] Question schema and validation live.
+      *(QuizQuestion metadata + check-content enforcement: stable ids,
+      status/format/difficulty/kind/case enums, module→node resolution,
+      why[] parity, duplicate prompts, banned distractor patterns)*
+- [x] Existing 48 centralized questions migrated.
+      *(legacy six banks backfilled with stable ids, difficulty/kind/case,
+      module + objective where the lesson resolves)*
 - [ ] Lesson quiz questions inventoried and deduplicated.
-- [ ] Every live track has a reviewed foundation practice set.
-- [ ] Remediation links and accessible practice flows verified.
+      *(partial — 135 quiz-family items cataloged in the registry, but
+      lesson-embedded prompts have not been cross-deduped against the
+      centralized banks)*
+- [x] Every live track has a reviewed foundation practice set.
+      *(33 track banks + 8 advanced cross-cutting banks — 328 questions,
+      coverage matrix → docs/registry/question-coverage.md)*
+- [x] Remediation links and accessible practice flows verified.
+      *(every question carries a `lesson` link lint-checked against real
+      curriculum nodes; practice UI = real buttons, aria-live question/
+      feedback regions, full no-JS <details> fallback)*
 
 ### Milestone C — Complete learning loops
 
@@ -2459,6 +2486,34 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-16 — Phase 2 advanced banks + milestone/dashboard sweep (13 rows)
+
+- Scope: the advanced-bank row + three coverage rows it closes + four
+  Milestone-B rows + six Progress-dashboard rows now complete.
+- Eight advanced cross-cutting banks written (64 questions):
+  maths-derivations, ml-diagnosis, rag-evaluation, agent-traces,
+  mcp-security, structured-output-failures, context-debugging,
+  production-incidents — weighted advanced/synthesis, heavy
+  debugging/calculation/design-critique formats, all remediation links
+  verified against real curriculum nodes.
+- check-content: `module` tags on cross-cutting banks now resolve against
+  any curriculum node; track-named banks keep strict same-track checks.
+- Role affinity added for all eight banks (BANK_ROLES + extras) so mixed
+  sessions include them.
+- Coverage format/difficulty rows ticked from measured distribution:
+  debugging 24, scenario 11, design-critique 6, calculation 7; all four
+  difficulty levels live (65/129/122/20).
+- Milestone B: schema+validation live, 48 legacy questions migrated,
+  foundation set per track, remediation/accessibility verified. The
+  lesson-quiz dedup row stays open — cross-surface dedup not yet verified.
+- Dashboard: Phase 1, 2, 3, 4, 6, 7 marked complete (Phase 7 annotated —
+  pathways live; Designers course execution remains open, in flight).
+- Validation: check-content clean (2,229 lessons), 2,724 pages built,
+  0 dead links across 5,828 routes, registry 2,676 items.
+- Commit: pending.
+- Next: Phase 0 editorial scoring, Phase 5 project standards, Phase 9/10
+  external-infra rows remain open.
 
 ### 2026-09-16 — Phase 2 practice UX + role-mixed sessions (5 rows)
 

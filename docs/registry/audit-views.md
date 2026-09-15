@@ -1,13 +1,13 @@
 # Content registry — audit views
 
-Generated 2026-09-15T19:08:37.712Z by `scripts/build-content-registry.mjs`.
-2668 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T19:48:58.803Z by `scripts/build-content-registry.mjs`.
+2676 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
 
 - lesson: 2160
-- quiz: 135
+- quiz: 143
 - reference: 107
 - lab: 76
 - answer: 35
@@ -23,12 +23,12 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By status
 
-- live: 2668
+- live: 2676
 
 ## By search intent (heuristic)
 
 - concept: 1976
-- practice: 135
+- practice: 143
 - comparison: 116
 - build: 109
 - reference: 108
@@ -47,7 +47,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By primary audience (heuristic)
 
-- ai-engineer: 1791
+- ai-engineer: 1799
 - beginner-engineer: 440
 - forward-deployed-engineer: 195
 - general: 192
@@ -87,20 +87,20 @@ and split always need a written human reason (see checklist).
 | disposition | items |
 |---|---:|
 | investigate | 2326 |
-| keep | 337 |
+| keep | 345 |
 | expand | 5 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2403 | 1.91 | 0 | 211 | 2192 |
+| intentClarity | 2411 | 1.91 | 0 | 211 | 2200 |
 | correctnessSources | 51 | 1.25 | 0 | 38 | 13 |
 | completeness | 2571 | 1.63 | 50 | 850 | 1671 |
 | prerequisiteFit | 2412 | 0.15 | 2232 | 0 | 180 |
-| handsOn | 2403 | 1.41 | 661 | 91 | 1651 |
-| explanationQuality | 2403 | 1.93 | 60 | 58 | 2285 |
-| metadata | 2403 | 1.84 | 0 | 375 | 2028 |
+| handsOn | 2411 | 1.41 | 669 | 91 | 1651 |
+| explanationQuality | 2411 | 1.92 | 68 | 58 | 2285 |
+| metadata | 2411 | 1.84 | 0 | 375 | 2036 |
 | linking | 2268 | 1.50 | 397 | 332 | 1539 |
-| freshnessHealth | 2668 | 0.77 | 925 | 1426 | 317 |
+| freshnessHealth | 2676 | 0.77 | 925 | 1434 | 317 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
@@ -365,7 +365,7 @@ _… 216 more in content-registry.json (`sourcingFlags`)_
 
 Review order: volatile classes first, oldest last-verified date first; undated items lead each queue. `verified`/`updated`/`published` supply the last-verified date — git-derived when frontmatter is absent.
 
-- periodic: 1426
+- periodic: 1434
 - pricing-sensitive: 366
 - release-sensitive: 359
 - durable: 266
@@ -764,6 +764,14 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /practice/local-inference — 8 questions, 8 lesson links
 - /practice/agent-frameworks — 8 questions, 8 lesson links
 - /practice/ai-for-designers — 8 questions, 8 lesson links
+- /practice/maths-derivations — 8 questions, 8 lesson links
+- /practice/ml-diagnosis — 8 questions, 8 lesson links
+- /practice/rag-evaluation — 8 questions, 8 lesson links
+- /practice/agent-traces — 8 questions, 8 lesson links
+- /practice/mcp-security — 8 questions, 8 lesson links
+- /practice/structured-output-failures — 8 questions, 8 lesson links
+- /practice/context-debugging — 8 questions, 8 lesson links
+- /practice/production-incidents — 8 questions, 8 lesson links
 
 ## Non-lesson collections
 
