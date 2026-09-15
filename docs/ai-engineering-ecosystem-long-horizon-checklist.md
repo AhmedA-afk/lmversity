@@ -2543,7 +2543,7 @@ validation, deployment status, measured result when available, blockers, and nex
 - Ticked: the definition-of-done "every major track" row.
 - Validation: check-content clean (2,316 lessons), 2,811 pages built,
   0 dead links across 6,002 routes; registry 2,763 items.
-- Commit: pending
+- Commit: `043827e`
 - Next: Phase 5 standards rows (starter repos + clean-env verify),
   Phase 0 editorial scoring, Phase 9/10 external infra.
 
