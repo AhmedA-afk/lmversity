@@ -2456,9 +2456,17 @@ Credentials to monitor:
 
 ### Milestone C — Complete learning loops
 
-- [ ] Each priority track connects concept → example → practice → scenario → project → interview.
-- [ ] Under-covered tracks have been expanded, merged, or repositioned.
-- [ ] Role paths terminate in evidence-producing projects.
+- [x] Each priority track connects concept → example → practice → scenario → project → interview.
+      *(registry six-surface audit: all 22 Phase-8 priority tracks carry concept +
+      worked-example + mistakes + reference + practice-bank + project/lab items;
+      scenarios and interview hubs are site-wide families linked into the chain)*
+- [x] Under-covered tracks have been expanded, merged, or repositioned.
+      *(gap-fill batch closed every surface gap: 12 mistakes pages, 13 cheatsheets,
+      12 worked examples, 6 project artifacts — incl. multimodal-ai and
+      agent-frameworks brought from partial to full coverage)*
+- [x] Role paths terminate in evidence-producing projects.
+      *(all 11 role paths carry 2–3 project refs + explicit evidence lists;
+      every capstone across the site now includes defense questions)*
 
 ### Milestone D — Current ecosystem reference
 
@@ -2513,6 +2521,41 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-16 — Six-surface gap fill + Milestone C close (3 rows)
+
+- Scope: the remainder of the surface-coverage gap list — the audit showed
+  mistakes ×12, reference ×13, worked-example ×12, project ×5 across the
+  22 Phase-8 priority tracks; this batch wrote all remaining surfaces.
+- New lessons (all registered in curriculum.ts):
+  13 cheatsheets (ai-foundations/model-selection, maths, ml, classical-ai,
+  deep-learning, llm-foundations, agentic-ai, harness-design,
+  evals-red-teaming, fine-tuning, production, responsible-ai,
+  python-data-apis),
+  12 worked examples (maths gradient descent, ml leakage, A* grid,
+  vanishing gradient, context budget, genai-feature demo-to-prod,
+  agent run trace, harness boundary attack, eval regression,
+  fine-tune regression, incident triage, API pagination),
+  12 mistakes pages (from prior batch segment),
+  5 + 1 project artifacts (harness, mcp, evals, fine-tuning,
+  responsible-ai + agent-frameworks bake-off),
+  plus multimodal-ai (cheatsheet, mistakes, doc-pipeline worked example)
+  and responsible-ai/contestability worked example to close the last gaps.
+- Six-surface audit after registry regen: **22/22 priority tracks fully
+  covered** (concept + worked-example + mistakes + reference + practice +
+  project). Remaining gaps exist only on non-priority tracks
+  (agent-skills, cli-agents, llm-security, local-inference, multilingual-ai,
+  voice-ai, web-agents, ai-automation-ops, fde) — deliberately left as
+  narrower tracks, not "major track" gaps.
+- Ticked: Milestone C rows 1–3 (six-surface chain on all priority tracks,
+  under-covered tracks expanded, role paths terminate in evidence projects —
+  verified all 11 roles carry 2–3 project refs + evidence lists).
+- Validation: check-content clean (2,289 lessons), 2,784 pages built,
+  0 dead links across 5,948 routes; registry 2,736 items.
+- Commit: pending
+- Next: definition-of-done row "every major track" (9 non-priority tracks
+  still partial), Phase 5 standards rows (starter repos + clean-env verify),
+  Phase 0 editorial scoring, Phase 9/10 external infra.
 
 ### 2026-09-16 — Phase 5 project-coverage artifacts (10 rows)
 

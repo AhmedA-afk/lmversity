@@ -314,8 +314,13 @@ const unsortedTracks: Track[] = [
         "title": "Capstone: run a real task end to end, verified",
         "slug": "run-a-real-task-end-to-end-with-verification",
         "status": "live"
-      }
-    ]
+      },
+      {
+        "title": "Common mistakes: everyday AI use",
+        "slug": "everyday-ai-mistakes",
+        "status": "live"
+      },
+]
   },
   {
     "id": "maths-foundations",
@@ -1302,7 +1307,22 @@ const unsortedTracks: Track[] = [
           "title": "Check every maths answer deterministically",
           "slug": "verifying-maths-results-deterministically"
         },
-      ]
+      {
+        "title": "Common mistakes: the maths errors that break ML intuition",
+        "slug": "maths-mistakes",
+        "status": "live"
+      },
+      {
+        "title": "Maths cheatsheet",
+        "slug": "maths-cheatsheet",
+        "status": "live"
+      },
+      {
+        "title": "Worked example: gradient descent, one step at a time",
+        "slug": "gradient-descent-worked-example",
+        "status": "live"
+      }
+    ]
   },
   {
     "id": "python-data-apis",
@@ -1601,6 +1621,16 @@ const unsortedTracks: Track[] = [
       {
         "title": "Capstone: Messy Data to an LLM Pipeline",
         "slug": "messy-data-to-llm-pipeline-capstone",
+        "status": "live"
+      },
+      {
+        "title": "Python and data APIs cheatsheet",
+        "slug": "python-data-apis-cheatsheet",
+        "status": "live"
+      },
+      {
+        "title": "Worked example: a paginated API pipeline that silently dropped data",
+        "slug": "api-pipeline-worked-example",
         "status": "live"
       }
     ]
@@ -2417,7 +2447,17 @@ const unsortedTracks: Track[] = [
           "title": "Choose between rules, ML, and agents: a system-selection case",
           "slug": "choosing-an-ai-approach-system-selection"
         },
-      ]
+      {
+        "title": "Common mistakes: evaluation and model claims",
+        "slug": "eval-and-model-mistakes",
+        "status": "live"
+      },
+      {
+        "title": "Model selection cheatsheet",
+        "slug": "model-selection-cheatsheet",
+        "status": "live"
+      }
+    ]
   },
   {
     "id": "llm-foundations",
@@ -3094,6 +3134,11 @@ const unsortedTracks: Track[] = [
         "title": "Capstone: Build a Tiny GPT and Watch It Learn",
         "slug": "build-a-tiny-gpt-capstone",
         "status": "live"
+      },
+      {
+        "title": "LLM foundations cheatsheet",
+        "slug": "llm-foundations-cheatsheet",
+        "status": "live"
       }
     ]
   },
@@ -3518,6 +3563,21 @@ const unsortedTracks: Track[] = [
       {
         "title": "Separate uncertainty from the decision it informs",
         "slug": "uncertainty-and-decision",
+        "status": "live"
+      },
+      {
+        "title": "Common mistakes: classical AI and search",
+        "slug": "classical-ai-mistakes",
+        "status": "live"
+      },
+      {
+        "title": "Classical AI cheatsheet",
+        "slug": "classical-ai-cheatsheet",
+        "status": "live"
+      },
+      {
+        "title": "Worked example: A* on a grid",
+        "slug": "a-star-worked-example",
         "status": "live"
       }
     ]
@@ -4574,6 +4634,21 @@ const unsortedTracks: Track[] = [
         "title": "Time series, ranking, and recommenders under temporal and exposure feedback",
         "slug": "deep-lectures/907-time-series-ranking-and-recommender-systems-under-temporal-exposure-feedback",
         "status": "live"
+      },
+      {
+        "title": "Common mistakes: the pipeline errors that inflate your metrics",
+        "slug": "ml-pipeline-mistakes",
+        "status": "live"
+      },
+      {
+        "title": "ML cheatsheet",
+        "slug": "ml-cheatsheet",
+        "status": "live"
+      },
+      {
+        "title": "Worked example: finding the leakage in a 97% model",
+        "slug": "leakage-worked-example",
+        "status": "live"
       }
     ]
   },
@@ -5263,6 +5338,21 @@ const unsortedTracks: Track[] = [
       {
         "title": "Deep learning: parameters learn representations",
         "slug": "neural-networks-and-representations",
+        "status": "live"
+      },
+      {
+        "title": "Common mistakes: deep learning training",
+        "slug": "deep-learning-mistakes",
+        "status": "live"
+      },
+      {
+        "title": "Deep learning cheatsheet",
+        "slug": "deep-learning-cheatsheet",
+        "status": "live"
+      },
+      {
+        "title": "Worked example: a vanishing gradient, caught in the weights",
+        "slug": "vanishing-gradient-worked-example",
         "status": "live"
       }
     ]
@@ -6665,7 +6755,12 @@ const unsortedTracks: Track[] = [
         "slug": "context-management-service-project",
         "status": "live"
       },
-]
+      {
+        "title": "Worked example: where a 128k context window actually went",
+        "slug": "context-budget-worked-example",
+        "status": "live"
+      }
+    ]
   },
   {
     "id": "structured-outputs",
@@ -8645,7 +8740,12 @@ const unsortedTracks: Track[] = [
           "slug": "indic-language-pipeline-lab",
           "status": "live"
         },
-      ]
+      {
+        "title": "Worked example: a GenAI feature from demo to production",
+        "slug": "genai-feature-worked-example",
+        "status": "live"
+      }
+    ]
   },
   {
     "id": "rag",
@@ -9950,7 +10050,12 @@ const unsortedTracks: Track[] = [
           "title": "Build an MCP server in TypeScript",
           "slug": "mcp-server-in-typescript"
         },
-      ]
+      {
+        "title": "Project: a production MCP server — auth, versioning, telemetry",
+        "slug": "mcp-production-server-project",
+        "status": "live"
+      },
+]
   },
   {
     "id": "agentic-ai",
@@ -10122,7 +10227,22 @@ const unsortedTracks: Track[] = [
         "slug": "multi-agent-workflow-project",
         "status": "live"
       },
-]
+      {
+        "title": "Common mistakes: agent loop design",
+        "slug": "agent-loop-mistakes",
+        "status": "live"
+      },
+      {
+        "title": "Agentic AI cheatsheet",
+        "slug": "agentic-ai-cheatsheet",
+        "status": "live"
+      },
+      {
+        "title": "Worked example: an agent run, step by step",
+        "slug": "agent-run-worked-example",
+        "status": "live"
+      }
+    ]
   },
   {
     "id": "harness-design",
@@ -10284,7 +10404,27 @@ const unsortedTracks: Track[] = [
           "title": "Wiring MCP servers and Agent Skills into a harness",
           "slug": "harness-skill-and-mcp-integrations"
         },
-      ]
+      {
+        "title": "Project: a reliable tool-call harness — policy, sandbox, crash recovery",
+        "slug": "harness-reliability-project",
+        "status": "live"
+      },
+      {
+        "title": "Common mistakes: harness design",
+        "slug": "harness-mistakes",
+        "status": "live"
+      },
+      {
+        "title": "Harness design cheatsheet",
+        "slug": "harness-cheatsheet",
+        "status": "live"
+      },
+      {
+        "title": "Worked example: a harness boundary under attack",
+        "slug": "harness-boundary-worked-example",
+        "status": "live"
+      }
+    ]
   },
   {
     "id": "evals-red-teaming",
@@ -10437,6 +10577,26 @@ const unsortedTracks: Track[] = [
       {
         "title": "Designing multilingual evaluations",
         "slug": "multilingual-evaluation-design",
+        "status": "live"
+      },
+      {
+        "title": "Project: an evaluation harness — golden set, judge calibration, regression gates",
+        "slug": "eval-harness-project",
+        "status": "live"
+      },
+      {
+        "title": "Common mistakes: evaluation and red teaming",
+        "slug": "eval-mistakes",
+        "status": "live"
+      },
+      {
+        "title": "Evals and red teaming cheatsheet",
+        "slug": "eval-cheatsheet",
+        "status": "live"
+      },
+      {
+        "title": "Worked example: an eval that passed and shipped a regression",
+        "slug": "eval-regression-worked-example",
         "status": "live"
       }
     ]
@@ -10649,7 +10809,22 @@ const unsortedTracks: Track[] = [
         "slug": "platform-engineer-capstone",
         "status": "live"
       },
-]
+      {
+        "title": "Common mistakes: shipping AI features to production",
+        "slug": "production-mistakes",
+        "status": "live"
+      },
+      {
+        "title": "Production cheatsheet",
+        "slug": "production-cheatsheet",
+        "status": "live"
+      },
+      {
+        "title": "Worked example: triaging a production LLM incident",
+        "slug": "incident-triage-worked-example",
+        "status": "live"
+      }
+    ]
   },
   {
     "id": "cli-agents",
@@ -10755,7 +10930,22 @@ const unsortedTracks: Track[] = [
       { "title": "Image generation in products", "slug": "image-generation-in-products", "status": "live" },
       { "title": "Evaluating multimodal systems", "slug": "multimodal-evaluation", "status": "live" },
       { "title": "Multimodal cost and latency", "slug": "multimodal-cost-and-latency", "status": "live" },
-      { "title": "Lab: retrieval over mixed documents", "slug": "multimodal-rag-lab", "status": "live" }
+      { "title": "Lab: retrieval over mixed documents", "slug": "multimodal-rag-lab", "status": "live" },
+      {
+        "title": "Multimodal AI cheatsheet",
+        "slug": "multimodal-cheatsheet",
+        "status": "live"
+      },
+      {
+        "title": "Multimodal AI: common mistakes",
+        "slug": "multimodal-mistakes",
+        "status": "live"
+      },
+      {
+        "title": "Worked example: a document pipeline that costs 10x what it should",
+        "slug": "document-pipeline-worked-example",
+        "status": "live"
+      }
     ]
   },
   {
@@ -11071,7 +11261,27 @@ const unsortedTracks: Track[] = [
           "title": "Lab: pin your fine-tuning stack so it still runs next quarter",
           "slug": "pinning-your-training-stack-lab"
         },
-      ]
+      {
+        "title": "Project: a fine-tuning pipeline — dataset, training, evaluation, registration",
+        "slug": "fine-tuning-pipeline-project",
+        "status": "live"
+      },
+      {
+        "title": "Common mistakes: fine-tuning",
+        "slug": "fine-tuning-mistakes",
+        "status": "live"
+      },
+      {
+        "title": "Fine-tuning cheatsheet",
+        "slug": "fine-tuning-cheatsheet",
+        "status": "live"
+      },
+      {
+        "title": "Worked example: a fine-tune that fixed one thing and broke three",
+        "slug": "fine-tune-regression-worked-example",
+        "status": "live"
+      }
+    ]
   },
   {
     "id": "responsible-ai",
@@ -11116,6 +11326,26 @@ const unsortedTracks: Track[] = [
         "slug": "consent-contestability-and-impact",
         "status": "live",
         "prereq": ["governance-artifacts"]
+      },
+      {
+        "title": "Project: a responsible-AI release — risk register, model card, red-team sign-off",
+        "slug": "responsible-release-project",
+        "status": "live"
+      },
+      {
+        "title": "Common mistakes: responsible AI in practice",
+        "slug": "responsible-ai-mistakes",
+        "status": "live"
+      },
+      {
+        "title": "Responsible AI cheatsheet",
+        "slug": "responsible-ai-cheatsheet",
+        "status": "live"
+      },
+      {
+        "title": "Worked example: a contestability path that actually works",
+        "slug": "contestability-worked-example",
+        "status": "live"
       }
     ]
   },
@@ -11326,6 +11556,26 @@ const unsortedTracks: Track[] = [
         "slug": "framework-comparison-and-escape-hatches",
         "status": "live",
         "prereq": ["raw-sdk-agent-baseline"]
+      },
+      {
+        "title": "Agent frameworks cheatsheet",
+        "slug": "framework-cheatsheet",
+        "status": "live"
+      },
+      {
+        "title": "Agent frameworks: common mistakes",
+        "slug": "framework-mistakes",
+        "status": "live"
+      },
+      {
+        "title": "Worked example: the task the framework could not express",
+        "slug": "framework-leak-worked-example",
+        "status": "live"
+      },
+      {
+        "title": "Project: framework selection bake-off",
+        "slug": "framework-selection-project",
+        "status": "live"
       }
     ]
   },

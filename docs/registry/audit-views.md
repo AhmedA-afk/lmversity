@@ -1,17 +1,17 @@
 # Content registry — audit views
 
-Generated 2026-09-15T20:18:03.033Z by `scripts/build-content-registry.mjs`.
-2686 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T20:50:35.048Z by `scripts/build-content-registry.mjs`.
+2736 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
 
-- lesson: 2167
+- lesson: 2177
 - quiz: 143
-- reference: 107
+- reference: 122
 - lab: 78
+- project: 59
 - answer: 35
-- project: 34
 - interview: 27
 - page: 26
 - blog: 20
@@ -23,19 +23,19 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By status
 
-- live: 2686
+- live: 2736
 
 ## By search intent (heuristic)
 
-- concept: 1983
+- concept: 1894
 - practice: 143
+- build: 137
+- reference: 123
 - comparison: 116
-- build: 112
-- reference: 108
+- worked-example: 96
+- troubleshooting: 62
 - answer: 35
-- worked-example: 33
 - interview-prep: 27
-- troubleshooting: 26
 - how-to: 20
 - read: 20
 - hub: 14
@@ -47,10 +47,10 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By primary audience (heuristic)
 
-- ai-engineer: 1809
-- beginner-engineer: 440
+- ai-engineer: 1850
+- beginner-engineer: 448
 - forward-deployed-engineer: 195
-- general: 192
+- general: 193
 - job-candidate: 27
 - ml-engineer: 2
 - data-scientist: 2
@@ -86,34 +86,38 @@ and split always need a written human reason (see checklist).
 
 | disposition | items |
 |---|---:|
-| investigate | 2336 |
+| investigate | 2386 |
 | keep | 345 |
 | expand | 5 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2418 | 1.91 | 0 | 211 | 2207 |
-| correctnessSources | 51 | 1.25 | 0 | 38 | 13 |
-| completeness | 2581 | 1.63 | 48 | 852 | 1681 |
-| prerequisiteFit | 2422 | 0.15 | 2242 | 0 | 180 |
-| handsOn | 2418 | 1.40 | 676 | 91 | 1651 |
-| explanationQuality | 2418 | 1.92 | 68 | 58 | 2292 |
-| metadata | 2418 | 1.84 | 0 | 375 | 2043 |
-| linking | 2275 | 1.51 | 397 | 332 | 1546 |
-| freshnessHealth | 2686 | 0.77 | 928 | 1441 | 317 |
+| intentClarity | 2428 | 1.91 | 0 | 210 | 2218 |
+| correctnessSources | 52 | 1.27 | 0 | 38 | 14 |
+| completeness | 2631 | 1.64 | 47 | 849 | 1735 |
+| prerequisiteFit | 2472 | 0.15 | 2292 | 0 | 180 |
+| handsOn | 2428 | 1.41 | 671 | 91 | 1666 |
+| explanationQuality | 2428 | 1.92 | 68 | 57 | 2303 |
+| metadata | 2428 | 1.85 | 0 | 375 | 2053 |
+| linking | 2285 | 1.51 | 392 | 329 | 1564 |
+| freshnessHealth | 2736 | 0.77 | 945 | 1468 | 323 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
 
 ### Non-keep dispositions
 
-#### investigate: live lesson not registered in curriculum (2239)
+#### investigate: live lesson not registered in curriculum (2289)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
 - /learn/agent-frameworks/crewai-crews-and-flows — CrewAI: role-based crews with deterministic flows
 - /learn/agent-frameworks/dspy-programmatic-prompting — DSPy: programming, not prompting
+- /learn/agent-frameworks/framework-cheatsheet — Agent Frameworks Cheatsheet
 - /learn/agent-frameworks/framework-comparison-and-escape-hatches — Comparing frameworks — and the escape hatches that matter
+- /learn/agent-frameworks/framework-leak-worked-example — Worked Example: The Task the Framework Couldn't Express
+- /learn/agent-frameworks/framework-mistakes — Agent Frameworks: Common Mistakes
+- /learn/agent-frameworks/framework-selection-project — Project: Framework Selection Bake-Off
 - /learn/agent-frameworks/google-adk — Google ADK: workflow agents and multi-agent teams
 - /learn/agent-frameworks/haystack-pipelines — Haystack: explicit pipelines for retrieval and agents
 - /learn/agent-frameworks/langchain-agents-and-integrations — LangChain: the integration layer, then agents
@@ -134,22 +138,18 @@ and split always need a written human reason (see checklist).
 - /learn/agent-skills/skill-vs-prompt-rule-hook-mcp-subagent — Skill vs prompt vs project rule vs hook vs MCP vs subagent
 - /learn/agent-skills/skills-projects-first-skill-and-capstone — Projects: build your first skill, then turn a workflow into a tested one
 - /learn/agentic-ai/agent-benchmarks — Benchmarking Agents: SWE-bench, WebArena, and GAIA
+- /learn/agentic-ai/agent-loop-mistakes — Common Mistakes: Agent Loop Design
 - /learn/agentic-ai/agent-memory-short-vs-long-term — Short-Term vs Long-Term Memory
 - /learn/agentic-ai/agent-orchestration-frameworks — Choosing an Orchestration Framework
 - /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access
+- /learn/agentic-ai/agent-run-worked-example — Worked Example: An Agent Run, Step by Step
 - /learn/agentic-ai/agent-task-contracts — Write a task contract for an agent
 - /learn/agentic-ai/agent-to-agent-protocols — Agent-to-Agent Protocols: How Agents Will Talk to Each Other
+- /learn/agentic-ai/agentic-ai-cheatsheet — Agentic AI Cheatsheet
 - /learn/agentic-ai/agents-vs-workflows — Choose an agent only when a workflow is not enough
 - /learn/agentic-ai/autonomy-vs-control — Setting the Autonomy Dial
 - /learn/agentic-ai/blackboard-and-swarm-patterns — Blackboard and Swarm: Decentralized Multi-Agent Coordination
-- /learn/agentic-ai/choosing-an-agent-framework — LangGraph, CrewAI, AutoGen: What Each Framework Actually Buys You
-- /learn/agentic-ai/coding-agent-architecture — Inside a Coding Agent: How Claude Code and SWE-Agent Work
-- /learn/agentic-ai/common-agent-failure-modes — Diagnosing Agent Failure Modes
-- /learn/agentic-ai/computer-use-agents — Computer-Use Agents: Letting a Model Operate a GUI
-- /learn/agentic-ai/cost-aware-agent-loops — Cost-Aware Agents: Budgeting Tokens Across a Long-Running Loop
-- /learn/agentic-ai/error-handling-and-retries — Recovering When Tools Fail
-- /learn/agentic-ai/evaluating-agent-behavior-in-dev — Reading an Agent's Trace
-- … 2199 more in content-registry.json
+- … 2249 more in content-registry.json
 
 #### investigate: zero in-body internal links (97)
 
@@ -217,15 +217,15 @@ and split always need a written human reason (see checklist).
 
 ## Duplicate candidates
 
-353 pairs by title/slug similarity (117 not already cross-linked) — candidates for the merge/redirect editorial pass, not verdicts. Pairs where one already links to the other are marked linked — often deliberate two-part lessons.
+367 pairs by title/slug similarity (130 not already cross-linked) — candidates for the merge/redirect editorial pass, not verdicts. Pairs where one already links to the other are marked linked — often deliberate two-part lessons.
 
 | item A | item B | jac | contain | stem | linked | scope |
 |---|---|---:|---:|---|---|---|
 | /learn/prompt-engineering/meta-prompting-to-draft-prompts | /learn/prompt-engineering/meta-prompting-with-models | 1 | 1 |  | yes | same track |
+| /learn/prompt-engineering/task-framing-intent-constraints-criteria | /learn/prompt-engineering/task-framing | 1 | 1 | yes | yes | same track |
 | /learn/llm-foundations/grouped-query-attention | /learn/llm-foundations/multi-query-and-grouped-query-attention | 1 | 1 |  | yes | same track |
 | /learn/genai-app-dev/generative-ui-rendering-components | /learn/genai-app-dev/generative-ui | 1 | 1 | yes | yes | same track |
 | /learn/tools-function-calling/structured-output-vs-tool-calls-when | /learn/tools-function-calling/structured-output-vs-tool-calls | 1 | 1 | yes | yes | same track |
-| /learn/prompt-engineering/task-framing-intent-constraints-criteria | /learn/prompt-engineering/task-framing | 1 | 1 | yes | yes | same track |
 | /learn/genai-app-dev/session-and-state-management | /learn/genai-app-dev/session-state-multi-turn | 0.83 | 1 |  | yes | same track |
 | /learn/tools-function-calling/openapi-to-schema-conversion | /learn/tools-function-calling/openapi-to-tool-schema | 0.83 | 1 |  | yes | same track |
 | /learn/context-engineering/context-window-testing-and-eval | /learn/context-engineering/testing-whether-context-helps | 0.83 | 1 |  | yes | same track |
@@ -249,12 +249,12 @@ and split always need a written human reason (see checklist).
 | /learn/structured-outputs/schema-versioning-and-migration | /learn/structured-outputs/schema-versioning-basics | 0.71 | 1 |  | yes | same track |
 | /learn/ai-foundations/ai-systems/111-alpha-beta-pruning-and-move-ordering | /learn/classical-ai/search-planning/113-alpha-beta-pruning-bounds-move-ordering-and-exactness | 0.71 | 1 |  | yes | ai-foundations × classical-ai |
 | /learn/prompt-engineering/automatic-prompt-optimization-dspy | /learn/prompt-engineering/automatic-prompt-optimization | 0.67 | 1 | yes | yes | same track |
+| /learn/structured-outputs/reliability-design-mistakes | /learn/tools-function-calling/reliability-common-mistakes | 0.67 | 1 |  |  | structured-outputs × tools-function-calling |
 | /learn/ai-foundations/ai-vs-ml-vs-deep-learning | /answers/difference-between-ai-and-machine-learning | 0.67 | 1 |  | yes | ai-foundations × answers |
 | /learn/context-engineering/context-engineering-vs-prompting | /learn/prompt-engineering/what-prompt-engineering-is | 0.67 | 1 |  |  | context-engineering × prompt-engineering |
 | /learn/prompt-engineering/what-prompt-engineering-is | /learn/tools-function-calling/descriptions-are-prompts | 0.67 | 1 |  | yes | prompt-engineering × tools-function-calling |
 | /learn/tools-function-calling/chaining-into-dag-workflows | /learn/tools-function-calling/chaining-tools-into-workflows | 0.67 | 1 |  | yes | same track |
 | /learn/context-engineering/cache-aware-context-design-deep | /learn/context-engineering/cache-aware-context-design | 0.67 | 1 | yes | yes | same track |
-| /learn/structured-outputs/reliability-design-mistakes | /learn/tools-function-calling/reliability-common-mistakes | 0.67 | 1 |  |  | structured-outputs × tools-function-calling |
 | /learn/genai-app-dev/quiz-reliability-safety | /learn/tools-function-calling/reliability-quiz | 0.67 | 1 |  |  | genai-app-dev × tools-function-calling |
 | /learn/deep-learning/core/129-transfer-learning-fine-tuning-and-domain-shift | /learn/deep-learning/vision/211-transfer-learning-and-fine-tuning | 0.67 | 1 |  | yes | same track |
 | /learn/ai-foundations/applied-ai/308-training-and-inference-economics | /learn/ai-foundations/training-vs-inference | 0.67 | 1 |  | yes | same track |
@@ -268,6 +268,7 @@ and split always need a written human reason (see checklist).
 | /learn/context-engineering/context-handoff-between-agents-deep | /learn/context-engineering/context-handoff-between-agents | 0.5 | 1 | yes | yes | same track |
 | /learn/context-engineering/tokens-are-not-words | /learn/llm-foundations/why-models-need-tokens-not-characters | 0.5 | 1 |  | yes | context-engineering × llm-foundations |
 | /learn/prompt-engineering/what-prompting-is | /learn/prompt-engineering/what-role-prompting-changes | 0.5 | 1 |  | yes | same track |
+| /learn/hallucinations/production-reliability-cheatsheet | /learn/production/production-cheatsheet | 0.5 | 1 |  |  | hallucinations × production |
 | /learn/context-engineering/conversation-memory-and-state | /learn/context-engineering/cross-session-memory-architecture | 0.5 | 1 |  | yes | same track |
 | /learn/prompt-engineering/what-prompt-engineering-is | /answers/prompt-engineering-vs-context-engineering | 0.5 | 1 |  | yes | prompt-engineering × answers |
 | /learn/maths-foundations/partial-derivatives-and-chain-rule | /learn/maths-foundations/the-chain-rule | 0.5 | 1 |  | yes | same track |
@@ -280,54 +281,24 @@ and split always need a written human reason (see checklist).
 | /learn/tools-function-calling/foundations-quiz | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  |  | same track |
 | /learn/tools-function-calling/parallel-tool-calls-mechanics | /learn/tools-function-calling/parallel-tool-calls | 0.5 | 1 | yes | yes | same track |
 | /learn/tools-function-calling/taxonomy-of-tool-failures | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  | yes | same track |
-| /learn/tools-function-calling/tool-calling-across-providers | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  | yes | same track |
 
-_… 293 more pairs in content-registry.json (`duplicates`)_
+_… 307 more pairs in content-registry.json (`duplicates`)_
 
 ## Title-overpromise candidates
 
-1 items whose titles claim more than the body structure delivers — scope words on thin bodies, or numeric promises ("7 mistakes") the heading/list structure doesn't fulfill. Candidates, not verdicts.
+0 items whose titles claim more than the body structure delivers — scope words on thin bodies, or numeric promises ("7 mistakes") the heading/list structure doesn't fulfill. Candidates, not verdicts.
 
-| item | words | signals |
-|---|---:|---|
-| /learn/machine-learning/assessments/ml-849-staged-capstone-handbook | 368 | scope word "handbook" on 368w vs ~1069w median |
 
 ## Sourcing review flags
 
-279 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
+174 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
 
 | item | flags |
 |---|---|
-| /learn/agent-frameworks/agno-teams-and-agentos | release-sensitive page with no updated/review date |
-| /learn/agent-frameworks/claude-agent-sdk | release-sensitive page with no updated/review date |
-| /learn/agent-frameworks/crewai-crews-and-flows | release-sensitive page with no updated/review date |
-| /learn/agent-frameworks/dspy-programmatic-prompting | release-sensitive page with no updated/review date |
-| /learn/agent-frameworks/framework-comparison-and-escape-hatches | release-sensitive page with no updated/review date |
-| /learn/agent-frameworks/google-adk | release-sensitive page with no updated/review date |
-| /learn/agent-frameworks/haystack-pipelines | release-sensitive page with no updated/review date |
-| /learn/agent-frameworks/langchain-agents-and-integrations | release-sensitive page with no updated/review date |
-| /learn/agent-frameworks/langgraph-durable-agents | release-sensitive page with no updated/review date |
-| /learn/agent-frameworks/llamaindex-data-framework | release-sensitive page with no updated/review date |
-| /learn/agent-frameworks/mastra-typescript-agents | pricing-sensitive page with no updated/review date |
-| /learn/agent-frameworks/microsoft-agent-frameworks | pricing-sensitive page with no updated/review date |
-| /learn/agent-frameworks/no-code-ai-workflows | release-sensitive page with no updated/review date |
-| /learn/agent-frameworks/openai-agents-sdk | pricing-sensitive page with no updated/review date |
-| /learn/agent-frameworks/pydanticai-typed-agents | release-sensitive page with no updated/review date |
-| /learn/agent-frameworks/structured-output-libraries | release-sensitive page with no updated/review date |
-| /learn/agent-frameworks/vercel-ai-sdk | release-sensitive page with no updated/review date |
-| /learn/agent-skills/agent-skills-spec-and-progressive-disclosure | release-sensitive page with no updated/review date |
-| /learn/agent-skills/evaluating-and-porting-skills | policy-sensitive page with no updated/review date |
-| /learn/agent-skills/skill-md-anatomy | policy-sensitive page with no updated/review date |
-| /learn/agent-skills/skill-security-and-provenance | certification-sensitive page with no updated/review date |
-| /learn/agent-skills/skill-vs-prompt-rule-hook-mcp-subagent | release-sensitive page with no updated/review date |
-| /learn/agentic-ai/agent-permissions-and-authorization | certification-sensitive page with no updated/review date |
-| /learn/agentic-ai/multi-agent-workflow-project | pricing-sensitive page with no updated/review date |
-| /learn/ai-automation-ops/auditability-and-run-history | release-sensitive page with no updated/review date |
-| /learn/ai-automation-ops/automation-design-lab | pricing-sensitive page with no updated/review date |
-| /learn/ai-automation-ops/automation-landscape-deterministic-to-agentic | release-sensitive page with no updated/review date |
-| /learn/ai-automation-ops/llm-steps-in-automation | pricing-sensitive page with no updated/review date |
-| /learn/ai-automation-ops/where-ai-belongs-in-a-workflow | pricing-sensitive page with no updated/review date |
-| /learn/ai-automation-ops/workflow-platforms-compared | pricing-sensitive page with no updated/review date |
+| /learn/agent-frameworks/framework-cheatsheet | pricing-sensitive page with no updated/review date |
+| /learn/agent-frameworks/framework-leak-worked-example | release-sensitive page with no updated/review date |
+| /learn/agent-frameworks/framework-mistakes | release-sensitive page with no updated/review date |
+| /learn/agent-frameworks/framework-selection-project | release-sensitive page with no updated/review date |
 | /learn/ai-for-designers/ai-product-design-foundations-quiz | pricing-sensitive page with no updated/review date |
 | /learn/ai-for-designers/choosing-where-ai-belongs-worked-example | pricing-sensitive page with no updated/review date |
 | /learn/ai-for-designers/correction-undo-and-recovery-patterns | policy-sensitive page with no updated/review date |
@@ -349,39 +320,58 @@ _… 293 more pairs in content-registry.json (`duplicates`)_
 | /learn/ai-foundations/what-a-model-actually-is | 4 numeric claims with no sources section or external link |
 | /learn/ai-literacy/common-myths-about-ai-debunked | 6 numeric claims with no sources section or external link |
 | /learn/ai-literacy/cost-and-limits-quiz | 8 numeric claims with no sources section or external link |
+| /learn/ai-literacy/everyday-ai-mistakes | pricing-sensitive page with no updated/review date |
 | /learn/ai-literacy/judging-and-verifying-quiz | 42 numeric claims with no sources section or external link |
-| /learn/ai-literacy/meet-skills-connectors-and-agents | release-sensitive page with no updated/review date |
 | /learn/ai-literacy/the-real-limits-of-ai-today | 5 numeric claims with no sources section or external link |
 | /learn/ai-literacy/what-not-to-paste-into-ai | 10 numeric claims with no sources section or external link |
 | /learn/ai-literacy/what-using-ai-actually-costs | 4 numeric claims with no sources section or external link |
 | /learn/ai-literacy/when-ai-gets-numbers-and-math-wrong | 103 numeric claims with no sources section or external link |
 | /learn/classical-ai/search-planning/112-adversarial-search-games-utilities-and-minimax | 4 numeric claims with no sources section or external link |
-| /learn/cli-agents/cli-agent-labs | release-sensitive page with no updated/review date |
-| /learn/cli-agents/customizing-the-agent-surface | release-sensitive page with no updated/review date |
+| /learn/context-engineering/budgeting-and-observability-quiz | 48 numeric claims with no sources section or external link |
+| /learn/context-engineering/compaction-memory-quiz | 15 numeric claims with no sources section or external link |
+| /learn/context-engineering/cost-latency-quality-tradeoff-curve | 48 numeric claims with no sources section or external link |
+| /learn/context-engineering/deduping-overlapping-tool-results | 10 numeric claims with no sources section or external link |
+| /learn/context-engineering/dissecting-a-live-context-payload | 23 numeric claims with no sources section or external link |
+| /learn/context-engineering/dynamic-budget-reallocation | 32 numeric claims with no sources section or external link |
+| /learn/context-engineering/failure-modes-quiz | 5 numeric claims with no sources section or external link |
+| /learn/context-engineering/foundations-quiz | 9 numeric claims with no sources section or external link |
+| /learn/context-engineering/instrumenting-token-spend-in-production | 8 numeric claims with no sources section or external link |
+| /learn/context-engineering/just-in-time-context-loading-pattern | 4 numeric claims with no sources section or external link |
+| /learn/context-engineering/measuring-cache-savings | 26 numeric claims with no sources section or external link |
+| /learn/context-engineering/poisoning-real-world-scenarios | 4 numeric claims with no sources section or external link |
+| /learn/context-engineering/prompt-caching-mechanics | 6 numeric claims with no sources section or external link |
+| /learn/context-engineering/reading-a-context-budget-pie | 33 numeric claims with no sources section or external link |
+| /learn/context-engineering/retrieving-then-filtering-pipeline | 4 numeric claims with no sources section or external link |
+| /learn/context-engineering/selection-ordering-quiz | 10 numeric claims with no sources section or external link |
+| /learn/context-engineering/the-budget-allocation-mental-model | 15 numeric claims with no sources section or external link |
+| /learn/context-engineering/the-whole-game-of-context-engineering | 6 numeric claims with no sources section or external link |
+| /learn/context-engineering/token-accounting-per-turn-ledger | 48 numeric claims with no sources section or external link |
+| /learn/context-engineering/tool-output-is-context-too | 8 numeric claims with no sources section or external link |
+| /learn/context-engineering/why-context-is-the-real-bottleneck | 7 numeric claims with no sources section or external link |
+| /learn/deep-learning/sequence-generative/317-language-model-objectives-and-tokenization | 9 numeric claims with no sources section or external link |
+| /learn/deep-learning/sequence-generative/320-language-model-evaluation-calibration-and-behavior | 9 numeric claims with no sources section or external link |
+| /learn/deep-learning/vision/223-pruning-sparsity-and-quantization | 6 numeric claims with no sources section or external link |
+| /learn/evals-red-teaming/eval-regression-worked-example | pricing-sensitive page with no updated/review date; 13 numeric claims with no sources section or external link |
+| /learn/evals-red-teaming/flaky-eval-mitigation | 5 numeric claims with no sources section or external link |
+| /learn/fine-tuning/context-length-extension-rope-scaling | 8 numeric claims with no sources section or external link |
+| /learn/fine-tuning/fine-tune-regression-worked-example | pricing-sensitive page with no updated/review date; 15 numeric claims with no sources section or external link |
 
-_… 219 more in content-registry.json (`sourcingFlags`)_
+_… 114 more in content-registry.json (`sourcingFlags`)_
 
 ## Freshness queues
 
 Review order: volatile classes first, oldest last-verified date first; undated items lead each queue. `verified`/`updated`/`published` supply the last-verified date — git-derived when frontmatter is absent.
 
-- periodic: 1441
-- pricing-sensitive: 368
-- release-sensitive: 360
-- durable: 266
+- periodic: 1468
+- pricing-sensitive: 376
+- release-sensitive: 365
+- durable: 272
 - certification-sensitive: 104
-- policy-sensitive: 96
+- policy-sensitive: 100
 - volatile: 51
 
 ### certification-sensitive (104) — oldest-verified first
 
-- /learn/agent-skills/skill-security-and-provenance — Skill provenance, review, and the safe-installation checklist *(verified undated)*
-- /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access *(verified undated)*
-- /learn/llm-security/owasp-llm-and-agentic-top-10 — OWASP Top 10 for LLM and agentic applications *(verified undated)*
-- /learn/llm-security/sandboxing-code-execution-and-browser-use — Sandboxing code execution and browser use *(verified undated)*
-- /learn/tools-function-calling/building-a-database-tool — Lab: build a read-only database tool *(verified undated)*
-- /learn/web-agents/sessions-credentials-and-act-boundaries — Sessions, credentials, and the observe/act boundary *(verified undated)*
-- /learn/harness-design/deny-floors-and-policy-layers — Deny-Floors: Rules No Prompt Can Override *(verified 2026-08-29)*
 - /learn/ai-foundations/reliable-ai/201-provenance-consent-and-data-rights — Provenance, Consent, and Data Rights *(verified 2026-08-30)*
 - /learn/ai-foundations/reliable-ai/202-labels-annotation-and-ground-truth — Labels, Annotation, and the Limits of Ground Truth *(verified 2026-08-30)*
 - /learn/ai-foundations/reliable-ai/203-benchmarks-evaluations-and-capability-claims — Benchmarks, Evaluations, and Defensible Capability Claims *(verified 2026-08-30)*
@@ -405,159 +395,166 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-foundations/reliable-ai/221-contestability-appeals-and-recource — Contestability, Appeals, and Recourse *(verified 2026-08-30)*
 - /learn/ai-foundations/reliable-ai/222-societal-impact-labor-and-power — Societal Impact, Labour, and Power *(verified 2026-08-30)*
 - /learn/ai-foundations/reliable-ai/223-environmental-impact-and-compute-governance — Environmental Impact and Compute Governance *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/224-safety-cases-and-deployment-assurance — Safety Cases and Deployment Assurance *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/225-case-study-health-and-clinical-support — Case Study: Health and Clinical Support *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/226-case-study-finance-and-public-services — Case Study: Finance and Public Services *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/227-case-study-generative-agents-and-critical-workflows — Case Study: Generative Agents in Critical Workflows *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/228-reliable-ai-capstone-and-technical-defense — Reliable AI Capstone and Technical Defense *(verified 2026-08-30)*
+- /learn/ai-literacy/fact-check-an-ai-answer-step-by-step — Fact-checking an AI answer, step by step *(verified 2026-08-30)*
+- /learn/ai-literacy/run-a-real-task-end-to-end-with-verification — Capstone: run a real task end to end, verified *(verified 2026-08-30)*
 - … 74 more in content-registry.json
 
-### pricing-sensitive (368) — oldest-verified first
+### pricing-sensitive (376) — oldest-verified first
 
-- /learn/agent-frameworks/mastra-typescript-agents — Mastra: the TypeScript agent framework *(verified undated)*
-- /learn/agent-frameworks/microsoft-agent-frameworks — Microsoft's agent frameworks: Semantic Kernel, AutoGen, and the convergence *(verified undated)*
-- /learn/agent-frameworks/openai-agents-sdk — OpenAI Agents SDK: agents, handoffs, and guardrails *(verified undated)*
-- /learn/agentic-ai/multi-agent-workflow-project — Project: A Multi-Agent Workflow With Explicit Delegation and Shared-State Limits *(verified undated)*
-- /learn/ai-automation-ops/automation-design-lab — Lab: design an ops automation *(verified undated)*
-- /learn/ai-automation-ops/llm-steps-in-automation — LLM steps in automation *(verified undated)*
-- /learn/ai-automation-ops/where-ai-belongs-in-a-workflow — Where AI belongs in a workflow *(verified undated)*
-- /learn/ai-automation-ops/workflow-platforms-compared — Workflow platforms compared: n8n, Zapier, Make, Pipedream *(verified undated)*
+- /learn/agent-frameworks/framework-cheatsheet — Agent Frameworks Cheatsheet *(verified undated)*
 - /learn/ai-for-designers/ai-product-design-foundations-quiz — Quiz: AI product design foundations *(verified undated)*
 - /learn/ai-for-designers/choosing-where-ai-belongs-worked-example — Choosing where AI belongs: a worked example *(verified undated)*
-- /learn/harness-design/web-harness-case-study — Case study: a web-navigation harness end to end *(verified undated)*
-- /learn/llm-security/guardrails-frameworks-in-practice — Guardrails AI, NeMo Guardrails, and Llama Guard: the filter layer in depth *(verified undated)*
-- /learn/machine-learning/predictive-ml-vs-generative-ai — Separate predictive-ML choices from generative-AI choices *(verified undated)*
-- /learn/multilingual-ai/multilingual-cost-and-latency — Multilingual cost and latency *(verified undated)*
-- /learn/multimodal-ai/image-generation-in-products — Image generation in products: when it serves the product vs decorates it *(verified undated)*
-- /learn/multimodal-ai/multimodal-cost-and-latency — Multimodal cost and latency: the economics of non-text tokens *(verified undated)*
-- /learn/production/deployment-variants-cloud-and-portable — Deployment variants: one managed-cloud path and one portable path *(verified undated)*
-- /learn/production/langfuse-observability — Langfuse: the open-source observability platform *(verified undated)*
-- /learn/production/provider-gateway-project — Project: A Provider Gateway — Normalized Requests, Errors, Streaming, Fallback *(verified undated)*
-- /learn/rag/managed-vector-databases — Pinecone, Weaviate, Qdrant, Milvus: the dedicated vector databases *(verified undated)*
-- /learn/web-agents/agentic-browsers-overview — Agentic browsers: Browser Use, Stagehand, Browserbase, and computer-use tools *(verified undated)*
-- /learn/web-agents/extraction-and-evaluation — Extraction with schemas, and evaluating whether the browser task worked *(verified undated)*
-- /interview/ai-foundations — AI foundations interview questions *(verified undated)*
-- /interview/behavioral-and-project-defense — Behavioral and project-defense interview questions *(verified undated)*
-- /interview/role-ai-platform-engineer — AI platform engineer interview questions *(verified undated)*
-- /interview/role-product-manager — Product manager interview questions (AI track) *(verified undated)*
-- /scenarios/browser-agent-permissions — A research agent that wandered into a checkout page *(verified undated)*
+- /learn/ai-literacy/everyday-ai-mistakes — Common Mistakes: Everyday AI Use *(verified undated)*
+- /learn/evals-red-teaming/eval-regression-worked-example — Worked Example: An Eval That Passed and Shipped a Regression *(verified undated)*
+- /learn/fine-tuning/fine-tune-regression-worked-example — Worked Example: A Fine-Tune That Fixed One Thing and Broke Three *(verified undated)*
+- /learn/genai-app-dev/genai-feature-worked-example — Worked Example: A GenAI Feature From Demo to Production *(verified undated)*
+- /learn/multimodal-ai/document-pipeline-worked-example — Worked Example: A Document Pipeline That Costs 10× What It Should *(verified undated)*
+- /learn/multimodal-ai/multimodal-cheatsheet — Multimodal AI Cheatsheet *(verified undated)*
+- /learn/multimodal-ai/multimodal-mistakes — Multimodal AI: Common Mistakes *(verified undated)*
 - /learn/ai-foundations/choosing-a-model — Choosing a model in 2026 *(verified 2026-08-29)*
 - /learn/ai-foundations/tokens-context-cost — Tokens, context & cost *(verified 2026-08-29)*
-- /learn/evals-red-teaming/building-a-golden-dataset — Building a Golden Dataset *(verified 2026-08-29)*
-- … 338 more in content-registry.json
+- /learn/prompt-engineering/chain-of-thought-prompting — Chain-of-Thought: Getting the Model to Show Its Work *(verified 2026-08-29)*
+- /learn/prompt-engineering/few-shot-prompting — Few-Shot Prompting: Teaching by Example *(verified 2026-08-29)*
+- /learn/prompt-engineering/system-vs-user-prompts — System Prompts vs User Prompts *(verified 2026-08-29)*
+- /learn/ai-foundations/classification-vs-regression — Classification vs. Regression: The Two Basic Prediction Tasks *(verified 2026-08-30)*
+- /learn/ai-foundations/supervised-learning-explained — Supervised Learning, Explained *(verified 2026-08-30)*
+- /learn/ai-literacy/ai-literacy-master-cheatsheet — Cheatsheet: the AI literacy master reference *(verified 2026-08-30)*
+- /learn/ai-literacy/compare-ai-tools-for-one-real-task — Comparing AI tools for one real task *(verified 2026-08-30)*
+- /learn/ai-literacy/free-vs-paid-ai-what-you-get — Free vs. paid AI: what you actually get *(verified 2026-08-30)*
+- /learn/ai-literacy/is-ai-worth-it-for-this-task — Is AI worth it here? A cost-benefit walkthrough *(verified 2026-08-30)*
+- /learn/ai-literacy/the-real-limits-of-ai-today — The real limits of today's AI *(verified 2026-08-30)*
+- /learn/ai-literacy/the-verification-checklist — Cheatsheet: the verification checklist *(verified 2026-08-30)*
+- /learn/ai-literacy/using-ai-honestly-and-responsibly — Using AI honestly and responsibly *(verified 2026-08-30)*
+- /learn/ai-literacy/verification-tactics-by-task-type — How to verify different kinds of AI output *(verified 2026-08-30)*
+- /learn/ai-literacy/what-a-hallucination-really-is — What an AI 'hallucination' really is *(verified 2026-08-30)*
+- /learn/ai-literacy/what-ai-actually-is — What AI actually is (and what it isn't) *(verified 2026-08-30)*
+- /learn/ai-literacy/what-ai-can-and-cant-do-overview — What AI can and can't do: the whole picture *(verified 2026-08-30)*
+- /learn/ai-literacy/what-happens-to-what-you-type — What happens to what you type into AI *(verified 2026-08-30)*
+- /learn/ai-literacy/what-not-to-paste-into-ai — What you should never paste into AI *(verified 2026-08-30)*
+- … 346 more in content-registry.json
 
-### policy-sensitive (96) — oldest-verified first
+### policy-sensitive (100) — oldest-verified first
 
-- /learn/agent-skills/evaluating-and-porting-skills — Evaluating skills with fixtures, and porting them across agents *(verified undated)*
-- /learn/agent-skills/skill-md-anatomy — SKILL.md anatomy: frontmatter, body, and bundled resources *(verified undated)*
 - /learn/ai-for-designers/correction-undo-and-recovery-patterns — Correction, undo, and recovery patterns *(verified undated)*
 - /learn/ai-for-designers/creating-a-realistic-ai-test-set — Creating a realistic AI test set *(verified undated)*
 - /learn/ai-for-designers/prototype-ai-behavior-without-a-model — Prototype AI behavior without a model *(verified undated)*
 - /learn/ai-for-designers/prototype-and-evaluation-quiz — Quiz: prototype and evaluation *(verified undated)*
 - /learn/ai-for-designers/research-synthesis-lab — Lab: build a source-traceable research synthesis board *(verified undated)*
 - /learn/ai-for-designers/trust-and-recovery-quiz — Quiz: trust and recovery *(verified undated)*
-- /learn/llm-foundations/read-a-model-card-lab — Lab: read a model card like an engineer *(verified undated)*
-- /learn/llm-security/audit-logs-and-accountability — Audit logs, approval records, and data deletion: the accountability layer *(verified undated)*
-- /learn/llm-security/llm-supply-chain-security — LLM supply-chain security: secrets, dependencies, and model artifacts *(verified undated)*
-- /learn/local-inference/the-local-privacy-boundary — The local privacy boundary *(verified undated)*
-- /learn/multilingual-ai/code-mixing-and-code-switching — Code mixing and code-switching *(verified undated)*
-- /learn/multimodal-ai/multimodal-evaluation — Evaluating multimodal systems: accuracy you can't eyeball *(verified undated)*
-- /learn/rag/pgvector-in-postgres — pgvector: vector search inside the Postgres you already run *(verified undated)*
-- /learn/rag/search-engines-with-vectors — Elasticsearch, OpenSearch, Vespa: the search-engine lineage *(verified undated)*
-- /learn/responsible-ai/consent-contestability-and-impact — Consent, contestability, and the costs nobody measures *(verified undated)*
-- /learn/voice-ai/speech-synthesis-and-voice-design — Speech synthesis and voice design: TTS that doesn't feel like a machine *(verified undated)*
-- /learn/voice-ai/voice-ai-system-design — Voice AI system design: owning the pipeline vs renting it *(verified undated)*
-- /learn/voice-ai/voice-evaluation-and-testing — Evaluating voice agents: the metrics that predict real UX *(verified undated)*
-- /scenarios/coding-agent-rollout — Rolling out a coding agent without losing the repo *(verified undated)*
-- /scenarios/regulated-decision-support — An eligibility screener in a regulated workflow *(verified undated)*
-- /scenarios/voice-agent-latency — A phone agent that keeps talking over people *(verified undated)*
+- /learn/responsible-ai/contestability-worked-example — Worked Example: A Contestability Path That Actually Works *(verified undated)*
+- /learn/responsible-ai/responsible-ai-cheatsheet — Responsible AI Cheatsheet *(verified undated)*
+- /learn/responsible-ai/responsible-ai-mistakes — Common Mistakes: Responsible AI in Practice *(verified undated)*
+- /learn/responsible-ai/responsible-release-project — Project: A Responsible-AI Release — Risk Register, Model Card, Red-Team Sign-Off *(verified undated)*
 - /privacy — Privacy *(verified undated)*
 - /terms — Terms *(verified undated)*
-- /learn/agentic-ai/state-memory-and-recovery — Design agent state, memory, and recovery explicitly *(verified 2026-08-30)*
 - /learn/ai-foundations/open-weight-vs-closed-models — Open-Weight vs. Closed Models *(verified 2026-08-30)*
 - /learn/ai-literacy/ai-vs-human-thinking-compared — AI vs. a human expert: a side-by-side *(verified 2026-08-30)*
 - /learn/ai-literacy/data-privacy-provenance-and-policy — Protect data with privacy, provenance, and policy boundaries *(verified 2026-08-30)*
 - /learn/classical-ai/knowledge-uncertainty/215-knowledge-graphs-queries-provenance-and-embeddings — Knowledge graphs: queries, provenance, and embeddings *(verified 2026-08-30)*
-- … 66 more in content-registry.json
+- /learn/fine-tuning/picking-a-base-model-to-fine-tune — Choose a Base Model to Fine-Tune *(verified 2026-08-30)*
+- /learn/genai-app-dev/extracting-typed-data-from-freeform — Extracting Typed Records From Freeform Text *(verified 2026-08-30)*
+- /learn/hallucinations/leading-prompt-fabrication — Worked Example: False Premises and Leading Questions *(verified 2026-08-30)*
+- /learn/machine-learning/assessments/ml-842-assignment-01-reproducible-baseline — Assignment 1: frame a decision and ship a reproducible baseline *(verified 2026-08-30)*
+- /learn/machine-learning/assessments/ml-847-model-report-template — Model report template: predictive system review *(verified 2026-08-30)*
+- /learn/machine-learning/assessments/ml-848-model-report-template-high-stakes — Model report template: high-stakes review and human oversight *(verified 2026-08-30)*
+- /learn/machine-learning/assessments/ml-849-staged-capstone-handbook — Staged capstone handbook: from proposal to production review *(verified 2026-08-30)*
+- /learn/machine-learning/ml-114-lab-from-question-to-evaluation-plan — Lab: from question to evaluation plan *(verified 2026-08-30)*
+- /learn/machine-learning/ml-512-randomized-experiments-and-online-ab-tests — Randomized experiments and online A/B tests *(verified 2026-08-30)*
+- /learn/machine-learning/ml-707-lab-content-ranking-with-feedback — Lab: content ranking with feedback *(verified 2026-08-30)*
+- /learn/machine-learning/problem-sets/10-comprehensive-classical-ml-qualifying-exam — Problem Set 10: Comprehensive Classical ML Qualifying Exam *(verified 2026-08-30)*
+- /learn/machine-learning/public-data-projects/adult-income-project — Public-data project: Adult income prediction *(verified 2026-08-30)*
+- /learn/machine-learning/public-data-projects/aps-failure-project — Public-data project: APS Failure under imbalance *(verified 2026-08-30)*
+- /learn/machine-learning/public-data-projects/bank-marketing-project — Public-data project: Bank Marketing decision support *(verified 2026-08-30)*
+- … 70 more in content-registry.json
 
-### release-sensitive (360) — oldest-verified first
+### release-sensitive (365) — oldest-verified first
 
 Largest queue; full list in JSON. Oldest-verified sample:
-- /learn/agent-frameworks/agno-teams-and-agentos — Agno, LangGraph *(verified undated)*
-- /learn/agent-frameworks/claude-agent-sdk — Claude, MCP, Anthropic, OpenAI *(verified undated)*
-- /learn/agent-frameworks/crewai-crews-and-flows — CrewAI, LangGraph *(verified undated)*
-- /learn/agent-frameworks/dspy-programmatic-prompting — DSPy, LangGraph, Mastra *(verified undated)*
-- /learn/agent-frameworks/framework-comparison-and-escape-hatches — MCP, OpenAI, Claude, Vertex, LangGraph, LlamaIndex, PydanticAI, Agno, CrewAI, Mastra, Haystack, DSPy *(verified undated)*
-- /learn/agent-frameworks/google-adk — Vertex, Gemini, OpenAI *(verified undated)*
-- /learn/agent-frameworks/haystack-pipelines — Haystack, OpenSearch, Elasticsearch, pgvector, LlamaIndex, LangGraph *(verified undated)*
-- /learn/agent-frameworks/langchain-agents-and-integrations — LangChain, LangGraph, OpenAI, Anthropic *(verified undated)*
-- /learn/agent-frameworks/langgraph-durable-agents — LangGraph, LangSmith, LangChain *(verified undated)*
-- /learn/agent-frameworks/llamaindex-data-framework — LlamaIndex, LangGraph *(verified undated)*
-- /learn/agent-frameworks/no-code-ai-workflows — n8n, Zapier, Pipedream, LangChain *(verified undated)*
-- /learn/agent-frameworks/pydanticai-typed-agents — PydanticAI, LangGraph, OpenTelemetry *(verified undated)*
-- /learn/agent-frameworks/structured-output-libraries — Instructor, Outlines, OpenAI, vLLM, llama.cpp, Anthropic, SGLang, Gemini *(verified undated)*
-- /learn/agent-frameworks/vercel-ai-sdk — Mastra, PydanticAI, LangGraph *(verified undated)*
-- /learn/agent-skills/agent-skills-spec-and-progressive-disclosure — Anthropic, MCP *(verified undated)*
-- /learn/agent-skills/skill-vs-prompt-rule-hook-mcp-subagent — MCP *(verified undated)*
-- /learn/ai-automation-ops/auditability-and-run-history — n8n, Zapier, Pipedream *(verified undated)*
-- /learn/ai-automation-ops/automation-landscape-deterministic-to-agentic — n8n, Zapier, Pipedream *(verified undated)*
-- /learn/ai-literacy/meet-skills-connectors-and-agents — MCP *(verified undated)*
-- /learn/cli-agents/cli-agent-labs — Codex, Claude, Gemini, Aider *(verified undated)*
-- /learn/cli-agents/customizing-the-agent-surface — MCP, Model Context Protocol *(verified undated)*
-- /learn/cli-agents/getting-the-agent-oriented — Codex, Claude, Gemini, Aider *(verified undated)*
-- /learn/cli-agents/headless-runs-and-automation — MCP *(verified undated)*
-- /learn/cli-agents/permissions-sandboxes-and-git-workflow — Claude, Codex, Gemini *(verified undated)*
-- /learn/cli-agents/planning-modes-and-patch-review — Claude, Aider, Codex, Gemini *(verified undated)*
-- /learn/evals-red-teaming/multilingual-evaluation-design — Sarvam, AI4Bharat *(verified undated)*
-- /learn/genai-app-dev/building-for-indic-scripts-and-segmentation — AI4Bharat *(verified undated)*
-- /learn/genai-app-dev/indic-language-pipeline-lab — Sarvam, AI4Bharat, Bhashini *(verified undated)*
-- /learn/harness-design/agent-stack-vocabulary — MCP, Model Context Protocol *(verified undated)*
-- /learn/harness-design/harness-skill-and-mcp-integrations — MCP *(verified undated)*
-- … 330 more
+- /learn/agent-frameworks/framework-leak-worked-example — CrewAI, LangGraph *(verified undated)*
+- /learn/agent-frameworks/framework-mistakes — LangGraph *(verified undated)*
+- /learn/agent-frameworks/framework-selection-project — LangGraph, CrewAI, Agno, PydanticAI, OpenAI, Mastra, Claude *(verified undated)*
+- /learn/llm-foundations/llm-foundations-cheatsheet — Perplexity *(verified undated)*
+- /learn/mcp/mcp-production-server-project — MCP *(verified undated)*
+- /learn/genai-app-dev/streaming-responses-to-the-ui — Anthropic, OpenAI *(verified 2026-08-29)*
+- /learn/prompt-engineering/delimiters-and-formatting — Claude *(verified 2026-08-29)*
+- /learn/ai-foundations/foundation-models-explained — GPT-4, Claude, Gemini *(verified 2026-08-30)*
+- /learn/ai-foundations/interpretability-black-box-problem — Anthropic, Claude *(verified 2026-08-30)*
+- /learn/ai-foundations/narrow-ai-vs-general-ai — Claude *(verified 2026-08-30)*
+- /learn/ai-foundations/scaling-laws — OpenAI, GPT-3 *(verified 2026-08-30)*
+- /learn/ai-literacy/common-myths-about-ai-debunked — ChatGPT, Copilot *(verified 2026-08-30)*
+- /learn/ai-literacy/expecting-too-much-or-too-little — ChatGPT *(verified 2026-08-30)*
+- /learn/ai-literacy/types-of-ai-you-meet-every-day — ChatGPT, Claude, Gemini *(verified 2026-08-30)*
+- /learn/context-engineering/counting-tokens-in-practice — OpenAI, Claude, Anthropic *(verified 2026-08-30)*
+- /learn/context-engineering/just-in-time-context-loading — Claude *(verified 2026-08-30)*
+- /learn/context-engineering/progressive-tool-disclosure — MCP, Claude *(verified 2026-08-30)*
+- /learn/context-engineering/scratchpad-and-working-memory-patterns — Claude *(verified 2026-08-30)*
+- /learn/context-engineering/structured-memory-stores-compared — Redis *(verified 2026-08-30)*
+- /learn/context-engineering/structured-memory-stores — Redis, Pinecone, Weaviate, pgvector *(verified 2026-08-30)*
+- /learn/deep-learning/vision/223-pruning-sparsity-and-quantization — Unstructured *(verified 2026-08-30)*
+- /learn/fine-tuning/catastrophic-forgetting-and-overfitting — Perplexity *(verified 2026-08-30)*
+- /learn/fine-tuning/choosing-a-training-framework — Hugging Face *(verified 2026-08-30)*
+- /learn/fine-tuning/context-length-extension-rope-scaling — Llama, Mistral *(verified 2026-08-30)*
+- /learn/fine-tuning/dataset-decontamination-and-deduplication — Hugging Face *(verified 2026-08-30)*
+- /learn/fine-tuning/distributed-training-with-fsdp-and-deepspeed — Hugging Face *(verified 2026-08-30)*
+- /learn/fine-tuning/knowledge-distillation — GPT-4, Claude *(verified 2026-08-30)*
+- /learn/fine-tuning/learning-rate-schedules-and-warmup — Hugging Face *(verified 2026-08-30)*
+- /learn/fine-tuning/lora-rank-and-target-module-selection — Llama *(verified 2026-08-30)*
+- /learn/fine-tuning/memory-optimization-gradient-checkpointing-flash-attention — Hugging Face *(verified 2026-08-30)*
+- … 335 more
 
 ## Missing-data queues
 
 ### no summary/meta description (0)
 
 
-### no published or updated date (204)
+### no published or updated date (76)
 
-- /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
-- /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
-- /learn/agent-frameworks/crewai-crews-and-flows — CrewAI: role-based crews with deterministic flows
-- /learn/agent-frameworks/dspy-programmatic-prompting — DSPy: programming, not prompting
-- /learn/agent-frameworks/framework-comparison-and-escape-hatches — Comparing frameworks — and the escape hatches that matter
-- /learn/agent-frameworks/google-adk — Google ADK: workflow agents and multi-agent teams
-- /learn/agent-frameworks/haystack-pipelines — Haystack: explicit pipelines for retrieval and agents
-- /learn/agent-frameworks/langchain-agents-and-integrations — LangChain: the integration layer, then agents
-- /learn/agent-frameworks/langgraph-durable-agents — LangGraph: durable agents as state machines
-- /learn/agent-frameworks/llamaindex-data-framework — LlamaIndex: the data framework that grew agents
-- /learn/agent-frameworks/mastra-typescript-agents — Mastra: the TypeScript agent framework
-- /learn/agent-frameworks/microsoft-agent-frameworks — Microsoft's agent frameworks: Semantic Kernel, AutoGen, and the convergence
-- /learn/agent-frameworks/no-code-ai-workflows — n8n, Zapier, Make, Pipedream: bounded no-code AI workflows
-- /learn/agent-frameworks/openai-agents-sdk — OpenAI Agents SDK: agents, handoffs, and guardrails
-- /learn/agent-frameworks/pydanticai-typed-agents — PydanticAI: agents that type-check
-- /learn/agent-frameworks/raw-sdk-agent-baseline — The raw-SDK baseline every framework wraps
-- /learn/agent-frameworks/structured-output-libraries — Instructor, Outlines, Guidance: the constrained-output libraries
-- /learn/agent-frameworks/vercel-ai-sdk — Vercel AI SDK: streaming, tools, and generative UI
-- /learn/agent-skills/agent-skills-spec-and-progressive-disclosure — The Agent Skills spec and progressive disclosure
-- /learn/agent-skills/evaluating-and-porting-skills — Evaluating skills with fixtures, and porting them across agents
-- /learn/agent-skills/skill-md-anatomy — SKILL.md anatomy: frontmatter, body, and bundled resources
-- /learn/agent-skills/skill-security-and-provenance — Skill provenance, review, and the safe-installation checklist
-- /learn/agent-skills/skill-vs-prompt-rule-hook-mcp-subagent — Skill vs prompt vs project rule vs hook vs MCP vs subagent
-- /learn/agent-skills/skills-projects-first-skill-and-capstone — Projects: build your first skill, then turn a workflow into a tested one
-- /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access
-- /learn/agentic-ai/agent-task-contracts — Write a task contract for an agent
-- /learn/agentic-ai/multi-agent-workflow-project — Project: A Multi-Agent Workflow With Explicit Delegation and Shared-State Limits
-- /learn/agentic-ai/stateful-agent-checkpoints-project — Project: A Stateful Agent With Checkpoints and Resumable Execution
-- /learn/ai-automation-ops/approvals-and-human-in-the-loop — Approvals and human-in-the-loop
-- /learn/ai-automation-ops/auditability-and-run-history — Auditability and run history
-- /learn/ai-automation-ops/automation-design-lab — Lab: design an ops automation
-- /learn/ai-automation-ops/automation-landscape-deterministic-to-agentic — The automation landscape: deterministic to agentic
-- /learn/ai-automation-ops/llm-steps-in-automation — LLM steps in automation
-- /learn/ai-automation-ops/maintaining-automations — Maintaining automations
-- /learn/ai-automation-ops/where-ai-belongs-in-a-workflow — Where AI belongs in a workflow
-- /learn/ai-automation-ops/workflow-platforms-compared — Workflow platforms compared: n8n, Zapier, Make, Pipedream
+- /learn/agent-frameworks/framework-cheatsheet — Agent Frameworks Cheatsheet
+- /learn/agent-frameworks/framework-leak-worked-example — Worked Example: The Task the Framework Couldn't Express
+- /learn/agent-frameworks/framework-mistakes — Agent Frameworks: Common Mistakes
+- /learn/agent-frameworks/framework-selection-project — Project: Framework Selection Bake-Off
+- /learn/agentic-ai/agent-loop-mistakes — Common Mistakes: Agent Loop Design
+- /learn/agentic-ai/agent-run-worked-example — Worked Example: An Agent Run, Step by Step
+- /learn/agentic-ai/agentic-ai-cheatsheet — Agentic AI Cheatsheet
 - /learn/ai-for-designers/ai-feature-state-model-worked-example — AI feature state model: a worked example
 - /learn/ai-for-designers/ai-for-designers-course-guide — AI for Designers: course guide, lanes, and your first case study
 - /learn/ai-for-designers/ai-interaction-state-cheatsheet — AI interaction states cheatsheet
 - /learn/ai-for-designers/ai-product-design-common-mistakes — AI product design: common mistakes
-- … 164 more
+- /learn/ai-for-designers/ai-product-design-foundations-quiz — Quiz: AI product design foundations
+- /learn/ai-for-designers/ai-prototype-testing-common-mistakes — AI prototype testing: common mistakes
+- /learn/ai-for-designers/behavior-before-interface-quiz — Quiz: behavior before interface
+- /learn/ai-for-designers/capstone-design-a-trustworthy-ai-feature — Capstone: design a trustworthy AI feature
+- /learn/ai-for-designers/choosing-where-ai-belongs-worked-example — Choosing where AI belongs: a worked example
+- /learn/ai-for-designers/correction-undo-and-recovery-patterns — Correction, undo, and recovery patterns
+- /learn/ai-for-designers/creating-a-realistic-ai-test-set — Creating a realistic AI test set
+- /learn/ai-for-designers/designer-mental-model-for-generative-ai — A designer's mental model for generative AI
+- /learn/ai-for-designers/designing-a-ux-evaluation-rubric — Designing a UX evaluation rubric
+- /learn/ai-for-designers/designing-for-uncertainty — Designing for uncertainty
+- /learn/ai-for-designers/designing-the-ai-behavior-contract — Designing the AI behavior contract
+- /learn/ai-for-designers/deterministic-vs-probabilistic-interfaces-compared — Deterministic vs probabilistic interfaces, compared
+- /learn/ai-for-designers/human-review-and-approval-boundaries — Human review and approval boundaries
+- /learn/ai-for-designers/mapping-ai-capabilities-to-user-tasks — Mapping AI capabilities to user tasks
+- /learn/ai-for-designers/prompt-as-interaction-spec — Prompts as interaction specs
+- /learn/ai-for-designers/prototype-ai-behavior-without-a-model — Prototype AI behavior without a model
+- /learn/ai-for-designers/prototype-and-evaluation-quiz — Quiz: prototype and evaluation
+- /learn/ai-for-designers/research-synthesis-lab — Lab: build a source-traceable research synthesis board
+- /learn/ai-for-designers/sources-confidence-and-explanations-compared — Sources, confidence, and explanations, compared
+- /learn/ai-for-designers/test-an-ai-prototype-worked-example — Testing an AI prototype: a worked example
+- /learn/ai-for-designers/trust-and-recovery-quiz — Quiz: trust and recovery
+- /learn/ai-for-designers/trust-patterns-worked-example — Trust patterns: a redesign worked example
+- /learn/ai-foundations/eval-and-model-mistakes — Common Mistakes: Evaluation and Model Claims
+- /learn/ai-foundations/model-selection-cheatsheet — AI Foundations Cheatsheet
+- /learn/ai-literacy/everyday-ai-mistakes — Common Mistakes: Everyday AI Use
+- /learn/classical-ai/a-star-worked-example — Worked Example: A* on a Grid — Where the Heuristic Matters
+- /learn/classical-ai/classical-ai-cheatsheet — Classical AI Cheatsheet
+- /learn/classical-ai/classical-ai-mistakes — Common Mistakes: Classical AI and Search
+- /learn/context-engineering/context-budget-worked-example — Worked Example: Where a 128k Context Window Actually Went
+- … 36 more
 
 ### zero in-body internal links (template nav still applies) (491)
 
@@ -603,13 +600,17 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-foundations/reliable-ai/221-contestability-appeals-and-recource — Contestability, Appeals, and Recourse
 - … 451 more
 
-### live file not in curriculum (2239)
+### live file not in curriculum (2289)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
 - /learn/agent-frameworks/crewai-crews-and-flows — CrewAI: role-based crews with deterministic flows
 - /learn/agent-frameworks/dspy-programmatic-prompting — DSPy: programming, not prompting
+- /learn/agent-frameworks/framework-cheatsheet — Agent Frameworks Cheatsheet
 - /learn/agent-frameworks/framework-comparison-and-escape-hatches — Comparing frameworks — and the escape hatches that matter
+- /learn/agent-frameworks/framework-leak-worked-example — Worked Example: The Task the Framework Couldn't Express
+- /learn/agent-frameworks/framework-mistakes — Agent Frameworks: Common Mistakes
+- /learn/agent-frameworks/framework-selection-project — Project: Framework Selection Bake-Off
 - /learn/agent-frameworks/google-adk — Google ADK: workflow agents and multi-agent teams
 - /learn/agent-frameworks/haystack-pipelines — Haystack: explicit pipelines for retrieval and agents
 - /learn/agent-frameworks/langchain-agents-and-integrations — LangChain: the integration layer, then agents
@@ -630,22 +631,18 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agent-skills/skill-vs-prompt-rule-hook-mcp-subagent — Skill vs prompt vs project rule vs hook vs MCP vs subagent
 - /learn/agent-skills/skills-projects-first-skill-and-capstone — Projects: build your first skill, then turn a workflow into a tested one
 - /learn/agentic-ai/agent-benchmarks — Benchmarking Agents: SWE-bench, WebArena, and GAIA
+- /learn/agentic-ai/agent-loop-mistakes — Common Mistakes: Agent Loop Design
 - /learn/agentic-ai/agent-memory-short-vs-long-term — Short-Term vs Long-Term Memory
 - /learn/agentic-ai/agent-orchestration-frameworks — Choosing an Orchestration Framework
 - /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access
+- /learn/agentic-ai/agent-run-worked-example — Worked Example: An Agent Run, Step by Step
 - /learn/agentic-ai/agent-task-contracts — Write a task contract for an agent
 - /learn/agentic-ai/agent-to-agent-protocols — Agent-to-Agent Protocols: How Agents Will Talk to Each Other
+- /learn/agentic-ai/agentic-ai-cheatsheet — Agentic AI Cheatsheet
 - /learn/agentic-ai/agents-vs-workflows — Choose an agent only when a workflow is not enough
 - /learn/agentic-ai/autonomy-vs-control — Setting the Autonomy Dial
 - /learn/agentic-ai/blackboard-and-swarm-patterns — Blackboard and Swarm: Decentralized Multi-Agent Coordination
-- /learn/agentic-ai/choosing-an-agent-framework — LangGraph, CrewAI, AutoGen: What Each Framework Actually Buys You
-- /learn/agentic-ai/coding-agent-architecture — Inside a Coding Agent: How Claude Code and SWE-Agent Work
-- /learn/agentic-ai/common-agent-failure-modes — Diagnosing Agent Failure Modes
-- /learn/agentic-ai/computer-use-agents — Computer-Use Agents: Letting a Model Operate a GUI
-- /learn/agentic-ai/cost-aware-agent-loops — Cost-Aware Agents: Budgeting Tokens Across a Long-Running Loop
-- /learn/agentic-ai/error-handling-and-retries — Recovering When Tools Fail
-- /learn/agentic-ai/evaluating-agent-behavior-in-dev — Reading an Agent's Trace
-- … 2199 more
+- … 2249 more
 
 ### live curriculum node missing file (0)
 
@@ -656,38 +653,12 @@ Largest queue; full list in JSON. Oldest-verified sample:
 ### lesson files with status coming (0)
 
 
-### release-sensitive, no date at all (127)
+### release-sensitive, no date at all (27)
 
-- /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
-- /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
-- /learn/agent-frameworks/crewai-crews-and-flows — CrewAI: role-based crews with deterministic flows
-- /learn/agent-frameworks/dspy-programmatic-prompting — DSPy: programming, not prompting
-- /learn/agent-frameworks/framework-comparison-and-escape-hatches — Comparing frameworks — and the escape hatches that matter
-- /learn/agent-frameworks/google-adk — Google ADK: workflow agents and multi-agent teams
-- /learn/agent-frameworks/haystack-pipelines — Haystack: explicit pipelines for retrieval and agents
-- /learn/agent-frameworks/langchain-agents-and-integrations — LangChain: the integration layer, then agents
-- /learn/agent-frameworks/langgraph-durable-agents — LangGraph: durable agents as state machines
-- /learn/agent-frameworks/llamaindex-data-framework — LlamaIndex: the data framework that grew agents
-- /learn/agent-frameworks/mastra-typescript-agents — Mastra: the TypeScript agent framework
-- /learn/agent-frameworks/microsoft-agent-frameworks — Microsoft's agent frameworks: Semantic Kernel, AutoGen, and the convergence
-- /learn/agent-frameworks/no-code-ai-workflows — n8n, Zapier, Make, Pipedream: bounded no-code AI workflows
-- /learn/agent-frameworks/openai-agents-sdk — OpenAI Agents SDK: agents, handoffs, and guardrails
-- /learn/agent-frameworks/pydanticai-typed-agents — PydanticAI: agents that type-check
-- /learn/agent-frameworks/structured-output-libraries — Instructor, Outlines, Guidance: the constrained-output libraries
-- /learn/agent-frameworks/vercel-ai-sdk — Vercel AI SDK: streaming, tools, and generative UI
-- /learn/agent-skills/agent-skills-spec-and-progressive-disclosure — The Agent Skills spec and progressive disclosure
-- /learn/agent-skills/evaluating-and-porting-skills — Evaluating skills with fixtures, and porting them across agents
-- /learn/agent-skills/skill-md-anatomy — SKILL.md anatomy: frontmatter, body, and bundled resources
-- /learn/agent-skills/skill-security-and-provenance — Skill provenance, review, and the safe-installation checklist
-- /learn/agent-skills/skill-vs-prompt-rule-hook-mcp-subagent — Skill vs prompt vs project rule vs hook vs MCP vs subagent
-- /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access
-- /learn/agentic-ai/multi-agent-workflow-project — Project: A Multi-Agent Workflow With Explicit Delegation and Shared-State Limits
-- /learn/ai-automation-ops/auditability-and-run-history — Auditability and run history
-- /learn/ai-automation-ops/automation-design-lab — Lab: design an ops automation
-- /learn/ai-automation-ops/automation-landscape-deterministic-to-agentic — The automation landscape: deterministic to agentic
-- /learn/ai-automation-ops/llm-steps-in-automation — LLM steps in automation
-- /learn/ai-automation-ops/where-ai-belongs-in-a-workflow — Where AI belongs in a workflow
-- /learn/ai-automation-ops/workflow-platforms-compared — Workflow platforms compared: n8n, Zapier, Make, Pipedream
+- /learn/agent-frameworks/framework-cheatsheet — Agent Frameworks Cheatsheet
+- /learn/agent-frameworks/framework-leak-worked-example — Worked Example: The Task the Framework Couldn't Express
+- /learn/agent-frameworks/framework-mistakes — Agent Frameworks: Common Mistakes
+- /learn/agent-frameworks/framework-selection-project — Project: Framework Selection Bake-Off
 - /learn/ai-for-designers/ai-product-design-foundations-quiz — Quiz: AI product design foundations
 - /learn/ai-for-designers/choosing-where-ai-belongs-worked-example — Choosing where AI belongs: a worked example
 - /learn/ai-for-designers/correction-undo-and-recovery-patterns — Correction, undo, and recovery patterns
@@ -696,9 +667,21 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-for-designers/prototype-and-evaluation-quiz — Quiz: prototype and evaluation
 - /learn/ai-for-designers/research-synthesis-lab — Lab: build a source-traceable research synthesis board
 - /learn/ai-for-designers/trust-and-recovery-quiz — Quiz: trust and recovery
-- /learn/ai-literacy/meet-skills-connectors-and-agents — Meet skills, connectors, and agents — safely
-- /learn/cli-agents/cli-agent-labs — Labs: the untrusted-repo security drill and the comparative harness run
-- … 87 more
+- /learn/ai-literacy/everyday-ai-mistakes — Common Mistakes: Everyday AI Use
+- /learn/evals-red-teaming/eval-regression-worked-example — Worked Example: An Eval That Passed and Shipped a Regression
+- /learn/fine-tuning/fine-tune-regression-worked-example — Worked Example: A Fine-Tune That Fixed One Thing and Broke Three
+- /learn/genai-app-dev/genai-feature-worked-example — Worked Example: A GenAI Feature From Demo to Production
+- /learn/llm-foundations/llm-foundations-cheatsheet — LLM Foundations Cheatsheet
+- /learn/mcp/mcp-production-server-project — Project: A Production MCP Server — Auth, Versioning, Telemetry
+- /learn/multimodal-ai/document-pipeline-worked-example — Worked Example: A Document Pipeline That Costs 10× What It Should
+- /learn/multimodal-ai/multimodal-cheatsheet — Multimodal AI Cheatsheet
+- /learn/multimodal-ai/multimodal-mistakes — Multimodal AI: Common Mistakes
+- /learn/responsible-ai/contestability-worked-example — Worked Example: A Contestability Path That Actually Works
+- /learn/responsible-ai/responsible-ai-cheatsheet — Responsible AI Cheatsheet
+- /learn/responsible-ai/responsible-ai-mistakes — Common Mistakes: Responsible AI in Practice
+- /learn/responsible-ai/responsible-release-project — Project: A Responsible-AI Release — Risk Register, Model Card, Red-Team Sign-Off
+- /privacy — Privacy
+- /terms — Terms
 
 ## Role paths
 
@@ -777,87 +760,87 @@ Largest queue; full list in JSON. Oldest-verified sample:
 
 ### interview (27)
 
-- /interview/agents — AI agents interview questions (1035 words, updated 2026-09-08)
-- /interview/ai-foundations — AI foundations interview questions (922 words)
-- /interview/ai-system-design — AI system design interview questions (985 words, updated 2026-09-08)
-- /interview/behavioral-and-project-defense — Behavioral and project-defense interview questions (921 words)
-- /interview/classical-ml — Classical ML interview questions (811 words)
-- /interview/context-engineering — Context engineering interview questions (914 words)
-- /interview/deep-learning — Deep learning interview questions (876 words)
-- /interview/evals — LLM evaluation interview questions (991 words, updated 2026-08-30)
-- /interview/interview-modes — Interview modes: interviewer and candidate (504 words)
-- /interview/llm-basics — LLM basics interview questions (995 words, updated 2026-09-08)
-- /interview/maths-foundations — Maths foundations interview questions (832 words)
-- /interview/mcp — MCP interview questions (972 words, updated 2026-09-08)
-- /interview/production-and-observability — Production and observability interview questions (893 words)
-- /interview/prompt-engineering — Prompt engineering interview questions (986 words, updated 2026-09-08)
-- /interview/rag — RAG interview questions (930 words, updated 2026-08-30)
-- /interview/role-ai-engineer — AI engineer interview questions (348 words)
-- /interview/role-ai-platform-engineer — AI platform engineer interview questions (387 words)
-- /interview/role-applied-ai-engineer — Applied AI engineer interview questions (336 words)
-- /interview/role-data-scientist — Data scientist interview questions (AI track) (382 words)
-- /interview/role-designer — Designer interview questions (AI track) (428 words)
-- /interview/role-forward-deployed-engineer — Forward-deployed engineer interview questions (390 words)
-- /interview/role-ml-engineer — ML engineer interview questions (357 words)
-- /interview/role-product-manager — Product manager interview questions (AI track) (410 words)
-- /interview/role-security-engineer — Security engineer interview questions (AI track) (428 words)
-- /interview/safety-and-security — AI safety and security interview questions (951 words)
-- /interview/structured-outputs — Structured outputs interview questions (880 words)
-- /interview/take-home-exercises — Take-home exercises and integrity (479 words)
+- /interview/agents — AI agents interview questions (1035 words, updated 2026-09-15)
+- /interview/ai-foundations — AI foundations interview questions (922 words, updated 2026-09-15)
+- /interview/ai-system-design — AI system design interview questions (985 words, updated 2026-09-15)
+- /interview/behavioral-and-project-defense — Behavioral and project-defense interview questions (921 words, updated 2026-09-15)
+- /interview/classical-ml — Classical ML interview questions (811 words, updated 2026-09-15)
+- /interview/context-engineering — Context engineering interview questions (914 words, updated 2026-09-15)
+- /interview/deep-learning — Deep learning interview questions (876 words, updated 2026-09-15)
+- /interview/evals — LLM evaluation interview questions (991 words, updated 2026-09-15)
+- /interview/interview-modes — Interview modes: interviewer and candidate (504 words, updated 2026-09-15)
+- /interview/llm-basics — LLM basics interview questions (995 words, updated 2026-09-15)
+- /interview/maths-foundations — Maths foundations interview questions (832 words, updated 2026-09-15)
+- /interview/mcp — MCP interview questions (972 words, updated 2026-09-15)
+- /interview/production-and-observability — Production and observability interview questions (893 words, updated 2026-09-15)
+- /interview/prompt-engineering — Prompt engineering interview questions (986 words, updated 2026-09-15)
+- /interview/rag — RAG interview questions (930 words, updated 2026-09-15)
+- /interview/role-ai-engineer — AI engineer interview questions (348 words, updated 2026-09-15)
+- /interview/role-ai-platform-engineer — AI platform engineer interview questions (387 words, updated 2026-09-15)
+- /interview/role-applied-ai-engineer — Applied AI engineer interview questions (336 words, updated 2026-09-15)
+- /interview/role-data-scientist — Data scientist interview questions (AI track) (382 words, updated 2026-09-15)
+- /interview/role-designer — Designer interview questions (AI track) (428 words, updated 2026-09-15)
+- /interview/role-forward-deployed-engineer — Forward-deployed engineer interview questions (390 words, updated 2026-09-15)
+- /interview/role-ml-engineer — ML engineer interview questions (357 words, updated 2026-09-15)
+- /interview/role-product-manager — Product manager interview questions (AI track) (410 words, updated 2026-09-15)
+- /interview/role-security-engineer — Security engineer interview questions (AI track) (428 words, updated 2026-09-15)
+- /interview/safety-and-security — AI safety and security interview questions (951 words, updated 2026-09-15)
+- /interview/structured-outputs — Structured outputs interview questions (880 words, updated 2026-09-15)
+- /interview/take-home-exercises — Take-home exercises and integrity (479 words, updated 2026-09-15)
 
 ### scenario (12)
 
-- /scenarios/agent-approval — An agent that can update customer records (886 words, updated 2026-08-30)
-- /scenarios/browser-agent-permissions — A research agent that wandered into a checkout page (874 words)
-- /scenarios/coding-agent-rollout — Rolling out a coding agent without losing the repo (893 words)
-- /scenarios/document-qa — Document Q&A with permissions intact (748 words, updated 2026-08-30)
-- /scenarios/eval-release — A release that improves quality but raises cost (685 words, updated 2026-08-30)
-- /scenarios/incident-response — The support bot that started promising refunds (869 words)
-- /scenarios/mcp-team-server — An MCP server for a small engineering team (809 words, updated 2026-08-30)
-- /scenarios/rag-migration — Migrating the RAG system nobody documented (885 words)
-- /scenarios/regulated-decision-support — An eligibility screener in a regulated workflow (896 words)
-- /scenarios/streaming-research — A research feature that streams useful work (772 words, updated 2026-08-30)
-- /scenarios/support-assistant — A support assistant that must show its work (841 words, updated 2026-08-30)
-- /scenarios/voice-agent-latency — A phone agent that keeps talking over people (890 words)
+- /scenarios/agent-approval — An agent that can update customer records (886 words, updated 2026-09-15)
+- /scenarios/browser-agent-permissions — A research agent that wandered into a checkout page (874 words, updated 2026-09-15)
+- /scenarios/coding-agent-rollout — Rolling out a coding agent without losing the repo (893 words, updated 2026-09-15)
+- /scenarios/document-qa — Document Q&A with permissions intact (748 words, updated 2026-09-15)
+- /scenarios/eval-release — A release that improves quality but raises cost (685 words, updated 2026-09-15)
+- /scenarios/incident-response — The support bot that started promising refunds (869 words, updated 2026-09-15)
+- /scenarios/mcp-team-server — An MCP server for a small engineering team (809 words, updated 2026-09-15)
+- /scenarios/rag-migration — Migrating the RAG system nobody documented (885 words, updated 2026-09-15)
+- /scenarios/regulated-decision-support — An eligibility screener in a regulated workflow (896 words, updated 2026-09-15)
+- /scenarios/streaming-research — A research feature that streams useful work (772 words, updated 2026-09-15)
+- /scenarios/support-assistant — A support assistant that must show its work (841 words, updated 2026-09-15)
+- /scenarios/voice-agent-latency — A phone agent that keeps talking over people (890 words, updated 2026-09-15)
 
 ### guide (14)
 
-- /guides/add-observability-to-an-ai-feature — Add observability to an AI feature (412 words)
-- /guides/build-a-rag-pipeline-over-your-own-documents — Build a RAG pipeline over your own documents (838 words, updated 2026-08-30)
-- /guides/build-a-tool-calling-agent-from-scratch — Build a tool-calling agent from scratch, no framework (534 words, updated 2026-08-30)
-- /guides/build-an-mcp-server-in-python — Build an MCP server in Python and connect it to Claude (725 words, updated 2026-08-30)
-- /guides/build-your-first-browser-agent — Build your first browser agent (413 words)
-- /guides/build-your-first-voice-agent — Build your first voice agent (382 words)
-- /guides/cut-your-llm-bill — Cut your LLM bill without hurting quality (875 words, updated 2026-08-30)
-- /guides/defend-against-prompt-injection — Defend a tool-using app against prompt injection (917 words, updated 2026-08-30)
-- /guides/get-reliable-json-out-of-an-llm — Get reliable JSON out of an LLM (638 words, updated 2026-08-30)
-- /guides/migrate-between-raw-sdks-and-frameworks — Migrate between raw SDKs and agent frameworks (444 words)
-- /guides/rag-fine-tuning-or-a-longer-prompt — RAG, fine-tuning, or a longer prompt? (918 words, updated 2026-08-30)
-- /guides/run-your-first-local-model-app — Run your first local model app with Ollama (356 words)
-- /guides/ship-your-first-ai-feature-to-production — Ship your first AI feature to production (851 words, updated 2026-08-30)
-- /guides/write-your-first-eval-for-an-ai-feature — Write your first eval for an AI feature (861 words, updated 2026-08-30)
+- /guides/add-observability-to-an-ai-feature — Add observability to an AI feature (412 words, updated 2026-09-15)
+- /guides/build-a-rag-pipeline-over-your-own-documents — Build a RAG pipeline over your own documents (838 words, updated 2026-09-15)
+- /guides/build-a-tool-calling-agent-from-scratch — Build a tool-calling agent from scratch, no framework (534 words, updated 2026-09-15)
+- /guides/build-an-mcp-server-in-python — Build an MCP server in Python and connect it to Claude (725 words, updated 2026-09-15)
+- /guides/build-your-first-browser-agent — Build your first browser agent (413 words, updated 2026-09-15)
+- /guides/build-your-first-voice-agent — Build your first voice agent (382 words, updated 2026-09-15)
+- /guides/cut-your-llm-bill — Cut your LLM bill without hurting quality (875 words, updated 2026-09-15)
+- /guides/defend-against-prompt-injection — Defend a tool-using app against prompt injection (917 words, updated 2026-09-15)
+- /guides/get-reliable-json-out-of-an-llm — Get reliable JSON out of an LLM (638 words, updated 2026-09-15)
+- /guides/migrate-between-raw-sdks-and-frameworks — Migrate between raw SDKs and agent frameworks (444 words, updated 2026-09-15)
+- /guides/rag-fine-tuning-or-a-longer-prompt — RAG, fine-tuning, or a longer prompt? (918 words, updated 2026-09-15)
+- /guides/run-your-first-local-model-app — Run your first local model app with Ollama (356 words, updated 2026-09-15)
+- /guides/ship-your-first-ai-feature-to-production — Ship your first AI feature to production (851 words, updated 2026-09-15)
+- /guides/write-your-first-eval-for-an-ai-feature — Write your first eval for an AI feature (861 words, updated 2026-09-15)
 
 ### blog (20)
 
-- /blog/agent-skills-vs-prompts-rules-mcp-hooks-subagents — Agent Skills vs prompts, rules, MCP, hooks, and subagents (504 words)
+- /blog/agent-skills-vs-prompts-rules-mcp-hooks-subagents — Agent Skills vs prompts, rules, MCP, hooks, and subagents (504 words, updated 2026-09-15)
 - /blog/agents-need-a-harness — Agents need a harness, not just a prompt (191 words, updated 2026-08-30)
-- /blog/building-multilingual-and-indic-ai-systems — Building multilingual and Indic AI systems (418 words)
-- /blog/designing-reliable-browser-automation — Designing reliable browser automation (397 words)
+- /blog/building-multilingual-and-indic-ai-systems — Building multilingual and Indic AI systems (418 words, updated 2026-09-15)
+- /blog/designing-reliable-browser-automation — Designing reliable browser automation (397 words, updated 2026-09-15)
 - /blog/how-to-learn-ai-in-2026 — How to actually learn AI in 2026 (251 words, updated 2026-08-30)
-- /blog/how-to-read-a-tool-call-trace — How to read a tool-call trace (405 words)
+- /blog/how-to-read-a-tool-call-trace — How to read a tool-call trace (405 words, updated 2026-09-15)
 - /blog/lmversity-launch-note — Why LMVersity is free and structured (220 words, updated 2026-09-08)
-- /blog/local-models-privacy-latency-hardware-quality — Local models: privacy, latency, hardware, and the quality question (519 words)
-- /blog/observability-for-multi-step-ai-systems — Observability for multi-step AI systems (416 words)
+- /blog/local-models-privacy-latency-hardware-quality — Local models: privacy, latency, hardware, and the quality question (519 words, updated 2026-09-15)
+- /blog/observability-for-multi-step-ai-systems — Observability for multi-step AI systems (416 words, updated 2026-09-15)
 - /blog/rag-is-not-a-truth-machine — RAG is not a truth machine (219 words, updated 2026-08-30)
 - /blog/read-the-loop-before-you-pick-a-framework — Read the loop before you pick a framework (525 words, updated 2026-08-30)
 - /blog/stopping-conditions-for-agents — Every agent loop needs five stopping conditions (537 words, updated 2026-08-30)
-- /blog/teardown-playwright-mcp-tool-contracts — Teardown: Playwright MCP's tool contracts (679 words)
+- /blog/teardown-playwright-mcp-tool-contracts — Teardown: Playwright MCP's tool contracts (679 words, updated 2026-09-15)
 - /blog/the-context-window-got-bigger-and-it-did-not-fix-this — The context window got bigger. It didn't fix what you think. (578 words, updated 2026-08-30)
 - /blog/the-mcp-mistakes-that-show-up-at-3am — The MCP server mistakes that show up at 3am (631 words, updated 2026-08-30)
-- /blog/what-ai-coding-agents-can-and-cannot-safely-own — What AI coding agents can and cannot safely own (422 words)
-- /blog/what-an-eval-catches-that-a-demo-misses — What an eval catches that a demo misses (375 words)
-- /blog/why-there-is-no-certificate — Why there's no certificate here (520 words, updated 2026-09-08)
-- /blog/workflow-agent-or-multi-agent — Workflow, agent, or multi-agent: the decision is about who holds the plan (444 words)
+- /blog/what-ai-coding-agents-can-and-cannot-safely-own — What AI coding agents can and cannot safely own (422 words, updated 2026-09-15)
+- /blog/what-an-eval-catches-that-a-demo-misses — What an eval catches that a demo misses (375 words, updated 2026-09-15)
+- /blog/why-there-is-no-certificate — Why there's no certificate here (520 words, updated 2026-09-15)
+- /blog/workflow-agent-or-multi-agent — Workflow, agent, or multi-agent: the decision is about who holds the plan (444 words, updated 2026-09-15)
 - /blog/your-rag-problem-is-a-retrieval-problem — Your RAG problem is a retrieval problem (700 words, updated 2026-08-30)
 
 ### answer (35)

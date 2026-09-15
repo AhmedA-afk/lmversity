@@ -208,17 +208,18 @@ const contentDates = JSON.parse(readFileSync(join(DATA, 'content-dates.json'), '
 const KIND_RULES = [
   [/-quiz$/, 'quiz'],
   [/-cheatsheet$/, 'cheatsheet'],
-  [/-worked-example$/, 'worked-example'],
-  [/-common-mistakes$/, 'common-mistakes'],
+  [/worked[- ]examples?|(^|[-/])examples?$|-worked$/, 'worked-example'],
+  [/(^|[- ])mistakes?\b/, 'common-mistakes'],
   [/(-compared|-methods-compared)$|(^|-)vs[.-]/, 'comparison'],
   [/capstone/, 'capstone'],
   [/(^|\/)labs?\/|-lab\b|\blab\b/, 'lab'],
+  [/(^|[-/])project([-/]|$)|-project$/, 'project'],
   [/drill/, 'drill'],
 ];
 const kindFor = (slug, title) =>
   KIND_RULES.find(([re]) => re.test(slug) || re.test(title.toLowerCase()))?.[1] ?? 'concept';
 
-const LESSON_FAMILY = { quiz: 'quiz', cheatsheet: 'reference', capstone: 'project', lab: 'lab' };
+const LESSON_FAMILY = { quiz: 'quiz', cheatsheet: 'reference', capstone: 'project', project: 'project', lab: 'lab' };
 const FDE_FAMILY = { lesson: 'lesson', lab: 'lab', drill: 'lesson', bootcamp: 'lesson', capstone: 'project', reference: 'reference' };
 
 const VENDOR_RE = /\b(OpenAI|ChatGPT|GPT-\d|Claude|Anthropic|Gemini|Vertex|AI Studio|Llama|Mistral|DeepSeek|Qwen|Grok|xAI|Cohere|Sarvam|AI4Bharat|Bhashini|Krutrim|Copilot|Cursor|Windsurf|Aider|Cline|Devin|Codex|Ollama|LM Studio|llama\.cpp|vLLM|SGLang|MLX|ONNX|Hugging ?Face|LangChain|LangGraph|LangSmith|LlamaIndex|Agno|PydanticAI|Semantic Kernel|AutoGen|CrewAI|Mastra|DSPy|Haystack|Instructor|Outlines|n8n|Zapier|Pipedream|Pinecone|Weaviate|Qdrant|Milvus|Zilliz|Chroma|Elasticsearch|OpenSearch|Vespa|LanceDB|Redis|pgvector|Unstructured|Docling|LlamaParse|Langfuse|Arize|Phoenix|Weave|Helicone|Braintrust|Promptfoo|DeepEval|Ragas|TruLens|OpenTelemetry|Playwright|Puppeteer|Selenium|Stagehand|Browserbase|Bedrock|SageMaker|Azure|AWS|Databricks|Snowflake|watsonx|Cloudflare|OpenRouter|Together AI|Fireworks|Groq|Cerebras|Replicate|Modal|Perplexity|NotebookLM|Model Context Protocol|MCP)\b/g;

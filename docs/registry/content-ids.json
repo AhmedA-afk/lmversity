@@ -1,7 +1,7 @@
 {
  "version": 1,
  "next": {
-  "les": 2239,
+  "les": 2289,
   "que": 27,
   "sce": 12,
   "blo": 20,
@@ -10666,6 +10666,206 @@
   "lessons/structured-outputs/output-validation-service-project.md": {
    "id": "les-2239",
    "fp": "128f809e63f1bd78762342b858360dec2ffcdf92"
+  },
+  "lessons/agentic-ai/agent-loop-mistakes.md": {
+   "id": "les-2240",
+   "fp": "f8caa9f9a0ea11835cda632d25bb481505399510"
+  },
+  "lessons/agentic-ai/agent-run-worked-example.md": {
+   "id": "les-2241",
+   "fp": "5f7180b15f2161c2702f2d8fb1a6fb72e5176625"
+  },
+  "lessons/agentic-ai/agentic-ai-cheatsheet.md": {
+   "id": "les-2242",
+   "fp": "3308a5a4a822b3599df313834cc047111a1c9d65"
+  },
+  "lessons/ai-foundations/eval-and-model-mistakes.md": {
+   "id": "les-2243",
+   "fp": "04640776a04a15514ad79bdbbffe7cb50c8ecf7e"
+  },
+  "lessons/ai-foundations/model-selection-cheatsheet.md": {
+   "id": "les-2244",
+   "fp": "5270b609e942620238585a7172768b83e743190a"
+  },
+  "lessons/ai-literacy/everyday-ai-mistakes.md": {
+   "id": "les-2245",
+   "fp": "4ce2f466c19dc1aed96336bb573c30f0d58e017a"
+  },
+  "lessons/classical-ai/a-star-worked-example.md": {
+   "id": "les-2246",
+   "fp": "0b7d81e821c59dbfe4d3b315de713110d84cf9c1"
+  },
+  "lessons/classical-ai/classical-ai-cheatsheet.md": {
+   "id": "les-2247",
+   "fp": "f09aeca9be2d8937eb8d6fe133747fe1f29683df"
+  },
+  "lessons/classical-ai/classical-ai-mistakes.md": {
+   "id": "les-2248",
+   "fp": "91de8c3148959427407d42e7fde00f3df21b3e7a"
+  },
+  "lessons/context-engineering/context-budget-worked-example.md": {
+   "id": "les-2249",
+   "fp": "db94f08caedb5d071c65f72076587142e2f49d7e"
+  },
+  "lessons/deep-learning/deep-learning-cheatsheet.md": {
+   "id": "les-2250",
+   "fp": "b6d727658efcecd1ea495bb39d6ddc842b1fd714"
+  },
+  "lessons/deep-learning/deep-learning-mistakes.md": {
+   "id": "les-2251",
+   "fp": "8f247073be1edd5e8a6b7412faa8b62a8b209d10"
+  },
+  "lessons/deep-learning/vanishing-gradient-worked-example.md": {
+   "id": "les-2252",
+   "fp": "de9ff3c5b02719593d53b9cc6473f0c8e53e7390"
+  },
+  "lessons/evals-red-teaming/eval-cheatsheet.md": {
+   "id": "les-2253",
+   "fp": "5fad106474e3f5a517319cc34d12aae41aa09084"
+  },
+  "lessons/evals-red-teaming/eval-harness-project.md": {
+   "id": "les-2254",
+   "fp": "847ff7266507f69d27f1e8567396fd35bf2e0b33"
+  },
+  "lessons/evals-red-teaming/eval-mistakes.md": {
+   "id": "les-2255",
+   "fp": "50e77c5f2ef5155bf3a865df0bf978bd12caaae5"
+  },
+  "lessons/evals-red-teaming/eval-regression-worked-example.md": {
+   "id": "les-2256",
+   "fp": "e0e8708df4c97d5a2f3d42f26dd0d6f3da8f2b72"
+  },
+  "lessons/fine-tuning/fine-tune-regression-worked-example.md": {
+   "id": "les-2257",
+   "fp": "62efb09d5fd72a1eccd69e05754c14e3e070cbcc"
+  },
+  "lessons/fine-tuning/fine-tuning-cheatsheet.md": {
+   "id": "les-2258",
+   "fp": "1322f4134e362d06ca35cac3ef28e713de1f73a1"
+  },
+  "lessons/fine-tuning/fine-tuning-mistakes.md": {
+   "id": "les-2259",
+   "fp": "d17d84311563a248bc7a6aff5f9d0530ae446389"
+  },
+  "lessons/fine-tuning/fine-tuning-pipeline-project.md": {
+   "id": "les-2260",
+   "fp": "cad28af41024e7d6a3ee9efc86ed0f1fbfa53295"
+  },
+  "lessons/genai-app-dev/genai-feature-worked-example.md": {
+   "id": "les-2261",
+   "fp": "0c6691fb54c7f308c68d0ec740ea82152b45813e"
+  },
+  "lessons/harness-design/harness-boundary-worked-example.md": {
+   "id": "les-2262",
+   "fp": "fbcc5414687d8435a77c1c5b3d4f462fbfe1ab39"
+  },
+  "lessons/harness-design/harness-cheatsheet.md": {
+   "id": "les-2263",
+   "fp": "2162871a0144efadd36c18e094f8ce62bb733f69"
+  },
+  "lessons/harness-design/harness-mistakes.md": {
+   "id": "les-2264",
+   "fp": "885d51bebecc21a71908d7144bda8267b03f21f2"
+  },
+  "lessons/harness-design/harness-reliability-project.md": {
+   "id": "les-2265",
+   "fp": "de4374ff678bfcf2ccb88632b5339596dfd92861"
+  },
+  "lessons/llm-foundations/llm-foundations-cheatsheet.md": {
+   "id": "les-2266",
+   "fp": "521b30f7d3cc8deb2c5fc3fbbd4e2cb6a997fd19"
+  },
+  "lessons/machine-learning/leakage-worked-example.md": {
+   "id": "les-2267",
+   "fp": "f45f5646d480fb1bb8555a1c1a85b8b733c5f8f4"
+  },
+  "lessons/machine-learning/ml-cheatsheet.md": {
+   "id": "les-2268",
+   "fp": "6d11f8a4efa46e1b491794dbae953f9d161d4318"
+  },
+  "lessons/machine-learning/ml-pipeline-mistakes.md": {
+   "id": "les-2269",
+   "fp": "8da603121adb1e8c0398f88eb2479573891617f0"
+  },
+  "lessons/maths-foundations/gradient-descent-worked-example.md": {
+   "id": "les-2270",
+   "fp": "7dd88d415e1fc7a368968c4e9be5e757f40aea89"
+  },
+  "lessons/maths-foundations/maths-cheatsheet.md": {
+   "id": "les-2271",
+   "fp": "22bae8c1afb3ffc455030bb7bf8a92c04c717705"
+  },
+  "lessons/maths-foundations/maths-mistakes.md": {
+   "id": "les-2272",
+   "fp": "396bec4e7e8df72d09bd340b6058fd40726ef047"
+  },
+  "lessons/mcp/mcp-production-server-project.md": {
+   "id": "les-2273",
+   "fp": "07bf066ab36c1280ed4be128412462efc189dd4a"
+  },
+  "lessons/production/incident-triage-worked-example.md": {
+   "id": "les-2274",
+   "fp": "8543b48e2ccbcea8832cf7e0c99d04368dd953d8"
+  },
+  "lessons/production/production-cheatsheet.md": {
+   "id": "les-2275",
+   "fp": "389b406e12479a60a54fd1f8478fc8e3cfa2f6ed"
+  },
+  "lessons/production/production-mistakes.md": {
+   "id": "les-2276",
+   "fp": "6f71621369feea8cc55a4baec285f47ad5d02cec"
+  },
+  "lessons/python-data-apis/api-pipeline-worked-example.md": {
+   "id": "les-2277",
+   "fp": "20c6fcd0b52e878c118e67bddcc09e3da026995a"
+  },
+  "lessons/python-data-apis/python-data-apis-cheatsheet.md": {
+   "id": "les-2278",
+   "fp": "7f1306fe836e2ffccc5e4fc034a267afaa569682"
+  },
+  "lessons/responsible-ai/responsible-ai-cheatsheet.md": {
+   "id": "les-2279",
+   "fp": "4f6ef85d426e31830fab54245c41dd592cda424d"
+  },
+  "lessons/responsible-ai/responsible-ai-mistakes.md": {
+   "id": "les-2280",
+   "fp": "9eab7638c2baf17adb264006b623871c2ce3dc11"
+  },
+  "lessons/responsible-ai/responsible-release-project.md": {
+   "id": "les-2281",
+   "fp": "52709d77c60baab6abb3670d9a381a3b3dbb5cd7"
+  },
+  "lessons/agent-frameworks/framework-cheatsheet.md": {
+   "id": "les-2282",
+   "fp": "6cdc32f98e17295c6399b6872cb2e1316a827844"
+  },
+  "lessons/agent-frameworks/framework-leak-worked-example.md": {
+   "id": "les-2283",
+   "fp": "6c39d623f9a8d32a32b7e3091f33767f0dbd3d67"
+  },
+  "lessons/agent-frameworks/framework-mistakes.md": {
+   "id": "les-2284",
+   "fp": "eb820eb682713c0c345df8e204a0afa6eb6fbd58"
+  },
+  "lessons/agent-frameworks/framework-selection-project.md": {
+   "id": "les-2285",
+   "fp": "6c7e85238eaaa696d98456c8cc8091be4124aff0"
+  },
+  "lessons/multimodal-ai/document-pipeline-worked-example.md": {
+   "id": "les-2286",
+   "fp": "c95aa5258ba137c69dd23467217c931c1ffd16de"
+  },
+  "lessons/multimodal-ai/multimodal-cheatsheet.md": {
+   "id": "les-2287",
+   "fp": "17de7db6e0a06048ae2774a1f5573d6381193b2e"
+  },
+  "lessons/multimodal-ai/multimodal-mistakes.md": {
+   "id": "les-2288",
+   "fp": "06dbb9f0b26474165144b21a672be9a437cfeeb9"
+  },
+  "lessons/responsible-ai/contestability-worked-example.md": {
+   "id": "les-2289",
+   "fp": "59ffa78e6d003a4cee7d7c0a3dc3f9ff2b3d3082"
   }
  },
  "retired": {
