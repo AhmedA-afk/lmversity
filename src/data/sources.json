@@ -1648,5 +1648,293 @@
     "type": "repo",
     "status": "current",
     "accessedAt": "2026-09-15"
+  },
+  "cert-aws-ai-practitioner": {
+    "title": "AWS Certified AI Practitioner (AIF-C01)",
+    "publisher": "Amazon Web Services",
+    "url": "https://aws.amazon.com/certification/certified-ai-practitioner/",
+    "type": "certification-guide",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "cert-aws-ml-associate": {
+    "title": "AWS Certified Machine Learning Engineer — Associate",
+    "publisher": "Amazon Web Services",
+    "url": "https://aws.amazon.com/certification/certified-machine-learning-engineer-associate/",
+    "type": "certification-guide",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "cert-azure-ai-900": {
+    "title": "Microsoft Certified: Azure AI Fundamentals (AI-900)",
+    "publisher": "Microsoft",
+    "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/",
+    "type": "certification-guide",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "cert-azure-ai-102": {
+    "title": "Microsoft Certified: Azure AI Engineer Associate (AI-102)",
+    "publisher": "Microsoft",
+    "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-engineer/",
+    "type": "certification-guide",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "cert-ms-applied-skills": {
+    "title": "Microsoft Applied Skills assessments",
+    "publisher": "Microsoft",
+    "url": "https://learn.microsoft.com/en-us/credentials/browse/?credential_types=applied%20skills",
+    "type": "certification-guide",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "cert-google-genai-leader": {
+    "title": "Google Cloud Generative AI Leader",
+    "publisher": "Google Cloud",
+    "url": "https://cloud.google.com/learn/certification/generative-ai-leader",
+    "type": "certification-guide",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "cert-google-pmle": {
+    "title": "Google Cloud Professional Machine Learning Engineer",
+    "publisher": "Google Cloud",
+    "url": "https://cloud.google.com/learn/certification/machine-learning-engineer",
+    "type": "certification-guide",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "cert-nvidia-directory": {
+    "title": "NVIDIA certification programs",
+    "publisher": "NVIDIA",
+    "url": "https://www.nvidia.com/en-us/learn/certification/",
+    "type": "certification-guide",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "cert-nvidia-agentic": {
+    "title": "NVIDIA Agentic AI Professional certification",
+    "publisher": "NVIDIA",
+    "url": "https://www.nvidia.com/en-us/learn/certification/agentic-ai-professional/",
+    "type": "certification-guide",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "cert-databricks": {
+    "title": "Databricks certifications",
+    "publisher": "Databricks",
+    "url": "https://www.databricks.com/learn/certification",
+    "type": "certification-guide",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "course-openai-academy": {
+    "title": "OpenAI Academy",
+    "publisher": "OpenAI",
+    "url": "https://academy.openai.com/",
+    "type": "official-docs",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "course-anthropic": {
+    "title": "Anthropic courses repository",
+    "publisher": "Anthropic",
+    "url": "https://github.com/anthropics/courses",
+    "type": "repo",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "course-anthropic-cookbook": {
+    "title": "Anthropic Cookbook",
+    "publisher": "Anthropic",
+    "url": "https://github.com/anthropics/anthropic-cookbook",
+    "type": "repo",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "course-openai-cookbook": {
+    "title": "OpenAI Cookbook",
+    "publisher": "OpenAI",
+    "url": "https://github.com/openai/openai-cookbook",
+    "type": "repo",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "course-google-skills": {
+    "title": "Google Skills learning platform",
+    "publisher": "Google",
+    "url": "https://www.skills.google/",
+    "type": "official-docs",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "course-ms-learn": {
+    "title": "Microsoft Learn training",
+    "publisher": "Microsoft",
+    "url": "https://learn.microsoft.com/en-us/training/",
+    "type": "official-docs",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "course-aws-skill-builder": {
+    "title": "AWS Skill Builder",
+    "publisher": "Amazon Web Services",
+    "url": "https://skillbuilder.aws/",
+    "type": "official-docs",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "course-nvidia-dli": {
+    "title": "NVIDIA Deep Learning Institute",
+    "publisher": "NVIDIA",
+    "url": "https://www.nvidia.com/en-us/training/",
+    "type": "official-docs",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "course-hf-learn": {
+    "title": "Hugging Face courses",
+    "publisher": "Hugging Face",
+    "url": "https://huggingface.co/learn",
+    "type": "official-docs",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "course-dlai": {
+    "title": "DeepLearning.AI course catalog",
+    "publisher": "DeepLearning.AI",
+    "url": "https://www.deeplearning.ai/courses/",
+    "type": "official-docs",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "course-fastai": {
+    "title": "fast.ai Practical Deep Learning",
+    "publisher": "fast.ai",
+    "url": "https://course.fast.ai/",
+    "type": "official-docs",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "course-fsdl": {
+    "title": "Full Stack Deep Learning",
+    "publisher": "Full Stack Deep Learning",
+    "url": "https://fullstackdeeplearning.com/",
+    "type": "official-docs",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "course-kaggle": {
+    "title": "Kaggle Learn",
+    "publisher": "Kaggle",
+    "url": "https://www.kaggle.com/learn",
+    "type": "official-docs",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "course-databricks": {
+    "title": "Databricks Academy",
+    "publisher": "Databricks",
+    "url": "https://www.databricks.com/learn/training",
+    "type": "official-docs",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "course-mongodb": {
+    "title": "MongoDB University",
+    "publisher": "MongoDB",
+    "url": "https://learn.mongodb.com/",
+    "type": "official-docs",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "course-pinecone": {
+    "title": "Pinecone Learning Center",
+    "publisher": "Pinecone",
+    "url": "https://www.pinecone.io/learn/",
+    "type": "official-docs",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "course-weaviate": {
+    "title": "Weaviate Academy",
+    "publisher": "Weaviate",
+    "url": "https://weaviate.io/developers/academy",
+    "type": "official-docs",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "course-qdrant": {
+    "title": "Qdrant courses",
+    "publisher": "Qdrant",
+    "url": "https://qdrant.tech/course/",
+    "type": "official-docs",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "course-langchain": {
+    "title": "LangChain Academy",
+    "publisher": "LangChain",
+    "url": "https://academy.langchain.com/",
+    "type": "official-docs",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "course-langfuse": {
+    "title": "Langfuse Academy",
+    "publisher": "Langfuse",
+    "url": "https://langfuse.com/academy",
+    "type": "official-docs",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "course-llamaindex": {
+    "title": "LlamaIndex documentation",
+    "publisher": "LlamaIndex",
+    "url": "https://docs.llamaindex.ai/",
+    "type": "official-docs",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "course-nptel": {
+    "title": "NPTEL open courses",
+    "publisher": "NPTEL (IIT/IISc)",
+    "url": "https://nptel.ac.in/",
+    "type": "official-docs",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "course-swayam": {
+    "title": "SWAYAM open learning",
+    "publisher": "Government of India",
+    "url": "https://swayam.gov.in/",
+    "type": "official-docs",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "course-ai4bharat": {
+    "title": "AI4Bharat open resources",
+    "publisher": "AI4Bharat (IIT Madras)",
+    "url": "https://ai4bharat.iitm.ac.in/",
+    "type": "official-docs",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "course-bhashini": {
+    "title": "Bhashini language ecosystem",
+    "publisher": "Government of India",
+    "url": "https://bhashini.gov.in/",
+    "type": "official-docs",
+    "status": "current",
+    "accessedAt": "2026-09-15"
+  },
+  "course-ai-studio": {
+    "title": "Google AI Studio",
+    "publisher": "Google",
+    "url": "https://aistudio.google.com/",
+    "type": "official-docs",
+    "status": "current",
+    "accessedAt": "2026-09-15"
   }
 }

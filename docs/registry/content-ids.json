@@ -6,7 +6,7 @@
   "sce": 6,
   "blo": 10,
   "gui": 9,
-  "ans": 33,
+  "ans": 34,
   "fde": 193,
   "rol": 12,
   "prc": 6,
@@ -9832,6 +9832,10 @@
   "lessons/mcp/mcp-server-in-typescript.mdx": {
    "id": "les-2166",
    "fp": "05369dc4deabd086643678db6cf10f43f6a2baa3"
+  },
+  "answers/certification-vs-portfolio-vs-experience.md": {
+   "id": "ans-0034",
+   "fp": "1cdacd039045856f1607abe83790bf7923e79e54"
   }
  },
  "retired": {

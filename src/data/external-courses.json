@@ -1,0 +1,368 @@
+{
+  "$comment": "External course directory — official and high-quality learning resources that fill gaps or complement LMVersity tracks. Every entry links to the provider's official page; no affiliate relationships exist; entries are listed for learner benefit, not partnership. costModel: free | free-audit | freemium | subscription | paid | mixed.",
+  "openai-academy": {
+    "provider": "OpenAI",
+    "title": "OpenAI Academy",
+    "officialSource": "course-openai-academy",
+    "audience": "General → developer",
+    "costModel": "free",
+    "kind": "official-vendor",
+    "verifiedAt": "2026-09-15",
+    "note": "OpenAI's own learning hub — product tutorials plus developer sessions.",
+    "lmversity": [
+      "genai-app-dev",
+      "prompt-engineering"
+    ]
+  },
+  "openai-cookbook": {
+    "provider": "OpenAI",
+    "title": "OpenAI Cookbook",
+    "officialSource": "course-openai-cookbook",
+    "audience": "Developer",
+    "costModel": "free",
+    "kind": "official-repo",
+    "verifiedAt": "2026-09-15",
+    "note": "Runnable examples for the OpenAI API — code-first reference.",
+    "lmversity": [
+      "genai-app-dev",
+      "tools-function-calling",
+      "structured-outputs"
+    ]
+  },
+  "anthropic-courses": {
+    "provider": "Anthropic",
+    "title": "Anthropic courses",
+    "officialSource": "course-anthropic",
+    "audience": "Developer",
+    "costModel": "free",
+    "kind": "official-repo",
+    "verifiedAt": "2026-09-15",
+    "note": "Anthropic's course material on GitHub — prompt engineering through tool use and evaluation.",
+    "lmversity": [
+      "prompt-engineering",
+      "tools-function-calling",
+      "evals-red-teaming"
+    ]
+  },
+  "anthropic-cookbook": {
+    "provider": "Anthropic",
+    "title": "Anthropic Cookbook",
+    "officialSource": "course-anthropic-cookbook",
+    "audience": "Developer",
+    "costModel": "free",
+    "kind": "official-repo",
+    "verifiedAt": "2026-09-15",
+    "note": "Copyable code patterns for the Claude API.",
+    "lmversity": [
+      "genai-app-dev",
+      "tools-function-calling"
+    ]
+  },
+  "google-skills": {
+    "provider": "Google",
+    "title": "Google Skills",
+    "officialSource": "course-google-skills",
+    "audience": "All levels",
+    "costModel": "freemium",
+    "kind": "official-vendor",
+    "verifiedAt": "2026-09-15",
+    "note": "Google's consolidated learning platform (Cloud Skills Boost lineage). Bot-check on automated probes — open in a browser.",
+    "lmversity": [
+      "ai-foundations",
+      "production"
+    ]
+  },
+  "google-ai-studio": {
+    "provider": "Google",
+    "title": "Google AI Studio",
+    "officialSource": "course-ai-studio",
+    "audience": "Developer",
+    "costModel": "free",
+    "kind": "official-vendor",
+    "verifiedAt": "2026-09-15",
+    "note": "Free environment for trying Gemini models and prompt prototyping.",
+    "lmversity": [
+      "prompt-engineering",
+      "genai-app-dev"
+    ]
+  },
+  "microsoft-learn": {
+    "provider": "Microsoft",
+    "title": "Microsoft Learn",
+    "officialSource": "course-ms-learn",
+    "audience": "All levels",
+    "costModel": "free",
+    "kind": "official-vendor",
+    "verifiedAt": "2026-09-15",
+    "note": "Free modules and learning paths across Azure AI, Copilot extensibility, and agents.",
+    "lmversity": [
+      "genai-app-dev",
+      "agentic-ai"
+    ]
+  },
+  "aws-skill-builder": {
+    "provider": "AWS",
+    "title": "AWS Skill Builder",
+    "officialSource": "course-aws-skill-builder",
+    "audience": "All levels",
+    "costModel": "freemium",
+    "kind": "official-vendor",
+    "verifiedAt": "2026-09-15",
+    "note": "AWS's learning platform — free courses plus paid exam-prep subscriptions.",
+    "lmversity": [
+      "production",
+      "machine-learning"
+    ]
+  },
+  "nvidia-dli": {
+    "provider": "NVIDIA",
+    "title": "NVIDIA Deep Learning Institute",
+    "officialSource": "course-nvidia-dli",
+    "audience": "Intermediate → advanced",
+    "costModel": "mixed",
+    "kind": "official-vendor",
+    "verifiedAt": "2026-09-15",
+    "note": "Hands-on GPU labs; many self-paced courses free, workshops paid.",
+    "lmversity": [
+      "deep-learning",
+      "local-inference"
+    ]
+  },
+  "huggingface-learn": {
+    "provider": "Hugging Face",
+    "title": "Hugging Face courses",
+    "officialSource": "course-hf-learn",
+    "audience": "Intermediate",
+    "costModel": "free",
+    "kind": "official-vendor",
+    "verifiedAt": "2026-09-15",
+    "note": "Free NLP, agents, and smol-course material tied to the HF ecosystem.",
+    "lmversity": [
+      "llm-foundations",
+      "fine-tuning",
+      "local-inference"
+    ]
+  },
+  "deeplearningai": {
+    "provider": "DeepLearning.AI",
+    "title": "DeepLearning.AI courses",
+    "officialSource": "course-dlai",
+    "audience": "All levels",
+    "costModel": "freemium",
+    "kind": "independent",
+    "verifiedAt": "2026-09-15",
+    "note": "Andrew Ng's catalog — short courses on current topics plus full specializations.",
+    "lmversity": [
+      "ai-foundations",
+      "genai-app-dev",
+      "machine-learning"
+    ]
+  },
+  "fastai": {
+    "provider": "fast.ai",
+    "title": "Practical Deep Learning for Coders",
+    "officialSource": "course-fastai",
+    "audience": "Programmers",
+    "costModel": "free",
+    "kind": "independent",
+    "verifiedAt": "2026-09-15",
+    "note": "Top-down, code-first deep learning — the classic free practical course.",
+    "lmversity": [
+      "deep-learning",
+      "machine-learning"
+    ]
+  },
+  "fsdl": {
+    "provider": "Full Stack Deep Learning",
+    "title": "Full Stack Deep Learning",
+    "officialSource": "course-fsdl",
+    "audience": "Engineers",
+    "costModel": "free",
+    "kind": "independent",
+    "verifiedAt": "2026-09-15",
+    "note": "Production ML systems end to end — lectures and materials openly published.",
+    "lmversity": [
+      "production",
+      "machine-learning",
+      "llm-foundations"
+    ]
+  },
+  "kaggle-learn": {
+    "provider": "Kaggle",
+    "title": "Kaggle Learn",
+    "officialSource": "course-kaggle",
+    "audience": "Beginner → intermediate",
+    "costModel": "free",
+    "kind": "official-vendor",
+    "verifiedAt": "2026-09-15",
+    "note": "Short practical courses plus competitions for applied practice.",
+    "lmversity": [
+      "machine-learning",
+      "python-data-apis"
+    ]
+  },
+  "databricks-academy": {
+    "provider": "Databricks",
+    "title": "Databricks Academy",
+    "officialSource": "course-databricks",
+    "audience": "Data + AI practitioners",
+    "costModel": "freemium",
+    "kind": "official-vendor",
+    "verifiedAt": "2026-09-15",
+    "note": "Official Databricks training incl. genAI application courses.",
+    "lmversity": [
+      "rag",
+      "production"
+    ]
+  },
+  "mongodb-university": {
+    "provider": "MongoDB",
+    "title": "MongoDB University",
+    "officialSource": "course-mongodb",
+    "audience": "Developers",
+    "costModel": "free",
+    "kind": "official-vendor",
+    "verifiedAt": "2026-09-15",
+    "note": "Free official courses incl. vector-search material relevant to RAG.",
+    "lmversity": [
+      "rag",
+      "python-data-apis"
+    ]
+  },
+  "pinecone-learn": {
+    "provider": "Pinecone",
+    "title": "Pinecone Learning Center",
+    "officialSource": "course-pinecone",
+    "audience": "Developers",
+    "costModel": "free",
+    "kind": "official-vendor",
+    "verifiedAt": "2026-09-15",
+    "note": "Vector-database and RAG tutorials from the Pinecone team.",
+    "lmversity": [
+      "rag"
+    ]
+  },
+  "weaviate-academy": {
+    "provider": "Weaviate",
+    "title": "Weaviate Academy",
+    "officialSource": "course-weaviate",
+    "audience": "Developers",
+    "costModel": "free",
+    "kind": "official-vendor",
+    "verifiedAt": "2026-09-15",
+    "note": "Official Weaviate vector-DB courses.",
+    "lmversity": [
+      "rag"
+    ]
+  },
+  "qdrant-course": {
+    "provider": "Qdrant",
+    "title": "Qdrant courses",
+    "officialSource": "course-qdrant",
+    "audience": "Developers",
+    "costModel": "free",
+    "kind": "official-vendor",
+    "verifiedAt": "2026-09-15",
+    "note": "Official Qdrant vector-search courses.",
+    "lmversity": [
+      "rag"
+    ]
+  },
+  "langchain-academy": {
+    "provider": "LangChain",
+    "title": "LangChain Academy",
+    "officialSource": "course-langchain",
+    "audience": "Developers",
+    "costModel": "free",
+    "kind": "official-vendor",
+    "verifiedAt": "2026-09-15",
+    "note": "Official LangChain/LangGraph courses — agent building on their stack.",
+    "lmversity": [
+      "agent-frameworks",
+      "agentic-ai"
+    ]
+  },
+  "langfuse-academy": {
+    "provider": "Langfuse",
+    "title": "Langfuse Academy",
+    "officialSource": "course-langfuse",
+    "audience": "Developers",
+    "costModel": "free",
+    "kind": "official-vendor",
+    "verifiedAt": "2026-09-15",
+    "note": "Official LLM observability/evaluation course from Langfuse.",
+    "lmversity": [
+      "production",
+      "evals-red-teaming"
+    ]
+  },
+  "llamaindex-docs": {
+    "provider": "LlamaIndex",
+    "title": "LlamaIndex docs and examples",
+    "officialSource": "course-llamaindex",
+    "audience": "Developers",
+    "costModel": "free",
+    "kind": "official-docs",
+    "verifiedAt": "2026-09-15",
+    "note": "No separate academy domain — the docs' examples serve as the learning path.",
+    "lmversity": [
+      "rag",
+      "agent-frameworks"
+    ]
+  },
+  "nptel": {
+    "provider": "NPTEL (IIT/IISc)",
+    "title": "NPTEL open courses",
+    "officialSource": "course-nptel",
+    "audience": "University-level",
+    "costModel": "free-audit",
+    "kind": "public-university",
+    "verifiedAt": "2026-09-15",
+    "note": "Indian university courses openly published — AI/ML syllabi verifiable per course; certificates via paid proctored exam.",
+    "lmversity": [
+      "ai-foundations",
+      "machine-learning",
+      "maths-foundations"
+    ]
+  },
+  "swayam": {
+    "provider": "SWAYAM (Govt. of India)",
+    "title": "SWAYAM open learning",
+    "officialSource": "course-swayam",
+    "audience": "University-level",
+    "costModel": "free-audit",
+    "kind": "public-university",
+    "verifiedAt": "2026-09-15",
+    "note": "India's MOOC platform — university courses free to study, optional paid certificates.",
+    "lmversity": [
+      "ai-foundations",
+      "ai-literacy"
+    ]
+  },
+  "ai4bharat": {
+    "provider": "AI4Bharat (IIT Madras)",
+    "title": "AI4Bharat open resources",
+    "officialSource": "course-ai4bharat",
+    "audience": "Research + engineering",
+    "costModel": "free",
+    "kind": "research-lab",
+    "verifiedAt": "2026-09-15",
+    "note": "Open Indic language models, datasets, and tools — resources rather than a course.",
+    "lmversity": [
+      "ai-literacy"
+    ]
+  },
+  "bhashini": {
+    "provider": "Bhashini (Govt. of India)",
+    "title": "Bhashini ecosystem",
+    "officialSource": "course-bhashini",
+    "audience": "Developers + researchers",
+    "costModel": "free",
+    "kind": "public-program",
+    "verifiedAt": "2026-09-15",
+    "note": "National translation mission — language APIs and datasets via official channels.",
+    "lmversity": [
+      "ai-literacy"
+    ]
+  }
+}

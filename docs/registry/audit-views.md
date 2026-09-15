@@ -1,7 +1,7 @@
 # Content registry — audit views
 
-Generated 2026-09-15T15:08:53.076Z by `scripts/build-content-registry.mjs`.
-2464 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T15:16:03.956Z by `scripts/build-content-registry.mjs`.
+2465 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
@@ -10,7 +10,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 - quiz: 89
 - lab: 70
 - reference: 55
-- answer: 33
+- answer: 34
 - project: 32
 - page: 21
 - role: 12
@@ -23,7 +23,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By status
 
-- live: 2464
+- live: 2465
 
 ## By search intent (heuristic)
 
@@ -32,7 +32,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 - build: 102
 - practice: 89
 - reference: 56
-- answer: 33
+- answer: 34
 - worked-example: 29
 - troubleshooting: 24
 - how-to: 15
@@ -50,7 +50,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 - ai-engineer: 1688
 - beginner-engineer: 440
 - forward-deployed-engineer: 194
-- general: 124
+- general: 125
 - job-candidate: 7
 - developer: 1
 - ml-engineer: 1
@@ -84,19 +84,19 @@ and split always need a written human reason (see checklist).
 |---|---:|
 | investigate | 2262 |
 | keep | 200 |
-| expand | 2 |
+| expand | 3 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2263 | 1.91 | 0 | 209 | 2054 |
+| intentClarity | 2264 | 1.91 | 0 | 210 | 2054 |
 | correctnessSources | 46 | 1.28 | 0 | 33 | 13 |
-| completeness | 2414 | 1.64 | 44 | 786 | 1584 |
+| completeness | 2415 | 1.64 | 45 | 786 | 1584 |
 | prerequisiteFit | 2349 | 0.15 | 2169 | 0 | 180 |
-| handsOn | 2263 | 1.48 | 566 | 53 | 1644 |
-| explanationQuality | 2263 | 1.96 | 20 | 56 | 2187 |
-| metadata | 2263 | 1.84 | 0 | 361 | 1902 |
-| linking | 2174 | 1.50 | 382 | 321 | 1471 |
-| freshnessHealth | 2464 | 0.75 | 871 | 1327 | 266 |
+| handsOn | 2264 | 1.48 | 566 | 54 | 1644 |
+| explanationQuality | 2264 | 1.96 | 20 | 56 | 2188 |
+| metadata | 2264 | 1.84 | 0 | 362 | 1902 |
+| linking | 2175 | 1.50 | 382 | 322 | 1471 |
+| freshnessHealth | 2465 | 0.75 | 872 | 1327 | 266 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
@@ -194,6 +194,10 @@ and split always need a written human reason (see checklist).
 #### expand: thin vs family median (191w vs ~525w) (1)
 
 - /blog/agents-need-a-harness — Agents need a harness, not just a prompt
+
+#### expand: thin vs family median (279w vs ~1009w) (1)
+
+- /answers/certification-vs-portfolio-vs-experience — AI certification vs portfolio vs experience — which matters?
 
 #### expand: thin vs family median (361w vs ~1009w) (1)
 
@@ -353,10 +357,10 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - pricing-sensitive: 347
 - release-sensitive: 339
 - durable: 266
-- certification-sensitive: 103
+- certification-sensitive: 104
 - policy-sensitive: 82
 
-### certification-sensitive (103) — oldest-verified first
+### certification-sensitive (104) — oldest-verified first
 
 - /learn/agent-skills/skill-security-and-provenance — Skill provenance, review, and the safe-installation checklist *(verified undated)*
 - /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access *(verified undated)*
@@ -388,7 +392,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-foundations/reliable-ai/221-contestability-appeals-and-recource — Contestability, Appeals, and Recourse *(verified 2026-08-30)*
 - /learn/ai-foundations/reliable-ai/222-societal-impact-labor-and-power — Societal Impact, Labour, and Power *(verified 2026-08-30)*
 - /learn/ai-foundations/reliable-ai/223-environmental-impact-and-compute-governance — Environmental Impact and Compute Governance *(verified 2026-08-30)*
-- … 73 more in content-registry.json
+- … 74 more in content-registry.json
 
 ### pricing-sensitive (347) — oldest-verified first
 
@@ -766,12 +770,13 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /blog/why-there-is-no-certificate — Why there's no certificate here (520 words, updated 2026-09-08)
 - /blog/your-rag-problem-is-a-retrieval-problem — Your RAG problem is a retrieval problem (700 words, updated 2026-08-30)
 
-### answer (33)
+### answer (34)
 
 - /answers/ai-engineer-interview-questions — AI engineer interview questions: what is asked and how to prepare (1210 words, updated 2026-09-08)
 - /answers/ai-engineer-roadmap — AI engineer roadmap: the skills in order, and what to skip (2002 words, updated 2026-09-08)
 - /answers/ai-engineer-vs-ml-engineer — AI engineer vs ML engineer: the difference in what you do all day (977 words, updated 2026-09-08)
 - /answers/can-i-run-an-llm-locally — Can I run an LLM locally, and should I? (469 words, updated 2026-09-15)
+- /answers/certification-vs-portfolio-vs-experience — AI certification vs portfolio vs experience — which matters? (279 words, updated 2026-09-15)
 - /answers/deploy-an-llm-app-to-production — How do I deploy an LLM app to production? (361 words, updated 2026-09-15)
 - /answers/difference-between-ai-and-machine-learning — Difference between AI and machine learning (and deep learning) (1009 words, updated 2026-09-08)
 - /answers/free-forward-deployed-engineer-course — Free Forward Deployed Engineer course: from zero to FDE in nine months (2002 words, updated 2026-09-08)

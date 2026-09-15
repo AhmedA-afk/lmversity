@@ -1,0 +1,73 @@
+---
+import Layout from '../components/Layout.astro';
+import certifications from '../data/certifications.json';
+import sources from '../data/sources.json';
+import { getTrack } from '../data/curriculum.ts';
+
+const certs = Object.entries(certifications)
+  .filter(([id]) => !id.startsWith('$'))
+  .map(([id, c]) => ({ id, ...c, url: sources[c.officialSource]?.url }));
+---
+<Layout
+  title="AI certifications registry"
+  description="A sourced registry of AI and ML certifications — exam codes, audiences, domains, and the LMVersity tracks that map to each objective set. Official pages only; nothing here is an endorsement."
+  breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Certifications', url: '/certifications' }]}
+>
+  <section class="head container">
+    <span class="eyebrow">Reference</span>
+    <h1>Certifications, verified against official pages.</h1>
+    <p class="sub">Each record cites the provider's official credential page and carries the date it was last checked. Exam codes, prices, and objective weights change — always confirm on the official page before registering. A certificate proves exam performance; it does not prove implementation skill — pair it with the projects in the mapped tracks.</p>
+  </section>
+
+  <section class="container list">
+    {certs.map((c) => (
+      <article class="cert">
+        <div class="cert-head">
+          <div>
+            <h2>{c.name}</h2>
+            <p class="org mono">{c.org} · {c.level} · <span class={`st st-${c.status}`}>{c.status}</span></p>
+          </div>
+          <a href={c.url} class="off mono" target="_blank" rel="noopener noreferrer">Official page ↗</a>
+        </div>
+        <dl class="grid">
+          <div><dt>Exam</dt><dd>{c.examCode}</dd></div>
+          <div><dt>Audience</dt><dd>{c.audience}</dd></div>
+          <div><dt>Delivery</dt><dd>{c.delivery}</dd></div>
+          <div><dt>Verified</dt><dd class="mono">{c.verifiedAt}</dd></div>
+        </dl>
+        <p class="domains"><span class="mono">Domains:</span> {c.domains.join(' · ')}</p>
+        {c.volatile && <p class="vol">{c.volatile}</p>}
+        <p class="map"><span class="mono">LMVersity coverage:</span> {c.lmversity.map((t, i) => (<>{i > 0 && ' · '}<a href={`/learn/${t}`}>{getTrack(t)?.name ?? t}</a></>))}</p>
+      </article>
+    ))}
+  </section>
+
+  <section class="container note">
+    <p>Missing a credential? The registry only lists certifications verified against an official page on the date shown. Vendor programs we could not verify are excluded rather than guessed.</p>
+  </section>
+</Layout>
+
+<style>
+  .head { padding-block: 48px 8px; }
+  .head h1 { font-size: clamp(28px, 4vw, 38px); letter-spacing: -.02em; margin-top: 14px; max-width: 24ch; }
+  .sub { margin-top: 16px; color: var(--muted); max-width: 66ch; font-size: 15px; line-height: 1.6; }
+  .list { padding-top: 36px; display: grid; gap: 16px; }
+  .cert { border: 1px solid var(--rule); border-radius: 12px; padding: 22px 24px; background: var(--paper); }
+  .cert-head { display: flex; justify-content: space-between; align-items: start; gap: 16px; }
+  .cert h2 { font-size: 19px; letter-spacing: -.01em; }
+  .org { margin-top: 6px; font-size: 11px; color: var(--faint); letter-spacing: .04em; }
+  .st { padding: 1px 7px; border-radius: 10px; border: 1px solid var(--rule); }
+  .st-current { color: var(--accent); border-color: var(--accent); }
+  .off { font-size: 11.5px; color: var(--accent); flex: none; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 18px; }
+  .grid dt { font-size: 10.5px; text-transform: uppercase; letter-spacing: .06em; color: var(--faint); }
+  .grid dd { margin: 4px 0 0; font-size: 13.5px; color: var(--text); }
+  .domains { margin-top: 16px; font-size: 13px; color: var(--muted); line-height: 1.6; }
+  .domains .mono, .map .mono { font-size: 10.5px; color: var(--faint); letter-spacing: .04em; }
+  .vol { margin-top: 10px; font-size: 12.5px; color: var(--muted); padding: 8px 12px; border-left: 2px solid var(--accent); background: var(--panel); }
+  .map { margin-top: 12px; font-size: 13px; color: var(--muted); }
+  .map a { color: var(--accent); }
+  .note { padding-block: 30px 20px; }
+  .note p { font-size: 13px; color: var(--faint); max-width: 66ch; }
+  @media (max-width: 760px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+</style>

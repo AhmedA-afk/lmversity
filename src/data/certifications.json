@@ -1,0 +1,238 @@
+{
+  "$comment": "Certification registry — sourced only from official credential pages (officialSource ids → sources.json). Volatile fields (exam codes, prices, dates) carry verifiedAt; re-verify before advising a learner. Status: current | beta | retiring | retired | unverified.",
+  "aws-ai-practitioner": {
+    "name": "AWS Certified AI Practitioner",
+    "org": "AWS",
+    "status": "current",
+    "examCode": "AIF-C01",
+    "level": "foundational",
+    "audience": "Business and technical roles new to AI/ML on AWS",
+    "domains": [
+      "AI/ML fundamentals",
+      "Generative AI concepts",
+      "Foundation model applications",
+      "Responsible AI",
+      "Security and compliance"
+    ],
+    "delivery": "proctored exam, test center or online",
+    "duration": "90 min",
+    "officialSource": "cert-aws-ai-practitioner",
+    "verifiedAt": "2026-09-15",
+    "volatile": "Price, exam code, and domain weights change — verify on the official page before registering.",
+    "lmversity": [
+      "ai-foundations",
+      "llm-foundations",
+      "responsible-ai",
+      "genai-app-dev"
+    ]
+  },
+  "aws-ml-engineer-associate": {
+    "name": "AWS Certified Machine Learning Engineer — Associate",
+    "org": "AWS",
+    "status": "current",
+    "examCode": "MLA-C01",
+    "level": "associate",
+    "audience": "Engineers building/deploying ML workloads on AWS",
+    "domains": [
+      "Data preparation",
+      "Model development",
+      "Deployment and orchestration",
+      "Monitoring and security"
+    ],
+    "delivery": "proctored exam",
+    "duration": "130 min",
+    "officialSource": "cert-aws-ml-associate",
+    "verifiedAt": "2026-09-15",
+    "volatile": "Successor to the retired ML Specialty — confirm current code before booking.",
+    "lmversity": [
+      "machine-learning",
+      "production",
+      "fine-tuning"
+    ]
+  },
+  "azure-ai-fundamentals": {
+    "name": "Microsoft Certified: Azure AI Fundamentals",
+    "org": "Microsoft",
+    "status": "current",
+    "examCode": "AI-900",
+    "level": "fundamentals",
+    "audience": "Anyone needing a broad Azure AI survey — no deep technical background required",
+    "domains": [
+      "AI workloads",
+      "ML principles on Azure",
+      "Vision",
+      "Language",
+      "Generative AI"
+    ],
+    "delivery": "proctored exam",
+    "officialSource": "cert-azure-ai-900",
+    "verifiedAt": "2026-09-15",
+    "volatile": "Objective domains refresh periodically — check the skills-measured doc.",
+    "lmversity": [
+      "ai-foundations",
+      "ai-literacy",
+      "genai-app-dev"
+    ]
+  },
+  "azure-ai-engineer": {
+    "name": "Microsoft Certified: Azure AI Engineer Associate",
+    "org": "Microsoft",
+    "status": "current",
+    "examCode": "AI-102",
+    "level": "associate",
+    "audience": "Developers building AI solutions on Azure AI services",
+    "domains": [
+      "Plan and manage Azure AI solutions",
+      "GenAI solutions",
+      "Agents",
+      "Vision/language/speech",
+      "Responsible AI"
+    ],
+    "delivery": "proctored exam",
+    "officialSource": "cert-azure-ai-102",
+    "verifiedAt": "2026-09-15",
+    "volatile": "Exam objectives were revised for agentic workloads — verify the current objective list.",
+    "lmversity": [
+      "genai-app-dev",
+      "tools-function-calling",
+      "agentic-ai",
+      "production"
+    ]
+  },
+  "microsoft-applied-skills-genai": {
+    "name": "Microsoft Applied Skills (generative AI and agents)",
+    "org": "Microsoft",
+    "status": "current",
+    "examCode": "none — scenario-based assessments",
+    "level": "applied skill",
+    "audience": "Practitioners proving a specific task skill (Azure OpenAI, agents, Semantic Kernel)",
+    "domains": [
+      "Scenario-lab tasks rather than broad exams"
+    ],
+    "delivery": "free online lab assessment",
+    "officialSource": "cert-ms-applied-skills",
+    "verifiedAt": "2026-09-15",
+    "volatile": "Individual assessments rotate — the catalog, not one title, is the stable reference.",
+    "lmversity": [
+      "genai-app-dev",
+      "tools-function-calling",
+      "agentic-ai"
+    ]
+  },
+  "google-generative-ai-leader": {
+    "name": "Google Cloud Generative AI Leader",
+    "org": "Google Cloud",
+    "status": "current",
+    "examCode": "Generative AI Leader",
+    "level": "foundational/leadership",
+    "audience": "Leaders and practitioners covering genAI strategy on Google Cloud",
+    "domains": [
+      "GenAI concepts",
+      "Google Cloud genAI offerings",
+      "Responsible AI",
+      "Adoption strategy"
+    ],
+    "delivery": "proctored exam",
+    "officialSource": "cert-google-genai-leader",
+    "verifiedAt": "2026-09-15",
+    "volatile": "Newer cert — objectives and availability still settling; verify before advising.",
+    "lmversity": [
+      "ai-foundations",
+      "ai-literacy",
+      "responsible-ai"
+    ]
+  },
+  "google-pmle": {
+    "name": "Google Cloud Professional Machine Learning Engineer",
+    "org": "Google Cloud",
+    "status": "current",
+    "examCode": "Professional ML Engineer",
+    "level": "professional",
+    "audience": "ML engineers designing and operating ML systems on GCP/Vertex AI",
+    "domains": [
+      "ML problem framing",
+      "Architecture and data",
+      "Model development",
+      "Serving and MLOps",
+      "Responsible AI"
+    ],
+    "delivery": "proctored exam",
+    "officialSource": "cert-google-pmle",
+    "verifiedAt": "2026-09-15",
+    "volatile": "Exam content updates on a cycle — check the current exam guide.",
+    "lmversity": [
+      "machine-learning",
+      "deep-learning",
+      "production",
+      "evals-red-teaming"
+    ]
+  },
+  "nvidia-genai-associate": {
+    "name": "NVIDIA-Certified Associate: Generative AI LLMs",
+    "org": "NVIDIA",
+    "status": "current",
+    "examCode": "NCA-GENL",
+    "level": "associate",
+    "audience": "Practitioners demonstrating genAI/LLM fundamentals on NVIDIA stacks",
+    "domains": [
+      "LLM fundamentals",
+      "Prompt engineering",
+      "RAG",
+      "NVIDIA tooling"
+    ],
+    "delivery": "proctored exam",
+    "officialSource": "cert-nvidia-directory",
+    "verifiedAt": "2026-09-15",
+    "volatile": "NVIDIA cert catalog expands quickly — confirm exam code on the directory page.",
+    "lmversity": [
+      "llm-foundations",
+      "prompt-engineering",
+      "rag"
+    ]
+  },
+  "nvidia-agentic-professional": {
+    "name": "NVIDIA-Certified Professional: Agentic AI",
+    "org": "NVIDIA",
+    "status": "current",
+    "examCode": "NCP-AAI",
+    "level": "professional",
+    "audience": "Engineers building production agentic systems on NVIDIA platforms",
+    "domains": [
+      "Agent architectures",
+      "Tool use and orchestration",
+      "Deployment and scaling"
+    ],
+    "delivery": "proctored exam",
+    "officialSource": "cert-nvidia-agentic",
+    "verifiedAt": "2026-09-15",
+    "volatile": "Newer professional tier — prerequisites and domains may shift.",
+    "lmversity": [
+      "agentic-ai",
+      "harness-design",
+      "production"
+    ]
+  },
+  "databricks-genai-engineer": {
+    "name": "Databricks Certified Generative AI Engineer — Associate",
+    "org": "Databricks",
+    "status": "current",
+    "examCode": "Generative AI Engineer Associate",
+    "level": "associate",
+    "audience": "Engineers building genAI apps on Databricks (RAG, agents, governance)",
+    "domains": [
+      "GenAI application development",
+      "RAG pipelines",
+      "Model serving",
+      "Governance"
+    ],
+    "delivery": "proctored exam",
+    "officialSource": "cert-databricks",
+    "verifiedAt": "2026-09-15",
+    "volatile": "Check the current exam guide — Databricks revises objectives with platform releases.",
+    "lmversity": [
+      "rag",
+      "genai-app-dev",
+      "production"
+    ]
+  }
+}

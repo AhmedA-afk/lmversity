@@ -1,9 +1,9 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T15:08:53.076Z",
+  "generatedAt": "2026-09-15T15:16:03.956Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2464,
+  "itemCount": 2465,
   "counts": {
    "byFamily": {
     "lesson": 2109,
@@ -15,18 +15,18 @@
     "scenario": 6,
     "blog": 10,
     "guide": 9,
-    "answer": 33,
+    "answer": 34,
     "role": 12,
     "track": 10,
     "page": 21,
     "glossary": 1
    },
    "byStatus": {
-    "live": 2464
+    "live": 2465
    },
    "byKind": {
     "concept": 1808,
-    "comparison": 103,
+    "comparison": 104,
     "capstone": 32,
     "worked-example": 29,
     "quiz": 83,
@@ -104,7 +104,7 @@
     "pricing-sensitive": 347,
     "periodic": 1327,
     "policy-sensitive": 82,
-    "certification-sensitive": 103,
+    "certification-sensitive": 104,
     "durable": 266
    }
   },
@@ -190250,6 +190250,84 @@
     "explanationQuality": 2,
     "metadata": 1,
     "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "ans-0034",
+   "family": "answer",
+   "kind": "comparison",
+   "title": "AI certification vs portfolio vs experience — which matters?",
+   "slug": "certification-vs-portfolio-vs-experience",
+   "route": "/answers/certification-vs-portfolio-vs-experience",
+   "collection": "answers",
+   "path": "src/content/answers/certification-vs-portfolio-vs-experience.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "A certification proves exam performance, a portfolio proves you built something, and experience proves it worked under real conditions — employers weight them differently at different career stages, so choose based on the gap you actually have.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 279,
+   "headings": [
+    "Short answer",
+    "When each one wins",
+    "The mistake to avoid"
+   ],
+   "internalLinks": [
+    "/certifications",
+    "/roles"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "Article",
+    "FAQPage",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "faqCount": 4,
+    "related": [
+     "/certifications",
+     "/external-courses",
+     "/roles",
+     "/learn"
+    ],
+    "listItems": 3,
+    "numericClaims": 0
+   },
+   "searchIntent": "answer",
+   "primaryAudience": "general",
+   "promisedOutcome": "A certification proves exam performance, a portfolio proves you built something, and experience proves it worked under real conditions — employers weight them differently at different career stages, so choose based on the gap you actually have.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "certification-sensitive",
+   "freshnessSignals": [
+    "certification/exam mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "expand",
+   "dispositionReason": "thin vs family median (279w vs ~1009w)",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 1,
+    "correctnessSources": null,
+    "completeness": 0,
+    "prerequisiteFit": null,
+    "handsOn": 1,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,

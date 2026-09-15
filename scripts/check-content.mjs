@@ -85,6 +85,37 @@ if (existsSync(ENTITIES_FILE)) {
   }
 }
 
+// --- certification + external-course registries -----------------------------
+// Same volatile-fact discipline as entities: every record must cite an official
+// source id so a credential/course page change is one record edit.
+const REGISTRIES = [
+  {
+    file: 'src/data/certifications.json', label: 'certifications.json',
+    required: ['name', 'org', 'status', 'officialSource', 'verifiedAt'],
+    statusEnum: new Set(['current', 'beta', 'retiring', 'retired', 'unverified']),
+  },
+  {
+    file: 'src/data/external-courses.json', label: 'external-courses.json',
+    required: ['provider', 'title', 'officialSource', 'costModel', 'verifiedAt'],
+    statusEnum: null,
+  },
+];
+for (const reg of REGISTRIES) {
+  const p = join(ROOT, reg.file);
+  if (!existsSync(p)) continue;
+  const raw = JSON.parse(readFileSync(p, 'utf8'));
+  for (const [id, e] of Object.entries(raw)) {
+    if (id.startsWith('$')) continue;
+    const miss = reg.required.filter((k) => !e[k]);
+    if (miss.length) problems.push(`${reg.label} "${id}": missing ${miss.join(', ')}`);
+    if (reg.statusEnum && e.status && !reg.statusEnum.has(e.status))
+      problems.push(`${reg.label} "${id}": unknown status "${e.status}"`);
+    if (e.verifiedAt && !DATE_RE.test(e.verifiedAt)) problems.push(`${reg.label} "${id}": verifiedAt must be YYYY-MM-DD`);
+    if (e.officialSource && !sourceRegistry.has(e.officialSource))
+      problems.push(`${reg.label} "${id}": officialSource references unknown source "${e.officialSource}"`);
+  }
+}
+
 // editorial pipeline stages — `status` is nav visibility, `reviewStatus` is the
 // editorial record; a live page must have passed review, a coming page must not
 // claim it has

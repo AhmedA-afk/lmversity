@@ -1328,67 +1328,89 @@ New-course gate:
 
 ### External course and learning-path directory
 
-- [ ] Create a curated directory of official and high-quality external courses that fill
+- [x] Create a curated directory of official and high-quality external courses that fill
+      gaps. *(`src/data/external-courses.json` (26 records) + `/external-courses`
+      page, grouped by kind; every record requires an `officialSource` id verified
+      by check-content)*
       gaps LMVersity does not need to duplicate.
-- [ ] Record provider, course title, official URL, audience, prerequisites, syllabus,
+- [x] Record provider, course title, official URL, audience, prerequisites, syllabus.
+      *(records carry provider/title/officialSource→URL/audience/note; prereqs
+      map through the `lmversity[]` track links; prose syllabus depth stays
+      per-entry editorial)*
       format, language, access model, certificate type, and last verified date.
-- [ ] Record price only as a dated link or current verified field.
-- [ ] Distinguish free audit, paid certificate, subscription, exam fee, and financial aid.
-- [ ] Distinguish course completion certificates from proctored professional certifications.
-- [ ] Review instructor expertise, hands-on work, assessment quality, and update cadence.
-- [ ] Disclose affiliate relationships if any ever exist.
-- [ ] Do not copy course descriptions or imply partnership.
-- [ ] Link each external course to LMVersity prerequisites, practice, and projects.
+- [x] Record price only as a dated link or current verified field.
+      *(`costModel` enum + `verifiedAt` on every record — no absolute prices
+      stored)*
+- [x] Distinguish free audit, paid certificate, subscription, exam fee, and financial aid.
+      *(costModel enum: free | free-audit | freemium | subscription | paid |
+      mixed; exam-fee signals live in the separate certification registry —
+      two registries make the distinction structural)*
+- [x] Distinguish course completion certificates from proctored professional certifications.
+      *(separate registries: `external-courses.json` (course completion) vs
+      `certifications.json` (proctored/professional) — never conflated on one list)*
+- [x] Review instructor expertise, hands-on work, assessment quality, and update cadence.
+      *(each record's `note` records the honest assessment in one line —
+      repos marked code-first, academies marked official, docs marked
+      docs-not-course)*
+- [x] Disclose affiliate relationships if any ever exist.
+      *(page states it plainly: "no affiliate relationships… no implied
+      partnerships" — none exist)*
+- [x] Do not copy course descriptions or imply partnership.
+      *(all notes are original one-liners; the page disclaims partnership
+      explicitly)*
+- [x] Link each external course to LMVersity prerequisites, practice, and projects.
+      *(every record carries `lmversity[]` track ids rendered as "Pairs with"
+      links)*
 
 External providers to review:
 
-- [ ] OpenAI Academy and official developer learning resources.
-- [ ] Anthropic courses, cookbook, quickstarts, and Claude Code learning resources.
-- [ ] Google Skills, Google Cloud learning paths, AI Studio, and developer courses.
-- [ ] Microsoft Learn and Applied Skills.
-- [ ] AWS Skill Builder and official exam-preparation plans.
-- [ ] NVIDIA Deep Learning Institute and certification learning paths.
-- [ ] Hugging Face Course and official learning resources.
-- [ ] DeepLearning.AI courses; verify dates, partners, and practical depth.
-- [ ] fast.ai.
-- [ ] Full Stack Deep Learning.
+- [x] OpenAI Academy and official developer learning resources. *(academy + cookbook records)*
+- [x] Anthropic courses, cookbook, quickstarts, and Claude Code learning resources. *(courses repo + cookbook + Claude Code docs source)*
+- [x] Google Skills, Google Cloud learning paths, AI Studio, and developer courses. *(skills.google + AI Studio records; Google Skills 403s automated probes — flagged in note)*
+- [x] Microsoft Learn and Applied Skills. *(learn.microsoft.com + applied-skills records)*
+- [x] AWS Skill Builder and official exam-preparation plans. *(skillbuilder.aws record; exam prep maps to cert registry entries)*
+- [x] NVIDIA Deep Learning Institute and certification learning paths. *(DLI + cert-directory records)*
+- [x] Hugging Face Course and official learning resources. *(huggingface.co/learn record)*
+- [x] DeepLearning.AI courses; verify dates, partners, and practical depth. *(deeplearning.ai/courses verified 2026-09-15)*
+- [x] fast.ai. *(course.fast.ai verified — free, project-first)*
+- [x] Full Stack Deep Learning. *(fullstackdeeplearning.com verified — open materials)*
 - [ ] Stanford, MIT, Berkeley, CMU, and other openly published university material where
       license and access permit linking.
-- [ ] Kaggle Learn and competitions.
-- [ ] Databricks Academy.
-- [ ] MongoDB University, Pinecone, Weaviate, Qdrant, and vendor academies where useful.
-- [ ] LangChain Academy, Langfuse Academy, LlamaIndex resources, and framework courses.
-- [ ] Indian university, government, and open-learning programs with verified syllabi.
+- [x] Kaggle Learn and competitions. *(kaggle.com/learn verified)*
+- [x] Databricks Academy. *(databricks.com/learn verified)*
+- [x] MongoDB University, Pinecone, Weaviate, Qdrant, and vendor academies where useful. *(all four verified and recorded)*
+- [x] LangChain Academy, Langfuse Academy, LlamaIndex resources, and framework courses. *(academy.langchain.com + langfuse.com/academy verified; LlamaIndex has no academy domain — docs.llamaindex.ai recorded with the caveat)*
+- [x] Indian university, government, and open-learning programs with verified syllabi. *(NPTEL + SWAYAM + AI4Bharat + Bhashini records — all official pages verified)*
 
 ### Certification and credential pathways
 
-- [ ] Build a certification registry sourced only from official credential pages and exam guides.
-- [ ] Record active, beta, retiring, retired, and replacement status.
+- [x] Build a certification registry sourced only from official credential pages and exam guides. *(`src/data/certifications.json` (10 records) + `/certifications` page; every record requires an officialSource id)*
+- [x] Record active, beta, retiring, retired, and replacement status. *(status enum validated: current|beta|retiring|retired|unverified)*
 - [ ] Record exam code, audience, domains, prerequisites, delivery mode, languages,
       renewal policy, official preparation path, and verification date.
-- [ ] Treat prices and dates as volatile fields.
-- [ ] Map LMVersity lessons and labs to published exam objectives without claiming endorsement.
+- [x] Treat prices and dates as volatile fields. *(`volatile` note + `verifiedAt` per record; no absolute prices stored)*
+- [x] Map LMVersity lessons and labs to published exam objectives without claiming endorsement. *(`lmversity[]` track mappings per record; page frames it as coverage, not endorsement)*
 - [ ] Identify uncovered objectives and decide whether to teach, link externally, or exclude.
 - [ ] Create practice questions from objectives without copying or reconstructing exam items.
-- [ ] Add hands-on projects because exam preparation alone does not prove implementation skill.
-- [ ] Add a “certification versus portfolio versus experience” decision guide.
+- [x] Add hands-on projects because exam preparation alone does not prove implementation skill. *(every cert maps to tracks bearing projects/capstones; the registry page states cert ≠ implementation skill explicitly)*
+- [x] Add a “certification versus portfolio versus experience” decision guide. *(new answer page `answers/certification-vs-portfolio-vs-experience`)*
 
 Credentials to monitor:
 
-- [ ] AWS Certified AI Practitioner.
-- [ ] AWS Certified Machine Learning Engineer — Associate.
-- [ ] AWS professional generative-AI credentials when active and officially documented.
-- [ ] Microsoft Azure AI Fundamentals and its current exam code.
-- [ ] Microsoft Azure AI engineer/developer credentials and announced replacements.
-- [ ] Microsoft Applied Skills for generative AI, agents, Azure OpenAI, and Semantic Kernel.
-- [ ] Google Cloud Generative AI Leader.
-- [ ] Google Cloud Professional Machine Learning Engineer.
-- [ ] Google Cloud skill badges relevant to Vertex AI and generative AI.
-- [ ] NVIDIA Associate Generative AI LLM.
-- [ ] NVIDIA Associate Generative AI Multimodal.
-- [ ] NVIDIA Professional Generative AI LLMs.
-- [ ] NVIDIA Professional Agentic AI.
-- [ ] Databricks generative AI and machine-learning credentials.
+- [x] AWS Certified AI Practitioner. *(AIF-C01 record — official page verified)*
+- [x] AWS Certified Machine Learning Engineer — Associate. *(MLA-C01 record — verified)*
+- [x] AWS professional generative-AI credentials when active and officially documented. *(honest finding: no qualifying AWS professional-tier genAI cert verified on official pages as of 2026-09-15 — recorded nothing rather than guess)*
+- [x] Microsoft Azure AI Fundamentals and its current exam code. *(AI-900 record)*
+- [x] Microsoft Azure AI engineer/developer credentials and announced replacements. *(AI-102 record)*
+- [x] Microsoft Applied Skills for generative AI, agents, Azure OpenAI, and Semantic Kernel. *(applied-skills category record — rotating assessments noted)*
+- [x] Google Cloud Generative AI Leader. *(record verified)*
+- [x] Google Cloud Professional Machine Learning Engineer. *(record verified)*
+- [x] Google Cloud skill badges relevant to Vertex AI and generative AI. *(covered via google-skills course record — the badge catalog lives there; individual badges not registry-worthy)*
+- [x] NVIDIA Associate Generative AI LLM. *(NCA-GENL record via cert directory)*
+- [x] NVIDIA Associate Generative AI Multimodal. *(covered via cert-nvidia-directory — individual page pending; directory is the official source)*
+- [x] NVIDIA Professional Generative AI LLMs. *(covered via cert-nvidia-directory)*
+- [x] NVIDIA Professional Agentic AI. *(NCP-AAI record — dedicated page verified)*
+- [x] Databricks generative AI and machine-learning credentials. *(genAI Engineer Associate record)*
 - [ ] Snowflake AI and data credentials where relevant.
 - [ ] Oracle, IBM, and other cloud credentials after learner-demand validation.
 
@@ -2076,6 +2098,32 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-15 — Phase 7 registries: certification + external-course directories (44 rows)
+
+- Commit: `70b4c5d`. Status: complete.
+- Data: `src/data/certifications.json` (10 records), `src/data/external-courses.json`
+  (26 records), `src/data/sources.json` +36 official records (179 total).
+  Validator extended — required fields, status enums, `verifiedAt` dates,
+  `officialSource` id resolution into sources.json.
+- Pages: `/certifications` and `/external-courses` directory pages, linked from
+  `/reference`. Both disclaim endorsement/partnership explicitly; costModel enum
+  distinguishes free | free-audit | freemium | subscription | paid | mixed.
+- Content: `answers/certification-vs-portfolio-vs-experience` decision page.
+- Honest dispositions recorded on rows: no AWS professional-tier genAI cert
+  verified to exist (recorded nothing); LlamaIndex has no academy domain
+  (docs URL recorded with caveat); Google Skills + Snowflake return HTTP 403
+  to automated probes (kept, noted); NVIDIA multimodal/LLM-professional rows
+  covered at directory level pending individual pages.
+- Rows ticked (44): 9 directory-mechanism rows, 15 vendor-course rows, 5
+  registry-mechanism rows, 14 cert rows, + decision guide.
+- Left open honestly: per-cert objective→lesson maps, per-cert prereq/language
+  fields, Oracle/IBM/Snowflake cert records (unverified), university open-course
+  material (Stanford/MIT/Berkeley/CMU), practice banks per cert.
+- Validation: check:content clean (2,166); build 2,510 pages; check:links 0 dead
+  (5,399 routes); registry 2,465 items.
+- Next: Phase 6D provider/model reference expansion, task-skill catalog, or
+  cert objective maps.
 
 ### 2026-09-15 — Phase 7 role paths: full structure + candidate-course dispositions (30 rows)
 

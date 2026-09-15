@@ -1,0 +1,77 @@
+---
+import Layout from '../components/Layout.astro';
+import courses from '../data/external-courses.json';
+import sources from '../data/sources.json';
+import { getTrack } from '../data/curriculum.ts';
+
+const entries = Object.entries(courses)
+  .filter(([id]) => !id.startsWith('$'))
+  .map(([id, c]) => ({ id, ...c, url: sources[c.officialSource]?.url }));
+
+const byKind = new Map();
+for (const e of entries) {
+  const k = e.kind ?? 'other';
+  if (!byKind.has(k)) byKind.set(k, []);
+  byKind.get(k).push(e);
+}
+const KIND_LABELS = {
+  'official-vendor': 'Official vendor resources',
+  'official-repo': 'Official code repositories',
+  'official-docs': 'Official documentation',
+  'independent': 'Independent courses',
+  'public-university': 'Public university programs',
+  'research-lab': 'Research labs',
+  'public-program': 'Public programs',
+};
+---
+<Layout
+  title="External course directory"
+  description="Official and high-quality external AI courses and learning resources — vendor academies, open university material, and independent courses, each linked to its official page and mapped to LMVersity tracks."
+  breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'External courses', url: '/external-courses' }]}
+>
+  <section class="head container">
+    <span class="eyebrow">Directory</span>
+    <h1>External courses worth your time.</h1>
+    <p class="sub">A curated directory of official and high-quality AI learning resources. Every entry links to the provider's own page — no affiliate relationships, no copied descriptions, no implied partnerships. Free means free to study; where a certificate or exam costs money, the record says so.</p>
+  </section>
+
+  {[...byKind.entries()].map(([kind, items]) => (
+    <section class="container group">
+      <h2>{KIND_LABELS[kind] ?? kind}</h2>
+      <ul class="cards">
+        {items.map((c) => (
+          <li class="card">
+            <div class="card-head">
+              <div>
+                <h3>{c.title}</h3>
+                <p class="prov mono">{c.provider} · {c.costModel} · verified {c.verifiedAt}</p>
+              </div>
+              <a href={c.url} class="off mono" target="_blank" rel="noopener noreferrer">Official ↗</a>
+            </div>
+            <p class="note">{c.note}</p>
+            <p class="map"><span class="mono">Pairs with:</span> {(c.lmversity ?? []).map((t, i) => (<>{i > 0 && ' · '}<a href={`/learn/${t}`}>{getTrack(t)?.name ?? t}</a></>))}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+</Layout>
+
+<style>
+  .head { padding-block: 48px 8px; }
+  .head h1 { font-size: clamp(28px, 4vw, 38px); letter-spacing: -.02em; margin-top: 14px; max-width: 24ch; }
+  .sub { margin-top: 16px; color: var(--muted); max-width: 66ch; font-size: 15px; line-height: 1.6; }
+  .group { padding-top: 34px; }
+  .group h2 { font-size: 15px; text-transform: uppercase; letter-spacing: .07em; color: var(--faint); font-weight: 500; }
+  .cards { list-style: none; padding: 0; margin: 16px 0 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .card { border: 1px solid var(--rule); border-radius: 10px; padding: 18px 20px; background: var(--paper); display: flex; flex-direction: column; gap: 8px; }
+  .card-head { display: flex; justify-content: space-between; align-items: start; gap: 12px; }
+  .card h3 { font-size: 16px; letter-spacing: -.01em; }
+  .prov { margin-top: 4px; font-size: 10.5px; color: var(--faint); letter-spacing: .04em; }
+  .off { font-size: 11px; color: var(--accent); flex: none; }
+  .note { font-size: 13px; color: var(--muted); line-height: 1.55; }
+  .map { font-size: 12.5px; color: var(--muted); }
+  .map .mono { font-size: 10px; color: var(--faint); }
+  .map a { color: var(--accent); }
+  @media (max-width: 700px) { .cards { grid-template-columns: 1fr; } }
+</style>
