@@ -3512,6 +3512,11 @@ const unsortedTracks: Track[] = [
         "status": "live"
       },
       {
+        "title": "Separate predictive-ML choices from generative-AI choices",
+        "slug": "predictive-ml-vs-generative-ai",
+        "status": "live"
+      },
+      {
         "title": "Generalization: why a good test score can still be wrong",
         "slug": "generalization-and-evaluation",
         "status": "live"

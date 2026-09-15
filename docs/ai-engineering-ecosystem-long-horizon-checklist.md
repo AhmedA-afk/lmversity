@@ -1212,11 +1212,24 @@ Credentials to monitor:
 
 ### Machine Learning
 
-- [ ] Complete the path from baseline through deployment, calibration, drift, causal limits,
-      fairness, monitoring, and decision thresholds.
-- [ ] Add projects using public datasets with data cards and reproducible splits.
-- [ ] Add model debugging and stakeholder-communication scenarios.
-- [ ] Separate predictive ML choices from generative-AI choices.
+- [x] Complete the path from baseline through deployment, calibration, drift, causal limits,
+      fairness, monitoring, and decision thresholds. *(coverage verified per
+      topic: baselines ml-110/ml-413/ml-842, calibration ml-213/ml-843/904,
+      drift ml-510/ml-612/ml-616, causal ml-511/ml-513/906,
+      fairness ml-514/fairness-and-subgroup-evaluation, monitoring
+      drift-and-monitoring/ml-612, thresholds ml-214/classifiers-thresholds,
+      deployment ml-611/901/903)*
+- [x] Add projects using public datasets with data cards and reproducible splits.
+      *(12 public-data project files — 6 datasets × named+numbered specs —
+      all carry `## Data card` sections with provenance/licence/missingness
+      and seeded stratified-split discipline; rubric rows grade both)*
+- [x] Add model debugging and stakeholder-communication scenarios.
+      *(debugging: ml-844 assignment + ml-711 error-gallery lab; stakeholder
+      comms: ml-847 model-report template + ml-616 drift-incident case study
+      + ml-850 oral-defense rubric)*
+- [x] Separate predictive ML choices from generative-AI choices.
+      *(new lesson `predictive-ml-vs-generative-ai`: two choice frames, three
+      separating questions, links to 302-choosing for the full table)*
 
 ### Classical AI
 
@@ -2129,6 +2142,36 @@ validation, deployment status, measured result when available, blockers, and nex
   `check:links` 0 dead.
 - Next batch: Maths Foundations diagnostics/practice rows, or the remaining
   track-section rows.
+
+### 2026-09-15 — Footer-pointer link resolution
+
+- Commit: `5bfa768`. The numbered-course tracks' "Continue / Go deeper /
+  Apply it" footers named target lessons as plain text — a convention that
+  rendered as dead text. Resolved 275 pointers to real links in 178 files
+  via slug-exact + title-containment matching (slug match preferred, which
+  fixed verb-style ML titles like "Linear algebra for ML" →
+  `linear-algebra-for-ml`). Maths files with no outward links: 167 → 48;
+  island lessons: 464 → 395. ~59 pointers remain unresolved — they name
+  module-level targets ("Mathematics Foundations checklist") that aren't
+  pages; those are editorial.
+- Validation: `check:content` clean (2,063); build 2,398 pages;
+  `check:links` 0 dead; registry regenerated.
+- Next batch: ML/DL/classical track rows, or the editorial status workflow.
+
+### 2026-09-15 — Machine Learning track rows
+
+- New lesson `predictive-ml-vs-generative-ai` registered in the ML track
+  (after `learning-paradigms`): predictive vs generative choice frames, the
+  three separating questions, and onward links into the ML path and the
+  ai-foundations 302 chooser.
+- All four Machine Learning rows ticked — the baseline→deployment path and
+  public-data projects verified as already covering the named topics (data
+  cards, seeded splits, debugging, and stakeholder communication all exist);
+  the separation row needed the new lesson.
+- Validation: `check:content` clean (2,064); build 2,399 pages;
+  `check:links` 0 dead.
+- Next batch: Classical AI / Deep Learning keep-or-merge decisions, or
+  LLM Foundations audit row.
 
 ### 2026-09-14 — Master ecosystem backlog created
 
