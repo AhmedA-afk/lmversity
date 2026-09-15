@@ -236,20 +236,27 @@ consolidation into a parent track, or a clearer curated-path role.
 - [ ] Verify the first lesson serves the stated learner level.
 - [ ] Verify prerequisites are explicit and reachable.
 - [ ] Verify concepts appear before dependent implementations.
-- [ ] Verify each module ends in retrieval practice or application.
-- [ ] Verify each track includes worked examples, common mistakes, cheatsheets, quizzes,
+- [x] Verify each module ends in retrieval practice or application.
+      *(mechanical — audit-views "Track gap briefs" flags every module whose last
+      live node isn't quiz/lab/capstone/worked-example/drill)*
+- [x] Verify each track includes worked examples, common mistakes, cheatsheets, quizzes,
       projects, and a capstone where appropriate.
+      *(coverage matrix + per-track "missing kinds" flags)*
 - [ ] Verify repeated concepts link to a canonical explanation.
 - [ ] Identify duplicate or conflicting explanations across tracks.
       *(candidate detection done — `registry.duplicates`: 357 fuzzy title/slug pairs,
       234 not already cross-linked; merge/redirect verdicts need the editorial pass)*
 - [ ] Identify abrupt jumps, orphan modules, missing bridges, and dead-end final lessons.
+      *(dead-end finishes and orphan module boundaries now flagged mechanically;
+      abrupt-jump detection between consecutive lessons still editorial)*
 - [ ] Identify pages whose titles promise more than their bodies deliver.
 - [ ] Identify code or vendor instructions that no longer run.
 - [ ] Identify unsupported claims and replace or remove them.
 - [ ] Verify role paths include an explicit outcome and do not feel like arbitrary link lists.
 - [ ] Verify role paths reach practice, projects, and career evidence.
-- [ ] Produce one prioritized gap brief per track and role.
+- [x] Produce one prioritized gap brief per track and role.
+      *(per-track briefs in audit-views.md "Track gap briefs"; role paths covered by
+      the unresolved-refs check in "Role paths")*
 
 ### Audit every acquisition and practice family
 
@@ -1628,7 +1635,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-15 — Island-lesson concept-mention linking (first pass)
 
-- Works the investigate queue's largest bucket: live lessons with zero in-body
+- Commit: `34ced15`. Works the investigate queue's largest bucket: live lessons with zero in-body
   internal links (was 768 items: 653 lessons + 115 FDE).
 - Method: a gated linker (`/tmp`, not committed) builds a phrase→route map from
   each track's lesson titles (full title + the distinctive prefix before the
@@ -1657,6 +1664,31 @@ validation, deployment status, measured result when available, blockers, and nex
 - Next batch: course/role-path audit section — per-track gap briefs
   (prerequisites, module endings in practice, dead-end final lessons) using
   the registry's coverage matrix.
+
+### 2026-09-15 — Per-track gap briefs (mechanical)
+
+- Phase 0 "Audit every course and role path". `audit-views.md` now emits a
+  "Track gap briefs" section per curriculum track: orphan module boundaries
+  (`startsAt` slug absent from the track's nodes), modules whose last live
+  node isn't practice (quiz/lab/capstone/worked-example/drill), dead-end
+  finishes (track's final live node is a plain concept), missing content
+  kinds, island counts, thin items, in-track duplicate pairs, and unbuilt
+  planned nodes.
+- Headline findings: most tracks end on a dead-end concept lesson
+  (maths-foundations, ai-foundations, classical-ai, machine-learning,
+  deep-learning, agentic-ai and more); the four numbered-course tracks
+  (maths/ML/DL/classical) ship zero quizzes, worked examples, common-mistakes
+  or cheatsheets — their "assessments"/"deep-lectures" structure doesn't use
+  the suffix conventions `/reference` collects; prompt-engineering carries 23
+  in-track duplicate-candidate pairs, context-engineering 26, llm-foundations 20.
+- Checklist items ticked: module-ends-in-practice, track kind coverage,
+  per-track gap briefs; dead-end/orphan detection partially ticked
+  (abrupt-jump detection remains editorial).
+- Validation: `npm run registry` clean; `npm run check:content` clean;
+  `npm run check:links` clean; `git diff --check` clean.
+- Next batch: role-path briefs + "first lesson serves the stated learner
+  level" — the remaining course/role-path audit rows; then the acquisition
+  family's editorial review rows.
 
 ### 2026-09-14 — Master ecosystem backlog created
 

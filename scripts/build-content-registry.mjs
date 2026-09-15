@@ -967,6 +967,59 @@ for (const t of tracks) {
   md.push(`| ${t.id} | ${files.length} | ${k('concept')} | ${k('worked-example')} | ${k('common-mistakes')} | ${k('comparison')} | ${k('cheatsheet')} | ${k('quiz')} | ${k('lab')} | ${k('capstone')} | ${pct((i) => i.features.codeBlocks > 0)}% | ${pct((i) => i.features.interactiveCheck)}% | ${pct((i) => i.features.sourcesSection || i.externalLinks.length > 0)}% | ${med} | ${quickGuideTracks.has(t.id) ? 'yes' : '—'} | ${hasBank ? 'yes' : '—'} |`);
 }
 md.push('');
+md.push('## Track gap briefs');
+md.push('');
+md.push('Mechanical per-track audit. Practice-ending = last node of a module is quiz/lab/capstone/worked-example/drill;');
+md.push('dead-end = the track\'s final live node is a plain concept; orphan boundary = a module `startsAt` slug absent from the track\'s nodes.');
+md.push('');
+const PRACTICE_KINDS = new Set(['quiz', 'lab', 'capstone', 'worked-example', 'drill', 'project']);
+for (const t of tracks) {
+  const files = lessonItems.filter((i) => i.track === t.id && i.status !== 'coming');
+  if (!files.length && !(t.nodes ?? []).length) continue;
+  const order = (t.nodes ?? []).filter((n) => n.slug).map((n) => n.slug);
+  const liveOrder = order.filter((s) => lessonIdsOnDisk.has(`${t.id}/${s}`));
+  const bounds = moduleMap[t.id] ?? [];
+  const flags = [];
+  // orphan boundaries
+  for (const b of bounds) if (!order.includes(b.startsAt)) flags.push(`orphan module boundary: \`${b.startsAt}\` ("${b.name}")`);
+  // module-ending practice check
+  const noPractice = [];
+  for (let bi = 0; bi < bounds.length; bi++) {
+    const start = order.indexOf(bounds[bi].startsAt);
+    if (start === -1) continue;
+    const end = bi + 1 < bounds.length ? order.indexOf(bounds[bi + 1].startsAt) : order.length;
+    const modSlugs = order.slice(start, end === -1 ? order.length : end).filter((s) => lessonIdsOnDisk.has(`${t.id}/${s}`));
+    if (!modSlugs.length) continue;
+    const lastSlug = modSlugs[modSlugs.length - 1];
+    const k = kindFor(lastSlug, nodeByTrackSlug.get(`${t.id}/${lastSlug}`)?.node.title ?? '');
+    if (!PRACTICE_KINDS.has(k)) noPractice.push(`"${bounds[bi].name}" ends on ${lastSlug} (${k})`);
+  }
+  if (noPractice.length) flags.push(`modules without practice ending: ${noPractice.slice(0, 4).join('; ')}${noPractice.length > 4 ? ` +${noPractice.length - 4} more` : ''}`);
+  // dead-end final lesson
+  const lastLive = liveOrder[liveOrder.length - 1];
+  if (lastLive) {
+    const k = kindFor(lastLive, nodeByTrackSlug.get(`${t.id}/${lastLive}`)?.node.title ?? '');
+    if (!PRACTICE_KINDS.has(k)) flags.push(`dead-end finish: last live lesson is ${lastLive} (${k})`);
+  }
+  // coverage gaps
+  const kindsPresent = new Set(files.map((i) => i.kind));
+  const missing = ['quiz', 'worked-example', 'common-mistakes', 'cheatsheet', 'capstone'].filter((k) => !kindsPresent.has(k));
+  if (missing.length) flags.push(`missing kinds: ${missing.join(', ')}`);
+  // islands / thin / dups
+  const islands = files.filter((i) => i.dispositionReason === 'zero in-body internal links').length;
+  if (islands) flags.push(`${islands} island lesson${islands === 1 ? '' : 's'} (no in-body links)`);
+  const thin = files.filter((i) => i.disposition === 'expand' && i.status === 'live').length;
+  if (thin) flags.push(`${thin} thin vs family median`);
+  const dups = duplicates.filter((d) => d.sameTrack && (d.a.track === t.id)).length;
+  if (dups) flags.push(`${dups} duplicate-candidate pairs in track`);
+  const coming = order.filter((s) => !lessonIdsOnDisk.has(`${t.id}/${s}`)).length;
+  if (coming) flags.push(`${coming} planned nodes unbuilt`);
+  md.push(`### ${t.id} — ${files.length} files, ${bounds.length} modules`);
+  md.push('');
+  if (flags.length) for (const f of flags) md.push(`- ${f}`);
+  else md.push('- clean');
+  md.push('');
+}
 md.push('## Scores and dispositions (mechanical pass)');
 md.push('');
 md.push('Scale 0/1/2 per dimension; `null` = editorial judgement required. Auto-dispositions are');
