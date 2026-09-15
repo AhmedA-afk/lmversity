@@ -2509,7 +2509,7 @@ validation, deployment status, measured result when available, blockers, and nex
   verification, which doc artifacts alone cannot certify.
 - Validation: check-content clean (2,239 lessons), 2,734 pages built,
   0 dead links across 5,848 routes.
-- Commit: pending.
+- Commit: `f7c2356`
 - Next: Phase 5 standards rows (starter code, pinned deps, clean-env
   verification), Phase 0 editorial scoring, Phase 9/10 external infra.
 
