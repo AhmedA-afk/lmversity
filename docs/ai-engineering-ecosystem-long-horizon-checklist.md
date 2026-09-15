@@ -1113,16 +1113,16 @@ consolidation into a parent track, or a clearer curated-path role.
 
 ### MCP curriculum
 
-- [ ] Protocol architecture, lifecycle, transports, capability negotiation, and versioning.
-- [ ] Tools, resources, prompts, roots, sampling, elicitation, and current extensions.
-- [ ] Build stdio and streamable HTTP servers.
-- [ ] Client connection, discovery, schemas, structured output, and errors.
-- [ ] Authentication, authorization, user consent, and tenant boundaries.
-- [ ] Server trust, prompt injection, data exfiltration, and supply-chain risks.
-- [ ] Registry and discovery workflows.
-- [ ] Testing, inspection, tracing, deployment, and backwards compatibility.
-- [ ] MCP Apps and UI extensions after current specification review.
-- [ ] Use official specification pages and date-stamp version-specific lessons.
+- [x] Protocol architecture, lifecycle, transports, capability negotiation, and versioning.
+- [x] Tools, resources, prompts, roots, sampling, elicitation, and current extensions.
+- [x] Build stdio and streamable HTTP servers.
+- [x] Client connection, discovery, schemas, structured output, and errors.
+- [x] Authentication, authorization, user consent, and tenant boundaries.
+- [x] Server trust, prompt injection, data exfiltration, and supply-chain risks.
+- [x] Registry and discovery workflows.
+- [x] Testing, inspection, tracing, deployment, and backwards compatibility.
+- [x] MCP Apps and UI extensions after current specification review.
+- [x] Use official specification pages and date-stamp version-specific lessons.
 
 ### Agent Skills curriculum and task catalog
 
@@ -2904,7 +2904,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-15 — Web & browser harness course complete (all 14 rows)
 
-- Commit: pending. New `web-agents` track (n:27, Agentic group, 7
+- Commit: `49e9251`. New `web-agents` track (n:27, Agentic group, 7
   lessons): `what-the-browser-exposes` (all perception + state/event
   channels — row 1), `playwright-fundamentals-and-locators` (auto-waits
   + semantic locators, deterministic baseline — rows 2+9),
@@ -2923,6 +2923,26 @@ validation, deployment status, measured result when available, blockers, and nex
 - Validation: `check:content` clean (2,145); build 2,485 pages;
   `check:links` 0 dead (5,349 routes); registry 2,474 items.
 - Next batch: MCP curriculum (10 rows), Agent Skills curriculum (9 rows).
+
+### 2026-09-15 — MCP curriculum complete (all 10 rows)
+
+- Commit: pending. The `mcp` track already carried near-complete
+  coverage (57 lessons): lifecycle/transports, all primitives incl.
+  roots/sampling/elicitation, client+server builds, the full auth
+  family, trust/injection/supply-chain security, registries,
+  testing/deployment/versioning. One real gap filled:
+  `mcp-apps-and-ui-extensions` (MCP Apps `ext-apps` + MCP-UI pattern,
+  honest about draft-stage status).
+- Date-stamp row: `published`/`updated` added to the five
+  spec-evolution-sensitive lessons (versioning, streamable-http,
+  elicitation, sampling, roots) — those edits ride in the working tree
+  with the user's `.mdx` migration (mixed files, not staged).
+- Sources: 2 new verified records (ext-apps repo, mcpui.dev); mcp-spec
+  record added earlier this session.
+- Validation: `check:content` clean (2,146); build 2,486 pages;
+  `check:links` 0 dead (5,351 routes); registry 2,475 items.
+- Next batch: Agent Skills curriculum (9 rows) — spec, SKILL.md
+  anatomy, provenance/security, eval, porting, projects/capstone.
 
 ### 2026-09-14 — Master ecosystem backlog created
 

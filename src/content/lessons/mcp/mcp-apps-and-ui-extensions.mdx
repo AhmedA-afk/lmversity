@@ -1,0 +1,83 @@
+---
+title: "MCP Apps and UI extensions: tools that return interfaces"
+track: "mcp"
+status: live
+summary: "The emerging extension where MCP servers return interactive UI — an app widget inside the host, not just text — what it is, how it works, and why it's still a moving spec."
+duration: "8 min read"
+published: "2026-09-15"
+updated: "2026-09-15"
+sources: ["mcp-ext-apps", "mcp-spec", "mcpui-site"]
+---
+
+## The short answer
+
+Classic MCP tools return *data* — text, JSON, resources the model
+reads. **MCP Apps** (the `ext-apps` extension work) lets a tool return
+an **interactive interface**: a widget rendered inside the host app —
+a chart you can interact with, a form, a map — not just a description
+of one. The mechanism builds on the community **MCP-UI** pattern: the
+tool result includes a resource pointing at HTML/JS that the host
+renders in a sandboxed frame, with a defined bridge for the UI to talk
+back to the host (tool calls, intents, notifications).
+
+## Why it exists
+
+Some responses are wrong as text: "here's your invoice" wants a
+formatted document, "pick a seat" wants a seat map, "review the diff"
+wants a diff viewer. Pre-Apps, the server could only return text and
+hope the host's renderer improvised well. Apps make the UI *part of
+the contract* — the server ships the interface that renders its own
+output, so the experience is designed, not guessed.
+
+## The shape
+
+```
+tool call → result includes resource: ui://server/widget.html
+                ↓
+host fetches the resource, renders it in a sandboxed iframe
+                ↓
+UI ↔ host bridge: the widget can call tools, send intents,
+    notify on resize/context — within declared capabilities
+```
+
+The security model is the point to study: the widget is *untrusted
+content* by design — remote HTML+JS rendered with a strict sandbox and
+a narrow postMessage bridge, because a tool that can return arbitrary
+UI is a tool that can phish
+([supply-chain](/learn/llm-security/llm-supply-chain-security) applies —
+an MCP server is already somebody else's code; an MCP App is somebody
+else's *UI*).
+
+## The honest state of the spec
+
+**This lesson is date-stamped for a reason** — the Apps extension is
+draft-stage work: the extension repo is the source of truth, host
+support is uneven (ChatGPT's Apps SDK lineage converged with the
+community MCP-UI work), and message/capability names are still
+moving. Design against the *pattern* (server-declared UI + sandboxed
+render + narrow bridge), and check the current spec before building —
+treat specifics here as a snapshot, not a contract. That's the same
+posture the checklist asks for every version-sensitive lesson: the
+`updated` date on this page tells you when it was last reviewed.
+
+## The honest limits
+
+Even once stable, Apps expands the trust surface — a rendered widget
+with a bridge is a bigger target than a text response, and "sandboxed
+iframe" is only as strong as the host's implementation. It's also a
+host feature, not a server feature: a widget-declaring tool on a host
+that doesn't support Apps degrades to whatever fallback the server
+provides — design the text fallback first.
+
+## The exercise
+
+Take a tool you know that returns structured data and sketch the
+widget it *should* return — then write the text fallback a
+non-Apps host gets. If the fallback is embarrassing, the tool's real
+output was never designed, which is the actual lesson.
+
+## Go deeper
+
+- [MCP architecture](/learn/mcp/mcp-architecture-hosts-clients-servers) — hosts, clients, servers.
+- [Tools, resources, and prompts](/learn/mcp/mcp-tools-resources-and-prompts) — the primitives Apps extends.
+- [Versioning MCP servers](/learn/mcp/versioning-mcp-servers-without-breaking-clients) — keeping a moving spec from breaking clients.

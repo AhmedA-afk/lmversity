@@ -1,7 +1,7 @@
 {
  "version": 1,
  "next": {
-  "les": 2145,
+  "les": 2146,
   "que": 7,
   "sce": 6,
   "blo": 10,
@@ -9841,6 +9841,10 @@
   },
   "data:track/web-agents": {
    "id": "trk-0028"
+  },
+  "lessons/mcp/mcp-apps-and-ui-extensions.mdx": {
+   "id": "les-2146",
+   "fp": "71dd81d976afb9aa186f861634d38c41583012e6"
   }
  },
  "retired": {

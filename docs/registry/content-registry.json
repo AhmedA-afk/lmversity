@@ -1,12 +1,12 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T14:24:14.186Z",
+  "generatedAt": "2026-09-15T14:27:49.575Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2474,
+  "itemCount": 2475,
   "counts": {
    "byFamily": {
-    "lesson": 2092,
+    "lesson": 2093,
     "project": 31,
     "quiz": 89,
     "reference": 59,
@@ -22,10 +22,10 @@
     "glossary": 1
    },
    "byStatus": {
-    "live": 2474
+    "live": 2475
    },
    "byKind": {
-    "concept": 1792,
+    "concept": 1793,
     "comparison": 102,
     "worked-example": 29,
     "capstone": 31,
@@ -76,7 +76,7 @@
     "local-inference": 15,
     "machine-learning": 210,
     "maths-foundations": 194,
-    "mcp": 59,
+    "mcp": 60,
     "production": 36,
     "prompt-engineering": 144,
     "python-data-apis": 59,
@@ -101,7 +101,7 @@
     "fde": 193
    },
    "byFreshness": {
-    "release-sensitive": 334,
+    "release-sensitive": 335,
     "pricing-sensitive": 345,
     "periodic": 1350,
     "certification-sensitive": 102,
@@ -10486,7 +10486,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (238w vs ~767w)",
+   "dispositionReason": "thin vs family median (238w vs ~766w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -33689,7 +33689,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -36742,7 +36742,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -88855,7 +88855,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (277w vs ~767w)",
+   "dispositionReason": "thin vs family median (277w vs ~766w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -92573,7 +92573,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (269w vs ~767w)",
+   "dispositionReason": "thin vs family median (269w vs ~766w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -131953,6 +131953,94 @@
    }
   },
   {
+   "id": "les-2146",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "MCP Apps and UI extensions: tools that return interfaces",
+   "slug": "mcp/mcp-apps-and-ui-extensions",
+   "route": "/learn/mcp/mcp-apps-and-ui-extensions",
+   "collection": "lessons",
+   "path": "src/content/lessons/mcp/mcp-apps-and-ui-extensions.mdx",
+   "track": "mcp",
+   "module": null,
+   "status": "live",
+   "summary": "The emerging extension where MCP servers return interactive UI — an app widget inside the host, not just text — what it is, how it works, and why it's still a moving spec.",
+   "author": "Ahmed Ansari",
+   "published": "2026-09-15",
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 454,
+   "headings": [
+    "The short answer",
+    "Why it exists",
+    "The shape",
+    "The honest state of the spec",
+    "The honest limits",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/llm-security/llm-supply-chain-security",
+    "/learn/mcp/mcp-architecture-hosts-clients-servers",
+    "/learn/mcp/mcp-tools-resources-and-prompts",
+    "/learn/mcp/versioning-mcp-servers-without-breaking-clients"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 3,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "The emerging extension where MCP servers return interactive UI — an app widget inside the host, not just text — what it is, how it works, and why it's still a moving spec.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/mcp/running-mcp-servers-in-production",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: MCP, ChatGPT"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-1476",
    "family": "lesson",
    "kind": "concept",
@@ -133424,8 +133512,8 @@
    "status": "live",
    "summary": "Lets an MCP server pause a tool call to ask the user a question, instead of failing or guessing.",
    "author": "Ahmed Ansari",
-   "published": "2026-08-30",
-   "updated": "2026-08-30",
+   "published": "2026-09-15",
+   "updated": "2026-09-15",
    "verified": null,
    "wordCount": 481,
    "headings": [
@@ -134016,8 +134104,8 @@
    "status": "live",
    "summary": "Tells a server which directories it may touch instead of trusting it with the whole filesystem.",
    "author": "Ahmed Ansari",
-   "published": "2026-08-30",
-   "updated": "2026-08-30",
+   "published": "2026-09-15",
+   "updated": "2026-09-15",
    "verified": null,
    "wordCount": 487,
    "headings": [
@@ -134099,8 +134187,8 @@
    "status": "live",
    "summary": "A server asks the connected client to run a completion on its behalf, instead of holding its own model or API key.",
    "author": "Ahmed Ansari",
-   "published": "2026-08-30",
-   "updated": "2026-08-30",
+   "published": "2026-09-15",
+   "updated": "2026-09-15",
    "verified": null,
    "wordCount": 457,
    "headings": [
@@ -135886,8 +135974,8 @@
    "status": "live",
    "summary": "How MCP's HTTP transport keeps one logical session alive across a dropped connection and replays what was missed.",
    "author": "Ahmed Ansari",
-   "published": "2026-08-30",
-   "updated": "2026-08-30",
+   "published": "2026-09-15",
+   "updated": "2026-09-15",
    "verified": null,
    "wordCount": 610,
    "headings": [
@@ -136142,8 +136230,8 @@
    "status": "live",
    "summary": "Change a server's tools and schemas over time without breaking clients already connected to it.",
    "author": "Ahmed Ansari",
-   "published": "2026-08-30",
-   "updated": "2026-08-30",
+   "published": "2026-09-15",
+   "updated": "2026-09-15",
    "verified": null,
    "wordCount": 595,
    "headings": [
@@ -136185,7 +136273,7 @@
    "promisedOutcome": "Change a server's tools and schemas over time without breaking clients already connected to it.",
    "jobToBeDone": null,
    "prerequisite": null,
-   "nextAction": "/learn/mcp/running-mcp-servers-in-production",
+   "nextAction": "/learn/mcp/mcp-apps-and-ui-extensions",
    "practiceType": "inline-check",
    "freshnessClass": "release-sensitive",
    "freshnessSignals": [
@@ -173478,7 +173566,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 0,
     "explanationQuality": 2,
@@ -206544,14 +206632,14 @@
    ],
    "features": {
     "group": "Building",
-    "declaredMeta": "57 lessons",
-    "nodeCount": 57,
-    "liveNodes": 57,
+    "declaredMeta": "58 lessons",
+    "nodeCount": 58,
+    "liveNodes": 58,
     "comingNodes": 0,
     "headingOnlyNodes": 0,
-    "fileCount": 57,
+    "fileCount": 58,
     "kinds": {
-     "concept": 28,
+     "concept": 29,
      "cheatsheet": 6,
      "common-mistakes": 6,
      "comparison": 5,

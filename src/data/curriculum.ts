@@ -9593,7 +9593,7 @@ const unsortedTracks: Track[] = [
     "n": "16",
     "name": "MCP",
     "group": "Building",
-    "meta": "57 lessons",
+    "meta": "58 lessons",
     "summary": "The protocol that lets any AI app plug into any tool or data source — servers, primitives, transports, auth and production operation, with worked examples, comparisons and debugging clinics throughout.",
     "nodes": [
       {
@@ -9756,6 +9756,12 @@ const unsortedTracks: Track[] = [
         "title": "Versioning MCP Servers Without Breaking Clients",
         "slug": "versioning-mcp-servers-without-breaking-clients",
         "status": "live"
+      },
+      {
+        "title": "MCP Apps and UI Extensions: Tools That Return Interfaces",
+        "slug": "mcp-apps-and-ui-extensions",
+        "status": "live",
+        "prereq": ["versioning-mcp-servers-without-breaking-clients"]
       },
       {
         "title": "Running MCP Servers in Production",

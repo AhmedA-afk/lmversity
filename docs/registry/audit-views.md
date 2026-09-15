@@ -1,12 +1,12 @@
 # Content registry — audit views
 
-Generated 2026-09-15T14:24:14.186Z by `scripts/build-content-registry.mjs`.
-2474 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T14:27:49.575Z by `scripts/build-content-registry.mjs`.
+2475 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
 
-- lesson: 2092
+- lesson: 2093
 - quiz: 89
 - lab: 67
 - reference: 59
@@ -23,11 +23,11 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By status
 
-- live: 2474
+- live: 2475
 
 ## By search intent (heuristic)
 
-- concept: 1923
+- concept: 1924
 - comparison: 107
 - build: 98
 - practice: 89
@@ -47,7 +47,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By primary audience (heuristic)
 
-- ai-engineer: 1698
+- ai-engineer: 1699
 - beginner-engineer: 439
 - forward-deployed-engineer: 194
 - general: 125
@@ -83,7 +83,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 | genai-app-dev | 130 | 118 | 0 | 0 | 5 | 6 | 0 | 0 | 1 | 78% | 0% | 0% | 692 | — | — |
 | rag | 64 | 36 | 6 | 6 | 3 | 6 | 6 | 0 | 1 | 50% | 42% | 2% | 633 | yes | yes |
 | tools-function-calling | 126 | 93 | 1 | 7 | 11 | 5 | 7 | 1 | 1 | 74% | 0% | 0% | 691 | — | — |
-| mcp | 57 | 28 | 6 | 6 | 5 | 6 | 6 | 0 | 0 | 60% | 53% | 5% | 553 | yes | yes |
+| mcp | 58 | 29 | 6 | 6 | 5 | 6 | 6 | 0 | 0 | 60% | 52% | 5% | 553 | yes | yes |
 | agentic-ai | 30 | 27 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 23% | 87% | 0% | 544 | — | yes |
 | harness-design | 27 | 27 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 63% | 96% | 4% | 505 | — | — |
 | evals-red-teaming | 28 | 25 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 21% | 100% | 4% | 595 | — | yes |
@@ -206,7 +206,7 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - modules without practice ending: "Tool calling basics" ends on tool-choice-and-forcing-tool-use (concept); "Multi-step and parallel use" ends on testing-and-debugging-tool-calls (concept); "Schemas at scale" ends on streaming-partial-tool-calls (concept)
 - 29 duplicate-candidate pairs in track
 
-### mcp — 57 files, 0 modules — starts: "What Is MCP"
+### mcp — 58 files, 0 modules — starts: "What Is MCP"
 
 - dead-end finish: last live lesson is server-design-and-permissions (concept)
 - missing kinds: capstone
@@ -290,21 +290,21 @@ and split always need a written human reason (see checklist).
 
 | disposition | items |
 |---|---:|
-| keep | 2087 |
+| keep | 2088 |
 | investigate | 382 |
 | expand | 5 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2246 | 1.91 | 0 | 206 | 2040 |
+| intentClarity | 2247 | 1.91 | 0 | 206 | 2041 |
 | correctnessSources | 45 | 1.27 | 0 | 33 | 12 |
-| completeness | 2393 | 1.64 | 39 | 782 | 1572 |
-| prerequisiteFit | 2328 | 2.00 | 3 | 0 | 2325 |
-| handsOn | 2246 | 1.48 | 558 | 53 | 1635 |
-| explanationQuality | 2246 | 1.96 | 20 | 56 | 2170 |
-| metadata | 2246 | 1.85 | 0 | 348 | 1898 |
-| linking | 2157 | 1.50 | 382 | 321 | 1454 |
-| freshnessHealth | 2474 | 0.76 | 861 | 1350 | 263 |
+| completeness | 2394 | 1.64 | 39 | 780 | 1575 |
+| prerequisiteFit | 2329 | 2.00 | 3 | 0 | 2326 |
+| handsOn | 2247 | 1.48 | 558 | 53 | 1636 |
+| explanationQuality | 2247 | 1.96 | 20 | 56 | 2171 |
+| metadata | 2247 | 1.84 | 0 | 349 | 1898 |
+| linking | 2158 | 1.50 | 382 | 321 | 1455 |
+| freshnessHealth | 2475 | 0.76 | 862 | 1350 | 263 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
@@ -355,15 +355,15 @@ and split always need a written human reason (see checklist).
 - /learn/ai-foundations/reliable-ai/221-contestability-appeals-and-recource — Contestability, Appeals, and Recourse
 - … 342 more in content-registry.json
 
-#### expand: thin vs family median (238w vs ~767w) (1)
+#### expand: thin vs family median (238w vs ~766w) (1)
 
 - /learn/ai-foundations/choosing-a-model — Choosing a model in 2026
 
-#### expand: thin vs family median (277w vs ~767w) (1)
+#### expand: thin vs family median (277w vs ~766w) (1)
 
 - /learn/llm-foundations/next-token-prediction — Next-Token Prediction: The One Objective
 
-#### expand: thin vs family median (269w vs ~767w) (1)
+#### expand: thin vs family median (269w vs ~766w) (1)
 
 - /learn/llm-foundations/tokenization-explained — Tokenization: How Text Becomes Tokens
 
@@ -527,7 +527,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 
 - periodic: 1350
 - pricing-sensitive: 345
-- release-sensitive: 334
+- release-sensitive: 335
 - durable: 263
 - certification-sensitive: 102
 - policy-sensitive: 80
@@ -634,7 +634,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/machine-learning/ml-707-lab-content-ranking-with-feedback — Lab: content ranking with feedback *(verified 2026-08-30)*
 - … 50 more in content-registry.json
 
-### release-sensitive (334) — oldest-verified first
+### release-sensitive (335) — oldest-verified first
 
 Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno, LangGraph *(verified undated)*
@@ -667,7 +667,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/local-inference/llama-cpp-build-quantize-serve — llama.cpp, Ollama, LM Studio, OpenAI *(verified undated)*
 - /learn/local-inference/lm-studio-local-server — LM Studio, OpenAI, Ollama, Hugging Face, vLLM, MLX, llama.cpp *(verified undated)*
 - /learn/local-inference/mlx-lm-on-apple-silicon — MLX, OpenAI, Hugging Face, Ollama, vLLM, llama.cpp, LM Studio, ONNX *(verified undated)*
-- … 304 more
+- … 305 more
 
 ## Missing-data queues
 

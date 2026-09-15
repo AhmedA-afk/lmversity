@@ -793,6 +793,24 @@
     "claims": ["MCP protocol architecture and primitives"],
     "status": "current"
   },
+  "mcp-ext-apps": {
+    "title": "MCP Apps extension (ext-apps)",
+    "publisher": "Model Context Protocol",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/modelcontextprotocol/ext-apps",
+    "type": "official-docs",
+    "claims": ["interactive UI returned from tool results", "draft-stage extension"],
+    "status": "current"
+  },
+  "mcpui-site": {
+    "title": "MCP-UI project",
+    "publisher": "MCP-UI",
+    "accessedAt": "2026-09-15",
+    "url": "https://mcpui.dev/",
+    "type": "official-docs",
+    "claims": ["community UI-over-MCP pattern the Apps work builds on"],
+    "status": "current"
+  },
   "google-adk-docs": {
     "title": "Agent Development Kit documentation",
     "publisher": "Google",
