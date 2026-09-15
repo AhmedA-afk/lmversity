@@ -1,0 +1,62 @@
+---
+title: "AI foundations interview questions"
+topic: "AI Foundations"
+description: "Seven questions about what models are, what they're good at, and where the limits actually sit."
+order: 8
+---
+
+## 1. What is a language model, mechanically?
+
+A model that assigns probabilities to the next token given the tokens before it. Everything it does — answering, reasoning, coding, translating — is that same operation applied repeatedly. There's no lookup, no database, no plan unless you build one around it.
+
+The useful consequence: the model doesn't "know" things the way a database knows them; it produces plausible continuations, which is why grounding and verification are engineering concerns, not afterthoughts. See [why models hallucinate](/learn/hallucinations/why-models-hallucinate).
+
+**Follow-up:** if it's just next-token prediction, why can it do arithmetic sometimes and not others?
+
+## 2. What is the difference between pretraining and fine-tuning?
+
+Pretraining learns general language and world structure from a huge corpus — expensive, done once by the lab. Fine-tuning adapts a pretrained model on a narrower dataset to shift behavior: instruction-following, a domain's vocabulary, a style, a task. You're usually fine-tuning to change *how* it behaves, not *what* it knows — knowledge injection via fine-tuning is unreliable compared to retrieval.
+
+**Follow-up:** when would you pick fine-tuning over retrieval-augmented generation, and when is that the wrong choice?
+
+## 3. What does "emergent capability" mean, and why is it contested?
+
+The observation that some abilities appear only past a scale threshold — a small model can't, a big model suddenly can. It's contested because part of the effect is measurement: smooth underlying improvement can look like a jump if your metric is all-or-nothing. The engineering takeaway is the same either way: capability isn't linear in size, and "it couldn't do it before" doesn't mean "it can't now."
+
+**Follow-up:** how does this change how you'd evaluate whether a model can do your task?
+
+## 4. What are tokens and why do they matter beyond cost?
+
+Tokens are the model's input units — sub-word pieces, not words or characters. Beyond billing: context limits are in tokens, tokenization affects what the model "sees" (a word split oddly can degrade understanding), and different languages tokenize at wildly different efficiencies for the same content. The [tokenizer lab](/learn/llm-foundations/inspect-a-real-tokenizer-lab) makes it concrete.
+
+**Follow-up:** why would the same sentence cost different token counts in English versus Hindi?
+
+## 5. When is a model the wrong tool entirely?
+
+When the task needs exactness over judgment: arithmetic you can compute, lookups you can query, rules you can write, actions that must be identical every time. A model's strength is judgment-shaped work — reading intent, extracting meaning, generating plausible text. Using one where a lookup or a rule works is paying for nondeterminism you don't need.
+
+**Follow-up:** give an example of a feature that looks like an LLM feature but should be a database query.
+
+## 6. Choose the tradeoff: a bigger model or a better prompt?
+
+**Format: choose the tradeoff.**
+
+The honest answer is "it depends where the failure is." If the model misunderstands the task, a better prompt (clearer spec, examples, constraints) is cheap and usually wins. If it understands and still can't do it — the reasoning is beyond it, the knowledge isn't there — a bigger model or retrieval is the fix, not more prompt. Debug the failure class first; upgrading models to fix a spec problem is expensive prompt engineering.
+
+**Follow-up:** what would you measure to know which failure you have?
+
+## 7. What's the difference between an AI *feature* and an AI *system*?
+
+A feature is the model call and its UX — the chat, the summary, the suggestion. A system is everything around it: retrieval, validation, fallbacks, cost controls, observability, the failure paths. Most production incidents are system failures wearing feature clothes — the model did something plausible and the system had no check on it.
+
+**Follow-up:** name the parts of an AI system that exist even if the model is swapped tomorrow.
+
+## How to score your answers
+
+- **Strong answers** describe mechanism (tokens, probability, training) and immediately connect it to engineering consequences — hallucination, cost, context, verification.
+- **Weak answers** treat the model as a knowledge box: "it knows X," "it learned the answer" — the mental model fails exactly where the system design gets hard.
+- Follow-ups push on boundaries: when the model is wrong, why it's wrong, and who should own the check.
+
+## Practice next
+
+Work the [AI foundations lessons](/learn/ai-foundations) until the mechanism language is automatic, then return to the follow-ups you hedged.

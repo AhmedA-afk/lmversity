@@ -1,0 +1,62 @@
+---
+title: "AI safety and security interview questions"
+topic: "Safety & Security"
+description: "Seven questions on prompt injection, guardrails, red-teaming, and where safety controls actually live in a system."
+order: 14
+---
+
+## 1. What is prompt injection, and why is it hard to fix?
+
+Untrusted input — a user message, retrieved document, tool result, web page — containing text the model might treat as instruction. Hard to fix because there's no privilege separation inside the context window: instruction and data are the same tokens, and "ignore the injected part" is itself an instruction the injection can counter. The durable fixes are structural — input validation, capability limits, output checks — not better wording. See [defend against prompt injection](/guides/defend-against-prompt-injection).
+
+**Follow-up:** why is indirect injection (via retrieved content) worse than direct?
+
+## 2. Where do safety controls belong in the stack?
+
+Defense in depth: input validation (catch known-bad patterns), capability limits (the agent's tools and permissions — the strongest layer), output checks (what the model returns before it acts), and monitoring (detect what slips through). The layer people over-trust is the prompt itself — a system prompt describes intent; it can't enforce a boundary. Permissions are enforced in code, which is why [sandboxing](/learn/llm-security/sandboxing-code-execution-and-browser-use) is a control and a prompt is a hope.
+
+**Follow-up:** which layer fails most often in practice, and why?
+
+## 3. What's the difference between alignment, guardrails, and security?
+
+Alignment is whether the model does what you intend — a model property. Guardrails are runtime checks on inputs and outputs — a system property. Security is protecting the whole system from adversarial input — an architecture property. Teams conflate them and end up testing alignment when the breach was a permissions problem. They're different failure classes with different fixes.
+
+**Follow-up:** a model outputs harmful content — which of the three failed, and how do you tell?
+
+## 4. How do you red-team an AI feature?
+
+Adversarially, against the actual threat model: prompt injection (direct and via content), jailbreaks (instruction-override attempts), data exfiltration (can it leak the system prompt, other users' data, secrets), capability abuse (can tools be used beyond intent), and denial-of-wallet (inputs that inflate cost). The [adversarial testing lab](/learn/responsible-ai/adversarial-testing-lab) runs the methodology — the key is testing the *system*, not just the model's refusal behavior.
+
+**Follow-up:** what's the difference between red-teaming the model and red-teaming the feature?
+
+## 5. Explain this output: a support bot reveals part of its system prompt when asked "what are your instructions?" — what's exposed?
+
+**Format: debug this output.**
+
+Two exposures. The obvious one: the prompt's contents — which may include business logic, internal terminology, or the shape of your defenses (an attacker now knows what to route around). The structural one: if the model can quote its instructions, the instructions aren't protected — and whatever *else* was in that context (internal context, retrieved docs) may be extractable the same way. The fix isn't secrecy as a strategy — it's assuming the prompt is public and never putting anything in it that must stay secret.
+
+**Follow-up:** what should never go in a system prompt even if you assume it can't be extracted?
+
+## 6. How do you handle PII in an AI feature?
+
+Minimize first — don't send PII you don't need. Detect and redact what must pass through — PII in prompts, PII in logs (the leak people forget), PII in outputs. Retention is a policy decision made explicit: what you log, for how long, for what purpose. The [PII redaction lesson](/learn/production/pii-redaction-in-llm-logs) covers the logging side; the principle is that PII handling is a data-governance decision before it's a model decision.
+
+**Follow-up:** where does PII most often leak in production — and why do logs get missed?
+
+## 7. Choose the tradeoff: strict refusal behavior versus a permissive model with strong guardrails?
+
+**Format: choose the tradeoff.**
+
+Strict model behavior pushes safety into the model — simpler, but brittle: refusals over-fire on legitimate use and under-fire on novel attacks. Permissive model + strong system guardrails puts control where you can test and update it — the right structure for products where you own the risk model. The honest frame: you can't outsource the boundary to the model and also own the product — one of them holds the act boundary, and it should be your code.
+
+**Follow-up:** when does a refusal-heavy model become a usability liability?
+
+## How to score your answers
+
+- **Strong answers** locate safety in the *system* — permissions, validation, monitoring — with the model as one layer, not the boundary.
+- **Weak answers** reach for "better prompting" or "a safer model" as the whole defense; both miss that adversaries don't respect your prompt.
+- Follow-ups push on *who enforces* — the enforcement location reveals whether the answer is structural or aspirational.
+
+## Practice next
+
+The [llm-security track](/learn/llm-security) covers the full threat model — injection testing, sandboxing, supply chain, audit.

@@ -1,0 +1,38 @@
+---
+title: "Take-home exercises and integrity"
+topic: "Take-home Exercises"
+description: "What take-home AI exercises look like, how to do them well, and the integrity rules that apply when AI tools are everywhere."
+order: 18
+---
+
+## What take-homes look like in AI roles
+
+Common shapes, roughly by seniority:
+
+- **Build a small feature** — a RAG pipeline over provided documents, a classifier with eval, a structured-output extractor. Tests whether you can ship a working artifact, not talk about one.
+- **Analyze a failure** — a broken pipeline, a bad output set, a trace to diagnose. Tests debugging instinct: can you find the cause, not just describe symptoms.
+- **Design a system** — a written architecture for a described problem, with tradeoffs. Tests design judgment: can you choose, and defend the choice.
+- **Evaluate a decision** — "here's a system, critique it" or "choose between these approaches." Tests calibration and technical taste.
+
+## Doing them well
+
+**Timebox honestly.** The exercise tests judgment, including scope judgment — a smaller thing done well beats a larger thing abandoned. Read the whole prompt before writing a line; the rubric is usually in what they chose to ask for.
+
+**Show the reasoning, not just the artifact.** A README that says *what you decided and why* — the tradeoff you weighed, the alternative you rejected, the shortcut you took knowingly — is often worth more than the code. Reviewers can run code; they can't run your head unless you write it down.
+
+**Test like it's production.** If they asked for a feature, include the eval, the failure handling, the "here's what I'd measure." The differentiator between candidates is rarely the happy path — it's whether you thought about what happens when it breaks.
+
+## The integrity question
+
+AI tools complicate take-homes: the exercise is meant to measure *you*, and an agent can now produce a plausible artifact. The honest line:
+
+- **Disclose the assistance you used.** "I used an agent for the boilerplate and wrote the eval myself" is honest and increasingly normal — the deliverable is your judgment, not proof you can type unaided.
+- **Own every line you submit.** If you can't explain and defend a choice in the code, don't submit it — you will be asked about it, and "the agent wrote that" isn't a defense, it's a confession you shipped work you can't stand behind.
+- **Follow the stated rules.** Some exercises explicitly ban or require AI tools — the rule is the rule, and violating it is the integrity failure, not the tool use itself.
+- **The artifact is the start, not the end.** Expect a live walkthrough — they will ask you to explain, extend, or change it on the spot. If you couldn't rebuild the key decision in a conversation, the artifact didn't prove what it was meant to.
+
+The deeper rule: the exercise measures whether *you* can do the work when it matters. AI assistance that you'd use on the real job is legitimate to disclose; work you can't defend in a room isn't legitimate no matter how it was produced.
+
+## Practice next
+
+The capstones across the curriculum — [ship a GenAI assistant](/learn/genai-app-dev/capstone-ship-a-genai-assistant), [build a tool-using agent](/learn/tools-function-calling/capstone-build-a-tool-using-agent) — are take-home-shaped: build the artifact, then defend every decision in it.

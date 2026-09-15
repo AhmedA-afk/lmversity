@@ -1,0 +1,64 @@
+---
+title: "Behavioral and project-defense interview questions"
+topic: "Behavioral & Project Defense"
+description: "Seven questions on defending your work, your decisions, and your projects — the interview format where your judgment is the subject."
+order: 16
+---
+
+## 1. Tell me about a project you're proud of. What's the interviewer actually listening for?
+
+Not the project — the *judgment*. Can you say what problem it solved, what the hard part was, what you'd do differently. They're listening for the decision quality: did you understand the tradeoffs you made, or did you follow a tutorial? The project is the evidence; the reasoning is what's being evaluated.
+
+**Follow-up:** what's the wrong way to answer this — what do candidates oversell?
+
+## 2. Defend this: you used a large hosted model for a task a smaller local model could do. Justify it.
+
+**Format: defend this decision.**
+
+Defensible if you can name what the bigger model bought: capability the task needed, ops you didn't want, time-to-ship you couldn't spend on infrastructure. Indefensible if the honest answer is "it was easier" — that's a real answer, but own it as a tradeoff, not a technical necessity. The interviewer wants to know you *considered* the alternative, not that you picked the impressive one.
+
+**Follow-up:** what would make you revisit the decision?
+
+## 3. Describe a time you disagreed with a technical direction. What did you do?
+
+They're testing for *reasoned* disagreement: did you have a technical basis, did you voice it to the right people, did you disagree-and-commit if outvoted or escalate if it mattered? The bad answers are the extremes — silent compliance (no judgment) and refusing to move on (no collaboration). The good answer has a decision quality to it, whatever the outcome.
+
+**Follow-up:** what would make you escalate past a disagree-and-commit?
+
+## 4. Your model demo works but your eval says it's not ready. Ship or hold?
+
+**Format: choose the tradeoff.**
+
+The answer the interviewer wants isn't "hold" — it's *why*. If the eval measures the right things and fails, you hold: the demo is lying to you. If the eval is poorly designed, the answer is fix the eval, not ship anyway. The judgment being tested is whether you trust measurement over presentation — and whether you can tell a good metric from a convenient one. This is the [eval-vs-demo post](/blog/what-an-eval-catches-that-a-demo-misses) as an interview question.
+
+**Follow-up:** what if the deadline is real — how do you de-risk shipping a not-ready feature?
+
+## 5. Walk me through the hardest bug you found in an AI system.
+
+They want the debugging *process*: how you isolated it, what you ruled out, what the actual cause turned out to be versus what you assumed. AI-system bugs are prized because the failure surface is unusual — a model that "worked" but retrieved wrong context, a prompt that behaved differently across versions. The story's value is in the diagnosis path, not the fix.
+
+**Follow-up:** what's a bug class in AI systems that doesn't exist in normal software?
+
+## 6. Explain this: you built a RAG system and it hallucinates anyway. What went wrong?
+
+**Format: defend this project — or debug it.**
+
+RAG reduces hallucination; it doesn't eliminate it — the model can still ignore retrieved content, misread it, or confabulate beyond it. The diagnosis paths: retrieval served wrong docs (the common case — [your RAG problem is a retrieval problem](/blog/your-rag-problem-is-a-retrieval-problem)), generation ignored right docs (instruction/grounding failure), or the question had no answer in the corpus and the model guessed anyway (abstention failure). Each has a different fix — the defense is showing you know which lever to pull.
+
+**Follow-up:** which of the three is hardest to detect in production, and why?
+
+## 7. What would you do differently on your last project?
+
+The interviewer wants specific, honest, learned-from reflection — not "I'd start sooner" filler. Good answers name a real decision that cost you: a skipped eval, a vendor lock-in you didn't price, a scope you should've cut. The skill being tested is *calibration* — can you accurately assess your own past judgment? That's the skill that predicts the next project's decisions.
+
+**Follow-up:** how do you know it was the wrong call — what would the right call have produced?
+
+## How to score your answers
+
+- **Strong answers** reason about judgment — tradeoffs named, alternatives considered, lessons specific — not just outcomes.
+- **Weak answers** describe the project without the decision-making; the interviewer can't evaluate what you chose, only what happened.
+- Follow-ups push on *calibration* — would you make the same call again, and how do you know?
+
+## Practice next
+
+The [project-defense format](/learn/ai-for-designers/capstone-design-a-trustworthy-ai-feature) appears across the capstones — pick one you've built and defend every decision in it out loud.

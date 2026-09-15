@@ -1,7 +1,7 @@
 # Content registry — audit views
 
-Generated 2026-09-15T17:27:24.756Z by `scripts/build-content-registry.mjs`.
-2604 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T17:42:28.544Z by `scripts/build-content-registry.mjs`.
+2615 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
@@ -14,16 +14,16 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 - project: 33
 - page: 25
 - blog: 19
+- interview: 18
 - guide: 14
 - scenario: 12
 - role: 12
 - track: 10
-- interview: 7
 - glossary: 1
 
 ## By status
 
-- live: 2604
+- live: 2615
 
 ## By search intent (heuristic)
 
@@ -37,12 +37,12 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 - troubleshooting: 26
 - how-to: 20
 - read: 19
+- interview-prep: 18
 - hub: 13
 - scenario: 12
 - role-path: 12
 - nav: 12
 - course-hub: 10
-- interview-prep: 7
 - definition: 3
 
 ## By primary audience (heuristic)
@@ -51,7 +51,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 - beginner-engineer: 440
 - forward-deployed-engineer: 194
 - general: 190
-- job-candidate: 7
+- job-candidate: 18
 - developer: 1
 - ml-engineer: 1
 - data-scientist: 1
@@ -82,21 +82,21 @@ and split always need a written human reason (see checklist).
 
 | disposition | items |
 |---|---:|
-| investigate | 2325 |
-| keep | 276 |
+| investigate | 2326 |
+| keep | 286 |
 | expand | 3 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2340 | 1.91 | 0 | 211 | 2129 |
+| intentClarity | 2351 | 1.91 | 0 | 211 | 2140 |
 | correctnessSources | 50 | 1.26 | 0 | 37 | 13 |
-| completeness | 2550 | 1.63 | 49 | 842 | 1659 |
+| completeness | 2561 | 1.63 | 49 | 844 | 1668 |
 | prerequisiteFit | 2412 | 0.15 | 2232 | 0 | 180 |
-| handsOn | 2340 | 1.44 | 619 | 70 | 1651 |
-| explanationQuality | 2340 | 1.96 | 20 | 56 | 2264 |
-| metadata | 2340 | 1.84 | 0 | 375 | 1965 |
-| linking | 2247 | 1.50 | 396 | 327 | 1524 |
-| freshnessHealth | 2604 | 0.77 | 916 | 1371 | 317 |
+| handsOn | 2351 | 1.44 | 619 | 81 | 1651 |
+| explanationQuality | 2351 | 1.96 | 20 | 56 | 2275 |
+| metadata | 2351 | 1.84 | 0 | 375 | 1976 |
+| linking | 2258 | 1.50 | 397 | 332 | 1529 |
+| freshnessHealth | 2615 | 0.77 | 918 | 1380 | 317 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
@@ -147,8 +147,9 @@ and split always need a written human reason (see checklist).
 - /learn/agentic-ai/evaluating-agent-behavior-in-dev — Reading an Agent's Trace
 - … 2189 more in content-registry.json
 
-#### investigate: zero in-body internal links (96)
+#### investigate: zero in-body internal links (97)
 
+- /interview/interview-modes — Interview modes: interviewer and candidate
 - /roles/forward-deployed-engineer/ai/agents-loops-stop-conditions-and-fallbacks — Agents: loops, stop conditions, and safe fallbacks
 - /roles/forward-deployed-engineer/ai/chunking-embedding-and-hybrid-search — Chunking, embeddings and hybrid search
 - /roles/forward-deployed-engineer/ai/cost-latency-and-the-call-centre-budget — Cost, latency, and the call-centre budget
@@ -188,8 +189,7 @@ and split always need a written human reason (see checklist).
 - /roles/forward-deployed-engineer/data/salesforce-and-crm-objects — Salesforce and CRM objects: the fields that are always wrong
 - /roles/forward-deployed-engineer/data/sap-erp-exports-and-the-flat-file — SAP and ERP exports: living with the flat file
 - /roles/forward-deployed-engineer/data/sharepoint-drive-and-document-stores — SharePoint, Drive, and document stores as a source of truth
-- /roles/forward-deployed-engineer/data/sso-saml-oidc-and-the-customers-idp — SSO, SAML, OIDC, and the customer's identity provider
-- … 56 more in content-registry.json
+- … 57 more in content-registry.json
 
 #### expand: thin vs family median (279w vs ~1005w) (1)
 
@@ -282,7 +282,7 @@ _… 293 more pairs in content-registry.json (`duplicates`)_
 
 ## Sourcing review flags
 
-268 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
+270 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
 
 | item | flags |
 |---|---|
@@ -347,14 +347,14 @@ _… 293 more pairs in content-registry.json (`duplicates`)_
 | /learn/cli-agents/customizing-the-agent-surface | release-sensitive page with no updated/review date |
 | /learn/cli-agents/getting-the-agent-oriented | release-sensitive page with no updated/review date |
 
-_… 208 more in content-registry.json (`sourcingFlags`)_
+_… 210 more in content-registry.json (`sourcingFlags`)_
 
 ## Freshness queues
 
 Review order: volatile classes first, oldest last-verified date first; undated items lead each queue. `verified`/`updated`/`published` supply the last-verified date — git-derived when frontmatter is absent.
 
-- periodic: 1371
-- pricing-sensitive: 361
+- periodic: 1380
+- pricing-sensitive: 363
 - release-sensitive: 357
 - durable: 266
 - certification-sensitive: 104
@@ -395,7 +395,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-foundations/reliable-ai/223-environmental-impact-and-compute-governance — Environmental Impact and Compute Governance *(verified 2026-08-30)*
 - … 74 more in content-registry.json
 
-### pricing-sensitive (361) — oldest-verified first
+### pricing-sensitive (363) — oldest-verified first
 
 - /learn/agent-frameworks/mastra-typescript-agents — Mastra: the TypeScript agent framework *(verified undated)*
 - /learn/agent-frameworks/microsoft-agent-frameworks — Microsoft's agent frameworks: Semantic Kernel, AutoGen, and the convergence *(verified undated)*
@@ -417,6 +417,8 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/rag/managed-vector-databases — Pinecone, Weaviate, Qdrant, Milvus: the dedicated vector databases *(verified undated)*
 - /learn/web-agents/agentic-browsers-overview — Agentic browsers: Browser Use, Stagehand, Browserbase, and computer-use tools *(verified undated)*
 - /learn/web-agents/extraction-and-evaluation — Extraction with schemas, and evaluating whether the browser task worked *(verified undated)*
+- /interview/ai-foundations — AI foundations interview questions *(verified undated)*
+- /interview/behavioral-and-project-defense — Behavioral and project-defense interview questions *(verified undated)*
 - /scenarios/browser-agent-permissions — A research agent that wandered into a checkout page *(verified undated)*
 - /learn/ai-foundations/choosing-a-model — Choosing a model in 2026 *(verified 2026-08-29)*
 - /learn/ai-foundations/tokens-context-cost — Tokens, context & cost *(verified 2026-08-29)*
@@ -425,9 +427,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/prompt-engineering/chain-of-thought-prompting — Chain-of-Thought: Getting the Model to Show Its Work *(verified 2026-08-29)*
 - /learn/prompt-engineering/few-shot-prompting — Few-Shot Prompting: Teaching by Example *(verified 2026-08-29)*
 - /learn/prompt-engineering/system-vs-user-prompts — System Prompts vs User Prompts *(verified 2026-08-29)*
-- /learn/agentic-ai/stopping-conditions-for-agents — Termination Conditions: Teaching an Agent When It's Done *(verified 2026-08-30)*
-- /learn/ai-foundations/ai-systems/110-adversarial-search-minimax-and-game-values — Adversarial Search: Minimax and Game Values *(verified 2026-08-30)*
-- … 331 more in content-registry.json
+- … 333 more in content-registry.json
 
 ### policy-sensitive (94) — oldest-verified first
 
@@ -503,7 +503,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 ### no summary/meta description (0)
 
 
-### no published or updated date (174)
+### no published or updated date (185)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -545,9 +545,9 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-for-designers/ai-product-design-common-mistakes — AI product design: common mistakes
 - /learn/ai-for-designers/ai-product-design-foundations-quiz — Quiz: AI product design foundations
 - /learn/ai-for-designers/ai-prototype-testing-common-mistakes — AI prototype testing: common mistakes
-- … 134 more
+- … 145 more
 
-### zero in-body internal links (template nav still applies) (490)
+### zero in-body internal links (template nav still applies) (491)
 
 - /learn/agentic-ai/agents-vs-workflows — Choose an agent only when a workflow is not enough
 - /learn/ai-foundations/applied-ai/301-ai-product-discovery-outcomes-and-harm — AI Product Discovery: Outcomes, Users, and Harm
@@ -589,7 +589,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-foundations/reliable-ai/219-incident-response-rollback-and-learning — AI Incidents, Rollback, and Organisational Learning
 - /learn/ai-foundations/reliable-ai/220-human-in-the-loop-and-meaningful-oversight — Human-in-the-Loop and Meaningful Oversight
 - /learn/ai-foundations/reliable-ai/221-contestability-appeals-and-recource — Contestability, Appeals, and Recourse
-- … 450 more
+- … 451 more
 
 ### live file not in curriculum (2229)
 
@@ -644,7 +644,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 ### lesson files with status coming (0)
 
 
-### release-sensitive, no date at all (117)
+### release-sensitive, no date at all (119)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -686,7 +686,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-literacy/meet-skills-connectors-and-agents — Meet skills, connectors, and agents — safely
 - /learn/cli-agents/cli-agent-labs — Labs: the untrusted-repo security drill and the comparative harness run
 - /learn/cli-agents/customizing-the-agent-surface — Customizing the agent: MCP config, skills, commands, rules, hooks, and subagents
-- … 77 more
+- … 79 more
 
 ## Role paths
 
@@ -727,15 +727,26 @@ Largest queue; full list in JSON. Oldest-verified sample:
 
 ## Non-lesson collections
 
-### interview (7)
+### interview (18)
 
 - /interview/agents — AI agents interview questions (776 words, updated 2026-09-08)
+- /interview/ai-foundations — AI foundations interview questions (708 words)
 - /interview/ai-system-design — AI system design interview questions (748 words, updated 2026-09-08)
+- /interview/behavioral-and-project-defense — Behavioral and project-defense interview questions (726 words)
+- /interview/classical-ml — Classical ML interview questions (632 words)
+- /interview/context-engineering — Context engineering interview questions (716 words)
+- /interview/deep-learning — Deep learning interview questions (685 words)
 - /interview/evals — LLM evaluation interview questions (753 words, updated 2026-08-30)
+- /interview/interview-modes — Interview modes: interviewer and candidate (504 words)
 - /interview/llm-basics — LLM basics interview questions (785 words, updated 2026-09-08)
+- /interview/maths-foundations — Maths foundations interview questions (623 words)
 - /interview/mcp — MCP interview questions (713 words, updated 2026-09-08)
+- /interview/production-and-observability — Production and observability interview questions (705 words)
 - /interview/prompt-engineering — Prompt engineering interview questions (752 words, updated 2026-09-08)
 - /interview/rag — RAG interview questions (721 words, updated 2026-08-30)
+- /interview/safety-and-security — AI safety and security interview questions (748 words)
+- /interview/structured-outputs — Structured outputs interview questions (689 words)
+- /interview/take-home-exercises — Take-home exercises and integrity (479 words)
 
 ### scenario (12)
 

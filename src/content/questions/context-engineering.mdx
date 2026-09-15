@@ -1,0 +1,62 @@
+---
+title: "Context engineering interview questions"
+topic: "Context Engineering"
+description: "Seven questions on what goes in the context window, what rots it, and why more context can make things worse."
+order: 13
+---
+
+## 1. What is context engineering?
+
+The discipline of deciding what goes into the model's input at each call — system prompt, retrieved content, history, tool results, examples — and in what order, at what size, with what trust. It's the difference between "prompt engineering" (phrasing the ask) and shaping the whole information environment the model reasons inside.
+
+**Follow-up:** why is context a system-design problem, not a prompt-writing problem?
+
+## 2. Why can more context make the model *worse*?
+
+Attention isn't free — relevant content competes with everything else in the window. Two failure modes: **distraction** (relevant fact buried among near-duplicates the model can't distinguish) and **lost-in-the-middle** (models use beginnings and ends better than middles). Dumping more context in is a retrieval-quality bet, not a quality strategy — the [context-rot lesson](/learn/context-engineering/context-rot-explained) covers the mechanics.
+
+**Follow-up:** what does "lost in the middle" mean, and how does it change how you order retrieved content?
+
+## 3. What belongs in the system prompt versus the user turn?
+
+System prompt: invariants — who the assistant is, output contract, hard constraints, things true across every turn. User turn: this request's content — the question, the documents, the variables. The mistake is putting task content in the system prompt (it never rotates out) or invariants in the user turn (they can be overridden or lost). Per-message roles are a trust boundary, not a style choice.
+
+**Follow-up:** where do retrieved documents go, and why not in the system prompt?
+
+## 4. How do you handle a conversation that outgrows the context window?
+
+The strategies, roughly in order of complexity: truncate old turns (loses early context), summarize older turns into a compaction block (lossy but bounded), retrieve relevant history on demand (turns memory into a search problem), or externalize state into structured fields the model reads fresh each turn. The design question is what the model *needs to remember* — keep that, let the rest go. See [summarization for compaction](/learn/context-engineering/summarization-for-compaction).
+
+**Follow-up:** what breaks when you summarize — what does compaction always lose?
+
+## 5. What is prompt injection, in context terms?
+
+Untrusted content in the context — a retrieved document, a tool result, a user message — carrying text the model might read as instruction. The model can't reliably tell "data to summarize" from "command to follow" when both are tokens in the window. The defense is structural: mark untrusted regions, instruct the model on what's data, and never let context content escalate privileges. The [injection lesson](/learn/llm-security/prompt-injection-testing-and-threat-models) covers the threat model.
+
+**Follow-up:** why can't you just instruct the model to "ignore malicious instructions"?
+
+## 6. Explain this trace: the agent repeats the same tool call every step for six steps. What's happening in the context?
+
+**Format: explain this trace.**
+
+The context is poisoned — the agent can't tell it's looping. Either the tool results look identical (same error or same result, so the model can't tell it already tried), the earlier calls fell out of the window (truncation ate the history), or the result is indistinguishable enough that the model can't see the retry failing. The context fix is making the failure *visible*: annotate repeated calls, summarize what's been tried, or surface the loop to the model explicitly. The [context-poisoning lesson](/learn/context-engineering/context-poisoning-and-distraction) covers the family.
+
+**Follow-up:** how do you make "you already tried this" legible to the model?
+
+## 7. Choose the tradeoff: a bigger context window versus better retrieval?
+
+**Format: choose the tradeoff.**
+
+Bigger window helps when the task genuinely needs it all — long-document analysis, many-shot learning, whole-codebase reasoning — and when retrieval would lose what it needs. Better retrieval wins when the relevant part is small and findable — which is most production workloads — and costs less per call. The failure is defaulting to "just make it bigger": you pay more per request and often *lose* accuracy to distraction. Measure what the task actually needs first — the [context-window blog](/blog/the-context-window-got-bigger-and-it-did-not-fix-this) is the cautionary version.
+
+**Follow-up:** what does your task's "relevant-fraction" look like, and how would you measure it?
+
+## How to score your answers
+
+- **Strong answers** treat the context window as a designed environment — ordering, trust, budget, decay — not a bucket.
+- **Weak answers** equate context with "the prompt" or assume more is better; both fail at production scale.
+- Follow-ups push on *what breaks* — the failure modes reveal whether they've debugged context or just filled it.
+
+## Practice next
+
+The [context-engineering track](/learn/context-engineering) covers the whole discipline — rot, compaction, ordering, observability.

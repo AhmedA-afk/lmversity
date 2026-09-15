@@ -1,0 +1,62 @@
+---
+title: "Deep learning interview questions"
+topic: "Deep Learning"
+description: "Seven questions on training dynamics, architectures, and the failure modes that matter at production scale."
+order: 11
+---
+
+## 1. What is attention, intuitively?
+
+For each token, a learned way to look back at every earlier token and decide which matter — scored by relevance (query·key), weighted into the representation (value). It's how the model handles long-range dependencies a fixed window can't: the "it" in a sentence can attend to whatever it refers to, however far back.
+
+**Follow-up:** why does attention scale quadratically, and what does that cost on long contexts?
+
+## 2. What's the difference between a transformer and an RNN for sequence work?
+
+An RNN reads tokens one at a time, carrying state forward — sequential, hard to parallelize, struggles with long-range dependencies. A transformer reads the whole sequence at once and lets attention wire up whichever positions matter — parallelizable, better at long range, which is why it won. The cost is that quadratic attention over the whole context.
+
+**Follow-up:** name a case where an RNN-style approach is still reasonable today.
+
+## 3. What do learning rate and batch size actually trade off?
+
+Learning rate: step size per update — too high diverges or oscillates, too low crawls. Batch size: how much data per update — bigger batches give smoother gradients and use hardware better but can generalize worse and need different learning rates. They're coupled: scale the batch, scale the rate. In practice you tune them together, not independently.
+
+**Follow-up:** what does a learning-rate schedule buy you that a fixed rate doesn't?
+
+## 4. What is overfitting in a deep network, and what actually fixes it?
+
+Same concept as classical ML — the network memorizes noise — but with more capacity to do it badly. The fixes are the standard toolkit: more data (best), augmentation, regularization (weight decay, dropout), early stopping on validation, smaller model. The trap is treating "train longer" as the answer — that's how you get there, not out.
+
+**Follow-up:** why does dropout help, intuitively?
+
+## 5. What is catastrophic forgetting?
+
+Fine-tune a model on a new task and it can lose capability on the old ones — the weights that served the old task get overwritten. It's why naive fine-tuning is risky for general capability, and why techniques like LoRA (train a small adapter, freeze the base) or mixing old-task data into new training matter in practice.
+
+**Follow-up:** how would you detect forgetting after a fine-tune — what would you measure?
+
+## 6. Explain this trace: training loss flatlines high, validation loss flatlines higher. What's broken?
+
+**Format: explain this trace.**
+
+Both losses flat and high means the model isn't learning at all — underfitting to the point of barely moving. The usual suspects, in order: learning rate too low (steps too small to move), a bug in the data or loss (labels misaligned, loss computed wrong), the model can't express the pattern (architecture mismatch), or the input pipeline is feeding noise (shuffled labels are the classic). Distinguish by overfitting a *tiny* batch first — if the model can't memorize 50 examples, it's a bug, not a capacity problem.
+
+**Follow-up:** what does it mean if the tiny-batch overfit works but full training still flatlines?
+
+## 7. Choose the tradeoff: a bigger pretrained model or a smaller one fine-tuned on your data?
+
+**Format: choose the tradeoff.**
+
+Depends on the gap. If your task is close to what the big model already does, a small fine-tuned model wins on cost and often on your specific distribution. If the task needs capability the small model doesn't have — hard reasoning, broad knowledge — no amount of fine-tuning adds what isn't there. The honest sequence: measure the small model on your task first; only pay for size you can show you need.
+
+**Follow-up:** what would you measure to know which failure you have — capability or specialization?
+
+## How to score your answers
+
+- **Strong answers** reason about training dynamics — loss curves, learning rates, forgetting — as diagnosable phenomena, not trivia.
+- **Weak answers** recite architecture facts without connecting them to when things break.
+- Follow-ups push on the debugging instinct: what you'd check first, and why.
+
+## Practice next
+
+The [deep-learning track](/learn/deep-learning) builds the training-dynamics intuition the trace questions lean on — the experiment-tracking and optimization labs especially.

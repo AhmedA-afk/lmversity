@@ -1,0 +1,62 @@
+---
+title: "Production and observability interview questions"
+topic: "Production & Observability"
+description: "Seven questions on deploying AI features, watching them, and the production concerns that don't exist in the notebook."
+order: 15
+---
+
+## 1. What changes when an AI feature goes from demo to production?
+
+Everything except the demo: latency budgets, cost per request, error handling, the failure modes users actually hit, version control for prompts and models, observability, and someone owning the pager. The model call is usually the easy part — the system around it is the product. Most "AI projects that failed" failed on the last 20%, not the model.
+
+**Follow-up:** name three things that exist in production that a demo never needs.
+
+## 2. How do you version prompts and models in production?
+
+Prompts are code: versioned in the repo, deployed with the app, tagged in the observability data so a given response traces to a given prompt version. Models: pin the version where the provider allows it — an alias that silently upgrades is a regression waiting to happen. Record both on every request; when behavior changes and your code didn't, this is how you find out what did. See [prompt versioning and rollback](/learn/genai-app-dev/prompt-versioning-and-rollback).
+
+**Follow-up:** the provider ships a silent model update — how do you detect the behavior changed?
+
+## 3. What does observability mean for an LLM feature?
+
+Traces per request (every step: retrieval, calls, post-processing), cost and latency per step, prompt and model versions attached, and quality signals where you can get them. The point isn't dashboards — it's being able to answer "why did the system do that" for any request after the fact. The [observability foundations lesson](/learn/production/llm-observability-foundations) covers the shape; [instrumenting one app two ways](/learn/production/instrumenting-one-app-two-ways) builds it.
+
+**Follow-up:** what's the difference between monitoring this and monitoring a normal API?
+
+## 4. How do you control cost on a model-driven feature?
+
+Know the drivers first: tokens in, tokens out, calls per user-action, model tier per step. Then the levers: smaller/cheaper models where quality allows, caching (prompt caching, response caching, embedding caching), batch for non-interactive work, context discipline (retrieval quality over context size), and per-step routing so flagship models only touch hard steps. [Cut your LLM bill](/guides/cut-your-llm-bill) walks the whole playbook.
+
+**Follow-up:** which lever usually saves the most, and why is it the one teams try last?
+
+## 5. Explain this trace: p50 latency is 800ms, p95 is 14s. Same code, same model — what's going on?
+
+**Format: explain this trace.**
+
+A bimodal distribution means the requests aren't one workload. The usual suspects: a retry loop (a fraction of requests hit a slow path — timeout-and-retry is invisible in the p50), context-size variance (long-context calls are quadratically slower), a fallback model (a percentage routed to a slower provider), or queueing under load (a resource pool saturating at p95). The aggregate hides it — you need the per-request trace breakdown to see which. The [observability guide](/guides/add-observability-to-an-ai-feature) covers the instrumentation.
+
+**Follow-up:** how would you distinguish a retry problem from a context-size problem from the trace alone?
+
+## 6. How do you test an AI feature before release?
+
+Layers, not a single gate: deterministic tests for the code (validation, routing, schemas), eval fixtures for the model behavior (a versioned set run against changes — see [write your first eval](/guides/write-your-first-eval-for-an-ai-feature)), adversarial tests for security, and a canary or shadow release for the production cutover. "It works in the demo" is a test of one; the layers catch different failure classes.
+
+**Follow-up:** what's the eval set's job that unit tests can't do?
+
+## 7. Choose the tradeoff: a faster cheaper model or a slower better one?
+
+**Format: choose the tradeoff.**
+
+Map it to the user-facing cost of each failure. If latency drives the experience (voice, inline completion, chat), the fast model wins and you engineer around its quality limits — tighter prompts, better retrieval, validation. If correctness drives the outcome (extraction, analysis, anything a user will act on), the slower better model wins and you engineer around its latency — streaming, async, progress UX. The honest answer is per-step, not per-product: different steps can take different models.
+
+**Follow-up:** how would you measure which error the user actually notices?
+
+## How to score your answers
+
+- **Strong answers** treat production as the product — versioning, observability, cost, testing layers — not as a deployment detail.
+- **Weak answers** describe the model's behavior and stop there; the system is where the real questions live.
+- Follow-ups push on *how you'd know* — the measurement instinct reveals production experience.
+
+## Practice next
+
+The [production track](/learn/production) covers the operating side — observability, evals, rollout, incident response.

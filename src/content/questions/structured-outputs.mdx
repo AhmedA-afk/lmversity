@@ -1,0 +1,62 @@
+---
+title: "Structured outputs interview questions"
+topic: "Structured Outputs"
+description: "Seven questions on JSON mode, schemas, validation, and why 'return JSON' is a contract, not a suggestion."
+order: 12
+---
+
+## 1. What does "JSON mode" actually guarantee — and not guarantee?
+
+It guarantees the output parses as JSON. It does **not** guarantee the JSON matches your schema — the fields, types, required values, and enums are still on you. Confusing the two is the most common structured-output bug: valid JSON, wrong shape. Schema-enforced output (where the provider constrains decoding to a schema) is the stronger guarantee where it's offered.
+
+**Follow-up:** when does valid-JSON-wrong-shape hurt more than invalid JSON?
+
+## 2. How do you handle a model that returns almost-valid JSON?
+
+Repair before you retry. Common corruptions — trailing commas, unclosed brackets, markdown fences, preamble text — are mechanically fixable; incremental repair beats re-asking because it's deterministic and cheap. The pattern is extract → repair → validate → retry only on validation failure, not "retry on any parse error." See [incremental JSON repair](/learn/structured-outputs/incremental-json-repair-explained) for the mechanics.
+
+**Follow-up:** which corruptions should you *not* repair silently, and why?
+
+## 3. Why do schemas beat prompts for structured output?
+
+A prompt describes what you want; a schema *constrains* what can come back. Prompts fail probabilistically — the model mostly complies. Schema enforcement (function-calling, structured-output modes, constrained decoding) makes invalid structure impossible at decode time, not just discouraged. The deeper reason: prompts shape tendencies, schemas shape guarantees — production wants guarantees.
+
+**Follow-up:** when is a schema not enough even with enforcement?
+
+## 4. How do you design a schema the model can actually fill?
+
+Flat over nested where possible — deep nesting multiplies failure surface. Explicit nullability — "field may be absent" beats the model inventing a value. Small enums over free text — closed sets are checkable. Descriptions on fields — the model reads them as spec. And fields for *uncertainty* — a `"confidence"` or `"reason"` slot keeps the model honest better than forcing confident output.
+
+**Follow-up:** what goes wrong when you require a field the source document doesn't always have?
+
+## 5. Explain this output: the model returns `{"sentiment": "positive", "confidence": 0.95}` for a clearly negative review. Schema-valid — what failed?
+
+**Format: debug this output.**
+
+The schema held; the *semantics* failed — this is the case structure can't catch. The model produced confident, well-formed, wrong output: either it misread the review (a comprehension failure), the schema let it express false confidence (a design failure — a number it can't calibrate), or the label set is ambiguous (mixed-sentiment text forced to one label). The fix lives at the semantic layer: quoted-evidence fields, label definitions, or multi-label schemas — validation must check *plausibility*, not just shape.
+
+**Follow-up:** what would you add to the schema so a wrong answer is harder to produce confidently?
+
+## 6. How do you validate structured output in production?
+
+Two layers. **Syntactic**: does it parse, does it match the schema, are the types right. **Semantic**: do the values make sense — the PO exists, the date isn't in the future, the extracted name appears in the source. Semantic validation is where production quality actually lives; a syntactically perfect wrong answer is worse than a parse error because it looks right. Every check that fails should route somewhere — a retry, a repair, a human queue — never a silent default.
+
+**Follow-up:** which validations belong in code versus back in the model?
+
+## 7. Choose the tradeoff: strict schema enforcement versus a looser contract with repair?
+
+**Format: choose the tradeoff.**
+
+Strict enforcement where the output feeds code directly — pipelines, tool calls, anything downstream that can't tolerate shape errors; the rigidity is the point. Looser-with-repair where the output is for humans or tolerant consumers, and where the schema itself is still evolving — enforcement constrains iteration. The deeper question is what failure you can absorb: strictness pays upfront cost to avoid downstream ones.
+
+**Follow-up:** which choice ages better as your schema evolves weekly?
+
+## How to score your answers
+
+- **Strong answers** separate the layers: parsing, schema, semantics — and know which failures live at each.
+- **Weak answers** treat "it returned JSON" as the finish line; the shape was never the hard part.
+- Follow-ups push on *where* validation lives — the answer reveals whether they've shipped this or read about it.
+
+## Practice next
+
+The [structured-outputs track](/learn/structured-outputs) covers the full contract — schemas, repair, validation, provider differences.

@@ -567,19 +567,31 @@ consolidation into a parent track, or a clearer curated-path role.
 ## Phase 3 — Interview preparation ecosystem
 
 - [ ] Expand from 7 interview topics into a taxonomy aligned with every technical track and role.
-- [ ] Add topic hubs for AI foundations, maths, classical ML, deep learning, LLMs, prompting,
+- [x] Add topic hubs for AI foundations, maths, classical ML, deep learning, LLMs, prompting,
       RAG, agents, tools, MCP, structured outputs, context, evals, safety, production,
       observability, system design, and behavioral/project defense.
+      *(16 topic hubs: added ai-foundations, maths-foundations, classical-ml,
+      deep-learning, structured-outputs, context-engineering,
+      safety-and-security, production-and-observability,
+      behavioral-and-project-defense; tools covered inside the agents hub)*
 - [ ] Add role hubs for AI engineer, ML engineer, applied AI engineer, AI platform engineer,
       forward-deployed engineer, data scientist, product manager, designer, and security engineer.
 - [ ] Give each question a concise answer, deep answer, common weak answer, follow-up questions,
       evaluation rubric, and curriculum links.
-- [ ] Add “explain this trace,” “debug this output,” “design this system,” “choose the tradeoff,”
+- [x] Add “explain this trace,” “debug this output,” “design this system,” “choose the tradeoff,”
       and “defend this project” formats.
-- [ ] Add interviewer mode with prompts and scoring guidance.
-- [ ] Add candidate mode with progressive hints.
+      *(all five formats live across the question files — format-tagged per
+      question; design-this-system lives in ai-system-design)*
+- [x] Add interviewer mode with prompts and scoring guidance.
+      *(served: `interview-modes` — prompt patterns, probe-for-boundary,
+      scoring guidance per format)*
+- [x] Add candidate mode with progressive hints.
+      *(served: `interview-modes` — cover-answer-compare method, timed
+      practice, self-scoring via weak-answer descriptions)*
 - [ ] Add mock interview sets by role and level.
-- [ ] Add take-home exercise examples with explicit integrity guidance.
+- [x] Add take-home exercise examples with explicit integrity guidance.
+      *(served: `take-home-exercises` — exercise shapes, doing-them-well,
+      AI-assistance disclosure + defend-every-line integrity rules)*
 - [ ] Add project-defense questions to every capstone.
 - [x] Date-stamp provider-specific interview material. (Vacuously satisfied:
       no provider-specific claims in the interview corpus — a grep over
@@ -2325,6 +2337,27 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-16 — Phase 3: interview taxonomy + modes (5 rows)
+
+- Commit: `PENDING`. Status: complete.
+- Scope: interview corpus expanded 7 → 16 topic hubs (added
+  ai-foundations, maths-foundations, classical-ml, deep-learning,
+  structured-outputs, context-engineering, safety-and-security,
+  production-and-observability, behavioral-and-project-defense — tools
+  covered inside the agents hub); added interview-modes (interviewer
+  prompts/scoring + candidate progressive hints) and take-home-exercises
+  (exercise shapes + AI-assistance integrity guidance). All five question
+  formats (explain-trace, debug-output, design-system, choose-tradeoff,
+  defend-project) now live across the corpus.
+- Files: 11 new `src/content/questions/*.mdx`; 1 blog link fix
+  (evaluating-agent-trajectories).
+- Validation: `check:content` clean (2,229 lessons); build 2,663 pages;
+  `check:links` 0 dead / 5,705 routes.
+- Open in Phase 3: role hubs (9 roles), per-question deep/weak/rubric
+  depth, mock interview sets by role+level, project-defense on every
+  capstone.
+- Next: role-hub batch; Phase 2 question-bank schema; Phase 10.
 
 ### 2026-09-16 — Phase 4: guides, scenarios, blog themes (17 rows)
 

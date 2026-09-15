@@ -1,0 +1,62 @@
+---
+title: "Maths foundations interview questions"
+topic: "Maths for AI"
+description: "Seven questions on the linear algebra, probability, and calculus that AI engineering actually uses — applied, not theorem-proving."
+order: 9
+---
+
+## 1. What is a vector embedding, geometrically?
+
+A point in a high-dimensional space placed so that *similar* inputs land near each other — "near" measured by cosine similarity or distance. An embedding model is a learned function from text (or image, audio) to that point. Everything downstream — retrieval, clustering, recommendations — is geometry on those points.
+
+**Follow-up:** why does cosine similarity get used more than Euclidean distance for embeddings?
+
+## 2. What does a dot product measure between two vectors?
+
+Roughly: how aligned two directions are, scaled by magnitude. For embeddings it's the engine of similarity — high dot product means the vectors point the same way. The same operation sits inside attention (query·key = relevance score), which is why one multiplication shows up in two different-looking places.
+
+**Follow-up:** a query and a document have a high dot product — what does that claim, and what doesn't it claim?
+
+## 3. What is a matrix multiplication doing in a neural network?
+
+Each layer applies a linear transform — a matrix times the input vector — then a nonlinearity. The matrix is the learned part; stacking layers lets the network carve the space into regions simple linear maps can't. You don't need the proof, but you do need the intuition: the model is geometry, and "training" is shaping that geometry.
+
+**Follow-up:** why can't a stack of linear transforms without nonlinearity learn anything interesting?
+
+## 4. What does "sampling temperature" do, probabilistically?
+
+Temperature rescales the logits before the softmax that turns them into probabilities. Low temperature sharpens — the top token dominates, output is more deterministic. High temperature flattens — tail tokens get real probability, output diversifies. It's not creativity; it's the shape of the distribution you sample from.
+
+**Follow-up:** why does temperature 0 still not guarantee identical outputs in production?
+
+## 5. Explain precision and recall with a real example.
+
+**Format: explain this concept with an example.**
+
+For a spam filter: precision = of the emails marked spam, what fraction actually were (few false accusations). Recall = of the actual spam, what fraction we caught (few escapes). The trade-off is the point — you can always raise recall by marking more things spam, at the cost of precision. Which to favor is a cost question: false positives and false negatives rarely cost the same.
+
+**Follow-up:** for a cancer screening model, which error is worse — and who decides?
+
+## 6. What is overfitting, and how do you detect it?
+
+The model learned the training data's noise along with its signal — great on what it's seen, poor on new data. Detect it by the gap: training metrics improve while held-out metrics stall or degrade. The fix is never "more epochs" — it's more data, less capacity, regularization, or better validation splits.
+
+**Follow-up:** why is a train/test split alone sometimes not enough to catch it?
+
+## 7. Choose the tradeoff: model interpretability versus accuracy?
+
+**Format: choose the tradeoff.**
+
+It depends on the decision the model drives. For a recommender, accuracy usually wins — a wrong pick costs a click. For a loan denial or a medical flag, you may need the simpler model because "why" is a regulatory and appeal requirement, not a nicety. The honest frame: interpretability isn't a binary, it's a spectrum — and the required point on it is set by who's affected when the model is wrong.
+
+**Follow-up:** when does the more accurate model become the *less* responsible choice?
+
+## How to score your answers
+
+- **Strong answers** carry the geometric/probabilistic intuition into engineering consequences — embedding similarity, temperature behavior, validation gaps.
+- **Weak answers** recite definitions without the "so what" — knowing precision's formula matters less than knowing which error the application can't afford.
+- Follow-ups push on the trade-off, not the formula.
+
+## Practice next
+
+The [maths foundations labs](/learn/maths-foundations) build the geometric intuition concretely — the embedding-geometry lab especially.

@@ -2,7 +2,7 @@
  "version": 1,
  "next": {
   "les": 2229,
-  "que": 7,
+  "que": 18,
   "sce": 12,
   "blo": 19,
   "gui": 14,
@@ -10384,11 +10384,55 @@
   },
   "blog/what-an-eval-catches-that-a-demo-misses.mdx": {
    "id": "blo-0018",
-   "fp": "893163a0cfe9652a80989ff1f719ae840779e832"
+   "fp": "643403df653aeb906a18bfb23c774948e358472a"
   },
   "blog/workflow-agent-or-multi-agent.mdx": {
    "id": "blo-0019",
    "fp": "9cbe5b09807a8ce8ff2a4c3ff02d62338fe583a6"
+  },
+  "questions/ai-foundations.mdx": {
+   "id": "que-0008",
+   "fp": "65e0beb9afce9c482d3fb50dd3ab4bbd08108e28"
+  },
+  "questions/behavioral-and-project-defense.mdx": {
+   "id": "que-0009",
+   "fp": "f5f118554fc0a2348a111a31345dd4ef6d6b7795"
+  },
+  "questions/classical-ml.mdx": {
+   "id": "que-0010",
+   "fp": "1c9105313ac90ece14e48f24a561bc3b6e44400c"
+  },
+  "questions/context-engineering.mdx": {
+   "id": "que-0011",
+   "fp": "6bcc8f908d481b62d202c918a48f6d7fde67b77a"
+  },
+  "questions/deep-learning.mdx": {
+   "id": "que-0012",
+   "fp": "da67a348f1961e4db7c4923a62d22b10d434f84e"
+  },
+  "questions/interview-modes.mdx": {
+   "id": "que-0013",
+   "fp": "8e1d70bf8c4c2991ce64eac45455e63e7713fe9f"
+  },
+  "questions/maths-foundations.mdx": {
+   "id": "que-0014",
+   "fp": "02043d8b8a46fed6e847312a5690884c986ed85e"
+  },
+  "questions/production-and-observability.mdx": {
+   "id": "que-0015",
+   "fp": "a72545399a8ba7cf2081435aabe5f9c33e489342"
+  },
+  "questions/safety-and-security.mdx": {
+   "id": "que-0016",
+   "fp": "6c8d9be1873c9e035f540d7972c9370dabea9f7f"
+  },
+  "questions/structured-outputs.mdx": {
+   "id": "que-0017",
+   "fp": "1f4601dc5c3b176a09c074c00e0ca3699c574b8d"
+  },
+  "questions/take-home-exercises.mdx": {
+   "id": "que-0018",
+   "fp": "6ddc6a68d918d5a15080e9b3c2ff629b78b392c2"
   }
  },
  "retired": {
