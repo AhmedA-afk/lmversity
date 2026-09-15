@@ -9,6 +9,21 @@ order: 4
 
 Your team wants multiple AI hosts to inspect issues, read build logs, and open a draft pull request. The server will run with access to internal systems and will be used by people with different roles.
 
+## Constraints
+
+- Callers arrive through different hosts with different trust levels — the server cannot assume the client already checked anything.
+- Users hold different repository permissions; a token that works for everyone is a token that over-serves someone.
+- Write actions must stay reviewable: a pull request the model opens is a draft, never a merge.
+- Issue bodies and build logs are untrusted input — they can carry instructions aimed at the calling model.
+
+## Options on the table
+
+**One broad service token per host.** Rejected: whoever connects inherits the whole permission set, and "the client asked" is not authorization.
+
+**Pass each user's own credentials through.** Right answer for user-initiated actions, but it does not cover automation that has no user attached — keep it for the draft-PR tool, not as the whole model.
+
+**Narrow read tools plus one explicit write.** Chosen: read-only tools serve every caller; opening a draft is a separate tool with server-side repository and branch checks, so the risky capability is small enough to audit.
+
 ## The first decision
 
 Expose focused read tools and resources first. Make opening a pull request a separate, explicit tool that creates a draft only, with repository and branch authorization checked on the server.
@@ -23,6 +38,10 @@ Expose focused read tools and resources first. Make opening a pull request a sep
 6. Test capability negotiation and clear behavior when a client lacks a feature.
 
 MCP is an interoperability layer, not a reason to widen permissions. Read [MCP architecture](/learn/mcp/mcp-architecture-hosts-clients-servers) and the [official server tools specification](https://modelcontextprotocol.io/specification/2025-06-18/server/tools).
+
+## What went wrong
+
+The first version of the log-reading tool returned whole files. A routine "why did this build fail" question pulled tens of thousands of log lines into the model's context — the failure line survived, but the context around it was truncated, and the model answered from the visible middle. Worse, the log happened to contain a line that read like an instruction, and the host's model repeated it back as a suggestion. The fix was boring on purpose: bounded results, byte limits, and a resource link for the full file so the client — not the tool — decides how much to read.
 
 ## What to test first
 

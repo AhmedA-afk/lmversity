@@ -9,6 +9,21 @@ order: 6
 
 You are building a research feature that searches a private knowledge base, compares sources, and writes a short brief. Users want to see progress, but partial answers can be mistaken for final conclusions.
 
+## Constraints
+
+- Runs take minutes, not seconds — no feedback at all reads as a hung page, and abandonment mid-run wastes the spend.
+- Anything rendered is a screenshot waiting to happen: a partial finding shown without a label will be quoted as a conclusion.
+- Sources are external and can disappear or conflict mid-run; the final brief must trace to source IDs, not to prose that mentioned them.
+- Cancellation has to stop downstream spend, not just the animation.
+
+## Options on the table
+
+**Stream raw model tokens.** Rejected: token streams are unlabeled by nature — a half-formed sentence about a source looks exactly like a finding, and there is no place to hang a caveat.
+
+**Spinner until done.** Rejected: a multi-minute task with no visible work invites abandonment and gives the operator no diagnostic surface when it fails.
+
+**Typed progress events.** Chosen: the UI renders stage, status, and labeled intermediate artifacts; the final brief is a separate object that only exists after validation.
+
 ## The first decision
 
 Stream typed progress events rather than an unstructured stream of model prose. Show stages such as searching, selecting sources, drafting, and checking citations. Label partial findings and keep the final brief separate.
@@ -22,6 +37,10 @@ Stream typed progress events rather than an unstructured stream of model prose. 
 5. Validate the final structure and citations before marking the task complete.
 
 Streaming improves perceived responsiveness; it does not make an unsupported claim safe. Combine [streaming responses](/learn/genai-app-dev/streaming-responses-to-the-ui) with [evaluating RAG quality](/learn/rag/evaluating-rag-quality).
+
+## What went wrong
+
+An early build streamed citation links into the draft as the model produced them, before validation ran. A source URL that no longer resolved sat on screen, styled identically to verified ones, for the rest of the run — and into the exported brief, because the export copied the rendered text. The postmortem produced two rules that cost little and save much: intermediate artifacts render with their stage label attached, and citations are only styled as citations after they validate. The failure was not the missing source; it was the UI lying about how much checking had happened.
 
 ## What to test first
 

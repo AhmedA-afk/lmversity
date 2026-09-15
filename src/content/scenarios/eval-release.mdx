@@ -9,6 +9,21 @@ order: 5
 
 The new configuration improves answer quality on a small demo set. It also increases context length and doubles the tail latency. The product team wants to ship before a large customer pilot.
 
+## Constraints
+
+- The pilot date is fixed by the customer contract — "let us evaluate for another month" is not available.
+- Tail latency doubled, and the product has real-time surfaces where tail latency is the user experience.
+- The quality gain was measured on a demo set the team chose themselves — a selection effect, not evidence.
+- Rollback must be one flag flip; if the canary misbehaves during the pilot, there is no incident-response luxury.
+
+## Options on the table
+
+**Ship on the demo score.** Rejected: a hand-picked set measures what the team hoped to see, and a regression discovered by the pilot customer is discovered too late.
+
+**Block the release.** Rejected: the quality gain is probably real, and a standing rule of "nothing ships while anything is unmeasured" means nothing ships — the answer is measurement, not freeze.
+
+**Canary with a frozen eval.** Chosen: both configurations scored against the same representative set, explicit cost and latency budgets, and a rollback path before the pilot sees it.
+
 ## The first decision
 
 Do not approve from the demo score. Freeze a representative evaluation set and compare the old and new configurations across quality, groundedness, failure severity, latency, retries, and cost. The pilot should be a canary with a rollback path.
@@ -23,6 +38,10 @@ Do not approve from the demo score. Freeze a representative evaluation set and c
 6. Promote only if the improvement clears the task's threshold without a safety or reliability regression.
 
 An eval should change a release decision. See [building a golden dataset](/learn/evals-red-teaming/building-a-golden-dataset) and [why evals matter](/learn/evals-red-teaming/why-evals-matter).
+
+## What went wrong
+
+An earlier release — pre-dating this eval discipline — had quietly doubled retry volume because a validation loop regenerated outputs that looked fine individually. Quality dashboards showed improvement while cost climbed for a week before finance noticed. Nobody had put retries on a dashboard because retries were an implementation detail, not a metric. That incident is why this scenario tracks latency, cost, and retry rate as release axes alongside quality: a system can get better and worse in the same deploy.
 
 ## What to test first
 

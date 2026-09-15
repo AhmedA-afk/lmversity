@@ -1,6 +1,6 @@
 # Acquisition & practice family audit — mechanical pass
 
-Generated 2026-09-15T06:18:50.940Z by `scripts/audit-families.mjs`.
+Generated 2026-09-15T06:30:21.575Z by `scripts/audit-families.mjs`.
 Structural checks only; originality/correctness are scored in the review pass.
 
 ## Findings
@@ -9,7 +9,7 @@ Structural checks only; originality/correctness are scored in the review pass.
 - **Guides (9)**: all have `related` lesson lists and ordered steps; 9/9 have **zero in-body internal links** (continuation lives only in the frontmatter block); `rag-fine-tuning-or-a-longer-prompt` have no code.
 - **Blog (10)**: all dated; `why-there-is-no-certificate` never link into the curriculum.
 - **Interview (7)**: 8 questions each; 5/7 have **no follow-up prompts or rubric** — the checklist asks for both.
-- **Scenarios (6)**: ~192 words avg; missing sections: constraints, options, postmortem, implementation.
+- **Scenarios (6)**: ~451 words avg; missing sections: none.
 - **Centralized practice banks**: 48 questions across 6 tracks, 48 total lesson links.
 - **Lesson quiz pages (83 files, 603 questions)**: all questions carry a marked correct answer; 0 duplicate stems corpus-wide; correct-answer positions skew B 66%, C 19%, A 11%, D 3%; 11 files have answer blocks that don't discuss every option.
 - **Worked examples (29)**: 0 flagged — every file has runnable code and an inspectable outcome.
@@ -104,12 +104,12 @@ Structural checks only; originality/correctness are scored in the review pass.
 
 | item | sections | int links | words | flags |
 |---|---------|---|
-| agent-approval | 4 | 2 | 199 | missing: constraints, options, postmortem |
-| document-qa | 4 | 2 | 190 | missing: constraints, implementation, postmortem |
-| eval-release | 4 | 2 | 189 | missing: constraints, options |
-| mcp-team-server | 4 | 1 | 187 | missing: constraints, options, postmortem |
-| streaming-research | 4 | 2 | 172 | missing: constraints, options |
-| support-assistant | 4 | 2 | 213 | missing: options, postmortem |
+| agent-approval | 7 | 2 | 459 | — |
+| document-qa | 7 | 2 | 428 | — |
+| eval-release | 7 | 2 | 436 | — |
+| mcp-team-server | 7 | 1 | 459 | — |
+| streaming-research | 7 | 2 | 434 | — |
+| support-assistant | 7 | 2 | 490 | — |
 
 ## Centralized practice banks
 

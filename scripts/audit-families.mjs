@@ -146,7 +146,7 @@ const SCENARIO_SECTIONS = {
   constraints: /constraint|requirement|limit|must not/i,
   options: /option|alternative|trade-?off|approach|choice/i,
   decision: /decision|design|chosen|plan/i,
-  implementation: /implement|build|architect|steps|how/i,
+  implementation: /implement|build|architect|steps|guided reasoning|how/i,
   evaluation: /test|evaluat|measure|metric|verify/i,
   postmortem: /postmortem|went wrong|incident|retro|failure/i,
 };

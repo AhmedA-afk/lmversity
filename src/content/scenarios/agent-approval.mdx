@@ -9,6 +9,21 @@ order: 3
 
 An operations team wants an agent to look up a customer, identify a duplicate account, and propose merging records. The merge is reversible only with manual work and affects billing history.
 
+## Constraints
+
+- Unmerging is manual and slow, so a wrong merge costs hours of operations time and can misstate billing history in the interim.
+- Reviewers are people with other jobs; an approval request that takes ten minutes to verify will be rubber-stamped within a week.
+- The lookup data is occasionally stale — a "duplicate" may be two recently-split accounts that are both legitimate.
+- Every write needs an audit trail: who approved, what the agent proposed, what the checks saw.
+
+## Options on the table
+
+**Fully autonomous merge.** Rejected: the cost asymmetry is the whole problem — detection errors are cheap, merge errors are not.
+
+**Report-only agent.** Surfaces candidates for humans to merge by hand. Rejected as the end state: it does the noticing but leaves the tedious part — assembling the merge — manual. Reasonable as a first release.
+
+**Propose-and-approve.** Chosen: the agent does the evidence work, a person makes the consequential call, and code executes the write deterministically.
+
 ## The first decision
 
 Split read and write capabilities. Let the model gather evidence and produce a merge proposal, but require a human approval step before the write tool is available. Put deterministic checks on identity, confidence, and account status.
@@ -23,6 +38,10 @@ Split read and write capabilities. Let the model gather evidence and produce a m
 6. Stop after approval, rejection, timeout, or a bounded number of read steps.
 
 This is a good case for a small agent inside a strict harness. The [control loop](/learn/harness-design/the-control-loop) and [when not to use an agent](/learn/agentic-ai/when-not-to-use-an-agent) are useful companion reading.
+
+## What went wrong
+
+The pilot surfaced its edge within a week: two accounts shared a company name and a billing contact but held different tax IDs — a regional subsidiary, not a duplicate. The name-similarity check had scored them highly and the evidence bundle looked convincing enough that the reviewer nearly approved. Nobody had told the checks what makes two accounts *distinct*, only what makes them similar. The fix was a hard rule — different tax IDs or different billing entities reject the proposal outright — and a review-note convention: every proposal must state the strongest evidence *against* merging, not just for it.
 
 ## What to test first
 

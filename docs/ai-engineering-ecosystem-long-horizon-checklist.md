@@ -1464,6 +1464,21 @@ validation, deployment status, measured result when available, blockers, and nex
 - Next batch: backlog item 2 — scenario depth pass (6 files, add missing
   constraints/options/postmortem sections).
 
+### 2026-09-15 — Scenario depth pass
+
+- All 6 scenarios went from 4 sections / ~192 words to 7 sections / ~450 words. Each now
+  carries `## Constraints` (hard requirements that shape the design), `## Options on the
+  table` (two rejected alternatives plus the chosen approach), and `## What went wrong`
+  (a postmortem narrative with the rule the incident produced — e.g. the document-Q&A
+  cache keyed on query rather than permission scope, the support assistant citing a
+  `superseded` article).
+- No invented numbers or external claims; postmortems are internally consistent with the
+  scenario's own stated design.
+- Validation: `npm run check:content` clean; `npm run check:links` clean;
+  `git diff --check` clean. Audit now reports 0 missing scenario sections. Commit: `79d4f2f`.
+- Next batch: backlog item 3 — interview follow-up prompts + weak-vs-strong rubric
+  (7 topic files, ~56 questions).
+
 ### 2026-09-14 — Master ecosystem backlog created
 
 - Status: research and operating plan complete; execution not started.

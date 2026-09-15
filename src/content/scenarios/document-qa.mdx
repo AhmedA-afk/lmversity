@@ -9,6 +9,21 @@ order: 2
 
 You need to let employees ask questions over project documents. Some documents are confidential, permissions change during the day, and answers must cite where they came from.
 
+## Constraints
+
+- A revoked permission must take effect at query time; waiting for a reindex is a leak window.
+- Citations must point at a specific document version, or they cannot be audited after edits.
+- Roles differ inside a tenant — "same company" is not "same permission."
+- Retrieval results are shared infrastructure (caches, prewarm jobs); anything cached per query rather than per authorized scope can cross a boundary.
+
+## Options on the table
+
+**One index per tenant.** Rejected: it still does not express roles inside a tenant, and every new group becomes an operations project instead of a metadata row.
+
+**Retrieve everything, filter after generation.** Rejected: once confidential text is in the prompt, the application has already failed — the model is not a security boundary.
+
+**Authorization-aware retrieval.** Chosen: scope is resolved before ranking, so unauthorized content never enters the candidate set, let alone the context.
+
 ## The first decision
 
 Make authorization a retrieval concern, not a prompt instruction. Every indexed chunk needs a stable document identity and permission metadata. At query time, resolve the user's allowed scope before ranking candidates.
@@ -22,6 +37,10 @@ Make authorization a retrieval concern, not a prompt instruction. Every indexed 
 5. Return citations that point to the authorized source version.
 
 Do not solve a permission bug by telling the model to hide a document. Once sensitive text enters context, the application has already crossed the boundary. Compare these choices with the [RAG track](/learn/rag) and [retrieval versus context stuffing](/learn/context-engineering/retrieval-vs-context-stuffing).
+
+## What went wrong
+
+The postmortem that shaped this design: a retrieval cache keyed only on the query string served a restricted document's summary to a user whose access had been revoked an hour earlier. Every piece had worked as designed — the index was fresh, the model grounded, the citation correct. The failure was the cache treating a question as the same question regardless of who asked. Authorization scope went into the cache key, and the incident review added a rule the prompt never could have enforced: results are only cacheable within the same resolved permission scope.
 
 ## What to test first
 

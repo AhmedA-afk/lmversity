@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-15T06:18:50.939Z",
+ "generatedAt": "2026-09-15T06:30:21.575Z",
  "findings": {
   "answers": [
    {
@@ -654,151 +654,151 @@
     "slug": "agent-approval",
     "sections": [
      "The situation",
+     "Constraints",
+     "Options on the table",
      "The first decision",
      "Guided reasoning",
+     "What went wrong",
      "What to test first"
     ],
     "covered": [
      "situation",
-     "decision",
-     "implementation",
-     "evaluation"
-    ],
-    "missing": [
      "constraints",
      "options",
+     "decision",
+     "implementation",
+     "evaluation",
      "postmortem"
     ],
+    "missing": [],
     "internal": 2,
-    "words": 199,
-    "flags": [
-     "missing: constraints, options, postmortem"
-    ]
+    "words": 459,
+    "flags": []
    },
    {
     "slug": "document-qa",
     "sections": [
      "The situation",
+     "Constraints",
+     "Options on the table",
      "The first decision",
      "Guided reasoning",
+     "What went wrong",
      "What to test first"
     ],
     "covered": [
      "situation",
+     "constraints",
      "options",
      "decision",
-     "evaluation"
-    ],
-    "missing": [
-     "constraints",
      "implementation",
+     "evaluation",
      "postmortem"
     ],
+    "missing": [],
     "internal": 2,
-    "words": 190,
-    "flags": [
-     "missing: constraints, implementation, postmortem"
-    ]
+    "words": 428,
+    "flags": []
    },
    {
     "slug": "eval-release",
     "sections": [
      "The situation",
+     "Constraints",
+     "Options on the table",
      "The first decision",
      "Guided reasoning",
+     "What went wrong",
      "What to test first"
     ],
     "covered": [
      "situation",
+     "constraints",
+     "options",
      "decision",
      "implementation",
      "evaluation",
      "postmortem"
     ],
-    "missing": [
-     "constraints",
-     "options"
-    ],
+    "missing": [],
     "internal": 2,
-    "words": 189,
-    "flags": [
-     "missing: constraints, options"
-    ]
+    "words": 436,
+    "flags": []
    },
    {
     "slug": "mcp-team-server",
     "sections": [
      "The situation",
+     "Constraints",
+     "Options on the table",
      "The first decision",
      "Guided reasoning",
+     "What went wrong",
      "What to test first"
     ],
     "covered": [
      "situation",
-     "decision",
-     "implementation",
-     "evaluation"
-    ],
-    "missing": [
      "constraints",
      "options",
-     "postmortem"
-    ],
-    "internal": 1,
-    "words": 187,
-    "flags": [
-     "missing: constraints, options, postmortem"
-    ]
-   },
-   {
-    "slug": "streaming-research",
-    "sections": [
-     "The situation",
-     "The first decision",
-     "Guided reasoning",
-     "What to test first"
-    ],
-    "covered": [
-     "situation",
      "decision",
      "implementation",
      "evaluation",
      "postmortem"
     ],
-    "missing": [
-     "constraints",
-     "options"
-    ],
-    "internal": 2,
-    "words": 172,
-    "flags": [
-     "missing: constraints, options"
-    ]
+    "missing": [],
+    "internal": 1,
+    "words": 459,
+    "flags": []
    },
    {
-    "slug": "support-assistant",
+    "slug": "streaming-research",
     "sections": [
      "The situation",
+     "Constraints",
+     "Options on the table",
      "The first decision",
      "Guided reasoning",
+     "What went wrong",
      "What to test first"
     ],
     "covered": [
      "situation",
      "constraints",
+     "options",
      "decision",
      "implementation",
-     "evaluation"
-    ],
-    "missing": [
-     "options",
+     "evaluation",
      "postmortem"
     ],
+    "missing": [],
     "internal": 2,
-    "words": 213,
-    "flags": [
-     "missing: options, postmortem"
-    ]
+    "words": 434,
+    "flags": []
+   },
+   {
+    "slug": "support-assistant",
+    "sections": [
+     "The situation",
+     "Constraints",
+     "Options on the table",
+     "The first decision",
+     "Guided reasoning",
+     "What went wrong",
+     "What to test first"
+    ],
+    "covered": [
+     "situation",
+     "constraints",
+     "options",
+     "decision",
+     "implementation",
+     "evaluation",
+     "postmortem"
+    ],
+    "missing": [],
+    "internal": 2,
+    "words": 490,
+    "flags": []
    }
   ],
   "practice": [

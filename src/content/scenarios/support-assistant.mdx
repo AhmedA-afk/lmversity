@@ -9,6 +9,21 @@ order: 1
 
 You are building an assistant for a SaaS support team. It can search product documentation and draft a reply, but it must not invent a refund policy or send a message without review.
 
+## Constraints
+
+- Replies cite plan-specific rules, and plans differ — an answer that is right for one customer can be wrong for the next.
+- The documentation set changes weekly, and retired articles must stop being cited immediately, not on the next full reindex.
+- Policy-sensitive intents (refunds, cancellations, legal threats) escalate to a person regardless of retrieval confidence.
+- Every reply is reviewed before it is sent; latency matters less than a wrong answer leaving the building.
+
+## Options on the table
+
+**Autonomous support agent.** Reads the ticket, answers, sends. Rejected: the task list includes consequential external actions, and "the model wrote it" is not a defense a support org can offer a customer.
+
+**Search without drafting.** Return documents and let the agent write from scratch. Rejected: it saves none of the agent's time and gives up the citation check, which is the part that makes drafts trustworthy.
+
+**Retrieval-backed draft with human send.** Chosen. The model does the part it is good at — reading, matching, drafting — and the boundary stays where the risk is.
+
 ## The first decision
 
 Start with a retrieval-backed draft workflow, not an autonomous support agent. The assistant should classify the request, retrieve approved documents with the user's product and plan context, draft an answer with source links, and route uncertain or policy-sensitive cases to a person.
@@ -22,6 +37,10 @@ Start with a retrieval-backed draft workflow, not an autonomous support agent. T
 5. Measure groundedness, escalation accuracy, resolution quality, latency, and cost.
 
 The important boundary is between drafting and sending. A fluent draft can be helpful; a sent policy claim is an external action. See [grounding with source documents](/learn/hallucinations/grounding-with-source-documents) and [permission and approval systems](/learn/harness-design/permission-and-approval-systems).
+
+## What went wrong
+
+In the first month, a customer on an annual plan was quoted a monthly-plan refund window. Retrieval had found the right article — a deprecated version of it. The document ID was stable, but its status field said `superseded`, and nothing checked it. The reviewer caught this one; the fix was to validate article status in application code, not to ask the model to be more careful. The second lesson was quieter: the intents most likely to produce a confident wrong answer were the policy ones, which is why escalation conditions are defined in the intent list rather than inferred from confidence.
 
 ## What to test first
 
