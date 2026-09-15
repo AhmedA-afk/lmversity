@@ -676,6 +676,51 @@
     "claims": ["model signing and artifact provenance"],
     "status": "current"
   },
+  "claude-code-docs": {
+    "title": "Claude Code documentation",
+    "publisher": "Anthropic",
+    "accessedAt": "2026-09-15",
+    "url": "https://code.claude.com/docs/en/overview",
+    "type": "official-docs",
+    "claims": ["CLI agent modes, permissions, hooks, subagents, MCP config"],
+    "status": "current"
+  },
+  "openai-codex-repo": {
+    "title": "OpenAI Codex CLI repository",
+    "publisher": "OpenAI",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/openai/codex",
+    "type": "official-docs",
+    "claims": ["codex exec non-interactive mode", "sandbox/approval policies"],
+    "status": "current"
+  },
+  "gemini-cli-repo": {
+    "title": "Gemini CLI repository",
+    "publisher": "Google",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/google-gemini/gemini-cli",
+    "type": "official-docs",
+    "claims": ["gemini -p non-interactive mode", "sandboxing flags"],
+    "status": "current"
+  },
+  "aider-docs": {
+    "title": "Aider documentation",
+    "publisher": "Aider",
+    "accessedAt": "2026-09-15",
+    "url": "https://aider.chat/docs/",
+    "type": "official-docs",
+    "claims": ["architect/editor model split", "--message non-interactive mode"],
+    "status": "current"
+  },
+  "mcp-spec": {
+    "title": "Model Context Protocol specification",
+    "publisher": "Model Context Protocol",
+    "accessedAt": "2026-09-15",
+    "url": "https://modelcontextprotocol.io/specification",
+    "type": "official-docs",
+    "claims": ["MCP protocol architecture and primitives"],
+    "status": "current"
+  },
   "google-adk-docs": {
     "title": "Agent Development Kit documentation",
     "publisher": "Google",

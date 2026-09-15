@@ -10051,13 +10051,19 @@ const unsortedTracks: Track[] = [
     "n": "18",
     "name": "Harness Design",
     "group": "Agentic",
-    "meta": "26 lessons",
+    "meta": "27 lessons",
     "summary": "The engineering scaffold — control loop, tool routing, policy, sandboxing, state — that turns a raw model into a working, controllable agent.",
     "nodes": [
       {
         "title": "The Harness: Everything Around the Model",
         "slug": "what-is-a-harness",
         "status": "live"
+      },
+      {
+        "title": "The Agent Stack Vocabulary: Model, Loop, Harness, Tool, Skill, MCP, Instruction, Hook, Subagent, Workflow",
+        "slug": "agent-stack-vocabulary",
+        "status": "live",
+        "prereq": ["what-is-a-harness"]
       },
       {
         "title": "Building the Control Loop",
@@ -10519,6 +10525,57 @@ const unsortedTracks: Track[] = [
         "title": "Ship AI systems with versioning, rollback, and incident paths",
         "slug": "deployment-versioning-and-incidents",
         "status": "live"
+      }
+    ]
+  },
+  {
+    "id": "cli-agents",
+    "n": "26",
+    "name": "CLI Coding Agents",
+    "group": "Agentic",
+    "meta": "7 lessons",
+    "summary": "Using Codex, Claude Code, Gemini CLI, and Aider well — orientation, planning, permissions, git discipline, headless automation, customization, multi-agent work, and adversarial labs.",
+    "nodes": [
+      {
+        "title": "Getting a CLI Agent Oriented: Repo Discovery, Instruction Files, and Context Control",
+        "slug": "getting-the-agent-oriented",
+        "status": "live"
+      },
+      {
+        "title": "Planning Modes and Patch Review: The Two Halves of Safe Agent Work",
+        "slug": "planning-modes-and-patch-review",
+        "status": "live",
+        "prereq": ["getting-the-agent-oriented"]
+      },
+      {
+        "title": "Permissions, Sandbox Boundaries, and Git Workflow with CLI Agents",
+        "slug": "permissions-sandboxes-and-git-workflow",
+        "status": "live",
+        "prereq": ["planning-modes-and-patch-review"]
+      },
+      {
+        "title": "Headless Runs, Structured Output, and Scheduled Agent Tasks",
+        "slug": "headless-runs-and-automation",
+        "status": "live",
+        "prereq": ["permissions-sandboxes-and-git-workflow"]
+      },
+      {
+        "title": "Customizing the Agent: MCP Config, Skills, Commands, Rules, Hooks, and Subagents",
+        "slug": "customizing-the-agent-surface",
+        "status": "live",
+        "prereq": ["getting-the-agent-oriented"]
+      },
+      {
+        "title": "Multi-Agent Decomposition, Failure Recovery, and Handoff Notes",
+        "slug": "multi-agent-and-recovery",
+        "status": "live",
+        "prereq": ["permissions-sandboxes-and-git-workflow"]
+      },
+      {
+        "title": "Labs: The Untrusted-Repo Security Drill and the Comparative Harness Run",
+        "slug": "cli-agent-labs",
+        "status": "live",
+        "prereq": ["multi-agent-and-recovery"]
       }
     ]
   },

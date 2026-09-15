@@ -1065,32 +1065,32 @@ consolidation into a parent track, or a clearer curated-path role.
 
 ### Harness foundations
 
-- [ ] Teach the difference between a model, agent loop, harness, tool, skill, MCP server,
+- [x] Teach the difference between a model, agent loop, harness, tool, skill, MCP server,
       project instruction, hook, subagent, and workflow.
-- [ ] Teach gather-context, act, observe, verify, and stop as a reusable loop.
-- [ ] Teach context selection, compaction, state, memory, permissions, sandboxing,
+- [x] Teach gather-context, act, observe, verify, and stop as a reusable loop.
+- [x] Teach context selection, compaction, state, memory, permissions, sandboxing,
       checkpoints, budgets, retries, and evidence capture.
-- [ ] Teach explicit task contracts with objective, scope, constraints, acceptance criteria,
+- [x] Teach explicit task contracts with objective, scope, constraints, acceptance criteria,
       verification, and handoff.
-- [ ] Teach safe long-running operation and recovery from partial work.
-- [ ] Teach model and provider swapping without pretending harness behavior is identical.
+- [x] Teach safe long-running operation and recovery from partial work.
+- [x] Teach model and provider swapping without pretending harness behavior is identical.
 
 ### CLI harness course
 
-- [ ] Repository discovery and instruction files.
-- [ ] File search, dependency mapping, and context control.
-- [ ] Planning and execution modes.
-- [ ] Patch review, tests, and diff inspection.
-- [ ] Permission modes and sandbox boundaries.
-- [ ] Git branches, worktrees, commits, pull requests, and CI.
-- [ ] Non-interactive and structured-output modes.
-- [ ] Scheduled and long-running tasks.
-- [ ] MCP configuration and tool discovery.
-- [ ] Skills, commands, rules, hooks, and subagents.
-- [ ] Multi-agent decomposition and conflict avoidance.
-- [ ] Failure recovery, context reset, and handoff notes.
-- [ ] Security lab for untrusted repositories and prompt injection.
-- [ ] Comparative labs using Codex, Claude Code, Gemini CLI, Aider, and another
+- [x] Repository discovery and instruction files.
+- [x] File search, dependency mapping, and context control.
+- [x] Planning and execution modes.
+- [x] Patch review, tests, and diff inspection.
+- [x] Permission modes and sandbox boundaries.
+- [x] Git branches, worktrees, commits, pull requests, and CI.
+- [x] Non-interactive and structured-output modes.
+- [x] Scheduled and long-running tasks.
+- [x] MCP configuration and tool discovery.
+- [x] Skills, commands, rules, hooks, and subagents.
+- [x] Multi-agent decomposition and conflict avoidance.
+- [x] Failure recovery, context reset, and handoff notes.
+- [x] Security lab for untrusted repositories and prompt injection.
+- [x] Comparative labs using Codex, Claude Code, Gemini CLI, Aider, and another
       provider-neutral harness on the same fixture.
 
 ### Web and browser harness course
@@ -2842,7 +2842,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-15 — Security, guardrails & governance section complete (all 10 rows)
 
-- Commit: pending. New `llm-security` track (n:25, Production group, 8
+- Commit: `65cfeb0`. New `llm-security` track (n:25, Production group, 8
   lessons): `owasp-llm-and-agentic-top-10` (taxonomy as checklist —
   integration risk framing), `nist-ai-rmf-and-mitre-atlas` (management
   layer vs threat layer), `provider-moderation-and-safety-apis` (the
@@ -2871,6 +2871,36 @@ validation, deployment status, measured result when available, blockers, and nex
 - Validation: `check:content` clean (2,130); build 2,468 pages;
   `check:links` 0 dead (5,315 routes); registry 2,457 items.
 - Next batch: Phase 6C harness foundations + CLI/web harness sections.
+
+### 2026-09-15 — Harness foundations + CLI harness course complete (all 20 rows)
+
+- Commit: pending. New `cli-agents` track (n:26, Agentic group, 7
+  lessons): `getting-the-agent-oriented` (repo discovery + instruction
+  files + context control — rows 1–2), `planning-modes-and-patch-review`
+  (plan/read-only modes + diff review — rows 3–4),
+  `permissions-sandboxes-and-git-workflow` (the approval dial, sandbox
+  mechanisms, branches/worktrees/commits/PR/CI — rows 5–6),
+  `headless-runs-and-automation` (non-interactive flags, structured
+  output, cron/CI scheduling — rows 7–8), `customizing-the-agent-surface`
+  (MCP config + skills/commands/rules/hooks/subagents chooser —
+  rows 9–10), `multi-agent-and-recovery` (worktree isolation, file
+  ownership, context-rot reset, handoff notes — rows 11–12), and
+  `cli-agent-labs` (untrusted-repo injection drill + the same-fixture
+  comparative run across Codex/Claude Code/Gemini CLI/Aider — rows 13–14).
+- Foundations section: all 6 rows ticked. Five ride existing
+  harness-design coverage (control loop, context/state/permissions/
+  sandboxing/checkpoints lessons, task contracts, crash recovery,
+  model-routing-and-fallback). One new lesson added: `agent-stack-
+  vocabulary` — the ten-term taxonomy (model/loop/harness/tool/skill/
+  MCP/instruction/hook/subagent/workflow) that row 1 specifically asks
+  for and no existing lesson covered.
+- Sources: 5 new verified records (Claude Code docs, Codex repo, Gemini
+  CLI repo, Aider docs, MCP spec). Aider docs URL is `/docs/` —
+  `/docs.html` 404s.
+- Validation: `check:content` clean (2,138); build 2,477 pages;
+  `check:links` 0 dead (5,333 routes); registry 2,466 items.
+- Next batch: web/browser harness course (14 rows), MCP curriculum
+  (10 rows), Agent Skills curriculum (9 rows).
 
 ### 2026-09-14 — Master ecosystem backlog created
 

@@ -1,7 +1,7 @@
 {
  "version": 1,
  "next": {
-  "les": 2130,
+  "les": 2138,
   "que": 7,
   "sce": 6,
   "blo": 10,
@@ -11,7 +11,7 @@
   "rol": 12,
   "prc": 6,
   "pag": 22,
-  "trk": 26,
+  "trk": 27,
   "qgd": 4,
   "stb": 25
  },
@@ -9775,6 +9775,41 @@
   },
   "data:track/llm-security": {
    "id": "trk-0026"
+  },
+  "lessons/cli-agents/cli-agent-labs.md": {
+   "id": "les-2131",
+   "fp": "2349598ce414418879bf4dc849aee60b16e2a504"
+  },
+  "lessons/cli-agents/customizing-the-agent-surface.md": {
+   "id": "les-2132",
+   "fp": "98f2ffb463acdcac44cd8ff511fc38155edcac41"
+  },
+  "lessons/cli-agents/getting-the-agent-oriented.md": {
+   "id": "les-2133",
+   "fp": "d65759ce9a1301f7359f6b8e2660057d6ad40c56"
+  },
+  "lessons/cli-agents/headless-runs-and-automation.md": {
+   "id": "les-2134",
+   "fp": "731a912066104096c43153f08756ef27326851cf"
+  },
+  "lessons/cli-agents/multi-agent-and-recovery.md": {
+   "id": "les-2135",
+   "fp": "594108b3bc80a41b39c13fd8ede290e6acbbb140"
+  },
+  "lessons/cli-agents/permissions-sandboxes-and-git-workflow.md": {
+   "id": "les-2136",
+   "fp": "2aa922bc8a489e001f3f59c0701a53cf0f07bbe4"
+  },
+  "lessons/cli-agents/planning-modes-and-patch-review.md": {
+   "id": "les-2137",
+   "fp": "be24b6995c74650ddfe0014ebf52d3f3927da937"
+  },
+  "lessons/harness-design/agent-stack-vocabulary.mdx": {
+   "id": "les-2138",
+   "fp": "63760a7e9687572365da7a81049b758373af13ca"
+  },
+  "data:track/cli-agents": {
+   "id": "trk-0027"
   }
  },
  "retired": {

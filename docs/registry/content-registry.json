@@ -1,12 +1,12 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T14:15:01.771Z",
+  "generatedAt": "2026-09-15T14:19:55.477Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2457,
+  "itemCount": 2466,
   "counts": {
    "byFamily": {
-    "lesson": 2077,
+    "lesson": 2085,
     "project": 31,
     "quiz": 89,
     "reference": 59,
@@ -16,22 +16,23 @@
     "blog": 10,
     "guide": 9,
     "answer": 33,
-    "track": 35,
+    "track": 36,
     "role": 12,
     "page": 21,
     "glossary": 1
    },
    "byStatus": {
-    "live": 2457
+    "live": 2466
    },
    "byKind": {
-    "concept": 1778,
+    "concept": 1785,
     "comparison": 102,
     "worked-example": 29,
     "capstone": 31,
     "quiz": 83,
     "cheatsheet": 48,
     "lab": 67,
+    "drill": 14,
     "common-mistakes": 24,
     "topic": 7,
     "scenario": 6,
@@ -41,9 +42,8 @@
     "definition": 12,
     "lesson": 131,
     "reference": 7,
-    "drill": 13,
     "bootcamp": 6,
-    "track": 25,
+    "track": 26,
     "quick-guide": 4,
     "role-path": 12,
     "fde-phase": 10,
@@ -63,13 +63,14 @@
     "ai-foundations": 161,
     "ai-literacy": 60,
     "classical-ai": 84,
+    "cli-agents": 8,
     "context-engineering": 133,
     "deep-learning": 137,
     "evals-red-teaming": 29,
     "fine-tuning": 27,
     "genai-app-dev": 131,
     "hallucinations": 134,
-    "harness-design": 27,
+    "harness-design": 28,
     "llm-foundations": 134,
     "llm-security": 9,
     "local-inference": 15,
@@ -99,9 +100,9 @@
     "fde": 193
    },
    "byFreshness": {
-    "release-sensitive": 324,
+    "release-sensitive": 331,
     "pricing-sensitive": 343,
-    "periodic": 1346,
+    "periodic": 1348,
     "certification-sensitive": 101,
     "policy-sensitive": 80,
     "durable": 263
@@ -10484,7 +10485,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (238w vs ~769w)",
+   "dispositionReason": "thin vs family median (238w vs ~768w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -30028,6 +30029,619 @@
    }
   },
   {
+   "id": "les-2131",
+   "family": "lesson",
+   "kind": "drill",
+   "title": "Labs: the untrusted-repo security drill and the comparative harness run",
+   "slug": "cli-agents/cli-agent-labs",
+   "route": "/learn/cli-agents/cli-agent-labs",
+   "collection": "lessons",
+   "path": "src/content/lessons/cli-agents/cli-agent-labs.md",
+   "track": "cli-agents",
+   "module": null,
+   "status": "live",
+   "summary": "Two hands-on exercises — point an agent at a repo built to attack it, then run the same fixture task across Codex, Claude Code, Gemini CLI, Aider, and a neutral harness to compare real behavior.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 495,
+   "headings": [
+    "The short answer",
+    "Lab 1 — the untrusted repo",
+    "Lab 2 — the comparative fixture run",
+    "The honest limits",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agent-frameworks/raw-sdk-agent-baseline",
+    "/learn/cli-agents/permissions-sandboxes-and-git-workflow",
+    "/learn/cli-agents/planning-modes-and-patch-review",
+    "/learn/harness-design/agent-stack-vocabulary",
+    "/learn/llm-security/prompt-injection-testing-and-threat-models"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 6,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Two hands-on exercises — point an agent at a repo built to attack it, then run the same fixture task across Codex, Claude Code, Gemini CLI, Aider, and a neutral harness to compare real behavior.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/cli-agents",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Codex, Claude, Gemini, Aider"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2132",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Customizing the agent: MCP config, skills, commands, rules, hooks, and subagents",
+   "slug": "cli-agents/customizing-the-agent-surface",
+   "route": "/learn/cli-agents/customizing-the-agent-surface",
+   "collection": "lessons",
+   "path": "src/content/lessons/cli-agents/customizing-the-agent-surface.md",
+   "track": "cli-agents",
+   "module": null,
+   "status": "live",
+   "summary": "The six extension surfaces every CLI agent exposes — MCP servers for tools, skills and slash commands for workflows, rules for standing guidance, hooks for deterministic interception, subagents for delegation.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 484,
+   "headings": [
+    "The short answer",
+    "The six surfaces",
+    "Choosing by mechanism",
+    "The honest limits",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/cli-agents/getting-the-agent-oriented",
+    "/learn/cli-agents/multi-agent-and-recovery",
+    "/learn/harness-design/agent-stack-vocabulary",
+    "/learn/harness-design/hooks-as-extension-points",
+    "/learn/harness-design/subagent-and-task-delegation",
+    "/learn/llm-security/llm-supply-chain-security",
+    "/learn/mcp/mcp-architecture-hosts-clients-servers"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 9,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "The six extension surfaces every CLI agent exposes — MCP servers for tools, skills and slash commands for workflows, rules for standing guidance, hooks for deterministic interception, subagents for delegation.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/cli-agents/multi-agent-and-recovery",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: MCP, Model Context Protocol"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 1,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2133",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Getting a CLI agent oriented: repo discovery, instruction files, and context control",
+   "slug": "cli-agents/getting-the-agent-oriented",
+   "route": "/learn/cli-agents/getting-the-agent-oriented",
+   "collection": "lessons",
+   "path": "src/content/lessons/cli-agents/getting-the-agent-oriented.md",
+   "track": "cli-agents",
+   "module": null,
+   "status": "live",
+   "summary": "How CLI coding agents map an unfamiliar repository — file discovery, AGENTS.md-style instruction files, dependency mapping, and the levers you have over what enters their context.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 558,
+   "headings": [
+    "The short answer",
+    "How the agent discovers your repo",
+    "Your levers",
+    "The context-control mindset",
+    "The honest limits",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/cli-agents/planning-modes-and-patch-review",
+    "/learn/harness-design/agent-stack-vocabulary",
+    "/learn/harness-design/context-window-management-in-a-harness"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 10,
+    "numericClaims": 1,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "How CLI coding agents map an unfamiliar repository — file discovery, AGENTS.md-style instruction files, dependency mapping, and the levers you have over what enters their context.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/cli-agents/planning-modes-and-patch-review",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Codex, Claude, Gemini, Aider"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2134",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Headless runs, structured output, and scheduled agent tasks",
+   "slug": "cli-agents/headless-runs-and-automation",
+   "route": "/learn/cli-agents/headless-runs-and-automation",
+   "collection": "lessons",
+   "path": "src/content/lessons/cli-agents/headless-runs-and-automation.md",
+   "track": "cli-agents",
+   "module": null,
+   "status": "live",
+   "summary": "CLI agents aren't only interactive — non-interactive flags, JSON/structured output, and scheduling turn them into automation primitives for CI, batch jobs, and long-running work.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 472,
+   "headings": [
+    "The short answer",
+    "The three building blocks",
+    "The operating rules for unattended agents",
+    "The honest limits",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agentic-ai/agent-task-contracts",
+    "/learn/cli-agents/customizing-the-agent-surface",
+    "/learn/cli-agents/multi-agent-and-recovery",
+    "/learn/cli-agents/permissions-sandboxes-and-git-workflow",
+    "/learn/harness-design/headless-cli-agents"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 6,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "CLI agents aren't only interactive — non-interactive flags, JSON/structured output, and scheduling turn them into automation primitives for CI, batch jobs, and long-running work.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/cli-agents/customizing-the-agent-surface",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: MCP"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2135",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Multi-agent decomposition, failure recovery, and handoff notes",
+   "slug": "cli-agents/multi-agent-and-recovery",
+   "route": "/learn/cli-agents/multi-agent-and-recovery",
+   "collection": "lessons",
+   "path": "src/content/lessons/cli-agents/multi-agent-and-recovery.md",
+   "track": "cli-agents",
+   "module": null,
+   "status": "live",
+   "summary": "Running several agents on one codebase without collisions — worktree isolation and file ownership — plus the recovery playbook for context rot, dead ends, and crashed runs.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 545,
+   "headings": [
+    "The short answer",
+    "Multi-agent without collisions",
+    "The recovery playbook",
+    "The honest limits",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/cli-agents/cli-agent-labs",
+    "/learn/cli-agents/permissions-sandboxes-and-git-workflow",
+    "/learn/harness-design/context-window-management-in-a-harness",
+    "/learn/harness-design/crash-recovery-and-resumption",
+    "/learn/harness-design/subagent-and-task-delegation"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 11,
+    "numericClaims": 1,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Running several agents on one codebase without collisions — worktree isolation and file ownership — plus the recovery playbook for context rot, dead ends, and crashed runs.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/cli-agents/cli-agent-labs",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2136",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Permissions, sandbox boundaries, and git workflow with CLI agents",
+   "slug": "cli-agents/permissions-sandboxes-and-git-workflow",
+   "route": "/learn/cli-agents/permissions-sandboxes-and-git-workflow",
+   "collection": "lessons",
+   "path": "src/content/lessons/cli-agents/permissions-sandboxes-and-git-workflow.md",
+   "track": "cli-agents",
+   "module": null,
+   "status": "live",
+   "summary": "Approval modes from ask-everything to full-auto, what sandbox flags actually isolate, and the git discipline — branches, worktrees, reviewable commits — that keeps agent work recoverable.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 546,
+   "headings": [
+    "The short answer",
+    "The permission dial",
+    "What sandboxes actually isolate",
+    "The git discipline",
+    "The honest limits",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/cli-agents/cli-agent-labs",
+    "/learn/cli-agents/multi-agent-and-recovery",
+    "/learn/cli-agents/planning-modes-and-patch-review",
+    "/learn/llm-security/sandboxing-code-execution-and-browser-use"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 10,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Approval modes from ask-everything to full-auto, what sandbox flags actually isolate, and the git discipline — branches, worktrees, reviewable commits — that keeps agent work recoverable.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/cli-agents/headless-runs-and-automation",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Claude, Codex, Gemini"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2137",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Planning modes and patch review: the two halves of safe agent work",
+   "slug": "cli-agents/planning-modes-and-patch-review",
+   "route": "/learn/cli-agents/planning-modes-and-patch-review",
+   "collection": "lessons",
+   "path": "src/content/lessons/cli-agents/planning-modes-and-patch-review.md",
+   "track": "cli-agents",
+   "module": null,
+   "status": "live",
+   "summary": "CLI agents separate thinking from touching — plan/read-only modes for exploration, execution modes for edits — and your review of the diff is the gate that makes the workflow safe.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 463,
+   "headings": [
+    "The short answer",
+    "Planning vs execution",
+    "Diff review that actually works",
+    "The honest limits",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/cli-agents/getting-the-agent-oriented",
+    "/learn/cli-agents/headless-runs-and-automation",
+    "/learn/cli-agents/multi-agent-and-recovery",
+    "/learn/cli-agents/permissions-sandboxes-and-git-workflow"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 9,
+    "numericClaims": 1,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "CLI agents separate thinking from touching — plan/read-only modes for exploration, execution modes for edits — and your review of the diff is the gate that makes the workflow safe.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/cli-agents/permissions-sandboxes-and-git-workflow",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Claude, Aider, Codex, Gemini"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-0328",
    "family": "lesson",
    "kind": "concept",
@@ -39008,7 +39622,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -80516,6 +81130,95 @@
    }
   },
   {
+   "id": "les-2138",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "The agent stack vocabulary: model, loop, harness, tool, skill, MCP, instruction, hook, subagent, workflow",
+   "slug": "harness-design/agent-stack-vocabulary",
+   "route": "/learn/harness-design/agent-stack-vocabulary",
+   "collection": "lessons",
+   "path": "src/content/lessons/harness-design/agent-stack-vocabulary.mdx",
+   "track": "harness-design",
+   "module": "What a harness is",
+   "status": "live",
+   "summary": "Ten terms that get used interchangeably but aren't — what each layer of an agentic system actually is, who owns it, and why the distinctions decide where bugs live.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 625,
+   "headings": [
+    "The short answer",
+    "The distinctions that matter in practice",
+    "Why precision pays",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agentic-ai/agents-vs-workflows",
+    "/learn/harness-design/hooks-as-extension-points",
+    "/learn/harness-design/subagent-and-task-delegation",
+    "/learn/harness-design/the-control-loop",
+    "/learn/harness-design/what-is-a-harness",
+    "/learn/llm-security/llm-supply-chain-security",
+    "/learn/tools-function-calling/the-authority-problem"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 14,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Ten terms that get used interchangeably but aren't — what each layer of an agentic system actually is, who owns it, and why the distinctions decide where bugs live.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/harness-design/the-control-loop",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: MCP, Model Context Protocol"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-0912",
    "family": "lesson",
    "kind": "concept",
@@ -82648,7 +83351,7 @@
    "promisedOutcome": "The harness is the code around the model: the loop, tool router, policy layer, and prompt assembly that turn an LLM into an agent.",
    "jobToBeDone": null,
    "prerequisite": null,
-   "nextAction": "/learn/harness-design/the-control-loop",
+   "nextAction": "/learn/harness-design/agent-stack-vocabulary",
    "practiceType": "inline-check",
    "freshnessClass": "release-sensitive",
    "freshnessSignals": [
@@ -88151,7 +88854,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (277w vs ~769w)",
+   "dispositionReason": "thin vs family median (277w vs ~768w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -91869,7 +92572,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (269w vs ~769w)",
+   "dispositionReason": "thin vs family median (269w vs ~768w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -126726,7 +127429,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -131064,7 +131767,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -205441,14 +206144,14 @@
    ],
    "features": {
     "group": "Agentic",
-    "declaredMeta": "26 lessons",
-    "nodeCount": 26,
-    "liveNodes": 26,
+    "declaredMeta": "27 lessons",
+    "nodeCount": 27,
+    "liveNodes": 27,
     "comingNodes": 0,
     "headingOnlyNodes": 0,
-    "fileCount": 26,
+    "fileCount": 27,
     "kinds": {
-     "concept": 26
+     "concept": 27
     },
     "modules": 6,
     "quickGuide": false
@@ -205667,6 +206370,82 @@
    "searchIntent": "reference",
    "primaryAudience": "ai-engineer",
    "promisedOutcome": null,
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": null,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "trk-0027",
+   "family": "track",
+   "kind": "track",
+   "title": "CLI Coding Agents",
+   "slug": "cli-agents",
+   "route": "/learn/cli-agents",
+   "collection": null,
+   "path": "src/data/curriculum.ts",
+   "track": "cli-agents",
+   "module": null,
+   "status": "live",
+   "summary": "Using Codex, Claude Code, Gemini CLI, and Aider well — orientation, planning, permissions, git discipline, headless automation, customization, multi-agent work, and adversarial labs.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": null,
+   "headings": [],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [
+    "Course",
+    "CourseInstance",
+    "Syllabus",
+    "Offer",
+    "FAQPage",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "group": "Agentic",
+    "declaredMeta": "7 lessons",
+    "nodeCount": 7,
+    "liveNodes": 7,
+    "comingNodes": 0,
+    "headingOnlyNodes": 0,
+    "fileCount": 7,
+    "kinds": {
+     "drill": 1,
+     "concept": 6
+    },
+    "modules": 0,
+    "quickGuide": false
+   },
+   "searchIntent": "course-hub",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Using Codex, Claude Code, Gemini CLI, and Aider well — orientation, planning, permissions, git discipline, headless automation, customization, multi-agent work, and adversarial labs.",
    "jobToBeDone": null,
    "prerequisite": null,
    "nextAction": null,
@@ -211242,6 +212021,25 @@
   },
   {
    "a": {
+    "route": "/learn/harness-design/agent-stack-vocabulary",
+    "slug": "harness-design/agent-stack-vocabulary",
+    "title": "The agent stack vocabulary: model, loop, harness, tool, skill, MCP, instruction, hook, subagent, workflow",
+    "track": "harness-design"
+   },
+   "b": {
+    "route": "/learn/tools-function-calling/the-tool-call-loop",
+    "slug": "tools-function-calling/the-tool-call-loop",
+    "title": "The Agent Loop",
+    "track": "tools-function-calling"
+   },
+   "jaccard": 0.15,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
     "route": "/learn/prompt-engineering/structured-output-contracts",
     "slug": "prompt-engineering/structured-output-contracts",
     "title": "Structured Output: Making the Model Speak a Contract",
@@ -213598,6 +214396,25 @@
   },
   {
    "a": {
+    "route": "/learn/mcp/debugging-common-mcp-failures",
+    "slug": "mcp/debugging-common-mcp-failures",
+    "title": "Debugging Common MCP Failures",
+    "track": "mcp"
+   },
+   "b": {
+    "route": "/learn/mcp/mcp-debugging-worked-example",
+    "slug": "mcp/mcp-debugging-worked-example",
+    "title": "Debugging MCP, Worked: Four Failures From Symptom to Cause",
+    "track": "mcp"
+   },
+   "jaccard": 0.38,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
     "route": "/learn/prompt-engineering/prompt-patterns",
     "slug": "prompt-engineering/prompt-patterns",
     "title": "Prompt patterns: zero-shot, few-shot, decomposition, and critique",
@@ -213632,25 +214449,6 @@
    "containment": 0.75,
    "slugStem": false,
    "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/debugging-common-mcp-failures",
-    "slug": "mcp/debugging-common-mcp-failures",
-    "title": "Debugging Common MCP Failures",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-debugging-worked-example",
-    "slug": "mcp/mcp-debugging-worked-example",
-    "title": "Debugging MCP, Worked: Four Failures From Symptom to Cause",
-    "track": "mcp"
-   },
-   "jaccard": 0.38,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
    "sameTrack": true
   },
   {
@@ -214605,6 +215403,44 @@
   },
   {
    "a": {
+    "route": "/learn/mcp/mcp-auth-cheatsheet",
+    "slug": "mcp/mcp-auth-cheatsheet",
+    "title": "MCP Auth Cheatsheet",
+    "track": "mcp"
+   },
+   "b": {
+    "route": "/learn/mcp/mcp-auth-fundamentals",
+    "slug": "mcp/mcp-auth-fundamentals",
+    "title": "MCP Auth Fundamentals",
+    "track": "mcp"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/mcp/mcp-transports-cheatsheet",
+    "slug": "mcp/mcp-transports-cheatsheet",
+    "title": "MCP Transports Cheatsheet",
+    "track": "mcp"
+   },
+   "b": {
+    "route": "/learn/mcp/mcp-transports-compared",
+    "slug": "mcp/mcp-transports-compared",
+    "title": "MCP Transports Compared",
+    "track": "mcp"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
     "route": "/learn/llm-foundations/kv-cache-step-by-step-shapes",
     "slug": "llm-foundations/kv-cache-step-by-step-shapes",
     "title": "The KV Cache Step by Step",
@@ -214843,44 +215679,6 @@
     "slug": "llm-foundations/mixture-of-experts-routing",
     "title": "Mixture of Experts: Routing",
     "track": "llm-foundations"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-auth-cheatsheet",
-    "slug": "mcp/mcp-auth-cheatsheet",
-    "title": "MCP Auth Cheatsheet",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-auth-fundamentals",
-    "slug": "mcp/mcp-auth-fundamentals",
-    "title": "MCP Auth Fundamentals",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-transports-cheatsheet",
-    "slug": "mcp/mcp-transports-cheatsheet",
-    "title": "MCP Transports Cheatsheet",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-transports-compared",
-    "slug": "mcp/mcp-transports-compared",
-    "title": "MCP Transports Compared",
-    "track": "mcp"
    },
    "jaccard": 0.5,
    "containment": 0.67,
@@ -215986,6 +216784,60 @@
    ]
   },
   {
+   "route": "/learn/cli-agents/cli-agent-labs",
+   "slug": "cli-agents/cli-agent-labs",
+   "title": "Labs: the untrusted-repo security drill and the comparative harness run",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/cli-agents/customizing-the-agent-surface",
+   "slug": "cli-agents/customizing-the-agent-surface",
+   "title": "Customizing the agent: MCP config, skills, commands, rules, hooks, and subagents",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/cli-agents/getting-the-agent-oriented",
+   "slug": "cli-agents/getting-the-agent-oriented",
+   "title": "Getting a CLI agent oriented: repo discovery, instruction files, and context control",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/cli-agents/headless-runs-and-automation",
+   "slug": "cli-agents/headless-runs-and-automation",
+   "title": "Headless runs, structured output, and scheduled agent tasks",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/cli-agents/permissions-sandboxes-and-git-workflow",
+   "slug": "cli-agents/permissions-sandboxes-and-git-workflow",
+   "title": "Permissions, sandbox boundaries, and git workflow with CLI agents",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/cli-agents/planning-modes-and-patch-review",
+   "slug": "cli-agents/planning-modes-and-patch-review",
+   "title": "Planning modes and patch review: the two halves of safe agent work",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
    "route": "/learn/context-engineering/budgeting-and-observability-quiz",
    "slug": "context-engineering/budgeting-and-observability-quiz",
    "title": "Budgeting and Observability Quiz",
@@ -216361,6 +217213,15 @@
    "family": "quiz",
    "flags": [
     "9 numeric claims with no sources section or external link"
+   ]
+  },
+  {
+   "route": "/learn/harness-design/agent-stack-vocabulary",
+   "slug": "harness-design/agent-stack-vocabulary",
+   "title": "The agent stack vocabulary: model, loop, harness, tool, skill, MCP, instruction, hook, subagent, workflow",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
    ]
   },
   {

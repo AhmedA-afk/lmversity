@@ -1,0 +1,99 @@
+---
+title: "The agent stack vocabulary: model, loop, harness, tool, skill, MCP, instruction, hook, subagent, workflow"
+track: "harness-design"
+status: live
+summary: "Ten terms that get used interchangeably but aren't — what each layer of an agentic system actually is, who owns it, and why the distinctions decide where bugs live."
+duration: "10 min read"
+---
+
+## The short answer
+
+"Agent" gets used for ten different things. When someone says "the agent
+did X," the real actor is one of these layers — and the fix belongs to
+the layer that owns the behavior:
+
+- **Model** — the LLM: weights + context window. Predicts tokens, has no
+  memory between calls, no ability to act.
+- **Agent loop** — the cycle: gather context → call model → parse → act
+  → observe → repeat until done. The loop is code; the model is the
+  brain inside it (see [the control loop](/learn/harness-design/the-control-loop)).
+- **Harness** — the program that *runs* the loop: CLI agent, IDE
+  extension, your Python app. Owns tools, permissions, context
+  assembly, budgets ([what is a harness](/learn/harness-design/what-is-a-harness)).
+- **Tool** — a function the harness exposes to the model: `read_file`,
+  `search`, `run_command`. The model *requests* calls; the harness
+  *executes* them — that handoff is where
+  [authority](/learn/tools-function-calling/the-authority-problem)
+  lives.
+- **Skill** — packaged instructions + resources the agent loads when a
+  task matches (a `SKILL.md` with scripts/references). Skill = *know-how*,
+  tool = *capability*. A skill can tell the model how to use tools well;
+  it can't give the model a new action.
+- **MCP server** — a separate process exposing tools/resources/prompts
+  over the Model Context Protocol — the standard way to add tools
+  without rebuilding the harness. It's a *transport*, not a feature:
+  an MCP tool is still just a tool once connected.
+- **Project instruction** — standing context injected into every run
+  (`AGENTS.md`, rules files). Always-on guidance, unlike a skill which
+  loads on demand.
+- **Hook** — code the harness runs at lifecycle events (before/after a
+  tool call, on stop). Deterministic — no model in the path
+  ([hooks as extension points](/learn/harness-design/hooks-as-extension-points)).
+- **Subagent** — a second agent loop the main loop delegates a subtask
+  to — own context window, own tools subset, returns a result
+  ([delegation](/learn/harness-design/subagent-and-task-delegation)).
+- **Workflow** — fixed orchestration: a script or DAG calling models
+  deterministically. No loop deciding what to do next — the path is
+  written ahead of time ([agents vs workflows](/learn/agentic-ai/agents-vs-workflows)).
+
+## The distinctions that matter in practice
+
+**Loop vs harness vs model.** "The model went rogue" is usually a
+*harness* bug — the loop kept calling because nothing stopped it, or a
+tool executed without a permission check. The model just produced text;
+the harness decided the text became an action.
+
+**Skill vs instruction vs hook.** All three shape behavior without being
+model weights — instructions are *always on* (cost context every run),
+skills load *when relevant* (progressive disclosure — cheap until used),
+hooks run *deterministic code* (fire every time regardless of what the
+model wants). Choose by those mechanics, not by which file is easiest
+to edit.
+
+**Tool vs MCP server.** An MCP server is just tools delivered over a
+protocol — which means an MCP server is also a
+[supply-chain and injection surface](/learn/llm-security/llm-supply-chain-security),
+because now *another team's code* is your tool.
+
+**Subagent vs workflow.** A subagent is the loop spawning a loop (dynamic
+delegation); a workflow is code calling models in a fixed order
+(static composition). If the decomposition is known upfront, it's a
+workflow and should be written as one — subagents are for when the
+*parent* can't predict the subtask shape.
+
+## Why precision pays
+
+Each layer has a different failure signature and a different owner:
+model failures → provider/model choice; loop failures → stopping
+conditions and budgets; harness failures → tool dispatch, permissions,
+context assembly; tool failures → the tool's code or the API behind it;
+skill/instruction failures → guidance text; hook failures → your own
+deterministic code; MCP failures → an external server; subagent
+failures → the delegation contract; workflow failures → orchestration
+logic. Debugging starts by naming the right layer — "the agent is
+broken" names none of them.
+
+## The exercise
+
+Take one real agentic feature (a coding CLI, a chat-with-tools app, an
+MCP-connected assistant) and label each piece you can identify with one
+of the ten terms. The pieces you can't cleanly label are where the
+architecture is muddy — usually a tool doing a hook's job or a workflow
+pretending to be an agent.
+
+## Go deeper
+
+- [What is a harness](/learn/harness-design/what-is-a-harness) — the layer deep-dive.
+- [The control loop](/learn/harness-design/the-control-loop) — gather/act/observe/verify/stop.
+- [Subagent and task delegation](/learn/harness-design/subagent-and-task-delegation) — the delegation contract.
+- [Hooks as extension points](/learn/harness-design/hooks-as-extension-points) — deterministic interception.
