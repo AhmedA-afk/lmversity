@@ -252,8 +252,13 @@ consolidation into a parent track, or a clearer curated-path role.
 - [ ] Identify pages whose titles promise more than their bodies deliver.
 - [ ] Identify code or vendor instructions that no longer run.
 - [ ] Identify unsupported claims and replace or remove them.
-- [ ] Verify role paths include an explicit outcome and do not feel like arbitrary link lists.
-- [ ] Verify role paths reach practice, projects, and career evidence.
+- [x] Verify role paths include an explicit outcome and do not feel like arbitrary link lists.
+      *(all 12 carry a learner-facing description; paths previously ended on bare
+      concept lessons — each now ends on a domain-matched practice step)*
+- [x] Verify role paths reach practice, projects, and career evidence.
+      *(each of the 11 non-FDE paths gained a final quiz/lab/capstone step;
+      engineering roles also keep production-track steps — audit view reports
+      practice/career step counts per role)*
 - [x] Produce one prioritized gap brief per track and role.
       *(per-track briefs in audit-views.md "Track gap briefs"; role paths covered by
       the unresolved-refs check in "Role paths")*
@@ -1667,7 +1672,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-15 — Per-track gap briefs (mechanical)
 
-- Phase 0 "Audit every course and role path". `audit-views.md` now emits a
+- Commit: `d7cb1fe`. Phase 0 "Audit every course and role path". `audit-views.md` now emits a
   "Track gap briefs" section per curriculum track: orphan module boundaries
   (`startsAt` slug absent from the track's nodes), modules whose last live
   node isn't practice (quiz/lab/capstone/worked-example/drill), dead-end
@@ -1688,6 +1693,35 @@ validation, deployment status, measured result when available, blockers, and nex
   `npm run check:links` clean; `git diff --check` clean.
 - Next batch: role-path briefs + "first lesson serves the stated learner
   level" — the remaining course/role-path audit rows; then the acquisition
+  family's editorial review rows.
+
+### 2026-09-15 — Role-path audit and practice enders
+
+- The registry's role-path records now carry `practiceSteps`, `careerSteps`,
+  and `lastKind`, and the Role paths view flags "no practice step" and
+  "dead-end finish" per role.
+- Finding: **all 11 non-FDE role paths ended on a plain concept lesson with
+  zero practice steps** — exactly the "arbitrary link list" failure the
+  checklist guards against.
+- Fix: appended one domain-matched practice ender per role in
+  `src/data/roles.ts` — e.g. developer/founder →
+  `genai-app-dev/capstone-ship-a-genai-assistant`, data-scientist →
+  `rag/rag-capstone-support-bot`, security-engineer →
+  `responsible-ai/adversarial-testing-lab`, ml-engineer →
+  `machine-learning/ml-615-lab-release-a-model-with-a-kill-switch`, the
+  lighter-touch roles → `ai-literacy/*-quiz` pages, student →
+  `ai-foundations/capstone-build-train-evaluate-a-classifier`. All targets
+  verified live + curriculum-registered before wiring.
+- Incident note: the first edit wrote trailing commas into `path` arrays,
+  which broke the registry's strict `JSON.parse` slice — roles briefly read
+  as 1 item and the 11 role IDs got retired in `content-ids.json`. Restored
+  the original `rol-0002…0012` IDs (the phantom `rol-0013+` minting was
+  never committed), removed the commas, regenerated clean.
+- Validation: all 12 roles resolve, every path ends on a practice step,
+  `npm run check:links` clean, `git diff --check` clean.
+- Next batch: remaining course-audit rows (track promise vs modules, first
+  lesson vs stated level, prerequisites, concept-before-implementation
+  ordering) — partially mechanical, partly editorial; then the acquisition
   family's editorial review rows.
 
 ### 2026-09-14 — Master ecosystem backlog created

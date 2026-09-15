@@ -626,12 +626,18 @@ for (const t of tracks) {
 for (const r of roles) {
   pendingIds.push({ key: `data:role/${r.id}` });
   const unresolved = (r.path ?? []).filter((ref) => !lessonIdsOnDisk.has(ref));
+  const stepKinds = (r.path ?? []).map((ref) => {
+    const slug = ref.split('/').pop();
+    return kindFor(slug, nodeByTrackSlug.get(ref)?.node.title ?? '');
+  });
+  const practiceSteps = stepKinds.filter((k) => ['quiz', 'lab', 'capstone', 'worked-example', 'project'].includes(k)).length;
+  const careerSteps = (r.path ?? []).filter((ref) => ref.startsWith('production/')).length;
   items.push(baseRecord({
     family: 'role', kind: 'role-path',
     title: r.name, slug: r.id, route: `/roles/${r.id}`,
     path: 'src/data/roles.ts', summary: r.blurb,
     structuredData: STRUCTURED_DATA.role,
-    features: { pathLength: (r.path ?? []).length, unresolvedRefs: unresolved, description: r.description },
+    features: { pathLength: (r.path ?? []).length, unresolvedRefs: unresolved, description: r.description, practiceSteps, careerSteps, lastKind: stepKinds[stepKinds.length - 1] ?? null },
     searchIntent: 'role-path', primaryAudience: r.id,
     freshnessClass: 'periodic',
   }));
@@ -1111,7 +1117,12 @@ for (const [name, list] of Object.entries(queues)) {
 md.push('## Role paths');
 md.push('');
 for (const i of items.filter((x) => x.family === 'role')) {
-  md.push(`- ${i.route} — ${i.features.pathLength ?? `${i.features.liveNodes}/${i.features.plannedNodes} live`} steps${i.features.unresolvedRefs?.length ? ` — ⚠ unresolved: ${i.features.unresolvedRefs.join(', ')}` : ''}`);
+  const f = i.features;
+  const notes = [];
+  if (f.unresolvedRefs?.length) notes.push(`⚠ unresolved: ${f.unresolvedRefs.join(', ')}`);
+  if (f.practiceSteps === 0) notes.push('⚠ no practice/lab/capstone step');
+  if (f.lastKind === 'concept') notes.push('dead-end finish');
+  md.push(`- ${i.route} — ${f.pathLength ?? `${f.liveNodes}/${f.plannedNodes} live`} steps${f.practiceSteps != null ? `, ${f.practiceSteps} practice` : ''}${f.careerSteps ? `, ${f.careerSteps} production` : ''}${notes.length ? ' — ' + notes.join('; ') : ''}`);
 }
 md.push('');
 md.push('## FDE path — plan vs on disk');

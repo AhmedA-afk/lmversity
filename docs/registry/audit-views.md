@@ -1,6 +1,6 @@
 # Content registry — audit views
 
-Generated 2026-09-15T07:36:19.519Z by `scripts/build-content-registry.mjs`.
+Generated 2026-09-15T07:41:51.293Z by `scripts/build-content-registry.mjs`.
 2406 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
@@ -830,17 +830,17 @@ Largest queue; full list in JSON. Vendor-signal sample:
 
 ## Role paths
 
-- /roles/developer — 10 steps
-- /roles/ml-engineer — 10 steps
-- /roles/data-scientist — 10 steps
-- /roles/product-manager — 9 steps
-- /roles/founder — 10 steps
-- /roles/ceo — 8 steps
-- /roles/designer — 8 steps
-- /roles/content-creator — 8 steps
-- /roles/marketer — 8 steps
-- /roles/security-engineer — 9 steps
-- /roles/student — 11 steps
+- /roles/developer — 11 steps, 1 practice, 1 production
+- /roles/ml-engineer — 11 steps, 1 practice, 1 production
+- /roles/data-scientist — 11 steps, 1 practice
+- /roles/product-manager — 10 steps, 1 practice, 1 production
+- /roles/founder — 11 steps, 1 practice, 2 production
+- /roles/ceo — 9 steps, 1 practice, 1 production
+- /roles/designer — 9 steps, 1 practice
+- /roles/content-creator — 9 steps, 1 practice
+- /roles/marketer — 9 steps, 1 practice
+- /roles/security-engineer — 10 steps, 1 practice, 2 production
+- /roles/student — 12 steps, 1 practice
 - /roles/forward-deployed-engineer — 180/180 live steps
 
 ## FDE path — plan vs on disk

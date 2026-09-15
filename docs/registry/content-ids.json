@@ -9506,37 +9506,48 @@
    "id": "stb-0025"
   },
   "data:role/developer": {
-   "id": "rol-0002"
+   "id": "rol-0002",
+   "fp": null
   },
   "data:role/ml-engineer": {
-   "id": "rol-0003"
+   "id": "rol-0003",
+   "fp": null
   },
   "data:role/data-scientist": {
-   "id": "rol-0004"
+   "id": "rol-0004",
+   "fp": null
   },
   "data:role/product-manager": {
-   "id": "rol-0005"
+   "id": "rol-0005",
+   "fp": null
   },
   "data:role/founder": {
-   "id": "rol-0006"
+   "id": "rol-0006",
+   "fp": null
   },
   "data:role/ceo": {
-   "id": "rol-0007"
+   "id": "rol-0007",
+   "fp": null
   },
   "data:role/designer": {
-   "id": "rol-0008"
+   "id": "rol-0008",
+   "fp": null
   },
   "data:role/content-creator": {
-   "id": "rol-0009"
+   "id": "rol-0009",
+   "fp": null
   },
   "data:role/marketer": {
-   "id": "rol-0010"
+   "id": "rol-0010",
+   "fp": null
   },
   "data:role/security-engineer": {
-   "id": "rol-0011"
+   "id": "rol-0011",
+   "fp": null
   },
   "data:role/student": {
-   "id": "rol-0012"
+   "id": "rol-0012",
+   "fp": null
   }
  },
  "retired": {}

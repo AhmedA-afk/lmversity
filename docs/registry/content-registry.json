@@ -1,7 +1,7 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T07:36:19.519Z",
+  "generatedAt": "2026-09-15T07:41:51.293Z",
   "generator": "scripts/build-content-registry.mjs",
   "itemCount": 2406,
   "counts": {
@@ -190917,9 +190917,12 @@
     "BreadcrumbList"
    ],
    "features": {
-    "pathLength": 10,
+    "pathLength": 11,
     "unresolvedRefs": [],
-    "description": "For software engineers adding LLM features to real apps. Runs from a working mental model of what models do, through prompting, structured output, and tool calling, out to shipping and operating a feature under real load."
+    "description": "For software engineers adding LLM features to real apps. Runs from a working mental model of what models do, through prompting, structured output, and tool calling, out to shipping and operating a feature under real load.",
+    "practiceSteps": 1,
+    "careerSteps": 1,
+    "lastKind": "capstone"
    },
    "searchIntent": "role-path",
    "primaryAudience": "developer",
@@ -190980,9 +190983,12 @@
     "BreadcrumbList"
    ],
    "features": {
-    "pathLength": 10,
+    "pathLength": 11,
     "unresolvedRefs": [],
-    "description": "For ML engineers who need the internals, not just the API. Covers the maths and architecture that make transformers work, then the full decision path from fine-tuning through evaluation and cost tracking."
+    "description": "For ML engineers who need the internals, not just the API. Covers the maths and architecture that make transformers work, then the full decision path from fine-tuning through evaluation and cost tracking.",
+    "practiceSteps": 1,
+    "careerSteps": 1,
+    "lastKind": "lab"
    },
    "searchIntent": "role-path",
    "primaryAudience": "ml-engineer",
@@ -191043,9 +191049,12 @@
     "BreadcrumbList"
    ],
    "features": {
-    "pathLength": 10,
+    "pathLength": 11,
     "unresolvedRefs": [],
-    "description": "For data scientists using LLMs for extraction, classification, and analysis. Emphasizes embeddings, structured outputs, and retrieval, plus measuring quality rather than trusting vibes."
+    "description": "For data scientists using LLMs for extraction, classification, and analysis. Emphasizes embeddings, structured outputs, and retrieval, plus measuring quality rather than trusting vibes.",
+    "practiceSteps": 1,
+    "careerSteps": 0,
+    "lastKind": "capstone"
    },
    "searchIntent": "role-path",
    "primaryAudience": "data-scientist",
@@ -191106,9 +191115,12 @@
     "BreadcrumbList"
    ],
    "features": {
-    "pathLength": 9,
+    "pathLength": 10,
     "unresolvedRefs": [],
-    "description": "For PMs shaping AI features. Builds a grounded sense of what models can and can't do, what they cost, and where reliability, retrieval, and evals fit into a shipping plan."
+    "description": "For PMs shaping AI features. Builds a grounded sense of what models can and can't do, what they cost, and where reliability, retrieval, and evals fit into a shipping plan.",
+    "practiceSteps": 1,
+    "careerSteps": 1,
+    "lastKind": "quiz"
    },
    "searchIntent": "role-path",
    "primaryAudience": "product-manager",
@@ -191169,9 +191181,12 @@
     "BreadcrumbList"
    ],
    "features": {
-    "pathLength": 10,
+    "pathLength": 11,
     "unresolvedRefs": [],
-    "description": "For founders building AI-native products. Balances a fast build path with the cost, reliability, and evaluation decisions that determine whether the thing survives contact with real users."
+    "description": "For founders building AI-native products. Balances a fast build path with the cost, reliability, and evaluation decisions that determine whether the thing survives contact with real users.",
+    "practiceSteps": 1,
+    "careerSteps": 2,
+    "lastKind": "capstone"
    },
    "searchIntent": "role-path",
    "primaryAudience": "founder",
@@ -191232,9 +191247,12 @@
     "BreadcrumbList"
    ],
    "features": {
-    "pathLength": 8,
+    "pathLength": 9,
     "unresolvedRefs": [],
-    "description": "For executives who need a real mental model, not hype. Focuses on capabilities, limits, cost structure, and the risk and reliability questions that shape company-level bets."
+    "description": "For executives who need a real mental model, not hype. Focuses on capabilities, limits, cost structure, and the risk and reliability questions that shape company-level bets.",
+    "practiceSteps": 1,
+    "careerSteps": 1,
+    "lastKind": "quiz"
    },
    "searchIntent": "role-path",
    "primaryAudience": "ceo",
@@ -191295,9 +191313,12 @@
     "BreadcrumbList"
    ],
    "features": {
-    "pathLength": 8,
+    "pathLength": 9,
     "unresolvedRefs": [],
-    "description": "For product and UX designers working on AI features. Covers how models behave, why they fail, and the interaction patterns — streaming, uncertainty, structure — that make an AI feature feel reliable."
+    "description": "For product and UX designers working on AI features. Covers how models behave, why they fail, and the interaction patterns — streaming, uncertainty, structure — that make an AI feature feel reliable.",
+    "practiceSteps": 1,
+    "careerSteps": 0,
+    "lastKind": "quiz"
    },
    "searchIntent": "role-path",
    "primaryAudience": "designer",
@@ -191358,9 +191379,12 @@
     "BreadcrumbList"
    ],
    "features": {
-    "pathLength": 8,
+    "pathLength": 9,
     "unresolvedRefs": [],
-    "description": "For writers and creators using LLMs day to day. Focuses on reliable prompting techniques, controlling tone and structure, and grounding output so the model stops fabricating."
+    "description": "For writers and creators using LLMs day to day. Focuses on reliable prompting techniques, controlling tone and structure, and grounding output so the model stops fabricating.",
+    "practiceSteps": 1,
+    "careerSteps": 0,
+    "lastKind": "quiz"
    },
    "searchIntent": "role-path",
    "primaryAudience": "content-creator",
@@ -191421,9 +191445,12 @@
     "BreadcrumbList"
    ],
    "features": {
-    "pathLength": 8,
+    "pathLength": 9,
     "unresolvedRefs": [],
-    "description": "For marketers embedding AI in their workflow. Combines practical prompting and grounding with an honest read on hallucination risk and what to verify before anything ships."
+    "description": "For marketers embedding AI in their workflow. Combines practical prompting and grounding with an honest read on hallucination risk and what to verify before anything ships.",
+    "practiceSteps": 1,
+    "careerSteps": 0,
+    "lastKind": "quiz"
    },
    "searchIntent": "role-path",
    "primaryAudience": "marketer",
@@ -191484,9 +191511,12 @@
     "BreadcrumbList"
    ],
    "features": {
-    "pathLength": 9,
+    "pathLength": 10,
     "unresolvedRefs": [],
-    "description": "For security engineers responsible for AI systems. Covers the agent and harness attack surface, prompt injection, policy enforcement, and monitoring untrusted input in production."
+    "description": "For security engineers responsible for AI systems. Covers the agent and harness attack surface, prompt injection, policy enforcement, and monitoring untrusted input in production.",
+    "practiceSteps": 1,
+    "careerSteps": 2,
+    "lastKind": "lab"
    },
    "searchIntent": "role-path",
    "primaryAudience": "security-engineer",
@@ -191547,9 +191577,12 @@
     "BreadcrumbList"
    ],
    "features": {
-    "pathLength": 11,
+    "pathLength": 12,
     "unresolvedRefs": [],
-    "description": "For students and career-switchers starting fresh. Runs from the core maths and how models learn, through how LLMs actually work, up to building and evaluating a first real feature."
+    "description": "For students and career-switchers starting fresh. Runs from the core maths and how models learn, through how LLMs actually work, up to building and evaluating a first real feature.",
+    "practiceSteps": 1,
+    "careerSteps": 0,
+    "lastKind": "capstone"
    },
    "searchIntent": "role-path",
    "primaryAudience": "student",

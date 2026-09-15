@@ -16,7 +16,8 @@ export const roles: Role[] = [
       "genai-app-dev/streaming-responses-to-the-ui",
       "genai-app-dev/rate-limits-and-retry-strategies",
       "genai-app-dev/shipping-your-first-end-to-end-app",
-      "production/feature-flags-and-kill-switches"
+      "production/feature-flags-and-kill-switches",
+      "genai-app-dev/capstone-ship-a-genai-assistant"
     ]
   },
   {
@@ -34,7 +35,8 @@ export const roles: Role[] = [
       "fine-tuning/building-a-fine-tuning-dataset",
       "fine-tuning/lora-and-qlora-fine-tuning",
       "evals-red-teaming/building-a-golden-dataset",
-      "production/token-and-cost-tracking"
+      "production/token-and-cost-tracking",
+      "machine-learning/ml-615-lab-release-a-model-with-a-kill-switch"
     ]
   },
   {
@@ -52,7 +54,8 @@ export const roles: Role[] = [
       "rag/what-is-rag-and-when-to-use-it",
       "evals-red-teaming/why-evals-matter",
       "evals-red-teaming/building-a-golden-dataset",
-      "hallucinations/why-models-hallucinate"
+      "hallucinations/why-models-hallucinate",
+      "rag/rag-capstone-support-bot"
     ]
   },
   {
@@ -69,7 +72,8 @@ export const roles: Role[] = [
       "agentic-ai/when-not-to-use-an-agent",
       "rag/what-is-rag-and-when-to-use-it",
       "evals-red-teaming/why-evals-matter",
-      "production/feature-flags-and-kill-switches"
+      "production/feature-flags-and-kill-switches",
+      "ai-literacy/deciding-when-and-which-ai-quiz"
     ]
   },
   {
@@ -87,7 +91,8 @@ export const roles: Role[] = [
       "genai-app-dev/shipping-your-first-end-to-end-app",
       "evals-red-teaming/why-evals-matter",
       "production/token-and-cost-tracking",
-      "production/feature-flags-and-kill-switches"
+      "production/feature-flags-and-kill-switches",
+      "genai-app-dev/capstone-ship-a-genai-assistant"
     ]
   },
   {
@@ -103,7 +108,8 @@ export const roles: Role[] = [
       "hallucinations/why-models-hallucinate",
       "agentic-ai/what-is-an-agent",
       "evals-red-teaming/why-evals-matter",
-      "production/feature-flags-and-kill-switches"
+      "production/feature-flags-and-kill-switches",
+      "ai-literacy/cost-and-limits-quiz"
     ]
   },
   {
@@ -119,7 +125,8 @@ export const roles: Role[] = [
       "genai-app-dev/streaming-responses-to-the-ui",
       "hallucinations/teaching-models-to-say-i-dont-know",
       "prompt-engineering/system-vs-user-prompts",
-      "agentic-ai/when-not-to-use-an-agent"
+      "agentic-ai/when-not-to-use-an-agent",
+      "ai-literacy/judging-and-verifying-quiz"
     ]
   },
   {
@@ -135,7 +142,8 @@ export const roles: Role[] = [
       "prompt-engineering/few-shot-prompting",
       "prompt-engineering/chain-of-thought-prompting",
       "hallucinations/why-models-hallucinate",
-      "hallucinations/grounding-with-source-documents"
+      "hallucinations/grounding-with-source-documents",
+      "ai-literacy/prompting-quiz"
     ]
   },
   {
@@ -151,7 +159,8 @@ export const roles: Role[] = [
       "prompt-engineering/answer-first-prompting",
       "hallucinations/why-models-hallucinate",
       "hallucinations/grounding-with-source-documents",
-      "rag/what-is-rag-and-when-to-use-it"
+      "rag/what-is-rag-and-when-to-use-it",
+      "ai-literacy/prompting-quiz"
     ]
   },
   {
@@ -168,7 +177,8 @@ export const roles: Role[] = [
       "evals-red-teaming/prompt-injection-basics",
       "mcp/what-is-mcp",
       "production/structured-logging-for-llm-calls",
-      "production/feature-flags-and-kill-switches"
+      "production/feature-flags-and-kill-switches",
+      "responsible-ai/adversarial-testing-lab"
     ]
   },
   {
@@ -187,7 +197,8 @@ export const roles: Role[] = [
       "ai-foundations/how-llms-work",
       "prompt-engineering/system-vs-user-prompts",
       "genai-app-dev/anatomy-of-a-genai-feature",
-      "evals-red-teaming/why-evals-matter"
+      "evals-red-teaming/why-evals-matter",
+      "ai-foundations/capstone-build-train-evaluate-a-classifier"
     ]
   }
 ];
