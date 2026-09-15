@@ -1,6 +1,6 @@
 # Content registry — audit views
 
-Generated 2026-09-15T08:23:36.294Z by `scripts/build-content-registry.mjs`.
+Generated 2026-09-15T08:46:24.724Z by `scripts/build-content-registry.mjs`.
 2410 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
@@ -590,6 +590,14 @@ and split always need a written human reason (see checklist).
 | /learn/tools-function-calling/tool-calling-glossary-cheatsheet | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  | yes | same track |
 
 _… 304 more pairs in content-registry.json (`duplicates`)_
+
+## Title-overpromise candidates
+
+1 items whose titles claim more than the body structure delivers — scope words on thin bodies, or numeric promises ("7 mistakes") the heading/list structure doesn't fulfill. Candidates, not verdicts.
+
+| item | words | signals |
+|---|---:|---|
+| /learn/machine-learning/assessments/ml-849-staged-capstone-handbook | 368 | scope word "handbook" on 368w vs ~1011w median |
 
 ## Freshness queues
 

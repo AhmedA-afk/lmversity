@@ -268,7 +268,13 @@ consolidation into a parent track, or a clearer curated-path role.
 - [ ] Identify abrupt jumps, orphan modules, missing bridges, and dead-end final lessons.
       *(dead-end finishes and orphan module boundaries now flagged mechanically;
       abrupt-jump detection between consecutive lessons still editorial)*
-- [ ] Identify pages whose titles promise more than their bodies deliver.
+- [x] Identify pages whose titles promise more than their bodies deliver.
+      *(mechanical detector emits candidates into `registry.overpromise` +
+      audit-views.md "Title-overpromise candidates": scope-word titles
+      ("complete", "handbook", "deep dive", "end to end") on bodies under half
+      the family median, plus numeric promises ("7 mistakes") the heading/list
+      structure doesn't fulfill. 1 candidate currently — the queue stays
+      editorial: expand, retitle, or keep with reason.)*
 - [ ] Identify code or vendor instructions that no longer run.
 - [ ] Identify unsupported claims and replace or remove them.
 - [x] Verify role paths include an explicit outcome and do not feel like arbitrary link lists.
@@ -1812,7 +1818,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-15 — Answer-cluster gap fill (4 new Straight Answers)
 
-- Authored four answer pages for the clusters the checklist lists but the
+- Commit: `3e4fb00`. Authored four answer pages for the clusters the checklist lists but the
   corpus lacked: `how-much-does-an-llm-app-cost` (cost drivers + measure-first),
   `can-i-run-an-llm-locally` (privacy/latency/volume/quality tradeoffs, hedged
   per rule 12 — no invented perf claims), `deploy-an-llm-app-to-production`
@@ -1894,6 +1900,26 @@ validation, deployment status, measured result when available, blockers, and nex
   originality, distractor quality) — start with the 44 "expand" dispositions
   (thin vs family median) and the top duplicate-candidate pairs for
   merge/redirect verdicts.
+
+### 2026-09-15 — Title-overpromise detection
+
+- Commit: `3905dec`. Added a mechanical proxy for "titles promise more than
+  bodies deliver": scope-word titles ("complete", "handbook", "deep dive",
+  "end to end") on bodies under half the family median, plus numeric promises
+  ("7 mistakes", "30 questions") the heading/list structure doesn't fulfill.
+  Added `listItems` to `analyzeBody()` and every family builder so the numeric
+  check has a structural signal beyond headings.
+- Detector scope fixed mid-batch: it first ran under `CONTENT_FAMILY` (the
+  linkability set) which excludes `project`/`reference`/`lab` — widened to all
+  content families, excluding only structural records (track/role/page/glossary).
+- Result: 1 candidate emitted (`ml-849-staged-capstone-handbook`, 368w vs
+  ~1011 median — a dense spec, so likely a keep-with-reason verdict). Queue
+  renders in audit-views.md "Title-overpromise candidates"; verdicts stay
+  editorial.
+- Validation: `npm run registry` clean; `audit:families` flags 0;
+  `check:content` clean; `check:links` clean (2,396 pages); `git diff --check`.
+- Next batch: course-audit editorial rows (track promise vs modules,
+  first-lesson level fit), then the interview weak-answer pass.
 
 ### 2026-09-14 — Master ecosystem backlog created
 

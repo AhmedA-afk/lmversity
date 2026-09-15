@@ -111,12 +111,16 @@ function analyzeBody(body) {
     .replace(/!?\[[^\]]*\]\([^)]*\)/g, ' ')
     .replace(/[#*_`>|~-]/g, ' ');
   const wordCount = text.split(/\s+/).filter((w) => /[A-Za-z0-9]/.test(w)).length;
+  // structural elements that could fulfill a numeric title promise
+  // ("7 mistakes", "5 ways") — list items, numbered items, bold-led bullets
+  const listItems = (noCode.match(/^\s*(?:[-*+]|\d+[.)])\s+\S/gm) || []).length;
   return {
     headings,
     internalLinks: [...internal].sort(),
     externalLinks: [...external].sort(),
     imports,
     codeBlockCount: Math.floor(((body.match(/^```/gm) || []).length) / 2),
+    listItems,
     wordCount,
   };
 }
@@ -402,6 +406,7 @@ for (const file of [...walk(LESSONS, /\.(md|mdx)$/)].sort()) {
       errorCase: kind === 'common-mistakes' || /mistake|error|fail|broken|debug|goes wrong|anti-?pattern/i.test(a.headings.map((h) => h.text).join(' ')),
       sourcesSection: /sources|further reading|references/i.test(a.headings.map((h) => h.text).join(' ')),
       runnableSignals: a.codeBlockCount > 0 && /\b(npm|pip|python3?|node|curl|ollama|docker)\b/i.test(body),
+      listItems: a.listItems,
       linksToPractice: a.internalLinks.some((l) => l.startsWith('/practice')),
     },
     searchIntent: intent(LESSON_FAMILY[kind] ?? 'lesson', kind, fm.title ?? '', slug),
@@ -447,7 +452,7 @@ for (const file of [...walk(join(CONTENT, 'questions'), /\.mdx$/)].sort()) {
     wordCount: a.wordCount, headings: a.headings.filter((h) => h.depth === 2).map((h) => h.text).slice(0, 50),
     internalLinks: a.internalLinks, externalLinks: a.externalLinks,
     structuredData: STRUCTURED_DATA.interview,
-    features: { questionCount: a.headings.filter((h) => h.depth === 2).length, codeBlocks: a.codeBlockCount },
+    features: { questionCount: a.headings.filter((h) => h.depth === 2).length, codeBlocks: a.codeBlockCount, listItems: a.listItems },
     searchIntent: 'interview-prep', primaryAudience: 'job-candidate',
     freshnessClass: fr.cls ?? 'periodic', freshnessSignals: fr.signals,
   }));
@@ -466,7 +471,7 @@ for (const file of [...walk(join(CONTENT, 'scenarios'), /\.mdx$/)].sort()) {
     wordCount: a.wordCount, headings: a.headings.filter((h) => h.depth === 2).map((h) => h.text).slice(0, 50),
     internalLinks: a.internalLinks, externalLinks: a.externalLinks,
     structuredData: STRUCTURED_DATA.scenario,
-    features: { codeBlocks: a.codeBlockCount, sourcesSection: /sources|references/i.test(a.headings.map((h) => h.text).join(' ')) },
+    features: { codeBlocks: a.codeBlockCount, sourcesSection: /sources|references/i.test(a.headings.map((h) => h.text).join(' ')), listItems: a.listItems },
     searchIntent: 'scenario', primaryAudience: 'ai-engineer',
     freshnessClass: fr.cls ?? 'periodic', freshnessSignals: fr.signals,
   }));
@@ -486,7 +491,7 @@ for (const file of [...walk(join(CONTENT, 'blog'), /\.mdx$/)].sort()) {
     wordCount: a.wordCount, headings: a.headings.filter((h) => h.depth === 2).map((h) => h.text).slice(0, 50),
     internalLinks: a.internalLinks, externalLinks: a.externalLinks,
     structuredData: STRUCTURED_DATA.blog,
-    features: { tags: fm.tags ?? [], codeBlocks: a.codeBlockCount },
+    features: { tags: fm.tags ?? [], codeBlocks: a.codeBlockCount, listItems: a.listItems },
     searchIntent: 'read', primaryAudience: 'general',
     freshnessClass: fr.cls ?? 'periodic', freshnessSignals: fr.signals,
   }));
@@ -509,7 +514,7 @@ for (const file of [...walk(join(CONTENT, 'guides'), /\.(md|mdx)$/)].sort()) {
     features: {
       level: fm.level, duration: fm.duration, steps: Array.isArray(fm.steps) ? fm.steps.length : 0,
       relatedLessons: Array.isArray(fm.related) ? fm.related : [],
-      codeBlocks: a.codeBlockCount, featured: fm.featured === 'true' || fm.featured === true,
+      codeBlocks: a.codeBlockCount, listItems: a.listItems, featured: fm.featured === 'true' || fm.featured === true,
     },
     searchIntent: 'how-to', primaryAudience: 'ai-engineer',
     freshnessClass: fr.cls ?? 'periodic', freshnessSignals: fr.signals,
@@ -530,7 +535,7 @@ for (const file of [...walk(join(CONTENT, 'answers'), /\.(md|mdx)$/)].sort()) {
     wordCount: a.wordCount, headings: a.headings.filter((h) => h.depth === 2).map((h) => h.text).slice(0, 50),
     internalLinks: a.internalLinks, externalLinks: a.externalLinks,
     structuredData: STRUCTURED_DATA.answer,
-    features: { faqCount: Array.isArray(fm.faq) ? fm.faq.length : 0, related: Array.isArray(fm.related) ? fm.related : [] },
+    features: { faqCount: Array.isArray(fm.faq) ? fm.faq.length : 0, related: Array.isArray(fm.related) ? fm.related : [], listItems: a.listItems },
     searchIntent: 'answer', primaryAudience: 'general',
     freshnessClass: fr.cls ?? 'periodic', freshnessSignals: fr.signals,
   }));
@@ -560,6 +565,7 @@ for (const file of [...walk(FDE, /\.(md|mdx)$/)].sort()) {
       diagram: a.imports.some((i) => i.includes('/diagrams/')) || /<svg|!\[/.test(body),
       sources: Array.isArray(fm.sources) ? fm.sources.length : 0,
       artifact: fm.artifact ?? null, outcomes: Array.isArray(fm.outcomes) ? fm.outcomes.length : 0,
+      listItems: a.listItems,
     },
     searchIntent: intent(FDE_FAMILY[fm.kind] ?? 'lesson', fm.kind ?? 'lesson', fm.title ?? '', slug),
     primaryAudience: 'forward-deployed-engineer',
@@ -898,6 +904,36 @@ for (const idxList of tokenIndex.values()) {
 }
 duplicates.sort((x, y) => y.containment - x.containment || y.jaccard - x.jaccard);
 
+// ---------------------------------------------------------------------------
+// title-overpromise candidates — titles that claim more than the body delivers.
+// Two mechanical signals: (a) a scope word ("complete", "everything", "master",
+// "definitive", "all", "deep dive") on a body well under the family median;
+// (b) a numeric promise ("7 mistakes", "5 ways") the heading/list structure
+// doesn't fulfill. Candidates only — editorial verdicts stay human.
+
+const SCOPE_WORDS = /\b(complete|definitive|ultimate|comprehensive|everything|master(?:ing|y)?|all[- ]in[- ]one|handbook|bible|crash course|deep dive|from scratch|end[- ]to[- ]end|full guide|a to z)\b/i;
+const NUMERIC_PROMISE = /\b(\d+)\s+(mistakes|ways|reasons|rules|patterns|steps|tips|signals|checks|questions|examples|levers|principles|traps|lessons)\b/i;
+const NON_CONTENT = new Set(['track', 'role', 'page', 'glossary']);
+const overpromise = [];
+for (const it of items) {
+  if (!it.title || it.wordCount == null || NON_CONTENT.has(it.family)) continue;
+  const med = familyMedian[it.family];
+  const scope = it.title.match(SCOPE_WORDS)?.[0];
+  const num = it.title.match(NUMERIC_PROMISE);
+  const signals = [];
+  if (scope && med && it.wordCount < med * 0.5) signals.push(`scope word "${scope}" on ${it.wordCount}w vs ~${Math.round(med)}w median`);
+  if (num) {
+    const promised = +num[1];
+    // count concrete structural elements that could fulfill the promise —
+    // headings of any depth, or list items, whichever is larger
+    const delivered = Math.max((it.headings ?? []).length, it.features?.listItems ?? 0);
+    if (delivered < promised) signals.push(`title promises ${promised} ${num[2]}, structure shows ~${delivered}`);
+  }
+  if (signals.length) {
+    overpromise.push({ route: it.route, slug: it.slug, title: it.title, family: it.family, words: it.wordCount, signals });
+  }
+}
+
 const byFamily = {}, byTrack = {}, byFresh = {}, byStatus = {}, byKind = {};
 for (const it of items) {
   byFamily[it.family] = (byFamily[it.family] ?? 0) + 1;
@@ -920,6 +956,7 @@ const registry = {
   },
   items,
   duplicates,
+  overpromise,
 };
 
 mkdirSync(OUT_DIR, { recursive: true });
@@ -1093,6 +1130,19 @@ for (const d of duplicates.slice(0, 60)) {
   md.push(`| ${d.a.route ?? d.a.slug} | ${d.b.route ?? d.b.slug} | ${d.jaccard} | ${d.containment} | ${d.slugStem ? 'yes' : ''} | ${d.alreadyLinked ? 'yes' : ''} | ${d.sameTrack ? 'same track' : `${d.a.track} × ${d.b.track}`} |`);
 }
 if (duplicates.length > 60) md.push(`\n_… ${duplicates.length - 60} more pairs in content-registry.json (\`duplicates\`)_`);
+md.push('');
+md.push('## Title-overpromise candidates');
+md.push('');
+md.push(`${overpromise.length} items whose titles claim more than the body structure delivers — scope words on thin bodies, or numeric promises ("7 mistakes") the heading/list structure doesn't fulfill. Candidates, not verdicts.`);
+md.push('');
+if (overpromise.length) {
+  md.push('| item | words | signals |');
+  md.push('|---|---:|---|');
+  for (const o of overpromise.slice(0, 60)) {
+    md.push(`| ${o.route ?? o.slug} | ${o.words} | ${o.signals.join('; ')} |`);
+  }
+  if (overpromise.length > 60) md.push(`\n_… ${overpromise.length - 60} more in content-registry.json (\`overpromise\`)_`);
+}
 md.push('');
 md.push('## Freshness queues');
 md.push('');
