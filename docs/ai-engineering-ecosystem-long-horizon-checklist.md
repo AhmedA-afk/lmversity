@@ -872,12 +872,12 @@ consolidation into a parent track, or a clearer curated-path role.
       *(served: `messy-data-to-llm-pipeline-capstone` + `incremental-json-repair` + get-reliable-json guide)*
 - [x] Retrieval baseline using lexical search before embeddings.
       *(served: `rag-capstone-support-bot` (retrieval baseline first) + `hybrid-search-lexical-and-vector`)*
-- [ ] Embedding search with evaluation fixtures.
+- [x] Embedding search with evaluation fixtures. — `rag/embedding-search-eval-lab`
 - [x] Hybrid retrieval and reranking comparison.
       *(served: `rag-capstone-support-bot` + `reranking-retrieved-results` + `hybrid-search-lexical-and-vector`)*
 - [x] Hallucination and citation audit tool.
       *(served: `capstone-trustworthy-qa-system` — grounded QA with citation enforcement)*
-- [ ] Model-output validation service.
+- [x] Model-output validation service. — `structured-outputs/output-validation-service-project`
 - [x] Cost, latency, and token ledger.
       *(served: `token-and-cost-tracking` + `instrumenting-one-app-two-ways`)*
 - [x] Small local-model application using Ollama.
@@ -912,16 +912,16 @@ consolidation into a parent track, or a clearer curated-path role.
 
 ### Advanced engineering projects
 
-- [ ] Stateful agent with checkpoints and resumable execution.
-- [ ] Multi-agent workflow with explicit delegation and shared-state limits.
-- [ ] Context management service with compaction and regression tests.
-- [ ] RAG ingestion system with incremental updates and access controls.
+- [x] Stateful agent with checkpoints and resumable execution. — `agentic-ai/stateful-agent-checkpoints-project`
+- [x] Multi-agent workflow with explicit delegation and shared-state limits. — `agentic-ai/multi-agent-workflow-project`
+- [x] Context management service with compaction and regression tests. — `context-engineering/context-management-service-project`
+- [x] RAG ingestion system with incremental updates and access controls. — `rag/rag-ingestion-incremental-project`
 - [x] Evaluation pipeline with versioned datasets and release gates.
       *(served: evals-red-teaming harness impls + `prompts-as-versioned-config` + `418-evaluation-gates-and-release-readiness-lab`)*
 - [x] Langfuse-instrumented application with traces, prompt versions, and experiments.
       *(served: `langfuse-observability` + `instrumenting-one-app-two-ways`)*
-- [ ] Provider gateway with normalized requests, errors, streaming, and fallback.
-- [ ] Model router based on task, policy, latency, and measured quality.
+- [x] Provider gateway with normalized requests, errors, streaming, and fallback. — `production/provider-gateway-project`
+- [x] Model router based on task, policy, latency, and measured quality. — `production/model-router-project`
 - [x] Batch-processing pipeline for non-interactive AI workloads.
       *(served: `batching-llm-calls-for-throughput` + `serving-batch-and-online`)*
 - [x] Canary release and rollback for a model or prompt change.
@@ -930,7 +930,7 @@ consolidation into a parent track, or a clearer curated-path role.
       *(served: `adversarial-testing-lab` + `prompt-injection-testing-and-threat-models` + `securing-mcp-servers-against-prompt-injection`)*
 - [x] PII redaction and retention-policy lab.
       *(served: `pii-redaction-in-llm-logs` — hands-on redaction; retention covered in audit-log lessons)*
-- [ ] Production incident simulation with on-call runbook.
+- [x] Production incident simulation with on-call runbook. — `production/incident-simulation-lab`
 - [x] GPU or hosted open-model deployment with load and memory measurement.
       *(served: `vllm-production-serving` + `quantization-formats-and-tradeoffs-lab` + hosted-inference hub)*
 
@@ -940,7 +940,7 @@ consolidation into a parent track, or a clearer curated-path role.
       *(served: developer role capstone — `capstone-ship-a-genai-assistant`)*
 - [x] ML engineer: train or adapt, evaluate, deploy, and monitor a model-backed system.
       *(served: ml-engineer role capstone — `ml-foundations-capstone` + `ml-615-lab-release-a-model-with-a-kill-switch`)*
-- [ ] AI platform engineer: build a gateway, trace pipeline, budgets, and release controls.
+- [x] AI platform engineer: build a gateway, trace pipeline, budgets, and release controls. — `production/platform-engineer-capstone`
 - [x] Forward-deployed engineer: scope, build, deploy, and defend a constrained customer solution.
       *(served: forward-deployed-engineer role path — 5 capstones + 6 bootcamps)*
 - [x] Designer: prototype, evaluate, and hand off a trustworthy AI experience.
@@ -2486,6 +2486,32 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-16 — Phase 5 project-coverage artifacts (10 rows)
+
+- Scope: the ten open Phase 5 coverage rows — each now has a real
+  hands-on artifact (lab or project lesson) carrying the Phase-5
+  standards inline: learner brief, prerequisites, supplied assets and
+  mock/local mode, acceptance criteria, deterministic-test and
+  eval-fixture requirements, failure injection, portfolio section, and
+  a Defend-this-build rubric.
+- New lessons (registered in curriculum.ts):
+  rag/embedding-search-eval-lab, rag/rag-ingestion-incremental-project,
+  structured-outputs/output-validation-service-project,
+  agentic-ai/stateful-agent-checkpoints-project,
+  agentic-ai/multi-agent-workflow-project,
+  context-engineering/context-management-service-project,
+  production/provider-gateway-project, production/model-router-project,
+  production/incident-simulation-lab,
+  production/platform-engineer-capstone.
+- The 14 Phase-5 *standards* rows stay open — they require runnable
+  starter repos, pinned dependencies, and clean-env command
+  verification, which doc artifacts alone cannot certify.
+- Validation: check-content clean (2,239 lessons), 2,734 pages built,
+  0 dead links across 5,848 routes.
+- Commit: pending.
+- Next: Phase 5 standards rows (starter code, pinned deps, clean-env
+  verification), Phase 0 editorial scoring, Phase 9/10 external infra.
 
 ### 2026-09-16 — Phase 2 advanced banks + milestone/dashboard sweep (13 rows)
 

@@ -6659,8 +6659,13 @@ const unsortedTracks: Track[] = [
         "title": "Capstone: Build a Budgeted, Context-Managed Agent",
         "slug": "build-a-budgeted-context-managed-agent",
         "status": "live"
-      }
-    ]
+      },
+      {
+        "title": "Project: a context management service with compaction and regression tests",
+        "slug": "context-management-service-project",
+        "status": "live"
+      },
+]
   },
   {
     "id": "structured-outputs",
@@ -7290,8 +7295,13 @@ const unsortedTracks: Track[] = [
         "title": "Capstone: A Production Extraction Service",
         "slug": "build-a-production-extraction-service",
         "status": "live"
-      }
-    ]
+      },
+      {
+        "title": "Project: a model-output validation service",
+        "slug": "output-validation-service-project",
+        "status": "live"
+      },
+]
   },
   {
     "id": "hallucinations",
@@ -8972,8 +8982,18 @@ const unsortedTracks: Track[] = [
         "title": "Capstone: Build a Grounded Support Bot",
         "slug": "rag-capstone-support-bot",
         "status": "live"
-      }
-    ]
+      },
+      {
+        "title": "Lab: embedding search with evaluation fixtures",
+        "slug": "embedding-search-eval-lab",
+        "status": "live"
+      },
+      {
+        "title": "Project: RAG ingestion with incremental updates and access control",
+        "slug": "rag-ingestion-incremental-project",
+        "status": "live"
+      },
+]
   },
   {
     "id": "tools-function-calling",
@@ -10091,8 +10111,18 @@ const unsortedTracks: Track[] = [
         "slug": "agent-permissions-and-authorization",
         "status": "live",
         "prereq": ["autonomy-vs-control"]
-      }
-    ]
+      },
+      {
+        "title": "Project: a stateful agent with checkpoints and resumable execution",
+        "slug": "stateful-agent-checkpoints-project",
+        "status": "live"
+      },
+      {
+        "title": "Project: a multi-agent workflow with explicit delegation and shared-state limits",
+        "slug": "multi-agent-workflow-project",
+        "status": "live"
+      },
+]
   },
   {
     "id": "harness-design",
@@ -10599,7 +10629,27 @@ const unsortedTracks: Track[] = [
           "title": "Deployment variants: one managed-cloud path and one portable path",
           "slug": "deployment-variants-cloud-and-portable"
         },
-      ]
+      {
+        "title": "Project: a provider gateway — normalized requests, errors, streaming, fallback",
+        "slug": "provider-gateway-project",
+        "status": "live"
+      },
+      {
+        "title": "Project: a model router by task, policy, latency, and measured quality",
+        "slug": "model-router-project",
+        "status": "live"
+      },
+      {
+        "title": "Lab: production incident simulation with an on-call runbook",
+        "slug": "incident-simulation-lab",
+        "status": "live"
+      },
+      {
+        "title": "Capstone: the AI platform — gateway, trace pipeline, budgets, release controls",
+        "slug": "platform-engineer-capstone",
+        "status": "live"
+      },
+]
   },
   {
     "id": "cli-agents",
