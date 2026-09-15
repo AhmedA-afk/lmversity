@@ -2552,7 +2552,7 @@ validation, deployment status, measured result when available, blockers, and nex
   verified all 11 roles carry 2–3 project refs + evidence lists).
 - Validation: check-content clean (2,289 lessons), 2,784 pages built,
   0 dead links across 5,948 routes; registry 2,736 items.
-- Commit: pending
+- Commit: `cfb3083`
 - Next: definition-of-done row "every major track" (9 non-priority tracks
   still partial), Phase 5 standards rows (starter repos + clean-env verify),
   Phase 0 editorial scoring, Phase 9/10 external infra.
