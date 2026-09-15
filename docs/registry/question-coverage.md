@@ -9,39 +9,39 @@ explicitly remediates to (`module` field) — one question can cover one node.
 
 | Track | Bank | Live questions | Node coverage | Difficulty mix | Kind mix |
 |---|---|---|---|---|---|
-| AI Literacy (`ai-literacy`) | — | — | 0/59 (0%) | — | — |
-| Maths Foundations (`maths-foundations`) | — | — | 0/196 (0%) | — | — |
-| Python & Data (`python-data-apis`) | — | — | 0/58 (0%) | — | — |
-| AI Foundations (`ai-foundations`) | ✓ | 8 | 0/161 (0%) | unspecified 8 | unspecified 8 |
-| LLM Foundations (`llm-foundations`) | — | — | 0/133 (0%) | — | — |
+| AI Literacy (`ai-literacy`) | ✓ | 8 | 8/59 (14%) | beginner 3, intermediate 4, advanced 1 | conceptual 7, operational 1 |
+| Maths Foundations (`maths-foundations`) | ✓ | 8 | 8/196 (4%) | beginner 4, intermediate 3, advanced 1 | conceptual 8 |
+| Python & Data (`python-data-apis`) | ✓ | 8 | 8/58 (14%) | beginner 3, intermediate 3, advanced 2 | conceptual 2, operational 4, code-reading 2 |
+| AI Foundations (`ai-foundations`) | ✓ | 8 | 6/161 (4%) | beginner 5, intermediate 3 | conceptual 8 |
+| LLM Foundations (`llm-foundations`) | ✓ | 8 | 8/133 (6%) | beginner 2, intermediate 4, advanced 1, synthesis 1 | conceptual 5, code-reading 1, architecture 2 |
 | Classical AI (`classical-ai`) | ✓ | 8 | 8/83 (10%) | beginner 3, intermediate 4, advanced 1 | conceptual 7, operational 1 |
 | Classical Machine Learning (`machine-learning`) | ✓ | 8 | 7/209 (3%) | beginner 1, intermediate 5, advanced 2 | conceptual 5, operational 1, code-reading 1, output-reading 1 |
 | Deep Learning (`deep-learning`) | ✓ | 8 | 8/136 (6%) | beginner 2, intermediate 4, advanced 2 | conceptual 5, output-reading 1, architecture 1, operational 1 |
-| Prompt Engineering (`prompt-engineering`) | ✓ | 8 | 0/143 (0%) | unspecified 8 | unspecified 8 |
-| Context Engineering (`context-engineering`) | — | — | 0/132 (0%) | — | — |
-| Structured Outputs (`structured-outputs`) | — | — | 0/124 (0%) | — | — |
-| Hallucinations & Reliability (`hallucinations`) | — | — | 0/132 (0%) | — | — |
-| GenAI App Dev (`genai-app-dev`) | — | — | 0/133 (0%) | — | — |
-| RAG (`rag`) | ✓ | 8 | 0/64 (0%) | unspecified 8 | unspecified 8 |
-| Tools & Function Calling (`tools-function-calling`) | — | — | 0/128 (0%) | — | — |
-| MCP (`mcp`) | ✓ | 8 | 0/59 (0%) | unspecified 8 | unspecified 8 |
+| Prompt Engineering (`prompt-engineering`) | ✓ | 8 | 8/143 (6%) | beginner 4, intermediate 4 | conceptual 6, operational 2 |
+| Context Engineering (`context-engineering`) | ✓ | 8 | 8/132 (6%) | beginner 3, intermediate 2, advanced 2, synthesis 1 | conceptual 4, output-reading 1, architecture 3 |
+| Structured Outputs (`structured-outputs`) | ✓ | 8 | 8/124 (6%) | beginner 2, intermediate 3, advanced 3 | conceptual 2, output-reading 1, architecture 3, operational 2 |
+| Hallucinations & Reliability (`hallucinations`) | ✓ | 8 | 8/132 (6%) | beginner 2, intermediate 3, advanced 3 | conceptual 4, output-reading 1, architecture 2, operational 1 |
+| GenAI App Dev (`genai-app-dev`) | ✓ | 8 | 8/133 (6%) | beginner 2, intermediate 3, advanced 2, synthesis 1 | conceptual 2, architecture 2, operational 4 |
+| RAG (`rag`) | ✓ | 8 | 7/64 (11%) | beginner 2, intermediate 5, advanced 1 | conceptual 3, operational 3, architecture 2 |
+| Tools & Function Calling (`tools-function-calling`) | ✓ | 8 | 8/128 (6%) | beginner 2, intermediate 3, advanced 3 | conceptual 2, architecture 4, output-reading 1, operational 1 |
+| MCP (`mcp`) | ✓ | 8 | 8/59 (14%) | beginner 1, intermediate 4, advanced 3 | conceptual 3, architecture 3, operational 2 |
 | Agentic AI (`agentic-ai`) | ✓ | 8 | 8/30 (27%) | beginner 2, intermediate 4, advanced 2 | conceptual 5, operational 1, architecture 2 |
 | Harness Design (`harness-design`) | ✓ | 8 | 2/31 (6%) | beginner 1, intermediate 4, advanced 3 | conceptual 3, architecture 4, operational 1 |
-| Evals & Red-teaming (`evals-red-teaming`) | ✓ | 8 | 0/29 (0%) | unspecified 8 | unspecified 8 |
+| Evals & Red-teaming (`evals-red-teaming`) | ✓ | 8 | 8/29 (28%) | beginner 1, intermediate 4, advanced 3 | conceptual 4, operational 4 |
 | Production & Ops (`production`) | ✓ | 8 | 8/35 (23%) | beginner 2, intermediate 4, advanced 2 | conceptual 2, operational 4, architecture 2 |
-| CLI Coding Agents (`cli-agents`) | — | — | 0/7 (0%) | — | — |
-| AI Automation for Operations (`ai-automation-ops`) | — | — | 0/8 (0%) | — | — |
-| Multilingual and Indic AI Engineering (`multilingual-ai`) | — | — | 0/10 (0%) | — | — |
-| Multimodal AI Engineering (`multimodal-ai`) | — | — | 0/8 (0%) | — | — |
-| Voice AI Engineering (`voice-ai`) | — | — | 0/8 (0%) | — | — |
-| Web & Browser Agents (`web-agents`) | — | — | 0/7 (0%) | — | — |
-| Agent Skills (`agent-skills`) | — | — | 0/6 (0%) | — | — |
-| LLM Security & Governance (`llm-security`) | — | — | 0/8 (0%) | — | — |
+| CLI Coding Agents (`cli-agents`) | ✓ | 8 | 5/7 (71%) | beginner 1, intermediate 4, advanced 3 | conceptual 2, operational 4, output-reading 1, architecture 1 |
+| AI Automation for Operations (`ai-automation-ops`) | ✓ | 8 | 6/8 (75%) | beginner 1, intermediate 4, advanced 3 | conceptual 1, architecture 3, operational 3, output-reading 1 |
+| Multilingual and Indic AI Engineering (`multilingual-ai`) | ✓ | 8 | 7/10 (70%) | beginner 1, intermediate 4, advanced 2, synthesis 1 | conceptual 3, architecture 3, operational 2 |
+| Multimodal AI Engineering (`multimodal-ai`) | ✓ | 8 | 8/8 (100%) | beginner 1, intermediate 4, advanced 3 | architecture 3, operational 3, conceptual 1, output-reading 1 |
+| Voice AI Engineering (`voice-ai`) | ✓ | 8 | 8/8 (100%) | beginner 1, intermediate 4, advanced 2, synthesis 1 | architecture 3, conceptual 2, operational 3 |
+| Web & Browser Agents (`web-agents`) | ✓ | 8 | 6/7 (86%) | beginner 1, intermediate 3, advanced 4 | conceptual 2, operational 2, architecture 4 |
+| Agent Skills (`agent-skills`) | ✓ | 8 | 6/6 (100%) | beginner 2, intermediate 2, advanced 4 | conceptual 2, architecture 3, operational 3 |
+| LLM Security & Governance (`llm-security`) | ✓ | 8 | 8/8 (100%) | beginner 1, intermediate 3, advanced 4 | conceptual 4, architecture 2, operational 2 |
 | Fine-tuning & Optimization (`fine-tuning`) | ✓ | 8 | 6/27 (22%) | beginner 1, intermediate 5, advanced 2 | conceptual 6, operational 2 |
 | Responsible AI (`responsible-ai`) | ✓ | 8 | 6/7 (86%) | beginner 3, intermediate 4, advanced 1 | conceptual 5, operational 2, architecture 1 |
-| Local Models & Inference (`local-inference`) | — | — | 0/14 (0%) | — | — |
-| Agent Frameworks (`agent-frameworks`) | — | — | 0/18 (0%) | — | — |
-| AI for Designers (`ai-for-designers`) | — | — | 0/26 (0%) | — | — |
+| Local Models & Inference (`local-inference`) | ✓ | 8 | 7/14 (50%) | beginner 1, intermediate 3, advanced 3, synthesis 1 | conceptual 3, operational 2, architecture 3 |
+| Agent Frameworks (`agent-frameworks`) | ✓ | 8 | 5/18 (28%) | beginner 1, intermediate 3, advanced 4 | conceptual 4, architecture 4 |
+| AI for Designers (`ai-for-designers`) | ✓ | 8 | 8/26 (31%) | beginner 2, intermediate 3, advanced 3 | conceptual 4, architecture 3, operational 1 |
 | Developer (`developer`) | — | — | 0/0 (0%) | — | — |
 | ML Engineer (`ml-engineer`) | — | — | 0/0 (0%) | — | — |
 | Data Scientist (`data-scientist`) | — | — | 0/0 (0%) | — | — |
@@ -53,44 +53,33 @@ explicitly remediates to (`module` field) — one question can cover one node.
 | Marketer (`marketer`) | — | — | 0/0 (0%) | — | — |
 | Security Engineer (`security-engineer`) | — | — | 0/0 (0%) | — | — |
 | Student (`student`) | — | — | 0/0 (0%) | — | — |
-| ⚠ Agents and tool use (`agents`) | ✓ | 8 | no curriculum track | — | — |
 
-**104 live questions across 13 banked tracks; 31 curriculum tracks have no bank yet.**
+**264 live questions across 33 banked tracks; 11 curriculum tracks have no bank yet.**
 
 ### Production queue (no bank)
 
-- `ai-literacy` — AI Literacy (59 live nodes)
-- `maths-foundations` — Maths Foundations (196 live nodes)
-- `python-data-apis` — Python & Data (58 live nodes)
-- `llm-foundations` — LLM Foundations (133 live nodes)
-- `context-engineering` — Context Engineering (132 live nodes)
-- `structured-outputs` — Structured Outputs (124 live nodes)
-- `hallucinations` — Hallucinations & Reliability (132 live nodes)
-- `genai-app-dev` — GenAI App Dev (133 live nodes)
-- `tools-function-calling` — Tools & Function Calling (128 live nodes)
-- `cli-agents` — CLI Coding Agents (7 live nodes)
-- `ai-automation-ops` — AI Automation for Operations (8 live nodes)
-- `multilingual-ai` — Multilingual and Indic AI Engineering (10 live nodes)
-- `multimodal-ai` — Multimodal AI Engineering (8 live nodes)
-- `voice-ai` — Voice AI Engineering (8 live nodes)
-- `web-agents` — Web & Browser Agents (7 live nodes)
-- `agent-skills` — Agent Skills (6 live nodes)
-- `llm-security` — LLM Security & Governance (8 live nodes)
-- `local-inference` — Local Models & Inference (14 live nodes)
-- `agent-frameworks` — Agent Frameworks (18 live nodes)
-- `ai-for-designers` — AI for Designers (26 live nodes)
 
 ### Deepest gaps (bank exists, <30% node coverage)
 
-- `ai-foundations` — 0/161 nodes covered
+- `ai-literacy` — 8/59 nodes covered
+- `maths-foundations` — 8/196 nodes covered
+- `python-data-apis` — 8/58 nodes covered
+- `ai-foundations` — 6/161 nodes covered
+- `llm-foundations` — 8/133 nodes covered
 - `classical-ai` — 8/83 nodes covered
 - `machine-learning` — 7/209 nodes covered
 - `deep-learning` — 8/136 nodes covered
-- `prompt-engineering` — 0/143 nodes covered
-- `rag` — 0/64 nodes covered
-- `mcp` — 0/59 nodes covered
+- `prompt-engineering` — 8/143 nodes covered
+- `context-engineering` — 8/132 nodes covered
+- `structured-outputs` — 8/124 nodes covered
+- `hallucinations` — 8/132 nodes covered
+- `genai-app-dev` — 8/133 nodes covered
+- `rag` — 7/64 nodes covered
+- `tools-function-calling` — 8/128 nodes covered
+- `mcp` — 8/59 nodes covered
 - `agentic-ai` — 8/30 nodes covered
 - `harness-design` — 2/31 nodes covered
-- `evals-red-teaming` — 0/29 nodes covered
+- `evals-red-teaming` — 8/29 nodes covered
 - `production` — 8/35 nodes covered
 - `fine-tuning` — 6/27 nodes covered
+- `agent-frameworks` — 5/18 nodes covered

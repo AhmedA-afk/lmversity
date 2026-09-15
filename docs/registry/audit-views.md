@@ -1,19 +1,19 @@
 # Content registry — audit views
 
-Generated 2026-09-15T18:09:26.600Z by `scripts/build-content-registry.mjs`.
-2633 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T19:08:37.712Z by `scripts/build-content-registry.mjs`.
+2668 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
 
 - lesson: 2160
+- quiz: 135
 - reference: 107
-- quiz: 101
 - lab: 76
 - answer: 35
 - project: 33
 - interview: 27
-- page: 25
+- page: 26
 - blog: 20
 - guide: 14
 - scenario: 12
@@ -23,22 +23,22 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By status
 
-- live: 2633
+- live: 2668
 
 ## By search intent (heuristic)
 
 - concept: 1976
+- practice: 135
 - comparison: 116
 - build: 109
 - reference: 108
-- practice: 101
 - answer: 35
 - worked-example: 33
 - interview-prep: 27
 - troubleshooting: 26
 - how-to: 20
 - read: 20
-- hub: 13
+- hub: 14
 - scenario: 12
 - role-path: 12
 - nav: 12
@@ -47,22 +47,26 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By primary audience (heuristic)
 
-- ai-engineer: 1770
+- ai-engineer: 1791
 - beginner-engineer: 440
-- forward-deployed-engineer: 194
-- general: 191
+- forward-deployed-engineer: 195
+- general: 192
 - job-candidate: 27
+- ml-engineer: 2
+- data-scientist: 2
+- product-manager: 2
+- founder: 2
+- designer: 2
+- marketer: 2
+- security-engineer: 2
+- student: 2
 - developer: 1
-- ml-engineer: 1
-- data-scientist: 1
-- product-manager: 1
-- founder: 1
 - ceo: 1
-- designer: 1
 - content-creator: 1
-- marketer: 1
-- security-engineer: 1
-- student: 1
+- applied-ai-engineer: 1
+- ai-platform-engineer: 1
+- executive: 1
+- creator: 1
 
 ## Coverage matrix — what each live track actually ships
 
@@ -83,20 +87,20 @@ and split always need a written human reason (see checklist).
 | disposition | items |
 |---|---:|
 | investigate | 2326 |
-| keep | 304 |
-| expand | 3 |
+| keep | 337 |
+| expand | 5 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2369 | 1.91 | 0 | 211 | 2158 |
+| intentClarity | 2403 | 1.91 | 0 | 211 | 2192 |
 | correctnessSources | 51 | 1.25 | 0 | 38 | 13 |
-| completeness | 2571 | 1.63 | 49 | 853 | 1669 |
+| completeness | 2571 | 1.63 | 50 | 850 | 1671 |
 | prerequisiteFit | 2412 | 0.15 | 2232 | 0 | 180 |
-| handsOn | 2369 | 1.43 | 627 | 91 | 1651 |
-| explanationQuality | 2369 | 1.95 | 28 | 56 | 2285 |
-| metadata | 2369 | 1.84 | 0 | 375 | 1994 |
+| handsOn | 2403 | 1.41 | 661 | 91 | 1651 |
+| explanationQuality | 2403 | 1.93 | 60 | 58 | 2285 |
+| metadata | 2403 | 1.84 | 0 | 375 | 2028 |
 | linking | 2268 | 1.50 | 397 | 332 | 1539 |
-| freshnessHealth | 2633 | 0.77 | 924 | 1392 | 317 |
+| freshnessHealth | 2668 | 0.77 | 925 | 1426 | 317 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
@@ -191,6 +195,14 @@ and split always need a written human reason (see checklist).
 - /roles/forward-deployed-engineer/data/sharepoint-drive-and-document-stores — SharePoint, Drive, and document stores as a source of truth
 - … 57 more in content-registry.json
 
+#### expand: thin vs family median (348w vs ~876w) (1)
+
+- /interview/role-ai-engineer — AI engineer interview questions
+
+#### expand: thin vs family median (336w vs ~876w) (1)
+
+- /interview/role-applied-ai-engineer — Applied AI engineer interview questions
+
 #### expand: thin vs family median (279w vs ~1005w) (1)
 
 - /answers/certification-vs-portfolio-vs-experience — AI certification vs portfolio vs experience — which matters?
@@ -278,7 +290,7 @@ _… 293 more pairs in content-registry.json (`duplicates`)_
 
 | item | words | signals |
 |---|---:|---|
-| /learn/machine-learning/assessments/ml-849-staged-capstone-handbook | 368 | scope word "handbook" on 368w vs ~999w median |
+| /learn/machine-learning/assessments/ml-849-staged-capstone-handbook | 368 | scope word "handbook" on 368w vs ~1069w median |
 
 ## Sourcing review flags
 
@@ -353,8 +365,8 @@ _… 216 more in content-registry.json (`sourcingFlags`)_
 
 Review order: volatile classes first, oldest last-verified date first; undated items lead each queue. `verified`/`updated`/`published` supply the last-verified date — git-derived when frontmatter is absent.
 
-- periodic: 1392
-- pricing-sensitive: 365
+- periodic: 1426
+- pricing-sensitive: 366
 - release-sensitive: 359
 - durable: 266
 - certification-sensitive: 104
@@ -395,7 +407,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-foundations/reliable-ai/223-environmental-impact-and-compute-governance — Environmental Impact and Compute Governance *(verified 2026-08-30)*
 - … 74 more in content-registry.json
 
-### pricing-sensitive (365) — oldest-verified first
+### pricing-sensitive (366) — oldest-verified first
 
 - /learn/agent-frameworks/mastra-typescript-agents — Mastra: the TypeScript agent framework *(verified undated)*
 - /learn/agent-frameworks/microsoft-agent-frameworks — Microsoft's agent frameworks: Semantic Kernel, AutoGen, and the convergence *(verified undated)*
@@ -427,7 +439,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/evals-red-teaming/building-a-golden-dataset — Building a Golden Dataset *(verified 2026-08-29)*
 - /learn/production/token-and-cost-tracking — Track Cost Per Request and Per User *(verified 2026-08-29)*
 - /learn/prompt-engineering/chain-of-thought-prompting — Chain-of-Thought: Getting the Model to Show Its Work *(verified 2026-08-29)*
-- … 335 more in content-registry.json
+- … 336 more in content-registry.json
 
 ### policy-sensitive (96) — oldest-verified first
 
@@ -732,26 +744,46 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /practice/agentic-ai — 8 questions, 8 lesson links
 - /practice/harness-design — 8 questions, 8 lesson links
 - /practice/fine-tuning — 8 questions, 8 lesson links
+- /practice/ai-literacy — 8 questions, 8 lesson links
+- /practice/maths-foundations — 8 questions, 8 lesson links
+- /practice/python-data-apis — 8 questions, 8 lesson links
+- /practice/llm-foundations — 8 questions, 8 lesson links
+- /practice/context-engineering — 8 questions, 8 lesson links
+- /practice/structured-outputs — 8 questions, 8 lesson links
+- /practice/hallucinations — 8 questions, 8 lesson links
+- /practice/genai-app-dev — 8 questions, 8 lesson links
+- /practice/tools-function-calling — 8 questions, 8 lesson links
+- /practice/cli-agents — 8 questions, 8 lesson links
+- /practice/ai-automation-ops — 8 questions, 8 lesson links
+- /practice/multilingual-ai — 8 questions, 8 lesson links
+- /practice/multimodal-ai — 8 questions, 8 lesson links
+- /practice/voice-ai — 8 questions, 8 lesson links
+- /practice/web-agents — 8 questions, 8 lesson links
+- /practice/agent-skills — 8 questions, 8 lesson links
+- /practice/llm-security — 8 questions, 8 lesson links
+- /practice/local-inference — 8 questions, 8 lesson links
+- /practice/agent-frameworks — 8 questions, 8 lesson links
+- /practice/ai-for-designers — 8 questions, 8 lesson links
 
 ## Non-lesson collections
 
 ### interview (27)
 
-- /interview/agents — AI agents interview questions (776 words, updated 2026-09-08)
-- /interview/ai-foundations — AI foundations interview questions (708 words)
-- /interview/ai-system-design — AI system design interview questions (748 words, updated 2026-09-08)
-- /interview/behavioral-and-project-defense — Behavioral and project-defense interview questions (726 words)
-- /interview/classical-ml — Classical ML interview questions (632 words)
-- /interview/context-engineering — Context engineering interview questions (716 words)
-- /interview/deep-learning — Deep learning interview questions (685 words)
-- /interview/evals — LLM evaluation interview questions (753 words, updated 2026-08-30)
+- /interview/agents — AI agents interview questions (1035 words, updated 2026-09-08)
+- /interview/ai-foundations — AI foundations interview questions (922 words)
+- /interview/ai-system-design — AI system design interview questions (985 words, updated 2026-09-08)
+- /interview/behavioral-and-project-defense — Behavioral and project-defense interview questions (921 words)
+- /interview/classical-ml — Classical ML interview questions (811 words)
+- /interview/context-engineering — Context engineering interview questions (914 words)
+- /interview/deep-learning — Deep learning interview questions (876 words)
+- /interview/evals — LLM evaluation interview questions (991 words, updated 2026-08-30)
 - /interview/interview-modes — Interview modes: interviewer and candidate (504 words)
-- /interview/llm-basics — LLM basics interview questions (785 words, updated 2026-09-08)
-- /interview/maths-foundations — Maths foundations interview questions (623 words)
-- /interview/mcp — MCP interview questions (713 words, updated 2026-09-08)
-- /interview/production-and-observability — Production and observability interview questions (705 words)
-- /interview/prompt-engineering — Prompt engineering interview questions (752 words, updated 2026-09-08)
-- /interview/rag — RAG interview questions (721 words, updated 2026-08-30)
+- /interview/llm-basics — LLM basics interview questions (995 words, updated 2026-09-08)
+- /interview/maths-foundations — Maths foundations interview questions (832 words)
+- /interview/mcp — MCP interview questions (972 words, updated 2026-09-08)
+- /interview/production-and-observability — Production and observability interview questions (893 words)
+- /interview/prompt-engineering — Prompt engineering interview questions (986 words, updated 2026-09-08)
+- /interview/rag — RAG interview questions (930 words, updated 2026-08-30)
 - /interview/role-ai-engineer — AI engineer interview questions (348 words)
 - /interview/role-ai-platform-engineer — AI platform engineer interview questions (387 words)
 - /interview/role-applied-ai-engineer — Applied AI engineer interview questions (336 words)
@@ -761,8 +793,8 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /interview/role-ml-engineer — ML engineer interview questions (357 words)
 - /interview/role-product-manager — Product manager interview questions (AI track) (410 words)
 - /interview/role-security-engineer — Security engineer interview questions (AI track) (428 words)
-- /interview/safety-and-security — AI safety and security interview questions (748 words)
-- /interview/structured-outputs — Structured outputs interview questions (689 words)
+- /interview/safety-and-security — AI safety and security interview questions (951 words)
+- /interview/structured-outputs — Structured outputs interview questions (880 words)
 - /interview/take-home-exercises — Take-home exercises and integrity (479 words)
 
 ### scenario (12)

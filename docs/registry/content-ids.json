@@ -9,8 +9,8 @@
   "ans": 35,
   "fde": 193,
   "rol": 12,
-  "prc": 14,
-  "pag": 26,
+  "prc": 48,
+  "pag": 27,
   "trk": 29,
   "qgd": 4,
   "stb": 25,
@@ -423,7 +423,7 @@
   },
   "lessons/ai-foundations/capstone-build-train-evaluate-a-classifier.md": {
    "id": "les-0102",
-   "fp": "f9221934f4883ed639eef3672ec603fd2cdbed81"
+   "fp": "d3032e6335dfe4bc120556108b9149f697663ffd"
   },
   "lessons/ai-foundations/choosing-a-model-decision-framework.md": {
    "id": "les-0103",
@@ -831,7 +831,7 @@
   },
   "lessons/ai-literacy/first-ai-workflow-capstone.md": {
    "id": "les-0204",
-   "fp": "15da6a5fb88432aea0ee04f6961fdb992699fa88"
+   "fp": "e85be1cbed0ee5838a4e91def992f668b1c57ce5"
   },
   "lessons/ai-literacy/free-vs-paid-ai-what-you-get.md": {
    "id": "les-0205",
@@ -1203,7 +1203,7 @@
   },
   "lessons/classical-ai/knowledge-uncertainty/227-explainability-proof-traces-and-knowledge-based-ai-capstone.md": {
    "id": "les-0297",
-   "fp": "0f43cf9cf88becd1ce453d9e676b348e24b8eed3"
+   "fp": "96cb0fd1deec17157b2485260cb76710cfa241fa"
   },
   "lessons/classical-ai/search-and-planning.md": {
    "id": "les-0298",
@@ -1319,7 +1319,7 @@
   },
   "lessons/classical-ai/search-planning/128-classical-ai-search-and-planning-capstone.md": {
    "id": "les-0326",
-   "fp": "96bea0046c3d91d1c726c68e3aa53f16af8658c0"
+   "fp": "5eb0664ed450dc1082738561b28d2a6528755b74"
   },
   "lessons/classical-ai/uncertainty-and-decision.md": {
    "id": "les-0327",
@@ -1587,7 +1587,7 @@
   },
   "lessons/context-engineering/multi-agent-and-capstone-quiz.md": {
    "id": "les-0393",
-   "fp": "5a888632ce8f2e33e32ea23a86cad709f01b969f"
+   "fp": "94532da00a002c7b0b45cab42bc31e8f9f02e3b7"
   },
   "lessons/context-engineering/multi-agent-context-mistakes.md": {
    "id": "les-0394",
@@ -2655,7 +2655,7 @@
   },
   "lessons/genai-app-dev/capstone-ship-a-genai-assistant.md": {
    "id": "les-0660",
-   "fp": "6f540720bc6e56b062ed049ea75694f0098afd45"
+   "fp": "0110f9dd00e41ef5c83d1abb9a6ec7fe848ca641"
   },
   "lessons/genai-app-dev/chat-ux-that-doesnt-feel-broken.md": {
    "id": "les-0661",
@@ -3163,7 +3163,7 @@
   },
   "lessons/hallucinations/capstone-trustworthy-qa-system.md": {
    "id": "les-0787",
-   "fp": "80d96b5ddb422c102f1590e1871b2a2269067a4d"
+   "fp": "d8e9d2f9a9a88025639d3ce88566a78033b1d03a"
   },
   "lessons/hallucinations/chainpoll-detector-impl.md": {
    "id": "les-0788",
@@ -3791,7 +3791,7 @@
   },
   "lessons/llm-foundations/behavior-and-capstone-quiz.mdx": {
    "id": "les-0944",
-   "fp": "f5fdad1047bed306c344439173d7103891bd2b85"
+   "fp": "99ad86063fe70be4230eca688b2a86b3f76c3898"
   },
   "lessons/llm-foundations/bpe-vs-wordpiece-vs-unigram.mdx": {
    "id": "les-0945",
@@ -3799,7 +3799,7 @@
   },
   "lessons/llm-foundations/build-a-tiny-gpt-capstone.mdx": {
    "id": "les-0946",
-   "fp": "3fdf0a8bdf6ade99e5b4ea97a97f412a2ed0592e"
+   "fp": "19006d7529fc77a7c5428cdc7623efb09fb62f58"
   },
   "lessons/llm-foundations/build-bpe-from-scratch.mdx": {
    "id": "les-0947",
@@ -4935,7 +4935,7 @@
   },
   "lessons/machine-learning/ml-foundations-capstone.md": {
    "id": "les-1230",
-   "fp": "5114c0b6eaccb71efb8d11b28b6ac405b04a8292"
+   "fp": "37ccc1ed3225fc7cfbb4ce65ee6fc615c2195152"
   },
   "lessons/machine-learning/ml-systems-and-reproducibility.md": {
    "id": "les-1231",
@@ -5423,7 +5423,7 @@
   },
   "lessons/maths-foundations/labs/a11-mathematical-ml-capstone.md": {
    "id": "les-1352",
-   "fp": "533731d780b7ab3187e4f4c8c70d47cdc31f111e"
+   "fp": "7be3368dac1d43d5b85ad4a02f86ff916cf3aadb"
   },
   "lessons/maths-foundations/labs/a2-least-squares-from-three-angles.md": {
    "id": "les-1353",
@@ -6543,11 +6543,11 @@
   },
   "lessons/prompt-engineering/prompt-library-capstone-project.md": {
    "id": "les-1632",
-   "fp": "6cf05ae2bff7ffc4bb8a1b9cbebac4506fac9fde"
+   "fp": "224cad69b6aa0b7b2d8814e871323fa0a5b4853f"
   },
   "lessons/prompt-engineering/prompt-library-capstone.md": {
    "id": "les-1633",
-   "fp": "4683ad6a59a8875a45d97f87e249693e20937961"
+   "fp": "22806feb25dd95913ae19f37c8f52e4f75a385e4"
   },
   "lessons/prompt-engineering/prompt-patterns.md": {
    "id": "les-1634",
@@ -6627,7 +6627,7 @@
   },
   "lessons/prompt-engineering/robustness-capstone-quiz.md": {
    "id": "les-1653",
-   "fp": "fc8e08c7b286a1f3297efd088d7a6e8ca29cd837"
+   "fp": "e8897780959b178f67e98760a336d2a8b7892e63"
   },
   "lessons/prompt-engineering/robustness-common-mistakes.md": {
    "id": "les-1654",
@@ -6907,7 +6907,7 @@
   },
   "lessons/python-data-apis/messy-data-to-llm-pipeline-capstone.md": {
    "id": "les-1723",
-   "fp": "5862efa5cc7e993cb1b77fb583e4c441910e0b00"
+   "fp": "6c02df1bddda1841e8e8fe00b432f215047363a5"
   },
   "lessons/python-data-apis/nested-json-in-memory.md": {
    "id": "les-1724",
@@ -7155,7 +7155,7 @@
   },
   "lessons/rag/rag-capstone-support-bot.mdx": {
    "id": "les-1785",
-   "fp": "bc321087379163bbc87c903df11578c2b074219c"
+   "fp": "7b615f692a8db4552195f14cb92158dc326445af"
   },
   "lessons/rag/rag-eval-cheatsheet.md": {
    "id": "les-1786",
@@ -7299,7 +7299,7 @@
   },
   "lessons/structured-outputs/capstone-and-eval-quiz.md": {
    "id": "les-1821",
-   "fp": "91d0dc8c01cc0f474fb3de1f59acbfe496cc6f74"
+   "fp": "f73697ab1b1bf47446fc82a1e4168fdf84b90b0b"
   },
   "lessons/structured-outputs/chunk-and-merge-extraction.md": {
    "id": "les-1822",
@@ -7823,7 +7823,7 @@
   },
   "lessons/tools-function-calling/capstone-build-a-tool-using-agent.md": {
    "id": "les-1952",
-   "fp": "3209637b6c989e67686679c1c007939be99e3e9b"
+   "fp": "47cd23705a87415409c1367da56c2952ee1337a8"
   },
   "lessons/tools-function-calling/chaining-into-dag-workflows.md": {
    "id": "les-1953",
@@ -8259,31 +8259,31 @@
   },
   "questions/agents.mdx": {
    "id": "que-0001",
-   "fp": "916da58154e4c2950c83b7ee097dc1de4179ecf7"
+   "fp": "8f99c9e151f8b83987426e40cf03ad2870ef323f"
   },
   "questions/ai-system-design.mdx": {
    "id": "que-0002",
-   "fp": "82db8a122c928686df8997eed552191c2d73f40f"
+   "fp": "fb2f2263da5f01efbc2529f98c6d5fd8222e38a6"
   },
   "questions/evals.mdx": {
    "id": "que-0003",
-   "fp": "2326332e7f161adde1e4b231635cee87ae80e875"
+   "fp": "2f2e01041c8a77b865c562e7ff08d9b13ab78ae5"
   },
   "questions/llm-basics.mdx": {
    "id": "que-0004",
-   "fp": "6b951ad59b0578c8db49f6f16c220d3f85c6b190"
+   "fp": "3949804c2a9b251792bc9e67ba31d6a86bb0b2e9"
   },
   "questions/mcp.mdx": {
    "id": "que-0005",
-   "fp": "d45ff1e8802fc6760f99373e5ead30478b675837"
+   "fp": "72772dac1028aaed6929b249181ada46c7c5446a"
   },
   "questions/prompt-engineering.mdx": {
    "id": "que-0006",
-   "fp": "6b239c4e68670fe939949398ea3df3c7a77c4600"
+   "fp": "9e0db181d134f9a909a834a424792530e4a6347e"
   },
   "questions/rag.mdx": {
    "id": "que-0007",
-   "fp": "c9c26b658ff2471319bb5d684ed3ddea1bd51765"
+   "fp": "8ae23a1f943714cfe9bf68cf4fa5bd4a6bc4e24f"
   },
   "scenarios/agent-approval.mdx": {
    "id": "sce-0001",
@@ -9776,7 +9776,7 @@
   },
   "lessons/agent-skills/skills-projects-first-skill-and-capstone.md": {
    "id": "les-2152",
-   "fp": "6849a9e842fca67f48952e5300743c68ba819d0d"
+   "fp": "b6ac62c5792933757fb36a0dd9bceb6354a76887"
   },
   "lessons/ai-foundations/choosing-an-ai-approach-system-selection.mdx": {
    "id": "les-2153",
@@ -10132,7 +10132,7 @@
   },
   "lessons/ai-for-designers/capstone-design-a-trustworthy-ai-feature.md": {
    "id": "les-2185",
-   "fp": "f3225ecb501f8edba504ff5bc259e0848376b0e3"
+   "fp": "3c12fa952936bd9f389ef7b61a242128cb42de42"
   },
   "lessons/ai-for-designers/choosing-where-ai-belongs-worked-example.md": {
    "id": "les-2186",
@@ -10392,23 +10392,23 @@
   },
   "questions/ai-foundations.mdx": {
    "id": "que-0008",
-   "fp": "65e0beb9afce9c482d3fb50dd3ab4bbd08108e28"
+   "fp": "94438e546eb8ea6899eee857d18fe335ae901d88"
   },
   "questions/behavioral-and-project-defense.mdx": {
    "id": "que-0009",
-   "fp": "f5f118554fc0a2348a111a31345dd4ef6d6b7795"
+   "fp": "b2c7f8c40010317433d480e95b925e8c97a4156e"
   },
   "questions/classical-ml.mdx": {
    "id": "que-0010",
-   "fp": "1c9105313ac90ece14e48f24a561bc3b6e44400c"
+   "fp": "d2a73debc2c03629968626703daf205c75c92dbc"
   },
   "questions/context-engineering.mdx": {
    "id": "que-0011",
-   "fp": "6bcc8f908d481b62d202c918a48f6d7fde67b77a"
+   "fp": "2863a53ddad6ee7ec511b1a9921209a9500f986b"
   },
   "questions/deep-learning.mdx": {
    "id": "que-0012",
-   "fp": "da67a348f1961e4db7c4923a62d22b10d434f84e"
+   "fp": "2f1b861ed7bdad353580c34767e908b832376ea7"
   },
   "questions/interview-modes.mdx": {
    "id": "que-0013",
@@ -10416,19 +10416,19 @@
   },
   "questions/maths-foundations.mdx": {
    "id": "que-0014",
-   "fp": "02043d8b8a46fed6e847312a5690884c986ed85e"
+   "fp": "fd1223aad12aeada126c522549645c19e6860d9c"
   },
   "questions/production-and-observability.mdx": {
    "id": "que-0015",
-   "fp": "a72545399a8ba7cf2081435aabe5f9c33e489342"
+   "fp": "3bba96bb4d1dd8b5c74b85dc12cfcdd378de830b"
   },
   "questions/safety-and-security.mdx": {
    "id": "que-0016",
-   "fp": "6c8d9be1873c9e035f540d7972c9370dabea9f7f"
+   "fp": "fa1208e5a8a18099787f9cb91827612fefbd1e27"
   },
   "questions/structured-outputs.mdx": {
    "id": "que-0017",
-   "fp": "1f4601dc5c3b176a09c074c00e0ca3699c574b8d"
+   "fp": "97c1416fe657b7b56c3fb875b16d5b63972babce"
   },
   "questions/take-home-exercises.mdx": {
    "id": "que-0018",
@@ -10497,6 +10497,111 @@
   "blog/teardown-playwright-mcp-tool-contracts.mdx": {
    "id": "blo-0020",
    "fp": "ed8f1d86d4443d17485a1688c8bdf830443b2e82"
+  },
+  "data:practice/ai-literacy": {
+   "id": "prc-0015"
+  },
+  "data:practice/maths-foundations": {
+   "id": "prc-0016"
+  },
+  "data:practice/python-data-apis": {
+   "id": "prc-0017"
+  },
+  "data:practice/llm-foundations": {
+   "id": "prc-0018"
+  },
+  "data:practice/context-engineering": {
+   "id": "prc-0019"
+  },
+  "data:practice/structured-outputs": {
+   "id": "prc-0020"
+  },
+  "data:practice/hallucinations": {
+   "id": "prc-0021"
+  },
+  "data:practice/genai-app-dev": {
+   "id": "prc-0022"
+  },
+  "data:practice/tools-function-calling": {
+   "id": "prc-0023"
+  },
+  "data:practice/cli-agents": {
+   "id": "prc-0024"
+  },
+  "data:practice/ai-automation-ops": {
+   "id": "prc-0025"
+  },
+  "data:practice/multilingual-ai": {
+   "id": "prc-0026"
+  },
+  "data:practice/multimodal-ai": {
+   "id": "prc-0027"
+  },
+  "data:practice/voice-ai": {
+   "id": "prc-0028"
+  },
+  "data:practice/web-agents": {
+   "id": "prc-0029"
+  },
+  "data:practice/agent-skills": {
+   "id": "prc-0030"
+  },
+  "data:practice/llm-security": {
+   "id": "prc-0031"
+  },
+  "data:practice/local-inference": {
+   "id": "prc-0032"
+  },
+  "data:practice/agent-frameworks": {
+   "id": "prc-0033"
+  },
+  "data:practice/ai-for-designers": {
+   "id": "prc-0034"
+  },
+  "data:practice/mixed-ai-engineer": {
+   "id": "prc-0035"
+  },
+  "data:practice/mixed-ml-engineer": {
+   "id": "prc-0036"
+  },
+  "data:practice/mixed-applied-ai-engineer": {
+   "id": "prc-0037"
+  },
+  "data:practice/mixed-ai-platform-engineer": {
+   "id": "prc-0038"
+  },
+  "data:practice/mixed-forward-deployed-engineer": {
+   "id": "prc-0039"
+  },
+  "data:practice/mixed-data-scientist": {
+   "id": "prc-0040"
+  },
+  "data:practice/mixed-designer": {
+   "id": "prc-0041"
+  },
+  "data:practice/mixed-product-manager": {
+   "id": "prc-0042"
+  },
+  "data:practice/mixed-security-engineer": {
+   "id": "prc-0043"
+  },
+  "data:practice/mixed-founder": {
+   "id": "prc-0044"
+  },
+  "data:practice/mixed-executive": {
+   "id": "prc-0045"
+  },
+  "data:practice/mixed-marketer": {
+   "id": "prc-0046"
+  },
+  "data:practice/mixed-creator": {
+   "id": "prc-0047"
+  },
+  "data:practice/mixed-student": {
+   "id": "prc-0048"
+  },
+  "page:/practice/mixed": {
+   "id": "pag-0027"
   }
  },
  "retired": {

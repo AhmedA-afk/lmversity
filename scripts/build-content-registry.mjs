@@ -722,11 +722,33 @@ for (const q of quizTracks) {
   }));
 }
 
+// --- role-mixed practice sessions --------------------------------------------------
+const quizMapBlock = (name) => quizSrc.match(new RegExp(`export const ${name}[^=]*= \\{([\\s\\S]*?)\\};`))?.[1] ?? '';
+const BANK_ROLES = Object.fromEntries([...quizMapBlock('BANK_ROLES').matchAll(/^\s*'?([\w-]+)'?:\s*'([^']+)'/gm)].map((m) => [m[1], m[2]]));
+const BANK_ROLES_EXTRA = Object.fromEntries([...quizMapBlock('BANK_ROLES_EXTRA').matchAll(/^\s*'?([\w-]+)'?:\s*\[([^\]]*)\]/gm)]
+  .map((m) => [m[1], [...m[2].matchAll(/'([^']+)'/g)].map((s) => s[1])]));
+const ROLE_SESSIONS = Object.fromEntries([...quizMapBlock('ROLE_SESSIONS').matchAll(/^\s*'?([\w-]+)'?:\s*'([^']+)'/gm)].map((m) => [m[1], m[2]]));
+for (const [role, name] of Object.entries(ROLE_SESSIONS)) {
+  const banks = quizTracks.filter((t) => BANK_ROLES[t.id] === role || (BANK_ROLES_EXTRA[t.id] ?? []).includes(role));
+  const questionCount = banks.reduce((n, t) => n + t.questionCount, 0);
+  pendingIds.push({ key: `data:practice/mixed-${role}` });
+  items.push(baseRecord({
+    family: 'quiz', kind: 'practice-track',
+    title: `${name} mixed session`, slug: `mixed-${role}`, route: `/practice/mixed/${role}`,
+    path: 'src/data/quizzes.ts', summary: `Cross-topic practice session drawing ${questionCount} questions from ${banks.length} banks.`,
+    structuredData: STRUCTURED_DATA['practice-track'],
+    features: { questionCount, bankCount: banks.length },
+    searchIntent: 'practice', primaryAudience: role,
+    practiceType: 'quiz-bank', freshnessClass: 'periodic',
+  }));
+}
+
 // --- static pages and endpoints --------------------------------------------------
 const STATIC_FAMILY = {
   'index.astro': { title: 'Home', kind: 'landing', route: '/' },
   'learn/index.astro': { title: 'Learn — all tracks', kind: 'hub', route: '/learn' },
   'practice/index.astro': { title: 'Practice room', kind: 'hub', route: '/practice' },
+  'practice/mixed/index.astro': { title: 'Mixed practice sessions', kind: 'hub', route: '/practice/mixed' },
   'interview/index.astro': { title: 'Interview prep', kind: 'hub', route: '/interview' },
   'scenarios/index.astro': { title: 'Scenarios', kind: 'hub', route: '/scenarios' },
   'blog/index.astro': { title: 'Blog', kind: 'hub', route: '/blog' },

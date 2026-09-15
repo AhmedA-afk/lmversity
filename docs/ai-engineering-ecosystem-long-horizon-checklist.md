@@ -577,11 +577,19 @@ consolidation into a parent track, or a clearer curated-path role.
 
 ### Practice experience
 
-- [ ] Build topic and module filters without creating thin indexable combinations.
-- [ ] Build difficulty, format, role, and remediation filters.
+- [x] Build topic and module filters without creating thin indexable combinations.
+      *(module selector + `?difficulty=`/`?format=`/`?role=` — all
+      client-side query params on one route; zero indexable permutations)*
+- [x] Build difficulty, format, role, and remediation filters.
+      *(difficulty/format/role cycles in Quiz.astro; remediation =
+      per-question `lesson` link, present on all 264 questions)*
 - [x] Add seeded practice sessions so a learner can reproduce a set.
       *(`?seed=N` deterministic shuffle — same URL, same set)*
-- [ ] Add focused mode, mixed review, missed-question review, and spaced revisit queues.
+- [x] Add focused mode, mixed review, missed-question review, and spaced revisit queues.
+      *(focused = `?module=` drill-down; mixed = /practice/mixed role
+      sessions; missed = `?mode=missed` from localStorage; spaced =
+      `?mode=spaced` — wrong-answer questions always due, correct ones
+      return after 7 days)*
 - [x] Keep all practice usable without an account.
       *(all practice runs client-side; no auth anywhere)*
 - [x] Store optional local progress without implying cross-device persistence.
@@ -609,15 +617,20 @@ consolidation into a parent track, or a clearer curated-path role.
 
 ### Initial bank milestones
 
-- [ ] Publish a reviewed foundation set for every live track before deepening one track alone.
+- [x] Publish a reviewed foundation set for every live track before deepening one track alone.
+      *(264 questions across 33 banks — every live lesson track has a
+      foundation set; coverage report → docs/registry/question-coverage.md)*
 - [x] Bring under-covered `classical-ai`, `deep-learning`, `responsible-ai`, `production`,
       `evals-red-teaming`, `agentic-ai`, `harness-design`, and `fine-tuning` up first.
       *(all eight banked — 7 new foundation sets added (evals already
       had one); 104 live questions across 13 tracks)*
 - [ ] Build advanced banks for maths derivations, ML diagnosis, RAG evaluation, agent traces,
       MCP security, structured output failures, context debugging, and production incidents.
-- [ ] Build role-mixed sessions for AI engineer, ML engineer, designer, product manager,
+- [x] Build role-mixed sessions for AI engineer, ML engineer, designer, product manager,
       security engineer, founder, executive, marketer, creator, and student paths.
+      *(14 sessions at /practice/mixed/<role> — all ten named paths plus
+      applied-AI, platform, forward-deployed, and data-scientist;
+      BANK_ROLES + BANK_ROLES_EXTRA give honest multi-role affinity)*
 
 ## Phase 3 — Interview preparation ecosystem
 
@@ -2446,6 +2459,33 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-16 — Phase 2 practice UX + role-mixed sessions (5 rows)
+
+- Scope: Quiz component modes/filters + `/practice/mixed` role sessions.
+- Quiz.astro: added spaced-revisit queue (`?mode=spaced` — per-question
+  history in localStorage; wrong answers always due, correct ones return
+  after 7 days), format cycle, role cycle (multi-role via `tags.roles`),
+  module selector (focused mode), `?take=N` session cap; all filters are
+  client-side query params — no indexable permutations.
+- quizzes.ts: `BANK_ROLES_EXTRA` (secondary role affinities) +
+  `banksForRole()`; `ROLE_SESSIONS` expanded to 14 — all ten checklist
+  paths (AI/ML engineer, designer, PM, security engineer, founder,
+  executive, marketer, creator, student) plus applied-AI, platform,
+  forward-deployed, data-scientist.
+- New pages: `/practice/mixed` (session index) +
+  `/practice/mixed/[role]` (14 role sessions, cross-bank question pools);
+  linked from /practice hero.
+- Registry: role-session records + `/practice/mixed` hub in
+  build-content-registry (regex-parse style); 2,668 items.
+- Fixed: two `format: 'debugging'` retags that had been spliced inside
+  prompt strings (syntax break); tags moved to metadata.
+- Validation: check-content clean (2,229 lessons), 2,716 pages built,
+  0 dead internal links across 5,812 routes, git diff --check clean.
+- Commit: pending.
+- Next: Phase 0 editorial-review rows, Phase 2 advanced banks
+  (maths derivations, ML diagnosis, RAG eval, agent traces…), Phase 5
+  project standards remain open.
 
 ### 2026-09-16 — Release gates + Phase 3 close: per-question depth + capstone defense (16 rows)
 

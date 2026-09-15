@@ -59,7 +59,7 @@ for (const { id, name, from, to } of qTrackSpans) {
 
 // Bank ids that legitimately differ from curriculum track ids (route stability —
 // the bank id is the /practice/ URL, the curriculum id is the /learn/ one).
-const BANK_TO_TRACK = { evals: 'evals-red-teaming' };
+const BANK_TO_TRACK = { evals: 'evals-red-teaming', agents: 'agentic-ai' };
 const bankFor = (id) => banks.get(id) ?? banks.get(Object.keys(BANK_TO_TRACK).find((b) => BANK_TO_TRACK[b] === id));
 
 // --- matrix -------------------------------------------------------------------

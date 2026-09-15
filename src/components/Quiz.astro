@@ -28,8 +28,12 @@ const quizSchema = {
   <div class="quiz-modes mono" data-modes hidden>
     <button type="button" data-mode-all>All questions</button>
     <button type="button" data-mode-missed>Review missed (<span data-missed-count>0</span>)</button>
+    <button type="button" data-mode-spaced>Spaced (<span data-spaced-count>0</span>)</button>
     <button type="button" data-shuffle>Shuffle</button>
     <button type="button" data-diff-cycle>Difficulty: all</button>
+    <button type="button" data-format-cycle>Format: all</button>
+    <button type="button" data-role-cycle>Role: all</button>
+    <select class="quiz-module" data-module-select aria-label="Focus on one module"><option value="">All modules</option></select>
     <span class="quiz-seed" data-seed-label></span>
   </div>
   <div class="quiz-progress" aria-hidden="true"><span data-progress></span></div>
@@ -107,12 +111,36 @@ const quizSchema = {
     const missed = new Set(readMissed());
     if (missedCountEl instanceof HTMLElement) missedCountEl.textContent = String(missed.size);
 
-    let questions = JSON.parse(quiz.dataset.questions || '[]');
+    // --- Spaced revisit: per-question history (correct/wrong + timestamp) ---
+    const seenKey = `quiz-seen:${trackId}`;
+    const readSeen = () => {
+      try { return JSON.parse(localStorage.getItem(seenKey) || '{}'); } catch { return {}; }
+    };
+    const writeSeen = (seen) => {
+      try { localStorage.setItem(seenKey, JSON.stringify(seen)); } catch { /* private mode */ }
+    };
+    const seen = readSeen();
+    const SPACED_MS = 7 * 24 * 60 * 60 * 1000; // a correct answer buys a week
+    const isDue = (q) => {
+      const h = seen[q.id];
+      if (!h) return true; // never attempted
+      if (!h.ok) return true; // last attempt was wrong — always due
+      return Date.now() - h.t > SPACED_MS; // answered right but stale — revisit
+    };
+    const spacedCountEl = quiz.querySelector('[data-spaced-count]');
+
+    let allQuestions = JSON.parse(quiz.dataset.questions || '[]');
+    if (spacedCountEl instanceof HTMLElement) {
+      spacedCountEl.textContent = String(allQuestions.filter(isDue).length);
+    }
+
+    let questions = allQuestions;
     if (seed) {
       questions = shuffled(questions, mulberry32(Number(seed) || 0));
       if (seedLabelEl instanceof HTMLElement) seedLabelEl.textContent = `seed ${seed}`;
     }
     if (mode === 'missed') questions = questions.filter((q) => missed.has(q.id));
+    if (mode === 'spaced') questions = questions.filter(isDue);
 
     // --- Difficulty filter: ?difficulty=beginner|intermediate|advanced|synthesis ---
     const diff = params.get('difficulty');
@@ -129,6 +157,66 @@ const quizSchema = {
       location.href = u.toString();
     });
 
+    // --- Format filter: ?format=... cycles through formats present ---
+    const fmt = params.get('format');
+    const fmtBtn = quiz.querySelector('[data-format-cycle]');
+    const formatsPresent = [...new Set(allQuestions.map((q) => q.format).filter(Boolean))];
+    if (fmt) {
+      questions = questions.filter((q) => q.format === fmt);
+      if (fmtBtn instanceof HTMLElement) fmtBtn.textContent = `Format: ${fmt}`;
+    }
+    fmtBtn?.addEventListener('click', () => {
+      const u = new URL(location.href);
+      const cycle = ['', ...formatsPresent];
+      const next = cycle[(cycle.indexOf(fmt ?? '') + 1) % cycle.length];
+      if (next) u.searchParams.set('format', next); else u.searchParams.delete('format');
+      location.href = u.toString();
+    });
+    if (fmtBtn instanceof HTMLElement && formatsPresent.length < 2) fmtBtn.hidden = true;
+
+    // --- Role filter: ?role=... cycles through roles present ---
+    const role = params.get('role');
+    const roleBtn = quiz.querySelector('[data-role-cycle]');
+    const rolesOf = (q) => q.tags?.roles ?? (q.tags?.role ? [q.tags.role] : []);
+    const rolesPresent = [...new Set(allQuestions.flatMap(rolesOf))];
+    if (role) {
+      questions = questions.filter((q) => rolesOf(q).includes(role));
+      if (roleBtn instanceof HTMLElement) roleBtn.textContent = `Role: ${role}`;
+    }
+    roleBtn?.addEventListener('click', () => {
+      const u = new URL(location.href);
+      const cycle = ['', ...rolesPresent];
+      const next = cycle[(cycle.indexOf(role ?? '') + 1) % cycle.length];
+      if (next) u.searchParams.set('role', next); else u.searchParams.delete('role');
+      location.href = u.toString();
+    });
+    if (roleBtn instanceof HTMLElement && rolesPresent.length < 2) roleBtn.hidden = true;
+
+    // --- Module filter (focused mode): ?module=<slug> drills one curriculum node ---
+    const mod = params.get('module');
+    const modSel = quiz.querySelector('[data-module-select]');
+    const modulesPresent = [...new Set(allQuestions.map((q) => q.module).filter(Boolean))];
+    if (modSel instanceof HTMLSelectElement) {
+      for (const m of modulesPresent) {
+        const opt = document.createElement('option');
+        opt.value = m;
+        opt.textContent = m.split('/').pop().replace(/-/g, ' ');
+        if (m === mod) opt.selected = true;
+        modSel.append(opt);
+      }
+      if (modulesPresent.length < 2) modSel.hidden = true;
+      modSel.addEventListener('change', () => {
+        const u = new URL(location.href);
+        if (modSel.value) u.searchParams.set('module', modSel.value); else u.searchParams.delete('module');
+        location.href = u.toString();
+      });
+    }
+    if (mod) questions = questions.filter((q) => q.module === mod);
+
+    // --- Session size: ?take=N caps the filtered/shuffled set ---
+    const take = Number(params.get('take'));
+    if (take > 0 && questions.length > take) questions = questions.slice(0, take);
+
     if (modesEl instanceof HTMLElement) modesEl.hidden = false;
     quiz.querySelector('[data-mode-all]')?.addEventListener('click', () => {
       const u = new URL(location.href); u.searchParams.delete('mode');
@@ -136,6 +224,10 @@ const quizSchema = {
     });
     quiz.querySelector('[data-mode-missed]')?.addEventListener('click', () => {
       const u = new URL(location.href); u.searchParams.set('mode', 'missed');
+      location.href = u.toString();
+    });
+    quiz.querySelector('[data-mode-spaced]')?.addEventListener('click', () => {
+      const u = new URL(location.href); u.searchParams.set('mode', 'spaced');
       location.href = u.toString();
     });
     quiz.querySelector('[data-shuffle]')?.addEventListener('click', () => {
@@ -152,7 +244,7 @@ const quizSchema = {
     quiz.querySelector('[data-static]')?.remove();
 
     if (questions.length === 0 && questionEl instanceof HTMLElement) {
-      questionEl.textContent = mode === 'missed' ? 'Nothing missed yet — answer a full round first.' : 'No questions here yet.';
+      questionEl.textContent = mode === 'missed' ? 'Nothing missed yet — answer a full round first.' : mode === 'spaced' ? 'Nothing due — every question here was answered correctly within the week.' : 'No questions match these filters.';
       if (countEl instanceof HTMLElement) countEl.textContent = '';
     }
 
@@ -185,6 +277,10 @@ const quizSchema = {
       if (index === item.answer) { score += 1; missed.delete(item.id); } else { missed.add(item.id); }
       writeMissed([...missed]);
       if (missedCountEl instanceof HTMLElement) missedCountEl.textContent = String(missed.size);
+      const prev = seen[item.id] || { c: 0, w: 0 };
+      seen[item.id] = { c: prev.c + (index === item.answer ? 1 : 0), w: prev.w + (index === item.answer ? 0 : 1), ok: index === item.answer, t: Date.now() };
+      writeSeen(seen);
+      if (spacedCountEl instanceof HTMLElement) spacedCountEl.textContent = String(allQuestions.filter(isDue).length);
       quiz.querySelectorAll('.quiz-option').forEach((node) => {
         if (!(node instanceof HTMLButtonElement)) return;
         const choice = Number(node.dataset.index);
@@ -292,6 +388,11 @@ const quizSchema = {
     padding: 7px 10px; border-radius: 5px; cursor: pointer;
   }
   .quiz .quiz-modes button:hover { border-color: var(--accent); color: var(--accent); }
+  .quiz .quiz-modes .quiz-module {
+    font: 500 11px/1 'IBM Plex Mono', 'IBM Plex Mono Fallback', monospace;
+    border: 1px solid var(--rule); background: var(--bg); color: var(--muted);
+    padding: 7px 10px; border-radius: 5px; max-width: 15rem;
+  }
   .quiz .quiz-seed { font-size: 10px; color: var(--faint); margin-left: auto; }
 
   /* Static fallback — visible only until the script takes over. */

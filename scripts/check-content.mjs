@@ -339,6 +339,8 @@ if (existsSync(QUIZZES)) {
   };
   const qTrackSpans = [...qsrc.matchAll(/id:\s*'([\w-]+)',\s*\n\s*name:/g)]
     .map((m, i, arr) => ({ id: m[1], from: m.index, to: arr[i + 1]?.index ?? qsrc.indexOf('];', m.index) }));
+  // Bank ids that map to a differently-named curriculum track.
+  const BANK_TO_TRACK = { evals: 'evals-red-teaming', agents: 'agentic-ai' };
   const seenPrompts = new Map();
   for (const { id, from, to } of qTrackSpans) {
     const seg = qsrc.slice(from, to);
@@ -368,8 +370,9 @@ if (existsSync(QUIZZES)) {
         if (v && !VALID[key].has(v)) problems.push(`quizzes/${id}: invalid ${key} "${v}"`);
       }
       const mod = call.match(/module:\s*'([^']+)'/)?.[1];
-      if (mod && !trackNodes.get(id)?.has(mod)) {
-        problems.push(`quizzes/${id}: module "${mod}" is not a curriculum node in ${id}`);
+      const curriculumTrack = BANK_TO_TRACK[id] ?? id;
+      if (mod && !trackNodes.get(curriculumTrack)?.has(mod)) {
+        problems.push(`quizzes/${id}: module "${mod}" is not a curriculum node in ${curriculumTrack}`);
       }
       // duplicate detection on the normalized prompt
       const norm = prompt.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
