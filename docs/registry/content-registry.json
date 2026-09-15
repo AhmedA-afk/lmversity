@@ -1,9 +1,9 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T08:14:25.764Z",
+  "generatedAt": "2026-09-15T08:23:36.294Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2406,
+  "itemCount": 2410,
   "counts": {
    "byFamily": {
     "lesson": 2039,
@@ -15,14 +15,14 @@
     "scenario": 6,
     "blog": 10,
     "guide": 9,
-    "answer": 29,
+    "answer": 33,
     "track": 33,
     "role": 12,
     "page": 21,
     "glossary": 1
    },
    "byStatus": {
-    "live": 2380,
+    "live": 2384,
     "coming": 26
    },
    "byKind": {
@@ -37,9 +37,9 @@
     "topic": 7,
     "scenario": 6,
     "post": 10,
-    "howto": 18,
+    "howto": 20,
     "pillar": 4,
-    "definition": 10,
+    "definition": 12,
     "lesson": 131,
     "reference": 7,
     "drill": 13,
@@ -100,9 +100,9 @@
    },
    "byFreshness": {
     "release-sensitive": 283,
-    "periodic": 1356,
+    "periodic": 1358,
     "policy-sensitive": 73,
-    "pricing-sensitive": 334,
+    "pricing-sensitive": 336,
     "certification-sensitive": 97,
     "durable": 263
    }
@@ -171977,6 +171977,174 @@
    }
   },
   {
+   "id": "ans-0030",
+   "family": "answer",
+   "kind": "definition",
+   "title": "Can I run an LLM locally, and should I?",
+   "slug": "can-i-run-an-llm-locally",
+   "route": "/answers/can-i-run-an-llm-locally",
+   "collection": "answers",
+   "path": "src/content/answers/can-i-run-an-llm-locally.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Yes — quantized open-weight models run on a laptop or a workstation; whether you should depends on privacy, latency, volume, and how much quality headroom your task needs.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 469,
+   "headings": [
+    "The short version",
+    "What \"running locally\" actually means",
+    "The real tradeoffs",
+    "Where LMVersity fits",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/fde/deploy/self-hosted-execution-inside-the-perimeter",
+    "/learn/fine-tuning/choosing-managed-vs-self-hosted-fine-tuning",
+    "/learn/fine-tuning/quantization-gguf-awq-gptq",
+    "/learn/llm-foundations/quantization-and-inference-serving",
+    "/learn/production/model-routing-by-task-complexity"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "Article",
+    "FAQPage",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "faqCount": 4,
+    "related": [
+     "/learn/llm-foundations/quantization-and-inference-serving",
+     "/learn/fine-tuning/quantization-gguf-awq-gptq",
+     "/learn/fine-tuning/choosing-managed-vs-self-hosted-fine-tuning",
+     "/learn/fde/deploy/self-hosted-execution-inside-the-perimeter",
+     "/learn/production/model-routing-by-task-complexity"
+    ]
+   },
+   "searchIntent": "answer",
+   "primaryAudience": "general",
+   "promisedOutcome": "Yes — quantized open-weight models run on a laptop or a workstation; whether you should depends on privacy, latency, volume, and how much quality headroom your task needs.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "pricing-sensitive",
+   "freshnessSignals": [
+    "pricing/cost mention",
+    "vendor/tool mentions: Ollama, llama.cpp"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": 1,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "ans-0031",
+   "family": "answer",
+   "kind": "howto",
+   "title": "How do I deploy an LLM app to production?",
+   "slug": "deploy-an-llm-app-to-production",
+   "route": "/answers/deploy-an-llm-app-to-production",
+   "collection": "answers",
+   "path": "src/content/answers/deploy-an-llm-app-to-production.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "A production LLM feature is a model call plus four systems around it — an eval gate, observability, cost controls, and a kill switch — not just the API call itself.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 361,
+   "headings": [
+    "The short version",
+    "The shape of a production LLM feature",
+    "What \"done\" looks like",
+    "Where LMVersity fits",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/guides/ship-your-first-ai-feature-to-production",
+    "/guides/write-your-first-eval-for-an-ai-feature",
+    "/learn/production",
+    "/learn/production/canary-and-shadow-releases",
+    "/learn/production/feature-flags-and-kill-switches",
+    "/learn/production/incident-postmortems-for-ai",
+    "/learn/production/observability-cost-and-latency",
+    "/learn/production/on-call-playbooks-for-ai",
+    "/learn/production/prompts-as-versioned-config"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "Article",
+    "FAQPage",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "faqCount": 4,
+    "related": [
+     "/guides/ship-your-first-ai-feature-to-production",
+     "/guides/write-your-first-eval-for-an-ai-feature",
+     "/learn/production/feature-flags-and-kill-switches",
+     "/learn/production/canary-and-shadow-releases",
+     "/learn/production/observability-cost-and-latency",
+     "/learn/production"
+    ]
+   },
+   "searchIntent": "answer",
+   "primaryAudience": "general",
+   "promisedOutcome": "A production LLM feature is a model call plus four systems around it — an eval gate, observability, cost controls, and a kill switch — not just the API call itself.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "expand",
+   "dispositionReason": "thin vs family median (361w vs ~1009w)",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 0,
+    "prerequisiteFit": null,
+    "handsOn": 1,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "ans-0004",
    "family": "answer",
    "kind": "comparison",
@@ -172236,6 +172404,90 @@
     "metadata": 2,
     "linking": 2,
     "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "ans-0032",
+   "family": "answer",
+   "kind": "howto",
+   "title": "How much does an LLM app cost to run?",
+   "slug": "how-much-does-an-llm-app-cost",
+   "route": "/answers/how-much-does-an-llm-app-cost",
+   "collection": "answers",
+   "path": "src/content/answers/how-much-does-an-llm-app-cost.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "LLM cost is tokens in plus tokens out, multiplied by a price per million — so the bill is driven by your context size, output length, retries, and loops, not just the model's sticker price.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 458,
+   "headings": [
+    "The short version",
+    "Where the money actually goes",
+    "Measure before you optimise",
+    "Where LMVersity fits",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/guides/cut-your-llm-bill",
+    "/learn/context-engineering/context-observability-and-token-accounting",
+    "/learn/production",
+    "/learn/production/model-routing-by-task-complexity",
+    "/learn/production/prompt-and-semantic-caching",
+    "/learn/production/token-and-cost-tracking"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "Article",
+    "FAQPage",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "faqCount": 4,
+    "related": [
+     "/guides/cut-your-llm-bill",
+     "/learn/production/token-and-cost-tracking",
+     "/learn/production/model-routing-by-task-complexity",
+     "/learn/production/prompt-and-semantic-caching",
+     "/learn/context-engineering/context-observability-and-token-accounting",
+     "/learn/production"
+    ]
+   },
+   "searchIntent": "answer",
+   "primaryAudience": "general",
+   "promisedOutcome": "LLM cost is tokens in plus tokens out, multiplied by a price per million — so the bill is driven by your context size, output length, retries, and loops, not just the model's sticker price.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "pricing-sensitive",
+   "freshnessSignals": [
+    "pricing/cost mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": 1,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
     "demand": null
@@ -174089,6 +174341,86 @@
     "metadata": 2,
     "linking": 2,
     "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "ans-0033",
+   "family": "answer",
+   "kind": "definition",
+   "title": "What is prompt injection?",
+   "slug": "what-is-prompt-injection",
+   "route": "/answers/what-is-prompt-injection",
+   "collection": "answers",
+   "path": "src/content/answers/what-is-prompt-injection.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Prompt injection is when text the model reads — a user message, a web page, a retrieved document — changes what the model does; there is no model-layer fix, so the defence is architectural.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 406,
+   "headings": [
+    "The short version",
+    "Why this isn't a prompt problem",
+    "What a real defence looks like",
+    "Where LMVersity fits",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/guides/defend-against-prompt-injection",
+    "/learn/evals-red-teaming/prompt-injection-basics",
+    "/learn/harness-design/permission-and-approval-systems",
+    "/learn/production/prompt-injection-monitoring",
+    "/learn/responsible-ai/adversarial-testing-lab"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "Article",
+    "FAQPage",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "faqCount": 4,
+    "related": [
+     "/guides/defend-against-prompt-injection",
+     "/learn/evals-red-teaming/prompt-injection-basics",
+     "/learn/production/prompt-injection-monitoring",
+     "/learn/responsible-ai/adversarial-testing-lab",
+     "/learn/harness-design/permission-and-approval-systems"
+    ]
+   },
+   "searchIntent": "answer",
+   "primaryAudience": "general",
+   "promisedOutcome": "Prompt injection is when text the model reads — a user message, a web page, a retrieved document — changes what the model does; there is no model-layer fix, so the defence is architectural.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": 1,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
     "demand": null
@@ -195728,6 +196060,63 @@
   },
   {
    "a": {
+    "route": "/learn/evals-red-teaming/prompt-injection-basics",
+    "slug": "evals-red-teaming/prompt-injection-basics",
+    "title": "Prompt Injection: When Content Becomes Instructions",
+    "track": "evals-red-teaming"
+   },
+   "b": {
+    "route": "/answers/what-is-prompt-injection",
+    "slug": "what-is-prompt-injection",
+    "title": "What is prompt injection?",
+    "track": "answers"
+   },
+   "jaccard": 0.4,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/genai-app-dev/input-validation-and-injection-defense",
+    "slug": "genai-app-dev/input-validation-and-injection-defense",
+    "title": "Input Validation and Prompt-Injection Defense",
+    "track": "genai-app-dev"
+   },
+   "b": {
+    "route": "/answers/what-is-prompt-injection",
+    "slug": "what-is-prompt-injection",
+    "title": "What is prompt injection?",
+    "track": "answers"
+   },
+   "jaccard": 0.4,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/prompt-engineering/prompt-injection-basics",
+    "slug": "prompt-engineering/prompt-injection-basics",
+    "title": "Prompt Injection: When the Input Fights Your Instructions",
+    "track": "prompt-engineering"
+   },
+   "b": {
+    "route": "/answers/what-is-prompt-injection",
+    "slug": "what-is-prompt-injection",
+    "title": "What is prompt injection?",
+    "track": "answers"
+   },
+   "jaccard": 0.4,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
     "route": "/learn/hallucinations/production-antipatterns",
     "slug": "hallucinations/production-antipatterns",
     "title": "Common Mistakes: Production Reliability Antipatterns",
@@ -195956,6 +196345,44 @@
   },
   {
    "a": {
+    "route": "/learn/mcp/securing-mcp-servers-against-prompt-injection",
+    "slug": "mcp/securing-mcp-servers-against-prompt-injection",
+    "title": "Securing MCP Servers Against Prompt Injection",
+    "track": "mcp"
+   },
+   "b": {
+    "route": "/answers/what-is-prompt-injection",
+    "slug": "what-is-prompt-injection",
+    "title": "What is prompt injection?",
+    "track": "answers"
+   },
+   "jaccard": 0.33,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/production/prompt-injection-monitoring",
+    "slug": "production/prompt-injection-monitoring",
+    "title": "Monitor Production Traffic for Prompt Injection and Abuse",
+    "track": "production"
+   },
+   "b": {
+    "route": "/answers/what-is-prompt-injection",
+    "slug": "what-is-prompt-injection",
+    "title": "What is prompt injection?",
+    "track": "answers"
+   },
+   "jaccard": 0.33,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": false
+  },
+  {
+   "a": {
     "route": "/learn/maths-foundations/cross-entropy-and-negative-log-likelihood",
     "slug": "maths-foundations/cross-entropy-and-negative-log-likelihood",
     "title": "Cross-entropy from expected negative log-likelihood",
@@ -196089,6 +196516,25 @@
   },
   {
    "a": {
+    "route": "/guides/defend-against-prompt-injection",
+    "slug": "defend-against-prompt-injection",
+    "title": "Defend a tool-using app against prompt injection",
+    "track": "guides"
+   },
+   "b": {
+    "route": "/answers/what-is-prompt-injection",
+    "slug": "what-is-prompt-injection",
+    "title": "What is prompt injection?",
+    "track": "answers"
+   },
+   "jaccard": 0.29,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": false
+  },
+  {
+   "a": {
     "route": "/learn/structured-outputs/schema-versioning-and-migration",
     "slug": "structured-outputs/schema-versioning-and-migration",
     "title": "Schema Versioning: Evolving a Contract Without Breaking Consumers",
@@ -196123,6 +196569,25 @@
    "containment": 1,
    "slugStem": false,
    "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/responsible-ai/adversarial-testing-lab",
+    "slug": "responsible-ai/adversarial-testing-lab",
+    "title": "Lab: turn a prompt injection finding into a regression test",
+    "track": "responsible-ai"
+   },
+   "b": {
+    "route": "/answers/what-is-prompt-injection",
+    "slug": "what-is-prompt-injection",
+    "title": "What is prompt injection?",
+    "track": "answers"
+   },
+   "jaccard": 0.25,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {

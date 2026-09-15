@@ -6,7 +6,7 @@
   "sce": 6,
   "blo": 10,
   "gui": 9,
-  "ans": 29,
+  "ans": 33,
   "fde": 193,
   "rol": 12,
   "prc": 6,
@@ -9548,6 +9548,22 @@
   "data:role/student": {
    "id": "rol-0012",
    "fp": null
+  },
+  "answers/can-i-run-an-llm-locally.md": {
+   "id": "ans-0030",
+   "fp": "272c99ebedca5c349ae6900a30916d6c8d3ec31d"
+  },
+  "answers/deploy-an-llm-app-to-production.md": {
+   "id": "ans-0031",
+   "fp": "1c3924690731d2c11db1f020991421a655e887e9"
+  },
+  "answers/how-much-does-an-llm-app-cost.md": {
+   "id": "ans-0032",
+   "fp": "5244b7382d45a9719b809de4ae6b263fab8bf66a"
+  },
+  "answers/what-is-prompt-injection.md": {
+   "id": "ans-0033",
+   "fp": "0bfe588aade66094f1b81a25a0c1412e4c8759a1"
   }
  },
  "retired": {}

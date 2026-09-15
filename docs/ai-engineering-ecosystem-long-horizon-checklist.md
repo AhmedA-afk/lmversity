@@ -145,7 +145,7 @@ Current milestone: Phase 0 — audit and score every existing learning and acqui
 - [x] Lesson filenames include 90 quiz pages, 43 worked-example pages, 41 mistake pages,
       and 48 cheatsheets.
 - [x] Interview preparation currently has 7 topic files and 56 long-answer questions.
-- [x] Straight Answers contains 29 pages.
+- [x] Straight Answers contains 33 pages.
 - [x] Scenarios contains 6 pages.
 - [x] Guides contains 9 pages.
 - [x] Blog contains 10 posts.
@@ -478,8 +478,11 @@ consolidation into a parent track, or a clearer curated-path role.
 - [x] Merge search variations that share the same actual answer. (Zero duplicate
       normalized intents across the answer set; variations consolidate onto canonical
       slugs rather than spawning per-wording pages.)
-- [ ] Add answer clusters for roles, learning paths, tools, providers, costs, local models,
-      deployment, evaluation, security, and career transitions.
+- [x] Add answer clusters for roles, learning paths, tools, providers, costs, local models,
+      deployment, evaluation, security, and career transitions. (All ten clusters
+      now covered — added `how-much-does-an-llm-app-cost`, `can-i-run-an-llm-locally`,
+      `deploy-an-llm-app-to-production`, `what-is-prompt-injection`; roles/paths/
+      tools/providers/eval/career were already covered.)
 - [x] Review FAQ structured data against current Google eligibility and page content.
       (Answers emit FAQPage + Article + BreadcrumbList; FAQPage matches visible
       question/answer structure.)
@@ -1807,9 +1810,27 @@ validation, deployment status, measured result when available, blockers, and nex
   ordering) — partially mechanical, partly editorial; then the acquisition
   family's editorial review rows.
 
+### 2026-09-15 — Answer-cluster gap fill (4 new Straight Answers)
+
+- Authored four answer pages for the clusters the checklist lists but the
+  corpus lacked: `how-much-does-an-llm-app-cost` (cost drivers + measure-first),
+  `can-i-run-an-llm-locally` (privacy/latency/volume/quality tradeoffs, hedged
+  per rule 12 — no invented perf claims), `deploy-an-llm-app-to-production`
+  (eval gate + observability + controls + kill switch), and
+  `what-is-prompt-injection` (definition + architectural-defence framing).
+  All ten checklist clusters (roles, paths, tools, providers, costs, local
+  models, deployment, evaluation, security, career) are now covered.
+- Caught and fixed one wrong route: FDE lessons live under
+  `/roles/forward-deployed-engineer/...`, not `/learn/fde/...`.
+- Validation: fresh build 2,396 pages, `check:links` clean (0 dead),
+  `check:content` clean, `git diff --check` clean. Registry: 2,410 items,
+  answers 29 → 33.
+- Next: remaining ~220 unlinked duplicate-pair verdicts, the 44-item expand
+  queue, or the interview per-question weak-answer pass (56 questions).
+
 ### 2026-09-15 — Bare-path link repair + duplicate-pair cross-linking
 
-- Found a rendering bug class: 29 content files carried **bare `/learn/` paths**
+- Commit: `a2924bc`. Found a rendering bug class: 29 content files carried **bare `/learn/` paths**
   as literal text — 96 in `**Related:**` footers, 89 in body prose — which
   markdown renders as plain text, not links. Converted all to `[title](path)`
   links using the registry title map; also dropped the leading self-title

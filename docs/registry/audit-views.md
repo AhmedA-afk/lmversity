@@ -1,7 +1,7 @@
 # Content registry — audit views
 
-Generated 2026-09-15T08:14:25.764Z by `scripts/build-content-registry.mjs`.
-2406 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T08:23:36.294Z by `scripts/build-content-registry.mjs`.
+2410 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
@@ -10,9 +10,9 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 - quiz: 89
 - lab: 60
 - reference: 59
+- answer: 33
 - track: 33
 - project: 31
-- answer: 29
 - page: 21
 - role: 12
 - blog: 10
@@ -23,7 +23,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By status
 
-- live: 2380
+- live: 2384
 - coming: 26
 
 ## By search intent (heuristic)
@@ -33,9 +33,9 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 - build: 91
 - practice: 89
 - reference: 60
+- answer: 33
 - course-hub: 33
 - worked-example: 29
-- answer: 29
 - troubleshooting: 24
 - how-to: 15
 - role-path: 12
@@ -51,7 +51,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 - ai-engineer: 1637
 - beginner-engineer: 439
 - forward-deployed-engineer: 194
-- general: 118
+- general: 122
 - job-candidate: 7
 - developer: 1
 - ml-engineer: 1
@@ -263,21 +263,21 @@ and split always need a written human reason (see checklist).
 
 | disposition | items |
 |---|---:|
-| keep | 1887 |
+| keep | 1890 |
 | investigate | 449 |
-| expand | 70 |
+| expand | 71 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2189 | 1.89 | 25 | 184 | 1980 |
+| intentClarity | 2193 | 1.89 | 25 | 184 | 1984 |
 | correctnessSources | 43 | 1.28 | 0 | 31 | 12 |
-| completeness | 2304 | 1.65 | 44 | 713 | 1547 |
+| completeness | 2308 | 1.65 | 45 | 716 | 1547 |
 | prerequisiteFit | 2243 | 2.00 | 3 | 0 | 2240 |
-| handsOn | 2189 | 1.48 | 550 | 49 | 1590 |
-| explanationQuality | 2189 | 1.93 | 45 | 56 | 2088 |
-| metadata | 2189 | 1.85 | 25 | 281 | 1883 |
-| linking | 2100 | 1.37 | 493 | 340 | 1267 |
-| freshnessHealth | 2406 | 0.78 | 787 | 1356 | 263 |
+| handsOn | 2193 | 1.47 | 550 | 53 | 1590 |
+| explanationQuality | 2193 | 1.93 | 45 | 56 | 2092 |
+| metadata | 2193 | 1.85 | 25 | 284 | 1884 |
+| linking | 2104 | 1.37 | 493 | 340 | 1271 |
+| freshnessHealth | 2410 | 0.78 | 789 | 1358 | 263 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
@@ -518,9 +518,13 @@ and split always need a written human reason (see checklist).
 
 - /blog/agents-need-a-harness — Agents need a harness, not just a prompt
 
+#### expand: thin vs family median (361w vs ~1009w) (1)
+
+- /answers/deploy-an-llm-app-to-production — How do I deploy an LLM app to production?
+
 ## Duplicate candidates
 
-357 pairs by title/slug similarity (220 not already cross-linked) — candidates for the merge/redirect editorial pass, not verdicts. Pairs where one already links to the other are marked linked — often deliberate two-part lessons.
+364 pairs by title/slug similarity (223 not already cross-linked) — candidates for the merge/redirect editorial pass, not verdicts. Pairs where one already links to the other are marked linked — often deliberate two-part lessons.
 
 | item A | item B | jac | contain | stem | linked | scope |
 |---|---|---:|---:|---|---|---|
@@ -585,12 +589,12 @@ and split always need a written human reason (see checklist).
 | /learn/tools-function-calling/tool-calling-across-providers | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  |  | same track |
 | /learn/tools-function-calling/tool-calling-glossary-cheatsheet | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  | yes | same track |
 
-_… 297 more pairs in content-registry.json (`duplicates`)_
+_… 304 more pairs in content-registry.json (`duplicates`)_
 
 ## Freshness queues
 
-- periodic: 1356
-- pricing-sensitive: 334
+- periodic: 1358
+- pricing-sensitive: 336
 - release-sensitive: 283
 - durable: 263
 - certification-sensitive: 97
@@ -630,7 +634,7 @@ _… 297 more pairs in content-registry.json (`duplicates`)_
 - /learn/ai-literacy/fact-check-an-ai-answer-step-by-step — Fact-checking an AI answer, step by step
 - … 67 more in content-registry.json
 
-### pricing-sensitive (334)
+### pricing-sensitive (336)
 
 - /learn/agentic-ai/stopping-conditions-for-agents — Termination Conditions: Teaching an Agent When It's Done
 - /learn/ai-foundations/ai-systems/110-adversarial-search-minimax-and-game-values — Adversarial Search: Minimax and Game Values
@@ -662,7 +666,7 @@ _… 297 more pairs in content-registry.json (`duplicates`)_
 - /learn/ai-literacy/how-to-ask-ai-clearly — How to ask AI for exactly what you want
 - /learn/ai-literacy/is-ai-worth-it-for-this-task — Is AI worth it here? A cost-benefit walkthrough
 - /learn/ai-literacy/judging-and-verifying-quiz — Quiz: judging and verifying
-- … 304 more in content-registry.json
+- … 306 more in content-registry.json
 
 ### policy-sensitive (73)
 
@@ -910,14 +914,17 @@ Largest queue; full list in JSON. Vendor-signal sample:
 - /blog/why-there-is-no-certificate — Why there's no certificate here (520 words, updated 2026-09-08)
 - /blog/your-rag-problem-is-a-retrieval-problem — Your RAG problem is a retrieval problem (700 words, updated 2026-08-30)
 
-### answer (29)
+### answer (33)
 
 - /answers/ai-engineer-interview-questions — AI engineer interview questions: what is asked and how to prepare (1210 words, updated 2026-09-08)
 - /answers/ai-engineer-roadmap — AI engineer roadmap: the skills in order, and what to skip (2002 words, updated 2026-09-08)
 - /answers/ai-engineer-vs-ml-engineer — AI engineer vs ML engineer: the difference in what you do all day (977 words, updated 2026-09-08)
+- /answers/can-i-run-an-llm-locally — Can I run an LLM locally, and should I? (469 words, updated 2026-09-15)
+- /answers/deploy-an-llm-app-to-production — How do I deploy an LLM app to production? (361 words, updated 2026-09-15)
 - /answers/difference-between-ai-and-machine-learning — Difference between AI and machine learning (and deep learning) (1009 words, updated 2026-09-08)
 - /answers/free-forward-deployed-engineer-course — Free Forward Deployed Engineer course: from zero to FDE in nine months (2002 words, updated 2026-09-08)
 - /answers/how-do-llms-work — How do LLMs work? Tokens, attention, and next-token prediction in plain words (919 words, updated 2026-09-08)
+- /answers/how-much-does-an-llm-app-cost — How much does an LLM app cost to run? (458 words, updated 2026-09-15)
 - /answers/how-to-become-an-ai-engineer — How to become an AI engineer in 2026 (from zero, for free) (1977 words, updated 2026-09-08)
 - /answers/how-to-build-a-rag-app — How to build a RAG app, step by step (and where it breaks) (1234 words, updated 2026-09-08)
 - /answers/how-to-evaluate-an-llm-app — How to evaluate an LLM app: golden sets, judges, and release gates (1228 words, updated 2026-09-08)
@@ -939,6 +946,7 @@ Largest queue; full list in JSON. Vendor-signal sample:
 - /answers/what-is-an-ai-agent — What is an AI agent? A plain definition and the parts that matter (1053 words, updated 2026-09-08)
 - /answers/what-is-lmv — What is LMV? LMV is LMVersity, a free AI engineering curriculum (731 words, updated 2026-09-08)
 - /answers/what-is-mcp — What is MCP (Model Context Protocol)? (925 words, updated 2026-09-08)
+- /answers/what-is-prompt-injection — What is prompt injection? (406 words, updated 2026-09-15)
 - /answers/what-is-rag — What is RAG (retrieval-augmented generation)? (926 words, updated 2026-09-08)
 - /answers/what-skills-does-an-ai-engineer-need — What skills does an AI engineer need? The honest list (1251 words, updated 2026-09-08)
 
