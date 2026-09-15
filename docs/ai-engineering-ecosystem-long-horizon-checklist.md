@@ -2260,13 +2260,13 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-16 — Phase 7: AI Automation for Operations (1 candidate row)
 
-- Commit: `PENDING`. Status: complete.
+- Commit: `7ba0edd`. Status: complete.
 - Scope: `ai-automation-ops` track — 8 lessons (deterministic→agentic
   landscape, where-AI-belongs judgment test, n8n/Zapier/Make/Pipedream
   comparison, four validated LLM-step patterns, approval gates + act
   boundary, auditability/run-history/idempotency, drift + maintenance,
   invoice-triage design lab). Registered n:32, group Building.
-- Files: 7 new lessons under `src/content/lessons/ai-automation-ops/`;
+- Files: 8 new lessons under `src/content/lessons/ai-automation-ops/`;
   `curriculum.ts`; `sources.json` (+4 platform doc records).
 - Sources checked: docs.n8n.io, docs.zapier.com, pipedream.com/docs —
   HTTP 200; make.com help 403 bot-blocked (retained with caveat).
