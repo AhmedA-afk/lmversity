@@ -840,6 +840,58 @@ function scoreItem(it) {
 }
 for (const it of items) scoreItem(it);
 
+// ---------------------------------------------------------------------------
+// duplicate candidates — fuzzy title/slug similarity so the editorial pass can
+// decide merge/redirect with evidence. Candidates only; nothing auto-decided.
+
+const STOPWORDS = new Set('a an and are as at be by for from how in is it its of on or that the this to vs what when where which who why with your'.split(' '));
+const titleToks = (t) => new Set((t ?? '').toLowerCase().replace(/['’]/g, '').replace(/[^a-z0-9]+/g, ' ').split(/\s+/).filter((w) => w.length > 1 && !STOPWORDS.has(w)));
+const dupScored = items.filter((i) => i.title && ['lessons', 'fde', 'answers', 'guides', 'blog'].includes(i.collection));
+const tokenIndex = new Map();
+const itemToks = new Map();
+dupScored.forEach((it, idx) => {
+  const toks = titleToks(it.title);
+  itemToks.set(idx, toks);
+  for (const w of toks) {
+    if (!tokenIndex.has(w)) tokenIndex.set(w, []);
+    tokenIndex.get(w).push(idx);
+  }
+});
+const pairSeen = new Set();
+const duplicates = [];
+for (const idxList of tokenIndex.values()) {
+  if (idxList.length < 2) continue;
+  for (let a = 0; a < idxList.length; a++) {
+    for (let b = a + 1; b < idxList.length; b++) {
+      const i = idxList[a], j = idxList[b];
+      const key = i < j ? `${i}:${j}` : `${j}:${i}`;
+      if (pairSeen.has(key)) continue;
+      pairSeen.add(key);
+      const A = dupScored[i], B = dupScored[j];
+      const ta = itemToks.get(i), tb = itemToks.get(j);
+      const inter = [...ta].filter((w) => tb.has(w)).length;
+      if (inter < 2) continue;
+      const union = ta.size + tb.size - inter;
+      const jaccard = inter / union;
+      const containment = inter / Math.min(ta.size, tb.size);
+      // slug-stem containment: cosine-similarity ⊂ cosine-similarity-angular-distance-…
+      const sa = (A.slug ?? '').split('/').pop(), sb = (B.slug ?? '').split('/').pop();
+      const slugStem = sa !== sb && sa.length >= 8 && (sb.startsWith(sa + '-') || sa.startsWith(sb + '-'));
+      if (jaccard >= 0.5 || containment >= 0.7 || slugStem) {
+        const linked = (A.internalLinks ?? []).includes(B.route) || (B.internalLinks ?? []).includes(A.route);
+        duplicates.push({
+          a: { route: A.route, slug: A.slug, title: A.title, track: A.track ?? A.collection },
+          b: { route: B.route, slug: B.slug, title: B.title, track: B.track ?? B.collection },
+          jaccard: +jaccard.toFixed(2), containment: +containment.toFixed(2),
+          slugStem: Boolean(slugStem), alreadyLinked: linked,
+          sameTrack: (A.track ?? A.collection) === (B.track ?? B.collection),
+        });
+      }
+    }
+  }
+}
+duplicates.sort((x, y) => y.containment - x.containment || y.jaccard - x.jaccard);
+
 const byFamily = {}, byTrack = {}, byFresh = {}, byStatus = {}, byKind = {};
 for (const it of items) {
   byFamily[it.family] = (byFamily[it.family] ?? 0) + 1;
@@ -858,8 +910,10 @@ const registry = {
     counts: { byFamily, byStatus, byKind, byTrack, byFreshness: byFresh },
     analyticsNote: 'Analytics fields are null until Search Console / analytics exports are wired in.',
     heuristicNote: 'searchIntent, primaryAudience and freshnessClass are heuristic; freshnessSignals records what fired so a reviewer can overrule.',
+    duplicatesNote: 'duplicate candidates are fuzzy title/slug similarity only — the editorial pass decides keep/merge/redirect with a written reason.',
   },
   items,
+  duplicates,
 };
 
 mkdirSync(OUT_DIR, { recursive: true });
@@ -947,6 +1001,18 @@ for (const [why, list] of Object.entries(dispGroups).sort((a, b) => b[1].length 
   if (list.length > 40) md.push(`- … ${list.length - 40} more in content-registry.json`);
   md.push('');
 }
+md.push('## Duplicate candidates');
+md.push('');
+const unlinked = duplicates.filter((d) => !d.alreadyLinked);
+md.push(`${duplicates.length} pairs by title/slug similarity (${unlinked.length} not already cross-linked) — candidates for the merge/redirect editorial pass, not verdicts. Pairs where one already links to the other are marked linked — often deliberate two-part lessons.`);
+md.push('');
+md.push('| item A | item B | jac | contain | stem | linked | scope |');
+md.push('|---|---|---:|---:|---|---|---|');
+for (const d of duplicates.slice(0, 60)) {
+  md.push(`| ${d.a.route ?? d.a.slug} | ${d.b.route ?? d.b.slug} | ${d.jaccard} | ${d.containment} | ${d.slugStem ? 'yes' : ''} | ${d.alreadyLinked ? 'yes' : ''} | ${d.sameTrack ? 'same track' : `${d.a.track} × ${d.b.track}`} |`);
+}
+if (duplicates.length > 60) md.push(`\n_… ${duplicates.length - 60} more pairs in content-registry.json (\`duplicates\`)_`);
+md.push('');
 md.push('## Freshness queues');
 md.push('');
 for (const [c, n] of Object.entries(byFresh).sort((a, b) => b[1] - a[1])) md.push(`- ${c}: ${n}`);

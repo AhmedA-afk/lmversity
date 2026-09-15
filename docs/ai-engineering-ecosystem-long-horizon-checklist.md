@@ -241,6 +241,8 @@ consolidation into a parent track, or a clearer curated-path role.
       projects, and a capstone where appropriate.
 - [ ] Verify repeated concepts link to a canonical explanation.
 - [ ] Identify duplicate or conflicting explanations across tracks.
+      *(candidate detection done — `registry.duplicates`: 357 fuzzy title/slug pairs,
+      234 not already cross-linked; merge/redirect verdicts need the editorial pass)*
 - [ ] Identify abrupt jumps, orphan modules, missing bridges, and dead-end final lessons.
 - [ ] Identify pages whose titles promise more than their bodies deliver.
 - [ ] Identify code or vendor instructions that no longer run.
@@ -1574,7 +1576,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-15 — Mechanical scoring pass over the registry
 
-- Phase 0 "Score every item". `scripts/build-content-registry.mjs` now scores
+- Commit: `e8b7fd0`. Phase 0 "Score every item". `scripts/build-content-registry.mjs` now scores
   every registry item on 9 of 12 checklist dimensions (0/1/2 scale, `null` =
   editorial judgement required) and assigns a disposition:
   `intentClarity`, `correctnessSources` (source presence only — correctness
@@ -1599,6 +1601,30 @@ validation, deployment status, measured result when available, blockers, and nex
 - Next batch: work the investigate queue — wire in-body curriculum links into
   the 653 island lessons (batchable by track; mechanical insertion at
   concept-mention points, same approach as the guides pass).
+
+### 2026-09-15 — Duplicate-candidate detection across content collections
+
+- Phase 0 "Identify duplicate or conflicting explanations". The registry now
+  emits a `duplicates` array: fuzzy title-token similarity (Jaccard ≥0.5 or
+  containment ≥0.7) plus slug-stem containment (`cosine-similarity` ⊂
+  `cosine-similarity-angular-distance-embedding-retrieval`), scoped to lessons,
+  FDE, answers, guides, and blog.
+- Measured result: **357 candidate pairs**, of which 123 are already
+  cross-linked (deliberate two-part lessons like `rate-limits-and-retry` ↔
+  `rate-limits-and-retry-strategies`, marked `alreadyLinked`) and **234 are
+  unlinked** — the actual editorial review queue. Cross-track pairs surface
+  real overlaps, e.g. `genai-app-dev/function-calling-across-providers` ×
+  `tools-function-calling/tool-calling-across-providers`.
+- Why before the island-linking batch: linking 653 zero-link lessons to
+  sibling concepts requires canonical targets; the duplicate map identifies
+  which of two near-identical pages should win before links point at either.
+- Audit view: `docs/registry/audit-views.md` gained a "Duplicate candidates"
+  table (top 60, full list in JSON).
+- Validation: `npm run registry` clean; `npm run check:content` clean;
+  `git diff --check` clean.
+- Next batch: start the island-linking pass on one track — `machine-learning`
+  (162 islands) — using curriculum neighbours and duplicate-free canonical
+  targets; then scale per track.
 
 ### 2026-09-14 — Master ecosystem backlog created
 
