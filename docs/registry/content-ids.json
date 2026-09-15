@@ -1,7 +1,7 @@
 {
  "version": 1,
  "next": {
-  "les": 2085,
+  "les": 2091,
   "que": 7,
   "sce": 6,
   "blo": 10,
@@ -9589,6 +9589,30 @@
   },
   "data:track/local-inference": {
    "id": "trk-0024"
+  },
+  "lessons/local-inference/huggingface-tgi-and-tei.md": {
+   "id": "les-2086",
+   "fp": "efb1909b00a392ad96fef2b8a021c5e5b802271f"
+  },
+  "lessons/local-inference/huggingface-transformers-pipelines.md": {
+   "id": "les-2087",
+   "fp": "3e3bb53ba0714a92bb1cb565c6e4078d1fa134eb"
+  },
+  "lessons/local-inference/lm-studio-local-server.md": {
+   "id": "les-2088",
+   "fp": "e72b81c84e8c025da87404aace4c22c5c061a77b"
+  },
+  "lessons/local-inference/mlx-lm-on-apple-silicon.md": {
+   "id": "les-2089",
+   "fp": "0d87ce88f63f1fa81618b3b9317937c9dd57b2f9"
+  },
+  "lessons/local-inference/onnx-runtime-on-device-inference.md": {
+   "id": "les-2090",
+   "fp": "7e4774bd3f90735416e253105ae689d8cc13909e"
+  },
+  "lessons/local-inference/sglang-serving-and-structured-generation.md": {
+   "id": "les-2091",
+   "fp": "21598cffe3e40fa35c307333acf6a74a03ea04a8"
   }
  },
  "retired": {

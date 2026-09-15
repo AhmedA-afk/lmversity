@@ -190,6 +190,78 @@
     "claims": ["Hosted inference endpoint behavior"],
     "status": "current"
   },
+  "hf-transformers-docs": {
+    "title": "Transformers documentation",
+    "publisher": "Hugging Face",
+    "accessedAt": "2026-09-15",
+    "url": "https://huggingface.co/docs/transformers/index",
+    "type": "official-docs",
+    "claims": ["pipeline() task API", "AutoModel/AutoTokenizer loading", "device_map hardware placement"],
+    "status": "current"
+  },
+  "hf-tgi-docs": {
+    "title": "Text Generation Inference documentation",
+    "publisher": "Hugging Face",
+    "accessedAt": "2026-09-15",
+    "url": "https://huggingface.co/docs/text-generation-inference/index",
+    "type": "official-docs",
+    "claims": ["TGI serving, batching, streaming", "supported architectures", "OpenAI-compatible API"],
+    "status": "current"
+  },
+  "hf-tei-docs": {
+    "title": "Text Embeddings Inference documentation",
+    "publisher": "Hugging Face",
+    "accessedAt": "2026-09-15",
+    "url": "https://huggingface.co/docs/text-embeddings-inference/index",
+    "type": "official-docs",
+    "claims": ["TEI embed/rerank/classify endpoints"],
+    "status": "current"
+  },
+  "lmstudio-docs": {
+    "title": "LM Studio documentation",
+    "publisher": "LM Studio",
+    "accessedAt": "2026-09-15",
+    "url": "https://lmstudio.ai/docs",
+    "type": "official-docs",
+    "claims": ["LM Studio local server", "OpenAI-compatible endpoints", "lms CLI"],
+    "status": "current"
+  },
+  "sglang-docs": {
+    "title": "SGLang documentation",
+    "publisher": "SGLang",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.sglang.ai",
+    "type": "official-docs",
+    "claims": ["SGLang serving", "RadixAttention prefix reuse", "constrained/structured generation"],
+    "status": "current"
+  },
+  "mlx-docs": {
+    "title": "MLX documentation",
+    "publisher": "Apple Machine Learning Research",
+    "accessedAt": "2026-09-15",
+    "url": "https://ml-explore.github.io/mlx/build/html/index.html",
+    "type": "official-docs",
+    "claims": ["MLX unified-memory array framework", "quantization and GGUF export ops"],
+    "status": "current"
+  },
+  "mlx-lm-repo": {
+    "title": "mlx-lm repository",
+    "publisher": "Apple Machine Learning Research",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/ml-explore/mlx-lm",
+    "type": "repo",
+    "claims": ["mlx_lm.generate/server commands", "mlx-community model format"],
+    "status": "current"
+  },
+  "onnxruntime-docs": {
+    "title": "ONNX Runtime documentation",
+    "publisher": "Microsoft",
+    "accessedAt": "2026-09-15",
+    "url": "https://onnxruntime.ai/docs/",
+    "type": "official-docs",
+    "claims": ["InferenceSession API", "execution providers", "ONNX quantization and graph optimization"],
+    "status": "current"
+  },
   "ollama-docs": {
     "title": "Ollama tool-calling and embedding API docs",
     "publisher": "Ollama",

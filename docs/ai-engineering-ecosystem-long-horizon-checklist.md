@@ -899,16 +899,28 @@ consolidation into a parent track, or a clearer curated-path role.
       *(2025-12: `ollama-first-run` covers install/discovery/pull/run/API/streaming/
       troubleshooting; `ollama-modelfiles-and-apis` covers Modelfiles, structured output,
       embeddings, tool calling, vision; hardware use in `hardware-sizing-measurement-guide`)*
-- [ ] LM Studio local serving and OpenAI-compatible APIs after official verification.
+- [x] LM Studio local serving and OpenAI-compatible APIs after official verification.
+      *(2026-09: `lm-studio-local-server` — verified against lmstudio.ai/docs;
+      GUI workflow, /v1 endpoints, lms CLI, honest limits vs Ollama)*
 - [x] llama.cpp build, quantization formats, runtime flags, server mode, and measurement.
       *(2025-12: `llama-cpp-build-quantize-serve`)*
 - [x] vLLM serving, batching, memory, OpenAI-compatible APIs, and production deployment.
       *(2025-12: `vllm-production-serving`)*
-- [ ] SGLang serving and structured generation after demand review.
-- [ ] Hugging Face Transformers and pipelines.
-- [ ] Hugging Face Text Generation Inference and Text Embeddings Inference.
-- [ ] MLX and MLX-LM for supported Apple Silicon workflows.
-- [ ] ONNX Runtime and on-device inference where relevant.
+- [x] SGLang serving and structured generation after demand review.
+      *(2026-09: `sglang-serving-and-structured-generation` — RadixAttention,
+      constrained decoding, when-to-pick vs vLLM; verified against docs.sglang.ai)*
+- [x] Hugging Face Transformers and pipelines.
+      *(2026-09: `huggingface-transformers-pipelines` — pipeline() + AutoModel
+      + device_map, and what it's not for)*
+- [x] Hugging Face Text Generation Inference and Text Embeddings Inference.
+      *(2026-09: `huggingface-tgi-and-tei` — continuous batching, SSE streaming,
+      supported-architecture seams, honest TGI-vs-vLLM comparison)*
+- [x] MLX and MLX-LM for supported Apple Silicon workflows.
+      *(2026-09: `mlx-lm-on-apple-silicon` — unified memory, mlx_lm.generate/
+      server, mlx-community, portability limit)*
+- [x] ONNX Runtime and on-device inference where relevant.
+      *(2026-09: `onnx-runtime-on-device-inference` — ONNX export, InferenceSession,
+      execution providers, embedded-vs-served distinction)*
 - [x] Quantization lab covering GGUF and other supported formats with measured tradeoffs.
       *(2025-12: `quantization-formats-and-tradeoffs-lab` — measure-then-choose method, no copied numbers)*
 - [x] Hardware-sizing guide based on reproducible measurements, not copied estimates.
@@ -2621,6 +2633,27 @@ validation, deployment status, measured result when available, blockers, and nex
   `check:links` 0 dead (5,221 routes); registry 2,410 items.
 - Next batch: remaining local-inference rows (LM Studio/SGLang/MLX/ONNX/HF),
   then agent frameworks.
+
+### 2026-09-15 — Local-inference section complete (all 14 rows)
+
+- Commit: `44a3c2c`. Six more lessons complete the Local models section:
+  `lm-studio-local-server`, `sglang-serving-and-structured-generation`,
+  `mlx-lm-on-apple-silicon`, `onnx-runtime-on-device-inference`,
+  `huggingface-transformers-pipelines`, `huggingface-tgi-and-tei`. Track now
+  14 lessons with prereq ordering: simple runtimes → engines → dev library →
+  serving → labs/sizing/privacy.
+- Checklist: all 14 Phase 6B Local-models rows now ticked. Sources verified
+  before citing — 8 new source records (lmstudio.ai/docs, docs.sglang.ai,
+  MLX docs + mlx-lm repo, onnxruntime.ai/docs, HF transformers/TGI/TEI docs),
+  all HTTP-verified during authoring.
+- Editorial consistency held: every runtime lesson answers "when this vs the
+  alternatives" (LM Studio vs Ollama vs vLLM; TGI vs vLLM; MLX portability
+  limit; ONNX embedded-vs-served), and comparisons defer to the measure-it-
+  yourself lessons rather than repeating vendor benchmarks.
+- Validation: `check:content` clean (2,091); build 2,427 pages;
+  `check:links` 0 dead (5,233 routes); registry 2,416 items.
+- Next batch: Phase 6B agent/application frameworks (raw-SDK baseline,
+  Agents SDK, LangGraph, LlamaIndex, PydanticAI, etc.).
 
 ### 2026-09-14 — Master ecosystem backlog created
 

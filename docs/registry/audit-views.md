@@ -1,12 +1,12 @@
 # Content registry — audit views
 
-Generated 2026-09-15T13:36:03.476Z by `scripts/build-content-registry.mjs`.
-2410 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T13:42:00.632Z by `scripts/build-content-registry.mjs`.
+2416 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
 
-- lesson: 2033
+- lesson: 2039
 - quiz: 89
 - lab: 66
 - reference: 59
@@ -23,11 +23,11 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By status
 
-- live: 2410
+- live: 2416
 
 ## By search intent (heuristic)
 
-- concept: 1864
+- concept: 1870
 - comparison: 107
 - build: 97
 - practice: 89
@@ -47,7 +47,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By primary audience (heuristic)
 
-- ai-engineer: 1634
+- ai-engineer: 1640
 - beginner-engineer: 439
 - forward-deployed-engineer: 194
 - general: 125
@@ -90,7 +90,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 | production | 28 | 28 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 54% | 100% | 4% | 520 | yes | — |
 | fine-tuning | 26 | 21 | 0 | 0 | 5 | 0 | 0 | 0 | 0 | 27% | 0% | 8% | 557 | — | — |
 | responsible-ai | 7 | 6 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 14% | 0% | 14% | 392 | — | — |
-| local-inference | 8 | 7 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 63% | 0% | 13% | 456 | — | — |
+| local-inference | 14 | 13 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 79% | 0% | 7% | 419 | — | — |
 
 ## Track gap briefs
 
@@ -253,7 +253,7 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - 1 duplicate-candidate pairs in track
 - promise gap: no live node title covers "Safety"; "building AI you can defend"
 
-### local-inference — 8 files, 0 modules — starts: "What 'running a model locally' actually means"
+### local-inference — 14 files, 0 modules — starts: "What 'running a model locally' actually means"
 
 - dead-end finish: last live lesson is the-local-privacy-boundary (concept)
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
@@ -266,21 +266,21 @@ and split always need a written human reason (see checklist).
 
 | disposition | items |
 |---|---:|
-| keep | 2023 |
+| keep | 2029 |
 | investigate | 382 |
 | expand | 5 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2187 | 1.92 | 0 | 185 | 2002 |
+| intentClarity | 2193 | 1.92 | 0 | 186 | 2007 |
 | correctnessSources | 45 | 1.27 | 0 | 33 | 12 |
-| completeness | 2333 | 1.65 | 39 | 738 | 1556 |
-| prerequisiteFit | 2268 | 2.00 | 3 | 0 | 2265 |
-| handsOn | 2187 | 1.49 | 535 | 53 | 1599 |
-| explanationQuality | 2187 | 1.96 | 20 | 56 | 2111 |
-| metadata | 2187 | 1.87 | 0 | 291 | 1896 |
-| linking | 2098 | 1.48 | 382 | 321 | 1395 |
-| freshnessHealth | 2410 | 0.78 | 805 | 1342 | 263 |
+| completeness | 2339 | 1.65 | 39 | 743 | 1557 |
+| prerequisiteFit | 2274 | 2.00 | 3 | 0 | 2271 |
+| handsOn | 2193 | 1.49 | 535 | 53 | 1605 |
+| explanationQuality | 2193 | 1.96 | 20 | 56 | 2117 |
+| metadata | 2193 | 1.86 | 0 | 297 | 1896 |
+| linking | 2104 | 1.48 | 382 | 321 | 1401 |
+| freshnessHealth | 2416 | 0.77 | 811 | 1342 | 263 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
@@ -331,15 +331,15 @@ and split always need a written human reason (see checklist).
 - /learn/ai-foundations/reliable-ai/221-contestability-appeals-and-recource — Contestability, Appeals, and Recourse
 - … 342 more in content-registry.json
 
-#### expand: thin vs family median (238w vs ~776w) (1)
+#### expand: thin vs family median (238w vs ~775w) (1)
 
 - /learn/ai-foundations/choosing-a-model — Choosing a model in 2026
 
-#### expand: thin vs family median (277w vs ~776w) (1)
+#### expand: thin vs family median (277w vs ~775w) (1)
 
 - /learn/llm-foundations/next-token-prediction — Next-Token Prediction: The One Objective
 
-#### expand: thin vs family median (269w vs ~776w) (1)
+#### expand: thin vs family median (269w vs ~775w) (1)
 
 - /learn/llm-foundations/tokenization-explained — Tokenization: How Text Becomes Tokens
 
@@ -430,7 +430,7 @@ _… 277 more pairs in content-registry.json (`duplicates`)_
 
 ## Sourcing review flags
 
-160 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
+166 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
 
 | item | flags |
 |---|---|
@@ -495,7 +495,7 @@ _… 277 more pairs in content-registry.json (`duplicates`)_
 | /learn/hallucinations/intrinsic-vs-extrinsic-hallucination | 7 numeric claims with no sources section or external link |
 | /learn/hallucinations/latency-cost-reliability-tradeoffs | 15 numeric claims with no sources section or external link |
 
-_… 100 more in content-registry.json (`sourcingFlags`)_
+_… 106 more in content-registry.json (`sourcingFlags`)_
 
 ## Freshness queues
 
@@ -503,7 +503,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 
 - periodic: 1342
 - pricing-sensitive: 337
-- release-sensitive: 293
+- release-sensitive: 299
 - durable: 263
 - certification-sensitive: 99
 - policy-sensitive: 76
@@ -610,15 +610,21 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/machine-learning/public-data-projects/bank-marketing-project — Public-data project: Bank Marketing decision support *(verified 2026-08-30)*
 - … 46 more in content-registry.json
 
-### release-sensitive (293) — oldest-verified first
+### release-sensitive (299) — oldest-verified first
 
 Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-literacy/meet-skills-connectors-and-agents — MCP *(verified undated)*
 - /learn/local-inference/hardware-sizing-measurement-guide — llama.cpp, Ollama, vLLM *(verified undated)*
+- /learn/local-inference/huggingface-tgi-and-tei — Hugging Face, OpenAI, vLLM, llama.cpp *(verified undated)*
+- /learn/local-inference/huggingface-transformers-pipelines — Hugging Face, vLLM, llama.cpp, Ollama *(verified undated)*
 - /learn/local-inference/llama-cpp-build-quantize-serve — llama.cpp, Ollama, LM Studio, OpenAI *(verified undated)*
+- /learn/local-inference/lm-studio-local-server — LM Studio, OpenAI, Ollama, Hugging Face, vLLM, MLX, llama.cpp *(verified undated)*
+- /learn/local-inference/mlx-lm-on-apple-silicon — MLX, OpenAI, Hugging Face, Ollama, vLLM, llama.cpp, LM Studio, ONNX *(verified undated)*
 - /learn/local-inference/ollama-first-run — Ollama, OpenAI *(verified undated)*
 - /learn/local-inference/ollama-modelfiles-and-apis — Ollama, OpenAI *(verified undated)*
+- /learn/local-inference/onnx-runtime-on-device-inference — ONNX, llama.cpp, Ollama, vLLM *(verified undated)*
 - /learn/local-inference/quantization-formats-and-tradeoffs-lab — llama.cpp *(verified undated)*
+- /learn/local-inference/sglang-serving-and-structured-generation — SGLang, vLLM, OpenAI, llama.cpp, Ollama *(verified undated)*
 - /learn/local-inference/vllm-production-serving — vLLM, OpenAI, Ollama, llama.cpp, Llama *(verified undated)*
 - /learn/local-inference/what-local-inference-actually-means — Ollama *(verified undated)*
 - /learn/python-data-apis/observability-for-ai-services — OpenTelemetry *(verified undated)*
@@ -637,20 +643,14 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agentic-ai/agent-orchestration-frameworks — LangGraph, CrewAI, AutoGen, OpenAI, Claude *(verified 2026-08-30)*
 - /learn/agentic-ai/agent-to-agent-protocols — MCP *(verified 2026-08-30)*
 - /learn/agentic-ai/choosing-an-agent-framework — LangGraph, CrewAI, AutoGen *(verified 2026-08-30)*
-- /learn/agentic-ai/coding-agent-architecture — Claude *(verified 2026-08-30)*
-- /learn/agentic-ai/hierarchical-task-decomposition — LangGraph *(verified 2026-08-30)*
-- /learn/agentic-ai/persistent-agent-memory — Claude *(verified 2026-08-30)*
-- /learn/ai-foundations/foundation-models-explained — GPT-4, Claude, Gemini *(verified 2026-08-30)*
-- /learn/ai-foundations/how-llms-work-end-to-end-example — GPT-2 *(verified 2026-08-30)*
-- /learn/ai-foundations/interpretability-black-box-problem — Anthropic, Claude *(verified 2026-08-30)*
-- … 263 more
+- … 269 more
 
 ## Missing-data queues
 
 ### no summary/meta description (0)
 
 
-### no published or updated date (25)
+### no published or updated date (31)
 
 - /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access
 - /learn/agentic-ai/agent-task-contracts — Write a task contract for an agent
@@ -660,10 +660,16 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/llm-foundations/inspect-a-real-tokenizer-lab — Lab: inspect a real tokenizer
 - /learn/llm-foundations/read-a-model-card-lab — Lab: read a model card like an engineer
 - /learn/local-inference/hardware-sizing-measurement-guide — Size hardware for local inference by measuring it
+- /learn/local-inference/huggingface-tgi-and-tei — Hugging Face TGI and TEI: the ecosystem's own serving layer
+- /learn/local-inference/huggingface-transformers-pipelines — Hugging Face Transformers: pipelines and AutoModel
 - /learn/local-inference/llama-cpp-build-quantize-serve — llama.cpp: build, quantize, and serve
+- /learn/local-inference/lm-studio-local-server — LM Studio: the GUI path to a local OpenAI-compatible server
+- /learn/local-inference/mlx-lm-on-apple-silicon — MLX and mlx-lm on Apple Silicon
 - /learn/local-inference/ollama-first-run — Ollama: install, pull, run, and the first API call
 - /learn/local-inference/ollama-modelfiles-and-apis — Ollama Modelfiles, embeddings, and tool calling
+- /learn/local-inference/onnx-runtime-on-device-inference — ONNX Runtime: inference that embeds in the app
 - /learn/local-inference/quantization-formats-and-tradeoffs-lab — Lab: pick a quantization level by measuring the tradeoff
+- /learn/local-inference/sglang-serving-and-structured-generation — SGLang: serving with RadixAttention and constrained generation
 - /learn/local-inference/the-local-privacy-boundary — The local privacy boundary
 - /learn/local-inference/vllm-production-serving — vLLM: serving a model to real traffic
 - /learn/local-inference/what-local-inference-actually-means — What 'running a model locally' actually means
@@ -734,16 +740,22 @@ Largest queue; full list in JSON. Oldest-verified sample:
 ### lesson files with status coming (0)
 
 
-### release-sensitive, no date at all (18)
+### release-sensitive, no date at all (24)
 
 - /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access
 - /learn/ai-literacy/meet-skills-connectors-and-agents — Meet skills, connectors, and agents — safely
 - /learn/llm-foundations/read-a-model-card-lab — Lab: read a model card like an engineer
 - /learn/local-inference/hardware-sizing-measurement-guide — Size hardware for local inference by measuring it
+- /learn/local-inference/huggingface-tgi-and-tei — Hugging Face TGI and TEI: the ecosystem's own serving layer
+- /learn/local-inference/huggingface-transformers-pipelines — Hugging Face Transformers: pipelines and AutoModel
 - /learn/local-inference/llama-cpp-build-quantize-serve — llama.cpp: build, quantize, and serve
+- /learn/local-inference/lm-studio-local-server — LM Studio: the GUI path to a local OpenAI-compatible server
+- /learn/local-inference/mlx-lm-on-apple-silicon — MLX and mlx-lm on Apple Silicon
 - /learn/local-inference/ollama-first-run — Ollama: install, pull, run, and the first API call
 - /learn/local-inference/ollama-modelfiles-and-apis — Ollama Modelfiles, embeddings, and tool calling
+- /learn/local-inference/onnx-runtime-on-device-inference — ONNX Runtime: inference that embeds in the app
 - /learn/local-inference/quantization-formats-and-tradeoffs-lab — Lab: pick a quantization level by measuring the tradeoff
+- /learn/local-inference/sglang-serving-and-structured-generation — SGLang: serving with RadixAttention and constrained generation
 - /learn/local-inference/the-local-privacy-boundary — The local privacy boundary
 - /learn/local-inference/vllm-production-serving — vLLM: serving a model to real traffic
 - /learn/local-inference/what-local-inference-actually-means — What 'running a model locally' actually means

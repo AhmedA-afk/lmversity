@@ -1,12 +1,12 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T13:36:03.476Z",
+  "generatedAt": "2026-09-15T13:42:00.632Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2410,
+  "itemCount": 2416,
   "counts": {
    "byFamily": {
-    "lesson": 2033,
+    "lesson": 2039,
     "project": 31,
     "quiz": 89,
     "reference": 59,
@@ -22,10 +22,10 @@
     "glossary": 1
    },
    "byStatus": {
-    "live": 2410
+    "live": 2416
    },
    "byKind": {
-    "concept": 1734,
+    "concept": 1740,
     "comparison": 102,
     "worked-example": 29,
     "capstone": 31,
@@ -70,7 +70,7 @@
     "hallucinations": 134,
     "harness-design": 27,
     "llm-foundations": 134,
-    "local-inference": 9,
+    "local-inference": 15,
     "machine-learning": 210,
     "maths-foundations": 194,
     "mcp": 59,
@@ -97,7 +97,7 @@
     "fde": 193
    },
    "byFreshness": {
-    "release-sensitive": 293,
+    "release-sensitive": 299,
     "periodic": 1342,
     "certification-sensitive": 99,
     "policy-sensitive": 76,
@@ -8911,7 +8911,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (238w vs ~776w)",
+   "dispositionReason": "thin vs family median (238w vs ~775w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -75288,7 +75288,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -86578,7 +86578,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (277w vs ~776w)",
+   "dispositionReason": "thin vs family median (277w vs ~775w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -90296,7 +90296,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (269w vs ~776w)",
+   "dispositionReason": "thin vs family median (269w vs ~775w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -92662,6 +92662,183 @@
    }
   },
   {
+   "id": "les-2086",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Hugging Face TGI and TEI: the ecosystem's own serving layer",
+   "slug": "local-inference/huggingface-tgi-and-tei",
+   "route": "/learn/local-inference/huggingface-tgi-and-tei",
+   "collection": "lessons",
+   "path": "src/content/lessons/local-inference/huggingface-tgi-and-tei.md",
+   "track": "local-inference",
+   "module": null,
+   "status": "live",
+   "summary": "Text Generation Inference and Text Embeddings Inference are Hugging Face's production servers — continuous batching, streaming, and OpenAI-compatible surfaces for generation, embeddings, and reranking.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 385,
+   "headings": [
+    "The short answer",
+    "What TGI gives you",
+    "TGI versus vLLM",
+    "Where the seams are",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/local-inference/hardware-sizing-measurement-guide",
+    "/learn/local-inference/huggingface-transformers-pipelines",
+    "/learn/local-inference/llama-cpp-build-quantize-serve",
+    "/learn/local-inference/vllm-production-serving",
+    "/learn/rag/ingestion-chunking-and-retrieval"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 6,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Text Generation Inference and Text Embeddings Inference are Hugging Face's production servers — continuous batching, streaming, and OpenAI-compatible surfaces for generation, embeddings, and reranking.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/local-inference/sglang-serving-and-structured-generation",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Hugging Face, OpenAI, vLLM, llama.cpp"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 1,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2087",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Hugging Face Transformers: pipelines and AutoModel",
+   "slug": "local-inference/huggingface-transformers-pipelines",
+   "route": "/learn/local-inference/huggingface-transformers-pipelines",
+   "collection": "lessons",
+   "path": "src/content/lessons/local-inference/huggingface-transformers-pipelines.md",
+   "track": "local-inference",
+   "module": null,
+   "status": "live",
+   "summary": "The transformers library is the reference implementation every runtime descends from — pipeline() for quick tasks, AutoModel/AutoTokenizer for control, and device_map for hardware placement.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 325,
+   "headings": [
+    "The short answer",
+    "The two levels",
+    "What it's for",
+    "What it's not for",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/llm-foundations/read-a-model-card-lab",
+    "/learn/local-inference/huggingface-tgi-and-tei",
+    "/learn/local-inference/llama-cpp-build-quantize-serve",
+    "/learn/local-inference/ollama-first-run",
+    "/learn/local-inference/vllm-production-serving",
+    "/learn/rag/ingestion-chunking-and-retrieval"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 6,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "The transformers library is the reference implementation every runtime descends from — pipeline() for quick tasks, AutoModel/AutoTokenizer for control, and device_map for hardware placement.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/local-inference/vllm-production-serving",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Hugging Face, vLLM, llama.cpp, Ollama"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-2079",
    "family": "lesson",
    "kind": "concept",
@@ -92725,7 +92902,7 @@
    "promisedOutcome": "llama.cpp is the inference engine under most local-model tooling — build it, understand GGUF quantization formats, run the server, and measure what you get.",
    "jobToBeDone": null,
    "prerequisite": null,
-   "nextAction": "/learn/local-inference/vllm-production-serving",
+   "nextAction": "/learn/local-inference/mlx-lm-on-apple-silicon",
    "practiceType": "none",
    "freshnessClass": "release-sensitive",
    "freshnessSignals": [
@@ -92746,6 +92923,181 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2088",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "LM Studio: the GUI path to a local OpenAI-compatible server",
+   "slug": "local-inference/lm-studio-local-server",
+   "route": "/learn/local-inference/lm-studio-local-server",
+   "collection": "lessons",
+   "path": "src/content/lessons/local-inference/lm-studio-local-server.md",
+   "track": "local-inference",
+   "module": null,
+   "status": "live",
+   "summary": "LM Studio trades Ollama's terminal workflow for a desktop app — model discovery, download, and a local OpenAI-compatible server behind a GUI, plus an lms CLI for scripting.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 419,
+   "headings": [
+    "The short answer",
+    "What the workflow looks like",
+    "Where it fits versus Ollama",
+    "The honest limits",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/local-inference/mlx-lm-on-apple-silicon",
+    "/learn/local-inference/ollama-first-run",
+    "/learn/local-inference/the-local-privacy-boundary",
+    "/learn/local-inference/vllm-production-serving"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 9,
+    "numericClaims": 1,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "LM Studio trades Ollama's terminal workflow for a desktop app — model discovery, download, and a local OpenAI-compatible server behind a GUI, plus an lms CLI for scripting.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/local-inference/llama-cpp-build-quantize-serve",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: LM Studio, OpenAI, Ollama, Hugging Face, vLLM, MLX, llama.cpp"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2089",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "MLX and mlx-lm on Apple Silicon",
+   "slug": "local-inference/mlx-lm-on-apple-silicon",
+   "route": "/learn/local-inference/mlx-lm-on-apple-silicon",
+   "collection": "lessons",
+   "path": "src/content/lessons/local-inference/mlx-lm-on-apple-silicon.md",
+   "track": "local-inference",
+   "module": null,
+   "status": "live",
+   "summary": "MLX is Apple's array framework built for unified-memory Apple Silicon, and mlx-lm is its LLM package — load, generate, quantize, and serve models that take advantage of the shared-memory architecture.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 399,
+   "headings": [
+    "The short answer",
+    "Why unified memory changes the shape of the problem",
+    "The workflow",
+    "Where it fits in the runtime landscape",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/local-inference/hardware-sizing-measurement-guide",
+    "/learn/local-inference/llama-cpp-build-quantize-serve",
+    "/learn/local-inference/lm-studio-local-server",
+    "/learn/local-inference/onnx-runtime-on-device-inference",
+    "/learn/local-inference/quantization-formats-and-tradeoffs-lab"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 6,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "MLX is Apple's array framework built for unified-memory Apple Silicon, and mlx-lm is its LLM package — load, generate, quantize, and serve models that take advantage of the shared-memory architecture.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/local-inference/onnx-runtime-on-device-inference",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: MLX, OpenAI, Hugging Face, Ollama, vLLM, llama.cpp, LM Studio, ONNX"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
     "linking": 2,
     "freshnessHealth": 0,
     "originality": null,
@@ -92904,7 +93256,7 @@
    "promisedOutcome": "Customize a model with a Modelfile, then use Ollama's structured output, embeddings, and tool-calling APIs — the surface a real local app is built on.",
    "jobToBeDone": null,
    "prerequisite": null,
-   "nextAction": "/learn/local-inference/llama-cpp-build-quantize-serve",
+   "nextAction": "/learn/local-inference/lm-studio-local-server",
    "practiceType": "none",
    "freshnessClass": "release-sensitive",
    "freshnessSignals": [
@@ -92925,6 +93277,94 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2090",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "ONNX Runtime: inference that embeds in the app",
+   "slug": "local-inference/onnx-runtime-on-device-inference",
+   "route": "/learn/local-inference/onnx-runtime-on-device-inference",
+   "collection": "lessons",
+   "path": "src/content/lessons/local-inference/onnx-runtime-on-device-inference.md",
+   "track": "local-inference",
+   "module": null,
+   "status": "live",
+   "summary": "ONNX Runtime runs exported models inside applications across platforms — execution providers route work to whatever accelerator the device has, from CUDA to CoreML to WebGPU.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 454,
+   "headings": [
+    "The short answer",
+    "The two-step shape",
+    "Execution providers are the real story",
+    "Where it sits against the rest of this track",
+    "The honest limits",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/local-inference/hardware-sizing-measurement-guide",
+    "/learn/local-inference/quantization-formats-and-tradeoffs-lab",
+    "/learn/local-inference/the-local-privacy-boundary",
+    "/learn/local-inference/what-local-inference-actually-means"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 8,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "ONNX Runtime runs exported models inside applications across platforms — execution providers route work to whatever accelerator the device has, from CUDA to CoreML to WebGPU.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/local-inference/huggingface-transformers-pipelines",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: ONNX, llama.cpp, Ollama, vLLM"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
     "linking": 2,
     "freshnessHealth": 0,
     "originality": null,
@@ -93012,6 +93452,93 @@
     "explanationQuality": null,
     "metadata": null,
     "linking": null,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2091",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "SGLang: serving with RadixAttention and constrained generation",
+   "slug": "local-inference/sglang-serving-and-structured-generation",
+   "route": "/learn/local-inference/sglang-serving-and-structured-generation",
+   "collection": "lessons",
+   "path": "src/content/lessons/local-inference/sglang-serving-and-structured-generation.md",
+   "track": "local-inference",
+   "module": null,
+   "status": "live",
+   "summary": "SGLang is a serving framework whose RadixAttention reuses KV cache across requests sharing prefixes, and whose constrained decoding enforces regex or JSON-schema structure on output.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 402,
+   "headings": [
+    "The short answer",
+    "Why it exists alongside vLLM",
+    "The shape of it",
+    "When it's the right pick",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/context-engineering/kv-cache-and-context-prefixes",
+    "/learn/local-inference/hardware-sizing-measurement-guide",
+    "/learn/local-inference/vllm-production-serving",
+    "/learn/prompt-engineering/json-schema-in-prompts"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 2,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 6,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "SGLang is a serving framework whose RadixAttention reuses KV cache across requests sharing prefixes, and whose constrained decoding enforces regex or JSON-schema structure on output.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/local-inference/quantization-formats-and-tradeoffs-lab",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: SGLang, vLLM, OpenAI, llama.cpp, Ollama"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -93165,7 +93692,7 @@
    "promisedOutcome": "vLLM is the serving layer for when 'local' means 'a service, not a laptop' — continuous batching, memory management, and an OpenAI-compatible API for production traffic.",
    "jobToBeDone": null,
    "prerequisite": null,
-   "nextAction": "/learn/local-inference/quantization-formats-and-tradeoffs-lab",
+   "nextAction": "/learn/local-inference/huggingface-tgi-and-tei",
    "practiceType": "none",
    "freshnessClass": "release-sensitive",
    "freshnessSignals": [
@@ -201908,14 +202435,14 @@
    ],
    "features": {
     "group": "Production",
-    "declaredMeta": "8 lessons",
-    "nodeCount": 8,
-    "liveNodes": 8,
+    "declaredMeta": "14 lessons",
+    "nodeCount": 14,
+    "liveNodes": 14,
     "comingNodes": 0,
     "headingOnlyNodes": 0,
-    "fileCount": 8,
+    "fileCount": 14,
     "kinds": {
-     "concept": 7,
+     "concept": 13,
      "lab": 1
     },
     "modules": 0,
@@ -212232,9 +212759,45 @@
    ]
   },
   {
+   "route": "/learn/local-inference/huggingface-tgi-and-tei",
+   "slug": "local-inference/huggingface-tgi-and-tei",
+   "title": "Hugging Face TGI and TEI: the ecosystem's own serving layer",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/local-inference/huggingface-transformers-pipelines",
+   "slug": "local-inference/huggingface-transformers-pipelines",
+   "title": "Hugging Face Transformers: pipelines and AutoModel",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
    "route": "/learn/local-inference/llama-cpp-build-quantize-serve",
    "slug": "local-inference/llama-cpp-build-quantize-serve",
    "title": "llama.cpp: build, quantize, and serve",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/local-inference/lm-studio-local-server",
+   "slug": "local-inference/lm-studio-local-server",
+   "title": "LM Studio: the GUI path to a local OpenAI-compatible server",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/local-inference/mlx-lm-on-apple-silicon",
+   "slug": "local-inference/mlx-lm-on-apple-silicon",
+   "title": "MLX and mlx-lm on Apple Silicon",
    "family": "lesson",
    "flags": [
     "release-sensitive page with no updated/review date"
@@ -212260,10 +212823,28 @@
    ]
   },
   {
+   "route": "/learn/local-inference/onnx-runtime-on-device-inference",
+   "slug": "local-inference/onnx-runtime-on-device-inference",
+   "title": "ONNX Runtime: inference that embeds in the app",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
    "route": "/learn/local-inference/quantization-formats-and-tradeoffs-lab",
    "slug": "local-inference/quantization-formats-and-tradeoffs-lab",
    "title": "Lab: pick a quantization level by measuring the tradeoff",
    "family": "lab",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/local-inference/sglang-serving-and-structured-generation",
+   "slug": "local-inference/sglang-serving-and-structured-generation",
+   "title": "SGLang: serving with RadixAttention and constrained generation",
+   "family": "lesson",
    "flags": [
     "release-sensitive page with no updated/review date"
    ]

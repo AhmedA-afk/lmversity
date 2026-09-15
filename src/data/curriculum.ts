@@ -10635,7 +10635,7 @@ const unsortedTracks: Track[] = [
     "n": "23",
     "name": "Local Models & Inference",
     "group": "Production",
-    "meta": "8 lessons",
+    "meta": "14 lessons",
     "summary": "Running models on your own hardware — Ollama, llama.cpp, vLLM, quantization, hardware sizing, and what 'local' actually guarantees.",
     "nodes": [
       {
@@ -10656,8 +10656,32 @@ const unsortedTracks: Track[] = [
         "prereq": ["ollama-first-run"]
       },
       {
+        "title": "LM Studio: the GUI path to a local server",
+        "slug": "lm-studio-local-server",
+        "status": "live",
+        "prereq": ["ollama-first-run"]
+      },
+      {
         "title": "llama.cpp: build, quantize, and serve",
         "slug": "llama-cpp-build-quantize-serve",
+        "status": "live",
+        "prereq": ["what-local-inference-actually-means"]
+      },
+      {
+        "title": "MLX and mlx-lm on Apple Silicon",
+        "slug": "mlx-lm-on-apple-silicon",
+        "status": "live",
+        "prereq": ["llama-cpp-build-quantize-serve"]
+      },
+      {
+        "title": "ONNX Runtime: inference that embeds in the app",
+        "slug": "onnx-runtime-on-device-inference",
+        "status": "live",
+        "prereq": ["what-local-inference-actually-means"]
+      },
+      {
+        "title": "Hugging Face Transformers: pipelines and AutoModel",
+        "slug": "huggingface-transformers-pipelines",
         "status": "live",
         "prereq": ["what-local-inference-actually-means"]
       },
@@ -10666,6 +10690,18 @@ const unsortedTracks: Track[] = [
         "slug": "vllm-production-serving",
         "status": "live",
         "prereq": ["llama-cpp-build-quantize-serve"]
+      },
+      {
+        "title": "Hugging Face TGI and TEI: serving and embeddings",
+        "slug": "huggingface-tgi-and-tei",
+        "status": "live",
+        "prereq": ["huggingface-transformers-pipelines"]
+      },
+      {
+        "title": "SGLang: RadixAttention and constrained generation",
+        "slug": "sglang-serving-and-structured-generation",
+        "status": "live",
+        "prereq": ["vllm-production-serving"]
       },
       {
         "title": "Lab: pick a quantization level by measuring the tradeoff",
