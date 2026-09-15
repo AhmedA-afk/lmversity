@@ -2401,7 +2401,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-16 — Phase 2: question-bank schema + platform + 8 banks (31 rows)
 
-- Commit: `PENDING`. Status: complete (schema/platform; bank depth
+- Commit: `71177d9`. Status: complete (schema/platform; bank depth
   continues).
 - Scope: extended QuizQuestion to the full bank schema (stable ids,
   module/objective, format/difficulty/kind/case enums, tags, sources,
