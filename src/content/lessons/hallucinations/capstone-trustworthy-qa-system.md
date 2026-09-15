@@ -68,3 +68,15 @@ Ship the core spec first — every extension below is worth more once the base p
 - **Tier your risk scoring further.** Move from two tiers to three, and show the detection intensity and threshold genuinely differing across all three, per the [reliability architecture](/learn/hallucinations/reliability-architecture-overview).
 
 **Related:** [Reliability Architecture: Wiring the Pieces Together](/learn/hallucinations/reliability-architecture-overview), [Implementation: Confidence-Gated Escalation](/learn/hallucinations/confidence-gated-escalation-impl), [Implementation: Input and Output Guardrails](/learn/hallucinations/input-output-guardrail-impl), [Building a Golden Eval Set](/learn/hallucinations/building-golden-eval-set), [Cheatsheet: Production Reliability Checklist](/learn/hallucinations/production-reliability-cheatsheet)
+
+## Defend this build
+
+Before you call this done, answer these out loud — or in writing — the way you would in a review or an interview. Answer with evidence from the build, not adjectives.
+
+1. Feed your system a question with no support in the corpus and show me the escalation. What makes it an escalation and not a hedged answer?
+2. Pick the threshold you chose for accept-vs-escalate. What tradeoff does that number encode, and who agreed to it?
+3. Show a case where the retrieval returned confident-looking but wrong material. What caught it — or didn't?
+4. Which failure in your golden set is most expensive to a user, and does your eval weight it accordingly?
+5. If a citation and the generated text disagree, which does the user see first? Why that order?
+
+The pass bar: each answer names something in your artifacts — a decision, a measurement, a failure you saw and what you changed — rather than a promise about how the system should behave.

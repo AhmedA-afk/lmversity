@@ -147,3 +147,15 @@ same system without further evaluation.
 - Continue: What prompting actually is
 - Go deeper: Python for AI services
 - Apply it: Governance artifacts
+
+## Defend this build
+
+Before you call this done, answer these out loud — or in writing — the way you would in a review or an interview. Answer with evidence from the build, not adjectives.
+
+1. Name the step in your workflow where you would never accept the model's output unchecked. Why that step?
+2. What's the cheapest mistake this workflow could make at scale — and what stops it today?
+3. If you had to explain to a skeptical colleague why the AI step earns its place, what would you measure rather than claim?
+4. Which input could silently degrade the output without any error appearing? How would you find out?
+5. What would make you retire this workflow entirely — a signal, not a feeling?
+
+The pass bar: each answer names something in your artifacts — a decision, a measurement, a failure you saw and what you changed — rather than a promise about how the system should behave.

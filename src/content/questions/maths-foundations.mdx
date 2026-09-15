@@ -11,11 +11,19 @@ A point in a high-dimensional space placed so that *similar* inputs land near ea
 
 **Follow-up:** why does cosine similarity get used more than Euclidean distance for embeddings?
 
+**Weak answer:** a list of numbers the model understands
+
+**Rubric:** pass = a point/direction in high-dimensional space where distance encodes learned similarity; strong = notes 'near' depends on the chosen metric and training objective
+
 ## 2. What does a dot product measure between two vectors?
 
 Roughly: how aligned two directions are, scaled by magnitude. For embeddings it's the engine of similarity — high dot product means the vectors point the same way. The same operation sits inside attention (query·key = relevance score), which is why one multiplication shows up in two different-looking places.
 
 **Follow-up:** a query and a document have a high dot product — what does that claim, and what doesn't it claim?
+
+**Weak answer:** how similar two things are
+
+**Rubric:** pass = scaled cosine-style alignment — magnitude AND direction; strong = says what raw dot products reward that cosine normalizes away
 
 ## 3. What is a matrix multiplication doing in a neural network?
 
@@ -23,11 +31,19 @@ Each layer applies a linear transform — a matrix times the input vector — th
 
 **Follow-up:** why can't a stack of linear transforms without nonlinearity learn anything interesting?
 
+**Weak answer:** math the computer does fast
+
+**Rubric:** pass = a learned linear transform applied to many examples at once; strong = connects it to representation change — each layer re-expresses the input
+
 ## 4. What does "sampling temperature" do, probabilistically?
 
 Temperature rescales the logits before the softmax that turns them into probabilities. Low temperature sharpens — the top token dominates, output is more deterministic. High temperature flattens — tail tokens get real probability, output diversifies. It's not creativity; it's the shape of the distribution you sample from.
 
 **Follow-up:** why does temperature 0 still not guarantee identical outputs in production?
+
+**Weak answer:** it makes the model more creative
+
+**Rubric:** pass = rescales logits before softmax — sharpens or flattens the distribution; strong = states the limits: no new knowledge, no better reasoning
 
 ## 5. Explain precision and recall with a real example.
 
@@ -37,11 +53,19 @@ For a spam filter: precision = of the emails marked spam, what fraction actually
 
 **Follow-up:** for a cancer screening model, which error is worse — and who decides?
 
+**Weak answer:** accuracy broken into two words
+
+**Rubric:** pass = of-flagged vs of-actual with a concrete example; strong = names which you'd sacrifice for a given cost structure
+
 ## 6. What is overfitting, and how do you detect it?
 
 The model learned the training data's noise along with its signal — great on what it's seen, poor on new data. Detect it by the gap: training metrics improve while held-out metrics stall or degrade. The fix is never "more epochs" — it's more data, less capacity, regularization, or better validation splits.
 
 **Follow-up:** why is a train/test split alone sometimes not enough to catch it?
+
+**Weak answer:** when the model memorizes the training data
+
+**Rubric:** pass = train/test performance gap under honest evaluation; strong = names subtler forms — leakage, tuning to the test set
 
 ## 7. Choose the tradeoff: model interpretability versus accuracy?
 
@@ -50,6 +74,10 @@ The model learned the training data's noise along with its signal — great on w
 It depends on the decision the model drives. For a recommender, accuracy usually wins — a wrong pick costs a click. For a loan denial or a medical flag, you may need the simpler model because "why" is a regulatory and appeal requirement, not a nicety. The honest frame: interpretability isn't a binary, it's a spectrum — and the required point on it is set by who's affected when the model is wrong.
 
 **Follow-up:** when does the more accurate model become the *less* responsible choice?
+
+**Weak answer:** always take accuracy — users want correct answers
+
+**Rubric:** pass = conditions on stakes, regulation, and debugging need; strong = names a case where the accurate opaque model is the wrong choice even when legal
 
 ## How to score your answers
 

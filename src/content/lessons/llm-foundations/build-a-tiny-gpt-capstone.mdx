@@ -98,3 +98,15 @@ Ship the four required experiments first. Every extension above is worth more on
 </Callout>
 
 **Related:** [LLM Internals Reference Card](/learn/llm-foundations/llm-internals-reference-card), [Scaling Laws: What They Predict](/learn/llm-foundations/scaling-laws-what-they-predict), [Causal Masking](/learn/llm-foundations/causal-masking), [Context Window Mechanics](/learn/llm-foundations/context-window-mechanics), [In-Context Learning Mechanics](/learn/llm-foundations/in-context-learning-mechanics), [Temperature as Flattening](/learn/llm-foundations/temperature-as-flattening)
+
+## Defend this build
+
+Before you call this done, answer these out loud — or in writing — the way you would in a review or an interview. Answer with evidence from the build, not adjectives.
+
+1. Point at the exact tensor where 'what comes next' is decided. How does it get computed, step by step?
+2. Your loss curve — what does each bend correspond to mechanically, and where is it lying to you?
+3. If you doubled the context length, which parameter count grows, which stays flat, and what breaks first at inference?
+4. Show a failure mode of your model and explain it in terms of training data or architecture, not 'the model is small'.
+5. What would you change to make the model's next-token choice less confident at the same accuracy — and why might you want that?
+
+The pass bar: each answer names something in your artifacts — a decision, a measurement, a failure you saw and what you changed — rather than a promise about how the system should behave.

@@ -451,3 +451,15 @@ granted.
 - Continue: [Optimisation diagnostics and second-order perspective](/learn/maths-foundations/optimisation-diagnostics-and-second-order-perspective)
 - Go deeper: [Gradient checking and debugging](/learn/maths-foundations/gradient-checking-and-debugging)
 - Apply it: [ML foundations capstone](/learn/machine-learning/ml-foundations-capstone)
+
+## Defend this build
+
+Before you call this done, answer these out loud — or in writing — the way you would in a review or an interview. Answer with evidence from the build, not adjectives.
+
+1. Pick one result in your capstone and derive it again, out loud, without notes. Where do you stall?
+2. Which assumption in your model is mathematically convenient rather than true? What would the honest version cost you?
+3. Show a case where your optimization converges to a solution that's optimal and useless. What does the objective miss?
+4. If a colleague replaced your chosen estimator with its biased-but-lower-variance alternative, would your conclusion change?
+5. Which theorem in your derivation requires a condition your data doesn't quite meet — and why is the result still defensible?
+
+The pass bar: each answer names something in your artifacts — a decision, a measurement, a failure you saw and what you changed — rather than a promise about how the system should behave.

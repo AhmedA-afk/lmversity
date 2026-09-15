@@ -11,11 +11,19 @@ It guarantees the output parses as JSON. It does **not** guarantee the JSON matc
 
 **Follow-up:** when does valid-JSON-wrong-shape hurt more than invalid JSON?
 
+**Weak answer:** it guarantees correct data
+
+**Rubric:** pass = syntactic JSON validity, not schema or semantic correctness; strong = separates the three correctness layers
+
 ## 2. How do you handle a model that returns almost-valid JSON?
 
 Repair before you retry. Common corruptions — trailing commas, unclosed brackets, markdown fences, preamble text — are mechanically fixable; incremental repair beats re-asking because it's deterministic and cheap. The pattern is extract → repair → validate → retry only on validation failure, not "retry on any parse error." See [incremental JSON repair](/learn/structured-outputs/incremental-json-repair-explained) for the mechanics.
 
 **Follow-up:** which corruptions should you *not* repair silently, and why?
+
+**Weak answer:** regex it into shape and move on
+
+**Rubric:** pass = structured-output mode, retry with error feedback, or deterministic repair — chosen by failure class; strong = names when repair hides a worse problem
 
 ## 3. Why do schemas beat prompts for structured output?
 
@@ -23,11 +31,19 @@ A prompt describes what you want; a schema *constrains* what can come back. Prom
 
 **Follow-up:** when is a schema not enough even with enforcement?
 
+**Weak answer:** they don't — a good prompt is enough
+
+**Rubric:** pass = enforced constraint vs requested convention; strong = notes schemas still don't guarantee semantic truth
+
 ## 4. How do you design a schema the model can actually fill?
 
 Flat over nested where possible — deep nesting multiplies failure surface. Explicit nullability — "field may be absent" beats the model inventing a value. Small enums over free text — closed sets are checkable. Descriptions on fields — the model reads them as spec. And fields for *uncertainty* — a `"confidence"` or `"reason"` slot keeps the model honest better than forcing confident output.
 
 **Follow-up:** what goes wrong when you require a field the source document doesn't always have?
+
+**Weak answer:** dump your whole database schema at it
+
+**Rubric:** pass = minimal fields, clear names, flat where possible, enums over free text; strong = names which fields are most likely to be subtly wrong
 
 ## 5. Explain this output: the model returns `{"sentiment": "positive", "confidence": 0.95}` for a clearly negative review. Schema-valid — what failed?
 
@@ -37,11 +53,19 @@ The schema held; the *semantics* failed — this is the case structure can't cat
 
 **Follow-up:** what would you add to the schema so a wrong answer is harder to produce confidently?
 
+**Weak answer:** the schema
+
+**Rubric:** pass = separates syntactic from semantic failure — validation passed, extraction failed; strong = names the eval case that would have caught it
+
 ## 6. How do you validate structured output in production?
 
 Two layers. **Syntactic**: does it parse, does it match the schema, are the types right. **Semantic**: do the values make sense — the PO exists, the date isn't in the future, the extracted name appears in the source. Semantic validation is where production quality actually lives; a syntactically perfect wrong answer is worse than a parse error because it looks right. Every check that fails should route somewhere — a retry, a repair, a human queue — never a silent default.
 
 **Follow-up:** which validations belong in code versus back in the model?
+
+**Weak answer:** try/except around json.loads
+
+**Rubric:** pass = schema validation + semantic checks + logging of failure rates; strong = treats validation failure as observable, not silent
 
 ## 7. Choose the tradeoff: strict schema enforcement versus a looser contract with repair?
 
@@ -50,6 +74,10 @@ Two layers. **Syntactic**: does it parse, does it match the schema, are the type
 Strict enforcement where the output feeds code directly — pipelines, tool calls, anything downstream that can't tolerate shape errors; the rigidity is the point. Looser-with-repair where the output is for humans or tolerant consumers, and where the schema itself is still evolving — enforcement constrains iteration. The deeper question is what failure you can absorb: strictness pays upfront cost to avoid downstream ones.
 
 **Follow-up:** which choice ages better as your schema evolves weekly?
+
+**Weak answer:** always strict — never accept imperfection
+
+**Rubric:** pass = conditions on downstream cost of a parse failure vs a repaired wrong value; strong = names where strictness rejects correct-but-unusual answers
 
 ## How to score your answers
 

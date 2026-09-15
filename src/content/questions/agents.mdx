@@ -14,6 +14,10 @@ A chat response is not automatically an agent. The [agent loop](/learn/agentic-a
 
 **Follow-up:** what is the smallest change that would stop this system from being an agent?
 
+**Weak answer:** anything that calls an LLM in a loop
+
+**Rubric:** pass = a model that chooses actions against an environment toward a goal; strong = names what the environment feeds back and where the loop ends
+
 ## 2. How is an agent different from a workflow?
 
 A workflow has mostly predetermined steps and transitions. An agent chooses among actions or decides what information to seek at runtime. Many good products combine both: deterministic guardrails around a small amount of model-driven choice.
@@ -21,6 +25,10 @@ A workflow has mostly predetermined steps and transitions. An agent chooses amon
 Choose the least flexible design that meets the need. Predictability, testing, and approvals are easier when the path is explicit.
 
 **Follow-up:** name a task you would keep as a workflow even though an agent could do it — what tips the balance?
+
+**Weak answer:** an agent is just a workflow with AI steps
+
+**Rubric:** pass = who chooses the next step — the model at runtime vs the engineer at design time; strong = names the reliability cost you pay for runtime choice
 
 ## 3. What makes a good tool definition?
 
@@ -30,6 +38,10 @@ Validate arguments and results outside the model. LMVersity's [tool schema lesso
 
 **Follow-up:** a tool call succeeds but returns malformed data — where does your design catch it?
 
+**Weak answer:** a name and a JSON schema — the model figures out the rest
+
+**Rubric:** pass = clear contract: name, typed arguments, described result and failure modes; strong = names the model-facing semantics — what the tool is FOR
+
 ## 4. How should an agent stop?
 
 Give it explicit stop conditions: a successful result, an approved final action, a maximum number of turns, a token or cost budget, a timeout, and a repeated-error limit. Return a typed status so callers can distinguish success, refusal, timeout, and partial completion.
@@ -37,6 +49,10 @@ Give it explicit stop conditions: a successful result, an approved final action,
 An agent that can always keep trying is an incident waiting to happen. Make the budget visible in logs and tests.
 
 **Follow-up:** the agent hits its turn budget mid-task — what should the caller receive back?
+
+**Weak answer:** when it feels done
+
+**Rubric:** pass = explicit stop conditions: task complete, budget, error policy, human handoff; strong = names what the caller receives on each stop kind
 
 ## 5. What is human-in-the-loop control?
 
@@ -46,6 +62,10 @@ Good approval requests show the proposed action, inputs, expected effect, and an
 
 **Follow-up:** when does an approval step become theater rather than control?
 
+**Weak answer:** showing the user a confirm dialog
+
+**Rubric:** pass = approval gates placed on consequential actions; strong = says when approval becomes theater and how placement changes that
+
 ## 6. How do you secure an agent with tools?
 
 Use least-privilege credentials, per-tool authorization, input validation, output validation, isolation for risky work, audit logs, rate limits, and approval for irreversible actions. Treat tool results and retrieved content as untrusted input.
@@ -53,6 +73,10 @@ Use least-privilege credentials, per-tool authorization, input validation, outpu
 Also test indirect prompt injection and confused-deputy paths. OWASP lists excessive agency and prompt injection as distinct risks in its [LLM application guidance](https://owasp.org/www-project-top-10-for-large-language-model-applications/).
 
 **Follow-up:** walk an indirect injection through your design — where does the hostile text enter, and which control fires first?
+
+**Weak answer:** put 'do not do harmful things' in the system prompt
+
+**Rubric:** pass = least-privilege tools + untrusted-content labeling + output validation; strong = walks an indirect-injection path and names where each control fires
 
 ## 7. When should you not use an agent?
 
@@ -62,6 +86,10 @@ Use an agent when the task has meaningful uncertainty, changing steps, or natura
 
 **Follow-up:** a stakeholder wants an agent for something a scheduled job could do — what is your argument against it?
 
+**Weak answer:** never — agents are the modern default
+
+**Rubric:** pass = deterministic steps, identical-repeat requirements, or cost/latency budgets argue workflow; strong = makes the argument a stakeholder would accept
+
 ## 8. How do you debug an agent failure?
 
 Capture a trace of model inputs, selected tools, validated arguments, tool outputs, state transitions, retries, approvals, and final status. Reproduce with the same model and tool versions, then classify the failure as planning, retrieval, tool, permission, state, or synthesis related.
@@ -69,6 +97,10 @@ Capture a trace of model inputs, selected tools, validated arguments, tool outpu
 Avoid logging secrets or raw sensitive content by default. A useful trace is structured, redacted, and tied to a test case that can prevent regression.
 
 **Follow-up:** the trace shows fourteen turns and a bad final action — how do you tell a planning failure from a tool failure from a permissions failure?
+
+**Weak answer:** read the final output and guess
+
+**Rubric:** pass = trace the run — observations, decisions, tool calls, results; strong = separates planning, tool, and permission failures by where they appear in the trace
 
 ## How to score your answers
 

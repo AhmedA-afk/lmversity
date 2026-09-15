@@ -13,6 +13,10 @@ Define success in terms of resolution quality, groundedness, escalation accuracy
 
 **Follow-up:** resolution rate is up but escalations doubled — is that a success or a failure, and how do you find out?
 
+**Weak answer:** RAG over the docs plus a chat box
+
+**Rubric:** pass = retrieval + escalation policy + feedback loop + eval; strong = names the metric that reveals a bad success (escalation quality, not just deflection)
+
 ## 2. How would you design document question answering?
 
 Ingest documents with stable IDs and access controls, parse them into structure-aware chunks, index both lexical and semantic signals, retrieve with permissions applied, and return answers with source locations. Include a “not found” path.
@@ -20,6 +24,10 @@ Ingest documents with stable IDs and access controls, parse them into structure-
 Test updates, conflicting versions, tables, scanned pages, and unauthorized documents. RAG is only correct if retrieval and access control are correct.
 
 **Follow-up:** a user's permissions changed between indexing and query time — where does your design catch that?
+
+**Weak answer:** chunk, embed, retrieve, generate
+
+**Rubric:** pass = adds permissions, provenance, and citation requirements to the pipeline; strong = handles permission change between indexing and query time
 
 ## 3. How would you design a tool-using agent?
 
@@ -29,6 +37,10 @@ Begin with a workflow baseline so you can show what the agent adds. See [the con
 
 **Follow-up:** the agent works, but a fixed workflow does the same job — what would justify the agent over the workflow?
 
+**Weak answer:** give the model tools and a loop
+
+**Rubric:** pass = tool contracts + stop conditions + approval gates + trace logging; strong = justifies the agent over the equivalent workflow
+
 ## 4. How would you manage model and prompt changes?
 
 Version model choice, prompt, schema, retrieval settings, and tool definitions together. Run offline evals, shadow or canary a release where possible, compare cost and latency, and keep a fast rollback path.
@@ -36,6 +48,10 @@ Version model choice, prompt, schema, retrieval settings, and tool definitions t
 Do not change several high-leverage variables at once unless the release is treated as a new configuration with its own baseline.
 
 **Follow-up:** you changed the model and the prompt together and the evals improved — why is that still a problem?
+
+**Weak answer:** test the new model, then ship it
+
+**Rubric:** pass = versioned changes with evals and rollback; strong = explains why changing model and prompt together ruins attribution
 
 ## 5. How would you design for rate limits?
 
@@ -45,6 +61,10 @@ Track attempts and provider response classes so retries do not become invisible 
 
 **Follow-up:** which provider errors should never be retried, and what does the user see while the queue drains?
 
+**Weak answer:** retry on 429 with exponential backoff
+
+**Rubric:** pass = queueing, degradation, retry policy per error class; strong = names errors that must never be retried and what the user sees meanwhile
+
 ## 6. How would you observe an LLM feature?
 
 Log request IDs, configuration versions, latency, token usage, cost, tool calls, retrieval IDs, validation outcomes, and user-visible status. Redact secrets and sensitive content, and sample traces when full payload capture is not justified.
@@ -52,6 +72,10 @@ Log request IDs, configuration versions, latency, token usage, cost, tool calls,
 Pair operational telemetry with quality signals from evals, user feedback, and targeted review. A healthy API can still produce poor answers.
 
 **Follow-up:** every operational metric is green but users say answers got worse — which signal was missing?
+
+**Weak answer:** log latency and error rates like any service
+
+**Rubric:** pass = adds quality signals — eval scores, outcome feedback, cost — to operational metrics; strong = names the signal green dashboards miss
 
 ## 7. How would you make an AI feature private?
 
@@ -61,6 +85,10 @@ Privacy is a system property, not a prompt instruction. Test cross-tenant retrie
 
 **Follow-up:** where does a cross-tenant leak most plausibly enter this pipeline — name the component.
 
+**Weak answer:** use the model's privacy mode
+
+**Rubric:** pass = data minimization, retention policy, tenant isolation, and what leaves for the provider; strong = names the component where a cross-tenant leak most plausibly enters
+
 ## 8. How would you estimate cost before launch?
 
 Estimate requests by path, input and output tokens, model price, retrieval and storage, tool calls, retries, cache hit rate, and human review. Multiply by realistic traffic distributions and include worst-case loops or long contexts.
@@ -68,6 +96,10 @@ Estimate requests by path, input and output tokens, model price, retrieval and s
 Then instrument actual usage and compare it with the model. [Token and cost tracking](/learn/production/token-and-cost-tracking) is the operational follow-through.
 
 **Follow-up:** production cost comes in at several times your estimate — which assumption most likely broke?
+
+**Weak answer:** tokens in × tokens out × price
+
+**Rubric:** pass = adds retries, tool calls, retrieval, and human review to per-token math; strong = names the assumption most likely to break in production
 
 ## How to score your answers
 

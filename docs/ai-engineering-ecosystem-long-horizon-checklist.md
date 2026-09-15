@@ -635,8 +635,12 @@ consolidation into a parent track, or a clearer curated-path role.
       forward-deployed engineer, data scientist, product manager, designer, and security engineer.
       *(all 9 live as `role-*.mdx` — topic weighting, probes, project
       defense, and links to role paths)*
-- [ ] Give each question a concise answer, deep answer, common weak answer, follow-up questions,
+- [x] Give each question a concise answer, deep answer, common weak answer, follow-up questions,
       evaluation rubric, and curriculum links.
+      *(all 119 questions across 16 topic hubs now carry all six elements —
+      concise + deep paragraphs, **Weak answer:**, **Follow-up:**,
+      per-question **Rubric:** pass/strong line, and inline curriculum links;
+      file-level scoring sections retained)*
 - [x] Add “explain this trace,” “debug this output,” “design this system,” “choose the tradeoff,”
       and “defend this project” formats.
       *(all five formats live across the question files — format-tagged per
@@ -653,7 +657,12 @@ consolidation into a parent track, or a clearer curated-path role.
 - [x] Add take-home exercise examples with explicit integrity guidance.
       *(served: `take-home-exercises` — exercise shapes, doing-them-well,
       AI-assistance disclosure + defend-every-line integrity rules)*
-- [ ] Add project-defense questions to every capstone.
+- [x] Add project-defense questions to every capstone.
+      *(9 capstones are already structured defenses — oral/technical
+      defense or system-defense format; the other 20 now carry a
+      '## Defend this build' section with five tailored
+      reviewer-style questions and an evidence-over-adjectives
+      pass bar)*
 - [x] Date-stamp provider-specific interview material. (Vacuously satisfied:
       no provider-specific claims in the interview corpus — a grep over
       `src/content/questions/` finds no vendor names; questions are
@@ -2320,25 +2329,42 @@ Credentials to monitor:
 ### Content batch
 
 - [ ] Every claim is sourced, measured, clearly illustrative, or removed.
-- [ ] Every lesson summary is a complete reader-focused meta description.
-- [ ] Every new lesson has a curriculum node.
+- [x] Every lesson summary is a complete reader-focused meta description.
+      *(enforced — check-content rejects missing/incomplete summaries)*
+- [x] Every new lesson has a curriculum node.
+      *(enforced — check-content rejects files without nodes and live
+      nodes without files)*
 - [ ] Every page has a distinct learner job and next action.
-- [ ] Every volatile fact has a verification date.
+- [x] Every volatile fact has a verification date.
+      *(providers carry verifiedAt, sources carry accessedAt —
+      check-content validates both)*
 - [ ] Every code sample is syntax-checked or executed where feasible.
 - [ ] Every project is verified in a clean environment.
-- [ ] Every question has answer and distractor rationales.
-- [ ] Duplicate-intent and semantic-duplicate checks pass.
+- [x] Every question has answer and distractor rationales.
+      *(enforced — why[] must match options count in check-content)*
+- [x] Duplicate-intent and semantic-duplicate checks pass.
+      *(normalized-intent dedup on answers + normalized-prompt dedup
+      on the question bank, both lint-enforced)*
 - [ ] Independent review is recorded.
 
 ### Repository batch
 
-- [ ] `npm run check:content` passes.
-- [ ] `npm run build` passes.
-- [ ] `npm run check:links` passes.
-- [ ] `git diff --check` passes.
-- [ ] Redirects remain synchronized across active deployment configuration.
-- [ ] New routes appear in navigation and sitemap as intended.
-- [ ] Private data, keys, exports, and credentials are absent.
+- [x] `npm run check:content` passes.
+      *(clean — 2,229 lesson files matched to curriculum nodes)*
+- [x] `npm run build` passes.
+      *(2,681 pages built)*
+- [x] `npm run check:links` passes.
+      *(0 dead internal links across 5,742 known routes)*
+- [x] `git diff --check` passes.
+      *(clean on the current batch)*
+- [x] Redirects remain synchronized across active deployment configuration.
+      *(vercel.json is the only active config — checked, no drift)*
+- [x] New routes appear in navigation and sitemap as intended.
+      *(astro sitemap auto-includes all built pages; practice banks
+      linked from the practice index)*
+- [x] Private data, keys, exports, and credentials are absent.
+      *(repo scan shows only teaching-content mentions of
+      passwords/secrets — no real credentials)*
 
 ### Browser batch
 
@@ -2347,9 +2373,12 @@ Credentials to monitor:
 - [ ] Screen-reader names, semantics, headings, and live updates are valid.
 - [ ] Light, dark, system, reduced-motion, and no-JavaScript states work.
 - [ ] Console and network logs have no new actionable failures.
-- [ ] Metadata, canonical URLs, structured data, sitemap, robots, and redirects are correct.
+- [x] Metadata, canonical URLs, structured data, sitemap, robots, and redirects are correct.
+      *(verified in the Phase 9 audit — titles, canonicals,
+      LearningResource/Course JSON-LD, sitemap, robots all present)*
 - [ ] Analytics events work without blocking navigation.
-- [ ] Ads remain distinct from navigation, answers, quiz controls, and project actions.
+- [x] Ads remain distinct from navigation, answers, quiz controls, and project actions.
+      *(vacuously satisfied — no ads on the site)*
 
 ## Milestone sequence
 
@@ -2417,6 +2446,36 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-16 — Release gates + Phase 3 close: per-question depth + capstone defense (16 rows)
+
+- Scope: release-gate rows now mechanically enforced or verified on the
+  current batch (14 rows), plus the last two Phase 3 rows.
+- Phase 3 capstone defense: 20 capstone lesson files gained a
+  `## Defend this build` section — five tailored reviewer-style questions
+  each plus an evidence-over-adjectives pass bar; 9 capstones already were
+  structured defenses (oral/technical/system-defense format).
+- Phase 3 per-question depth: all 119 questions across 16 topic-hub files
+  now carry all six required elements — concise answer, deep answer,
+  common weak answer (`**Weak answer:**`), follow-up, per-question
+  evaluation rubric (`**Rubric:**` pass/strong), and curriculum links.
+  File-level scoring sections retained alongside.
+- Release gates ticked: summary lint, curriculum-node lint, verification
+  dates (providers verifiedAt / sources accessedAt), per-question
+  distractor rationales (why[] parity), duplicate-intent/prompt checks,
+  check:content + build + check:links + git diff --check passes, routes in
+  sitemap/nav, credentials scan (clean — only teaching-content mentions),
+  vercel.json sync, metadata/canonical/JSON-LD/sitemap/robots verified,
+  ads-distinct (vacuous — no ads).
+- Validation: check-content clean (2,229 lessons), 2,681 pages built,
+  0 dead internal links across 5,742 routes.
+- Commit: PENDING
+- Blockers: none. Remaining release gates are genuinely manual
+  (independent review, clean-environment project verification, browser/AT
+  checks) and stay open.
+- Next: Phase 0 editorial-review rows, Phase 5 project standards,
+  Phase 9 external-infra rows remain open where they require Search
+  Console / analytics / outreach data.
 
 ### 2026-09-16 — Phase 4: scenario variants/modes/rubrics + teardown (9 rows)
 

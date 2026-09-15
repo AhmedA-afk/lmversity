@@ -64,3 +64,15 @@ Weak submissions report only a single train accuracy, never split off a validati
 - Turn your gradient check into a small reusable function you'd trust to drop into a future project before ever trusting a new backprop implementation again
 
 **Related:** [Data splits and leakage, worked example](/learn/ai-foundations/data-splits-and-leakage-worked-example) · [Bias-variance tradeoff, worked example](/learn/ai-foundations/bias-variance-worked-example) · [Building an eval set, worked example](/learn/ai-foundations/building-an-eval-set-worked-example) · [Loss functions, worked examples](/learn/ai-foundations/loss-functions-worked-examples) · [Overfitting: visual intuition](/learn/ai-foundations/overfitting-visual-intuition) · [Benchmarks and what they miss](/learn/ai-foundations/benchmarks-and-what-they-miss)
+
+## Defend this build
+
+Before you call this done, answer these out loud — or in writing — the way you would in a review or an interview. Answer with evidence from the build, not adjectives.
+
+1. Your accuracy number — what's the base rate of the majority class, and what does your model add over always predicting it?
+2. Show a confusion the model makes that a human wouldn't. What feature does it rely on that you wouldn't?
+3. Where could your training data leak into your test set without you noticing? How did you check?
+4. If this classifier ran for a year untouched, which distribution shift would degrade it first — and which metric would you watch to catch it?
+5. What's the cost asymmetry between your two error types, and does your threshold reflect it?
+
+The pass bar: each answer names something in your artifacts — a decision, a measurement, a failure you saw and what you changed — rather than a promise about how the system should behave.

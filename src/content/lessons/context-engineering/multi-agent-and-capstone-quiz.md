@@ -123,3 +123,15 @@ D. Which compaction method — rolling window vs. hierarchical summarization —
 </details>
 
 **Related:** [Designing a Handoff Payload](/learn/context-engineering/handoff-payload-design), [What a Subagent Should Return](/learn/context-engineering/what-a-subagent-should-return), [Subagent Context Isolation](/learn/context-engineering/subagent-context-isolation), [Shared vs Private Context Stores](/learn/context-engineering/shared-vs-private-context-stores), [Reviewing a Full Context Architecture](/learn/context-engineering/end-to-end-context-architecture-review), [Context Engineering Master Cheatsheet](/learn/context-engineering/context-engineering-master-cheatsheet)
+
+## Defend this build
+
+Before you call this done, answer these out loud — or in writing — the way you would in a review or an interview. Answer with evidence from the build, not adjectives.
+
+1. Draw the context each agent in your system actually sees at step five — not what you intended, what it sees.
+2. Where can two agents disagree and produce a confident wrong answer neither would produce alone?
+3. Which piece of context is most expensive to keep fresh, and what goes stale silently if you stop updating it?
+4. Show a handoff where information was lost between agents. What did the receiving agent believe that wasn't true?
+5. What's the smallest change to your context policy that would measurably improve the weakest agent's output?
+
+The pass bar: each answer names something in your artifacts — a decision, a measurement, a failure you saw and what you changed — rather than a promise about how the system should behave.

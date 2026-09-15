@@ -14,6 +14,10 @@ MCP does not replace authorization, business logic, or a model provider. It defi
 
 **Follow-up:** what did integrations look like before MCP, and which problem does it deliberately leave unsolved?
 
+**Weak answer:** it's a plugin format — the same problem any API solves
+
+**Rubric:** pass = a standard for exposing context and tools to any model/host without N×M integrations; strong = names what it deliberately leaves unsolved (auth, billing, sandboxing)
+
 ## 2. What is the host, client, and server in MCP?
 
 The host is the application coordinating the model and user experience. It creates clients, usually one per server connection, and applies permission and lifecycle policies. A server exposes focused tools, resources, or prompts.
@@ -21,6 +25,10 @@ The host is the application coordinating the model and user experience. It creat
 Keeping those roles distinct helps with trust boundaries. The [MCP architecture lesson](/learn/mcp/mcp-architecture-hosts-clients-servers) walks through the relationship.
 
 **Follow-up:** where should user-facing consent policy live — host, client, or server — and why?
+
+**Weak answer:** client and server are the only two roles
+
+**Rubric:** pass = host owns the session/UX, client is the per-server connection, server exposes capabilities; strong = argues where consent policy belongs and why
 
 ## 3. How are tools, resources, and prompts different?
 
@@ -30,6 +38,10 @@ The official MCP overview describes tools as model-controlled, resources as appl
 
 **Follow-up:** why does the model-controlled versus user-controlled distinction matter when you design consent?
 
+**Weak answer:** they're all just text the server sends
+
+**Rubric:** pass = tools are model-invoked, resources are data the host/user selects, prompts are templates; strong = ties the control split to consent design
+
 ## 4. Is MCP just function calling?
 
 No. MCP can carry tool definitions and calls, but it also standardizes resources, prompts, capability negotiation, lifecycle messages, and transport behavior. A function-calling API can be one part of an MCP integration without covering the whole protocol.
@@ -37,6 +49,10 @@ No. MCP can carry tool definitions and calls, but it also standardizes resources
 Use direct provider APIs when a single application needs a narrow integration. MCP becomes more useful when interoperability and reusable servers matter.
 
 **Follow-up:** what does MCP give you that a provider's own function-calling API does not?
+
+**Weak answer:** yes, a rename of OpenAI functions
+
+**Rubric:** pass = function calling is per-provider invocation; MCP standardizes discovery + context across hosts; strong = names what you get beyond calls (resources, prompts, roots, sampling)
 
 ## 5. How should an MCP server expose tools safely?
 
@@ -46,6 +62,10 @@ The [MCP tools specification](https://modelcontextprotocol.io/specification/2025
 
 **Follow-up:** a tool takes a free-text parameter the model fills in — what can go wrong?
 
+**Weak answer:** expose everything — the model will pick sensibly
+
+**Rubric:** pass = narrow, typed, side-effect-annotated tools; strong = names the free-text-parameter risk and least-privilege scoping
+
 ## 6. What is capability negotiation?
 
 During initialization, clients and servers announce supported protocol features. Each side should only use capabilities that were negotiated and should handle unsupported or partially implemented features clearly.
@@ -53,6 +73,10 @@ During initialization, clients and servers announce supported protocol features.
 Capability negotiation lets implementations grow without making every server support every feature. It is part of the base protocol, not an optional convention.
 
 **Follow-up:** the client lacks a feature the server expects — what should happen at initialization versus at call time?
+
+**Weak answer:** the server tells the client what it can do
+
+**Rubric:** pass = initialization-time exchange of supported features between client and server; strong = separates init-time versus call-time failure handling
 
 ## 7. How do you handle MCP context-window pressure?
 
@@ -62,6 +86,10 @@ LMVersity's [MCP context window lesson](/learn/mcp/mcp-context-window) covers wh
 
 **Follow-up:** your server exposes forty tools — what does that cost on every single request?
 
+**Weak answer:** connect every server you can — more tools is more capable
+
+**Rubric:** pass = tool schemas and results consume context on every request; strong = names a mitigation: tool subsets, lazy discovery, compact schemas
+
 ## 8. What should an MCP security review ask?
 
 Ask who can connect, what data can leave the system, which actions can change state, how consent is recorded, how server identity and updates are trusted, and how failures are contained. Review local and remote transports separately.
@@ -69,6 +97,10 @@ Ask who can connect, what data can leave the system, which actions can change st
 MCP is powerful because it creates data and execution paths. The specification emphasizes user consent and control; treat that as a design requirement, not a checkbox.
 
 **Follow-up:** what is the first question you ask about a server before you connect it?
+
+**Weak answer:** does it use HTTPS
+
+**Rubric:** pass = trust boundary, permissions, tool side effects, supply chain of the server; strong = leads with 'who wrote this server and what can it reach'
 
 ## How to score your answers
 

@@ -271,3 +271,15 @@ Beyond the report itself, a strong submission has a few properties in common: a 
 - **Add a semantic-duplicate check before classifying** — embed each ticket body and flag near-duplicates so you're not paying for an LLM call on five tickets that are the same complaint; [embeddings and semantic similarity](/learn/rag/embeddings-and-semantic-similarity) covers the technique.
 
 **Related:** [Python data pipeline, the whole game](/learn/python-data-apis/python-data-pipeline-whole-game) · [Calling LLM APIs in Python](/learn/python-data-apis/calling-llm-apis-in-python) · [Batching LLM calls for throughput](/learn/python-data-apis/batching-llm-calls-for-throughput) · [Structuring a Python AI service](/learn/python-data-apis/structuring-a-python-ai-service) · [Testing data pipelines](/learn/python-data-apis/testing-data-pipelines) · [Secrets and config management](/learn/python-data-apis/secrets-and-config-management) · [Type coercion and parsing dates](/learn/python-data-apis/type-coercion-and-parsing-dates)
+
+## Defend this build
+
+Before you call this done, answer these out loud — or in writing — the way you would in a review or an interview. Answer with evidence from the build, not adjectives.
+
+1. Show a record your pipeline silently mangled or dropped. Which stage did it, and what instrumentation would have caught it?
+2. Where does your pipeline treat an upstream schema change as valid input? Walk through the failure it causes downstream.
+3. Which field in your data do you trust least at the point it reaches the LLM, and why does it still get through?
+4. If the source volume tripled, which stage fails first — cost, latency, or correctness?
+5. What does 'good output' mean for this pipeline when there's no ground truth? Show the check you run anyway.
+
+The pass bar: each answer names something in your artifacts — a decision, a measurement, a failure you saw and what you changed — rather than a promise about how the system should behave.

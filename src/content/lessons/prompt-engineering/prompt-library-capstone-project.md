@@ -53,3 +53,15 @@ A weak submission has an eval set that passes 100% on every version because ever
 - Port one prompt to a second model and see which eval cases hold and which don't — a live test of what [Prompt Portability Across Models](/learn/prompt-engineering/prompt-portability-across-models) covers, with your own numbers instead of someone else's.
 
 **Related:** [Capstone: Build a Prompt Library That Can Survive a Change](/learn/prompt-engineering/prompt-library-capstone) · [Prompt Templates and Variables](/learn/prompt-engineering/prompt-templates-and-variables) · [Defense in Depth: Delimiters, Roles, and Trust Boundaries](/learn/prompt-engineering/defending-with-delimiters-and-roles) · [Rubric and LLM Judge](/learn/prompt-engineering/rubric-and-llm-judge) · [Regression Tests for Prompts](/learn/prompt-engineering/regression-tests-for-prompts) · [Worked Example: An Injection Attack and Its Mitigations](/learn/prompt-engineering/injection-attack-and-defense-worked) · [Adapting Prompts Across Languages](/learn/prompt-engineering/adapting-prompts-across-languages) · [Prompt Portability Across Models](/learn/prompt-engineering/prompt-portability-across-models)
+
+## Defend this build
+
+Before you call this done, answer these out loud — or in writing — the way you would in a review or an interview. Answer with evidence from the build, not adjectives.
+
+1. Which prompt in your library would you stake a release decision on, and what does its eval history say?
+2. Show a prompt that regressed between two versions. What changed, and what in your process would have caught it sooner?
+3. Where does your library's shared context or few-shot bank create a common-mode failure across prompts?
+4. If a user can steer the model outside your prompt's intended scope, show the boundary and what holds it.
+5. Which eval case in your suite is hardest for a new contributor to understand — and what does that say about the suite?
+
+The pass bar: each answer names something in your artifacts — a decision, a measurement, a failure you saw and what you changed — rather than a promise about how the system should behave.

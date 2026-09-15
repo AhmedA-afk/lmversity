@@ -52,3 +52,15 @@ A run against the provided task suite that completes each task within the iterat
 - Version one tool's schema, ship the change, and confirm old logged traces still replay correctly against the new dispatcher — see [Tool Schema Versioning](/learn/tools-function-calling/tool-schema-versioning).
 
 **Related:** [Tool Selection at Scale](/learn/tools-function-calling/tool-selection-at-scale), [Executing Tool Calls Safely](/learn/tools-function-calling/executing-tool-calls-safely), [Chaining Tools into Workflows](/learn/tools-function-calling/chaining-tools-into-workflows), [Building Your Own Eval Harness](/learn/tools-function-calling/building-a-tool-use-eval-harness), [Advanced-Tools Mistakes](/learn/tools-function-calling/advanced-tools-common-mistakes)
+
+## Defend this build
+
+Before you call this done, answer these out loud — or in writing — the way you would in a review or an interview. Answer with evidence from the build, not adjectives.
+
+1. Show the tool call in your system with the worst-case side effect. What stands between the model's intent and that call executing?
+2. Where can a tool result feed instructions back into your agent's context? Show the injection path you closed — or didn't.
+3. Walk a trace where the agent called the right tool with wrong arguments. What validated the call before execution?
+4. If a tool's response format changes silently, which agent behavior degrades first — and what monitoring sees it?
+5. Which tool did you decide the agent may never call autonomously, and what approval gate did you build for it?
+
+The pass bar: each answer names something in your artifacts — a decision, a measurement, a failure you saw and what you changed — rather than a promise about how the system should behave.

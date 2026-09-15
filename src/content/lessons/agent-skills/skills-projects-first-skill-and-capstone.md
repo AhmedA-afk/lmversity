@@ -87,3 +87,15 @@ exactly like a [regression suite](/learn/evals-red-teaming/building-a-regression
 - [Evaluating and porting](/learn/agent-skills/evaluating-and-porting-skills) — the eval mechanics the capstone uses.
 - [Skill security and provenance](/learn/agent-skills/skill-security-and-provenance) — the audit.
 - [Customizing the agent surface](/learn/cli-agents/customizing-the-agent-surface) — where skills sit among the other extension points.
+
+## Defend this build
+
+Before you call this done, answer these out loud — or in writing — the way you would in a review or an interview. Answer with evidence from the build, not adjectives.
+
+1. Why did this workflow deserve to be a skill rather than a prompt you paste? What changed the second time it ran?
+2. Where does your skill's trigger boundary fail? Show a prompt that should NOT invoke it and explain why the model might anyway.
+3. Which part of the skill's output is verified, and which part is trusted on faith? What would a wrong-but-plausible output look like?
+4. If the underlying model or tool contract changes, which instruction in your skill breaks first — and how would you notice?
+5. What did you deliberately leave out of the skill's scope, and what failure convinced you to leave it out?
+
+The pass bar: each answer names something in your artifacts — a decision, a measurement, a failure you saw and what you changed — rather than a promise about how the system should behave.

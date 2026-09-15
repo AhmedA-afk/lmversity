@@ -189,3 +189,15 @@ D. Add "Please" to the instruction to make the model more cooperative
 </details>
 
 **Related:** [Prompt Injection: When the Input Fights Your Instructions](/learn/prompt-engineering/prompt-injection-basics) · [Worked Example: An Injection Attack and Its Mitigations](/learn/prompt-engineering/injection-attack-and-defense-worked) · [Defense in Depth: Delimiters, Roles, and Trust Boundaries](/learn/prompt-engineering/defending-with-delimiters-and-roles) · [Adapting Prompts Across Languages](/learn/prompt-engineering/adapting-prompts-across-languages) · [Handling Refusals and Safety Boundaries](/learn/prompt-engineering/handling-refusals-and-safety-boundaries) · [Cost and Token Budgets for Prompts](/learn/prompt-engineering/cost-and-token-budget-for-prompts)
+
+## Defend this build
+
+Before you call this done, answer these out loud — or in writing — the way you would in a review or an interview. Answer with evidence from the build, not adjectives.
+
+1. Show an input your prompt handles correctly today that a paraphrase, translation, or adversarial typo could break.
+2. Which safety instruction in your prompt is enforced by wording alone — and what does a determined user do to route around it?
+3. Where does your prompt's robustness come from the model, not the prompt? How would you tell them apart?
+4. What's the most plausible way this prompt produces a wrong answer that looks right — and which of your evals covers it?
+5. If you had to delete half your prompt's defensive instructions, which half survives the cut? Why those?
+
+The pass bar: each answer names something in your artifacts — a decision, a measurement, a failure you saw and what you changed — rather than a promise about how the system should behave.

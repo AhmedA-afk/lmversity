@@ -11,6 +11,10 @@ Not the project — the *judgment*. Can you say what problem it solved, what the
 
 **Follow-up:** what's the wrong way to answer this — what do candidates oversell?
 
+**Weak answer:** the tech stack and how impressive it was
+
+**Rubric:** pass = your decisions, your tradeoffs, evidence you can point at; strong = includes a failure and what it changed
+
 ## 2. Defend this: you used a large hosted model for a task a smaller local model could do. Justify it.
 
 **Format: defend this decision.**
@@ -19,11 +23,19 @@ Defensible if you can name what the bigger model bought: capability the task nee
 
 **Follow-up:** what would make you revisit the decision?
 
+**Weak answer:** the big model was easier
+
+**Rubric:** pass = a real reason — time-to-ship, eval evidence, maintenance cost — or honest concession; strong = names the condition where you'd switch
+
 ## 3. Describe a time you disagreed with a technical direction. What did you do?
 
 They're testing for *reasoned* disagreement: did you have a technical basis, did you voice it to the right people, did you disagree-and-commit if outvoted or escalate if it mattered? The bad answers are the extremes — silent compliance (no judgment) and refusing to move on (no collaboration). The good answer has a decision quality to it, whatever the outcome.
 
 **Follow-up:** what would make you escalate past a disagree-and-commit?
+
+**Weak answer:** I argued until I won
+
+**Rubric:** pass = the disagreement, your evidence, how it resolved; strong = shows you can commit to a decision you lost
 
 ## 4. Your model demo works but your eval says it's not ready. Ship or hold?
 
@@ -33,11 +45,19 @@ The answer the interviewer wants isn't "hold" — it's *why*. If the eval measur
 
 **Follow-up:** what if the deadline is real — how do you de-risk shipping a not-ready feature?
 
+**Weak answer:** ship — the demo proves it works
+
+**Rubric:** pass = trusts the measurement over the demo; strong = investigates why the demo and eval disagree before deciding
+
 ## 5. Walk me through the hardest bug you found in an AI system.
 
 They want the debugging *process*: how you isolated it, what you ruled out, what the actual cause turned out to be versus what you assumed. AI-system bugs are prized because the failure surface is unusual — a model that "worked" but retrieved wrong context, a prompt that behaved differently across versions. The story's value is in the diagnosis path, not the fix.
 
 **Follow-up:** what's a bug class in AI systems that doesn't exist in normal software?
+
+**Weak answer:** it was the model being dumb — nothing to learn
+
+**Rubric:** pass = reproduction → isolation → root cause in the system, not 'the model'; strong = the fix and the regression test it left behind
 
 ## 6. Explain this: you built a RAG system and it hallucinates anyway. What went wrong?
 
@@ -47,11 +67,19 @@ RAG reduces hallucination; it doesn't eliminate it — the model can still ignor
 
 **Follow-up:** which of the three is hardest to detect in production, and why?
 
+**Weak answer:** the model hallucinated — models do that
+
+**Rubric:** pass = decomposes retrieval miss, stale evidence, synthesis failure; strong = names the eval that locates which one
+
 ## 7. What would you do differently on your last project?
 
 The interviewer wants specific, honest, learned-from reflection — not "I'd start sooner" filler. Good answers name a real decision that cost you: a skipped eval, a vendor lock-in you didn't price, a scope you should've cut. The skill being tested is *calibration* — can you accurately assess your own past judgment? That's the skill that predicts the next project's decisions.
 
 **Follow-up:** how do you know it was the wrong call — what would the right call have produced?
+
+**Weak answer:** nothing — it went well
+
+**Rubric:** pass = a specific decision you'd change and the signal that revealed it; strong = what you'd build to catch it earlier
 
 ## How to score your answers
 

@@ -11,11 +11,19 @@ The discipline of deciding what goes into the model's input at each call — sys
 
 **Follow-up:** why is context a system-design problem, not a prompt-writing problem?
 
+**Weak answer:** a fancier name for prompt engineering
+
+**Rubric:** pass = curating everything the model sees — retrieval, memory, tool output, history — as a budget; strong = contrasts with single-string prompt work
+
 ## 2. Why can more context make the model *worse*?
 
 Attention isn't free — relevant content competes with everything else in the window. Two failure modes: **distraction** (relevant fact buried among near-duplicates the model can't distinguish) and **lost-in-the-middle** (models use beginnings and ends better than middles). Dumping more context in is a retrieval-quality bet, not a quality strategy — the [context-rot lesson](/learn/context-engineering/context-rot-explained) covers the mechanics.
 
 **Follow-up:** what does "lost in the middle" mean, and how does it change how you order retrieved content?
+
+**Weak answer:** it can't — more information is always better
+
+**Rubric:** pass = distractor dilution, lost-in-the-middle, stale/contradictory material; strong = names the retrieval-precision fix over the bigger-window fix
 
 ## 3. What belongs in the system prompt versus the user turn?
 
@@ -23,17 +31,29 @@ System prompt: invariants — who the assistant is, output contract, hard constr
 
 **Follow-up:** where do retrieved documents go, and why not in the system prompt?
 
+**Weak answer:** put everything in the system prompt so it's authoritative
+
+**Rubric:** pass = durable rules vs per-request data; strong = says system prompts aren't a security boundary
+
 ## 4. How do you handle a conversation that outgrows the context window?
 
 The strategies, roughly in order of complexity: truncate old turns (loses early context), summarize older turns into a compaction block (lossy but bounded), retrieve relevant history on demand (turns memory into a search problem), or externalize state into structured fields the model reads fresh each turn. The design question is what the model *needs to remember* — keep that, let the rest go. See [summarization for compaction](/learn/context-engineering/summarization-for-compaction).
 
 **Follow-up:** what breaks when you summarize — what does compaction always lose?
 
+**Weak answer:** summarize everything into the prompt
+
+**Rubric:** pass = truncation/summarization/retrieval strategies with their costs; strong = names what each strategy silently loses
+
 ## 5. What is prompt injection, in context terms?
 
 Untrusted content in the context — a retrieved document, a tool result, a user message — carrying text the model might read as instruction. The model can't reliably tell "data to summarize" from "command to follow" when both are tokens in the window. The defense is structural: mark untrusted regions, instruct the model on what's data, and never let context content escalate privileges. The [injection lesson](/learn/llm-security/prompt-injection-testing-and-threat-models) covers the threat model.
 
 **Follow-up:** why can't you just instruct the model to "ignore malicious instructions"?
+
+**Weak answer:** a user typing a bad word into the chat
+
+**Rubric:** pass = untrusted content entering authority position in the context; strong = names the indirect path — retrieved docs and tool output
 
 ## 6. Explain this trace: the agent repeats the same tool call every step for six steps. What's happening in the context?
 
@@ -43,6 +63,10 @@ The context is poisoned — the agent can't tell it's looping. Either the tool r
 
 **Follow-up:** how do you make "you already tried this" legible to the model?
 
+**Weak answer:** the model is stuck in a loop — restart it
+
+**Rubric:** pass = the context lacks a stop/change signal — same input yields same output; strong = names the fix: record results, add stop conditions, prune repetition
+
 ## 7. Choose the tradeoff: a bigger context window versus better retrieval?
 
 **Format: choose the tradeoff.**
@@ -50,6 +74,10 @@ The context is poisoned — the agent can't tell it's looping. Either the tool r
 Bigger window helps when the task genuinely needs it all — long-document analysis, many-shot learning, whole-codebase reasoning — and when retrieval would lose what it needs. Better retrieval wins when the relevant part is small and findable — which is most production workloads — and costs less per call. The failure is defaulting to "just make it bigger": you pay more per request and often *lose* accuracy to distraction. Measure what the task actually needs first — the [context-window blog](/blog/the-context-window-got-bigger-and-it-did-not-fix-this) is the cautionary version.
 
 **Follow-up:** what does your task's "relevant-fraction" look like, and how would you measure it?
+
+**Weak answer:** bigger window — retrieval is a workaround
+
+**Rubric:** pass = cost, latency, and attention-dilution vs precision; strong = names when the window genuinely wins
 
 ## How to score your answers
 

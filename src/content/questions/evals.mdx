@@ -13,6 +13,10 @@ The evaluation target is the system configuration: prompt, model, retrieval, too
 
 **Follow-up:** your eval score improved and user complaints went up — what are the two most likely explanations?
 
+**Weak answer:** running the app and checking the vibes
+
+**Rubric:** pass = repeatable comparison against a task and criterion; strong = says the eval target is the system config, not just the model
+
 ## 2. What belongs in a golden dataset?
 
 A golden dataset contains representative inputs, expected outputs or judging criteria, relevant metadata, and known edge cases. Include ordinary successes, ambiguous requests, long inputs, empty inputs, malformed inputs, and security-sensitive cases.
@@ -20,6 +24,10 @@ A golden dataset contains representative inputs, expected outputs or judging cri
 Keep an untouched test split for release decisions. If every failure is added to the test set after tuning, the score becomes optimistic.
 
 **Follow-up:** how do you keep a golden dataset representative as the product and its users change?
+
+**Weak answer:** a few hundred clean, representative inputs
+
+**Rubric:** pass = representative + edge + adversarial + security-sensitive cases with criteria; strong = names how the set stays representative as users change
 
 ## 3. What is the difference between a metric and a rubric?
 
@@ -29,6 +37,10 @@ Use metrics for stable properties and rubrics for nuanced quality. Report distri
 
 **Follow-up:** name a task where you would still choose exact match even though quality is fuzzy.
 
+**Weak answer:** they're the same thing at different scales
+
+**Rubric:** pass = metric measures one dimension, rubric encodes judgment criteria; strong = names a case for each and when exact match still wins
+
 ## 4. Are LLM judges reliable?
 
 They can be useful for scalable comparison when the rubric is explicit and the judge has been checked against human labels. They can also favor verbosity, share blind spots with the system under test, and behave inconsistently across phrasing.
@@ -36,6 +48,10 @@ They can be useful for scalable comparison when the rubric is explicit and the j
 Calibrate on a labeled sample, blind the judge where possible, use pairwise or rubric-based checks thoughtfully, and keep humans in the loop for high-impact decisions.
 
 **Follow-up:** the judge shares a failure mode with the system under test — how do you detect that?
+
+**Weak answer:** yes — a big model judging is objective
+
+**Rubric:** pass = judges are models with their own failure modes — bias, position effects, shared blind spots; strong = says how you'd validate a judge against human labels
 
 ## 5. What is red teaming for an AI application?
 
@@ -45,6 +61,10 @@ Make findings reproducible and connect them to a mitigation and regression test.
 
 **Follow-up:** which red-team findings become regression tests, and which stay one-off fixes?
 
+**Weak answer:** asking the model mean questions to see if it swears
+
+**Rubric:** pass = adversarial probing of the deployed system — injection, abuse, data exfiltration; strong = connects findings to regression tests
+
 ## 6. How do you evaluate a RAG system?
 
 Evaluate retrieval and generation separately, then evaluate the full answer. Check whether the right evidence was retrieved, whether the answer is supported, whether citations point to the right passages, and whether the system abstains when evidence is missing.
@@ -52,6 +72,10 @@ Evaluate retrieval and generation separately, then evaluate the full answer. Che
 Use queries written from real user needs, not only synthetic questions that match the index wording. See [evaluating RAG quality](/learn/rag/evaluating-rag-quality).
 
 **Follow-up:** retrieval recall is high but answers still cite the wrong passage — where do you look next?
+
+**Weak answer:** score the final answers
+
+**Rubric:** pass = retrieval metrics and generation metrics measured separately; strong = locates a failure in the right half of the system
 
 ## 7. What is an eval-driven development loop?
 
@@ -61,6 +85,10 @@ Start small enough to run often, then add cases from real failures. A useful eva
 
 **Follow-up:** the change wins on average but regresses on one input class — ship it or not?
 
+**Weak answer:** write evals after the feature ships
+
+**Rubric:** pass = evals define done before the change, then verify it; strong = handles the wins-on-average-but-regresses-on-a-class case
+
 ## 8. Which failures should block release?
 
 Block on failures tied to safety, privacy, authorization, irreversible actions, or contractual requirements. For quality failures, set thresholds based on the task's cost of error and monitor the tail, not just the mean.
@@ -68,6 +96,10 @@ Block on failures tied to safety, privacy, authorization, irreversible actions, 
 Document who owns the threshold and what happens when production drifts. Evals are decision tools; they should change release behavior.
 
 **Follow-up:** do quality failures and safety failures share one threshold process, or different ones?
+
+**Weak answer:** anything below the quality bar
+
+**Rubric:** pass = separates safety/rights/security failures from quality regressions; strong = argues whether they share one threshold process or different ones
 
 ## How to score your answers
 

@@ -70,3 +70,15 @@ The feature runs, streams, and holds a conversation without you thinking about i
 - Push the rollout further: a real percentage ramp against synthetic multi-user traffic, with the auto-halt from [Canary and Percentage-Based Rollout](/learn/genai-app-dev/canary-and-percentage-rollout) genuinely firing on an injected regression.
 
 **Related:** [Shipping a GenAI Feature End to End](/learn/genai-app-dev/shipping-end-to-end), [Incident Response for AI Features](/learn/genai-app-dev/incident-response-for-ai-features), [Canary and Percentage-Based Rollout](/learn/genai-app-dev/canary-and-percentage-rollout), [Observability for GenAI Features](/learn/genai-app-dev/observability-for-genai), [Shipping and Operating Cheatsheet](/learn/genai-app-dev/shipping-operating-cheatsheet), [The Whole Game: GenAI Feature Tour](/learn/genai-app-dev/the-whole-game-genai-feature-tour)
+
+## Defend this build
+
+Before you call this done, answer these out loud — or in writing — the way you would in a review or an interview. Answer with evidence from the build, not adjectives.
+
+1. Show a session where your assistant should have refused or escalated but didn't. What guardrail is missing?
+2. Walk the trace of a single request end-to-end: prompt, retrieval, model call, output check. Where is each decision made?
+3. Which prompt injection path did you close, and which did you accept? Justify the acceptance.
+4. If the model version upgrades tomorrow, which three behaviors would you re-test first, and how?
+5. What does your system do at 3am when a dependency is down — and which user sees it first?
+
+The pass bar: each answer names something in your artifacts — a decision, a measurement, a failure you saw and what you changed — rather than a promise about how the system should behave.

@@ -11,11 +11,19 @@ Turning raw data into inputs a model can learn from — encodings, aggregations,
 
 **Follow-up:** give an example where the feature mattered more than the model choice.
 
+**Weak answer:** an obsolete step deep learning removed
+
+**Rubric:** pass = turning domain knowledge into model-visible signal; strong = names where it still wins — tabular, small data, latency-constrained
+
 ## 2. Explain the bias-variance tradeoff.
 
 Bias is error from a model too simple to capture the pattern — it underfits. Variance is error from a model too sensitive to the training sample — it overfits. You trade one against the other: complexity lowers bias and raises variance. The engineering version: total error is what matters, and the sweet spot is found by validation, not theory.
 
 **Follow-up:** how does adding more training data shift each side?
+
+**Weak answer:** bias is prejudice, variance is noise
+
+**Rubric:** pass = underfit vs overfit error sources; strong = gives the levers that move each independently
 
 ## 3. Why is a random train/test split sometimes wrong?
 
@@ -23,11 +31,19 @@ When the data has structure the split must respect: time (train on past, test on
 
 **Follow-up:** what's the failure called when future information leaks into training, and why is it so dangerous?
 
+**Weak answer:** it isn't — random is always fair
+
+**Rubric:** pass = names the breaking cases: time, groups, near-duplicates; strong = picks the right split for a given deployment
+
 ## 4. What is data leakage?
 
 Information that wouldn't exist at prediction time sneaking into features or evaluation. The classic cases: a feature derived from the outcome, the same entity in train and test, preprocessing fit on the whole dataset before splitting. It's dangerous because the model looks great in eval and collapses in production — the leak was doing the work.
 
 **Follow-up:** a feature seems harmless but correlates perfectly with the label — what do you check?
+
+**Weak answer:** data getting stolen
+
+**Rubric:** pass = information unavailable at decision time leaking into training; strong = names subtle forms — preprocessing before split, future-derived features
 
 ## 5. Explain gradient descent in one minute.
 
@@ -35,11 +51,19 @@ The loss function measures wrongness; its gradient points uphill. Gradient desce
 
 **Follow-up:** what's the difference between batch, mini-batch, and stochastic descent in practice?
 
+**Weak answer:** it minimizes the loss by magic
+
+**Rubric:** pass = follow the gradient downhill with a step size; strong = says what can go wrong — local minima, plateaus, scale
+
 ## 6. When does a simple model beat a complex one?
 
 When data is limited, features are strong, interpretability is required, or the problem is roughly linear. A tuned logistic regression on good features often beats a neural net on the same data — and it debugs, explains, and deploys easier. The decision isn't sophistication; it's where the marginal accuracy lives relative to the operational cost.
 
 **Follow-up:** name a production setting where you'd choose the simpler model even at slightly lower accuracy.
+
+**Weak answer:** never — complexity is capability
+
+**Rubric:** pass = small data, interpretability, latency, maintenance; strong = names the total-cost argument, not just accuracy
 
 ## 7. Debug this: validation accuracy is 94% but production is 71%. Where do you look?
 
@@ -48,6 +72,10 @@ When data is limited, features are strong, interpretability is required, or the 
 Look for the distribution gap first — the three usual suspects: leakage inflating validation, a split that didn't match production structure (time, group, dedup), or label problems (validation labels were easy/gold; production labels are noisy). Then check serving skew — features computed differently in production than in training. The metric didn't lie; it measured a different dataset than the one you shipped to.
 
 **Follow-up:** which check do you run first, and what would it cost to be wrong?
+
+**Weak answer:** the model is broken — retrain it
+
+**Rubric:** pass = distribution shift, leakage inflating validation, label skew; strong = gives the investigation order before touching the model
 
 ## How to score your answers
 

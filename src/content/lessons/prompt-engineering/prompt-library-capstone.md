@@ -61,3 +61,15 @@ A prompt library is not a substitute for access control, application validation,
 - Continue: GenAI application engineering
 - Go deeper: Adversarial testing lab
 - Apply it: fork the library into a real role workflow and measure one week of use.
+
+## Defend this build
+
+Before you call this done, answer these out loud — or in writing — the way you would in a review or an interview. Answer with evidence from the build, not adjectives.
+
+1. Run your library against a model version bump. Which prompt's behavior changes most, and how would your evals catch it?
+2. Show a prompt where a user input could subvert the instruction. What in your library prevents or detects that?
+3. Which prompt in the library is load-bearing — the one whose silent regression would hurt most — and what protects it?
+4. How does a teammate know which prompt version produced a given output last Tuesday? Show the versioning trail.
+5. What's the worst output your library can produce while every prompt is individually 'correct'? Where's the composition risk?
+
+The pass bar: each answer names something in your artifacts — a decision, a measurement, a failure you saw and what you changed — rather than a promise about how the system should behave.

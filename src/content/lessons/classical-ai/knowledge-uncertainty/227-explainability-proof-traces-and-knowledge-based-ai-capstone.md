@@ -79,3 +79,14 @@ Choose a small decision domain such as fault triage, eligibility review, or inve
 
 You are ready to continue when you can explain which parts of a result are observed, inferred, estimated, and chosen by policy. You should be able to reproduce the worked calculation, identify one assumption whose failure would invalidate it, and design a safe fallback when the system cannot justify a conclusion.
 
+## Defend this build
+
+Before you call this done, answer these out loud — or in writing — the way you would in a review or an interview. Answer with evidence from the build, not adjectives.
+
+1. Pick one conclusion your system reached and trace it end-to-end: which facts, which rules, which inference steps?
+2. Where can your rule base be internally consistent and still produce a wrong answer? Show the gap.
+3. What's the difference in your system between 'unknown' and 'false'? Where does a user see that difference?
+4. Which rule in your base is the most load-bearing — the one whose error would change the most conclusions?
+5. How does a domain expert correct your system without understanding its internals? Show the update path.
+
+The pass bar: each answer names something in your artifacts — a decision, a measurement, a failure you saw and what you changed — rather than a promise about how the system should behave.

@@ -11,11 +11,19 @@ Untrusted input — a user message, retrieved document, tool result, web page �
 
 **Follow-up:** why is indirect injection (via retrieved content) worse than direct?
 
+**Weak answer:** users typing rude things — blocklist it
+
+**Rubric:** pass = instructions smuggled through untrusted data, no reliable in-model defense; strong = names the indirect path and why filtering can't finish the job
+
 ## 2. Where do safety controls belong in the stack?
 
 Defense in depth: input validation (catch known-bad patterns), capability limits (the agent's tools and permissions — the strongest layer), output checks (what the model returns before it acts), and monitoring (detect what slips through). The layer people over-trust is the prompt itself — a system prompt describes intent; it can't enforce a boundary. Permissions are enforced in code, which is why [sandboxing](/learn/llm-security/sandboxing-code-execution-and-browser-use) is a control and a prompt is a hope.
 
 **Follow-up:** which layer fails most often in practice, and why?
+
+**Weak answer:** in the model — that's the provider's job
+
+**Rubric:** pass = layered: model behavior + input/output checks + app-level authorization; strong = says which layer owns which failure
 
 ## 3. What's the difference between alignment, guardrails, and security?
 
@@ -23,11 +31,19 @@ Alignment is whether the model does what you intend — a model property. Guardr
 
 **Follow-up:** a model outputs harmful content — which of the three failed, and how do you tell?
 
+**Weak answer:** three words for content filtering
+
+**Rubric:** pass = alignment = model behavior, guardrails = policy checks around it, security = adversary-facing controls; strong = gives a failure each layer owns
+
 ## 4. How do you red-team an AI feature?
 
 Adversarially, against the actual threat model: prompt injection (direct and via content), jailbreaks (instruction-override attempts), data exfiltration (can it leak the system prompt, other users' data, secrets), capability abuse (can tools be used beyond intent), and denial-of-wallet (inputs that inflate cost). The [adversarial testing lab](/learn/responsible-ai/adversarial-testing-lab) runs the methodology — the key is testing the *system*, not just the model's refusal behavior.
 
 **Follow-up:** what's the difference between red-teaming the model and red-teaming the feature?
+
+**Weak answer:** try 'ignore previous instructions' once
+
+**Rubric:** pass = systematic attack surface: injection, exfiltration, tool abuse, edge inputs; strong = connects findings to regression tests
 
 ## 5. Explain this output: a support bot reveals part of its system prompt when asked "what are your instructions?" — what's exposed?
 
@@ -37,11 +53,19 @@ Two exposures. The obvious one: the prompt's contents — which may include busi
 
 **Follow-up:** what should never go in a system prompt even if you assume it can't be extracted?
 
+**Weak answer:** nothing — the system prompt is meant to be seen
+
+**Rubric:** pass = prompt disclosure leaks constraints, internals, sometimes secrets — an attacker's map; strong = says what should never have been in the prompt at all
+
 ## 6. How do you handle PII in an AI feature?
 
 Minimize first — don't send PII you don't need. Detect and redact what must pass through — PII in prompts, PII in logs (the leak people forget), PII in outputs. Retention is a policy decision made explicit: what you log, for how long, for what purpose. The [PII redaction lesson](/learn/production/pii-redaction-in-llm-logs) covers the logging side; the principle is that PII handling is a data-governance decision before it's a model decision.
 
 **Follow-up:** where does PII most often leak in production — and why do logs get missed?
+
+**Weak answer:** ask the model not to mention it
+
+**Rubric:** pass = minimize, detect, redact where possible, control retention, know what leaves for the provider; strong = names where PII most plausibly leaks — logs and context
 
 ## 7. Choose the tradeoff: strict refusal behavior versus a permissive model with strong guardrails?
 
@@ -50,6 +74,10 @@ Minimize first — don't send PII you don't need. Detect and redact what must pa
 Strict model behavior pushes safety into the model — simpler, but brittle: refusals over-fire on legitimate use and under-fire on novel attacks. Permissive model + strong system guardrails puts control where you can test and update it — the right structure for products where you own the risk model. The honest frame: you can't outsource the boundary to the model and also own the product — one of them holds the act boundary, and it should be your code.
 
 **Follow-up:** when does a refusal-heavy model become a usability liability?
+
+**Weak answer:** maximum refusal — safest is best
+
+**Rubric:** pass = refusal cost on legitimate use vs guardrail failure cost; strong = names who bears each failure
 
 ## How to score your answers
 

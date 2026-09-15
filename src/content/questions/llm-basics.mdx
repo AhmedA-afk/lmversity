@@ -14,6 +14,10 @@ The practical distinction matters: a model can produce a fluent answer without h
 
 **Follow-up:** if the model only predicts the next token, why does its output look like reasoning?
 
+**Weak answer:** a database of the internet that retrieves the right answer
+
+**Rubric:** pass = probability over token sequences + iterated prediction; strong = derives the fluent-but-unverified consequence
+
 ## 2. What is a token?
 
 A token is a unit chosen by a tokenizer. It may represent a whole word, part of a word, punctuation, or whitespace. Tokenization is model-specific, so the same text can consume different numbers of tokens across model families.
@@ -21,6 +25,10 @@ A token is a unit chosen by a tokenizer. It may represent a whole word, part of 
 Tokens affect context limits, latency, and cost. A good answer names all three instead of treating tokens as characters. See [tokenization](/learn/llm-foundations/tokenization-explained) and [tokens, context, and cost](/learn/ai-foundations/tokens-context-cost).
 
 **Follow-up:** where does "a token is a word" break — give a concrete example.
+
+**Weak answer:** a token is a word
+
+**Rubric:** pass = tokenizer-defined sub-word unit; strong = names a concrete case where the word-model breaks
 
 ## 3. Why can an LLM hallucinate?
 
@@ -30,6 +38,10 @@ Mitigations include retrieval with citations, constrained outputs, abstention ru
 
 **Follow-up:** why does retrieval reduce hallucinations without eliminating them?
 
+**Weak answer:** it's a bug the next version will patch
+
+**Rubric:** pass = the objective rewards plausible continuations, not truth; strong = names mitigations and why none is universal
+
 ## 4. What is the difference between training and inference?
 
 Training updates model parameters using many examples and an optimization procedure. Inference uses fixed parameters to compute an output for a given input. Prompting, retrieval, and tool calls change the input or surrounding application state; they do not retrain the base model.
@@ -37,6 +49,10 @@ Training updates model parameters using many examples and an optimization proced
 This distinction helps with debugging. If a behavior changes after adding documents to a request, investigate the context pipeline before proposing fine-tuning.
 
 **Follow-up:** which of the two does prompting change, and which does fine-tuning change?
+
+**Weak answer:** prompting the model trains it
+
+**Rubric:** pass = parameter update vs fixed-parameter compute; strong = uses the distinction to debug (context pipeline before fine-tuning)
 
 ## 5. What is a context window?
 
@@ -46,6 +62,10 @@ Treat context as a budget: retrieve relevant material, remove repetition, preser
 
 **Follow-up:** the model seems to forget an instruction mid-conversation — what actually happened?
 
+**Weak answer:** the model's memory of the conversation
+
+**Rubric:** pass = bounded token budget for input plus output; strong = treats context as a budget with deliberate allocation
+
 ## 6. What does temperature change?
 
 Temperature changes how sharply the model samples from its next-token probability distribution. Lower values usually make high-probability choices more likely; higher values spread probability across more alternatives.
@@ -53,6 +73,10 @@ Temperature changes how sharply the model samples from its next-token probabilit
 It does not add knowledge or make a model reason better. Use lower randomness for extraction and routing, then measure whether any setting improves the actual task rather than relying on a “creative” label.
 
 **Follow-up:** when is temperature 0 the right setting — and what does it not fix?
+
+**Weak answer:** a creativity dial — higher makes the model smarter
+
+**Rubric:** pass = sampling sharpness over the next-token distribution; strong = measures per task instead of trusting labels
 
 ## 7. Why do transformers use attention?
 
@@ -62,6 +86,10 @@ The original Transformer paper introduced an architecture based on attention rat
 
 **Follow-up:** why is attention a finite resource — what does a bigger context window not buy you?
 
+**Weak answer:** it lets the model focus on important words
+
+**Rubric:** pass = weighted relationships between positions + parallelizable computation; strong = explains what long context still doesn't buy
+
 ## 8. When should you use a smaller model?
 
 Use the smallest model that meets the task's quality, latency, and safety requirements. Smaller models can be cheaper and faster, and they may be easier to run privately. A larger model can still win when the task needs broad knowledge, complex synthesis, or robust instruction following.
@@ -69,6 +97,10 @@ Use the smallest model that meets the task's quality, latency, and safety requir
 Decide with a fixed evaluation set and production-like inputs. Compare total system cost, including retries, retrieval, tool calls, and human review, not just the per-token price.
 
 **Follow-up:** how would you actually find out whether a smaller model is good enough for this task?
+
+**Weak answer:** never — the biggest available model is the professional choice
+
+**Rubric:** pass = smallest model meeting quality/latency/safety requirements; strong = compares total system cost including retries and review
 
 ## How to score your answers
 

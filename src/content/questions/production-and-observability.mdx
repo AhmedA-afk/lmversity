@@ -11,11 +11,19 @@ Everything except the demo: latency budgets, cost per request, error handling, t
 
 **Follow-up:** name three things that exist in production that a demo never needs.
 
+**Weak answer:** nothing much — the demo was the hard part
+
+**Rubric:** pass = scale, adversarial inputs, cost, monitoring, failure handling; strong = names which assumption the demo hid
+
 ## 2. How do you version prompts and models in production?
 
 Prompts are code: versioned in the repo, deployed with the app, tagged in the observability data so a given response traces to a given prompt version. Models: pin the version where the provider allows it — an alias that silently upgrades is a regression waiting to happen. Record both on every request; when behavior changes and your code didn't, this is how you find out what did. See [prompt versioning and rollback](/learn/genai-app-dev/prompt-versioning-and-rollback).
 
 **Follow-up:** the provider ships a silent model update — how do you detect the behavior changed?
+
+**Weak answer:** edit the prompt file and redeploy
+
+**Rubric:** pass = versioned artifacts + attribution in logs + rollback path; strong = says why model and prompt versions both go in the trace
 
 ## 3. What does observability mean for an LLM feature?
 
@@ -23,11 +31,19 @@ Traces per request (every step: retrieval, calls, post-processing), cost and lat
 
 **Follow-up:** what's the difference between monitoring this and monitoring a normal API?
 
+**Weak answer:** latency and error dashboards
+
+**Rubric:** pass = traces (prompt, retrieval, calls, output) + quality signals + cost; strong = names the signal a green dashboard misses
+
 ## 4. How do you control cost on a model-driven feature?
 
 Know the drivers first: tokens in, tokens out, calls per user-action, model tier per step. Then the levers: smaller/cheaper models where quality allows, caching (prompt caching, response caching, embedding caching), batch for non-interactive work, context discipline (retrieval quality over context size), and per-step routing so flagship models only touch hard steps. [Cut your LLM bill](/guides/cut-your-llm-bill) walks the whole playbook.
 
 **Follow-up:** which lever usually saves the most, and why is it the one teams try last?
+
+**Weak answer:** use the cheapest model
+
+**Rubric:** pass = the levers — model size, caching, context size, routing, batching; strong = counts total cost including retries and review
 
 ## 5. Explain this trace: p50 latency is 800ms, p95 is 14s. Same code, same model — what's going on?
 
@@ -37,11 +53,19 @@ A bimodal distribution means the requests aren't one workload. The usual suspect
 
 **Follow-up:** how would you distinguish a retry problem from a context-size problem from the trace alone?
 
+**Weak answer:** the model is slow sometimes — nothing to fix
+
+**Rubric:** pass = looks for the tail cause — long contexts, retries, queueing, tool calls; strong = names which lever addresses which cause
+
 ## 6. How do you test an AI feature before release?
 
 Layers, not a single gate: deterministic tests for the code (validation, routing, schemas), eval fixtures for the model behavior (a versioned set run against changes — see [write your first eval](/guides/write-your-first-eval-for-an-ai-feature)), adversarial tests for security, and a canary or shadow release for the production cutover. "It works in the demo" is a test of one; the layers catch different failure classes.
 
 **Follow-up:** what's the eval set's job that unit tests can't do?
+
+**Weak answer:** you can't test nondeterminism
+
+**Rubric:** pass = eval sets on fixed config, adversarial cases, staged rollout; strong = separates what evals cover from what only production reveals
 
 ## 7. Choose the tradeoff: a faster cheaper model or a slower better one?
 
@@ -50,6 +74,10 @@ Layers, not a single gate: deterministic tests for the code (validation, routing
 Map it to the user-facing cost of each failure. If latency drives the experience (voice, inline completion, chat), the fast model wins and you engineer around its quality limits — tighter prompts, better retrieval, validation. If correctness drives the outcome (extraction, analysis, anything a user will act on), the slower better model wins and you engineer around its latency — streaming, async, progress UX. The honest answer is per-step, not per-product: different steps can take different models.
 
 **Follow-up:** how would you measure which error the user actually notices?
+
+**Weak answer:** quality first — users deserve the best
+
+**Rubric:** pass = conditions on task criticality, volume economics, latency UX; strong = names the routing option that avoids the binary
 
 ## How to score your answers
 

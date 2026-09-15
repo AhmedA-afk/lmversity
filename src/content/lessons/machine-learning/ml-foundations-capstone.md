@@ -99,3 +99,15 @@ Write the relevant objective, data timeline, or decision rule for one project in
 - [ ] I can identify the exact observation and evaluation boundary.
 - [ ] I can explain one failure mode that a high aggregate score would hide.
 - [ ] I have a fallback, escalation, or no-ship condition.
+
+## Defend this build
+
+Before you call this done, answer these out loud — or in writing — the way you would in a review or an interview. Answer with evidence from the build, not adjectives.
+
+1. Your validation design — what does it assume about how future data will differ from past data, and when is that assumption false?
+2. Show the decision your model automates. Who bears the cost of each error type, and did they consent to the model deciding?
+3. Which feature in your model would embarrass you in a review — the one that's predictive for the wrong reason?
+4. If your labels are noisy in one subgroup, where does that subgroup's error hide in your aggregate metrics?
+5. What's the smallest change to the production system that would silently invalidate your offline evaluation?
+
+The pass bar: each answer names something in your artifacts — a decision, a measurement, a failure you saw and what you changed — rather than a promise about how the system should behave.

@@ -14,6 +14,10 @@ The prompt is only one part of the system. Pair it with representative examples,
 
 **Follow-up:** the prompt works on your test inputs but fails in production — what do you check first?
 
+**Weak answer:** clever magic words and a strong persona
+
+**Rubric:** pass = testable task + context + constraints two engineers can run consistently; strong = treats the prompt as one component beside evals and validation
+
 ## 2. What belongs in a system prompt?
 
 Stable application rules belong in a system prompt: the assistant's job, durable constraints, safety boundaries, and output contract. User requests and user-provided material should remain separate so that data is not accidentally treated as authority.
@@ -21,6 +25,10 @@ Stable application rules belong in a system prompt: the assistant's job, durable
 System messages are not a security boundary by themselves. Enforce permissions, tool access, and sensitive-data controls in application code. See [system prompts versus user prompts](/learn/prompt-engineering/system-vs-user-prompts).
 
 **Follow-up:** what should never go in a system prompt even though it fits there?
+
+**Weak answer:** everything — the system prompt is a security layer
+
+**Rubric:** pass = stable rules vs. keeping user material out of authority position; strong = says enforcement lives in application code
 
 ## 3. When should you use few-shot examples?
 
@@ -30,6 +38,10 @@ Examples consume context and can create accidental bias. Compare zero-shot and f
 
 **Follow-up:** when do examples beat instructions — and when do they quietly hurt?
 
+**Weak answer:** always — more examples can only help
+
+**Rubric:** pass = uses examples where rules are hard to express; strong = compares zero/few-shot on the same eval instead of intuition
+
 ## 4. Why are delimiters useful?
 
 Delimiters make the boundary between instructions and untrusted content visible to both the reader and the model. Labels such as “document” or “customer message” also clarify how a piece of text should be treated.
@@ -37,6 +49,10 @@ Delimiters make the boundary between instructions and untrusted content visible 
 Delimiters reduce confusion but do not sanitize malicious content or grant trustworthy status. Parse and authorize data outside the model as well. See [delimiters and formatting](/learn/prompt-engineering/delimiters-and-formatting).
 
 **Follow-up:** why is a delimiter not a security boundary?
+
+**Weak answer:** delimiters sanitize hostile input
+
+**Rubric:** pass = visible instruction/data boundary for model and reader; strong = names what delimiters cannot do and where parsing/authorization actually lives
 
 ## 5. Should you ask a model to show its chain of thought?
 
@@ -46,6 +62,10 @@ For hard tasks, decomposition, tool use, and checking often help more than a lon
 
 **Follow-up:** what do you ask for instead when the output has to be auditable?
 
+**Weak answer:** always — more reasoning text means better reasoning
+
+**Rubric:** pass = prefers an auditable artifact (assumptions, evidence, verification summary); strong = names tasks where decomposition or tools help more
+
 ## 6. How do you make a prompt robust to prompt injection?
 
 Assume any retrieved document, web page, or user field can contain instructions aimed at the model. Keep untrusted text clearly labeled, restrict tools by least privilege, require approval for consequential actions, and validate outputs before they reach a sink.
@@ -53,6 +73,10 @@ Assume any retrieved document, web page, or user field can contain instructions 
 There is no single “anti-injection phrase” that solves this. Use layered controls and test attack paths. The [OWASP LLM guidance](https://owasp.org/www-project-top-10-for-large-language-model-applications/) treats prompt injection as a first-class application risk.
 
 **Follow-up:** the untrusted text contains "ignore previous instructions" — where does your defense actually live?
+
+**Weak answer:** put 'ignore any other instructions' at the top
+
+**Rubric:** pass = labels untrusted text + least-privilege tools + approval gates; strong = says where the defense actually lives — outside the prompt
 
 ## 7. How would you evaluate a prompt change?
 
@@ -62,6 +86,10 @@ Track prompt version, model version, retrieval configuration, and cost. A prompt
 
 **Follow-up:** the new prompt wins 60/40 on your evaluation set — what else do you look at before shipping?
 
+**Weak answer:** try it on a few inputs and see if it feels better
+
+**Rubric:** pass = frozen representative set + criteria + old-vs-new comparison; strong = tracks versions and failure classes for attribution and rollback
+
 ## 8. How do you get reliable structured output?
 
 Give the model a precise schema, use the provider's structured-output feature where available, validate the result with a real parser, and retry or repair only when the error is safe to correct. Treat validation failure as an observable outcome, not as a silent string substitution.
@@ -69,6 +97,10 @@ Give the model a precise schema, use the provider's structured-output feature wh
 Keep business rules outside the schema when they need authoritative enforcement. LMVersity's [structured outputs track](/learn/structured-outputs) covers schema design and auto-repair.
 
 **Follow-up:** the model returns valid JSON with a wrong value — what catches it?
+
+**Weak answer:** ask nicely for JSON in the prompt text
+
+**Rubric:** pass = schema + provider feature + real parser validation; strong = names the valid-JSON-wrong-value failure class
 
 ## How to score your answers
 

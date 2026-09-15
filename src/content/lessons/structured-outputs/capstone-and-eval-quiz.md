@@ -135,3 +135,15 @@ D. This is purely a monitoring artifact and should be filtered out of the dashbo
 </details>
 
 **Related:** [The Cross-Provider Landscape](/learn/structured-outputs/cross-provider-landscape), [Writing Portable Schema Code](/learn/structured-outputs/writing-portable-schema-code), [Metrics for Structured-Output Quality](/learn/structured-outputs/evaluating-structured-output-quality-metrics), [Curating a Gold Dataset](/learn/structured-outputs/building-a-gold-dataset), [Regression-Testing Structured Output in CI](/learn/structured-outputs/regression-testing-schemas-and-prompts), [Monitoring in Production](/learn/structured-outputs/monitoring-structured-output-in-production)
+
+## Defend this build
+
+Before you call this done, answer these out loud — or in writing — the way you would in a review or an interview. Answer with evidence from the build, not adjectives.
+
+1. Show a model output that parses perfectly and is semantically wrong. Which of your checks catches that class?
+2. Where in your pipeline does a malformed output go — reject, retry, or repair — and what does each choice cost in latency?
+3. Which field in your schema is most likely to be subtly wrong rather than absent? What validates it?
+4. If the provider's structured-output behavior drifts, which of your tests fails first — and is it deterministic?
+5. Show the eval case where strict schema conformance hurt a correct answer. Where's the boundary?
+
+The pass bar: each answer names something in your artifacts — a decision, a measurement, a failure you saw and what you changed — rather than a promise about how the system should behave.

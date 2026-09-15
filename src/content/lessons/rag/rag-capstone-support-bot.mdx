@@ -95,3 +95,15 @@ Ship the core spec first. Every extension above is worth more once the base bot 
 />
 
 **Related:** [Building a RAG Pipeline End to End](/learn/rag/building-a-rag-pipeline-end-to-end) · [Grounding Answers with Citations](/learn/rag/grounding-answers-with-citations) · [Evaluating RAG Quality](/learn/rag/evaluating-rag-quality) · [Corrective / Self-RAG](/learn/rag/corrective-self-rag) · [Hybrid Search: Lexical and Vector](/learn/rag/hybrid-search-lexical-and-vector) · [Choosing a Vector Database](/learn/rag/choosing-a-vector-database)
+
+## Defend this build
+
+Before you call this done, answer these out loud — or in writing — the way you would in a review or an interview. Answer with evidence from the build, not adjectives.
+
+1. Show a question where your bot answered from the wrong retrieved chunk. Why did retrieval rank it, and what did you change?
+2. Which question type does your system answer worst — and is that a retrieval, chunking, or generation failure? Prove which.
+3. Point at the citation your system gave for one answer and check it line by line. Where does the text overclaim the source?
+4. If a doc in the corpus contradicts itself across versions, what does your system do? Show the record.
+5. What's the difference in your logs between 'retrieval found nothing' and 'retrieval found junk'? Which metric sees that difference?
+
+The pass bar: each answer names something in your artifacts — a decision, a measurement, a failure you saw and what you changed — rather than a promise about how the system should behave.

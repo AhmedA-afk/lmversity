@@ -86,3 +86,14 @@ Design and implement a search-and-planning capstone solver or planner for one of
 
 You can move on when you can explain the model before naming the algorithm, derive one decision trace by hand, and state exactly what guarantee depends on which assumption. You should also be able to say what the system does when those assumptions fail. That is the difference between invoking search-and-planning capstone and engineering a classical AI component that another person can inspect and trust.
 
+## Defend this build
+
+Before you call this done, answer these out loud — or in writing — the way you would in a review or an interview. Answer with evidence from the build, not adjectives.
+
+1. On your hardest instance, which component did the most work: the heuristic, the pruning, or the representation? Where's the evidence?
+2. Where does your heuristic overestimate, and what does that cost you in optimality or time?
+3. Show a problem instance where your planner produces a valid but absurd plan. Why does the objective function allow it?
+4. If the search space doubled in size, which assumption in your representation breaks first?
+5. What did you choose not to optimize for, and what would change if you did?
+
+The pass bar: each answer names something in your artifacts — a decision, a measurement, a failure you saw and what you changed — rather than a promise about how the system should behave.

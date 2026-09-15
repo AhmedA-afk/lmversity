@@ -11,11 +11,19 @@ For each token, a learned way to look back at every earlier token and decide whi
 
 **Follow-up:** why does attention scale quadratically, and what does that cost on long contexts?
 
+**Weak answer:** the model deciding which words are important
+
+**Rubric:** pass = learned weighting over positions that lets each token draw on relevant context; strong = distinguishes intuitive story from the actual computation
+
 ## 2. What's the difference between a transformer and an RNN for sequence work?
 
 An RNN reads tokens one at a time, carrying state forward — sequential, hard to parallelize, struggles with long-range dependencies. A transformer reads the whole sequence at once and lets attention wire up whichever positions matter — parallelizable, better at long range, which is why it won. The cost is that quadratic attention over the whole context.
 
 **Follow-up:** name a case where an RNN-style approach is still reasonable today.
+
+**Weak answer:** transformers are newer and better
+
+**Rubric:** pass = parallel attention vs sequential state — the training-time consequence; strong = names what recurrence bought that transformers gave up
 
 ## 3. What do learning rate and batch size actually trade off?
 
@@ -23,17 +31,29 @@ Learning rate: step size per update — too high diverges or oscillates, too low
 
 **Follow-up:** what does a learning-rate schedule buy you that a fixed rate doesn't?
 
+**Weak answer:** learning rate is speed, batch size is memory
+
+**Rubric:** pass = step size × gradient noise — stability vs throughput vs generalization; strong = connects them (small batches + big LR ≈ noisy steps)
+
 ## 4. What is overfitting in a deep network, and what actually fixes it?
 
 Same concept as classical ML — the network memorizes noise — but with more capacity to do it badly. The fixes are the standard toolkit: more data (best), augmentation, regularization (weight decay, dropout), early stopping on validation, smaller model. The trap is treating "train longer" as the answer — that's how you get there, not out.
 
 **Follow-up:** why does dropout help, intuitively?
 
+**Weak answer:** too many parameters — make it smaller
+
+**Rubric:** pass = memorization vs generalization + the fixes: data, regularization, early stop; strong = notes when the textbook fix is the wrong one
+
 ## 5. What is catastrophic forgetting?
 
 Fine-tune a model on a new task and it can lose capability on the old ones — the weights that served the old task get overwritten. It's why naive fine-tuning is risky for general capability, and why techniques like LoRA (train a small adapter, freeze the base) or mixing old-task data into new training matter in practice.
 
 **Follow-up:** how would you detect forgetting after a fine-tune — what would you measure?
+
+**Weak answer:** the model randomly forgets things
+
+**Rubric:** pass = fine-tuning overwrites prior-task behavior; strong = names mitigations — replay, regularization, adapters — and their cost
 
 ## 6. Explain this trace: training loss flatlines high, validation loss flatlines higher. What's broken?
 
@@ -43,6 +63,10 @@ Both losses flat and high means the model isn't learning at all — underfitting
 
 **Follow-up:** what does it mean if the tiny-batch overfit works but full training still flatlines?
 
+**Weak answer:** overfitting
+
+**Rubric:** pass = reads underfitting, not overfitting — both curves high; strong = proposes the debugging order: data, capacity, LR, bug in the pipeline
+
 ## 7. Choose the tradeoff: a bigger pretrained model or a smaller one fine-tuned on your data?
 
 **Format: choose the tradeoff.**
@@ -50,6 +74,10 @@ Both losses flat and high means the model isn't learning at all — underfitting
 Depends on the gap. If your task is close to what the big model already does, a small fine-tuned model wins on cost and often on your specific distribution. If the task needs capability the small model doesn't have — hard reasoning, broad knowledge — no amount of fine-tuning adds what isn't there. The honest sequence: measure the small model on your task first; only pay for size you can show you need.
 
 **Follow-up:** what would you measure to know which failure you have — capability or specialization?
+
+**Weak answer:** bigger always wins on benchmarks
+
+**Rubric:** pass = conditions on task narrowness, data quality, serving cost; strong = names the eval that would settle it honestly
 
 ## How to score your answers
 

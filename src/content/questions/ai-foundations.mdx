@@ -13,11 +13,19 @@ The useful consequence: the model doesn't "know" things the way a database knows
 
 **Follow-up:** if it's just next-token prediction, why can it do arithmetic sometimes and not others?
 
+**Weak answer:** a giant database that stores the internet and looks things up
+
+**Rubric:** pass = names next-token probability over sequences; strong = connects the mechanism to why grounding and verification are engineering concerns
+
 ## 2. What is the difference between pretraining and fine-tuning?
 
 Pretraining learns general language and world structure from a huge corpus — expensive, done once by the lab. Fine-tuning adapts a pretrained model on a narrower dataset to shift behavior: instruction-following, a domain's vocabulary, a style, a task. You're usually fine-tuning to change *how* it behaves, not *what* it knows — knowledge injection via fine-tuning is unreliable compared to retrieval.
 
 **Follow-up:** when would you pick fine-tuning over retrieval-augmented generation, and when is that the wrong choice?
+
+**Weak answer:** fine-tuning teaches the model new facts
+
+**Rubric:** pass = separates general capability training from behavioral adaptation; strong = notes knowledge injection via fine-tuning is unreliable compared to retrieval
 
 ## 3. What does "emergent capability" mean, and why is it contested?
 
@@ -25,17 +33,29 @@ The observation that some abilities appear only past a scale threshold — a sma
 
 **Follow-up:** how does this change how you'd evaluate whether a model can do your task?
 
+**Weak answer:** a mysterious property nobody can explain — pure marketing
+
+**Rubric:** pass = defines the threshold observation and why it's contested; strong = names the measurement-artifact explanation and the nonlinear-capability consequence
+
 ## 4. What are tokens and why do they matter beyond cost?
 
 Tokens are the model's input units — sub-word pieces, not words or characters. Beyond billing: context limits are in tokens, tokenization affects what the model "sees" (a word split oddly can degrade understanding), and different languages tokenize at wildly different efficiencies for the same content. The [tokenizer lab](/learn/llm-foundations/inspect-a-real-tokenizer-lab) makes it concrete.
 
 **Follow-up:** why would the same sentence cost different token counts in English versus Hindi?
 
+**Weak answer:** tokens are just words, or characters
+
+**Rubric:** pass = names context limits and what the model literally sees; strong = adds multilingual tokenization asymmetry
+
 ## 5. When is a model the wrong tool entirely?
 
 When the task needs exactness over judgment: arithmetic you can compute, lookups you can query, rules you can write, actions that must be identical every time. A model's strength is judgment-shaped work — reading intent, extracting meaning, generating plausible text. Using one where a lookup or a rule works is paying for nondeterminism you don't need.
 
 **Follow-up:** give an example of a feature that looks like an LLM feature but should be a database query.
+
+**Weak answer:** never — a good prompt makes it the right tool for anything
+
+**Rubric:** pass = draws the exactness-versus-judgment boundary with an example; strong = names the nondeterminism cost you pay for using a model where a rule works
 
 ## 6. Choose the tradeoff: a bigger model or a better prompt?
 
@@ -45,11 +65,19 @@ The honest answer is "it depends where the failure is." If the model misundersta
 
 **Follow-up:** what would you measure to know which failure you have?
 
+**Weak answer:** always upgrade the model — scale fixes everything
+
+**Rubric:** pass = conditions the choice on the failure class; strong = says how you'd measure which failure you have
+
 ## 7. What's the difference between an AI *feature* and an AI *system*?
 
 A feature is the model call and its UX — the chat, the summary, the suggestion. A system is everything around it: retrieval, validation, fallbacks, cost controls, observability, the failure paths. Most production incidents are system failures wearing feature clothes — the model did something plausible and the system had no check on it.
 
 **Follow-up:** name the parts of an AI system that exist even if the model is swapped tomorrow.
+
+**Weak answer:** they're two names for the model and its chat window
+
+**Rubric:** pass = lists system components beyond the model call; strong = frames incidents as system failures wearing feature clothes
 
 ## How to score your answers
 
