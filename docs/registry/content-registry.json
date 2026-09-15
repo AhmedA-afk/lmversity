@@ -1,19 +1,19 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T17:13:46.523Z",
+  "generatedAt": "2026-09-15T17:27:24.756Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2594,
+  "itemCount": 2604,
   "counts": {
    "byFamily": {
     "lesson": 2160,
     "project": 33,
-    "lab": 75,
+    "lab": 76,
     "reference": 107,
     "quiz": 93,
     "interview": 7,
     "scenario": 12,
-    "blog": 10,
+    "blog": 19,
     "guide": 14,
     "answer": 35,
     "role": 12,
@@ -22,13 +22,13 @@
     "glossary": 1
    },
    "byStatus": {
-    "live": 2594
+    "live": 2604
    },
    "byKind": {
     "concept": 1849,
     "comparison": 109,
     "capstone": 33,
-    "lab": 75,
+    "lab": 76,
     "worked-example": 33,
     "cheatsheet": 49,
     "common-mistakes": 26,
@@ -36,7 +36,7 @@
     "drill": 14,
     "topic": 7,
     "scenario": 12,
-    "post": 10,
+    "post": 19,
     "howto": 25,
     "pillar": 4,
     "definition": 12,
@@ -61,7 +61,7 @@
     "agent-skills": 6,
     "agentic-ai": 30,
     "ai-automation-ops": 8,
-    "ai-for-designers": 25,
+    "ai-for-designers": 26,
     "ai-foundations": 161,
     "ai-literacy": 59,
     "classical-ai": 83,
@@ -112,10 +112,10 @@
     "fde": 193
    },
    "byFreshness": {
-    "release-sensitive": 354,
-    "pricing-sensitive": 359,
-    "periodic": 1367,
-    "policy-sensitive": 93,
+    "release-sensitive": 357,
+    "pricing-sensitive": 361,
+    "periodic": 1371,
+    "policy-sensitive": 94,
     "certification-sensitive": 104,
     "durable": 266,
     "volatile": 51
@@ -7203,6 +7203,94 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
+    "linking": null,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2229",
+   "family": "lab",
+   "kind": "lab",
+   "title": "Lab: build a source-traceable research synthesis board",
+   "slug": "ai-for-designers/research-synthesis-lab",
+   "route": "/learn/ai-for-designers/research-synthesis-lab",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-for-designers/research-synthesis-lab.md",
+   "track": "ai-for-designers",
+   "module": null,
+   "status": "live",
+   "summary": "Synthesize twelve authored driver interviews for a fictional logistics operator into a theme board where every finding traces to its sources, with AI assistance you audit.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 1160,
+   "headings": [
+    "The situation",
+    "What you are given",
+    "Deliberately out of scope",
+    "Outcomes",
+    "Steps",
+    "Artifact",
+    "Honesty rules",
+    "Next"
+   ],
+   "internalLinks": [
+    "/learn/ai-for-designers/ai-product-design-common-mistakes",
+    "/learn/ai-for-designers/capstone-design-a-trustworthy-ai-feature",
+    "/learn/ai-for-designers/designing-a-ux-evaluation-rubric"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 16,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "build",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Synthesize twelve authored driver interviews for a fictional logistics operator into a theme board where every finding traces to its sources, with AI assistance you audit.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-for-designers",
+   "practiceType": "none",
+   "freshnessClass": "policy-sensitive",
+   "freshnessSignals": [
+    "policy/license mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": 0,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
     "linking": null,
     "freshnessHealth": 0,
     "originality": null,
@@ -114045,7 +114133,7 @@
    "scores": {
     "intentClarity": null,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 0,
     "prerequisiteFit": 0,
     "handsOn": null,
     "explanationQuality": null,
@@ -193999,6 +194087,82 @@
    }
   },
   {
+   "id": "blo-0011",
+   "family": "blog",
+   "kind": "post",
+   "title": "Agent Skills vs prompts, rules, MCP, hooks, and subagents",
+   "slug": "agent-skills-vs-prompts-rules-mcp-hooks-subagents",
+   "route": "/blog/agent-skills-vs-prompts-rules-mcp-hooks-subagents",
+   "collection": "blog",
+   "path": "src/content/blog/agent-skills-vs-prompts-rules-mcp-hooks-subagents.mdx",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Six mechanisms that all look like 'teaching the agent things' — and the differences that decide which one a given capability actually belongs in.",
+   "author": "Ahmed Ansari",
+   "published": "2026-09-16",
+   "updated": null,
+   "verified": null,
+   "wordCount": 504,
+   "headings": [
+    "The one-line distinction",
+    "When each is the right container",
+    "The composition that works"
+   ],
+   "internalLinks": [
+    "/learn/agent-skills/evaluating-and-porting-skills",
+    "/learn/agent-skills/skill-vs-prompt-rule-hook-mcp-subagent"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "Article",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "tags": [
+     "Agent Skills",
+     "MCP",
+     "Agents"
+    ],
+    "codeBlocks": 0,
+    "listItems": 6,
+    "numericClaims": 0
+   },
+   "searchIntent": "read",
+   "primaryAudience": "general",
+   "promisedOutcome": "Six mechanisms that all look like 'teaching the agent things' — and the differences that decide which one a given capability actually belongs in.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: MCP"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": 1,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 1,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "blo-0001",
    "family": "blog",
    "kind": "post",
@@ -194053,20 +194217,189 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "expand",
-   "dispositionReason": "thin vs family median (191w vs ~525w)",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 0,
+    "completeness": 1,
     "prerequisiteFit": null,
     "handsOn": 1,
     "explanationQuality": 2,
     "metadata": 2,
     "linking": 1,
     "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "blo-0012",
+   "family": "blog",
+   "kind": "post",
+   "title": "Building multilingual and Indic AI systems",
+   "slug": "building-multilingual-and-indic-ai-systems",
+   "route": "/blog/building-multilingual-and-indic-ai-systems",
+   "collection": "blog",
+   "path": "src/content/blog/building-multilingual-and-indic-ai-systems.mdx",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Serving users across languages isn't a translation feature — it's a systems problem of coverage, mixing, retrieval, and evaluation that English-first pipelines get wrong.",
+   "author": "Ahmed Ansari",
+   "published": "2026-09-16",
+   "updated": null,
+   "verified": null,
+   "wordCount": 418,
+   "headings": [
+    "Coverage is a spectrum, not a checkbox",
+    "The architecture choice is per-step",
+    "Code-mixing is the register, not the edge case",
+    "Retrieval and documents have their own multilingual physics",
+    "You can't improve what you can't measure",
+    "The Indic case specifically"
+   ],
+   "internalLinks": [
+    "/learn/evals-red-teaming/multilingual-evaluation-design",
+    "/learn/multilingual-ai",
+    "/learn/multilingual-ai/code-mixing-and-code-switching",
+    "/learn/multilingual-ai/cross-lingual-retrieval",
+    "/learn/multilingual-ai/multilingual-datasets-and-benchmarks",
+    "/learn/multilingual-ai/multilingual-documents-and-ocr",
+    "/learn/multilingual-ai/multilingual-model-landscape",
+    "/learn/multilingual-ai/multilingual-support-assistant-lab",
+    "/learn/multilingual-ai/translation-vs-multilingual-native",
+    "/providers/ai4bharat",
+    "/providers/bhashini",
+    "/providers/sarvam"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "Article",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "tags": [
+     "Multilingual",
+     "Indic AI",
+     "Architecture"
+    ],
+    "codeBlocks": 0,
+    "listItems": 0,
+    "numericClaims": 1
+   },
+   "searchIntent": "read",
+   "primaryAudience": "general",
+   "promisedOutcome": "Serving users across languages isn't a translation feature — it's a systems problem of coverage, mixing, retrieval, and evaluation that English-first pipelines get wrong.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Sarvam, AI4Bharat, Bhashini"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": 1,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "blo-0013",
+   "family": "blog",
+   "kind": "post",
+   "title": "Designing reliable browser automation",
+   "slug": "designing-reliable-browser-automation",
+   "route": "/blog/designing-reliable-browser-automation",
+   "collection": "blog",
+   "path": "src/content/blog/designing-reliable-browser-automation.mdx",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Browser automation fails at the seams — selectors, timing, sessions, and the agent's confidence. Reliability is a design property, not a retry policy.",
+   "author": "Ahmed Ansari",
+   "published": "2026-09-16",
+   "updated": null,
+   "verified": null,
+   "wordCount": 397,
+   "headings": [
+    "Locators are your contract with the page",
+    "Waiting is a design decision",
+    "Sessions are state, and state rots",
+    "The agent's confidence is the least reliable signal",
+    "Design for the failure modes on purpose"
+   ],
+   "internalLinks": [
+    "/learn/web-agents/extraction-and-evaluation",
+    "/learn/web-agents/playwright-fundamentals-and-locators",
+    "/learn/web-agents/sessions-credentials-and-act-boundaries",
+    "/learn/web-agents/what-the-browser-exposes"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "Article",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "tags": [
+     "Browser agents",
+     "Automation",
+     "Reliability"
+    ],
+    "codeBlocks": 0,
+    "listItems": 0,
+    "numericClaims": 1
+   },
+   "searchIntent": "read",
+   "primaryAudience": "general",
+   "promisedOutcome": "Browser automation fails at the seams — selectors, timing, sessions, and the agent's confidence. Reliability is a design property, not a retry policy.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Playwright"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": 1,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
     "demand": null
@@ -194152,6 +194485,83 @@
    }
   },
   {
+   "id": "blo-0014",
+   "family": "blog",
+   "kind": "post",
+   "title": "How to read a tool-call trace",
+   "slug": "how-to-read-a-tool-call-trace",
+   "route": "/blog/how-to-read-a-tool-call-trace",
+   "collection": "blog",
+   "path": "src/content/blog/how-to-read-a-tool-call-trace.mdx",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "A trace is the agent's black box recording — here's how to read one for the decision that actually went wrong, not the error that surfaced.",
+   "author": "Ahmed Ansari",
+   "published": "2026-09-16",
+   "updated": null,
+   "verified": null,
+   "wordCount": 405,
+   "headings": [
+    "The anatomy",
+    "Read backwards from the symptom",
+    "The three signature patterns",
+    "Make the trace readable before you need it"
+   ],
+   "internalLinks": [
+    "/blog/stopping-conditions-for-agents",
+    "/guides/add-observability-to-an-ai-feature",
+    "/guides/defend-against-prompt-injection",
+    "/learn/evals-red-teaming/evaluating-agent-trajectories"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "Article",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "tags": [
+     "Agents",
+     "Observability",
+     "Debugging"
+    ],
+    "codeBlocks": 0,
+    "listItems": 3,
+    "numericClaims": 0
+   },
+   "searchIntent": "read",
+   "primaryAudience": "general",
+   "promisedOutcome": "A trace is the agent's black box recording — here's how to read one for the decision that actually went wrong, not the error that surfaced.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": 1,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "blo-0003",
    "family": "blog",
    "kind": "post",
@@ -194218,6 +194628,165 @@
     "explanationQuality": 2,
     "metadata": 2,
     "linking": 1,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "blo-0015",
+   "family": "blog",
+   "kind": "post",
+   "title": "Local models: privacy, latency, hardware, and the quality question",
+   "slug": "local-models-privacy-latency-hardware-quality",
+   "route": "/blog/local-models-privacy-latency-hardware-quality",
+   "collection": "blog",
+   "path": "src/content/blog/local-models-privacy-latency-hardware-quality.mdx",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Running models locally is a real option with real tradeoffs — here's the honest accounting of what you gain, what you lose, and when it's the right call.",
+   "author": "Ahmed Ansari",
+   "published": "2026-09-16",
+   "updated": null,
+   "verified": null,
+   "wordCount": 519,
+   "headings": [
+    "Privacy: real, with caveats",
+    "Latency: both directions",
+    "Hardware is the honest constraint",
+    "Quality: the uncomfortable truth",
+    "Ops: you're the provider now",
+    "When local is the right call"
+   ],
+   "internalLinks": [
+    "/guides/run-your-first-local-model-app",
+    "/learn/local-inference/quantization-formats-and-tradeoffs-lab",
+    "/learn/local-inference/what-local-inference-actually-means",
+    "/providers/hosted-inference"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "Article",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "tags": [
+     "Local models",
+     "Open weights",
+     "Infrastructure"
+    ],
+    "codeBlocks": 0,
+    "listItems": 4,
+    "numericClaims": 8
+   },
+   "searchIntent": "read",
+   "primaryAudience": "general",
+   "promisedOutcome": "Running models locally is a real option with real tradeoffs — here's the honest accounting of what you gain, what you lose, and when it's the right call.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "pricing-sensitive",
+   "freshnessSignals": [
+    "pricing/cost mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": 1,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "blo-0016",
+   "family": "blog",
+   "kind": "post",
+   "title": "Observability for multi-step AI systems",
+   "slug": "observability-for-multi-step-ai-systems",
+   "route": "/blog/observability-for-multi-step-ai-systems",
+   "collection": "blog",
+   "path": "src/content/blog/observability-for-multi-step-ai-systems.mdx",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Single-call metrics tell you the model responded; multi-step systems need traces that show which step ate the time, the tokens, and the correctness.",
+   "author": "Ahmed Ansari",
+   "published": "2026-09-16",
+   "updated": null,
+   "verified": null,
+   "wordCount": 416,
+   "headings": [
+    "The aggregate hides everything",
+    "What a step-level trace buys you",
+    "The signals that matter per step",
+    "Two failure modes only traces catch",
+    "Build it before you need it"
+   ],
+   "internalLinks": [
+    "/blog/your-rag-problem-is-a-retrieval-problem",
+    "/guides/add-observability-to-an-ai-feature",
+    "/learn/production/instrumenting-one-app-two-ways",
+    "/learn/production/llm-observability-foundations"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "Article",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "tags": [
+     "Observability",
+     "Production",
+     "Agents"
+    ],
+    "codeBlocks": 0,
+    "listItems": 4,
+    "numericClaims": 5
+   },
+   "searchIntent": "read",
+   "primaryAudience": "general",
+   "promisedOutcome": "Single-call metrics tell you the model responded; multi-step systems need traces that show which step ate the time, the tokens, and the correctness.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": 1,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -194613,6 +195182,158 @@
    }
   },
   {
+   "id": "blo-0017",
+   "family": "blog",
+   "kind": "post",
+   "title": "What AI coding agents can and cannot safely own",
+   "slug": "what-ai-coding-agents-can-and-cannot-safely-own",
+   "route": "/blog/what-ai-coding-agents-can-and-cannot-safely-own",
+   "collection": "blog",
+   "path": "src/content/blog/what-ai-coding-agents-can-and-cannot-safely-own.mdx",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "The useful boundary isn't 'can it write code' — it's which decisions stay with the human and which the agent can carry end to end.",
+   "author": "Ahmed Ansari",
+   "published": "2026-09-16",
+   "updated": null,
+   "verified": null,
+   "wordCount": 422,
+   "headings": [
+    "What agents can own",
+    "What stays with the human",
+    "The working rule"
+   ],
+   "internalLinks": [
+    "/learn/cli-agents",
+    "/learn/cli-agents/cli-agent-labs",
+    "/learn/llm-security/sandboxing-code-execution-and-browser-use",
+    "/scenarios/coding-agent-rollout"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "Article",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "tags": [
+     "Coding agents",
+     "Security",
+     "Practice"
+    ],
+    "codeBlocks": 0,
+    "listItems": 0,
+    "numericClaims": 1
+   },
+   "searchIntent": "read",
+   "primaryAudience": "general",
+   "promisedOutcome": "The useful boundary isn't 'can it write code' — it's which decisions stay with the human and which the agent can carry end to end.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": 1,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "blo-0018",
+   "family": "blog",
+   "kind": "post",
+   "title": "What an eval catches that a demo misses",
+   "slug": "what-an-eval-catches-that-a-demo-misses",
+   "route": "/blog/what-an-eval-catches-that-a-demo-misses",
+   "collection": "blog",
+   "path": "src/content/blog/what-an-eval-catches-that-a-demo-misses.mdx",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "A demo proves the system can work once; an eval tells you how it fails, how often, and whether the fix you just shipped broke something else.",
+   "author": "Ahmed Ansari",
+   "published": "2026-09-16",
+   "updated": null,
+   "verified": null,
+   "wordCount": 375,
+   "headings": [
+    "Demos show capability; evals show distribution",
+    "Evals catch the regression nobody saw",
+    "The failure modes only a set can surface",
+    "What a real eval is (and isn't)"
+   ],
+   "internalLinks": [
+    "/guides/write-your-first-eval-for-an-ai-feature",
+    "/learn/evals-red-teaming/eval-driven-iteration",
+    "/learn/evals-red-teaming/evaluating-agent-behavior-in-dev"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "Article",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "tags": [
+     "Evaluation",
+     "Production",
+     "Testing"
+    ],
+    "codeBlocks": 0,
+    "listItems": 4,
+    "numericClaims": 1
+   },
+   "searchIntent": "read",
+   "primaryAudience": "general",
+   "promisedOutcome": "A demo proves the system can work once; an eval tells you how it fails, how often, and whether the fix you just shipped broke something else.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": 1,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "blo-0009",
    "family": "blog",
    "kind": "post",
@@ -194683,6 +195404,84 @@
     "explanationQuality": 2,
     "metadata": 2,
     "linking": 1,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "blo-0019",
+   "family": "blog",
+   "kind": "post",
+   "title": "Workflow, agent, or multi-agent: the decision is about who holds the plan",
+   "slug": "workflow-agent-or-multi-agent",
+   "route": "/blog/workflow-agent-or-multi-agent",
+   "collection": "blog",
+   "path": "src/content/blog/workflow-agent-or-multi-agent.mdx",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "The useful distinction between the three patterns isn't capability — it's where control lives, and what each one costs you when it fails.",
+   "author": "Ahmed Ansari",
+   "published": "2026-09-16",
+   "updated": null,
+   "verified": null,
+   "wordCount": 444,
+   "headings": [
+    "A workflow holds the plan in code",
+    "An agent holds the plan in the model",
+    "Multi-agent is a staffing decision, not an upgrade",
+    "The decision rule"
+   ],
+   "internalLinks": [
+    "/learn/agentic-ai/agents-vs-workflows",
+    "/learn/agentic-ai/multi-agent-patterns",
+    "/learn/agentic-ai/when-not-to-use-an-agent"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "Article",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "tags": [
+     "Agents",
+     "Architecture",
+     "Design"
+    ],
+    "codeBlocks": 0,
+    "listItems": 0,
+    "numericClaims": 0
+   },
+   "searchIntent": "read",
+   "primaryAudience": "general",
+   "promisedOutcome": "The useful distinction between the three patterns isn't capability — it's where control lives, and what each one costs you when it fails.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "pricing-sensitive",
+   "freshnessSignals": [
+    "pricing/cost mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": 1,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -222871,6 +223670,25 @@
   },
   {
    "a": {
+    "route": "/learn/cli-agents/customizing-the-agent-surface",
+    "slug": "cli-agents/customizing-the-agent-surface",
+    "title": "Customizing the agent: MCP config, skills, commands, rules, hooks, and subagents",
+    "track": "cli-agents"
+   },
+   "b": {
+    "route": "/blog/agent-skills-vs-prompts-rules-mcp-hooks-subagents",
+    "slug": "agent-skills-vs-prompts-rules-mcp-hooks-subagents",
+    "title": "Agent Skills vs prompts, rules, MCP, hooks, and subagents",
+    "track": "blog"
+   },
+   "jaccard": 0.6,
+   "containment": 0.86,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
     "route": "/learn/prompt-engineering/structured-output-contracts",
     "slug": "prompt-engineering/structured-output-contracts",
     "title": "Structured Output: Making the Model Speak a Contract",
@@ -227740,6 +228558,15 @@
    ]
   },
   {
+   "route": "/learn/ai-for-designers/research-synthesis-lab",
+   "slug": "ai-for-designers/research-synthesis-lab",
+   "title": "Lab: build a source-traceable research synthesis board",
+   "family": "lab",
+   "flags": [
+    "policy-sensitive page with no updated/review date"
+   ]
+  },
+  {
    "route": "/learn/ai-for-designers/trust-and-recovery-quiz",
    "slug": "ai-for-designers/trust-and-recovery-quiz",
    "title": "Quiz: trust and recovery",
@@ -229678,12 +230505,58 @@
    ]
   },
   {
+   "route": "/blog/agent-skills-vs-prompts-rules-mcp-hooks-subagents",
+   "slug": "agent-skills-vs-prompts-rules-mcp-hooks-subagents",
+   "title": "Agent Skills vs prompts, rules, MCP, hooks, and subagents",
+   "family": "blog",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/blog/building-multilingual-and-indic-ai-systems",
+   "slug": "building-multilingual-and-indic-ai-systems",
+   "title": "Building multilingual and Indic AI systems",
+   "family": "blog",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/blog/designing-reliable-browser-automation",
+   "slug": "designing-reliable-browser-automation",
+   "title": "Designing reliable browser automation",
+   "family": "blog",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/blog/local-models-privacy-latency-hardware-quality",
+   "slug": "local-models-privacy-latency-hardware-quality",
+   "title": "Local models: privacy, latency, hardware, and the quality question",
+   "family": "blog",
+   "flags": [
+    "pricing-sensitive page with no updated/review date",
+    "8 numeric claims with no sources section or external link"
+   ]
+  },
+  {
    "route": "/blog/the-context-window-got-bigger-and-it-did-not-fix-this",
    "slug": "the-context-window-got-bigger-and-it-did-not-fix-this",
    "title": "The context window got bigger. It didn't fix what you think.",
    "family": "blog",
    "flags": [
     "8 numeric claims with no sources section or external link"
+   ]
+  },
+  {
+   "route": "/blog/workflow-agent-or-multi-agent",
+   "slug": "workflow-agent-or-multi-agent",
+   "title": "Workflow, agent, or multi-agent: the decision is about who holds the plan",
+   "family": "blog",
+   "flags": [
+    "pricing-sensitive page with no updated/review date"
    ]
   },
   {

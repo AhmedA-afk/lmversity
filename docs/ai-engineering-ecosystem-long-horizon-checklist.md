@@ -688,19 +688,15 @@ consolidation into a parent track, or a clearer curated-path role.
 
 - [x] Raw model API versus agent harness. (Covered by blog post
       `agents-need-a-harness` + answer `what-is-an-agent-harness`.)
-- [ ] Workflow versus agent versus multi-agent design. (Lessons exist —
-      `agents-vs-workflows`, `when-not-to-use-an-agent` — but no dedicated
-      blog/guide piece yet.)
+- [x] Workflow versus agent versus multi-agent design. *(served: blog post `workflow-agent-or-multi-agent`)*
 - [x] Why more context can reduce quality. (Covered by blog post
       `the-context-window-got-bigger-and-it-did-not-fix-this`.)
-- [ ] What an evaluation catches that a demo misses. (Answer
-      `how-to-evaluate-an-llm-app` covers adjacent ground; no dedicated post.)
-- [ ] How to read a tool-call trace. (Lesson `evaluating-agent-behavior-in-dev`
-      covers it; no dedicated post/guide.)
+- [x] What an evaluation catches that a demo misses. *(served: blog post `what-an-eval-catches-that-a-demo-misses`)*
+- [x] How to read a tool-call trace. *(served: blog post `how-to-read-a-tool-call-trace`)*
 - [x] Building approval boundaries for agents. (Covered by scenario
       `agent-approval` + the permission-systems lessons.)
-- [ ] Designing reliable browser automation.
-- [ ] Local models: privacy, latency, hardware, and quality tradeoffs.
+- [x] Designing reliable browser automation. *(served: blog post `designing-reliable-browser-automation`)*
+- [x] Local models: privacy, latency, hardware, and quality tradeoffs. *(served: blog post `local-models-privacy-latency-hardware-quality`)*
 - [x] RAG failure diagnosis from retrieval through generation. (Covered by blog
       posts `your-rag-problem-is-a-retrieval-problem` and
       `rag-is-not-a-truth-machine`.)
@@ -708,16 +704,12 @@ consolidation into a parent track, or a clearer curated-path role.
       `get-reliable-json-out-of-an-llm`.)
 - [x] Prompt injection through tools and retrieved content. (Covered by guide
       `defend-against-prompt-injection`.)
-- [ ] Observability for multi-step AI systems. (Lesson coverage in
-      ai-foundations/context-engineering; no dedicated post/guide.)
+- [x] Observability for multi-step AI systems. *(served: blog post `observability-for-multi-step-ai-systems`)*
 - [x] Cost control without quality collapse. (Covered by guide
       `cut-your-llm-bill`.)
-- [ ] Building multilingual and Indic-language AI systems. (One FDE lesson
-      exists — `indic-languages-voice-and-whatsapp-surfaces`; no dedicated piece.)
-- [ ] What AI coding agents can and cannot safely own. (Answers
-      `how-to-use-claude-code` / `how-to-use-openai-codex` and lesson
-      `coding-agent-architecture` cover parts; no dedicated post.)
-- [ ] Agent Skills versus prompts, project instructions, MCP, hooks, and subagents.
+- [x] Building multilingual and Indic-language AI systems. *(served: blog post `building-multilingual-and-indic-ai-systems`)*
+- [x] What AI coding agents can and cannot safely own. *(served: blog post `what-ai-coding-agents-can-and-cannot-safely-own`)*
+- [x] Agent Skills versus prompts, project instructions, MCP, hooks, and subagents. *(served: blog post `agent-skills-vs-prompts-rules-mcp-hooks-subagents`)*
 
 ## Phase 5 — Projects, labs, and hands-on work
 
@@ -2333,6 +2325,25 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-16 — Phase 4: guides, scenarios, blog themes (17 rows)
+
+- Commit: `PENDING`. Status: complete.
+- Scope: 5 guides (first local-model app, first voice agent, first
+  browser agent, observability integration, SDK↔framework migration —
+  completing the 10-item first-X set); 6 scenarios (incident-response,
+  regulated-decision-support, voice-agent-latency, rag-migration,
+  browser-agent-permissions, coding-agent-rollout — all 9 named types +
+  all 7 decision domains); 9 blog posts covering every open priority
+  theme.
+- Files: 5 guides, 6 scenarios, 9 blog posts; all cross-links verified.
+- Validation: `check:content` clean; build 2652 pages; `check:links` 0
+  dead in committed files (parallel ai-for-designers WIP carries its own
+  template links — user's in-flight work, not part of this batch).
+- Blockers: none. Open: scenario variants, whiteboard/guided modes,
+  downloadable briefs, runnable repos for guides, blog editorial rows
+  needing recurring/scheduled publishing.
+- Next: Phase 2 question-bank schema, Phase 3 interview rows, Phase 10.
 
 ### 2026-09-16 — Phase 9: SEO audit + safeguards (26 rows)
 

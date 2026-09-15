@@ -1,0 +1,33 @@
+---
+title: "What an eval catches that a demo misses"
+description: "A demo proves the system can work once; an eval tells you how it fails, how often, and whether the fix you just shipped broke something else."
+published: "2026-09-16"
+tags: ["Evaluation", "Production", "Testing"]
+---
+
+The demo is the industry's favorite lie. Not because it's dishonest — because it's a sample of one, cherry-picked, run once, under conditions nobody recorded. An eval is what happens when you stop performing and start measuring.
+
+## Demos show capability; evals show distribution
+
+A demo answers "can it do this?" — valuable, and genuinely the right first question. But production doesn't run your best example; it runs your whole distribution. The eval is the instrument that maps that distribution: per-category accuracy, tail behavior on weird inputs, the failure rate you'd otherwise discover via support tickets.
+
+The gap is widest exactly where it matters. Fluent, confident output hides wrongness better than broken output does — a demo can't tell you the system is right 70% of the time because it looks right every time you watch it.
+
+## Evals catch the regression nobody saw
+
+The second thing evals do that demos can't: they make change visible. Swap a model version, tweak a prompt, update a dependency — the demo still works (demos always work), while the eval catches the 8-point drop on a category you didn't think to test. This is the difference between "it seems fine" and "here's what changed."
+
+## The failure modes only a set can surface
+
+- **Silent wrongness** — answers that are fluent and wrong. Only a graded set catches them at scale.
+- **Boundary behavior** — inputs near the edge of what the system handles. A demo lives in the middle; users live at the edges.
+- **Consistency** — the same input run ten times. A demo gets one roll of the dice.
+- **Degradation over time** — data drift, model updates, prompt decay. An eval rerun is a time machine; a demo is a photograph.
+
+## What a real eval is (and isn't)
+
+A real eval is a small, labeled, versioned set — fifty honest examples beat five hundred synthetic ones — plus a scoring method you trust and a way to rerun it on every change. It isn't a leaderboard score, a vibe check, or a demo with extra steps.
+
+The evals track covers the discipline end to end: [eval-driven iteration](/learn/evals-red-teaming/eval-driven-iteration) for the loop, [evaluating agent behavior](/learn/evals-red-teaming/evaluating-agent-behavior-in-dev) for the agentic case, and [write your first eval](/guides/write-your-first-eval-for-an-ai-feature) for the practical starting point.
+
+The mental shift is the whole lesson: a demo is an audition; an eval is an instrument. Ship the instrument.

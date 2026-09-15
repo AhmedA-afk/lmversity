@@ -1,0 +1,44 @@
+---
+title: "Observability for multi-step AI systems"
+description: "Single-call metrics tell you the model responded; multi-step systems need traces that show which step ate the time, the tokens, and the correctness."
+published: "2026-09-16"
+tags: ["Observability", "Production", "Agents"]
+---
+
+A single LLM call is easy to observe: latency in, tokens out, done. A multi-step system — retrieval, tool calls, agent loops, chained prompts — is where observability earns its name, because the failures live in the *steps*, not the aggregate.
+
+## The aggregate hides everything
+
+"Average latency 2.1s" tells you nothing when one request took 800ms and another took 14s because its retrieval step timed out and fell back. "Cost per request $0.04" hides that one flow path costs ten times another. Multi-step systems need **per-step** instrumentation — which step, how long, what tokens, what result — before the aggregates mean anything.
+
+## What a step-level trace buys you
+
+The waterfall view — a single request's steps laid out in time — answers the questions that actually come up:
+
+- *Why was this request slow?* The trace shows retrieval ate 60% of the time, not the model.
+- *Why was it expensive?* The agent retried the same tool four times before succeeding — you can see the retries.
+- *Why was it wrong?* The retrieved context contained the wrong document — visible in the span, invisible in the output.
+- *Which step regressed?* Compare traces across versions; the step whose latency or output shifted is the one to investigate.
+
+This is the instrumentation pattern in [observability and eval foundations](/learn/production/llm-observability-foundations) — trace per request, span per step, versions attached.
+
+## The signals that matter per step
+
+| Signal | What it answers |
+|---|---|
+| Step latency | Where the wait goes |
+| Token counts per call | Where the money goes |
+| Tool-call args + results | Whether the model called the right thing correctly |
+| Retrieval hits (IDs + scores) | Whether context was the right context |
+| Version tags (model, prompt, app) | Which change caused the regression |
+| Error + retry counts | Where the system is working harder than it should |
+
+## Two failure modes only traces catch
+
+**The silent retry.** A step fails, retries succeed, the request "works" — but at triple the latency and cost, and the retry rate is the leading indicator of a coming outage. Only step-level error logging sees it.
+
+**The wrong-context success.** The system returns a fluent, confident answer grounded in the wrong retrieved document. The output looks fine; the trace shows retrieval served garbage. This is why [your RAG problem is a retrieval problem](/blog/your-rag-problem-is-a-retrieval-problem) is a trace-reading lesson in disguise.
+
+## Build it before you need it
+
+The guide — [add observability to an AI feature](/guides/add-observability-to-an-ai-feature) — walks the implementation; the [two-ways lesson](/learn/production/instrumenting-one-app-two-ways) shows the platform-vs-OTel choice. The pattern to hold onto: instrument the request lifecycle as one trace, version everything, and verify the instrumentation answers your real questions — because in a multi-step system, the aggregate is always a lie of omission.

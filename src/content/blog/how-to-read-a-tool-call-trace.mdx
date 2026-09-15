@@ -1,0 +1,32 @@
+---
+title: "How to read a tool-call trace"
+description: "A trace is the agent's black box recording — here's how to read one for the decision that actually went wrong, not the error that surfaced."
+published: "2026-09-16"
+tags: ["Agents", "Observability", "Debugging"]
+---
+
+When a tool-using agent goes wrong, the error you see is usually three steps downstream of the decision that caused it. The trace — the ordered record of what the agent observed, decided, and called — is how you walk it back. Reading one well is a learnable skill, and it's the difference between debugging and guessing.
+
+## The anatomy
+
+A useful trace records, per step: what the model saw (the observation/context it was given), what it decided (the tool call it proposed), what happened (the tool's result), and what it cost (tokens, latency). If your trace only logs inputs and outputs, you're reading the flight recorder's summary card — see [evaluating agent behavior in dev](/learn/evals-red-teaming/evaluating-agent-trajectories) for what full instrumentation looks like.
+
+## Read backwards from the symptom
+
+Start at the end — the wrong output, the failed call, the loop — and walk backwards asking **"was this step's input correct?"** The first step whose *input* was wrong is your suspect; the first step whose *decision* was wrong given a correct input is your culprit. They're often different steps.
+
+- **Bad input, fine decision** → upstream problem: retrieval returned junk, state was stale, a tool returned malformed data the agent trusted.
+- **Fine input, bad decision** → the model's reasoning failed: it misread the data, chose the wrong tool, or hallucinated an argument.
+- **Repeated identical steps** → the agent can't tell it's stuck — missing loop detection or a tool returning identical results it keeps retrying.
+
+## The three signature patterns
+
+**The confabulation.** The agent calls a tool with arguments that look plausible but were never in any observation — invented IDs, assumed values. Tell: the argument doesn't appear anywhere upstream in the trace.
+
+**The spiral.** The agent retries the same call with trivially-different arguments, each failure generating the next attempt. Tell: near-identical calls in sequence, usually with growing context bloat. The fix is a stopping condition, not a better prompt — see [stopping conditions for agents](/blog/stopping-conditions-for-agents).
+
+**The trust failure.** The agent treats retrieved content or a tool result as instruction rather than data — a classic injection surface. Tell: the agent's plan visibly changes after reading a tool result that contains imperative-looking text. [Prompt injection through tools](/guides/defend-against-prompt-injection) is the defense guide.
+
+## Make the trace readable before you need it
+
+Traces are only useful if someone can read them under pressure: structured steps, tool results truncated sensibly (not megabyte dumps), decision and result linked, timestamps and costs per step. The observability guide — [add observability to an AI feature](/guides/add-observability-to-an-ai-feature) — is where to build that. A trace you can't read in an incident is a trace you didn't take.

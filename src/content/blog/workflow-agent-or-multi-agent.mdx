@@ -1,0 +1,32 @@
+---
+title: "Workflow, agent, or multi-agent: the decision is about who holds the plan"
+description: "The useful distinction between the three patterns isn't capability — it's where control lives, and what each one costs you when it fails."
+published: "2026-09-16"
+tags: ["Agents", "Architecture", "Design"]
+---
+
+Every few months the industry rediscovers the same taxonomy problem: is this thing a workflow, an agent, or a multi-agent system? The teams that ship well answer it with one question — **who holds the plan?**
+
+## A workflow holds the plan in code
+
+In a workflow, the sequence of steps is written down — by you, in advance. The model might fill in judgment inside a step (classify this, extract that, draft this reply), but it doesn't decide what happens next. When it fails, it fails at a *step*, and you can see which one.
+
+This is the pattern to default to. Most "AI automation" that works in production is a deterministic skeleton with model calls at the judgment-shaped joints. The failure modes are enumerable and the debugging story is sane.
+
+## An agent holds the plan in the model
+
+In an agent, the model decides which tool to call next — the plan is generated per-run. You give it a goal, a set of tools, and a stopping condition; it figures out the path. This is genuinely necessary for tasks where the path isn't knowable in advance: open-ended research, investigation across systems, recovery from unexpected states.
+
+The cost is that your test surface explodes. A workflow can be verified path by path; an agent must be evaluated distributionally — you test *tendencies*, not paths. That's a fundamentally different quality regime, and it's why [when not to use an agent](/learn/agentic-ai/when-not-to-use-an-agent) is a design question, not a cowardice question.
+
+## Multi-agent is a staffing decision, not an upgrade
+
+Multi-agent systems split work across cooperating agents — a researcher, a writer, a critic. The pitch is specialization; the price is coordination. Every boundary between agents is a place where context gets lost, instructions get re-interpreted, and accountability gets fuzzy.
+
+The honest reason to go multi-agent: the task genuinely decomposes into roles with different contexts, tools, or models — and you've already hit the context or capability limits of one agent. The dishonest reason: it demos well. Coordination overhead is real cost — tokens, latency, and debugging surface — paid per handoff.
+
+## The decision rule
+
+Ask, per task: **can I write the plan?** If yes → workflow, and put the model only where judgment lives. If the path is unknowable but the tools are enumerable → single agent with a hard edge (max turns, timeout, typed end states). If a single agent drowns in its own context or needs genuinely separate roles → multi-agent, with explicit delegation contracts.
+
+The pattern that fails is choosing the architecture by how impressive the demo looks. The one that ships is choosing it by who you want holding the plan when something goes wrong at 2am. For the deeper treatment: [agents vs workflows](/learn/agentic-ai/agents-vs-workflows) and [multi-agent coordination](/learn/agentic-ai/multi-agent-patterns).

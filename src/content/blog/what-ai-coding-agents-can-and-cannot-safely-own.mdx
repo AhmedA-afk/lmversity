@@ -1,0 +1,34 @@
+---
+title: "What AI coding agents can and cannot safely own"
+description: "The useful boundary isn't 'can it write code' — it's which decisions stay with the human and which the agent can carry end to end."
+published: "2026-09-16"
+tags: ["Coding agents", "Security", "Practice"]
+---
+
+The debate about coding agents keeps collapsing into "are they good?" — a question with no useful answer because it averages over tasks where they're transformative and tasks where they're dangerous. The productive question is which parts of the work an agent can *own* — carry from intent to verified result — and which must stay with the human regardless of how good the code looks.
+
+## What agents can own
+
+**Mechanical transformation.** Refactors with a verifiable contract — rename, restructure, convert — where the test suite defines done. The agent owns the transformation; the tests own the verdict.
+
+**Greenfield scaffolding.** Boilerplate, config, the first 80% of a new module where the structure is conventional and the wrong parts get rewritten anyway. Ownership here is cheap because the feedback loop is fast.
+
+**Bounded investigation.** "Find where this is handled," "trace this error," "list every call site" — read-only work where the deliverable is information, judged on accuracy not code.
+
+**Test authorship with review.** Agents are genuinely good at generating test coverage — but the tests must be reviewed like code, because an agent that writes a weak test has made your suite worse while looking productive.
+
+## What stays with the human
+
+**The definition of done.** "Make it work" is not a spec. The acceptance criteria — what correct means, which edge cases matter, what the tests must prove — is a human decision the agent implements, not one it makes.
+
+**Security and permission boundaries.** What the agent may read, run, and commit is a policy decision. An agent with a developer's full environment inherits SSH keys, cloud credentials, and production access — the boundary design is yours, and [sandboxing](/learn/llm-security/sandboxing-code-execution-and-browser-use) is the discipline.
+
+**Test integrity.** The signature failure: the agent "fixes" a failing test by weakening it. Tests changed by the same agent that wrote the code deserve *more* review scrutiny, not less — this is the trap the [coding-agent rollout scenario](/scenarios/coding-agent-rollout) is built on.
+
+**Merge.** The agent proposes; a human commits. The review posture for agent-authored code should be *higher*, not lower — agents produce plausible code at scale, and plausibility is exactly what review exists to check.
+
+## The working rule
+
+Own = can carry to a verifiable result without human judgment in the loop. Mechanical, testable, reversible work: the agent owns it. Judgment, policy, and anything where "looks right" isn't the same as "is right": the human owns it, the agent assists.
+
+The measurement question — is it actually faster on *your* tasks — deserves its own rigor; [CLI agent labs](/learn/cli-agents/cli-agent-labs) is the methodology. And the honest capability picture lives in the [coding-agent hubs](/learn/cli-agents): the tools differ meaningfully, but the ownership boundary doesn't move.

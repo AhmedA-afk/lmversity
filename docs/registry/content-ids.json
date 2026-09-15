@@ -1,10 +1,10 @@
 {
  "version": 1,
  "next": {
-  "les": 2228,
+  "les": 2229,
   "que": 7,
   "sce": 12,
-  "blo": 10,
+  "blo": 19,
   "gui": 14,
   "ans": 35,
   "fde": 193,
@@ -10349,6 +10349,46 @@
   "scenarios/voice-agent-latency.mdx": {
    "id": "sce-0012",
    "fp": "459a2f1bcfec034f70269b222c5142a4fc7e7e18"
+  },
+  "lessons/ai-for-designers/research-synthesis-lab.md": {
+   "id": "les-2229",
+   "fp": "ec85ca919163b02b81bcf866858e5635f92cf281"
+  },
+  "blog/agent-skills-vs-prompts-rules-mcp-hooks-subagents.mdx": {
+   "id": "blo-0011",
+   "fp": "a789a126dfc1109d93ade045eedbdc90ab04c721"
+  },
+  "blog/building-multilingual-and-indic-ai-systems.mdx": {
+   "id": "blo-0012",
+   "fp": "3015880cfba2f65de7e40882f45cb530ddf3b333"
+  },
+  "blog/designing-reliable-browser-automation.mdx": {
+   "id": "blo-0013",
+   "fp": "e48c3aa21f36e7200effb8827fc73a9c782dd66a"
+  },
+  "blog/how-to-read-a-tool-call-trace.mdx": {
+   "id": "blo-0014",
+   "fp": "76ac6d0836c2d2c44543723e69984be708014c92"
+  },
+  "blog/local-models-privacy-latency-hardware-quality.mdx": {
+   "id": "blo-0015",
+   "fp": "f93d731a8d038232507c56d72cfa1a8f24cf4782"
+  },
+  "blog/observability-for-multi-step-ai-systems.mdx": {
+   "id": "blo-0016",
+   "fp": "30e493b909175fce03fba57b46b802bff9e4c3ae"
+  },
+  "blog/what-ai-coding-agents-can-and-cannot-safely-own.mdx": {
+   "id": "blo-0017",
+   "fp": "ebca38b368f7535855ba1024d43a7815e2d626e7"
+  },
+  "blog/what-an-eval-catches-that-a-demo-misses.mdx": {
+   "id": "blo-0018",
+   "fp": "893163a0cfe9652a80989ff1f719ae840779e832"
+  },
+  "blog/workflow-agent-or-multi-agent.mdx": {
+   "id": "blo-0019",
+   "fp": "9cbe5b09807a8ce8ff2a4c3ff02d62338fe583a6"
   }
  },
  "retired": {

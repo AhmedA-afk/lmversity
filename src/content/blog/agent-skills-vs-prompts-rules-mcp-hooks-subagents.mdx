@@ -1,0 +1,35 @@
+---
+title: "Agent Skills vs prompts, rules, MCP, hooks, and subagents"
+description: "Six mechanisms that all look like 'teaching the agent things' — and the differences that decide which one a given capability actually belongs in."
+published: "2026-09-16"
+tags: ["Agent Skills", "MCP", "Agents"]
+---
+
+The agentic-tooling landscape now offers at least six ways to shape what an agent does: prompts, rules/instructions, Agent Skills, MCP servers, hooks, and subagents. They overlap enough to confuse — all six can carry "here's how we do code review" — but they differ in *when* they load, *what* they can do, and *who* they travel with. Getting the boundary right is the difference between a composable system and a pile of conventions.
+
+## The one-line distinction
+
+- **Prompt** — what you say *this turn*: ephemeral, per-request, gone next conversation.
+- **Rule / instruction file** — what's *always* true for this project: loaded every session, shapes every response.
+- **Agent Skill** — a *capability package* the agent loads *on demand*: instructions plus scripts plus assets, pulled in only when the task calls for it.
+- **MCP server** — a *tool and data interface*: gives the agent new things it can *do* and *read*, not new ways to think.
+- **Hook** — code that runs *on events*: deterministic behavior at lifecycle points, not reasoning.
+- **Subagent** — a *separate agent* you delegate to: its own context, its own tool set, for genuinely separable work.
+
+## When each is the right container
+
+**Rules** for invariants: code style, security posture, "never do X." They apply always, so they live always.
+
+**Skills** for procedures and knowledge that aren't always needed: how to run this team's deploy, how to audit a design for accessibility, how to build a fixture for this repo. Loaded when relevant — which means they don't tax context the rest of the time, and they can carry executable assets a prompt can't. The [Agent Skills track](/learn/agent-skills/skill-vs-prompt-rule-hook-mcp-subagent) covers the spec and the boundary in depth.
+
+**MCP** for capabilities: query the database, read the issue tracker, call the internal API. MCP gives the agent tools and data; it doesn't teach judgment. A skill can *use* an MCP server's tools — they're complementary, not competitors.
+
+**Hooks** for deterministic automation around the agent: format on save, run tests after edits, block commits that touch secrets. No reasoning — just code that fires on events, reliable because it's not a model.
+
+**Subagents** for delegation: genuinely separate workstreams that benefit from isolated context — a research agent with its own browsing, a test-runner with its own tools. Overhead is real; use them when the work is actually separable, not as a way to feel organized.
+
+## The composition that works
+
+The systems that scale use each for what it's for: rules for invariants, skills for procedures, MCP for capabilities, hooks for determinism, subagents for delegation. The failure mode is putting everything in one mechanism — a mega-prompt that tries to be a skill, a skill that tries to be an MCP server, a hook that tries to reason. Each boundary exists because the mechanism has a different loading model, a different trust surface, and a different portability story — the [portability lesson](/learn/agent-skills/evaluating-and-porting-skills) covers what actually travels between agents.
+
+The test for placement: ask *when does this need to exist* — every turn (rule), when relevant (skill), when the capability's needed (MCP), on an event (hook), or as a separate worker (subagent). The mechanism follows the lifecycle.

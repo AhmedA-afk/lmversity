@@ -1,0 +1,28 @@
+---
+title: "Designing reliable browser automation"
+description: "Browser automation fails at the seams — selectors, timing, sessions, and the agent's confidence. Reliability is a design property, not a retry policy."
+published: "2026-09-16"
+tags: ["Browser agents", "Automation", "Reliability"]
+---
+
+Every browser automation works on the demo site. The production question is what happens when the site changes, the session expires, the page loads nothing, or the "Submit" button is actually three buttons in a modal. Reliability here isn't tuning — it's architecture.
+
+## Locators are your contract with the page
+
+The single biggest reliability decision: how you find elements. Pixel coordinates and CSS selectors scraped from DevTools are bets that the page won't change — and they lose constantly. Role-based locators (`getByRole`, `getByLabel`) survive redesigns because they describe *what* the element is, not where it sits. This is the whole argument in [Playwright and locator strategies](/learn/web-agents/playwright-fundamentals-and-locators) — treat locators as a contract, not a shortcut.
+
+## Waiting is a design decision
+
+Most browser-automation failures are timing failures wearing other clothes: the element that isn't there yet, the request that hasn't resolved, the animation still running. Arbitrary `sleep(2000)` calls are reliability theater — the correct primitive is *waiting for a condition* (element visible, network idle, text present). Agents that act on stale snapshots make confident wrong decisions; the fix is making "is the page actually in the state I think" an explicit check.
+
+## Sessions are state, and state rots
+
+A logged-in session is the automation's most fragile asset: it expires, gets invalidated, hits captcha walls, and fails differently per site. Design for it: persist session state explicitly, detect expiry early (don't discover it at the checkout step), and decide whether re-auth is automatic or a human handoff. The [sessions and act-boundary lesson](/learn/web-agents/sessions-credentials-and-act-boundaries) covers the security side — a session is also your permission surface.
+
+## The agent's confidence is the least reliable signal
+
+An agentic browser adds a failure mode pure automation doesn't have: the model is *sure*. It'll report success on a failed extraction, describe a page it misread, and fill a form wrong with total fluency. Counter it structurally: verify outcomes, don't trust reports — after "did it work," check the page state, the downloaded file, the record in the system. The [extraction and evaluation lesson](/learn/web-agents/extraction-and-evaluation) covers measuring agent reliability honestly.
+
+## Design for the failure modes on purpose
+
+Reliable systems name their failure modes and handle each: page changed (locator fails → report, don't guess), site down (timeout → retry policy, not infinite retry), blocked (captcha → report, don't bypass), state lost (session expired → re-auth or handoff), action uncertain (destructive click → approval gate). The ones that fail are the ones where "it usually works" was the entire reliability strategy. The [web-agents track](/learn/web-agents/what-the-browser-exposes) builds the full picture.

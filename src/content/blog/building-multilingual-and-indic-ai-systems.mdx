@@ -1,0 +1,32 @@
+---
+title: "Building multilingual and Indic AI systems"
+description: "Serving users across languages isn't a translation feature — it's a systems problem of coverage, mixing, retrieval, and evaluation that English-first pipelines get wrong."
+published: "2026-09-16"
+tags: ["Multilingual", "Indic AI", "Architecture"]
+---
+
+Somewhere in the design doc there's a line item that reads "support Hindi" or "add multilingual." It arrives late, gets scoped as translation, and produces a system that works in demos and fails on the first code-mixed support ticket. Multilingual AI is a systems problem, and it deserves the same engineering respect as the rest of the stack.
+
+## Coverage is a spectrum, not a checkbox
+
+"Supports 100 languages" is a marketing claim. The engineering questions are how *well* — tokenizer efficiency varies enormously by script, capability follows training data, and a model that chats plausibly in a language can still fail structured tasks in it. The [multilingual model landscape](/learn/multilingual-ai/multilingual-model-landscape) lesson is the coverage framework: measure per language, per task, before you commit.
+
+## The architecture choice is per-step
+
+Three patterns: translate-then-LLM (translate to English, reason, translate back), multilingual-native (the model handles the language directly), or hybrid pivot (specialist models for language-heavy steps, flagship for reasoning). The mistake is choosing once for the whole system; the right answer is per-step — native for comprehension and generation, translate for the reasoning that needs your best model. [Translate vs multilingual-native](/learn/multilingual-ai/translation-vs-multilingual-native) works through the trade-offs.
+
+## Code-mixing is the register, not the edge case
+
+Real multilingual users don't stay inside one language — "mujhe kal tak ye report chahiye but the data isn't ready" is how people actually write. Language detectors return one label; translators flatten the mix; script-based routing reads romanized Hindi as English. The systems that work route on capability, not detection, and respond in the user's mix, not a cleaned-up version of it. [Code mixing and code-switching](/learn/multilingual-ai/code-mixing-and-code-switching) covers it.
+
+## Retrieval and documents have their own multilingual physics
+
+Cross-lingual retrieval is its own discipline: multilingual embeddings, query translation, or hybrid — with named-entity transliteration as the silent killer. Multilingual documents are worse: OCR quality is per-script, mixed-script pages need explicit handling, and the text often never survives digitization cleanly. [Cross-lingual retrieval](/learn/multilingual-ai/cross-lingual-retrieval) and [multilingual documents](/learn/multilingual-ai/multilingual-documents-and-ocr) carry the mechanics.
+
+## You can't improve what you can't measure
+
+Translated benchmarks measure English-shaped tasks in another language — they miss register, code-mixing, and culturally-loaded content. The durable asset is a small, human-reviewed eval set in your actual domain, stratified by language and register. [Multilingual datasets and benchmarks](/learn/multilingual-ai/multilingual-datasets-and-benchmarks) covers sourcing; [eval design](/learn/evals-red-teaming/multilingual-evaluation-design) covers the harness.
+
+## The Indic case specifically
+
+For Indian languages, the ecosystem is mature enough that "no good option" isn't a defense anymore — [Sarvam](/providers/sarvam), [AI4Bharat](/providers/ai4bharat), and [Bhashini](/providers/bhashini) exist because global models underserve these languages, and specialists often beat generalists on the languages they target. The [multilingual support assistant lab](/learn/multilingual-ai/multilingual-support-assistant-lab) builds the whole thing end to end. The full track: [Multilingual and Indic AI Engineering](/learn/multilingual-ai).

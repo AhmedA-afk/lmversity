@@ -1,0 +1,39 @@
+---
+title: "Local models: privacy, latency, hardware, and the quality question"
+description: "Running models locally is a real option with real tradeoffs — here's the honest accounting of what you gain, what you lose, and when it's the right call."
+published: "2026-09-16"
+tags: ["Local models", "Open weights", "Infrastructure"]
+---
+
+The pitch for local models is usually framed as privacy or cost. Both are real, but both are also more complicated than the pitch — and the tradeoffs that actually decide the question are quality and ops burden, which get less airtime. Here's the accounting.
+
+## Privacy: real, with caveats
+
+Yes — data that never leaves the machine can't leak from a provider, can't be logged by a third party, and can't be subpoenaed from someone else's infrastructure. For genuinely sensitive workloads (health, legal, unreleased IP, personal data you can't send to an API), this is the whole argument and it's decisive.
+
+The caveat: "local" covers the inference call only. Your RAG still sends queries somewhere if retrieval isn't local; your telemetry might still phone home; your fine-tuning pipeline might touch a cloud GPU. Privacy is a property of the whole system, not the model's location.
+
+## Latency: both directions
+
+Local inference can be *faster* — no network round-trip, no queue, no rate limits — or slower, depending on the model-hardware match. A quantized 4B model on a modern laptop generates snappily; a 70B on the same hardware crawls. The rule: measure tokens/second on *your* hardware with *your* model, and don't trust anyone else's number. The [local inference track](/learn/local-inference/what-local-inference-actually-means) covers the sizing math.
+
+## Hardware is the honest constraint
+
+The model's weights must fit in memory with headroom for context — that's the whole game. A 4-bit quantized 7-8B model needs ~5 GB; a 13B needs ~8 GB; a 70B needs ~40 GB. If it doesn't fit, you don't have a local model, you have a swapping problem. Quantization trades quality for fit — see [quantization formats and tradeoffs](/learn/local-inference/quantization-formats-and-tradeoffs-lab) for what the levels actually cost.
+
+## Quality: the uncomfortable truth
+
+The best hosted models are still meaningfully better than what runs on a laptop — especially on hard reasoning, long-context coherence, and instruction-following under constraints. Local models have closed the gap dramatically for routine work (summarization, classification, drafting, extraction), but "good enough" is task-specific: test your actual task, not a vibe. For many workloads the gap doesn't matter; for some it's disqualifying; the eval is how you find out which you're in.
+
+## Ops: you're the provider now
+
+The hidden cost: when you run local, you run the inference stack — updates, failures, memory pressure, the model that worked yesterday and won't load today. Hosted inference buys you someone's 3am pager; local gives you yours. For a personal tool that's fine; for a product it's a real line item. The [hosted inference comparison](/providers/hosted-inference) prices the alternatives.
+
+## When local is the right call
+
+- **Data genuinely can't leave** — compliance, confidentiality, or user trust makes it non-negotiable.
+- **Offline or edge operation** — the system must work without connectivity.
+- **Predictable volume at real scale** — the marginal cost of hosted calls exceeds the amortized cost of your hardware.
+- **Development and evaluation** — free, fast iteration without metering.
+
+When it's the wrong call: you need frontier quality, you don't want the ops, or the workload is bursty enough that hosted's pay-per-use beats owned idle hardware. The honest framing isn't "local vs cloud" — it's "which properties does this specific workload actually need." Start with the [local-model guide](/guides/run-your-first-local-model-app) to feel the tradeoffs firsthand.
