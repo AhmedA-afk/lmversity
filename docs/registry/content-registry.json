@@ -1,16 +1,16 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T16:30:04.375Z",
+  "generatedAt": "2026-09-15T16:41:05.094Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2533,
+  "itemCount": 2565,
   "counts": {
    "byFamily": {
-    "lesson": 2119,
-    "project": 32,
-    "quiz": 89,
-    "reference": 106,
-    "lab": 72,
+    "lesson": 2144,
+    "project": 33,
+    "reference": 107,
+    "quiz": 93,
+    "lab": 73,
     "interview": 7,
     "scenario": 6,
     "blog": 10,
@@ -22,18 +22,18 @@
     "glossary": 1
    },
    "byStatus": {
-    "live": 2533
+    "live": 2565
    },
    "byKind": {
-    "concept": 1818,
-    "comparison": 105,
-    "capstone": 32,
-    "worked-example": 29,
-    "quiz": 83,
-    "cheatsheet": 48,
-    "lab": 72,
+    "concept": 1835,
+    "comparison": 107,
+    "capstone": 33,
+    "worked-example": 33,
+    "cheatsheet": 49,
+    "common-mistakes": 26,
+    "quiz": 87,
+    "lab": 73,
     "drill": 14,
-    "common-mistakes": 24,
     "topic": 7,
     "scenario": 6,
     "post": 10,
@@ -60,7 +60,7 @@
     "agent-frameworks": 18,
     "agent-skills": 6,
     "agentic-ai": 30,
-    "ai-for-designers": 1,
+    "ai-for-designers": 25,
     "ai-foundations": 161,
     "ai-literacy": 59,
     "classical-ai": 83,
@@ -78,6 +78,7 @@
     "machine-learning": 209,
     "maths-foundations": 196,
     "mcp": 59,
+    "multimodal-ai": 8,
     "production": 35,
     "prompt-engineering": 143,
     "python-data-apis": 58,
@@ -103,10 +104,10 @@
     "fde": 193
    },
    "byFreshness": {
-    "release-sensitive": 343,
-    "pricing-sensitive": 347,
-    "periodic": 1337,
-    "policy-sensitive": 85,
+    "release-sensitive": 345,
+    "pricing-sensitive": 351,
+    "periodic": 1357,
+    "policy-sensitive": 91,
     "certification-sensitive": 104,
     "durable": 266,
     "volatile": 51
@@ -4741,6 +4742,89 @@
    }
   },
   {
+   "id": "les-2179",
+   "family": "lesson",
+   "kind": "worked-example",
+   "title": "AI feature state model: a worked example",
+   "slug": "ai-for-designers/ai-feature-state-model-worked-example",
+   "route": "/learn/ai-for-designers/ai-feature-state-model-worked-example",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-for-designers/ai-feature-state-model-worked-example.md",
+   "track": "ai-for-designers",
+   "module": null,
+   "status": "live",
+   "summary": "Model ten AI interaction states — idle through corrected — on an illustrative document Q&A feature, then apply the model to your own feature.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 396,
+   "headings": [
+    "Setup: the illustrative feature",
+    "Walking the ten states",
+    "Your turn"
+   ],
+   "internalLinks": [
+    "/learn/ai-for-designers/ai-interaction-state-cheatsheet",
+    "/learn/ai-for-designers/correction-undo-and-recovery-patterns",
+    "/learn/ai-for-designers/designing-for-uncertainty",
+    "/learn/genai-app-dev/designing-chat-ux",
+    "/learn/genai-app-dev/streaming-responses-to-the-ui"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": true,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 10,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "worked-example",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Model ten AI interaction states — idle through corrected — on an illustrative document Q&A feature, then apply the model to your own feature.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-for-designers",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-2170",
    "family": "lesson",
    "kind": "concept",
@@ -4818,6 +4902,1959 @@
     "completeness": 1,
     "prerequisiteFit": 0,
     "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2180",
+   "family": "reference",
+   "kind": "cheatsheet",
+   "title": "AI interaction states cheatsheet",
+   "slug": "ai-for-designers/ai-interaction-state-cheatsheet",
+   "route": "/learn/ai-for-designers/ai-interaction-state-cheatsheet",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-for-designers/ai-interaction-state-cheatsheet.md",
+   "track": "ai-for-designers",
+   "module": null,
+   "status": "live",
+   "summary": "A scannable inventory of the ten AI interaction states with the copy, controls, and exit paths each one must carry.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 289,
+   "headings": [
+    "The inventory",
+    "Accessibility notes",
+    "How to use it"
+   ],
+   "internalLinks": [
+    "/learn/ai-for-designers/ai-feature-state-model-worked-example",
+    "/learn/ai-for-designers/prompt-as-interaction-spec",
+    "/learn/genai-app-dev/designing-chat-ux"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 10,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "A scannable inventory of the ten AI interaction states with the copy, controls, and exit paths each one must carry.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-for-designers",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2181",
+   "family": "lesson",
+   "kind": "common-mistakes",
+   "title": "AI product design: common mistakes",
+   "slug": "ai-for-designers/ai-product-design-common-mistakes",
+   "route": "/learn/ai-for-designers/ai-product-design-common-mistakes",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-for-designers/ai-product-design-common-mistakes.md",
+   "track": "ai-for-designers",
+   "module": null,
+   "status": "live",
+   "summary": "Recognize the five recurring AI product design failures — magic boxes, happy-path flows, fake certainty, hidden automation, and missing recovery.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 349,
+   "headings": [
+    "1. The magic box",
+    "2. Happy-path-only flows",
+    "3. Fake certainty",
+    "4. Hidden automation",
+    "5. Missing recovery",
+    "How to use this list"
+   ],
+   "internalLinks": [
+    "/learn/ai-for-designers/ai-feature-state-model-worked-example",
+    "/learn/ai-for-designers/ai-product-design-foundations-quiz",
+    "/learn/ai-for-designers/correction-undo-and-recovery-patterns",
+    "/learn/ai-for-designers/designing-for-uncertainty",
+    "/learn/ai-for-designers/designing-the-ai-behavior-contract",
+    "/learn/ai-for-designers/human-review-and-approval-boundaries",
+    "/learn/ai-for-designers/prototype-ai-behavior-without-a-model",
+    "/learn/ai-for-designers/trust-patterns-worked-example",
+    "/learn/genai-app-dev/designing-chat-ux",
+    "/learn/hallucinations/why-models-hallucinate"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": true,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 0,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "troubleshooting",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Recognize the five recurring AI product design failures — magic boxes, happy-path flows, fake certainty, hidden automation, and missing recovery.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-for-designers",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2182",
+   "family": "quiz",
+   "kind": "quiz",
+   "title": "Quiz: AI product design foundations",
+   "slug": "ai-for-designers/ai-product-design-foundations-quiz",
+   "route": "/learn/ai-for-designers/ai-product-design-foundations-quiz",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-for-designers/ai-product-design-foundations-quiz.md",
+   "track": "ai-for-designers",
+   "module": null,
+   "status": "live",
+   "summary": "A six-question scenario quiz checking Module 1 judgment: mental models, probabilistic behavior, opportunity framing, and the five common mistakes.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 784,
+   "headings": [
+    "1. The demo review",
+    "2. The hidden context",
+    "3. The baseline question",
+    "4. The confident refund",
+    "5. The self-sending assistant",
+    "6. The one-page brief"
+   ],
+   "internalLinks": [
+    "/learn/agentic-ai/when-not-to-use-an-agent",
+    "/learn/ai-for-designers/ai-product-design-common-mistakes",
+    "/learn/ai-for-designers/choosing-where-ai-belongs-worked-example",
+    "/learn/ai-for-designers/designer-mental-model-for-generative-ai",
+    "/learn/ai-for-designers/designing-the-ai-behavior-contract",
+    "/learn/ai-for-designers/human-review-and-approval-boundaries"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 24,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "practice",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "A six-question scenario quiz checking Module 1 judgment: mental models, probabilistic behavior, opportunity framing, and the five common mistakes.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-for-designers",
+   "practiceType": "quiz-page",
+   "freshnessClass": "pricing-sensitive",
+   "freshnessSignals": [
+    "pricing/cost mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": null,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2183",
+   "family": "lesson",
+   "kind": "common-mistakes",
+   "title": "AI prototype testing: common mistakes",
+   "slug": "ai-for-designers/ai-prototype-testing-common-mistakes",
+   "route": "/learn/ai-for-designers/ai-prototype-testing-common-mistakes",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-for-designers/ai-prototype-testing-common-mistakes.md",
+   "track": "ai-for-designers",
+   "module": null,
+   "status": "live",
+   "summary": "Avoid the four prototype-testing traps — cherry-picked prompts, demo-only flows, shifting criteria, and missing baselines — before they invalidate your evaluation.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 301,
+   "headings": [
+    "1. Cherry-picked prompts",
+    "2. Demo-only flows",
+    "3. Changing criteria mid-round",
+    "4. Missing baselines",
+    "How to use this list"
+   ],
+   "internalLinks": [
+    "/learn/ai-for-designers/creating-a-realistic-ai-test-set",
+    "/learn/ai-for-designers/designing-a-ux-evaluation-rubric",
+    "/learn/ai-for-designers/prototype-and-evaluation-quiz",
+    "/learn/ai-for-designers/test-an-ai-prototype-worked-example"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": true,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 0,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "troubleshooting",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Avoid the four prototype-testing traps — cherry-picked prompts, demo-only flows, shifting criteria, and missing baselines — before they invalidate your evaluation.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-for-designers",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2184",
+   "family": "quiz",
+   "kind": "quiz",
+   "title": "Quiz: behavior before interface",
+   "slug": "ai-for-designers/behavior-before-interface-quiz",
+   "route": "/learn/ai-for-designers/behavior-before-interface-quiz",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-for-designers/behavior-before-interface-quiz.md",
+   "track": "ai-for-designers",
+   "module": null,
+   "status": "live",
+   "summary": "A six-question scenario quiz on behavior contracts, capability mapping, state models, and prompt specs from Module 2.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 682,
+   "headings": [
+    "1. The missing contract",
+    "2. The overloaded call",
+    "3. The spinner of mystery",
+    "4. The prompt contradiction",
+    "5. The cancelled run",
+    "6. The evidence gap"
+   ],
+   "internalLinks": [
+    "/learn/ai-for-designers/ai-feature-state-model-worked-example",
+    "/learn/ai-for-designers/ai-interaction-state-cheatsheet",
+    "/learn/ai-for-designers/designing-for-uncertainty",
+    "/learn/ai-for-designers/designing-the-ai-behavior-contract",
+    "/learn/ai-for-designers/mapping-ai-capabilities-to-user-tasks",
+    "/learn/ai-for-designers/prompt-as-interaction-spec"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 24,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "practice",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "A six-question scenario quiz on behavior contracts, capability mapping, state models, and prompt specs from Module 2.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-for-designers",
+   "practiceType": "quiz-page",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 0,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": null,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2185",
+   "family": "project",
+   "kind": "capstone",
+   "title": "Capstone: design a trustworthy AI feature",
+   "slug": "ai-for-designers/capstone-design-a-trustworthy-ai-feature",
+   "route": "/learn/ai-for-designers/capstone-design-a-trustworthy-ai-feature",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-for-designers/capstone-design-a-trustworthy-ai-feature.md",
+   "track": "ai-for-designers",
+   "module": null,
+   "status": "live",
+   "summary": "Complete the MVP capstone by assembling your brief, behavior model, trust pass, evaluated prototype, and engineer-ready handoff into one case study.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 554,
+   "headings": [
+    "What to submit",
+    "Three bounded briefs",
+    "Passing criteria",
+    "Portfolio prompt",
+    "When you are done"
+   ],
+   "internalLinks": [
+    "/learn/ai-for-designers/ai-for-designers-course-guide",
+    "/learn/ai-for-designers/designing-a-ux-evaluation-rubric",
+    "/learn/ai-for-designers/test-an-ai-prototype-worked-example"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 13,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "build",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Complete the MVP capstone by assembling your brief, behavior model, trust pass, evaluated prototype, and engineer-ready handoff into one case study.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-for-designers",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2186",
+   "family": "lesson",
+   "kind": "worked-example",
+   "title": "Choosing where AI belongs: a worked example",
+   "slug": "ai-for-designers/choosing-where-ai-belongs-worked-example",
+   "route": "/learn/ai-for-designers/choosing-where-ai-belongs-worked-example",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-for-designers/choosing-where-ai-belongs-worked-example.md",
+   "track": "ai-for-designers",
+   "module": null,
+   "status": "live",
+   "summary": "Work through an illustrative support-draft feature to decide where AI earns its place, what the baseline is, and what failure costs.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 521,
+   "headings": [
+    "Setup: the illustrative brief",
+    "Step 1 — name the user need precisely",
+    "Step 2 — state the non-AI baseline",
+    "Step 3 — score uncertainty and recoverability",
+    "Step 4 — write the value hypothesis and failure costs",
+    "Your turn"
+   ],
+   "internalLinks": [
+    "/learn/agentic-ai/when-not-to-use-an-agent",
+    "/learn/ai-for-designers/ai-product-design-common-mistakes",
+    "/learn/ai-for-designers/designing-the-ai-behavior-contract",
+    "/learn/ai-for-designers/human-review-and-approval-boundaries"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": true,
+    "errorCase": true,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 2,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "worked-example",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Work through an illustrative support-draft feature to decide where AI earns its place, what the baseline is, and what failure costs.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-for-designers",
+   "practiceType": "none",
+   "freshnessClass": "pricing-sensitive",
+   "freshnessSignals": [
+    "pricing/cost mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2187",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Correction, undo, and recovery patterns",
+   "slug": "ai-for-designers/correction-undo-and-recovery-patterns",
+   "route": "/learn/ai-for-designers/correction-undo-and-recovery-patterns",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-for-designers/correction-undo-and-recovery-patterns.md",
+   "track": "ai-for-designers",
+   "module": null,
+   "status": "live",
+   "summary": "Make wrong AI output repairable with correction flows, undo for actions, and recovery paths that preserve user work.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 292,
+   "headings": [
+    "Correction flows for generated content",
+    "Undo for actions",
+    "Recovery that preserves work",
+    "Exercise"
+   ],
+   "internalLinks": [
+    "/learn/ai-for-designers/ai-interaction-state-cheatsheet",
+    "/learn/ai-for-designers/human-review-and-approval-boundaries",
+    "/learn/ai-for-designers/trust-patterns-worked-example",
+    "/learn/genai-app-dev/designing-chat-ux"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 0,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Make wrong AI output repairable with correction flows, undo for actions, and recovery paths that preserve user work.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-for-designers",
+   "practiceType": "none",
+   "freshnessClass": "policy-sensitive",
+   "freshnessSignals": [
+    "policy/license mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 0,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2188",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Creating a realistic AI test set",
+   "slug": "ai-for-designers/creating-a-realistic-ai-test-set",
+   "route": "/learn/ai-for-designers/creating-a-realistic-ai-test-set",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-for-designers/creating-a-realistic-ai-test-set.md",
+   "track": "ai-for-designers",
+   "module": null,
+   "status": "live",
+   "summary": "Assemble a small scenario set with representative tasks, difficult cases, sensitive cases, and known failure modes for testing AI prototypes.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 279,
+   "headings": [
+    "The four buckets",
+    "Writing good scenarios",
+    "Keeping the set alive",
+    "Exercise"
+   ],
+   "internalLinks": [
+    "/learn/ai-for-designers/ai-product-design-common-mistakes",
+    "/learn/ai-for-designers/correction-undo-and-recovery-patterns",
+    "/learn/ai-for-designers/designing-a-ux-evaluation-rubric",
+    "/learn/ai-for-designers/prototype-ai-behavior-without-a-model",
+    "/learn/ai-for-designers/test-an-ai-prototype-worked-example"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 4,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Assemble a small scenario set with representative tasks, difficult cases, sensitive cases, and known failure modes for testing AI prototypes.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-for-designers",
+   "practiceType": "none",
+   "freshnessClass": "policy-sensitive",
+   "freshnessSignals": [
+    "policy/license mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 0,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2189",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "A designer's mental model for generative AI",
+   "slug": "ai-for-designers/designer-mental-model-for-generative-ai",
+   "route": "/learn/ai-for-designers/designer-mental-model-for-generative-ai",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-for-designers/designer-mental-model-for-generative-ai.md",
+   "track": "ai-for-designers",
+   "module": null,
+   "status": "live",
+   "summary": "Build a working mental model of generative AI — inputs, context, generated output, and variation — that tells you what to design around.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 418,
+   "headings": [
+    "The five parts",
+    "What this changes about your job",
+    "A small exercise",
+    "Next"
+   ],
+   "internalLinks": [
+    "/learn/ai-for-designers/designing-for-uncertainty",
+    "/learn/ai-for-designers/designing-the-ai-behavior-contract",
+    "/learn/ai-for-designers/deterministic-vs-probabilistic-interfaces-compared",
+    "/learn/ai-foundations/how-llms-work",
+    "/learn/ai-foundations/what-llms-can-and-cannot-do",
+    "/learn/hallucinations/why-models-hallucinate"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 8,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Build a working mental model of generative AI — inputs, context, generated output, and variation — that tells you what to design around.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-for-designers",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2190",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Designing a UX evaluation rubric",
+   "slug": "ai-for-designers/designing-a-ux-evaluation-rubric",
+   "route": "/learn/ai-for-designers/designing-a-ux-evaluation-rubric",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-for-designers/designing-a-ux-evaluation-rubric.md",
+   "track": "ai-for-designers",
+   "module": null,
+   "status": "live",
+   "summary": "Score AI prototypes on usefulness, clarity, control, recovery, trust, and accessibility with a rubric that separates interaction failures from model failures.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 318,
+   "headings": [
+    "Six criteria",
+    "Separating model failures from interaction failures",
+    "Running the rubric"
+   ],
+   "internalLinks": [
+    "/learn/ai-for-designers/ai-prototype-testing-common-mistakes",
+    "/learn/ai-for-designers/creating-a-realistic-ai-test-set",
+    "/learn/ai-for-designers/test-an-ai-prototype-worked-example"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": true,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 6,
+    "numericClaims": 0,
+    "specFormat": true,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Score AI prototypes on usefulness, clarity, control, recovery, trust, and accessibility with a rubric that separates interaction failures from model failures.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-for-designers",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2191",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Designing for uncertainty",
+   "slug": "ai-for-designers/designing-for-uncertainty",
+   "route": "/learn/ai-for-designers/designing-for-uncertainty",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-for-designers/designing-for-uncertainty.md",
+   "track": "ai-for-designers",
+   "module": null,
+   "status": "live",
+   "summary": "Design calibrated uncertainty wording, evidence placement, alternatives, and abstention so users can judge when to trust the output.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 301,
+   "headings": [
+    "Calibrated wording",
+    "Evidence, alternatives, abstention",
+    "Privacy and accessibility implications",
+    "Exercise",
+    "Next"
+   ],
+   "internalLinks": [
+    "/learn/ai-for-designers/correction-undo-and-recovery-patterns",
+    "/learn/ai-for-designers/human-review-and-approval-boundaries",
+    "/learn/ai-for-designers/sources-confidence-and-explanations-compared",
+    "/learn/hallucinations/confidence-and-uncertainty-signals",
+    "/learn/hallucinations/teaching-models-to-say-i-dont-know",
+    "/learn/hallucinations/why-models-hallucinate"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 3,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Design calibrated uncertainty wording, evidence placement, alternatives, and abstention so users can judge when to trust the output.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-for-designers",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2192",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Designing the AI behavior contract",
+   "slug": "ai-for-designers/designing-the-ai-behavior-contract",
+   "route": "/learn/ai-for-designers/designing-the-ai-behavior-contract",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-for-designers/designing-the-ai-behavior-contract.md",
+   "track": "ai-for-designers",
+   "module": null,
+   "status": "live",
+   "summary": "Write a behavior contract for an AI feature covering purpose, inputs, outputs, boundaries, tone, evidence, permissions, and escalation.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 389,
+   "headings": [
+    "The contract's eight clauses",
+    "Why behavior before interface",
+    "Exercise",
+    "Next"
+   ],
+   "internalLinks": [
+    "/learn/ai-for-designers/ai-feature-state-model-worked-example",
+    "/learn/ai-for-designers/human-review-and-approval-boundaries",
+    "/learn/ai-for-designers/mapping-ai-capabilities-to-user-tasks",
+    "/learn/ai-for-designers/prompt-as-interaction-spec",
+    "/learn/prompt-engineering/system-vs-user-prompts"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 8,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Write a behavior contract for an AI feature covering purpose, inputs, outputs, boundaries, tone, evidence, permissions, and escalation.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-for-designers",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2193",
+   "family": "lesson",
+   "kind": "comparison",
+   "title": "Deterministic vs probabilistic interfaces, compared",
+   "slug": "ai-for-designers/deterministic-vs-probabilistic-interfaces-compared",
+   "route": "/learn/ai-for-designers/deterministic-vs-probabilistic-interfaces-compared",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-for-designers/deterministic-vs-probabilistic-interfaces-compared.md",
+   "track": "ai-for-designers",
+   "module": null,
+   "status": "live",
+   "summary": "Compare deterministic and probabilistic interface behavior across testing, copy, empty states, and expectations so you design for variation on purpose.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 382,
+   "headings": [
+    "The core difference",
+    "How the design work changes",
+    "What to tell stakeholders",
+    "Diagnostic skim for experienced designers",
+    "Next"
+   ],
+   "internalLinks": [
+    "/learn/ai-for-designers/ai-product-design-common-mistakes",
+    "/learn/ai-for-designers/choosing-where-ai-belongs-worked-example",
+    "/learn/ai-for-designers/creating-a-realistic-ai-test-set",
+    "/learn/ai-for-designers/designing-a-ux-evaluation-rubric",
+    "/learn/genai-app-dev/why-stream-tokens",
+    "/learn/hallucinations/teaching-models-to-say-i-dont-know"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 0,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "comparison",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Compare deterministic and probabilistic interface behavior across testing, copy, empty states, and expectations so you design for variation on purpose.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-for-designers",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2194",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Human review and approval boundaries",
+   "slug": "ai-for-designers/human-review-and-approval-boundaries",
+   "route": "/learn/ai-for-designers/human-review-and-approval-boundaries",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-for-designers/human-review-and-approval-boundaries.md",
+   "track": "ai-for-designers",
+   "module": null,
+   "status": "live",
+   "summary": "Separate recommendation, confirmation, and action so every consequential AI step has the review boundary its stakes require.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 302,
+   "headings": [
+    "Three modes, never blurred",
+    "Designing the boundary well",
+    "Exercise",
+    "Next"
+   ],
+   "internalLinks": [
+    "/learn/agentic-ai/when-not-to-use-an-agent",
+    "/learn/ai-for-designers/correction-undo-and-recovery-patterns",
+    "/learn/ai-for-designers/designing-the-ai-behavior-contract",
+    "/learn/ai-for-designers/trust-patterns-worked-example"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 3,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Separate recommendation, confirmation, and action so every consequential AI step has the review boundary its stakes require.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-for-designers",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2195",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Mapping AI capabilities to user tasks",
+   "slug": "ai-for-designers/mapping-ai-capabilities-to-user-tasks",
+   "route": "/learn/ai-for-designers/mapping-ai-capabilities-to-user-tasks",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-for-designers/mapping-ai-capabilities-to-user-tasks.md",
+   "track": "ai-for-designers",
+   "module": null,
+   "status": "live",
+   "summary": "Separate retrieval, transformation, generation, prediction, and action so each subtask gets the AI role — or non-AI baseline — it can actually carry.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 337,
+   "headings": [
+    "The five capabilities",
+    "The mapping method",
+    "What stays non-AI",
+    "Next"
+   ],
+   "internalLinks": [
+    "/learn/agentic-ai/when-not-to-use-an-agent",
+    "/learn/ai-for-designers/ai-feature-state-model-worked-example",
+    "/learn/ai-for-designers/designing-the-ai-behavior-contract"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 5,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Separate retrieval, transformation, generation, prediction, and action so each subtask gets the AI role — or non-AI baseline — it can actually carry.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-for-designers",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2196",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Prompts as interaction specs",
+   "slug": "ai-for-designers/prompt-as-interaction-spec",
+   "route": "/learn/ai-for-designers/prompt-as-interaction-spec",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-for-designers/prompt-as-interaction-spec.md",
+   "track": "ai-for-designers",
+   "module": null,
+   "status": "live",
+   "summary": "Treat the prompt layer as part of system behavior by specifying role, constraints, evidence rules, and refusal shapes designers can review.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 370,
+   "headings": [
+    "What designers own in the prompt",
+    "Keeping policy constraints visible",
+    "Exercise",
+    "Next"
+   ],
+   "internalLinks": [
+    "/learn/ai-for-designers/behavior-before-interface-quiz",
+    "/learn/ai-for-designers/designing-the-ai-behavior-contract",
+    "/learn/ai-for-designers/human-review-and-approval-boundaries",
+    "/learn/prompt-engineering/system-vs-user-prompts"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 4,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Treat the prompt layer as part of system behavior by specifying role, constraints, evidence rules, and refusal shapes designers can review.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-for-designers",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2197",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Prototype AI behavior without a model",
+   "slug": "ai-for-designers/prototype-ai-behavior-without-a-model",
+   "route": "/learn/ai-for-designers/prototype-ai-behavior-without-a-model",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-for-designers/prototype-ai-behavior-without-a-model.md",
+   "track": "ai-for-designers",
+   "module": null,
+   "status": "live",
+   "summary": "Test AI interaction designs early with scripted, Wizard-of-Oz, and branch-based prototypes that disclose their limits honestly.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 332,
+   "headings": [
+    "Three prototype kinds",
+    "Disclosure and consent",
+    "Accessibility from the first prototype",
+    "Exercise"
+   ],
+   "internalLinks": [
+    "/learn/ai-for-designers/ai-feature-state-model-worked-example",
+    "/learn/ai-for-designers/creating-a-realistic-ai-test-set",
+    "/learn/ai-for-designers/designing-a-ux-evaluation-rubric"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 3,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Test AI interaction designs early with scripted, Wizard-of-Oz, and branch-based prototypes that disclose their limits honestly.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-for-designers",
+   "practiceType": "none",
+   "freshnessClass": "policy-sensitive",
+   "freshnessSignals": [
+    "policy/license mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2198",
+   "family": "quiz",
+   "kind": "quiz",
+   "title": "Quiz: prototype and evaluation",
+   "slug": "ai-for-designers/prototype-and-evaluation-quiz",
+   "route": "/learn/ai-for-designers/prototype-and-evaluation-quiz",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-for-designers/prototype-and-evaluation-quiz.md",
+   "track": "ai-for-designers",
+   "module": null,
+   "status": "live",
+   "summary": "A six-question scenario quiz on prototyping without models, scenario sets, rubrics, and the four testing traps from Module 4.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 667,
+   "headings": [
+    "1. The model wait",
+    "2. The friendly set",
+    "3. The right answer nobody can use",
+    "4. The moving goalposts",
+    "5. The honest wizard",
+    "6. The unmeasured claim"
+   ],
+   "internalLinks": [
+    "/learn/ai-for-designers/ai-prototype-testing-common-mistakes",
+    "/learn/ai-for-designers/capstone-design-a-trustworthy-ai-feature",
+    "/learn/ai-for-designers/creating-a-realistic-ai-test-set",
+    "/learn/ai-for-designers/designing-a-ux-evaluation-rubric",
+    "/learn/ai-for-designers/prototype-ai-behavior-without-a-model"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 24,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "practice",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "A six-question scenario quiz on prototyping without models, scenario sets, rubrics, and the four testing traps from Module 4.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-for-designers",
+   "practiceType": "quiz-page",
+   "freshnessClass": "policy-sensitive",
+   "freshnessSignals": [
+    "policy/license mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 0,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": null,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2199",
+   "family": "lesson",
+   "kind": "comparison",
+   "title": "Sources, confidence, and explanations, compared",
+   "slug": "ai-for-designers/sources-confidence-and-explanations-compared",
+   "route": "/learn/ai-for-designers/sources-confidence-and-explanations-compared",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-for-designers/sources-confidence-and-explanations-compared.md",
+   "track": "ai-for-designers",
+   "module": null,
+   "status": "live",
+   "summary": "Compare three trust patterns — cited sources, calibrated confidence, and explanations — on what each can and cannot communicate to users.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 319,
+   "headings": [
+    "What each pattern does",
+    "Choosing between them",
+    "Common combination mistakes"
+   ],
+   "internalLinks": [
+    "/learn/ai-for-designers/designing-for-uncertainty",
+    "/learn/ai-for-designers/trust-patterns-worked-example",
+    "/learn/hallucinations/citations-and-attribution"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": true,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 3,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "comparison",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Compare three trust patterns — cited sources, calibrated confidence, and explanations — on what each can and cannot communicate to users.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-for-designers",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2200",
+   "family": "lesson",
+   "kind": "worked-example",
+   "title": "Testing an AI prototype: a worked example",
+   "slug": "ai-for-designers/test-an-ai-prototype-worked-example",
+   "route": "/learn/ai-for-designers/test-an-ai-prototype-worked-example",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-for-designers/test-an-ai-prototype-worked-example.md",
+   "track": "ai-for-designers",
+   "module": null,
+   "status": "live",
+   "summary": "Run an illustrative twelve-scenario evaluation on a prototype, log model versus interaction failures, and turn findings into revisions.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 405,
+   "headings": [
+    "Setup: the illustrative run",
+    "What the run finds",
+    "Turning findings into revisions",
+    "Your turn"
+   ],
+   "internalLinks": [
+    "/learn/ai-for-designers/ai-prototype-testing-common-mistakes",
+    "/learn/ai-for-designers/capstone-design-a-trustworthy-ai-feature",
+    "/learn/ai-for-designers/designing-a-ux-evaluation-rubric",
+    "/learn/ai-for-designers/prompt-as-interaction-spec"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": true,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 5,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "worked-example",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Run an illustrative twelve-scenario evaluation on a prototype, log model versus interaction failures, and turn findings into revisions.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-for-designers",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2201",
+   "family": "quiz",
+   "kind": "quiz",
+   "title": "Quiz: trust and recovery",
+   "slug": "ai-for-designers/trust-and-recovery-quiz",
+   "route": "/learn/ai-for-designers/trust-and-recovery-quiz",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-for-designers/trust-and-recovery-quiz.md",
+   "track": "ai-for-designers",
+   "module": null,
+   "status": "live",
+   "summary": "A six-question scenario quiz on uncertainty wording, trust patterns, correction flows, and approval boundaries from Module 3.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 648,
+   "headings": [
+    "1. The conflicting threads",
+    "2. The bare percentage",
+    "3. The uncorrectable answer",
+    "4. The self-filing action",
+    "5. The exposed justification",
+    "6. The approval fatigue"
+   ],
+   "internalLinks": [
+    "/learn/ai-for-designers/correction-undo-and-recovery-patterns",
+    "/learn/ai-for-designers/designing-for-uncertainty",
+    "/learn/ai-for-designers/human-review-and-approval-boundaries",
+    "/learn/ai-for-designers/prototype-ai-behavior-without-a-model",
+    "/learn/ai-for-designers/sources-confidence-and-explanations-compared",
+    "/learn/ai-for-designers/trust-patterns-worked-example"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 24,
+    "numericClaims": 1,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "practice",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "A six-question scenario quiz on uncertainty wording, trust patterns, correction flows, and approval boundaries from Module 3.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-for-designers",
+   "practiceType": "quiz-page",
+   "freshnessClass": "policy-sensitive",
+   "freshnessSignals": [
+    "policy/license mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 0,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": null,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2202",
+   "family": "lesson",
+   "kind": "worked-example",
+   "title": "Trust patterns: a redesign worked example",
+   "slug": "ai-for-designers/trust-patterns-worked-example",
+   "route": "/learn/ai-for-designers/trust-patterns-worked-example",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-for-designers/trust-patterns-worked-example.md",
+   "track": "ai-for-designers",
+   "module": null,
+   "status": "live",
+   "summary": "Redesign an illustrative overconfident assistant flow using uncertainty wording, evidence, correction, and approval boundaries.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 358,
+   "headings": [
+    "Setup: the illustrative flow",
+    "The redesign",
+    "Before and after",
+    "Your turn"
+   ],
+   "internalLinks": [
+    "/learn/ai-for-designers/ai-product-design-common-mistakes",
+    "/learn/ai-for-designers/correction-undo-and-recovery-patterns",
+    "/learn/ai-for-designers/designing-for-uncertainty",
+    "/learn/ai-for-designers/human-review-and-approval-boundaries",
+    "/learn/ai-for-designers/sources-confidence-and-explanations-compared",
+    "/learn/ai-for-designers/trust-and-recovery-quiz"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": true,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 5,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "worked-example",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Redesign an illustrative overconfident assistant flow using uncertainty wording, evidence, correction, and approval boundaries.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-for-designers",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
     "linking": 2,
@@ -55558,7 +57595,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -55641,7 +57678,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -58322,7 +60359,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -58489,7 +60526,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": 1,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -60305,7 +62342,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -61419,7 +63456,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 0,
     "explanationQuality": 2,
@@ -63873,7 +65910,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -79766,7 +81803,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -80440,7 +82477,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 0,
     "explanationQuality": 2,
@@ -81110,7 +83147,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -91886,7 +93923,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -108117,7 +110154,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -111241,7 +113278,7 @@
    "scores": {
     "intentClarity": null,
     "correctnessSources": null,
-    "completeness": 0,
+    "completeness": 1,
     "prerequisiteFit": 0,
     "handsOn": null,
     "explanationQuality": null,
@@ -118664,7 +120701,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -129177,7 +131214,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -130235,7 +132272,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -138198,6 +140235,648 @@
     "explanationQuality": 2,
     "metadata": 2,
     "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2203",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Audio and video understanding: beyond the transcript",
+   "slug": "multimodal-ai/audio-video-and-mixed-media",
+   "route": "/learn/multimodal-ai/audio-video-and-mixed-media",
+   "collection": "lessons",
+   "path": "src/content/lessons/multimodal-ai/audio-video-and-mixed-media.md",
+   "track": "multimodal-ai",
+   "module": null,
+   "status": "live",
+   "summary": "Audio and video inputs for LLM systems: native audio understanding vs ASR transcripts, video frame sampling strategies, the cost scaling that bites, and when mixed-media input earns its complexity.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 377,
+   "headings": [
+    "The short answer",
+    "Audio: transcript vs native understanding",
+    "Video: the frame-sampling decision",
+    "The cost reality",
+    "Mixed-input: when it earns its complexity"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 0,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Audio and video inputs for LLM systems: native audio understanding vs ASR transcripts, video frame sampling strategies, the cost scaling that bites, and when mixed-media input earns its complexity.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/multimodal-ai",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 0,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2204",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Document AI pipelines: PDFs, layouts, and tables — the highest-value multimodal surface",
+   "slug": "multimodal-ai/document-ai-pipelines",
+   "route": "/learn/multimodal-ai/document-ai-pipelines",
+   "collection": "lessons",
+   "path": "src/content/lessons/multimodal-ai/document-ai-pipelines.md",
+   "track": "multimodal-ai",
+   "module": null,
+   "status": "live",
+   "summary": "Document understanding end to end: parsing vs native-vision strategies, layout and table extraction, OCR quality tiers, and building document pipelines that survive real-world PDFs.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 364,
+   "headings": [
+    "The short answer",
+    "The pipeline shape",
+    "Layout and tables — where documents fight back",
+    "OCR quality tiers",
+    "The accuracy contract"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 0,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Document understanding end to end: parsing vs native-vision strategies, layout and table extraction, OCR quality tiers, and building document pipelines that survive real-world PDFs.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/multimodal-ai",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Unstructured"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 0,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2205",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Image generation in products: when it serves the product vs decorates it",
+   "slug": "multimodal-ai/image-generation-in-products",
+   "route": "/learn/multimodal-ai/image-generation-in-products",
+   "collection": "lessons",
+   "path": "src/content/lessons/multimodal-ai/image-generation-in-products.md",
+   "track": "multimodal-ai",
+   "module": null,
+   "status": "live",
+   "summary": "Text-to-image in real products: the generation/editing API surface, prompt-to-output quality control, when generated imagery is the feature vs the decoration, and the governance boundaries.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 392,
+   "headings": [
+    "The short answer",
+    "The API surface",
+    "Quality control — the part demos skip",
+    "When generation is the feature vs decoration",
+    "The governance boundaries"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 0,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "comparison",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Text-to-image in real products: the generation/editing API surface, prompt-to-output quality control, when generated imagery is the feature vs the decoration, and the governance boundaries.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/multimodal-ai",
+   "practiceType": "none",
+   "freshnessClass": "pricing-sensitive",
+   "freshnessSignals": [
+    "pricing/cost mention",
+    "policy/license mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 0,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2206",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Image understanding in production: vision APIs that actually work",
+   "slug": "multimodal-ai/image-understanding-in-production",
+   "route": "/learn/multimodal-ai/image-understanding-in-production",
+   "collection": "lessons",
+   "path": "src/content/lessons/multimodal-ai/image-understanding-in-production.md",
+   "track": "multimodal-ai",
+   "module": null,
+   "status": "live",
+   "summary": "Vision-capable LLMs in production: what image understanding can and can't do, resolution and token economics, when OCR-plus-LLM beats native vision, and the accuracy traps of visual QA.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 403,
+   "headings": [
+    "The short answer",
+    "What vision models do well — and where they break",
+    "Resolution, tiling, and token economics",
+    "Native vision vs OCR-plus-LLM vs dedicated tools",
+    "The accuracy discipline"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 0,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Vision-capable LLMs in production: what image understanding can and can't do, resolution and token economics, when OCR-plus-LLM beats native vision, and the accuracy traps of visual QA.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/multimodal-ai",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 0,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2207",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Multimodal cost and latency: the economics of non-text tokens",
+   "slug": "multimodal-ai/multimodal-cost-and-latency",
+   "route": "/learn/multimodal-ai/multimodal-cost-and-latency",
+   "collection": "lessons",
+   "path": "src/content/lessons/multimodal-ai/multimodal-cost-and-latency.md",
+   "track": "multimodal-ai",
+   "module": null,
+   "status": "live",
+   "summary": "Managing the real economics of multimodal: image/video token costs, resolution tiers, caching strategies, and the latency profile of modality pipelines.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 386,
+   "headings": [
+    "The short answer",
+    "The token math",
+    "The cost-control levers",
+    "Latency: the pipeline compounds",
+    "The honest bill"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 4,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Managing the real economics of multimodal: image/video token costs, resolution tiers, caching strategies, and the latency profile of modality pipelines.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/multimodal-ai",
+   "practiceType": "none",
+   "freshnessClass": "pricing-sensitive",
+   "freshnessSignals": [
+    "pricing/cost mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 0,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2208",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Evaluating multimodal systems: accuracy you can't eyeball",
+   "slug": "multimodal-ai/multimodal-evaluation",
+   "route": "/learn/multimodal-ai/multimodal-evaluation",
+   "collection": "lessons",
+   "path": "src/content/lessons/multimodal-ai/multimodal-evaluation.md",
+   "track": "multimodal-ai",
+   "module": null,
+   "status": "live",
+   "summary": "Evaluating non-text outputs and inputs: extraction assertions, golden sets for vision/documents/audio, judging generated images, and the regression discipline for modality pipelines.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 398,
+   "headings": [
+    "The short answer",
+    "Understanding-side evals (modality→text)",
+    "Generation-side evals (text→modality)",
+    "The per-stage and end-to-end split",
+    "Regression discipline"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 0,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Evaluating non-text outputs and inputs: extraction assertions, golden sets for vision/documents/audio, judging generated images, and the regression discipline for modality pipelines.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/multimodal-ai",
+   "practiceType": "none",
+   "freshnessClass": "policy-sensitive",
+   "freshnessSignals": [
+    "policy/license mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 0,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2209",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "The multimodal model landscape: native vs adapter, and what the matrix actually looks like",
+   "slug": "multimodal-ai/multimodal-model-landscape",
+   "route": "/learn/multimodal-ai/multimodal-model-landscape",
+   "collection": "lessons",
+   "path": "src/content/lessons/multimodal-ai/multimodal-model-landscape.md",
+   "track": "multimodal-ai",
+   "module": null,
+   "status": "live",
+   "summary": "What 'multimodal' actually means — natively multimodal models vs modality adapters — and the input/output matrix that determines what your product can build.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 355,
+   "headings": [
+    "The short answer",
+    "The modality matrix — what actually exists",
+    "Native vs adapter — when it matters",
+    "The practical read"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 0,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "comparison",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "What 'multimodal' actually means — natively multimodal models vs modality adapters — and the input/output matrix that determines what your product can build.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/multimodal-ai",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 0,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2210",
+   "family": "lab",
+   "kind": "lab",
+   "title": "Lab: retrieval over mixed documents (multimodal RAG)",
+   "slug": "multimodal-ai/multimodal-rag-lab",
+   "route": "/learn/multimodal-ai/multimodal-rag-lab",
+   "collection": "lessons",
+   "path": "src/content/lessons/multimodal-ai/multimodal-rag-lab.md",
+   "track": "multimodal-ai",
+   "module": null,
+   "status": "live",
+   "summary": "A hands-on lab building retrieval over documents containing text, tables, and images — where naive text-only RAG loses the information and structure-aware retrieval wins.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 418,
+   "headings": [
+    "What you'll build",
+    "The corpus and the failure to fix",
+    "The pipeline stages",
+    "Acceptance criteria",
+    "Where this bites in production"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": true,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 4,
+    "numericClaims": 0,
+    "specFormat": true,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "build",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "A hands-on lab building retrieval over documents containing text, tables, and images — where naive text-only RAG loses the information and structure-aware retrieval wins.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/multimodal-ai",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Unstructured"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -157376,7 +160055,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -166302,7 +168981,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 0,
     "explanationQuality": 2,
@@ -168500,7 +171179,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -171096,7 +173775,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -176695,7 +179374,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -177408,7 +180087,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -178876,7 +181555,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -179412,7 +182091,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -181845,7 +184524,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -197628,7 +200307,7 @@
    "scores": {
     "intentClarity": null,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": null,
     "handsOn": null,
     "explanationQuality": null,
@@ -215811,25 +218490,6 @@
   },
   {
    "a": {
-    "route": "/learn/genai-app-dev/tool-calling-and-authority",
-    "slug": "genai-app-dev/tool-calling-and-authority",
-    "title": "Treat tool calls as requests for authority",
-    "track": "genai-app-dev"
-   },
-   "b": {
-    "route": "/learn/genai-app-dev/tool-calling-as-authority",
-    "slug": "genai-app-dev/tool-calling-as-authority",
-    "title": "Tool Calls Are Requests for Authority",
-    "track": "genai-app-dev"
-   },
-   "jaccard": 0.8,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
     "route": "/learn/prompt-engineering/ab-testing-in-production",
     "slug": "prompt-engineering/ab-testing-in-production",
     "title": "A/B Testing Prompts on Real Traffic",
@@ -215840,6 +218500,25 @@
     "slug": "prompt-engineering/ab-testing-prompts-in-production",
     "title": "A/B Testing Prompts Against Real Traffic",
     "track": "prompt-engineering"
+   },
+   "jaccard": 0.8,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/genai-app-dev/tool-calling-and-authority",
+    "slug": "genai-app-dev/tool-calling-and-authority",
+    "title": "Treat tool calls as requests for authority",
+    "track": "genai-app-dev"
+   },
+   "b": {
+    "route": "/learn/genai-app-dev/tool-calling-as-authority",
+    "slug": "genai-app-dev/tool-calling-as-authority",
+    "title": "Tool Calls Are Requests for Authority",
+    "track": "genai-app-dev"
    },
    "jaccard": 0.8,
    "containment": 1,
@@ -215963,25 +218642,6 @@
   },
   {
    "a": {
-    "route": "/learn/harness-design/subprocess-isolation-and-sandboxing",
-    "slug": "harness-design/subprocess-isolation-and-sandboxing",
-    "title": "Sandboxing Tool Execution in a Harness",
-    "track": "harness-design"
-   },
-   "b": {
-    "route": "/learn/tools-function-calling/sandboxing-tool-execution",
-    "slug": "tools-function-calling/sandboxing-tool-execution",
-    "title": "Sandboxing Tool Execution",
-    "track": "tools-function-calling"
-   },
-   "jaccard": 0.75,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": false
-  },
-  {
-   "a": {
     "route": "/learn/tools-function-calling/testing-and-debugging-tool-calls",
     "slug": "tools-function-calling/testing-and-debugging-tool-calls",
     "title": "Testing and Debugging Tool Calls",
@@ -215998,6 +218658,25 @@
    "slugStem": false,
    "alreadyLinked": true,
    "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/harness-design/subprocess-isolation-and-sandboxing",
+    "slug": "harness-design/subprocess-isolation-and-sandboxing",
+    "title": "Sandboxing Tool Execution in a Harness",
+    "track": "harness-design"
+   },
+   "b": {
+    "route": "/learn/tools-function-calling/sandboxing-tool-execution",
+    "slug": "tools-function-calling/sandboxing-tool-execution",
+    "title": "Sandboxing Tool Execution",
+    "track": "tools-function-calling"
+   },
+   "jaccard": 0.75,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": false
   },
   {
    "a": {
@@ -216077,25 +218756,6 @@
   },
   {
    "a": {
-    "route": "/learn/ai-foundations/ai-systems/111-alpha-beta-pruning-and-move-ordering",
-    "slug": "ai-foundations/ai-systems/111-alpha-beta-pruning-and-move-ordering",
-    "title": "Alpha-Beta Pruning and Move Ordering",
-    "track": "ai-foundations"
-   },
-   "b": {
-    "route": "/learn/classical-ai/search-planning/113-alpha-beta-pruning-bounds-move-ordering-and-exactness",
-    "slug": "classical-ai/search-planning/113-alpha-beta-pruning-bounds-move-ordering-and-exactness",
-    "title": "Alpha-Beta Pruning: Bounds, Move Ordering, and Exactness",
-    "track": "classical-ai"
-   },
-   "jaccard": 0.71,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": false
-  },
-  {
-   "a": {
     "route": "/learn/structured-outputs/schema-versioning-and-migration",
     "slug": "structured-outputs/schema-versioning-and-migration",
     "title": "Schema Versioning: Evolving a Contract Without Breaking Consumers",
@@ -216112,6 +218772,25 @@
    "slugStem": false,
    "alreadyLinked": true,
    "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/ai-foundations/ai-systems/111-alpha-beta-pruning-and-move-ordering",
+    "slug": "ai-foundations/ai-systems/111-alpha-beta-pruning-and-move-ordering",
+    "title": "Alpha-Beta Pruning and Move Ordering",
+    "track": "ai-foundations"
+   },
+   "b": {
+    "route": "/learn/classical-ai/search-planning/113-alpha-beta-pruning-bounds-move-ordering-and-exactness",
+    "slug": "classical-ai/search-planning/113-alpha-beta-pruning-bounds-move-ordering-and-exactness",
+    "title": "Alpha-Beta Pruning: Bounds, Move Ordering, and Exactness",
+    "track": "classical-ai"
+   },
+   "jaccard": 0.71,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": false
   },
   {
    "a": {
@@ -216229,6 +218908,44 @@
   },
   {
    "a": {
+    "route": "/learn/structured-outputs/reliability-design-mistakes",
+    "slug": "structured-outputs/reliability-design-mistakes",
+    "title": "Reliability-Design Mistakes",
+    "track": "structured-outputs"
+   },
+   "b": {
+    "route": "/learn/tools-function-calling/reliability-common-mistakes",
+    "slug": "tools-function-calling/reliability-common-mistakes",
+    "title": "Reliability Mistakes",
+    "track": "tools-function-calling"
+   },
+   "jaccard": 0.67,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/genai-app-dev/quiz-reliability-safety",
+    "slug": "genai-app-dev/quiz-reliability-safety",
+    "title": "Quiz: Reliability and Safety",
+    "track": "genai-app-dev"
+   },
+   "b": {
+    "route": "/learn/tools-function-calling/reliability-quiz",
+    "slug": "tools-function-calling/reliability-quiz",
+    "title": "Reliability Quiz",
+    "track": "tools-function-calling"
+   },
+   "jaccard": 0.67,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
     "route": "/learn/deep-learning/core/129-transfer-learning-fine-tuning-and-domain-shift",
     "slug": "deep-learning/core/129-transfer-learning-fine-tuning-and-domain-shift",
     "title": "Transfer Learning, Fine-tuning, and Domain Shift",
@@ -216321,44 +219038,6 @@
    "slugStem": false,
    "alreadyLinked": true,
    "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/genai-app-dev/quiz-reliability-safety",
-    "slug": "genai-app-dev/quiz-reliability-safety",
-    "title": "Quiz: Reliability and Safety",
-    "track": "genai-app-dev"
-   },
-   "b": {
-    "route": "/learn/tools-function-calling/reliability-quiz",
-    "slug": "tools-function-calling/reliability-quiz",
-    "title": "Reliability Quiz",
-    "track": "tools-function-calling"
-   },
-   "jaccard": 0.67,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/structured-outputs/reliability-design-mistakes",
-    "slug": "structured-outputs/reliability-design-mistakes",
-    "title": "Reliability-Design Mistakes",
-    "track": "structured-outputs"
-   },
-   "b": {
-    "route": "/learn/tools-function-calling/reliability-common-mistakes",
-    "slug": "tools-function-calling/reliability-common-mistakes",
-    "title": "Reliability Mistakes",
-    "track": "tools-function-calling"
-   },
-   "jaccard": 0.67,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": false
   },
   {
    "a": {
@@ -217065,6 +219744,44 @@
   },
   {
    "a": {
+    "route": "/learn/hallucinations/production-antipatterns",
+    "slug": "hallucinations/production-antipatterns",
+    "title": "Common Mistakes: Production Reliability Antipatterns",
+    "track": "hallucinations"
+   },
+   "b": {
+    "route": "/learn/tools-function-calling/reliability-common-mistakes",
+    "slug": "tools-function-calling/reliability-common-mistakes",
+    "title": "Reliability Mistakes",
+    "track": "tools-function-calling"
+   },
+   "jaccard": 0.4,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/hallucinations/semantic-entropy-and-uncertainty-quantification",
+    "slug": "hallucinations/semantic-entropy-and-uncertainty-quantification",
+    "title": "Semantic Entropy: Measuring Uncertainty by Resampling",
+    "track": "hallucinations"
+   },
+   "b": {
+    "route": "/learn/maths-foundations/entropy-and-uncertainty",
+    "slug": "maths-foundations/entropy-and-uncertainty",
+    "title": "Entropy and uncertainty",
+    "track": "maths-foundations"
+   },
+   "jaccard": 0.4,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
     "route": "/learn/genai-app-dev/function-calling-across-providers",
     "slug": "genai-app-dev/function-calling-across-providers",
     "title": "Tool/Function Calling Across Providers",
@@ -217122,25 +219839,6 @@
   },
   {
    "a": {
-    "route": "/learn/hallucinations/semantic-entropy-and-uncertainty-quantification",
-    "slug": "hallucinations/semantic-entropy-and-uncertainty-quantification",
-    "title": "Semantic Entropy: Measuring Uncertainty by Resampling",
-    "track": "hallucinations"
-   },
-   "b": {
-    "route": "/learn/maths-foundations/entropy-and-uncertainty",
-    "slug": "maths-foundations/entropy-and-uncertainty",
-    "title": "Entropy and uncertainty",
-    "track": "maths-foundations"
-   },
-   "jaccard": 0.4,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": false
-  },
-  {
-   "a": {
     "route": "/learn/ai-foundations/ai-systems/121-bayesian-networks-conditional-independence-and-inference",
     "slug": "ai-foundations/ai-systems/121-bayesian-networks-conditional-independence-and-inference",
     "title": "Bayesian Networks, Conditional Independence, and Inference",
@@ -217194,25 +219892,6 @@
    "containment": 1,
    "slugStem": false,
    "alreadyLinked": true,
-   "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/hallucinations/production-antipatterns",
-    "slug": "hallucinations/production-antipatterns",
-    "title": "Common Mistakes: Production Reliability Antipatterns",
-    "track": "hallucinations"
-   },
-   "b": {
-    "route": "/learn/tools-function-calling/reliability-common-mistakes",
-    "slug": "tools-function-calling/reliability-common-mistakes",
-    "title": "Reliability Mistakes",
-    "track": "tools-function-calling"
-   },
-   "jaccard": 0.4,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": false,
    "sameTrack": false
   },
   {
@@ -217578,6 +220257,25 @@
   },
   {
    "a": {
+    "route": "/learn/hallucinations/semantic-entropy-uncertainty-deep-dive",
+    "slug": "hallucinations/semantic-entropy-uncertainty-deep-dive",
+    "title": "Deep Dive: Semantic Entropy, Uncertainty Over Meanings",
+    "track": "hallucinations"
+   },
+   "b": {
+    "route": "/learn/maths-foundations/entropy-and-uncertainty",
+    "slug": "maths-foundations/entropy-and-uncertainty",
+    "title": "Entropy and uncertainty",
+    "track": "maths-foundations"
+   },
+   "jaccard": 0.29,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": false
+  },
+  {
+   "a": {
     "route": "/learn/tools-function-calling/benchmarking-tool-use",
     "slug": "tools-function-calling/benchmarking-tool-use",
     "title": "Benchmarking Tool Use: BFCL and Function-Calling Evals",
@@ -217612,25 +220310,6 @@
    "containment": 1,
    "slugStem": false,
    "alreadyLinked": false,
-   "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/hallucinations/semantic-entropy-uncertainty-deep-dive",
-    "slug": "hallucinations/semantic-entropy-uncertainty-deep-dive",
-    "title": "Deep Dive: Semantic Entropy, Uncertainty Over Meanings",
-    "track": "hallucinations"
-   },
-   "b": {
-    "route": "/learn/maths-foundations/entropy-and-uncertainty",
-    "slug": "maths-foundations/entropy-and-uncertainty",
-    "title": "Entropy and uncertainty",
-    "track": "maths-foundations"
-   },
-   "jaccard": 0.29,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -217685,6 +220364,25 @@
     "track": "context-engineering"
    },
    "jaccard": 0.25,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/ai-foundations/what-a-model-actually-is",
+    "slug": "ai-foundations/what-a-model-actually-is",
+    "title": "What a Model Actually Is",
+    "track": "ai-foundations"
+   },
+   "b": {
+    "route": "/learn/multimodal-ai/multimodal-model-landscape",
+    "slug": "multimodal-ai/multimodal-model-landscape",
+    "title": "The multimodal model landscape: native vs adapter, and what the matrix actually looks like",
+    "track": "multimodal-ai"
+   },
+   "jaccard": 0.22,
    "containment": 1,
    "slugStem": false,
    "alreadyLinked": false,
@@ -218984,6 +221682,63 @@
   },
   {
    "a": {
+    "route": "/learn/hallucinations/confidence-antipatterns",
+    "slug": "hallucinations/confidence-antipatterns",
+    "title": "Common Mistakes: Confidence Antipatterns",
+    "track": "hallucinations"
+   },
+   "b": {
+    "route": "/learn/hallucinations/production-antipatterns",
+    "slug": "hallucinations/production-antipatterns",
+    "title": "Common Mistakes: Production Reliability Antipatterns",
+    "track": "hallucinations"
+   },
+   "jaccard": 0.5,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/rag/retrieval-common-mistakes",
+    "slug": "rag/retrieval-common-mistakes",
+    "title": "Vector Retrieval: Common Mistakes",
+    "track": "rag"
+   },
+   "b": {
+    "route": "/learn/rag/vector-db-common-mistakes",
+    "slug": "rag/vector-db-common-mistakes",
+    "title": "Choosing a Vector DB: Common Mistakes",
+    "track": "rag"
+   },
+   "jaccard": 0.5,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/machine-learning/derivations/11-bootstrap-confidence-intervals-and-permutation-tests",
+    "slug": "machine-learning/derivations/11-bootstrap-confidence-intervals-and-permutation-tests",
+    "title": "Bootstrap confidence intervals and permutation tests",
+    "track": "machine-learning"
+   },
+   "b": {
+    "route": "/learn/machine-learning/ml-502-resampling-bootstrap-and-confidence-intervals",
+    "slug": "machine-learning/ml-502-resampling-bootstrap-and-confidence-intervals",
+    "title": "Resampling, bootstrap, and confidence intervals",
+    "track": "machine-learning"
+   },
+   "jaccard": 0.5,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
     "route": "/learn/structured-outputs/tool-and-function-schemas-for-extraction",
     "slug": "structured-outputs/tool-and-function-schemas-for-extraction",
     "title": "Tool Calling as an Extraction Mechanism",
@@ -219231,44 +221986,6 @@
   },
   {
    "a": {
-    "route": "/learn/hallucinations/confidence-antipatterns",
-    "slug": "hallucinations/confidence-antipatterns",
-    "title": "Common Mistakes: Confidence Antipatterns",
-    "track": "hallucinations"
-   },
-   "b": {
-    "route": "/learn/hallucinations/production-antipatterns",
-    "slug": "hallucinations/production-antipatterns",
-    "title": "Common Mistakes: Production Reliability Antipatterns",
-    "track": "hallucinations"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/rag/retrieval-common-mistakes",
-    "slug": "rag/retrieval-common-mistakes",
-    "title": "Vector Retrieval: Common Mistakes",
-    "track": "rag"
-   },
-   "b": {
-    "route": "/learn/rag/vector-db-common-mistakes",
-    "slug": "rag/vector-db-common-mistakes",
-    "title": "Choosing a Vector DB: Common Mistakes",
-    "track": "rag"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
     "route": "/learn/genai-app-dev/shipping-end-to-end",
     "slug": "genai-app-dev/shipping-end-to-end",
     "title": "Shipping a GenAI Feature End to End",
@@ -219336,25 +222053,6 @@
     "slug": "python-data-apis/loading-data-into-pandas",
     "title": "Loading Data from CSV, JSON, and Parquet",
     "track": "python-data-apis"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/machine-learning/derivations/11-bootstrap-confidence-intervals-and-permutation-tests",
-    "slug": "machine-learning/derivations/11-bootstrap-confidence-intervals-and-permutation-tests",
-    "title": "Bootstrap confidence intervals and permutation tests",
-    "track": "machine-learning"
-   },
-   "b": {
-    "route": "/learn/machine-learning/ml-502-resampling-bootstrap-and-confidence-intervals",
-    "slug": "machine-learning/ml-502-resampling-bootstrap-and-confidence-intervals",
-    "title": "Resampling, bootstrap, and confidence intervals",
-    "track": "machine-learning"
    },
    "jaccard": 0.5,
    "containment": 0.75,
@@ -219516,6 +222214,82 @@
   },
   {
    "a": {
+    "route": "/learn/ai-literacy/catch-a-hallucination-worked-example",
+    "slug": "ai-literacy/catch-a-hallucination-worked-example",
+    "title": "Worked example: catching a hallucination",
+    "track": "ai-literacy"
+   },
+   "b": {
+    "route": "/learn/hallucinations/anatomy-of-a-hallucination",
+    "slug": "hallucinations/anatomy-of-a-hallucination",
+    "title": "Worked Example: Dissecting One Real Hallucination",
+    "track": "hallucinations"
+   },
+   "jaccard": 0.43,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/ai-literacy/catch-a-hallucination-worked-example",
+    "slug": "ai-literacy/catch-a-hallucination-worked-example",
+    "title": "Worked example: catching a hallucination",
+    "track": "ai-literacy"
+   },
+   "b": {
+    "route": "/learn/hallucinations/risk-factor-walkthrough",
+    "slug": "hallucinations/risk-factor-walkthrough",
+    "title": "Worked Example: Scoring a Prompt for Hallucination Risk",
+    "track": "hallucinations"
+   },
+   "jaccard": 0.43,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/ai-literacy/catch-a-hallucination-worked-example",
+    "slug": "ai-literacy/catch-a-hallucination-worked-example",
+    "title": "Worked example: catching a hallucination",
+    "track": "ai-literacy"
+   },
+   "b": {
+    "route": "/learn/hallucinations/tracking-hallucination-in-ci",
+    "slug": "hallucinations/tracking-hallucination-in-ci",
+    "title": "Worked Example: Hallucination Regression Testing in CI",
+    "track": "hallucinations"
+   },
+   "jaccard": 0.43,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/hallucinations/evaluation-pitfalls",
+    "slug": "hallucinations/evaluation-pitfalls",
+    "title": "Common Mistakes: Evaluation Pitfalls and Benchmark Gaming",
+    "track": "hallucinations"
+   },
+   "b": {
+    "route": "/learn/rag/rag-eval-common-mistakes",
+    "slug": "rag/rag-eval-common-mistakes",
+    "title": "RAG Evaluation: Common Mistakes",
+    "track": "rag"
+   },
+   "jaccard": 0.43,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
     "route": "/learn/ai-foundations/gradient-descent-explained",
     "slug": "ai-foundations/gradient-descent-explained",
     "title": "Gradient Descent: The Engine of Learning",
@@ -219611,25 +222385,6 @@
   },
   {
    "a": {
-    "route": "/learn/hallucinations/evaluation-pitfalls",
-    "slug": "hallucinations/evaluation-pitfalls",
-    "title": "Common Mistakes: Evaluation Pitfalls and Benchmark Gaming",
-    "track": "hallucinations"
-   },
-   "b": {
-    "route": "/learn/rag/rag-eval-common-mistakes",
-    "slug": "rag/rag-eval-common-mistakes",
-    "title": "RAG Evaluation: Common Mistakes",
-    "track": "rag"
-   },
-   "jaccard": 0.43,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": false
-  },
-  {
-   "a": {
     "route": "/learn/responsible-ai/privacy-fairness-and-accessibility",
     "slug": "responsible-ai/privacy-fairness-and-accessibility",
     "title": "Treat privacy, fairness, and accessibility as system properties",
@@ -219646,63 +222401,6 @@
    "slugStem": false,
    "alreadyLinked": false,
    "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/ai-literacy/catch-a-hallucination-worked-example",
-    "slug": "ai-literacy/catch-a-hallucination-worked-example",
-    "title": "Worked example: catching a hallucination",
-    "track": "ai-literacy"
-   },
-   "b": {
-    "route": "/learn/hallucinations/anatomy-of-a-hallucination",
-    "slug": "hallucinations/anatomy-of-a-hallucination",
-    "title": "Worked Example: Dissecting One Real Hallucination",
-    "track": "hallucinations"
-   },
-   "jaccard": 0.43,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/ai-literacy/catch-a-hallucination-worked-example",
-    "slug": "ai-literacy/catch-a-hallucination-worked-example",
-    "title": "Worked example: catching a hallucination",
-    "track": "ai-literacy"
-   },
-   "b": {
-    "route": "/learn/hallucinations/risk-factor-walkthrough",
-    "slug": "hallucinations/risk-factor-walkthrough",
-    "title": "Worked Example: Scoring a Prompt for Hallucination Risk",
-    "track": "hallucinations"
-   },
-   "jaccard": 0.43,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/ai-literacy/catch-a-hallucination-worked-example",
-    "slug": "ai-literacy/catch-a-hallucination-worked-example",
-    "title": "Worked example: catching a hallucination",
-    "track": "ai-literacy"
-   },
-   "b": {
-    "route": "/learn/hallucinations/tracking-hallucination-in-ci",
-    "slug": "hallucinations/tracking-hallucination-in-ci",
-    "title": "Worked Example: Hallucination Regression Testing in CI",
-    "track": "hallucinations"
-   },
-   "jaccard": 0.43,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": false
   },
   {
    "a": {
@@ -220010,6 +222708,25 @@
   },
   {
    "a": {
+    "route": "/learn/ai-literacy/catch-a-hallucination-worked-example",
+    "slug": "ai-literacy/catch-a-hallucination-worked-example",
+    "title": "Worked example: catching a hallucination",
+    "track": "ai-literacy"
+   },
+   "b": {
+    "route": "/learn/hallucinations/building-golden-eval-set",
+    "slug": "hallucinations/building-golden-eval-set",
+    "title": "Worked Example: Building a Golden Hallucination Eval Set",
+    "track": "hallucinations"
+   },
+   "jaccard": 0.38,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
     "route": "/learn/tools-function-calling/tool-selection-at-scale",
     "slug": "tools-function-calling/tool-selection-at-scale",
     "title": "Tool Selection at Scale: When You Have Hundreds of Tools",
@@ -220082,25 +222799,6 @@
    "containment": 0.75,
    "slugStem": false,
    "alreadyLinked": true,
-   "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/ai-literacy/catch-a-hallucination-worked-example",
-    "slug": "ai-literacy/catch-a-hallucination-worked-example",
-    "title": "Worked example: catching a hallucination",
-    "track": "ai-literacy"
-   },
-   "b": {
-    "route": "/learn/hallucinations/building-golden-eval-set",
-    "slug": "hallucinations/building-golden-eval-set",
-    "title": "Worked Example: Building a Golden Hallucination Eval Set",
-    "track": "hallucinations"
-   },
-   "jaccard": 0.38,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
    "sameTrack": false
   },
   {
@@ -220770,6 +223468,215 @@
   },
   {
    "a": {
+    "route": "/learn/genai-app-dev/reliability-safety-cheatsheet",
+    "slug": "genai-app-dev/reliability-safety-cheatsheet",
+    "title": "Reliability and Safety Cheatsheet",
+    "track": "genai-app-dev"
+   },
+   "b": {
+    "route": "/learn/prompt-engineering/robustness-safety-cheatsheet",
+    "slug": "prompt-engineering/robustness-safety-cheatsheet",
+    "title": "Robustness and Safety Cheatsheet",
+    "track": "prompt-engineering"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/prompt-engineering/eval-versioning-cheatsheet",
+    "slug": "prompt-engineering/eval-versioning-cheatsheet",
+    "title": "Evaluation and Versioning Cheatsheet",
+    "track": "prompt-engineering"
+   },
+   "b": {
+    "route": "/learn/rag/rag-eval-cheatsheet",
+    "slug": "rag/rag-eval-cheatsheet",
+    "title": "RAG Evaluation Cheatsheet",
+    "track": "rag"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/rag/retrieval-cheatsheet",
+    "slug": "rag/retrieval-cheatsheet",
+    "title": "Vector Retrieval Cheatsheet",
+    "track": "rag"
+   },
+   "b": {
+    "route": "/learn/rag/vector-db-cheatsheet",
+    "slug": "rag/vector-db-cheatsheet",
+    "title": "Vector DB Cheatsheet",
+    "track": "rag"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/context-engineering/selection-ordering-quiz",
+    "slug": "context-engineering/selection-ordering-quiz",
+    "title": "Selection and Ordering Quiz",
+    "track": "context-engineering"
+   },
+   "b": {
+    "route": "/learn/tools-function-calling/tool-selection-quiz",
+    "slug": "tools-function-calling/tool-selection-quiz",
+    "title": "Tool Selection Quiz",
+    "track": "tools-function-calling"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/genai-app-dev/quiz-reliability-safety",
+    "slug": "genai-app-dev/quiz-reliability-safety",
+    "title": "Quiz: Reliability and Safety",
+    "track": "genai-app-dev"
+   },
+   "b": {
+    "route": "/learn/tools-function-calling/execution-safety-quiz",
+    "slug": "tools-function-calling/execution-safety-quiz",
+    "title": "Execution Safety Quiz",
+    "track": "tools-function-calling"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/hallucinations/detection-quiz",
+    "slug": "hallucinations/detection-quiz",
+    "title": "Quiz: Detecting Hallucination",
+    "track": "hallucinations"
+   },
+   "b": {
+    "route": "/learn/hallucinations/foundations-quiz",
+    "slug": "hallucinations/foundations-quiz",
+    "title": "Quiz: Foundations of Hallucination",
+    "track": "hallucinations"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/hallucinations/detection-quiz",
+    "slug": "hallucinations/detection-quiz",
+    "title": "Quiz: Detecting Hallucination",
+    "track": "hallucinations"
+   },
+   "b": {
+    "route": "/learn/hallucinations/mitigation-quiz",
+    "slug": "hallucinations/mitigation-quiz",
+    "title": "Quiz: Reducing Hallucination",
+    "track": "hallucinations"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/hallucinations/foundations-quiz",
+    "slug": "hallucinations/foundations-quiz",
+    "title": "Quiz: Foundations of Hallucination",
+    "track": "hallucinations"
+   },
+   "b": {
+    "route": "/learn/hallucinations/mitigation-quiz",
+    "slug": "hallucinations/mitigation-quiz",
+    "title": "Quiz: Reducing Hallucination",
+    "track": "hallucinations"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/ai-foundations/applied-ai/325-applied-ai-staged-capstone-and-defense",
+    "slug": "ai-foundations/applied-ai/325-applied-ai-staged-capstone-and-defense",
+    "title": "Applied AI Staged Capstone and Technical Defense",
+    "track": "ai-foundations"
+   },
+   "b": {
+    "route": "/learn/classical-ai/agents-robotics/324-agents-robotics-staged-capstone-and-technical-defense",
+    "slug": "classical-ai/agents-robotics/324-agents-robotics-staged-capstone-and-technical-defense",
+    "title": "Agents and robotics staged capstone and technical defense",
+    "track": "classical-ai"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/structured-outputs/capstone-and-eval-quiz",
+    "slug": "structured-outputs/capstone-and-eval-quiz",
+    "title": "Portability and Evaluation Checkpoint",
+    "track": "structured-outputs"
+   },
+   "b": {
+    "route": "/learn/structured-outputs/eval-and-provider-mistakes",
+    "slug": "structured-outputs/eval-and-provider-mistakes",
+    "title": "Evaluation and Portability Mistakes",
+    "track": "structured-outputs"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/ai-foundations/reliable-ai/205-uncertainty-calibration-and-abstention",
+    "slug": "ai-foundations/reliable-ai/205-uncertainty-calibration-and-abstention",
+    "title": "Uncertainty, Calibration, and Abstention",
+    "track": "ai-foundations"
+   },
+   "b": {
+    "route": "/learn/hallucinations/uncertainty-quiz",
+    "slug": "hallucinations/uncertainty-quiz",
+    "title": "Quiz: Uncertainty and Calibration",
+    "track": "hallucinations"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": false
+  },
+  {
+   "a": {
     "route": "/learn/tools-function-calling/anatomy-of-a-tool-call",
     "slug": "tools-function-calling/anatomy-of-a-tool-call",
     "title": "Anatomy of a Tool Call",
@@ -220865,44 +223772,6 @@
   },
   {
    "a": {
-    "route": "/learn/genai-app-dev/quiz-reliability-safety",
-    "slug": "genai-app-dev/quiz-reliability-safety",
-    "title": "Quiz: Reliability and Safety",
-    "track": "genai-app-dev"
-   },
-   "b": {
-    "route": "/learn/tools-function-calling/execution-safety-quiz",
-    "slug": "tools-function-calling/execution-safety-quiz",
-    "title": "Execution Safety Quiz",
-    "track": "tools-function-calling"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/genai-app-dev/reliability-safety-cheatsheet",
-    "slug": "genai-app-dev/reliability-safety-cheatsheet",
-    "title": "Reliability and Safety Cheatsheet",
-    "track": "genai-app-dev"
-   },
-   "b": {
-    "route": "/learn/prompt-engineering/robustness-safety-cheatsheet",
-    "slug": "prompt-engineering/robustness-safety-cheatsheet",
-    "title": "Robustness and Safety Cheatsheet",
-    "track": "prompt-engineering"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": false
-  },
-  {
-   "a": {
     "route": "/learn/tools-function-calling/execution-safety-common-mistakes",
     "slug": "tools-function-calling/execution-safety-common-mistakes",
     "title": "Execution Safety Mistakes",
@@ -220979,25 +223848,6 @@
   },
   {
    "a": {
-    "route": "/learn/ai-foundations/reliable-ai/205-uncertainty-calibration-and-abstention",
-    "slug": "ai-foundations/reliable-ai/205-uncertainty-calibration-and-abstention",
-    "title": "Uncertainty, Calibration, and Abstention",
-    "track": "ai-foundations"
-   },
-   "b": {
-    "route": "/learn/hallucinations/uncertainty-quiz",
-    "slug": "hallucinations/uncertainty-quiz",
-    "title": "Quiz: Uncertainty and Calibration",
-    "track": "hallucinations"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": false
-  },
-  {
-   "a": {
     "route": "/learn/ai-foundations/applied-ai/308-training-and-inference-economics",
     "slug": "ai-foundations/applied-ai/308-training-and-inference-economics",
     "title": "Training and Inference Economics",
@@ -221013,82 +223863,6 @@
    "containment": 0.67,
    "slugStem": false,
    "alreadyLinked": true,
-   "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/ai-foundations/applied-ai/325-applied-ai-staged-capstone-and-defense",
-    "slug": "ai-foundations/applied-ai/325-applied-ai-staged-capstone-and-defense",
-    "title": "Applied AI Staged Capstone and Technical Defense",
-    "track": "ai-foundations"
-   },
-   "b": {
-    "route": "/learn/classical-ai/agents-robotics/324-agents-robotics-staged-capstone-and-technical-defense",
-    "slug": "classical-ai/agents-robotics/324-agents-robotics-staged-capstone-and-technical-defense",
-    "title": "Agents and robotics staged capstone and technical defense",
-    "track": "classical-ai"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/prompt-engineering/eval-versioning-cheatsheet",
-    "slug": "prompt-engineering/eval-versioning-cheatsheet",
-    "title": "Evaluation and Versioning Cheatsheet",
-    "track": "prompt-engineering"
-   },
-   "b": {
-    "route": "/learn/rag/rag-eval-cheatsheet",
-    "slug": "rag/rag-eval-cheatsheet",
-    "title": "RAG Evaluation Cheatsheet",
-    "track": "rag"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/structured-outputs/capstone-and-eval-quiz",
-    "slug": "structured-outputs/capstone-and-eval-quiz",
-    "title": "Portability and Evaluation Checkpoint",
-    "track": "structured-outputs"
-   },
-   "b": {
-    "route": "/learn/structured-outputs/eval-and-provider-mistakes",
-    "slug": "structured-outputs/eval-and-provider-mistakes",
-    "title": "Evaluation and Portability Mistakes",
-    "track": "structured-outputs"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/context-engineering/selection-ordering-quiz",
-    "slug": "context-engineering/selection-ordering-quiz",
-    "title": "Selection and Ordering Quiz",
-    "track": "context-engineering"
-   },
-   "b": {
-    "route": "/learn/tools-function-calling/tool-selection-quiz",
-    "slug": "tools-function-calling/tool-selection-quiz",
-    "title": "Tool Selection Quiz",
-    "track": "tools-function-calling"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
    "sameTrack": false
   },
   {
@@ -221127,82 +223901,6 @@
    "containment": 0.67,
    "slugStem": false,
    "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/hallucinations/detection-quiz",
-    "slug": "hallucinations/detection-quiz",
-    "title": "Quiz: Detecting Hallucination",
-    "track": "hallucinations"
-   },
-   "b": {
-    "route": "/learn/hallucinations/foundations-quiz",
-    "slug": "hallucinations/foundations-quiz",
-    "title": "Quiz: Foundations of Hallucination",
-    "track": "hallucinations"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/hallucinations/detection-quiz",
-    "slug": "hallucinations/detection-quiz",
-    "title": "Quiz: Detecting Hallucination",
-    "track": "hallucinations"
-   },
-   "b": {
-    "route": "/learn/hallucinations/mitigation-quiz",
-    "slug": "hallucinations/mitigation-quiz",
-    "title": "Quiz: Reducing Hallucination",
-    "track": "hallucinations"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/hallucinations/foundations-quiz",
-    "slug": "hallucinations/foundations-quiz",
-    "title": "Quiz: Foundations of Hallucination",
-    "track": "hallucinations"
-   },
-   "b": {
-    "route": "/learn/hallucinations/mitigation-quiz",
-    "slug": "hallucinations/mitigation-quiz",
-    "title": "Quiz: Reducing Hallucination",
-    "track": "hallucinations"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/rag/retrieval-cheatsheet",
-    "slug": "rag/retrieval-cheatsheet",
-    "title": "Vector Retrieval Cheatsheet",
-    "track": "rag"
-   },
-   "b": {
-    "route": "/learn/rag/vector-db-cheatsheet",
-    "slug": "rag/vector-db-cheatsheet",
-    "title": "Vector DB Cheatsheet",
-    "track": "rag"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
    "sameTrack": true
   },
   {
@@ -221815,6 +224513,25 @@
   },
   {
    "a": {
+    "route": "/learn/multimodal-ai/multimodal-rag-lab",
+    "slug": "multimodal-ai/multimodal-rag-lab",
+    "title": "Lab: retrieval over mixed documents (multimodal RAG)",
+    "track": "multimodal-ai"
+   },
+   "b": {
+    "route": "/learn/rag/multimodal-rag",
+    "slug": "rag/multimodal-rag",
+    "title": "Multimodal RAG: Retrieving Over Images and Layout",
+    "track": "rag"
+   },
+   "jaccard": 0.3,
+   "containment": 0.5,
+   "slugStem": true,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
     "route": "/learn/evals-red-teaming/llm-as-judge",
     "slug": "evals-red-teaming/llm-as-judge",
     "title": "LLM-as-Judge: Grading Outputs with a Model",
@@ -222183,7 +224900,7 @@
    "family": "project",
    "words": 368,
    "signals": [
-    "scope word \"handbook\" on 368w vs ~1011w median"
+    "scope word \"handbook\" on 368w vs ~999w median"
    ]
   }
  ],
@@ -222393,6 +225110,69 @@
    "family": "lesson",
    "flags": [
     "certification-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/ai-for-designers/ai-product-design-foundations-quiz",
+   "slug": "ai-for-designers/ai-product-design-foundations-quiz",
+   "title": "Quiz: AI product design foundations",
+   "family": "quiz",
+   "flags": [
+    "pricing-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/ai-for-designers/choosing-where-ai-belongs-worked-example",
+   "slug": "ai-for-designers/choosing-where-ai-belongs-worked-example",
+   "title": "Choosing where AI belongs: a worked example",
+   "family": "lesson",
+   "flags": [
+    "pricing-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/ai-for-designers/correction-undo-and-recovery-patterns",
+   "slug": "ai-for-designers/correction-undo-and-recovery-patterns",
+   "title": "Correction, undo, and recovery patterns",
+   "family": "lesson",
+   "flags": [
+    "policy-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/ai-for-designers/creating-a-realistic-ai-test-set",
+   "slug": "ai-for-designers/creating-a-realistic-ai-test-set",
+   "title": "Creating a realistic AI test set",
+   "family": "lesson",
+   "flags": [
+    "policy-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/ai-for-designers/prototype-ai-behavior-without-a-model",
+   "slug": "ai-for-designers/prototype-ai-behavior-without-a-model",
+   "title": "Prototype AI behavior without a model",
+   "family": "lesson",
+   "flags": [
+    "policy-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/ai-for-designers/prototype-and-evaluation-quiz",
+   "slug": "ai-for-designers/prototype-and-evaluation-quiz",
+   "title": "Quiz: prototype and evaluation",
+   "family": "quiz",
+   "flags": [
+    "policy-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/ai-for-designers/trust-and-recovery-quiz",
+   "slug": "ai-for-designers/trust-and-recovery-quiz",
+   "title": "Quiz: trust and recovery",
+   "family": "quiz",
+   "flags": [
+    "policy-sensitive page with no updated/review date"
    ]
   },
   {
@@ -223537,6 +226317,51 @@
    "slug": "mcp/mcp-server-in-typescript",
    "title": "Build an MCP server in TypeScript",
    "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/multimodal-ai/document-ai-pipelines",
+   "slug": "multimodal-ai/document-ai-pipelines",
+   "title": "Document AI pipelines: PDFs, layouts, and tables — the highest-value multimodal surface",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/multimodal-ai/image-generation-in-products",
+   "slug": "multimodal-ai/image-generation-in-products",
+   "title": "Image generation in products: when it serves the product vs decorates it",
+   "family": "lesson",
+   "flags": [
+    "pricing-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/multimodal-ai/multimodal-cost-and-latency",
+   "slug": "multimodal-ai/multimodal-cost-and-latency",
+   "title": "Multimodal cost and latency: the economics of non-text tokens",
+   "family": "lesson",
+   "flags": [
+    "pricing-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/multimodal-ai/multimodal-evaluation",
+   "slug": "multimodal-ai/multimodal-evaluation",
+   "title": "Evaluating multimodal systems: accuracy you can't eyeball",
+   "family": "lesson",
+   "flags": [
+    "policy-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/multimodal-ai/multimodal-rag-lab",
+   "slug": "multimodal-ai/multimodal-rag-lab",
+   "title": "Lab: retrieval over mixed documents (multimodal RAG)",
+   "family": "lab",
    "flags": [
     "release-sensitive page with no updated/review date"
    ]

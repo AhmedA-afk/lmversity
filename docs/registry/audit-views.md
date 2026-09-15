@@ -1,17 +1,17 @@
 # Content registry — audit views
 
-Generated 2026-09-15T16:30:04.375Z by `scripts/build-content-registry.mjs`.
-2533 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T16:41:05.094Z by `scripts/build-content-registry.mjs`.
+2565 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
 
-- lesson: 2119
-- reference: 106
-- quiz: 89
-- lab: 72
+- lesson: 2144
+- reference: 107
+- quiz: 93
+- lab: 73
 - answer: 35
-- project: 32
+- project: 33
 - page: 25
 - role: 12
 - blog: 10
@@ -23,18 +23,18 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By status
 
-- live: 2533
+- live: 2565
 
 ## By search intent (heuristic)
 
-- concept: 1947
-- comparison: 110
-- reference: 107
-- build: 104
-- practice: 89
+- concept: 1962
+- comparison: 114
+- reference: 108
+- build: 106
+- practice: 93
 - answer: 35
-- worked-example: 29
-- troubleshooting: 24
+- worked-example: 33
+- troubleshooting: 26
 - how-to: 15
 - hub: 13
 - role-path: 12
@@ -47,7 +47,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By primary audience (heuristic)
 
-- ai-engineer: 1700
+- ai-engineer: 1732
 - beginner-engineer: 440
 - forward-deployed-engineer: 194
 - general: 181
@@ -82,28 +82,28 @@ and split always need a written human reason (see checklist).
 
 | disposition | items |
 |---|---:|
-| investigate | 2274 |
+| investigate | 2306 |
 | keep | 255 |
 | expand | 4 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2275 | 1.91 | 0 | 211 | 2064 |
+| intentClarity | 2304 | 1.91 | 0 | 211 | 2093 |
 | correctnessSources | 46 | 1.28 | 0 | 33 | 13 |
-| completeness | 2479 | 1.63 | 46 | 816 | 1617 |
-| prerequisiteFit | 2361 | 0.15 | 2181 | 0 | 180 |
-| handsOn | 2275 | 1.47 | 575 | 55 | 1645 |
-| explanationQuality | 2275 | 1.96 | 20 | 56 | 2199 |
-| metadata | 2275 | 1.84 | 0 | 369 | 1906 |
-| linking | 2186 | 1.50 | 389 | 322 | 1475 |
-| freshnessHealth | 2533 | 0.78 | 879 | 1337 | 317 |
+| completeness | 2511 | 1.63 | 50 | 819 | 1642 |
+| prerequisiteFit | 2393 | 0.15 | 2213 | 0 | 180 |
+| handsOn | 2304 | 1.46 | 599 | 55 | 1650 |
+| explanationQuality | 2304 | 1.96 | 20 | 56 | 2228 |
+| metadata | 2304 | 1.84 | 0 | 374 | 1930 |
+| linking | 2211 | 1.50 | 396 | 322 | 1493 |
+| freshnessHealth | 2565 | 0.78 | 891 | 1357 | 317 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
 
 ### Non-keep dispositions
 
-#### investigate: live lesson not registered in curriculum (2178)
+#### investigate: live lesson not registered in curriculum (2210)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -145,7 +145,7 @@ and split always need a written human reason (see checklist).
 - /learn/agentic-ai/cost-aware-agent-loops — Cost-Aware Agents: Budgeting Tokens Across a Long-Running Loop
 - /learn/agentic-ai/error-handling-and-retries — Recovering When Tools Fail
 - /learn/agentic-ai/evaluating-agent-behavior-in-dev — Reading an Agent's Trace
-- … 2138 more in content-registry.json
+- … 2170 more in content-registry.json
 
 #### investigate: zero in-body internal links (96)
 
@@ -209,7 +209,7 @@ and split always need a written human reason (see checklist).
 
 ## Duplicate candidates
 
-346 pairs by title/slug similarity (111 not already cross-linked) — candidates for the merge/redirect editorial pass, not verdicts. Pairs where one already links to the other are marked linked — often deliberate two-part lessons.
+348 pairs by title/slug similarity (113 not already cross-linked) — candidates for the merge/redirect editorial pass, not verdicts. Pairs where one already links to the other are marked linked — often deliberate two-part lessons.
 
 | item A | item B | jac | contain | stem | linked | scope |
 |---|---|---:|---:|---|---|---|
@@ -224,35 +224,35 @@ and split always need a written human reason (see checklist).
 | /learn/tools-function-calling/writing-descriptions-models-follow-deep | /learn/tools-function-calling/writing-tool-descriptions-models-follow | 0.83 | 1 |  | yes | same track |
 | /learn/genai-app-dev/chat-ux-that-doesnt-feel-broken | /learn/genai-app-dev/designing-chat-ux | 0.83 | 1 |  | yes | same track |
 | /learn/genai-app-dev/function-calling-across-providers | /learn/tools-function-calling/tool-calling-across-providers | 0.8 | 1 |  | yes | genai-app-dev × tools-function-calling |
-| /learn/genai-app-dev/tool-calling-and-authority | /learn/genai-app-dev/tool-calling-as-authority | 0.8 | 1 |  | yes | same track |
 | /learn/prompt-engineering/ab-testing-in-production | /learn/prompt-engineering/ab-testing-prompts-in-production | 0.8 | 1 |  | yes | same track |
+| /learn/genai-app-dev/tool-calling-and-authority | /learn/genai-app-dev/tool-calling-as-authority | 0.8 | 1 |  | yes | same track |
 | /learn/structured-outputs/json-schema-essentials-for-outputs | /learn/tools-function-calling/json-schema-for-tools-essentials | 0.8 | 1 |  | yes | structured-outputs × tools-function-calling |
 | /learn/structured-outputs/building-an-extraction-eval-harness | /learn/tools-function-calling/building-a-tool-use-eval-harness | 0.75 | 1 |  | yes | structured-outputs × tools-function-calling |
 | /learn/ai-foundations/narrow-ai-vs-general-ai | /learn/ai-foundations/narrow-vs-general-ai-in-practice | 0.75 | 1 |  | yes | same track |
 | /learn/context-engineering/context-engineering-vs-prompting | /answers/prompt-engineering-vs-context-engineering | 0.75 | 1 |  | yes | context-engineering × answers |
 | /learn/harness-design/the-control-loop | /learn/tools-function-calling/building-a-browser-tool-loop | 0.75 | 1 |  | yes | harness-design × tools-function-calling |
 | /learn/llm-foundations/context-window-mechanics-and-limits | /learn/llm-foundations/context-window-mechanics | 0.75 | 1 | yes | yes | same track |
-| /learn/harness-design/subprocess-isolation-and-sandboxing | /learn/tools-function-calling/sandboxing-tool-execution | 0.75 | 1 |  | yes | harness-design × tools-function-calling |
 | /learn/tools-function-calling/testing-and-debugging-tool-calls | /learn/tools-function-calling/testing-tool-calls-strategies | 0.75 | 1 |  | yes | same track |
+| /learn/harness-design/subprocess-isolation-and-sandboxing | /learn/tools-function-calling/sandboxing-tool-execution | 0.75 | 1 |  | yes | harness-design × tools-function-calling |
 | /learn/llm-foundations/grokking-and-double-descent-mechanics | /learn/llm-foundations/grokking-and-double-descent | 0.75 | 1 | yes | yes | same track |
 | /learn/genai-app-dev/rate-limits-and-retry-strategies | /learn/genai-app-dev/rate-limits-and-retry | 0.75 | 1 | yes | yes | same track |
 | /learn/prompt-engineering/negative-instructions-pitfall | /learn/prompt-engineering/negative-instructions-problem | 0.75 | 1 |  | yes | same track |
 | /learn/tools-function-calling/schema-versioning-strategies | /learn/tools-function-calling/tool-schema-versioning | 0.71 | 1 |  | yes | same track |
-| /learn/ai-foundations/ai-systems/111-alpha-beta-pruning-and-move-ordering | /learn/classical-ai/search-planning/113-alpha-beta-pruning-bounds-move-ordering-and-exactness | 0.71 | 1 |  | yes | ai-foundations × classical-ai |
 | /learn/structured-outputs/schema-versioning-and-migration | /learn/structured-outputs/schema-versioning-basics | 0.71 | 1 |  | yes | same track |
+| /learn/ai-foundations/ai-systems/111-alpha-beta-pruning-and-move-ordering | /learn/classical-ai/search-planning/113-alpha-beta-pruning-bounds-move-ordering-and-exactness | 0.71 | 1 |  | yes | ai-foundations × classical-ai |
 | /learn/prompt-engineering/automatic-prompt-optimization-dspy | /learn/prompt-engineering/automatic-prompt-optimization | 0.67 | 1 | yes | yes | same track |
 | /learn/ai-foundations/ai-vs-ml-vs-deep-learning | /answers/difference-between-ai-and-machine-learning | 0.67 | 1 |  | yes | ai-foundations × answers |
 | /learn/context-engineering/context-engineering-vs-prompting | /learn/prompt-engineering/what-prompt-engineering-is | 0.67 | 1 |  |  | context-engineering × prompt-engineering |
 | /learn/prompt-engineering/what-prompt-engineering-is | /learn/tools-function-calling/descriptions-are-prompts | 0.67 | 1 |  | yes | prompt-engineering × tools-function-calling |
 | /learn/tools-function-calling/chaining-into-dag-workflows | /learn/tools-function-calling/chaining-tools-into-workflows | 0.67 | 1 |  | yes | same track |
 | /learn/context-engineering/cache-aware-context-design-deep | /learn/context-engineering/cache-aware-context-design | 0.67 | 1 | yes | yes | same track |
+| /learn/structured-outputs/reliability-design-mistakes | /learn/tools-function-calling/reliability-common-mistakes | 0.67 | 1 |  |  | structured-outputs × tools-function-calling |
+| /learn/genai-app-dev/quiz-reliability-safety | /learn/tools-function-calling/reliability-quiz | 0.67 | 1 |  |  | genai-app-dev × tools-function-calling |
 | /learn/deep-learning/core/129-transfer-learning-fine-tuning-and-domain-shift | /learn/deep-learning/vision/211-transfer-learning-and-fine-tuning | 0.67 | 1 |  | yes | same track |
 | /learn/ai-foundations/applied-ai/308-training-and-inference-economics | /learn/ai-foundations/training-vs-inference | 0.67 | 1 |  | yes | same track |
 | /learn/ai-foundations/training-vs-inference | /learn/llm-foundations/training-time-vs-inference-time | 0.67 | 1 |  | yes | ai-foundations × llm-foundations |
 | /learn/ai-foundations/embeddings-quiz | /learn/maths-foundations/the-geometry-of-embeddings | 0.67 | 1 |  | yes | ai-foundations × maths-foundations |
 | /learn/context-engineering/long-context-strategies | /learn/context-engineering/million-token-window-strategies | 0.67 | 1 |  | yes | same track |
-| /learn/genai-app-dev/quiz-reliability-safety | /learn/tools-function-calling/reliability-quiz | 0.67 | 1 |  |  | genai-app-dev × tools-function-calling |
-| /learn/structured-outputs/reliability-design-mistakes | /learn/tools-function-calling/reliability-common-mistakes | 0.67 | 1 |  |  | structured-outputs × tools-function-calling |
 | /learn/hallucinations/why-rlhf-hurts-calibration | /learn/llm-foundations/instruction-tuning-and-rlhf | 0.6 | 1 |  | yes | hallucinations × llm-foundations |
 | /learn/tools-function-calling/streaming-partial-tool-calls-concept | /learn/tools-function-calling/streaming-partial-tool-calls | 0.57 | 1 | yes | yes | same track |
 | /learn/tools-function-calling/benchmarking-tool-use | /learn/tools-function-calling/benchmarking-with-bfcl | 0.57 | 1 |  | yes | same track |
@@ -274,7 +274,7 @@ and split always need a written human reason (see checklist).
 | /learn/tools-function-calling/taxonomy-of-tool-failures | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  | yes | same track |
 | /learn/tools-function-calling/tool-calling-across-providers | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  | yes | same track |
 
-_… 286 more pairs in content-registry.json (`duplicates`)_
+_… 288 more pairs in content-registry.json (`duplicates`)_
 
 ## Title-overpromise candidates
 
@@ -282,11 +282,11 @@ _… 286 more pairs in content-registry.json (`duplicates`)_
 
 | item | words | signals |
 |---|---:|---|
-| /learn/machine-learning/assessments/ml-849-staged-capstone-handbook | 368 | scope word "handbook" on 368w vs ~1011w median |
+| /learn/machine-learning/assessments/ml-849-staged-capstone-handbook | 368 | scope word "handbook" on 368w vs ~999w median |
 
 ## Sourcing review flags
 
-231 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
+243 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
 
 | item | flags |
 |---|---|
@@ -313,6 +313,13 @@ _… 286 more pairs in content-registry.json (`duplicates`)_
 | /learn/agent-skills/skill-security-and-provenance | certification-sensitive page with no updated/review date |
 | /learn/agent-skills/skill-vs-prompt-rule-hook-mcp-subagent | release-sensitive page with no updated/review date |
 | /learn/agentic-ai/agent-permissions-and-authorization | certification-sensitive page with no updated/review date |
+| /learn/ai-for-designers/ai-product-design-foundations-quiz | pricing-sensitive page with no updated/review date |
+| /learn/ai-for-designers/choosing-where-ai-belongs-worked-example | pricing-sensitive page with no updated/review date |
+| /learn/ai-for-designers/correction-undo-and-recovery-patterns | policy-sensitive page with no updated/review date |
+| /learn/ai-for-designers/creating-a-realistic-ai-test-set | policy-sensitive page with no updated/review date |
+| /learn/ai-for-designers/prototype-ai-behavior-without-a-model | policy-sensitive page with no updated/review date |
+| /learn/ai-for-designers/prototype-and-evaluation-quiz | policy-sensitive page with no updated/review date |
+| /learn/ai-for-designers/trust-and-recovery-quiz | policy-sensitive page with no updated/review date |
 | /learn/ai-foundations/building-an-eval-set-worked-example | 18 numeric claims with no sources section or external link |
 | /learn/ai-foundations/capabilities-and-eval-quiz | 28 numeric claims with no sources section or external link |
 | /learn/ai-foundations/choosing-a-model-decision-framework | 10 numeric claims with no sources section or external link |
@@ -343,26 +350,19 @@ _… 286 more pairs in content-registry.json (`duplicates`)_
 | /learn/context-engineering/compaction-memory-quiz | 15 numeric claims with no sources section or external link |
 | /learn/context-engineering/cost-latency-quality-tradeoff-curve | 48 numeric claims with no sources section or external link |
 | /learn/context-engineering/deduping-overlapping-tool-results | 10 numeric claims with no sources section or external link |
-| /learn/context-engineering/dissecting-a-live-context-payload | 23 numeric claims with no sources section or external link |
-| /learn/context-engineering/dynamic-budget-reallocation | 32 numeric claims with no sources section or external link |
-| /learn/context-engineering/failure-modes-quiz | 5 numeric claims with no sources section or external link |
-| /learn/context-engineering/foundations-quiz | 9 numeric claims with no sources section or external link |
-| /learn/context-engineering/instrumenting-token-spend-in-production | 8 numeric claims with no sources section or external link |
-| /learn/context-engineering/just-in-time-context-loading-pattern | 4 numeric claims with no sources section or external link |
-| /learn/context-engineering/measuring-cache-savings | 26 numeric claims with no sources section or external link |
 
-_… 171 more in content-registry.json (`sourcingFlags`)_
+_… 183 more in content-registry.json (`sourcingFlags`)_
 
 ## Freshness queues
 
 Review order: volatile classes first, oldest last-verified date first; undated items lead each queue. `verified`/`updated`/`published` supply the last-verified date — git-derived when frontmatter is absent.
 
-- periodic: 1337
-- pricing-sensitive: 347
-- release-sensitive: 343
+- periodic: 1357
+- pricing-sensitive: 351
+- release-sensitive: 345
 - durable: 266
 - certification-sensitive: 104
-- policy-sensitive: 85
+- policy-sensitive: 91
 - volatile: 51
 
 ### certification-sensitive (104) — oldest-verified first
@@ -399,14 +399,18 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-foundations/reliable-ai/223-environmental-impact-and-compute-governance — Environmental Impact and Compute Governance *(verified 2026-08-30)*
 - … 74 more in content-registry.json
 
-### pricing-sensitive (347) — oldest-verified first
+### pricing-sensitive (351) — oldest-verified first
 
 - /learn/agent-frameworks/mastra-typescript-agents — Mastra: the TypeScript agent framework *(verified undated)*
 - /learn/agent-frameworks/microsoft-agent-frameworks — Microsoft's agent frameworks: Semantic Kernel, AutoGen, and the convergence *(verified undated)*
 - /learn/agent-frameworks/openai-agents-sdk — OpenAI Agents SDK: agents, handoffs, and guardrails *(verified undated)*
+- /learn/ai-for-designers/ai-product-design-foundations-quiz — Quiz: AI product design foundations *(verified undated)*
+- /learn/ai-for-designers/choosing-where-ai-belongs-worked-example — Choosing where AI belongs: a worked example *(verified undated)*
 - /learn/harness-design/web-harness-case-study — Case study: a web-navigation harness end to end *(verified undated)*
 - /learn/llm-security/guardrails-frameworks-in-practice — Guardrails AI, NeMo Guardrails, and Llama Guard: the filter layer in depth *(verified undated)*
 - /learn/machine-learning/predictive-ml-vs-generative-ai — Separate predictive-ML choices from generative-AI choices *(verified undated)*
+- /learn/multimodal-ai/image-generation-in-products — Image generation in products: when it serves the product vs decorates it *(verified undated)*
+- /learn/multimodal-ai/multimodal-cost-and-latency — Multimodal cost and latency: the economics of non-text tokens *(verified undated)*
 - /learn/production/deployment-variants-cloud-and-portable — Deployment variants: one managed-cloud path and one portable path *(verified undated)*
 - /learn/production/langfuse-observability — Langfuse: the open-source observability platform *(verified undated)*
 - /learn/rag/managed-vector-databases — Pinecone, Weaviate, Qdrant, Milvus: the dedicated vector databases *(verified undated)*
@@ -427,20 +431,22 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-foundations/classification-vs-regression — Classification vs. Regression: The Two Basic Prediction Tasks *(verified 2026-08-30)*
 - /learn/ai-foundations/data-splits-and-leakage-worked-example — Splits, Leakage, and the Lie of a Good Score *(verified 2026-08-30)*
 - /learn/ai-foundations/foundation-models-and-llms-quiz — Foundation Models & LLMs: Check Your Model *(verified 2026-08-30)*
-- /learn/ai-foundations/generalization-quiz — Generalization: Will It Hold Up? *(verified 2026-08-30)*
-- /learn/ai-foundations/inference-cost-and-latency-intuition — Why Inference Is Bottlenecked by Memory, Not Math *(verified 2026-08-30)*
-- /learn/ai-foundations/interpretability-methods-overview — Ways to Peek Inside the Box *(verified 2026-08-30)*
-- /learn/ai-foundations/learning-paradigms-quiz — Which Kind of Learning Is This? *(verified 2026-08-30)*
-- … 317 more in content-registry.json
+- … 321 more in content-registry.json
 
-### policy-sensitive (85) — oldest-verified first
+### policy-sensitive (91) — oldest-verified first
 
 - /learn/agent-skills/evaluating-and-porting-skills — Evaluating skills with fixtures, and porting them across agents *(verified undated)*
 - /learn/agent-skills/skill-md-anatomy — SKILL.md anatomy: frontmatter, body, and bundled resources *(verified undated)*
+- /learn/ai-for-designers/correction-undo-and-recovery-patterns — Correction, undo, and recovery patterns *(verified undated)*
+- /learn/ai-for-designers/creating-a-realistic-ai-test-set — Creating a realistic AI test set *(verified undated)*
+- /learn/ai-for-designers/prototype-ai-behavior-without-a-model — Prototype AI behavior without a model *(verified undated)*
+- /learn/ai-for-designers/prototype-and-evaluation-quiz — Quiz: prototype and evaluation *(verified undated)*
+- /learn/ai-for-designers/trust-and-recovery-quiz — Quiz: trust and recovery *(verified undated)*
 - /learn/llm-foundations/read-a-model-card-lab — Lab: read a model card like an engineer *(verified undated)*
 - /learn/llm-security/audit-logs-and-accountability — Audit logs, approval records, and data deletion: the accountability layer *(verified undated)*
 - /learn/llm-security/llm-supply-chain-security — LLM supply-chain security: secrets, dependencies, and model artifacts *(verified undated)*
 - /learn/local-inference/the-local-privacy-boundary — The local privacy boundary *(verified undated)*
+- /learn/multimodal-ai/multimodal-evaluation — Evaluating multimodal systems: accuracy you can't eyeball *(verified undated)*
 - /learn/rag/pgvector-in-postgres — pgvector: vector search inside the Postgres you already run *(verified undated)*
 - /learn/rag/search-engines-with-vectors — Elasticsearch, OpenSearch, Vespa: the search-engine lineage *(verified undated)*
 - /learn/responsible-ai/consent-contestability-and-impact — Consent, contestability, and the costs nobody measures *(verified undated)*
@@ -459,15 +465,9 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/deep-learning/sequence-generative/325-multimodal-representations-and-fusion — Model text, images, audio, and structured signals together *(verified 2026-08-30)*
 - /learn/deep-learning/sequence-generative/334-generative-safety-copyright-and-provenance — Deploy generative systems with safety, copyright, and provenance controls *(verified 2026-08-30)*
 - /learn/deep-learning/vision/211-transfer-learning-and-fine-tuning — Transfer learning and fine-tuning *(verified 2026-08-30)*
-- /learn/deep-learning/vision/230-vision-capstone-and-mastery-check — Vision systems capstone: evidence from data to deployment *(verified 2026-08-30)*
-- /learn/fine-tuning/picking-a-base-model-to-fine-tune — Choose a Base Model to Fine-Tune *(verified 2026-08-30)*
-- /learn/genai-app-dev/extracting-typed-data-from-freeform — Extracting Typed Records From Freeform Text *(verified 2026-08-30)*
-- /learn/hallucinations/leading-prompt-fabrication — Worked Example: False Premises and Leading Questions *(verified 2026-08-30)*
-- /learn/machine-learning/assessments/ml-842-assignment-01-reproducible-baseline — Assignment 1: frame a decision and ship a reproducible baseline *(verified 2026-08-30)*
-- /learn/machine-learning/assessments/ml-847-model-report-template — Model report template: predictive system review *(verified 2026-08-30)*
-- … 55 more in content-registry.json
+- … 61 more in content-registry.json
 
-### release-sensitive (343) — oldest-verified first
+### release-sensitive (345) — oldest-verified first
 
 Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno, LangGraph *(verified undated)*
@@ -500,14 +500,14 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/harness-design/harness-skill-and-mcp-integrations — MCP *(verified undated)*
 - /learn/llm-security/prompt-injection-testing-and-threat-models — Promptfoo *(verified undated)*
 - /learn/llm-security/provider-moderation-and-safety-apis — OpenAI *(verified undated)*
-- … 313 more
+- … 315 more
 
 ## Missing-data queues
 
 ### no summary/meta description (0)
 
 
-### no published or updated date (117)
+### no published or updated date (149)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -535,23 +535,23 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agent-skills/skills-projects-first-skill-and-capstone — Projects: build your first skill, then turn a workflow into a tested one
 - /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access
 - /learn/agentic-ai/agent-task-contracts — Write a task contract for an agent
+- /learn/ai-for-designers/ai-feature-state-model-worked-example — AI feature state model: a worked example
 - /learn/ai-for-designers/ai-for-designers-course-guide — AI for Designers: course guide, lanes, and your first case study
-- /learn/ai-foundations/choosing-an-ai-approach-system-selection — Choose between rules, ML, and agents: a system-selection case
-- /learn/ai-literacy/ai-across-languages-and-accessibility — Use AI across languages and accessibility needs
-- /learn/ai-literacy/meet-skills-connectors-and-agents — Meet skills, connectors, and agents — safely
-- /learn/ai-literacy/seven-first-ai-workflows-lab — Lab: seven first AI workflows for everyday work
-- /learn/cli-agents/cli-agent-labs — Labs: the untrusted-repo security drill and the comparative harness run
-- /learn/cli-agents/customizing-the-agent-surface — Customizing the agent: MCP config, skills, commands, rules, hooks, and subagents
-- /learn/cli-agents/getting-the-agent-oriented — Getting a CLI agent oriented: repo discovery, instruction files, and context control
-- /learn/cli-agents/headless-runs-and-automation — Headless runs, structured output, and scheduled agent tasks
-- /learn/cli-agents/multi-agent-and-recovery — Multi-agent decomposition, failure recovery, and handoff notes
-- /learn/cli-agents/permissions-sandboxes-and-git-workflow — Permissions, sandbox boundaries, and git workflow with CLI agents
-- /learn/cli-agents/planning-modes-and-patch-review — Planning modes and patch review: the two halves of safe agent work
-- /learn/evals-red-teaming/multilingual-evaluation-design — Designing multilingual evaluations
-- /learn/fine-tuning/pinning-your-training-stack-lab — Lab: pin your fine-tuning stack so it still runs next quarter
-- … 77 more
+- /learn/ai-for-designers/ai-interaction-state-cheatsheet — AI interaction states cheatsheet
+- /learn/ai-for-designers/ai-product-design-common-mistakes — AI product design: common mistakes
+- /learn/ai-for-designers/ai-product-design-foundations-quiz — Quiz: AI product design foundations
+- /learn/ai-for-designers/ai-prototype-testing-common-mistakes — AI prototype testing: common mistakes
+- /learn/ai-for-designers/behavior-before-interface-quiz — Quiz: behavior before interface
+- /learn/ai-for-designers/capstone-design-a-trustworthy-ai-feature — Capstone: design a trustworthy AI feature
+- /learn/ai-for-designers/choosing-where-ai-belongs-worked-example — Choosing where AI belongs: a worked example
+- /learn/ai-for-designers/correction-undo-and-recovery-patterns — Correction, undo, and recovery patterns
+- /learn/ai-for-designers/creating-a-realistic-ai-test-set — Creating a realistic AI test set
+- /learn/ai-for-designers/designer-mental-model-for-generative-ai — A designer's mental model for generative AI
+- /learn/ai-for-designers/designing-a-ux-evaluation-rubric — Designing a UX evaluation rubric
+- /learn/ai-for-designers/designing-for-uncertainty — Designing for uncertainty
+- … 109 more
 
-### zero in-body internal links (template nav still applies) (482)
+### zero in-body internal links (template nav still applies) (490)
 
 - /learn/agentic-ai/agents-vs-workflows — Choose an agent only when a workflow is not enough
 - /learn/ai-foundations/applied-ai/301-ai-product-discovery-outcomes-and-harm — AI Product Discovery: Outcomes, Users, and Harm
@@ -593,9 +593,9 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-foundations/reliable-ai/219-incident-response-rollback-and-learning — AI Incidents, Rollback, and Organisational Learning
 - /learn/ai-foundations/reliable-ai/220-human-in-the-loop-and-meaningful-oversight — Human-in-the-Loop and Meaningful Oversight
 - /learn/ai-foundations/reliable-ai/221-contestability-appeals-and-recource — Contestability, Appeals, and Recourse
-- … 442 more
+- … 450 more
 
-### live file not in curriculum (2178)
+### live file not in curriculum (2210)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -637,7 +637,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agentic-ai/cost-aware-agent-loops — Cost-Aware Agents: Budgeting Tokens Across a Long-Running Loop
 - /learn/agentic-ai/error-handling-and-retries — Recovering When Tools Fail
 - /learn/agentic-ai/evaluating-agent-behavior-in-dev — Reading an Agent's Trace
-- … 2138 more
+- … 2170 more
 
 ### live curriculum node missing file (0)
 
@@ -648,7 +648,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 ### lesson files with status coming (0)
 
 
-### release-sensitive, no date at all (89)
+### release-sensitive, no date at all (101)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -673,6 +673,13 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agent-skills/skill-security-and-provenance — Skill provenance, review, and the safe-installation checklist
 - /learn/agent-skills/skill-vs-prompt-rule-hook-mcp-subagent — Skill vs prompt vs project rule vs hook vs MCP vs subagent
 - /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access
+- /learn/ai-for-designers/ai-product-design-foundations-quiz — Quiz: AI product design foundations
+- /learn/ai-for-designers/choosing-where-ai-belongs-worked-example — Choosing where AI belongs: a worked example
+- /learn/ai-for-designers/correction-undo-and-recovery-patterns — Correction, undo, and recovery patterns
+- /learn/ai-for-designers/creating-a-realistic-ai-test-set — Creating a realistic AI test set
+- /learn/ai-for-designers/prototype-ai-behavior-without-a-model — Prototype AI behavior without a model
+- /learn/ai-for-designers/prototype-and-evaluation-quiz — Quiz: prototype and evaluation
+- /learn/ai-for-designers/trust-and-recovery-quiz — Quiz: trust and recovery
 - /learn/ai-literacy/meet-skills-connectors-and-agents — Meet skills, connectors, and agents — safely
 - /learn/cli-agents/cli-agent-labs — Labs: the untrusted-repo security drill and the comparative harness run
 - /learn/cli-agents/customizing-the-agent-surface — Customizing the agent: MCP config, skills, commands, rules, hooks, and subagents
@@ -683,14 +690,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/evals-red-teaming/multilingual-evaluation-design — Designing multilingual evaluations
 - /learn/genai-app-dev/building-for-indic-scripts-and-segmentation — Building for Indic scripts, fonts, and segmentation
 - /learn/genai-app-dev/indic-language-pipeline-lab — Lab: build an Indic-language pipeline end to end
-- /learn/harness-design/agent-stack-vocabulary — The agent stack vocabulary: model, loop, harness, tool, skill, MCP, instruction, hook, subagent, workflow
-- /learn/harness-design/harness-skill-and-mcp-integrations — Wiring MCP servers and Agent Skills into a harness
-- /learn/harness-design/web-harness-case-study — Case study: a web-navigation harness end to end
-- /learn/llm-foundations/read-a-model-card-lab — Lab: read a model card like an engineer
-- /learn/llm-security/audit-logs-and-accountability — Audit logs, approval records, and data deletion: the accountability layer
-- /learn/llm-security/guardrails-frameworks-in-practice — Guardrails AI, NeMo Guardrails, and Llama Guard: the filter layer in depth
-- /learn/llm-security/llm-supply-chain-security — LLM supply-chain security: secrets, dependencies, and model artifacts
-- … 49 more
+- … 61 more
 
 ## Role paths
 

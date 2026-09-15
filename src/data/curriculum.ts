@@ -10653,6 +10653,24 @@ const unsortedTracks: Track[] = [
     ]
   },
   {
+    "id": "multimodal-ai",
+    "n": "30",
+    "name": "Multimodal AI Engineering",
+    "group": "Building",
+    "meta": "8 lessons",
+    "summary": "Image, audio, video, document, and mixed-input systems: the modality matrix, production vision, document pipelines, generation governance, evals, cost, and a mixed-document RAG lab.",
+    "nodes": [
+      { "title": "The multimodal model landscape", "slug": "multimodal-model-landscape", "status": "live" },
+      { "title": "Image understanding in production", "slug": "image-understanding-in-production", "status": "live" },
+      { "title": "Document AI pipelines", "slug": "document-ai-pipelines", "status": "live" },
+      { "title": "Audio and video understanding", "slug": "audio-video-and-mixed-media", "status": "live" },
+      { "title": "Image generation in products", "slug": "image-generation-in-products", "status": "live" },
+      { "title": "Evaluating multimodal systems", "slug": "multimodal-evaluation", "status": "live" },
+      { "title": "Multimodal cost and latency", "slug": "multimodal-cost-and-latency", "status": "live" },
+      { "title": "Lab: retrieval over mixed documents", "slug": "multimodal-rag-lab", "status": "live" }
+    ]
+  },
+  {
     "id": "voice-ai",
     "n": "29",
     "name": "Voice AI Engineering",

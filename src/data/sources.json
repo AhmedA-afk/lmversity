@@ -243,6 +243,17 @@
   ],
   "status": "current"
  },
+ "anthropic-vision-docs": {
+  "title": "Vision",
+  "publisher": "Anthropic",
+  "url": "https://docs.anthropic.com/en/docs/build-with-claude/vision",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "Claude vision capabilities, image input"
+  ]
+ },
  "att-faces-database": {
   "title": "AT&T Face Database",
   "publisher": "Cambridge DTG",
@@ -1381,6 +1392,17 @@
   ],
   "status": "current"
  },
+ "google-vision-docs": {
+  "title": "Vision",
+  "publisher": "Google",
+  "url": "https://ai.google.dev/gemini-api/docs/vision",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "Gemini vision, image/video/audio understanding"
+  ]
+ },
  "groq-docs": {
   "title": "Groq documentation",
   "publisher": "Groq",
@@ -2278,6 +2300,17 @@
    "ChatGPT product features, plans, memory, projects, custom GPTs (domain bot-protected, HTTP 403 to automated fetch)"
   ]
  },
+ "openai-image-gen-docs": {
+  "title": "Image generation guide",
+  "publisher": "OpenAI",
+  "url": "https://platform.openai.com/docs/guides/image-generation",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "text-to-image, editing, quality tiers"
+  ]
+ },
  "openai-models-docs": {
   "title": "Models — API documentation",
   "publisher": "OpenAI",
@@ -2354,6 +2387,17 @@
    "Service status and incident history"
   ],
   "status": "current"
+ },
+ "openai-vision-docs": {
+  "title": "Vision guide",
+  "publisher": "OpenAI",
+  "url": "https://platform.openai.com/docs/guides/images-vision",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "image input, detail tiers, vision capabilities"
+  ]
  },
  "openai-your-data": {
   "title": "Your data — API documentation",

@@ -1385,7 +1385,11 @@ template renders all six sections; `/roles` index gained a boundaries section.
       voice design, realtime transport/turn-taking, orchestration, evals,
       system design + provider-neutral lab; telephony covered in transport
       lesson, multilingual eval via the multilingual-evaluation lesson)*
-- [ ] Multimodal AI Engineering — image, audio, video, document, and mixed-input systems.
+- [x] Multimodal AI Engineering — image, audio, video, document, and mixed-input systems.
+      *(served: `multimodal-ai` track (8) — modality matrix, production
+      vision, document pipelines, audio/video/mixed media, image
+      generation + governance, multimodal evals, cost/latency, and a
+      mixed-document RAG lab)*
 - [x] Local and Open-Weight AI — Ollama, llama.cpp, model selection, licenses,
       quantization, hardware, serving, fine-tuning, and privacy.
       *(served: `local-inference` track (14) — Ollama/llama.cpp/LM Studio/
@@ -2243,6 +2247,29 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-16 — Phase 7: Multimodal AI Engineering track (1 candidate row)
+
+- Commit: `PENDING`. Status: complete.
+- Scope: `multimodal-ai` track — 8 lessons (modality landscape/matrix,
+  image understanding in production, document-AI pipelines,
+  audio/video/mixed media, image generation + governance, multimodal
+  evaluation, cost/latency, mixed-document RAG lab). Registered n:30,
+  group Building.
+- Files: 8 new lessons under `src/content/lessons/multimodal-ai/`;
+  `curriculum.ts` (track + node registration); `sources.json` (5 records).
+- Sources checked: OpenAI images-vision + image-generation, Anthropic
+  vision, Gemini vision, Unstructured — all HTTP 200.
+- Side fix: the parallel ai-for-designers build landed its 11 missing
+  lessons during this batch — reverted the temporary `coming` flags back
+  to `live` and repaired one dead cross-link (→ `why-stream-tokens`).
+- Validation: `check:content` clean (2210 lessons); build 2611 pages;
+  `check:links` 2611 pages / 5601 routes, 0 dead; registry 2565 items.
+- Blockers: none. AI-for-Designers candidate row stays open — its
+  334-row sub-checklist governs that course's completion, not file
+  presence alone.
+- Next: remaining candidate-course builds — Multilingual/Indic AI
+  Engineering, AI Automation for Operations.
 
 ### 2026-09-15 — Phase 7: Voice AI Engineering track (1 candidate row)
 

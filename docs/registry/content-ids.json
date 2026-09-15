@@ -1,7 +1,7 @@
 {
  "version": 1,
  "next": {
-  "les": 2178,
+  "les": 2210,
   "que": 7,
   "sce": 6,
   "blo": 10,
@@ -10105,6 +10105,134 @@
   "lessons/voice-ai/voice-evaluation-and-testing.md": {
    "id": "les-2178",
    "fp": "30978001d14675d453e4e388bf07d2bb0eb6856d"
+  },
+  "lessons/ai-for-designers/ai-feature-state-model-worked-example.md": {
+   "id": "les-2179",
+   "fp": "744f79bde7c2a39f7ec888998def67d3c0bbdc4f"
+  },
+  "lessons/ai-for-designers/ai-interaction-state-cheatsheet.md": {
+   "id": "les-2180",
+   "fp": "14bee0d03d70b049d3aa859a0b590fb86b755fcf"
+  },
+  "lessons/ai-for-designers/ai-product-design-common-mistakes.md": {
+   "id": "les-2181",
+   "fp": "5fc22d71f12dccd03fb4a56d86b8627063c536e3"
+  },
+  "lessons/ai-for-designers/ai-product-design-foundations-quiz.md": {
+   "id": "les-2182",
+   "fp": "42a8895cec3d45b019dcd59c3371bbb3e51f6715"
+  },
+  "lessons/ai-for-designers/ai-prototype-testing-common-mistakes.md": {
+   "id": "les-2183",
+   "fp": "2e71e7982f864ff1f946d6b06dd9baeab00e12be"
+  },
+  "lessons/ai-for-designers/behavior-before-interface-quiz.md": {
+   "id": "les-2184",
+   "fp": "4e017856d91fc1e12ab328e497470b82d8b678ed"
+  },
+  "lessons/ai-for-designers/capstone-design-a-trustworthy-ai-feature.md": {
+   "id": "les-2185",
+   "fp": "f3225ecb501f8edba504ff5bc259e0848376b0e3"
+  },
+  "lessons/ai-for-designers/choosing-where-ai-belongs-worked-example.md": {
+   "id": "les-2186",
+   "fp": "98dab6b3a57c80e9fdc34ca9273d949835f4d52d"
+  },
+  "lessons/ai-for-designers/correction-undo-and-recovery-patterns.md": {
+   "id": "les-2187",
+   "fp": "52351203a3d62013a967f643417604b23f0942b5"
+  },
+  "lessons/ai-for-designers/creating-a-realistic-ai-test-set.md": {
+   "id": "les-2188",
+   "fp": "7e0941f6bfe6c81b50b7c34a1c3dd13bdb4204c2"
+  },
+  "lessons/ai-for-designers/designer-mental-model-for-generative-ai.md": {
+   "id": "les-2189",
+   "fp": "ea837042e81e444b94bdb34236f557fc06399a34"
+  },
+  "lessons/ai-for-designers/designing-a-ux-evaluation-rubric.md": {
+   "id": "les-2190",
+   "fp": "217a526a6377c3a57810abb4f4d5765b7fbd132b"
+  },
+  "lessons/ai-for-designers/designing-for-uncertainty.md": {
+   "id": "les-2191",
+   "fp": "8dcd91e5c3c7526a33bbcef72d9ac592c16ac47f"
+  },
+  "lessons/ai-for-designers/designing-the-ai-behavior-contract.md": {
+   "id": "les-2192",
+   "fp": "f934e9ecdef39101ebbb6cf229abd725d66f5a6f"
+  },
+  "lessons/ai-for-designers/deterministic-vs-probabilistic-interfaces-compared.md": {
+   "id": "les-2193",
+   "fp": "52dc1c8aa178d32fffefe43d53d7eb76d02c904c"
+  },
+  "lessons/ai-for-designers/human-review-and-approval-boundaries.md": {
+   "id": "les-2194",
+   "fp": "730d7e5ad5541e44a3593f09c819c7cdb5191140"
+  },
+  "lessons/ai-for-designers/mapping-ai-capabilities-to-user-tasks.md": {
+   "id": "les-2195",
+   "fp": "4523712c7bc90cb24b90b7e31ed055c267b2f63f"
+  },
+  "lessons/ai-for-designers/prompt-as-interaction-spec.md": {
+   "id": "les-2196",
+   "fp": "f1d36475cbf8e7c383be30b59b9ca980796f7148"
+  },
+  "lessons/ai-for-designers/prototype-ai-behavior-without-a-model.md": {
+   "id": "les-2197",
+   "fp": "ff0f146be455c0f9aab0ccdbaf0b8cc04682cd99"
+  },
+  "lessons/ai-for-designers/prototype-and-evaluation-quiz.md": {
+   "id": "les-2198",
+   "fp": "1b6ad2cc77d1eab44ced565d67036d39d82ab1d3"
+  },
+  "lessons/ai-for-designers/sources-confidence-and-explanations-compared.md": {
+   "id": "les-2199",
+   "fp": "fe02b4209a90f2d75b7011a92bf7cc0314ddee1c"
+  },
+  "lessons/ai-for-designers/test-an-ai-prototype-worked-example.md": {
+   "id": "les-2200",
+   "fp": "29c69092cea26d7dea6856d7eb64afb40f6eff93"
+  },
+  "lessons/ai-for-designers/trust-and-recovery-quiz.md": {
+   "id": "les-2201",
+   "fp": "cd013a64cc16e72ed0736743ff88b4bc8aeb0709"
+  },
+  "lessons/ai-for-designers/trust-patterns-worked-example.md": {
+   "id": "les-2202",
+   "fp": "694b8e56432e905d5709ab2ede20cf4a27619743"
+  },
+  "lessons/multimodal-ai/audio-video-and-mixed-media.md": {
+   "id": "les-2203",
+   "fp": "1f8c110a46d8bd43a6fc3fdbb7e7b758ec504c3d"
+  },
+  "lessons/multimodal-ai/document-ai-pipelines.md": {
+   "id": "les-2204",
+   "fp": "959c256950579ef731125cbcaca1d38e8bf90655"
+  },
+  "lessons/multimodal-ai/image-generation-in-products.md": {
+   "id": "les-2205",
+   "fp": "cb3e622b633d16032c5624917065564853ce69e7"
+  },
+  "lessons/multimodal-ai/image-understanding-in-production.md": {
+   "id": "les-2206",
+   "fp": "b4418293e72756d868a3be85ee161d844b586569"
+  },
+  "lessons/multimodal-ai/multimodal-cost-and-latency.md": {
+   "id": "les-2207",
+   "fp": "5b2c5d1eec6d2d205840d3bdc0b21174eedb0967"
+  },
+  "lessons/multimodal-ai/multimodal-evaluation.md": {
+   "id": "les-2208",
+   "fp": "11c3952139859a37d231d62e70e7af11306fdc81"
+  },
+  "lessons/multimodal-ai/multimodal-model-landscape.md": {
+   "id": "les-2209",
+   "fp": "a97550e09b9074ce3b3e93603fa3192be4d167d3"
+  },
+  "lessons/multimodal-ai/multimodal-rag-lab.md": {
+   "id": "les-2210",
+   "fp": "4ba4590e7bb14f3dfa391835158ba26be7dac5f0"
   }
  },
  "retired": {
