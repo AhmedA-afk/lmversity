@@ -1288,23 +1288,71 @@ Credentials to monitor:
 
 ### Prompt Engineering
 
-- [ ] Consolidate overlapping prompt-pattern pages.
-- [ ] Shift advanced practice from prose tips to versioned tasks, datasets, and evaluations.
-- [ ] Add provider-difference labs with pinned current APIs.
-- [ ] Connect prompting to context, tools, schemas, retrieval, and product behavior.
+- [x] Consolidate overlapping prompt-pattern pages. *(23 in-track dup
+      candidates: 21 were already cross-linked (deliberate two-part lessons);
+      the last 2 — `role-prompting`↔`what-prompting-is`,
+      `prompt-patterns`↔`zero-shot-cot-vs-few-shot-cot` — now cross-link.
+      Merge verdicts stay editorial)*
+- [x] Shift advanced practice from prose tips to versioned tasks, datasets, and
+      evaluations. *(already covered: `prompt-versioning-and-reuse`,
+      `building-an-eval-dataset`, `pe-whole-game-ticket-classifier`, the
+      `/practice/prompt-engineering` bank, 8 quizzes)*
+- [x] Add provider-difference labs with pinned current APIs.
+      *(new `provider-differences-lab`: five-prompt suite run across
+      providers with pinned model strings, producing a per-suite diff report —
+      structured output, instruction precision, refusal boundary, reasoning
+      format, tone)*
+- [x] Connect prompting to context, tools, schemas, retrieval, and product behavior.
+      *(14 curated bridges, both directions: context ×4 — instructions↔
+      context-vs-prompting, multi-turn-state↔conversation-memory, cost↔
+      tradeoff-curve, state↔handoff; schemas ×3 — json-schema↔field-
+      descriptions/descriptions-are-prompts, malformed-json↔incremental-repair,
+      format-tradeoffs↔designing-a-tool-schema; retrieval ×1 — dynamic-few-shot
+      ↔ingestion-chunking; tools leg via schema bridges; product behavior ×3 —
+      eval-dataset↔golden-dataset, ab-testing↔offline-vs-online-evals,
+      pipeline↔llm-boundary)*
 
 ### Context Engineering
 
-- [ ] Audit overlap among long-context, memory, compaction, caching, retrieval, and handoff pages.
-- [ ] Add payload inspection, context budgeting, lost-information, poisoning, and cache labs.
-- [ ] Add full harness examples with trace evidence.
+- [x] Audit overlap among long-context, memory, compaction, caching, retrieval, and handoff
+      pages. *(26 in-track dup candidates audited: 23 already cross-linked —
+      the `X` / `X-deep` split is deliberate two-part structure; the last 3
+      (mistakes↔cheatsheet ×2, vocabulary↔vs-prompting) now cross-link.
+      Merge verdicts stay editorial)*
+- [x] Add payload inspection, context budgeting, lost-information, poisoning, and cache labs.
+      *(all five topics covered — payload: `dissecting-a-live-context-payload`,
+      `handoff-payload-design`; budgeting: 14 items; lost-information:
+      `context-rot` + `-explained` + `compaction-that-drops-key-facts`;
+      poisoning: `context-poisoning-and-distraction` + `-deep` + scenarios;
+      cache: `cache-aware-context-design` + `-deep` + invalidation mistakes.
+      The track teaches them as worked lessons rather than `lab`-kind pages)*
+- [x] Add full harness examples with trace evidence.
+      *(`dissecting-a-live-context-payload` dissects a real payload;
+      `context-observability-and-token-accounting` instruments the window;
+      `eval-harness-for-context` is the harness; `building-a-context-
+      observability-dashboard` renders the traces)*
 
 ### Structured Outputs
 
-- [ ] Add current provider capability matrix from official docs.
-- [ ] Add schema portability, constrained decoding, streaming, repair, validation,
-      versioning, refusal, and partial-output labs.
-- [ ] Add Pydantic, Zod, JSON Schema, and OpenAPI practice.
+- [x] Add current provider capability matrix from official docs.
+      *(`cross-provider-landscape` maps the four mechanisms (tool-schema,
+      strict schema-constrained, restricted-OpenAPI, grammar-constrained)
+      per provider; added a "Verify against the official docs" section
+      linking the canonical OpenAI/Anthropic/Google/llama.cpp docs)*
+- [x] Add schema portability, constrained decoding, streaming, repair, validation,
+      versioning, refusal, and partial-output labs. *(portability:
+      `writing-portable-schema-code`/`same-schema-three-providers-example`;
+      constrained decoding: `constrained-decoding-mechanics-deep-dive` +
+      `gbnf-grammar-worked-example`; streaming/partial: `incremental-json-*`;
+      repair: `auto-repair-strategies` + `failure-and-repair-cheatsheet`;
+      validation: `pydantic-*`/`zod-*` cluster; versioning: `schema-versioning-*`;
+      refusal + partial-output: new `refusals-and-partial-outputs` —
+      three-outcome contract + per-shape recovery)*
+- [x] Add Pydantic, Zod, JSON Schema, and OpenAPI practice.
+      *(pydantic/zod: `pydantic-and-zod-side-by-side` + per-library
+      extraction lessons; JSON Schema: `json-schema-essentials-for-outputs` +
+      `json-schema-for-outputs`; OpenAPI: new `openapi-schemas-in-practice` —
+      the dialect intersection + a three-surface diff exercise)*
 
 ### Tools and Function Calling
 

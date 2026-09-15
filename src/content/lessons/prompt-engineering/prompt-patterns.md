@@ -66,4 +66,4 @@ Patterns do not replace good data, retrieval, authorization, or evaluation. More
 - Go deeper: Reasoning and decomposition
 - Apply it: Red-team the boundary
 
-**Related:** [Ready-made prompt patterns for common tasks](/learn/ai-literacy/prompt-patterns-for-everyday-tasks)
+**Related:** [Ready-made prompt patterns for common tasks](/learn/ai-literacy/prompt-patterns-for-everyday-tasks) · [Zero-Shot CoT vs Few-Shot CoT](/learn/prompt-engineering/zero-shot-cot-vs-few-shot-cot)

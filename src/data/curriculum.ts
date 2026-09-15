@@ -5959,6 +5959,11 @@ const unsortedTracks: Track[] = [
         "status": "live"
       },
       {
+        "title": "Lab: measure how the same prompt behaves across providers",
+        "slug": "provider-differences-lab",
+        "status": "live"
+      },
+      {
         "title": "Capstone Project: Build a Versioned, Evaluated Prompt Library",
         "slug": "prompt-library-capstone-project",
         "status": "live"
@@ -7086,6 +7091,17 @@ const unsortedTracks: Track[] = [
       {
         "title": "Incremental JSON Repair: Fixing Truncated Output Instead of Discarding It",
         "slug": "incremental-json-repair",
+        "status": "live"
+      },
+      {
+        "title": "Handle refusals and partial structured outputs",
+        "slug": "refusals-and-partial-outputs",
+        "status": "live",
+        "prereq": ["incremental-json-repair"]
+      },
+      {
+        "title": "Use OpenAPI schemas for tool and output validation",
+        "slug": "openapi-schemas-in-practice",
         "status": "live"
       },
       {

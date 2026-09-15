@@ -64,4 +64,4 @@ A clear prompt does not guarantee truth, stable behavior across models, privacy,
 - Go deeper: Task framing
 - Apply it: Role workflow branch
 
-**Related:** [What Role Prompting Actually Changes](/learn/prompt-engineering/what-role-prompting-changes)
+**Related:** [What Role Prompting Actually Changes](/learn/prompt-engineering/what-role-prompting-changes) · [Role Prompting: What Personas Actually Change](/learn/prompt-engineering/role-prompting)

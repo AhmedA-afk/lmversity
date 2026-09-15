@@ -57,6 +57,17 @@ Every extraction pipeline that supports more than one model hits this the first 
 - **Trusting a constraint you haven't tested.** A `pattern` or `maxItems` in your schema might be a hard rail on one provider and a decoration the sampler ignores on another. Verify with your own eval, not the provider's marketing copy.
 - **Treating the OSS row as "harder, so skip it."** Grammar-constrained decoding is more work to set up but gives you the strongest guarantees in this list, because you own the constraint instead of trusting a black box to have applied it correctly.
 
+## Verify against the official docs
+
+Provider capabilities in this space change faster than any page can track — before you design to a limit, check the current source:
+
+- **OpenAI** — [Structured Outputs guide](https://platform.openai.com/docs/guides/structured-outputs): strict mode, supported schema subset, refusal shape.
+- **Anthropic** — [Tool use overview](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview): tool-schema mediation and its guarantees.
+- **Google Gemini** — [Structured output docs](https://ai.google.dev/gemini-api/docs/structured-output): the restricted OpenAPI subset `response_schema` accepts.
+- **Grammar-constrained decoding** — [llama.cpp grammar README](https://github.com/ggml-org/llama.cpp/blob/master/grammars/README.md): the GBNF grammar format OSS engines compile to.
+
+Capabilities described above were accurate when written; treat the docs as the current source of truth for limits and required fields.
+
 ## Where next
 
 [One Schema, Three Providers](/learn/structured-outputs/same-schema-three-providers-example) makes this concrete with real request/response pairs, then [Writing Portable Schema Code](/learn/structured-outputs/writing-portable-schema-code) turns the portable/provider-specific split into an actual code boundary.

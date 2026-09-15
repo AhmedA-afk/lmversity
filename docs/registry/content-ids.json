@@ -1,7 +1,7 @@
 {
  "version": 1,
  "next": {
-  "les": 2063,
+  "les": 2069,
   "que": 7,
   "sce": 6,
   "blo": 10,
@@ -30,7 +30,7 @@
   },
   "lessons/agentic-ai/agent-to-agent-protocols.mdx": {
    "id": "les-0004",
-   "fp": "e430a573ad8d8c14beb12918bcb99b3c556a9430"
+   "fp": "c68db9ec8b73d1783443e8e150bafc08d1e80724"
   },
   "lessons/agentic-ai/agents-vs-workflows.mdx": {
    "id": "les-0005",
@@ -38,11 +38,11 @@
   },
   "lessons/agentic-ai/autonomy-vs-control.mdx": {
    "id": "les-0006",
-   "fp": "748d5f7bddaaef9aa24f76e673100b71dd60addb"
+   "fp": "d63878cd2f4a7df5dd495cd73f0d2d924aa9dc8c"
   },
   "lessons/agentic-ai/blackboard-and-swarm-patterns.mdx": {
    "id": "les-0007",
-   "fp": "61005f5fbe2af8a673a7da22d55f5fafa6589b93"
+   "fp": "fde05b6e49599623173d48f91a004b0a22ca0f3f"
   },
   "lessons/agentic-ai/choosing-an-agent-framework.mdx": {
    "id": "les-0008",
@@ -74,11 +74,11 @@
   },
   "lessons/agentic-ai/hierarchical-task-decomposition.mdx": {
    "id": "les-0015",
-   "fp": "22fc554961eaafda0779157a0b3263c63e5bbc80"
+   "fp": "ad24abdd6391721dd30893313d2ab1b4df7d059e"
   },
   "lessons/agentic-ai/multi-agent-patterns.mdx": {
    "id": "les-0016",
-   "fp": "42f543c175421dd9cdf84a60e50db11e76e2f04f"
+   "fp": "aa455e34627b08e9a4ac5c7e836b1390843d5af8"
   },
   "lessons/agentic-ai/persistent-agent-memory.mdx": {
    "id": "les-0017",
@@ -86,11 +86,11 @@
   },
   "lessons/agentic-ai/planning-and-task-decomposition.mdx": {
    "id": "les-0018",
-   "fp": "c6e7ff1a76360608c519f3db0e1d53bd043054d5"
+   "fp": "d5ae63ea23c1c8c6ae95eff6865606a6af35ae1f"
   },
   "lessons/agentic-ai/react-pattern.mdx": {
    "id": "les-0019",
-   "fp": "4f34c12ee155bc71d11906484867773a69d6a22c"
+   "fp": "d263c35fdf678a1787c298515dfcd9feeb8bca40"
   },
   "lessons/agentic-ai/reflection-and-self-critique.mdx": {
    "id": "les-0020",
@@ -98,7 +98,7 @@
   },
   "lessons/agentic-ai/state-memory-and-recovery.mdx": {
    "id": "les-0021",
-   "fp": "3c36f0dfea6876d9acac9d712ba788558f51ae5e"
+   "fp": "769ff161956266e0986e0ecc15e9a57f5b06b27b"
   },
   "lessons/agentic-ai/stopping-conditions-for-agents.mdx": {
    "id": "les-0022",
@@ -110,19 +110,19 @@
   },
   "lessons/agentic-ai/the-agent-loop.mdx": {
    "id": "les-0024",
-   "fp": "f5e63009c243c5a2cb76b18ff8dc7f44e0441aa2"
+   "fp": "4a3995961b006c695de07f045bc77606b0d37579"
   },
   "lessons/agentic-ai/tool-use-basics.mdx": {
    "id": "les-0025",
-   "fp": "6e1592ad81bc4952246715982c0dbcf38cb26f9d"
+   "fp": "617d53e4a034120d989e9e7ea0438729eef4bb09"
   },
   "lessons/agentic-ai/tree-search-for-agent-planning.mdx": {
    "id": "les-0026",
-   "fp": "66bbedf155fa383475c2e745dff826e8abd31e3d"
+   "fp": "522ae5e0ff70c1aef329aed569eb28f2bb16e387"
   },
   "lessons/agentic-ai/what-is-an-agent.mdx": {
    "id": "les-0027",
-   "fp": "9a74cd801fe836736b6125564dcc0e67a28e0fb8"
+   "fp": "76507bb550a5682187bc09af64b36bf7dd4e0d89"
   },
   "lessons/agentic-ai/when-not-to-use-an-agent.mdx": {
    "id": "les-0028",
@@ -994,15 +994,15 @@
   },
   "lessons/classical-ai/agents-robotics/301-agent-architectures-and-rationality.md": {
    "id": "les-0245",
-   "fp": "32db32abd7faf1c0bf34fa4669b08c4ed11c14f9"
+   "fp": "f19eb6f16f39081a0c699802b7617e0ebccf542e"
   },
   "lessons/classical-ai/agents-robotics/302-reactive-agents-and-behavior-based-control.md": {
    "id": "les-0246",
-   "fp": "0b76b55b0a8e10980a26ed2bac27cde5a6a2ecb2"
+   "fp": "ee618fa4962a38a602363167d45bb237158f191a"
   },
   "lessons/classical-ai/agents-robotics/303-deliberative-agents-beliefs-goals-and-intentions.md": {
    "id": "les-0247",
-   "fp": "e2b2a58df4b698179a6c7bc60fa5ced2dcc1ce95"
+   "fp": "df452c06aba3243c2b05c35ef932592e6a00d1e2"
   },
   "lessons/classical-ai/agents-robotics/304-bdi-agents-and-practical-reasoning.md": {
    "id": "les-0248",
@@ -1010,15 +1010,15 @@
   },
   "lessons/classical-ai/agents-robotics/305-agent-memory-state-and-world-models.md": {
    "id": "les-0249",
-   "fp": "ba375b6581970ad8a8ba984e09b1bbd1f8b2d773"
+   "fp": "ab11f36237d116b1cbe613dd806f7b5f1ce4cb16"
   },
   "lessons/classical-ai/agents-robotics/306-tool-use-planning-and-action-verification.md": {
    "id": "les-0250",
-   "fp": "bac343a70293def13c5a7cc0989a93ba812034bf"
+   "fp": "cd382a22bfed4301a58950b9041e368c2a88ea6b"
   },
   "lessons/classical-ai/agents-robotics/307-multi-agent-coordination-and-task-allocation.md": {
    "id": "les-0251",
-   "fp": "3db2310459ca3c3abaee9b0f76abddfe004e4048"
+   "fp": "9e2642977c15a4ebb5cc418e4515ddd16afad2ae"
   },
   "lessons/classical-ai/agents-robotics/308-communication-protocols-and-shared-beliefs.md": {
    "id": "les-0252",
@@ -1030,7 +1030,7 @@
   },
   "lessons/classical-ai/agents-robotics/310-game-theory-strategic-agents-and-mechanism-design.md": {
    "id": "les-0254",
-   "fp": "ad770aa82c1cc5732626eccbb70d86785de4c953"
+   "fp": "682450de44cdcad8222b656fac18a3e5e5f29be4"
   },
   "lessons/classical-ai/agents-robotics/311-robot-sensors-perception-and-calibration.md": {
    "id": "les-0255",
@@ -1062,7 +1062,7 @@
   },
   "lessons/classical-ai/agents-robotics/318-task-planning-and-execution-monitoring.md": {
    "id": "les-0262",
-   "fp": "74870f1124f45eb080684fa06c6c7496e0a717e7"
+   "fp": "7de28a5bccabc8d9ebedce48b731a92cc232eae6"
   },
   "lessons/classical-ai/agents-robotics/319-human-robot-interaction-and-shared-autonomy.md": {
    "id": "les-0263",
@@ -1070,7 +1070,7 @@
   },
   "lessons/classical-ai/agents-robotics/320-robot-safety-constraints-and-runtime-assurance.md": {
    "id": "les-0264",
-   "fp": "67c9d40d10ea198a5c6ce66c573dc9fcffa0eb9b"
+   "fp": "645eb5d52f236b236a6e8965d92baa99b40235ca"
   },
   "lessons/classical-ai/agents-robotics/321-hybrid-symbolic-neural-systems.md": {
    "id": "les-0265",
@@ -1254,11 +1254,11 @@
   },
   "lessons/classical-ai/search-planning/112-adversarial-search-games-utilities-and-minimax.md": {
    "id": "les-0310",
-   "fp": "4384784c17c018c2d29728aa016fa123bde86991"
+   "fp": "54a6ecc1d179fadd1036cef1ee76361745e6f573"
   },
   "lessons/classical-ai/search-planning/113-alpha-beta-pruning-bounds-move-ordering-and-exactness.md": {
    "id": "les-0311",
-   "fp": "1d11f1581d70ea5b7a952acb9822625410569484"
+   "fp": "c255650af6fe3d4c143e3287153f644751b819a8"
   },
   "lessons/classical-ai/search-planning/114-monte-carlo-tree-search-selection-expansion-rollouts-and-backup.md": {
    "id": "les-0312",
@@ -1290,7 +1290,7 @@
   },
   "lessons/classical-ai/search-planning/121-hierarchical-task-networks-decomposition-methods-and-operational-knowledge.md": {
    "id": "les-0319",
-   "fp": "4689a1a99dd3358e760ddfbaa1cff68c10827b7c"
+   "fp": "14cecc5089054228ca4663633ea763fb5f064f2c"
   },
   "lessons/classical-ai/search-planning/122-scheduling-resources-precedence-critical-paths-and-objectives.md": {
    "id": "les-0320",
@@ -1398,15 +1398,15 @@
   },
   "lessons/context-engineering/context-engineering-vocabulary.md": {
    "id": "les-0346",
-   "fp": "9f94347e7feba7c5c43d7fcf8b18a5b45f80d7c4"
+   "fp": "b532c3f4c3d2a9c15391cd22d52cae87ff9699fc"
   },
   "lessons/context-engineering/context-engineering-vs-prompting.mdx": {
    "id": "les-0347",
-   "fp": "8735b395e703554cadd768c2c068e45fc8c1f16c"
+   "fp": "96a882307905a85a69a6701d19c1db1c9ebfa4ed"
   },
   "lessons/context-engineering/context-failure-mode-mistakes.md": {
    "id": "les-0348",
-   "fp": "adb87685a478f363ccc6c0aa7af1e7e39b7eb690"
+   "fp": "66bc00974d8872489d79353e0b56d83a43ade1fe"
   },
   "lessons/context-engineering/context-handoff-between-agents-deep.md": {
    "id": "les-0349",
@@ -1414,7 +1414,7 @@
   },
   "lessons/context-engineering/context-handoff-between-agents.mdx": {
    "id": "les-0350",
-   "fp": "783fb8dc932adb950d25f5caa27e25c8eef6ed71"
+   "fp": "925dfb5db142c0f415bb59a2e880b74fb44086c1"
   },
   "lessons/context-engineering/context-observability-and-token-accounting.mdx": {
    "id": "les-0351",
@@ -1454,11 +1454,11 @@
   },
   "lessons/context-engineering/conversation-memory-and-state.mdx": {
    "id": "les-0360",
-   "fp": "7bb1ca903d4de662e2a0cb148bd7935824368a62"
+   "fp": "df01f4da26909d9dcf911c60b622157027a16893"
   },
   "lessons/context-engineering/cost-latency-quality-tradeoff-curve.md": {
    "id": "les-0361",
-   "fp": "4ed8c259dd0c76980a42838ff11aa1f3bbaf5288"
+   "fp": "6d01ac62cdf76f3b0402aaa1b019ba01e8ec3f6a"
   },
   "lessons/context-engineering/counting-tokens-in-practice.md": {
    "id": "les-0362",
@@ -1498,7 +1498,7 @@
   },
   "lessons/context-engineering/failure-mode-cheatsheet.md": {
    "id": "les-0371",
-   "fp": "288493ea1f37aab6a1fb61970e75fd8f914660ff"
+   "fp": "67792ff82a233eb5b4080fdf47b3e196d38a9125"
   },
   "lessons/context-engineering/failure-modes-quiz.md": {
    "id": "les-0372",
@@ -1658,7 +1658,7 @@
   },
   "lessons/context-engineering/relevance-filtering-common-mistakes.md": {
    "id": "les-0411",
-   "fp": "42452a649d646010796c98a02ae47da94832bbea"
+   "fp": "2d0c6c53fd49bf29f98bcf8de9ec4b7029352cae"
   },
   "lessons/context-engineering/relevance-filtering-in-depth.md": {
    "id": "les-0412",
@@ -1702,7 +1702,7 @@
   },
   "lessons/context-engineering/selection-and-ordering-cheatsheet.md": {
    "id": "les-0422",
-   "fp": "0d30012af742958dad8c00ced96539f50385718f"
+   "fp": "6630c98e6d88d011bcef6db207b789b36d4ac4f2"
   },
   "lessons/context-engineering/selection-ordering-quiz.md": {
    "id": "les-0423",
@@ -2410,7 +2410,7 @@
   },
   "lessons/evals-red-teaming/building-a-golden-dataset.mdx": {
    "id": "les-0599",
-   "fp": "ca1f1487e4a2f98a582b30cbc5ffedf8755d97ec"
+   "fp": "d51d2059b47b2aa501b79171faba7824751c094d"
   },
   "lessons/evals-red-teaming/building-a-regression-suite.mdx": {
    "id": "les-0600",
@@ -2470,7 +2470,7 @@
   },
   "lessons/evals-red-teaming/offline-vs-online-evals.mdx": {
    "id": "les-0614",
-   "fp": "b0f86450a6b428fbcf598c642729a3e96dda275f"
+   "fp": "88e81f93a0831fb8ec50c98036af6077ec80d4cc"
   },
   "lessons/evals-red-teaming/pairwise-vs-pointwise-grading.mdx": {
    "id": "les-0615",
@@ -2478,7 +2478,7 @@
   },
   "lessons/evals-red-teaming/prompt-injection-basics.mdx": {
    "id": "les-0616",
-   "fp": "79486203a3e03ee3fe79fc24c68b67df859697f2"
+   "fp": "bc10d572423c1224b7b0e7a68dfc45945b099f25"
   },
   "lessons/evals-red-teaming/regression-gates-and-online-signals.mdx": {
    "id": "les-0617",
@@ -3118,7 +3118,7 @@
   },
   "lessons/genai-app-dev/where-the-llm-boundary-lives.md": {
    "id": "les-0776",
-   "fp": "7099dfc9b2e4318e04b0e9c42d4cc81b10061849"
+   "fp": "96eec26707608758979837081a405324ce55f2af"
   },
   "lessons/genai-app-dev/why-abstract-the-provider.md": {
    "id": "les-0777",
@@ -6238,7 +6238,7 @@
   },
   "lessons/prompt-engineering/ab-testing-prompts-in-production.mdx": {
    "id": "les-1556",
-   "fp": "54b57e39968176d562a1f84fb731dfb8f4b7d6de"
+   "fp": "e522ea75c743a075c114877373246c79985d5368"
   },
   "lessons/prompt-engineering/acceptance-criteria-in-prompts.md": {
    "id": "les-1557",
@@ -6282,7 +6282,7 @@
   },
   "lessons/prompt-engineering/building-an-eval-dataset.md": {
    "id": "les-1567",
-   "fp": "7ab264c61c1a33a13cfc6980fc7cd3ea76c82c72"
+   "fp": "a8eb70a5a20617fa3994763583ffa869d24198a5"
   },
   "lessons/prompt-engineering/cargo-cult-reasoning.md": {
    "id": "les-1568",
@@ -6310,7 +6310,7 @@
   },
   "lessons/prompt-engineering/cost-and-token-budget-for-prompts.md": {
    "id": "les-1574",
-   "fp": "be4ba6a96090b5bbc5b4abad5ce8ef1138ee2fed"
+   "fp": "f8633b5da9367a2ea65b926baa3b85bba0ebb93d"
   },
   "lessons/prompt-engineering/cot-on-a-word-problem.md": {
    "id": "les-1575",
@@ -6326,7 +6326,7 @@
   },
   "lessons/prompt-engineering/defending-with-delimiters-and-roles.md": {
    "id": "les-1578",
-   "fp": "e6ae072583b03353e6e307f7746e096ac5d23142"
+   "fp": "c53733e437193a941d11be63aef2bec5843fc9c9"
   },
   "lessons/prompt-engineering/delimiters-and-formatting.mdx": {
    "id": "les-1579",
@@ -6338,7 +6338,7 @@
   },
   "lessons/prompt-engineering/dynamic-few-shot-retrieval.md": {
    "id": "les-1581",
-   "fp": "17ddea6e2f5251bb9912087cb9f93d6bbd5d0ca2"
+   "fp": "f796af5485d9cc697ebead963768ba7ec375d2a0"
   },
   "lessons/prompt-engineering/escaping-user-content-in-templates.md": {
    "id": "les-1582",
@@ -6398,7 +6398,7 @@
   },
   "lessons/prompt-engineering/fixing-malformed-json-output.md": {
    "id": "les-1596",
-   "fp": "6f8eff8f5dc15f74f133c2f48b818b33215db21b"
+   "fp": "9eb0a53ab1d019d11fb3b935d6b74bf18de1fa74"
   },
   "lessons/prompt-engineering/formatting-anti-patterns.md": {
    "id": "les-1597",
@@ -6418,7 +6418,7 @@
   },
   "lessons/prompt-engineering/injection-attack-and-defense-worked.md": {
    "id": "les-1601",
-   "fp": "07e89c5ca3beb0d8ca59b7ca4e94ac6e35192d70"
+   "fp": "5d475a7185c41d12108d44dfecdf2d97cbee4390"
   },
   "lessons/prompt-engineering/instruction-position-and-recency.md": {
    "id": "les-1602",
@@ -6426,11 +6426,11 @@
   },
   "lessons/prompt-engineering/instructions-context-examples.md": {
    "id": "les-1603",
-   "fp": "f2d61003156fb93bc22c5a5af120d482df8ee25e"
+   "fp": "b32340c922db7c3b6ee38d19422f4c957ecb9706"
   },
   "lessons/prompt-engineering/json-schema-in-prompts.md": {
    "id": "les-1604",
-   "fp": "ec5ab7a6dced4a0dfdd9c2c40579db96a2d4a2ab"
+   "fp": "3ecf7d45a7f3bbecbf673e542b8d16682fcd7f82"
   },
   "lessons/prompt-engineering/label-bias-and-majority-label.md": {
    "id": "les-1605",
@@ -6454,7 +6454,7 @@
   },
   "lessons/prompt-engineering/multi-turn-prompt-state.md": {
    "id": "les-1610",
-   "fp": "f83377e67a866e441f5109b34a4d538d107d9556"
+   "fp": "ef354990922aacf4066eec2df7fc7a0ba42e6961"
   },
   "lessons/prompt-engineering/multimodal-and-localized-prompts.md": {
    "id": "les-1611",
@@ -6482,7 +6482,7 @@
   },
   "lessons/prompt-engineering/passing-state-between-stages.md": {
    "id": "les-1617",
-   "fp": "036dc8f4b8c4dc7d0b0b8ea84ed150af3c8bf649"
+   "fp": "d6fbae1cd881aa4931d4e17bcbad6e25ac871561"
   },
   "lessons/prompt-engineering/pe-whole-game-ticket-classifier.md": {
    "id": "les-1618",
@@ -6494,7 +6494,7 @@
   },
   "lessons/prompt-engineering/pipeline-vs-single-call-tradeoffs.md": {
    "id": "les-1620",
-   "fp": "5f9a79f5d0bd1259833f84304045d2707bf28fcf"
+   "fp": "b0b487c11c23a862a38aa914383378af87c19183"
   },
   "lessons/prompt-engineering/porting-a-prompt-worked.md": {
    "id": "les-1621",
@@ -6550,7 +6550,7 @@
   },
   "lessons/prompt-engineering/prompt-patterns.md": {
    "id": "les-1634",
-   "fp": "bdbc5f5a544a3c9723b12ade3907de68903be8db"
+   "fp": "873cf4c86b748b293248eb07b4a3077e00a06755"
   },
   "lessons/prompt-engineering/prompt-portability-across-models-strategy.md": {
    "id": "les-1635",
@@ -6642,7 +6642,7 @@
   },
   "lessons/prompt-engineering/role-prompting.mdx": {
    "id": "les-1657",
-   "fp": "1a0f34f77a8e45d51657ebb51495a041d71dde0c"
+   "fp": "fa18a77d96d4cc4a196d244d787c2c52cf29d7fe"
   },
   "lessons/prompt-engineering/roles-steering-quiz.md": {
    "id": "les-1658",
@@ -6750,7 +6750,7 @@
   },
   "lessons/prompt-engineering/what-prompting-is.md": {
    "id": "les-1684",
-   "fp": "2e7ac9d902d42e5cf0564907400db8194abf7fd4"
+   "fp": "50230a0295e0ef8a8df4fca718a329d34f681dca"
   },
   "lessons/prompt-engineering/what-role-prompting-changes.md": {
    "id": "les-1685",
@@ -6782,7 +6782,7 @@
   },
   "lessons/prompt-engineering/xml-markdown-json-formatting-tradeoffs.md": {
    "id": "les-1692",
-   "fp": "07e5bb1181f0d935baf5c3633fa421b5086c0c9e"
+   "fp": "495e9998bea190cb2a1789df6c8077841ed2d033"
   },
   "lessons/prompt-engineering/xml-tags-vs-markdown.mdx": {
    "id": "les-1693",
@@ -6790,7 +6790,7 @@
   },
   "lessons/prompt-engineering/zero-shot-cot-vs-few-shot-cot.md": {
    "id": "les-1694",
-   "fp": "6e848f919c99011318fb457a2652a4e153722fbe"
+   "fp": "d1c73a290657ac4b2aaed4fe6219c910a454d413"
   },
   "lessons/prompt-engineering/zero-shot-vs-few-shot.mdx": {
    "id": "les-1695",
@@ -7122,7 +7122,7 @@
   },
   "lessons/rag/ingestion-chunking-and-retrieval.mdx": {
    "id": "les-1777",
-   "fp": "b1080e5549e1ce17bbd17bfe37c6a224144f8be2"
+   "fp": "bd87c13c5c8bc5338624fcad8718eae839d6e908"
   },
   "lessons/rag/metadata-filtering-in-retrieval.mdx": {
    "id": "les-1778",
@@ -7330,7 +7330,7 @@
   },
   "lessons/structured-outputs/cross-provider-landscape.md": {
    "id": "les-1829",
-   "fp": "7bd2b7b50b0e4b144dde348f0eb872e0333ad18b"
+   "fp": "2101653106df7981a376a131ff9987655613079f"
   },
   "lessons/structured-outputs/cross-provider-structured-output-differences.mdx": {
    "id": "les-1830",
@@ -7414,7 +7414,7 @@
   },
   "lessons/structured-outputs/field-descriptions-as-prompts.md": {
    "id": "les-1850",
-   "fp": "217bb249f015d0a91c89f5d88b6e609f0275f3a5"
+   "fp": "3294993d76b132ecc2415a51037e983900f1d518"
   },
   "lessons/structured-outputs/field-design-cheatsheet.md": {
    "id": "les-1851",
@@ -7466,7 +7466,7 @@
   },
   "lessons/structured-outputs/incremental-json-repair.mdx": {
    "id": "les-1863",
-   "fp": "ff75b94311bdaa8885285b2b879b4ca4a9f53591"
+   "fp": "8b9a35f09df162b1cb26e468f411436bb14809fb"
   },
   "lessons/structured-outputs/incremental-parser-walkthrough.md": {
    "id": "les-1864",
@@ -7870,7 +7870,7 @@
   },
   "lessons/tools-function-calling/descriptions-are-prompts.md": {
    "id": "les-1964",
-   "fp": "403f80c4f9ca55ee10165d82a1fab5a56ac72bcd"
+   "fp": "5ee4c5a63dc63024bca93c118dd462cabe816eff"
   },
   "lessons/tools-function-calling/designing-a-tool-schema-walkthrough.md": {
    "id": "les-1965",
@@ -7878,7 +7878,7 @@
   },
   "lessons/tools-function-calling/designing-a-tool-schema.mdx": {
    "id": "les-1966",
-   "fp": "0eaa98651c5dd8d0628e388c104a44e67a4b54fa"
+   "fp": "4a2a95074fc52b48eff877cf20ae2fd5ca40de79"
   },
   "lessons/tools-function-calling/enum-vs-freeform-parameters.md": {
    "id": "les-1967",
@@ -9498,6 +9498,30 @@
   "lessons/ai-literacy/seven-first-ai-workflows-lab.md": {
    "id": "les-2063",
    "fp": "0f902312e709714ed9e1f639693e4745873fb777"
+  },
+  "lessons/llm-foundations/inspect-a-real-tokenizer-lab.md": {
+   "id": "les-2064",
+   "fp": "8ae532f273f0e7500e4ba29f6d8f88092980bc9b"
+  },
+  "lessons/llm-foundations/read-a-model-card-lab.md": {
+   "id": "les-2065",
+   "fp": "d10ee47be250524acfb7ef4eaed0e5bdafd8b31d"
+  },
+  "lessons/machine-learning/predictive-ml-vs-generative-ai.md": {
+   "id": "les-2066",
+   "fp": "677f92546a23ae5c71025bac24dac06ff130fbfa"
+  },
+  "lessons/prompt-engineering/provider-differences-lab.md": {
+   "id": "les-2067",
+   "fp": "9ad984ad33e3e9eff1cea593f30cc14cf94dc196"
+  },
+  "lessons/structured-outputs/openapi-schemas-in-practice.md": {
+   "id": "les-2068",
+   "fp": "319e462cd1f0f666f3b5458ecd5214452f265124"
+  },
+  "lessons/structured-outputs/refusals-and-partial-outputs.md": {
+   "id": "les-2069",
+   "fp": "fff6024a1b5346926d27459b1f9b20ec31457e61"
   }
  },
  "retired": {

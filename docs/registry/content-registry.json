@@ -1,16 +1,16 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T09:56:32.599Z",
+  "generatedAt": "2026-09-15T10:53:27.518Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2387,
+  "itemCount": 2393,
   "counts": {
    "byFamily": {
-    "lesson": 2016,
+    "lesson": 2019,
     "project": 31,
     "quiz": 89,
     "reference": 59,
-    "lab": 61,
+    "lab": 64,
     "interview": 7,
     "scenario": 6,
     "blog": 10,
@@ -22,16 +22,16 @@
     "glossary": 1
    },
    "byStatus": {
-    "live": 2387
+    "live": 2393
    },
    "byKind": {
-    "concept": 1718,
-    "comparison": 101,
+    "concept": 1720,
+    "comparison": 102,
     "worked-example": 29,
     "capstone": 31,
     "quiz": 83,
     "cheatsheet": 48,
-    "lab": 61,
+    "lab": 64,
     "common-mistakes": 24,
     "topic": 7,
     "scenario": 6,
@@ -69,16 +69,16 @@
     "genai-app-dev": 131,
     "hallucinations": 134,
     "harness-design": 27,
-    "llm-foundations": 132,
-    "machine-learning": 209,
+    "llm-foundations": 134,
+    "machine-learning": 210,
     "maths-foundations": 194,
     "mcp": 59,
     "production": 30,
-    "prompt-engineering": 143,
+    "prompt-engineering": 144,
     "python-data-apis": 58,
     "rag": 58,
     "responsible-ai": 7,
-    "structured-outputs": 123,
+    "structured-outputs": 125,
     "tools-function-calling": 124,
     "Agents": 1,
     "System design for AI": 1,
@@ -97,9 +97,9 @@
    },
    "byFreshness": {
     "release-sensitive": 284,
-    "periodic": 1334,
-    "policy-sensitive": 73,
-    "pricing-sensitive": 336,
+    "periodic": 1338,
+    "policy-sensitive": 74,
+    "pricing-sensitive": 337,
     "certification-sensitive": 97,
     "durable": 263
    }
@@ -389,6 +389,7 @@
    "internalLinks": [
     "/learn/agentic-ai/agent-orchestration-frameworks",
     "/learn/agentic-ai/multi-agent-patterns",
+    "/learn/classical-ai/agents-robotics/310-game-theory-strategic-agents-and-mechanism-design",
     "/learn/mcp/what-is-mcp"
    ],
    "externalLinks": [],
@@ -408,7 +409,7 @@
     "sourcesSection": false,
     "runnableSignals": false,
     "listItems": 4,
-    "numericClaims": 1,
+    "numericClaims": 2,
     "specFormat": false,
     "mathDense": false,
     "linksToPractice": false
@@ -557,6 +558,7 @@
     "/learn/agentic-ai/common-agent-failure-modes",
     "/learn/agentic-ai/error-handling-and-retries",
     "/learn/agentic-ai/when-not-to-use-an-agent",
+    "/learn/classical-ai/agents-robotics/320-robot-safety-constraints-and-runtime-assurance",
     "/learn/harness-design/permission-and-approval-systems"
    ],
    "externalLinks": [],
@@ -576,7 +578,7 @@
     "sourcesSection": false,
     "runnableSignals": false,
     "listItems": 2,
-    "numericClaims": 0,
+    "numericClaims": 1,
     "specFormat": false,
     "mathDense": false,
     "linksToPractice": false
@@ -638,7 +640,8 @@
    "internalLinks": [
     "/learn/agentic-ai/agent-orchestration-frameworks",
     "/learn/agentic-ai/agent-to-agent-protocols",
-    "/learn/agentic-ai/multi-agent-patterns"
+    "/learn/agentic-ai/multi-agent-patterns",
+    "/learn/classical-ai/agents-robotics/307-multi-agent-coordination-and-task-allocation"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -657,7 +660,7 @@
     "sourcesSection": false,
     "runnableSignals": false,
     "listItems": 0,
-    "numericClaims": 0,
+    "numericClaims": 1,
     "specFormat": false,
     "mathDense": false,
     "linksToPractice": false
@@ -1309,7 +1312,9 @@
     "/learn/agentic-ai/choosing-an-agent-framework",
     "/learn/agentic-ai/planning-and-task-decomposition",
     "/learn/agentic-ai/react-pattern",
-    "/learn/agentic-ai/tree-search-for-agent-planning"
+    "/learn/agentic-ai/tree-search-for-agent-planning",
+    "/learn/classical-ai/agents-robotics/318-task-planning-and-execution-monitoring",
+    "/learn/classical-ai/search-planning/121-hierarchical-task-networks-decomposition-methods-and-operational-knowledge"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -1328,7 +1333,7 @@
     "sourcesSection": false,
     "runnableSignals": false,
     "listItems": 0,
-    "numericClaims": 0,
+    "numericClaims": 2,
     "specFormat": false,
     "mathDense": false,
     "linksToPractice": false
@@ -1395,6 +1400,7 @@
     "/learn/agentic-ai/planning-and-task-decomposition",
     "/learn/agentic-ai/the-agent-loop",
     "/learn/agentic-ai/when-not-to-use-an-agent",
+    "/learn/classical-ai/agents-robotics/307-multi-agent-coordination-and-task-allocation",
     "/learn/prompt-engineering/self-consistency-sampling"
    ],
    "externalLinks": [],
@@ -1414,7 +1420,7 @@
     "sourcesSection": false,
     "runnableSignals": false,
     "listItems": 0,
-    "numericClaims": 1,
+    "numericClaims": 2,
     "specFormat": false,
     "mathDense": false,
     "linksToPractice": false
@@ -1561,6 +1567,7 @@
    "internalLinks": [
     "/learn/agentic-ai/react-pattern",
     "/learn/agentic-ai/the-agent-loop",
+    "/learn/classical-ai/agents-robotics/303-deliberative-agents-beliefs-goals-and-intentions",
     "/learn/prompt-engineering/task-decomposition"
    ],
    "externalLinks": [],
@@ -1580,7 +1587,7 @@
     "sourcesSection": false,
     "runnableSignals": false,
     "listItems": 0,
-    "numericClaims": 0,
+    "numericClaims": 1,
     "specFormat": false,
     "mathDense": false,
     "linksToPractice": false
@@ -1642,6 +1649,7 @@
    "internalLinks": [
     "/learn/agentic-ai/the-agent-loop",
     "/learn/agentic-ai/when-not-to-use-an-agent",
+    "/learn/classical-ai/agents-robotics/302-reactive-agents-and-behavior-based-control",
     "/learn/hallucinations/why-models-hallucinate",
     "/learn/prompt-engineering/chain-of-thought-prompting"
    ],
@@ -1662,7 +1670,7 @@
     "sourcesSection": false,
     "runnableSignals": false,
     "listItems": 0,
-    "numericClaims": 0,
+    "numericClaims": 1,
     "specFormat": false,
     "mathDense": false,
     "linksToPractice": false
@@ -1797,7 +1805,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 397,
+   "wordCount": 398,
    "headings": [
     "The short answer",
     "Separate the stores",
@@ -1809,7 +1817,9 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/classical-ai/agents-robotics/305-agent-memory-state-and-world-models"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -1827,7 +1837,7 @@
     "sourcesSection": false,
     "runnableSignals": false,
     "listItems": 10,
-    "numericClaims": 0,
+    "numericClaims": 1,
     "specFormat": true,
     "mathDense": false,
     "linksToPractice": false
@@ -1846,8 +1856,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -1858,7 +1868,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -2055,7 +2065,8 @@
    "internalLinks": [
     "/learn/agentic-ai/react-pattern",
     "/learn/agentic-ai/what-is-an-agent",
-    "/learn/agentic-ai/when-not-to-use-an-agent"
+    "/learn/agentic-ai/when-not-to-use-an-agent",
+    "/learn/classical-ai/agents-robotics/301-agent-architectures-and-rationality"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -2074,7 +2085,7 @@
     "sourcesSection": false,
     "runnableSignals": false,
     "listItems": 8,
-    "numericClaims": 0,
+    "numericClaims": 1,
     "specFormat": false,
     "mathDense": false,
     "linksToPractice": false
@@ -2137,6 +2148,7 @@
    "internalLinks": [
     "/learn/agentic-ai/the-agent-loop",
     "/learn/agentic-ai/tool-use-basics",
+    "/learn/classical-ai/agents-robotics/306-tool-use-planning-and-action-verification",
     "/learn/tools-function-calling/designing-a-tool-schema",
     "/learn/tools-function-calling/what-is-tool-calling"
    ],
@@ -2157,7 +2169,7 @@
     "sourcesSection": false,
     "runnableSignals": false,
     "listItems": 0,
-    "numericClaims": 0,
+    "numericClaims": 1,
     "specFormat": false,
     "mathDense": false,
     "linksToPractice": false
@@ -2219,6 +2231,8 @@
    "internalLinks": [
     "/learn/agentic-ai/planning-and-task-decomposition",
     "/learn/agentic-ai/react-pattern",
+    "/learn/classical-ai/search-planning/112-adversarial-search-games-utilities-and-minimax",
+    "/learn/classical-ai/search-planning/113-alpha-beta-pruning-bounds-move-ordering-and-exactness",
     "/learn/prompt-engineering/tree-of-thought-prompting"
    ],
    "externalLinks": [],
@@ -2238,7 +2252,7 @@
     "sourcesSection": false,
     "runnableSignals": false,
     "listItems": 0,
-    "numericClaims": 2,
+    "numericClaims": 4,
     "specFormat": false,
     "mathDense": false,
     "linksToPractice": false
@@ -2302,6 +2316,7 @@
     "/learn/agentic-ai/the-agent-loop",
     "/learn/agentic-ai/when-not-to-use-an-agent",
     "/learn/ai-foundations/what-llms-can-and-cannot-do",
+    "/learn/classical-ai/agents-robotics/301-agent-architectures-and-rationality",
     "/learn/harness-design/what-is-a-harness",
     "/learn/rag/what-is-rag-and-when-to-use-it",
     "/learn/tools-function-calling/what-is-tool-calling"
@@ -2323,7 +2338,7 @@
     "sourcesSection": false,
     "runnableSignals": false,
     "listItems": 0,
-    "numericClaims": 0,
+    "numericClaims": 1,
     "specFormat": false,
     "mathDense": false,
     "linksToPractice": false
@@ -21466,7 +21481,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 878,
+   "wordCount": 880,
    "headings": [
     "Learning objective",
     "Model, trace, and calculation",
@@ -21476,7 +21491,10 @@
     "Graded exercise",
     "Mastery check"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/agentic-ai/the-agent-loop",
+    "/learn/agentic-ai/what-is-an-agent"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -21511,8 +21529,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -21523,7 +21541,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -21547,7 +21565,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 877,
+   "wordCount": 879,
    "headings": [
     "Learning objective",
     "Model, trace, and calculation",
@@ -21557,7 +21575,9 @@
     "Graded exercise",
     "Mastery check"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/agentic-ai/react-pattern"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -21592,8 +21612,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -21604,7 +21624,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -21628,7 +21648,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 867,
+   "wordCount": 869,
    "headings": [
     "Learning objective",
     "Model, trace, and calculation",
@@ -21638,7 +21658,9 @@
     "Graded exercise",
     "Mastery check"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/agentic-ai/planning-and-task-decomposition"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -21673,8 +21695,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -21685,7 +21707,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -21790,7 +21812,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 859,
+   "wordCount": 861,
    "headings": [
     "Learning objective",
     "Model, trace, and calculation",
@@ -21800,7 +21822,9 @@
     "Graded exercise",
     "Mastery check"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/agentic-ai/state-memory-and-recovery"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -21835,8 +21859,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -21847,7 +21871,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -21871,7 +21895,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 862,
+   "wordCount": 864,
    "headings": [
     "Learning objective",
     "Model, trace, and calculation",
@@ -21881,7 +21905,9 @@
     "Graded exercise",
     "Mastery check"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/agentic-ai/tool-use-basics"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -21916,8 +21942,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -21928,7 +21954,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -21963,6 +21989,8 @@
     "Mastery check"
    ],
    "internalLinks": [
+    "/learn/agentic-ai/blackboard-and-swarm-patterns",
+    "/learn/agentic-ai/multi-agent-patterns",
     "/learn/ai-foundations/ai-systems/128-multi-agent-coordination-communication-and-allocation"
    ],
    "externalLinks": [],
@@ -22011,7 +22039,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -22197,7 +22225,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 871,
+   "wordCount": 873,
    "headings": [
     "Learning objective",
     "Model, trace, and calculation",
@@ -22207,7 +22235,9 @@
     "Graded exercise",
     "Mastery check"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/agentic-ai/agent-to-agent-protocols"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -22242,8 +22272,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -22254,7 +22284,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -22847,7 +22877,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 873,
+   "wordCount": 875,
    "headings": [
     "Learning objective",
     "Model, trace, and calculation",
@@ -22857,7 +22887,9 @@
     "Graded exercise",
     "Mastery check"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/agentic-ai/hierarchical-task-decomposition"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -22892,8 +22924,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -22904,7 +22936,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -23009,7 +23041,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 880,
+   "wordCount": 882,
    "headings": [
     "Learning objective",
     "Model, trace, and calculation",
@@ -23019,7 +23051,9 @@
     "Graded exercise",
     "Mastery check"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/agentic-ai/autonomy-vs-control"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -23054,8 +23088,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -23066,7 +23100,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -26770,7 +26804,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1150,
+   "wordCount": 1152,
    "headings": [
     "Why this lesson matters",
     "Formal model and calculation",
@@ -26781,7 +26815,9 @@
     "Graded exercise",
     "Mastery checkpoint"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/agentic-ai/tree-search-for-agent-planning"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -26818,8 +26854,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -26830,7 +26866,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -26866,6 +26902,7 @@
     "Mastery checkpoint"
    ],
    "internalLinks": [
+    "/learn/agentic-ai/tree-search-for-agent-planning",
     "/learn/ai-foundations/ai-systems/111-alpha-beta-pruning-and-move-ordering"
    ],
    "externalLinks": [],
@@ -27514,7 +27551,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1151,
+   "wordCount": 1153,
    "headings": [
     "Why this lesson matters",
     "Formal model and calculation",
@@ -27525,7 +27562,9 @@
     "Graded exercise",
     "Mastery checkpoint"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/agentic-ai/hierarchical-task-decomposition"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -27560,8 +27599,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -27572,7 +27611,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -29851,6 +29890,7 @@
    ],
    "internalLinks": [
     "/learn/context-engineering/cache-aware-context-design",
+    "/learn/context-engineering/context-engineering-vs-prompting",
     "/learn/context-engineering/context-handoff-between-agents",
     "/learn/context-engineering/context-observability-and-token-accounting",
     "/learn/context-engineering/context-ordering-and-recency-effects",
@@ -29955,8 +29995,10 @@
     "The practical takeaway"
    ],
    "internalLinks": [
+    "/learn/context-engineering/context-engineering-vocabulary",
     "/learn/context-engineering/context-rot",
-    "/learn/context-engineering/retrieval-vs-context-stuffing"
+    "/learn/context-engineering/retrieval-vs-context-stuffing",
+    "/learn/prompt-engineering/instructions-context-examples"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -30004,7 +30046,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -30037,6 +30079,7 @@
     "/learn/context-engineering/context-poisoning-and-distraction-deep",
     "/learn/context-engineering/context-rot-explained",
     "/learn/context-engineering/eval-harness-for-context",
+    "/learn/context-engineering/failure-mode-cheatsheet",
     "/learn/context-engineering/poisoning-real-world-scenarios",
     "/learn/context-engineering/prompt-injection-via-retrieved-content",
     "/learn/context-engineering/testing-whether-context-helps",
@@ -30211,7 +30254,8 @@
     "/learn/agentic-ai/subagent-context-isolation",
     "/learn/context-engineering/context-poisoning-and-distraction",
     "/learn/context-engineering/just-in-time-context-loading",
-    "/learn/context-engineering/token-budgeting-strategies"
+    "/learn/context-engineering/token-budgeting-strategies",
+    "/learn/prompt-engineering/passing-state-between-stages"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -31058,7 +31102,8 @@
     "/learn/agentic-ai/agent-memory-short-vs-long-term",
     "/learn/context-engineering/cross-session-memory-architecture",
     "/learn/context-engineering/retrieval-vs-context-stuffing",
-    "/learn/context-engineering/summarization-for-compaction"
+    "/learn/context-engineering/summarization-for-compaction",
+    "/learn/prompt-engineering/multi-turn-prompt-state"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -31147,7 +31192,8 @@
     "/learn/context-engineering/token-budget-cheatsheet",
     "/learn/context-engineering/when-long-context-beats-rag",
     "/learn/context-engineering/why-more-tokens-hurt",
-    "/learn/production/latency-and-cost-slos"
+    "/learn/production/latency-and-cost-slos",
+    "/learn/prompt-engineering/cost-and-token-budget-for-prompts"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -32024,6 +32070,7 @@
     "The tuning heuristic: delete until it breaks"
    ],
    "internalLinks": [
+    "/learn/context-engineering/context-failure-mode-mistakes",
     "/learn/context-engineering/context-poisoning-and-distraction-deep",
     "/learn/context-engineering/context-rot-explained",
     "/learn/context-engineering/entropy-and-context-noise",
@@ -35497,6 +35544,7 @@
     "/learn/context-engineering/placing-instructions-for-adherence",
     "/learn/context-engineering/recency-and-primacy-effects",
     "/learn/context-engineering/relevance-filtering-in-depth",
+    "/learn/context-engineering/selection-and-ordering-cheatsheet",
     "/learn/context-engineering/structured-context-injection-patterns",
     "/learn/context-engineering/what-to-include-vs-what-to-cut",
     "/learn/context-engineering/xml-vs-markdown-vs-json-delimiting"
@@ -36455,6 +36503,7 @@
     "/learn/context-engineering/ordering-context-for-attention",
     "/learn/context-engineering/placing-instructions-for-adherence",
     "/learn/context-engineering/recency-and-primacy-effects",
+    "/learn/context-engineering/relevance-filtering-common-mistakes",
     "/learn/context-engineering/relevance-filtering-in-depth",
     "/learn/context-engineering/reproducing-lost-in-the-middle",
     "/learn/context-engineering/signal-to-noise-in-context",
@@ -51466,7 +51515,8 @@
    ],
    "internalLinks": [
     "/learn/evals-red-teaming/prompt-injection-basics",
-    "/learn/evals-red-teaming/why-evals-matter"
+    "/learn/evals-red-teaming/why-evals-matter",
+    "/learn/prompt-engineering/building-an-eval-dataset"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -51516,7 +51566,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -52721,7 +52771,8 @@
     "/learn/evals-red-teaming/eval-driven-iteration",
     "/learn/evals-red-teaming/llm-as-judge",
     "/learn/evals-red-teaming/prompt-injection-basics",
-    "/learn/evals-red-teaming/writing-eval-metrics"
+    "/learn/evals-red-teaming/writing-eval-metrics",
+    "/learn/prompt-engineering/ab-testing-prompts-in-production"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -52886,7 +52937,9 @@
    "internalLinks": [
     "/learn/evals-red-teaming/building-a-golden-dataset",
     "/learn/harness-design/permission-and-approval-systems",
-    "/learn/prompt-engineering/delimiters-and-formatting"
+    "/learn/prompt-engineering/defending-with-delimiters-and-roles",
+    "/learn/prompt-engineering/delimiters-and-formatting",
+    "/learn/prompt-engineering/injection-attack-and-defense-worked"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -66817,7 +66870,8 @@
     "/learn/genai-app-dev/anatomy-of-a-genai-feature",
     "/learn/genai-app-dev/client-side-inference",
     "/learn/genai-app-dev/handling-api-keys-and-secrets",
-    "/learn/genai-app-dev/scaffolding-a-genai-project"
+    "/learn/genai-app-dev/scaffolding-a-genai-project",
+    "/learn/prompt-engineering/pipeline-vs-single-call-tradeoffs"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -84587,6 +84641,90 @@
    }
   },
   {
+   "id": "les-2064",
+   "family": "lab",
+   "kind": "lab",
+   "title": "Lab: inspect a real tokenizer",
+   "slug": "llm-foundations/inspect-a-real-tokenizer-lab",
+   "route": "/learn/llm-foundations/inspect-a-real-tokenizer-lab",
+   "collection": "lessons",
+   "path": "src/content/lessons/llm-foundations/inspect-a-real-tokenizer-lab.md",
+   "track": "llm-foundations",
+   "module": "From text to tokens",
+   "status": "live",
+   "summary": "Load a pretrained tokenizer and measure what it actually does to whitespace, numbers, code, and non-English text — the edge cases that decide real token budgets.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 431,
+   "headings": [
+    "The short answer",
+    "What you need",
+    "The inspection routine",
+    "What to record",
+    "The checkpoint",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/llm-foundations/bpe-vs-wordpiece-vs-unigram",
+    "/learn/llm-foundations/build-bpe-from-scratch",
+    "/learn/llm-foundations/reading-a-real-model-config"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 3,
+    "numericClaims": 3,
+    "specFormat": true,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "build",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Load a pretrained tokenizer and measure what it actually does to whitespace, numbers, code, and non-English text — the edge cases that decide real token budgets.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/llm-foundations/the-embedding-lookup-table",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-0981",
    "family": "lesson",
    "kind": "concept",
@@ -86973,6 +87111,92 @@
    }
   },
   {
+   "id": "les-2065",
+   "family": "lab",
+   "kind": "lab",
+   "title": "Lab: read a model card like an engineer",
+   "slug": "llm-foundations/read-a-model-card-lab",
+   "route": "/learn/llm-foundations/read-a-model-card-lab",
+   "collection": "lessons",
+   "path": "src/content/lessons/llm-foundations/read-a-model-card-lab.md",
+   "track": "llm-foundations",
+   "module": "The transformer",
+   "status": "live",
+   "summary": "Practice reading a real model card for the fields that decide fitness — intended use, training data, evaluations, and limitations — and for what the card declines to say.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 467,
+   "headings": [
+    "The short answer",
+    "Why this matters",
+    "The exercise",
+    "What to deliver",
+    "The checkpoint",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/llm-foundations/base-instruct-chat-reasoning-families",
+    "/learn/llm-foundations/model-families-and-variants",
+    "/learn/llm-foundations/reading-a-real-model-config"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 3,
+    "numericClaims": 0,
+    "specFormat": true,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "build",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Practice reading a real model card for the fields that decide fitness — intended use, training data, evaluations, and limitations — and for what the card declines to say.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/llm-foundations/myths-about-how-llms-work",
+   "practiceType": "none",
+   "freshnessClass": "policy-sensitive",
+   "freshnessSignals": [
+    "policy/license mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-1009",
    "family": "lesson",
    "kind": "concept",
@@ -87114,7 +87338,7 @@
    "promisedOutcome": "Hand-computing a real GPT-2-sized parameter count from four config numbers, layer by layer.",
    "jobToBeDone": null,
    "prerequisite": null,
-   "nextAction": "/learn/llm-foundations/myths-about-how-llms-work",
+   "nextAction": "/learn/llm-foundations/read-a-model-card-lab",
    "practiceType": "inline-check",
    "freshnessClass": "release-sensitive",
    "freshnessSignals": [
@@ -91621,7 +91845,7 @@
    "promisedOutcome": "Traces digit-grouping and multi-character tokens to the exact mechanism behind letter-counting and multi-digit addition failures.",
    "jobToBeDone": null,
    "prerequisite": null,
-   "nextAction": "/learn/llm-foundations/the-embedding-lookup-table",
+   "nextAction": "/learn/llm-foundations/inspect-a-real-tokenizer-lab",
    "practiceType": "inline-check",
    "freshnessClass": "release-sensitive",
    "freshnessSignals": [
@@ -96002,7 +96226,7 @@
    "promisedOutcome": "Supervised learning uses target labels, unsupervised learning looks for structure without a target, and self-supervised learning creates a learning.",
    "jobToBeDone": null,
    "prerequisite": null,
-   "nextAction": "/learn/machine-learning/generalization-and-evaluation",
+   "nextAction": "/learn/machine-learning/predictive-ml-vs-generative-ai",
    "practiceType": "none",
    "freshnessClass": "periodic",
    "freshnessSignals": [],
@@ -104965,7 +105189,7 @@
    "scores": {
     "intentClarity": null,
     "correctnessSources": null,
-    "completeness": 0,
+    "completeness": 1,
     "prerequisiteFit": 2,
     "handsOn": null,
     "explanationQuality": null,
@@ -105050,7 +105274,7 @@
    "scores": {
     "intentClarity": null,
     "correctnessSources": null,
-    "completeness": 0,
+    "completeness": 1,
     "prerequisiteFit": 2,
     "handsOn": null,
     "explanationQuality": null,
@@ -105299,7 +105523,7 @@
    "scores": {
     "intentClarity": null,
     "correctnessSources": null,
-    "completeness": 0,
+    "completeness": 1,
     "prerequisiteFit": 2,
     "handsOn": null,
     "explanationQuality": null,
@@ -106359,6 +106583,95 @@
     "metadata": 2,
     "linking": 1,
     "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2066",
+   "family": "lesson",
+   "kind": "comparison",
+   "title": "Separate predictive-ML choices from generative-AI choices",
+   "slug": "machine-learning/predictive-ml-vs-generative-ai",
+   "route": "/learn/machine-learning/predictive-ml-vs-generative-ai",
+   "collection": "lessons",
+   "path": "src/content/lessons/machine-learning/predictive-ml-vs-generative-ai.md",
+   "track": "machine-learning",
+   "module": "Orientation and problem framing",
+   "status": "live",
+   "summary": "Predictive ML scores a defined outcome on your data; generative AI produces open-ended content — the two fail differently, are evaluated differently, and are owned differently.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 420,
+   "headings": [
+    "The short answer",
+    "Why this matters",
+    "The two choice frames",
+    "The practical test",
+    "Continue, go deeper, apply it"
+   ],
+   "internalLinks": [
+    "/learn/ai-foundations/applied-ai/302-choosing-rules-classical-ml-deep-learning-or-llm",
+    "/learn/machine-learning/assessments/ml-842-assignment-01-reproducible-baseline",
+    "/learn/machine-learning/classifiers-thresholds-and-calibration",
+    "/learn/machine-learning/drift-and-monitoring",
+    "/learn/machine-learning/ml-101-data-generating-processes",
+    "/learn/machine-learning/ml-104-data-splitting-by-dependency",
+    "/learn/machine-learning/ml-110-baselines-rules-and-human-performance"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 6,
+    "numericClaims": 6,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "comparison",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Predictive ML scores a defined outcome on your data; generative AI produces open-ended content — the two fail differently, are evaluated differently, and are owned differently.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/machine-learning/generalization-and-evaluation",
+   "practiceType": "none",
+   "freshnessClass": "pricing-sensitive",
+   "freshnessSignals": [
+    "pricing/cost mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
     "demand": null
@@ -134048,6 +134361,7 @@
    ],
    "internalLinks": [
     "/learn/evals-red-teaming/llm-as-judge",
+    "/learn/evals-red-teaming/offline-vs-online-evals",
     "/learn/prompt-engineering/prompt-evaluation-basics",
     "/learn/prompt-engineering/prompt-versioning-and-change-management"
    ],
@@ -134995,6 +135309,7 @@
     "Extend it"
    ],
    "internalLinks": [
+    "/learn/evals-red-teaming/building-a-golden-dataset",
     "/learn/prompt-engineering/prompt-portability-across-models-strategy",
     "/learn/prompt-engineering/prompt-versioning-like-code",
     "/learn/prompt-engineering/regression-tests-for-prompts",
@@ -135590,6 +135905,7 @@
    ],
    "internalLinks": [
     "/learn/ai-foundations/tokens-context-cost",
+    "/learn/context-engineering/cost-latency-quality-tradeoff-curve",
     "/learn/prompt-engineering/chain-of-thought-prompting",
     "/learn/prompt-engineering/defending-with-delimiters-and-roles",
     "/learn/prompt-engineering/few-shot-prompting",
@@ -135944,6 +136260,7 @@
     "Tradeoffs, precisely"
    ],
    "internalLinks": [
+    "/learn/evals-red-teaming/prompt-injection-basics",
     "/learn/prompt-engineering/cost-and-token-budget-for-prompts",
     "/learn/prompt-engineering/delimiters-and-formatting",
     "/learn/prompt-engineering/injection-attack-and-defense-worked",
@@ -136210,6 +136527,7 @@
     "/learn/prompt-engineering/label-bias-and-majority-label",
     "/learn/prompt-engineering/three-shot-classifier-worked",
     "/learn/prompt-engineering/zero-shot-when-its-enough",
+    "/learn/rag/ingestion-chunking-and-retrieval",
     "/learn/rag/what-is-rag-and-when-to-use-it"
    ],
    "externalLinks": [],
@@ -137520,7 +137838,8 @@
     "/learn/prompt-engineering/prefilling-responses",
     "/learn/prompt-engineering/prompt-evaluation-basics",
     "/learn/prompt-engineering/structured-output-contracts",
-    "/learn/prompt-engineering/validation-and-repair-loop"
+    "/learn/prompt-engineering/validation-and-repair-loop",
+    "/learn/structured-outputs/incremental-json-repair"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -137961,6 +138280,7 @@
     "Takeaways"
    ],
    "internalLinks": [
+    "/learn/evals-red-teaming/prompt-injection-basics",
     "/learn/prompt-engineering/defending-with-delimiters-and-roles",
     "/learn/prompt-engineering/delimiters-and-formatting",
     "/learn/prompt-engineering/prompt-injection-basics",
@@ -138122,7 +138442,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 393,
+   "wordCount": 394,
    "headings": [
     "The short answer",
     "The anatomy",
@@ -138134,7 +138454,9 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/context-engineering/context-engineering-vs-prompting"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -138171,8 +138493,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -138183,7 +138505,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -138222,7 +138544,9 @@
     "/learn/prompt-engineering/prompt-portability-across-models",
     "/learn/prompt-engineering/prompt-templates-and-variables",
     "/learn/prompt-engineering/structured-output-contracts",
-    "/learn/prompt-engineering/validation-and-repair-loop"
+    "/learn/prompt-engineering/validation-and-repair-loop",
+    "/learn/structured-outputs/field-descriptions-as-prompts",
+    "/learn/tools-function-calling/descriptions-are-prompts"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -138738,6 +139062,7 @@
     "Where this leaves you"
    ],
    "internalLinks": [
+    "/learn/context-engineering/conversation-memory-and-state",
     "/learn/llm-foundations/context-window-mechanics",
     "/learn/prompt-engineering/instruction-position-and-recency",
     "/learn/prompt-engineering/multi-turn-prompt-design",
@@ -138856,7 +139181,7 @@
    "promisedOutcome": "Changing an input from text to image, audio, or another language changes what the system can observe, misunderstand, and omit.",
    "jobToBeDone": null,
    "prerequisite": null,
-   "nextAction": "/learn/prompt-engineering/prompt-library-capstone-project",
+   "nextAction": "/learn/prompt-engineering/provider-differences-lab",
    "practiceType": "none",
    "freshnessClass": "periodic",
    "freshnessSignals": [],
@@ -139330,6 +139655,7 @@
     "The tradeoff, precisely"
    ],
    "internalLinks": [
+    "/learn/context-engineering/context-handoff-between-agents",
     "/learn/prompt-engineering/classify-then-extract-pipeline",
     "/learn/prompt-engineering/over-decomposition",
     "/learn/prompt-engineering/structured-output-contracts",
@@ -139605,6 +139931,7 @@
    ],
    "internalLinks": [
     "/learn/ai-foundations/tokens-context-cost",
+    "/learn/genai-app-dev/where-the-llm-boundary-lives",
     "/learn/prompt-engineering/classify-then-extract-pipeline",
     "/learn/prompt-engineering/monolith-to-pipeline-worked",
     "/learn/prompt-engineering/over-decomposition",
@@ -140810,7 +141137,8 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
-    "/learn/ai-literacy/prompt-patterns-for-everyday-tasks"
+    "/learn/ai-literacy/prompt-patterns-for-everyday-tasks",
+    "/learn/prompt-engineering/zero-shot-cot-vs-few-shot-cot"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -141550,6 +141878,93 @@
     "metadata": 2,
     "linking": 2,
     "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2067",
+   "family": "lab",
+   "kind": "lab",
+   "title": "Lab: measure how the same prompt behaves across providers",
+   "slug": "prompt-engineering/provider-differences-lab",
+   "route": "/learn/prompt-engineering/provider-differences-lab",
+   "collection": "lessons",
+   "path": "src/content/lessons/prompt-engineering/provider-differences-lab.md",
+   "track": "prompt-engineering",
+   "module": "Evaluation and reuse",
+   "status": "live",
+   "summary": "Run one fixed prompt suite across two or more providers, pin the exact model strings, and record the behavioral differences that matter for your app — not the benchmark leaderboard.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 553,
+   "headings": [
+    "The short answer",
+    "Why this matters",
+    "Set up honestly",
+    "The test suite",
+    "Score and record",
+    "What to do with divergences",
+    "The checkpoint",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/genai-app-dev/sdk-vs-raw-api",
+    "/learn/prompt-engineering/ab-testing-prompts-in-production",
+    "/learn/prompt-engineering/porting-a-prompt-worked",
+    "/learn/structured-outputs/cross-provider-structured-output-differences"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 12,
+    "numericClaims": 1,
+    "specFormat": true,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "build",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Run one fixed prompt suite across two or more providers, pin the exact model strings, and record the behavioral differences that matter for your app — not the benchmark leaderboard.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/prompt-engineering/prompt-library-capstone-project",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
     "demand": null
@@ -142786,7 +143201,8 @@
     "/learn/context-engineering/context-engineering-vs-prompting",
     "/learn/prompt-engineering/chain-of-thought-prompting",
     "/learn/prompt-engineering/few-shot-prompting",
-    "/learn/prompt-engineering/system-vs-user-prompts"
+    "/learn/prompt-engineering/system-vs-user-prompts",
+    "/learn/prompt-engineering/what-prompting-is"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -145129,6 +145545,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/prompt-engineering/role-prompting",
     "/learn/prompt-engineering/what-role-prompting-changes"
    ],
    "externalLinks": [],
@@ -145836,7 +146253,8 @@
     "/learn/prompt-engineering/json-schema-in-prompts",
     "/learn/prompt-engineering/sectioning-a-prompt-into-blocks",
     "/learn/prompt-engineering/structured-output",
-    "/learn/prompt-engineering/xml-tags-vs-markdown"
+    "/learn/prompt-engineering/xml-tags-vs-markdown",
+    "/learn/tools-function-calling/designing-a-tool-schema"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -146006,6 +146424,7 @@
     "/learn/prompt-engineering/few-shot-format-leakage",
     "/learn/prompt-engineering/few-shot-prompting",
     "/learn/prompt-engineering/label-bias-and-majority-label",
+    "/learn/prompt-engineering/prompt-patterns",
     "/learn/prompt-engineering/self-consistency-sampling-explained",
     "/learn/prompt-engineering/what-chain-of-thought-actually-does",
     "/learn/prompt-engineering/zero-shot-vs-few-shot",
@@ -153395,7 +153814,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 404,
+   "wordCount": 405,
    "headings": [
     "The short answer",
     "The pipeline",
@@ -153407,7 +153826,9 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/prompt-engineering/dynamic-few-shot-retrieval"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -153442,8 +153863,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -153454,7 +153875,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -157917,7 +158338,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 841,
+   "wordCount": 924,
    "headings": [
     "What it is",
     "The mental model",
@@ -157925,6 +158346,7 @@
     "A concrete example (shown)",
     "Where it shows up",
     "Watch out for",
+    "Verify against the official docs",
     "Where next"
    ],
    "internalLinks": [
@@ -157935,7 +158357,12 @@
     "/learn/structured-outputs/tool-function-schemas",
     "/learn/structured-outputs/writing-portable-schema-code"
    ],
-   "externalLinks": [],
+   "externalLinks": [
+    "https://ai.google.dev/gemini-api/docs/structured-output",
+    "https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview",
+    "https://github.com/ggml-org/llama.cpp/blob/master/grammars/README.md",
+    "https://platform.openai.com/docs/guides/structured-outputs"
+   ],
    "structuredData": [
     "LearningResource",
     "WebPage",
@@ -157951,7 +158378,7 @@
     "errorCase": false,
     "sourcesSection": false,
     "runnableSignals": false,
-    "listItems": 7,
+    "listItems": 11,
     "numericClaims": 0,
     "specFormat": false,
     "mathDense": false,
@@ -157966,7 +158393,7 @@
    "practiceType": "none",
    "freshnessClass": "release-sensitive",
    "freshnessSignals": [
-    "vendor/tool mentions: Anthropic, OpenAI, llama.cpp, vLLM, Outlines"
+    "vendor/tool mentions: Anthropic, OpenAI, llama.cpp, vLLM, Outlines, Gemini"
    ],
    "owner": null,
    "reviewer": null,
@@ -157977,7 +158404,7 @@
    "analytics": null,
    "scores": {
     "intentClarity": 2,
-    "correctnessSources": null,
+    "correctnessSources": 1,
     "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
@@ -159775,6 +160202,7 @@
     "Where this shows up"
    ],
    "internalLinks": [
+    "/learn/prompt-engineering/json-schema-in-prompts",
     "/learn/structured-outputs/constrained-decoding-under-the-hood",
     "/learn/structured-outputs/enums-and-constrained-value-fields",
     "/learn/structured-outputs/json-schema-essentials-for-outputs",
@@ -160909,6 +161337,7 @@
     "Deciding what to do with a repaired partial"
    ],
    "internalLinks": [
+    "/learn/prompt-engineering/fixing-malformed-json-output",
     "/learn/structured-outputs/streaming-structured-output",
     "/learn/structured-outputs/structured-output-failure-modes",
     "/learn/structured-outputs/validation-and-auto-repair"
@@ -160940,7 +161369,7 @@
    "promisedOutcome": "Salvage malformed or cut-off JSON on the fly instead of throwing away the whole response and retrying.",
    "jobToBeDone": null,
    "prerequisite": null,
-   "nextAction": "/learn/structured-outputs/schema-versioning-and-migration",
+   "nextAction": "/learn/structured-outputs/refusals-and-partial-outputs",
    "practiceType": "none",
    "freshnessClass": "periodic",
    "freshnessSignals": [],
@@ -162346,6 +162775,94 @@
    }
   },
   {
+   "id": "les-2068",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Use OpenAPI schemas for tool and output validation",
+   "slug": "structured-outputs/openapi-schemas-in-practice",
+   "route": "/learn/structured-outputs/openapi-schemas-in-practice",
+   "collection": "lessons",
+   "path": "src/content/lessons/structured-outputs/openapi-schemas-in-practice.md",
+   "track": "structured-outputs",
+   "module": "Harder schema shapes",
+   "status": "live",
+   "summary": "Practice reading and writing the OpenAPI schema dialect — the subset some providers and most tool ecosystems actually speak — and where it differs from the JSON Schema you already know.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 395,
+   "headings": [
+    "The short answer",
+    "Why this matters",
+    "The dialect in practice",
+    "The practice",
+    "Where this pays off",
+    "The checkpoint",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/structured-outputs/cross-provider-structured-output-differences",
+    "/learn/structured-outputs/discriminated-unions-in-schemas",
+    "/learn/structured-outputs/json-schema-essentials-for-outputs",
+    "/learn/structured-outputs/schema-versioning-and-migration",
+    "/learn/structured-outputs/tool-function-schemas",
+    "/learn/structured-outputs/writing-portable-schema-code"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 14,
+    "numericClaims": 0,
+    "specFormat": true,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Practice reading and writing the OpenAPI schema dialect — the subset some providers and most tool ecosystems actually speak — and where it differs from the JSON Schema you already know.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/structured-outputs/schema-versioning-and-migration",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-1880",
    "family": "lesson",
    "kind": "concept",
@@ -163369,6 +163886,90 @@
     "intentClarity": 2,
     "correctnessSources": null,
     "completeness": 2,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2069",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Handle refusals and partial structured outputs",
+   "slug": "structured-outputs/refusals-and-partial-outputs",
+   "route": "/learn/structured-outputs/refusals-and-partial-outputs",
+   "collection": "lessons",
+   "path": "src/content/lessons/structured-outputs/refusals-and-partial-outputs.md",
+   "track": "structured-outputs",
+   "module": "Harder schema shapes",
+   "status": "live",
+   "summary": "Plan for the two structured-output outcomes that aren't valid JSON — a refusal-shaped response and a truncated stream — with detection and recovery paths for each.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 488,
+   "headings": [
+    "The short answer",
+    "Why this matters",
+    "The three-outcome contract",
+    "Recovery per shape",
+    "The lab version",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/structured-outputs/evaluating-structured-output-quality",
+    "/learn/structured-outputs/failure-modes-taxonomy",
+    "/learn/structured-outputs/incremental-json-repair"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 9,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Plan for the two structured-output outcomes that aren't valid JSON — a refusal-shaped response and a truncated stream — with detection and recovery paths for each.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/structured-outputs/openapi-schemas-in-practice",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -169716,6 +170317,7 @@
     "When this technique reaches its limit"
    ],
    "internalLinks": [
+    "/learn/prompt-engineering/json-schema-in-prompts",
     "/learn/prompt-engineering/what-prompt-engineering-is",
     "/learn/tools-function-calling/approval-gates-for-sensitive-tools",
     "/learn/tools-function-calling/common-tool-calling-failure-modes",
@@ -169887,6 +170489,7 @@
     "One tool, one job"
    ],
    "internalLinks": [
+    "/learn/prompt-engineering/xml-markdown-json-formatting-tradeoffs",
     "/learn/tools-function-calling/what-is-tool-calling",
     "/learn/tools-function-calling/writing-tool-descriptions-models-follow"
    ],
@@ -169938,7 +170541,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -198263,16 +198866,17 @@
    "features": {
     "group": "Foundations",
     "declaredMeta": "131 lessons",
-    "nodeCount": 131,
-    "liveNodes": 131,
+    "nodeCount": 133,
+    "liveNodes": 133,
     "comingNodes": 0,
     "headingOnlyNodes": 0,
-    "fileCount": 131,
+    "fileCount": 133,
     "kinds": {
      "concept": 113,
      "quiz": 7,
      "comparison": 10,
-     "capstone": 1
+     "capstone": 1,
+     "lab": 2
     },
     "modules": 6,
     "quickGuide": false
@@ -198417,15 +199021,15 @@
    "features": {
     "group": "Classical ML",
     "declaredMeta": "208 lessons",
-    "nodeCount": 208,
-    "liveNodes": 208,
+    "nodeCount": 209,
+    "liveNodes": 209,
     "comingNodes": 0,
     "headingOnlyNodes": 0,
-    "fileCount": 208,
+    "fileCount": 209,
     "kinds": {
      "concept": 185,
      "capstone": 3,
-     "comparison": 1,
+     "comparison": 2,
      "lab": 19
     },
     "modules": 12,
@@ -198572,17 +199176,18 @@
    "features": {
     "group": "Working with Models",
     "declaredMeta": "142 lessons",
-    "nodeCount": 142,
-    "liveNodes": 142,
+    "nodeCount": 143,
+    "liveNodes": 143,
     "comingNodes": 0,
     "headingOnlyNodes": 0,
-    "fileCount": 142,
+    "fileCount": 143,
     "kinds": {
      "concept": 117,
      "comparison": 8,
      "cheatsheet": 5,
      "quiz": 8,
      "capstone": 2,
+     "lab": 1,
      "common-mistakes": 1,
      "worked-example": 1
     },
@@ -198733,13 +199338,13 @@
    "features": {
     "group": "Working with Models",
     "declaredMeta": "122 lessons",
-    "nodeCount": 122,
-    "liveNodes": 122,
+    "nodeCount": 124,
+    "liveNodes": 124,
     "comingNodes": 0,
     "headingOnlyNodes": 0,
-    "fileCount": 122,
+    "fileCount": 124,
     "kinds": {
-     "concept": 101,
+     "concept": 103,
      "capstone": 1,
      "quiz": 7,
      "cheatsheet": 5,
@@ -204311,7 +204916,7 @@
    "jaccard": 0.4,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -207294,7 +207899,7 @@
    "jaccard": 0.38,
    "containment": 0.75,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -207484,7 +208089,7 @@
    "jaccard": 0.5,
    "containment": 0.67,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -207636,7 +208241,7 @@
    "jaccard": 0.5,
    "containment": 0.67,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -207902,7 +208507,7 @@
    "jaccard": 0.5,
    "containment": 0.67,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -209983,6 +210588,15 @@
    ]
   },
   {
+   "route": "/learn/llm-foundations/read-a-model-card-lab",
+   "slug": "llm-foundations/read-a-model-card-lab",
+   "title": "Lab: read a model card like an engineer",
+   "family": "lab",
+   "flags": [
+    "policy-sensitive page with no updated/review date"
+   ]
+  },
+  {
    "route": "/learn/llm-foundations/reading-a-real-model-config",
    "slug": "llm-foundations/reading-a-real-model-config",
    "title": "Reading a Real Model's Config and Counting Its Parameters",
@@ -210106,6 +210720,16 @@
    "family": "lesson",
    "flags": [
     "14 numeric claims with no sources section or external link"
+   ]
+  },
+  {
+   "route": "/learn/machine-learning/predictive-ml-vs-generative-ai",
+   "slug": "machine-learning/predictive-ml-vs-generative-ai",
+   "title": "Separate predictive-ML choices from generative-AI choices",
+   "family": "lesson",
+   "flags": [
+    "pricing-sensitive page with no updated/review date",
+    "6 numeric claims with no sources section or external link"
    ]
   },
   {
