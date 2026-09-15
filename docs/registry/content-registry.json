@@ -1,16 +1,16 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T13:59:46.452Z",
+  "generatedAt": "2026-09-15T14:06:35.447Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2442,
+  "itemCount": 2448,
   "counts": {
    "byFamily": {
-    "lesson": 2064,
+    "lesson": 2069,
     "project": 31,
     "quiz": 89,
     "reference": 59,
-    "lab": 66,
+    "lab": 67,
     "interview": 7,
     "scenario": 6,
     "blog": 10,
@@ -22,16 +22,16 @@
     "glossary": 1
    },
    "byStatus": {
-    "live": 2442
+    "live": 2448
    },
    "byKind": {
-    "concept": 1765,
+    "concept": 1770,
     "comparison": 102,
     "worked-example": 29,
     "capstone": 31,
     "quiz": 83,
     "cheatsheet": 48,
-    "lab": 66,
+    "lab": 67,
     "common-mistakes": 24,
     "topic": 7,
     "scenario": 6,
@@ -75,7 +75,7 @@
     "machine-learning": 210,
     "maths-foundations": 194,
     "mcp": 59,
-    "production": 30,
+    "production": 36,
     "prompt-engineering": 144,
     "python-data-apis": 59,
     "rag": 66,
@@ -98,8 +98,8 @@
     "fde": 193
    },
    "byFreshness": {
-    "release-sensitive": 317,
-    "pricing-sensitive": 341,
+    "release-sensitive": 322,
+    "pricing-sensitive": 342,
     "periodic": 1344,
     "certification-sensitive": 99,
     "policy-sensitive": 78,
@@ -10483,7 +10483,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (238w vs ~770w)",
+   "dispositionReason": "thin vs family median (238w vs ~769w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -88150,7 +88150,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (277w vs ~770w)",
+   "dispositionReason": "thin vs family median (277w vs ~769w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -91868,7 +91868,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (269w vs ~770w)",
+   "dispositionReason": "thin vs family median (269w vs ~769w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -135376,6 +135376,93 @@
    }
   },
   {
+   "id": "les-2117",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "DeepEval, TruLens, and provider-native evals: the rest of the field",
+   "slug": "production/eval-frameworks-deepeval-trulens-provider-native",
+   "route": "/learn/production/eval-frameworks-deepeval-trulens-provider-native",
+   "collection": "lessons",
+   "path": "src/content/lessons/production/eval-frameworks-deepeval-trulens-provider-native.md",
+   "track": "production",
+   "module": null,
+   "status": "live",
+   "summary": "DeepEval's pytest-shaped metrics, TruLens's feedback-function tracing, and the eval tools providers ship themselves — the remaining eval landscape after Promptfoo, Braintrust, and Ragas.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 407,
+   "headings": [
+    "The short answer",
+    "The three shapes",
+    "Where they fit against the earlier landscape",
+    "The honest limits",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/evals-red-teaming/building-a-golden-dataset",
+    "/learn/evals-red-teaming/building-a-regression-suite",
+    "/learn/evals-red-teaming/eval-tooling-landscape",
+    "/learn/production/instrumenting-one-app-two-ways"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 6,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "DeepEval's pytest-shaped metrics, TruLens's feedback-function tracing, and the eval tools providers ship themselves — the remaining eval landscape after Promptfoo, Braintrust, and Ragas.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/production/instrumenting-one-app-two-ways",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: DeepEval, TruLens, Promptfoo, Braintrust, Ragas, OpenAI, Anthropic, LangChain, LlamaIndex, Phoenix"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-1533",
    "family": "lesson",
    "kind": "concept",
@@ -135452,6 +135539,94 @@
     "metadata": 2,
     "linking": 2,
     "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2118",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Helicone: observability at the gateway, not the SDK",
+   "slug": "production/helicone-gateway-observability",
+   "route": "/learn/production/helicone-gateway-observability",
+   "collection": "lessons",
+   "path": "src/content/lessons/production/helicone-gateway-observability.md",
+   "track": "production",
+   "module": null,
+   "status": "live",
+   "summary": "Helicone observes LLM traffic by proxying it — requests route through a gateway that logs, caches, rate-limits, and traces — a different architecture from SDK instrumentation with different tradeoffs.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 407,
+   "headings": [
+    "The short answer",
+    "The two observability architectures",
+    "What the gateway position buys",
+    "The honest tradeoffs",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/production/instrumenting-one-app-two-ways",
+    "/learn/production/langfuse-observability",
+    "/learn/production/llm-gateway-and-provider-abstraction",
+    "/learn/production/llm-observability-foundations",
+    "/learn/production/token-and-cost-tracking"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 11,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Helicone observes LLM traffic by proxying it — requests route through a gateway that logs, caches, rate-limits, and traces — a different architecture from SDK instrumentation with different tradeoffs.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/production/eval-frameworks-deepeval-trulens-provider-native",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Helicone, Langfuse, LangSmith, OpenAI, Phoenix"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
     "demand": null
@@ -135630,6 +135805,271 @@
    }
   },
   {
+   "id": "les-2119",
+   "family": "lab",
+   "kind": "lab",
+   "title": "Lab: instrument one app with two observability paths",
+   "slug": "production/instrumenting-one-app-two-ways",
+   "route": "/learn/production/instrumenting-one-app-two-ways",
+   "collection": "lessons",
+   "path": "src/content/lessons/production/instrumenting-one-app-two-ways.md",
+   "track": "production",
+   "module": null,
+   "status": "live",
+   "summary": "One small app instrumented through SDK tracing and a gateway proxy — the hands-on comparison that shows what each observability architecture sees, misses, and costs.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 379,
+   "headings": [
+    "The short answer",
+    "The app",
+    "Path 1: SDK instrumentation",
+    "Path 2: gateway proxy",
+    "The comparison that matters",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/production/helicone-gateway-observability",
+    "/learn/production/langfuse-observability",
+    "/learn/production/langsmith-phoenix-weave",
+    "/learn/production/llm-observability-foundations"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 3,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 4,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "build",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "One small app instrumented through SDK tracing and a gateway proxy — the hands-on comparison that shows what each observability architecture sees, misses, and costs.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/production/deployment-versioning-and-incidents",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Langfuse, Helicone, OpenAI, LangSmith, Phoenix, Weave"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2120",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Langfuse: the open-source observability platform",
+   "slug": "production/langfuse-observability",
+   "route": "/learn/production/langfuse-observability",
+   "collection": "lessons",
+   "path": "src/content/lessons/production/langfuse-observability.md",
+   "track": "production",
+   "module": null,
+   "status": "live",
+   "summary": "Langfuse is the self-hostable LLM observability platform — traces, sessions, prompt management, datasets, experiments, annotation, evaluators, and dashboards — with the full feature set open-sourced.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 399,
+   "headings": [
+    "The short answer",
+    "The feature map",
+    "What it adds over logging",
+    "The honest limits",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/evals-red-teaming/llm-judge-bias-and-calibration",
+    "/learn/production/helicone-gateway-observability",
+    "/learn/production/langsmith-phoenix-weave",
+    "/learn/production/llm-observability-foundations"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 8,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Langfuse is the self-hostable LLM observability platform — traces, sessions, prompt management, datasets, experiments, annotation, evaluators, and dashboards — with the full feature set open-sourced.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/production/langsmith-phoenix-weave",
+   "practiceType": "none",
+   "freshnessClass": "pricing-sensitive",
+   "freshnessSignals": [
+    "pricing/cost mention",
+    "policy/license mention",
+    "vendor/tool mentions: Langfuse, LangChain, LlamaIndex, OpenAI, Redis, LangSmith, Phoenix, Weave, Helicone"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2121",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "LangSmith, Arize Phoenix, Weave: three platforms, three bets",
+   "slug": "production/langsmith-phoenix-weave",
+   "route": "/learn/production/langsmith-phoenix-weave",
+   "collection": "lessons",
+   "path": "src/content/lessons/production/langsmith-phoenix-weave.md",
+   "track": "production",
+   "module": null,
+   "status": "live",
+   "summary": "LangSmith, Arize Phoenix, and Weights & Biases Weave cover the same observability vocabulary with different center-of-gravity — ecosystem integration, open-source OTel-native, and ML-platform lineage.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 413,
+   "headings": [
+    "The short answer",
+    "The three bets",
+    "Choosing between them — and the fourth option",
+    "The honest limits",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agent-frameworks/langgraph-durable-agents",
+    "/learn/production/instrumenting-one-app-two-ways",
+    "/learn/production/langfuse-observability",
+    "/learn/production/llm-observability-foundations",
+    "/learn/production/opentelemetry-genai-semantic-conventions"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 6,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "LangSmith, Arize Phoenix, and Weights & Biases Weave cover the same observability vocabulary with different center-of-gravity — ecosystem integration, open-source OTel-native, and ML-platform lineage.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/production/helicone-gateway-observability",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: LangSmith, Arize, Phoenix, Weave, LangChain, LangGraph, OpenTelemetry, Langfuse"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-1536",
    "family": "lesson",
    "kind": "concept",
@@ -135796,6 +136236,97 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2122",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "LLM observability: the vocabulary every platform shares",
+   "slug": "production/llm-observability-foundations",
+   "route": "/learn/production/llm-observability-foundations",
+   "collection": "lessons",
+   "path": "src/content/lessons/production/llm-observability-foundations.md",
+   "track": "production",
+   "module": null,
+   "status": "live",
+   "summary": "Traces, spans, observations, sessions, prompt versions, datasets, experiments, evaluators, and dashboards — the shared vocabulary of LLM observability platforms, plus the operating rules that keep traces safe.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 508,
+   "headings": [
+    "The short answer",
+    "The trace anatomy",
+    "Where prompts, datasets, and evals attach",
+    "The operating rules",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/evals-red-teaming/building-a-regression-suite",
+    "/learn/evals-red-teaming/datasets-rubrics-and-judges",
+    "/learn/evals-red-teaming/llm-judge-bias-and-calibration",
+    "/learn/production/data-retention-and-privacy-policy",
+    "/learn/production/langfuse-observability",
+    "/learn/production/opentelemetry-genai-semantic-conventions",
+    "/learn/production/pii-redaction-in-llm-logs",
+    "/learn/production/tracing-multi-step-ai-pipelines"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 9,
+    "numericClaims": 1,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Traces, spans, observations, sessions, prompt versions, datasets, experiments, evaluators, and dashboards — the shared vocabulary of LLM observability platforms, plus the operating rules that keep traces safe.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/production/langfuse-observability",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Langfuse, LangSmith, Phoenix, Weave, Helicone, Braintrust, OpenAI, Anthropic, LangChain, LlamaIndex"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 1,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
     "linking": 2,
     "freshnessHealth": 0,
     "originality": null,
@@ -136196,7 +136727,7 @@
    "promisedOutcome": "Production AI needs traces that connect user intent, inputs, retrieval, model calls, tool actions, outputs, errors, cost, and latency.",
    "jobToBeDone": null,
    "prerequisite": null,
-   "nextAction": "/learn/production/deployment-versioning-and-incidents",
+   "nextAction": "/learn/production/llm-observability-foundations",
    "practiceType": "inline-check",
    "freshnessClass": "periodic",
    "freshnessSignals": [],
@@ -204348,13 +204879,14 @@
    "features": {
     "group": "Production",
     "declaredMeta": "28 lessons",
-    "nodeCount": 28,
-    "liveNodes": 28,
+    "nodeCount": 34,
+    "liveNodes": 34,
     "comingNodes": 0,
     "headingOnlyNodes": 0,
-    "fileCount": 28,
+    "fileCount": 34,
     "kinds": {
-     "concept": 28
+     "concept": 33,
+     "lab": 1
     },
     "modules": 0,
     "quickGuide": true
@@ -215410,6 +215942,60 @@
    "family": "lesson",
    "flags": [
     "5 numeric claims with no sources section or external link"
+   ]
+  },
+  {
+   "route": "/learn/production/eval-frameworks-deepeval-trulens-provider-native",
+   "slug": "production/eval-frameworks-deepeval-trulens-provider-native",
+   "title": "DeepEval, TruLens, and provider-native evals: the rest of the field",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/production/helicone-gateway-observability",
+   "slug": "production/helicone-gateway-observability",
+   "title": "Helicone: observability at the gateway, not the SDK",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/production/instrumenting-one-app-two-ways",
+   "slug": "production/instrumenting-one-app-two-ways",
+   "title": "Lab: instrument one app with two observability paths",
+   "family": "lab",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/production/langfuse-observability",
+   "slug": "production/langfuse-observability",
+   "title": "Langfuse: the open-source observability platform",
+   "family": "lesson",
+   "flags": [
+    "pricing-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/production/langsmith-phoenix-weave",
+   "slug": "production/langsmith-phoenix-weave",
+   "title": "LangSmith, Arize Phoenix, Weave: three platforms, three bets",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/production/llm-observability-foundations",
+   "slug": "production/llm-observability-foundations",
+   "title": "LLM observability: the vocabulary every platform shares",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
    ]
   },
   {

@@ -10480,6 +10480,42 @@ const unsortedTracks: Track[] = [
         "status": "live"
       },
       {
+        "title": "LLM observability: the vocabulary every platform shares",
+        "slug": "llm-observability-foundations",
+        "status": "live",
+        "prereq": ["opentelemetry-genai-semantic-conventions"]
+      },
+      {
+        "title": "Langfuse: the open-source observability platform",
+        "slug": "langfuse-observability",
+        "status": "live",
+        "prereq": ["llm-observability-foundations"]
+      },
+      {
+        "title": "LangSmith, Arize Phoenix, Weave: three platforms, three bets",
+        "slug": "langsmith-phoenix-weave",
+        "status": "live",
+        "prereq": ["llm-observability-foundations"]
+      },
+      {
+        "title": "Helicone: observability at the gateway, not the SDK",
+        "slug": "helicone-gateway-observability",
+        "status": "live",
+        "prereq": ["llm-observability-foundations"]
+      },
+      {
+        "title": "DeepEval, TruLens, and provider-native evals: the rest of the field",
+        "slug": "eval-frameworks-deepeval-trulens-provider-native",
+        "status": "live",
+        "prereq": ["llm-observability-foundations"]
+      },
+      {
+        "title": "Lab: instrument one app with two observability paths",
+        "slug": "instrumenting-one-app-two-ways",
+        "status": "live",
+        "prereq": ["helicone-gateway-observability"]
+      },
+      {
         "title": "Ship AI systems with versioning, rollback, and incident paths",
         "slug": "deployment-versioning-and-incidents",
         "status": "live"

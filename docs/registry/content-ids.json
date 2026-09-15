@@ -1,7 +1,7 @@
 {
  "version": 1,
  "next": {
-  "les": 2116,
+  "les": 2122,
   "que": 7,
   "sce": 6,
   "blo": 10,
@@ -9716,6 +9716,30 @@
   "lessons/rag/search-engines-with-vectors.md": {
    "id": "les-2116",
    "fp": "8adc6052dbcfb54a4759192c84daf76adf9718c8"
+  },
+  "lessons/production/eval-frameworks-deepeval-trulens-provider-native.md": {
+   "id": "les-2117",
+   "fp": "9605d822c9a2bc9f518a5b910141c04dcda49294"
+  },
+  "lessons/production/helicone-gateway-observability.md": {
+   "id": "les-2118",
+   "fp": "6fab92ed8bd21bb9629e2d55851fdb4bcf83bbf1"
+  },
+  "lessons/production/instrumenting-one-app-two-ways.md": {
+   "id": "les-2119",
+   "fp": "851b0d81b44d05a16e9e318fe15a838b71ecd2e6"
+  },
+  "lessons/production/langfuse-observability.md": {
+   "id": "les-2120",
+   "fp": "2e50df073a221256dbba4e9cb24cc6b447bc52aa"
+  },
+  "lessons/production/langsmith-phoenix-weave.md": {
+   "id": "les-2121",
+   "fp": "0ec5fca1c676041fa983b46dc5767ba813b462ca"
+  },
+  "lessons/production/llm-observability-foundations.md": {
+   "id": "les-2122",
+   "fp": "19fe0256f5f7f38e4aad3d0c0afd69eb3ccd0e4c"
   }
  },
  "retired": {

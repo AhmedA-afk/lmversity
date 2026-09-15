@@ -1033,19 +1033,19 @@ consolidation into a parent track, or a clearer curated-path role.
 
 ### Observability, prompt management, and evaluation
 
-- [ ] Langfuse traces, observations, sessions, prompt versions, datasets, experiments,
+- [x] Langfuse traces, observations, sessions, prompt versions, datasets, experiments,
       human annotation, code evaluators, model judges, dashboards, and self-hosting.
-- [ ] LangSmith tracing, evaluation, prompt workflows, and LangGraph integration.
-- [ ] Arize Phoenix tracing and evaluation.
-- [ ] Weights & Biases Weave.
-- [ ] Helicone gateway and observability.
-- [ ] Braintrust evaluation and observability.
-- [ ] OpenLLMetry and OpenTelemetry GenAI semantic conventions.
-- [ ] Promptfoo for prompt and red-team regression testing.
-- [ ] DeepEval, Ragas, and TruLens after technical review.
-- [ ] OpenAI Evals and provider-native evaluation tools where currently supported.
-- [ ] Build one shared sample app instrumented with at least two observability paths.
-- [ ] Teach redaction, sampling, retention, trace structure, environment separation,
+- [x] LangSmith tracing, evaluation, prompt workflows, and LangGraph integration.
+- [x] Arize Phoenix tracing and evaluation.
+- [x] Weights & Biases Weave.
+- [x] Helicone gateway and observability.
+- [x] Braintrust evaluation and observability.
+- [x] OpenLLMetry and OpenTelemetry GenAI semantic conventions.
+- [x] Promptfoo for prompt and red-team regression testing.
+- [x] DeepEval, Ragas, and TruLens after technical review.
+- [x] OpenAI Evals and provider-native evaluation tools where currently supported.
+- [x] Build one shared sample app instrumented with at least two observability paths.
+- [x] Teach redaction, sampling, retention, trace structure, environment separation,
       dataset curation, evaluator calibration, and feedback-to-regression loops.
 
 ### Security, guardrails, and governance
@@ -2814,6 +2814,31 @@ validation, deployment status, measured result when available, blockers, and nex
 - Next batch: observability/prompt-management/eval tooling (12 rows) —
   Langfuse, LangSmith, Phoenix, Weave, Helicone, Braintrust, OTel,
   Promptfoo, eval libs, shared instrumented app.
+
+### 2026-09-15 — Observability & eval tooling section complete (all 12 rows)
+
+- Commit: pending. 6 lessons added to the `production` track:
+  `llm-observability-foundations` (shared vocabulary — traces/spans/
+  sessions/prompt-versions/datasets/experiments/evaluators/dashboards —
+  plus the operating rules: redaction, sampling, retention, env
+  separation, judge calibration, feedback-to-regression loops, and an
+  OpenLLMetry auto-instrumentation paragraph), `langfuse-observability`
+  (self-hostable, MIT core, all named features), `langsmith-phoenix-weave`
+  (three platforms by ecosystem bet), `helicone-gateway-observability`
+  (gateway-vs-SDK architecture), `eval-frameworks-deepeval-trulens-
+  provider-native` (pytest-shaped DeepEval, feedback-on-traces TruLens,
+  provider-native evals), and `instrumenting-one-app-two-ways` (the
+  shared-app row — one pipeline traced via SDK and proxied via gateway,
+  with the what-each-can't-see comparison).
+- Checklist: all 12 observability rows ticked. Braintrust, Promptfoo, and
+  Ragas coverage is the existing `eval-tooling-landscape` lesson; OTel
+  GenAI conventions was already covered — both verified, not re-authored.
+- Sources: 8 new verified records (Langfuse, LangSmith, Phoenix, Weave,
+  Helicone, DeepEval, TruLens, OpenLLMetry repo).
+- Validation: `check:content` clean (2,122); build 2,459 pages;
+  `check:links` 0 dead (5,297 routes); registry 2,448 items.
+- Next batch: security/guardrails/governance section (OWASP LLM/agentic,
+  NIST AI RMF, MITRE ATLAS, …).
 
 ### 2026-09-14 — Master ecosystem backlog created
 
