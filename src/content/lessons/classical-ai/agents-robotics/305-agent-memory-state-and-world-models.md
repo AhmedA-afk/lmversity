@@ -67,3 +67,4 @@ Implement conflict resolution for door-status reports and show time-travel repla
 - Is an effect checked independently after action?
 - Can another engineer replay the trace and understand the safe fallback?
 
+**Modern counterpart:** [Design agent state, memory, and recovery explicitly](/learn/agentic-ai/state-memory-and-recovery)

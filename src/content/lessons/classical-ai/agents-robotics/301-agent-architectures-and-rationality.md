@@ -67,3 +67,4 @@ Build three policies for one grid world, hand-trace five cycles, and justify whi
 - Is an effect checked independently after action?
 - Can another engineer replay the trace and understand the safe fallback?
 
+**Modern counterparts:** [The Agent Loop: Sense, Think, Act](/learn/agentic-ai/the-agent-loop) · [What Makes Something an Agent](/learn/agentic-ai/what-is-an-agent)

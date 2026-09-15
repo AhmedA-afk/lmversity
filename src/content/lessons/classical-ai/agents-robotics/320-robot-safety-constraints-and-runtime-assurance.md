@@ -67,3 +67,4 @@ Define five invariants, simulate two violations, and prove through logs that the
 - Is an effect checked independently after action?
 - Can another engineer replay the trace and understand the safe fallback?
 
+**Modern counterpart:** [Setting the Autonomy Dial](/learn/agentic-ai/autonomy-vs-control)

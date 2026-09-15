@@ -67,3 +67,4 @@ Create a partial-order plan, inject an elevator failure, and show repair versus 
 - Is an effect checked independently after action?
 - Can another engineer replay the trace and understand the safe fallback?
 
+**Modern counterpart:** [Plan-and-Execute vs. ReAct: Hierarchical Task Decomposition](/learn/agentic-ai/hierarchical-task-decomposition)

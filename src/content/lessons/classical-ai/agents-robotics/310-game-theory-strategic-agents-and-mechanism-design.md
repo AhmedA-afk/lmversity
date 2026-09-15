@@ -67,3 +67,4 @@ Construct a two-player payoff table, find a stable outcome, then redesign the ru
 - Is an effect checked independently after action?
 - Can another engineer replay the trace and understand the safe fallback?
 
+**Modern counterpart:** [Agent-to-Agent Protocols: How Agents Will Talk to Each Other](/learn/agentic-ai/agent-to-agent-protocols)

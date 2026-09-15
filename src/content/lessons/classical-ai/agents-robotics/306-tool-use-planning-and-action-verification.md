@@ -67,3 +67,4 @@ Build a three-tool workflow with a partial failure and demonstrate idempotent re
 - Is an effect checked independently after action?
 - Can another engineer replay the trace and understand the safe fallback?
 
+**Modern counterpart:** [Giving Agents Tools](/learn/agentic-ai/tool-use-basics)

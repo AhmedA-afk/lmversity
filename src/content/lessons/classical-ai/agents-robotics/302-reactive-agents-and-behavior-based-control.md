@@ -67,3 +67,4 @@ Implement a simulated controller and report traces for normal, blocked, low-batt
 - Is an effect checked independently after action?
 - Can another engineer replay the trace and understand the safe fallback?
 
+**Modern counterpart:** [ReAct: Interleaving Reasoning and Acting](/learn/agentic-ai/react-pattern)

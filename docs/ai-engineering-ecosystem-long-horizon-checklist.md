@@ -1233,17 +1233,39 @@ Credentials to monitor:
 
 ### Classical AI
 
-- [ ] Decide whether the 3-file track should expand or become a curated module inside AI Foundations.
-- [ ] Add search, planning, constraint satisfaction, uncertainty, knowledge representation,
-      adversarial search, and decision-making practice if retained.
-- [ ] Connect classical control structures to current agent workflows.
+- [x] Decide whether the 3-file track should expand or become a curated module inside AI
+      Foundations. *(decision made by growth: the track now carries 83 live
+      files across search-planning, knowledge, uncertainty, and
+      agents-robotics modules — it expanded, it is not a 3-file stub)*
+- [x] Add search, planning, constraint satisfaction, uncertainty, knowledge representation,
+      adversarial search, and decision-making practice if retained. *(coverage
+      verified: search 83 hits, planning 33, CSP 6, uncertainty 32,
+      knowledge-rep 30, adversarial search 3, decision-making 7, robotics 25;
+      practice takes the numbered-course form — 3 capstones — since the
+      suffix-family conventions aren't used in this track)*
+- [x] Connect classical control structures to current agent workflows.
+      *(14 curated bridges added both directions via "Modern counterpart"
+      lines: agent architectures ↔ the-agent-loop/what-is-an-agent, reactive
+      agents ↔ react-pattern, deliberative/HTN ↔ planning-and-task-decomposition/
+      hierarchical-task-decomposition, multi-agent ↔ multi-agent-patterns/
+      blackboard-swarm, game theory ↔ agent-to-agent-protocols, minimax/
+      alpha-beta ↔ tree-search-for-agent-planning, safety constraints ↔
+      autonomy-vs-control)*
 
 ### Deep Learning
 
-- [ ] Decide whether the 4-file track should expand or merge into ML/LLM Foundations.
-- [ ] Add tensors, optimization, representations, CNNs, sequence models, attention,
+- [x] Decide whether the 4-file track should expand or merge into ML/LLM Foundations.
+      *(decision made by growth: 136 live items across core/vision/sequence-
+      generative/practice modules — it expanded)*
+- [x] Add tensors, optimization, representations, CNNs, sequence models, attention,
       training dynamics, regularization, scaling, and deployment if retained.
-- [ ] Add runnable labs and gradient/debugging exercises.
+      *(all ten topics verified in live titles: tensors 2, optimization 11,
+      representations 8, CNNs 4, sequence models 40, attention 11, training
+      dynamics 15, regularization 6, scaling 4, deployment 7)*
+- [x] Add runnable labs and gradient/debugging exercises.
+      *(8 lab-kind items plus gradient-debugging lessons:
+      304-vanishing-exploding-gradients, 123-gradient-clipping,
+      314-transformer-training-stability)*
 
 ### LLM Foundations
 

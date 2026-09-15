@@ -67,3 +67,4 @@ Build a planner that preserves one commitment, replans another, and escalates a 
 - Is an effect checked independently after action?
 - Can another engineer replay the trace and understand the safe fallback?
 
+**Modern counterpart:** [Planning Before Acting](/learn/agentic-ai/planning-and-task-decomposition)
