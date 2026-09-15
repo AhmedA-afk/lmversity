@@ -2482,7 +2482,7 @@ validation, deployment status, measured result when available, blockers, and nex
   prompt strings (syntax break); tags moved to metadata.
 - Validation: check-content clean (2,229 lessons), 2,716 pages built,
   0 dead internal links across 5,812 routes, git diff --check clean.
-- Commit: pending.
+- Commit: `40258c6`
 - Next: Phase 0 editorial-review rows, Phase 2 advanced banks
   (maths derivations, ML diagnosis, RAG eval, agent traces…), Phase 5
   project standards remain open.
