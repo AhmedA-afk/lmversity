@@ -1,12 +1,12 @@
 # Content registry — audit views
 
-Generated 2026-09-15T13:48:39.594Z by `scripts/build-content-registry.mjs`.
-2424 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T13:52:01.244Z by `scripts/build-content-registry.mjs`.
+2430 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
 
-- lesson: 2046
+- lesson: 2052
 - quiz: 89
 - lab: 66
 - reference: 59
@@ -23,11 +23,11 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By status
 
-- live: 2424
+- live: 2430
 
 ## By search intent (heuristic)
 
-- concept: 1877
+- concept: 1883
 - comparison: 107
 - build: 97
 - practice: 89
@@ -47,7 +47,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By primary audience (heuristic)
 
-- ai-engineer: 1648
+- ai-engineer: 1654
 - beginner-engineer: 439
 - forward-deployed-engineer: 194
 - general: 125
@@ -91,7 +91,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 | fine-tuning | 26 | 21 | 0 | 0 | 5 | 0 | 0 | 0 | 0 | 27% | 0% | 8% | 557 | — | — |
 | responsible-ai | 7 | 6 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 14% | 0% | 14% | 392 | — | — |
 | local-inference | 14 | 13 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 79% | 0% | 7% | 419 | — | — |
-| agent-frameworks | 7 | 7 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 100% | 0% | 0% | 394 | — | — |
+| agent-frameworks | 13 | 13 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 100% | 0% | 0% | 384 | — | — |
 
 ## Track gap briefs
 
@@ -259,9 +259,9 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - dead-end finish: last live lesson is the-local-privacy-boundary (concept)
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
 
-### agent-frameworks — 7 files, 0 modules — starts: "The raw-SDK baseline every framework wraps"
+### agent-frameworks — 13 files, 0 modules — starts: "The raw-SDK baseline every framework wraps"
 
-- dead-end finish: last live lesson is llamaindex-data-framework (concept)
+- dead-end finish: last live lesson is mastra-typescript-agents (concept)
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
 
 ## Scores and dispositions (mechanical pass)
@@ -272,21 +272,21 @@ and split always need a written human reason (see checklist).
 
 | disposition | items |
 |---|---:|
-| keep | 2037 |
+| keep | 2043 |
 | investigate | 382 |
 | expand | 5 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2200 | 1.92 | 0 | 186 | 2014 |
+| intentClarity | 2206 | 1.91 | 0 | 188 | 2018 |
 | correctnessSources | 45 | 1.27 | 0 | 33 | 12 |
-| completeness | 2346 | 1.65 | 39 | 748 | 1559 |
-| prerequisiteFit | 2281 | 2.00 | 3 | 0 | 2278 |
-| handsOn | 2200 | 1.49 | 535 | 53 | 1612 |
-| explanationQuality | 2200 | 1.96 | 20 | 56 | 2124 |
-| metadata | 2200 | 1.86 | 0 | 303 | 1897 |
-| linking | 2111 | 1.49 | 382 | 321 | 1408 |
-| freshnessHealth | 2424 | 0.77 | 817 | 1344 | 263 |
+| completeness | 2352 | 1.65 | 39 | 753 | 1560 |
+| prerequisiteFit | 2287 | 2.00 | 3 | 0 | 2284 |
+| handsOn | 2206 | 1.49 | 535 | 53 | 1618 |
+| explanationQuality | 2206 | 1.96 | 20 | 56 | 2130 |
+| metadata | 2206 | 1.86 | 0 | 309 | 1897 |
+| linking | 2117 | 1.49 | 382 | 321 | 1414 |
+| freshnessHealth | 2430 | 0.77 | 823 | 1344 | 263 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
@@ -337,15 +337,15 @@ and split always need a written human reason (see checklist).
 - /learn/ai-foundations/reliable-ai/221-contestability-appeals-and-recource — Contestability, Appeals, and Recourse
 - … 342 more in content-registry.json
 
-#### expand: thin vs family median (238w vs ~773w) (1)
+#### expand: thin vs family median (238w vs ~772w) (1)
 
 - /learn/ai-foundations/choosing-a-model — Choosing a model in 2026
 
-#### expand: thin vs family median (277w vs ~773w) (1)
+#### expand: thin vs family median (277w vs ~772w) (1)
 
 - /learn/llm-foundations/next-token-prediction — Next-Token Prediction: The One Objective
 
-#### expand: thin vs family median (269w vs ~773w) (1)
+#### expand: thin vs family median (269w vs ~772w) (1)
 
 - /learn/llm-foundations/tokenization-explained — Tokenization: How Text Becomes Tokens
 
@@ -364,9 +364,9 @@ and split always need a written human reason (see checklist).
 | item A | item B | jac | contain | stem | linked | scope |
 |---|---|---:|---:|---|---|---|
 | /learn/llm-foundations/grouped-query-attention | /learn/llm-foundations/multi-query-and-grouped-query-attention | 1 | 1 |  | yes | same track |
+| /learn/genai-app-dev/generative-ui-rendering-components | /learn/genai-app-dev/generative-ui | 1 | 1 | yes | yes | same track |
 | /learn/prompt-engineering/meta-prompting-to-draft-prompts | /learn/prompt-engineering/meta-prompting-with-models | 1 | 1 |  | yes | same track |
 | /learn/prompt-engineering/task-framing-intent-constraints-criteria | /learn/prompt-engineering/task-framing | 1 | 1 | yes | yes | same track |
-| /learn/genai-app-dev/generative-ui-rendering-components | /learn/genai-app-dev/generative-ui | 1 | 1 | yes | yes | same track |
 | /learn/tools-function-calling/structured-output-vs-tool-calls-when | /learn/tools-function-calling/structured-output-vs-tool-calls | 1 | 1 | yes | yes | same track |
 | /learn/genai-app-dev/session-and-state-management | /learn/genai-app-dev/session-state-multi-turn | 0.83 | 1 |  | yes | same track |
 | /learn/context-engineering/context-window-testing-and-eval | /learn/context-engineering/testing-whether-context-helps | 0.83 | 1 |  | yes | same track |
@@ -378,20 +378,20 @@ and split always need a written human reason (see checklist).
 | /learn/prompt-engineering/ab-testing-in-production | /learn/prompt-engineering/ab-testing-prompts-in-production | 0.8 | 1 |  | yes | same track |
 | /learn/structured-outputs/json-schema-essentials-for-outputs | /learn/tools-function-calling/json-schema-for-tools-essentials | 0.8 | 1 |  | yes | structured-outputs × tools-function-calling |
 | /learn/structured-outputs/building-an-extraction-eval-harness | /learn/tools-function-calling/building-a-tool-use-eval-harness | 0.75 | 1 |  | yes | structured-outputs × tools-function-calling |
+| /learn/ai-foundations/narrow-ai-vs-general-ai | /learn/ai-foundations/narrow-vs-general-ai-in-practice | 0.75 | 1 |  | yes | same track |
 | /learn/harness-design/the-control-loop | /learn/tools-function-calling/building-a-browser-tool-loop | 0.75 | 1 |  | yes | harness-design × tools-function-calling |
 | /learn/context-engineering/context-engineering-vs-prompting | /answers/prompt-engineering-vs-context-engineering | 0.75 | 1 |  | yes | context-engineering × answers |
 | /learn/llm-foundations/context-window-mechanics-and-limits | /learn/llm-foundations/context-window-mechanics | 0.75 | 1 | yes | yes | same track |
 | /learn/harness-design/subprocess-isolation-and-sandboxing | /learn/tools-function-calling/sandboxing-tool-execution | 0.75 | 1 |  | yes | harness-design × tools-function-calling |
 | /learn/tools-function-calling/testing-and-debugging-tool-calls | /learn/tools-function-calling/testing-tool-calls-strategies | 0.75 | 1 |  | yes | same track |
-| /learn/ai-foundations/narrow-ai-vs-general-ai | /learn/ai-foundations/narrow-vs-general-ai-in-practice | 0.75 | 1 |  | yes | same track |
 | /learn/llm-foundations/grokking-and-double-descent-mechanics | /learn/llm-foundations/grokking-and-double-descent | 0.75 | 1 | yes | yes | same track |
 | /learn/genai-app-dev/rate-limits-and-retry-strategies | /learn/genai-app-dev/rate-limits-and-retry | 0.75 | 1 | yes | yes | same track |
 | /learn/prompt-engineering/negative-instructions-pitfall | /learn/prompt-engineering/negative-instructions-problem | 0.75 | 1 |  | yes | same track |
 | /learn/tools-function-calling/schema-versioning-strategies | /learn/tools-function-calling/tool-schema-versioning | 0.71 | 1 |  | yes | same track |
 | /learn/ai-foundations/ai-systems/111-alpha-beta-pruning-and-move-ordering | /learn/classical-ai/search-planning/113-alpha-beta-pruning-bounds-move-ordering-and-exactness | 0.71 | 1 |  | yes | ai-foundations × classical-ai |
 | /learn/structured-outputs/schema-versioning-and-migration | /learn/structured-outputs/schema-versioning-basics | 0.71 | 1 |  | yes | same track |
-| /learn/context-engineering/cache-aware-context-design-deep | /learn/context-engineering/cache-aware-context-design | 0.67 | 1 | yes | yes | same track |
 | /learn/ai-foundations/ai-vs-ml-vs-deep-learning | /answers/difference-between-ai-and-machine-learning | 0.67 | 1 |  | yes | ai-foundations × answers |
+| /learn/context-engineering/cache-aware-context-design-deep | /learn/context-engineering/cache-aware-context-design | 0.67 | 1 | yes | yes | same track |
 | /learn/deep-learning/core/129-transfer-learning-fine-tuning-and-domain-shift | /learn/deep-learning/vision/211-transfer-learning-and-fine-tuning | 0.67 | 1 |  | yes | same track |
 | /learn/prompt-engineering/automatic-prompt-optimization-dspy | /learn/prompt-engineering/automatic-prompt-optimization | 0.67 | 1 | yes | yes | same track |
 | /learn/ai-foundations/applied-ai/308-training-and-inference-economics | /learn/ai-foundations/training-vs-inference | 0.67 | 1 |  | yes | same track |
@@ -404,8 +404,8 @@ and split always need a written human reason (see checklist).
 | /learn/tools-function-calling/chaining-into-dag-workflows | /learn/tools-function-calling/chaining-tools-into-workflows | 0.67 | 1 |  | yes | same track |
 | /learn/structured-outputs/reliability-design-mistakes | /learn/tools-function-calling/reliability-common-mistakes | 0.67 | 1 |  |  | structured-outputs × tools-function-calling |
 | /learn/hallucinations/why-rlhf-hurts-calibration | /learn/llm-foundations/instruction-tuning-and-rlhf | 0.6 | 1 |  | yes | hallucinations × llm-foundations |
-| /learn/tools-function-calling/benchmarking-tool-use | /learn/tools-function-calling/benchmarking-with-bfcl | 0.57 | 1 |  | yes | same track |
 | /learn/tools-function-calling/streaming-partial-tool-calls-concept | /learn/tools-function-calling/streaming-partial-tool-calls | 0.57 | 1 | yes | yes | same track |
+| /learn/tools-function-calling/benchmarking-tool-use | /learn/tools-function-calling/benchmarking-with-bfcl | 0.57 | 1 |  | yes | same track |
 | /learn/machine-learning/public-data-projects/ml-895-movielens-recommendation-and-feedback | /learn/machine-learning/public-data-projects/movielens-project | 0.56 | 1 |  | yes | same track |
 | /learn/context-engineering/context-handoff-between-agents-deep | /learn/context-engineering/context-handoff-between-agents | 0.5 | 1 | yes | yes | same track |
 | /learn/context-engineering/conversation-memory-and-state | /learn/context-engineering/cross-session-memory-architecture | 0.5 | 1 |  | yes | same track |
@@ -436,16 +436,22 @@ _… 277 more pairs in content-registry.json (`duplicates`)_
 
 ## Sourcing review flags
 
-172 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
+178 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
 
 | item | flags |
 |---|---|
+| /learn/agent-frameworks/agno-teams-and-agentos | release-sensitive page with no updated/review date |
 | /learn/agent-frameworks/claude-agent-sdk | release-sensitive page with no updated/review date |
+| /learn/agent-frameworks/crewai-crews-and-flows | release-sensitive page with no updated/review date |
 | /learn/agent-frameworks/google-adk | release-sensitive page with no updated/review date |
 | /learn/agent-frameworks/langchain-agents-and-integrations | release-sensitive page with no updated/review date |
 | /learn/agent-frameworks/langgraph-durable-agents | release-sensitive page with no updated/review date |
 | /learn/agent-frameworks/llamaindex-data-framework | release-sensitive page with no updated/review date |
+| /learn/agent-frameworks/mastra-typescript-agents | pricing-sensitive page with no updated/review date |
+| /learn/agent-frameworks/microsoft-agent-frameworks | pricing-sensitive page with no updated/review date |
 | /learn/agent-frameworks/openai-agents-sdk | pricing-sensitive page with no updated/review date |
+| /learn/agent-frameworks/pydanticai-typed-agents | release-sensitive page with no updated/review date |
+| /learn/agent-frameworks/vercel-ai-sdk | release-sensitive page with no updated/review date |
 | /learn/agentic-ai/agent-permissions-and-authorization | certification-sensitive page with no updated/review date |
 | /learn/ai-foundations/building-an-eval-set-worked-example | 18 numeric claims with no sources section or external link |
 | /learn/ai-foundations/capabilities-and-eval-quiz | 28 numeric claims with no sources section or external link |
@@ -494,22 +500,16 @@ _… 277 more pairs in content-registry.json (`duplicates`)_
 | /learn/evals-red-teaming/flaky-eval-mitigation | 5 numeric claims with no sources section or external link |
 | /learn/fine-tuning/context-length-extension-rope-scaling | 8 numeric claims with no sources section or external link |
 | /learn/genai-app-dev/cost-and-capability-based-routing | 18 numeric claims with no sources section or external link |
-| /learn/genai-app-dev/cutting-cost-with-model-cascade | 19 numeric claims with no sources section or external link |
-| /learn/genai-app-dev/feature-flagging-ai-features | 6 numeric claims with no sources section or external link |
-| /learn/genai-app-dev/implementing-prompt-caching | 9 numeric claims with no sources section or external link |
-| /learn/genai-app-dev/instrumenting-with-tracing | 6 numeric claims with no sources section or external link |
-| /learn/genai-app-dev/perf-cost-cheatsheet | 6 numeric claims with no sources section or external link |
-| /learn/genai-app-dev/quiz-performance-cost | 33 numeric claims with no sources section or external link |
 
-_… 112 more in content-registry.json (`sourcingFlags`)_
+_… 118 more in content-registry.json (`sourcingFlags`)_
 
 ## Freshness queues
 
 Review order: volatile classes first, oldest last-verified date first; undated items lead each queue. `verified`/`updated`/`published` supply the last-verified date — git-derived when frontmatter is absent.
 
 - periodic: 1344
-- pricing-sensitive: 338
-- release-sensitive: 304
+- pricing-sensitive: 340
+- release-sensitive: 308
 - durable: 263
 - certification-sensitive: 99
 - policy-sensitive: 76
@@ -548,8 +548,10 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-foundations/reliable-ai/227-case-study-generative-agents-and-critical-workflows — Case Study: Generative Agents in Critical Workflows *(verified 2026-08-30)*
 - … 69 more in content-registry.json
 
-### pricing-sensitive (338) — oldest-verified first
+### pricing-sensitive (340) — oldest-verified first
 
+- /learn/agent-frameworks/mastra-typescript-agents — Mastra: the TypeScript agent framework *(verified undated)*
+- /learn/agent-frameworks/microsoft-agent-frameworks — Microsoft's agent frameworks: Semantic Kernel, AutoGen, and the convergence *(verified undated)*
 - /learn/agent-frameworks/openai-agents-sdk — OpenAI Agents SDK: agents, handoffs, and guardrails *(verified undated)*
 - /learn/machine-learning/predictive-ml-vs-generative-ai — Separate predictive-ML choices from generative-AI choices *(verified undated)*
 - /learn/ai-foundations/choosing-a-model — Choosing a model in 2026 *(verified 2026-08-29)*
@@ -578,9 +580,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-foundations/supervised-learning-explained — Supervised Learning, Explained *(verified 2026-08-30)*
 - /learn/ai-foundations/tokens-and-cost-worked-example — Counting Tokens and Pricing a Call *(verified 2026-08-30)*
 - /learn/ai-foundations/what-a-model-actually-is — What a Model Actually Is *(verified 2026-08-30)*
-- /learn/ai-literacy/ai-is-not-a-search-engine — Stop treating AI like Google *(verified 2026-08-30)*
-- /learn/ai-literacy/ai-literacy-master-cheatsheet — Cheatsheet: the AI literacy master reference *(verified 2026-08-30)*
-- … 308 more in content-registry.json
+- … 310 more in content-registry.json
 
 ### policy-sensitive (76) — oldest-verified first
 
@@ -616,14 +616,18 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/machine-learning/public-data-projects/bank-marketing-project — Public-data project: Bank Marketing decision support *(verified 2026-08-30)*
 - … 46 more in content-registry.json
 
-### release-sensitive (304) — oldest-verified first
+### release-sensitive (308) — oldest-verified first
 
 Largest queue; full list in JSON. Oldest-verified sample:
+- /learn/agent-frameworks/agno-teams-and-agentos — Agno, LangGraph *(verified undated)*
 - /learn/agent-frameworks/claude-agent-sdk — Claude, MCP, Anthropic, OpenAI *(verified undated)*
+- /learn/agent-frameworks/crewai-crews-and-flows — CrewAI, LangGraph *(verified undated)*
 - /learn/agent-frameworks/google-adk — Vertex, Gemini, OpenAI *(verified undated)*
 - /learn/agent-frameworks/langchain-agents-and-integrations — LangChain, LangGraph, OpenAI, Anthropic *(verified undated)*
 - /learn/agent-frameworks/langgraph-durable-agents — LangGraph, LangSmith, LangChain *(verified undated)*
 - /learn/agent-frameworks/llamaindex-data-framework — LlamaIndex, LangGraph *(verified undated)*
+- /learn/agent-frameworks/pydanticai-typed-agents — PydanticAI, LangGraph, OpenTelemetry *(verified undated)*
+- /learn/agent-frameworks/vercel-ai-sdk — Mastra, PydanticAI, LangGraph *(verified undated)*
 - /learn/ai-literacy/meet-skills-connectors-and-agents — MCP *(verified undated)*
 - /learn/local-inference/hardware-sizing-measurement-guide — llama.cpp, Ollama, vLLM *(verified undated)*
 - /learn/local-inference/huggingface-tgi-and-tei — Hugging Face, OpenAI, vLLM, llama.cpp *(verified undated)*
@@ -645,26 +649,28 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/mcp/agent-dies-overnight-oauth — MCP *(verified 2026-08-29)*
 - /learn/mcp/first-mcp-server — MCP, Model Context Protocol, Claude *(verified 2026-08-29)*
 - /learn/mcp/mcp-architecture-hosts-clients-servers — MCP, Claude *(verified 2026-08-29)*
-- /learn/mcp/mcp-context-window — MCP *(verified 2026-08-29)*
-- /learn/mcp/mcp-tools-resources-and-prompts — MCP *(verified 2026-08-29)*
-- /learn/mcp/what-is-mcp — MCP, Model Context Protocol, Anthropic *(verified 2026-08-29)*
-- /learn/prompt-engineering/delimiters-and-formatting — Claude *(verified 2026-08-29)*
-- … 274 more
+- … 278 more
 
 ## Missing-data queues
 
 ### no summary/meta description (0)
 
 
-### no published or updated date (38)
+### no published or updated date (44)
 
+- /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
+- /learn/agent-frameworks/crewai-crews-and-flows — CrewAI: role-based crews with deterministic flows
 - /learn/agent-frameworks/google-adk — Google ADK: workflow agents and multi-agent teams
 - /learn/agent-frameworks/langchain-agents-and-integrations — LangChain: the integration layer, then agents
 - /learn/agent-frameworks/langgraph-durable-agents — LangGraph: durable agents as state machines
 - /learn/agent-frameworks/llamaindex-data-framework — LlamaIndex: the data framework that grew agents
+- /learn/agent-frameworks/mastra-typescript-agents — Mastra: the TypeScript agent framework
+- /learn/agent-frameworks/microsoft-agent-frameworks — Microsoft's agent frameworks: Semantic Kernel, AutoGen, and the convergence
 - /learn/agent-frameworks/openai-agents-sdk — OpenAI Agents SDK: agents, handoffs, and guardrails
+- /learn/agent-frameworks/pydanticai-typed-agents — PydanticAI: agents that type-check
 - /learn/agent-frameworks/raw-sdk-agent-baseline — The raw-SDK baseline every framework wraps
+- /learn/agent-frameworks/vercel-ai-sdk — Vercel AI SDK: streaming, tools, and generative UI
 - /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access
 - /learn/agentic-ai/agent-task-contracts — Write a task contract for an agent
 - /learn/ai-literacy/ai-across-languages-and-accessibility — Use AI across languages and accessibility needs
@@ -692,10 +698,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/rag/diagnosing-rag-failures-end-to-end — Diagnose a RAG failure from ingestion to synthesis
 - /learn/responsible-ai/consent-contestability-and-impact — Consent, contestability, and the costs nobody measures
 - /learn/structured-outputs/openapi-schemas-in-practice — Use OpenAPI schemas for tool and output validation
-- /learn/structured-outputs/refusals-and-partial-outputs — Handle refusals and partial structured outputs
-- /learn/tools-function-calling/building-a-database-tool — Lab: build a read-only database tool
-- /learn/tools-function-calling/idempotent-tool-design — Design idempotent tools so retries can't double-act
-- /learn/tools-function-calling/tool-discovery-at-runtime — Tool discovery at runtime: how an agent learns what it can call
+- … 4 more
 
 ### zero in-body internal links (template nav still applies) (433)
 
@@ -753,14 +756,20 @@ Largest queue; full list in JSON. Oldest-verified sample:
 ### lesson files with status coming (0)
 
 
-### release-sensitive, no date at all (30)
+### release-sensitive, no date at all (36)
 
+- /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
+- /learn/agent-frameworks/crewai-crews-and-flows — CrewAI: role-based crews with deterministic flows
 - /learn/agent-frameworks/google-adk — Google ADK: workflow agents and multi-agent teams
 - /learn/agent-frameworks/langchain-agents-and-integrations — LangChain: the integration layer, then agents
 - /learn/agent-frameworks/langgraph-durable-agents — LangGraph: durable agents as state machines
 - /learn/agent-frameworks/llamaindex-data-framework — LlamaIndex: the data framework that grew agents
+- /learn/agent-frameworks/mastra-typescript-agents — Mastra: the TypeScript agent framework
+- /learn/agent-frameworks/microsoft-agent-frameworks — Microsoft's agent frameworks: Semantic Kernel, AutoGen, and the convergence
 - /learn/agent-frameworks/openai-agents-sdk — OpenAI Agents SDK: agents, handoffs, and guardrails
+- /learn/agent-frameworks/pydanticai-typed-agents — PydanticAI: agents that type-check
+- /learn/agent-frameworks/vercel-ai-sdk — Vercel AI SDK: streaming, tools, and generative UI
 - /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access
 - /learn/ai-literacy/meet-skills-connectors-and-agents — Meet skills, connectors, and agents — safely
 - /learn/llm-foundations/read-a-model-card-lab — Lab: read a model card like an engineer

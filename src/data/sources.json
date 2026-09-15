@@ -289,6 +289,60 @@
     "claims": ["loaders, indexes, query engines", "Workflows orchestration", "agents and agentic RAG"],
     "status": "current"
   },
+  "pydanticai-docs": {
+    "title": "PydanticAI documentation",
+    "publisher": "Pydantic",
+    "accessedAt": "2026-09-15",
+    "url": "https://ai.pydantic.dev/",
+    "type": "official-docs",
+    "claims": ["typed agents (deps_type, output_type)", "tools and RunContext", "graphs and evals"],
+    "status": "current"
+  },
+  "semantic-kernel-docs": {
+    "title": "Semantic Kernel overview",
+    "publisher": "Microsoft Learn",
+    "accessedAt": "2026-09-15",
+    "url": "https://learn.microsoft.com/en-us/semantic-kernel/overview/",
+    "type": "official-docs",
+    "claims": ["Semantic Kernel plugins/planners/agents", "Microsoft agent framework direction"],
+    "status": "current"
+  },
+  "autogen-docs": {
+    "title": "AutoGen documentation",
+    "publisher": "Microsoft",
+    "accessedAt": "2026-09-15",
+    "url": "https://microsoft.github.io/autogen/stable/",
+    "type": "official-docs",
+    "claims": ["AutoGen multi-agent conversations", "GroupChat and AgentChat API", "redesign history"],
+    "status": "current"
+  },
+  "crewai-docs": {
+    "title": "CrewAI documentation",
+    "publisher": "CrewAI",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.crewai.com/",
+    "type": "official-docs",
+    "claims": ["Agents with role/goal/backstory", "Crews and processes", "Flows"],
+    "status": "current"
+  },
+  "mastra-docs": {
+    "title": "Mastra documentation",
+    "publisher": "Mastra",
+    "accessedAt": "2026-09-15",
+    "url": "https://mastra.ai/en/docs",
+    "type": "official-docs",
+    "claims": ["TypeScript agents and workflows", "suspend/resume", "memory, RAG, evals"],
+    "status": "current"
+  },
+  "vercel-ai-sdk-docs": {
+    "title": "Vercel AI SDK documentation",
+    "publisher": "Vercel",
+    "accessedAt": "2026-09-15",
+    "url": "https://ai-sdk.dev/docs",
+    "type": "official-docs",
+    "claims": ["generateText/streamText/generateObject", "useChat React hooks", "tool calling and generative UI"],
+    "status": "current"
+  },
   "google-adk-docs": {
     "title": "Agent Development Kit documentation",
     "publisher": "Google",

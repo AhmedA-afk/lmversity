@@ -10728,7 +10728,7 @@ const unsortedTracks: Track[] = [
     "n": "24",
     "name": "Agent Frameworks",
     "group": "Agentic",
-    "meta": "7 lessons",
+    "meta": "13 lessons",
     "summary": "Framework-by-framework coverage of agent SDKs and orchestration libraries — each module shows the raw-SDK baseline first, then what the framework actually adds, and when plain code is enough.",
     "nodes": [
       {
@@ -10771,6 +10771,42 @@ const unsortedTracks: Track[] = [
         "slug": "llamaindex-data-framework",
         "status": "live",
         "prereq": ["raw-sdk-agent-baseline"]
+      },
+      {
+        "title": "PydanticAI: agents that type-check",
+        "slug": "pydanticai-typed-agents",
+        "status": "live",
+        "prereq": ["raw-sdk-agent-baseline"]
+      },
+      {
+        "title": "Agno: fast agents, teams, and the AgentOS runtime",
+        "slug": "agno-teams-and-agentos",
+        "status": "live",
+        "prereq": ["raw-sdk-agent-baseline"]
+      },
+      {
+        "title": "Microsoft's agent frameworks: SK, AutoGen, and the convergence",
+        "slug": "microsoft-agent-frameworks",
+        "status": "live",
+        "prereq": ["raw-sdk-agent-baseline"]
+      },
+      {
+        "title": "CrewAI: role-based crews with deterministic flows",
+        "slug": "crewai-crews-and-flows",
+        "status": "live",
+        "prereq": ["raw-sdk-agent-baseline"]
+      },
+      {
+        "title": "Vercel AI SDK: streaming, tools, and generative UI",
+        "slug": "vercel-ai-sdk",
+        "status": "live",
+        "prereq": ["raw-sdk-agent-baseline"]
+      },
+      {
+        "title": "Mastra: the TypeScript agent framework",
+        "slug": "mastra-typescript-agents",
+        "status": "live",
+        "prereq": ["vercel-ai-sdk"]
       }
     ]
   }

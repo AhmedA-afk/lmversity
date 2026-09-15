@@ -1,7 +1,7 @@
 {
  "version": 1,
  "next": {
-  "les": 2098,
+  "les": 2104,
   "que": 7,
   "sce": 6,
   "blo": 10,
@@ -9644,6 +9644,30 @@
   "lessons/agent-frameworks/llamaindex-data-framework.md": {
    "id": "les-2098",
    "fp": "5d547117a08a127457cf089aa6545820db8ce257"
+  },
+  "lessons/agent-frameworks/agno-teams-and-agentos.md": {
+   "id": "les-2099",
+   "fp": "b7191a3242b298f7a56d24d52049aeca6eb8082a"
+  },
+  "lessons/agent-frameworks/crewai-crews-and-flows.md": {
+   "id": "les-2100",
+   "fp": "fea1c3af8a931b1aff6d7444589160b63f82b782"
+  },
+  "lessons/agent-frameworks/mastra-typescript-agents.md": {
+   "id": "les-2101",
+   "fp": "716da88367808fc5bd7886b426d7c0d0c4eec220"
+  },
+  "lessons/agent-frameworks/microsoft-agent-frameworks.md": {
+   "id": "les-2102",
+   "fp": "bd78a4e366f69ebbe6529b96b77b2c73ad44f618"
+  },
+  "lessons/agent-frameworks/pydanticai-typed-agents.md": {
+   "id": "les-2103",
+   "fp": "60ee4fce023979f21c14e11cb0562f53c8257bb2"
+  },
+  "lessons/agent-frameworks/vercel-ai-sdk.md": {
+   "id": "les-2104",
+   "fp": "72dba2650ed243eb5695fa36cddd1eb1f5540abf"
   }
  },
  "retired": {

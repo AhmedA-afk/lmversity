@@ -1,12 +1,12 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T13:48:39.594Z",
+  "generatedAt": "2026-09-15T13:52:01.244Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2424,
+  "itemCount": 2430,
   "counts": {
    "byFamily": {
-    "lesson": 2046,
+    "lesson": 2052,
     "project": 31,
     "quiz": 89,
     "reference": 59,
@@ -22,10 +22,10 @@
     "glossary": 1
    },
    "byStatus": {
-    "live": 2424
+    "live": 2430
    },
    "byKind": {
-    "concept": 1747,
+    "concept": 1753,
     "comparison": 102,
     "worked-example": 29,
     "capstone": 31,
@@ -58,7 +58,7 @@
     "endpoint": 4
    },
    "byTrack": {
-    "agent-frameworks": 8,
+    "agent-frameworks": 14,
     "agentic-ai": 31,
     "ai-foundations": 161,
     "ai-literacy": 60,
@@ -98,8 +98,8 @@
     "fde": 193
    },
    "byFreshness": {
-    "release-sensitive": 304,
-    "pricing-sensitive": 338,
+    "release-sensitive": 308,
+    "pricing-sensitive": 340,
     "periodic": 1344,
     "certification-sensitive": 99,
     "policy-sensitive": 76,
@@ -111,6 +111,93 @@
   "duplicatesNote": "duplicate candidates are fuzzy title/slug similarity only — the editorial pass decides keep/merge/redirect with a written reason."
  },
  "items": [
+  {
+   "id": "les-2099",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Agno: fast agents, teams, and the AgentOS runtime",
+   "slug": "agent-frameworks/agno-teams-and-agentos",
+   "route": "/learn/agent-frameworks/agno-teams-and-agentos",
+   "collection": "lessons",
+   "path": "src/content/lessons/agent-frameworks/agno-teams-and-agentos.md",
+   "track": "agent-frameworks",
+   "module": null,
+   "status": "live",
+   "summary": "Agno is a performance-focused Python agent framework — Agent/Team/Workflow primitives with knowledge, memory, and guardrails built in, and AgentOS as the serving runtime with a control plane.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 351,
+   "headings": [
+    "The short answer",
+    "The pieces",
+    "What it adds over the raw loop",
+    "When plain code is enough",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agent-frameworks/raw-sdk-agent-baseline",
+    "/learn/agentic-ai/agents-vs-workflows",
+    "/learn/agentic-ai/multi-agent-patterns",
+    "/learn/rag/ingestion-chunking-and-retrieval"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 7,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Agno is a performance-focused Python agent framework — Agent/Team/Workflow primitives with knowledge, memory, and guardrails built in, and AgentOS as the serving runtime with a control plane.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/agent-frameworks/microsoft-agent-frameworks",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Agno, LangGraph"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
   {
    "id": "les-2092",
    "family": "lesson",
@@ -177,6 +264,93 @@
    "freshnessClass": "release-sensitive",
    "freshnessSignals": [
     "vendor/tool mentions: Claude, MCP, Anthropic, OpenAI"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2100",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "CrewAI: role-based crews with deterministic flows",
+   "slug": "agent-frameworks/crewai-crews-and-flows",
+   "route": "/learn/agent-frameworks/crewai-crews-and-flows",
+   "collection": "lessons",
+   "path": "src/content/lessons/agent-frameworks/crewai-crews-and-flows.md",
+   "track": "agent-frameworks",
+   "module": null,
+   "status": "live",
+   "summary": "CrewAI designs multi-agent systems as crews — agents with roles, goals, and backstories executing tasks under a process — with Flows adding deterministic, event-driven control around them.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 376,
+   "headings": [
+    "The short answer",
+    "The vocabulary",
+    "What it adds over the raw loop",
+    "When plain code is enough",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agent-frameworks/google-adk",
+    "/learn/agent-frameworks/langgraph-durable-agents",
+    "/learn/agent-frameworks/raw-sdk-agent-baseline",
+    "/learn/agentic-ai/hierarchical-task-decomposition"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 7,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "CrewAI designs multi-agent systems as crews — agents with roles, goals, and backstories executing tasks under a process — with Flows adding deterministic, event-driven control around them.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/agent-frameworks/vercel-ai-sdk",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: CrewAI, LangGraph"
    ],
    "owner": null,
    "reviewer": null,
@@ -522,7 +696,7 @@
    "promisedOutcome": "LlamaIndex started as the RAG data framework — loaders, indexes, query engines — and grew Workflows and agents on top; its center of gravity is still data-to-answer, not general orchestration.",
    "jobToBeDone": null,
    "prerequisite": null,
-   "nextAction": "/learn/agent-frameworks",
+   "nextAction": "/learn/agent-frameworks/pydanticai-typed-agents",
    "practiceType": "none",
    "freshnessClass": "release-sensitive",
    "freshnessSignals": [
@@ -537,6 +711,180 @@
    "analytics": null,
    "scores": {
     "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2101",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Mastra: the TypeScript agent framework",
+   "slug": "agent-frameworks/mastra-typescript-agents",
+   "route": "/learn/agent-frameworks/mastra-typescript-agents",
+   "collection": "lessons",
+   "path": "src/content/lessons/agent-frameworks/mastra-typescript-agents.md",
+   "track": "agent-frameworks",
+   "module": null,
+   "status": "live",
+   "summary": "Mastra is the TypeScript-native agent framework — agents, typed workflows with suspend/resume, memory, RAG tooling, and evals — for JS/TS backends rather than Python-first stacks.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 365,
+   "headings": [
+    "The short answer",
+    "The primitives",
+    "What it adds over the raw loop",
+    "When plain code is enough",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agent-frameworks/raw-sdk-agent-baseline",
+    "/learn/agent-frameworks/vercel-ai-sdk",
+    "/learn/agentic-ai/agents-vs-workflows"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 7,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Mastra is the TypeScript-native agent framework — agents, typed workflows with suspend/resume, memory, RAG tooling, and evals — for JS/TS backends rather than Python-first stacks.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/agent-frameworks",
+   "practiceType": "none",
+   "freshnessClass": "pricing-sensitive",
+   "freshnessSignals": [
+    "pricing/cost mention",
+    "vendor/tool mentions: Mastra, LangGraph"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2102",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Microsoft's agent frameworks: Semantic Kernel, AutoGen, and the convergence",
+   "slug": "agent-frameworks/microsoft-agent-frameworks",
+   "route": "/learn/agent-frameworks/microsoft-agent-frameworks",
+   "collection": "lessons",
+   "path": "src/content/lessons/agent-frameworks/microsoft-agent-frameworks.md",
+   "track": "agent-frameworks",
+   "module": null,
+   "status": "live",
+   "summary": "Microsoft's agent story is consolidation — Semantic Kernel's enterprise orchestration and AutoGen's multi-agent research are converging into the Microsoft Agent Framework, so read the current docs before choosing.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 388,
+   "headings": [
+    "The short answer",
+    "The two lineages",
+    "What the convergence means for a chooser",
+    "When plain code is enough",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agent-frameworks/raw-sdk-agent-baseline",
+    "/learn/agentic-ai/choosing-an-agent-framework",
+    "/learn/agentic-ai/multi-agent-patterns"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 5,
+    "numericClaims": 1,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Microsoft's agent story is consolidation — Semantic Kernel's enterprise orchestration and AutoGen's multi-agent research are converging into the Microsoft Agent Framework, so read the current docs before choosing.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/agent-frameworks/crewai-crews-and-flows",
+   "practiceType": "none",
+   "freshnessClass": "pricing-sensitive",
+   "freshnessSignals": [
+    "pricing/cost mention",
+    "vendor/tool mentions: Semantic Kernel, AutoGen, Azure, OpenAI"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 1,
     "correctnessSources": null,
     "completeness": 1,
     "prerequisiteFit": 2,
@@ -638,6 +986,94 @@
    }
   },
   {
+   "id": "les-2103",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "PydanticAI: agents that type-check",
+   "slug": "agent-frameworks/pydanticai-typed-agents",
+   "route": "/learn/agent-frameworks/pydanticai-typed-agents",
+   "collection": "lessons",
+   "path": "src/content/lessons/agent-frameworks/pydanticai-typed-agents.md",
+   "track": "agent-frameworks",
+   "module": null,
+   "status": "live",
+   "summary": "PydanticAI brings the Pydantic model to agent code — typed dependencies, validated tool signatures, structured output that fails type-checking instead of parsing — plus graphs, evals, and Logfire observability.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 385,
+   "headings": [
+    "The short answer",
+    "The typed pieces",
+    "What it adds over the raw loop",
+    "When plain code is enough",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agent-frameworks/langgraph-durable-agents",
+    "/learn/agent-frameworks/raw-sdk-agent-baseline",
+    "/learn/evals-red-teaming/datasets-rubrics-and-judges",
+    "/learn/prompt-engineering/validation-and-repair-loop",
+    "/learn/structured-outputs/schema-design-for-reliability"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 7,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "PydanticAI brings the Pydantic model to agent code — typed dependencies, validated tool signatures, structured output that fails type-checking instead of parsing — plus graphs, evals, and Logfire observability.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/agent-frameworks/agno-teams-and-agentos",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: PydanticAI, LangGraph, OpenTelemetry"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 1,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-2095",
    "family": "lesson",
    "kind": "concept",
@@ -718,6 +1154,94 @@
     "metadata": 1,
     "linking": 2,
     "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2104",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Vercel AI SDK: streaming, tools, and generative UI",
+   "slug": "agent-frameworks/vercel-ai-sdk",
+   "route": "/learn/agent-frameworks/vercel-ai-sdk",
+   "collection": "lessons",
+   "path": "src/content/lessons/agent-frameworks/vercel-ai-sdk.md",
+   "track": "agent-frameworks",
+   "module": null,
+   "status": "live",
+   "summary": "The Vercel AI SDK is TypeScript plumbing for LLM apps — provider-agnostic calls, token streaming into React, tool calling, structured output — the layer below agent frameworks, not a framework itself.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 371,
+   "headings": [
+    "The short answer",
+    "The surface",
+    "What it adds over the raw loop",
+    "When plain code is enough",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agent-frameworks/mastra-typescript-agents",
+    "/learn/agent-frameworks/pydanticai-typed-agents",
+    "/learn/agent-frameworks/raw-sdk-agent-baseline",
+    "/learn/structured-outputs/cross-provider-landscape",
+    "/learn/structured-outputs/schema-design-for-reliability"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 7,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "The Vercel AI SDK is TypeScript plumbing for LLM apps — provider-agnostic calls, token streaming into React, tool calling, structured output — the layer below agent frameworks, not a framework itself.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/agent-frameworks/mastra-typescript-agents",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Mastra, PydanticAI, LangGraph"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
     "demand": null
@@ -9524,7 +10048,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (238w vs ~773w)",
+   "dispositionReason": "thin vs family median (238w vs ~772w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -75988,7 +76512,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -87191,7 +87715,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (277w vs ~773w)",
+   "dispositionReason": "thin vs family median (277w vs ~772w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -90909,7 +91433,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (269w vs ~773w)",
+   "dispositionReason": "thin vs family median (269w vs ~772w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -203124,14 +203648,14 @@
    ],
    "features": {
     "group": "Agentic",
-    "declaredMeta": "7 lessons",
-    "nodeCount": 7,
-    "liveNodes": 7,
+    "declaredMeta": "13 lessons",
+    "nodeCount": 13,
+    "liveNodes": 13,
     "comingNodes": 0,
     "headingOnlyNodes": 0,
-    "fileCount": 7,
+    "fileCount": 13,
     "kinds": {
-     "concept": 7
+     "concept": 13
     },
     "modules": 0,
     "quickGuide": false
@@ -206284,6 +206808,25 @@
   },
   {
    "a": {
+    "route": "/learn/genai-app-dev/generative-ui-rendering-components",
+    "slug": "genai-app-dev/generative-ui-rendering-components",
+    "title": "Generative UI: Rendering Components From Model Output",
+    "track": "genai-app-dev"
+   },
+   "b": {
+    "route": "/learn/genai-app-dev/generative-ui",
+    "slug": "genai-app-dev/generative-ui",
+    "title": "Generative UI: Rendering Components from Model Output",
+    "track": "genai-app-dev"
+   },
+   "jaccard": 1,
+   "containment": 1,
+   "slugStem": true,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
     "route": "/learn/prompt-engineering/meta-prompting-to-draft-prompts",
     "slug": "prompt-engineering/meta-prompting-to-draft-prompts",
     "title": "Meta-Prompting: Using a Model to Write Prompts",
@@ -206313,25 +206856,6 @@
     "slug": "prompt-engineering/task-framing",
     "title": "Task framing: intent, constraints, and acceptance criteria",
     "track": "prompt-engineering"
-   },
-   "jaccard": 1,
-   "containment": 1,
-   "slugStem": true,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/genai-app-dev/generative-ui-rendering-components",
-    "slug": "genai-app-dev/generative-ui-rendering-components",
-    "title": "Generative UI: Rendering Components From Model Output",
-    "track": "genai-app-dev"
-   },
-   "b": {
-    "route": "/learn/genai-app-dev/generative-ui",
-    "slug": "genai-app-dev/generative-ui",
-    "title": "Generative UI: Rendering Components from Model Output",
-    "track": "genai-app-dev"
    },
    "jaccard": 1,
    "containment": 1,
@@ -206550,6 +207074,25 @@
   },
   {
    "a": {
+    "route": "/learn/ai-foundations/narrow-ai-vs-general-ai",
+    "slug": "ai-foundations/narrow-ai-vs-general-ai",
+    "title": "Narrow AI vs. General AI",
+    "track": "ai-foundations"
+   },
+   "b": {
+    "route": "/learn/ai-foundations/narrow-vs-general-ai-in-practice",
+    "slug": "ai-foundations/narrow-vs-general-ai-in-practice",
+    "title": "Narrow vs. General AI in Practice",
+    "track": "ai-foundations"
+   },
+   "jaccard": 0.75,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
     "route": "/learn/harness-design/the-control-loop",
     "slug": "harness-design/the-control-loop",
     "title": "Building the Control Loop",
@@ -206636,25 +207179,6 @@
     "slug": "tools-function-calling/testing-tool-calls-strategies",
     "title": "Testing Tool Calls",
     "track": "tools-function-calling"
-   },
-   "jaccard": 0.75,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/ai-foundations/narrow-ai-vs-general-ai",
-    "slug": "ai-foundations/narrow-ai-vs-general-ai",
-    "title": "Narrow AI vs. General AI",
-    "track": "ai-foundations"
-   },
-   "b": {
-    "route": "/learn/ai-foundations/narrow-vs-general-ai-in-practice",
-    "slug": "ai-foundations/narrow-vs-general-ai-in-practice",
-    "title": "Narrow vs. General AI in Practice",
-    "track": "ai-foundations"
    },
    "jaccard": 0.75,
    "containment": 1,
@@ -206778,25 +207302,6 @@
   },
   {
    "a": {
-    "route": "/learn/context-engineering/cache-aware-context-design-deep",
-    "slug": "context-engineering/cache-aware-context-design-deep",
-    "title": "Cache-Aware Context Design",
-    "track": "context-engineering"
-   },
-   "b": {
-    "route": "/learn/context-engineering/cache-aware-context-design",
-    "slug": "context-engineering/cache-aware-context-design",
-    "title": "Cache-Aware Context Design: Ordering for Cache Hits",
-    "track": "context-engineering"
-   },
-   "jaccard": 0.67,
-   "containment": 1,
-   "slugStem": true,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
     "route": "/learn/ai-foundations/ai-vs-ml-vs-deep-learning",
     "slug": "ai-foundations/ai-vs-ml-vs-deep-learning",
     "title": "AI vs. Machine Learning vs. Deep Learning",
@@ -206813,6 +207318,25 @@
    "slugStem": false,
    "alreadyLinked": true,
    "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/context-engineering/cache-aware-context-design-deep",
+    "slug": "context-engineering/cache-aware-context-design-deep",
+    "title": "Cache-Aware Context Design",
+    "track": "context-engineering"
+   },
+   "b": {
+    "route": "/learn/context-engineering/cache-aware-context-design",
+    "slug": "context-engineering/cache-aware-context-design",
+    "title": "Cache-Aware Context Design: Ordering for Cache Hits",
+    "track": "context-engineering"
+   },
+   "jaccard": 0.67,
+   "containment": 1,
+   "slugStem": true,
+   "alreadyLinked": true,
+   "sameTrack": true
   },
   {
    "a": {
@@ -207044,25 +207568,6 @@
   },
   {
    "a": {
-    "route": "/learn/tools-function-calling/benchmarking-tool-use",
-    "slug": "tools-function-calling/benchmarking-tool-use",
-    "title": "Benchmarking Tool Use: BFCL and Function-Calling Evals",
-    "track": "tools-function-calling"
-   },
-   "b": {
-    "route": "/learn/tools-function-calling/benchmarking-with-bfcl",
-    "slug": "tools-function-calling/benchmarking-with-bfcl",
-    "title": "Benchmarking Tool Use With BFCL",
-    "track": "tools-function-calling"
-   },
-   "jaccard": 0.57,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
     "route": "/learn/tools-function-calling/streaming-partial-tool-calls-concept",
     "slug": "tools-function-calling/streaming-partial-tool-calls-concept",
     "title": "Streaming Tool Calls: Partial JSON Is Never Input",
@@ -207077,6 +207582,25 @@
    "jaccard": 0.57,
    "containment": 1,
    "slugStem": true,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/tools-function-calling/benchmarking-tool-use",
+    "slug": "tools-function-calling/benchmarking-tool-use",
+    "title": "Benchmarking Tool Use: BFCL and Function-Calling Evals",
+    "track": "tools-function-calling"
+   },
+   "b": {
+    "route": "/learn/tools-function-calling/benchmarking-with-bfcl",
+    "slug": "tools-function-calling/benchmarking-with-bfcl",
+    "title": "Benchmarking Tool Use With BFCL",
+    "track": "tools-function-calling"
+   },
+   "jaccard": 0.57,
+   "containment": 1,
+   "slugStem": false,
    "alreadyLinked": true,
    "sameTrack": true
   },
@@ -208545,6 +209069,44 @@
   },
   {
    "a": {
+    "route": "/learn/ai-foundations/applied-ai/325-applied-ai-staged-capstone-and-defense",
+    "slug": "ai-foundations/applied-ai/325-applied-ai-staged-capstone-and-defense",
+    "title": "Applied AI Staged Capstone and Technical Defense",
+    "track": "ai-foundations"
+   },
+   "b": {
+    "route": "/learn/ai-foundations/reliable-ai/228-reliable-ai-capstone-and-technical-defense",
+    "slug": "ai-foundations/reliable-ai/228-reliable-ai-capstone-and-technical-defense",
+    "title": "Reliable AI Capstone and Technical Defense",
+    "track": "ai-foundations"
+   },
+   "jaccard": 0.57,
+   "containment": 0.8,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/classical-ai/search-and-planning",
+    "slug": "classical-ai/search-and-planning",
+    "title": "Classical AI: search, planning, and the shape of a decision",
+    "track": "classical-ai"
+   },
+   "b": {
+    "route": "/learn/classical-ai/search-planning/128-classical-ai-search-and-planning-capstone",
+    "slug": "classical-ai/search-planning/128-classical-ai-search-and-planning-capstone",
+    "title": "Classical AI Search and Planning Capstone",
+    "track": "classical-ai"
+   },
+   "jaccard": 0.57,
+   "containment": 0.8,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
     "route": "/learn/genai-app-dev/background-jobs-for-long-running-ai-tasks",
     "slug": "genai-app-dev/background-jobs-for-long-running-ai-tasks",
     "title": "Background Jobs for Long-Running AI Tasks",
@@ -208602,25 +209164,6 @@
   },
   {
    "a": {
-    "route": "/learn/classical-ai/search-and-planning",
-    "slug": "classical-ai/search-and-planning",
-    "title": "Classical AI: search, planning, and the shape of a decision",
-    "track": "classical-ai"
-   },
-   "b": {
-    "route": "/learn/classical-ai/search-planning/128-classical-ai-search-and-planning-capstone",
-    "slug": "classical-ai/search-planning/128-classical-ai-search-and-planning-capstone",
-    "title": "Classical AI Search and Planning Capstone",
-    "track": "classical-ai"
-   },
-   "jaccard": 0.57,
-   "containment": 0.8,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
     "route": "/learn/llm-foundations/base-instruct-chat-reasoning-families",
     "slug": "llm-foundations/base-instruct-chat-reasoning-families",
     "title": "Base vs Instruct vs Chat vs Reasoning Models",
@@ -208631,25 +209174,6 @@
     "slug": "llm-foundations/model-families-and-variants",
     "title": "Model Families: Base, Instruct, Chat, Reasoning",
     "track": "llm-foundations"
-   },
-   "jaccard": 0.57,
-   "containment": 0.8,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/ai-foundations/applied-ai/325-applied-ai-staged-capstone-and-defense",
-    "slug": "ai-foundations/applied-ai/325-applied-ai-staged-capstone-and-defense",
-    "title": "Applied AI Staged Capstone and Technical Defense",
-    "track": "ai-foundations"
-   },
-   "b": {
-    "route": "/learn/ai-foundations/reliable-ai/228-reliable-ai-capstone-and-technical-defense",
-    "slug": "ai-foundations/reliable-ai/228-reliable-ai-capstone-and-technical-defense",
-    "title": "Reliable AI Capstone and Technical Defense",
-    "track": "ai-foundations"
    },
    "jaccard": 0.57,
    "containment": 0.8,
@@ -208906,6 +209430,63 @@
   },
   {
    "a": {
+    "route": "/learn/mcp/mcp-debugging-quiz",
+    "slug": "mcp/mcp-debugging-quiz",
+    "title": "Debugging MCP: Check Yourself",
+    "track": "mcp"
+   },
+   "b": {
+    "route": "/learn/mcp/mcp-primitives-quiz",
+    "slug": "mcp/mcp-primitives-quiz",
+    "title": "MCP Primitives: Check Yourself",
+    "track": "mcp"
+   },
+   "jaccard": 0.6,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/mcp/mcp-debugging-quiz",
+    "slug": "mcp/mcp-debugging-quiz",
+    "title": "Debugging MCP: Check Yourself",
+    "track": "mcp"
+   },
+   "b": {
+    "route": "/learn/mcp/mcp-transports-quiz",
+    "slug": "mcp/mcp-transports-quiz",
+    "title": "MCP Transports: Check Yourself",
+    "track": "mcp"
+   },
+   "jaccard": 0.6,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/mcp/mcp-primitives-quiz",
+    "slug": "mcp/mcp-primitives-quiz",
+    "title": "MCP Primitives: Check Yourself",
+    "track": "mcp"
+   },
+   "b": {
+    "route": "/learn/mcp/mcp-transports-quiz",
+    "slug": "mcp/mcp-transports-quiz",
+    "title": "MCP Transports: Check Yourself",
+    "track": "mcp"
+   },
+   "jaccard": 0.6,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
     "route": "/learn/prompt-engineering/decomposition-output-cheatsheet",
     "slug": "prompt-engineering/decomposition-output-cheatsheet",
     "title": "Decomposition and Structured-Output Cheatsheet",
@@ -208963,59 +209544,21 @@
   },
   {
    "a": {
-    "route": "/learn/mcp/mcp-debugging-quiz",
-    "slug": "mcp/mcp-debugging-quiz",
-    "title": "Debugging MCP: Check Yourself",
-    "track": "mcp"
+    "route": "/learn/prompt-engineering/role-prompting",
+    "slug": "prompt-engineering/role-prompting",
+    "title": "Role Prompting: What Personas Actually Change",
+    "track": "prompt-engineering"
    },
    "b": {
-    "route": "/learn/mcp/mcp-primitives-quiz",
-    "slug": "mcp/mcp-primitives-quiz",
-    "title": "MCP Primitives: Check Yourself",
-    "track": "mcp"
+    "route": "/learn/prompt-engineering/what-role-prompting-changes",
+    "slug": "prompt-engineering/what-role-prompting-changes",
+    "title": "What Role Prompting Actually Changes",
+    "track": "prompt-engineering"
    },
-   "jaccard": 0.6,
+   "jaccard": 0.5,
    "containment": 0.75,
    "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-debugging-quiz",
-    "slug": "mcp/mcp-debugging-quiz",
-    "title": "Debugging MCP: Check Yourself",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-transports-quiz",
-    "slug": "mcp/mcp-transports-quiz",
-    "title": "MCP Transports: Check Yourself",
-    "track": "mcp"
-   },
-   "jaccard": 0.6,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-primitives-quiz",
-    "slug": "mcp/mcp-primitives-quiz",
-    "title": "MCP Primitives: Check Yourself",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-transports-quiz",
-    "slug": "mcp/mcp-transports-quiz",
-    "title": "MCP Transports: Check Yourself",
-    "track": "mcp"
-   },
-   "jaccard": 0.6,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -209058,21 +209601,192 @@
   },
   {
    "a": {
-    "route": "/learn/prompt-engineering/role-prompting",
-    "slug": "prompt-engineering/role-prompting",
-    "title": "Role Prompting: What Personas Actually Change",
-    "track": "prompt-engineering"
+    "route": "/learn/mcp/mcp-auth-quiz",
+    "slug": "mcp/mcp-auth-quiz",
+    "title": "MCP Auth and Security: Check Yourself",
+    "track": "mcp"
    },
    "b": {
-    "route": "/learn/prompt-engineering/what-role-prompting-changes",
-    "slug": "prompt-engineering/what-role-prompting-changes",
-    "title": "What Role Prompting Actually Changes",
-    "track": "prompt-engineering"
+    "route": "/learn/mcp/mcp-debugging-quiz",
+    "slug": "mcp/mcp-debugging-quiz",
+    "title": "Debugging MCP: Check Yourself",
+    "track": "mcp"
    },
    "jaccard": 0.5,
    "containment": 0.75,
    "slugStem": false,
-   "alreadyLinked": true,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/mcp/mcp-auth-quiz",
+    "slug": "mcp/mcp-auth-quiz",
+    "title": "MCP Auth and Security: Check Yourself",
+    "track": "mcp"
+   },
+   "b": {
+    "route": "/learn/mcp/mcp-primitives-quiz",
+    "slug": "mcp/mcp-primitives-quiz",
+    "title": "MCP Primitives: Check Yourself",
+    "track": "mcp"
+   },
+   "jaccard": 0.5,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/mcp/mcp-auth-quiz",
+    "slug": "mcp/mcp-auth-quiz",
+    "title": "MCP Auth and Security: Check Yourself",
+    "track": "mcp"
+   },
+   "b": {
+    "route": "/learn/mcp/mcp-transports-quiz",
+    "slug": "mcp/mcp-transports-quiz",
+    "title": "MCP Transports: Check Yourself",
+    "track": "mcp"
+   },
+   "jaccard": 0.5,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/mcp/mcp-debugging-quiz",
+    "slug": "mcp/mcp-debugging-quiz",
+    "title": "Debugging MCP: Check Yourself",
+    "track": "mcp"
+   },
+   "b": {
+    "route": "/learn/mcp/mcp-deployment-quiz",
+    "slug": "mcp/mcp-deployment-quiz",
+    "title": "Running MCP Servers: Check Yourself",
+    "track": "mcp"
+   },
+   "jaccard": 0.5,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/mcp/mcp-debugging-quiz",
+    "slug": "mcp/mcp-debugging-quiz",
+    "title": "Debugging MCP: Check Yourself",
+    "track": "mcp"
+   },
+   "b": {
+    "route": "/learn/mcp/mcp-server-quiz",
+    "slug": "mcp/mcp-server-quiz",
+    "title": "Building an MCP Server: Check Yourself",
+    "track": "mcp"
+   },
+   "jaccard": 0.5,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/mcp/mcp-deployment-quiz",
+    "slug": "mcp/mcp-deployment-quiz",
+    "title": "Running MCP Servers: Check Yourself",
+    "track": "mcp"
+   },
+   "b": {
+    "route": "/learn/mcp/mcp-primitives-quiz",
+    "slug": "mcp/mcp-primitives-quiz",
+    "title": "MCP Primitives: Check Yourself",
+    "track": "mcp"
+   },
+   "jaccard": 0.5,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/mcp/mcp-deployment-quiz",
+    "slug": "mcp/mcp-deployment-quiz",
+    "title": "Running MCP Servers: Check Yourself",
+    "track": "mcp"
+   },
+   "b": {
+    "route": "/learn/mcp/mcp-transports-quiz",
+    "slug": "mcp/mcp-transports-quiz",
+    "title": "MCP Transports: Check Yourself",
+    "track": "mcp"
+   },
+   "jaccard": 0.5,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/mcp/mcp-primitives-quiz",
+    "slug": "mcp/mcp-primitives-quiz",
+    "title": "MCP Primitives: Check Yourself",
+    "track": "mcp"
+   },
+   "b": {
+    "route": "/learn/mcp/mcp-server-quiz",
+    "slug": "mcp/mcp-server-quiz",
+    "title": "Building an MCP Server: Check Yourself",
+    "track": "mcp"
+   },
+   "jaccard": 0.5,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/mcp/mcp-server-quiz",
+    "slug": "mcp/mcp-server-quiz",
+    "title": "Building an MCP Server: Check Yourself",
+    "track": "mcp"
+   },
+   "b": {
+    "route": "/learn/mcp/mcp-transports-quiz",
+    "slug": "mcp/mcp-transports-quiz",
+    "title": "MCP Transports: Check Yourself",
+    "track": "mcp"
+   },
+   "jaccard": 0.5,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/rag/retrieval-quiz",
+    "slug": "rag/retrieval-quiz",
+    "title": "Vector Retrieval: Check Yourself",
+    "track": "rag"
+   },
+   "b": {
+    "route": "/learn/rag/vector-db-quiz",
+    "slug": "rag/vector-db-quiz",
+    "title": "Choosing a Vector DB: Check Yourself",
+    "track": "rag"
+   },
+   "jaccard": 0.5,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
    "sameTrack": true
   },
   {
@@ -209457,196 +210171,6 @@
   },
   {
    "a": {
-    "route": "/learn/mcp/mcp-auth-quiz",
-    "slug": "mcp/mcp-auth-quiz",
-    "title": "MCP Auth and Security: Check Yourself",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-debugging-quiz",
-    "slug": "mcp/mcp-debugging-quiz",
-    "title": "Debugging MCP: Check Yourself",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-auth-quiz",
-    "slug": "mcp/mcp-auth-quiz",
-    "title": "MCP Auth and Security: Check Yourself",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-primitives-quiz",
-    "slug": "mcp/mcp-primitives-quiz",
-    "title": "MCP Primitives: Check Yourself",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-auth-quiz",
-    "slug": "mcp/mcp-auth-quiz",
-    "title": "MCP Auth and Security: Check Yourself",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-transports-quiz",
-    "slug": "mcp/mcp-transports-quiz",
-    "title": "MCP Transports: Check Yourself",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-debugging-quiz",
-    "slug": "mcp/mcp-debugging-quiz",
-    "title": "Debugging MCP: Check Yourself",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-deployment-quiz",
-    "slug": "mcp/mcp-deployment-quiz",
-    "title": "Running MCP Servers: Check Yourself",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-debugging-quiz",
-    "slug": "mcp/mcp-debugging-quiz",
-    "title": "Debugging MCP: Check Yourself",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-server-quiz",
-    "slug": "mcp/mcp-server-quiz",
-    "title": "Building an MCP Server: Check Yourself",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-deployment-quiz",
-    "slug": "mcp/mcp-deployment-quiz",
-    "title": "Running MCP Servers: Check Yourself",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-primitives-quiz",
-    "slug": "mcp/mcp-primitives-quiz",
-    "title": "MCP Primitives: Check Yourself",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-deployment-quiz",
-    "slug": "mcp/mcp-deployment-quiz",
-    "title": "Running MCP Servers: Check Yourself",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-transports-quiz",
-    "slug": "mcp/mcp-transports-quiz",
-    "title": "MCP Transports: Check Yourself",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-primitives-quiz",
-    "slug": "mcp/mcp-primitives-quiz",
-    "title": "MCP Primitives: Check Yourself",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-server-quiz",
-    "slug": "mcp/mcp-server-quiz",
-    "title": "Building an MCP Server: Check Yourself",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/mcp/mcp-server-quiz",
-    "slug": "mcp/mcp-server-quiz",
-    "title": "Building an MCP Server: Check Yourself",
-    "track": "mcp"
-   },
-   "b": {
-    "route": "/learn/mcp/mcp-transports-quiz",
-    "slug": "mcp/mcp-transports-quiz",
-    "title": "MCP Transports: Check Yourself",
-    "track": "mcp"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/rag/retrieval-quiz",
-    "slug": "rag/retrieval-quiz",
-    "title": "Vector Retrieval: Check Yourself",
-    "track": "rag"
-   },
-   "b": {
-    "route": "/learn/rag/vector-db-quiz",
-    "slug": "rag/vector-db-quiz",
-    "title": "Choosing a Vector DB: Check Yourself",
-    "track": "rag"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
     "route": "/answers/what-is-a-forward-deployed-engineer",
     "slug": "what-is-a-forward-deployed-engineer",
     "title": "What is a Forward Deployed Engineer (FDE)?",
@@ -209913,22 +210437,22 @@
   },
   {
    "a": {
-    "route": "/learn/agentic-ai/agent-memory-short-vs-long-term",
-    "slug": "agentic-ai/agent-memory-short-vs-long-term",
-    "title": "Short-Term vs Long-Term Memory",
-    "track": "agentic-ai"
+    "route": "/learn/ai-foundations/ai-ml-dl-as-nested-fields",
+    "slug": "ai-foundations/ai-ml-dl-as-nested-fields",
+    "title": "AI, ML, and Deep Learning as Nested Fields",
+    "track": "ai-foundations"
    },
    "b": {
-    "route": "/learn/deep-learning/sequence-generative/306-lstm-gates-and-memory",
-    "slug": "deep-learning/sequence-generative/306-lstm-gates-and-memory",
-    "title": "Derive LSTM gates and long-term memory",
-    "track": "deep-learning"
+    "route": "/learn/ai-foundations/ai-vs-ml-vs-deep-learning",
+    "slug": "ai-foundations/ai-vs-ml-vs-deep-learning",
+    "title": "AI vs. Machine Learning vs. Deep Learning",
+    "track": "ai-foundations"
    },
    "jaccard": 0.43,
    "containment": 0.75,
    "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": false
+   "alreadyLinked": true,
+   "sameTrack": true
   },
   {
    "a": {
@@ -209947,6 +210471,25 @@
    "containment": 0.75,
    "slugStem": false,
    "alreadyLinked": true,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/agentic-ai/agent-memory-short-vs-long-term",
+    "slug": "agentic-ai/agent-memory-short-vs-long-term",
+    "title": "Short-Term vs Long-Term Memory",
+    "track": "agentic-ai"
+   },
+   "b": {
+    "route": "/learn/deep-learning/sequence-generative/306-lstm-gates-and-memory",
+    "slug": "deep-learning/sequence-generative/306-lstm-gates-and-memory",
+    "title": "Derive LSTM gates and long-term memory",
+    "track": "deep-learning"
+   },
+   "jaccard": 0.43,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
    "sameTrack": false
   },
   {
@@ -209986,25 +210529,6 @@
    "slugStem": false,
    "alreadyLinked": false,
    "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/ai-foundations/ai-ml-dl-as-nested-fields",
-    "slug": "ai-foundations/ai-ml-dl-as-nested-fields",
-    "title": "AI, ML, and Deep Learning as Nested Fields",
-    "track": "ai-foundations"
-   },
-   "b": {
-    "route": "/learn/ai-foundations/ai-vs-ml-vs-deep-learning",
-    "slug": "ai-foundations/ai-vs-ml-vs-deep-learning",
-    "title": "AI vs. Machine Learning vs. Deep Learning",
-    "track": "ai-foundations"
-   },
-   "jaccard": 0.43,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
   },
   {
    "a": {
@@ -210825,6 +211349,82 @@
   },
   {
    "a": {
+    "route": "/learn/machine-learning/ml-303-kernel-methods-and-the-kernel-trick",
+    "slug": "machine-learning/ml-303-kernel-methods-and-the-kernel-trick",
+    "title": "Kernel methods and the kernel trick",
+    "track": "machine-learning"
+   },
+   "b": {
+    "route": "/learn/maths-foundations/kernel-matrices-and-kernel-trick",
+    "slug": "maths-foundations/kernel-matrices-and-kernel-trick",
+    "title": "Kernel matrices and the kernel trick",
+    "track": "maths-foundations"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/rag/chunking-quiz",
+    "slug": "rag/chunking-quiz",
+    "title": "Chunking: Check Yourself",
+    "track": "rag"
+   },
+   "b": {
+    "route": "/learn/rag/reranking-quiz",
+    "slug": "rag/reranking-quiz",
+    "title": "Reranking: Check Yourself",
+    "track": "rag"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/ai-literacy/what-ai-actually-is-quiz",
+    "slug": "ai-literacy/what-ai-actually-is-quiz",
+    "title": "Quiz: what AI is and isn't",
+    "track": "ai-literacy"
+   },
+   "b": {
+    "route": "/learn/ai-literacy/what-ai-actually-is",
+    "slug": "ai-literacy/what-ai-actually-is",
+    "title": "What AI actually is (and what it isn't)",
+    "track": "ai-literacy"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": true,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/context-engineering/tools-and-caching-cheatsheet",
+    "slug": "context-engineering/tools-and-caching-cheatsheet",
+    "title": "Tools and Caching Cheatsheet",
+    "track": "context-engineering"
+   },
+   "b": {
+    "route": "/learn/context-engineering/tools-caching-quiz",
+    "slug": "context-engineering/tools-caching-quiz",
+    "title": "Tools and Caching Quiz",
+    "track": "context-engineering"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
     "route": "/learn/context-engineering/compaction-memory-quiz",
     "slug": "context-engineering/compaction-memory-quiz",
     "title": "Compaction and Memory Quiz",
@@ -210949,25 +211549,6 @@
     "slug": "structured-outputs/repair-loop-mistakes",
     "title": "Repair-Loop Mistakes",
     "track": "structured-outputs"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/context-engineering/tools-and-caching-cheatsheet",
-    "slug": "context-engineering/tools-and-caching-cheatsheet",
-    "title": "Tools and Caching Cheatsheet",
-    "track": "context-engineering"
-   },
-   "b": {
-    "route": "/learn/context-engineering/tools-caching-quiz",
-    "slug": "context-engineering/tools-caching-quiz",
-    "title": "Tools and Caching Quiz",
-    "track": "context-engineering"
    },
    "jaccard": 0.5,
    "containment": 0.67,
@@ -211143,25 +211724,6 @@
    "jaccard": 0.5,
    "containment": 0.67,
    "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/ai-literacy/what-ai-actually-is-quiz",
-    "slug": "ai-literacy/what-ai-actually-is-quiz",
-    "title": "Quiz: what AI is and isn't",
-    "track": "ai-literacy"
-   },
-   "b": {
-    "route": "/learn/ai-literacy/what-ai-actually-is",
-    "slug": "ai-literacy/what-ai-actually-is",
-    "title": "What AI actually is (and what it isn't)",
-    "track": "ai-literacy"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": true,
    "alreadyLinked": true,
    "sameTrack": true
   },
@@ -211448,25 +212010,6 @@
    "containment": 0.67,
    "slugStem": false,
    "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/rag/chunking-quiz",
-    "slug": "rag/chunking-quiz",
-    "title": "Chunking: Check Yourself",
-    "track": "rag"
-   },
-   "b": {
-    "route": "/learn/rag/reranking-quiz",
-    "slug": "rag/reranking-quiz",
-    "title": "Reranking: Check Yourself",
-    "track": "rag"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
    "sameTrack": true
   },
   {
@@ -211867,25 +212410,6 @@
    "slugStem": false,
    "alreadyLinked": true,
    "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/machine-learning/ml-303-kernel-methods-and-the-kernel-trick",
-    "slug": "machine-learning/ml-303-kernel-methods-and-the-kernel-trick",
-    "title": "Kernel methods and the kernel trick",
-    "track": "machine-learning"
-   },
-   "b": {
-    "route": "/learn/maths-foundations/kernel-matrices-and-kernel-trick",
-    "slug": "maths-foundations/kernel-matrices-and-kernel-trick",
-    "title": "Kernel matrices and the kernel trick",
-    "track": "maths-foundations"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": false
   },
   {
    "a": {
@@ -212681,9 +213205,27 @@
  ],
  "sourcingFlags": [
   {
+   "route": "/learn/agent-frameworks/agno-teams-and-agentos",
+   "slug": "agent-frameworks/agno-teams-and-agentos",
+   "title": "Agno: fast agents, teams, and the AgentOS runtime",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
    "route": "/learn/agent-frameworks/claude-agent-sdk",
    "slug": "agent-frameworks/claude-agent-sdk",
    "title": "Claude Agent SDK: the Claude Code harness as a library",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/agent-frameworks/crewai-crews-and-flows",
+   "slug": "agent-frameworks/crewai-crews-and-flows",
+   "title": "CrewAI: role-based crews with deterministic flows",
    "family": "lesson",
    "flags": [
     "release-sensitive page with no updated/review date"
@@ -212726,12 +213268,48 @@
    ]
   },
   {
+   "route": "/learn/agent-frameworks/mastra-typescript-agents",
+   "slug": "agent-frameworks/mastra-typescript-agents",
+   "title": "Mastra: the TypeScript agent framework",
+   "family": "lesson",
+   "flags": [
+    "pricing-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/agent-frameworks/microsoft-agent-frameworks",
+   "slug": "agent-frameworks/microsoft-agent-frameworks",
+   "title": "Microsoft's agent frameworks: Semantic Kernel, AutoGen, and the convergence",
+   "family": "lesson",
+   "flags": [
+    "pricing-sensitive page with no updated/review date"
+   ]
+  },
+  {
    "route": "/learn/agent-frameworks/openai-agents-sdk",
    "slug": "agent-frameworks/openai-agents-sdk",
    "title": "OpenAI Agents SDK: agents, handoffs, and guardrails",
    "family": "lesson",
    "flags": [
     "pricing-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/agent-frameworks/pydanticai-typed-agents",
+   "slug": "agent-frameworks/pydanticai-typed-agents",
+   "title": "PydanticAI: agents that type-check",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/agent-frameworks/vercel-ai-sdk",
+   "slug": "agent-frameworks/vercel-ai-sdk",
+   "title": "Vercel AI SDK: streaming, tools, and generative UI",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
    ]
   },
   {

@@ -950,13 +950,26 @@ consolidation into a parent track, or a clearer curated-path role.
 - [x] LlamaIndex ingestion, indexes, query engines, workflows, agents, and agentic RAG.
       *(2026-09: `llamaindex-data-framework` — full stack from loaders to
       FunctionAgent; positioned as data-first, not general orchestration)*
-- [ ] Agno agents, teams, workflows, knowledge, memory, guardrails, and AgentOS.
-- [ ] PydanticAI typed agents, dependencies, tools, structured results, graphs, and evals.
-- [ ] Microsoft Semantic Kernel and current Microsoft agent framework direction.
-- [ ] Microsoft AutoGen history and migration status where current documentation supports it.
-- [ ] CrewAI crews and flows after technical and demand review.
-- [ ] Mastra agents, workflows, memory, RAG, evals, and deployment.
-- [ ] Vercel AI SDK for streaming, tools, structured output, providers, and generative UI.
+- [x] Agno agents, teams, workflows, knowledge, memory, guardrails, and AgentOS.
+      *(2026-09: `agno-teams-and-agentos` — all seven named areas covered)*
+- [x] PydanticAI typed agents, dependencies, tools, structured results, graphs, and evals.
+      *(2026-09: `pydanticai-typed-agents` — generics, DI via deps/RunContext,
+      output_type, graphs, pydantic-evals + Logfire)*
+- [x] Microsoft Semantic Kernel and current Microsoft agent framework direction.
+      *(2026-09: `microsoft-agent-frameworks` — SK enterprise lineage plus the
+      Agent Framework convergence; "check current docs" as the honest guidance)*
+- [x] Microsoft AutoGen history and migration status where current documentation supports it.
+      *(2026-09: same lesson — AutoGen research lineage, 0.2→0.4 redesign,
+      GroupChat, migration-debt caveat)*
+- [x] CrewAI crews and flows after technical and demand review.
+      *(2026-09: `crewai-crews-and-flows` — role/goal/backstory agents, tasks,
+      sequential/hierarchical processes, Flows)*
+- [x] Mastra agents, workflows, memory, RAG, evals, and deployment.
+      *(2026-09: `mastra-typescript-agents` — all six areas; positioned vs
+      Vercel AI SDK explicitly)*
+- [x] Vercel AI SDK for streaming, tools, structured output, providers, and generative UI.
+      *(2026-09: `vercel-ai-sdk` — all five areas; plumbing-vs-framework
+      distinction made explicit)*
 - [ ] DSPy for programmatic prompting and optimization.
 - [ ] Haystack for pipelines, retrieval, and agents.
 - [ ] Instructor for structured output where it remains relevant.
@@ -2703,6 +2716,24 @@ validation, deployment status, measured result when available, blockers, and nex
   reused existing langchain-langgraph-docs.
 - Validation: `check:content` clean (2,098); build 2,435 pages;
   `check:links` 0 dead (5,249 routes); registry 2,424 items.
+
+### 2026-09-15 — Agent Frameworks: typed/specialized tier (6 lessons)
+
+- Commit: pending. `pydanticai-typed-agents` (Agent[Deps,Output], DI,
+  output_type, evals/Logfire), `agno-teams-and-agentos` (knowledge/memory/
+  guardrails as constructor args + serving runtime), `microsoft-agent-frameworks`
+  (SK + AutoGen + MAF convergence — both Microsoft rows in one honest story),
+  `crewai-crews-and-flows` (role/goal/backstory, processes, Flows),
+  `vercel-ai-sdk` (plumbing layer: streamText/useChat/generateObject/Zod
+  tools/generative UI), `mastra-typescript-agents` (TS-native framework,
+  suspend/resume workflows). Track now 13 lessons.
+- Checklist: 7 more rows ticked (Agno, PydanticAI, SK, AutoGen, CrewAI,
+  Mastra, Vercel AI SDK). 6 rows remain: DSPy, Haystack, Instructor,
+  Outlines/Guidance, no-code, comparison capstone.
+- Sources: 6 new verified records (ai.pydantic.dev, learn.microsoft.com SK,
+  microsoft.github.io/autogen, docs.crewai.com, mastra.ai, ai-sdk.dev).
+- Validation: `check:content` clean (2,104); build 2,441 pages;
+  `check:links` 0 dead (5,261 routes); registry 2,430 items.
 
 ### 2026-09-14 — Master ecosystem backlog created
 
