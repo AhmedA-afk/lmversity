@@ -1,17 +1,17 @@
 # Content registry — audit views
 
-Generated 2026-09-15T13:28:57.373Z by `scripts/build-content-registry.mjs`.
-2401 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T13:36:03.476Z by `scripts/build-content-registry.mjs`.
+2410 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
 
-- lesson: 2026
+- lesson: 2033
 - quiz: 89
-- lab: 65
+- lab: 66
 - reference: 59
 - answer: 33
-- track: 32
+- track: 33
 - project: 31
 - page: 21
 - role: 12
@@ -23,17 +23,17 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By status
 
-- live: 2401
+- live: 2410
 
 ## By search intent (heuristic)
 
-- concept: 1857
+- concept: 1864
 - comparison: 107
-- build: 96
+- build: 97
 - practice: 89
 - reference: 60
 - answer: 33
-- course-hub: 32
+- course-hub: 33
 - worked-example: 29
 - troubleshooting: 24
 - how-to: 15
@@ -47,7 +47,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By primary audience (heuristic)
 
-- ai-engineer: 1625
+- ai-engineer: 1634
 - beginner-engineer: 439
 - forward-deployed-engineer: 194
 - general: 125
@@ -90,6 +90,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 | production | 28 | 28 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 54% | 100% | 4% | 520 | yes | — |
 | fine-tuning | 26 | 21 | 0 | 0 | 5 | 0 | 0 | 0 | 0 | 27% | 0% | 8% | 557 | — | — |
 | responsible-ai | 7 | 6 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 14% | 0% | 14% | 392 | — | — |
+| local-inference | 8 | 7 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 63% | 0% | 13% | 456 | — | — |
 
 ## Track gap briefs
 
@@ -252,6 +253,11 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - 1 duplicate-candidate pairs in track
 - promise gap: no live node title covers "Safety"; "building AI you can defend"
 
+### local-inference — 8 files, 0 modules — starts: "What 'running a model locally' actually means"
+
+- dead-end finish: last live lesson is the-local-privacy-boundary (concept)
+- missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
+
 ## Scores and dispositions (mechanical pass)
 
 Scale 0/1/2 per dimension; `null` = editorial judgement required. Auto-dispositions are
@@ -260,21 +266,21 @@ and split always need a written human reason (see checklist).
 
 | disposition | items |
 |---|---:|
-| keep | 2014 |
+| keep | 2023 |
 | investigate | 382 |
 | expand | 5 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2180 | 1.92 | 0 | 185 | 1995 |
-| correctnessSources | 44 | 1.27 | 0 | 32 | 12 |
-| completeness | 2325 | 1.65 | 39 | 733 | 1553 |
-| prerequisiteFit | 2260 | 2.00 | 3 | 0 | 2257 |
-| handsOn | 2180 | 1.49 | 532 | 53 | 1595 |
-| explanationQuality | 2180 | 1.96 | 20 | 56 | 2104 |
-| metadata | 2180 | 1.87 | 0 | 289 | 1891 |
-| linking | 2091 | 1.48 | 382 | 321 | 1388 |
-| freshnessHealth | 2401 | 0.78 | 797 | 1341 | 263 |
+| intentClarity | 2187 | 1.92 | 0 | 185 | 2002 |
+| correctnessSources | 45 | 1.27 | 0 | 33 | 12 |
+| completeness | 2333 | 1.65 | 39 | 738 | 1556 |
+| prerequisiteFit | 2268 | 2.00 | 3 | 0 | 2265 |
+| handsOn | 2187 | 1.49 | 535 | 53 | 1599 |
+| explanationQuality | 2187 | 1.96 | 20 | 56 | 2111 |
+| metadata | 2187 | 1.87 | 0 | 291 | 1896 |
+| linking | 2098 | 1.48 | 382 | 321 | 1395 |
+| freshnessHealth | 2410 | 0.78 | 805 | 1342 | 263 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
@@ -325,15 +331,15 @@ and split always need a written human reason (see checklist).
 - /learn/ai-foundations/reliable-ai/221-contestability-appeals-and-recource — Contestability, Appeals, and Recourse
 - … 342 more in content-registry.json
 
-#### expand: thin vs family median (238w vs ~777w) (1)
+#### expand: thin vs family median (238w vs ~776w) (1)
 
 - /learn/ai-foundations/choosing-a-model — Choosing a model in 2026
 
-#### expand: thin vs family median (277w vs ~777w) (1)
+#### expand: thin vs family median (277w vs ~776w) (1)
 
 - /learn/llm-foundations/next-token-prediction — Next-Token Prediction: The One Objective
 
-#### expand: thin vs family median (269w vs ~777w) (1)
+#### expand: thin vs family median (269w vs ~776w) (1)
 
 - /learn/llm-foundations/tokenization-explained — Tokenization: How Text Becomes Tokens
 
@@ -347,7 +353,7 @@ and split always need a written human reason (see checklist).
 
 ## Duplicate candidates
 
-334 pairs by title/slug similarity (100 not already cross-linked) — candidates for the merge/redirect editorial pass, not verdicts. Pairs where one already links to the other are marked linked — often deliberate two-part lessons.
+337 pairs by title/slug similarity (103 not already cross-linked) — candidates for the merge/redirect editorial pass, not verdicts. Pairs where one already links to the other are marked linked — often deliberate two-part lessons.
 
 | item A | item B | jac | contain | stem | linked | scope |
 |---|---|---:|---:|---|---|---|
@@ -412,7 +418,7 @@ and split always need a written human reason (see checklist).
 | /learn/tools-function-calling/tool-calling-glossary-cheatsheet | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  | yes | same track |
 | /learn/context-engineering/cache-aware-context-design | /learn/context-engineering/ordering-for-cache-hits | 0.5 | 1 |  | yes | same track |
 
-_… 274 more pairs in content-registry.json (`duplicates`)_
+_… 277 more pairs in content-registry.json (`duplicates`)_
 
 ## Title-overpromise candidates
 
@@ -424,7 +430,7 @@ _… 274 more pairs in content-registry.json (`duplicates`)_
 
 ## Sourcing review flags
 
-152 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
+160 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
 
 | item | flags |
 |---|---|
@@ -489,18 +495,18 @@ _… 274 more pairs in content-registry.json (`duplicates`)_
 | /learn/hallucinations/intrinsic-vs-extrinsic-hallucination | 7 numeric claims with no sources section or external link |
 | /learn/hallucinations/latency-cost-reliability-tradeoffs | 15 numeric claims with no sources section or external link |
 
-_… 92 more in content-registry.json (`sourcingFlags`)_
+_… 100 more in content-registry.json (`sourcingFlags`)_
 
 ## Freshness queues
 
 Review order: volatile classes first, oldest last-verified date first; undated items lead each queue. `verified`/`updated`/`published` supply the last-verified date — git-derived when frontmatter is absent.
 
-- periodic: 1341
+- periodic: 1342
 - pricing-sensitive: 337
-- release-sensitive: 286
+- release-sensitive: 293
 - durable: 263
 - certification-sensitive: 99
-- policy-sensitive: 75
+- policy-sensitive: 76
 
 ### certification-sensitive (99) — oldest-verified first
 
@@ -570,9 +576,10 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-literacy/compare-ai-tools-for-one-real-task — Comparing AI tools for one real task *(verified 2026-08-30)*
 - … 307 more in content-registry.json
 
-### policy-sensitive (75) — oldest-verified first
+### policy-sensitive (76) — oldest-verified first
 
 - /learn/llm-foundations/read-a-model-card-lab — Lab: read a model card like an engineer *(verified undated)*
+- /learn/local-inference/the-local-privacy-boundary — The local privacy boundary *(verified undated)*
 - /learn/responsible-ai/consent-contestability-and-impact — Consent, contestability, and the costs nobody measures *(verified undated)*
 - /privacy — Privacy *(verified undated)*
 - /terms — Terms *(verified undated)*
@@ -601,13 +608,19 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/machine-learning/public-data-projects/adult-income-project — Public-data project: Adult income prediction *(verified 2026-08-30)*
 - /learn/machine-learning/public-data-projects/aps-failure-project — Public-data project: APS Failure under imbalance *(verified 2026-08-30)*
 - /learn/machine-learning/public-data-projects/bank-marketing-project — Public-data project: Bank Marketing decision support *(verified 2026-08-30)*
-- /learn/machine-learning/public-data-projects/bike-sharing-project — Public-data project: Bike Sharing forecasting *(verified 2026-08-30)*
-- … 45 more in content-registry.json
+- … 46 more in content-registry.json
 
-### release-sensitive (286) — oldest-verified first
+### release-sensitive (293) — oldest-verified first
 
 Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-literacy/meet-skills-connectors-and-agents — MCP *(verified undated)*
+- /learn/local-inference/hardware-sizing-measurement-guide — llama.cpp, Ollama, vLLM *(verified undated)*
+- /learn/local-inference/llama-cpp-build-quantize-serve — llama.cpp, Ollama, LM Studio, OpenAI *(verified undated)*
+- /learn/local-inference/ollama-first-run — Ollama, OpenAI *(verified undated)*
+- /learn/local-inference/ollama-modelfiles-and-apis — Ollama, OpenAI *(verified undated)*
+- /learn/local-inference/quantization-formats-and-tradeoffs-lab — llama.cpp *(verified undated)*
+- /learn/local-inference/vllm-production-serving — vLLM, OpenAI, Ollama, llama.cpp, Llama *(verified undated)*
+- /learn/local-inference/what-local-inference-actually-means — Ollama *(verified undated)*
 - /learn/python-data-apis/observability-for-ai-services — OpenTelemetry *(verified undated)*
 - /learn/tools-function-calling/tool-discovery-at-runtime — MCP *(verified undated)*
 - /learn/genai-app-dev/streaming-responses-to-the-ui — Anthropic, OpenAI *(verified 2026-08-29)*
@@ -630,21 +643,14 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-foundations/foundation-models-explained — GPT-4, Claude, Gemini *(verified 2026-08-30)*
 - /learn/ai-foundations/how-llms-work-end-to-end-example — GPT-2 *(verified 2026-08-30)*
 - /learn/ai-foundations/interpretability-black-box-problem — Anthropic, Claude *(verified 2026-08-30)*
-- /learn/ai-foundations/narrow-ai-vs-general-ai — Claude *(verified 2026-08-30)*
-- /learn/ai-foundations/narrow-vs-general-ai-in-practice — GPT-5, Claude, Gemini *(verified 2026-08-30)*
-- /learn/ai-foundations/scaling-laws — OpenAI, GPT-3 *(verified 2026-08-30)*
-- /learn/ai-literacy/common-myths-about-ai-debunked — ChatGPT, Copilot *(verified 2026-08-30)*
-- /learn/ai-literacy/expecting-too-much-or-too-little — ChatGPT *(verified 2026-08-30)*
-- /learn/ai-literacy/types-of-ai-you-meet-every-day — ChatGPT, Claude, Gemini *(verified 2026-08-30)*
-- /learn/context-engineering/counting-tokens-in-practice — OpenAI, Claude, Anthropic *(verified 2026-08-30)*
-- … 256 more
+- … 263 more
 
 ## Missing-data queues
 
 ### no summary/meta description (0)
 
 
-### no published or updated date (17)
+### no published or updated date (25)
 
 - /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access
 - /learn/agentic-ai/agent-task-contracts — Write a task contract for an agent
@@ -653,6 +659,14 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-literacy/seven-first-ai-workflows-lab — Lab: seven first AI workflows for everyday work
 - /learn/llm-foundations/inspect-a-real-tokenizer-lab — Lab: inspect a real tokenizer
 - /learn/llm-foundations/read-a-model-card-lab — Lab: read a model card like an engineer
+- /learn/local-inference/hardware-sizing-measurement-guide — Size hardware for local inference by measuring it
+- /learn/local-inference/llama-cpp-build-quantize-serve — llama.cpp: build, quantize, and serve
+- /learn/local-inference/ollama-first-run — Ollama: install, pull, run, and the first API call
+- /learn/local-inference/ollama-modelfiles-and-apis — Ollama Modelfiles, embeddings, and tool calling
+- /learn/local-inference/quantization-formats-and-tradeoffs-lab — Lab: pick a quantization level by measuring the tradeoff
+- /learn/local-inference/the-local-privacy-boundary — The local privacy boundary
+- /learn/local-inference/vllm-production-serving — vLLM: serving a model to real traffic
+- /learn/local-inference/what-local-inference-actually-means — What 'running a model locally' actually means
 - /learn/machine-learning/predictive-ml-vs-generative-ai — Separate predictive-ML choices from generative-AI choices
 - /learn/prompt-engineering/provider-differences-lab — Lab: measure how the same prompt behaves across providers
 - /learn/python-data-apis/observability-for-ai-services — Add observability to a Python AI service
@@ -720,11 +734,19 @@ Largest queue; full list in JSON. Oldest-verified sample:
 ### lesson files with status coming (0)
 
 
-### release-sensitive, no date at all (10)
+### release-sensitive, no date at all (18)
 
 - /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access
 - /learn/ai-literacy/meet-skills-connectors-and-agents — Meet skills, connectors, and agents — safely
 - /learn/llm-foundations/read-a-model-card-lab — Lab: read a model card like an engineer
+- /learn/local-inference/hardware-sizing-measurement-guide — Size hardware for local inference by measuring it
+- /learn/local-inference/llama-cpp-build-quantize-serve — llama.cpp: build, quantize, and serve
+- /learn/local-inference/ollama-first-run — Ollama: install, pull, run, and the first API call
+- /learn/local-inference/ollama-modelfiles-and-apis — Ollama Modelfiles, embeddings, and tool calling
+- /learn/local-inference/quantization-formats-and-tradeoffs-lab — Lab: pick a quantization level by measuring the tradeoff
+- /learn/local-inference/the-local-privacy-boundary — The local privacy boundary
+- /learn/local-inference/vllm-production-serving — vLLM: serving a model to real traffic
+- /learn/local-inference/what-local-inference-actually-means — What 'running a model locally' actually means
 - /learn/machine-learning/predictive-ml-vs-generative-ai — Separate predictive-ML choices from generative-AI choices
 - /learn/python-data-apis/observability-for-ai-services — Add observability to a Python AI service
 - /learn/responsible-ai/consent-contestability-and-impact — Consent, contestability, and the costs nobody measures

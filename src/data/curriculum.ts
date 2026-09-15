@@ -10629,6 +10629,63 @@ const unsortedTracks: Track[] = [
         "prereq": ["governance-artifacts"]
       }
     ]
+  },
+  {
+    "id": "local-inference",
+    "n": "23",
+    "name": "Local Models & Inference",
+    "group": "Production",
+    "meta": "8 lessons",
+    "summary": "Running models on your own hardware — Ollama, llama.cpp, vLLM, quantization, hardware sizing, and what 'local' actually guarantees.",
+    "nodes": [
+      {
+        "title": "What 'running a model locally' actually means",
+        "slug": "what-local-inference-actually-means",
+        "status": "live"
+      },
+      {
+        "title": "Ollama: install, pull, run, and the first API call",
+        "slug": "ollama-first-run",
+        "status": "live",
+        "prereq": ["what-local-inference-actually-means"]
+      },
+      {
+        "title": "Ollama Modelfiles, embeddings, and tool calling",
+        "slug": "ollama-modelfiles-and-apis",
+        "status": "live",
+        "prereq": ["ollama-first-run"]
+      },
+      {
+        "title": "llama.cpp: build, quantize, and serve",
+        "slug": "llama-cpp-build-quantize-serve",
+        "status": "live",
+        "prereq": ["what-local-inference-actually-means"]
+      },
+      {
+        "title": "vLLM: serving a model to real traffic",
+        "slug": "vllm-production-serving",
+        "status": "live",
+        "prereq": ["llama-cpp-build-quantize-serve"]
+      },
+      {
+        "title": "Lab: pick a quantization level by measuring the tradeoff",
+        "slug": "quantization-formats-and-tradeoffs-lab",
+        "status": "live",
+        "prereq": ["llama-cpp-build-quantize-serve"]
+      },
+      {
+        "title": "Size hardware for local inference by measuring it",
+        "slug": "hardware-sizing-measurement-guide",
+        "status": "live",
+        "prereq": ["what-local-inference-actually-means"]
+      },
+      {
+        "title": "The local privacy boundary",
+        "slug": "the-local-privacy-boundary",
+        "status": "live",
+        "prereq": ["what-local-inference-actually-means"]
+      }
+    ]
   }
 ];
 

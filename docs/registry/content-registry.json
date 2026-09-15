@@ -1,37 +1,37 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T13:28:57.373Z",
+  "generatedAt": "2026-09-15T13:36:03.476Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2401,
+  "itemCount": 2410,
   "counts": {
    "byFamily": {
-    "lesson": 2026,
+    "lesson": 2033,
     "project": 31,
     "quiz": 89,
     "reference": 59,
-    "lab": 65,
+    "lab": 66,
     "interview": 7,
     "scenario": 6,
     "blog": 10,
     "guide": 9,
     "answer": 33,
-    "track": 32,
+    "track": 33,
     "role": 12,
     "page": 21,
     "glossary": 1
    },
    "byStatus": {
-    "live": 2401
+    "live": 2410
    },
    "byKind": {
-    "concept": 1727,
+    "concept": 1734,
     "comparison": 102,
     "worked-example": 29,
     "capstone": 31,
     "quiz": 83,
     "cheatsheet": 48,
-    "lab": 65,
+    "lab": 66,
     "common-mistakes": 24,
     "topic": 7,
     "scenario": 6,
@@ -43,7 +43,7 @@
     "reference": 7,
     "drill": 13,
     "bootcamp": 6,
-    "track": 22,
+    "track": 23,
     "quick-guide": 4,
     "role-path": 12,
     "fde-phase": 10,
@@ -70,6 +70,7 @@
     "hallucinations": 134,
     "harness-design": 27,
     "llm-foundations": 134,
+    "local-inference": 9,
     "machine-learning": 210,
     "maths-foundations": 194,
     "mcp": 59,
@@ -96,10 +97,10 @@
     "fde": 193
    },
    "byFreshness": {
-    "release-sensitive": 286,
-    "periodic": 1341,
+    "release-sensitive": 293,
+    "periodic": 1342,
     "certification-sensitive": 99,
-    "policy-sensitive": 75,
+    "policy-sensitive": 76,
     "pricing-sensitive": 337,
     "durable": 263
    }
@@ -8910,7 +8911,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (238w vs ~777w)",
+   "dispositionReason": "thin vs family median (238w vs ~776w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -86577,7 +86578,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (277w vs ~777w)",
+   "dispositionReason": "thin vs family median (277w vs ~776w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -90132,7 +90133,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -90295,7 +90296,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (269w vs ~777w)",
+   "dispositionReason": "thin vs family median (269w vs ~776w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -92565,6 +92566,712 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2078",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Size hardware for local inference by measuring it",
+   "slug": "local-inference/hardware-sizing-measurement-guide",
+   "route": "/learn/local-inference/hardware-sizing-measurement-guide",
+   "collection": "lessons",
+   "path": "src/content/lessons/local-inference/hardware-sizing-measurement-guide.md",
+   "track": "local-inference",
+   "module": null,
+   "status": "live",
+   "summary": "Whether a model runs on your hardware is an arithmetic floor plus a measurement, not a spec-sheet guess — compute the memory floor, then measure speed on the real task.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 490,
+   "headings": [
+    "The short answer",
+    "The fit question: arithmetic floor",
+    "The usable question: measure, don't estimate",
+    "The measurement protocol",
+    "What the answer looks like",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/local-inference/llama-cpp-build-quantize-serve",
+    "/learn/local-inference/quantization-formats-and-tradeoffs-lab",
+    "/learn/local-inference/vllm-production-serving",
+    "/learn/local-inference/what-local-inference-actually-means"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 7,
+    "numericClaims": 6,
+    "specFormat": true,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Whether a model runs on your hardware is an arithmetic floor plus a measurement, not a spec-sheet guess — compute the memory floor, then measure speed on the real task.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/local-inference/the-local-privacy-boundary",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: llama.cpp, Ollama, vLLM"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2079",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "llama.cpp: build, quantize, and serve",
+   "slug": "local-inference/llama-cpp-build-quantize-serve",
+   "route": "/learn/local-inference/llama-cpp-build-quantize-serve",
+   "collection": "lessons",
+   "path": "src/content/lessons/local-inference/llama-cpp-build-quantize-serve.md",
+   "track": "local-inference",
+   "module": null,
+   "status": "live",
+   "summary": "llama.cpp is the inference engine under most local-model tooling — build it, understand GGUF quantization formats, run the server, and measure what you get.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 478,
+   "headings": [
+    "The short answer",
+    "Why go below Ollama",
+    "The shape of the workflow",
+    "Quantization formats are the whole game",
+    "Runtime flags worth knowing",
+    "Measure, don't guess",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/fine-tuning/quantization-gguf-awq-gptq",
+    "/learn/local-inference/hardware-sizing-measurement-guide",
+    "/learn/local-inference/quantization-formats-and-tradeoffs-lab",
+    "/learn/local-inference/what-local-inference-actually-means",
+    "/learn/structured-outputs/grammar-constrained-generation"
+   ],
+   "externalLinks": [
+    "https://github.com/ggml-org/llama.cpp/blob/master/grammars/README.md"
+   ],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 4,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "llama.cpp is the inference engine under most local-model tooling — build it, understand GGUF quantization formats, run the server, and measure what you get.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/local-inference/vllm-production-serving",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: llama.cpp, Ollama, LM Studio, OpenAI"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": 1,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2080",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Ollama: install, pull, run, and the first API call",
+   "slug": "local-inference/ollama-first-run",
+   "route": "/learn/local-inference/ollama-first-run",
+   "collection": "lessons",
+   "path": "src/content/lessons/local-inference/ollama-first-run.md",
+   "track": "local-inference",
+   "module": null,
+   "status": "live",
+   "summary": "Get a model running locally with Ollama — installation, finding models, the pull/run lifecycle, and calling the local REST API with streaming.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 350,
+   "headings": [
+    "The short answer",
+    "Install and first pull",
+    "Run it",
+    "Call the API",
+    "Where the rough edges are",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/local-inference/hardware-sizing-measurement-guide",
+    "/learn/local-inference/ollama-modelfiles-and-apis",
+    "/learn/local-inference/the-local-privacy-boundary",
+    "/learn/local-inference/what-local-inference-actually-means"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 3,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 6,
+    "numericClaims": 4,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Get a model running locally with Ollama — installation, finding models, the pull/run lifecycle, and calling the local REST API with streaming.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/local-inference/ollama-modelfiles-and-apis",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Ollama, OpenAI"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2081",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Ollama Modelfiles, embeddings, and tool calling",
+   "slug": "local-inference/ollama-modelfiles-and-apis",
+   "route": "/learn/local-inference/ollama-modelfiles-and-apis",
+   "collection": "lessons",
+   "path": "src/content/lessons/local-inference/ollama-modelfiles-and-apis.md",
+   "track": "local-inference",
+   "module": null,
+   "status": "live",
+   "summary": "Customize a model with a Modelfile, then use Ollama's structured output, embeddings, and tool-calling APIs — the surface a real local app is built on.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 414,
+   "headings": [
+    "The short answer",
+    "Modelfiles: bake your defaults in",
+    "Structured output",
+    "Embeddings: local RAG without a remote call",
+    "Tool calling",
+    "Vision models",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/local-inference/hardware-sizing-measurement-guide",
+    "/learn/local-inference/ollama-first-run",
+    "/learn/rag/ingestion-chunking-and-retrieval",
+    "/learn/structured-outputs/grammar-constrained-generation",
+    "/learn/structured-outputs/json-schema-essentials-for-outputs",
+    "/learn/tools-function-calling/tool-calling-across-providers"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 4,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 4,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Customize a model with a Modelfile, then use Ollama's structured output, embeddings, and tool-calling APIs — the surface a real local app is built on.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/local-inference/llama-cpp-build-quantize-serve",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Ollama, OpenAI"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2082",
+   "family": "lab",
+   "kind": "lab",
+   "title": "Lab: pick a quantization level by measuring the tradeoff",
+   "slug": "local-inference/quantization-formats-and-tradeoffs-lab",
+   "route": "/learn/local-inference/quantization-formats-and-tradeoffs-lab",
+   "collection": "lessons",
+   "path": "src/content/lessons/local-inference/quantization-formats-and-tradeoffs-lab.md",
+   "track": "local-inference",
+   "module": null,
+   "status": "live",
+   "summary": "Quantization is a quality/size dial with a name in the filename — this lab runs the same task at two levels and measures the real cost of going smaller.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 427,
+   "headings": [
+    "The short answer",
+    "The naming scheme, decoded",
+    "The lab: measure the drop on your task",
+    "Reading the result",
+    "The rule this produces",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/fine-tuning/quantization-gguf-awq-gptq",
+    "/learn/local-inference/hardware-sizing-measurement-guide",
+    "/learn/local-inference/llama-cpp-build-quantize-serve"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 3,
+    "numericClaims": 2,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "build",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Quantization is a quality/size dial with a name in the filename — this lab runs the same task at two levels and measures the real cost of going smaller.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/local-inference/hardware-sizing-measurement-guide",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: llama.cpp"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2083",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "The local privacy boundary",
+   "slug": "local-inference/the-local-privacy-boundary",
+   "route": "/learn/local-inference/the-local-privacy-boundary",
+   "collection": "lessons",
+   "path": "src/content/lessons/local-inference/the-local-privacy-boundary.md",
+   "track": "local-inference",
+   "module": null,
+   "status": "live",
+   "summary": "A locally-running model keeps inference on your machine — but the app, its telemetry, its plugins, and its remote fallbacks each draw their own boundary. Auditing all of them is the privacy task.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 456,
+   "headings": [
+    "The short answer",
+    "The four leaks to audit",
+    "The audit method",
+    "What \"local and private\" actually requires",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/local-inference/ollama-first-run",
+    "/learn/local-inference/what-local-inference-actually-means",
+    "/learn/production/data-retention-and-privacy-policy",
+    "/learn/production/pii-redaction-in-llm-logs"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 4,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "A locally-running model keeps inference on your machine — but the app, its telemetry, its plugins, and its remote fallbacks each draw their own boundary. Auditing all of them is the privacy task.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/local-inference",
+   "practiceType": "none",
+   "freshnessClass": "policy-sensitive",
+   "freshnessSignals": [
+    "policy/license mention",
+    "vendor/tool mentions: Ollama"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2084",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "vLLM: serving a model to real traffic",
+   "slug": "local-inference/vllm-production-serving",
+   "route": "/learn/local-inference/vllm-production-serving",
+   "collection": "lessons",
+   "path": "src/content/lessons/local-inference/vllm-production-serving.md",
+   "track": "local-inference",
+   "module": null,
+   "status": "live",
+   "summary": "vLLM is the serving layer for when 'local' means 'a service, not a laptop' — continuous batching, memory management, and an OpenAI-compatible API for production traffic.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 482,
+   "headings": [
+    "The short answer",
+    "Where vLLM sits",
+    "The server shape",
+    "Why it's faster under load",
+    "The honest limits",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/deep-learning/sequence-generative/316-kv-cache-and-serving-latency",
+    "/learn/local-inference/hardware-sizing-measurement-guide",
+    "/learn/local-inference/llama-cpp-build-quantize-serve",
+    "/learn/production/latency-and-cost-slos"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 4,
+    "numericClaims": 1,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "vLLM is the serving layer for when 'local' means 'a service, not a laptop' — continuous batching, memory management, and an OpenAI-compatible API for production traffic.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/local-inference/quantization-formats-and-tradeoffs-lab",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: vLLM, OpenAI, Ollama, llama.cpp, Llama"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2085",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "What 'running a model locally' actually means",
+   "slug": "local-inference/what-local-inference-actually-means",
+   "route": "/learn/local-inference/what-local-inference-actually-means",
+   "collection": "lessons",
+   "path": "src/content/lessons/local-inference/what-local-inference-actually-means.md",
+   "track": "local-inference",
+   "module": null,
+   "status": "live",
+   "summary": "Local inference means the model's weights and every forward pass live on your hardware — but the app wrapping it may still phone home, download updates, or fall back to a remote API.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 409,
+   "headings": [
+    "The short answer",
+    "The three layers to separate",
+    "What local buys you — and what it doesn't",
+    "Where this fits",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/fine-tuning/choosing-managed-vs-self-hosted-fine-tuning",
+    "/learn/local-inference/hardware-sizing-measurement-guide",
+    "/learn/local-inference/ollama-first-run",
+    "/learn/local-inference/the-local-privacy-boundary"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 7,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Local inference means the model's weights and every forward pass live on your hardware — but the app wrapping it may still phone home, download updates, or fall back to a remote API.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/local-inference/ollama-first-run",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Ollama"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 1,
     "linking": 2,
     "freshnessHealth": 0,
     "originality": null,
@@ -134074,7 +134781,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -136831,7 +137538,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -201170,6 +201877,82 @@
    }
   },
   {
+   "id": "trk-0024",
+   "family": "track",
+   "kind": "track",
+   "title": "Local Models & Inference",
+   "slug": "local-inference",
+   "route": "/learn/local-inference",
+   "collection": null,
+   "path": "src/data/curriculum.ts",
+   "track": "local-inference",
+   "module": null,
+   "status": "live",
+   "summary": "Running models on your own hardware — Ollama, llama.cpp, vLLM, quantization, hardware sizing, and what 'local' actually guarantees.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": null,
+   "headings": [],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [
+    "Course",
+    "CourseInstance",
+    "Syllabus",
+    "Offer",
+    "FAQPage",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "group": "Production",
+    "declaredMeta": "8 lessons",
+    "nodeCount": 8,
+    "liveNodes": 8,
+    "comingNodes": 0,
+    "headingOnlyNodes": 0,
+    "fileCount": 8,
+    "kinds": {
+     "concept": 7,
+     "lab": 1
+    },
+    "modules": 0,
+    "quickGuide": false
+   },
+   "searchIntent": "course-hub",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Running models on your own hardware — Ollama, llama.cpp, vLLM, quantization, hardware sizing, and what 'local' actually guarantees.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": null,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "rol-0002",
    "family": "role",
    "kind": "role-path",
@@ -205597,6 +206380,25 @@
   },
   {
    "a": {
+    "route": "/learn/ai-foundations/what-a-model-actually-is",
+    "slug": "ai-foundations/what-a-model-actually-is",
+    "title": "What a Model Actually Is",
+    "track": "ai-foundations"
+   },
+   "b": {
+    "route": "/learn/local-inference/what-local-inference-actually-means",
+    "slug": "local-inference/what-local-inference-actually-means",
+    "title": "What 'running a model locally' actually means",
+    "track": "local-inference"
+   },
+   "jaccard": 0.4,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
     "route": "/learn/prompt-engineering/role-prompting",
     "slug": "prompt-engineering/role-prompting",
     "title": "Role Prompting: What Personas Actually Change",
@@ -205639,6 +206441,25 @@
     "slug": "genai-app-dev/function-calling-across-providers",
     "title": "Tool/Function Calling Across Providers",
     "track": "genai-app-dev"
+   },
+   "b": {
+    "route": "/learn/tools-function-calling/what-is-tool-calling",
+    "slug": "tools-function-calling/what-is-tool-calling",
+    "title": "What Is Tool Calling",
+    "track": "tools-function-calling"
+   },
+   "jaccard": 0.4,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/local-inference/ollama-modelfiles-and-apis",
+    "slug": "local-inference/ollama-modelfiles-and-apis",
+    "title": "Ollama Modelfiles, embeddings, and tool calling",
+    "track": "local-inference"
    },
    "b": {
     "route": "/learn/tools-function-calling/what-is-tool-calling",
@@ -208425,6 +209246,25 @@
    "slugStem": false,
    "alreadyLinked": false,
    "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/genai-app-dev/your-first-llm-api-call",
+    "slug": "genai-app-dev/your-first-llm-api-call",
+    "title": "Your First LLM API Call",
+    "track": "genai-app-dev"
+   },
+   "b": {
+    "route": "/learn/local-inference/ollama-first-run",
+    "slug": "local-inference/ollama-first-run",
+    "title": "Ollama: install, pull, run, and the first API call",
+    "track": "local-inference"
+   },
+   "jaccard": 0.38,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
   },
   {
    "a": {
@@ -211379,6 +212219,80 @@
    "family": "lesson",
    "flags": [
     "7 numeric claims with no sources section or external link"
+   ]
+  },
+  {
+   "route": "/learn/local-inference/hardware-sizing-measurement-guide",
+   "slug": "local-inference/hardware-sizing-measurement-guide",
+   "title": "Size hardware for local inference by measuring it",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date",
+    "6 numeric claims with no sources section or external link"
+   ]
+  },
+  {
+   "route": "/learn/local-inference/llama-cpp-build-quantize-serve",
+   "slug": "local-inference/llama-cpp-build-quantize-serve",
+   "title": "llama.cpp: build, quantize, and serve",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/local-inference/ollama-first-run",
+   "slug": "local-inference/ollama-first-run",
+   "title": "Ollama: install, pull, run, and the first API call",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date",
+    "4 numeric claims with no sources section or external link"
+   ]
+  },
+  {
+   "route": "/learn/local-inference/ollama-modelfiles-and-apis",
+   "slug": "local-inference/ollama-modelfiles-and-apis",
+   "title": "Ollama Modelfiles, embeddings, and tool calling",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/local-inference/quantization-formats-and-tradeoffs-lab",
+   "slug": "local-inference/quantization-formats-and-tradeoffs-lab",
+   "title": "Lab: pick a quantization level by measuring the tradeoff",
+   "family": "lab",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/local-inference/the-local-privacy-boundary",
+   "slug": "local-inference/the-local-privacy-boundary",
+   "title": "The local privacy boundary",
+   "family": "lesson",
+   "flags": [
+    "policy-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/local-inference/vllm-production-serving",
+   "slug": "local-inference/vllm-production-serving",
+   "title": "vLLM: serving a model to real traffic",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/local-inference/what-local-inference-actually-means",
+   "slug": "local-inference/what-local-inference-actually-means",
+   "title": "What 'running a model locally' actually means",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
    ]
   },
   {

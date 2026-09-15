@@ -894,20 +894,28 @@ consolidation into a parent track, or a clearer curated-path role.
 
 ### Local models and inference
 
-- [ ] Ollama installation, model discovery, pull/run lifecycle, Modelfiles, API, streaming,
+- [x] Ollama installation, model discovery, pull/run lifecycle, Modelfiles, API, streaming,
       structured output, embeddings, tool calling, vision, hardware use, and troubleshooting.
+      *(2025-12: `ollama-first-run` covers install/discovery/pull/run/API/streaming/
+      troubleshooting; `ollama-modelfiles-and-apis` covers Modelfiles, structured output,
+      embeddings, tool calling, vision; hardware use in `hardware-sizing-measurement-guide`)*
 - [ ] LM Studio local serving and OpenAI-compatible APIs after official verification.
-- [ ] llama.cpp build, quantization formats, runtime flags, server mode, and measurement.
-- [ ] vLLM serving, batching, memory, OpenAI-compatible APIs, and production deployment.
+- [x] llama.cpp build, quantization formats, runtime flags, server mode, and measurement.
+      *(2025-12: `llama-cpp-build-quantize-serve`)*
+- [x] vLLM serving, batching, memory, OpenAI-compatible APIs, and production deployment.
+      *(2025-12: `vllm-production-serving`)*
 - [ ] SGLang serving and structured generation after demand review.
 - [ ] Hugging Face Transformers and pipelines.
 - [ ] Hugging Face Text Generation Inference and Text Embeddings Inference.
 - [ ] MLX and MLX-LM for supported Apple Silicon workflows.
 - [ ] ONNX Runtime and on-device inference where relevant.
-- [ ] Quantization lab covering GGUF and other supported formats with measured tradeoffs.
-- [ ] Hardware-sizing guide based on reproducible measurements, not copied estimates.
-- [ ] Local privacy guide that distinguishes local execution from telemetry, downloads,
+- [x] Quantization lab covering GGUF and other supported formats with measured tradeoffs.
+      *(2025-12: `quantization-formats-and-tradeoffs-lab` — measure-then-choose method, no copied numbers)*
+- [x] Hardware-sizing guide based on reproducible measurements, not copied estimates.
+      *(2025-12: `hardware-sizing-measurement-guide` — measure-resident-bytes + tok/s method)*
+- [x] Local privacy guide that distinguishes local execution from telemetry, downloads,
       plugins, external tools, and remote model fallbacks.
+      *(2025-12: `the-local-privacy-boundary` — exactly this five-way distinction)*
 
 ### Agent and application frameworks
 
@@ -2590,6 +2598,29 @@ validation, deployment status, measured result when available, blockers, and nex
   `check:links` 0 dead (5,203); registry 2,401 items; Sources section
   verified rendering in built HTML.
 - Next batch: Phase 6B/6C framework/tool reference coverage.
+
+### 2026-09-15 — Local Models & Inference track (Phase 6B start)
+
+- Commit: `b337bfb`. New track `local-inference` (n 23, Production group) — the
+  corpus had zero dedicated Ollama/llama.cpp/vLLM coverage despite Phase 6B
+  naming them. 8 lessons: `what-local-inference-actually-means`,
+  `ollama-first-run`, `ollama-modelfiles-and-apis`,
+  `llama-cpp-build-quantize-serve`, `vllm-production-serving`,
+  `quantization-formats-and-tradeoffs-lab`, `hardware-sizing-measurement-guide`,
+  `the-local-privacy-boundary`. Prereq edges chain the runtime lessons to the
+  intro and vLLM/quantization to llama.cpp.
+- Checklist: 6 of 14 local-model rows ticked (Ollama, llama.cpp, vLLM,
+  quantization lab, hardware sizing, privacy guide). Still open: LM Studio,
+  SGLang, HF Transformers/pipelines, TGI/TEI, MLX, ONNX — none have coverage
+  yet; no invented ticks.
+- Editorial guardrails held: hardware and quantization lessons teach a
+  measure-it-yourself method (resident bytes, tok/s, perplexity on your own
+  hardware) instead of publishing unsourced numbers; the privacy lesson
+  separates local execution from telemetry/downloads/plugins/remote fallbacks.
+- Validation: `check:content` clean (2,085 lessons); build 2,421 pages;
+  `check:links` 0 dead (5,221 routes); registry 2,410 items.
+- Next batch: remaining local-inference rows (LM Studio/SGLang/MLX/ONNX/HF),
+  then agent frameworks.
 
 ### 2026-09-14 — Master ecosystem backlog created
 

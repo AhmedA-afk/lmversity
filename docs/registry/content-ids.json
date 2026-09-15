@@ -1,7 +1,7 @@
 {
  "version": 1,
  "next": {
-  "les": 2077,
+  "les": 2085,
   "que": 7,
   "sce": 6,
   "blo": 10,
@@ -11,7 +11,7 @@
   "rol": 12,
   "prc": 6,
   "pag": 22,
-  "trk": 23,
+  "trk": 24,
   "qgd": 4,
   "stb": 25
  },
@@ -9554,6 +9554,41 @@
   "lessons/responsible-ai/consent-contestability-and-impact.md": {
    "id": "les-2077",
    "fp": "03a8979eee1c59683d1f161c271d2f7c7868693d"
+  },
+  "lessons/local-inference/hardware-sizing-measurement-guide.md": {
+   "id": "les-2078",
+   "fp": "807e56e41f5e213945a92fb789732d30e6930a51"
+  },
+  "lessons/local-inference/llama-cpp-build-quantize-serve.md": {
+   "id": "les-2079",
+   "fp": "5909776aa44cefc35ef23ab8a097a790afa4a95a"
+  },
+  "lessons/local-inference/ollama-first-run.md": {
+   "id": "les-2080",
+   "fp": "2cfb3fe48223f5b3d9e637fd9ffd6d6d662c1796"
+  },
+  "lessons/local-inference/ollama-modelfiles-and-apis.md": {
+   "id": "les-2081",
+   "fp": "4bff3324322e059668467d6fe24291c1b00fab17"
+  },
+  "lessons/local-inference/quantization-formats-and-tradeoffs-lab.md": {
+   "id": "les-2082",
+   "fp": "a7da3eaafda6b069e7361d00f7f6679c1cdc1bc7"
+  },
+  "lessons/local-inference/the-local-privacy-boundary.md": {
+   "id": "les-2083",
+   "fp": "43e7d06caf949f45a9ac652e76ac2a517db075af"
+  },
+  "lessons/local-inference/vllm-production-serving.md": {
+   "id": "les-2084",
+   "fp": "08d360de2116ebe234ab2a1e9199906acca61fdf"
+  },
+  "lessons/local-inference/what-local-inference-actually-means.md": {
+   "id": "les-2085",
+   "fp": "b722b1648ae2baf0ede0abfdf08bfa79fa4bada4"
+  },
+  "data:track/local-inference": {
+   "id": "trk-0024"
   }
  },
  "retired": {
