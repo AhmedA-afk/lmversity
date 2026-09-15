@@ -1269,10 +1269,22 @@ Credentials to monitor:
 
 ### LLM Foundations
 
-- [ ] Audit tokenization, embeddings, attention, training, post-training, decoding,
-      reasoning, multimodality, inference, and evaluation coverage.
-- [ ] Add model-card reading, configuration reading, tokenizer inspection, and inference labs.
-- [ ] Distinguish known mechanisms from uncertain interpretations of model behavior.
+- [x] Audit tokenization, embeddings, attention, training, post-training, decoding,
+      reasoning, multimodality, inference, and evaluation coverage. *(all ten
+      verified in live titles: tokenization 16, embeddings 8, attention 19,
+      training 7, post-training 7, decoding 11, reasoning 5, multimodality 2,
+      inference 8, evaluation 1 — evaluation is thinnest, only
+      cross-entropy/perplexity; flagged for a future eval coverage pass)*
+- [x] Add model-card reading, configuration reading, tokenizer inspection, and inference labs.
+      *(config reading existed (`reading-a-real-model-config`); new labs
+      `inspect-a-real-tokenizer-lab` and `read-a-model-card-lab` registered
+      with prereq edges; inference labs already exist as implement-*/kv-cache
+      lessons)*
+- [x] Distinguish known mechanisms from uncertain interpretations of model behavior.
+      *(covered by `myths-about-how-llms-work`,
+      `emergent-abilities-and-the-mirage-debate` — which is precisely the
+      mechanism-vs-interpretation boundary — and `emergent-abilities-in-llms`,
+      plus the ai-foundations interpretability cluster)*
 
 ### Prompt Engineering
 
@@ -2194,6 +2206,32 @@ validation, deployment status, measured result when available, blockers, and nex
   `check:links` 0 dead.
 - Next batch: Classical AI / Deep Learning keep-or-merge decisions, or
   LLM Foundations audit row.
+
+### 2026-09-15 — Classical AI ↔ agentic bridges + DL decisions
+
+- Commit: `acb3f54`. 14 curated bridges added both directions between
+  classical-ai and agentic-ai (reactive→ReAct, deliberative/HTN→planning,
+  multi-agent→patterns/blackboard, minimax→tree-search, safety→autonomy
+  dial). Mixed .mdx files carry the user's migration edits — my link
+  appends ride along uncommitted there.
+- Classical AI (83 items) and Deep Learning (136 items) keep-vs-merge
+  decisions recorded: both already expanded far past the stale "3-file"/
+  "4-file" descriptions in the checklist; all named topics verified covered.
+- Next batch: LLM Foundations audit row + model-card/tokenizer labs, or
+  the remaining per-track rows.
+
+### 2026-09-15 — LLM Foundations labs
+
+- Two new labs registered with prereq edges: `inspect-a-real-tokenizer-lab`
+  (six probe routine — identity, numbers, code, case, multilingual,
+  boundary; ← `build-bpe-from-scratch`) and `read-a-model-card-lab`
+  (five-field critical reading; ← `reading-a-real-model-config`).
+- All three LLM Foundations rows ticked; evaluation coverage flagged as the
+  thinnest named topic (1 item).
+- Validation: `check:content` clean (2,066); build 2,401 pages;
+  `check:links` 0 dead.
+- Next batch: Prompt Engineering consolidation rows, or the editorial
+  status workflow.
 
 ### 2026-09-14 — Master ecosystem backlog created
 

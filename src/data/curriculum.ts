@@ -2452,6 +2452,12 @@ const unsortedTracks: Track[] = [
         "status": "live"
       },
       {
+        "title": "Lab: inspect a real tokenizer",
+        "slug": "inspect-a-real-tokenizer-lab",
+        "status": "live",
+        "prereq": ["build-bpe-from-scratch"]
+      },
+      {
         "title": "The Embedding Lookup Table",
         "slug": "the-embedding-lookup-table",
         "status": "live"
@@ -2645,6 +2651,12 @@ const unsortedTracks: Track[] = [
         "title": "Reading a Real Model's Config and Counting Its Parameters",
         "slug": "reading-a-real-model-config",
         "status": "live"
+      },
+      {
+        "title": "Lab: read a model card like an engineer",
+        "slug": "read-a-model-card-lab",
+        "status": "live",
+        "prereq": ["reading-a-real-model-config"]
       },
       {
         "title": "Myths About How LLMs Work",
