@@ -2418,6 +2418,23 @@ Credentials to monitor:
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
 
+### 2026-09-16 — Phase 4: scenario variants/modes/rubrics + teardown (9 rows)
+
+- Commit: `3fc4f3c`. Status: complete.
+- Scope: all 12 scenarios gained a tailored Variants section (startup/
+  enterprise/regulated/multilingual/low-connectivity as relevant),
+  "Two ways to run this" (whiteboard + guided modes), and an evaluation
+  rubric; new teardown post dissects Playwright MCP's real tool
+  contracts (read-only flags, element-permission params, snapshot refs).
+  Editorial policy rows verified against the compliant corpus.
+- Files: 12 scenario files, 1 blog post, playwright-mcp source record.
+- Validation: `check:content` clean; build 2,681 pages; `check:links`
+  0 dead / 5,742 routes.
+- Open in Phase 4: Search-Console-driven answer expansion (needs query
+  data), editorial pillars (provider-change pillar unbuilt), recurring
+  failure-of-month, deprecation notices.
+- Next: Phase 3 remainder, Phase 5 standards, or Phase 0/9 stragglers.
+
 ### 2026-09-16 — Phase 2: question-bank schema + platform + 8 banks (31 rows)
 
 - Commit: `71177d9`. Status: complete (schema/platform; bank depth
