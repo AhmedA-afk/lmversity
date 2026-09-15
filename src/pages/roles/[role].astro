@@ -22,17 +22,24 @@ const role = getRole(roleId!)!;
 const artAlt = roleArtAlt[role.id];
 const hasArt = existsSync(new URL(`../../../public/img/roles/role-${role.id}.webp`, import.meta.url));
 
-const steps = role.path.map((ref) => {
+const resolveRef = (ref: string) => {
   const [tid, slug] = ref.split('/');
   const track = getTrack(tid);
   const node = track?.nodes.find((n) => n.slug === slug);
   return {
     href: `/learn/${tid}/${slug}`,
     trackName: track?.name ?? tid,
-    title: conceptTitles[ref] ?? slug,
+    title: conceptTitles[ref] ?? node?.title ?? slug,
     hasPage: !!node && node.status === 'live',
   };
-});
+};
+
+const steps = role.path.map(resolveRef);
+const projects = (role.projects ?? []).map((p) => ({ ...p, ...resolveRef(p.ref) }));
+const branches = (role.branches ?? []).map((b) => ({
+  ...b,
+  links: b.refs.map((tid) => ({ href: `/learn/${tid}`, name: getTrack(tid)?.name ?? tid })),
+}));
 ---
 <Layout
   title={`AI for ${role.name}s`}
@@ -48,6 +55,7 @@ const steps = role.path.map((ref) => {
       <div>
         <h1>AI for {role.name}s</h1>
         <p class="desc">{role.description}</p>
+        {role.prereq && <p class="prereq"><span class="mono">Before you start:</span> {role.prereq}</p>}
         <p class="meta mono">{steps.length} lessons, in order</p>
       </div>
       {hasArt && artAlt && (
@@ -79,6 +87,70 @@ const steps = role.path.map((ref) => {
     </ol>
     <p class="foot">Want the whole picture? <a href="/learn">Open the full map →</a></p>
   </section>
+
+  {branches.length > 0 && (
+    <section class="container extra">
+      <h2>Optional branches</h2>
+      <p class="sub">Once the core path holds, these tracks take you deeper in the direction you pick.</p>
+      <ul class="cards">
+        {branches.map((b) => (
+          <li class="card">
+            <span class="card-title">{b.label}</span>
+            <span class="card-links">{b.links.map((l, i) => (<>{i > 0 && ' · '}<a href={l.href}>{l.name}</a></>))}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  {projects.length > 0 && (
+    <section class="container extra">
+      <h2>Projects that prove it</h2>
+      <p class="sub">The path ends in evidence — build these and you can show the skill, not claim it.</p>
+      <ul class="cards">
+        {projects.map((p) => (
+          <li class="card">
+            {p.hasPage ? <a href={p.href} class="card-title">{p.title}</a> : <span class="card-title">{p.title}</span>}
+            <span class="card-note">{p.note}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  {((role.interview?.length ?? 0) > 0 || (role.practice?.length ?? 0) > 0) && (
+    <section class="container extra">
+      <h2>Practice and interview prep</h2>
+      <ul class="links">
+        {(role.practice ?? []).map((t) => <li><a href={`/practice/${t}`}>Practice bank: {t.replace(/-/g, ' ')}</a></li>)}
+        {(role.interview ?? []).map((t) => <li><a href={`/interview/${t}`}>Interview prep: {t.replace(/-/g, ' ')}</a></li>)}
+      </ul>
+    </section>
+  )}
+
+  {role.evidence && role.evidence.length > 0 && (
+    <section class="container extra">
+      <h2>Portfolio evidence to aim for</h2>
+      <ul class="ticks">
+        {role.evidence.map((e) => <li>{e}</li>)}
+      </ul>
+    </section>
+  )}
+
+  {role.credentials && role.credentials.length > 0 && (
+    <section class="container extra">
+      <h2>External credentials worth evaluating</h2>
+      <p class="sub">Optional — listed for comparison, not endorsed. No credential guarantees a role, and none of these are required by this path.</p>
+      <ul class="cards">
+        {role.credentials.map((c) => (
+          <li class="card">
+            <span class="card-title">{c.name}</span>
+            <span class="card-note">{c.org} — {c.note}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
 </Layout>
 
 <style>
@@ -113,4 +185,19 @@ const steps = role.path.map((ref) => {
   .track { font-size: 10.5px; color: var(--faint); letter-spacing: .03em; }
   .right { flex: none; font-size: 11px; color: var(--faint); }
   .foot { margin-top: 28px; font-size: 14px; color: var(--muted); }
+
+  .prereq { margin-top: 14px; font-size: 13.5px; line-height: 1.55; color: var(--muted); max-width: 62ch; padding: 10px 14px; border-left: 2px solid var(--accent); background: var(--panel); }
+  .prereq .mono { font-size: 10.5px; color: var(--faint); letter-spacing: .04em; }
+  .extra { padding-block: 34px 0; }
+  .extra h2 { font-size: 20px; letter-spacing: -.01em; }
+  .extra .sub { margin-top: 8px; font-size: 13.5px; color: var(--muted); max-width: 64ch; }
+  .cards { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 10px; }
+  .card { display: flex; flex-direction: column; gap: 4px; padding: 13px 16px; border: 1px solid var(--rule); border-radius: 8px; }
+  .card-title { font: 500 14px/1.4 'IBM Plex Sans', 'IBM Plex Sans Fallback', sans-serif; color: var(--text); }
+  a.card-title:hover { color: var(--accent); text-decoration: none; }
+  .card-links { font-size: 12.5px; color: var(--muted); }
+  .card-note { font-size: 12.5px; color: var(--muted); line-height: 1.5; }
+  .links { margin: 14px 0 0; padding-left: 18px; font-size: 14px; line-height: 2; }
+  .ticks { margin: 14px 0 0; padding-left: 18px; font-size: 14px; line-height: 1.7; color: var(--text); }
+  .ticks li { margin-bottom: 8px; }
 </style>

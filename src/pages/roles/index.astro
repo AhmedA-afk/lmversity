@@ -45,6 +45,18 @@ const fdeTotal = fdeNodeCount();
       </a>
     ))}
   </section>
+  <section class="container boundaries">
+    <h2>Where the boundaries sit</h2>
+    <p class="sub">Paths share lessons where the underlying skill is shared — the differences are in what each role does with it.</p>
+    <ul class="blist">
+      <li><strong>Developer vs ML engineer.</strong> Both build systems; the developer applies models through APIs and ships features, the ML engineer trains, tunes, and serves the models themselves. Shared vocabulary, different layer of the stack.</li>
+      <li><strong>Product manager vs founder vs CEO.</strong> All three make decisions rather than implementations. A PM decides feature scope and ship criteria, a founder bets the product on it, a CEO sets the org's policy and risk posture. Same concepts — different authority.</li>
+      <li><strong>Designer, content creator, marketer.</strong> All use AI rather than build it. The designer shapes how AI features behave, the creator produces work with them, the marketer distributes and measures. The workflows overlap; the accountability differs.</li>
+      <li><strong>Security engineer vs developer.</strong> The security engineer reviews, attacks, and bounds what the developer builds — same mental model of how agents and tools work, opposite objective.</li>
+      <li><strong>Student vs data scientist.</strong> Both learn fundamentals; the student builds the broad base for its own sake, the data scientist applies it to data work with measured results.</li>
+      <li><strong>Forward-deployed engineer vs developer.</strong> The FDE embeds with a customer and ships inside their constraints — it is its own curriculum because the job includes the customer, not just the code.</li>
+    </ul>
+  </section>
 </Layout>
 
 <style>
@@ -71,4 +83,9 @@ const fdeTotal = fdeNodeCount();
   .rcard .cta { margin-top: 6px; font-size: 11.5px; color: var(--accent); }
   @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+  .boundaries { padding-block: 44px 20px; }
+  .boundaries h2 { font-size: 22px; letter-spacing: -.01em; }
+  .blist { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 12px; max-width: 72ch; }
+  .blist li { font-size: 14px; line-height: 1.6; color: var(--muted); padding-left: 14px; border-left: 2px solid var(--rule); }
+  .blist strong { color: var(--text); font-weight: 500; }
 </style>

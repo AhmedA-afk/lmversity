@@ -1,5 +1,17 @@
 // AUTO-GENERATED role learning paths. `path` items are "trackId/slug" concept refs.
-export interface Role { id: string; name: string; blurb: string; description: string; path: string[]; }
+export interface RoleBranch { label: string; refs: string[]; }
+export interface RoleProject { ref: string; note: string; }
+export interface RoleCredential { name: string; org: string; note: string; }
+export interface Role {
+  id: string; name: string; blurb: string; description: string; path: string[];
+  prereq?: string;
+  branches?: RoleBranch[];
+  projects?: RoleProject[];
+  interview?: string[];
+  practice?: string[];
+  credentials?: RoleCredential[];
+  evidence?: string[];
+}
 export const roles: Role[] = [
   {
     "id": "developer",
@@ -18,6 +30,29 @@ export const roles: Role[] = [
       "genai-app-dev/shipping-your-first-end-to-end-app",
       "production/feature-flags-and-kill-switches",
       "genai-app-dev/capstone-ship-a-genai-assistant"
+    ],
+    "prereq": "You read and write code in at least one language and have shipped something — a feature, a script, a side project. No ML background assumed.",
+    "branches": [
+      { "label": "Self-hosting models", "refs": ["local-inference"] },
+      { "label": "Building agent systems", "refs": ["agent-frameworks", "harness-design"] },
+      { "label": "Working with coding agents", "refs": ["cli-agents"] }
+    ],
+    "projects": [
+      { "ref": "genai-app-dev/capstone-ship-a-genai-assistant", "note": "End-to-end shipped feature with tests, flags, and observability" },
+      { "ref": "tools-function-calling/file-and-external-action-tools-lab", "note": "Tool layer with a real permission boundary" },
+      { "ref": "genai-app-dev/realtime-voice-agent-project", "note": "Streaming pipeline with a measured latency budget" }
+    ],
+    "interview": ["agents", "ai-system-design", "prompt-engineering"],
+    "practice": ["prompt-engineering", "agents"],
+    "credentials": [
+      { "name": "Short courses on LLM engineering topics", "org": "DeepLearning.AI", "note": "Free/paid mix; useful for structured deep dives" },
+      { "name": "AI Engineer Associate (AI-102)", "org": "Microsoft Azure", "note": "Azure-centric; useful if your shop is on Azure" },
+      { "name": "AI Practitioner", "org": "AWS", "note": "Entry-level cloud AI cert; signal for AWS-heavy roles" }
+    ],
+    "evidence": [
+      "A shipped AI feature with structured logging, eval checks, and a kill switch you can demo live",
+      "A tool-using agent where permissions are explicit and injected input can't act",
+      "A latency/cost dashboard or report you produced for a real workload"
     ]
   },
   {
@@ -37,6 +72,29 @@ export const roles: Role[] = [
       "evals-red-teaming/building-a-golden-dataset",
       "production/token-and-cost-tracking",
       "machine-learning/ml-615-lab-release-a-model-with-a-kill-switch"
+    ],
+    "prereq": "Python plus working linear algebra and probability — enough to follow a gradient derivation and a Bayes calculation without stopping.",
+    "branches": [
+      { "label": "Deep learning internals", "refs": ["deep-learning"] },
+      { "label": "Running models yourself", "refs": ["local-inference"] },
+      { "label": "Agent-shaped ML systems", "refs": ["agent-frameworks"] }
+    ],
+    "projects": [
+      { "ref": "machine-learning/ml-615-lab-release-a-model-with-a-kill-switch", "note": "Release with rollback designed in" },
+      { "ref": "fine-tuning/pinning-your-training-stack-lab", "note": "Reproducible training stack with run logs and a smoke test" },
+      { "ref": "machine-learning/ml-foundations-capstone", "note": "Classical ML end-to-end defense" }
+    ],
+    "interview": ["llm-basics", "evals", "ai-system-design"],
+    "practice": ["evals"],
+    "credentials": [
+      { "name": "Professional Machine Learning Engineer", "org": "Google Cloud", "note": "Substantial; GCP-weighted" },
+      { "name": "Machine Learning Engineer – Associate", "org": "AWS", "note": "AWS-weighted; current AWS ML cert tier" },
+      { "name": "Practical Deep Learning for Coders", "org": "fast.ai", "note": "Free course, not a cert — strong practical signal" }
+    ],
+    "evidence": [
+      "A fine-tuned adapter with a run log, dataset provenance, and eval numbers vs the base model",
+      "A model release with a documented rollback path you exercised",
+      "A serving benchmark: latency/throughput at a stated batch and quantization"
     ]
   },
   {
@@ -56,6 +114,28 @@ export const roles: Role[] = [
       "evals-red-teaming/building-a-golden-dataset",
       "hallucinations/why-models-hallucinate",
       "rag/rag-capstone-support-bot"
+    ],
+    "prereq": "SQL and a notebook workflow, plus enough statistics to read a confusion matrix and a confidence interval.",
+    "branches": [
+      { "label": "Data plumbing for AI", "refs": ["python-data-apis"] },
+      { "label": "Classical ML depth", "refs": ["machine-learning"] },
+      { "label": "Structured extraction at scale", "refs": ["structured-outputs"] }
+    ],
+    "projects": [
+      { "ref": "rag/rag-capstone-support-bot", "note": "Grounded QA over a document set with faithfulness measured" },
+      { "ref": "python-data-apis/messy-data-to-llm-pipeline-capstone", "note": "Messy inputs to model-ready pipeline" },
+      { "ref": "tools-function-calling/building-a-web-search-tool-lab", "note": "A retrieval tool with shaped, dated results" }
+    ],
+    "interview": ["rag", "evals", "llm-basics"],
+    "practice": ["rag", "evals"],
+    "credentials": [
+      { "name": "Azure Data Scientist Associate (DP-100)", "org": "Microsoft Azure", "note": "Azure-weighted data science cert" },
+      { "name": "Specializations in ML/data topics", "org": "DeepLearning.AI", "note": "Course sequences, not certs — good structured depth" }
+    ],
+    "evidence": [
+      "An extraction or classification pipeline with measured precision/recall vs a baseline",
+      "A RAG system with retrieval and faithfulness evals you can show failing and passing",
+      "A documented decision where a simpler model beat an LLM on cost or calibration"
     ]
   },
   {
@@ -74,6 +154,26 @@ export const roles: Role[] = [
       "evals-red-teaming/why-evals-matter",
       "production/feature-flags-and-kill-switches",
       "ai-literacy/deciding-when-and-which-ai-quiz"
+    ],
+    "prereq": "No code required. You should be able to read a product demo and ask \"what happens when it's wrong?\"",
+    "branches": [
+      { "label": "Deeper on measurement", "refs": ["evals-red-teaming"] },
+      { "label": "Risk and responsible-AI review", "refs": ["responsible-ai"] },
+      { "label": "Hands-on AI workflows", "refs": ["ai-literacy"] }
+    ],
+    "projects": [
+      { "ref": "ai-foundations/choosing-an-ai-approach-system-selection", "note": "The rules-vs-ML-vs-agent selection discipline applied to real cases" },
+      { "ref": "ai-literacy/first-ai-workflow-capstone", "note": "One AI workflow run end to end, so estimates come from contact" }
+    ],
+    "interview": ["llm-basics", "evals"],
+    "practice": ["ai-foundations"],
+    "credentials": [
+      { "name": "AI for Everyone", "org": "DeepLearning.AI", "note": "Non-technical survey course by Andrew Ng" }
+    ],
+    "evidence": [
+      "A PRD that includes eval criteria, failure modes, and a fallback path — not just the happy-path feature",
+      "A model/vendor comparison memo with cost and reliability numbers behind the recommendation",
+      "A ship/no-ship decision you defended with evidence"
     ]
   },
   {
@@ -93,6 +193,24 @@ export const roles: Role[] = [
       "production/token-and-cost-tracking",
       "production/feature-flags-and-kill-switches",
       "genai-app-dev/capstone-ship-a-genai-assistant"
+    ],
+    "prereq": "No technical background required for the early steps; the build path assumes you'll pair the lessons with real implementation work (yours or a teammate's).",
+    "branches": [
+      { "label": "Build the MVP yourself", "refs": ["genai-app-dev"] },
+      { "label": "Keep costs and reliability visible", "refs": ["production"] },
+      { "label": "AI workflows for the whole team", "refs": ["ai-literacy"] }
+    ],
+    "projects": [
+      { "ref": "genai-app-dev/capstone-ship-a-genai-assistant", "note": "The MVP path — ship the smallest real thing" },
+      { "ref": "ai-foundations/choosing-an-ai-approach-system-selection", "note": "Avoid building an agent where a rules engine wins" }
+    ],
+    "interview": ["llm-basics", "ai-system-design"],
+    "practice": ["ai-foundations"],
+    "credentials": [],
+    "evidence": [
+      "A working product demo that survives a skeptical user, not a video of a happy path",
+      "A per-user cost model with the margin math shown",
+      "An eval gate you'd run before each release — written down"
     ]
   },
   {
@@ -110,6 +228,26 @@ export const roles: Role[] = [
       "evals-red-teaming/why-evals-matter",
       "production/feature-flags-and-kill-switches",
       "ai-literacy/cost-and-limits-quiz"
+    ],
+    "prereq": "None. Every lesson here assumes a business reader, not a technical one.",
+    "branches": [
+      { "label": "Full AI literacy", "refs": ["ai-literacy"] },
+      { "label": "Governance and risk review", "refs": ["responsible-ai"] },
+      { "label": "What the numbers mean", "refs": ["evals-red-teaming"] }
+    ],
+    "projects": [
+      { "ref": "ai-literacy/first-ai-workflow-capstone", "note": "One real task run end to end — the fastest way to calibrate what AI does" },
+      { "ref": "ai-literacy/run-a-real-task-end-to-end-with-verification", "note": "Verification habits that scale to an org policy" }
+    ],
+    "interview": ["llm-basics"],
+    "practice": ["ai-foundations"],
+    "credentials": [
+      { "name": "AI for Everyone", "org": "DeepLearning.AI", "note": "Executive-friendly survey course" }
+    ],
+    "evidence": [
+      "An AI use policy your org actually follows — what may be built, bought, and what needs review",
+      "A vendor-evaluation rubric used on a real procurement decision",
+      "A one-page AI risk summary you could defend to a board"
     ]
   },
   {
@@ -127,6 +265,24 @@ export const roles: Role[] = [
       "prompt-engineering/system-vs-user-prompts",
       "agentic-ai/when-not-to-use-an-agent",
       "ai-literacy/judging-and-verifying-quiz"
+    ],
+    "prereq": "None beyond your design practice — no code assumed.",
+    "branches": [
+      { "label": "Everyday AI workflows", "refs": ["ai-literacy"] },
+      { "label": "How AI features behave", "refs": ["genai-app-dev"] },
+      { "label": "Where AI gets things wrong", "refs": ["hallucinations"] }
+    ],
+    "projects": [
+      { "ref": "ai-literacy/seven-first-ai-workflows-lab", "note": "Hands-on reps across the workflows you'll design for" },
+      { "ref": "genai-app-dev/realtime-voice-agent-project", "note": "What a streaming conversational surface demands of UX" }
+    ],
+    "interview": ["llm-basics"],
+    "practice": ["ai-foundations", "prompt-engineering"],
+    "credentials": [],
+    "evidence": [
+      "An AI-feature design spec covering latency, uncertainty, and failure states — not just the ideal flow",
+      "A designed pattern for showing AI confidence/citations to users",
+      "An accessibility-checked conversational flow"
     ]
   },
   {
@@ -144,6 +300,23 @@ export const roles: Role[] = [
       "hallucinations/why-models-hallucinate",
       "hallucinations/grounding-with-source-documents",
       "ai-literacy/prompting-quiz"
+    ],
+    "prereq": "None.",
+    "branches": [
+      { "label": "Prompting depth", "refs": ["prompt-engineering"] },
+      { "label": "Verification and hallucination", "refs": ["hallucinations"] }
+    ],
+    "projects": [
+      { "ref": "ai-literacy/seven-first-ai-workflows-lab", "note": "Research, drafting, editing, and review workflows hands-on" },
+      { "ref": "ai-literacy/first-ai-workflow-capstone", "note": "One workflow tuned into something you'd actually reuse" }
+    ],
+    "interview": ["llm-basics"],
+    "practice": ["prompt-engineering"],
+    "credentials": [],
+    "evidence": [
+      "A documented workflow — prompt, steps, verification pass — that a teammate could follow",
+      "A verification checklist you actually apply to AI-assisted drafts",
+      "A measured before/after on a real piece of work"
     ]
   },
   {
@@ -161,6 +334,23 @@ export const roles: Role[] = [
       "hallucinations/grounding-with-source-documents",
       "rag/what-is-rag-and-when-to-use-it",
       "ai-literacy/prompting-quiz"
+    ],
+    "prereq": "None.",
+    "branches": [
+      { "label": "Prompting depth", "refs": ["prompt-engineering"] },
+      { "label": "Verification and brand safety", "refs": ["hallucinations"] }
+    ],
+    "projects": [
+      { "ref": "ai-literacy/seven-first-ai-workflows-lab", "note": "Research, drafting, and review reps" },
+      { "ref": "ai-literacy/first-ai-workflow-capstone", "note": "A repeatable workflow for a real recurring task" }
+    ],
+    "interview": ["llm-basics"],
+    "practice": ["prompt-engineering"],
+    "credentials": [],
+    "evidence": [
+      "A repeatable content workflow with the review step built in, not bolted on",
+      "A brand-safety checklist for AI output used on a live campaign",
+      "A quality comparison: AI-assisted vs previous baseline, scored on your criteria"
     ]
   },
   {
@@ -179,6 +369,25 @@ export const roles: Role[] = [
       "production/structured-logging-for-llm-calls",
       "production/feature-flags-and-kill-switches",
       "responsible-ai/adversarial-testing-lab"
+    ],
+    "prereq": "Security fundamentals — authentication vs authorization, basic threat modeling, and how injection classes of bugs work. No ML background needed.",
+    "branches": [
+      { "label": "Full LLM security track", "refs": ["llm-security"] },
+      { "label": "Web-agent attack surface", "refs": ["web-agents"] },
+      { "label": "Detection and audit in production", "refs": ["production"] }
+    ],
+    "projects": [
+      { "ref": "llm-security/prompt-injection-testing-and-threat-models", "note": "Threat-model an AI feature and test the injection paths" },
+      { "ref": "responsible-ai/adversarial-testing-lab", "note": "Structured adversarial testing reps" },
+      { "ref": "llm-security/sandboxing-code-execution-and-browser-use", "note": "Contain what an agent can touch" }
+    ],
+    "interview": ["agents", "ai-system-design", "mcp"],
+    "practice": ["agents", "mcp"],
+    "credentials": [],
+    "evidence": [
+      "A threat model for an LLM feature with abuse cases ranked by blast radius",
+      "A red-team report with reproducible injection paths and the fixes verified",
+      "A guardrail/sandbox configuration with before/after eval results"
     ]
   },
   {
@@ -199,6 +408,28 @@ export const roles: Role[] = [
       "genai-app-dev/anatomy-of-a-genai-feature",
       "evals-red-teaming/why-evals-matter",
       "ai-foundations/capstone-build-train-evaluate-a-classifier"
+    ],
+    "prereq": "None — this path assumes you're starting from interest, not experience.",
+    "branches": [
+      { "label": "Maths underneath it all", "refs": ["maths-foundations"] },
+      { "label": "Classical AI for fundamentals", "refs": ["classical-ai"] },
+      { "label": "Deeper on models", "refs": ["llm-foundations"] }
+    ],
+    "projects": [
+      { "ref": "ai-foundations/capstone-build-train-evaluate-a-classifier", "note": "The first real end-to-end build" },
+      { "ref": "machine-learning/ml-foundations-capstone", "note": "Classical ML defended end to end" },
+      { "ref": "llm-foundations/build-a-tiny-gpt-capstone", "note": "Build the thing yourself once" }
+    ],
+    "interview": ["llm-basics", "ai-system-design"],
+    "practice": ["ai-foundations", "prompt-engineering"],
+    "credentials": [
+      { "name": "Specializations across ML and deep learning", "org": "DeepLearning.AI", "note": "Structured course sequences — audit free" },
+      { "name": "Practical Deep Learning for Coders", "org": "fast.ai", "note": "Free and project-first" }
+    ],
+    "evidence": [
+      "A classifier you trained, evaluated, and can explain the mistakes of",
+      "A written explanation of one mechanism (attention, gradient descent, Bayes) that another student could learn from",
+      "A capstone defense you survived questions on"
     ]
   }
 ];

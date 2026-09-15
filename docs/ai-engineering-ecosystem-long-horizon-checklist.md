@@ -1199,67 +1199,126 @@ For each task-skill guide:
 
 ### Review and complete current role paths
 
-- [ ] AI engineer.
-- [ ] ML engineer.
-- [ ] Data scientist.
-- [ ] Product manager.
-- [ ] Founder.
-- [ ] CEO or executive.
-- [ ] Designer.
-- [ ] Content creator.
-- [ ] Marketer.
-- [ ] Security engineer.
-- [ ] Student.
-- [ ] Forward-deployed engineer.
-- [ ] Give each role a prerequisite check, core path, optional branches, projects,
+All 11 roles.ts paths now carry the full structure: `prereq` check, core `path`,
+optional `branches` (track links), `projects` (real capstone/lab refs with notes),
+`interview` + `practice` refs, `credentials` (where honest options exist — several
+roles deliberately list none), and `evidence` portfolio targets. The `[role].astro`
+template renders all six sections; `/roles` index gained a boundaries section.
+
+- [x] AI engineer. *(the `developer` role path — prereq, 3 branches, 3 projects incl. the ship capstone, agents/system-design/prompt interview refs)*
+- [x] ML engineer. *(branches: deep-learning/local-inference/agent-frameworks; projects: kill-switch release, pinned training stack, ML capstone; GCP/AWS/fast.ai credential options listed with honest notes)*
+- [x] Data scientist. *(branches: python-data-apis/machine-learning/structured-outputs; projects: rag capstone, messy-data pipeline, search tool lab)*
+- [x] Product manager. *(no-code prereq; projects: system-selection discipline + first-workflow capstone; llm-basics + evals interview refs)*
+- [x] Founder. *(branches: genai-app-dev/production/ai-literacy; projects: MVP capstone + system selection; no credentials pushed — deliberate)*
+- [x] CEO or executive. *(projects: first-workflow capstone + end-to-end verification; evidence: AI use policy, vendor rubric, board-ready risk memo)*
+- [x] Designer. *(branches: ai-literacy/genai-app-dev/hallucinations; projects: 7-workflow lab + realtime-voice project for streaming-surface UX)*
+- [x] Content creator. *(branches: prompt-engineering/hallucinations; workflow labs as projects)*
+- [x] Marketer. *(same workflow spine; evidence weighted to brand-safety and measured quality)*
+- [x] Security engineer. *(security prereq stated; branches: llm-security/web-agents/production; projects: threat-model lab, adversarial testing, sandboxing)*
+- [x] Student. *(branches: maths/classical-ai/llm-foundations; projects: classifier capstone, ML capstone, tiny-GPT; free credential options only)*
+- [x] Forward-deployed engineer. *(separate full curriculum — `src/data/fde.ts` +
+      183 FDE files across orientation/foundations/craft/data/ai/deploy/field/
+      product/career/practice phases; already the most structured path on the site)*
+- [x] Give each role a prerequisite check, core path, optional branches, projects,
       interview practice, external credentials, and portfolio evidence.
-- [ ] Explain where role boundaries overlap and differ.
-- [ ] Verify job-market claims with current primary or high-quality labor evidence.
-- [ ] Do not promise employment, salary, or certification outcomes.
+- [x] Explain where role boundaries overlap and differ.
+      *("Where the boundaries sit" section on `/roles` — six boundary pairs:
+      dev/ML-eng layer split, PM/founder/CEO authority split, designer/creator/
+      marketer accountability split, security-vs-dev objective split,
+      student/data-scientist purpose split, FDE-vs-dev customer-embedding split)*
+- [x] Verify job-market claims with current primary or high-quality labor evidence.
+      *(scan: role copy makes zero employment/salary/demand claims — nothing to
+      verify; the convention is now documented for any future claim)*
+- [x] Do not promise employment, salary, or certification outcomes.
+      *(credentials render under an explicit disclaimer: "listed for comparison,
+      not endorsed… none of these are required by this path")*
 
 ### Candidate new dedicated courses
 
 - [ ] AI for Designers — execute `docs/ai-for-designers-course-checklist.md`.
-- [ ] AI Product Management — opportunity selection, evaluation, UX, risk, economics,
+- [x] AI Product Management — opportunity selection, evaluation, UX, risk, economics,
       rollout, measurement, and vendor decisions.
-- [ ] AI Coding Agents — CLI harnesses, web/cloud agents, instructions, skills, MCP,
+      *(served per new-course gate: product-manager role path + branches
+      (evals-red-teaming, responsible-ai, ai-literacy) +
+      `choosing-an-ai-approach-system-selection` cover the named scope;
+      no distinct course needed)*
+- [x] AI Coding Agents — CLI harnesses, web/cloud agents, instructions, skills, MCP,
       tests, review, security, and long-horizon work.
-- [ ] Agent Harness Engineering — context, tools, permissions, state, checkpoints,
+      *(served: `cli-agents` (7), `web-agents` (7), `agent-skills` (6),
+      `harness-design` (27), `mcp` (58) tracks)*
+- [x] Agent Harness Engineering — context, tools, permissions, state, checkpoints,
       delegation, evaluation, observability, and recovery.
+      *(served: `harness-design` track — all named topics have dedicated lessons
+      incl. three case studies and MCP/skill integrations)*
 - [ ] Voice AI Engineering — speech recognition, synthesis, realtime transport,
       turn-taking, interruption, latency, telephony, multilingual evaluation, and safety.
 - [ ] Multimodal AI Engineering — image, audio, video, document, and mixed-input systems.
-- [ ] Local and Open-Weight AI — Ollama, llama.cpp, model selection, licenses,
+- [x] Local and Open-Weight AI — Ollama, llama.cpp, model selection, licenses,
       quantization, hardware, serving, fine-tuning, and privacy.
-- [ ] LLMOps and AI Platform Engineering — gateways, routing, budgets, observability,
+      *(served: `local-inference` track (14) — Ollama/llama.cpp/LM Studio/
+      vLLM/SGLang/HF/TGI/MLX/ONNX + hardware sizing, quantization lab,
+      model choice; licenses in model-choice lessons)*
+- [x] LLMOps and AI Platform Engineering — gateways, routing, budgets, observability,
       evals, releases, incident response, and governance.
-- [ ] AI Security Engineering — threat modeling, injection, tool abuse, data leakage,
+      *(served: `production` track (34) — gateway/abstraction, routing,
+      per-tenant budgets, full observability set, eval regression,
+      canary/shadow, postmortems/on-call, retention policy)*
+- [x] AI Security Engineering — threat modeling, injection, tool abuse, data leakage,
       sandboxing, supply chain, testing, and incident response.
-- [ ] Browser and Computer-Use Agents — deterministic browser control, agentic browsing,
+      *(served: `llm-security` track (8) + security-engineer role path
+      branches; injection testing/threat model, supply chain, sandboxing,
+      audit all have dedicated lessons)*
+- [x] Browser and Computer-Use Agents — deterministic browser control, agentic browsing,
       authenticated sessions, evaluation, and injection defense.
+      *(served: `web-agents` track (7) — channels, Playwright locators,
+      CDP/Puppeteer/Selenium/DevTools-MCP, agentic browsers,
+      sessions/act-boundary, web injection, extraction/eval)*
 - [ ] Multilingual and Indic AI Engineering — Sarvam, AI4Bharat, Bhashini, speech,
       translation, code mixing, documents, datasets, and evaluation.
 - [ ] AI Automation for Operations — deterministic workflows, agents, approvals,
       n8n/Zapier/Make/Pipedream candidates, auditability, and maintenance.
-- [ ] AI for Data Analysts — querying, notebooks, spreadsheets, chart reasoning,
+- [x] AI for Data Analysts — querying, notebooks, spreadsheets, chart reasoning,
       verification, reproducibility, and privacy.
-- [ ] AI for Creators and Marketers — research, production, review, provenance,
+      *(served: data-scientist role path (extraction/structured-outputs/RAG/evals)
+      + `python-data-apis` track (58); notebooks caveat noted — no .ipynb
+      pipeline)*
+- [x] AI for Creators and Marketers — research, production, review, provenance,
       distribution, measurement, and platform policy.
-- [ ] AI for Founders — validation, data advantage, cost, reliability, security,
+      *(served: content-creator + marketer role paths — workflow labs as
+      projects, verification/brand-safety evidence; prompt-engineering and
+      hallucinations as branches)*
+- [x] AI for Founders — validation, data advantage, cost, reliability, security,
       hiring, procurement, and launch.
-- [ ] AI Governance for Builders — evidence, policies, risk tiers, documentation,
+      *(served: founder role path — MVP capstone, system-selection,
+      production branches; cost model + eval gate as evidence)*
+- [x] AI Governance for Builders — evidence, policies, risk tiers, documentation,
       approvals, audits, and incident learning.
-- [ ] Advanced RAG Engineering — parsing, retrieval, reranking, evaluation, access,
+      *(served: `responsible-ai` (7 — risk-before-model, governance-artifacts,
+      consent/contestability) + `llm-security` governance lessons
+      (audit-logs, NIST RMF/ATLAS) + production incident set)*
+- [x] Advanced RAG Engineering — parsing, retrieval, reranking, evaluation, access,
       freshness, multimodal, graph, agentic, and production patterns.
-- [ ] Advanced Evaluation Engineering — datasets, rubrics, judges, statistics,
+      *(served: `rag` track (64) — ingestion/parsing vendors (Docling etc.),
+      chunking, embeddings, hybrid, reranking, vector DBs (Qdrant/pgvector/
+      Milvus/Weaviate), evals, agentic RAG, production patterns)*
+- [x] Advanced Evaluation Engineering — datasets, rubrics, judges, statistics,
       online signals, adversarial tests, and release gates.
-- [ ] Production Agent Systems — long-running execution, scheduling, event-driven work,
+      *(served: `evals-red-teaming` track (28) — golden datasets, rubric
+      design, LLM judges, regression gates/online signals, adversarial
+      testing; provider-native evals in production track)*
+- [x] Production Agent Systems — long-running execution, scheduling, event-driven work,
       queues, idempotency, recovery, multi-agent coordination, and operations.
+      *(served: `agentic-ai` (30) + `harness-design` (27) — checkpointing,
+      recovery, subagent delegation, multi-agent patterns, ops harness case
+      study, scheduling via distributed orchestration)*
 
 New-course gate:
 
 - [ ] Confirm a distinct audience and outcome.
-- [ ] Confirm the topic cannot be served better as a module, guide, or curated role path.
+- [x] Confirm the topic cannot be served better as a module, guide, or curated role path.
+      *(applied to all 18 candidates: 14 resolved as served by existing
+      tracks/role paths — the gate's preferred outcome; 4 remain genuinely
+      unmet (Designers, Voice, Multimodal, Indic/AI-Automation vendor depth))*
 - [ ] Confirm search or learner evidence.
 - [ ] Define prerequisites and capstone before drafting lessons.
 - [ ] Reuse canonical concepts instead of duplicating them.
@@ -2017,6 +2076,24 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-15 — Phase 7 role paths: full structure + candidate-course dispositions (30 rows)
+
+- Commit: `bd6c309`. Status: complete.
+- Schema: `Role` extended — `prereq`, `branches[]`, `projects[]`, `interview[]`,
+  `practice[]`, `credentials[]`, `evidence[]`; `[role].astro` renders all six
+  sections; `/roles` index gained "Where the boundaries sit" (6 boundary pairs).
+- Content: all 11 roles populated — prereq checks, branch tracks, project refs to
+  real capstones/labs, interview/practice bank links, honest credential options
+  (several roles deliberately list none), portfolio-evidence targets.
+- Dispositions: 14 of 18 candidate courses resolved as served by existing
+  tracks/role paths (the new-course gate's preferred outcome); 4 remain genuinely
+  unmet — Designers (own 334-row checklist exists), Voice, Multimodal,
+  Indic/automation-vendor depth.
+- Verified: role copy contains zero job-market/salary/employment claims;
+  credentials render under explicit no-endorsement disclaimer.
+- Validation: build 2,507 pages; check:links 0 dead; registry 2,464 items.
+- Next: Phase 6D provider/model reference expansion or the task-skill catalog.
 
 ### 2026-09-15 — Phase 8 finish: TS MCP server + versioned-lab + deterministic-check lessons
 
