@@ -547,6 +547,28 @@ for (const file of [...walk(join(CONTENT, 'answers'), /\.(md|mdx)$/)].sort()) {
   }));
 }
 
+// --- provider hubs --------------------------------------------------------------
+const PROVIDERS_DIR = join(CONTENT, 'providers');
+if (existsSync(PROVIDERS_DIR)) {
+  for (const file of [...walk(PROVIDERS_DIR, /\.(md|mdx)$/)].sort()) {
+    const { rel, fm, body, a } = fileItem('providers', file, 'providers');
+    const fr = freshness(fm.title ?? '', fm.description ?? '', a.headings, body);
+    items.push(baseRecord({
+      family: 'reference', kind: 'provider-hub',
+      title: fm.title, slug: rel, route: `/providers/${rel}`,
+      collection: 'providers', path: relative(ROOT, file),
+      summary: fm.description,
+      updated: fm.verifiedAt || contentDates[`providers/${rel}`]?.updated,
+      wordCount: a.wordCount, headings: a.headings.filter((h) => h.depth === 2).map((h) => h.text).slice(0, 50),
+      internalLinks: a.internalLinks, externalLinks: a.externalLinks,
+      structuredData: null,
+      features: { vendor: fm.vendor, covers: fm.covers, verifiedAt: fm.verifiedAt, sources: fm.sources ?? [], related: fm.related ?? [], numericClaims: a.numericClaims },
+      searchIntent: 'reference', primaryAudience: 'general',
+      freshnessClass: 'volatile', freshnessSignals: fr.signals,
+    }));
+  }
+}
+
 // --- fde path ------------------------------------------------------------------
 const FDE = join(CONTENT, 'fde');
 const fdeLive = new Set();
@@ -713,6 +735,9 @@ const STATIC_FAMILY = {
   'roles/index.astro': { title: 'Role paths', kind: 'hub', route: '/roles' },
   'reference/index.astro': { title: 'Reference & cheatsheets', kind: 'hub', route: '/reference' },
   'reference/glossary.astro': { title: 'Glossary', kind: 'glossary', route: '/reference/glossary', family: 'glossary' },
+  'certifications.astro': { title: 'Certifications registry', kind: 'hub', route: '/certifications' },
+  'external-courses.astro': { title: 'External course directory', kind: 'hub', route: '/external-courses' },
+  'providers/index.astro': { title: 'Provider hubs', kind: 'hub', route: '/providers' },
   'kit.astro': { title: 'Kit', kind: 'page', route: '/kit' },
   'saved.astro': { title: 'Saved items', kind: 'tool', route: '/saved' },
   'stats.astro': { title: 'Stats', kind: 'page', route: '/stats' },

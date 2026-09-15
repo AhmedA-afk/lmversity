@@ -790,31 +790,60 @@ consolidation into a parent track, or a clearer curated-path role.
 
 ### Shared provider-page template
 
-- [ ] State whether the page covers a consumer app, coding agent, API, cloud platform,
-      model family, or open-weight release.
-- [ ] Give a current, dated product map without treating one product name as the whole company.
-- [ ] Link to official documentation, model/system cards, pricing, data policy, changelog,
-      status page, SDKs, and terms where relevant.
-- [ ] Cover authentication, first API call, streaming, structured output, tool use,
+- [x] State whether the page covers a consumer app, coding agent, API, cloud platform,
+      model family, or open-weight release. *(`covers` enum in the providers
+      schema, rendered as badges on every hub)*
+- [x] Give a current, dated product map without treating one product name as the whole company.
+      *(`verifiedAt` required per hub; every page splits consumer/agent/API/cloud
+      surfaces explicitly)*
+- [x] Link to official documentation, model/system cards, pricing, data policy, changelog,
+      status page, SDKs, and terms where relevant. *(Official-links section +
+      rendered source-registry citations; only verified URLs registered)*
+- [x] Cover authentication, first API call, streaming, structured output, tool use,
       multimodality, embeddings, batch work, realtime, files, fine-tuning, and eval support
-      only when official sources confirm them.
-- [ ] Cover data retention, training use, region, and enterprise controls from official policy.
-- [ ] Cover model naming, aliases, pinned versions, deprecation, and migration.
-- [ ] Separate advertised context from tested usable context.
-- [ ] Separate provider benchmark claims from LMVersity measurements.
-- [ ] Add a minimal runnable lab and a provider-neutral equivalent.
-- [ ] Add common errors, rate-limit behavior, retry guidance, and status-page links.
-- [ ] Add “when to choose,” “when not to choose,” and migration considerations.
-- [ ] Add a current-model data record instead of hard-coding model lists throughout lessons.
+      only when official sources confirm them. *("Getting started shape" +
+      "Product map" sections; each hub lists only what its verified docs show —
+      e.g. Anthropic's page notes it offers no image/video generation)*
+- [x] Cover data retention, training use, region, and enterprise controls from official policy.
+      *("Data policy" section per hub, linking the governing policy pages and
+      flagging surface-level differences — e.g. AI Studio terms vs Vertex
+      governance)*
+- [x] Cover model naming, aliases, pinned versions, deprecation, and migration.
+      *("Naming, aliases, deprecation" section per hub — e.g. Anthropic's
+      alias vs dated-ID convention and published 'not sooner than' retirement
+      dates)*
+- [x] Separate advertised context from tested usable context.
+      *("Context and capability claims" section — advertised vs usable context
+      divergence stated per hub)*
+- [x] Separate provider benchmark claims from LMVersity measurements.
+      *(convention established: vendor numbers flagged as vendor numbers,
+      readers directed to run their own evals; LMVersity-published measurements
+      don't exist yet — the separation language is honest about that)*
+- [x] Add a minimal runnable lab and a provider-neutral equivalent.
+      *("Minimal lab" section: five-call smoke test + the same calls through
+      an adapter as the neutral equivalent)*
+- [x] Add common errors, rate-limit behavior, retry guidance, and status-page links.
+      *("Common errors and operations" section per hub with status-page links)*
+- [x] Add “when to choose,” “when not to choose,” and migration considerations.
+      *(required closing sections per hub — including honest negatives like
+      OpenAI offering no open weights, Anthropic no image/video generation)*
+- [x] Add a current-model data record instead of hard-coding model lists throughout lessons.
+      *(model-family entity records started: openai-gpt, anthropic-claude,
+      google-gemini with officialSources + changeNote; remaining families land
+      as their hubs do)*
 
 ### Frontier API and product providers
 
-- [ ] OpenAI hub: ChatGPT, API platform, Responses API, Agents SDK, realtime, image/audio,
-      embeddings, moderation, batch, evals, and Codex.
-- [ ] Anthropic hub: Claude apps, Claude API, Claude Code, Agent SDK, tool use, prompt caching,
-      computer use, MCP, skills, and evaluation guidance.
-- [ ] Google hub: Gemini apps, Gemini API, AI Studio, Vertex AI, Gemini CLI, Agent
-      Development Kit, multimodal/realtime products, and Gemma.
+- [x] OpenAI hub: ChatGPT, API platform, Responses API, Agents SDK, realtime, image/audio,
+      embeddings, moderation, batch, evals, and Codex. *(`/providers/openai` —
+      full map incl. plugins/workspace-agents/commerce surface and the legacy
+      Assistants/Evals/fine-tuning section)*
+- [x] Anthropic hub: Claude apps, Claude API, Claude Code, Agent SDK, tool use, prompt caching,
+      computer use, MCP, skills, and evaluation guidance. *(`/providers/anthropic` —
+      verified lineup Fable 5.1/Opus 5/Sonnet 5/Haiku 4.5 + multi-cloud IDs)*
+- [x] Google hub: Gemini apps, Gemini API, AI Studio, Vertex AI, Gemini CLI, Agent
+      Development Kit, multimodal/realtime products, and Gemma. *(`/providers/google` —
+      Gemini 3.x lineup verified, two-surface auth/terms split covered)*
 - [ ] Meta hub: Meta AI, Meta Model API, Llama, Llama Guard, Muse Spark, and Muse Code.
 - [ ] xAI hub: Grok consumer products, API, model families, structured output, tools,
       realtime or multimodal capabilities where current docs support them.
@@ -2099,9 +2128,38 @@ Credentials to monitor:
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
 
+### 2026-09-15 — Phase 6: provider-hub collection + first three hubs (15 rows)
+
+- Commit: `25c0517`. Status: complete.
+- Collection: new `providers` content collection (content.config.ts schema:
+  `vendor`→entities.json, `covers[]` enum, required `verifiedAt`,
+  `sources[]`/`related[]`); `/providers` index + `/providers/[slug]` pages with
+  rendered official-source citations; linked from `/reference`.
+- Validator: check-content now checks providers `sources[]` ids against
+  sources.json, `vendor` ids against entities.json (added `entityRegistry`
+  set), and `verifiedAt` date shape. Bug found+fixed: `x in Set` doesn't
+  work — needs `.has()`.
+- Registry: build-content-registry now counts providers as `reference`/
+  `provider-hub` (volatile freshness class) and registers the three
+  top-level hub pages (certifications, external-courses, providers) that
+  were missing from the page map.
+- Content: `/providers/openai` (Responses API/Agents/Realtime/Codex/plugins,
+  legacy surface flagged), `/providers/anthropic` (verified lineup
+  Fable 5.1/Opus 5/Sonnet 5/Haiku 4.5, alias vs dated-ID convention,
+  published retirement dates, multi-cloud IDs), `/providers/google`
+  (Gemini 3.x verified, AI Studio vs Vertex auth/terms split, OpenAI-compat
+  endpoint, Gemma distinction).
+- Data: +20 verified official source records (199 total); +3 model-family
+  entities (openai-gpt, anthropic-claude, google-gemini) with changeNote.
+- Rows ticked (15): all 12 shared-template rows + the 3 provider rows.
+- Validation: check:content clean (2,166); build 2,514 pages; check:links
+  0 dead (5,407 routes); registry 2,471 items.
+- Next: Meta/xAI/Mistral/DeepSeek/Z.ai/Cohere/AI21 hubs; India+multilingual
+  providers; open-model family hubs; cloud platforms/gateways.
+
 ### 2026-09-15 — Phase 7 registries: certification + external-course directories (44 rows)
 
-- Commit: `70b4c5d`. Status: complete.
+- Commit: `3fdfd4b`. Status: complete.
 - Data: `src/data/certifications.json` (10 records), `src/data/external-courses.json`
   (26 records), `src/data/sources.json` +36 official records (179 total).
   Validator extended — required fields, status enums, `verifiedAt` dates,

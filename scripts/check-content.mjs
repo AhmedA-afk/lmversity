@@ -68,10 +68,12 @@ const ENTITY_KINDS = new Set([
 ]);
 const ENTITY_STATUS = new Set(['current', 'deprecated', 'superseded', 'retired']);
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+const entityRegistry = new Set();
 if (existsSync(ENTITIES_FILE)) {
   const raw = JSON.parse(readFileSync(ENTITIES_FILE, 'utf8'));
   for (const [id, e] of Object.entries(raw)) {
     if (id.startsWith('$')) continue;
+    entityRegistry.add(id);
     const miss = ['name', 'kind', 'status', 'verifiedAt', 'officialSources']
       .filter((k) => !e[k]);
     if (miss.length) problems.push(`entities.json "${id}": missing ${miss.join(', ')}`);
@@ -299,7 +301,7 @@ if (existsSync(ANSWERS_DIR)) {
 }
 
 // source-ref validation for the other collections that can declare `sources:`
-for (const dirName of ['questions', 'scenarios', 'answers', 'guides', 'blog']) {
+for (const dirName of ['questions', 'scenarios', 'answers', 'guides', 'blog', 'providers']) {
   const dir = join(ROOT, 'src/content', dirName);
   if (!existsSync(dir)) continue;
   for (const file of walk(dir)) {
@@ -307,6 +309,15 @@ for (const dirName of ['questions', 'scenarios', 'answers', 'guides', 'blog']) {
     for (const sid of fmList(fm.sources)) {
       if (!sourceRegistry.has(sid)) {
         problems.push(`${dirName}/${relative(dir, file)}: sources[] id "${sid}" is not in src/data/sources.json`);
+      }
+    }
+    // providers: vendor must resolve to entities.json; verifiedAt must be a date.
+    if (dirName === 'providers') {
+      if (fm.vendor && !entityRegistry.has(fm.vendor)) {
+        problems.push(`providers/${relative(dir, file)}: vendor "${fm.vendor}" is not in src/data/entities.json`);
+      }
+      if (fm.verifiedAt && !/^\d{4}-\d{2}-\d{2}$/.test(fm.verifiedAt)) {
+        problems.push(`providers/${relative(dir, file)}: verifiedAt "${fm.verifiedAt}" is not YYYY-MM-DD`);
       }
     }
   }

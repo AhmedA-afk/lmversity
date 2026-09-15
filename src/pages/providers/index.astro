@@ -1,0 +1,54 @@
+---
+import Layout from '../../components/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const all = (await getCollection('providers')).sort((a, b) => a.data.title.localeCompare(b.data.title));
+const kindLabel: Record<string, string> = {
+  'consumer-app': 'consumer app', 'coding-agent': 'coding agent', 'api': 'API',
+  'cloud-platform': 'cloud platform', 'open-model': 'open model', 'consumer-product': 'consumer product',
+};
+---
+<Layout
+  title="AI provider hubs — dated, official-source reference"
+  description="Reference hubs for AI providers: dated product maps, official documentation and policy links, getting-started shape, naming and deprecation conventions, and honest when-to-choose guidance. Verified against official sources."
+  type="collection"
+  breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Providers', url: '/providers' }]}
+  itemList={all.map((p) => ({ name: p.data.title, url: `/providers/${p.id}` }))}
+>
+  <section class="head container">
+    <span class="eyebrow">Provider hubs</span>
+    <h1>AI providers, mapped and dated.</h1>
+    <p class="sub">One page per vendor: what the product surface actually contains, where the official docs and policies live, how naming and deprecation work, and when each provider is the right choice. Every product map carries the date it was last verified against official pages — treat anything older as a pointer, not gospel.</p>
+    <p class="note">These hubs link to official documentation; listing is not endorsement and no provider has reviewed or paid for its page.</p>
+  </section>
+  <section class="container group">
+    <ul class="list">
+      {all.map((p) => (
+        <li>
+          <a href={`/providers/${p.id}`}>{p.data.title}</a>
+          <div class="badges">
+            {p.data.covers.map((c) => <span class="badge mono">{kindLabel[c] ?? c}</span>)}
+            <span class="badge mono muted">verified {p.data.verifiedAt}</span>
+          </div>
+          <span class="desc">{p.data.description}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+</Layout>
+
+<style>
+  .head { padding-block: 56px 8px; }
+  .head h1 { font-size: clamp(30px, 4.5vw, 42px); letter-spacing: -.02em; margin-top: 14px; max-width: 22ch; }
+  .sub { margin-top: 16px; color: var(--muted); max-width: 64ch; font-size: 15px; line-height: 1.6; }
+  .note { margin-top: 14px; font-size: 13px; color: var(--muted); max-width: 64ch; }
+  .group { padding-top: 32px; padding-bottom: 56px; }
+  .list { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--rule); }
+  .list li { display: flex; flex-direction: column; gap: 6px; padding: 16px 4px; border-bottom: 1px solid var(--rule); }
+  .list a { font: 500 16px/1.35 'IBM Plex Sans', 'IBM Plex Sans Fallback', sans-serif; color: var(--text); }
+  .list a:hover { color: var(--accent); text-decoration: none; }
+  .badges { display: flex; flex-wrap: wrap; gap: 6px; }
+  .badge { font-size: 11px; color: var(--accent); border: 1px solid var(--rule); border-radius: 999px; padding: 2px 8px; }
+  .badge.muted { color: var(--muted); }
+  .desc { font-size: 13.5px; line-height: 1.5; color: var(--muted); max-width: 80ch; }
+</style>

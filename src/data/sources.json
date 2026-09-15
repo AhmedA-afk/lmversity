@@ -1936,5 +1936,225 @@
     "type": "official-docs",
     "status": "current",
     "accessedAt": "2026-09-15"
+  },
+  "openai-models-docs": {
+    "title": "Models — API documentation",
+    "publisher": "OpenAI",
+    "accessedAt": "2026-09-15",
+    "url": "https://platform.openai.com/docs/models",
+    "type": "official-docs",
+    "claims": [
+      "Current model catalog and capabilities"
+    ],
+    "status": "current"
+  },
+  "openai-pricing": {
+    "title": "Pricing — API documentation",
+    "publisher": "OpenAI",
+    "accessedAt": "2026-09-15",
+    "url": "https://platform.openai.com/docs/pricing",
+    "type": "official-docs",
+    "claims": [
+      "Current API pricing"
+    ],
+    "status": "current"
+  },
+  "openai-deprecations": {
+    "title": "Deprecations — API documentation",
+    "publisher": "OpenAI",
+    "accessedAt": "2026-09-15",
+    "url": "https://platform.openai.com/docs/deprecations",
+    "type": "official-docs",
+    "claims": [
+      "Model and API deprecation schedule"
+    ],
+    "status": "current"
+  },
+  "openai-your-data": {
+    "title": "Your data — API documentation",
+    "publisher": "OpenAI",
+    "accessedAt": "2026-09-15",
+    "url": "https://platform.openai.com/docs/guides/your-data",
+    "type": "official-docs",
+    "claims": [
+      "Data retention, training use, and privacy controls"
+    ],
+    "status": "current"
+  },
+  "openai-error-codes": {
+    "title": "Error codes — API documentation",
+    "publisher": "OpenAI",
+    "accessedAt": "2026-09-15",
+    "url": "https://platform.openai.com/docs/guides/error-codes",
+    "type": "official-docs",
+    "claims": [
+      "API error taxonomy"
+    ],
+    "status": "current"
+  },
+  "openai-rate-limits": {
+    "title": "Rate limits — API documentation",
+    "publisher": "OpenAI",
+    "accessedAt": "2026-09-15",
+    "url": "https://platform.openai.com/docs/guides/rate-limits",
+    "type": "official-docs",
+    "claims": [
+      "Rate-limit tiers and headers"
+    ],
+    "status": "current"
+  },
+  "openai-status": {
+    "title": "OpenAI status page",
+    "publisher": "OpenAI",
+    "accessedAt": "2026-09-15",
+    "url": "https://status.openai.com",
+    "type": "official-docs",
+    "claims": [
+      "Service status and incident history"
+    ],
+    "status": "current"
+  },
+  "anthropic-models-overview": {
+    "title": "Models overview",
+    "publisher": "Anthropic",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.anthropic.com/en/docs/about-claude/models/overview",
+    "type": "official-docs",
+    "claims": [
+      "Current Claude lineup, IDs, context windows, retirement dates"
+    ],
+    "status": "current"
+  },
+  "anthropic-model-deprecations": {
+    "title": "Model deprecations",
+    "publisher": "Anthropic",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.anthropic.com/en/docs/about-claude/model-deprecations",
+    "type": "official-docs",
+    "claims": [
+      "Model deprecation schedule and migration guides"
+    ],
+    "status": "current"
+  },
+  "anthropic-pricing": {
+    "title": "Pricing",
+    "publisher": "Anthropic",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.anthropic.com/en/docs/about-claude/pricing",
+    "type": "official-docs",
+    "claims": [
+      "Current API pricing"
+    ],
+    "status": "current"
+  },
+  "anthropic-status": {
+    "title": "Anthropic status page",
+    "publisher": "Anthropic",
+    "accessedAt": "2026-09-15",
+    "url": "https://status.anthropic.com",
+    "type": "official-docs",
+    "claims": [
+      "Service status and incident history"
+    ],
+    "status": "current"
+  },
+  "anthropic-trust": {
+    "title": "Anthropic Trust Center",
+    "publisher": "Anthropic",
+    "accessedAt": "2026-09-15",
+    "url": "https://trust.anthropic.com",
+    "type": "official-docs",
+    "claims": [
+      "Security posture, certifications, subprocessors"
+    ],
+    "status": "current"
+  },
+  "anthropic-privacy": {
+    "title": "Anthropic Privacy Center",
+    "publisher": "Anthropic",
+    "accessedAt": "2026-09-15",
+    "url": "https://privacy.anthropic.com",
+    "type": "official-docs",
+    "claims": [
+      "Privacy and data-usage policies"
+    ],
+    "status": "current"
+  },
+  "google-gemini-models": {
+    "title": "Gemini API models",
+    "publisher": "Google",
+    "accessedAt": "2026-09-15",
+    "url": "https://ai.google.dev/gemini-api/docs/models",
+    "type": "official-docs",
+    "claims": [
+      "Current Gemini lineup, endpoint strings, stability labels"
+    ],
+    "status": "current"
+  },
+  "google-gemini-deprecations": {
+    "title": "Gemini API deprecations",
+    "publisher": "Google",
+    "accessedAt": "2026-09-15",
+    "url": "https://ai.google.dev/gemini-api/docs/deprecations",
+    "type": "official-docs",
+    "claims": [
+      "Model deprecation schedule"
+    ],
+    "status": "current"
+  },
+  "google-gemini-rate-limits": {
+    "title": "Gemini API rate limits",
+    "publisher": "Google",
+    "accessedAt": "2026-09-15",
+    "url": "https://ai.google.dev/gemini-api/docs/rate-limits",
+    "type": "official-docs",
+    "claims": [
+      "Rate-limit tiers"
+    ],
+    "status": "current"
+  },
+  "google-gemini-terms": {
+    "title": "Gemini API terms of service",
+    "publisher": "Google",
+    "accessedAt": "2026-09-15",
+    "url": "https://ai.google.dev/gemini-api/terms",
+    "type": "official-docs",
+    "claims": [
+      "Terms for the AI Studio developer surface"
+    ],
+    "status": "current"
+  },
+  "google-vertex-models": {
+    "title": "Vertex AI generative-AI models",
+    "publisher": "Google Cloud",
+    "accessedAt": "2026-09-15",
+    "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models",
+    "type": "official-docs",
+    "claims": [
+      "Vertex-hosted model lineup"
+    ],
+    "status": "current"
+  },
+  "google-vertex-data-governance": {
+    "title": "Vertex AI data governance",
+    "publisher": "Google Cloud",
+    "accessedAt": "2026-09-15",
+    "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/data-governance",
+    "type": "official-docs",
+    "claims": [
+      "Enterprise data-governance commitments"
+    ],
+    "status": "current"
+  },
+  "google-cloud-status": {
+    "title": "Google Cloud status",
+    "publisher": "Google Cloud",
+    "accessedAt": "2026-09-15",
+    "url": "https://status.cloud.google.com",
+    "type": "official-docs",
+    "claims": [
+      "Service status and incident history"
+    ],
+    "status": "current"
   }
 }

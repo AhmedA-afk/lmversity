@@ -1,7 +1,7 @@
 # Content registry — audit views
 
-Generated 2026-09-15T15:16:03.956Z by `scripts/build-content-registry.mjs`.
-2465 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T15:25:52.280Z by `scripts/build-content-registry.mjs`.
+2471 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
@@ -9,10 +9,10 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 - lesson: 2109
 - quiz: 89
 - lab: 70
-- reference: 55
+- reference: 58
 - answer: 34
 - project: 32
-- page: 21
+- page: 24
 - role: 12
 - blog: 10
 - track: 10
@@ -23,7 +23,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By status
 
-- live: 2465
+- live: 2471
 
 ## By search intent (heuristic)
 
@@ -31,16 +31,16 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 - comparison: 108
 - build: 102
 - practice: 89
-- reference: 56
+- reference: 59
 - answer: 34
 - worked-example: 29
 - troubleshooting: 24
 - how-to: 15
 - role-path: 12
 - nav: 12
+- hub: 12
 - read: 10
 - course-hub: 10
-- hub: 9
 - interview-prep: 7
 - scenario: 6
 - definition: 3
@@ -50,7 +50,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 - ai-engineer: 1688
 - beginner-engineer: 440
 - forward-deployed-engineer: 194
-- general: 125
+- general: 131
 - job-candidate: 7
 - developer: 1
 - ml-engineer: 1
@@ -83,20 +83,20 @@ and split always need a written human reason (see checklist).
 | disposition | items |
 |---|---:|
 | investigate | 2262 |
-| keep | 200 |
+| keep | 206 |
 | expand | 3 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
 | intentClarity | 2264 | 1.91 | 0 | 210 | 2054 |
 | correctnessSources | 46 | 1.28 | 0 | 33 | 13 |
-| completeness | 2415 | 1.64 | 45 | 786 | 1584 |
+| completeness | 2418 | 1.64 | 45 | 786 | 1587 |
 | prerequisiteFit | 2349 | 0.15 | 2169 | 0 | 180 |
 | handsOn | 2264 | 1.48 | 566 | 54 | 1644 |
 | explanationQuality | 2264 | 1.96 | 20 | 56 | 2188 |
 | metadata | 2264 | 1.84 | 0 | 362 | 1902 |
 | linking | 2175 | 1.50 | 382 | 322 | 1471 |
-| freshnessHealth | 2465 | 0.75 | 872 | 1327 | 266 |
+| freshnessHealth | 2471 | 0.76 | 872 | 1330 | 269 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
@@ -353,12 +353,13 @@ _… 165 more in content-registry.json (`sourcingFlags`)_
 
 Review order: volatile classes first, oldest last-verified date first; undated items lead each queue. `verified`/`updated`/`published` supply the last-verified date — git-derived when frontmatter is absent.
 
-- periodic: 1327
+- periodic: 1330
 - pricing-sensitive: 347
 - release-sensitive: 339
 - durable: 266
 - certification-sensitive: 104
 - policy-sensitive: 82
+- volatile: 3
 
 ### certification-sensitive (104) — oldest-verified first
 
@@ -546,7 +547,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/harness-design/agent-stack-vocabulary — The agent stack vocabulary: model, loop, harness, tool, skill, MCP, instruction, hook, subagent, workflow
 - … 65 more
 
-### zero in-body internal links (template nav still applies) (433)
+### zero in-body internal links (template nav still applies) (436)
 
 - /learn/agentic-ai/agents-vs-workflows — Choose an agent only when a workflow is not enough
 - /learn/ai-foundations/applied-ai/301-ai-product-discovery-outcomes-and-harm — AI Product Discovery: Outcomes, Users, and Harm
@@ -588,7 +589,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-foundations/reliable-ai/219-incident-response-rollback-and-learning — AI Incidents, Rollback, and Organisational Learning
 - /learn/ai-foundations/reliable-ai/220-human-in-the-loop-and-meaningful-oversight — Human-in-the-Loop and Meaningful Oversight
 - /learn/ai-foundations/reliable-ai/221-contestability-appeals-and-recource — Contestability, Appeals, and Recourse
-- … 393 more
+- … 396 more
 
 ### live file not in curriculum (2166)
 

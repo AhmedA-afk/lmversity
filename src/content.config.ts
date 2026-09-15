@@ -125,4 +125,28 @@ const answers = defineCollection({
   }),
 });
 
-export const collections = { lessons, questions, scenarios, blog, guides, fde, answers };
+// Provider hubs: dated reference pages for AI vendors. Every hub states what
+// surface it covers, carries `verifiedAt` for its product map, and cites the
+// official docs/policy pages its volatile claims trace to. They are reference
+// material, not lessons — no curriculum node required.
+const providers = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/providers' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    /** Vendor id in src/data/entities.json. */
+    vendor: z.string(),
+    /** Which surfaces this page covers. */
+    covers: z.array(z.enum([
+      'consumer-app', 'coding-agent', 'api', 'cloud-platform',
+      'open-model', 'consumer-product',
+    ])).default([]),
+    /** Date the product map was last checked against official pages. */
+    verifiedAt: z.string(),
+    related: z.array(z.string()).default([]),
+    /** Source-registry ids backing volatile claims. */
+    sources: z.array(z.string()).default([]),
+  }),
+});
+
+export const collections = { lessons, questions, scenarios, blog, guides, fde, answers, providers };

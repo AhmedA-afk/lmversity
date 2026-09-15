@@ -968,5 +968,38 @@
     "officialSources": [
       "nvidia-certifications"
     ]
+  },
+  "openai-gpt": {
+    "name": "OpenAI GPT family",
+    "kind": "model-family",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "openai-models-docs",
+      "openai-deprecations"
+    ],
+    "changeNote": "2026-09-15: Quickstart steers to GPT-6 Astra; catalog is authoritative for current IDs."
+  },
+  "anthropic-claude": {
+    "name": "Claude family",
+    "kind": "model-family",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "anthropic-models-overview",
+      "anthropic-model-deprecations"
+    ],
+    "changeNote": "2026-09-15: Lineup Fable 5.1 / Opus 5 / Sonnet 5 / Haiku 4.5; aliases + dated IDs coexist; per-model 'not sooner than' retirement dates published."
+  },
+  "google-gemini": {
+    "name": "Gemini family",
+    "kind": "model-family",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "google-gemini-models",
+      "google-gemini-deprecations"
+    ],
+    "changeNote": "2026-09-15: Gemini 3.x — 3.8 Flash newest stable; Stable/Preview/Legacy labels per model; endpoint strings gemini-<version>-<tier>."
   }
 }

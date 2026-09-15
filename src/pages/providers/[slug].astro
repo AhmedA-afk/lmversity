@@ -1,0 +1,109 @@
+---
+import Layout from '../../components/Layout.astro';
+import ReportError from '../../components/ReportError.astro';
+import { getCollection, render } from 'astro:content';
+import { site } from '../../data/site';
+import contentDates from '../../data/content-dates.json';
+import sourceRegistry from '../../data/sources.json';
+import entities from '../../data/entities.json';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('providers');
+  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const { Content, headings } = await render(entry);
+const toc = headings.filter((h) => h.depth === 2);
+const all = await getCollection('providers');
+const lessons = await getCollection('lessons');
+const titleFor = new Map([
+  ...all.map((p) => [`/providers/${p.id}`, p.data.title] as const),
+  ...lessons.map((l) => [`/learn/${l.id}`, l.data.title] as const),
+]);
+const kindLabel: Record<string, string> = {
+  'consumer-app': 'consumer app', 'coding-agent': 'coding agent', 'api': 'API',
+  'cloud-platform': 'cloud platform', 'open-model': 'open model', 'consumer-product': 'consumer product',
+};
+const vendor = (entities as Record<string, { name?: string }>)[entry.data.vendor];
+
+const fileDates = (contentDates as Record<string, { published?: string; updated?: string }>)[`providers/${entry.id}`];
+const published = fileDates?.published;
+const modified = fileDates?.updated;
+
+type SourceEntry = { title: string; publisher: string; url: string; type: string; status: string };
+const citedSources = (entry.data.sources ?? [])
+  .map((id: string) => ({ id, s: (sourceRegistry as Record<string, SourceEntry>)[id] }))
+  .filter((x) => x.s);
+---
+<Layout
+  title={entry.data.title}
+  description={entry.data.description}
+  type="article"
+  modifiedTime={modified}
+  publishedTime={published}
+  breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Providers', url: '/providers' }, { name: entry.data.title, url: `/providers/${entry.id}` }]}
+>
+  <div class="wrap container">
+    <article class="doc">
+      <nav class="crumb mono" aria-label="Breadcrumb"><a href="/providers">Providers</a> <span>/</span> {vendor?.name ?? entry.data.vendor}</nav>
+      <h1>{entry.data.title}</h1>
+      <p class="meta mono">
+        {site.author.name && <>By <a href="/about">{site.author.name}</a> · </>}
+        Product map verified {entry.data.verifiedAt}
+        {modified && <> · page updated {modified}</>}
+      </p>
+      <div class="badges">
+        {entry.data.covers.map((c) => <span class="badge mono">{kindLabel[c] ?? c}</span>)}
+      </div>
+      <div class="prose"><Content /></div>
+
+      {toc.length > 2 && (
+        <nav class="toc" aria-label="On this page">
+          <div class="eyebrow">On this page</div>
+          <ul>{toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ul>
+        </nav>
+      )}
+
+      {entry.data.related.length > 0 && (
+        <section class="related">
+          <div class="eyebrow">Learn it properly</div>
+          <ul>{entry.data.related.map((u) => <li><a href={u}>{titleFor.get(u) ?? u.replace(/^\/learn\//, '').replace(/-/g, ' ').replace(/\//g, ' · ')}</a></li>)}</ul>
+        </section>
+      )}
+
+      {citedSources.length > 0 && (
+        <section class="sources" aria-label="Sources">
+          <div class="eyebrow">Official sources</div>
+          <ol>
+            {citedSources.map(({ id, s }) => (
+              <li>
+                <a href={s.url} rel="nofollow noopener" target="_blank">{s.title}</a>
+                <span> — {s.publisher}{s.status !== 'current' ? ` (${s.status})` : ''}</span>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
+
+      <ReportError path={`providers/${entry.id}`} />
+    </article>
+  </div>
+</Layout>
+
+<style>
+  .wrap { padding-block: 48px 80px; max-width: 780px; }
+  .crumb { font-size: 12px; color: var(--muted); }
+  .crumb a { color: var(--muted); } .crumb a:hover { color: var(--accent); }
+  h1 { font-size: clamp(28px, 4vw, 38px); letter-spacing: -.02em; margin-top: 12px; }
+  .meta { font-size: 12px; color: var(--muted); margin-top: 12px; }
+  .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+  .badge { font-size: 11px; color: var(--accent); border: 1px solid var(--rule); border-radius: 999px; padding: 2px 8px; }
+  .prose { margin-top: 28px; }
+  .toc { margin-top: 36px; padding: 16px 18px; border: 1px solid var(--rule); border-radius: 8px; }
+  .toc ul { margin: 10px 0 0; padding-left: 18px; font-size: 13.5px; line-height: 1.8; }
+  .related { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--rule); }
+  .related ul { margin: 10px 0 0; padding-left: 18px; font-size: 14px; line-height: 1.9; }
+  .sources { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--rule); }
+  .sources ol { margin: 12px 0 0; padding-left: 18px; font-size: 12.5px; line-height: 1.7; color: var(--muted); }
+  .sources a { font: 500 13px/1.4 'IBM Plex Sans', 'IBM Plex Sans Fallback', sans-serif; }
+</style>

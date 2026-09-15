@@ -10,10 +10,11 @@
   "fde": 193,
   "rol": 12,
   "prc": 6,
-  "pag": 22,
+  "pag": 25,
   "trk": 29,
   "qgd": 4,
-  "stb": 25
+  "stb": 25,
+  "pro": 3
  },
  "entries": {
   "lessons/agentic-ai/agent-benchmarks.mdx": {
@@ -9836,6 +9837,27 @@
   "answers/certification-vs-portfolio-vs-experience.md": {
    "id": "ans-0034",
    "fp": "1cdacd039045856f1607abe83790bf7923e79e54"
+  },
+  "providers/anthropic.md": {
+   "id": "pro-0001",
+   "fp": "2b91a480d1a1e551bef1b928737e62d0232ad88b"
+  },
+  "providers/google.md": {
+   "id": "pro-0002",
+   "fp": "1fe99f399878e7596f89cd860963c82f4acc1c22"
+  },
+  "providers/openai.md": {
+   "id": "pro-0003",
+   "fp": "9a1684e3fcdfb54bd8f0cc6644f30cc244263668"
+  },
+  "page:/certifications": {
+   "id": "pag-0023"
+  },
+  "page:/external-courses": {
+   "id": "pag-0024"
+  },
+  "page:/providers": {
+   "id": "pag-0025"
   }
  },
  "retired": {
