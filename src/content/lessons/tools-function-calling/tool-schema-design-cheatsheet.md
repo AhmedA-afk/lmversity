@@ -99,4 +99,4 @@ if "body" in call_args and "html_body" not in call_args:
 - **New field or breaking rename?** Additive first, always. Rename only inside a deprecation window.
 - **Trim or keep a sentence?** Keep it if removing it changes model behavior in your eval; cut it if it doesn't.
 
-**Related:** /learn/tools-function-calling/schema-design-common-mistakes · /learn/tools-function-calling/parameter-design-patterns · /learn/tools-function-calling/enum-vs-freeform-parameters · /learn/tools-function-calling/schema-versioning-strategies · /learn/tools-function-calling/measuring-and-trimming-schema-tokens
+**Related:** [Schema Design Mistakes](/learn/tools-function-calling/schema-design-common-mistakes) · [Parameter Design Patterns](/learn/tools-function-calling/parameter-design-patterns) · [Enum vs. Free-Form Parameters](/learn/tools-function-calling/enum-vs-freeform-parameters) · [Versioning Schemas Without Breaking Agents](/learn/tools-function-calling/schema-versioning-strategies) · [Measuring and Trimming Schema Tokens](/learn/tools-function-calling/measuring-and-trimming-schema-tokens)

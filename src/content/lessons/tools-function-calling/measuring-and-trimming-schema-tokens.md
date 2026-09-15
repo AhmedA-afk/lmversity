@@ -147,7 +147,7 @@ tools_v2 = [
 ]
 ```
 
-> **Why this step?** Notice `status` moved from a prose-described free string to an `enum` — that's not just shorter, it's a strict accuracy improvement per /learn/tools-function-calling/enum-vs-freeform-parameters. Trimming and correctness aren't in tension here; a lot of verbosity was standing in for structure the schema should have been carrying itself. Also notice `order_id`'s description disappeared entirely once the parameter name plus the tool-level description already made its meaning unambiguous — a description that repeats what the name and type already say is pure cost.
+> **Why this step?** Notice `status` moved from a prose-described free string to an `enum` — that's not just shorter, it's a strict accuracy improvement per [Enum vs. Free-Form Parameters](/learn/tools-function-calling/enum-vs-freeform-parameters). Trimming and correctness aren't in tension here; a lot of verbosity was standing in for structure the schema should have been carrying itself. Also notice `order_id`'s description disappeared entirely once the parameter name plus the tool-level description already made its meaning unambiguous — a description that repeats what the name and type already say is pure cost.
 
 ## Run it
 
@@ -198,4 +198,4 @@ Anything that diverges is a signal to look at, not necessarily a regression — 
 
 Run `registry_report` in CI against your actual tool registry file and fail the build if the total crosses a threshold you set — this turns schema bloat from something you notice months later into something a pull request flags immediately. Pair it with the eval step above running on the same trigger, so a token-reducing change and a behavior-preserving change are checked together rather than as two separate, easy-to-skip steps.
 
-**Related:** /learn/tools-function-calling/token-cost-of-schemas-deep · /learn/tools-function-calling/token-cost-of-tool-schemas · /learn/tools-function-calling/enum-vs-freeform-parameters · /learn/tools-function-calling/schema-design-common-mistakes · /learn/tools-function-calling/tool-schema-design-cheatsheet
+**Related:** [Tool Schemas Are Re-Sent on Every Call](/learn/tools-function-calling/token-cost-of-schemas-deep) · [The Token Cost of Tool Schemas](/learn/tools-function-calling/token-cost-of-tool-schemas) · [Enum vs. Free-Form Parameters](/learn/tools-function-calling/enum-vs-freeform-parameters) · [Schema Design Mistakes](/learn/tools-function-calling/schema-design-common-mistakes) · [Production Schema Checklist](/learn/tools-function-calling/tool-schema-design-cheatsheet)

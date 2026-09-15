@@ -119,13 +119,13 @@ A one-level array of flat objects is almost always fine. Two levels of nesting i
 |---|---|
 | A field is really one flat value someone would type in one box | Keep it flat, sibling-level property |
 | A field has a small, known, stable set of valid values | `enum` |
-| A field has an open-ended or frequently-changing set of values | Free string with description — see /learn/tools-function-calling/enum-vs-freeform-parameters |
+| A field has an open-ended or frequently-changing set of values | Free string with description — see [Enum vs. Free-Form Parameters](/learn/tools-function-calling/enum-vs-freeform-parameters) |
 | The API call fails without this field | `required` |
 | The API call succeeds without this field, using a fallback | Optional, with the fallback stated in the description |
 | The data is genuinely a list of records (passengers, attendees, line items) | Array of flat objects — one level of nesting, no deeper |
 
 ## Where next
 
-For the enum decision specifically, /learn/tools-function-calling/enum-vs-freeform-parameters goes deeper on the tradeoff and gives a concrete rule of thumb. For turning these patterns into finished prose, see /learn/tools-function-calling/writing-descriptions-models-follow-deep — a well-flattened schema still needs good descriptions to be filled correctly.
+For the enum decision specifically, [Enum vs. Free-Form Parameters](/learn/tools-function-calling/enum-vs-freeform-parameters) goes deeper on the tradeoff and gives a concrete rule of thumb. For turning these patterns into finished prose, see [Writing Descriptions Models Actually Follow](/learn/tools-function-calling/writing-descriptions-models-follow-deep) — a well-flattened schema still needs good descriptions to be filled correctly.
 
-**Related:** /learn/tools-function-calling/json-schema-for-tools-essentials · /learn/tools-function-calling/enum-vs-freeform-parameters · /learn/tools-function-calling/designing-a-tool-schema-walkthrough · /learn/tools-function-calling/schema-design-common-mistakes · /learn/tools-function-calling/writing-descriptions-models-follow-deep
+**Related:** [The JSON Schema Subset That Matters for Tools](/learn/tools-function-calling/json-schema-for-tools-essentials) · [Enum vs. Free-Form Parameters](/learn/tools-function-calling/enum-vs-freeform-parameters) · [Designing a Schema From a Fuzzy Requirement](/learn/tools-function-calling/designing-a-tool-schema-walkthrough) · [Schema Design Mistakes](/learn/tools-function-calling/schema-design-common-mistakes) · [Writing Descriptions Models Actually Follow](/learn/tools-function-calling/writing-descriptions-models-follow-deep)

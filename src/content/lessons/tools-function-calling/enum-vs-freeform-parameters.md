@@ -52,7 +52,7 @@ duration: "7 min read"
 }
 ```
 
-**How it works:** still a plain string in the schema — `pattern` in JSON Schema is frequently ignored at generation time (see /learn/tools-function-calling/json-schema-for-tools-essentials), so the constraint lives entirely in the description's prose, and your code re-validates it after the call returns.
+**How it works:** still a plain string in the schema — `pattern` in JSON Schema is frequently ignored at generation time (see [The JSON Schema Subset That Matters for Tools](/learn/tools-function-calling/json-schema-for-tools-essentials)), so the constraint lives entirely in the description's prose, and your code re-validates it after the call returns.
 
 **When it wins:** values that follow a format but come from the user or an external source rather than a fixed list — promo codes, order numbers, email addresses. You can't enumerate them, but you can describe their shape precisely enough that the model either passes through a real one or declines to invent a plausible-looking fake.
 
@@ -97,6 +97,6 @@ Ask two questions in order. First: **do I control the full list of valid values,
 
 Second, only if you said no to the first question: **does the value have a recognizable shape even though the set isn't closed?** If yes, use a validated string with the shape and an explicit anti-invention instruction in the description. If the value has no recognizable shape at all — it's genuinely open text — a plain free-form string is correct and adding constraint would only add false confidence.
 
-Reach for the hybrid pattern only when you've already shipped a strict enum and watched it fall behind reality at least once. It's the right answer for a known recurring problem, not a default starting point — start with a plain enum for closed sets, per /learn/tools-function-calling/tool-schema-design-cheatsheet, and add the escape hatch when you have evidence you need it.
+Reach for the hybrid pattern only when you've already shipped a strict enum and watched it fall behind reality at least once. It's the right answer for a known recurring problem, not a default starting point — start with a plain enum for closed sets, per [Production Schema Checklist](/learn/tools-function-calling/tool-schema-design-cheatsheet), and add the escape hatch when you have evidence you need it.
 
-**Related:** /learn/tools-function-calling/parameter-design-patterns · /learn/tools-function-calling/json-schema-for-tools-essentials · /learn/tools-function-calling/schema-design-common-mistakes · /learn/tools-function-calling/tool-schema-design-cheatsheet · /learn/tools-function-calling/schema-versioning-strategies
+**Related:** [Parameter Design Patterns](/learn/tools-function-calling/parameter-design-patterns) · [The JSON Schema Subset That Matters for Tools](/learn/tools-function-calling/json-schema-for-tools-essentials) · [Schema Design Mistakes](/learn/tools-function-calling/schema-design-common-mistakes) · [Production Schema Checklist](/learn/tools-function-calling/tool-schema-design-cheatsheet) · [Versioning Schemas Without Breaking Agents](/learn/tools-function-calling/schema-versioning-strategies)

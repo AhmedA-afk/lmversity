@@ -22,7 +22,7 @@ This reframes the whole problem: you're not really versioning the schema so much
 
 Four practical strategies fall out of that framing, roughly in order of how disruptive they are.
 
-**Additive-only changes** are free. Adding a new optional field, or a new enum member alongside existing ones, doesn't invalidate any call an agent holding the old schema would make — the old agent simply never populates the new field, and your dispatcher treats its absence as "not specified," which it already has to handle for any optional field. This is why /learn/tools-function-calling/parameter-design-patterns pushes you toward honest, minimal `required` sets in the first place: a schema with few required fields has more room to grow additively later without a breaking change ever becoming necessary.
+**Additive-only changes** are free. Adding a new optional field, or a new enum member alongside existing ones, doesn't invalidate any call an agent holding the old schema would make — the old agent simply never populates the new field, and your dispatcher treats its absence as "not specified," which it already has to handle for any optional field. This is why [Parameter Design Patterns](/learn/tools-function-calling/parameter-design-patterns) pushes you toward honest, minimal `required` sets in the first place: a schema with few required fields has more room to grow additively later without a breaking change ever becoming necessary.
 
 **Deprecation windows** handle the case where a field or a whole tool needs to go away, but can't disappear atomically. You keep the old shape accepted — silently, or with a logged warning — for a fixed window after the new shape ships, giving every in-flight conversation and every conversation started shortly after the schema change time to complete naturally before you remove the old path. The window length should be driven by your actual conversation lifetimes: if sessions rarely run longer than an hour, a day's grace period covers essentially everyone; if agents can run for days, size the window to match.
 
@@ -42,7 +42,7 @@ def handle_send_email(call_args: dict) -> dict:
     return execute_send_email(call_args)
 ```
 
-This is deliberately small: it detects the old shape, logs it (so you know when it's safe to remove), and normalizes to the new internal shape before doing the real work. The schema itself, meanwhile, can advertise `html_body` as the documented field going forward while quietly still accepting `body` for the length of the deprecation window — see /learn/tools-function-calling/versioning-a-schema-worked for this exact scenario traced through in full, including what happens to an agent that's mid-conversation when each version of the change ships.
+This is deliberately small: it detects the old shape, logs it (so you know when it's safe to remove), and normalizes to the new internal shape before doing the real work. The schema itself, meanwhile, can advertise `html_body` as the documented field going forward while quietly still accepting `body` for the length of the deprecation window — see [Evolving send_email v1 to v2](/learn/tools-function-calling/versioning-a-schema-worked) for this exact scenario traced through in full, including what happens to an agent that's mid-conversation when each version of the change ships.
 
 ## Where it shows up
 
@@ -56,6 +56,6 @@ Any tool that's been in production long enough to need a second look at its sche
 
 ## Where next
 
-/learn/tools-function-calling/versioning-a-schema-worked traces one migration — `send_email` gaining `cc` and renaming `body` to `html_body` — through both the backward-compatible path and the breaking path, showing exactly what an in-flight agent experiences in each.
+[Evolving send_email v1 to v2](/learn/tools-function-calling/versioning-a-schema-worked) traces one migration — `send_email` gaining `cc` and renaming `body` to `html_body` — through both the backward-compatible path and the breaking path, showing exactly what an in-flight agent experiences in each.
 
-**Related:** /learn/tools-function-calling/tool-schema-versioning · /learn/tools-function-calling/versioning-a-schema-worked · /learn/tools-function-calling/parameter-design-patterns · /learn/tools-function-calling/schema-design-common-mistakes · /learn/tools-function-calling/enum-vs-freeform-parameters
+**Related:** [Versioning Tool Schemas Without Breaking Running Agents](/learn/tools-function-calling/tool-schema-versioning) · [Evolving send_email v1 to v2](/learn/tools-function-calling/versioning-a-schema-worked) · [Parameter Design Patterns](/learn/tools-function-calling/parameter-design-patterns) · [Schema Design Mistakes](/learn/tools-function-calling/schema-design-common-mistakes) · [Enum vs. Free-Form Parameters](/learn/tools-function-calling/enum-vs-freeform-parameters)

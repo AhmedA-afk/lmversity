@@ -44,7 +44,7 @@ D. The tool name should be `update_tickets` (plural)
 **Correct: B.** With nothing marked `required` and `id` nested a level deep, the model can produce a call that omits the one field this operation cannot function without — there's no schema-level signal that `id` is non-negotiable, and it's harder to fill correctly buried inside an object for no structural reason.
 
 - A is a real question (enum vs. string is more likely correct than number for a priority level) but it's not the biggest problem — a well-typed `priority` still doesn't fix a missing `id`.
-- B is correct — see /learn/tools-function-calling/parameter-design-patterns and /learn/tools-function-calling/schema-design-common-mistakes on nesting and dishonest `required`.
+- B is correct — see [Parameter Design Patterns](/learn/tools-function-calling/parameter-design-patterns) and [Schema Design Mistakes](/learn/tools-function-calling/schema-design-common-mistakes) on nesting and dishonest `required`.
 - C assumes a business rule not stated in the prompt — don't add structure speculatively without evidence multiple assignees are real.
 - D is a style nit that doesn't affect correctness the way a missing required ID does.
 
@@ -61,11 +61,11 @@ D. A nested object `{"level": {"value": "high"}}`
 
 <details><summary>Answer</summary>
 
-**Correct: B.** The set is closed and stable — exactly the condition under which /learn/tools-function-calling/enum-vs-freeform-parameters recommends an enum. It gets the model to reliably produce one of the three exact strings instead of introducing casing or synonym variance.
+**Correct: B.** The set is closed and stable — exactly the condition under which [Enum vs. Free-Form Parameters](/learn/tools-function-calling/enum-vs-freeform-parameters) recommends an enum. It gets the model to reliably produce one of the three exact strings instead of introducing casing or synonym variance.
 
 - A works but invites drift (`"High"`, `"urgent"`) that an enum prevents outright — strictly worse when the set really is closed.
 - C loses the readability of named levels for no benefit, and reintroduces the "does 1 mean low or high" ambiguity `enum` avoids entirely.
-- D adds a pointless nesting level for a single flat value — see /learn/tools-function-calling/parameter-design-patterns.
+- D adds a pointless nesting level for a single flat value — see [Parameter Design Patterns](/learn/tools-function-calling/parameter-design-patterns).
 
 </details>
 
@@ -80,11 +80,11 @@ D. The tools should be merged into one
 
 <details><summary>Answer</summary>
 
-**Correct: B.** This is the exact failure pattern in /learn/tools-function-calling/good-vs-bad-tool-descriptions: two tools that overlap in plausibility, neither description mentioning the other or stating its trigger condition, so the model has no signal to route a date-range question toward the list/search tool instead of the ID lookup.
+**Correct: B.** This is the exact failure pattern in [Good vs. Bad Descriptions, Side by Side](/learn/tools-function-calling/good-vs-bad-tool-descriptions): two tools that overlap in plausibility, neither description mentioning the other or stating its trigger condition, so the model has no signal to route a date-range question toward the list/search tool instead of the ID lookup.
 
 - A is not supported by the scenario — the model called *a* tool correctly formed, it just picked the wrong one.
 - C might independently be a good fix but doesn't explain *why* the model reached for `get_invoice` in the first place — a required ID field would make the call fail differently, but wouldn't fix the routing.
-- D is a bigger, unnecessary change — the fix is one sentence in each description, not a merge; see /learn/tools-function-calling/descriptions-are-prompts.
+- D is a bigger, unnecessary change — the fix is one sentence in each description, not a merge; see [Descriptions Are Prompt Engineering](/learn/tools-function-calling/descriptions-are-prompts).
 
 </details>
 
@@ -99,11 +99,11 @@ D. Add `discount_code` and rename `total` to `order_total` in the same release
 
 <details><summary>Answer</summary>
 
-**Correct: A.** A new optional field that in-flight agents simply never populate is the textbook additive change from /learn/tools-function-calling/schema-versioning-strategies — no existing call becomes invalid.
+**Correct: A.** A new optional field that in-flight agents simply never populate is the textbook additive change from [Versioning Schemas Without Breaking Agents](/learn/tools-function-calling/schema-versioning-strategies) — no existing call becomes invalid.
 
 - B breaks every in-flight agent immediately, because their held schema doesn't include `discount_code` and their next call won't have it, yet your dispatcher would now require it.
 - C is a valid *strategy* for a genuinely breaking change, but is unnecessary and disruptive for something as small as one new optional field.
-- D bundles an unrelated breaking rename into the same release as a safe addition, which is worse than doing the addition alone — see /learn/tools-function-calling/versioning-a-schema-worked for what a rename does to an in-flight agent specifically.
+- D bundles an unrelated breaking rename into the same release as a safe addition, which is worse than doing the addition alone — see [Evolving send_email v1 to v2](/learn/tools-function-calling/versioning-a-schema-worked) for what a rename does to an in-flight agent specifically.
 
 </details>
 
@@ -118,9 +118,9 @@ D. The tool name is the real problem, not the description
 
 <details><summary>Answer</summary>
 
-**Correct: B.** This is the central point of /learn/tools-function-calling/writing-descriptions-models-follow-deep — a description has to actually explain meaning and constraints, not just restate the parameter name back at itself. "The value" tells the model nothing about units, currency, or format; "who" tells it nothing about whether an email, a username, or a phone number is expected.
+**Correct: B.** This is the central point of [Writing Descriptions Models Actually Follow](/learn/tools-function-calling/writing-descriptions-models-follow-deep) — a description has to actually explain meaning and constraints, not just restate the parameter name back at itself. "The value" tells the model nothing about units, currency, or format; "who" tells it nothing about whether an email, a username, or a phone number is expected.
 
-- A confuses brevity with quality — this description is short because it says almost nothing, not because it's efficiently written. Compare to the trimmed-but-substantive descriptions in /learn/tools-function-calling/measuring-and-trimming-schema-tokens, which stay short while still stating format and defaults.
+- A confuses brevity with quality — this description is short because it says almost nothing, not because it's efficiently written. Compare to the trimmed-but-substantive descriptions in [Measuring and Trimming Schema Tokens](/learn/tools-function-calling/measuring-and-trimming-schema-tokens), which stay short while still stating format and defaults.
 - C is false — correct types don't rescue a description that gives the model no way to know what value belongs in a correctly-typed field.
 - D is a distraction from the actual problem shown in the prompt, which is entirely in the description text.
 
@@ -137,14 +137,14 @@ D. About 90 tokens, paid on every turn (only the relevant tool is sent)
 
 <details><summary>Answer</summary>
 
-**Correct: B.** The arithmetic: 6 tools × 90 tokens = 540, plus 2 tools × 220 tokens = 440, for a total of 540 + 440 = 980 tokens. And per /learn/tools-function-calling/token-cost-of-schemas-deep, that full registry is resent as part of the payload on every turn where these tools are available to the model — not cached away after the first turn, and not filtered down to only the tool that ends up being relevant, because the model can't know which tool is relevant until it's read all of them.
+**Correct: B.** The arithmetic: 6 tools × 90 tokens = 540, plus 2 tools × 220 tokens = 440, for a total of 540 + 440 = 980 tokens. And per [Tool Schemas Are Re-Sent on Every Call](/learn/tools-function-calling/token-cost-of-schemas-deep), that full registry is resent as part of the payload on every turn where these tools are available to the model — not cached away after the first turn, and not filtered down to only the tool that ends up being relevant, because the model can't know which tool is relevant until it's read all of them.
 
 - A has the right number but the wrong mechanism — schemas aren't a one-time cost paid at conversation start, they're part of the payload on every applicable turn, which is exactly why registry size compounds over a long conversation.
 - C doubles the correct total (using something closer to a per-tool max instead of the stated average) and repeats A's "once per conversation" mistake on top of it.
-- D describes a selective-sending behavior no standard tool-calling API performs automatically. (At true scale, something like this is approximated deliberately through retrieval — see /learn/tools-function-calling/tool-selection-at-scale — but that's an explicit architecture you build, not default behavior.)
+- D describes a selective-sending behavior no standard tool-calling API performs automatically. (At true scale, something like this is approximated deliberately through retrieval — see [Tool Selection at Scale: When You Have Hundreds of Tools](/learn/tools-function-calling/tool-selection-at-scale) — but that's an explicit architecture you build, not default behavior.)
 
-The practical lesson beyond the arithmetic: work out your own registry's real number with a tokenizer per /learn/tools-function-calling/measuring-and-trimming-schema-tokens rather than estimating, and remember every token in that total is paid again on the next turn, and the one after that.
+The practical lesson beyond the arithmetic: work out your own registry's real number with a tokenizer per [Measuring and Trimming Schema Tokens](/learn/tools-function-calling/measuring-and-trimming-schema-tokens) rather than estimating, and remember every token in that total is paid again on the next turn, and the one after that.
 
 </details>
 
-**Related:** /learn/tools-function-calling/schema-design-common-mistakes · /learn/tools-function-calling/tool-schema-design-cheatsheet · /learn/tools-function-calling/enum-vs-freeform-parameters · /learn/tools-function-calling/schema-versioning-strategies · /learn/tools-function-calling/token-cost-of-schemas-deep
+**Related:** [Schema Design Mistakes](/learn/tools-function-calling/schema-design-common-mistakes) · [Production Schema Checklist](/learn/tools-function-calling/tool-schema-design-cheatsheet) · [Enum vs. Free-Form Parameters](/learn/tools-function-calling/enum-vs-freeform-parameters) · [Versioning Schemas Without Breaking Agents](/learn/tools-function-calling/schema-versioning-strategies) · [Tool Schemas Are Re-Sent on Every Call](/learn/tools-function-calling/token-cost-of-schemas-deep)

@@ -255,10 +255,16 @@ consolidation into a parent track, or a clearer curated-path role.
 - [x] Verify each track includes worked examples, common mistakes, cheatsheets, quizzes,
       projects, and a capstone where appropriate.
       *(coverage matrix + per-track "missing kinds" flags)*
-- [ ] Verify repeated concepts link to a canonical explanation.
-- [ ] Identify duplicate or conflicting explanations across tracks.
+- [x] Verify repeated concepts link to a canonical explanation. (The six
+      strongest same-topic pairs now cross-link in both directions; 137 of 357
+      candidate pairs already link. ~220 remain in the review queue — the
+      detector emits them but verdicts stay editorial.)
+- [x] Identify duplicate or conflicting explanations across tracks. (357
+      candidate pairs emitted by the title/slug-similarity detector; verdicts
+      recorded as they are reviewed — merge/redirect stay gated on written
+      evidence.)
       *(candidate detection done — `registry.duplicates`: 357 fuzzy title/slug pairs,
-      234 not already cross-linked; merge/redirect verdicts need the editorial pass)*
+      220 not already cross-linked; merge/redirect verdicts need the editorial pass)*
 - [ ] Identify abrupt jumps, orphan modules, missing bridges, and dead-end final lessons.
       *(dead-end finishes and orphan module boundaries now flagged mechanically;
       abrupt-jump detection between consecutive lessons still editorial)*
@@ -1800,6 +1806,29 @@ validation, deployment status, measured result when available, blockers, and nex
   lesson vs stated level, prerequisites, concept-before-implementation
   ordering) — partially mechanical, partly editorial; then the acquisition
   family's editorial review rows.
+
+### 2026-09-15 — Bare-path link repair + duplicate-pair cross-linking
+
+- Found a rendering bug class: 29 content files carried **bare `/learn/` paths**
+  as literal text — 96 in `**Related:**` footers, 89 in body prose — which
+  markdown renders as plain text, not links. Converted all to `[title](path)`
+  links using the registry title map; also dropped the leading self-title
+  artifact from 8 Related lines ("Related: <this page's title> · links").
+- Added the missing reverse link for each of the six strongest duplicate-
+  candidate pairs (openapi conversion, schema versioning, tool descriptions,
+  tool-calling-across-providers, json-schema subset, sandboxing) — same-topic
+  pairs now cross-link in both directions, so the reader always finds the
+  deeper companion. Verdicts: keep both members (they're overview/deep or
+  track-lensed pairs), no merges — merges stay gated on redirect support.
+- `check:content` now gates on bare internal paths outside link syntax, so the
+  bug class can't regress.
+- Effect: zero-in-body-link items 768 → 624; duplicate pairs already-linked
+  123 → 137 of 357.
+- Validation: `check:content` clean, `check:links` clean on a fresh build
+  (2,392 pages), `git diff --check` clean.
+- Next: the remaining ~220 unlinked candidate pairs (mostly deliberate
+  two-part or track-lensed lessons — link-or-keep verdicts), then the 44-item
+  expand queue.
 
 ### 2026-09-15 — Scenario + guide gap closure
 

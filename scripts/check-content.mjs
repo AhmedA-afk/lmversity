@@ -60,13 +60,20 @@ function bodyH1s(body) {
 const curSrc = readFileSync(CURRICULUM, 'utf8');
 const trackNodes = new Map(); // trackId -> Map(slug -> status)
 let curTrack = null;
+let pendingSlug = null; // slug waiting on its "status" line (status sits on the next line)
 for (const line of curSrc.split('\n')) {
   const t = line.match(/^\s*"id":\s*"([\w-]+)",\s*$/);
-  if (t) { curTrack = t[1]; if (!trackNodes.has(curTrack)) trackNodes.set(curTrack, new Map()); continue; }
+  if (t) { curTrack = t[1]; pendingSlug = null; if (!trackNodes.has(curTrack)) trackNodes.set(curTrack, new Map()); continue; }
   const s = line.match(/"slug":\s*"([^"]+)"/);
   if (s && curTrack) {
-    const st = line.match(/"status":\s*"(\w+)"/);
-    trackNodes.get(curTrack).set(s[1], st ? st[1] : 'live');
+    trackNodes.get(curTrack).set(s[1], 'live');
+    pendingSlug = s[1];
+    continue;
+  }
+  const st = line.match(/"status":\s*"(\w+)"/);
+  if (st && curTrack && pendingSlug) {
+    trackNodes.get(curTrack).set(pendingSlug, st[1]);
+    pendingSlug = null;
   }
 }
 
@@ -96,6 +103,11 @@ for (const file of walk(LESSONS_DIR)) {
 
   const h1 = bodyH1s(body);
   if (h1 > 0) problems.push(`${rel}: ${h1} body-level H1 outside code — the template already emits the title`);
+
+  // bare internal paths render as literal text, not links — must be [title](/learn/x)
+  const unfenced = body.replace(/```[\s\S]*?```/g, '');
+  const barePaths = unfenced.match(/[^\w`(\["']\/(?:learn|interview|scenarios|guides|answers|practice|fde)\/[a-z0-9-]+(\/[a-z0-9-]+)*/g);
+  if (barePaths) problems.push(`${rel}: ${barePaths.length} bare internal path(s) outside link syntax — they render as plain text, wrap them as [title](path)`);
 
   const node = trackNodes.get(track)?.get(slug);
   if (node) seenNodes.add(`${track}/${slug}`);

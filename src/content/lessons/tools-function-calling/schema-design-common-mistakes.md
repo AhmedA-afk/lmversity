@@ -14,7 +14,7 @@ Almost every schema-related bug in production traces back to one of five pattern
 
 **Symptom:** calls that are almost right — the data is all there, but one level too shallow or too deep (`{"location": "SF"}` instead of `{"location": {"city": "SF"}}`, or the reverse), or entire optional sub-objects silently missing because the model wasn't confident where they belonged.
 
-**Fix:** flatten to sibling properties wherever the data is genuinely single-valued. Reserve nesting for data that's actually plural or composite — a list of attendees, a list of line items — per /learn/tools-function-calling/parameter-design-patterns, and cap it at one level deep in the common case.
+**Fix:** flatten to sibling properties wherever the data is genuinely single-valued. Reserve nesting for data that's actually plural or composite — a list of attendees, a list of line items — per [Parameter Design Patterns](/learn/tools-function-calling/parameter-design-patterns), and cap it at one level deep in the common case.
 
 ### The mistake: ambiguous tool names
 
@@ -22,7 +22,7 @@ Almost every schema-related bug in production traces back to one of five pattern
 
 **Symptom:** the model calls a plausible-sounding tool that isn't the best fit — a search tool where an exact-ID lookup was available and would have been faster and more precise, or vice versa.
 
-**Fix:** pick one verb convention (`get_`, `search_`, `create_`, `update_`, `delete_`) and use it consistently across the whole registry, then let the description carry the actual disambiguation — see /learn/tools-function-calling/good-vs-bad-tool-descriptions for what that sentence looks like when two tools are genuinely close.
+**Fix:** pick one verb convention (`get_`, `search_`, `create_`, `update_`, `delete_`) and use it consistently across the whole registry, then let the description carry the actual disambiguation — see [Good vs. Bad Descriptions, Side by Side](/learn/tools-function-calling/good-vs-bad-tool-descriptions) for what that sentence looks like when two tools are genuinely close.
 
 ### The mistake: missing or dishonest required flags
 
@@ -30,7 +30,7 @@ Almost every schema-related bug in production traces back to one of five pattern
 
 **Symptom:** either the model asks clarifying questions for fields that didn't need to be specified, or your dispatcher throws on missing fields the schema implied were optional.
 
-**Fix:** audit `required` against what actually makes the underlying operation fail, not against what would be "nice to have." Anything with a real, statable default belongs out of `required` and into the description — see the three-draft progression in /learn/tools-function-calling/designing-a-tool-schema-walkthrough for exactly this correction in action.
+**Fix:** audit `required` against what actually makes the underlying operation fail, not against what would be "nice to have." Anything with a real, statable default belongs out of `required` and into the description — see the three-draft progression in [Designing a Schema From a Fuzzy Requirement](/learn/tools-function-calling/designing-a-tool-schema-walkthrough) for exactly this correction in action.
 
 ### The mistake: giant, unstable enums
 
@@ -38,7 +38,7 @@ Almost every schema-related bug in production traces back to one of five pattern
 
 **Symptom:** a valid, real value that isn't yet in the enum gets force-fit into the nearest existing member, silently producing wrong data, or the model refuses to produce a value at all because nothing in the list fits.
 
-**Fix:** for a set that's large or actively growing, use a validated free string with a documented format instead — see /learn/tools-function-calling/enum-vs-freeform-parameters for the full comparison — or an enum with an explicit escape-hatch member paired with a free-text companion field.
+**Fix:** for a set that's large or actively growing, use a validated free string with a documented format instead — see [Enum vs. Free-Form Parameters](/learn/tools-function-calling/enum-vs-freeform-parameters) for the full comparison — or an enum with an explicit escape-hatch member paired with a free-text companion field.
 
 ### The mistake: internal jargon the model has never seen
 
@@ -54,7 +54,7 @@ Almost every schema-related bug in production traces back to one of five pattern
 
 **Symptom:** wrong-tool selection between similar tools, and arguments that are the right *type* but the wrong *value* because the model had to guess at meaning the description should have supplied.
 
-**Fix:** rewrite every description against the three-question bar in /learn/tools-function-calling/writing-descriptions-models-follow-deep — what it does, when to use it (and not), and what each parameter means.
+**Fix:** rewrite every description against the three-question bar in [Writing Descriptions Models Actually Follow](/learn/tools-function-calling/writing-descriptions-models-follow-deep) — what it does, when to use it (and not), and what each parameter means.
 
 ## Pre-flight checklist
 
@@ -67,6 +67,6 @@ Before shipping any new or changed schema, check it against each mistake above d
 - [ ] No field or value name is internal jargon without either a translation layer or an explicit mapping in the description
 - [ ] Every description answers what/when/when-not, not just what
 
-For the same checklist in reference-card form, see /learn/tools-function-calling/tool-schema-design-cheatsheet.
+For the same checklist in reference-card form, see [Production Schema Checklist](/learn/tools-function-calling/tool-schema-design-cheatsheet).
 
-**Related:** /learn/tools-function-calling/parameter-design-patterns · /learn/tools-function-calling/writing-descriptions-models-follow-deep · /learn/tools-function-calling/enum-vs-freeform-parameters · /learn/tools-function-calling/designing-a-tool-schema-walkthrough · /learn/tools-function-calling/tool-schema-design-cheatsheet
+**Related:** [Parameter Design Patterns](/learn/tools-function-calling/parameter-design-patterns) · [Writing Descriptions Models Actually Follow](/learn/tools-function-calling/writing-descriptions-models-follow-deep) · [Enum vs. Free-Form Parameters](/learn/tools-function-calling/enum-vs-freeform-parameters) · [Designing a Schema From a Fuzzy Requirement](/learn/tools-function-calling/designing-a-tool-schema-walkthrough) · [Production Schema Checklist](/learn/tools-function-calling/tool-schema-design-cheatsheet)

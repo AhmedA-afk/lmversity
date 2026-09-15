@@ -1,6 +1,6 @@
 # Content registry — audit views
 
-Generated 2026-09-15T07:55:38.783Z by `scripts/build-content-registry.mjs`.
+Generated 2026-09-15T08:14:25.764Z by `scripts/build-content-registry.mjs`.
 2406 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
@@ -83,7 +83,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 | hallucinations | 132 | 108 | 0 | 0 | 10 | 6 | 7 | 0 | 1 | 48% | 0% | 2% | 734 | yes | — |
 | genai-app-dev | 130 | 118 | 0 | 0 | 5 | 6 | 0 | 0 | 1 | 78% | 0% | 0% | 692 | — | — |
 | rag | 56 | 28 | 6 | 6 | 3 | 6 | 6 | 0 | 1 | 48% | 48% | 2% | 991 | yes | yes |
-| tools-function-calling | 123 | 91 | 1 | 7 | 11 | 5 | 7 | 0 | 1 | 74% | 0% | 0% | 716 | — | — |
+| tools-function-calling | 123 | 91 | 1 | 7 | 11 | 5 | 7 | 0 | 1 | 74% | 0% | 0% | 710 | — | — |
 | mcp | 57 | 28 | 6 | 6 | 5 | 6 | 6 | 0 | 0 | 60% | 53% | 5% | 553 | yes | yes |
 | agentic-ai | 28 | 25 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 25% | 93% | 0% | 545 | — | yes |
 | harness-design | 26 | 26 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 65% | 100% | 4% | 505 | — | — |
@@ -101,7 +101,7 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 ### ai-literacy — 56 files, 9 modules
 
 - missing kinds: common-mistakes
-- 8 island lessons (no in-body links)
+- 6 island lessons (no in-body links)
 - 5 duplicate-candidate pairs in track
 
 ### maths-foundations — 193 files, 17 modules
@@ -200,7 +200,6 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 ### tools-function-calling — 123 files, 5 modules
 
 - modules without practice ending: "Tool calling basics" ends on tool-choice-and-forcing-tool-use (concept); "Multi-step and parallel use" ends on testing-and-debugging-tool-calls (concept); "Schemas at scale" ends on streaming-partial-tool-calls (concept)
-- 13 island lessons (no in-body links)
 - 29 duplicate-candidate pairs in track
 
 ### mcp — 57 files, 0 modules
@@ -264,20 +263,20 @@ and split always need a written human reason (see checklist).
 
 | disposition | items |
 |---|---:|
-| keep | 1872 |
-| investigate | 464 |
+| keep | 1887 |
+| investigate | 449 |
 | expand | 70 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
 | intentClarity | 2189 | 1.89 | 25 | 184 | 1980 |
 | correctnessSources | 43 | 1.28 | 0 | 31 | 12 |
-| completeness | 2304 | 1.65 | 44 | 711 | 1549 |
+| completeness | 2304 | 1.65 | 44 | 713 | 1547 |
 | prerequisiteFit | 2243 | 2.00 | 3 | 0 | 2240 |
 | handsOn | 2189 | 1.48 | 550 | 49 | 1590 |
 | explanationQuality | 2189 | 1.93 | 45 | 56 | 2088 |
 | metadata | 2189 | 1.85 | 25 | 281 | 1883 |
-| linking | 2100 | 1.35 | 508 | 342 | 1250 |
+| linking | 2100 | 1.37 | 493 | 340 | 1267 |
 | freshnessHealth | 2406 | 0.78 | 787 | 1356 | 263 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
@@ -285,7 +284,7 @@ and split always need a written human reason (see checklist).
 
 ### Non-keep dispositions
 
-#### investigate: zero in-body internal links (464)
+#### investigate: zero in-body internal links (449)
 
 - /learn/agentic-ai/agents-vs-workflows — Choose an agent only when a workflow is not enough
 - /learn/agentic-ai/state-memory-and-recovery — Design agent state, memory, and recovery explicitly
@@ -327,7 +326,7 @@ and split always need a written human reason (see checklist).
 - /learn/ai-foundations/reliable-ai/212-adversarial-ml-and-input-security — Adversarial ML and Input Security
 - /learn/ai-foundations/reliable-ai/213-model-supply-chain-and-artifact-security — Model Supply Chain and Artifact Security
 - /learn/ai-foundations/reliable-ai/214-alignment-objectives-and-reward-hacking — Alignment Objectives and Reward Hacking
-- … 424 more in content-registry.json
+- … 409 more in content-registry.json
 
 #### expand: planned stub — no content yet (26)
 
@@ -358,52 +357,52 @@ and split always need a written human reason (see checklist).
 - ai-for-designers/prototype-and-evaluation-quiz — Quiz: prototype and evaluation
 - ai-for-designers/capstone-design-a-trustworthy-ai-feature — Capstone: design a trustworthy AI feature end to end
 
-#### expand: thin vs family median (193w vs ~780w) (3)
+#### expand: thin vs family median (193w vs ~779w) (3)
 
 - /learn/machine-learning/public-data-projects/bank-marketing-project — Public-data project: Bank Marketing decision support
 - /learn/machine-learning/public-data-projects/bike-sharing-project — Public-data project: Bike Sharing forecasting
 - /learn/machine-learning/public-data-projects/online-retail-project — Public-data project: Online Retail customer analysis
 
-#### expand: thin vs family median (264w vs ~780w) (2)
+#### expand: thin vs family median (264w vs ~779w) (2)
 
 - /learn/machine-learning/assessments/ml-845-assignment-04-unsupervised-decision-support — Assignment 4: unsupervised learning without inventing stories
 - /learn/machine-learning/assessments/ml-846-assignment-05-temporal-risk-aware-system — Assignment 5: build a time-aware, risk-aware ML system
 
-#### expand: thin vs family median (226w vs ~780w) (2)
+#### expand: thin vs family median (226w vs ~779w) (2)
 
 - /learn/machine-learning/assessments/ml-847-model-report-template — Model report template: predictive system review
 - /learn/machine-learning/reproductions/adaboost-reproduction — Paper reproduction: AdaBoost and the training-error bound
 
-#### expand: thin vs family median (191w vs ~780w) (2)
+#### expand: thin vs family median (191w vs ~779w) (2)
 
 - /learn/machine-learning/public-data-projects/aps-failure-project — Public-data project: APS Failure under imbalance
 - /learn/machine-learning/public-data-projects/movielens-project — Public-data project: MovieLens recommendation
 
-#### expand: thin vs family median (238w vs ~780w) (1)
+#### expand: thin vs family median (238w vs ~779w) (1)
 
 - /learn/ai-foundations/choosing-a-model — Choosing a model in 2026
 
-#### expand: thin vs family median (231w vs ~780w) (1)
+#### expand: thin vs family median (231w vs ~779w) (1)
 
 - /learn/ai-foundations/tokens-context-cost — Tokens, context & cost
 
-#### expand: thin vs family median (277w vs ~780w) (1)
+#### expand: thin vs family median (277w vs ~779w) (1)
 
 - /learn/llm-foundations/next-token-prediction — Next-Token Prediction: The One Objective
 
-#### expand: thin vs family median (269w vs ~780w) (1)
+#### expand: thin vs family median (269w vs ~779w) (1)
 
 - /learn/llm-foundations/tokenization-explained — Tokenization: How Text Becomes Tokens
 
-#### expand: thin vs family median (279w vs ~780w) (1)
+#### expand: thin vs family median (279w vs ~779w) (1)
 
 - /learn/machine-learning/assessments/ml-843-assignment-02-linear-models-calibration — Assignment 2: derive, implement, and calibrate a linear decision model
 
-#### expand: thin vs family median (246w vs ~780w) (1)
+#### expand: thin vs family median (246w vs ~779w) (1)
 
 - /learn/machine-learning/assessments/ml-844-assignment-03-tree-ensemble-debugging — Assignment 3: compare trees and ensembles through a debugging clinic
 
-#### expand: thin vs family median (233w vs ~780w) (1)
+#### expand: thin vs family median (233w vs ~779w) (1)
 
 - /learn/machine-learning/assessments/ml-848-model-report-template-high-stakes — Model report template: high-stakes review and human oversight
 
@@ -411,23 +410,23 @@ and split always need a written human reason (see checklist).
 
 - /learn/machine-learning/assessments/ml-849-staged-capstone-handbook — Staged capstone handbook: from proposal to production review
 
-#### expand: thin vs family median (291w vs ~780w) (1)
+#### expand: thin vs family median (291w vs ~779w) (1)
 
 - /learn/machine-learning/derivations/01-linear-regression-normal-equations-and-geometry — Linear regression: normal equations and geometry
 
-#### expand: thin vs family median (296w vs ~780w) (1)
+#### expand: thin vs family median (296w vs ~779w) (1)
 
 - /learn/machine-learning/derivations/02-gradient-descent-and-convergence-for-linear-models — Gradient descent and convergence for linear models
 
-#### expand: thin vs family median (278w vs ~780w) (1)
+#### expand: thin vs family median (278w vs ~779w) (1)
 
 - /learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian — Logistic regression: likelihood, gradient, and Hessian
 
-#### expand: thin vs family median (298w vs ~780w) (1)
+#### expand: thin vs family median (298w vs ~779w) (1)
 
 - /learn/machine-learning/derivations/04-map-mle-and-regularization-as-priors — MAP, MLE, and regularization as priors
 
-#### expand: thin vs family median (290w vs ~780w) (1)
+#### expand: thin vs family median (290w vs ~779w) (1)
 
 - /learn/machine-learning/derivations/08-pca-svd-and-best-low-rank-approximation — PCA, SVD, and best low-rank approximation
 
@@ -475,31 +474,31 @@ and split always need a written human reason (see checklist).
 
 - /learn/machine-learning/ml-871-executable-lab-studio — Executable Classical ML lab studio
 
-#### expand: thin vs family median (201w vs ~780w) (1)
+#### expand: thin vs family median (201w vs ~779w) (1)
 
 - /learn/machine-learning/public-data-projects/adult-income-project — Public-data project: Adult income prediction
 
-#### expand: thin vs family median (212w vs ~780w) (1)
+#### expand: thin vs family median (212w vs ~779w) (1)
 
 - /learn/machine-learning/reproductions/linear-regression-reproduction — Paper reproduction: least squares, shrinkage, and prediction
 
-#### expand: thin vs family median (210w vs ~780w) (1)
+#### expand: thin vs family median (210w vs ~779w) (1)
 
 - /learn/machine-learning/reproductions/pca-reconstruction-reproduction — Paper reproduction: low-rank reconstruction
 
-#### expand: thin vs family median (208w vs ~780w) (1)
+#### expand: thin vs family median (208w vs ~779w) (1)
 
 - /learn/machine-learning/reproductions/random-forest-reproduction — Paper reproduction: random forests and out-of-bag evidence
 
-#### expand: thin vs family median (214w vs ~780w) (1)
+#### expand: thin vs family median (214w vs ~779w) (1)
 
 - /learn/machine-learning/reproductions/svm-kernel-reproduction — Paper reproduction: margins and kernels
 
-#### expand: thin vs family median (288w vs ~780w) (1)
+#### expand: thin vs family median (288w vs ~779w) (1)
 
 - /learn/mcp/first-mcp-server — Build your first MCP server in Python (20 min)
 
-#### expand: thin vs family median (196w vs ~780w) (1)
+#### expand: thin vs family median (196w vs ~779w) (1)
 
 - /learn/prompt-engineering/answer-first-prompting — Answer-first prompting
 
@@ -511,7 +510,7 @@ and split always need a written human reason (see checklist).
 
 - /learn/responsible-ai/adversarial-testing-lab — Lab: turn a prompt injection finding into a regression test
 
-#### expand: thin vs family median (149w vs ~780w) (1)
+#### expand: thin vs family median (149w vs ~779w) (1)
 
 - /learn/structured-outputs/incremental-json-repair — Incremental JSON Repair: Fixing Truncated Output Instead of Discarding It
 
@@ -521,7 +520,7 @@ and split always need a written human reason (see checklist).
 
 ## Duplicate candidates
 
-357 pairs by title/slug similarity (227 not already cross-linked) — candidates for the merge/redirect editorial pass, not verdicts. Pairs where one already links to the other are marked linked — often deliberate two-part lessons.
+357 pairs by title/slug similarity (220 not already cross-linked) — candidates for the merge/redirect editorial pass, not verdicts. Pairs where one already links to the other are marked linked — often deliberate two-part lessons.
 
 | item A | item B | jac | contain | stem | linked | scope |
 |---|---|---:|---:|---|---|---|
@@ -532,13 +531,13 @@ and split always need a written human reason (see checklist).
 | /learn/tools-function-calling/structured-output-vs-tool-calls-when | /learn/tools-function-calling/structured-output-vs-tool-calls | 1 | 1 | yes | yes | same track |
 | /learn/genai-app-dev/session-and-state-management | /learn/genai-app-dev/session-state-multi-turn | 0.83 | 1 |  | yes | same track |
 | /learn/context-engineering/context-window-testing-and-eval | /learn/context-engineering/testing-whether-context-helps | 0.83 | 1 |  | yes | same track |
-| /learn/tools-function-calling/writing-descriptions-models-follow-deep | /learn/tools-function-calling/writing-tool-descriptions-models-follow | 0.83 | 1 |  |  | same track |
-| /learn/tools-function-calling/openapi-to-schema-conversion | /learn/tools-function-calling/openapi-to-tool-schema | 0.83 | 1 |  |  | same track |
+| /learn/tools-function-calling/writing-descriptions-models-follow-deep | /learn/tools-function-calling/writing-tool-descriptions-models-follow | 0.83 | 1 |  | yes | same track |
+| /learn/tools-function-calling/openapi-to-schema-conversion | /learn/tools-function-calling/openapi-to-tool-schema | 0.83 | 1 |  | yes | same track |
 | /learn/genai-app-dev/chat-ux-that-doesnt-feel-broken | /learn/genai-app-dev/designing-chat-ux | 0.83 | 1 |  | yes | same track |
-| /learn/genai-app-dev/function-calling-across-providers | /learn/tools-function-calling/tool-calling-across-providers | 0.8 | 1 |  |  | genai-app-dev × tools-function-calling |
+| /learn/genai-app-dev/function-calling-across-providers | /learn/tools-function-calling/tool-calling-across-providers | 0.8 | 1 |  | yes | genai-app-dev × tools-function-calling |
 | /learn/genai-app-dev/tool-calling-and-authority | /learn/genai-app-dev/tool-calling-as-authority | 0.8 | 1 |  | yes | same track |
 | /learn/prompt-engineering/ab-testing-in-production | /learn/prompt-engineering/ab-testing-prompts-in-production | 0.8 | 1 |  | yes | same track |
-| /learn/structured-outputs/json-schema-essentials-for-outputs | /learn/tools-function-calling/json-schema-for-tools-essentials | 0.8 | 1 |  |  | structured-outputs × tools-function-calling |
+| /learn/structured-outputs/json-schema-essentials-for-outputs | /learn/tools-function-calling/json-schema-for-tools-essentials | 0.8 | 1 |  | yes | structured-outputs × tools-function-calling |
 | /learn/harness-design/the-control-loop | /learn/tools-function-calling/building-a-browser-tool-loop | 0.75 | 1 |  |  | harness-design × tools-function-calling |
 | /learn/context-engineering/context-engineering-vs-prompting | /answers/prompt-engineering-vs-context-engineering | 0.75 | 1 |  | yes | context-engineering × answers |
 | /learn/llm-foundations/context-window-mechanics-and-limits | /learn/llm-foundations/context-window-mechanics | 0.75 | 1 | yes | yes | same track |
@@ -549,7 +548,7 @@ and split always need a written human reason (see checklist).
 | /learn/llm-foundations/grokking-and-double-descent-mechanics | /learn/llm-foundations/grokking-and-double-descent | 0.75 | 1 | yes | yes | same track |
 | /learn/genai-app-dev/rate-limits-and-retry-strategies | /learn/genai-app-dev/rate-limits-and-retry | 0.75 | 1 | yes | yes | same track |
 | /learn/prompt-engineering/negative-instructions-pitfall | /learn/prompt-engineering/negative-instructions-problem | 0.75 | 1 |  | yes | same track |
-| /learn/tools-function-calling/schema-versioning-strategies | /learn/tools-function-calling/tool-schema-versioning | 0.71 | 1 |  |  | same track |
+| /learn/tools-function-calling/schema-versioning-strategies | /learn/tools-function-calling/tool-schema-versioning | 0.71 | 1 |  | yes | same track |
 | /learn/ai-foundations/ai-systems/111-alpha-beta-pruning-and-move-ordering | /learn/classical-ai/search-planning/113-alpha-beta-pruning-bounds-move-ordering-and-exactness | 0.71 | 1 |  |  | ai-foundations × classical-ai |
 | /learn/structured-outputs/schema-versioning-and-migration | /learn/structured-outputs/schema-versioning-basics | 0.71 | 1 |  | yes | same track |
 | /learn/context-engineering/cache-aware-context-design-deep | /learn/context-engineering/cache-aware-context-design | 0.67 | 1 | yes | yes | same track |
@@ -742,7 +741,7 @@ Largest queue; full list in JSON. Vendor-signal sample:
 ### no published or updated date (0)
 
 
-### zero in-body internal links (template nav still applies) (539)
+### zero in-body internal links (template nav still applies) (522)
 
 - /learn/agentic-ai/agents-vs-workflows — Choose an agent only when a workflow is not enough
 - /learn/agentic-ai/state-memory-and-recovery — Design agent state, memory, and recovery explicitly
@@ -784,7 +783,7 @@ Largest queue; full list in JSON. Vendor-signal sample:
 - /learn/ai-foundations/reliable-ai/211-privacy-preserving-learning-and-release — Privacy-Preserving Learning and Release
 - /learn/ai-foundations/reliable-ai/212-adversarial-ml-and-input-security — Adversarial ML and Input Security
 - /learn/ai-foundations/reliable-ai/213-model-supply-chain-and-artifact-security — Model Supply Chain and Artifact Security
-- … 499 more
+- … 482 more
 
 ### live file not in curriculum (0)
 
@@ -882,8 +881,8 @@ Largest queue; full list in JSON. Vendor-signal sample:
 - /scenarios/agent-approval — An agent that can update customer records (656 words, updated 2026-08-30)
 - /scenarios/document-qa — Document Q&A with permissions intact (529 words, updated 2026-08-30)
 - /scenarios/eval-release — A release that improves quality but raises cost (451 words, updated 2026-08-30)
-- /scenarios/mcp-team-server — An MCP server for a small engineering team (476 words, updated 2026-08-30)
-- /scenarios/streaming-research — A research feature that streams useful work (452 words, updated 2026-08-30)
+- /scenarios/mcp-team-server — An MCP server for a small engineering team (584 words, updated 2026-08-30)
+- /scenarios/streaming-research — A research feature that streams useful work (545 words, updated 2026-08-30)
 - /scenarios/support-assistant — A support assistant that must show its work (601 words, updated 2026-08-30)
 
 ### guide (9)

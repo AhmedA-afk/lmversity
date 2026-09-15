@@ -80,7 +80,7 @@ def handle_send_email(call_args: dict) -> dict:
     ...
 ```
 
-Session A's agent gets a tool error back, has no way to self-correct (it doesn't know the schema changed — see /learn/tools-function-calling/self-correction-on-bad-tool-calls for why self-correction assumes the model can *see* what's wrong, and here it can't), and either the user sees a broken "sorry, something went wrong" moment or the agent's retry loop burns a turn producing the exact same call again, since nothing in its context tells it what to change.
+Session A's agent gets a tool error back, has no way to self-correct (it doesn't know the schema changed — see [Self-Correction When the Model Calls a Tool Wrong](/learn/tools-function-calling/self-correction-on-bad-tool-calls) for why self-correction assumes the model can *see* what's wrong, and here it can't), and either the user sees a broken "sorry, something went wrong" moment or the agent's retry loop burns a turn producing the exact same call again, since nothing in its context tells it what to change.
 
 ## Step by step: the backward-compatible path
 
@@ -156,4 +156,4 @@ The backward-compatible path has one sharp edge: if a conversation somehow sends
 - The backward-compatible path costs a few lines of dispatcher code and a logging call. That's cheap insurance against a user-visible failure in a conversation that was already succeeding before you shipped anything.
 - Removing the deprecated path isn't optional cleanup — plan the removal date when you ship the compatibility branch, driven by real usage data, not by "we'll get to it."
 
-**Related:** /learn/tools-function-calling/schema-versioning-strategies · /learn/tools-function-calling/tool-schema-versioning · /learn/tools-function-calling/self-correction-on-bad-tool-calls · /learn/tools-function-calling/handling-tool-errors-and-retries · /learn/tools-function-calling/parameter-design-patterns
+**Related:** [Versioning Schemas Without Breaking Agents](/learn/tools-function-calling/schema-versioning-strategies) · [Versioning Tool Schemas Without Breaking Running Agents](/learn/tools-function-calling/tool-schema-versioning) · [Self-Correction When the Model Calls a Tool Wrong](/learn/tools-function-calling/self-correction-on-bad-tool-calls) · [Handling Tool Errors and Retries](/learn/tools-function-calling/handling-tool-errors-and-retries) · [Parameter Design Patterns](/learn/tools-function-calling/parameter-design-patterns)

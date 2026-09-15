@@ -1,7 +1,7 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T07:55:38.783Z",
+  "generatedAt": "2026-09-15T08:14:25.764Z",
   "generator": "scripts/build-content-registry.mjs",
   "itemCount": 2406,
   "counts": {
@@ -8292,7 +8292,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (238w vs ~780w)",
+   "dispositionReason": "thin vs family median (238w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -14250,7 +14250,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (231w vs ~780w)",
+   "dispositionReason": "thin vs family median (231w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -15368,7 +15368,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1920,
+   "wordCount": 1841,
    "headings": [
     "Search finds. Chat generates.",
     "\"What's the best-rated dentist near me?\"",
@@ -15379,7 +15379,20 @@
     "Staying in chat when you should switch tools",
     "Pre-flight checklist"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/ai-literacy/ai-is-not-a-search-engine",
+    "/learn/ai-literacy/catch-a-hallucination-worked-example",
+    "/learn/ai-literacy/choose-the-right-ai-system",
+    "/learn/ai-literacy/fact-check-an-ai-answer-step-by-step",
+    "/learn/ai-literacy/how-to-verify-facts-and-sources",
+    "/learn/ai-literacy/matching-the-ai-tool-to-the-job",
+    "/learn/ai-literacy/task-or-automation",
+    "/learn/ai-literacy/the-single-most-important-skill-judging-output",
+    "/learn/ai-literacy/the-verification-checklist",
+    "/learn/ai-literacy/what-a-hallucination-really-is",
+    "/learn/ai-literacy/where-ai-knowledge-comes-from-and-stops",
+    "/learn/ai-literacy/why-ai-sounds-so-confident"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -15413,8 +15426,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -15425,7 +15438,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 1,
-    "linking": 0,
+    "linking": 2,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -17450,7 +17463,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1952,
+   "wordCount": 1828,
    "headings": [
     "Picture a staffing desk, not a single genius",
     "Walk the desk: four requests come in",
@@ -17460,7 +17473,20 @@
     "The free-vs-paid twist on the same desk",
     "Where the hiring analogy breaks"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/ai-literacy/ai-as-pattern-prediction-not-thinking",
+    "/learn/ai-literacy/ai-is-not-a-search-engine",
+    "/learn/ai-literacy/choose-the-right-ai-system",
+    "/learn/ai-literacy/compare-ai-tools-for-one-real-task",
+    "/learn/ai-literacy/free-vs-paid-ai-what-you-get",
+    "/learn/ai-literacy/is-ai-worth-it-for-this-task",
+    "/learn/ai-literacy/should-i-use-ai-for-this-worked-decisions",
+    "/learn/ai-literacy/verification-tactics-by-task-type",
+    "/learn/ai-literacy/what-not-to-paste-into-ai",
+    "/learn/ai-literacy/when-ai-gets-numbers-and-math-wrong",
+    "/learn/ai-literacy/where-ai-knowledge-comes-from-and-stops",
+    "/learn/ai-literacy/why-ai-sounds-so-confident"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -17493,8 +17519,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -17505,7 +17531,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 1,
-    "linking": 0,
+    "linking": 2,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -18505,7 +18531,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1072,
+   "wordCount": 1064,
    "headings": [
     "The setup (specific)",
     "Step by step",
@@ -20092,7 +20118,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1722,
+   "wordCount": 1716,
    "headings": [
     "Start with the stew pot, not the vending machine",
     "Walk it through: what actually happens when you paste",
@@ -27534,7 +27560,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 445,
+   "wordCount": 434,
    "headings": [
     "How the cache actually matches",
     "Ordering your context for stability",
@@ -27542,8 +27568,10 @@
    ],
    "internalLinks": [
     "/learn/context-engineering/context-ordering-and-recency-effects",
+    "/learn/context-engineering/summarization-for-compaction",
     "/learn/context-engineering/token-budgeting-strategies",
-    "/learn/genai-app-dev/prompt-caching-for-speed-and-cost"
+    "/learn/genai-app-dev/prompt-caching-for-speed-and-cost",
+    "/learn/tools-function-calling/token-cost-of-tool-schemas"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -55322,7 +55350,8 @@
     "/learn/genai-app-dev/implementing-a-tool-call-loop",
     "/learn/genai-app-dev/json-schema-and-validation",
     "/learn/genai-app-dev/provider-abstraction-leaks",
-    "/learn/genai-app-dev/provider-adapter-anthropic-openai"
+    "/learn/genai-app-dev/provider-adapter-anthropic-openai",
+    "/learn/tools-function-calling/tool-calling-across-providers"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -81853,7 +81882,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (277w vs ~780w)",
+   "dispositionReason": "thin vs family median (277w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -85314,7 +85343,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (269w vs ~780w)",
+   "dispositionReason": "thin vs family median (269w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -87783,7 +87812,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (279w vs ~780w)",
+   "dispositionReason": "thin vs family median (279w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -87859,7 +87888,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (246w vs ~780w)",
+   "dispositionReason": "thin vs family median (246w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -87935,7 +87964,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (264w vs ~780w)",
+   "dispositionReason": "thin vs family median (264w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -88011,7 +88040,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (264w vs ~780w)",
+   "dispositionReason": "thin vs family median (264w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -88090,7 +88119,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (226w vs ~780w)",
+   "dispositionReason": "thin vs family median (226w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -88167,7 +88196,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (233w vs ~780w)",
+   "dispositionReason": "thin vs family median (233w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -89458,7 +89487,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (291w vs ~780w)",
+   "dispositionReason": "thin vs family median (291w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -89536,7 +89565,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (296w vs ~780w)",
+   "dispositionReason": "thin vs family median (296w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -89617,7 +89646,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (278w vs ~780w)",
+   "dispositionReason": "thin vs family median (278w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -89697,7 +89726,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (298w vs ~780w)",
+   "dispositionReason": "thin vs family median (298w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -90015,7 +90044,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (290w vs ~780w)",
+   "dispositionReason": "thin vs family median (290w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -102000,7 +102029,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (201w vs ~780w)",
+   "dispositionReason": "thin vs family median (201w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -102077,7 +102106,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (191w vs ~780w)",
+   "dispositionReason": "thin vs family median (191w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -102154,7 +102183,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (193w vs ~780w)",
+   "dispositionReason": "thin vs family median (193w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -102231,7 +102260,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (193w vs ~780w)",
+   "dispositionReason": "thin vs family median (193w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -102815,7 +102844,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (191w vs ~780w)",
+   "dispositionReason": "thin vs family median (191w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -102892,7 +102921,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (193w vs ~780w)",
+   "dispositionReason": "thin vs family median (193w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -103226,7 +103255,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (226w vs ~780w)",
+   "dispositionReason": "thin vs family median (226w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -103303,7 +103332,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (212w vs ~780w)",
+   "dispositionReason": "thin vs family median (212w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -103801,7 +103830,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (210w vs ~780w)",
+   "dispositionReason": "thin vs family median (210w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -103878,7 +103907,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (208w vs ~780w)",
+   "dispositionReason": "thin vs family median (208w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -103955,7 +103984,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (214w vs ~780w)",
+   "dispositionReason": "thin vs family median (214w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -120481,7 +120510,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (288w vs ~780w)",
+   "dispositionReason": "thin vs family median (288w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -122632,7 +122661,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 462,
+   "wordCount": 457,
    "headings": [
     "Why a server would want this",
     "How the request actually flows",
@@ -127427,7 +127456,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (196w vs ~780w)",
+   "dispositionReason": "thin vs family median (196w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -139036,7 +139065,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1724,
+   "wordCount": 1641,
    "headings": [
     "What it is",
     "The mental model",
@@ -139047,7 +139076,12 @@
     "Where next"
    ],
    "internalLinks": [
-    "/learn/python-data-apis/numpy-arrays-fundamentals"
+    "/learn/python-data-apis/batching-llm-calls-for-throughput",
+    "/learn/python-data-apis/concurrent-api-calls-with-asyncio",
+    "/learn/python-data-apis/numpy-arrays-fundamentals",
+    "/learn/python-data-apis/rate-limits-and-retries",
+    "/learn/python-data-apis/setting-up-venv-and-jupyter",
+    "/learn/python-data-apis/why-async-for-api-calls-intuition"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -139091,7 +139125,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 1,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -139115,7 +139149,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1327,
+   "wordCount": 1323,
    "headings": [
     "What we're building",
     "Setup",
@@ -139474,7 +139508,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 2161,
+   "wordCount": 2130,
    "headings": [
     "CSV — comma-separated values",
     "JSON — a single structured document",
@@ -139485,12 +139519,17 @@
    ],
    "internalLinks": [
     "/learn/python-data-apis/calling-rest-apis-with-python",
+    "/learn/python-data-apis/choosing-a-data-format",
+    "/learn/python-data-apis/data-contracts-and-validation",
+    "/learn/python-data-apis/files-and-data-formats-overview",
+    "/learn/python-data-apis/files-and-formats-quiz",
     "/learn/python-data-apis/groupby-and-aggregation",
     "/learn/python-data-apis/nested-json-in-memory",
     "/learn/python-data-apis/pagination-patterns",
     "/learn/python-data-apis/parquet-and-columnar-formats",
     "/learn/python-data-apis/reading-and-writing-csv",
-    "/learn/python-data-apis/type-coercion-and-parsing-dates"
+    "/learn/python-data-apis/type-coercion-and-parsing-dates",
+    "/learn/python-data-apis/validating-dataframes-with-schemas"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -140584,7 +140623,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1434,
+   "wordCount": 1430,
    "headings": [
     "What we're building",
     "Setup",
@@ -141027,7 +141066,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1192,
+   "wordCount": 1188,
    "headings": [
     "The setup (specific)",
     "Step by step",
@@ -141792,7 +141831,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1863,
+   "wordCount": 1859,
    "headings": [
     "The setup (specific)",
     "Step by step",
@@ -142244,7 +142283,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1276,
+   "wordCount": 1272,
    "headings": [
     "What it is",
     "The mental model",
@@ -143536,7 +143575,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1213,
+   "wordCount": 1208,
    "headings": [
     "Why \"Works on My Machine\" Happens",
     "One counter, many recipes",
@@ -152710,7 +152749,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (149w vs ~780w)",
+   "dispositionReason": "thin vs family median (149w vs ~779w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -153091,7 +153130,8 @@
     "/learn/structured-outputs/optional-vs-nullable-mistakes",
     "/learn/structured-outputs/pydantic-models-for-extraction",
     "/learn/structured-outputs/tool-function-schemas",
-    "/learn/structured-outputs/zod-schemas-for-extraction"
+    "/learn/structured-outputs/zod-schemas-for-extraction",
+    "/learn/tools-function-calling/json-schema-for-tools-essentials"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -161058,7 +161098,7 @@
    "published": "2026-09-02",
    "updated": "2026-09-02",
    "verified": null,
-   "wordCount": 1048,
+   "wordCount": 974,
    "headings": [
     "The mechanism, precisely",
     "Technique 1: embedding a short example call",
@@ -161066,7 +161106,15 @@
     "Technique 3: steering disambiguation purely through wording",
     "When this technique reaches its limit"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/tools-function-calling/approval-gates-for-sensitive-tools",
+    "/learn/tools-function-calling/common-tool-calling-failure-modes",
+    "/learn/tools-function-calling/good-vs-bad-tool-descriptions",
+    "/learn/tools-function-calling/parameter-design-patterns",
+    "/learn/tools-function-calling/schema-design-common-mistakes",
+    "/learn/tools-function-calling/token-cost-of-schemas-deep",
+    "/learn/tools-function-calling/writing-descriptions-models-follow-deep"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -161097,8 +161145,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -161109,7 +161157,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -161133,7 +161181,7 @@
    "published": "2026-09-02",
    "updated": "2026-09-02",
    "verified": null,
-   "wordCount": 800,
+   "wordCount": 769,
    "headings": [
     "What we're building",
     "Draft 1: the literal translation",
@@ -161141,7 +161189,13 @@
     "Draft 3: defaults, disambiguation, and the attendee gap",
     "Takeaways"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/tools-function-calling/designing-a-tool-schema",
+    "/learn/tools-function-calling/enum-vs-freeform-parameters",
+    "/learn/tools-function-calling/json-schema-for-tools-essentials",
+    "/learn/tools-function-calling/parameter-design-patterns",
+    "/learn/tools-function-calling/writing-descriptions-models-follow-deep"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -161172,8 +161226,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -161184,7 +161238,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -161286,7 +161340,7 @@
    "published": "2026-09-02",
    "updated": "2026-09-02",
    "verified": null,
-   "wordCount": 1123,
+   "wordCount": 1081,
    "headings": [
     "Strict enum",
     "Free-form string",
@@ -161295,7 +161349,13 @@
     "Decision table",
     "How to choose"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/tools-function-calling/json-schema-for-tools-essentials",
+    "/learn/tools-function-calling/parameter-design-patterns",
+    "/learn/tools-function-calling/schema-design-common-mistakes",
+    "/learn/tools-function-calling/schema-versioning-strategies",
+    "/learn/tools-function-calling/tool-schema-design-cheatsheet"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -161328,8 +161388,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -161340,7 +161400,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 2,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -162371,7 +162431,7 @@
    "published": "2026-09-02",
    "updated": "2026-09-02",
    "verified": null,
-   "wordCount": 630,
+   "wordCount": 586,
    "headings": [
     "The setup",
     "Version A: vague",
@@ -162379,7 +162439,14 @@
     "Where it breaks (+fix)",
     "Takeaways"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/tools-function-calling/common-tool-calling-failure-modes",
+    "/learn/tools-function-calling/descriptions-are-prompts",
+    "/learn/tools-function-calling/parameter-design-patterns",
+    "/learn/tools-function-calling/tool-selection-at-scale",
+    "/learn/tools-function-calling/writing-descriptions-models-follow-deep",
+    "/learn/tools-function-calling/writing-tool-descriptions-models-follow"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -162410,19 +162477,19 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 2,
+    "completeness": 1,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -162950,7 +163017,7 @@
    "published": "2026-09-02",
    "updated": "2026-09-02",
    "verified": null,
-   "wordCount": 983,
+   "wordCount": 917,
    "headings": [
     "What it is",
     "The mental model",
@@ -162960,7 +163027,16 @@
     "Watch out for",
     "Where next"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/structured-outputs/json-schema-essentials-for-outputs",
+    "/learn/structured-outputs/json-schema-for-outputs",
+    "/learn/structured-outputs/tool-function-schemas",
+    "/learn/tools-function-calling/designing-a-tool-schema",
+    "/learn/tools-function-calling/designing-a-tool-schema-walkthrough",
+    "/learn/tools-function-calling/openapi-to-tool-schema",
+    "/learn/tools-function-calling/parameter-design-patterns",
+    "/learn/tools-function-calling/writing-descriptions-models-follow-deep"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -162993,8 +163069,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -163005,7 +163081,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 2,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -163029,7 +163105,7 @@
    "published": "2026-09-02",
    "updated": "2026-09-02",
    "verified": null,
-   "wordCount": 878,
+   "wordCount": 840,
    "headings": [
     "What we're building",
     "Setup",
@@ -163038,7 +163114,13 @@
     "Harden it",
     "Extend it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/tools-function-calling/enum-vs-freeform-parameters",
+    "/learn/tools-function-calling/schema-design-common-mistakes",
+    "/learn/tools-function-calling/token-cost-of-schemas-deep",
+    "/learn/tools-function-calling/token-cost-of-tool-schemas",
+    "/learn/tools-function-calling/tool-schema-design-cheatsheet"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -163069,8 +163151,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -163081,7 +163163,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -163268,7 +163350,7 @@
    "published": "2026-09-02",
    "updated": "2026-09-02",
    "verified": null,
-   "wordCount": 917,
+   "wordCount": 857,
    "headings": [
     "What we're building",
     "Setup",
@@ -163277,7 +163359,13 @@
     "The hand-tuned result",
     "Extend it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/tools-function-calling/approval-gates-for-sensitive-tools",
+    "/learn/tools-function-calling/json-schema-for-tools-essentials",
+    "/learn/tools-function-calling/openapi-to-tool-schema",
+    "/learn/tools-function-calling/parameter-design-patterns",
+    "/learn/tools-function-calling/writing-descriptions-models-follow-deep"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -163311,8 +163399,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -163323,7 +163411,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 1,
-    "linking": 0,
+    "linking": 2,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -163355,6 +163443,7 @@
    ],
    "internalLinks": [
     "/learn/tools-function-calling/designing-a-tool-schema",
+    "/learn/tools-function-calling/openapi-to-schema-conversion",
     "/learn/tools-function-calling/token-cost-of-tool-schemas",
     "/learn/tools-function-calling/tool-selection-at-scale",
     "/learn/tools-function-calling/writing-tool-descriptions-models-follow"
@@ -163931,7 +164020,7 @@
    "published": "2026-09-02",
    "updated": "2026-09-02",
    "verified": null,
-   "wordCount": 716,
+   "wordCount": 664,
    "headings": [
     "What it is",
     "Illustrated on book_flight",
@@ -163939,7 +164028,13 @@
     "Decision table",
     "Where next"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/tools-function-calling/designing-a-tool-schema-walkthrough",
+    "/learn/tools-function-calling/enum-vs-freeform-parameters",
+    "/learn/tools-function-calling/json-schema-for-tools-essentials",
+    "/learn/tools-function-calling/schema-design-common-mistakes",
+    "/learn/tools-function-calling/writing-descriptions-models-follow-deep"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -163970,8 +164065,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -163982,7 +164077,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -165261,11 +165356,18 @@
    "published": "2026-09-02",
    "updated": "2026-09-02",
    "verified": null,
-   "wordCount": 1169,
+   "wordCount": 1100,
    "headings": [
     "Pre-flight checklist"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/tools-function-calling/designing-a-tool-schema-walkthrough",
+    "/learn/tools-function-calling/enum-vs-freeform-parameters",
+    "/learn/tools-function-calling/good-vs-bad-tool-descriptions",
+    "/learn/tools-function-calling/parameter-design-patterns",
+    "/learn/tools-function-calling/tool-schema-design-cheatsheet",
+    "/learn/tools-function-calling/writing-descriptions-models-follow-deep"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -165296,8 +165398,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -165308,7 +165410,7 @@
     "handsOn": 0,
     "explanationQuality": 1,
     "metadata": 2,
-    "linking": 0,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -165332,7 +165434,7 @@
    "published": "2026-09-02",
    "updated": "2026-09-02",
    "verified": null,
-   "wordCount": 1429,
+   "wordCount": 1320,
    "headings": [
     "Question 1",
     "Question 2",
@@ -165341,7 +165443,20 @@
     "Question 5",
     "Question 6 — token budget estimation"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/tools-function-calling/descriptions-are-prompts",
+    "/learn/tools-function-calling/enum-vs-freeform-parameters",
+    "/learn/tools-function-calling/good-vs-bad-tool-descriptions",
+    "/learn/tools-function-calling/measuring-and-trimming-schema-tokens",
+    "/learn/tools-function-calling/parameter-design-patterns",
+    "/learn/tools-function-calling/schema-design-common-mistakes",
+    "/learn/tools-function-calling/schema-versioning-strategies",
+    "/learn/tools-function-calling/token-cost-of-schemas-deep",
+    "/learn/tools-function-calling/tool-schema-design-cheatsheet",
+    "/learn/tools-function-calling/tool-selection-at-scale",
+    "/learn/tools-function-calling/versioning-a-schema-worked",
+    "/learn/tools-function-calling/writing-descriptions-models-follow-deep"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -165408,7 +165523,7 @@
    "published": "2026-09-02",
    "updated": "2026-09-02",
    "verified": null,
-   "wordCount": 1102,
+   "wordCount": 1057,
    "headings": [
     "What it is",
     "The mental model",
@@ -165418,7 +165533,13 @@
     "Watch out for",
     "Where next"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/tools-function-calling/enum-vs-freeform-parameters",
+    "/learn/tools-function-calling/parameter-design-patterns",
+    "/learn/tools-function-calling/schema-design-common-mistakes",
+    "/learn/tools-function-calling/tool-schema-versioning",
+    "/learn/tools-function-calling/versioning-a-schema-worked"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -165449,8 +165570,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -165461,7 +165582,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -166804,7 +166925,7 @@
    "published": "2026-09-02",
    "updated": "2026-09-02",
    "verified": null,
-   "wordCount": 1009,
+   "wordCount": 936,
    "headings": [
     "What it is",
     "Why it works this way",
@@ -166813,7 +166934,13 @@
     "Watch out for",
     "Where next"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/tools-function-calling/measuring-and-trimming-schema-tokens",
+    "/learn/tools-function-calling/token-cost-of-tool-schemas",
+    "/learn/tools-function-calling/too-many-tools-confuse-models",
+    "/learn/tools-function-calling/tool-selection-at-scale",
+    "/learn/tools-function-calling/writing-descriptions-models-follow-deep"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -166844,8 +166971,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -166856,7 +166983,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -167057,6 +167184,7 @@
     "How to choose"
    ],
    "internalLinks": [
+    "/learn/genai-app-dev/function-calling-across-providers",
     "/learn/tools-function-calling/anatomy-of-a-tool-call",
     "/learn/tools-function-calling/first-tool-call-walkthrough",
     "/learn/tools-function-calling/how-models-learn-to-call-tools",
@@ -167810,14 +167938,20 @@
    "published": "2026-09-02",
    "updated": "2026-09-02",
    "verified": null,
-   "wordCount": 291,
+   "wordCount": 262,
    "headings": [
     "The checklist",
     "Start-here defaults",
     "Quick snippets",
     "Decision rules, one-liners"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/tools-function-calling/enum-vs-freeform-parameters",
+    "/learn/tools-function-calling/measuring-and-trimming-schema-tokens",
+    "/learn/tools-function-calling/parameter-design-patterns",
+    "/learn/tools-function-calling/schema-design-common-mistakes",
+    "/learn/tools-function-calling/schema-versioning-strategies"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -167894,7 +168028,8 @@
    "internalLinks": [
     "/learn/structured-outputs/schema-versioning-and-migration",
     "/learn/tools-function-calling/designing-a-tool-schema",
-    "/learn/tools-function-calling/handling-tool-errors-and-retries"
+    "/learn/tools-function-calling/handling-tool-errors-and-retries",
+    "/learn/tools-function-calling/schema-versioning-strategies"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -168552,7 +168687,7 @@
    "published": "2026-09-02",
    "updated": "2026-09-02",
    "verified": null,
-   "wordCount": 898,
+   "wordCount": 860,
    "headings": [
     "The setup",
     "Step by step: the breaking path",
@@ -168560,7 +168695,13 @@
     "Where it breaks (+fix)",
     "Takeaways"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/tools-function-calling/handling-tool-errors-and-retries",
+    "/learn/tools-function-calling/parameter-design-patterns",
+    "/learn/tools-function-calling/schema-versioning-strategies",
+    "/learn/tools-function-calling/self-correction-on-bad-tool-calls",
+    "/learn/tools-function-calling/tool-schema-versioning"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -168591,8 +168732,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -168603,7 +168744,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -168875,7 +169016,7 @@
    "published": "2026-09-02",
    "updated": "2026-09-02",
    "verified": null,
-   "wordCount": 991,
+   "wordCount": 926,
    "headings": [
     "What it is",
     "The mental model",
@@ -168885,7 +169026,14 @@
     "Watch out for",
     "Where next"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/prompt-engineering/what-prompt-engineering-is",
+    "/learn/tools-function-calling/descriptions-are-prompts",
+    "/learn/tools-function-calling/good-vs-bad-tool-descriptions",
+    "/learn/tools-function-calling/json-schema-for-tools-essentials",
+    "/learn/tools-function-calling/parameter-design-patterns",
+    "/learn/tools-function-calling/writing-tool-descriptions-models-follow"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -168916,8 +169064,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -168928,7 +169076,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -168961,7 +169109,8 @@
    ],
    "internalLinks": [
     "/learn/tools-function-calling/designing-a-tool-schema",
-    "/learn/tools-function-calling/what-is-tool-calling"
+    "/learn/tools-function-calling/what-is-tool-calling",
+    "/learn/tools-function-calling/writing-descriptions-models-follow-deep"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -169005,7 +169154,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -169790,7 +169939,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 2,
+    "completeness": 1,
     "prerequisiteFit": null,
     "handsOn": 1,
     "explanationQuality": 2,
@@ -169819,7 +169968,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 476,
+   "wordCount": 584,
    "headings": [
     "The situation",
     "Constraints",
@@ -169827,6 +169976,7 @@
     "The first decision",
     "Guided reasoning",
     "What went wrong",
+    "Failure injection",
     "What to test first",
     "Go further"
    ],
@@ -169897,7 +170047,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 452,
+   "wordCount": 545,
    "headings": [
     "The situation",
     "Constraints",
@@ -169905,6 +170055,7 @@
     "The first decision",
     "Guided reasoning",
     "What went wrong",
+    "Failure injection",
     "What to test first",
     "Go further"
    ],
@@ -194166,7 +194317,7 @@
    "jaccard": 0.83,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -194185,7 +194336,7 @@
    "jaccard": 0.83,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -194223,7 +194374,7 @@
    "jaccard": 0.8,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -194280,7 +194431,7 @@
    "jaccard": 0.8,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -194489,7 +194640,7 @@
    "jaccard": 0.71,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -198878,7 +199029,7 @@
    "jaccard": 0.5,
    "containment": 0.67,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -200132,7 +200283,7 @@
    "jaccard": 0.4,
    "containment": 0.67,
    "slugStem": true,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
