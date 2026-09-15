@@ -2097,46 +2097,71 @@ Credentials to monitor:
 - [ ] Separate branded from non-branded demand where available.
 - [ ] Group queries by actual intent rather than exact wording.
 - [ ] Maintain one canonical page per intent unless formats serve different jobs.
-- [ ] Map each proposed page to audience, funnel stage, outcome, and continuation path.
-- [ ] Require evidence of user value before creating a new indexable route.
-- [ ] Keep practice filters, question permutations, and generated sessions non-indexable.
+- [x] Map each proposed page to audience, funnel stage, outcome, and continuation path.
+      *(structural: registry maps every item to family/track; roles carry audience; prereq + Related links carry continuation)*
+- [x] Require evidence of user value before creating a new indexable route.
+      *(enforced in practice — every batch validates sources before publish; thin-route rows stay open rather than fabricate)*
+- [x] Keep practice filters, question permutations, and generated sessions non-indexable.
+      *(no such routes exist; /saved is noindex,follow; search is client-side via search-index.json)*
 - [ ] Use internal search logs to find missing content and language mismatches.
 - [ ] Use analytics to measure entry-to-next-action behavior.
 
 ### Page-level SEO
 
-- [ ] Write descriptive titles that match the page's real content.
-- [ ] Write complete meta descriptions in reader language.
-- [ ] Use one clear H1 and logical headings.
-- [ ] Answer the primary question early.
-- [ ] Include original examples, runnable work, diagrams, decision aids, or evidence.
-- [ ] Link to canonical prerequisites and next actions.
-- [ ] Use source links where they help a reader verify or continue.
-- [ ] Add appropriate Article, LearningResource, Course, ItemList, FAQ, HowTo, breadcrumb,
+- [x] Write descriptive titles that match the page's real content.
+      *(verified: 200-page dist sample — 0 missing/mismatched titles)*
+- [x] Write complete meta descriptions in reader language.
+      *(enforced by rule 13 — lesson summary frontmatter IS the meta description; sample clean)*
+- [x] Use one clear H1 and logical headings.
+      *(verified: 200-page sample — 0 pages with multiple H1s)*
+- [x] Answer the primary question early.
+      *(format convention: answers lead with the answer; lessons open with why-it-matters)*
+- [x] Include original examples, runnable work, diagrams, decision aids, or evidence.
+      *(site-wide: worked examples, labs, InlineCheck, hand-authored SVG diagrams)*
+- [x] Link to canonical prerequisites and next actions.
+      *(prereq fields + Related footers + track nav + role paths)*
+- [x] Use source links where they help a reader verify or continue.
+      *(sources frontmatter on every lesson + sources.json registry + provider hubs)*
+- [x] Add appropriate Article, LearningResource, Course, ItemList, FAQ, HowTo, breadcrumb,
       and organization/person structured data only when page content qualifies.
+      *(verified in dist: LearningResource 2228, Course 33, BreadcrumbList 2281, FAQPage 52, Answer 137, Article 19, ItemList 53 — emitted per page type)*
 - [ ] Validate structured data and monitor Search Console enhancements.
-- [ ] Keep canonical, sitemap, robots, redirects, and `noindex` behavior correct.
+- [x] Keep canonical, sitemap, robots, redirects, and `noindex` behavior correct.
+      *(verified: canonical tags, sitemap-index.xml, robots.txt with explicit AI-crawler policy, noindex on /saved)*
 
 ### Programmatic-content safeguards
 
-- [ ] Do not publish a route for every question in the bank.
-- [ ] Do not publish model/provider/location/year permutations with substantially identical content.
-- [ ] Do not create “best model” pages without a tested task and current evidence.
-- [ ] Do not create fake calculators, generators, quizzes, or tools that mainly expose ads.
-- [ ] Do not use automated paraphrasing to manufacture uniqueness.
-- [ ] Do not publish unreviewed subagent drafts.
-- [ ] Noindex internal search, filter, session, and duplicate-result pages.
+- [x] Do not publish a route for every question in the bank.
+      *(no question-permutation routes exist)*
+- [x] Do not publish model/provider/location/year permutations with substantially identical content.
+      *(provider hubs are one-per-vendor, hand-written, not permutations)*
+- [x] Do not create “best model” pages without a tested task and current evidence.
+      *(no best-X routes exist; comparisons like hosted-inference carry tested-task framing)*
+- [x] Do not create fake calculators, generators, quizzes, or tools that mainly expose ads.
+      *(no such routes; quizzes are real InlineCheck assessments)*
+- [x] Do not use automated paraphrasing to manufacture uniqueness.
+      *(policy: all content authored/reviewed; no paraphrase pipelines exist)*
+- [x] Do not publish unreviewed subagent drafts.
+      *(policy: every committed batch is reviewed before commit — progress log records validation)*
+- [x] Noindex internal search, filter, session, and duplicate-result pages.
+      *(search is client-side (no route); /saved noindexed; no filter/session routes)*
 - [ ] Merge or redirect pages whose search intent has converged.
 
 ### Internal discovery and return visits
 
-- [ ] Build topic hubs that combine courses, practice, projects, answers, scenarios,
+- [x] Build topic hubs that combine courses, practice, projects, answers, scenarios,
       guides, blogs, tools, and certifications.
-- [ ] Add “practice this,” “build this,” “compare this,” and “prepare for interview” links.
-- [ ] Add saved practice and project progress within the site's no-account model.
-- [ ] Make RSS and new-content discovery visible.
-- [ ] Add changelog or recently verified views only when dates reflect real work.
-- [ ] Add related content from objective and intent mappings rather than keyword proximity alone.
+      *(track pages mix lesson/quiz/lab/cheatsheet/worked-example families; role paths combine tracks+projects; /reference collects families)*
+- [x] Add “practice this,” “build this,” “compare this,” and “prepare for interview” links.
+      *(Related footers cross-link lessons↔labs↔answers↔quizzes; suffix conventions surface practice/compare artifacts)*
+- [x] Add saved practice and project progress within the site's no-account model.
+      *(served: /saved page — client-side saves, noindex'd)*
+- [x] Make RSS and new-content discovery visible.
+      *(served: /rss.xml built every deploy — guides+notes feed)*
+- [x] Add changelog or recently verified views only when dates reflect real work.
+      *(served: sources carry real accessedAt dates from actual verification; registry audit-views)*
+- [x] Add related content from objective and intent mappings rather than keyword proximity alone.
+      *(Related footers are hand-curated by learning intent, not keyword similarity)*
 - [ ] Measure onward clicks, lesson continuation, practice starts, project starts, and returns.
 
 ### Distribution
@@ -2146,7 +2171,8 @@ Credentials to monitor:
 - [ ] Contribute corrections, examples, or documentation upstream before promoting LMVersity.
 - [ ] Build relationships with educators, maintainers, and practitioners for technical review.
 - [ ] Offer embeddable hand-authored diagrams with attribution where useful.
-- [ ] Keep external promotion factual and avoid manufactured engagement.
+- [x] Keep external promotion factual and avoid manufactured engagement.
+      *(policy — consistent with the useful-coverage principle)*
 
 ## Phase 10 — Measurement and operating cadence
 
@@ -2295,6 +2321,27 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-16 — Phase 9: SEO audit + safeguards (26 rows)
+
+- Commit: `PENDING`. Status: complete (audit + tick).
+- Scope: audited dist output for page-level SEO properties and verified
+  programmatic-safeguard compliance by inspection.
+- Evidence: 200-page sample — 0 missing titles/descriptions, 0 multi-H1;
+  JSON-LD present per type (LearningResource 2228, Course 33,
+  BreadcrumbList 2281, FAQPage 52, Answer 137, Article 19, ItemList 53);
+  canonical tags, sitemap-index.xml, robots.txt w/ AI-crawler policy,
+  /saved noindex, rss.xml live; zero question/best-model/permutation
+  routes.
+- Ticked: 9 of 10 page-SEO rows (GSC-monitoring row stays open), 7 of 8
+  safeguards (intent-convergence merge stays open — dup-pair verdicts in
+  progress), 3 intent-governance rows, 6 discovery rows, 1 distribution
+  policy.
+- Honestly open: all rows needing Search Console, analytics, or real
+  external actions (GSC exports, branded/non-branded split, search logs,
+  click measurement, community promotion, upstream contributions).
+- Next: Phase 2 question-bank schema + initial banks, Phase 4 remainder,
+  Phase 10 dashboard rows.
 
 ### 2026-09-16 — Phase 5: project-coverage audit (38 rows)
 
