@@ -350,13 +350,28 @@ consolidation into a parent track, or a clearer curated-path role.
 - [ ] Keep volatile facts in shared data records so corrections propagate.
 - [ ] Separate evergreen concept content from dated vendor snapshots.
 - [ ] Give vendor and certification records `verifiedAt`, `officialSources`, and `status`.
-- [ ] Add validation that rejects future dates, missing required sources, duplicate IDs,
-      unknown curriculum nodes, and invalid internal links.
-- [ ] Add validation that flags volatile pages without a review date.
-- [ ] Add validation that flags provider comparisons sourced only from provider marketing.
-- [ ] Add validation that flags numerical claims without nearby source metadata.
-- [ ] Add validation that flags answer or question pages with duplicate normalized intent.
-- [ ] Add validation that flags empty practice explanations and repeated distractors.
+- [x] Add validation that rejects future dates, missing required sources, duplicate IDs,
+      unknown curriculum nodes, and invalid internal links. *(future dates rejected
+      in check-content; duplicate IDs caught by the registry id map; unknown
+      curriculum nodes and dead nav links rejected by check-content; invalid
+      internal links rejected by check-links. "Missing required sources" awaits
+      the source-registry schema — no required-source field exists yet)*
+- [x] Add validation that flags volatile pages without a review date.
+      *(registry `sourcingFlags`: volatile-class items with no `updated` — 0
+      current violations)*
+- [x] Add validation that flags provider comparisons sourced only from provider marketing.
+      *(sourcingFlags: comparison-intent items whose external links are all
+      provider/first-party domains — 0 current violations)*
+- [x] Add validation that flags numerical claims without nearby source metadata.
+      *(sourcingFlags: pricing/release-sensitive items with ≥4 numeric claims and
+      no sources section or external link — 144 candidates queued)*
+- [x] Add validation that flags answer or question pages with duplicate normalized intent.
+      *(check-content rejects duplicate normalized answer titles; registry
+      duplicates detector covers question banks)*
+- [x] Add validation that flags empty practice explanations and repeated distractors.
+      *(audit-families flags empty why[] entries and repeated option text in
+      centralized banks, plus near-empty answer blocks and repeated options in
+      lesson quizzes — 0 current findings)*
 - [ ] Add an editorial status workflow: proposed, researched, drafted, technically reviewed,
       copy reviewed, browser verified, live, refresh due, and retired.
 
@@ -2019,7 +2034,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-15 — Phase 1 slice: prereq schema + validation rules
 
-- `TrackNode.prereq?: string[]` added to `src/data/curriculum.ts`;
+- Commit: `78eeb4d`. `TrackNode.prereq?: string[]` added to `src/data/curriculum.ts`;
   `check-content` now validates each edge: prereq must be a node in the same
   track AND declared earlier (catches unreachable/circular deps). Verified by
   fault injection — both violation types fail the gate.
@@ -2037,6 +2052,26 @@ validation, deployment status, measured result when available, blockers, and nex
 - Next batch: remaining Phase 1 validations (volatile-without-review-date,
   provider-comparison sourcing, numeric-claim sourcing) or the ~119
   duplicate verdicts.
+
+### 2026-09-15 — Phase 1 validation cluster
+
+- Registry gains `sourcingFlags` + an audit-views section: volatile pages
+  without `updated` (0 violations), comparison-intent pages whose external
+  links are all provider domains (0 violations), and pricing/release-sensitive
+  pages with ≥4 numeric claims and no source signal (**144 candidates** —
+  mostly quizzes/worked examples carrying numeric options or figures on
+  volatile topics).
+- `analyzeBody` gains `numericClaims` (unit-bearing numbers, %, $, N×,
+  ≥3-digit figures); all family builders carry it through `features`.
+- `audit-families` gains the two practice-bank rules: empty `why[]`
+  explanations and repeated option/distractor text — in both centralized
+  banks and lesson quiz pages. Current corpus: 0 findings on both.
+- Six Phase-1 checklist rows ticked; "missing required sources" stays noted
+  as blocked on the source-registry schema (no required-source field exists).
+- Validation: `npm run registry` clean; `audit:families` flags 0;
+  `check:content` clean.
+- Next batch: editorial status workflow (`proposed`→`retired` field +
+  validation) or source-registry schema.
 
 ### 2026-09-14 — Master ecosystem backlog created
 

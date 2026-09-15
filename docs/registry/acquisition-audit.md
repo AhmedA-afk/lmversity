@@ -1,6 +1,6 @@
 # Acquisition & practice family audit — mechanical pass
 
-Generated 2026-09-15T08:54:24.083Z by `scripts/audit-families.mjs`.
+Generated 2026-09-15T09:32:47.665Z by `scripts/audit-families.mjs`.
 Structural checks only; originality/correctness are scored in the review pass.
 
 ## Findings
@@ -224,6 +224,12 @@ Structural checks only; originality/correctness are scored in the review pass.
 | D | 104 | 17% |
 
 ### Duplicate question stems across quiz pages: 0
+
+
+### Repeated option text within a question: 0
+
+
+### Near-empty answer blocks (<8 words of rationale): 0
 
 
 ## Worked examples (29)

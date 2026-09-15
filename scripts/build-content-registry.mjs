@@ -114,6 +114,8 @@ function analyzeBody(body) {
   // structural elements that could fulfill a numeric title promise
   // ("7 mistakes", "5 ways") — list items, numbered items, bold-led bullets
   const listItems = (noCode.match(/^\s*(?:[-*+]|\d+[.)])\s+\S/gm) || []).length;
+  // quantitative claims — numbers with units, percentages, prices, multipliers
+  const numericClaims = (noCode.match(/\$\s?\d|\b\d+(?:\.\d+)?\s*(?:%|percent|x\b|×|tokens?|ms\b|s\b|gb|mb|kb|k\b|m\b|b\b)|\b\d{3,}\b/gi) || []).length;
   return {
     headings,
     internalLinks: [...internal].sort(),
@@ -121,6 +123,7 @@ function analyzeBody(body) {
     imports,
     codeBlockCount: Math.floor(((body.match(/^```/gm) || []).length) / 2),
     listItems,
+    numericClaims,
     wordCount,
   };
 }
@@ -406,7 +409,7 @@ for (const file of [...walk(LESSONS, /\.(md|mdx)$/)].sort()) {
       errorCase: kind === 'common-mistakes' || /mistake|error|fail|broken|debug|goes wrong|anti-?pattern/i.test(a.headings.map((h) => h.text).join(' ')),
       sourcesSection: /sources|further reading|references/i.test(a.headings.map((h) => h.text).join(' ')),
       runnableSignals: a.codeBlockCount > 0 && /\b(npm|pip|python3?|node|curl|ollama|docker)\b/i.test(body),
-      listItems: a.listItems,
+      listItems: a.listItems, numericClaims: a.numericClaims,
       specFormat: /rubric|protocol|required artefact|submission artefact|stage gate|deliverable|acceptance criteria|checkpoint/i.test(a.headings.map((h) => h.text).join(' ')),
       mathDense: (body.match(/\$/g) ?? []).length >= 6 || /\\frac|\\nabla|\\sum|\\prod|\\beta|\\theta|\\alpha|\\partial/.test(body),
       linksToPractice: a.internalLinks.some((l) => l.startsWith('/practice')),
@@ -454,7 +457,7 @@ for (const file of [...walk(join(CONTENT, 'questions'), /\.mdx$/)].sort()) {
     wordCount: a.wordCount, headings: a.headings.filter((h) => h.depth === 2).map((h) => h.text).slice(0, 50),
     internalLinks: a.internalLinks, externalLinks: a.externalLinks,
     structuredData: STRUCTURED_DATA.interview,
-    features: { questionCount: a.headings.filter((h) => h.depth === 2).length, codeBlocks: a.codeBlockCount, listItems: a.listItems },
+    features: { questionCount: a.headings.filter((h) => h.depth === 2).length, codeBlocks: a.codeBlockCount, listItems: a.listItems, numericClaims: a.numericClaims },
     searchIntent: 'interview-prep', primaryAudience: 'job-candidate',
     freshnessClass: fr.cls ?? 'periodic', freshnessSignals: fr.signals,
   }));
@@ -473,7 +476,7 @@ for (const file of [...walk(join(CONTENT, 'scenarios'), /\.mdx$/)].sort()) {
     wordCount: a.wordCount, headings: a.headings.filter((h) => h.depth === 2).map((h) => h.text).slice(0, 50),
     internalLinks: a.internalLinks, externalLinks: a.externalLinks,
     structuredData: STRUCTURED_DATA.scenario,
-    features: { codeBlocks: a.codeBlockCount, sourcesSection: /sources|references/i.test(a.headings.map((h) => h.text).join(' ')), listItems: a.listItems },
+    features: { codeBlocks: a.codeBlockCount, sourcesSection: /sources|references/i.test(a.headings.map((h) => h.text).join(' ')), listItems: a.listItems, numericClaims: a.numericClaims },
     searchIntent: 'scenario', primaryAudience: 'ai-engineer',
     freshnessClass: fr.cls ?? 'periodic', freshnessSignals: fr.signals,
   }));
@@ -493,7 +496,7 @@ for (const file of [...walk(join(CONTENT, 'blog'), /\.mdx$/)].sort()) {
     wordCount: a.wordCount, headings: a.headings.filter((h) => h.depth === 2).map((h) => h.text).slice(0, 50),
     internalLinks: a.internalLinks, externalLinks: a.externalLinks,
     structuredData: STRUCTURED_DATA.blog,
-    features: { tags: fm.tags ?? [], codeBlocks: a.codeBlockCount, listItems: a.listItems },
+    features: { tags: fm.tags ?? [], codeBlocks: a.codeBlockCount, listItems: a.listItems, numericClaims: a.numericClaims },
     searchIntent: 'read', primaryAudience: 'general',
     freshnessClass: fr.cls ?? 'periodic', freshnessSignals: fr.signals,
   }));
@@ -516,7 +519,7 @@ for (const file of [...walk(join(CONTENT, 'guides'), /\.(md|mdx)$/)].sort()) {
     features: {
       level: fm.level, duration: fm.duration, steps: Array.isArray(fm.steps) ? fm.steps.length : 0,
       relatedLessons: Array.isArray(fm.related) ? fm.related : [],
-      codeBlocks: a.codeBlockCount, listItems: a.listItems, featured: fm.featured === 'true' || fm.featured === true,
+      codeBlocks: a.codeBlockCount, listItems: a.listItems, numericClaims: a.numericClaims, featured: fm.featured === 'true' || fm.featured === true,
     },
     searchIntent: 'how-to', primaryAudience: 'ai-engineer',
     freshnessClass: fr.cls ?? 'periodic', freshnessSignals: fr.signals,
@@ -537,7 +540,7 @@ for (const file of [...walk(join(CONTENT, 'answers'), /\.(md|mdx)$/)].sort()) {
     wordCount: a.wordCount, headings: a.headings.filter((h) => h.depth === 2).map((h) => h.text).slice(0, 50),
     internalLinks: a.internalLinks, externalLinks: a.externalLinks,
     structuredData: STRUCTURED_DATA.answer,
-    features: { faqCount: Array.isArray(fm.faq) ? fm.faq.length : 0, related: Array.isArray(fm.related) ? fm.related : [], listItems: a.listItems },
+    features: { faqCount: Array.isArray(fm.faq) ? fm.faq.length : 0, related: Array.isArray(fm.related) ? fm.related : [], listItems: a.listItems, numericClaims: a.numericClaims },
     searchIntent: 'answer', primaryAudience: 'general',
     freshnessClass: fr.cls ?? 'periodic', freshnessSignals: fr.signals,
   }));
@@ -567,7 +570,7 @@ for (const file of [...walk(FDE, /\.(md|mdx)$/)].sort()) {
       diagram: a.imports.some((i) => i.includes('/diagrams/')) || /<svg|!\[/.test(body),
       sources: Array.isArray(fm.sources) ? fm.sources.length : 0,
       artifact: fm.artifact ?? null, outcomes: Array.isArray(fm.outcomes) ? fm.outcomes.length : 0,
-      listItems: a.listItems,
+      listItems: a.listItems, numericClaims: a.numericClaims,
       specFormat: /rubric|protocol|required artefact|submission artefact|stage gate|deliverable|acceptance criteria|checkpoint/i.test(a.headings.map((h) => h.text).join(' ')),
       mathDense: (body.match(/\$/g) ?? []).length >= 6 || /\\frac|\\nabla|\\sum|\\prod|\\beta|\\theta|\\alpha|\\partial/.test(body),
     },
@@ -948,6 +951,33 @@ for (const it of items) {
   }
 }
 
+// ---------------------------------------------------------------------------
+// sourcing review flags — Phase 1 governance, candidate queues not verdicts:
+// volatile pages without a review date; comparison pages whose only external
+// links are provider domains; volatile pages making numeric claims with no
+// source signal at all.
+
+const PROVIDER_DOMAIN = /(openai\.com|anthropic\.com|ai\.meta|research\.meta|deepmind|google\.com|cloud\.google|mistral\.ai|x\.ai|cohere\.|ai21\.|together\.ai|groq\.com|aws\.amazon|azure\.microsoft|nvidia\.com|huggingface\.co|ollama\.|sarvam\.ai|langchain|langfuse|aider\.chat|stagehand|browserbase)/i;
+const sourcingFlags = [];
+for (const it of items) {
+  if (!it.title || NON_CONTENT.has(it.family)) continue;
+  const f = it.features ?? {};
+  const ext = it.externalLinks ?? [];
+  const flags = [];
+  if (VOLATILE.has(it.freshnessClass) && !it.updated)
+    flags.push(`${it.freshnessClass} page with no updated/review date`);
+  const isComparison = it.kind === 'comparison' || it.searchIntent === 'comparison' || /\bvs\.?\b|\bversus\b|\bcompare/i.test(it.title ?? '');
+  if (isComparison && ext.length > 0 && ext.every((u) => PROVIDER_DOMAIN.test(u)))
+    flags.push('comparison sourced only to provider/first-party domains');
+  const hasSourceSignal = f.sourcesSection || (f.sources ?? 0) > 0 || ext.length > 0;
+  // pricing/release classes are where an unsourced number rots into a lie;
+  // a high claim density on those pages without any source signal is the risk
+  if (['pricing-sensitive', 'release-sensitive'].includes(it.freshnessClass)
+      && (f.numericClaims ?? 0) >= 4 && !hasSourceSignal)
+    flags.push(`${f.numericClaims} numeric claims with no sources section or external link`);
+  if (flags.length) sourcingFlags.push({ route: it.route, slug: it.slug, title: it.title, family: it.family, flags });
+}
+
 const byFamily = {}, byTrack = {}, byFresh = {}, byStatus = {}, byKind = {};
 for (const it of items) {
   byFamily[it.family] = (byFamily[it.family] ?? 0) + 1;
@@ -971,6 +1001,7 @@ const registry = {
   items,
   duplicates,
   overpromise,
+  sourcingFlags,
 };
 
 mkdirSync(OUT_DIR, { recursive: true });
@@ -1179,6 +1210,19 @@ if (overpromise.length) {
     md.push(`| ${o.route ?? o.slug} | ${o.words} | ${o.signals.join('; ')} |`);
   }
   if (overpromise.length > 60) md.push(`\n_… ${overpromise.length - 60} more in content-registry.json (\`overpromise\`)_`);
+}
+md.push('');
+md.push('## Sourcing review flags');
+md.push('');
+md.push(`${sourcingFlags.length} items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.`);
+md.push('');
+if (sourcingFlags.length) {
+  md.push('| item | flags |');
+  md.push('|---|---|');
+  for (const s of sourcingFlags.slice(0, 60)) {
+    md.push(`| ${s.route ?? s.slug} | ${s.flags.join('; ')} |`);
+  }
+  if (sourcingFlags.length > 60) md.push(`\n_… ${sourcingFlags.length - 60} more in content-registry.json (\`sourcingFlags\`)_`);
 }
 md.push('');
 md.push('## Freshness queues');

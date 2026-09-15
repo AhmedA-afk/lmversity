@@ -1,17 +1,17 @@
 # Content registry — audit views
 
-Generated 2026-09-15T09:11:59.283Z by `scripts/build-content-registry.mjs`.
-2410 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T09:29:40.853Z by `scripts/build-content-registry.mjs`.
+2384 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
 
-- lesson: 2039
+- lesson: 2014
 - quiz: 89
 - lab: 60
 - reference: 59
 - answer: 33
-- track: 33
+- track: 32
 - project: 31
 - page: 21
 - role: 12
@@ -24,17 +24,16 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 ## By status
 
 - live: 2384
-- coming: 26
 
 ## By search intent (heuristic)
 
-- concept: 1871
+- concept: 1846
 - comparison: 106
 - build: 91
 - practice: 89
 - reference: 60
 - answer: 33
-- course-hub: 33
+- course-hub: 32
 - worked-example: 29
 - troubleshooting: 24
 - how-to: 15
@@ -48,7 +47,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By primary audience (heuristic)
 
-- ai-engineer: 1637
+- ai-engineer: 1611
 - beginner-engineer: 439
 - forward-deployed-engineer: 194
 - general: 122
@@ -91,7 +90,6 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 | production | 28 | 28 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 54% | 100% | 4% | 520 | yes | — |
 | fine-tuning | 26 | 21 | 0 | 0 | 5 | 0 | 0 | 0 | 0 | 27% | 0% | 8% | 557 | — | — |
 | responsible-ai | 6 | 5 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 17% | 0% | 17% | 392 | — | — |
-| ai-for-designers | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0% | 0% | 0% | 0 | — | — |
 
 ## Track gap briefs
 
@@ -254,11 +252,6 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - 1 duplicate-candidate pairs in track
 - promise gap: no live node title covers "Safety"; "building AI you can defend"
 
-### ai-for-designers — 0 files, 5 modules
-
-- missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
-- 25 planned nodes unbuilt
-
 ## Scores and dispositions (mechanical pass)
 
 Scale 0/1/2 per dimension; `null` = editorial judgement required. Auto-dispositions are
@@ -269,19 +262,19 @@ and split always need a written human reason (see checklist).
 |---|---:|
 | keep | 1950 |
 | investigate | 429 |
-| expand | 31 |
+| expand | 5 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2193 | 1.89 | 25 | 184 | 1984 |
+| intentClarity | 2168 | 1.92 | 0 | 184 | 1984 |
 | correctnessSources | 43 | 1.28 | 0 | 31 | 12 |
 | completeness | 2308 | 1.65 | 45 | 716 | 1547 |
 | prerequisiteFit | 2243 | 2.00 | 3 | 0 | 2240 |
-| handsOn | 2193 | 1.47 | 550 | 53 | 1590 |
-| explanationQuality | 2193 | 1.93 | 45 | 56 | 2092 |
-| metadata | 2193 | 1.85 | 25 | 284 | 1884 |
-| linking | 2104 | 1.39 | 454 | 371 | 1279 |
-| freshnessHealth | 2410 | 0.78 | 789 | 1358 | 263 |
+| handsOn | 2168 | 1.49 | 525 | 53 | 1590 |
+| explanationQuality | 2168 | 1.96 | 20 | 56 | 2092 |
+| metadata | 2168 | 1.87 | 0 | 284 | 1884 |
+| linking | 2079 | 1.41 | 429 | 371 | 1279 |
+| freshnessHealth | 2384 | 0.78 | 789 | 1332 | 263 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
@@ -331,35 +324,6 @@ and split always need a written human reason (see checklist).
 - /learn/ai-foundations/reliable-ai/215-human-feedback-preference-data-and-rlhf — Human Feedback, Preference Data, and RLHF
 - /learn/ai-foundations/reliable-ai/216-red-teaming-and-misuse-evaluation — Red Teaming and Misuse Evaluation
 - … 389 more in content-registry.json
-
-#### expand: planned stub — no content yet (26)
-
-- /learn/ai-for-designers — AI for Designers
-- ai-for-designers/ai-for-designers-course-guide — Start here: the two lanes, the artifacts, the case study
-- ai-for-designers/designer-mental-model-for-generative-ai — A designer's mental model for generative AI
-- ai-for-designers/deterministic-vs-probabilistic-interfaces-compared — Deterministic vs probabilistic interfaces, compared
-- ai-for-designers/choosing-where-ai-belongs-worked-example — Choose where AI belongs: a worked example
-- ai-for-designers/ai-product-design-common-mistakes — AI product design: common mistakes
-- ai-for-designers/ai-product-design-foundations-quiz — Quiz: AI product design foundations
-- ai-for-designers/designing-the-ai-behavior-contract — Design the AI behavior contract
-- ai-for-designers/mapping-ai-capabilities-to-user-tasks — Map AI capabilities to user tasks
-- ai-for-designers/ai-feature-state-model-worked-example — Model every state an AI feature can be in
-- ai-for-designers/ai-interaction-state-cheatsheet — AI interaction states: cheatsheet
-- ai-for-designers/prompt-as-interaction-spec — Treat the prompt as an interaction spec
-- ai-for-designers/behavior-before-interface-quiz — Quiz: behavior before interface
-- ai-for-designers/designing-for-uncertainty — Design for uncertainty, not around it
-- ai-for-designers/sources-confidence-and-explanations-compared — Sources, confidence, and explanations compared
-- ai-for-designers/correction-undo-and-recovery-patterns — Correction, undo, and recovery patterns
-- ai-for-designers/human-review-and-approval-boundaries — Draw the line: recommend, confirm, or act
-- ai-for-designers/trust-patterns-worked-example — Fix an overconfident assistant: a worked example
-- ai-for-designers/trust-and-recovery-quiz — Quiz: trust and recovery
-- ai-for-designers/prototype-ai-behavior-without-a-model — Prototype AI behavior without a model
-- ai-for-designers/creating-a-realistic-ai-test-set — Create a realistic AI test set
-- ai-for-designers/designing-a-ux-evaluation-rubric — Design a UX evaluation rubric
-- ai-for-designers/test-an-ai-prototype-worked-example — Test an AI prototype: a worked example
-- ai-for-designers/ai-prototype-testing-common-mistakes — AI prototype testing: common mistakes
-- ai-for-designers/prototype-and-evaluation-quiz — Quiz: prototype and evaluation
-- ai-for-designers/capstone-design-a-trustworthy-ai-feature — Capstone: design a trustworthy AI feature end to end
 
 #### expand: thin vs family median (238w vs ~779w) (1)
 
@@ -458,9 +422,78 @@ _… 274 more pairs in content-registry.json (`duplicates`)_
 |---|---:|---|
 | /learn/machine-learning/assessments/ml-849-staged-capstone-handbook | 368 | scope word "handbook" on 368w vs ~1011w median |
 
+## Sourcing review flags
+
+144 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
+
+| item | flags |
+|---|---|
+| /learn/ai-foundations/building-an-eval-set-worked-example | 18 numeric claims with no sources section or external link |
+| /learn/ai-foundations/capabilities-and-eval-quiz | 28 numeric claims with no sources section or external link |
+| /learn/ai-foundations/choosing-a-model-decision-framework | 10 numeric claims with no sources section or external link |
+| /learn/ai-foundations/generalization-quiz | 10 numeric claims with no sources section or external link |
+| /learn/ai-foundations/how-llms-work-end-to-end-example | 13 numeric claims with no sources section or external link |
+| /learn/ai-foundations/narrow-vs-general-ai-in-practice | 4 numeric claims with no sources section or external link |
+| /learn/ai-foundations/open-vs-closed-and-hardware-tradeoffs | 33 numeric claims with no sources section or external link |
+| /learn/ai-foundations/practical-models-quiz | 42 numeric claims with no sources section or external link |
+| /learn/ai-foundations/scaling-laws | 7 numeric claims with no sources section or external link |
+| /learn/ai-foundations/tokens-and-cost-worked-example | 39 numeric claims with no sources section or external link |
+| /learn/ai-foundations/what-a-model-actually-is | 4 numeric claims with no sources section or external link |
+| /learn/ai-literacy/common-myths-about-ai-debunked | 6 numeric claims with no sources section or external link |
+| /learn/ai-literacy/cost-and-limits-quiz | 8 numeric claims with no sources section or external link |
+| /learn/ai-literacy/judging-and-verifying-quiz | 42 numeric claims with no sources section or external link |
+| /learn/ai-literacy/the-real-limits-of-ai-today | 5 numeric claims with no sources section or external link |
+| /learn/ai-literacy/what-not-to-paste-into-ai | 10 numeric claims with no sources section or external link |
+| /learn/ai-literacy/what-using-ai-actually-costs | 4 numeric claims with no sources section or external link |
+| /learn/ai-literacy/when-ai-gets-numbers-and-math-wrong | 103 numeric claims with no sources section or external link |
+| /learn/classical-ai/search-planning/112-adversarial-search-games-utilities-and-minimax | 4 numeric claims with no sources section or external link |
+| /learn/context-engineering/budgeting-and-observability-quiz | 48 numeric claims with no sources section or external link |
+| /learn/context-engineering/compaction-memory-quiz | 15 numeric claims with no sources section or external link |
+| /learn/context-engineering/cost-latency-quality-tradeoff-curve | 48 numeric claims with no sources section or external link |
+| /learn/context-engineering/deduping-overlapping-tool-results | 10 numeric claims with no sources section or external link |
+| /learn/context-engineering/dissecting-a-live-context-payload | 23 numeric claims with no sources section or external link |
+| /learn/context-engineering/dynamic-budget-reallocation | 32 numeric claims with no sources section or external link |
+| /learn/context-engineering/failure-modes-quiz | 5 numeric claims with no sources section or external link |
+| /learn/context-engineering/foundations-quiz | 9 numeric claims with no sources section or external link |
+| /learn/context-engineering/instrumenting-token-spend-in-production | 8 numeric claims with no sources section or external link |
+| /learn/context-engineering/just-in-time-context-loading-pattern | 4 numeric claims with no sources section or external link |
+| /learn/context-engineering/measuring-cache-savings | 26 numeric claims with no sources section or external link |
+| /learn/context-engineering/poisoning-real-world-scenarios | 4 numeric claims with no sources section or external link |
+| /learn/context-engineering/prompt-caching-mechanics | 6 numeric claims with no sources section or external link |
+| /learn/context-engineering/reading-a-context-budget-pie | 33 numeric claims with no sources section or external link |
+| /learn/context-engineering/retrieving-then-filtering-pipeline | 4 numeric claims with no sources section or external link |
+| /learn/context-engineering/selection-ordering-quiz | 10 numeric claims with no sources section or external link |
+| /learn/context-engineering/the-budget-allocation-mental-model | 15 numeric claims with no sources section or external link |
+| /learn/context-engineering/the-whole-game-of-context-engineering | 6 numeric claims with no sources section or external link |
+| /learn/context-engineering/token-accounting-per-turn-ledger | 48 numeric claims with no sources section or external link |
+| /learn/context-engineering/tool-output-is-context-too | 8 numeric claims with no sources section or external link |
+| /learn/context-engineering/why-context-is-the-real-bottleneck | 7 numeric claims with no sources section or external link |
+| /learn/deep-learning/sequence-generative/317-language-model-objectives-and-tokenization | 9 numeric claims with no sources section or external link |
+| /learn/deep-learning/sequence-generative/320-language-model-evaluation-calibration-and-behavior | 9 numeric claims with no sources section or external link |
+| /learn/deep-learning/vision/223-pruning-sparsity-and-quantization | 6 numeric claims with no sources section or external link |
+| /learn/evals-red-teaming/flaky-eval-mitigation | 5 numeric claims with no sources section or external link |
+| /learn/fine-tuning/context-length-extension-rope-scaling | 8 numeric claims with no sources section or external link |
+| /learn/genai-app-dev/cost-and-capability-based-routing | 18 numeric claims with no sources section or external link |
+| /learn/genai-app-dev/cutting-cost-with-model-cascade | 19 numeric claims with no sources section or external link |
+| /learn/genai-app-dev/feature-flagging-ai-features | 6 numeric claims with no sources section or external link |
+| /learn/genai-app-dev/implementing-prompt-caching | 9 numeric claims with no sources section or external link |
+| /learn/genai-app-dev/instrumenting-with-tracing | 6 numeric claims with no sources section or external link |
+| /learn/genai-app-dev/perf-cost-cheatsheet | 6 numeric claims with no sources section or external link |
+| /learn/genai-app-dev/quiz-performance-cost | 33 numeric claims with no sources section or external link |
+| /learn/genai-app-dev/quiz-provider-layer | 8 numeric claims with no sources section or external link |
+| /learn/genai-app-dev/quiz-state-structured-tools | 11 numeric claims with no sources section or external link |
+| /learn/hallucinations/adversarial-and-leading-prompts | 4 numeric claims with no sources section or external link |
+| /learn/hallucinations/escalation-human-in-the-loop | 5 numeric claims with no sources section or external link |
+| /learn/hallucinations/intrinsic-vs-extrinsic-hallucination | 7 numeric claims with no sources section or external link |
+| /learn/hallucinations/latency-cost-reliability-tradeoffs | 15 numeric claims with no sources section or external link |
+| /learn/hallucinations/mitigation-quiz | 5 numeric claims with no sources section or external link |
+| /learn/hallucinations/uncertainty-in-practice-triage | 5 numeric claims with no sources section or external link |
+
+_… 84 more in content-registry.json (`sourcingFlags`)_
+
 ## Freshness queues
 
-- periodic: 1358
+- periodic: 1332
 - pricing-sensitive: 336
 - release-sensitive: 283
 - durable: 263
@@ -662,33 +695,8 @@ Largest queue; full list in JSON. Vendor-signal sample:
 ### live curriculum node missing file (0)
 
 
-### coming nodes (planned, unbuilt) (25)
+### coming nodes (planned, unbuilt) (0)
 
-- ai-for-designers/ai-for-designers-course-guide — Start here: the two lanes, the artifacts, the case study
-- ai-for-designers/designer-mental-model-for-generative-ai — A designer's mental model for generative AI
-- ai-for-designers/deterministic-vs-probabilistic-interfaces-compared — Deterministic vs probabilistic interfaces, compared
-- ai-for-designers/choosing-where-ai-belongs-worked-example — Choose where AI belongs: a worked example
-- ai-for-designers/ai-product-design-common-mistakes — AI product design: common mistakes
-- ai-for-designers/ai-product-design-foundations-quiz — Quiz: AI product design foundations
-- ai-for-designers/designing-the-ai-behavior-contract — Design the AI behavior contract
-- ai-for-designers/mapping-ai-capabilities-to-user-tasks — Map AI capabilities to user tasks
-- ai-for-designers/ai-feature-state-model-worked-example — Model every state an AI feature can be in
-- ai-for-designers/ai-interaction-state-cheatsheet — AI interaction states: cheatsheet
-- ai-for-designers/prompt-as-interaction-spec — Treat the prompt as an interaction spec
-- ai-for-designers/behavior-before-interface-quiz — Quiz: behavior before interface
-- ai-for-designers/designing-for-uncertainty — Design for uncertainty, not around it
-- ai-for-designers/sources-confidence-and-explanations-compared — Sources, confidence, and explanations compared
-- ai-for-designers/correction-undo-and-recovery-patterns — Correction, undo, and recovery patterns
-- ai-for-designers/human-review-and-approval-boundaries — Draw the line: recommend, confirm, or act
-- ai-for-designers/trust-patterns-worked-example — Fix an overconfident assistant: a worked example
-- ai-for-designers/trust-and-recovery-quiz — Quiz: trust and recovery
-- ai-for-designers/prototype-ai-behavior-without-a-model — Prototype AI behavior without a model
-- ai-for-designers/creating-a-realistic-ai-test-set — Create a realistic AI test set
-- ai-for-designers/designing-a-ux-evaluation-rubric — Design a UX evaluation rubric
-- ai-for-designers/test-an-ai-prototype-worked-example — Test an AI prototype: a worked example
-- ai-for-designers/ai-prototype-testing-common-mistakes — AI prototype testing: common mistakes
-- ai-for-designers/prototype-and-evaluation-quiz — Quiz: prototype and evaluation
-- ai-for-designers/capstone-design-a-trustworthy-ai-feature — Capstone: design a trustworthy AI feature end to end
 
 ### lesson files with status coming (0)
 

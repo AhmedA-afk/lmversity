@@ -186,7 +186,10 @@ for (const f of list(join(CONTENT, 'scenarios'), /\.mdx$/)) {
       const options = optArr ? optArr.match(/'((?:[^'\\]|\\.)*)'/g)?.length ?? 0 : 0;
       const answerIdx = text.match(/\]\s*,\s*(\d+)/)?.[1];
       const whyArr = arrays[1]?.[1] ?? '';
-      const whyCount = whyArr ? whyArr.match(/'((?:[^'\\]|\\.)*)'/g)?.length ?? 0 : 0;
+      const whyEntries = whyArr ? (whyArr.match(/'((?:[^'\\]|\\.)*)'/g) ?? []).map((w) => w.slice(1, -1)) : [];
+      const whyCount = whyEntries.length;
+      const optEntries = optArr ? (optArr.match(/'((?:[^'\\]|\\.)*)'/g) ?? []).map((o) => o.slice(1, -1).trim().toLowerCase()) : [];
+      const dupOpts = optEntries.filter((o, i) => o && optEntries.indexOf(o) !== i);
       const hasLesson = /'\/learn\//.test(text);
       const promptText = text.match(/^\s*'((?:[^'\\]|\\.)*)'/)?.[1] ?? '';
       questions.push({
@@ -197,6 +200,8 @@ for (const f of list(join(CONTENT, 'scenarios'), /\.mdx$/)) {
           ...(options && whyCount !== options ? [`why[] has ${whyCount} entries for ${options} options`] : []),
           ...(answerIdx == null ? ['could not parse answer index'] : []),
           ...(/all of the above|none of the above/i.test(optArr) ? ['"all/none of the above" option'] : []),
+          ...(whyEntries.some((w) => !w.trim()) ? ['empty why[] explanation'] : []),
+          ...(dupOpts.length ? [`repeated distractor/option text: "${dupOpts[0].slice(0, 50)}"`] : []),
         ],
       });
     }
@@ -218,6 +223,8 @@ for (const f of list(join(CONTENT, 'scenarios'), /\.mdx$/)) {
 // Option styles: `- **A.**`, `- A.`, `- A)`, `A)`, bare `A. text`. Answer marks: `**Correct: A.**`, `**Answer A**`.
 const stemIndex = new Map(); // normalized stem -> [{slug, n}]
 const quizAnswerPos = {};
+const dupOptFiles = []; // question blocks repeating an option text
+const thinRationale = []; // <details> answer blocks with <8 words of prose
 const Q_BOUNDARY = /\n(?=#{2,3}\s+(?:(?:Question\s+)\d+[.:]?|\d+[.:])|\*\*Q?\d+\.)/;
 const OPT_RE = /^(?:-\s+)?(?:\*\*)?[A-E][.)]/gm;
 const ANS_RE = /\*\*(?:Correct:|Answer)\s*([A-E])\.?\s*\*\*/;
@@ -241,6 +248,11 @@ for (const f of [...walkQ(join(CONTENT, 'lessons'))].sort()) {
     const mark = b.match(ANS_RE);
     if (mark) { answers++; quizAnswerPos[mark[1]] = (quizAnswerPos[mark[1]] ?? 0) + 1; }
     const det = b.match(/<details>[\s\S]*?<\/details>/);
+    const optTexts = (b.replace(/<details>[\s\S]*?<\/details>/g, '').match(new RegExp(OPT_RE.source, 'gm')) ?? [])
+      .map((o) => o.replace(/^(?:-\s+)?(?:\*\*)?[A-E][.)]\s*/, '').replace(/\*\*$/, '').trim().toLowerCase()).filter(Boolean);
+    if (new Set(optTexts).size < optTexts.length) dupOptFiles.push(`${rel} q${i + 1}`);
+    const detText = det ? det[0].replace(/<[^>]+>/g, ' ').replace(ANS_RE, '').replace(/\*\*[A-E]\*\*/g, ' ').replace(/\s+/g, ' ').trim() : null;
+    if (det && detText.split(' ').filter((w) => /\w/.test(w)).length < 8) thinRationale.push(`${rel} q${i + 1}`);
     const letters = new Set();
     if (det) for (const m of det[0].replace(ANS_RE, '').matchAll(LETTER_RE)) letters.add(m[1] ?? m[2] ?? m[3]);
     if (det && letters.size >= Math.max(2, opts - 1)) rationaleForAll++;
@@ -343,7 +355,7 @@ for (const f of [...walkKind(/-common-mistakes\.(md|mdx)$/)].sort()) {
 }
 
 // ---------------------------------------------------------------------------
-writeFileSync(join(OUT, 'family-audit.json'), JSON.stringify({ generatedAt: new Date().toISOString(), findings, duplicateStems }, null, 1) + '\n');
+writeFileSync(join(OUT, 'family-audit.json'), JSON.stringify({ generatedAt: new Date().toISOString(), findings, duplicateStems, dupOptFiles, thinRationale }, null, 1) + '\n');
 
 const md = ['# Acquisition & practice family audit — mechanical pass', '', `Generated ${new Date().toISOString()} by \`scripts/audit-families.mjs\`.`, 'Structural checks only; originality/correctness are scored in the review pass.', ''];
 
@@ -437,6 +449,12 @@ md.push('');
 
 md.push(`### Duplicate question stems across quiz pages: ${duplicateStems.length}`, '');
 for (const [stem, refs] of duplicateStems) md.push(`- "${stem.slice(0, 80)}" → ${refs.map((r) => `${r.slug}#${r.n}`).join(', ')}`);
+md.push('');
+md.push(`### Repeated option text within a question: ${dupOptFiles.length}`, '');
+for (const r of dupOptFiles.slice(0, 40)) md.push(`- ${r}`);
+md.push('');
+md.push(`### Near-empty answer blocks (<8 words of rationale): ${thinRationale.length}`, '');
+for (const r of thinRationale.slice(0, 40)) md.push(`- ${r}`);
 md.push('');
 
 table('Worked examples', findings.workedExamples, [

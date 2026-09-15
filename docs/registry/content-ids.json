@@ -9427,84 +9427,6 @@
   "data:track/responsible-ai": {
    "id": "trk-0022"
   },
-  "data:track/ai-for-designers": {
-   "id": "trk-0023"
-  },
-  "data:stub/ai-for-designers/ai-for-designers-course-guide": {
-   "id": "stb-0001"
-  },
-  "data:stub/ai-for-designers/designer-mental-model-for-generative-ai": {
-   "id": "stb-0002"
-  },
-  "data:stub/ai-for-designers/deterministic-vs-probabilistic-interfaces-compared": {
-   "id": "stb-0003"
-  },
-  "data:stub/ai-for-designers/choosing-where-ai-belongs-worked-example": {
-   "id": "stb-0004"
-  },
-  "data:stub/ai-for-designers/ai-product-design-common-mistakes": {
-   "id": "stb-0005"
-  },
-  "data:stub/ai-for-designers/ai-product-design-foundations-quiz": {
-   "id": "stb-0006"
-  },
-  "data:stub/ai-for-designers/designing-the-ai-behavior-contract": {
-   "id": "stb-0007"
-  },
-  "data:stub/ai-for-designers/mapping-ai-capabilities-to-user-tasks": {
-   "id": "stb-0008"
-  },
-  "data:stub/ai-for-designers/ai-feature-state-model-worked-example": {
-   "id": "stb-0009"
-  },
-  "data:stub/ai-for-designers/ai-interaction-state-cheatsheet": {
-   "id": "stb-0010"
-  },
-  "data:stub/ai-for-designers/prompt-as-interaction-spec": {
-   "id": "stb-0011"
-  },
-  "data:stub/ai-for-designers/behavior-before-interface-quiz": {
-   "id": "stb-0012"
-  },
-  "data:stub/ai-for-designers/designing-for-uncertainty": {
-   "id": "stb-0013"
-  },
-  "data:stub/ai-for-designers/sources-confidence-and-explanations-compared": {
-   "id": "stb-0014"
-  },
-  "data:stub/ai-for-designers/correction-undo-and-recovery-patterns": {
-   "id": "stb-0015"
-  },
-  "data:stub/ai-for-designers/human-review-and-approval-boundaries": {
-   "id": "stb-0016"
-  },
-  "data:stub/ai-for-designers/trust-patterns-worked-example": {
-   "id": "stb-0017"
-  },
-  "data:stub/ai-for-designers/trust-and-recovery-quiz": {
-   "id": "stb-0018"
-  },
-  "data:stub/ai-for-designers/prototype-ai-behavior-without-a-model": {
-   "id": "stb-0019"
-  },
-  "data:stub/ai-for-designers/creating-a-realistic-ai-test-set": {
-   "id": "stb-0020"
-  },
-  "data:stub/ai-for-designers/designing-a-ux-evaluation-rubric": {
-   "id": "stb-0021"
-  },
-  "data:stub/ai-for-designers/test-an-ai-prototype-worked-example": {
-   "id": "stb-0022"
-  },
-  "data:stub/ai-for-designers/ai-prototype-testing-common-mistakes": {
-   "id": "stb-0023"
-  },
-  "data:stub/ai-for-designers/prototype-and-evaluation-quiz": {
-   "id": "stb-0024"
-  },
-  "data:stub/ai-for-designers/capstone-design-a-trustworthy-ai-feature": {
-   "id": "stb-0025"
-  },
   "data:role/developer": {
    "id": "rol-0002",
    "fp": null
@@ -9566,5 +9488,110 @@
    "fp": "0bfe588aade66094f1b81a25a0c1412e4c8759a1"
   }
  },
- "retired": {}
+ "retired": {
+  "data:track/ai-for-designers": {
+   "id": "trk-0023",
+   "retiredAt": "2026-09-15"
+  },
+  "data:stub/ai-for-designers/ai-for-designers-course-guide": {
+   "id": "stb-0001",
+   "retiredAt": "2026-09-15"
+  },
+  "data:stub/ai-for-designers/designer-mental-model-for-generative-ai": {
+   "id": "stb-0002",
+   "retiredAt": "2026-09-15"
+  },
+  "data:stub/ai-for-designers/deterministic-vs-probabilistic-interfaces-compared": {
+   "id": "stb-0003",
+   "retiredAt": "2026-09-15"
+  },
+  "data:stub/ai-for-designers/choosing-where-ai-belongs-worked-example": {
+   "id": "stb-0004",
+   "retiredAt": "2026-09-15"
+  },
+  "data:stub/ai-for-designers/ai-product-design-common-mistakes": {
+   "id": "stb-0005",
+   "retiredAt": "2026-09-15"
+  },
+  "data:stub/ai-for-designers/ai-product-design-foundations-quiz": {
+   "id": "stb-0006",
+   "retiredAt": "2026-09-15"
+  },
+  "data:stub/ai-for-designers/designing-the-ai-behavior-contract": {
+   "id": "stb-0007",
+   "retiredAt": "2026-09-15"
+  },
+  "data:stub/ai-for-designers/mapping-ai-capabilities-to-user-tasks": {
+   "id": "stb-0008",
+   "retiredAt": "2026-09-15"
+  },
+  "data:stub/ai-for-designers/ai-feature-state-model-worked-example": {
+   "id": "stb-0009",
+   "retiredAt": "2026-09-15"
+  },
+  "data:stub/ai-for-designers/ai-interaction-state-cheatsheet": {
+   "id": "stb-0010",
+   "retiredAt": "2026-09-15"
+  },
+  "data:stub/ai-for-designers/prompt-as-interaction-spec": {
+   "id": "stb-0011",
+   "retiredAt": "2026-09-15"
+  },
+  "data:stub/ai-for-designers/behavior-before-interface-quiz": {
+   "id": "stb-0012",
+   "retiredAt": "2026-09-15"
+  },
+  "data:stub/ai-for-designers/designing-for-uncertainty": {
+   "id": "stb-0013",
+   "retiredAt": "2026-09-15"
+  },
+  "data:stub/ai-for-designers/sources-confidence-and-explanations-compared": {
+   "id": "stb-0014",
+   "retiredAt": "2026-09-15"
+  },
+  "data:stub/ai-for-designers/correction-undo-and-recovery-patterns": {
+   "id": "stb-0015",
+   "retiredAt": "2026-09-15"
+  },
+  "data:stub/ai-for-designers/human-review-and-approval-boundaries": {
+   "id": "stb-0016",
+   "retiredAt": "2026-09-15"
+  },
+  "data:stub/ai-for-designers/trust-patterns-worked-example": {
+   "id": "stb-0017",
+   "retiredAt": "2026-09-15"
+  },
+  "data:stub/ai-for-designers/trust-and-recovery-quiz": {
+   "id": "stb-0018",
+   "retiredAt": "2026-09-15"
+  },
+  "data:stub/ai-for-designers/prototype-ai-behavior-without-a-model": {
+   "id": "stb-0019",
+   "retiredAt": "2026-09-15"
+  },
+  "data:stub/ai-for-designers/creating-a-realistic-ai-test-set": {
+   "id": "stb-0020",
+   "retiredAt": "2026-09-15"
+  },
+  "data:stub/ai-for-designers/designing-a-ux-evaluation-rubric": {
+   "id": "stb-0021",
+   "retiredAt": "2026-09-15"
+  },
+  "data:stub/ai-for-designers/test-an-ai-prototype-worked-example": {
+   "id": "stb-0022",
+   "retiredAt": "2026-09-15"
+  },
+  "data:stub/ai-for-designers/ai-prototype-testing-common-mistakes": {
+   "id": "stb-0023",
+   "retiredAt": "2026-09-15"
+  },
+  "data:stub/ai-for-designers/prototype-and-evaluation-quiz": {
+   "id": "stb-0024",
+   "retiredAt": "2026-09-15"
+  },
+  "data:stub/ai-for-designers/capstone-design-a-trustworthy-ai-feature": {
+   "id": "stb-0025",
+   "retiredAt": "2026-09-15"
+  }
+ }
 }
