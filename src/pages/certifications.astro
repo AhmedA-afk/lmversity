@@ -34,6 +34,10 @@ const certs = Object.entries(certifications)
           <div><dt>Audience</dt><dd>{c.audience}</dd></div>
           <div><dt>Delivery</dt><dd>{c.delivery}</dd></div>
           <div><dt>Verified</dt><dd class="mono">{c.verifiedAt}</dd></div>
+          {c.prerequisites && <div><dt>Prerequisites</dt><dd>{c.prerequisites}</dd></div>}
+          {c.languages && <div><dt>Languages</dt><dd>{c.languages.join(', ')}</dd></div>}
+          {c.renewal && <div><dt>Renewal</dt><dd>{c.renewal}</dd></div>}
+          {c.officialPrep && <div><dt>Official prep</dt><dd>{c.officialPrep}</dd></div>}
         </dl>
         <p class="domains"><span class="mono">Domains:</span> {c.domains.join(' · ')}</p>
         {c.volatile && <p class="vol">{c.volatile}</p>}

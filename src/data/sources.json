@@ -425,6 +425,17 @@
   "status": "current",
   "accessedAt": "2026-09-15"
  },
+ "cert-ibm-training": {
+  "title": "IBM Training certifications",
+  "publisher": "IBM",
+  "url": "https://www.ibm.com/training/certifications",
+  "type": "certification-guide",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "IBM credential catalog incl. watsonx-related certifications"
+  ]
+ },
  "cert-ms-applied-skills": {
   "title": "Microsoft Applied Skills assessments",
   "publisher": "Microsoft",
@@ -448,6 +459,28 @@
   "type": "certification-guide",
   "status": "current",
   "accessedAt": "2026-09-15"
+ },
+ "cert-oracle-genai-pro": {
+  "title": "Oracle Cloud Infrastructure Generative AI Professional",
+  "publisher": "Oracle",
+  "url": "https://education.oracle.com/oracle-cloud-infrastructure-2025-generative-ai-professional/pexam_1Z0-1127-25",
+  "type": "certification-guide",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "OCI Generative AI Professional exam 1Z0-1127-25 (page bot-protected, HTTP 403 to automated fetch)"
+  ]
+ },
+ "cert-snowflake-genai": {
+  "title": "SnowPro Specialty: Generative AI",
+  "publisher": "Snowflake",
+  "url": "https://www.snowflake.com/en/certifications/",
+  "type": "certification-guide",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "Snowflake generative-AI specialty credential (page bot-protected, HTTP 403 to automated fetch)"
+  ]
  },
  "chroma-docs": {
   "title": "Chroma documentation",
@@ -649,6 +682,17 @@
   "status": "current",
   "accessedAt": "2026-09-15"
  },
+ "course-berkeley-cs188": {
+  "title": "CS188: Introduction to Artificial Intelligence",
+  "publisher": "UC Berkeley",
+  "url": "https://inst.eecs.berkeley.edu/~cs188/",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "Berkeley's AI course — lectures, projects, notes openly published"
+  ]
+ },
  "course-bhashini": {
   "title": "Bhashini language ecosystem",
   "publisher": "Government of India",
@@ -656,6 +700,17 @@
   "type": "official-docs",
   "status": "current",
   "accessedAt": "2026-09-15"
+ },
+ "course-cmu-10601": {
+  "title": "10-601 Machine Learning",
+  "publisher": "Carnegie Mellon",
+  "url": "https://www.cs.cmu.edu/~mgormley/courses/10601/",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "CMU's ML course — lectures, homeworks, recitations openly published"
+  ]
  },
  "course-databricks": {
   "title": "Databricks Academy",
@@ -737,6 +792,28 @@
   "status": "current",
   "accessedAt": "2026-09-15"
  },
+ "course-mit-6006": {
+  "title": "MIT 6.006 Introduction to Algorithms",
+  "publisher": "MIT OpenCourseWare",
+  "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "MIT OCW algorithms — the algorithms foundation AI interviews assume"
+  ]
+ },
+ "course-mit-6034": {
+  "title": "MIT 6.034 Artificial Intelligence",
+  "publisher": "MIT OpenCourseWare",
+  "url": "https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010/",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "MIT OCW AI course — lectures, notes, assignments openly published"
+  ]
+ },
  "course-mongodb": {
   "title": "MongoDB University",
   "publisher": "MongoDB",
@@ -800,6 +877,28 @@
   "type": "official-docs",
   "status": "current",
   "accessedAt": "2026-09-15"
+ },
+ "course-stanford-cs229": {
+  "title": "CS229: Machine Learning",
+  "publisher": "Stanford",
+  "url": "https://cs229.stanford.edu",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "Stanford's canonical ML course — syllabus, notes, problem sets openly published"
+  ]
+ },
+ "course-stanford-slp3": {
+  "title": "Speech and Language Processing (3rd ed. draft)",
+  "publisher": "Stanford",
+  "url": "https://web.stanford.edu/~jurafsky/slp3/",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "Jurafsky & Martin SLP3 — free draft chapters, the canonical NLP text"
+  ]
  },
  "course-swayam": {
   "title": "SWAYAM open learning",

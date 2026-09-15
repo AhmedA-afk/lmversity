@@ -1,6 +1,6 @@
 # Content registry — audit views
 
-Generated 2026-09-15T16:15:55.811Z by `scripts/build-content-registry.mjs`.
+Generated 2026-09-15T16:23:02.691Z by `scripts/build-content-registry.mjs`.
 2524 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 

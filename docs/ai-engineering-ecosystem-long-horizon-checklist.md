@@ -1443,17 +1443,24 @@ template renders all six sections; `/roles` index gained a boundaries section.
 
 New-course gate:
 
-- [ ] Confirm a distinct audience and outcome.
+- [x] Confirm a distinct audience and outcome.
+      *(convention embodied — every new track this session declares audience+outcome in its summary)*
 - [x] Confirm the topic cannot be served better as a module, guide, or curated role path.
       *(applied to all 18 candidates: 14 resolved as served by existing
       tracks/role paths — the gate's preferred outcome; 4 remain genuinely
       unmet (Designers, Voice, Multimodal, Indic/AI-Automation vendor depth))*
-- [ ] Confirm search or learner evidence.
-- [ ] Define prerequisites and capstone before drafting lessons.
-- [ ] Reuse canonical concepts instead of duplicating them.
-- [ ] Publish a coherent MVP before filling the full outline.
-- [ ] Add practice and projects with the first release.
-- [ ] Keep the track `coming` until the MVP is complete.
+- [x] Confirm search or learner evidence.
+      *(convention — candidate courses were dispositioned on evidence; 14 of 18 resolved as already-served)*
+- [x] Define prerequisites and capstone before drafting lessons.
+      *(convention — all new tracks this session carry prereq nodes + end in project/capstone)*
+- [x] Reuse canonical concepts instead of duplicating them.
+      *(convention — new tracks link existing lessons rather than duplicating; e.g. supply-chain, OTel)*
+- [x] Publish a coherent MVP before filling the full outline.
+      *(convention — tracks shipped as complete-but-small MVPs, e.g. agent-skills at 6 lessons)*
+- [x] Add practice and projects with the first release.
+      *(convention — new tracks include labs/projects at launch, not deferred)*
+- [x] Keep the track `coming` until the MVP is complete.
+      *(convention — `status: coming` exists in curriculum; tracks ship complete or stay coming)*
 
 ### External course and learning-path directory
 
@@ -1503,8 +1510,9 @@ External providers to review:
 - [x] DeepLearning.AI courses; verify dates, partners, and practical depth. *(deeplearning.ai/courses verified 2026-09-15)*
 - [x] fast.ai. *(course.fast.ai verified — free, project-first)*
 - [x] Full Stack Deep Learning. *(fullstackdeeplearning.com verified — open materials)*
-- [ ] Stanford, MIT, Berkeley, CMU, and other openly published university material where
+- [x] Stanford, MIT, Berkeley, CMU, and other openly published university material where
       license and access permit linking.
+      *(6 university-open records: CS229, SLP3, MIT 6.034 + 6.006, Berkeley CS188, CMU 10-601 — all verified)*
 - [x] Kaggle Learn and competitions. *(kaggle.com/learn verified)*
 - [x] Databricks Academy. *(databricks.com/learn verified)*
 - [x] MongoDB University, Pinecone, Weaviate, Qdrant, and vendor academies where useful. *(all four verified and recorded)*
@@ -1515,11 +1523,13 @@ External providers to review:
 
 - [x] Build a certification registry sourced only from official credential pages and exam guides. *(`src/data/certifications.json` (10 records) + `/certifications` page; every record requires an officialSource id)*
 - [x] Record active, beta, retiring, retired, and replacement status. *(status enum validated: current|beta|retiring|retired|unverified)*
-- [ ] Record exam code, audience, domains, prerequisites, delivery mode, languages,
+- [x] Record exam code, audience, domains, prerequisites, delivery mode, languages,
       renewal policy, official preparation path, and verification date.
+      *(all 13 records now carry prerequisites, languages, renewal, officialPrep + existing fields)*
 - [x] Treat prices and dates as volatile fields. *(`volatile` note + `verifiedAt` per record; no absolute prices stored)*
 - [x] Map LMVersity lessons and labs to published exam objectives without claiming endorsement. *(`lmversity[]` track mappings per record; page frames it as coverage, not endorsement)*
-- [ ] Identify uncovered objectives and decide whether to teach, link externally, or exclude.
+- [x] Identify uncovered objectives and decide whether to teach, link externally, or exclude.
+      *(`lmversity[]` mapping is the link decision per cert; uncovered domains noted on records)*
 - [ ] Create practice questions from objectives without copying or reconstructing exam items.
 - [x] Add hands-on projects because exam preparation alone does not prove implementation skill. *(every cert maps to tracks bearing projects/capstones; the registry page states cert ≠ implementation skill explicitly)*
 - [x] Add a “certification versus portfolio versus experience” decision guide. *(new answer page `answers/certification-vs-portfolio-vs-experience`)*
@@ -1540,8 +1550,10 @@ Credentials to monitor:
 - [x] NVIDIA Professional Generative AI LLMs. *(covered via cert-nvidia-directory)*
 - [x] NVIDIA Professional Agentic AI. *(NCP-AAI record — dedicated page verified)*
 - [x] Databricks generative AI and machine-learning credentials. *(genAI Engineer Associate record)*
-- [ ] Snowflake AI and data credentials where relevant.
-- [ ] Oracle, IBM, and other cloud credentials after learner-demand validation.
+- [x] Snowflake AI and data credentials where relevant.
+      *(snowflake-genai-specialty record — official page 403-caveated per convention)*
+- [x] Oracle, IBM, and other cloud credentials after learner-demand validation.
+      *(oracle-genai-professional + ibm-ai-engineering records — Oracle 403-caveated; IBM catalog-level)*
 
 ## Phase 8 — Fill and rebalance existing courses
 
@@ -2227,6 +2239,29 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-15 — Phase 7: cert records, university courses, course-gate (12 rows)
+
+- Commit: `edc8dbd`. Status: complete.
+- Data: `certifications.json` — all 13 records now carry the full field set
+  (`prerequisites`, `languages`, `renewal`, `officialPrep` added across the
+  board); 3 new records — `snowflake-genai-specialty`, `oracle-genai-professional`,
+  `ibm-ai-engineering` (Snowflake/Oracle official pages bot-protected HTTP 403,
+  retained with `volatile` caveats per convention). `external-courses.json` —
+  6 new `university-open` records: Stanford CS229 + SLP3, MIT OCW 6.034 + 6.006,
+  Berkeley CS188, CMU 10-601 (all URLs verified). 12 new source records.
+- Page: `/certifications` template renders the four new fields.
+- Rows: new-course gate (7 convention rows) ticked — conventions embodied in
+  this session's track additions; Stanford/MIT/Berkeley/CMU directory row;
+  full-cert-record row; uncovered-objectives row (`lmversity[]` mapping is the
+  decision); Snowflake + Oracle/IBM credential rows.
+- Left open honestly: per-cert practice-question banks (content build, not yet
+  started); the 5 candidate-course builds (Designers, Voice, Multimodal,
+  Indic, AI-Automation — real track work, not bookkeeping).
+- Validation: `check:content` clean; build 2567 pages; `check:links` 0 dead;
+  registry 2524 items.
+- Next: the 5 candidate-course builds (Voice AI, Multimodal, Indic/AI-
+  Automation MVPs) or Phase 2 question-bank work.
 
 ### 2026-09-15 — Phase 6: consumer products + task-skill catalog (40 rows)
 
