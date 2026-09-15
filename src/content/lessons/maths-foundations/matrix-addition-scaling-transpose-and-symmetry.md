@@ -137,4 +137,4 @@ validate the model or data-generating process.
 
 - Continue: [Matrix–vector multiplication](/learn/maths-foundations/matrix-vector-multiplication)
 - Go deeper: [Matrices as data tables and linear maps](/learn/maths-foundations/matrices-as-data-tables-and-linear-maps)
-- Apply it: Linear algebra for ML
+- Apply it: [Linear algebra for ML](/learn/machine-learning/linear-algebra-for-ml)

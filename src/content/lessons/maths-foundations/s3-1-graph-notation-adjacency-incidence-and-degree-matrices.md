@@ -104,4 +104,4 @@ make every downstream mathematical operation precise but irrelevant.
 
 - Continue: [Random walks and transition operators](/learn/maths-foundations/s3-2-random-walks-and-transition-operators)
 - Go deeper: [Graph Laplacians and smoothness](/learn/maths-foundations/s3-3-graph-laplacians-and-smoothness)
-- Apply it: Message passing and oversmoothing
+- Apply it: [Message passing and oversmoothing](/learn/maths-foundations/s3-5-message-passing-and-oversmoothing)

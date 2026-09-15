@@ -94,4 +94,4 @@ Naming a data-generating process does not remove unmeasured selection, measureme
 
 - Continue: [Estimators, bias, consistency, efficiency, and variance](/learn/maths-foundations/estimators-bias-consistency-efficiency-and-variance)
 - Go deeper: [Causal inference foundations](/learn/maths-foundations/causal-inference-foundations)
-- Apply it: Features, leakage, and missingness
+- Apply it: [Features, leakage, and missingness](/learn/machine-learning/features-leakage-and-missingness)

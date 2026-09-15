@@ -113,4 +113,4 @@ coverage, and exact inference scales poorly with dataset size without approximat
 
 - Continue: [Causal graphical models](/learn/maths-foundations/s4-6-causal-graphical-models-do-calculus-and-identifiability-limits) and identifiability limits
 - Go deeper: [Variational inference and the ELBO](/learn/maths-foundations/s4-4-variational-inference-and-the-elbo)
-- Apply it: Causal questions versus predictive models
+- Apply it: [Causal questions versus predictive models](/learn/machine-learning/causal-questions-vs-predictive-models)

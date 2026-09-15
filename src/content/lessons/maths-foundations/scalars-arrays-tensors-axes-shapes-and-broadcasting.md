@@ -150,6 +150,6 @@ checks, data contracts, and model evaluation.
 
 - Continue: [Units, scales, normalisation, and dimensionless quantities](/learn/maths-foundations/units-scales-normalisation)
 - Go deeper: Mathematics Foundations checklist
-- Apply it: Linear algebra for ML
+- Apply it: [Linear algebra for ML](/learn/machine-learning/linear-algebra-for-ml)
 
 **Related:** [Tensors, Shapes, and Broadcasting](/learn/deep-learning/core/101-tensors-shapes-and-broadcasting)

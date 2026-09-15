@@ -145,4 +145,4 @@ outcomes separately.
 
 - Continue: [Conditional probability](/learn/maths-foundations/conditional-probability)
 - Go deeper: Mathematics Foundations assignments
-- Apply it: Problem framing and baselines
+- Apply it: [Problem framing and baselines](/learn/machine-learning/problem-framing-and-baselines)

@@ -88,4 +88,4 @@ Likelihood does not choose a correct model, supply a prior, measure causal effec
 
 - Continue: [Maximum likelihood estimation](/learn/maths-foundations/maximum-likelihood-estimation)
 - Go deeper: [Likelihood, cross-entropy, and classification objectives](/learn/maths-foundations/likelihood-cross-entropy-and-classification-objectives)
-- Apply it: Linear regression
+- Apply it: [Linear regression](/learn/machine-learning/linear-regression)

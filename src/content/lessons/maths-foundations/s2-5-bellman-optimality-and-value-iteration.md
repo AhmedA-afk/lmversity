@@ -111,5 +111,5 @@ constraints require additional methods and evidence.
 ## Continue, go deeper, apply it
 
 - Continue: [Policies, exploration, and occupancy](/learn/maths-foundations/s2-6-policies-exploration-and-occupancy)
-- Go deeper: Temporal-difference learning
+- Go deeper: [Temporal-difference learning](/learn/maths-foundations/s2-7-temporal-difference-learning-and-bias-variance)
 - Apply it: [RL safety and offline-data warnings](/learn/maths-foundations/s2-8-rl-safety-and-offline-data-warnings)

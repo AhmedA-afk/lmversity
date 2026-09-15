@@ -113,7 +113,7 @@ mis-specified model rather than strong evidence.
 ## Continue, go deeper, apply it
 
 - Continue: [Graph notation, adjacency, incidence, and degree matrices](/learn/maths-foundations/s3-1-graph-notation-adjacency-incidence-and-degree-matrices)
-- Go deeper: Bayesian posterior inference and predictive checks
-- Apply it: Probabilistic modelling in ML
+- Go deeper: [Bayesian posterior inference and predictive checks](/learn/maths-foundations/s4-1-bayesian-posterior-inference-and-posterior-predictive-checks)
+- Apply it: [Probabilistic modelling in ML](/learn/machine-learning/deep-lectures/904-probabilistic-modelling-mle-map-bayesian-inference-calibration-and-uncertainty)
 
 **Related:** [Hidden Markov models: filtering, smoothing, and Viterbi](/learn/classical-ai/knowledge-uncertainty/220-hidden-markov-models-filtering-smoothing-and-viterbi)

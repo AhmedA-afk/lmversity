@@ -73,4 +73,4 @@ Level-set geometry does not prove classifier accuracy, fairness, or global feasi
 
 - Continue: [Jacobians for vector-valued functions](/learn/maths-foundations/jacobians-for-vector-valued-functions)
 - Go deeper: [Constrained optimisation, Lagrange multipliers, and KKT intuition](/learn/maths-foundations/constrained-optimisation-lagrange-multipliers-and-kkt-intuition)
-- Apply it: Classifiers, thresholds, and calibration
+- Apply it: [Classifiers, thresholds, and calibration](/learn/machine-learning/classifiers-thresholds-and-calibration)

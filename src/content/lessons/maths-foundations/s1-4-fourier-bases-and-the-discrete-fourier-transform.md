@@ -113,5 +113,5 @@ can discard phase and absolute alignment, which may be decisive for a task.
 ## Continue, go deeper, apply it
 
 - Continue: [Frequency filtering and the convolution theorem](/learn/maths-foundations/s1-5-frequency-filtering-and-convolution-theorem)
-- Go deeper: Spectrograms and time–frequency trade-offs
+- Go deeper: [Spectrograms and time–frequency trade-offs](/learn/maths-foundations/s1-6-spectrograms-windowing-and-time-frequency-trade-offs)
 - Apply it: [Vision/audio case study](/learn/maths-foundations/s1-8-vision-audio-case-study)

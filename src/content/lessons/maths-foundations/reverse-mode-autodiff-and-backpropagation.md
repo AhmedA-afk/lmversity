@@ -67,4 +67,4 @@ Backpropagation differentiates a programmed computation; it does not validate th
 
 - Continue: [Gradient checking and debugging](/learn/maths-foundations/gradient-checking-and-debugging)
 - Go deeper: [Forward-mode automatic differentiation](/learn/maths-foundations/forward-mode-automatic-differentiation)
-- Apply it: Loss, gradients, and optimisation
+- Apply it: [Loss, gradients, and optimisation](/learn/deep-learning/loss-gradients-and-optimization)

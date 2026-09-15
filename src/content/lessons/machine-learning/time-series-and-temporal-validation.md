@@ -73,8 +73,8 @@ future will resemble the selected historical windows.
 
 ## Continue, go deeper, apply it
 
-- Continue: Drift and monitoring
-- Go deeper: Causal questions versus predictive models
+- Continue: [Drift and monitoring](/learn/machine-learning/drift-and-monitoring)
+- Go deeper: [Causal questions versus predictive models](/learn/machine-learning/causal-questions-vs-predictive-models)
 - Apply it: publish an as-of feature table and walk-forward report.
 ## Formal extension
 

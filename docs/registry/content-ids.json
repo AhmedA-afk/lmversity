@@ -1094,7 +1094,7 @@
   },
   "lessons/classical-ai/constraint-satisfaction.md": {
    "id": "les-0270",
-   "fp": "952a7971154c4a2c1d31769d707ad31e88b9265f"
+   "fp": "b4520ba9e6320d9610d3b44cf5ea7cd0d16ed4c7"
   },
   "lessons/classical-ai/knowledge-uncertainty/201-knowledge-representation-models-and-tradeoffs.md": {
    "id": "les-0271",
@@ -1206,7 +1206,7 @@
   },
   "lessons/classical-ai/search-and-planning.md": {
    "id": "les-0298",
-   "fp": "25f0a49ac045c73cb643bcf7bc73076b835205a1"
+   "fp": "aa0905bcbb421425f6653deec74bf4cf9c9bd3c8"
   },
   "lessons/classical-ai/search-planning/101-state-spaces-representation-actions-goals-and-costs.md": {
    "id": "les-0299",
@@ -1322,7 +1322,7 @@
   },
   "lessons/classical-ai/uncertainty-and-decision.md": {
    "id": "les-0327",
-   "fp": "668a9967c210b35858782aec3ab484621e9a209e"
+   "fp": "b7badcd5c085618495645e9a1fed18745bcebc51"
   },
   "lessons/context-engineering/ab-testing-context-variants.md": {
    "id": "les-0328",
@@ -1854,7 +1854,7 @@
   },
   "lessons/deep-learning/attention-and-transformers.md": {
    "id": "les-0460",
-   "fp": "68221870a202b0b701cf85a7779fd35fd80bd197"
+   "fp": "b2e4bf840c05abf32993004bfe114036d1016353"
   },
   "lessons/deep-learning/core/101-tensors-shapes-and-broadcasting.md": {
    "id": "les-0461",
@@ -1998,11 +1998,11 @@
   },
   "lessons/deep-learning/loss-gradients-and-optimization.md": {
    "id": "les-0496",
-   "fp": "00821fc71cbdd8b2d60769711d0a1d576cddbf61"
+   "fp": "ea4020ccbe06b2992376b27fe8c6f0f58d71a7a2"
   },
   "lessons/deep-learning/neural-networks-and-representations.md": {
    "id": "les-0497",
-   "fp": "dad1d83779963322ce5c839075a651194132f2d4"
+   "fp": "11037c7f6ff010c161b6c0bd680fe210d932d0db"
   },
   "lessons/deep-learning/practice/401-data-contracts-and-schema-audits.md": {
    "id": "les-0498",
@@ -4290,7 +4290,7 @@
   },
   "lessons/machine-learning/anomaly-detection.md": {
    "id": "les-1069",
-   "fp": "5d8d48fabf60bdf700161b1ebda02e50e9a1c77e"
+   "fp": "15b603212bb8b3c1c680a9e869a026f7982e419d"
   },
   "lessons/machine-learning/assessments/ml-841-diagnostic-exam.md": {
    "id": "les-1070",
@@ -4334,27 +4334,27 @@
   },
   "lessons/machine-learning/bayesian-and-generative-learning.md": {
    "id": "les-1080",
-   "fp": "95cb15f6898aec878d6b7daae1eb9e215c5316e5"
+   "fp": "5aef733809d19b7c2fa1a2de1551e02087c56509"
   },
   "lessons/machine-learning/causal-questions-vs-predictive-models.md": {
    "id": "les-1081",
-   "fp": "5019c4717d332d54db7462233a509024c46e3128"
+   "fp": "60d78201e9111a3de09eed4fbe5980b788b78a2c"
   },
   "lessons/machine-learning/classifiers-thresholds-and-calibration.md": {
    "id": "les-1082",
-   "fp": "7a9bb7aed506df4f80e4e72b2cd5a77728ac98de"
+   "fp": "52a3f002aeef4034eadc9484b28418d44883e012"
   },
   "lessons/machine-learning/clustering-and-k-means.md": {
    "id": "les-1083",
-   "fp": "eb28ff6e4bc543a3e8e8b7f05bb47d3507f8921b"
+   "fp": "ffef3896fa387c9b817c30559836ebf273d8a530"
   },
   "lessons/machine-learning/cross-validation-and-experimental-design.md": {
    "id": "les-1084",
-   "fp": "daca64c0443bd2510c4cb936d3ae15a8a4a1a24d"
+   "fp": "501623bcf6bf47e1e8aa24843e9cf933b044159b"
   },
   "lessons/machine-learning/decision-trees-and-entropy.md": {
    "id": "les-1085",
-   "fp": "9d8460173dae26e94feb16dc4b84eb3ec5e8a48b"
+   "fp": "6a0784aa6e2af5066903f5876cb55ba8f4fe4139"
   },
   "lessons/machine-learning/deep-lectures/901-linear-and-logistic-regression-from-objective-to-deployment.md": {
    "id": "les-1086",
@@ -4434,55 +4434,55 @@
   },
   "lessons/machine-learning/drift-and-monitoring.md": {
    "id": "les-1105",
-   "fp": "8c778f4d913c7af5445fa0946569ef3a8c752a2d"
+   "fp": "e256dc4ec9a541628c49ede2c9d53ca731cd9a85"
   },
   "lessons/machine-learning/ensemble-methods.md": {
    "id": "les-1106",
-   "fp": "a190c29066919ded02241f4921db7906100e19f8"
+   "fp": "418e1a07bd191badef2070062a2ca4f77a05719d"
   },
   "lessons/machine-learning/fairness-and-subgroup-evaluation.md": {
    "id": "les-1107",
-   "fp": "861333c9670418be28adb14a1f09550a7e3f3841"
+   "fp": "dbd5786a1af71b57a2ac96a85c39408c3f22684d"
   },
   "lessons/machine-learning/feature-engineering-and-pipelines.md": {
    "id": "les-1108",
-   "fp": "3dad6f7cf94d54fa18247fb8a5142f123689450b"
+   "fp": "3bec0f44753c4c41722a7bfcdeafd9b7dc21e068"
   },
   "lessons/machine-learning/features-leakage-and-missingness.md": {
    "id": "les-1109",
-   "fp": "c9f61435a91409beea32dbfcfb106916fe8a8be2"
+   "fp": "3788992be0bc6196f1366821ffabfeee33a66844"
   },
   "lessons/machine-learning/generalization-and-evaluation.md": {
    "id": "les-1110",
-   "fp": "3e917bb3e6032e06a12ee49262f1f29879d166c2"
+   "fp": "11dbbe4db27c0fdbebbb290a8c2234d36d128063"
   },
   "lessons/machine-learning/imbalanced-data-and-metrics.md": {
    "id": "les-1111",
-   "fp": "781ec364419ffa9ccee885630087237f0883839e"
+   "fp": "6b6a082d541b90eac33d4b9d3df7132a9bfc7729"
   },
   "lessons/machine-learning/interpretability-and-error-analysis.md": {
    "id": "les-1112",
-   "fp": "bec2737f0136f5fa1e854e3c98e893970477b3b7"
+   "fp": "2d075bd254260b6fdb64b2790df3fd478190fb55"
   },
   "lessons/machine-learning/learning-paradigms.md": {
    "id": "les-1113",
-   "fp": "9e2344d7360563c185bd87f82d07771cb5f8603d"
+   "fp": "ee63452e679919906e2db352b80b4e89e54c39da"
   },
   "lessons/machine-learning/learning-theory-and-pac-intuition.md": {
    "id": "les-1114",
-   "fp": "671321a9af850695bf6af0936ffab10de7755f72"
+   "fp": "c94286b42ad07a948d05271eb578a251e43a2bcd"
   },
   "lessons/machine-learning/linear-algebra-for-ml.md": {
    "id": "les-1115",
-   "fp": "23c3bf2970c0fa92d7d103ac0403364c42bc8df9"
+   "fp": "07c3d9e6891c8d4adb37e69d4c85f34adcfdfe9a"
   },
   "lessons/machine-learning/linear-regression.md": {
    "id": "les-1116",
-   "fp": "2ba528fb2b271ed4a7ace3d433d3be9b524a85fa"
+   "fp": "c0456a03914d3db88eee38c5f8b079a452da5768"
   },
   "lessons/machine-learning/logistic-regression.md": {
    "id": "les-1117",
-   "fp": "e79b3bccc4ff55f1a2f605a8c825febd972dac88"
+   "fp": "a672012974a046b1eb46e6738cbca3ad1a008547"
   },
   "lessons/machine-learning/ml-001-how-to-use-the-classical-ml-course.md": {
    "id": "les-1118",
@@ -4934,19 +4934,19 @@
   },
   "lessons/machine-learning/ml-foundations-capstone.md": {
    "id": "les-1230",
-   "fp": "622b6163b0b9dc6a61b5d790dfdf81aade8de0ca"
+   "fp": "5114c0b6eaccb71efb8d11b28b6ac405b04a8292"
   },
   "lessons/machine-learning/ml-systems-and-reproducibility.md": {
    "id": "les-1231",
-   "fp": "39cdcb5c0e06237b72f3ca31b79a70430bb5549d"
+   "fp": "4a244bed26559e022162fa1fd1f4c0ddcdee9cb0"
   },
   "lessons/machine-learning/nearest-neighbors-and-kernels.md": {
    "id": "les-1232",
-   "fp": "ea222b7bf29a08c486cf9766ecbc9239ca7b2a67"
+   "fp": "dee9c38ee5a1f7fea3caece1932cb95bcd935b34"
   },
   "lessons/machine-learning/neural-network-bridge.md": {
    "id": "les-1233",
-   "fp": "aa5c2255b0c1ba1a79a29f1037a584cd36ba5486"
+   "fp": "54a121962eeacea2b39bdda2788a30ed1da5c3d7"
   },
   "lessons/machine-learning/optimization-loss-and-gradient-descent.md": {
    "id": "les-1234",
@@ -4954,15 +4954,15 @@
   },
   "lessons/machine-learning/pca-and-dimensionality-reduction.md": {
    "id": "les-1235",
-   "fp": "9c216d872442e89a56c417b0da5c405c2fd2a765"
+   "fp": "32bba62ebfd727822a65a2455e82f079c32c6274"
   },
   "lessons/machine-learning/probability-and-statistics-for-ml.md": {
    "id": "les-1236",
-   "fp": "ca4c895942e5b7dbc1df22b521e6075ab0d4d7f6"
+   "fp": "5e85cc8370a24b3859629d07740244c7679f72db"
   },
   "lessons/machine-learning/problem-framing-and-baselines.md": {
    "id": "les-1237",
-   "fp": "2f8c57d6e9779dfa9a1e09ef5a9baa1b66ed35b9"
+   "fp": "5ded22f84f68b39becc96ccde0ef901df0b790bc"
   },
   "lessons/machine-learning/problem-sets/01-linear-models-and-optimization.md": {
    "id": "les-1238",
@@ -5058,15 +5058,15 @@
   },
   "lessons/machine-learning/recommenders-and-ranking.md": {
    "id": "les-1261",
-   "fp": "e053a2e17a44250f17c348df02cd778e6b317eed"
+   "fp": "e68a649317ddbf65f9fe89f06255a04212fb3639"
   },
   "lessons/machine-learning/regularization-and-bias-variance.md": {
    "id": "les-1262",
-   "fp": "992d8cbb9d6f20ed877c9612ac4e70e6413e0b2a"
+   "fp": "8a2daacba8e632744d886b7cda3b405ee7cf573c"
   },
   "lessons/machine-learning/reinforcement-learning-and-reward.md": {
    "id": "les-1263",
-   "fp": "99dd89849a720dc69fcdf7e4b316e2b73979343d"
+   "fp": "414aed54abadefc2a523002e570d8587af2cb795"
   },
   "lessons/machine-learning/reproductions/adaboost-reproduction.md": {
    "id": "les-1264",
@@ -5110,19 +5110,19 @@
   },
   "lessons/machine-learning/serving-batch-and-online.md": {
    "id": "les-1274",
-   "fp": "802f8f417c914af7a37758e36a718176f9bdc9ca"
+   "fp": "7045ddc90c4f8d1f03f3a47863b29f59656c85da"
   },
   "lessons/machine-learning/statistical-testing-for-ml.md": {
    "id": "les-1275",
-   "fp": "4e40f60c957cd260c719f7974c43ab18fd8cc53e"
+   "fp": "ec4742fe3aa2e3f80071be6a2a8427958528a22c"
   },
   "lessons/machine-learning/time-series-and-temporal-validation.md": {
    "id": "les-1276",
-   "fp": "1fe8355b3954ab85cbdd0f847e968fc67894168e"
+   "fp": "46c57d92c74979b65a6b15f1211a2cfb08f51fd5"
   },
   "lessons/maths-foundations/ab-experiments-sequential-testing-and-multiple-comparisons.md": {
    "id": "les-1277",
-   "fp": "12e0716686ccb46ee93973f1a73f2c92876e0345"
+   "fp": "d1ac5bba7b323cc5b2aaaf5f0351af84626074f5"
   },
   "lessons/maths-foundations/algebra-for-model-equations.md": {
    "id": "les-1278",
@@ -5130,7 +5130,7 @@
   },
   "lessons/maths-foundations/angles-margins-separating-hyperplanes.md": {
    "id": "les-1279",
-   "fp": "94096aa50ab3fef95726a10acc8b03843bd7ca62"
+   "fp": "fee9f3bc81f767087af65fd268dee602cb7da2bd"
   },
   "lessons/maths-foundations/backpropagation-intuition.mdx": {
    "id": "les-1280",
@@ -5138,11 +5138,11 @@
   },
   "lessons/maths-foundations/batch-gradient-descent-and-learning-rate.md": {
    "id": "les-1281",
-   "fp": "0bbbe7bd20136026d1502d70303ee258d7ff456d"
+   "fp": "e631f596350b114525d5e16ef9d0e9ae8172015c"
   },
   "lessons/maths-foundations/bayes-rule-and-base-rates.md": {
    "id": "les-1282",
-   "fp": "a5d256ef7a053dfa6dfa6ca81f2b7aed2ffd17f4"
+   "fp": "8afe33420b28c84cde46a49e17cc5338a640931f"
   },
   "lessons/maths-foundations/bayes-theorem-for-ai.mdx": {
    "id": "les-1283",
@@ -5150,63 +5150,63 @@
   },
   "lessons/maths-foundations/bernoulli-binomial-hypergeometric-and-negative-binomial.md": {
    "id": "les-1284",
-   "fp": "54008e819a50b02834bd554db215e4298d057f7a"
+   "fp": "fe6bd45e5ad2ebe1341126bda09bf5a7a69c15db"
   },
   "lessons/maths-foundations/beta-and-dirichlet-priors.md": {
    "id": "les-1285",
-   "fp": "5d4f6875d551028a2659fe4601819c4de355b4e5"
+   "fp": "cf941d1ab939b14a4a64915840466ea447bfc176"
   },
   "lessons/maths-foundations/bootstrap-methods.md": {
    "id": "les-1286",
-   "fp": "00316988da9e6863cce7742c316d239d5ca6e4f4"
+   "fp": "441c3557c8dd9004d20c4a5f7ea89e763004ff7c"
   },
   "lessons/maths-foundations/calibration-proper-scoring-rules-and-distribution-shift.md": {
    "id": "les-1287",
-   "fp": "2d55ef6dcf96d1f950addfe7047b40e76247260c"
+   "fp": "c1aed164bac576187f06adda16afce473e22824f"
   },
   "lessons/maths-foundations/categorical-and-multinomial-models.md": {
    "id": "les-1288",
-   "fp": "fd2fcbad305eb5365b388658475d90b6cfd29f08"
+   "fp": "947361e79c110ce41a75cb502f999de7a1b12c54"
   },
   "lessons/maths-foundations/causal-inference-foundations.md": {
    "id": "les-1289",
-   "fp": "4ef7c6a530790e2aa2cc17ba60a0e1dddedd9e77"
+   "fp": "0f413f666726d1a7b62cd1c7b1461169a1f79d3d"
   },
   "lessons/maths-foundations/computational-graphs-and-local-derivatives.md": {
    "id": "les-1290",
-   "fp": "e27a8d874ca55dab78a47daee9f2fceeb7c75c85"
+   "fp": "1425a9cec8d35ac990421db9859fac665be2ba6e"
   },
   "lessons/maths-foundations/concentration-tail-risk-and-rare-events.md": {
    "id": "les-1291",
-   "fp": "c9f0ff3f141fbd0fce652d776c7ee0d5b887b35a"
+   "fp": "7df2198dbc88dc4088d15feabfe1263d34ff5817"
   },
   "lessons/maths-foundations/condition-numbers-stability-and-solvers.md": {
    "id": "les-1292",
-   "fp": "c20285b8084db2b889929748fcf7fde4a3078b81"
+   "fp": "10730ad81cd82f323a84c934eb3554c29e133bdc"
   },
   "lessons/maths-foundations/conditional-expectation-and-conditional-variance.md": {
    "id": "les-1293",
-   "fp": "53b944294af565959bb8d598814339ca7008bbe4"
+   "fp": "a662910e13df339ecd82b953282b4cf578ce2d5a"
   },
   "lessons/maths-foundations/conditional-probability.md": {
    "id": "les-1294",
-   "fp": "336feab2594c9a58fce4850aa31dfe476829f5bd"
+   "fp": "f2be6542ec702d0a8c32f0e5a1ba940e4b2aec96"
   },
   "lessons/maths-foundations/conditioning-scaling-initialisation-and-normalisation.md": {
    "id": "les-1295",
-   "fp": "1786c50ac497ab804fa9fde4a4d7ba0de5c2e776"
+   "fp": "eb12691295b98a72e4cfb303d41930526b9ffafa"
   },
   "lessons/maths-foundations/confidence-intervals-and-frequentist-meaning.md": {
    "id": "les-1296",
-   "fp": "904858755643f2b2c57ddc23ba4486a9424d6d9e"
+   "fp": "efb4bdc00b0cfa1375d4d910c4011e9d1ff3c924"
   },
   "lessons/maths-foundations/constrained-optimisation-lagrange-multipliers-and-kkt-intuition.md": {
    "id": "les-1297",
-   "fp": "75b301cfc6f789c4bdabcee1110a6e11ed560e75"
+   "fp": "98eaa4b2abe78d2edbc785756419b4616e5c457e"
   },
   "lessons/maths-foundations/convex-sets-functions-and-guarantees.md": {
    "id": "les-1298",
-   "fp": "3ee562bf29d761d6cd4548d22d6ddde14219bec1"
+   "fp": "3670440465b2f22dd58866485a6f4b0abbbe76a5"
   },
   "lessons/maths-foundations/convexity-and-loss-landscapes.mdx": {
    "id": "les-1299",
@@ -5214,7 +5214,7 @@
   },
   "lessons/maths-foundations/cosine-similarity-angular-distance-embedding-retrieval.md": {
    "id": "les-1300",
-   "fp": "88a853830ada7a1cce576904761a9364d85f304d"
+   "fp": "c940c33c7e5917575df187a185326c07bd2bdf6a"
   },
   "lessons/maths-foundations/cosine-similarity.mdx": {
    "id": "les-1301",
@@ -5222,15 +5222,15 @@
   },
   "lessons/maths-foundations/counting-permutations-combinations-and-inclusion-exclusion.md": {
    "id": "les-1302",
-   "fp": "4e4f915197fb2a4236061628d98fef6285c74191"
+   "fp": "b84710117feb1f1cb6f76165185fc4c09334c93d"
   },
   "lessons/maths-foundations/covariance-and-whitening.md": {
    "id": "les-1303",
-   "fp": "d5eb813793daddf5c439d7964e8b3409ba65241e"
+   "fp": "ede076317c307a186011bc74317d654d5c88fc15"
   },
   "lessons/maths-foundations/covariance-correlation-and-confounding.md": {
    "id": "les-1304",
-   "fp": "75e3fe3ccb6047f846ce2ccc28a3dcd58dd599d7"
+   "fp": "f645e4bb26701aef50520f2aa47add07437780c5"
   },
   "lessons/maths-foundations/critical-points-monotonicity-and-extrema.md": {
    "id": "les-1305",
@@ -5238,15 +5238,15 @@
   },
   "lessons/maths-foundations/cross-entropy-and-negative-log-likelihood.md": {
    "id": "les-1306",
-   "fp": "d011d3fdc31abd9642cc9f5d43f0903c0c28797c"
+   "fp": "04a43d242fedc1d25bea216abc6231c7a6042282"
   },
   "lessons/maths-foundations/data-generating-processes-sampling-and-selection-bias.md": {
    "id": "les-1307",
-   "fp": "5a80d4e83ccb9b5f0eee1b7b60c936249217f759"
+   "fp": "534022fd98bad2285ae1a8d9505f51a7963c5616"
   },
   "lessons/maths-foundations/derivatives-of-affine-layers-and-elementwise-activations.md": {
    "id": "les-1308",
-   "fp": "36b5509e79d9f983502a4820c6cca92a7327e944"
+   "fp": "c0e765ab07515ca4d970ddd62cda5884c8dfdfae"
   },
   "lessons/maths-foundations/derivatives-rate-slope-sensitivity.md": {
    "id": "les-1309",
@@ -5254,19 +5254,19 @@
   },
   "lessons/maths-foundations/descriptive-statistics-and-exploratory-analysis.md": {
    "id": "les-1310",
-   "fp": "41629874c8c4dce76b326c3a8bd63996b0973827"
+   "fp": "efd18778dda787142ee6a2e60f8b24c7a7d04487"
   },
   "lessons/maths-foundations/diagonalisation-and-powers.md": {
    "id": "les-1311",
-   "fp": "4273792348d0f00e1faafec851d221705f663970"
+   "fp": "706d3d9318585e2b48f0a00089fd5b1095fd5f05"
   },
   "lessons/maths-foundations/differentials-trace-notation-and-matrix-calculus-conventions.md": {
    "id": "les-1312",
-   "fp": "7ea66bcafef41ebc3592e6698819ff3c2eee1b54"
+   "fp": "c35241e4d73935e8312b69b359b064fddaa55c19"
   },
   "lessons/maths-foundations/differentiation-rules.md": {
    "id": "les-1313",
-   "fp": "c7db7586211c1c825cd9810cc847c7020ff8433d"
+   "fp": "d463c40835ad790d9f71a90be9ca02446a50f497"
   },
   "lessons/maths-foundations/dot-product-explained.mdx": {
    "id": "les-1314",
@@ -5274,11 +5274,11 @@
   },
   "lessons/maths-foundations/dot-products-bilinear-scores.md": {
    "id": "les-1315",
-   "fp": "4758fddc42c76a2dbf814a1032a3843e5c61ac02"
+   "fp": "b96a8451edba90b0c4e391c4d041006ef49798b7"
   },
   "lessons/maths-foundations/effect-sizes-power-and-sample-size-planning.md": {
    "id": "les-1316",
-   "fp": "2d6dd128e7078201eee3fd2e343a7e0b211ee412"
+   "fp": "357d0b6a124b6e2bead778ad6c12c7d84587e068"
   },
   "lessons/maths-foundations/eigenvalues-and-eigenvectors.mdx": {
    "id": "les-1317",
@@ -5290,19 +5290,19 @@
   },
   "lessons/maths-foundations/entropy-and-uncertainty.md": {
    "id": "les-1319",
-   "fp": "c22a4f572cc885ccf95cf8988f11077a72f4bdd8"
+   "fp": "8d325a4d736c8acc379355808674182fea4a263d"
   },
   "lessons/maths-foundations/estimators-bias-consistency-efficiency-and-variance.md": {
    "id": "les-1320",
-   "fp": "e2c4a45ca1ffc345faedbcfec34d2ae60fd3fbc8"
+   "fp": "1fba112a7fa69e969922e74caaf82905f4aa58b2"
   },
   "lessons/maths-foundations/expectation-and-linearity.md": {
    "id": "les-1321",
-   "fp": "38b5f3428f14b88eab182742cb6366cd606ba807"
+   "fp": "51a769dfacce5172ee5d529e9befb9c3ec9fd5a3"
   },
   "lessons/maths-foundations/exponential-families-sufficient-statistics-and-glm.md": {
    "id": "les-1322",
-   "fp": "44fe8591e3f2f791c023d7e7ed950398b2f015c5"
+   "fp": "6c6aa85d9d4ccd7d051fcabbcc583443a8eebd66"
   },
   "lessons/maths-foundations/finite-differences-and-numerical-derivative-checks.md": {
    "id": "les-1323",
@@ -5318,23 +5318,23 @@
   },
   "lessons/maths-foundations/functions-mappings-and-composition.md": {
    "id": "les-1326",
-   "fp": "52dac57dd0519c2705b34144692968895d46eafa"
+   "fp": "e77e534db9268eca22a4dc7771e2bd4a10255c20"
   },
   "lessons/maths-foundations/gaussian-distributions-and-standardisation.md": {
    "id": "les-1327",
-   "fp": "817a17fe92f3a7c0b359e178b08c3f8d26c301ff"
+   "fp": "b4cdc4a37c8ad468dea349e3082a796384171f9e"
   },
   "lessons/maths-foundations/gaussian-elimination-and-row-echelon-form.md": {
    "id": "les-1328",
-   "fp": "55904cf2fc740968326f80492fcb16a901771f26"
+   "fp": "6dfa59526b644ec7ce1f50e0f240c02a1c3d3da1"
   },
   "lessons/maths-foundations/geometry-in-high-dimensions.md": {
    "id": "les-1329",
-   "fp": "51a641a44ce4e0635b1c7ec3e9237f48ca52cbb6"
+   "fp": "1f997b9d892982a19c7a243f4c6cbd6eb44418c0"
   },
   "lessons/maths-foundations/gradient-checking-and-debugging.md": {
    "id": "les-1330",
-   "fp": "19b4bb2b25890fa4921ce24061769b4138a35b1f"
+   "fp": "9f62ac5482a4d8d604c5d0953a0872d5fed4e38b"
   },
   "lessons/maths-foundations/gradient-descent-intuition.mdx": {
    "id": "les-1331",
@@ -5350,7 +5350,7 @@
   },
   "lessons/maths-foundations/gram-schmidt-orthogonalisation.md": {
    "id": "les-1334",
-   "fp": "fe6e000fccd8f4db61d771eed26fdd65aeab074d"
+   "fp": "938a8c1fbf6ff160ee17f1e1ee8974652c67f78c"
   },
   "lessons/maths-foundations/hessians-curvature-and-saddle-points.md": {
    "id": "les-1335",
@@ -5362,43 +5362,43 @@
   },
   "lessons/maths-foundations/hypothesis-tests-p-values-and-permutation-tests.md": {
    "id": "les-1337",
-   "fp": "90da963e71021c241e4f6f5c35006970af8e492c"
+   "fp": "722fc62d75afc0274827291d54e50524b1f7be8c"
   },
   "lessons/maths-foundations/importance-sampling-and-weighted-estimates.md": {
    "id": "les-1338",
-   "fp": "4af8537e9b8b17204aecf7087ab08a6fc4cff7af"
+   "fp": "4b251d02e06fb5e2af9aa470a0a38956452d693a"
   },
   "lessons/maths-foundations/independence-and-conditional-independence.md": {
    "id": "les-1339",
-   "fp": "8c09d0b7bd9042dac84d6e855fe4210d1a56873b"
+   "fp": "b9d4e6e6613fef9495d0e9bde6c3b788f5e8fef1"
   },
   "lessons/maths-foundations/integrals-accumulation-and-probability-mass.md": {
    "id": "les-1340",
-   "fp": "4b0fa9eccb8bbb7a6f86181255ecadc18dd14051"
+   "fp": "30e0a842b4ad89d72b454b37c9417f15651ec802"
   },
   "lessons/maths-foundations/inverses-and-why-solving-beats-explicit-inversion.md": {
    "id": "les-1341",
-   "fp": "09db6a4bfa1870cea47449e4d356c92fad9a7a67"
+   "fp": "9d0b0309ae3f29ec5c36444c485543eba9b0aeca"
   },
   "lessons/maths-foundations/invertibility-determinants-and-volume-intuition.md": {
    "id": "les-1342",
-   "fp": "fa824057286b4098ba7675d1fe8f4fd13ccb3d72"
+   "fp": "4ddaeaa0e836d247d96ab34de1c6d777793aace9"
   },
   "lessons/maths-foundations/jacobians-for-vector-valued-functions.md": {
    "id": "les-1343",
-   "fp": "497a0c1278b19adb405473a57235ffbd6a72b3ed"
+   "fp": "c9530da1e786a7edb2abdbf2cb1d481b9a7de9e5"
   },
   "lessons/maths-foundations/joint-marginal-and-conditional-distributions.md": {
    "id": "les-1344",
-   "fp": "503d09e7ee38e68efcb12836ea5c1cde89a6475e"
+   "fp": "75a8efc67074a27fbd01e02004f77da1addb21dd"
   },
   "lessons/maths-foundations/kernel-matrices-and-kernel-trick.md": {
    "id": "les-1345",
-   "fp": "a3f8967ad38827f147d71f77d863b1eded820f36"
+   "fp": "e05e5a5054bf057089d924abe47f845dd2d93d82"
   },
   "lessons/maths-foundations/kl-divergence-and-distribution-mismatch.md": {
    "id": "les-1346",
-   "fp": "02c5a5dd79ce8e28f8b0622bf9b18bd449d4d2a6"
+   "fp": "22cc9a06d39778ddfdee540d2a1a74ae5edec392"
   },
   "lessons/maths-foundations/kl-divergence.mdx": {
    "id": "les-1347",
@@ -5410,27 +5410,27 @@
   },
   "lessons/maths-foundations/labs/a0-notation-and-tensor-shape-clinic.md": {
    "id": "les-1349",
-   "fp": "954fcef9a55e88f3026395d4a74bf9ca84e580c8"
+   "fp": "42fb8f695670dc1ddfca315be1aa85fcef838616"
   },
   "lessons/maths-foundations/labs/a1-embedding-geometry-lab.md": {
    "id": "les-1350",
-   "fp": "aa34ef9fb735d528191ace101972a3ceed63f7cc"
+   "fp": "5a7e6236eeec7f5c5b25d1cef21333ab8f4e017e"
   },
   "lessons/maths-foundations/labs/a10-optimiser-and-stability-clinic.md": {
    "id": "les-1351",
-   "fp": "16353bb83ab7e19097a62aa3fef03c76e2b59ee3"
+   "fp": "3b5b8f236297127fc57e58003a9b8d752afbb1e5"
   },
   "lessons/maths-foundations/labs/a11-mathematical-ml-capstone.md": {
    "id": "les-1352",
-   "fp": "5ba82fd906274ad939cdec0913c19a76cb93cb63"
+   "fp": "533731d780b7ab3187e4f4c8c70d47cdc31f111e"
   },
   "lessons/maths-foundations/labs/a2-least-squares-from-three-angles.md": {
    "id": "les-1353",
-   "fp": "43bbc1eb43206bf4df07f282902a205e0239646a"
+   "fp": "237845ad33e8228105057e83792177fc6e16ac41"
   },
   "lessons/maths-foundations/labs/a3-pca-kernels-and-low-rank-compression.md": {
    "id": "les-1354",
-   "fp": "d38add8be1c6fc7f4e1bc8c580031a80475ed0e2"
+   "fp": "6f2e33a5b3995a83f9eccc948dec1fd75fde6d8d"
   },
   "lessons/maths-foundations/labs/a4-derivative-and-gradient-audit.md": {
    "id": "les-1355",
@@ -5442,31 +5442,31 @@
   },
   "lessons/maths-foundations/labs/a6-base-rates-bayes-and-simulation.md": {
    "id": "les-1357",
-   "fp": "7093e8a751904d90bc64db94f2504bb05ae61d4e"
+   "fp": "15db0ad11f456de9142b64e35344bfb8c3c6b93d"
   },
   "lessons/maths-foundations/labs/a7-likelihood-priors-and-sampling.md": {
    "id": "les-1358",
-   "fp": "bb73dca90fc74be5a5ef2ea80f5c3bc0b629fe61"
+   "fp": "ddb3a236f17b9e37e1199bc9dde4e66c1c4ec8d7"
   },
   "lessons/maths-foundations/labs/a8-evidence-under-uncertainty-and-causality.md": {
    "id": "les-1359",
-   "fp": "00b1d8cdcdcb45d3e45b7aa989a0ffc734347346"
+   "fp": "b97fc10a346c8aca71ca664102b6e4b937f5162e"
   },
   "lessons/maths-foundations/labs/a9-losses-are-probability-claims.md": {
    "id": "les-1360",
-   "fp": "752e22631ab2a84525fb0b9fe58ffb42c1ff2846"
+   "fp": "f44a26eeb3a592769cff876897afd286885589e0"
   },
   "lessons/maths-foundations/latent-variables-and-elbo-intuition.md": {
    "id": "les-1361",
-   "fp": "78ed69fdcee335e142a8dbd4bf4bcea1e5c6154c"
+   "fp": "6faaf5eae3b55511b36326db297cdcb27246032a"
   },
   "lessons/maths-foundations/law-of-large-numbers-and-central-limit-theorem.md": {
    "id": "les-1362",
-   "fp": "616ff98cf6ce1b8007c1a135c526e4a295efc08b"
+   "fp": "6c3eb8b74d1f72794cf9f31895fb6b122f3027cb"
   },
   "lessons/maths-foundations/law-of-total-probability.md": {
    "id": "les-1363",
-   "fp": "ad1730a92a6c2f72f0075047a4136cf26125f547"
+   "fp": "da736a50bc6ecda6b3626e17da569ab769f1c692"
   },
   "lessons/maths-foundations/learning-rate-schedules-warmup-and-gradient-clipping.md": {
    "id": "les-1364",
@@ -5474,19 +5474,19 @@
   },
   "lessons/maths-foundations/least-squares-normal-equations-and-projection-geometry.md": {
    "id": "les-1365",
-   "fp": "54895eccae29721c1c39a6f9d6ae0f5b85df936a"
+   "fp": "cc1e95d00f3389e6335987244c15e952afefce40"
   },
   "lessons/maths-foundations/level-sets-tangent-planes-and-constrained-movement.md": {
    "id": "les-1366",
-   "fp": "ecb338702ec52f488373ad6d8a51178185226af7"
+   "fp": "afe7703120f78c9d9a4c2290910f511d95389f6e"
   },
   "lessons/maths-foundations/likelihood-and-log-likelihood.md": {
    "id": "les-1367",
-   "fp": "4cb8b7c0ea30f75d3418198528ad5bfd1cb039ca"
+   "fp": "2a1b7ea161632a30ef426de93fdf75eeb77edf40"
   },
   "lessons/maths-foundations/likelihood-cross-entropy-and-classification-objectives.md": {
    "id": "les-1368",
-   "fp": "79119b16cb4e8f6ea706ea210c6927df179e5743"
+   "fp": "f6d4c121fa080241c6784f660f76f51369385c5a"
   },
   "lessons/maths-foundations/limits-continuity-and-local-approximation.md": {
    "id": "les-1369",
@@ -5494,7 +5494,7 @@
   },
   "lessons/maths-foundations/linear-systems-and-augmented-matrices.md": {
    "id": "les-1370",
-   "fp": "b9a8c864c21cedb6c0549bb9a0524385627e2a23"
+   "fp": "710941fab9d09eeb76f4243e3fbde61f03461288"
   },
   "lessons/maths-foundations/logarithms-for-ml.mdx": {
    "id": "les-1371",
@@ -5502,19 +5502,19 @@
   },
   "lessons/maths-foundations/low-rank-approximation-and-compression.md": {
    "id": "les-1372",
-   "fp": "bcd3ea4d2184c300a727823218c2d72bc49111ce"
+   "fp": "842c09a6c72625b297dc8fd91b02784028ed22cd"
   },
   "lessons/maths-foundations/map-and-regularisation.md": {
    "id": "les-1373",
-   "fp": "538a52353bd6308d511fa13c37444533fdbde54b"
+   "fp": "db98bb168f44338d9fed74c453bbef3314438fc0"
   },
   "lessons/maths-foundations/markov-chains-and-stationary-distributions.md": {
    "id": "les-1374",
-   "fp": "c8a8ef1158b59ec37bc910980398a582ec12bada"
+   "fp": "af0cd989706bbcdf616e4a8ef3aabbbd6c84726a"
   },
   "lessons/maths-foundations/matrices-as-data-tables-and-linear-maps.md": {
    "id": "les-1375",
-   "fp": "6086c0adbb55bf370c812a7975846f1fadc2ea35"
+   "fp": "a8b3522a620a6c46d2853508ba3cf8df241ad1e9"
   },
   "lessons/maths-foundations/matrices-as-transformations.mdx": {
    "id": "les-1376",
@@ -5522,11 +5522,11 @@
   },
   "lessons/maths-foundations/matrix-addition-scaling-transpose-and-symmetry.md": {
    "id": "les-1377",
-   "fp": "b6cd367b9c4b33d7d8c371c3a62d644e6babf28b"
+   "fp": "7f8106760f3ee64fd65f1d2ddc86ecb4a46321a9"
   },
   "lessons/maths-foundations/matrix-matrix-multiplication-and-batching.md": {
    "id": "les-1378",
-   "fp": "c8a55c652b5cad83a901181a5883579c7b70deb8"
+   "fp": "3ea2222bb62c3c68e3ac7c4f0b881161567d5fbf"
   },
   "lessons/maths-foundations/matrix-multiplication-mechanics.mdx": {
    "id": "les-1379",
@@ -5534,31 +5534,31 @@
   },
   "lessons/maths-foundations/matrix-vector-multiplication.md": {
    "id": "les-1380",
-   "fp": "34b07c33ac0d8a83f2a4a0d67b0eb45042368d89"
+   "fp": "7c7ade0616b03fa325876f594db0ad4dbff5bdf8"
   },
   "lessons/maths-foundations/maximum-likelihood-estimation.md": {
    "id": "les-1381",
-   "fp": "af31698b91418565f9f5c183c55d052a7c82dd60"
+   "fp": "2641ee1a44cc440f096c7726b74019575986ac48"
   },
   "lessons/maths-foundations/momentum-nesterov-rmsprop-and-adam.md": {
    "id": "les-1382",
-   "fp": "a1e145ec2e51c502e266eb893b117ec198f7bb6e"
+   "fp": "2b8c1b164ffaf41f5960adac3c75d187c29ad924"
   },
   "lessons/maths-foundations/monte-carlo-estimation-and-standard-errors.md": {
    "id": "les-1383",
-   "fp": "f24c7dd3814451b69dcc527ed64f6e87d499d1cb"
+   "fp": "e7c998ec0c4bd9e735451cc51b0c33829fb6f3ee"
   },
   "lessons/maths-foundations/multivariate-gaussians-and-covariance-geometry.md": {
    "id": "les-1384",
-   "fp": "0557fec16e2471be6caf8616eea5074e37861679"
+   "fp": "596626f9593d08e4fd5f4b27dec08996579e556e"
   },
   "lessons/maths-foundations/mutual-information-and-representation-relevance.md": {
    "id": "les-1385",
-   "fp": "2ef5bc0f81b14ade445499fcd726b060ea9dd07c"
+   "fp": "4e77477c60fd5a0509f6686faff52694d6e01e15"
   },
   "lessons/maths-foundations/naive-bayes-and-generative-vs-discriminative-modeling.md": {
    "id": "les-1386",
-   "fp": "d233a18fb54456042b386fb56060b45f29015fb1"
+   "fp": "79828f0770eff32904dbd415e4dc562df575960d"
   },
   "lessons/maths-foundations/newton-quasi-newton-and-coordinate-descent.md": {
    "id": "les-1387",
@@ -5566,11 +5566,11 @@
   },
   "lessons/maths-foundations/non-smooth-optimisation-and-subgradients.md": {
    "id": "les-1388",
-   "fp": "9e542e9afe3d66abfca30d0caf66fbb67dca2bbd"
+   "fp": "6cad5260d13723edbf6e086a762a48eb887f07a3"
   },
   "lessons/maths-foundations/norms-and-distances.md": {
    "id": "les-1389",
-   "fp": "38bec0f3cea30ce4f90cd85fc0ef46eb8f9b27f7"
+   "fp": "8c83f1c1e50772d01d7aec6126a588e1f5470136"
   },
   "lessons/maths-foundations/notation-indices-sums-and-products.md": {
    "id": "les-1390",
@@ -5578,7 +5578,7 @@
   },
   "lessons/maths-foundations/null-spaces-column-spaces-row-spaces-and-the-fundamental-picture.md": {
    "id": "les-1391",
-   "fp": "084c8fbba3f11a576fe6a513c513c0c710fff9ae"
+   "fp": "ad0d799c12c56ffcce2dd7de2e1a2fea12c304a5"
   },
   "lessons/maths-foundations/numerical-stability-log-sum-exp.mdx": {
    "id": "les-1392",
@@ -5586,27 +5586,27 @@
   },
   "lessons/maths-foundations/numerical-stability-softmax-logsumexp-and-safe-probabilities.md": {
    "id": "les-1393",
-   "fp": "12fe09fb196350e99571f34846f6071d602c79cc"
+   "fp": "8cb5d1b284419abec770d57699626c205ec9599e"
   },
   "lessons/maths-foundations/objectives-losses-empirical-risk-and-constraints.md": {
    "id": "les-1394",
-   "fp": "1294e1a9bf0a5db1e4a99f22bb31d1fceee5b82f"
+   "fp": "bfc644ddf60aaeb4fbf663247212b256f27ff03b"
   },
   "lessons/maths-foundations/one-dimensional-optimisation-clinic.md": {
    "id": "les-1395",
-   "fp": "80715a6926fbdaaaea1aac10edadf5891b4ab501"
+   "fp": "b33e947ecb8161562db2fc81ade8fd0440350bbb"
   },
   "lessons/maths-foundations/optimisation-diagnostics-and-second-order-perspective.md": {
    "id": "les-1396",
-   "fp": "c67d1c4e898710bfdd622d1347baf360f62372bf"
+   "fp": "8baaa4c15a66627966020eadf081feea31fbe3a6"
   },
   "lessons/maths-foundations/orthogonal-complements-and-projection-matrices.md": {
    "id": "les-1397",
-   "fp": "3b4cdb35abe6645357e3d94fde1df33731acd5a7"
+   "fp": "38a2d698c321829163f9ad628b63b1a2430f2bb9"
   },
   "lessons/maths-foundations/orthogonality-orthonormal-coordinates.md": {
    "id": "les-1398",
-   "fp": "c3492bd75ff3b53a2d11e37faea2275988a04388"
+   "fp": "5d9e9f08ff986138c0921cedd018118480bdab62"
   },
   "lessons/maths-foundations/partial-derivatives-and-chain-rule.mdx": {
    "id": "les-1399",
@@ -5614,11 +5614,11 @@
   },
   "lessons/maths-foundations/partial-derivatives-and-coordinate-wise-sensitivity.md": {
    "id": "les-1400",
-   "fp": "8549838b3849efafcaa50d0e9978635b8d4654e8"
+   "fp": "329f25b6f5a82ea53b6b61be99dfb07b649ed7cb"
   },
   "lessons/maths-foundations/pca-from-variance-and-svd.md": {
    "id": "les-1401",
-   "fp": "faa4c9c3dd6120f06322d87291f7357e6a136d31"
+   "fp": "464756a00234c1a12af610923c20c25a74c073f8"
   },
   "lessons/maths-foundations/perplexity-explained.mdx": {
    "id": "les-1402",
@@ -5626,11 +5626,11 @@
   },
   "lessons/maths-foundations/pmfs-cdfs-pdfs-and-mass-versus-density.md": {
    "id": "les-1403",
-   "fp": "2840ad2cc675a7959d34812916fe5d5e9f27b02b"
+   "fp": "4ce26bc53835d75bb5ffe9942a16226a743cb564"
   },
   "lessons/maths-foundations/poisson-counts-and-rate-assumptions.md": {
    "id": "les-1404",
-   "fp": "763d3fc17426332622883b585f5b6f52bf2520b7"
+   "fp": "fac02a909d46971dac832e1b723147093e306463"
   },
   "lessons/maths-foundations/probability-basics-for-ai.mdx": {
    "id": "les-1405",
@@ -5638,35 +5638,35 @@
   },
   "lessons/maths-foundations/projections-and-residuals.md": {
    "id": "les-1406",
-   "fp": "6a85ae1919609109d52dbd672a83001c4a268c84"
+   "fp": "b2bea11d4e446fb9c4c1570ece7be0d5bc5e347b"
   },
   "lessons/maths-foundations/qr-factorisation-and-least-squares.md": {
    "id": "les-1407",
-   "fp": "0de1584729d73092666f66ff6d88b6630d289b2c"
+   "fp": "0f62d9f82ddacfe97d6b1f229a47a1f5065ece96"
   },
   "lessons/maths-foundations/quantiles-order-statistics-empirical-distributions-and-anomaly-thresholds.md": {
    "id": "les-1408",
-   "fp": "288cfa48f98b8e8b00ac31c78d73d1799293331d"
+   "fp": "d4beb9e22939db0295e8e820fd870084b7f01ca7"
   },
   "lessons/maths-foundations/random-variables-and-support.md": {
    "id": "les-1409",
-   "fp": "ff7447969ef9c31018a5d34b068c18fe4e44d237"
+   "fp": "13ed0fd6039d39cda15b0c7f1dedc4c1dfa28c5d"
   },
   "lessons/maths-foundations/rank-pivots-and-identifiability.md": {
    "id": "les-1410",
-   "fp": "57a7eb9ab9fc721eefe34bab7ed9438b54b18bd2"
+   "fp": "bba101cc695728634293fcf96f3e172f53805509"
   },
   "lessons/maths-foundations/ratios-fractions-percentages-scientific-notation-and-sanity-checks.md": {
    "id": "les-1411",
-   "fp": "752548f62ca13f69f2e58d6202408da0abadc462"
+   "fp": "02732fe6d84d9f39cc0e2eb7b3aeb36688b4d381"
   },
   "lessons/maths-foundations/regularisation-geometry-l1-l2-weight-decay-and-early-stopping.md": {
    "id": "les-1412",
-   "fp": "de8a49b5e1a1abb067fb0ef3a2b5e4ec1f87808b"
+   "fp": "67025017fb8e3509a6ced473fcac84c18f674c5f"
   },
   "lessons/maths-foundations/reverse-mode-autodiff-and-backpropagation.md": {
    "id": "les-1413",
-   "fp": "bf3e6dbe52cf190de7d4719fcf0a06fb817aa64e"
+   "fp": "dee8e6e1cf822fb0c0f66e9c5ff1a5a7bb7cc4ac"
   },
   "lessons/maths-foundations/s1-1-discrete-signals-sampling-and-aliasing.md": {
    "id": "les-1414",
@@ -5682,7 +5682,7 @@
   },
   "lessons/maths-foundations/s1-4-fourier-bases-and-the-discrete-fourier-transform.md": {
    "id": "les-1417",
-   "fp": "31666bbdbdd8a0d6b2b23d053f79bcc679e6d540"
+   "fp": "47015772caa4164bf6041e3aa170ac2873e93c52"
   },
   "lessons/maths-foundations/s1-5-frequency-filtering-and-convolution-theorem.md": {
    "id": "les-1418",
@@ -5694,11 +5694,11 @@
   },
   "lessons/maths-foundations/s1-7-image-transforms-interpolation-and-invariance.md": {
    "id": "les-1420",
-   "fp": "222a4d43fd2f57c4871e83b9626182b3a07f8082"
+   "fp": "ccc0294c65f4a5057d4b3e624574463ea7ff730b"
   },
   "lessons/maths-foundations/s1-8-vision-audio-case-study.md": {
    "id": "les-1421",
-   "fp": "291b25cf8bbe47deb47d2c4c46c4891e3ca0951a"
+   "fp": "7c7bae28fa5c00714aa9564759de934fbe217bd6"
   },
   "lessons/maths-foundations/s2-1-markov-property-and-state-design.md": {
    "id": "les-1422",
@@ -5710,19 +5710,19 @@
   },
   "lessons/maths-foundations/s2-3-markov-decision-processes.md": {
    "id": "les-1424",
-   "fp": "a4d6e4c30cf4f55bcc0b91655b6dad696264d3b0"
+   "fp": "2b9d22904d222b2c3c729b920d510cdd844588e6"
   },
   "lessons/maths-foundations/s2-4-bellman-expectation-equations.md": {
    "id": "les-1425",
-   "fp": "d3c438c50f90fd49c38d5a2a16b50915848ce6f1"
+   "fp": "3b36d1aa831d2c961e03a135ae38cfc4323f50cd"
   },
   "lessons/maths-foundations/s2-5-bellman-optimality-and-value-iteration.md": {
    "id": "les-1426",
-   "fp": "ef4adf655735a4914a5683686d45db81ab7a1374"
+   "fp": "649c3e5ae80160f806064affb00cd7bfb9e873b8"
   },
   "lessons/maths-foundations/s2-6-policies-exploration-and-occupancy.md": {
    "id": "les-1427",
-   "fp": "eefda5e2f9321108d423804fe5315b56500e7aba"
+   "fp": "0c1a064fd367b126d2b2eddc8e0f3cc5981703a7"
   },
   "lessons/maths-foundations/s2-7-temporal-difference-learning-and-bias-variance.md": {
    "id": "les-1428",
@@ -5730,15 +5730,15 @@
   },
   "lessons/maths-foundations/s2-8-rl-safety-and-offline-data-warnings.md": {
    "id": "les-1429",
-   "fp": "d61a55928f162a0c8a5592cce91799175348becf"
+   "fp": "11506bce278f01e21cd7cd53fac43522a2e87dd2"
   },
   "lessons/maths-foundations/s2-9-hidden-markov-models-filtering-and-decoding.md": {
    "id": "les-1430",
-   "fp": "3948da8f4c277f7e9586a12a2e0a97ae8178b11f"
+   "fp": "41baaf3ac37fac021a89a4dade9a07c5bc9091bb"
   },
   "lessons/maths-foundations/s3-1-graph-notation-adjacency-incidence-and-degree-matrices.md": {
    "id": "les-1431",
-   "fp": "839a066a3702382e241a68ce60d60549ea8fb951"
+   "fp": "2b0d4d3ee83f9ff20d3503767cdc265d2f17d0bd"
   },
   "lessons/maths-foundations/s3-2-random-walks-and-transition-operators.md": {
    "id": "les-1432",
@@ -5750,11 +5750,11 @@
   },
   "lessons/maths-foundations/s3-4-spectral-clustering-and-embeddings.md": {
    "id": "les-1434",
-   "fp": "9a15c88ee6d57821a36f21738baaa4b59ee92516"
+   "fp": "c13c576f83cdff7719faa34d35b55c5db2c231df"
   },
   "lessons/maths-foundations/s3-5-message-passing-and-oversmoothing.md": {
    "id": "les-1435",
-   "fp": "9126671d841f7ccda654c0ff3b38a18af2ac2ef2"
+   "fp": "c3d8b0b25e858179639c9ea94857172a2c808758"
   },
   "lessons/maths-foundations/s4-1-bayesian-posterior-inference-and-posterior-predictive-checks.md": {
    "id": "les-1436",
@@ -5762,47 +5762,47 @@
   },
   "lessons/maths-foundations/s4-2-conjugacy-and-exponential-family-structure.md": {
    "id": "les-1437",
-   "fp": "2768631a42bbe1e29d3f4757d887e08073d6419a"
+   "fp": "8c872af719b61114b3b81b5db1b4e486bd899253"
   },
   "lessons/maths-foundations/s4-3-markov-chain-monte-carlo.md": {
    "id": "les-1438",
-   "fp": "069cb26ebb94111ba8936a6388f6c5b0cf18330c"
+   "fp": "d88f9461fcc6f8a2edfed4c20de811fb4842358c"
   },
   "lessons/maths-foundations/s4-4-variational-inference-and-the-elbo.md": {
    "id": "les-1439",
-   "fp": "6f0369fa967f802c3356b0b5baae4150e9db3299"
+   "fp": "52bc33c5eea8b00b463f240117673d2ebc9012a4"
   },
   "lessons/maths-foundations/s4-5-gaussian-processes-and-kernel-uncertainty.md": {
    "id": "les-1440",
-   "fp": "47a4f3bdee81350804979b5912bbe19100874617"
+   "fp": "bfc63f7460ff1e563aec16e2cb12e74083b476f1"
   },
   "lessons/maths-foundations/s4-6-causal-graphical-models-do-calculus-and-identifiability-limits.md": {
    "id": "les-1441",
-   "fp": "085f1b8ba6b5ae17b5d053eda3cee7b2b6e18637"
+   "fp": "b3fbf82c40496a985fd796f99231a6f6fdf289ef"
   },
   "lessons/maths-foundations/sample-spaces-events-and-probability-axioms.md": {
    "id": "les-1442",
-   "fp": "3d5e5a12ee48005971607294823043814b7b9dff"
+   "fp": "59da4f7ac6b0c9380e91345f0ce9fb3eb10c1063"
   },
   "lessons/maths-foundations/sampling-inverse-transform-and-rejection-sampling.md": {
    "id": "les-1443",
-   "fp": "2765459bb373f98e2c0c8ffc85edc4cb2e74f187"
+   "fp": "698e4993e34ad49d10fc04c85f0ac2103db80bba"
   },
   "lessons/maths-foundations/scalars-arrays-tensors-axes-shapes-and-broadcasting.md": {
    "id": "les-1444",
-   "fp": "b26895aae3a993255f6c3e45284115c2e0e499d2"
+   "fp": "e5a9dbe515ca696497e867d5a25d9138c026f283"
   },
   "lessons/maths-foundations/second-derivatives-curvature-and-local-quadratic-models.md": {
    "id": "les-1445",
-   "fp": "ca0130ef01e06552ddc0ba27228bd6dbed15e135"
+   "fp": "06d4560e4cf4cdcde625c4887260083446f8acae"
   },
   "lessons/maths-foundations/self-information-and-coding-intuition.md": {
    "id": "les-1446",
-   "fp": "d7b623dc571525983125413ae7cd88d841c6d1ec"
+   "fp": "7c11e1dbd70603b49add5a69b85b51bf5eb6d23e"
   },
   "lessons/maths-foundations/sequences-recurrences-polynomials-quadratics-and-growth-rates.md": {
    "id": "les-1447",
-   "fp": "9b8417d58b85dbaaddc54c24535c3d6abb3778dc"
+   "fp": "663cf06d444364bc05b913031e5e11bad0de6980"
   },
   "lessons/maths-foundations/sets-logic-and-proof-habits.md": {
    "id": "les-1448",
@@ -5810,7 +5810,7 @@
   },
   "lessons/maths-foundations/similarity-search-design-clinic.md": {
    "id": "les-1449",
-   "fp": "5376331100d98f55397fe2cff1431dea0b28e351"
+   "fp": "8ef992cf7a3f4958ddd82cede010229b52223958"
   },
   "lessons/maths-foundations/singular-value-decomposition.mdx": {
    "id": "les-1450",
@@ -5818,15 +5818,15 @@
   },
   "lessons/maths-foundations/span-linear-independence-basis-and-dimension.md": {
    "id": "les-1451",
-   "fp": "79b2283551682b1510043b964dee26de6ece1bd9"
+   "fp": "464abf5483f43417e7f0bfaace5ed43187aa5667"
   },
   "lessons/maths-foundations/stochastic-and-minibatch-gradient-descent.md": {
    "id": "les-1452",
-   "fp": "ef06dd96b0afcf78842800a9376e84903ebe2518"
+   "fp": "4ec6f3a0678eec06bc83b265d8e8491ad9093b5d"
   },
   "lessons/maths-foundations/symmetric-matrices-quadratic-forms-and-definiteness.md": {
    "id": "les-1453",
-   "fp": "41346395615b7a8a88897b8dac41bdf9e4b8dea1"
+   "fp": "ff241ae8a264dc836d7e13e28ebc92b555b2fad1"
   },
   "lessons/maths-foundations/taylor-expansions-and-approximation-error.md": {
    "id": "les-1454",
@@ -5854,27 +5854,27 @@
   },
   "lessons/maths-foundations/transformations-of-random-variables-and-lotus.md": {
    "id": "les-1460",
-   "fp": "907c6fc9e6d2fcaa0a5ad1fc2cbcf6454c21d526"
+   "fp": "b56c3eb9cb11596e96c31776c1624d64a85b18c4"
   },
   "lessons/maths-foundations/uniform-geometric-and-exponential-models.md": {
    "id": "les-1461",
-   "fp": "672f786d702b4c852d87fa7f932b1bf5ad707c4c"
+   "fp": "145d606d1169f00aaf9d171fe06a06fa514f6e34"
   },
   "lessons/maths-foundations/units-scales-normalisation.md": {
    "id": "les-1462",
-   "fp": "1588589cbd6a3539a5d61870ab930c3369e2d847"
+   "fp": "e85a8f1da5fbc620d6795db614854fe8cf3c206f"
   },
   "lessons/maths-foundations/variance-standard-deviation-and-bias-variance.md": {
    "id": "les-1463",
-   "fp": "8f8253874bf9d57ab868b53a770f5a3e01cac04f"
+   "fp": "3193f9e9b05e9c513cdea267259794bad30f0d44"
   },
   "lessons/maths-foundations/vector-addition-affine-combinations-centroids.md": {
    "id": "les-1464",
-   "fp": "ba7c439b63c81d9e88efe760f882beef7c158b8b"
+   "fp": "33ee61a4a65cf9dbf79d9cda69a10b961205a559"
   },
   "lessons/maths-foundations/vector-means-centring-feature-standardisation.md": {
    "id": "les-1465",
-   "fp": "7522c68e89f756008d4df5fe78bd94e6cbda7b3f"
+   "fp": "b65e9d8a238089eb13412b1091aca31e9153658f"
   },
   "lessons/maths-foundations/vector-norms.mdx": {
    "id": "les-1466",
@@ -5882,11 +5882,11 @@
   },
   "lessons/maths-foundations/vectors-as-coordinates-features.md": {
    "id": "les-1467",
-   "fp": "6ae5be4cee6583bdadc489ead0c6c91f5f014a32"
+   "fp": "40cc53f0a3f60f441d4673ef0fc262549c1300b0"
   },
   "lessons/maths-foundations/visual-reasoning-and-diagnostic-plots.md": {
    "id": "les-1468",
-   "fp": "2023bee9757e78188dd97c4a1faeba9f314c529f"
+   "fp": "bf114d02035f38a0b89938a4e7fa90ed7bac5f69"
   },
   "lessons/maths-foundations/what-is-a-vector.mdx": {
    "id": "les-1469",

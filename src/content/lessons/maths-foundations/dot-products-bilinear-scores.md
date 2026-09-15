@@ -165,5 +165,5 @@ the score is a defensible signal.
 ## Continue, go deeper, apply it
 
 - Continue: [Norms and distances](/learn/maths-foundations/norms-and-distances)
-- Go deeper: Linear algebra for ML
-- Apply it: A1 embedding geometry lab
+- Go deeper: [Linear algebra for ML](/learn/machine-learning/linear-algebra-for-ml)
+- Apply it: [A1 embedding geometry lab](/learn/maths-foundations/labs/a1-embedding-geometry-lab)

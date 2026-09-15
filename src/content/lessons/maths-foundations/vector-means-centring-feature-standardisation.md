@@ -159,5 +159,5 @@ whose absolute scale is meaningful. Validate the choice on the task.
 ## Continue, go deeper, apply it
 
 - Continue: [Geometry in high dimensions](/learn/maths-foundations/geometry-in-high-dimensions)
-- Go deeper: Linear algebra for ML
-- Apply it: A1 embedding geometry lab
+- Go deeper: [Linear algebra for ML](/learn/machine-learning/linear-algebra-for-ml)
+- Apply it: [A1 embedding geometry lab](/learn/maths-foundations/labs/a1-embedding-geometry-lab)

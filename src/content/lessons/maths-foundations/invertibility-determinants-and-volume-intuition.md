@@ -132,4 +132,4 @@ useful least-squares or constrained problem.
 
 - Continue: [Inverses and why solving beats explicit inversion](/learn/maths-foundations/inverses-and-why-solving-beats-explicit-inversion)
 - Go deeper: [Span, linear independence, basis, and dimension](/learn/maths-foundations/span-linear-independence-basis-and-dimension)
-- Apply it: Linear regression
+- Apply it: [Linear regression](/learn/machine-learning/linear-regression)

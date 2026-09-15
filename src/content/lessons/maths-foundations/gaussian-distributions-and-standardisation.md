@@ -133,5 +133,5 @@ covariance geometry and conditioning.
 ## Continue, go deeper, apply it
 
 - Continue: [Multivariate Gaussians and covariance geometry](/learn/maths-foundations/multivariate-gaussians-and-covariance-geometry)
-- Go deeper: Linear algebra for ML
+- Go deeper: [Linear algebra for ML](/learn/machine-learning/linear-algebra-for-ml)
 - Apply it: Likelihood, priors, and sampling assignment

@@ -1,6 +1,6 @@
 # Content registry — audit views
 
-Generated 2026-09-15T09:49:03.214Z by `scripts/build-content-registry.mjs`.
+Generated 2026-09-15T09:56:32.599Z by `scripts/build-content-registry.mjs`.
 2387 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
@@ -69,7 +69,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 | track | files | concept | worked ex. | mistakes | compared | cheatsheet | quiz | lab | capstone | % code | % check | % sources | med. words | quick guide | quiz bank |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | ai-literacy | 59 | 43 | 2 | 0 | 2 | 2 | 7 | 1 | 2 | 61% | 0% | 2% | 1513 | — | — |
-| maths-foundations | 193 | 179 | 0 | 0 | 2 | 0 | 0 | 11 | 1 | 71% | 0% | 0% | 771 | — | — |
+| maths-foundations | 193 | 179 | 0 | 0 | 2 | 0 | 0 | 11 | 1 | 71% | 0% | 0% | 763 | — | — |
 | python-data-apis | 57 | 44 | 0 | 2 | 0 | 0 | 10 | 0 | 1 | 98% | 0% | 4% | 1615 | — | — |
 | ai-foundations | 160 | 127 | 9 | 0 | 10 | 0 | 10 | 0 | 4 | 68% | 0% | 1% | 1009 | — | yes |
 | llm-foundations | 131 | 113 | 0 | 0 | 10 | 0 | 7 | 0 | 1 | 48% | 94% | 0% | 796 | — | — |
@@ -108,7 +108,7 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - modules without practice ending: "The essential maths for AI" ends on convexity-and-loss-landscapes (concept); "Single-variable calculus" ends on one-dimensional-optimisation-clinic (concept); "Decompositions and numerical linear algebra" ends on kernel-matrices-and-kernel-trick (concept); "Mathematical language and computation" ends on sequences-recurrences-polynomials-quadratics-and-growth-rates (concept) +12 more
 - dead-end finish: last live lesson is s4-6-causal-graphical-models-do-calculus-and-identifiability-limits (concept)
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet
-- 6 island lessons (no in-body links)
+- 1 island lesson (no in-body links)
 - 10 duplicate-candidate pairs in track
 - promise gap: no live node title covers "The minimum maths"
 
@@ -140,7 +140,7 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - modules without practice ending: "Agents, robotics, and hybrid systems" ends on constraint-satisfaction (concept); "Original concept recaps" ends on uncertainty-and-decision (concept)
 - dead-end finish: last live lesson is uncertainty-and-decision (concept)
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet
-- 71 island lessons (no in-body links)
+- 69 island lessons (no in-body links)
 - 2 duplicate-candidate pairs in track
 
 ### machine-learning — 208 files, 12 modules — starts: "How to use the Classical ML course"
@@ -148,7 +148,7 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - modules without practice ending: "Orientation and problem framing" ends on generalization-and-evaluation (concept); "Data, features, and decisions" ends on ml-115-case-study-triage-under-review-capacity (concept); "Maths, objectives, and generalisation" ends on regularization-and-bias-variance (concept); "Linear and generalised models" ends on ml-216-case-study-demand-forecast-with-uncertainty (concept) +7 more
 - dead-end finish: last live lesson is deep-lectures/907-time-series-ranking-and-recommender-systems-under-temporal-exposure-feedback (concept)
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet
-- 112 island lessons (no in-body links)
+- 94 island lessons (no in-body links)
 - 13 duplicate-candidate pairs in track
 - promise gap: no live node title covers "model families"
 
@@ -157,7 +157,7 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - modules without practice ending: "Programme orientation" ends on dl-001-how-to-use-the-deep-learning-program (concept); "Sequences, transformers, generation, and RL" ends on sequence-generative/338-rlhf-preference-optimization-and-alignment-bridge (concept); "Concept recaps" ends on neural-networks-and-representations (concept)
 - dead-end finish: last live lesson is neural-networks-and-representations (concept)
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet
-- 63 island lessons (no in-body links)
+- 61 island lessons (no in-body links)
 - 3 duplicate-candidate pairs in track
 
 ### prompt-engineering — 142 files, 7 modules — starts: "The Whole Game: One Task From Vague Ask to Reliable Prompt"
@@ -260,20 +260,20 @@ and split always need a written human reason (see checklist).
 
 | disposition | items |
 |---|---:|
-| keep | 1960 |
-| investigate | 422 |
+| keep | 1987 |
+| investigate | 395 |
 | expand | 5 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
 | intentClarity | 2170 | 1.92 | 0 | 184 | 1986 |
 | correctnessSources | 43 | 1.28 | 0 | 31 | 12 |
-| completeness | 2311 | 1.65 | 44 | 719 | 1548 |
+| completeness | 2311 | 1.65 | 44 | 715 | 1552 |
 | prerequisiteFit | 2246 | 2.00 | 3 | 0 | 2243 |
 | handsOn | 2170 | 1.49 | 527 | 53 | 1590 |
 | explanationQuality | 2170 | 1.96 | 20 | 56 | 2094 |
 | metadata | 2170 | 1.87 | 0 | 284 | 1886 |
-| linking | 2081 | 1.41 | 422 | 378 | 1281 |
+| linking | 2081 | 1.47 | 395 | 312 | 1374 |
 | freshnessHealth | 2387 | 0.78 | 790 | 1334 | 263 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
@@ -281,7 +281,7 @@ and split always need a written human reason (see checklist).
 
 ### Non-keep dispositions
 
-#### investigate: zero in-body internal links (422)
+#### investigate: zero in-body internal links (395)
 
 - /learn/agentic-ai/agents-vs-workflows — Choose an agent only when a workflow is not enough
 - /learn/agentic-ai/state-memory-and-recovery — Design agent state, memory, and recovery explicitly
@@ -323,17 +323,17 @@ and split always need a written human reason (see checklist).
 - /learn/ai-foundations/reliable-ai/218-audits-evidence-and-independent-review — Audits, Evidence, and Independent Review
 - /learn/ai-foundations/reliable-ai/219-incident-response-rollback-and-learning — AI Incidents, Rollback, and Organisational Learning
 - /learn/ai-foundations/reliable-ai/220-human-in-the-loop-and-meaningful-oversight — Human-in-the-Loop and Meaningful Oversight
-- … 382 more in content-registry.json
+- … 355 more in content-registry.json
 
-#### expand: thin vs family median (238w vs ~779w) (1)
+#### expand: thin vs family median (238w vs ~778w) (1)
 
 - /learn/ai-foundations/choosing-a-model — Choosing a model in 2026
 
-#### expand: thin vs family median (277w vs ~779w) (1)
+#### expand: thin vs family median (277w vs ~778w) (1)
 
 - /learn/llm-foundations/next-token-prediction — Next-Token Prediction: The One Objective
 
-#### expand: thin vs family median (269w vs ~779w) (1)
+#### expand: thin vs family median (269w vs ~778w) (1)
 
 - /learn/llm-foundations/tokenization-explained — Tokenization: How Text Becomes Tokens
 
@@ -347,7 +347,7 @@ and split always need a written human reason (see checklist).
 
 ## Duplicate candidates
 
-334 pairs by title/slug similarity (106 not already cross-linked) — candidates for the merge/redirect editorial pass, not verdicts. Pairs where one already links to the other are marked linked — often deliberate two-part lessons.
+334 pairs by title/slug similarity (105 not already cross-linked) — candidates for the merge/redirect editorial pass, not verdicts. Pairs where one already links to the other are marked linked — often deliberate two-part lessons.
 
 | item A | item B | jac | contain | stem | linked | scope |
 |---|---|---:|---:|---|---|---|
@@ -648,7 +648,7 @@ Largest queue; full list in JSON. Vendor-signal sample:
 - /learn/ai-literacy/meet-skills-connectors-and-agents — Meet skills, connectors, and agents — safely
 - /learn/ai-literacy/seven-first-ai-workflows-lab — Lab: seven first AI workflows for everyday work
 
-### zero in-body internal links (template nav still applies) (474)
+### zero in-body internal links (template nav still applies) (446)
 
 - /learn/agentic-ai/agents-vs-workflows — Choose an agent only when a workflow is not enough
 - /learn/agentic-ai/state-memory-and-recovery — Design agent state, memory, and recovery explicitly
@@ -690,7 +690,7 @@ Largest queue; full list in JSON. Vendor-signal sample:
 - /learn/ai-foundations/reliable-ai/218-audits-evidence-and-independent-review — Audits, Evidence, and Independent Review
 - /learn/ai-foundations/reliable-ai/219-incident-response-rollback-and-learning — AI Incidents, Rollback, and Organisational Learning
 - /learn/ai-foundations/reliable-ai/220-human-in-the-loop-and-meaningful-oversight — Human-in-the-Loop and Meaningful Oversight
-- … 434 more
+- … 406 more
 
 ### live file not in curriculum (0)
 

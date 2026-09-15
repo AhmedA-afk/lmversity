@@ -74,8 +74,8 @@ represents social and product consequences.
 
 ## Continue, go deeper, apply it
 
-- Continue: Bayesian and generative learning
-- Go deeper: Generalization and evaluation
+- Continue: [Bayesian and generative learning](/learn/machine-learning/bayesian-and-generative-learning)
+- Go deeper: [Generalization and evaluation](/learn/machine-learning/generalization-and-evaluation)
 - Apply it: annotate a model report with its generalization assumptions.
 ## Formal extension
 

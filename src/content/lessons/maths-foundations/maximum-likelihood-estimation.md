@@ -94,6 +94,6 @@ MLE does not protect against a biased sample, misspecified likelihood, overcapac
 
 ## Continue, go deeper, apply it
 
-- Continue: MAP and regularisation
+- Continue: [MAP and regularisation](/learn/maths-foundations/map-and-regularisation)
 - Go deeper: [Naive Bayes and generative versus discriminative modelling](/learn/maths-foundations/naive-bayes-and-generative-vs-discriminative-modeling)
-- Apply it: Logistic regression
+- Apply it: [Logistic regression](/learn/machine-learning/logistic-regression)

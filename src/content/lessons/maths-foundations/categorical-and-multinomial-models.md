@@ -132,5 +132,5 @@ question: how long until an event occurs?
 ## Continue, go deeper, apply it
 
 - Continue: [Uniform, geometric, and exponential models](/learn/maths-foundations/uniform-geometric-and-exponential-models)
-- Go deeper: Logistic regression
+- Go deeper: [Logistic regression](/learn/machine-learning/logistic-regression)
 - Apply it: Likelihood, priors, and sampling assignment

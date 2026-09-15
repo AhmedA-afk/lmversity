@@ -116,6 +116,6 @@ assumptions; a graph is a transparent assumption set, not an oracle.
 
 ## Continue, go deeper, apply it
 
-- Continue: Problem framing and baselines
-- Go deeper: Causal questions versus predictive models
-- Apply it: Risk before model
+- Continue: [Problem framing and baselines](/learn/machine-learning/problem-framing-and-baselines)
+- Go deeper: [Causal questions versus predictive models](/learn/machine-learning/causal-questions-vs-predictive-models)
+- Apply it: [Risk before model](/learn/responsible-ai/risk-before-model)

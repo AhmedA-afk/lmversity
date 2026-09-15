@@ -104,4 +104,4 @@ Descriptive analysis does not establish causality, representativeness, statistic
 
 - Continue: [Data-generating processes, sampling, and selection bias](/learn/maths-foundations/data-generating-processes-sampling-and-selection-bias)
 - Go deeper: [Estimators, bias, consistency, efficiency, and variance](/learn/maths-foundations/estimators-bias-consistency-efficiency-and-variance)
-- Apply it: Interpretability and error analysis
+- Apply it: [Interpretability and error analysis](/learn/machine-learning/interpretability-and-error-analysis)

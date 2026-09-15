@@ -73,8 +73,8 @@ It is a prioritization mechanism, not a verdict.
 
 ## Continue, go deeper, apply it
 
-- Continue: Recommenders and ranking
-- Go deeper: Drift and monitoring
+- Continue: [Recommenders and ranking](/learn/machine-learning/recommenders-and-ranking)
+- Go deeper: [Drift and monitoring](/learn/machine-learning/drift-and-monitoring)
 - Apply it: publish an anomaly response matrix, not only a score plot.
 ## Formal extension
 

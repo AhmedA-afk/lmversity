@@ -75,8 +75,8 @@ misleading labels.
 
 ## Continue, go deeper, apply it
 
-- Continue: Features, leakage, and missingness
-- Go deeper: Neural networks and representations
+- Continue: [Features, leakage, and missingness](/learn/machine-learning/features-leakage-and-missingness)
+- Go deeper: [Neural networks and representations](/learn/deep-learning/neural-networks-and-representations)
 - Apply it: compare three learning setups on a small, documented dataset.
 
 ## Start with the feedback loop

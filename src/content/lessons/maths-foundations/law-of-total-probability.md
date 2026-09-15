@@ -133,6 +133,6 @@ an observed event into a posterior about its source.
 
 ## Continue, go deeper, apply it
 
-- Continue: Bayes’ rule and base rates
-- Go deeper: Imbalanced data and metrics
+- Continue: [Bayes’ rule and base rates](/learn/maths-foundations/bayes-rule-and-base-rates)
+- Go deeper: [Imbalanced data and metrics](/learn/machine-learning/imbalanced-data-and-metrics)
 - Apply it: Mathematics Foundations assignments

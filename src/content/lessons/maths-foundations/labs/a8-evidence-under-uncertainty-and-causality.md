@@ -508,4 +508,4 @@ deterministic checks proves only that this analysis matches this frozen fixture.
 
 - Continue: [Self-information and coding intuition](/learn/maths-foundations/self-information-and-coding-intuition)
 - Go deeper: [A/B experiments, sequential testing, and multiple comparisons](/learn/maths-foundations/ab-experiments-sequential-testing-and-multiple-comparisons)
-- Apply it: Causal inference foundations
+- Apply it: [Causal inference foundations](/learn/maths-foundations/causal-inference-foundations)

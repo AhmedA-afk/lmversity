@@ -74,7 +74,7 @@ good performance on a new population.
 ## Continue, go deeper, apply it
 
 - Continue: [Logistic regression](/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian)
-- Go deeper: Causal questions versus predictive models
+- Go deeper: [Causal questions versus predictive models](/learn/machine-learning/causal-questions-vs-predictive-models)
 - Apply it: publish a transparent baseline report with residual plots.
 
 ## From residuals to the fitted line

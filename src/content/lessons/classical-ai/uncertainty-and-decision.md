@@ -74,6 +74,6 @@ Stakeholders still need to approve which harms count and who bears them.
 
 ## Continue, go deeper, apply it
 
-- Continue: Classifiers, thresholds, and calibration
-- Go deeper: Search and planning
+- Continue: [Classifiers, thresholds, and calibration](/learn/machine-learning/classifiers-thresholds-and-calibration)
+- Go deeper: [Search and planning](/learn/classical-ai/search-and-planning)
 - Apply it: write a decision table for one model score used by your team.

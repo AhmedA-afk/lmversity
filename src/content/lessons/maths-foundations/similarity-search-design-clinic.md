@@ -185,6 +185,6 @@ provenance, reranking, generation, and human review as separate contracts.
 
 ## Continue, go deeper, apply it
 
-- Continue: Ingestion, chunking, and retrieval
-- Go deeper: Linear algebra for ML
-- Apply it: A1 embedding geometry lab
+- Continue: [Ingestion, chunking, and retrieval](/learn/rag/ingestion-chunking-and-retrieval)
+- Go deeper: [Linear algebra for ML](/learn/machine-learning/linear-algebra-for-ml)
+- Apply it: [A1 embedding geometry lab](/learn/maths-foundations/labs/a1-embedding-geometry-lab)

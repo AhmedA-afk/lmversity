@@ -76,5 +76,5 @@ An integral does not identify a density, causal rate, or correct sampling model.
 ## Continue, go deeper, apply it
 
 - Continue: [One-dimensional optimisation clinic](/learn/maths-foundations/one-dimensional-optimisation-clinic)
-- Go deeper: Probability and statistics for ML
+- Go deeper: [Probability and statistics for ML](/learn/machine-learning/probability-and-statistics-for-ml)
 - Apply it: Curriculum assignments

@@ -93,4 +93,4 @@ Exponential-family structure does not make the distribution correct, the link li
 
 - Continue: [Objectives, losses, empirical risk, and constraints](/learn/maths-foundations/objectives-losses-empirical-risk-and-constraints)
 - Go deeper: [Likelihood and log-likelihood](/learn/maths-foundations/likelihood-and-log-likelihood)
-- Apply it: Linear regression
+- Apply it: [Linear regression](/learn/machine-learning/linear-regression)

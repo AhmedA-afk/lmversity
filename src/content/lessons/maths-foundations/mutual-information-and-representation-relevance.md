@@ -89,5 +89,5 @@ MI does not prove causality, fairness, robustness, or generalisation. Estimation
 ## Continue, go deeper, apply it
 
 - Continue: [Likelihood, cross-entropy, and classification objectives](/learn/maths-foundations/likelihood-cross-entropy-and-classification-objectives)
-- Go deeper: Latent variables and ELBO intuition
-- Apply it: PCA and dimensionality reduction
+- Go deeper: [Latent variables and ELBO intuition](/learn/maths-foundations/latent-variables-and-elbo-intuition)
+- Apply it: [PCA and dimensionality reduction](/learn/machine-learning/pca-and-dimensionality-reduction)

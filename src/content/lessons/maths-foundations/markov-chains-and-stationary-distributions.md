@@ -135,5 +135,5 @@ a policy or reward model.
 ## Continue, go deeper, apply it
 
 - Continue: [Importance sampling and weighted estimates](/learn/maths-foundations/importance-sampling-and-weighted-estimates)
-- Go deeper: Search and planning
+- Go deeper: [Search and planning](/learn/classical-ai/search-and-planning)
 - Apply it: Likelihood, priors, and sampling assignment

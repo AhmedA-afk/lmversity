@@ -140,6 +140,6 @@ the same logic beyond two outcomes.
 
 ## Continue, go deeper, apply it
 
-- Continue: Categorical and Multinomial models
-- Go deeper: Probability and statistics for ML
+- Continue: [Categorical and Multinomial models](/learn/maths-foundations/categorical-and-multinomial-models)
+- Go deeper: [Probability and statistics for ML](/learn/machine-learning/probability-and-statistics-for-ml)
 - Apply it: Likelihood, priors, and sampling assignment

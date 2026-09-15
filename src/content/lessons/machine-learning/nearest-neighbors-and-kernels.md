@@ -74,8 +74,8 @@ be close for the wrong reason.
 
 ## Continue, go deeper, apply it
 
-- Continue: Ensemble methods
-- Go deeper: Clustering and k-means
+- Continue: [Ensemble methods](/learn/machine-learning/ensemble-methods)
+- Go deeper: [Clustering and k-means](/learn/machine-learning/clustering-and-k-means)
 - Apply it: create a nearest-neighbor error gallery with the distance features shown.
 
 ## A neighbor rule is a local estimator

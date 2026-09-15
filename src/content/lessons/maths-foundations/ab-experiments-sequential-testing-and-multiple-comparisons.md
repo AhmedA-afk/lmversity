@@ -92,6 +92,6 @@ Randomisation does not fix interference, noncompliance, bad measurement, or a bi
 
 ## Continue, go deeper, apply it
 
-- Continue: Calibration, scoring rules, and distribution shift
+- Continue: [Calibration, scoring rules, and distribution shift](/learn/maths-foundations/calibration-proper-scoring-rules-and-distribution-shift)
 - Go deeper: [Learning-rate schedules, warm-up, and gradient clipping](/learn/maths-foundations/learning-rate-schedules-warmup-and-gradient-clipping)
-- Apply it: Cross-validation and experimental design
+- Apply it: [Cross-validation and experimental design](/learn/machine-learning/cross-validation-and-experimental-design)

@@ -448,6 +448,6 @@ granted.
 
 ## Continue, go deeper, apply it
 
-- Continue: Optimisation diagnostics and second-order perspective
-- Go deeper: Gradient checking and debugging
-- Apply it: ML foundations capstone
+- Continue: [Optimisation diagnostics and second-order perspective](/learn/maths-foundations/optimisation-diagnostics-and-second-order-perspective)
+- Go deeper: [Gradient checking and debugging](/learn/maths-foundations/gradient-checking-and-debugging)
+- Apply it: [ML foundations capstone](/learn/machine-learning/ml-foundations-capstone)

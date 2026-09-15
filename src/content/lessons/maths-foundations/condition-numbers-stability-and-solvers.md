@@ -176,4 +176,4 @@ evaluated.
 
 - Continue: [Kernel matrices and the kernel trick](/learn/maths-foundations/kernel-matrices-and-kernel-trick)
 - Go deeper: Optimisation, loss, and [gradient descent](/learn/maths-foundations/gradient-descent-intuition)
-- Apply it: ML systems and reproducibility
+- Apply it: [ML systems and reproducibility](/learn/machine-learning/ml-systems-and-reproducibility)

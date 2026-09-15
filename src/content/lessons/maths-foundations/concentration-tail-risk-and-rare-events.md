@@ -131,5 +131,5 @@ different probability model.
 ## Continue, go deeper, apply it
 
 - Continue: [Markov chains and stationary distributions](/learn/maths-foundations/markov-chains-and-stationary-distributions)
-- Go deeper: Imbalanced data and metrics
+- Go deeper: [Imbalanced data and metrics](/learn/machine-learning/imbalanced-data-and-metrics)
 - Apply it: Likelihood, priors, and sampling assignment

@@ -75,8 +75,8 @@ it optimizes a geometric compression objective.
 
 ## Continue, go deeper, apply it
 
-- Continue: Anomaly detection
-- Go deeper: Linear algebra for ML
+- Continue: [Anomaly detection](/learn/machine-learning/anomaly-detection)
+- Go deeper: [Linear algebra for ML](/learn/machine-learning/linear-algebra-for-ml)
 - Apply it: create a projection report with discarded-signal risks.
 
 ## PCA is an optimization problem

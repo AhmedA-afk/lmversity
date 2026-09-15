@@ -1,7 +1,7 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T09:49:03.214Z",
+  "generatedAt": "2026-09-15T09:56:32.599Z",
   "generator": "scripts/build-content-registry.mjs",
   "itemCount": 2387,
   "counts": {
@@ -434,7 +434,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -8721,7 +8721,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (238w vs ~779w)",
+   "dispositionReason": "thin vs family median (238w vs ~778w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -23495,7 +23495,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 404,
+   "wordCount": 398,
    "headings": [
     "The short answer",
     "The model",
@@ -23507,7 +23507,10 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/classical-ai/search-and-planning",
+    "/learn/classical-ai/uncertainty-and-decision"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -23544,8 +23547,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -23556,7 +23559,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -25777,7 +25780,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 398,
+   "wordCount": 391,
    "headings": [
     "The short answer",
     "Worked example: a delivery route",
@@ -25789,7 +25792,10 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/problem-framing-and-baselines",
+    "/learn/prompt-engineering/reasoning-and-decomposition"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -25824,8 +25830,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -25836,7 +25842,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -28164,7 +28170,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 391,
+   "wordCount": 384,
    "headings": [
     "The short answer",
     "A small decision table",
@@ -28177,7 +28183,9 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
-    "/learn/classical-ai/knowledge-uncertainty/222-decision-theory-expected-utility-and-action-selection"
+    "/learn/classical-ai/knowledge-uncertainty/222-decision-theory-expected-utility-and-action-selection",
+    "/learn/classical-ai/search-and-planning",
+    "/learn/machine-learning/classifiers-thresholds-and-calibration"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -28225,7 +28233,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -39808,7 +39816,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 599,
+   "wordCount": 589,
    "headings": [
     "The short answer",
     "A small intuition",
@@ -39821,7 +39829,10 @@
     "Formal extension: shape-aware scaled dot-product attention",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/genai-app-dev/api-lifecycle-and-structured-output",
+    "/learn/rag/grounding-citations-and-context-budgets"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -39856,8 +39867,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -39868,7 +39879,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -42889,7 +42900,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 556,
+   "wordCount": 549,
    "headings": [
     "The short answer",
     "The loop",
@@ -42902,7 +42913,10 @@
     "Formal extension: logits, loss, and gradient scale",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/deep-learning/attention-and-transformers",
+    "/learn/deep-learning/neural-networks-and-representations"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -42937,8 +42951,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -42949,7 +42963,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -42973,7 +42987,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 617,
+   "wordCount": 614,
    "headings": [
     "The short answer",
     "From pixels or tokens to a decision",
@@ -42988,7 +43002,8 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
-    "/learn/deep-learning/core/119-data-augmentation-invariances-and-leakage"
+    "/learn/deep-learning/core/119-data-augmentation-invariances-and-leakage",
+    "/learn/machine-learning/generalization-and-evaluation"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -59947,7 +59962,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -86250,7 +86265,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (277w vs ~779w)",
+   "dispositionReason": "thin vs family median (277w vs ~778w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -89882,7 +89897,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (269w vs ~779w)",
+   "dispositionReason": "thin vs family median (269w vs ~778w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -92176,7 +92191,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 591,
+   "wordCount": 585,
    "headings": [
     "The short answer",
     "The mechanism",
@@ -92192,7 +92207,10 @@
     "Debugging and assessment studio",
     "Advanced checkpoint"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/drift-and-monitoring",
+    "/learn/machine-learning/recommenders-and-ranking"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -92227,8 +92245,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -92239,7 +92257,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -93080,7 +93098,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 590,
+   "wordCount": 581,
    "headings": [
     "The short answer",
     "The mechanism",
@@ -93096,7 +93114,10 @@
     "Debugging and assessment studio",
     "Advanced checkpoint"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/probability-and-statistics-for-ml",
+    "/learn/machine-learning/reinforcement-learning-and-reward"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -93131,8 +93152,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -93143,7 +93164,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -93167,7 +93188,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 586,
+   "wordCount": 579,
    "headings": [
     "The short answer",
     "The distinction",
@@ -93183,7 +93204,10 @@
     "Debugging and assessment studio",
     "Advanced checkpoint"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/classical-ai/uncertainty-and-decision",
+    "/learn/machine-learning/interpretability-and-error-analysis"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -93218,8 +93242,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -93230,7 +93254,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -93254,7 +93278,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 845,
+   "wordCount": 838,
    "headings": [
     "The short answer",
     "Four examples",
@@ -93271,7 +93295,10 @@
     "Assessment: decision record",
     "When scores become policies"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/generalization-and-evaluation",
+    "/learn/responsible-ai/privacy-fairness-and-accessibility"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -93306,8 +93333,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -93318,7 +93345,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -93342,7 +93369,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 842,
+   "wordCount": 834,
    "headings": [
     "The short answer",
     "The mechanism",
@@ -93360,7 +93387,9 @@
     "From pattern to action requires a second experiment"
    ],
    "internalLinks": [
-    "/learn/machine-learning/derivations/09-gaussian-mixtures-em-and-latent-variable-inference"
+    "/learn/machine-learning/derivations/09-gaussian-mixtures-em-and-latent-variable-inference",
+    "/learn/machine-learning/nearest-neighbors-and-kernels",
+    "/learn/machine-learning/pca-and-dimensionality-reduction"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -93408,7 +93437,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -93432,7 +93461,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 580,
+   "wordCount": 572,
    "headings": [
     "The short answer",
     "Choose the split",
@@ -93448,7 +93477,10 @@
     "Debugging and assessment studio",
     "Advanced checkpoint"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/imbalanced-data-and-metrics",
+    "/learn/machine-learning/statistical-testing-for-ml"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -93483,8 +93515,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -93495,7 +93527,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -93519,7 +93551,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 847,
+   "wordCount": 843,
    "headings": [
     "The short answer",
     "The mechanism",
@@ -93535,7 +93567,10 @@
     "Debugging clinic: the split that should never have existed",
     "Assessment: build and critique a tiny tree"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/classical-ai/constraint-satisfaction",
+    "/learn/machine-learning/ensemble-methods"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -93572,8 +93607,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -93584,7 +93619,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -95189,7 +95224,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 579,
+   "wordCount": 575,
    "headings": [
     "The short answer",
     "The monitoring layers",
@@ -95206,7 +95241,8 @@
     "Advanced checkpoint"
    ],
    "internalLinks": [
-    "/learn/machine-learning/deep-lectures/907-time-series-ranking-and-recommender-systems-under-temporal-exposure-feedback"
+    "/learn/machine-learning/deep-lectures/907-time-series-ranking-and-recommender-systems-under-temporal-exposure-feedback",
+    "/learn/machine-learning/ml-systems-and-reproducibility"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -95278,7 +95314,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 869,
+   "wordCount": 864,
    "headings": [
     "The short answer",
     "The mechanism",
@@ -95297,6 +95333,7 @@
     "Reproducible ensemble comparison"
    ],
    "internalLinks": [
+    "/learn/machine-learning/cross-validation-and-experimental-design",
     "/learn/machine-learning/derivations/06-decision-tree-impurity-and-information-gain-calculations"
    ],
    "externalLinks": [],
@@ -95369,7 +95406,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 594,
+   "wordCount": 587,
    "headings": [
     "The short answer",
     "The evaluation frame",
@@ -95385,7 +95422,10 @@
     "Debugging and assessment studio",
     "Advanced checkpoint"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/drift-and-monitoring",
+    "/learn/responsible-ai/privacy-fairness-and-accessibility"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -95420,8 +95460,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -95432,7 +95472,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -95456,7 +95496,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 864,
+   "wordCount": 856,
    "headings": [
     "The short answer",
     "The pipeline contract",
@@ -95473,7 +95513,10 @@
     "Debugging clinic: train/serve parity",
     "Assessment: design a feature contract"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/clustering-and-k-means",
+    "/learn/machine-learning/ml-systems-and-reproducibility"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -95508,8 +95551,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -95520,7 +95563,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -95544,7 +95587,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 853,
+   "wordCount": 846,
    "headings": [
     "The short answer",
     "Four examples",
@@ -95561,6 +95604,8 @@
     "Assessment: leakage review board"
    ],
    "internalLinks": [
+    "/learn/machine-learning/classifiers-thresholds-and-calibration",
+    "/learn/machine-learning/generalization-and-evaluation",
     "/learn/machine-learning/ml-108-missing-data-mechanisms"
    ],
    "externalLinks": [],
@@ -95609,7 +95654,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -95633,7 +95678,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 937,
+   "wordCount": 932,
    "headings": [
     "The short answer",
     "Three ways to be fooled",
@@ -95651,7 +95696,10 @@
     "Debugging clinic: a suspiciously perfect model",
     "Assessment: write an evaluation protocol"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/deep-learning/neural-networks-and-representations",
+    "/learn/prompt-engineering/prompt-evaluation"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -95688,8 +95736,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -95700,7 +95748,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -95724,7 +95772,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 588,
+   "wordCount": 580,
    "headings": [
     "The short answer",
     "The metric map",
@@ -95741,6 +95789,8 @@
     "Advanced checkpoint"
    ],
    "internalLinks": [
+    "/learn/machine-learning/fairness-and-subgroup-evaluation",
+    "/learn/machine-learning/feature-engineering-and-pipelines",
     "/learn/machine-learning/ml-509-class-imbalance-resampling-and-class-weights"
    ],
    "externalLinks": [],
@@ -95789,7 +95839,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -95813,7 +95863,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 598,
+   "wordCount": 589,
    "headings": [
     "The short answer",
     "The workflow",
@@ -95830,6 +95880,8 @@
     "Advanced checkpoint"
    ],
    "internalLinks": [
+    "/learn/machine-learning/causal-questions-vs-predictive-models",
+    "/learn/machine-learning/fairness-and-subgroup-evaluation",
     "/learn/machine-learning/ml-313-partial-dependence-ice-and-ale"
    ],
    "externalLinks": [],
@@ -95878,7 +95930,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -95902,7 +95954,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 912,
+   "wordCount": 904,
    "headings": [
     "The short answer",
     "Compare the setups",
@@ -95919,7 +95971,10 @@
     "Debugging clinic: a beautiful cluster with no use",
     "Assessment: choose and justify a paradigm"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/deep-learning/neural-networks-and-representations",
+    "/learn/machine-learning/features-leakage-and-missingness"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -95954,8 +96009,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -95966,7 +96021,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -95990,7 +96045,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 585,
+   "wordCount": 578,
    "headings": [
     "The short answer",
     "The intuition",
@@ -96006,7 +96061,10 @@
     "Debugging and assessment studio",
     "Advanced checkpoint"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/bayesian-and-generative-learning",
+    "/learn/machine-learning/generalization-and-evaluation"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -96041,8 +96099,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -96053,7 +96111,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -96077,7 +96135,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 925,
+   "wordCount": 916,
    "headings": [
     "The short answer",
     "The mechanism",
@@ -96094,7 +96152,10 @@
     "Debugging clinic: catch an accidental broadcast",
     "Assessment: calculate, then explain"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/deep-learning/neural-networks-and-representations",
+    "/learn/machine-learning/probability-and-statistics-for-ml"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -96129,8 +96190,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -96141,7 +96202,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -96165,7 +96226,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 840,
+   "wordCount": 835,
    "headings": [
     "The short answer",
     "The mechanism",
@@ -96183,6 +96244,7 @@
     "Assessment: model report"
    ],
    "internalLinks": [
+    "/learn/machine-learning/causal-questions-vs-predictive-models",
     "/learn/machine-learning/derivations/01-linear-regression-normal-equations-and-geometry",
     "/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian"
    ],
@@ -96234,7 +96296,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -96258,7 +96320,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 838,
+   "wordCount": 830,
    "headings": [
     "The short answer",
     "The mechanism",
@@ -96276,8 +96338,10 @@
     "Assessment: work in odds, then decisions"
    ],
    "internalLinks": [
+    "/learn/machine-learning/classifiers-thresholds-and-calibration",
     "/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian",
-    "/learn/machine-learning/ml-206-logistic-regression-likelihood-and-odds"
+    "/learn/machine-learning/ml-206-logistic-regression-likelihood-and-odds",
+    "/learn/machine-learning/regularization-and-bias-variance"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -96325,7 +96389,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -105772,7 +105836,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 624,
+   "wordCount": 618,
    "headings": [
     "The short answer",
     "Required deliverables",
@@ -105788,7 +105852,10 @@
     "Debugging and assessment studio",
     "Advanced checkpoint"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/ml-systems-and-reproducibility",
+    "/learn/responsible-ai/governance-artifacts"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -105859,7 +105926,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 577,
+   "wordCount": 572,
    "headings": [
     "The short answer",
     "The experiment record",
@@ -105875,7 +105942,9 @@
     "Debugging and assessment studio",
     "Advanced checkpoint"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/evals-red-teaming/regression-gates-and-online-signals"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -105910,8 +105979,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -105922,7 +105991,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -105946,7 +106015,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 858,
+   "wordCount": 852,
    "headings": [
     "The short answer",
     "The mechanism",
@@ -105964,7 +106033,10 @@
     "Assessment: choose a locality policy",
     "Retrieval can be an explanation only if the representation is explained"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/clustering-and-k-means",
+    "/learn/machine-learning/ensemble-methods"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -106001,8 +106073,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -106013,7 +106085,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -106037,7 +106109,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 580,
+   "wordCount": 572,
    "headings": [
     "The short answer",
     "The mechanism",
@@ -106054,7 +106126,9 @@
     "Advanced checkpoint"
    ],
    "internalLinks": [
-    "/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian"
+    "/learn/deep-learning/attention-and-transformers",
+    "/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian",
+    "/learn/machine-learning/learning-theory-and-pac-intuition"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -106102,7 +106176,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -106216,7 +106290,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 854,
+   "wordCount": 848,
    "headings": [
     "The short answer",
     "The mechanism",
@@ -106233,7 +106307,10 @@
     "Debugging clinic: leaked projection and lost signal",
     "Assessment: PCA derivation and design"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/anomaly-detection",
+    "/learn/machine-learning/linear-algebra-for-ml"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -106268,8 +106345,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -106280,7 +106357,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -106304,7 +106381,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 829,
+   "wordCount": 820,
    "headings": [
     "The short answer",
     "The mechanism",
@@ -106322,7 +106399,9 @@
     "Assessment: probability audit"
    ],
    "internalLinks": [
-    "/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian"
+    "/learn/machine-learning/bayesian-and-generative-learning",
+    "/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian",
+    "/learn/machine-learning/optimization-loss-and-gradient-descent"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -106370,7 +106449,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -106394,7 +106473,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1108,
+   "wordCount": 1101,
    "headings": [
     "The short answer",
     "From product request to learning problem",
@@ -106412,7 +106491,9 @@
     "Assessment: defend a proposed ML project"
    ],
    "internalLinks": [
-    "/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian"
+    "/learn/deep-learning/neural-networks-and-representations",
+    "/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian",
+    "/learn/machine-learning/generalization-and-evaluation"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -106460,7 +106541,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -108405,7 +108486,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 579,
+   "wordCount": 575,
    "headings": [
     "The short answer",
     "The mechanism",
@@ -108422,6 +108503,7 @@
     "Advanced checkpoint"
    ],
    "internalLinks": [
+    "/learn/machine-learning/clustering-and-k-means",
     "/learn/machine-learning/deep-lectures/907-time-series-ranking-and-recommender-systems-under-temporal-exposure-feedback"
    ],
    "externalLinks": [],
@@ -108494,7 +108576,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 832,
+   "wordCount": 827,
    "headings": [
     "The short answer",
     "The mechanism",
@@ -108513,6 +108595,7 @@
    ],
    "internalLinks": [
     "/learn/ai-foundations/bias-variance-tradeoff",
+    "/learn/machine-learning/cross-validation-and-experimental-design",
     "/learn/machine-learning/derivations/06-decision-tree-impurity-and-information-gain-calculations",
     "/learn/machine-learning/ml-203-ridge-lasso-and-elastic-net"
    ],
@@ -108588,7 +108671,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 591,
+   "wordCount": 584,
    "headings": [
     "The short answer",
     "The mechanism",
@@ -108604,7 +108687,10 @@
     "Debugging and assessment studio",
     "Advanced checkpoint"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/agentic-ai/agents-vs-workflows",
+    "/learn/machine-learning/statistical-testing-for-ml"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -108639,8 +108725,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -108651,7 +108737,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -109527,7 +109613,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 596,
+   "wordCount": 589,
    "headings": [
     "The short answer",
     "The serving decision",
@@ -109544,7 +109630,9 @@
     "Advanced checkpoint"
    ],
    "internalLinks": [
-    "/learn/machine-learning/ml-610-batch-scoring-online-serving-and-shadow-mode"
+    "/learn/machine-learning/ml-610-batch-scoring-online-serving-and-shadow-mode",
+    "/learn/machine-learning/neural-network-bridge",
+    "/learn/production/observability-cost-and-latency"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -109592,7 +109680,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -109616,7 +109704,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 588,
+   "wordCount": 580,
    "headings": [
     "The short answer",
     "The comparison protocol",
@@ -109632,7 +109720,10 @@
     "Debugging and assessment studio",
     "Advanced checkpoint"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/cross-validation-and-experimental-design",
+    "/learn/machine-learning/ml-foundations-capstone"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -109667,8 +109758,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -109679,7 +109770,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -109703,7 +109794,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 577,
+   "wordCount": 569,
    "headings": [
     "The short answer",
     "The temporal contract",
@@ -109719,7 +109810,10 @@
     "Debugging and assessment studio",
     "Advanced checkpoint"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/causal-questions-vs-predictive-models",
+    "/learn/machine-learning/drift-and-monitoring"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -109754,8 +109848,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -109766,7 +109860,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -109790,7 +109884,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 773,
+   "wordCount": 762,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -109805,6 +109899,8 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/cross-validation-and-experimental-design",
+    "/learn/maths-foundations/calibration-proper-scoring-rules-and-distribution-shift",
     "/learn/maths-foundations/learning-rate-schedules-warmup-and-gradient-clipping"
    ],
    "externalLinks": [],
@@ -109853,7 +109949,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -109962,7 +110058,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 871,
+   "wordCount": 863,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -109975,6 +110071,8 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/classifiers-thresholds-and-calibration",
+    "/learn/maths-foundations/labs/a1-embedding-geometry-lab",
     "/learn/maths-foundations/vector-means-centring-feature-standardisation"
    ],
    "externalLinks": [],
@@ -110023,7 +110121,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -110128,7 +110226,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 699,
+   "wordCount": 694,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -110144,6 +110242,7 @@
    ],
    "internalLinks": [
     "/learn/ai-foundations/gradient-descent-explained",
+    "/learn/machine-learning/optimization-loss-and-gradient-descent",
     "/learn/maths-foundations/conditioning-scaling-initialisation-and-normalisation",
     "/learn/maths-foundations/gradient-descent-intuition",
     "/learn/maths-foundations/stochastic-and-minibatch-gradient-descent"
@@ -110218,7 +110317,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 850,
+   "wordCount": 841,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -110231,6 +110330,8 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/classifiers-thresholds-and-calibration",
+    "/learn/maths-foundations/labs/a6-base-rates-bayes-and-simulation",
     "/learn/maths-foundations/random-variables-and-support"
    ],
    "externalLinks": [],
@@ -110279,7 +110380,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -110384,7 +110485,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 857,
+   "wordCount": 848,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -110397,6 +110498,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/probability-and-statistics-for-ml",
     "/learn/maths-foundations/categorical-and-multinomial-models"
    ],
    "externalLinks": [],
@@ -110469,7 +110571,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 774,
+   "wordCount": 770,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -110482,6 +110584,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/bayesian-and-generative-learning",
     "/learn/maths-foundations/transformations-of-random-variables-and-lotus"
    ],
    "externalLinks": [],
@@ -110554,7 +110657,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 794,
+   "wordCount": 789,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -110569,6 +110672,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/cross-validation-and-experimental-design",
     "/learn/maths-foundations/causal-inference-foundations",
     "/learn/maths-foundations/hypothesis-tests-p-values-and-permutation-tests"
    ],
@@ -110618,7 +110722,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -110642,7 +110746,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 737,
+   "wordCount": 733,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -110657,6 +110761,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/fairness-and-subgroup-evaluation",
     "/learn/maths-foundations/causal-inference-foundations",
     "/learn/maths-foundations/conditional-probability",
     "/learn/maths-foundations/kl-divergence-and-distribution-mismatch"
@@ -110731,7 +110836,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 814,
+   "wordCount": 812,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -110744,6 +110849,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/logistic-regression",
     "/learn/maths-foundations/uniform-geometric-and-exponential-models"
    ],
    "externalLinks": [],
@@ -110816,7 +110922,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 795,
+   "wordCount": 790,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -110832,6 +110938,7 @@
    ],
    "internalLinks": [
     "/learn/classical-ai/knowledge-uncertainty/225-causal-graphs-confounding-interventions-and-counterfactuals",
+    "/learn/machine-learning/causal-questions-vs-predictive-models",
     "/learn/maths-foundations/data-generating-processes-sampling-and-selection-bias",
     "/learn/maths-foundations/self-information-and-coding-intuition"
    ],
@@ -110905,7 +111012,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 501,
+   "wordCount": 497,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -110920,6 +111027,7 @@
    "internalLinks": [
     "/learn/deep-learning/core/108-computation-graphs-and-local-derivatives",
     "/learn/maths-foundations/forward-mode-automatic-differentiation",
+    "/learn/maths-foundations/gradient-checking-and-debugging",
     "/learn/maths-foundations/reverse-mode-autodiff-and-backpropagation",
     "/learn/maths-foundations/the-chain-rule"
    ],
@@ -110993,7 +111101,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 818,
+   "wordCount": 814,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -111006,6 +111114,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/imbalanced-data-and-metrics",
     "/learn/maths-foundations/markov-chains-and-stationary-distributions"
    ],
    "externalLinks": [],
@@ -111078,7 +111187,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1007,
+   "wordCount": 1003,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -111092,6 +111201,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/ml-systems-and-reproducibility",
     "/learn/maths-foundations/gradient-descent-intuition",
     "/learn/maths-foundations/kernel-matrices-and-kernel-trick",
     "/learn/maths-foundations/least-squares-normal-equations-and-projection-geometry"
@@ -111166,7 +111276,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 890,
+   "wordCount": 880,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -111179,7 +111289,9 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/probability-and-statistics-for-ml",
     "/learn/maths-foundations/bernoulli-binomial-hypergeometric-and-negative-binomial",
+    "/learn/maths-foundations/labs/a6-base-rates-bayes-and-simulation",
     "/learn/maths-foundations/law-of-total-probability"
    ],
    "externalLinks": [],
@@ -111228,7 +111340,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -111252,7 +111364,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 933,
+   "wordCount": 925,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -111265,7 +111377,9 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
-    "/learn/maths-foundations/independence-and-conditional-independence"
+    "/learn/classical-ai/uncertainty-and-decision",
+    "/learn/maths-foundations/independence-and-conditional-independence",
+    "/learn/maths-foundations/labs/a6-base-rates-bayes-and-simulation"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -111313,7 +111427,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -111337,7 +111451,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 753,
+   "wordCount": 749,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -111352,6 +111466,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/deep-learning/neural-networks-and-representations",
     "/learn/maths-foundations/numerical-stability-softmax-logsumexp-and-safe-probabilities",
     "/learn/maths-foundations/optimisation-diagnostics-and-second-order-perspective"
    ],
@@ -111401,7 +111516,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -111425,7 +111540,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 768,
+   "wordCount": 763,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -111440,6 +111555,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/cross-validation-and-experimental-design",
     "/learn/maths-foundations/bootstrap-methods",
     "/learn/maths-foundations/hypothesis-tests-p-values-and-permutation-tests"
    ],
@@ -111489,7 +111605,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -111513,7 +111629,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 534,
+   "wordCount": 528,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -111526,7 +111642,9 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
-    "/learn/maths-foundations/non-smooth-optimisation-and-subgradients"
+    "/learn/machine-learning/regularization-and-bias-variance",
+    "/learn/maths-foundations/non-smooth-optimisation-and-subgradients",
+    "/learn/responsible-ai/risk-before-model"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -111574,7 +111692,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -111598,7 +111716,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 771,
+   "wordCount": 760,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -111613,9 +111731,11 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/optimization-loss-and-gradient-descent",
     "/learn/maths-foundations/batch-gradient-descent-and-learning-rate",
     "/learn/maths-foundations/gradient-descent-intuition",
-    "/learn/maths-foundations/least-squares-normal-equations-and-projection-geometry"
+    "/learn/maths-foundations/least-squares-normal-equations-and-projection-geometry",
+    "/learn/maths-foundations/optimisation-diagnostics-and-second-order-perspective"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -111771,7 +111891,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 895,
+   "wordCount": 887,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -111786,7 +111906,9 @@
    "internalLinks": [
     "/learn/maths-foundations/cosine-similarity",
     "/learn/maths-foundations/dot-product-explained",
-    "/learn/maths-foundations/orthogonality-orthonormal-coordinates"
+    "/learn/maths-foundations/labs/a1-embedding-geometry-lab",
+    "/learn/maths-foundations/orthogonality-orthonormal-coordinates",
+    "/learn/rag/ingestion-chunking-and-retrieval"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -111939,7 +112061,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 910,
+   "wordCount": 906,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -111952,6 +112074,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/problem-framing-and-baselines",
     "/learn/maths-foundations/conditional-probability",
     "/learn/maths-foundations/sample-spaces-events-and-probability-axioms"
    ],
@@ -112001,7 +112124,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -112025,7 +112148,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 946,
+   "wordCount": 937,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -112039,6 +112162,8 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/features-leakage-and-missingness",
+    "/learn/machine-learning/probability-and-statistics-for-ml",
     "/learn/maths-foundations/condition-numbers-stability-and-solvers"
    ],
    "externalLinks": [],
@@ -112087,7 +112212,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -112111,7 +112236,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 790,
+   "wordCount": 785,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -112124,6 +112249,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/causal-questions-vs-predictive-models",
     "/learn/maths-foundations/joint-marginal-and-conditional-distributions"
    ],
    "externalLinks": [],
@@ -112285,7 +112411,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 718,
+   "wordCount": 710,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -112300,8 +112426,10 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/logistic-regression",
     "/learn/maths-foundations/kl-divergence",
     "/learn/maths-foundations/kl-divergence-and-distribution-mismatch",
+    "/learn/maths-foundations/likelihood-cross-entropy-and-classification-objectives",
     "/learn/maths-foundations/numerical-stability-softmax-logsumexp-and-safe-probabilities"
    ],
    "externalLinks": [],
@@ -112374,7 +112502,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 986,
+   "wordCount": 982,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -112389,6 +112517,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/features-leakage-and-missingness",
     "/learn/maths-foundations/causal-inference-foundations",
     "/learn/maths-foundations/estimators-bias-consistency-efficiency-and-variance"
    ],
@@ -112438,7 +112567,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -112462,7 +112591,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 497,
+   "wordCount": 493,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -112475,6 +112604,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/deep-learning/neural-networks-and-representations",
     "/learn/maths-foundations/computational-graphs-and-local-derivatives",
     "/learn/maths-foundations/non-smooth-optimisation-and-subgradients"
    ],
@@ -112524,7 +112654,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -112635,7 +112765,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 916,
+   "wordCount": 912,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -112650,6 +112780,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/interpretability-and-error-analysis",
     "/learn/maths-foundations/data-generating-processes-sampling-and-selection-bias",
     "/learn/maths-foundations/estimators-bias-consistency-efficiency-and-variance"
    ],
@@ -112699,7 +112830,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -112723,7 +112854,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 943,
+   "wordCount": 934,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -112737,6 +112868,8 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/deep-learning/neural-networks-and-representations",
+    "/learn/machine-learning/time-series-and-temporal-validation",
     "/learn/maths-foundations/symmetric-matrices-quadratic-forms-and-definiteness"
    ],
    "externalLinks": [],
@@ -112785,7 +112918,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -112809,7 +112942,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 469,
+   "wordCount": 467,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -112822,6 +112955,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-regression",
     "/learn/maths-foundations/derivatives-of-affine-layers-and-elementwise-activations",
     "/learn/maths-foundations/reverse-mode-autodiff-and-backpropagation"
    ],
@@ -112871,7 +113005,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -112895,7 +113029,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 513,
+   "wordCount": 508,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -112908,6 +113042,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/logistic-regression",
     "/learn/maths-foundations/derivatives-of-affine-layers-and-elementwise-activations",
     "/learn/maths-foundations/the-chain-rule"
    ],
@@ -112957,7 +113092,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -113063,7 +113198,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 839,
+   "wordCount": 831,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -113076,7 +113211,9 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-algebra-for-ml",
     "/learn/maths-foundations/dot-product-explained",
+    "/learn/maths-foundations/labs/a1-embedding-geometry-lab",
     "/learn/maths-foundations/norms-and-distances",
     "/learn/maths-foundations/vector-norms"
    ],
@@ -113150,7 +113287,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 786,
+   "wordCount": 776,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -113165,7 +113302,9 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
-    "/learn/maths-foundations/ab-experiments-sequential-testing-and-multiple-comparisons"
+    "/learn/machine-learning/imbalanced-data-and-metrics",
+    "/learn/maths-foundations/ab-experiments-sequential-testing-and-multiple-comparisons",
+    "/learn/maths-foundations/calibration-proper-scoring-rules-and-distribution-shift"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -113213,7 +113352,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -113401,7 +113540,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 715,
+   "wordCount": 704,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -113416,6 +113555,8 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/probability-and-statistics-for-ml",
+    "/learn/maths-foundations/cross-entropy-and-negative-log-likelihood",
     "/learn/maths-foundations/mutual-information-and-representation-relevance"
    ],
    "externalLinks": [],
@@ -113464,7 +113605,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -113488,7 +113629,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 840,
+   "wordCount": 835,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -113503,6 +113644,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/probability-and-statistics-for-ml",
     "/learn/maths-foundations/confidence-intervals-and-frequentist-meaning",
     "/learn/maths-foundations/likelihood-and-log-likelihood"
    ],
@@ -113552,7 +113694,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -113576,7 +113718,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 730,
+   "wordCount": 725,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -113589,6 +113731,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/probability-and-statistics-for-ml",
     "/learn/maths-foundations/variance-standard-deviation-and-bias-variance"
    ],
    "externalLinks": [],
@@ -113661,7 +113804,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 767,
+   "wordCount": 765,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -113676,6 +113819,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-regression",
     "/learn/maths-foundations/likelihood-and-log-likelihood",
     "/learn/maths-foundations/objectives-losses-empirical-risk-and-constraints"
    ],
@@ -113725,7 +113869,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -114010,7 +114154,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 865,
+   "wordCount": 861,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -114023,6 +114167,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/problem-framing-and-baselines",
     "/learn/maths-foundations/algebra-for-model-equations"
    ],
    "externalLinks": [],
@@ -114095,7 +114240,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 813,
+   "wordCount": 809,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -114108,6 +114253,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-algebra-for-ml",
     "/learn/maths-foundations/multivariate-gaussians-and-covariance-geometry"
    ],
    "externalLinks": [],
@@ -114180,7 +114326,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 821,
+   "wordCount": 819,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -114193,6 +114339,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-regression",
     "/learn/maths-foundations/least-squares-normal-equations-and-projection-geometry",
     "/learn/maths-foundations/linear-systems-and-augmented-matrices",
     "/learn/maths-foundations/rank-pivots-and-identifiability"
@@ -114267,7 +114414,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 973,
+   "wordCount": 965,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -114280,6 +114427,8 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-algebra-for-ml",
+    "/learn/maths-foundations/labs/a1-embedding-geometry-lab",
     "/learn/maths-foundations/similarity-search-design-clinic"
    ],
    "externalLinks": [],
@@ -114328,7 +114477,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -114352,7 +114501,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 523,
+   "wordCount": 519,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -114365,6 +114514,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/evals-red-teaming/datasets-rubrics-and-judges",
     "/learn/maths-foundations/finite-differences-and-numerical-derivative-checks",
     "/learn/maths-foundations/non-smooth-optimisation-and-subgradients"
    ],
@@ -114414,7 +114564,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -114687,7 +114837,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 926,
+   "wordCount": 920,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -114701,6 +114851,8 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-algebra-for-ml",
+    "/learn/machine-learning/linear-regression",
     "/learn/maths-foundations/qr-factorisation-and-least-squares"
    ],
    "externalLinks": [],
@@ -114749,7 +114901,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -114941,7 +115093,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 803,
+   "wordCount": 798,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -114956,6 +115108,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/cross-validation-and-experimental-design",
     "/learn/machine-learning/ml-503-hypothesis-tests-permutation-tests-and-effect-sizes",
     "/learn/maths-foundations/ab-experiments-sequential-testing-and-multiple-comparisons",
     "/learn/maths-foundations/effect-sizes-power-and-sample-size-planning"
@@ -115030,7 +115183,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 840,
+   "wordCount": 836,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -115043,6 +115196,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/bayesian-and-generative-learning",
     "/learn/maths-foundations/quantiles-order-statistics-empirical-distributions-and-anomaly-thresholds"
    ],
    "externalLinks": [],
@@ -115115,7 +115269,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 901,
+   "wordCount": 888,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -115129,6 +115283,8 @@
    ],
    "internalLinks": [
     "/learn/ai-foundations/ai-systems/121-bayesian-networks-conditional-independence-and-inference",
+    "/learn/machine-learning/classifiers-thresholds-and-calibration",
+    "/learn/maths-foundations/labs/a6-base-rates-bayes-and-simulation",
     "/learn/maths-foundations/law-of-total-probability"
    ],
    "externalLinks": [],
@@ -115177,7 +115333,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -115201,7 +115357,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 549,
+   "wordCount": 544,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -115214,6 +115370,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/probability-and-statistics-for-ml",
     "/learn/maths-foundations/one-dimensional-optimisation-clinic"
    ],
    "externalLinks": [],
@@ -115286,7 +115443,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 840,
+   "wordCount": 831,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -115299,6 +115456,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-regression",
     "/learn/maths-foundations/invertibility-determinants-and-volume-intuition",
     "/learn/maths-foundations/least-squares-normal-equations-and-projection-geometry"
    ],
@@ -115348,7 +115506,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -115372,7 +115530,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 763,
+   "wordCount": 761,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -115385,6 +115543,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-regression",
     "/learn/maths-foundations/inverses-and-why-solving-beats-explicit-inversion",
     "/learn/maths-foundations/span-linear-independence-basis-and-dimension"
    ],
@@ -115434,7 +115593,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -115458,7 +115617,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 483,
+   "wordCount": 479,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -115471,6 +115630,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-algebra-for-ml",
     "/learn/maths-foundations/forward-mode-automatic-differentiation",
     "/learn/maths-foundations/hessians-curvature-and-saddle-points"
    ],
@@ -115520,7 +115680,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -115544,7 +115704,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 778,
+   "wordCount": 768,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -115557,7 +115717,9 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
-    "/learn/maths-foundations/conditional-expectation-and-conditional-variance"
+    "/learn/machine-learning/probability-and-statistics-for-ml",
+    "/learn/maths-foundations/conditional-expectation-and-conditional-variance",
+    "/learn/maths-foundations/labs/a6-base-rates-bayes-and-simulation"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -115605,7 +115767,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -115629,7 +115791,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 963,
+   "wordCount": 956,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -115643,7 +115805,9 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
-    "/learn/machine-learning/ml-303-kernel-methods-and-the-kernel-trick"
+    "/learn/machine-learning/generalization-and-evaluation",
+    "/learn/machine-learning/ml-303-kernel-methods-and-the-kernel-trick",
+    "/learn/machine-learning/pca-and-dimensionality-reduction"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -115691,7 +115855,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -115715,7 +115879,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 715,
+   "wordCount": 705,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -115731,7 +115895,9 @@
    ],
    "internalLinks": [
     "/learn/maths-foundations/kl-divergence",
-    "/learn/maths-foundations/mutual-information-and-representation-relevance"
+    "/learn/maths-foundations/latent-variables-and-elbo-intuition",
+    "/learn/maths-foundations/mutual-information-and-representation-relevance",
+    "/learn/rag/grounding-citations-and-context-budgets"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -115779,7 +115945,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -115967,7 +116133,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 2141,
+   "wordCount": 2137,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -115981,6 +116147,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-algebra-for-ml",
     "/learn/maths-foundations/matrix-multiplication-mechanics",
     "/learn/maths-foundations/partial-derivatives-and-coordinate-wise-sensitivity",
     "/learn/maths-foundations/vectors-as-coordinates-features"
@@ -116055,7 +116222,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1454,
+   "wordCount": 1446,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -116073,9 +116240,11 @@
     "M1 reference route"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-algebra-for-ml",
     "/learn/maths-foundations/cosine-similarity-angular-distance-embedding-retrieval",
     "/learn/maths-foundations/similarity-search-design-clinic",
-    "/learn/maths-foundations/vectors-as-coordinates-features"
+    "/learn/maths-foundations/vectors-as-coordinates-features",
+    "/learn/rag/ingestion-chunking-and-retrieval"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -116147,7 +116316,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1512,
+   "wordCount": 1504,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -116168,7 +116337,9 @@
    "internalLinks": [
     "/learn/maths-foundations/condition-numbers-stability-and-solvers",
     "/learn/maths-foundations/gradient-descent-intuition",
-    "/learn/maths-foundations/learning-rate-schedules-warmup-and-gradient-clipping"
+    "/learn/maths-foundations/learning-rate-schedules-warmup-and-gradient-clipping",
+    "/learn/maths-foundations/optimisation-diagnostics-and-second-order-perspective",
+    "/learn/maths-foundations/regularisation-geometry-l1-l2-weight-decay-and-early-stopping"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -116240,7 +116411,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 2691,
+   "wordCount": 2678,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -116261,8 +116432,11 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/ml-foundations-capstone",
     "/learn/maths-foundations/conditional-probability",
+    "/learn/maths-foundations/gradient-checking-and-debugging",
     "/learn/maths-foundations/matrix-multiplication-mechanics",
+    "/learn/maths-foundations/optimisation-diagnostics-and-second-order-perspective",
     "/learn/maths-foundations/the-chain-rule"
    ],
    "externalLinks": [],
@@ -116337,7 +116511,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1815,
+   "wordCount": 1806,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -116353,6 +116527,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-regression",
     "/learn/maths-foundations/inverses-and-why-solving-beats-explicit-inversion",
     "/learn/maths-foundations/least-squares-normal-equations-and-projection-geometry",
     "/learn/maths-foundations/null-spaces-column-spaces-row-spaces-and-the-fundamental-picture"
@@ -116427,7 +116602,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1798,
+   "wordCount": 1792,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -116447,6 +116622,7 @@
     "M3 reference route"
    ],
    "internalLinks": [
+    "/learn/machine-learning/pca-and-dimensionality-reduction",
     "/learn/maths-foundations/kernel-matrices-and-kernel-trick",
     "/learn/maths-foundations/low-rank-approximation-and-compression",
     "/learn/maths-foundations/pca-from-variance-and-svd"
@@ -116706,7 +116882,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1680,
+   "wordCount": 1670,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -116725,8 +116901,10 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/classifiers-thresholds-and-calibration",
     "/learn/maths-foundations/conditional-probability",
     "/learn/maths-foundations/law-of-total-probability",
+    "/learn/maths-foundations/monte-carlo-estimation-and-standard-errors",
     "/learn/maths-foundations/random-variables-and-support"
    ],
    "externalLinks": [],
@@ -116799,7 +116977,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1464,
+   "wordCount": 1461,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -116820,7 +116998,8 @@
    "internalLinks": [
     "/learn/maths-foundations/bootstrap-methods",
     "/learn/maths-foundations/importance-sampling-and-weighted-estimates",
-    "/learn/maths-foundations/law-of-large-numbers-and-central-limit-theorem"
+    "/learn/maths-foundations/law-of-large-numbers-and-central-limit-theorem",
+    "/learn/maths-foundations/map-and-regularisation"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -116892,7 +117071,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 2372,
+   "wordCount": 2369,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -116915,6 +117094,7 @@
    ],
    "internalLinks": [
     "/learn/maths-foundations/ab-experiments-sequential-testing-and-multiple-comparisons",
+    "/learn/maths-foundations/causal-inference-foundations",
     "/learn/maths-foundations/effect-sizes-power-and-sample-size-planning",
     "/learn/maths-foundations/self-information-and-coding-intuition"
    ],
@@ -116988,7 +117168,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 2105,
+   "wordCount": 2101,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -117005,6 +117185,7 @@
     "M9 reference route"
    ],
    "internalLinks": [
+    "/learn/machine-learning/classifiers-thresholds-and-calibration",
     "/learn/maths-foundations/kl-divergence-and-distribution-mismatch",
     "/learn/maths-foundations/likelihood-cross-entropy-and-classification-objectives",
     "/learn/maths-foundations/self-information-and-coding-intuition"
@@ -117079,7 +117260,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 776,
+   "wordCount": 769,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -117094,7 +117275,9 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
-    "/learn/maths-foundations/exponential-families-sufficient-statistics-and-glm"
+    "/learn/deep-learning/neural-networks-and-representations",
+    "/learn/maths-foundations/exponential-families-sufficient-statistics-and-glm",
+    "/learn/maths-foundations/map-and-regularisation"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -117142,7 +117325,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -117166,7 +117349,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 853,
+   "wordCount": 848,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -117179,6 +117362,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/probability-and-statistics-for-ml",
     "/learn/maths-foundations/concentration-tail-risk-and-rare-events"
    ],
    "externalLinks": [],
@@ -117251,7 +117435,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 876,
+   "wordCount": 867,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -117263,7 +117447,10 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/imbalanced-data-and-metrics",
+    "/learn/maths-foundations/bayes-rule-and-base-rates"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -117298,8 +117485,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -117310,7 +117497,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -117423,7 +117610,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 835,
+   "wordCount": 833,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -117436,6 +117623,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-regression",
     "/learn/maths-foundations/inverses-and-why-solving-beats-explicit-inversion"
    ],
    "externalLinks": [],
@@ -117508,7 +117696,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 559,
+   "wordCount": 555,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -117521,6 +117709,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/classifiers-thresholds-and-calibration",
     "/learn/maths-foundations/constrained-optimisation-lagrange-multipliers-and-kkt-intuition",
     "/learn/maths-foundations/jacobians-for-vector-valued-functions"
    ],
@@ -117570,7 +117759,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -117594,7 +117783,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 802,
+   "wordCount": 800,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -117609,6 +117798,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-regression",
     "/learn/maths-foundations/likelihood-cross-entropy-and-classification-objectives",
     "/learn/maths-foundations/maximum-likelihood-estimation"
    ],
@@ -117658,7 +117848,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -117682,7 +117872,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 790,
+   "wordCount": 781,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -117697,6 +117887,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/logistic-regression",
     "/learn/maths-foundations/naive-bayes-and-generative-vs-discriminative-modeling",
     "/learn/maths-foundations/numerical-stability-softmax-logsumexp-and-safe-probabilities"
    ],
@@ -117746,7 +117937,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -117856,7 +118047,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 770,
+   "wordCount": 768,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -117869,6 +118060,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-regression",
     "/learn/maths-foundations/gaussian-elimination-and-row-echelon-form",
     "/learn/maths-foundations/matrix-matrix-multiplication-and-batching"
    ],
@@ -117918,7 +118110,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -118025,7 +118217,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 870,
+   "wordCount": 863,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -118039,6 +118231,8 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/generalization-and-evaluation",
+    "/learn/machine-learning/pca-and-dimensionality-reduction",
     "/learn/maths-foundations/pca-from-variance-and-svd"
    ],
    "externalLinks": [],
@@ -118087,7 +118281,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -118111,7 +118305,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 866,
+   "wordCount": 858,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -118126,7 +118320,9 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
-    "/learn/maths-foundations/confidence-intervals-and-frequentist-meaning"
+    "/learn/machine-learning/regularization-and-bias-variance",
+    "/learn/maths-foundations/confidence-intervals-and-frequentist-meaning",
+    "/learn/maths-foundations/latent-variables-and-elbo-intuition"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -118174,7 +118370,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -118198,7 +118394,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 832,
+   "wordCount": 829,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -118211,6 +118407,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/classical-ai/search-and-planning",
     "/learn/maths-foundations/importance-sampling-and-weighted-estimates",
     "/learn/maths-foundations/matrix-multiplication-mechanics"
    ],
@@ -118260,7 +118457,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -118284,7 +118481,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 986,
+   "wordCount": 982,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -118297,6 +118494,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-algebra-for-ml",
     "/learn/maths-foundations/matrix-addition-scaling-transpose-and-symmetry"
    ],
    "externalLinks": [],
@@ -118452,7 +118650,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 810,
+   "wordCount": 806,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -118465,6 +118663,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-algebra-for-ml",
     "/learn/maths-foundations/matrices-as-data-tables-and-linear-maps",
     "/learn/maths-foundations/matrix-vector-multiplication"
    ],
@@ -118514,7 +118713,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -118538,7 +118737,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 818,
+   "wordCount": 814,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -118551,9 +118750,11 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-regression",
     "/learn/maths-foundations/dot-product-explained",
     "/learn/maths-foundations/linear-systems-and-augmented-matrices",
-    "/learn/maths-foundations/matrix-multiplication-mechanics"
+    "/learn/maths-foundations/matrix-multiplication-mechanics",
+    "/learn/maths-foundations/matrix-vector-multiplication"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -118707,7 +118908,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 760,
+   "wordCount": 756,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -118720,6 +118921,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-algebra-for-ml",
     "/learn/maths-foundations/dot-product-explained",
     "/learn/maths-foundations/matrix-addition-scaling-transpose-and-symmetry",
     "/learn/maths-foundations/matrix-matrix-multiplication-and-batching",
@@ -118795,7 +118997,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 856,
+   "wordCount": 851,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -118810,6 +119012,8 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/logistic-regression",
+    "/learn/maths-foundations/map-and-regularisation",
     "/learn/maths-foundations/naive-bayes-and-generative-vs-discriminative-modeling"
    ],
    "externalLinks": [],
@@ -118858,7 +119062,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -118882,7 +119086,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 749,
+   "wordCount": 745,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -118897,6 +119101,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/deep-learning/loss-gradients-and-optimization",
     "/learn/maths-foundations/optimisation-diagnostics-and-second-order-perspective",
     "/learn/maths-foundations/regularisation-geometry-l1-l2-weight-decay-and-early-stopping"
    ],
@@ -118946,7 +119151,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -118970,7 +119175,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 796,
+   "wordCount": 791,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -118983,6 +119188,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/probability-and-statistics-for-ml",
     "/learn/maths-foundations/law-of-large-numbers-and-central-limit-theorem"
    ],
    "externalLinks": [],
@@ -119055,7 +119261,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 780,
+   "wordCount": 776,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -119068,6 +119274,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-algebra-for-ml",
     "/learn/maths-foundations/beta-and-dirichlet-priors"
    ],
    "externalLinks": [],
@@ -119140,7 +119347,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 727,
+   "wordCount": 718,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -119155,7 +119362,9 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/pca-and-dimensionality-reduction",
     "/learn/maths-foundations/kl-divergence",
+    "/learn/maths-foundations/latent-variables-and-elbo-intuition",
     "/learn/maths-foundations/likelihood-cross-entropy-and-classification-objectives"
    ],
    "externalLinks": [],
@@ -119204,7 +119413,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -119228,7 +119437,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 797,
+   "wordCount": 788,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -119243,7 +119452,9 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
-    "/learn/maths-foundations/exponential-families-sufficient-statistics-and-glm"
+    "/learn/machine-learning/problem-framing-and-baselines",
+    "/learn/maths-foundations/exponential-families-sufficient-statistics-and-glm",
+    "/learn/maths-foundations/latent-variables-and-elbo-intuition"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -119291,7 +119502,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -119406,7 +119617,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 559,
+   "wordCount": 556,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -119419,6 +119630,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/regularization-and-bias-variance",
     "/learn/maths-foundations/constrained-optimisation-lagrange-multipliers-and-kkt-intuition",
     "/learn/maths-foundations/gradient-checking-and-debugging"
    ],
@@ -119468,7 +119680,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -119492,7 +119704,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 983,
+   "wordCount": 975,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -119505,7 +119717,9 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
-    "/learn/maths-foundations/cosine-similarity-angular-distance-embedding-retrieval"
+    "/learn/machine-learning/linear-algebra-for-ml",
+    "/learn/maths-foundations/cosine-similarity-angular-distance-embedding-retrieval",
+    "/learn/maths-foundations/labs/a1-embedding-geometry-lab"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -119553,7 +119767,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -119662,7 +119876,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 782,
+   "wordCount": 778,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -119675,6 +119889,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-algebra-for-ml",
     "/learn/maths-foundations/rank-pivots-and-identifiability",
     "/learn/maths-foundations/span-linear-independence-basis-and-dimension"
    ],
@@ -119724,7 +119939,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -119830,7 +120045,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 742,
+   "wordCount": 731,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -119845,6 +120060,8 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/genai-app-dev/api-lifecycle-and-structured-output",
+    "/learn/maths-foundations/cross-entropy-and-negative-log-likelihood",
     "/learn/maths-foundations/numerical-stability-log-sum-exp",
     "/learn/maths-foundations/optimisation-diagnostics-and-second-order-perspective"
    ],
@@ -119894,7 +120111,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -119918,7 +120135,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 823,
+   "wordCount": 819,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -119933,6 +120150,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/problem-framing-and-baselines",
     "/learn/maths-foundations/constrained-optimisation-lagrange-multipliers-and-kkt-intuition",
     "/learn/maths-foundations/convex-sets-functions-and-guarantees",
     "/learn/maths-foundations/effect-sizes-power-and-sample-size-planning"
@@ -120007,7 +120225,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 543,
+   "wordCount": 538,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -120020,6 +120238,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/optimization-loss-and-gradient-descent",
     "/learn/maths-foundations/gradient-descent-intuition",
     "/learn/maths-foundations/hessians-curvature-and-saddle-points",
     "/learn/maths-foundations/partial-derivatives-and-coordinate-wise-sensitivity"
@@ -120094,7 +120313,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 773,
+   "wordCount": 769,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -120109,6 +120328,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/interpretability-and-error-analysis",
     "/learn/maths-foundations/convex-sets-functions-and-guarantees",
     "/learn/maths-foundations/newton-quasi-newton-and-coordinate-descent"
    ],
@@ -120158,7 +120378,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -120182,7 +120402,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1011,
+   "wordCount": 1003,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -120196,6 +120416,8 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-algebra-for-ml",
+    "/learn/machine-learning/reproductions/ml-881-reproduce-least-squares-linear-regression",
     "/learn/maths-foundations/dot-product-explained",
     "/learn/maths-foundations/gram-schmidt-orthogonalisation",
     "/learn/maths-foundations/least-squares-normal-equations-and-projection-geometry"
@@ -120217,7 +120439,7 @@
     "sourcesSection": false,
     "runnableSignals": true,
     "listItems": 7,
-    "numericClaims": 0,
+    "numericClaims": 1,
     "specFormat": true,
     "mathDense": false,
     "linksToPractice": false
@@ -120270,7 +120492,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 796,
+   "wordCount": 788,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -120283,6 +120505,8 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-algebra-for-ml",
+    "/learn/maths-foundations/labs/a1-embedding-geometry-lab",
     "/learn/maths-foundations/projections-and-residuals"
    ],
    "externalLinks": [],
@@ -120331,7 +120555,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -120437,7 +120661,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 562,
+   "wordCount": 558,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -120450,6 +120674,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/features-leakage-and-missingness",
     "/learn/maths-foundations/derivatives-of-affine-layers-and-elementwise-activations",
     "/learn/maths-foundations/gradients-and-directional-derivatives"
    ],
@@ -120499,7 +120724,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -120523,7 +120748,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 976,
+   "wordCount": 969,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -120537,6 +120762,8 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/generalization-and-evaluation",
+    "/learn/machine-learning/pca-and-dimensionality-reduction",
     "/learn/maths-foundations/covariance-and-whitening"
    ],
    "externalLinks": [],
@@ -120585,7 +120812,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -120693,7 +120920,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 867,
+   "wordCount": 857,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -120706,7 +120933,9 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
-    "/learn/maths-foundations/expectation-and-linearity"
+    "/learn/machine-learning/probability-and-statistics-for-ml",
+    "/learn/maths-foundations/expectation-and-linearity",
+    "/learn/maths-foundations/labs/a6-base-rates-bayes-and-simulation"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -120754,7 +120983,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -120778,7 +121007,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 816,
+   "wordCount": 814,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -120791,6 +121020,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/anomaly-detection",
     "/learn/maths-foundations/gaussian-distributions-and-standardisation"
    ],
    "externalLinks": [],
@@ -120945,7 +121175,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 751,
+   "wordCount": 743,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -120958,7 +121188,9 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-algebra-for-ml",
     "/learn/maths-foundations/angles-margins-separating-hyperplanes",
+    "/learn/maths-foundations/labs/a1-embedding-geometry-lab",
     "/learn/maths-foundations/least-squares-normal-equations-and-projection-geometry"
    ],
    "externalLinks": [],
@@ -121007,7 +121239,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -121031,7 +121263,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 914,
+   "wordCount": 908,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -121045,6 +121277,8 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-regression",
+    "/learn/machine-learning/problem-framing-and-baselines",
     "/learn/maths-foundations/eigenvalues-and-eigenvectors",
     "/learn/maths-foundations/least-squares-normal-equations-and-projection-geometry"
    ],
@@ -121094,7 +121328,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -121118,7 +121352,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 869,
+   "wordCount": 867,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -121130,7 +121364,9 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/anomaly-detection"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -121165,8 +121401,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -121177,7 +121413,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -121201,7 +121437,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 946,
+   "wordCount": 934,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -121213,7 +121449,10 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/probability-and-statistics-for-ml",
+    "/learn/maths-foundations/pmfs-cdfs-pdfs-and-mass-versus-density"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -121248,8 +121487,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -121260,7 +121499,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -121284,7 +121523,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 847,
+   "wordCount": 845,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -121297,6 +121536,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-regression",
     "/learn/maths-foundations/gaussian-elimination-and-row-echelon-form",
     "/learn/maths-foundations/null-spaces-column-spaces-row-spaces-and-the-fundamental-picture"
    ],
@@ -121346,7 +121586,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -121370,7 +121610,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 850,
+   "wordCount": 842,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -121383,7 +121623,9 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
-    "/learn/maths-foundations/sequences-recurrences-polynomials-quadratics-and-growth-rates"
+    "/learn/machine-learning/imbalanced-data-and-metrics",
+    "/learn/maths-foundations/sequences-recurrences-polynomials-quadratics-and-growth-rates",
+    "/learn/maths-foundations/units-scales-normalisation"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -121431,7 +121673,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -121455,7 +121697,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 787,
+   "wordCount": 784,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -121471,6 +121713,7 @@
    ],
    "internalLinks": [
     "/learn/deep-learning/core/117-regularization-weight-decay-early-stopping-and-label-smoothing",
+    "/learn/machine-learning/regularization-and-bias-variance",
     "/learn/maths-foundations/conditioning-scaling-initialisation-and-normalisation",
     "/learn/maths-foundations/learning-rate-schedules-warmup-and-gradient-clipping"
    ],
@@ -121544,7 +121787,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 506,
+   "wordCount": 502,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -121557,6 +121800,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/deep-learning/loss-gradients-and-optimization",
     "/learn/maths-foundations/forward-mode-automatic-differentiation",
     "/learn/maths-foundations/gradient-checking-and-debugging"
    ],
@@ -121606,7 +121850,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -121891,7 +122135,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 677,
+   "wordCount": 672,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -121906,6 +122150,7 @@
    ],
    "internalLinks": [
     "/learn/maths-foundations/s1-5-frequency-filtering-and-convolution-theorem",
+    "/learn/maths-foundations/s1-6-spectrograms-windowing-and-time-frequency-trade-offs",
     "/learn/maths-foundations/s1-8-vision-audio-case-study"
    ],
    "externalLinks": [],
@@ -121954,7 +122199,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -122153,7 +122398,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 675,
+   "wordCount": 671,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -122168,7 +122413,8 @@
    ],
    "internalLinks": [
     "/learn/maths-foundations/s1-1-discrete-signals-sampling-and-aliasing",
-    "/learn/maths-foundations/s1-8-vision-audio-case-study"
+    "/learn/maths-foundations/s1-8-vision-audio-case-study",
+    "/learn/responsible-ai/privacy-fairness-and-accessibility"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -122216,7 +122462,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -122240,7 +122486,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 776,
+   "wordCount": 772,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -122254,6 +122500,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/interpretability-and-error-analysis",
     "/learn/maths-foundations/s1-6-spectrograms-windowing-and-time-frequency-trade-offs"
    ],
    "externalLinks": [],
@@ -122501,7 +122748,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 669,
+   "wordCount": 666,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -122515,6 +122762,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/agentic-ai/agents-vs-workflows",
     "/learn/maths-foundations/s2-4-bellman-expectation-equations",
     "/learn/maths-foundations/s2-8-rl-safety-and-offline-data-warnings"
    ],
@@ -122564,7 +122812,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -122588,7 +122836,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 603,
+   "wordCount": 600,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -122603,7 +122851,8 @@
    ],
    "internalLinks": [
     "/learn/maths-foundations/s2-3-markov-decision-processes",
-    "/learn/maths-foundations/s2-5-bellman-optimality-and-value-iteration"
+    "/learn/maths-foundations/s2-5-bellman-optimality-and-value-iteration",
+    "/learn/maths-foundations/s2-7-temporal-difference-learning-and-bias-variance"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -122651,7 +122900,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -122675,7 +122924,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 652,
+   "wordCount": 649,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -122690,6 +122939,7 @@
    ],
    "internalLinks": [
     "/learn/maths-foundations/s2-6-policies-exploration-and-occupancy",
+    "/learn/maths-foundations/s2-7-temporal-difference-learning-and-bias-variance",
     "/learn/maths-foundations/s2-8-rl-safety-and-offline-data-warnings"
    ],
    "externalLinks": [],
@@ -122738,7 +122988,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -122762,7 +123012,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 633,
+   "wordCount": 630,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -122777,6 +123027,7 @@
    ],
    "internalLinks": [
     "/learn/maths-foundations/s2-5-bellman-optimality-and-value-iteration",
+    "/learn/maths-foundations/s2-7-temporal-difference-learning-and-bias-variance",
     "/learn/maths-foundations/s2-8-rl-safety-and-offline-data-warnings"
    ],
    "externalLinks": [],
@@ -122825,7 +123076,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -122937,7 +123188,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 659,
+   "wordCount": 654,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -122951,6 +123202,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/evals-red-teaming/regression-gates-and-online-signals",
     "/learn/maths-foundations/constrained-optimisation-lagrange-multipliers-and-kkt-intuition",
     "/learn/maths-foundations/s2-6-policies-exploration-and-occupancy",
     "/learn/maths-foundations/s2-9-hidden-markov-models-filtering-and-decoding"
@@ -123025,7 +123277,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 640,
+   "wordCount": 630,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -123040,7 +123292,9 @@
    ],
    "internalLinks": [
     "/learn/classical-ai/knowledge-uncertainty/220-hidden-markov-models-filtering-smoothing-and-viterbi",
-    "/learn/maths-foundations/s3-1-graph-notation-adjacency-incidence-and-degree-matrices"
+    "/learn/machine-learning/deep-lectures/904-probabilistic-modelling-mle-map-bayesian-inference-calibration-and-uncertainty",
+    "/learn/maths-foundations/s3-1-graph-notation-adjacency-incidence-and-degree-matrices",
+    "/learn/maths-foundations/s4-1-bayesian-posterior-inference-and-posterior-predictive-checks"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -123059,7 +123313,7 @@
     "sourcesSection": false,
     "runnableSignals": false,
     "listItems": 7,
-    "numericClaims": 2,
+    "numericClaims": 3,
     "specFormat": true,
     "mathDense": false,
     "linksToPractice": false
@@ -123088,7 +123342,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -123112,7 +123366,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 664,
+   "wordCount": 660,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -123128,7 +123382,8 @@
    "internalLinks": [
     "/learn/maths-foundations/matrix-multiplication-mechanics",
     "/learn/maths-foundations/s3-2-random-walks-and-transition-operators",
-    "/learn/maths-foundations/s3-3-graph-laplacians-and-smoothness"
+    "/learn/maths-foundations/s3-3-graph-laplacians-and-smoothness",
+    "/learn/maths-foundations/s3-5-message-passing-and-oversmoothing"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -123376,7 +123631,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 650,
+   "wordCount": 646,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -123390,6 +123645,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/clustering-and-k-means",
     "/learn/maths-foundations/s3-3-graph-laplacians-and-smoothness",
     "/learn/maths-foundations/s3-5-message-passing-and-oversmoothing"
    ],
@@ -123439,7 +123695,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -123463,7 +123719,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 628,
+   "wordCount": 624,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -123477,6 +123733,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/deep-learning/neural-networks-and-representations",
     "/learn/maths-foundations/cosine-similarity-angular-distance-embedding-retrieval",
     "/learn/maths-foundations/s3-4-spectral-clustering-and-embeddings"
    ],
@@ -123526,7 +123783,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -123637,7 +123894,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 613,
+   "wordCount": 606,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -123651,6 +123908,8 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/maths-foundations/maximum-likelihood-estimation",
+    "/learn/maths-foundations/s4-1-bayesian-posterior-inference-and-posterior-predictive-checks",
     "/learn/maths-foundations/s4-3-markov-chain-monte-carlo"
    ],
    "externalLinks": [],
@@ -123699,7 +123958,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -123723,7 +123982,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 599,
+   "wordCount": 593,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -123737,6 +123996,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/maths-foundations/s4-1-bayesian-posterior-inference-and-posterior-predictive-checks",
     "/learn/maths-foundations/s4-4-variational-inference-and-the-elbo"
    ],
    "externalLinks": [],
@@ -123809,7 +124069,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 639,
+   "wordCount": 635,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -123823,6 +124083,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/deep-learning/loss-gradients-and-optimization",
     "/learn/maths-foundations/s4-3-markov-chain-monte-carlo",
     "/learn/maths-foundations/s4-5-gaussian-processes-and-kernel-uncertainty"
    ],
@@ -123872,7 +124133,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -123896,7 +124157,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 673,
+   "wordCount": 668,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -123910,6 +124171,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/causal-questions-vs-predictive-models",
     "/learn/maths-foundations/numerical-stability-softmax-logsumexp-and-safe-probabilities",
     "/learn/maths-foundations/s4-4-variational-inference-and-the-elbo",
     "/learn/maths-foundations/s4-6-causal-graphical-models-do-calculus-and-identifiability-limits"
@@ -123986,7 +124248,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 697,
+   "wordCount": 685,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -123999,7 +124261,11 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/causal-questions-vs-predictive-models",
+    "/learn/machine-learning/problem-framing-and-baselines",
+    "/learn/responsible-ai/risk-before-model"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -124034,8 +124300,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -124046,7 +124312,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -124070,7 +124336,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 973,
+   "wordCount": 965,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -124083,6 +124349,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/probability-and-statistics-for-ml",
     "/learn/maths-foundations/counting-permutations-combinations-and-inclusion-exclusion"
    ],
    "externalLinks": [],
@@ -124155,7 +124422,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 820,
+   "wordCount": 815,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -124168,6 +124435,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/probability-and-statistics-for-ml",
     "/learn/maths-foundations/monte-carlo-estimation-and-standard-errors"
    ],
    "externalLinks": [],
@@ -124240,7 +124508,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 934,
+   "wordCount": 930,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -124254,6 +124522,7 @@
    ],
    "internalLinks": [
     "/learn/deep-learning/core/101-tensors-shapes-and-broadcasting",
+    "/learn/machine-learning/linear-algebra-for-ml",
     "/learn/maths-foundations/units-scales-normalisation"
    ],
    "externalLinks": [],
@@ -124302,7 +124571,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -124326,7 +124595,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 536,
+   "wordCount": 531,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -124339,6 +124608,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/optimization-loss-and-gradient-descent",
     "/learn/maths-foundations/gradient-descent-intuition",
     "/learn/maths-foundations/hessians-curvature-and-saddle-points",
     "/learn/maths-foundations/taylor-expansions-and-approximation-error"
@@ -124413,7 +124683,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 715,
+   "wordCount": 706,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -124428,6 +124698,8 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/deep-learning/attention-and-transformers",
+    "/learn/maths-foundations/cross-entropy-and-negative-log-likelihood",
     "/learn/maths-foundations/entropy-and-uncertainty"
    ],
    "externalLinks": [],
@@ -124476,7 +124748,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -124500,7 +124772,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 940,
+   "wordCount": 935,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -124513,6 +124785,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/time-series-and-temporal-validation",
     "/learn/maths-foundations/algebra-for-model-equations",
     "/learn/maths-foundations/batch-gradient-descent-and-learning-rate"
    ],
@@ -124562,7 +124835,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -124671,7 +124944,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1112,
+   "wordCount": 1100,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -124684,7 +124957,10 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
-    "/learn/maths-foundations/dot-product-explained"
+    "/learn/machine-learning/linear-algebra-for-ml",
+    "/learn/maths-foundations/dot-product-explained",
+    "/learn/maths-foundations/labs/a1-embedding-geometry-lab",
+    "/learn/rag/ingestion-chunking-and-retrieval"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -124732,7 +125008,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -124837,7 +125113,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 742,
+   "wordCount": 738,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -124850,6 +125126,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-algebra-for-ml",
     "/learn/maths-foundations/invertibility-determinants-and-volume-intuition",
     "/learn/maths-foundations/null-spaces-column-spaces-row-spaces-and-the-fundamental-picture"
    ],
@@ -124899,7 +125176,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -124923,7 +125200,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 772,
+   "wordCount": 762,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -124938,8 +125215,10 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/optimization-loss-and-gradient-descent",
     "/learn/maths-foundations/conditioning-scaling-initialisation-and-normalisation",
-    "/learn/maths-foundations/gradient-descent-intuition"
+    "/learn/maths-foundations/gradient-descent-intuition",
+    "/learn/maths-foundations/momentum-nesterov-rmsprop-and-adam"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -124987,7 +125266,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -125011,7 +125290,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 901,
+   "wordCount": 890,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -125025,7 +125304,10 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
-    "/learn/maths-foundations/level-sets-tangent-planes-and-constrained-movement"
+    "/learn/deep-learning/loss-gradients-and-optimization",
+    "/learn/machine-learning/pca-and-dimensionality-reduction",
+    "/learn/maths-foundations/level-sets-tangent-planes-and-constrained-movement",
+    "/learn/maths-foundations/singular-value-decomposition"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -125073,7 +125355,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -125604,7 +125886,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 774,
+   "wordCount": 769,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -125617,6 +125899,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/probability-and-statistics-for-ml",
     "/learn/maths-foundations/sampling-inverse-transform-and-rejection-sampling"
    ],
    "externalLinks": [],
@@ -125689,7 +125972,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 815,
+   "wordCount": 812,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -125702,6 +125985,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/classical-ai/uncertainty-and-decision",
     "/learn/maths-foundations/poisson-counts-and-rate-assumptions"
    ],
    "externalLinks": [],
@@ -125774,7 +126058,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 936,
+   "wordCount": 926,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -125787,7 +126071,9 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
-    "/learn/maths-foundations/floating-point-arithmetic-and-computational-notation"
+    "/learn/machine-learning/features-leakage-and-missingness",
+    "/learn/maths-foundations/floating-point-arithmetic-and-computational-notation",
+    "/learn/maths-foundations/ratios-fractions-percentages-scientific-notation-and-sanity-checks"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -125835,7 +126121,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -125859,7 +126145,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 858,
+   "wordCount": 855,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -125872,6 +126158,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/regularization-and-bias-variance",
     "/learn/maths-foundations/covariance-correlation-and-confounding"
    ],
    "externalLinks": [],
@@ -125944,7 +126231,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 890,
+   "wordCount": 886,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -125958,6 +126245,7 @@
    ],
    "internalLinks": [
     "/learn/maths-foundations/dot-products-bilinear-scores",
+    "/learn/maths-foundations/labs/a1-embedding-geometry-lab",
     "/learn/maths-foundations/vector-means-centring-feature-standardisation"
    ],
    "externalLinks": [],
@@ -126006,7 +126294,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -126030,7 +126318,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 855,
+   "wordCount": 847,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -126043,7 +126331,9 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
-    "/learn/maths-foundations/geometry-in-high-dimensions"
+    "/learn/machine-learning/linear-algebra-for-ml",
+    "/learn/maths-foundations/geometry-in-high-dimensions",
+    "/learn/maths-foundations/labs/a1-embedding-geometry-lab"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -126091,7 +126381,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -126197,7 +126487,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1060,
+   "wordCount": 1052,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -126210,6 +126500,8 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/machine-learning/linear-algebra-for-ml",
+    "/learn/maths-foundations/labs/a1-embedding-geometry-lab",
     "/learn/maths-foundations/matrix-multiplication-mechanics",
     "/learn/maths-foundations/vector-addition-affine-combinations-centroids"
    ],
@@ -126261,7 +126553,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -126285,7 +126577,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 898,
+   "wordCount": 884,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -126297,7 +126589,11 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/drift-and-monitoring",
+    "/learn/machine-learning/interpretability-and-error-analysis",
+    "/learn/maths-foundations/ratios-fractions-percentages-scientific-notation-and-sanity-checks"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -126332,8 +126628,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -126344,7 +126640,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 2,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -160746,7 +161042,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -168163,7 +168459,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -206048,7 +206344,7 @@
    "jaccard": 0.5,
    "containment": 0.75,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {

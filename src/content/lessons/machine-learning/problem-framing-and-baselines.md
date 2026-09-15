@@ -55,8 +55,8 @@ A good offline prediction may not improve outcomes. Interventions change behavio
 
 ## Continue, go deeper, apply it
 
-- Continue: Generalization and evaluation
-- Go deeper: Neural networks and representations
+- Continue: [Generalization and evaluation](/learn/machine-learning/generalization-and-evaluation)
+- Go deeper: [Neural networks and representations](/learn/deep-learning/neural-networks-and-representations)
 - Apply it: write a model card for the baseline before training a larger model.
 
 ## A framing worksheet that can survive implementation

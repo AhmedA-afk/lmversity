@@ -102,6 +102,6 @@ learning rate.
 
 ## Continue, go deeper, apply it
 
-- Continue: Attention and transformers
-- Go deeper: Neural networks and representations
+- Continue: [Attention and transformers](/learn/deep-learning/attention-and-transformers)
+- Go deeper: [Neural networks and representations](/learn/deep-learning/neural-networks-and-representations)
 - Apply it: create a training-debug notebook with four labeled failure curves.

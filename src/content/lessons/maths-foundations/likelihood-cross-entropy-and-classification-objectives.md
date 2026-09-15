@@ -92,5 +92,5 @@ Cross-entropy does not guarantee calibrated or fair probabilities, correct label
 ## Continue, go deeper, apply it
 
 - Continue: [Naive Bayes and generative versus discriminative modelling](/learn/maths-foundations/naive-bayes-and-generative-vs-discriminative-modeling)
-- Go deeper: Numerical stability: softmax and log-sum-exp
-- Apply it: Logistic regression
+- Go deeper: [Numerical stability: softmax and log-sum-exp](/learn/maths-foundations/numerical-stability-softmax-logsumexp-and-safe-probabilities)
+- Apply it: [Logistic regression](/learn/machine-learning/logistic-regression)

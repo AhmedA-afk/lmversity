@@ -77,8 +77,8 @@ Domain review and impact evaluation remain necessary.
 
 ## Continue, go deeper, apply it
 
-- Continue: Clustering and k-means
-- Go deeper: ML systems and reproducibility
+- Continue: [Clustering and k-means](/learn/machine-learning/clustering-and-k-means)
+- Go deeper: [ML systems and reproducibility](/learn/machine-learning/ml-systems-and-reproducibility)
 - Apply it: publish a feature dictionary and train/serve parity tests.
 
 ## Treat transformations as part of the model

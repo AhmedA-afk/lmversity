@@ -132,5 +132,5 @@ the structure than one association summary.
 ## Continue, go deeper, apply it
 
 - Continue: [Joint, marginal, and conditional distributions](/learn/maths-foundations/joint-marginal-and-conditional-distributions)
-- Go deeper: Causal questions versus predictive models
+- Go deeper: [Causal questions versus predictive models](/learn/machine-learning/causal-questions-vs-predictive-models)
 - Apply it: Mathematics Foundations assignments

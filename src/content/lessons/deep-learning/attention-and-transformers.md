@@ -97,6 +97,6 @@ not replace retrieval or evidence evaluation.
 
 ## Continue, go deeper, apply it
 
-- Continue: API lifecycle and structured output
-- Go deeper: Grounding, citations, and context budgets
+- Continue: [API lifecycle and structured output](/learn/genai-app-dev/api-lifecycle-and-structured-output)
+- Go deeper: [Grounding, citations, and context budgets](/learn/rag/grounding-citations-and-context-budgets)
 - Apply it: design a context-ablation experiment for one answer task.

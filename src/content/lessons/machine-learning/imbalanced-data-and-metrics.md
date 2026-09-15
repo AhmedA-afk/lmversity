@@ -74,8 +74,8 @@ reflect unequal observation and access.
 
 ## Continue, go deeper, apply it
 
-- Continue: Feature engineering and pipelines
-- Go deeper: Fairness and subgroup evaluation
+- Continue: [Feature engineering and pipelines](/learn/machine-learning/feature-engineering-and-pipelines)
+- Go deeper: [Fairness and subgroup evaluation](/learn/machine-learning/fairness-and-subgroup-evaluation)
 - Apply it: create a metric contract for one classifier.
 ## Formal extension
 

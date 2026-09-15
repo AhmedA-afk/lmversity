@@ -90,6 +90,6 @@ Stochasticity does not guarantee escape from bad regions, good generalisation, o
 
 ## Continue, go deeper, apply it
 
-- Continue: Momentum, Nesterov, RMSProp, and Adam
+- Continue: [Momentum, Nesterov, RMSProp, and Adam](/learn/maths-foundations/momentum-nesterov-rmsprop-and-adam)
 - Go deeper: [Conditioning, scaling, initialisation, and normalisation](/learn/maths-foundations/conditioning-scaling-initialisation-and-normalisation)
-- Apply it: Optimisation, loss, and gradient descent
+- Apply it: [Optimisation, loss, and gradient descent](/learn/machine-learning/optimization-loss-and-gradient-descent)

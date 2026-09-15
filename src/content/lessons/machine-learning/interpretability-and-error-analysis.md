@@ -75,8 +75,8 @@ explanation can be incomplete. Transparency does not equal fairness or causality
 
 ## Continue, go deeper, apply it
 
-- Continue: Fairness and subgroup evaluation
-- Go deeper: Causal questions versus predictive models
+- Continue: [Fairness and subgroup evaluation](/learn/machine-learning/fairness-and-subgroup-evaluation)
+- Go deeper: [Causal questions versus predictive models](/learn/machine-learning/causal-questions-vs-predictive-models)
 - Apply it: publish an error gallery with rejected explanations.
 ## Formal extension
 

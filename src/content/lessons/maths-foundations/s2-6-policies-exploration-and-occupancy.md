@@ -106,6 +106,6 @@ partial observability, or changing environments.
 
 ## Continue, go deeper, apply it
 
-- Continue: Temporal-difference learning
+- Continue: [Temporal-difference learning](/learn/maths-foundations/s2-7-temporal-difference-learning-and-bias-variance)
 - Go deeper: [Bellman optimality and value iteration](/learn/maths-foundations/s2-5-bellman-optimality-and-value-iteration)
 - Apply it: [RL safety and offline-data warnings](/learn/maths-foundations/s2-8-rl-safety-and-offline-data-warnings)

@@ -173,5 +173,5 @@ misleading evaluation split.
 ## Continue, go deeper, apply it
 
 - Continue: [Eigenvalues and eigenvectors](/learn/maths-foundations/eigenvalues-and-eigenvectors)
-- Go deeper: Linear regression
-- Apply it: Problem framing and baselines
+- Go deeper: [Linear regression](/learn/machine-learning/linear-regression)
+- Apply it: [Problem framing and baselines](/learn/machine-learning/problem-framing-and-baselines)

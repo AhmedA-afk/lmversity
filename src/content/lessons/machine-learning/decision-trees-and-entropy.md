@@ -74,8 +74,8 @@ is an invitation to review, not a proof of causality.
 
 ## Continue, go deeper, apply it
 
-- Continue: Ensemble methods
-- Go deeper: Constraint satisfaction
+- Continue: [Ensemble methods](/learn/machine-learning/ensemble-methods)
+- Go deeper: [Constraint satisfaction](/learn/classical-ai/constraint-satisfaction)
 - Apply it: publish a tree diagram with rejected splits and reasons.
 
 ## Calculate a split before asking software to search

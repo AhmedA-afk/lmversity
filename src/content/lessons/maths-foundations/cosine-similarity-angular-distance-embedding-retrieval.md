@@ -166,5 +166,5 @@ missing access filter. Evaluate retrieval with task-specific reviewed cases.
 ## Continue, go deeper, apply it
 
 - Continue: [Orthogonality and orthonormal coordinates](/learn/maths-foundations/orthogonality-orthonormal-coordinates)
-- Go deeper: Ingestion, chunking, and retrieval
-- Apply it: A1 embedding geometry lab
+- Go deeper: [Ingestion, chunking, and retrieval](/learn/rag/ingestion-chunking-and-retrieval)
+- Apply it: [A1 embedding geometry lab](/learn/maths-foundations/labs/a1-embedding-geometry-lab)

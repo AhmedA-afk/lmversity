@@ -374,5 +374,5 @@ and escalation path are specified.
 ## Continue, go deeper, apply it
 
 - Continue: [Random variables and support](/learn/maths-foundations/random-variables-and-support)
-- Go deeper: Monte Carlo estimation and standard errors
-- Apply it: Classifiers, thresholds, and calibration
+- Go deeper: [Monte Carlo estimation and standard errors](/learn/maths-foundations/monte-carlo-estimation-and-standard-errors)
+- Apply it: [Classifiers, thresholds, and calibration](/learn/machine-learning/classifiers-thresholds-and-calibration)

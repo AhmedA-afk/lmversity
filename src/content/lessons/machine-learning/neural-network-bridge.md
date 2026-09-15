@@ -75,8 +75,8 @@ reliable evaluation, or production controls.
 
 ## Continue, go deeper, apply it
 
-- Continue: Learning theory and PAC intuition
-- Go deeper: Attention and transformers
+- Continue: [Learning theory and PAC intuition](/learn/machine-learning/learning-theory-and-pac-intuition)
+- Go deeper: [Attention and transformers](/learn/deep-learning/attention-and-transformers)
 - Apply it: write a baseline-versus-network decision memo.
 ## Formal extension
 

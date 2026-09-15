@@ -74,8 +74,8 @@ sampling. Those are modeling and governance choices.
 
 ## Continue, go deeper, apply it
 
-- Continue: Optimization, loss, and gradient descent
-- Go deeper: Bayesian and generative learning
+- Continue: [Optimization, loss, and gradient descent](/learn/machine-learning/optimization-loss-and-gradient-descent)
+- Go deeper: [Bayesian and generative learning](/learn/machine-learning/bayesian-and-generative-learning)
 - Apply it: add uncertainty language to a model evaluation report.
 
 ## Conditional probability is the source of many ML mistakes

@@ -1203,8 +1203,11 @@ Credentials to monitor:
 
 - [ ] Add diagnostic paths by learner background.
 - [ ] Add derivation, intuition, calculation, visualization, coding, and error-analysis practice.
-- [ ] Connect maths lessons directly to ML, embeddings, attention, optimization,
-      probabilities, evaluation statistics, and inference.
+- [x] Connect maths lessons directly to ML, embeddings, attention, optimization,
+      probabilities, evaluation statistics, and inference. *(275 plain-text
+      "Go deeper / Apply it" footer pointers resolved to real links across
+      maths/ML/DL/classical — maths files with no outward links: 167 → 48;
+      remaining pointers name module-level targets that aren't pages)*
 - [ ] Add notebooks and deterministic answer checking.
 
 ### Machine Learning
@@ -2109,7 +2112,8 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-15 — AI Foundations overlap pass
 
-- Cross-linked 13 same-topic duplicate pairs touching `ai-foundations` in
+- Commit: `862e44c` (13 pure-diff files; mixed files with in-flight user
+  edits stay uncommitted). Cross-linked 13 same-topic duplicate pairs touching `ai-foundations` in
   both directions via the `**Related:**` convention: the identical-slug
   `why-llms-hallucinate` twins (ai-foundations ↔ llm-foundations),
   `backpropagation-explained` ↔ `the-chain-rule`, `gradient-descent-explained`

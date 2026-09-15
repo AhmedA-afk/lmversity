@@ -141,5 +141,5 @@ into uncertainty statements; the next module is the route for that work.
 ## Continue, go deeper, apply it
 
 - Continue: Mathematics Foundations checklist
-- Go deeper: Anomaly detection
+- Go deeper: [Anomaly detection](/learn/machine-learning/anomaly-detection)
 - Apply it: Likelihood, priors, and sampling assignment

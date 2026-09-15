@@ -67,8 +67,8 @@ a feature pipeline that leaks the future.
 
 ## Continue, go deeper, apply it
 
-- Continue: Generalization and evaluation
-- Go deeper: Privacy, fairness, and accessibility
+- Continue: [Generalization and evaluation](/learn/machine-learning/generalization-and-evaluation)
+- Go deeper: [Privacy, fairness, and accessibility](/learn/responsible-ai/privacy-fairness-and-accessibility)
 - Apply it: write a threshold decision record with an owner and review date.
 
 ## A threshold encodes a tradeoff

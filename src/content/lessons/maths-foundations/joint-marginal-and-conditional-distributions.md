@@ -125,5 +125,5 @@ summarise these slices while retaining the conditioning variable.
 ## Continue, go deeper, apply it
 
 - Continue: [Conditional expectation and conditional variance](/learn/maths-foundations/conditional-expectation-and-conditional-variance)
-- Go deeper: Probability and statistics for ML
-- Apply it: Base rates, Bayes, and simulation
+- Go deeper: [Probability and statistics for ML](/learn/machine-learning/probability-and-statistics-for-ml)
+- Apply it: [Base rates, Bayes, and simulation](/learn/maths-foundations/labs/a6-base-rates-bayes-and-simulation)

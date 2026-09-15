@@ -65,6 +65,6 @@ KKT conditions may be necessary rather than sufficient without suitable constrai
 
 ## Continue, go deeper, apply it
 
-- Continue: Regularisation and bias–variance
+- Continue: [Regularisation and bias–variance](/learn/machine-learning/regularization-and-bias-variance)
 - Go deeper: [Non-smooth optimisation and subgradients](/learn/maths-foundations/non-smooth-optimisation-and-subgradients)
-- Apply it: Risk before model
+- Apply it: [Risk before model](/learn/responsible-ai/risk-before-model)

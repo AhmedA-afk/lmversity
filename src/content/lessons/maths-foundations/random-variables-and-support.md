@@ -133,6 +133,6 @@ represent the distribution once the variable is defined.
 
 ## Continue, go deeper, apply it
 
-- Continue: PMFs, CDFs, PDFs, and mass versus density
-- Go deeper: Probability and statistics for ML
+- Continue: [PMFs, CDFs, PDFs, and mass versus density](/learn/maths-foundations/pmfs-cdfs-pdfs-and-mass-versus-density)
+- Go deeper: [Probability and statistics for ML](/learn/machine-learning/probability-and-statistics-for-ml)
 - Apply it: Mathematics Foundations assignments

@@ -74,7 +74,7 @@ production environment identical to a notebook.
 ## Continue, go deeper, apply it
 
 - Continue: Serving, batch, and online inference
-- Go deeper: Regression gates and online signals
+- Go deeper: [Regression gates and online signals](/learn/evals-red-teaming/regression-gates-and-online-signals)
 - Apply it: add a machine-readable experiment manifest to a project.
 ## Formal extension
 

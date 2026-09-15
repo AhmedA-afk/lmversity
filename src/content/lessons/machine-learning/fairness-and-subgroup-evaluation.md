@@ -74,8 +74,8 @@ inequality. Technical parity is not the same as a just outcome.
 
 ## Continue, go deeper, apply it
 
-- Continue: Drift and monitoring
-- Go deeper: Privacy, fairness, and accessibility
+- Continue: [Drift and monitoring](/learn/machine-learning/drift-and-monitoring)
+- Go deeper: [Privacy, fairness, and accessibility](/learn/responsible-ai/privacy-fairness-and-accessibility)
 - Apply it: write a subgroup evaluation report with a deployment recommendation.
 ## Formal extension
 

@@ -516,7 +516,7 @@ held-out, subgroup-aware, task-specific data and an explicit action policy.
 
 - Continue: [Likelihood, cross-entropy, and classification objectives](/learn/maths-foundations/likelihood-cross-entropy-and-classification-objectives)
 - Go deeper: [KL divergence and distribution mismatch](/learn/maths-foundations/kl-divergence-and-distribution-mismatch)
-- Apply it: Classifiers, thresholds, and calibration
+- Apply it: [Classifiers, thresholds, and calibration](/learn/machine-learning/classifiers-thresholds-and-calibration)
 
 ## M9 reference route
 

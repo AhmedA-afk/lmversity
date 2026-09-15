@@ -147,4 +147,4 @@ data quality, and decision policy remain separate work.
 
 - Continue: [Algebra for model equations](/learn/maths-foundations/algebra-for-model-equations)
 - Go deeper: Mathematics Foundations checklist
-- Apply it: Problem framing and baselines
+- Apply it: [Problem framing and baselines](/learn/machine-learning/problem-framing-and-baselines)

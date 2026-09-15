@@ -133,5 +133,5 @@ sampling, uncertainty, and metric-definition review.
 ## Continue, go deeper, apply it
 
 - Continue: [Sequences, recurrences, polynomials, quadratics, and growth rates](/learn/maths-foundations/sequences-recurrences-polynomials-quadratics-and-growth-rates)
-- Go deeper: Units, scales, and normalisation
-- Apply it: Imbalanced data and metrics
+- Go deeper: [Units, scales, and normalisation](/learn/maths-foundations/units-scales-normalisation)
+- Apply it: [Imbalanced data and metrics](/learn/machine-learning/imbalanced-data-and-metrics)

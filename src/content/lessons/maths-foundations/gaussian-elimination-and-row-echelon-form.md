@@ -133,4 +133,4 @@ next tools.
 
 - Continue: [Rank, pivots, and identifiability](/learn/maths-foundations/rank-pivots-and-identifiability)
 - Go deeper: [Linear systems and augmented matrices](/learn/maths-foundations/linear-systems-and-augmented-matrices)
-- Apply it: Linear regression
+- Apply it: [Linear regression](/learn/machine-learning/linear-regression)

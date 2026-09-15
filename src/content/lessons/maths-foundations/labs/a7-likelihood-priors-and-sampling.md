@@ -224,5 +224,5 @@ MLE and MAP do not prove that a likelihood or prior is appropriate, and a Monte 
 ## Continue, go deeper, apply it
 
 - Continue: [Law of large numbers and central limit theorem](/learn/maths-foundations/law-of-large-numbers-and-central-limit-theorem)
-- Go deeper: MAP and regularisation
+- Go deeper: [MAP and regularisation](/learn/maths-foundations/map-and-regularisation)
 - Apply it: [Bootstrap methods](/learn/maths-foundations/bootstrap-methods)

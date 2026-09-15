@@ -137,5 +137,5 @@ sampling design; covariance describes how two quantities move together.
 ## Continue, go deeper, apply it
 
 - Continue: [Covariance, correlation, and confounding warnings](/learn/maths-foundations/covariance-correlation-and-confounding)
-- Go deeper: Regularization and bias–variance
+- Go deeper: [Regularization and bias–variance](/learn/machine-learning/regularization-and-bias-variance)
 - Apply it: Mathematics Foundations assignments

@@ -74,8 +74,8 @@ is meaningful to people or policy.
 
 ## Continue, go deeper, apply it
 
-- Continue: PCA and dimensionality reduction
-- Go deeper: Nearest neighbors and kernels
+- Continue: [PCA and dimensionality reduction](/learn/machine-learning/pca-and-dimensionality-reduction)
+- Go deeper: [Nearest neighbors and kernels](/learn/machine-learning/nearest-neighbors-and-kernels)
 - Apply it: publish a cluster investigation with rejected interpretations.
 
 ## The objective explains the behavior

@@ -87,5 +87,5 @@ Cross-entropy does not guarantee calibration, fairness, causal validity, or usef
 ## Continue, go deeper, apply it
 
 - Continue: [KL divergence and distribution mismatch](/learn/maths-foundations/kl-divergence-and-distribution-mismatch)
-- Go deeper: Likelihood, cross-entropy, and classification objectives
-- Apply it: Logistic regression
+- Go deeper: [Likelihood, cross-entropy, and classification objectives](/learn/maths-foundations/likelihood-cross-entropy-and-classification-objectives)
+- Apply it: [Logistic regression](/learn/machine-learning/logistic-regression)

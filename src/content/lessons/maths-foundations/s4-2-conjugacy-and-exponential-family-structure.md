@@ -107,5 +107,5 @@ data collection. Exact posterior arithmetic may still describe the wrong model.
 ## Continue, go deeper, apply it
 
 - Continue: [Markov chain Monte Carlo](/learn/maths-foundations/s4-3-markov-chain-monte-carlo)
-- Go deeper: Bayesian posterior inference
-- Apply it: Maximum likelihood and estimation
+- Go deeper: [Bayesian posterior inference](/learn/maths-foundations/s4-1-bayesian-posterior-inference-and-posterior-predictive-checks)
+- Apply it: [Maximum likelihood and estimation](/learn/maths-foundations/maximum-likelihood-estimation)

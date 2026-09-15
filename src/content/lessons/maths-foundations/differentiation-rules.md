@@ -72,6 +72,6 @@ Rules do not remove the need for [the chain rule](/learn/maths-foundations/the-c
 
 ## Continue, go deeper, apply it
 
-- Continue: The chain rule
+- Continue: [The chain rule](/learn/maths-foundations/the-chain-rule)
 - Go deeper: [Derivatives of affine layers and elementwise activations](/learn/maths-foundations/derivatives-of-affine-layers-and-elementwise-activations)
-- Apply it: Logistic regression
+- Apply it: [Logistic regression](/learn/machine-learning/logistic-regression)

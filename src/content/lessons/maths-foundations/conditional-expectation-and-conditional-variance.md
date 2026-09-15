@@ -144,5 +144,5 @@ The next module chooses concrete distribution families and sampling procedures.
 ## Continue, go deeper, apply it
 
 - Continue: [Bernoulli, Binomial, Hypergeometric, and Negative Binomial models](/learn/maths-foundations/bernoulli-binomial-hypergeometric-and-negative-binomial)
-- Go deeper: Probability and statistics for ML
-- Apply it: Base rates, Bayes, and simulation
+- Go deeper: [Probability and statistics for ML](/learn/machine-learning/probability-and-statistics-for-ml)
+- Apply it: [Base rates, Bayes, and simulation](/learn/maths-foundations/labs/a6-base-rates-bayes-and-simulation)

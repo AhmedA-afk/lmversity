@@ -90,5 +90,5 @@ Convexity does not guarantee fast convergence, good data, or useful objectives. 
 ## Continue, go deeper, apply it
 
 - Continue: [Batch gradient descent and learning-rate choice](/learn/maths-foundations/batch-gradient-descent-and-learning-rate)
-- Go deeper: Optimisation diagnostics and second-order perspective
-- Apply it: Optimisation, loss, and gradient descent
+- Go deeper: [Optimisation diagnostics and second-order perspective](/learn/maths-foundations/optimisation-diagnostics-and-second-order-perspective)
+- Apply it: [Optimisation, loss, and gradient descent](/learn/machine-learning/optimization-loss-and-gradient-descent)

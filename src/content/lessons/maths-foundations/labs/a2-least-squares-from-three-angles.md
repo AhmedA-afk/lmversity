@@ -375,6 +375,6 @@ agreement establish algebraic and computational consistency, not model validity.
 
 ## Continue, go deeper, apply it
 
-- Continue: Least squares, normal equations, and projection geometry
+- Continue: [Least squares, normal equations, and projection geometry](/learn/maths-foundations/least-squares-normal-equations-and-projection-geometry)
 - Go deeper: [Inverses and why solving beats explicit inversion](/learn/maths-foundations/inverses-and-why-solving-beats-explicit-inversion)
-- Apply it: Linear regression
+- Apply it: [Linear regression](/learn/machine-learning/linear-regression)

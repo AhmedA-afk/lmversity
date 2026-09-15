@@ -74,8 +74,8 @@ or domain knowledge that supports the counterfactual claim.
 
 ## Continue, go deeper, apply it
 
-- Continue: Interpretability and error analysis
-- Go deeper: Uncertainty and decision
+- Continue: [Interpretability and error analysis](/learn/machine-learning/interpretability-and-error-analysis)
+- Go deeper: [Uncertainty and decision](/learn/classical-ai/uncertainty-and-decision)
 - Apply it: rewrite one predictive requirement as a causal question and list the missing evidence.
 ## Formal extension
 

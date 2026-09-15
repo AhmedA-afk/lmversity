@@ -133,5 +133,5 @@ failure budget explicit.
 ## Continue, go deeper, apply it
 
 - Continue: [Concentration, tail risk, and rare events](/learn/maths-foundations/concentration-tail-risk-and-rare-events)
-- Go deeper: Probability and statistics for ML
+- Go deeper: [Probability and statistics for ML](/learn/machine-learning/probability-and-statistics-for-ml)
 - Apply it: Likelihood, priors, and sampling assignment

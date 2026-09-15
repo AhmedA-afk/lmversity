@@ -93,6 +93,6 @@ Entropy does not measure correctness, label quality, causal relevance, or calibr
 
 ## Continue, go deeper, apply it
 
-- Continue: Cross-entropy and negative log-likelihood
+- Continue: [Cross-entropy and negative log-likelihood](/learn/maths-foundations/cross-entropy-and-negative-log-likelihood)
 - Go deeper: [Mutual information and representation relevance](/learn/maths-foundations/mutual-information-and-representation-relevance)
-- Apply it: Probability and statistics for ML
+- Apply it: [Probability and statistics for ML](/learn/machine-learning/probability-and-statistics-for-ml)

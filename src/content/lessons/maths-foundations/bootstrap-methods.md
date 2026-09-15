@@ -91,4 +91,4 @@ Bootstrap does not remove bias, create unseen modes, guarantee coverage, or just
 
 - Continue: [Hypothesis tests, p-values, and permutation tests](/learn/maths-foundations/hypothesis-tests-p-values-and-permutation-tests)
 - Go deeper: [Causal inference foundations](/learn/maths-foundations/causal-inference-foundations)
-- Apply it: Cross-validation and experimental design
+- Apply it: [Cross-validation and experimental design](/learn/machine-learning/cross-validation-and-experimental-design)

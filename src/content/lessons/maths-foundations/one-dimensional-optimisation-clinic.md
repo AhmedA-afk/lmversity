@@ -69,4 +69,4 @@ One-dimensional descent does not guarantee success in non-convex, stochastic, or
 
 - Continue: [Partial derivatives and coordinate-wise sensitivity](/learn/maths-foundations/partial-derivatives-and-coordinate-wise-sensitivity)
 - Go deeper: [Hessians, curvature, and saddle points](/learn/maths-foundations/hessians-curvature-and-saddle-points)
-- Apply it: Optimisation, loss, and gradient descent
+- Apply it: [Optimisation, loss, and gradient descent](/learn/machine-learning/optimization-loss-and-gradient-descent)

@@ -73,4 +73,4 @@ Partials do not measure joint movement, causal effect, or global feature importa
 
 - Continue: [Gradients and directional derivatives](/learn/maths-foundations/gradients-and-directional-derivatives)
 - Go deeper: [Derivatives of affine layers and elementwise activations](/learn/maths-foundations/derivatives-of-affine-layers-and-elementwise-activations)
-- Apply it: Features, leakage, and missingness
+- Apply it: [Features, leakage, and missingness](/learn/machine-learning/features-leakage-and-missingness)

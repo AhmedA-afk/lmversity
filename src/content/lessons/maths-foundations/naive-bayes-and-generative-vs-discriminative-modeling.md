@@ -90,6 +90,6 @@ Naive Bayes does not make correlated features independent, guarantee calibrated 
 
 ## Continue, go deeper, apply it
 
-- Continue: Latent variables and ELBO intuition
+- Continue: [Latent variables and ELBO intuition](/learn/maths-foundations/latent-variables-and-elbo-intuition)
 - Go deeper: [Exponential families, sufficient statistics, and GLM intuition](/learn/maths-foundations/exponential-families-sufficient-statistics-and-glm)
-- Apply it: Problem framing and baselines
+- Apply it: [Problem framing and baselines](/learn/machine-learning/problem-framing-and-baselines)

@@ -169,4 +169,4 @@ result.
 
 - Continue: [Dot products and bilinear scores](/learn/maths-foundations/dot-products-bilinear-scores)
 - Go deeper: [Vector means, centring, and feature standardisation](/learn/maths-foundations/vector-means-centring-feature-standardisation)
-- Apply it: A1 embedding geometry lab
+- Apply it: [A1 embedding geometry lab](/learn/maths-foundations/labs/a1-embedding-geometry-lab)

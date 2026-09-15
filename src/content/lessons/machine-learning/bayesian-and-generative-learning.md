@@ -74,8 +74,8 @@ turn a posterior into a moral or policy decision.
 
 ## Continue, go deeper, apply it
 
-- Continue: Reinforcement learning and reward
-- Go deeper: Probability and statistics for ML
+- Continue: [Reinforcement learning and reward](/learn/machine-learning/reinforcement-learning-and-reward)
+- Go deeper: [Probability and statistics for ML](/learn/machine-learning/probability-and-statistics-for-ml)
 - Apply it: write a model-choice note for a prediction versus generation task.
 ## Formal extension
 

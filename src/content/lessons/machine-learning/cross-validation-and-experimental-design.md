@@ -74,8 +74,8 @@ It only makes the evidence about the chosen target more credible.
 
 ## Continue, go deeper, apply it
 
-- Continue: Imbalanced data and metrics
-- Go deeper: Statistical testing for ML
+- Continue: [Imbalanced data and metrics](/learn/machine-learning/imbalanced-data-and-metrics)
+- Go deeper: [Statistical testing for ML](/learn/machine-learning/statistical-testing-for-ml)
 - Apply it: publish a split decision record before comparing models.
 ## Formal extension
 

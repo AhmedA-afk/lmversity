@@ -107,4 +107,4 @@ and a low-collision embedding can still encode a harmful shortcut.
 
 - Continue: Probabilistic-research extensions
 - Go deeper: [Spectral clustering and embeddings](/learn/maths-foundations/s3-4-spectral-clustering-and-embeddings)
-- Apply it: Neural networks and representations
+- Apply it: [Neural networks and representations](/learn/deep-learning/neural-networks-and-representations)

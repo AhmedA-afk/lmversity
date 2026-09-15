@@ -182,5 +182,5 @@ It also does not make a rank-deficient or badly scaled matrix safe automatically
 ## Continue, go deeper, apply it
 
 - Continue: [Gram–Schmidt orthogonalisation](/learn/maths-foundations/gram-schmidt-orthogonalisation)
-- Go deeper: Linear algebra for ML
-- Apply it: Least squares and regression
+- Go deeper: [Linear algebra for ML](/learn/machine-learning/linear-algebra-for-ml)
+- Apply it: [Least squares and regression](/learn/machine-learning/reproductions/ml-881-reproduce-least-squares-linear-regression)

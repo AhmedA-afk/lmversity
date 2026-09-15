@@ -133,5 +133,5 @@ standard errors and convergence diagnostics.
 ## Continue, go deeper, apply it
 
 - Continue: [Monte Carlo estimation and standard errors](/learn/maths-foundations/monte-carlo-estimation-and-standard-errors)
-- Go deeper: Probability and statistics for ML
+- Go deeper: [Probability and statistics for ML](/learn/machine-learning/probability-and-statistics-for-ml)
 - Apply it: Likelihood, priors, and sampling assignment

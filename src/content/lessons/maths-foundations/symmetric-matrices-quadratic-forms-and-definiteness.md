@@ -164,6 +164,6 @@ noise. Symmetrising a bad matrix can conceal an upstream implementation error.
 
 ## Continue, go deeper, apply it
 
-- Continue: Singular value decomposition
-- Go deeper: Loss, gradients, and optimisation
-- Apply it: PCA and dimensionality reduction
+- Continue: [Singular value decomposition](/learn/maths-foundations/singular-value-decomposition)
+- Go deeper: [Loss, gradients, and optimisation](/learn/deep-learning/loss-gradients-and-optimization)
+- Apply it: [PCA and dimensionality reduction](/learn/machine-learning/pca-and-dimensionality-reduction)

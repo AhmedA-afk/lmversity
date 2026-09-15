@@ -141,4 +141,4 @@ real deployments.
 
 - Continue: [Batch gradient descent and learning-rate choice](/learn/maths-foundations/batch-gradient-descent-and-learning-rate)
 - Go deeper: [Algebra for model equations](/learn/maths-foundations/algebra-for-model-equations)
-- Apply it: Time series and temporal validation
+- Apply it: [Time series and temporal validation](/learn/machine-learning/time-series-and-temporal-validation)

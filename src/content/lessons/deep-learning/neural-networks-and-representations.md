@@ -77,6 +77,6 @@ the representation, probe, label, or measurement protocol.
 
 ## Continue, go deeper, apply it
 
-- Continue: Generalization and evaluation
+- Continue: [Generalization and evaluation](/learn/machine-learning/generalization-and-evaluation)
 - Go deeper: transformers, tokenization, and language-model training
 - Apply it: compare a learned embedding search with a keyword baseline.

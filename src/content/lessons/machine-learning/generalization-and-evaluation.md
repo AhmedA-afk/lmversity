@@ -57,8 +57,8 @@ Offline evaluation cannot reveal every future distribution shift, causal effect,
 
 ## Continue, go deeper, apply it
 
-- Continue: Deep learning representations
-- Go deeper: Prompt evaluation
+- Continue: [Deep learning representations](/learn/deep-learning/neural-networks-and-representations)
+- Go deeper: [Prompt evaluation](/learn/prompt-engineering/prompt-evaluation)
 - Apply it: Responsible fairness and provenance
 
 ## Estimate a future quantity, not a leaderboard number

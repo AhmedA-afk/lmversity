@@ -76,7 +76,7 @@ the decision. It controls one kind of complexity.
 ## Continue, go deeper, apply it
 
 - Continue: [Decision trees](/learn/machine-learning/derivations/06-decision-tree-impurity-and-information-gain-calculations) and entropy
-- Go deeper: Cross-validation and experimental design
+- Go deeper: [Cross-validation and experimental design](/learn/machine-learning/cross-validation-and-experimental-design)
 - Apply it: add a regularization sweep and stability note to a model report.
 
 ## Complexity appears in the objective

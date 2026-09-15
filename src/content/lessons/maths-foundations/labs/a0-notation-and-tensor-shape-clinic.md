@@ -389,4 +389,4 @@ review after the shape boundary passes.
 
 - Continue: [Vectors as coordinates](/learn/maths-foundations/vectors-as-coordinates-features) and features
 - Go deeper: [Partial derivatives and coordinate-wise sensitivity](/learn/maths-foundations/partial-derivatives-and-coordinate-wise-sensitivity)
-- Apply it: Linear algebra for ML
+- Apply it: [Linear algebra for ML](/learn/machine-learning/linear-algebra-for-ml)

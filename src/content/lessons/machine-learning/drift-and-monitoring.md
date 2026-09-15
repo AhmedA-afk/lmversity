@@ -74,7 +74,7 @@ means a safe decision.
 
 ## Continue, go deeper, apply it
 
-- Continue: ML systems and reproducibility
+- Continue: [ML systems and reproducibility](/learn/machine-learning/ml-systems-and-reproducibility)
 - Go deeper: [Time series](/learn/machine-learning/deep-lectures/907-time-series-ranking-and-recommender-systems-under-temporal-exposure-feedback) and temporal validation
 - Apply it: publish a drift response runbook with a rollback condition.
 ## Formal extension

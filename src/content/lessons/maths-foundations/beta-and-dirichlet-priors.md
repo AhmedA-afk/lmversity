@@ -132,5 +132,5 @@ distribution changes when a variable is reparameterised.
 ## Continue, go deeper, apply it
 
 - Continue: [Transformations of random variables and LOTUS](/learn/maths-foundations/transformations-of-random-variables-and-lotus)
-- Go deeper: Bayesian and generative learning
+- Go deeper: [Bayesian and generative learning](/learn/machine-learning/bayesian-and-generative-learning)
 - Apply it: Likelihood, priors, and sampling assignment

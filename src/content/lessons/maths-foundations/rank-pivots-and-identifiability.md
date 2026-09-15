@@ -132,4 +132,4 @@ exact model, but it does not guarantee stable estimates or good generalisation.
 
 - Continue: [Null spaces, column spaces, row spaces, and the fundamental picture](/learn/maths-foundations/null-spaces-column-spaces-row-spaces-and-the-fundamental-picture)
 - Go deeper: [Gaussian elimination and row-echelon form](/learn/maths-foundations/gaussian-elimination-and-row-echelon-form)
-- Apply it: Linear regression
+- Apply it: [Linear regression](/learn/machine-learning/linear-regression)

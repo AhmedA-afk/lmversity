@@ -73,8 +73,8 @@ that differs from the evaluation set.
 
 ## Continue, go deeper, apply it
 
-- Continue: ML Foundations capstone
-- Go deeper: Cross-validation and experimental design
+- Continue: [ML Foundations capstone](/learn/machine-learning/ml-foundations-capstone)
+- Go deeper: [Cross-validation and experimental design](/learn/machine-learning/cross-validation-and-experimental-design)
 - Apply it: add a paired comparison and uncertainty interval to a model report.
 ## Formal extension
 

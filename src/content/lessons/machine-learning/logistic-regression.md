@@ -73,8 +73,8 @@ it only makes some assumptions easier to inspect.
 
 ## Continue, go deeper, apply it
 
-- Continue: Regularization and bias-variance
-- Go deeper: Classifiers, thresholds, and calibration
+- Continue: [Regularization and bias-variance](/learn/machine-learning/regularization-and-bias-variance)
+- Go deeper: [Classifiers, thresholds, and calibration](/learn/machine-learning/classifiers-thresholds-and-calibration)
 - Apply it: write a threshold decision record for the classifier.
 
 ## The log-odds model

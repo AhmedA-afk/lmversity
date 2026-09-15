@@ -121,5 +121,5 @@ averages.
 ## Continue, go deeper, apply it
 
 - Continue: [Variance, standard deviation, and bias–variance language](/learn/maths-foundations/variance-standard-deviation-and-bias-variance)
-- Go deeper: Probability and statistics for ML
+- Go deeper: [Probability and statistics for ML](/learn/machine-learning/probability-and-statistics-for-ml)
 - Apply it: Mathematics Foundations assignments

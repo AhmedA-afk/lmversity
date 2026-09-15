@@ -143,6 +143,6 @@ and transformation available for review.
 
 ## Continue, go deeper, apply it
 
-- Continue: Ratios, fractions, percentages, and numerical sanity checks
-- Go deeper: Interpretability and error analysis
-- Apply it: Drift and monitoring
+- Continue: [Ratios, fractions, percentages, and numerical sanity checks](/learn/maths-foundations/ratios-fractions-percentages-scientific-notation-and-sanity-checks)
+- Go deeper: [Interpretability and error analysis](/learn/machine-learning/interpretability-and-error-analysis)
+- Apply it: [Drift and monitoring](/learn/machine-learning/drift-and-monitoring)

@@ -95,6 +95,6 @@ Batch GD does not choose a correct objective, escape every non-convex issue, or 
 
 - Continue: [Stochastic and mini-batch gradient descent](/learn/maths-foundations/stochastic-and-minibatch-gradient-descent)
 - Go deeper: [Conditioning, scaling, initialisation, and normalisation](/learn/maths-foundations/conditioning-scaling-initialisation-and-normalisation)
-- Apply it: Optimisation, loss, and gradient descent
+- Apply it: [Optimisation, loss, and gradient descent](/learn/machine-learning/optimization-loss-and-gradient-descent)
 
 **Related:** [Gradient Descent: The Engine of Learning](/learn/ai-foundations/gradient-descent-explained)

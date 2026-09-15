@@ -149,5 +149,5 @@ fact, not evidence that the discarded information is harmless.
 ## Continue, go deeper, apply it
 
 - Continue: [Angles, margins, and separating hyperplanes](/learn/maths-foundations/angles-margins-separating-hyperplanes)
-- Go deeper: Linear algebra for ML
-- Apply it: A1 embedding geometry lab
+- Go deeper: [Linear algebra for ML](/learn/machine-learning/linear-algebra-for-ml)
+- Apply it: [A1 embedding geometry lab](/learn/maths-foundations/labs/a1-embedding-geometry-lab)

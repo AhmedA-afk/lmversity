@@ -190,5 +190,5 @@ operations that are only meaningful after the coordinate contract is sound.
 ## Continue, go deeper, apply it
 
 - Continue: [Vector addition](/learn/maths-foundations/vector-addition-affine-combinations-centroids), affine combinations, and centroids
-- Go deeper: Linear algebra for ML
-- Apply it: A1 embedding geometry lab
+- Go deeper: [Linear algebra for ML](/learn/machine-learning/linear-algebra-for-ml)
+- Apply it: [A1 embedding geometry lab](/learn/maths-foundations/labs/a1-embedding-geometry-lab)

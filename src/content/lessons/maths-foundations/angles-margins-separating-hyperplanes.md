@@ -157,5 +157,5 @@ Threshold and probability decisions need their own validation.
 ## Continue, go deeper, apply it
 
 - Continue: [Vector means, centring, and feature standardisation](/learn/maths-foundations/vector-means-centring-feature-standardisation)
-- Go deeper: Classifiers, thresholds, and calibration
-- Apply it: A1 embedding geometry lab
+- Go deeper: [Classifiers, thresholds, and calibration](/learn/machine-learning/classifiers-thresholds-and-calibration)
+- Apply it: [A1 embedding geometry lab](/learn/maths-foundations/labs/a1-embedding-geometry-lab)

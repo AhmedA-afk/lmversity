@@ -379,8 +379,8 @@ evaluation, and downstream answer tests.
 ## Continue, go deeper, apply it
 
 - Continue: [Similarity-search design clinic](/learn/maths-foundations/similarity-search-design-clinic)
-- Go deeper: Ingestion, chunking, and retrieval
-- Apply it: Linear algebra for ML
+- Go deeper: [Ingestion, chunking, and retrieval](/learn/rag/ingestion-chunking-and-retrieval)
+- Apply it: [Linear algebra for ML](/learn/machine-learning/linear-algebra-for-ml)
 
 ## M1 reference route
 

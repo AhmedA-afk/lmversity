@@ -426,7 +426,7 @@ evaluation.
 
 - Continue: [PCA from variance maximisation and SVD](/learn/maths-foundations/pca-from-variance-and-svd)
 - Go deeper: [Kernel matrices and the kernel trick](/learn/maths-foundations/kernel-matrices-and-kernel-trick)
-- Apply it: PCA and dimensionality reduction in ML
+- Apply it: [PCA and dimensionality reduction in ML](/learn/machine-learning/pca-and-dimensionality-reduction)
 
 ## M3 reference route
 

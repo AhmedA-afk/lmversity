@@ -78,8 +78,8 @@ can frame, test, communicate, and operate an ML decision honestly.
 
 ## Continue, go deeper, apply it
 
-- Continue: Governance artifacts
-- Go deeper: ML systems and reproducibility
+- Continue: [Governance artifacts](/learn/responsible-ai/governance-artifacts)
+- Go deeper: [ML systems and reproducibility](/learn/machine-learning/ml-systems-and-reproducibility)
 - Apply it: submit the complete model/system card and release review.
 ## Formal extension
 

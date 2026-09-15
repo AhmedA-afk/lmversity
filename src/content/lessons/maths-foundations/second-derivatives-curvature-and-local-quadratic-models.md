@@ -69,4 +69,4 @@ One-dimensional curvature does not capture interactions among coordinates, noise
 
 - Continue: [Taylor expansions and approximation error](/learn/maths-foundations/taylor-expansions-and-approximation-error)
 - Go deeper: [Hessians, curvature, and saddle points](/learn/maths-foundations/hessians-curvature-and-saddle-points)
-- Apply it: Optimisation, loss, and gradient descent
+- Apply it: [Optimisation, loss, and gradient descent](/learn/machine-learning/optimization-loss-and-gradient-descent)

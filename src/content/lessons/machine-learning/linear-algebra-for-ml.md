@@ -76,8 +76,8 @@ which features are valid, fair, or available at decision time.
 
 ## Continue, go deeper, apply it
 
-- Continue: Probability and statistics for ML
-- Go deeper: Neural networks and representations
+- Continue: [Probability and statistics for ML](/learn/machine-learning/probability-and-statistics-for-ml)
+- Go deeper: [Neural networks and representations](/learn/deep-learning/neural-networks-and-representations)
 - Apply it: publish a feature-scaling note for a small model.
 
 ## Shapes are a first-class correctness condition

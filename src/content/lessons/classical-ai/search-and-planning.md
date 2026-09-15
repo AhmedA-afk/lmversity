@@ -53,6 +53,6 @@ Explicit planning struggles when the world is noisy, partially observed, or too 
 
 ## Continue, go deeper, apply it
 
-- Continue: Problem framing and baselines
-- Go deeper: Reasoning and decomposition
+- Continue: [Problem framing and baselines](/learn/machine-learning/problem-framing-and-baselines)
+- Go deeper: [Reasoning and decomposition](/learn/prompt-engineering/reasoning-and-decomposition)
 - Apply it: model an AI agent as a state machine before adding a framework.

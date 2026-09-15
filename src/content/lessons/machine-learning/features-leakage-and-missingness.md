@@ -68,8 +68,8 @@ decision or whether the label itself is a poor proxy.
 
 ## Continue, go deeper, apply it
 
-- Continue: Generalization and evaluation
-- Go deeper: Classifiers, thresholds, and calibration
+- Continue: [Generalization and evaluation](/learn/machine-learning/generalization-and-evaluation)
+- Go deeper: [Classifiers, thresholds, and calibration](/learn/machine-learning/classifiers-thresholds-and-calibration)
 - Apply it: publish a feature-availability table with your model experiment.
 
 ## Build a feature availability ledger

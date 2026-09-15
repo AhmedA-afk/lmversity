@@ -73,4 +73,4 @@ Gradient checks are local and sampled. They do not cover every branch, prove tra
 
 - Continue: [Non-smooth optimisation and subgradients](/learn/maths-foundations/non-smooth-optimisation-and-subgradients)
 - Go deeper: [Finite differences and numerical derivative checks](/learn/maths-foundations/finite-differences-and-numerical-derivative-checks)
-- Apply it: Datasets, rubrics, and judges
+- Apply it: [Datasets, rubrics, and judges](/learn/evals-red-teaming/datasets-rubrics-and-judges)

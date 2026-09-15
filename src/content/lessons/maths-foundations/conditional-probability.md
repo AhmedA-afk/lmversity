@@ -144,5 +144,5 @@ ways to compose or reverse these quantities.
 ## Continue, go deeper, apply it
 
 - Continue: [Independence and conditional independence](/learn/maths-foundations/independence-and-conditional-independence)
-- Go deeper: Uncertainty and decision
-- Apply it: Base rates, Bayes, and simulation
+- Go deeper: [Uncertainty and decision](/learn/classical-ai/uncertainty-and-decision)
+- Apply it: [Base rates, Bayes, and simulation](/learn/maths-foundations/labs/a6-base-rates-bayes-and-simulation)

@@ -166,5 +166,5 @@ validation data, and the decision cost must be inspected with the distance.
 ## Continue, go deeper, apply it
 
 - Continue: [Cosine similarity, angular distance, and embedding retrieval](/learn/maths-foundations/cosine-similarity-angular-distance-embedding-retrieval)
-- Go deeper: Linear algebra for ML
-- Apply it: A1 embedding geometry lab
+- Go deeper: [Linear algebra for ML](/learn/machine-learning/linear-algebra-for-ml)
+- Apply it: [A1 embedding geometry lab](/learn/maths-foundations/labs/a1-embedding-geometry-lab)

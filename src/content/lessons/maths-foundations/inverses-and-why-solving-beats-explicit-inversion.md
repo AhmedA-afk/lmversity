@@ -130,6 +130,6 @@ squares rather than exact solving.
 
 ## Continue, go deeper, apply it
 
-- Continue: Least squares, normal equations, and projection geometry
+- Continue: [Least squares, normal equations, and projection geometry](/learn/maths-foundations/least-squares-normal-equations-and-projection-geometry)
 - Go deeper: [Invertibility, determinants, and volume intuition](/learn/maths-foundations/invertibility-determinants-and-volume-intuition)
-- Apply it: Linear regression
+- Apply it: [Linear regression](/learn/machine-learning/linear-regression)

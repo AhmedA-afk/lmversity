@@ -78,6 +78,6 @@ missing preference or resolve uncertainty about the world.
 
 ## Continue, go deeper, apply it
 
-- Continue: Uncertainty and decision
-- Go deeper: Search and planning
+- Continue: [Uncertainty and decision](/learn/classical-ai/uncertainty-and-decision)
+- Go deeper: [Search and planning](/learn/classical-ai/search-and-planning)
 - Apply it: build a constraint-based scheduler with a “relax this preference” control.

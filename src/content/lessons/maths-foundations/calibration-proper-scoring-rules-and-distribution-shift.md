@@ -89,4 +89,4 @@ Calibration does not guarantee discrimination, fairness, causal validity, or saf
 
 - Continue: [Causal inference foundations](/learn/maths-foundations/causal-inference-foundations)
 - Go deeper: [KL divergence and distribution mismatch](/learn/maths-foundations/kl-divergence-and-distribution-mismatch)
-- Apply it: Fairness and subgroup evaluation
+- Apply it: [Fairness and subgroup evaluation](/learn/machine-learning/fairness-and-subgroup-evaluation)

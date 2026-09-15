@@ -74,8 +74,8 @@ that should not be automated.
 
 ## Continue, go deeper, apply it
 
-- Continue: Neural network bridge
-- Go deeper: Observability, cost, and latency
+- Continue: [Neural network bridge](/learn/machine-learning/neural-network-bridge)
+- Go deeper: [Observability, cost, and latency](/learn/production/observability-cost-and-latency)
 - Apply it: write a batch/online decision record and outage runbook.
 ## Formal extension
 

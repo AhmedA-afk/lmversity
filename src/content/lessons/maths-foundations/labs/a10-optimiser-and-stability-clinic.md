@@ -262,5 +262,5 @@ This clinic does not establish that a lower training objective generalises, that
 ## Continue, go deeper, apply it
 
 - Continue: [Learning-rate schedules, warm-up, and gradient clipping](/learn/maths-foundations/learning-rate-schedules-warmup-and-gradient-clipping)
-- Go deeper: Optimisation diagnostics and second-order perspective
-- Apply it: Regularisation geometry
+- Go deeper: [Optimisation diagnostics and second-order perspective](/learn/maths-foundations/optimisation-diagnostics-and-second-order-perspective)
+- Apply it: [Regularisation geometry](/learn/maths-foundations/regularisation-geometry-l1-l2-weight-decay-and-early-stopping)

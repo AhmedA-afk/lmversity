@@ -67,6 +67,6 @@ A correct graph can still encode a wrong loss or data contract. It also does not
 
 - Continue: [Forward-mode automatic differentiation](/learn/maths-foundations/forward-mode-automatic-differentiation)
 - Go deeper: [Reverse-mode autodiff and backpropagation](/learn/maths-foundations/reverse-mode-autodiff-and-backpropagation)
-- Apply it: Gradient checking and debugging
+- Apply it: [Gradient checking and debugging](/learn/maths-foundations/gradient-checking-and-debugging)
 
 **Related:** [Computation Graphs and Local Derivatives](/learn/deep-learning/core/108-computation-graphs-and-local-derivatives)

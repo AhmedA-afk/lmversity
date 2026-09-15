@@ -106,4 +106,4 @@ boundaries beyond an RL algorithm.
 
 - Continue: [Hidden Markov models, filtering, and decoding](/learn/maths-foundations/s2-9-hidden-markov-models-filtering-and-decoding)
 - Go deeper: [Policies, exploration, and occupancy](/learn/maths-foundations/s2-6-policies-exploration-and-occupancy)
-- Apply it: Regression gates and online signals
+- Apply it: [Regression gates and online signals](/learn/evals-red-teaming/regression-gates-and-online-signals)

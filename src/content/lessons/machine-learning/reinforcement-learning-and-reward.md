@@ -74,8 +74,8 @@ safe in a new environment.
 
 ## Continue, go deeper, apply it
 
-- Continue: Statistical testing for ML
-- Go deeper: Agents versus workflows
+- Continue: [Statistical testing for ML](/learn/machine-learning/statistical-testing-for-ml)
+- Go deeper: [Agents versus workflows](/learn/agentic-ai/agents-vs-workflows)
 - Apply it: write a reward and constraint specification for a toy environment.
 ## Formal extension
 

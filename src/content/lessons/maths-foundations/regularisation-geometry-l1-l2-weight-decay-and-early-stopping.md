@@ -94,6 +94,6 @@ Regularisation does not remove selection bias, guarantee sparsity stability, or 
 
 - Continue: [Learning-rate schedules, warm-up, and gradient clipping](/learn/maths-foundations/learning-rate-schedules-warmup-and-gradient-clipping)
 - Go deeper: [Conditioning, scaling, initialisation, and normalisation](/learn/maths-foundations/conditioning-scaling-initialisation-and-normalisation)
-- Apply it: Regularisation and bias–variance
+- Apply it: [Regularisation and bias–variance](/learn/machine-learning/regularization-and-bias-variance)
 
 **Related:** [Regularisation: Weight Decay, Early Stopping, and Label Smoothing](/learn/deep-learning/core/117-regularization-weight-decay-early-stopping-and-label-smoothing)

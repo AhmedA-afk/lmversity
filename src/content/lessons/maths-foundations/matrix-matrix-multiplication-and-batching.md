@@ -137,5 +137,5 @@ products.
 ## Continue, go deeper, apply it
 
 - Continue: [Linear systems and augmented matrices](/learn/maths-foundations/linear-systems-and-augmented-matrices)
-- Go deeper: Matrix–vector multiplication
-- Apply it: Linear regression
+- Go deeper: [Matrix–vector multiplication](/learn/maths-foundations/matrix-vector-multiplication)
+- Apply it: [Linear regression](/learn/machine-learning/linear-regression)

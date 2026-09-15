@@ -108,5 +108,5 @@ be prohibitive for production latency.
 ## Continue, go deeper, apply it
 
 - Continue: [Variational inference and the ELBO](/learn/maths-foundations/s4-4-variational-inference-and-the-elbo)
-- Go deeper: Bayesian posterior inference
-- Apply it: Posterior predictive checks
+- Go deeper: [Bayesian posterior inference](/learn/maths-foundations/s4-1-bayesian-posterior-inference-and-posterior-predictive-checks)
+- Apply it: [Posterior predictive checks](/learn/maths-foundations/s4-1-bayesian-posterior-inference-and-posterior-predictive-checks)

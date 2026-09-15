@@ -138,5 +138,5 @@ change the decision. Keep the raw meaning available for review.
 ## Continue, go deeper, apply it
 
 - Continue: [Floating-point arithmetic and computational notation](/learn/maths-foundations/floating-point-arithmetic-and-computational-notation)
-- Go deeper: Ratios, percentages, and numerical sanity checks
-- Apply it: Features, leakage, and missingness
+- Go deeper: [Ratios, percentages, and numerical sanity checks](/learn/maths-foundations/ratios-fractions-percentages-scientific-notation-and-sanity-checks)
+- Apply it: [Features, leakage, and missingness](/learn/machine-learning/features-leakage-and-missingness)
