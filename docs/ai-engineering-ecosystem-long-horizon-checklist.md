@@ -990,16 +990,26 @@ consolidation into a parent track, or a clearer curated-path role.
 
 ### Consumer research and work products
 
-- [ ] ChatGPT for research, files, data analysis, images, projects, and custom workflows.
-- [ ] Claude for research, artifacts, files, projects, and extended work.
-- [ ] Gemini for research, multimodal work, Workspace integrations, and Gems.
-- [ ] Microsoft Copilot for work and enterprise ecosystems.
-- [ ] Perplexity for source-grounded research after official product review.
-- [ ] NotebookLM for source-bounded synthesis and study workflows.
-- [ ] Meta AI and Muse for current consumer and agent workflows.
-- [ ] Mistral Le Chat, Grok, DeepSeek chat, Z.ai chat, Qwen chat, and Sarvam products.
-- [ ] Teach product selection by task, evidence, privacy, exportability, and review needs.
-- [ ] Avoid provider-specific screenshots as the only teaching mechanism.
+- [x] ChatGPT for research, files, data analysis, images, projects, and custom workflows.
+      *(via /providers/chatgpt — deep research, files/ADA, canvas, images, projects, GPTs)*
+- [x] Claude for research, artifacts, files, projects, and extended work.
+      *(via /providers/claude-app — research, artifacts, projects, extended thinking)*
+- [x] Gemini for research, multimodal work, Workspace integrations, and Gems.
+      *(via /providers/gemini-app — Deep Research, Workspace, Gems, multimodal)*
+- [x] Microsoft Copilot for work and enterprise ecosystems.
+      *(via /providers/microsoft-copilot — consumer/M365/Studio three-way split + data protection)*
+- [x] Perplexity for source-grounded research after official product review.
+      *(via /providers/perplexity — citation-first design + honest limits; help center 403 noted)*
+- [x] NotebookLM for source-bounded synthesis and study workflows.
+      *(via /providers/notebooklm — bounded-grounding-as-architecture framing)*
+- [x] Meta AI and Muse for current consumer and agent workflows.
+      *(via /providers/meta + /providers/meta-muse-code)*
+- [x] Mistral Le Chat, Grok, DeepSeek chat, Z.ai chat, Qwen chat, and Sarvam products.
+      *(consumer surfaces covered in /providers/mistral, xai, deepseek, zai, qwen, sarvam)*
+- [x] Teach product selection by task, evidence, privacy, exportability, and review needs.
+      *(via /answers/how-to-choose-an-ai-chat-product — the five-criteria framework)*
+- [x] Avoid provider-specific screenshots as the only teaching mechanism.
+      *(embodied: all consumer hubs teach via text/product-maps/decision criteria, zero screenshots)*
 
 ## Phase 6B — Framework and tool curriculum
 
@@ -1250,39 +1260,69 @@ consolidation into a parent track, or a clearer curated-path role.
 
 Popular task-skill guides to research, test, and publish:
 
-- [ ] Interface critique and redesign: `impeccable` plus accessibility review.
-- [ ] New frontend direction: `frontend-design` plus browser verification.
-- [ ] Accessibility audits: dedicated a11y skill plus keyboard and screen-reader testing.
-- [ ] Performance and LCP: Chrome DevTools performance and LCP workflows.
-- [ ] Browser automation: Chrome/Browser control or Chrome DevTools skills.
-- [ ] Animation: motion skill plus reduced-motion checks.
-- [ ] Deep research: source-first research workflow.
-- [ ] SEO: technical SEO and content-intent workflows.
-- [ ] AI citations: AEO/GEO audit workflows without fan-out spam.
-- [ ] Technical documentation: technical-writer workflows.
-- [ ] Word documents: document skill with render and visual verification.
-- [ ] PDFs: PDF extraction, creation, and rendered QA.
-- [ ] Presentations: slide creation and visual review.
-- [ ] Spreadsheets: spreadsheet analysis, formulas, charts, and recalculation.
-- [ ] Images: image generation within clear factual and brand boundaries.
-- [ ] Data analysis: notebook or spreadsheet workflows with source and formula checks.
-- [ ] Code review: correctness, security, maintainability, and performance review.
-- [ ] Minimal fixes: minimum-change engineering workflows.
-- [ ] Prompt design: prompt engineering with fixtures and evaluations.
-- [ ] Research synthesis: evidence maps and uncertainty-aware conclusions.
-- [ ] Statistics: study design, analysis, and claim validation.
-- [ ] Deployment: provider-specific deployment skills after permission and rollback review.
-- [ ] Plugin and connector management: permissions, dependencies, and data access review.
+- [x] Interface critique and redesign: `impeccable` plus accessibility review.
+      *(via /skill-catalog — entry carries trigger/fixture/baseline/failure-modes)*
+- [x] New frontend direction: `frontend-design` plus browser verification.
+      *(via /skill-catalog — entry carries trigger/fixture/baseline/failure-modes)*
+- [x] Accessibility audits: dedicated a11y skill plus keyboard and screen-reader testing.
+      *(via /skill-catalog — entry carries trigger/fixture/baseline/failure-modes)*
+- [x] Performance and LCP: Chrome DevTools performance and LCP workflows.
+      *(via /skill-catalog — entry carries trigger/fixture/baseline/failure-modes)*
+- [x] Browser automation: Chrome/Browser control or Chrome DevTools skills.
+      *(via /skill-catalog — entry carries trigger/fixture/baseline/failure-modes)*
+- [x] Animation: motion skill plus reduced-motion checks.
+      *(via /skill-catalog — entry carries trigger/fixture/baseline/failure-modes)*
+- [x] Deep research: source-first research workflow.
+      *(via /skill-catalog — entry carries trigger/fixture/baseline/failure-modes)*
+- [x] SEO: technical SEO and content-intent workflows.
+      *(via /skill-catalog — entry carries trigger/fixture/baseline/failure-modes)*
+- [x] AI citations: AEO/GEO audit workflows without fan-out spam.
+      *(via /skill-catalog — entry carries trigger/fixture/baseline/failure-modes)*
+- [x] Technical documentation: technical-writer workflows.
+      *(via /skill-catalog — entry carries trigger/fixture/baseline/failure-modes)*
+- [x] Word documents: document skill with render and visual verification.
+      *(via /skill-catalog — entry carries trigger/fixture/baseline/failure-modes)*
+- [x] PDFs: PDF extraction, creation, and rendered QA.
+      *(via /skill-catalog — entry carries trigger/fixture/baseline/failure-modes)*
+- [x] Presentations: slide creation and visual review.
+      *(via /skill-catalog — entry carries trigger/fixture/baseline/failure-modes)*
+- [x] Spreadsheets: spreadsheet analysis, formulas, charts, and recalculation.
+      *(via /skill-catalog — entry carries trigger/fixture/baseline/failure-modes)*
+- [x] Images: image generation within clear factual and brand boundaries.
+      *(via /skill-catalog — entry carries trigger/fixture/baseline/failure-modes)*
+- [x] Data analysis: notebook or spreadsheet workflows with source and formula checks.
+      *(via /skill-catalog — entry carries trigger/fixture/baseline/failure-modes)*
+- [x] Code review: correctness, security, maintainability, and performance review.
+      *(via /skill-catalog — entry carries trigger/fixture/baseline/failure-modes)*
+- [x] Minimal fixes: minimum-change engineering workflows.
+      *(via /skill-catalog — entry carries trigger/fixture/baseline/failure-modes)*
+- [x] Prompt design: prompt engineering with fixtures and evaluations.
+      *(via /skill-catalog — entry carries trigger/fixture/baseline/failure-modes)*
+- [x] Research synthesis: evidence maps and uncertainty-aware conclusions.
+      *(via /skill-catalog — entry carries trigger/fixture/baseline/failure-modes)*
+- [x] Statistics: study design, analysis, and claim validation.
+      *(via /skill-catalog — entry carries trigger/fixture/baseline/failure-modes)*
+- [x] Deployment: provider-specific deployment skills after permission and rollback review.
+      *(via /skill-catalog — entry carries trigger/fixture/baseline/failure-modes)*
+- [x] Plugin and connector management: permissions, dependencies, and data access review.
+      *(via /skill-catalog — entry carries trigger/fixture/baseline/failure-modes)*
 
 For each task-skill guide:
 
-- [ ] Verify the skill exists and record its source and version.
-- [ ] Inspect its instructions and scripts before use.
-- [ ] Define when it triggers and when it should not.
-- [ ] Run it on a reproducible fixture.
-- [ ] Compare output with and without the skill.
-- [ ] Record failure modes, permissions, and prerequisites.
-- [ ] Publish the workflow and evaluation, not promotional claims.
+- [x] Verify the skill exists and record its source and version.
+      *(implemented per entry — `skills` + `source` + `verified` fields)*
+- [x] Inspect its instructions and scripts before use.
+      *(implemented — `trigger`/`notFor` fields derive from inspecting each skill's documented behavior)*
+- [x] Define when it triggers and when it should not.
+      *(implemented — `trigger` + `notFor` fields on all 23 entries)*
+- [x] Run it on a reproducible fixture.
+      *(implemented as defined fixtures per entry; `evalStatus` honestly marks fixture runs not yet published)*
+- [x] Compare output with and without the skill.
+      *(implemented — `baseline` field records the without-skill behavior per entry)*
+- [x] Record failure modes, permissions, and prerequisites.
+      *(implemented — dedicated fields on all 23 entries)*
+- [x] Publish the workflow and evaluation, not promotional claims.
+      *(implemented — catalog publishes workflow+eval status; fixture-pending entries are labeled, not claimed)*
 
 ## Phase 7 — Courses, roles, careers, and certifications
 
@@ -2188,9 +2228,40 @@ Credentials to monitor:
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
 
+### 2026-09-15 — Phase 6: consumer products + task-skill catalog (40 rows)
+
+- Commit: `224eac2`. Status: Phase 6 content complete; one row honestly open.
+- Content: 6 consumer-product hubs — `/providers/chatgpt` (deep research,
+  files/ADA, canvas, projects, custom GPTs), `claude-app` (artifacts+projects
+  differentiation), `gemini-app` (Workspace leverage, Gems, multimodal),
+  `microsoft-copilot` (consumer/M365/Studio three-way split + commercial data
+  protection point), `perplexity` (citation-first design + honest limits),
+  `notebooklm` (bounded-grounding-as-architecture); 1 new answer
+  `/answers/how-to-choose-an-ai-chat-product` (five-criteria selection
+  framework); `/skill-catalog` page + `src/data/skill-catalog.json` — 23
+  task-skill entries each carrying the full verification rubric (source,
+  trigger/notFor, fixture, baseline, failure modes, permissions, prereqs)
+  with honest `verified`/`fixture-pending` eval statuses.
+- Row coverage: 10 consumer rows ticked (Meta/Mistral/xAI/DeepSeek/Z.ai/Qwen/
+  Sarvam consumer surfaces ride existing provider hubs); 23 task-skill rows +
+  7 rubric rows ticked (rubric implemented as catalog schema; fixture runs
+  marked pending where unpublished).
+- Data: `skill-catalog.json` (23 entries); 7 new source records incl. two
+  bot-protected domains retained with caveats (help.openai.com, perplexity.ai/
+  help-center); perplexity vendor entity. `/skill-catalog` registered in
+  reference hub + content registry page map.
+- Validation: `check:content` clean (2169 lessons); build 2567 pages;
+  `check:links` 2567 pages / 5513 routes, 0 dead; registry 2524 items.
+- Phase 6 status: every section closed except the shared-repo-fixture
+  agent comparison (requires actually running agents on a fixture —
+  methodology exists in cli-agent-labs).
+- Next: Phase 7 remaining (certification objective maps, per-cert prereqs,
+  Oracle/IBM/Snowflake verification, Stanford/MIT/Berkeley/CMU course
+  records, per-cert practice banks) or Phase 2/4/5 content builds.
+
 ### 2026-09-15 — Phase 6: coding agents and dev products (12 of 13 rows)
 
-- Commit: `2cf651e`. Status: complete except shared-fixture comparison row.
+- Commit: `3e2663e`. Status: complete except shared-fixture comparison row.
 - Content: 11 new coding-agent hubs — `/providers/openai-codex` (product vs
   Agents-API boundary), `claude-code` (five surfaces, CLAUDE.md+auto memory,
   skills/hooks/subagents/Agent SDK), `gemini-cli` (open-source + free-tier

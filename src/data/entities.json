@@ -1457,5 +1457,14 @@
   "officialSources": [
    "sourcegraph-docs"
   ]
+ },
+ "perplexity": {
+  "name": "Perplexity",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "perplexity-help"
+  ]
  }
 }

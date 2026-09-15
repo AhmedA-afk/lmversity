@@ -6,15 +6,15 @@
   "sce": 6,
   "blo": 10,
   "gui": 9,
-  "ans": 34,
+  "ans": 35,
   "fde": 193,
   "rol": 12,
   "prc": 6,
-  "pag": 25,
+  "pag": 26,
   "trk": 29,
   "qgd": 4,
   "stb": 25,
-  "pro": 45
+  "pro": 51
  },
  "entries": {
   "lessons/agentic-ai/agent-benchmarks.mdx": {
@@ -10038,6 +10038,37 @@
   "providers/windsurf.md": {
    "id": "pro-0045",
    "fp": "ad771f7f31198c4f78194285fa2017fdce47cec3"
+  },
+  "answers/how-to-choose-an-ai-chat-product.md": {
+   "id": "ans-0035",
+   "fp": "b681374a8d6c9eb9cc129da0c9ea34db0db82e55"
+  },
+  "providers/chatgpt.md": {
+   "id": "pro-0046",
+   "fp": "df8f78cf6536220cae9e25890a3fea44bac294d8"
+  },
+  "providers/claude-app.md": {
+   "id": "pro-0047",
+   "fp": "6358fd6e48f27736dffb3e1d37285e8ced3d7d7c"
+  },
+  "providers/gemini-app.md": {
+   "id": "pro-0048",
+   "fp": "79666b887a0a2013bed0b3639edcd38bfd92ea77"
+  },
+  "providers/microsoft-copilot.md": {
+   "id": "pro-0049",
+   "fp": "5b7aa81aa533182800d4865e9d2181d04561625d"
+  },
+  "providers/notebooklm.md": {
+   "id": "pro-0050",
+   "fp": "17f8905a6ab47f008f50d1648f44ed8a3a43245e"
+  },
+  "providers/perplexity.md": {
+   "id": "pro-0051",
+   "fp": "6ff957feeccd62afc18245a436dff270e441bcaf"
+  },
+  "page:/skill-catalog": {
+   "id": "pag-0026"
   }
  },
  "retired": {

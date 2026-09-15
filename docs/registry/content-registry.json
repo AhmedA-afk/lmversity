@@ -1,32 +1,32 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T16:04:57.142Z",
+  "generatedAt": "2026-09-15T16:15:55.811Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2516,
+  "itemCount": 2524,
   "counts": {
    "byFamily": {
     "lesson": 2111,
     "project": 32,
     "quiz": 89,
-    "reference": 100,
+    "reference": 106,
     "lab": 71,
     "interview": 7,
     "scenario": 6,
     "blog": 10,
     "guide": 9,
-    "answer": 34,
+    "answer": 35,
     "role": 12,
     "track": 10,
-    "page": 24,
+    "page": 25,
     "glossary": 1
    },
    "byStatus": {
-    "live": 2516
+    "live": 2524
    },
    "byKind": {
     "concept": 1810,
-    "comparison": 104,
+    "comparison": 105,
     "capstone": 32,
     "worked-example": 29,
     "quiz": 83,
@@ -40,7 +40,7 @@
     "howto": 20,
     "pillar": 4,
     "definition": 12,
-    "provider-hub": 45,
+    "provider-hub": 51,
     "lesson": 131,
     "reference": 7,
     "bootcamp": 6,
@@ -48,7 +48,7 @@
     "fde-phase": 10,
     "practice-track": 6,
     "landing": 1,
-    "hub": 12,
+    "hub": 13,
     "glossary": 1,
     "page": 3,
     "tool": 1,
@@ -101,13 +101,13 @@
     "fde": 193
    },
    "byFreshness": {
-    "release-sensitive": 342,
+    "release-sensitive": 343,
     "pricing-sensitive": 347,
-    "periodic": 1330,
+    "periodic": 1331,
     "policy-sensitive": 82,
     "certification-sensitive": 104,
     "durable": 266,
-    "volatile": 45
+    "volatile": 51
    }
   },
   "analyticsNote": "Analytics fields are null until Search Console / analytics exports are wired in.",
@@ -190580,7 +190580,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (279w vs ~1009w)",
+   "dispositionReason": "thin vs family median (279w vs ~1005w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -190667,7 +190667,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (361w vs ~1009w)",
+   "dispositionReason": "thin vs family median (361w vs ~1005w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -191221,6 +191221,90 @@
     "metadata": 2,
     "linking": 2,
     "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "ans-0035",
+   "family": "answer",
+   "kind": "comparison",
+   "title": "How do I choose between ChatGPT, Claude, Gemini, and the other AI assistants?",
+   "slug": "how-to-choose-an-ai-chat-product",
+   "route": "/answers/how-to-choose-an-ai-chat-product",
+   "collection": "answers",
+   "path": "src/content/answers/how-to-choose-an-ai-chat-product.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Choose by task shape, evidence needs, privacy tier, and exportability — not by model leaderboard: research products, artifact workspaces, ecosystem copilots, and bounded-source tools are different categories wearing the same 'chat' label.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 384,
+   "headings": [
+    "Short answer",
+    "The five selection criteria",
+    "What not to pick on",
+    "The per-product hubs"
+   ],
+   "internalLinks": [
+    "/providers/chatgpt",
+    "/providers/claude-app",
+    "/providers/gemini-app",
+    "/providers/microsoft-copilot",
+    "/providers/notebooklm",
+    "/providers/perplexity"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "Article",
+    "FAQPage",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "faqCount": 4,
+    "related": [
+     "/providers/chatgpt",
+     "/providers/claude-app",
+     "/providers/gemini-app",
+     "/providers/perplexity",
+     "/providers/notebooklm"
+    ],
+    "listItems": 10,
+    "numericClaims": 1
+   },
+   "searchIntent": "answer",
+   "primaryAudience": "general",
+   "promisedOutcome": "Choose by task shape, evidence needs, privacy tier, and exportability — not by model leaderboard: research products, artifact workspaces, ecosystem copilots, and bounded-source tools are different categories wearing the same 'chat' label.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: ChatGPT, Claude, Gemini, Copilot, Perplexity, NotebookLM"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "expand",
+   "dispositionReason": "thin vs family median (384w vs ~1005w)",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 1,
+    "correctnessSources": null,
+    "completeness": 0,
+    "prerequisiteFit": null,
+    "handsOn": 1,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
     "demand": null
@@ -193608,7 +193692,7 @@
    "scores": {
     "intentClarity": null,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": null,
     "handsOn": null,
     "explanationQuality": null,
@@ -193754,6 +193838,168 @@
    "freshnessSignals": [
     "policy/license mention",
     "vendor/tool mentions: Hugging Face, AI4Bharat"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0046",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "ChatGPT (the product)",
+   "slug": "chatgpt",
+   "route": "/providers/chatgpt",
+   "collection": "providers",
+   "path": "src/content/providers/chatgpt.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "ChatGPT as a work product mapped: research and deep research, files and data analysis, image generation, projects, custom GPTs, memory, and the plan tiers — distinct from the OpenAI API.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 364,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "The selection read",
+    "When to choose it"
+   ],
+   "internalLinks": [
+    "/answers/how-to-choose-an-ai-chat-product",
+    "/providers/openai"
+   ],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "openai",
+    "covers": [
+     "consumer-app",
+     "consumer-product"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "openai-help-center",
+     "openai-codex-docs"
+    ],
+    "related": [
+     "/providers/openai",
+     "/providers/claude-app",
+     "/answers/how-to-choose-an-ai-chat-product"
+    ],
+    "numericClaims": 2
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "ChatGPT as a work product mapped: research and deep research, files and data analysis, image generation, projects, custom GPTs, memory, and the plan tiers — distinct from the OpenAI API.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "vendor/tool mentions: ChatGPT, OpenAI, NotebookLM"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0047",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Claude (the app)",
+   "slug": "claude-app",
+   "route": "/providers/claude-app",
+   "collection": "providers",
+   "path": "src/content/providers/claude-app.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Claude as a work product mapped: research mode, artifacts, files and projects, extended thinking, styles, and integrations — the app surface distinct from the Anthropic API.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 333,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "The selection read",
+    "When to choose it"
+   ],
+   "internalLinks": [
+    "/answers/how-to-choose-an-ai-chat-product",
+    "/providers/anthropic"
+   ],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "anthropic",
+    "covers": [
+     "consumer-app",
+     "consumer-product"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "anthropic-support",
+     "anthropic-docs"
+    ],
+    "related": [
+     "/providers/anthropic",
+     "/providers/chatgpt",
+     "/answers/how-to-choose-an-ai-chat-product"
+    ],
+    "numericClaims": 1
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Claude as a work product mapped: research mode, artifacts, files and projects, extended thinking, styles, and integrations — the app surface distinct from the Anthropic API.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "vendor/tool mentions: Claude, Anthropic, ChatGPT, NotebookLM"
    ],
    "owner": null,
    "reviewer": null,
@@ -194409,6 +194655,89 @@
    }
   },
   {
+   "id": "pro-0048",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Gemini (the app)",
+   "slug": "gemini-app",
+   "route": "/providers/gemini-app",
+   "collection": "providers",
+   "path": "src/content/providers/gemini-app.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Google's Gemini app mapped: Deep Research, multimodal work, Workspace integration, Gems, and the ecosystem leverage that is its real differentiator — distinct from the Gemini API.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 319,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "The selection read",
+    "When to choose it"
+   ],
+   "internalLinks": [
+    "/answers/how-to-choose-an-ai-chat-product",
+    "/providers/google",
+    "/providers/notebooklm"
+   ],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "google",
+    "covers": [
+     "consumer-app",
+     "consumer-product"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "google-gemini-support",
+     "google-docs"
+    ],
+    "related": [
+     "/providers/google",
+     "/providers/notebooklm",
+     "/answers/how-to-choose-an-ai-chat-product"
+    ],
+    "numericClaims": 1
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Google's Gemini app mapped: Deep Research, multimodal work, Workspace integration, Gems, and the ecosystem leverage that is its real differentiator — distinct from the Gemini API.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "pricing/cost mention",
+    "vendor/tool mentions: Gemini, Vertex, ChatGPT, Claude, NotebookLM"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "pro-0039",
    "family": "reference",
    "kind": "provider-hub",
@@ -194974,7 +195303,7 @@
    "scores": {
     "intentClarity": null,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": null,
     "handsOn": null,
     "explanationQuality": null,
@@ -195134,7 +195463,7 @@
    "scores": {
     "intentClarity": null,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": null,
     "handsOn": null,
     "explanationQuality": null,
@@ -195474,6 +195803,88 @@
    }
   },
   {
+   "id": "pro-0049",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Microsoft Copilot (consumer + work)",
+   "slug": "microsoft-copilot",
+   "route": "/providers/microsoft-copilot",
+   "collection": "providers",
+   "path": "src/content/providers/microsoft-copilot.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Microsoft Copilot mapped: consumer vs Microsoft 365 Copilot vs Copilot Studio — three products under one name, what enterprise data protection actually means, and the selection trap of conflating them.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 374,
+   "headings": [
+    "What this page covers",
+    "Product map — the three-way split",
+    "The enterprise-data-protection point — the actual differentiator",
+    "When to choose it"
+   ],
+   "internalLinks": [
+    "/answers/how-to-choose-an-ai-chat-product"
+   ],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "microsoft",
+    "covers": [
+     "consumer-app",
+     "consumer-product"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "microsoft-copilot-support"
+    ],
+    "related": [
+     "/providers/microsoft-foundry",
+     "/providers/github-copilot",
+     "/answers/how-to-choose-an-ai-chat-product"
+    ],
+    "numericClaims": 4
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Microsoft Copilot mapped: consumer vs Microsoft 365 Copilot vs Copilot Studio — three products under one name, what enterprise data protection actually means, and the selection trap of conflating them.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "certification/exam mention",
+    "pricing/cost mention",
+    "policy/license mention",
+    "vendor/tool mentions: Copilot"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "pro-0030",
    "family": "reference",
    "kind": "provider-hub",
@@ -195691,6 +196102,83 @@
    "freshnessSignals": [
     "policy/license mention",
     "vendor/tool mentions: Hugging Face, DeepSeek, Llama, Qwen"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0050",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "NotebookLM",
+   "slug": "notebooklm",
+   "route": "/providers/notebooklm",
+   "collection": "providers",
+   "path": "src/content/providers/notebooklm.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Google's NotebookLM mapped: source-bounded synthesis (only-your-documents grounding), Audio Overviews, mind maps, and study workflows — the strictest-grounding consumer AI product and why that design matters.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 362,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "The positioning point — why the design is the lesson",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "google",
+    "covers": [
+     "consumer-app",
+     "consumer-product"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "google-notebooklm-support"
+    ],
+    "related": [
+     "/providers/perplexity",
+     "/providers/gemini-app",
+     "/answers/how-to-choose-an-ai-chat-product"
+    ],
+    "numericClaims": 1
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Google's NotebookLM mapped: source-bounded synthesis (only-your-documents grounding), Audio Overviews, mind maps, and study workflows — the strictest-grounding consumer AI product and why that design matters.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "vendor/tool mentions: NotebookLM, Gemini, Perplexity"
    ],
    "owner": null,
    "reviewer": null,
@@ -196169,6 +196657,83 @@
    "freshnessClass": "volatile",
    "freshnessSignals": [
     "vendor/tool mentions: OpenRouter, OpenAI"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0051",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Perplexity",
+   "slug": "perplexity",
+   "route": "/providers/perplexity",
+   "collection": "providers",
+   "path": "src/content/providers/perplexity.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Perplexity mapped: the answer-engine model — source-grounded answers with citations, Pro search, Spaces, and the model-agnostic backend — plus what 'research product' means when the product is the citations.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 363,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "The positioning point — and the honest limits",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "perplexity",
+    "covers": [
+     "consumer-app",
+     "consumer-product"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "perplexity-help"
+    ],
+    "related": [
+     "/providers/notebooklm",
+     "/providers/openrouter",
+     "/answers/how-to-choose-an-ai-chat-product"
+    ],
+    "numericClaims": 2
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Perplexity mapped: the answer-engine model — source-grounded answers with citations, Pro search, Spaces, and the model-agnostic backend — plus what 'research product' means when the product is the citations.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "vendor/tool mentions: Perplexity, NotebookLM"
    ],
    "owner": null,
    "reviewer": null,
@@ -199723,7 +200288,7 @@
    "scores": {
     "intentClarity": null,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": null,
     "explanationQuality": null,
@@ -213568,6 +214133,63 @@
    "route": "/providers",
    "collection": null,
    "path": "src/pages/providers/index.astro",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": null,
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": null,
+   "headings": [],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {},
+   "searchIntent": "hub",
+   "primaryAudience": "general",
+   "promisedOutcome": null,
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": null,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pag-0026",
+   "family": "page",
+   "kind": "hub",
+   "title": "Agent skill catalog",
+   "slug": "/skill-catalog",
+   "route": "/skill-catalog",
+   "collection": null,
+   "path": "src/pages/skill-catalog.astro",
    "track": null,
    "module": null,
    "status": "live",

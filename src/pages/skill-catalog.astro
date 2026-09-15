@@ -1,0 +1,85 @@
+---
+import Layout from '../components/Layout.astro';
+import catalog from '../data/skill-catalog.json';
+
+const entries = catalog.entries;
+const verified = entries.filter(e => e.evalStatus === 'verified').length;
+const pending = entries.length - verified;
+---
+<Layout
+  title="Agent skill catalog — verified task guides"
+  description="Which agent skill for which task: 23 task domains mapped to real skills with trigger boundaries, reproducible fixtures, baseline comparisons, and honest evaluation status — workflows and evals, not promotional claims."
+  breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Skill catalog', url: '/skill-catalog' }]}
+>
+  <section class="head container">
+    <span class="eyebrow">Reference</span>
+    <h1>Which skill for which task.</h1>
+    <p class="sub">Every entry is verified to exist in the agent environment, with its trigger boundary, a reproducible fixture, the with/without-skill baseline, failure modes, permissions, and prerequisites recorded. Statuses are honest: <strong>verified</strong> means inspected and documented ({verified} entries); <strong>fixture-pending</strong> means the skill exists and its fixture is defined, but a published eval run is still outstanding ({pending} entries). Catalog verified {catalog.verifiedAt}.</p>
+  </section>
+
+  <section class="container rubric">
+    <h2>The verification rubric every entry answers</h2>
+    <ol class="rubric-list">
+      <li>Verify the skill exists; record its source.</li>
+      <li>Inspect its instructions and scripts before use.</li>
+      <li>Define when it triggers — and when it should not.</li>
+      <li>Run it on a reproducible fixture.</li>
+      <li>Compare output with and without the skill.</li>
+      <li>Record failure modes, permissions, and prerequisites.</li>
+      <li>Publish the workflow and evaluation — not promotional claims.</li>
+    </ol>
+  </section>
+
+  <section class="container list">
+    {entries.map((e) => (
+      <article class="entry" id={e.id}>
+        <div class="entry-head">
+          <h2>{e.task}</h2>
+          <span class={`status st-${e.evalStatus === 'verified' ? 'verified' : 'pending'}`}>{e.evalStatus}</span>
+        </div>
+        <p class="skills mono">{e.skills.join(' · ')}</p>
+        <p class="src">Source: {e.source} · verified {e.verified ? 'yes' : 'no'}</p>
+        <dl class="grid">
+          <div class="cell"><dt>Trigger when</dt><dd>{e.trigger}</dd></div>
+          <div class="cell"><dt>Not for</dt><dd>{e.notFor}</dd></div>
+          <div class="cell"><dt>Fixture</dt><dd>{e.fixture}</dd></div>
+          <div class="cell"><dt>Without the skill</dt><dd>{e.baseline}</dd></div>
+        </dl>
+        <p class="fm"><span class="mono">Failure modes:</span> {e.failureModes.join(' · ')}</p>
+        <p class="perm"><span class="mono">Permissions:</span> {e.permissions} <span class="sep">·</span> <span class="mono">Prereqs:</span> {e.prereqs.join('; ')}</p>
+      </article>
+    ))}
+  </section>
+
+  <section class="container note">
+    <p>A fixture-pending status is honest, not broken: the skill exists, its trigger boundary and fixture are defined, but the measured with/without run hasn't been published. Entries are updated as fixture runs complete.</p>
+  </section>
+</Layout>
+
+<style>
+  .head { padding-block: 48px 8px; }
+  .head h1 { font-size: clamp(28px, 4vw, 38px); letter-spacing: -.02em; margin-top: 14px; max-width: 24ch; }
+  .sub { margin-top: 16px; color: var(--muted); max-width: 70ch; font-size: 15px; line-height: 1.6; }
+  .rubric { padding-top: 32px; }
+  .rubric h2 { font-size: 17px; letter-spacing: -.01em; }
+  .rubric-list { margin-top: 12px; columns: 2; gap: 32px; font-size: 13.5px; color: var(--muted); line-height: 1.7; padding-left: 20px; }
+  .rubric-list li { margin-bottom: 6px; break-inside: avoid; }
+  .list { padding-top: 32px; display: grid; gap: 16px; }
+  .entry { border: 1px solid var(--rule); border-radius: 12px; padding: 22px 24px; background: var(--paper); }
+  .entry-head { display: flex; justify-content: space-between; align-items: start; gap: 16px; }
+  .entry h2 { font-size: 18px; letter-spacing: -.01em; }
+  .status { font-size: 10.5px; padding: 2px 9px; border-radius: 10px; border: 1px solid var(--rule); letter-spacing: .04em; flex: none; margin-top: 4px; }
+  .st-verified { color: var(--accent); border-color: var(--accent); }
+  .st-pending { color: var(--faint); }
+  .skills { margin-top: 8px; font-size: 11.5px; color: var(--accent); letter-spacing: .03em; }
+  .src { margin-top: 4px; font-size: 11.5px; color: var(--faint); }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 24px; margin-top: 16px; }
+  .cell dt { font-size: 10.5px; text-transform: uppercase; letter-spacing: .06em; color: var(--faint); }
+  .cell dd { margin: 5px 0 0; font-size: 13px; color: var(--text); line-height: 1.6; }
+  .fm, .perm { margin-top: 14px; font-size: 12.5px; color: var(--muted); line-height: 1.6; }
+  .fm .mono, .perm .mono { font-size: 10.5px; color: var(--faint); letter-spacing: .04em; }
+  .sep { color: var(--faint); }
+  .note { padding-block: 30px 20px; }
+  .note p { font-size: 13px; color: var(--faint); max-width: 66ch; }
+  @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } .rubric-list { columns: 1; } }
+</style>

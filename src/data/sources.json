@@ -221,6 +221,17 @@
   ],
   "status": "current"
  },
+ "anthropic-support": {
+  "title": "Anthropic Help Center",
+  "publisher": "Anthropic",
+  "url": "https://support.anthropic.com",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "Claude app features: artifacts, projects, research, styles, plans"
+  ]
+ },
  "anthropic-trust": {
   "title": "Anthropic Trust Center",
   "publisher": "Anthropic",
@@ -1093,6 +1104,17 @@
   ],
   "status": "current"
  },
+ "google-docs": {
+  "title": "Google Gemini API documentation",
+  "publisher": "Google",
+  "url": "https://ai.google.dev/gemini-api/docs",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "Gemini API product surface"
+  ]
+ },
  "google-gemini-deprecations": {
   "title": "Gemini API deprecations",
   "publisher": "Google",
@@ -1138,6 +1160,17 @@
   ],
   "status": "current"
  },
+ "google-gemini-support": {
+  "title": "Gemini Apps Help",
+  "publisher": "Google",
+  "url": "https://support.google.com/gemini",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "Gemini app features: Deep Research, Gems, Workspace integration, extensions"
+  ]
+ },
  "google-gemini-terms": {
   "title": "Gemini API terms of service",
   "publisher": "Google",
@@ -1159,6 +1192,17 @@
    "Gemma open model family"
   ],
   "status": "current"
+ },
+ "google-notebooklm-support": {
+  "title": "NotebookLM Help",
+  "publisher": "Google",
+  "url": "https://support.google.com/notebooklm",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "source-bounded synthesis, Audio Overviews, study surfaces"
+  ]
  },
  "google-people-first-content": {
   "title": "Creating helpful, reliable, people-first content",
@@ -1794,6 +1838,17 @@
    "Muse Code and Muse Spark product surface"
   ]
  },
+ "microsoft-copilot-support": {
+  "title": "Microsoft Copilot support",
+  "publisher": "Microsoft",
+  "url": "https://support.microsoft.com/en-us/copilot",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "consumer Copilot vs M365 Copilot vs Copilot Studio surfaces"
+  ]
+ },
  "microsoft-credential-directory": {
   "title": "Microsoft credential directory",
   "publisher": "Microsoft Learn",
@@ -2080,6 +2135,17 @@
   ],
   "status": "current"
  },
+ "openai-help-center": {
+  "title": "OpenAI Help Center",
+  "publisher": "OpenAI",
+  "url": "https://help.openai.com",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "ChatGPT product features, plans, memory, projects, custom GPTs (domain bot-protected, HTTP 403 to automated fetch)"
+  ]
+ },
  "openai-models-docs": {
   "title": "Models — API documentation",
   "publisher": "OpenAI",
@@ -2223,6 +2289,17 @@
    "LLM application risk taxonomy incl. prompt injection"
   ],
   "status": "current"
+ },
+ "perplexity-help": {
+  "title": "Perplexity Help Center",
+  "publisher": "Perplexity",
+  "url": "https://www.perplexity.ai/help-center",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "answer engine, Pro Search, Spaces, model choice (domain bot-protected, HTTP 403 to automated fetch)"
+  ]
  },
  "pgvector-repo": {
   "title": "pgvector repository",

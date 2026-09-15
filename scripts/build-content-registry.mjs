@@ -738,6 +738,7 @@ const STATIC_FAMILY = {
   'certifications.astro': { title: 'Certifications registry', kind: 'hub', route: '/certifications' },
   'external-courses.astro': { title: 'External course directory', kind: 'hub', route: '/external-courses' },
   'providers/index.astro': { title: 'Provider hubs', kind: 'hub', route: '/providers' },
+  'skill-catalog.astro': { title: 'Agent skill catalog', kind: 'hub', route: '/skill-catalog' },
   'kit.astro': { title: 'Kit', kind: 'page', route: '/kit' },
   'saved.astro': { title: 'Saved items', kind: 'tool', route: '/saved' },
   'stats.astro': { title: 'Stats', kind: 'page', route: '/stats' },

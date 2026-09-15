@@ -1,18 +1,18 @@
 # Content registry — audit views
 
-Generated 2026-09-15T16:04:57.142Z by `scripts/build-content-registry.mjs`.
-2516 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T16:15:55.811Z by `scripts/build-content-registry.mjs`.
+2524 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
 
 - lesson: 2111
-- reference: 100
+- reference: 106
 - quiz: 89
 - lab: 71
-- answer: 34
+- answer: 35
 - project: 32
-- page: 24
+- page: 25
 - role: 12
 - blog: 10
 - track: 10
@@ -23,22 +23,22 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By status
 
-- live: 2516
+- live: 2524
 
 ## By search intent (heuristic)
 
 - concept: 1941
 - comparison: 108
+- reference: 107
 - build: 103
-- reference: 101
 - practice: 89
-- answer: 34
+- answer: 35
 - worked-example: 29
 - troubleshooting: 24
 - how-to: 15
+- hub: 13
 - role-path: 12
 - nav: 12
-- hub: 12
 - read: 10
 - course-hub: 10
 - interview-prep: 7
@@ -50,7 +50,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 - ai-engineer: 1691
 - beginner-engineer: 440
 - forward-deployed-engineer: 194
-- general: 173
+- general: 181
 - job-candidate: 7
 - developer: 1
 - ml-engineer: 1
@@ -83,20 +83,20 @@ and split always need a written human reason (see checklist).
 | disposition | items |
 |---|---:|
 | investigate | 2265 |
-| keep | 248 |
-| expand | 3 |
+| keep | 255 |
+| expand | 4 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2266 | 1.91 | 0 | 210 | 2056 |
+| intentClarity | 2267 | 1.91 | 0 | 211 | 2056 |
 | correctnessSources | 46 | 1.28 | 0 | 33 | 13 |
-| completeness | 2463 | 1.63 | 45 | 813 | 1605 |
+| completeness | 2470 | 1.63 | 46 | 814 | 1610 |
 | prerequisiteFit | 2352 | 0.15 | 2172 | 0 | 180 |
-| handsOn | 2266 | 1.47 | 568 | 54 | 1644 |
-| explanationQuality | 2266 | 1.96 | 20 | 56 | 2190 |
-| metadata | 2266 | 1.84 | 0 | 364 | 1902 |
-| linking | 2177 | 1.50 | 382 | 322 | 1473 |
-| freshnessHealth | 2516 | 0.78 | 875 | 1330 | 311 |
+| handsOn | 2267 | 1.47 | 568 | 55 | 1644 |
+| explanationQuality | 2267 | 1.96 | 20 | 56 | 2191 |
+| metadata | 2267 | 1.84 | 0 | 365 | 1902 |
+| linking | 2178 | 1.50 | 382 | 322 | 1474 |
+| freshnessHealth | 2524 | 0.78 | 876 | 1331 | 317 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
@@ -195,13 +195,17 @@ and split always need a written human reason (see checklist).
 
 - /blog/agents-need-a-harness — Agents need a harness, not just a prompt
 
-#### expand: thin vs family median (279w vs ~1009w) (1)
+#### expand: thin vs family median (279w vs ~1005w) (1)
 
 - /answers/certification-vs-portfolio-vs-experience — AI certification vs portfolio vs experience — which matters?
 
-#### expand: thin vs family median (361w vs ~1009w) (1)
+#### expand: thin vs family median (361w vs ~1005w) (1)
 
 - /answers/deploy-an-llm-app-to-production — How do I deploy an LLM app to production?
+
+#### expand: thin vs family median (384w vs ~1005w) (1)
+
+- /answers/how-to-choose-an-ai-chat-product — How do I choose between ChatGPT, Claude, Gemini, and the other AI assistants?
 
 ## Duplicate candidates
 
@@ -353,13 +357,13 @@ _… 168 more in content-registry.json (`sourcingFlags`)_
 
 Review order: volatile classes first, oldest last-verified date first; undated items lead each queue. `verified`/`updated`/`published` supply the last-verified date — git-derived when frontmatter is absent.
 
-- periodic: 1330
+- periodic: 1331
 - pricing-sensitive: 347
-- release-sensitive: 342
+- release-sensitive: 343
 - durable: 266
 - certification-sensitive: 104
 - policy-sensitive: 82
-- volatile: 45
+- volatile: 51
 
 ### certification-sensitive (104) — oldest-verified first
 
@@ -463,7 +467,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/machine-learning/ml-114-lab-from-question-to-evaluation-plan — Lab: from question to evaluation plan *(verified 2026-08-30)*
 - … 52 more in content-registry.json
 
-### release-sensitive (342) — oldest-verified first
+### release-sensitive (343) — oldest-verified first
 
 Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno, LangGraph *(verified undated)*
@@ -496,7 +500,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/harness-design/harness-skill-and-mcp-integrations — MCP *(verified undated)*
 - /learn/llm-security/prompt-injection-testing-and-threat-models — Promptfoo *(verified undated)*
 - /learn/llm-security/provider-moderation-and-safety-apis — OpenAI *(verified undated)*
-- … 312 more
+- … 313 more
 
 ## Missing-data queues
 
@@ -547,7 +551,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/genai-app-dev/building-for-indic-scripts-and-segmentation — Building for Indic scripts, fonts, and segmentation
 - … 68 more
 
-### zero in-body internal links (template nav still applies) (472)
+### zero in-body internal links (template nav still applies) (474)
 
 - /learn/agentic-ai/agents-vs-workflows — Choose an agent only when a workflow is not enough
 - /learn/ai-foundations/applied-ai/301-ai-product-discovery-outcomes-and-harm — AI Product Discovery: Outcomes, Users, and Harm
@@ -589,7 +593,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-foundations/reliable-ai/219-incident-response-rollback-and-learning — AI Incidents, Rollback, and Organisational Learning
 - /learn/ai-foundations/reliable-ai/220-human-in-the-loop-and-meaningful-oversight — Human-in-the-Loop and Meaningful Oversight
 - /learn/ai-foundations/reliable-ai/221-contestability-appeals-and-recource — Contestability, Appeals, and Recourse
-- … 432 more
+- … 434 more
 
 ### live file not in curriculum (2169)
 
@@ -771,7 +775,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /blog/why-there-is-no-certificate — Why there's no certificate here (520 words, updated 2026-09-08)
 - /blog/your-rag-problem-is-a-retrieval-problem — Your RAG problem is a retrieval problem (700 words, updated 2026-08-30)
 
-### answer (34)
+### answer (35)
 
 - /answers/ai-engineer-interview-questions — AI engineer interview questions: what is asked and how to prepare (1210 words, updated 2026-09-08)
 - /answers/ai-engineer-roadmap — AI engineer roadmap: the skills in order, and what to skip (2002 words, updated 2026-09-08)
@@ -785,6 +789,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /answers/how-much-does-an-llm-app-cost — How much does an LLM app cost to run? (458 words, updated 2026-09-15)
 - /answers/how-to-become-an-ai-engineer — How to become an AI engineer in 2026 (from zero, for free) (1977 words, updated 2026-09-08)
 - /answers/how-to-build-a-rag-app — How to build a RAG app, step by step (and where it breaks) (1234 words, updated 2026-09-08)
+- /answers/how-to-choose-an-ai-chat-product — How do I choose between ChatGPT, Claude, Gemini, and the other AI assistants? (384 words, updated 2026-09-15)
 - /answers/how-to-evaluate-an-llm-app — How to evaluate an LLM app: golden sets, judges, and release gates (1228 words, updated 2026-09-08)
 - /answers/how-to-fine-tune-an-llm — How to fine-tune an LLM: when to, and the steps that matter (1260 words, updated 2026-09-08)
 - /answers/how-to-learn-machine-learning-free — How to learn machine learning for free, in the right order (1183 words, updated 2026-09-08)
