@@ -1007,6 +1007,28 @@ for (const t of tracks) {
     const k = kindFor(lastLive, nodeByTrackSlug.get(`${t.id}/${lastLive}`)?.node.title ?? '');
     if (!PRACTICE_KINDS.has(k)) flags.push(`dead-end finish: last live lesson is ${lastLive} (${k})`);
   }
+  // quiz nodes should sit after their stem lesson
+  const orderIdx = new Map(liveOrder.map((s, i) => [s, i]));
+  const earlyQuiz = [];
+  for (const s of liveOrder) {
+    if (!s.endsWith('-quiz')) continue;
+    const stem = s.slice(0, -5);
+    if (orderIdx.has(stem) && orderIdx.get(stem) > orderIdx.get(s)) earlyQuiz.push(s);
+  }
+  if (earlyQuiz.length) flags.push(`quiz before its lesson: ${earlyQuiz.slice(0, 3).join(', ')}${earlyQuiz.length > 3 ? ` +${earlyQuiz.length - 3}` : ''}`);
+  // first live node should orient (concept), not drop into lab/quiz
+  const firstLive = liveOrder[0];
+  if (firstLive) {
+    const k = kindFor(firstLive, nodeByTrackSlug.get(`${t.id}/${firstLive}`)?.node.title ?? '');
+    if (['quiz', 'lab', 'capstone'].includes(k)) flags.push(`first live node is ${k}: ${firstLive}`);
+  }
+  // 'coming' nodes wedged before live ones break the sequence for learners
+  const firstComing = order.findIndex((s) => !lessonIdsOnDisk.has(`${t.id}/${s}`));
+  const lastLiveInOrder = order.indexOf(lastLive);
+  if (firstComing !== -1 && lastLive && firstComing < lastLiveInOrder) {
+    const wedged = order.slice(firstComing, lastLiveInOrder).filter((s) => !lessonIdsOnDisk.has(`${t.id}/${s}`));
+    if (wedged.length) flags.push(`${wedged.length} 'coming' node${wedged.length === 1 ? '' : 's'} inside the live sequence (from ${wedged[0]})`);
+  }
   // coverage gaps
   const kindsPresent = new Set(files.map((i) => i.kind));
   const missing = ['quiz', 'worked-example', 'common-mistakes', 'cheatsheet', 'capstone'].filter((k) => !kindsPresent.has(k));

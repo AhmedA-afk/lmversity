@@ -234,8 +234,14 @@ consolidation into a parent track, or a clearer curated-path role.
 
 - [ ] Verify the track promise matches its actual modules.
 - [ ] Verify the first lesson serves the stated learner level.
+      *(mechanical half passed — no track opens on a quiz/lab/capstone node;
+      whether the content matches the level remains editorial)*
 - [ ] Verify prerequisites are explicit and reachable.
+      *(blocked by schema — `TrackNode` has no prerequisite field; needs the
+      canonical content-model work first)*
 - [ ] Verify concepts appear before dependent implementations.
+      *(mechanical half passed — every `-quiz` node sits after its stem lesson;
+      deeper concept-ordering remains editorial)*
 - [x] Verify each module ends in retrieval practice or application.
       *(mechanical — audit-views "Track gap briefs" flags every module whose last
       live node isn't quiz/lab/capstone/worked-example/drill)*
@@ -1697,7 +1703,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-15 — Role-path audit and practice enders
 
-- The registry's role-path records now carry `practiceSteps`, `careerSteps`,
+- Commit: `f9a9524`. The registry's role-path records now carry `practiceSteps`, `careerSteps`,
   and `lastKind`, and the Role paths view flags "no practice step" and
   "dead-end finish" per role.
 - Finding: **all 11 non-FDE role paths ended on a plain concept lesson with
@@ -1723,6 +1729,23 @@ validation, deployment status, measured result when available, blockers, and nex
   lesson vs stated level, prerequisites, concept-before-implementation
   ordering) — partially mechanical, partly editorial; then the acquisition
   family's editorial review rows.
+
+### 2026-09-15 — Course ordering checks + roles.ts note
+
+- Extended "Track gap briefs" with three ordering checks: `-quiz` nodes must
+  follow their stem lesson, a track's first live node shouldn't be
+  quiz/lab/capstone, and `coming` nodes shouldn't wedge inside the live
+  sequence. **All three pass clean on every track** — the curriculum order is
+  structurally sound; the gaps are coverage, not sequence.
+- Prerequisite check recorded as schema-blocked: `TrackNode` carries only
+  title/slug/status/eta — no prerequisite field exists, so "prerequisites are
+  explicit and reachable" needs the canonical content-model work first.
+- Validation: `npm run registry` clean; `npm run check:content` clean;
+  `git diff --check` clean.
+- Next batch: the remaining family-review rows are editorial (intent,
+  originality, distractor quality) — start with the 44 "expand" dispositions
+  (thin vs family median) and the top duplicate-candidate pairs for
+  merge/redirect verdicts.
 
 ### 2026-09-14 — Master ecosystem backlog created
 
