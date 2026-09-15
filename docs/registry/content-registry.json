@@ -1,15 +1,15 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T15:58:19.867Z",
+  "generatedAt": "2026-09-15T16:04:57.142Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2505,
+  "itemCount": 2516,
   "counts": {
    "byFamily": {
     "lesson": 2111,
     "project": 32,
     "quiz": 89,
-    "reference": 89,
+    "reference": 100,
     "lab": 71,
     "interview": 7,
     "scenario": 6,
@@ -22,7 +22,7 @@
     "glossary": 1
    },
    "byStatus": {
-    "live": 2505
+    "live": 2516
    },
    "byKind": {
     "concept": 1810,
@@ -40,7 +40,7 @@
     "howto": 20,
     "pillar": 4,
     "definition": 12,
-    "provider-hub": 34,
+    "provider-hub": 45,
     "lesson": 131,
     "reference": 7,
     "bootcamp": 6,
@@ -107,7 +107,7 @@
     "policy-sensitive": 82,
     "certification-sensitive": 104,
     "durable": 266,
-    "volatile": 34
+    "volatile": 45
    }
   },
   "analyticsNote": "Analytics fields are null until Search Console / analytics exports are wired in.",
@@ -134782,7 +134782,7 @@
    "scores": {
     "intentClarity": null,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": null,
     "explanationQuality": null,
@@ -167611,7 +167611,7 @@
    "scores": {
     "intentClarity": null,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": null,
     "explanationQuality": null,
@@ -178607,7 +178607,7 @@
    "scores": {
     "intentClarity": null,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": null,
     "explanationQuality": null,
@@ -193372,6 +193372,82 @@
    }
   },
   {
+   "id": "pro-0035",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Aider",
+   "slug": "aider",
+   "route": "/providers/aider",
+   "collection": "providers",
+   "path": "src/content/providers/aider.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Aider mapped: the open-source terminal pair-programmer's repo map, chat modes, git-native workflow, per-model configuration, and scripting — the lightweight counter-position to heavyweight agent platforms.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 369,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "The positioning point",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "aider",
+    "covers": [
+     "coding-agent"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "aider-docs"
+    ],
+    "related": [
+     "/providers/opencode",
+     "/learn/cli-agents/getting-the-agent-oriented",
+     "/learn/cli-agents/headless-runs-and-automation"
+    ],
+    "numericClaims": 1
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Aider mapped: the open-source terminal pair-programmer's repo map, chat modes, git-native workflow, per-model configuration, and scripting — the lightweight counter-position to heavyweight agent platforms.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "vendor/tool mentions: Aider, OpenAI, Anthropic, Gemini, OpenRouter, Claude, Copilot"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "pro-0001",
    "family": "reference",
    "kind": "provider-hub",
@@ -193702,6 +193778,83 @@
    }
   },
   {
+   "id": "pro-0036",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Claude Code",
+   "slug": "claude-code",
+   "route": "/providers/claude-code",
+   "collection": "providers",
+   "path": "src/content/providers/claude-code.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Anthropic's coding agent mapped: CLI/IDE/desktop/web/mobile surfaces, CLAUDE.md project memory plus auto memory, skills, hooks, MCP, subagents, permissions, and the Agent SDK for building on it.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 335,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "The differentiation read",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "anthropic",
+    "covers": [
+     "coding-agent"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "claude-code-docs"
+    ],
+    "related": [
+     "/providers/anthropic",
+     "/providers/openai-codex",
+     "/learn/cli-agents/customizing-the-agent-surface",
+     "/learn/cli-agents/headless-runs-and-automation"
+    ],
+    "numericClaims": 1
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Anthropic's coding agent mapped: CLI/IDE/desktop/web/mobile surfaces, CLAUDE.md project memory plus auto memory, skills, hooks, MCP, subagents, permissions, and the Agent SDK for building on it.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "vendor/tool mentions: Claude, Anthropic, MCP, Cursor, Bedrock, Vertex"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "pro-0025",
    "family": "reference",
    "kind": "provider-hub",
@@ -193853,6 +194006,83 @@
     "intentClarity": null,
     "correctnessSources": null,
     "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0037",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Cursor",
+   "slug": "cursor",
+   "route": "/providers/cursor",
+   "collection": "providers",
+   "path": "src/content/providers/cursor.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Cursor mapped: the AI-first editor's agent workflows, rules and project context, Plan Mode, multi-model selection, background agents, and the review loop — plus what being editor-first costs and buys.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 339,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "The positioning point",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "cursor",
+    "covers": [
+     "coding-agent",
+     "consumer-product"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "cursor-docs"
+    ],
+    "related": [
+     "/providers/github-copilot",
+     "/providers/windsurf",
+     "/learn/cli-agents/planning-modes-and-patch-review"
+    ],
+    "numericClaims": 1
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Cursor mapped: the AI-first editor's agent workflows, rules and project context, Plan Mode, multi-model selection, background agents, and the review loop — plus what being editor-first costs and buys.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "vendor/tool mentions: Cursor, Claude, MCP, Azure, Copilot"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
     "prerequisiteFit": null,
     "handsOn": null,
     "explanationQuality": null,
@@ -194027,6 +194257,82 @@
    }
   },
   {
+   "id": "pro-0038",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Cognition Devin",
+   "slug": "devin",
+   "route": "/providers/devin",
+   "collection": "providers",
+   "path": "src/content/providers/devin.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Cognition's autonomous software engineer mapped: the workspace model (shell+IDE+browser), task specification with completion criteria, knowledge, testing, Slack/Teams integration, PR workflow, and long-running task supervision.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 389,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "The positioning point",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "cognition",
+    "covers": [
+     "coding-agent"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "devin-docs"
+    ],
+    "related": [
+     "/providers/claude-code",
+     "/learn/cli-agents/multi-agent-and-recovery",
+     "/learn/cli-agents/cli-agent-labs"
+    ],
+    "numericClaims": 1
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Cognition's autonomous software engineer mapped: the workspace model (shell+IDE+browser), task specification with completion criteria, knowledge, testing, Slack/Teams integration, PR workflow, and long-running task supervision.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "vendor/tool mentions: Devin, Copilot, Cursor"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "pro-0016",
    "family": "reference",
    "kind": "provider-hub",
@@ -194079,6 +194385,84 @@
    "freshnessSignals": [
     "policy/license mention",
     "vendor/tool mentions: Hugging Face, Llama, Qwen, DeepSeek, Mistral"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0039",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Google Gemini CLI",
+   "slug": "gemini-cli",
+   "route": "/providers/gemini-cli",
+   "collection": "providers",
+   "path": "src/content/providers/gemini-cli.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Google's open-source terminal agent mapped: authentication tiers, GEMINI.md context files, built-in tools and MCP, extensions, checkpointing, and headless/CI scripting.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 313,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "The positioning point",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "google",
+    "covers": [
+     "coding-agent"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "gemini-cli-repo"
+    ],
+    "related": [
+     "/providers/google",
+     "/providers/claude-code",
+     "/learn/cli-agents/getting-the-agent-oriented",
+     "/learn/cli-agents/headless-runs-and-automation"
+    ],
+    "numericClaims": 1
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Google's open-source terminal agent mapped: authentication tiers, GEMINI.md context files, built-in tools and MCP, extensions, checkpointing, and headless/CI scripting.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "pricing/cost mention",
+    "vendor/tool mentions: Gemini, MCP, Vertex, Claude, Codex"
    ],
    "owner": null,
    "reviewer": null,
@@ -194158,6 +194542,83 @@
    "freshnessSignals": [
     "policy/license mention",
     "vendor/tool mentions: Gemini, Llama, Qwen, Sarvam, Ollama, llama.cpp, vLLM, SGLang, MLX, DeepSeek"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0040",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "GitHub Copilot",
+   "slug": "github-copilot",
+   "route": "/providers/github-copilot",
+   "collection": "providers",
+   "path": "src/content/providers/github-copilot.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "GitHub Copilot mapped: IDE agent mode, the Copilot CLI (autopilot, /fleet, research), the cloud agent, code review, custom instructions and memory, plugins/skills/hooks/MCP, and repository integration.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 385,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "The positioning point",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "github",
+    "covers": [
+     "coding-agent",
+     "consumer-product"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "github-copilot-docs"
+    ],
+    "related": [
+     "/providers/claude-code",
+     "/providers/cursor",
+     "/learn/cli-agents/permissions-sandboxes-and-git-workflow"
+    ],
+    "numericClaims": 1
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "GitHub Copilot mapped: IDE agent mode, the Copilot CLI (autopilot, /fleet, research), the cloud agent, code review, custom instructions and memory, plugins/skills/hooks/MCP, and repository integration.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "vendor/tool mentions: Copilot, MCP"
    ],
    "owner": null,
    "reviewer": null,
@@ -194605,6 +195066,87 @@
    }
   },
   {
+   "id": "pro-0041",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "IDE Coding Agents: Cline, Roo Code, Continue, Amazon Q, Junie, Sourcegraph",
+   "slug": "ide-agents",
+   "route": "/providers/ide-agents",
+   "collection": "providers",
+   "path": "src/content/providers/ide-agents.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "The IDE-extension agents mapped as a category: Cline, Roo Code, Continue, Amazon Q Developer, JetBrains AI/Junie, and Sourcegraph Cody/Amp — what distinguishes each and how to evaluate the extension tier.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 408,
+   "headings": [
+    "What this page covers",
+    "The six shapes",
+    "The category read",
+    "When to choose this tier"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "cline",
+    "covers": [
+     "coding-agent"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "cline-docs",
+     "roocode-docs",
+     "continue-docs",
+     "amazon-q-docs",
+     "junie-docs",
+     "sourcegraph-docs"
+    ],
+    "related": [
+     "/providers/cursor",
+     "/providers/github-copilot",
+     "/learn/cli-agents/getting-the-agent-oriented"
+    ],
+    "numericClaims": 1
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "The IDE-extension agents mapped as a category: Cline, Roo Code, Continue, Amazon Q Developer, JetBrains AI/Junie, and Sourcegraph Cody/Amp — what distinguishes each and how to evaluate the extension tier.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "vendor/tool mentions: Cline, Cursor, Windsurf, MCP, AWS, Copilot"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "pro-0013",
    "family": "reference",
    "kind": "provider-hub",
@@ -194744,6 +195286,84 @@
    "freshnessSignals": [
     "policy/license mention",
     "vendor/tool mentions: Llama, Ollama, llama.cpp, vLLM, SGLang, MLX, Qwen"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0042",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Meta Muse Code",
+   "slug": "meta-muse-code",
+   "route": "/providers/meta-muse-code",
+   "collection": "providers",
+   "path": "src/content/providers/meta-muse-code.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Meta's coding products mapped: Muse Code's CLI workflow and model API, Muse Spark, availability status from official sources, and what the Llama-stack developer surface means for coding-agent evaluation.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 311,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "The positioning point",
+    "When to choose it"
+   ],
+   "internalLinks": [
+    "/providers/meta"
+   ],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "meta",
+    "covers": [
+     "coding-agent"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "meta-muse-docs"
+    ],
+    "related": [
+     "/providers/meta",
+     "/providers/claude-code",
+     "/learn/cli-agents/getting-the-agent-oriented"
+    ],
+    "numericClaims": 1
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Meta's coding products mapped: Muse Code's CLI workflow and model API, Muse Spark, availability status from official sources, and what the Llama-stack developer surface means for coding-agent evaluation.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "vendor/tool mentions: Llama, Claude, Copilot, Cursor"
    ],
    "owner": null,
    "reviewer": null,
@@ -194920,7 +195540,7 @@
    "scores": {
     "intentClarity": null,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": null,
     "handsOn": null,
     "explanationQuality": null,
@@ -195249,6 +195869,83 @@
    }
   },
   {
+   "id": "pro-0043",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "OpenAI Codex",
+   "slug": "openai-codex",
+   "route": "/providers/openai-codex",
+   "collection": "providers",
+   "path": "src/content/providers/openai-codex.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "OpenAI's coding agent mapped: the Codex CLI/IDE/web surfaces, repository instructions, skills and MCP, approvals and sandboxing, automation, and the review workflow — as distinct from the API's Agents surface.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 356,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "The boundary to understand",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "openai",
+    "covers": [
+     "coding-agent"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "openai-codex-docs"
+    ],
+    "related": [
+     "/providers/openai",
+     "/providers/claude-code",
+     "/learn/cli-agents/getting-the-agent-oriented",
+     "/learn/cli-agents/permissions-sandboxes-and-git-workflow"
+    ],
+    "numericClaims": 1
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "OpenAI's coding agent mapped: the Codex CLI/IDE/web surfaces, repository instructions, skills and MCP, approvals and sandboxing, automation, and the review workflow — as distinct from the API's Agents surface.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "vendor/tool mentions: OpenAI, Codex, MCP, ChatGPT, Claude"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "pro-0003",
    "family": "reference",
    "kind": "provider-hub",
@@ -195332,6 +196029,82 @@
     "intentClarity": null,
     "correctnessSources": null,
     "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0044",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "OpenCode",
+   "slug": "opencode",
+   "route": "/providers/opencode",
+   "collection": "providers",
+   "path": "src/content/providers/opencode.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "OpenCode mapped: the provider-neutral open-source terminal agent — multi-model support, AGENTS.md project instructions, LSP-aware tooling, plugins, and the TUI/headless split.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 282,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "The positioning point",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "opencode",
+    "covers": [
+     "coding-agent"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "opencode-docs"
+    ],
+    "related": [
+     "/providers/aider",
+     "/providers/gemini-cli",
+     "/learn/cli-agents/customizing-the-agent-surface"
+    ],
+    "numericClaims": 1
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "OpenCode mapped: the provider-neutral open-source terminal agent — multi-model support, AGENTS.md project instructions, LSP-aware tooling, plugins, and the TUI/headless split.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "vendor/tool mentions: Anthropic, OpenAI, Gemini, OpenRouter, MCP"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
     "prerequisiteFit": null,
     "handsOn": null,
     "explanationQuality": null,
@@ -195793,6 +196566,83 @@
     "certification/exam mention",
     "pricing/cost mention",
     "vendor/tool mentions: OpenAI, Anthropic, OpenRouter, Cloudflare"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0045",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Windsurf",
+   "slug": "windsurf",
+   "route": "/providers/windsurf",
+   "collection": "providers",
+   "path": "src/content/providers/windsurf.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Windsurf mapped: the agentic IDE's Cascade workflow, project configuration and memories, previews and deployments, and what 'flow-state' agentic editing means in practice — verified against official docs.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 314,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "The positioning point",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "windsurf",
+    "covers": [
+     "coding-agent",
+     "consumer-product"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "windsurf-docs"
+    ],
+    "related": [
+     "/providers/cursor",
+     "/learn/cli-agents/customizing-the-agent-surface"
+    ],
+    "numericClaims": 1
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Windsurf mapped: the agentic IDE's Cascade workflow, project configuration and memories, previews and deployments, and what 'flow-state' agentic editing means in practice — verified against official docs.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "pricing/cost mention",
+    "vendor/tool mentions: Windsurf, Cursor, MCP"
    ],
    "owner": null,
    "reviewer": null,

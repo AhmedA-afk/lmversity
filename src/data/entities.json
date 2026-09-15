@@ -1376,5 +1376,86 @@
   "officialSources": [
    "modal-docs"
   ]
+ },
+ "github": {
+  "name": "GitHub",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "github-copilot-docs"
+  ]
+ },
+ "cursor": {
+  "name": "Anysphere (Cursor)",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "cursor-docs"
+  ]
+ },
+ "windsurf": {
+  "name": "Windsurf",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "windsurf-docs"
+  ]
+ },
+ "opencode": {
+  "name": "OpenCode",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "opencode-docs"
+  ]
+ },
+ "cline": {
+  "name": "Cline",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "cline-docs"
+  ]
+ },
+ "roo-code": {
+  "name": "Roo Code",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "roocode-docs"
+  ]
+ },
+ "continue": {
+  "name": "Continue",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "continue-docs"
+  ]
+ },
+ "jetbrains": {
+  "name": "JetBrains",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "junie-docs"
+  ]
+ },
+ "sourcegraph": {
+  "name": "Sourcegraph",
+  "kind": "vendor",
+  "status": "current",
+  "verifiedAt": "2026-09-15",
+  "officialSources": [
+   "sourcegraph-docs"
+  ]
  }
 }

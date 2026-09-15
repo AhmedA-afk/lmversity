@@ -14,7 +14,7 @@
   "trk": 29,
   "qgd": 4,
   "stb": 25,
-  "pro": 34
+  "pro": 45
  },
  "entries": {
   "lessons/agentic-ai/agent-benchmarks.mdx": {
@@ -9994,6 +9994,50 @@
   "providers/vercel-ai-gateway.md": {
    "id": "pro-0034",
    "fp": "feb2f979556cf10f2ced0c4b4f1e2389ad02003f"
+  },
+  "providers/aider.md": {
+   "id": "pro-0035",
+   "fp": "672931de2ed8d7773962043e8ee45eea53baa88f"
+  },
+  "providers/claude-code.md": {
+   "id": "pro-0036",
+   "fp": "ad9db89e181609c5e645ba6b4b6af8acabd24d54"
+  },
+  "providers/cursor.md": {
+   "id": "pro-0037",
+   "fp": "8b286135f704c8517c3f974a16997827db115bc3"
+  },
+  "providers/devin.md": {
+   "id": "pro-0038",
+   "fp": "d6867d899fd6d09e1a881799a20a4c3ac1321949"
+  },
+  "providers/gemini-cli.md": {
+   "id": "pro-0039",
+   "fp": "d5644168ffe3d1fc4b030d5ef6b10e3dc202d00a"
+  },
+  "providers/github-copilot.md": {
+   "id": "pro-0040",
+   "fp": "b489c24309b5286bb5c0a5329767b82ad59884e1"
+  },
+  "providers/ide-agents.md": {
+   "id": "pro-0041",
+   "fp": "b56f89621fee89d36a278ead0054c8cebe3278e9"
+  },
+  "providers/meta-muse-code.md": {
+   "id": "pro-0042",
+   "fp": "e553ccf85c514b8cd70234e2fcd3829dd7d7eee3"
+  },
+  "providers/openai-codex.md": {
+   "id": "pro-0043",
+   "fp": "ce5538996eac393821ff9fff1e1f8abf81c9c0f0"
+  },
+  "providers/opencode.md": {
+   "id": "pro-0044",
+   "fp": "5be7be66c42c9d577f3f0ae7cf985341545d70c4"
+  },
+  "providers/windsurf.md": {
+   "id": "pro-0045",
+   "fp": "ad771f7f31198c4f78194285fa2017fdce47cec3"
   }
  },
  "retired": {

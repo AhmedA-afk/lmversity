@@ -952,26 +952,41 @@ consolidation into a parent track, or a clearer curated-path role.
 
 ### Coding agents and development products
 
-- [ ] OpenAI Codex: CLI, IDE, web/cloud work, repository instructions, skills, MCP,
+- [x] OpenAI Codex: CLI, IDE, web/cloud work, repository instructions, skills, MCP,
       approvals, sandboxing, automation, and review workflows.
-- [ ] Anthropic Claude Code: CLI, web/cloud, IDE, project memory, skills, hooks, MCP,
+      *(via /providers/openai-codex)*
+- [x] Anthropic Claude Code: CLI, web/cloud, IDE, project memory, skills, hooks, MCP,
       subagents, permissions, and Agent SDK.
-- [ ] Google Gemini CLI: authentication, context files, commands, tools, MCP, extensions,
+      *(via /providers/claude-code)*
+- [x] Google Gemini CLI: authentication, context files, commands, tools, MCP, extensions,
       checkpointing, scripting, and CI use.
-- [ ] Cognition Devin: workspace model, task specification, planning, knowledge, testing,
+      *(via /providers/gemini-cli)*
+- [x] Cognition Devin: workspace model, task specification, planning, knowledge, testing,
       browser use, pull requests, review, and long-running task supervision.
-- [ ] Meta Muse Code and Muse Spark: current availability, CLI workflow, model API,
+      *(via /providers/devin — disclosure of Cognition affiliation noted on page)*
+- [x] Meta Muse Code and Muse Spark: current availability, CLI workflow, model API,
       supported tools, and limitations from official sources.
-- [ ] GitHub Copilot: IDE agent mode, CLI, coding agent, code review, custom instructions,
+      *(via /providers/meta-muse-code — availability flagged volatile)*
+- [x] GitHub Copilot: IDE agent mode, CLI, coding agent, code review, custom instructions,
       Agent Skills, MCP, and repository integration.
-- [ ] Cursor: agent workflows, rules, project context, background work, and review.
-- [ ] Windsurf: agent workflow and project configuration after official verification.
-- [ ] Aider: repo map, chat modes, git workflow, model configuration, and scripting.
-- [ ] OpenCode: provider-neutral terminal workflow, project instructions, tools, and plugins.
-- [ ] Cline, Roo Code, Continue, Amazon Q Developer, JetBrains AI/Junie, and Sourcegraph
+      *(via /providers/github-copilot — six-surface map incl. CLI/cloud/automations)*
+- [x] Cursor: agent workflows, rules, project context, background work, and review.
+      *(via /providers/cursor — multi-model table, Plan Mode, background agents)*
+- [x] Windsurf: agent workflow and project configuration after official verification.
+      *(via /providers/windsurf — Cascade + config; volatility caveat dated)*
+- [x] Aider: repo map, chat modes, git workflow, model configuration, and scripting.
+      *(via /providers/aider)*
+- [x] OpenCode: provider-neutral terminal workflow, project instructions, tools, and plugins.
+      *(via /providers/opencode)*
+- [x] Cline, Roo Code, Continue, Amazon Q Developer, JetBrains AI/Junie, and Sourcegraph
       Cody/Amp as demand-supported candidates.
+      *(via /providers/ide-agents — six shapes distinguished)*
 - [ ] Create task-based comparisons using the same repository fixture and acceptance tests.
-- [ ] Never declare a universal winner from vendor benchmarks or a single task.
+      *(methodology taught in /learn/cli-agents/cli-agent-labs; no measured comparison
+      published yet — requires running the agents on a shared fixture)*
+- [x] Never declare a universal winner from vendor benchmarks or a single task.
+      *(embodied: every coding-agent hub ends with when-to-choose/when-not; ide-agents page
+      explicitly frames the pick as try-both; no page declares a winner)*
 
 ### Consumer research and work products
 
@@ -2172,6 +2187,29 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-15 — Phase 6: coding agents and dev products (12 of 13 rows)
+
+- Commit: `2cf651e`. Status: complete except shared-fixture comparison row.
+- Content: 11 new coding-agent hubs — `/providers/openai-codex` (product vs
+  Agents-API boundary), `claude-code` (five surfaces, CLAUDE.md+auto memory,
+  skills/hooks/subagents/Agent SDK), `gemini-cli` (open-source + free-tier
+  entry), `devin` (delegation-first workspace; Cognition-affiliation disclosure
+  on page), `meta-muse-code`, `github-copilot` (six surfaces incl. CLI autopilot
+  + cloud agent + Actions automations), `cursor` (AI-first editor, published
+  multi-model table), `windsurf` (Cascade; volatility caveat), `aider` (repo
+  map, git-native, model freedom), `opencode` (provider-neutral OSS), and
+  `ide-agents` (Cline/Roo/Continue/Amazon Q/Junie/Sourcegraph as extension
+  tier). "Never declare a winner" row ticked — embodied across all pages.
+- Left open honestly: task-based comparisons on a shared repo fixture —
+  methodology exists in `/learn/cli-agents/cli-agent-labs` but no measured
+  comparison is published (requires actually running the agents).
+- Data: 9 new vendor entities (github, cursor, windsurf, aider, opencode,
+  cline, roo-code, continue, jetbrains, sourcegraph — one key reused where
+  existing); 12 new source records, all URLs verified 2026-09-15.
+- Validation: `check:content` clean (2169 lessons); build 2559 pages;
+  `check:links` 2559 pages / 5497 routes, 0 dead; registry 2516 items.
+- Next: consumer research/work products (15 rows) — last Phase 6 section.
 
 ### 2026-09-15 — Phase 6: cloud platforms and gateways (13 rows)
 

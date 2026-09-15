@@ -1,14 +1,14 @@
 # Content registry — audit views
 
-Generated 2026-09-15T15:58:19.867Z by `scripts/build-content-registry.mjs`.
-2505 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T16:04:57.142Z by `scripts/build-content-registry.mjs`.
+2516 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
 
 - lesson: 2111
+- reference: 100
 - quiz: 89
-- reference: 89
 - lab: 71
 - answer: 34
 - project: 32
@@ -23,14 +23,14 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By status
 
-- live: 2505
+- live: 2516
 
 ## By search intent (heuristic)
 
 - concept: 1941
 - comparison: 108
 - build: 103
-- reference: 90
+- reference: 101
 - practice: 89
 - answer: 34
 - worked-example: 29
@@ -50,7 +50,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 - ai-engineer: 1691
 - beginner-engineer: 440
 - forward-deployed-engineer: 194
-- general: 162
+- general: 173
 - job-candidate: 7
 - developer: 1
 - ml-engineer: 1
@@ -83,20 +83,20 @@ and split always need a written human reason (see checklist).
 | disposition | items |
 |---|---:|
 | investigate | 2265 |
-| keep | 237 |
+| keep | 248 |
 | expand | 3 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
 | intentClarity | 2266 | 1.91 | 0 | 210 | 2056 |
 | correctnessSources | 46 | 1.28 | 0 | 33 | 13 |
-| completeness | 2452 | 1.63 | 45 | 806 | 1601 |
+| completeness | 2463 | 1.63 | 45 | 813 | 1605 |
 | prerequisiteFit | 2352 | 0.15 | 2172 | 0 | 180 |
 | handsOn | 2266 | 1.47 | 568 | 54 | 1644 |
 | explanationQuality | 2266 | 1.96 | 20 | 56 | 2190 |
 | metadata | 2266 | 1.84 | 0 | 364 | 1902 |
 | linking | 2177 | 1.50 | 382 | 322 | 1473 |
-| freshnessHealth | 2505 | 0.77 | 875 | 1330 | 300 |
+| freshnessHealth | 2516 | 0.78 | 875 | 1330 | 311 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
@@ -359,7 +359,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - durable: 266
 - certification-sensitive: 104
 - policy-sensitive: 82
-- volatile: 34
+- volatile: 45
 
 ### certification-sensitive (104) — oldest-verified first
 
@@ -547,7 +547,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/genai-app-dev/building-for-indic-scripts-and-segmentation — Building for Indic scripts, fonts, and segmentation
 - … 68 more
 
-### zero in-body internal links (template nav still applies) (462)
+### zero in-body internal links (template nav still applies) (472)
 
 - /learn/agentic-ai/agents-vs-workflows — Choose an agent only when a workflow is not enough
 - /learn/ai-foundations/applied-ai/301-ai-product-discovery-outcomes-and-harm — AI Product Discovery: Outcomes, Users, and Harm
@@ -589,7 +589,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-foundations/reliable-ai/219-incident-response-rollback-and-learning — AI Incidents, Rollback, and Organisational Learning
 - /learn/ai-foundations/reliable-ai/220-human-in-the-loop-and-meaningful-oversight — Human-in-the-Loop and Meaningful Oversight
 - /learn/ai-foundations/reliable-ai/221-contestability-appeals-and-recource — Contestability, Appeals, and Recourse
-- … 422 more
+- … 432 more
 
 ### live file not in curriculum (2169)
 

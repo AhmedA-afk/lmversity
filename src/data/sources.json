@@ -100,6 +100,17 @@
   ],
   "status": "current"
  },
+ "amazon-q-docs": {
+  "title": "Amazon Q Developer documentation",
+  "publisher": "AWS",
+  "url": "https://docs.aws.amazon.com/amazonq/",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "IDE+CLI agent, AWS-native context"
+  ]
+ },
  "anthropic-claude-code-docs": {
   "title": "Claude Code quickstart and how it works",
   "publisher": "Anthropic",
@@ -472,6 +483,17 @@
   ],
   "status": "current"
  },
+ "cline-docs": {
+  "title": "Cline documentation",
+  "publisher": "Cline",
+  "url": "https://docs.cline.bot",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "open-source VS Code agent, plan/act modes, MCP"
+  ]
+ },
  "cloudflare-workers-ai-docs": {
   "title": "Cloudflare Workers AI documentation",
   "publisher": "Cloudflare",
@@ -538,6 +560,17 @@
    "Service status"
   ],
   "status": "current"
+ },
+ "continue-docs": {
+  "title": "Continue documentation",
+  "publisher": "Continue",
+  "url": "https://docs.continue.dev",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "open-source VS Code/JetBrains autopilot, config-driven, BYO models"
+  ]
  },
  "cortes-vapnik-svm-paper": {
   "title": "Support-Vector Networks",
@@ -786,6 +819,17 @@
   ],
   "status": "current"
  },
+ "cursor-docs": {
+  "title": "Cursor documentation",
+  "publisher": "Anysphere",
+  "url": "https://docs.cursor.com",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "agent workflows, rules, Plan Mode, multi-model table, background agents"
+  ]
+ },
  "databricks-ml-docs": {
   "title": "Machine learning on Databricks",
   "publisher": "Databricks",
@@ -841,6 +885,17 @@
    "Service status"
   ],
   "status": "current"
+ },
+ "devin-docs": {
+  "title": "Devin documentation",
+  "publisher": "Cognition",
+  "url": "https://docs.devin.ai",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "workspace model (shell+IDE+browser), task spec, Slack/Teams, CLI handoff, API"
+  ]
  },
  "docling-docs": {
   "title": "Docling documentation",
@@ -958,6 +1013,17 @@
    "GitHub Copilot Agent Skills behavior"
   ],
   "status": "current"
+ },
+ "github-copilot-docs": {
+  "title": "GitHub Copilot documentation",
+  "publisher": "GitHub",
+  "url": "https://docs.github.com/en/copilot",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "IDE agent mode, Copilot CLI, cloud agent, code review, automations, memory, plugins, MCP"
+  ]
  },
  "gitleaks-repo": {
   "title": "gitleaks repository",
@@ -1422,6 +1488,17 @@
   ],
   "status": "current"
  },
+ "junie-docs": {
+  "title": "JetBrains Junie documentation",
+  "publisher": "JetBrains",
+  "url": "https://www.jetbrains.com/help/junie/",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "autonomous coding agent plugin for JetBrains IDEs"
+  ]
+ },
  "krutrim-cloud": {
   "title": "Krutrim Cloud platform",
   "publisher": "Krutrim (Ola)",
@@ -1705,6 +1782,17 @@
    "Meta Model API surface, Muse family, Muse Code, protocols"
   ],
   "status": "current"
+ },
+ "meta-muse-docs": {
+  "title": "Meta developer documentation",
+  "publisher": "Meta",
+  "url": "https://developers.facebook.com/docs/",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "Muse Code and Muse Spark product surface"
+  ]
  },
  "microsoft-credential-directory": {
   "title": "Microsoft credential directory",
@@ -2069,6 +2157,17 @@
   ],
   "status": "current"
  },
+ "opencode-docs": {
+  "title": "OpenCode documentation",
+  "publisher": "OpenCode",
+  "url": "https://opencode.ai/docs/",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "provider-neutral terminal agent, TUI, AGENTS.md, LSP tools, plugins"
+  ]
+ },
  "openllmetry-repo": {
   "title": "OpenLLMetry repository",
   "publisher": "Traceloop",
@@ -2268,6 +2367,17 @@
   ],
   "status": "current"
  },
+ "roocode-docs": {
+  "title": "Roo Code documentation",
+  "publisher": "Roo Code",
+  "url": "https://docs.roocode.com",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "Cline-family VS Code agent fork, modes/customization"
+  ]
+ },
  "sarvam-api-docs": {
   "title": "Sarvam AI API documentation",
   "publisher": "Sarvam AI",
@@ -2368,6 +2478,17 @@
   "accessedAt": "2026-09-15",
   "claims": [
    "SQL-native AI functions, in-perimeter model deployment, REST APIs"
+  ]
+ },
+ "sourcegraph-docs": {
+  "title": "Sourcegraph documentation",
+  "publisher": "Sourcegraph",
+  "url": "https://sourcegraph.com/docs",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "Cody and Amp agents, code-graph context"
   ]
  },
  "stagehand-docs": {
@@ -2618,6 +2739,17 @@
    "EBNF grammar notation reference"
   ],
   "status": "current"
+ },
+ "windsurf-docs": {
+  "title": "Windsurf documentation",
+  "publisher": "Windsurf",
+  "url": "https://docs.windsurf.com",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "Cascade agent workflow, project configuration, previews"
+  ]
  },
  "xai-grok-docs": {
   "title": "Grok model documentation",
