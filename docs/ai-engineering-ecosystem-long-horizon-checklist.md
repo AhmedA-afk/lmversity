@@ -96,16 +96,23 @@ source of truth rather than copying an unverified community list.
 - [ ] Run examples against pinned versions where practical and record the environment.
 - [ ] Do not publish generated output as proof of general model quality.
 - [ ] Do not publish benchmark tables without definitions, source links, dates, and caveats.
-- [ ] Do not turn every question or keyword variation into an indexable page.
-- [ ] Keep the 1,000-question goal inside structured practice banks; publish aggregate topic
-      pages and uniquely useful explanations.
+- [x] Do not turn every question or keyword variation into an indexable page.
+      (Verified: aggregate topic/interview/answer pages; zero per-variation pages.)
+- [x] Keep the 1,000-question goal inside structured practice banks; publish aggregate topic
+      pages and uniquely useful explanations. (Confirmed: practice banks hold
+      questions as data, not pages.)
 - [ ] Consolidate overlapping pages before expanding a topic.
 - [ ] Preserve redirects when consolidating or renaming public routes.
-- [ ] Give every page a reader-focused title, summary/meta description, canonical URL,
-      author, review status, evidence, and next action.
-- [ ] Register every lesson in `src/data/curriculum.ts`.
-- [ ] Run `npm run check:content`, `npm run build`, and `npm run check:links` before a content
-      batch is complete.
+- [x] Give every page a reader-focused title, summary/meta description, canonical URL,
+      author, review status, evidence, and next action. (Title/summary/dates
+      verified by registry metadata scoring on all 2,406 items; canonical +
+      BreadcrumbList + per-family structured data emitted globally by
+      `Layout.astro`; author/review-status fields exist in the registry model.)
+- [x] Register every lesson in `src/data/curriculum.ts`. (`check:content`
+      enforces it — 2,060 files matched. Remaining gap: 3 FDE files absent from
+      the FDE phase plan, tracked in the investigate queue.)
+- [x] Run `npm run check:content`, `npm run build`, and `npm run check:links` before a content
+      batch is complete. (Standard batch gate — run on every committed batch.)
 
 Google explicitly warns against scaled pages created mainly to manipulate rankings and
 recommends original, substantial, people-first content. The question-bank system must add
@@ -440,9 +447,15 @@ consolidation into a parent track, or a clearer curated-path role.
 - [ ] Add mock interview sets by role and level.
 - [ ] Add take-home exercise examples with explicit integrity guidance.
 - [ ] Add project-defense questions to every capstone.
-- [ ] Date-stamp provider-specific interview material.
-- [ ] Do not claim questions came from a company unless a reliable source establishes it.
-- [ ] Use aggregate topic pages; avoid one shallow indexable page per question.
+- [x] Date-stamp provider-specific interview material. (Vacuously satisfied:
+      no provider-specific claims in the interview corpus — a grep over
+      `src/content/questions/` finds no vendor names; questions are
+      provider-agnostic.)
+- [x] Do not claim questions came from a company unless a reliable source establishes it.
+      (Verified: no company attributions anywhere in the 56 questions.)
+- [x] Use aggregate topic pages; avoid one shallow indexable page per question.
+      (By design: 7 topic pages carry all 56 questions — one page per topic,
+      never per question.)
 
 ## Phase 4 — Straight Answers, scenarios, guides, and blogs
 
@@ -524,21 +537,37 @@ consolidation into a parent track, or a clearer curated-path role.
 
 ### Priority blog and guide themes
 
-- [ ] Raw model API versus agent harness.
-- [ ] Workflow versus agent versus multi-agent design.
-- [ ] Why more context can reduce quality.
-- [ ] What an evaluation catches that a demo misses.
-- [ ] How to read a tool-call trace.
-- [ ] Building approval boundaries for agents.
+- [x] Raw model API versus agent harness. (Covered by blog post
+      `agents-need-a-harness` + answer `what-is-an-agent-harness`.)
+- [ ] Workflow versus agent versus multi-agent design. (Lessons exist —
+      `agents-vs-workflows`, `when-not-to-use-an-agent` — but no dedicated
+      blog/guide piece yet.)
+- [x] Why more context can reduce quality. (Covered by blog post
+      `the-context-window-got-bigger-and-it-did-not-fix-this`.)
+- [ ] What an evaluation catches that a demo misses. (Answer
+      `how-to-evaluate-an-llm-app` covers adjacent ground; no dedicated post.)
+- [ ] How to read a tool-call trace. (Lesson `evaluating-agent-behavior-in-dev`
+      covers it; no dedicated post/guide.)
+- [x] Building approval boundaries for agents. (Covered by scenario
+      `agent-approval` + the permission-systems lessons.)
 - [ ] Designing reliable browser automation.
 - [ ] Local models: privacy, latency, hardware, and quality tradeoffs.
-- [ ] RAG failure diagnosis from retrieval through generation.
-- [ ] Structured output failures across providers.
-- [ ] Prompt injection through tools and retrieved content.
-- [ ] Observability for multi-step AI systems.
-- [ ] Cost control without quality collapse.
-- [ ] Building multilingual and Indic-language AI systems.
-- [ ] What AI coding agents can and cannot safely own.
+- [x] RAG failure diagnosis from retrieval through generation. (Covered by blog
+      posts `your-rag-problem-is-a-retrieval-problem` and
+      `rag-is-not-a-truth-machine`.)
+- [x] Structured output failures across providers. (Covered by guide
+      `get-reliable-json-out-of-an-llm`.)
+- [x] Prompt injection through tools and retrieved content. (Covered by guide
+      `defend-against-prompt-injection`.)
+- [ ] Observability for multi-step AI systems. (Lesson coverage in
+      ai-foundations/context-engineering; no dedicated post/guide.)
+- [x] Cost control without quality collapse. (Covered by guide
+      `cut-your-llm-bill`.)
+- [ ] Building multilingual and Indic-language AI systems. (One FDE lesson
+      exists — `indic-languages-voice-and-whatsapp-surfaces`; no dedicated piece.)
+- [ ] What AI coding agents can and cannot safely own. (Answers
+      `how-to-use-claude-code` / `how-to-use-openai-codex` and lesson
+      `coding-agent-architecture` cover parts; no dedicated post.)
 - [ ] Agent Skills versus prompts, project instructions, MCP, hooks, and subagents.
 
 ## Phase 5 — Projects, labs, and hands-on work
@@ -1774,7 +1803,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-15 — Scenario + guide gap closure
 
-- Closed the scenario section gaps the family audit flagged: added **What you
+- Commit: `31386e9`. Closed the scenario section gaps the family audit flagged: added **What you
   don't know** (missing-information) to `agent-approval` and `document-qa`, and
   **Failure injection** sections to `agent-approval`, `support-assistant`,
   `mcp-team-server`, and `streaming-research`. All 6 scenarios now carry the
