@@ -6,6 +6,9 @@ summary: "Using a model to score outputs against a rubric at scale, and the bias
 duration: "6 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Once you have more than a handful of eval examples, a human can't read every output every time you change a prompt. LLM-as-judge fixes that by having a second model — often a stronger one — read the output and grade it against a rubric, turning a subjective "does this look right" into a repeatable score.
 
 ## How it actually works
@@ -26,6 +29,10 @@ A judge model isn't a neutral referee — it carries systematic biases that will
 
 **Format bias**: judges reward answers that look confident and well-structured — bullet points, headers, hedged caveats — independent of whether the content is right.
 
+<Callout kind="breaks" title="Grading your own homework">
+Using the same model family as both generator and judge invites self-preference bias — the judge rates its own style more favorably even when quality is equal. Pair that with unchecked position and verbosity bias and your scores optimize toward longer, confident-sounding text, not correctness.
+</Callout>
+
 None of these mean LLM-as-judge is useless; they mean the judge itself needs to be evaluated, not trusted on day one.
 
 ## Calibrating a judge before you rely on it
@@ -34,4 +41,11 @@ Before you let a judge grade your production evals, check it against ground trut
 
 Keep a thin slice of [human evaluation](/learn/evals-red-teaming/human-evaluation-and-annotation) running permanently, even after the judge is calibrated — it's your early warning system for judge drift when you swap models or rubrics change.
 
-**Related:** [Choosing Metrics That Actually Measure Success](/learn/evals-red-teaming/writing-eval-metrics), [Building a Golden Dataset](/learn/evals-red-teaming/building-a-golden-dataset), [Designing a Human Review Workflow](/learn/evals-red-teaming/human-evaluation-and-annotation)
+<InlineCheck
+  question="Why are pairwise comparisons ('which of these two outputs is better?') generally more reliable than absolute scores?"
+  options={['Choosing between two candidates is an easier judgment than deciding whether something is a 7 or an 8 — relative ranking sidesteps calibration problems that absolute scores carry', 'Because pairwise runs cost fewer tokens', 'Because judges cannot count past two']}
+  answer={0}
+  explanation="Absolute scoring forces the judge to invent a stable internal scale it doesn't have. 'A or B' is a bounded, repeatable question — which is why pairwise is the standard for comparing two prompts or models."
+/>
+
+**Related:** [Choosing Metrics That Actually Measure Success](/learn/evals-red-teaming/writing-eval-metrics), [Building a Golden Dataset](/learn/evals-red-teaming/building-a-golden-dataset), [Designing a Human Review Workflow](/learn/evals-red-teaming/human-evaluation-and-annotation); [LLM-as-Judge for Faithfulness and Factuality](/learn/hallucinations/llm-as-judge-for-faithfulness)

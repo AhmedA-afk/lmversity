@@ -6,6 +6,10 @@ summary: "Pin exact model snapshots, track deprecation dates, and keep a tested 
 duration: "5 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+import Steps from '../../../components/kit/Steps.astro';
+import Step from '../../../components/kit/Step.astro';
+
 Every model you call has a shelf life. Providers ship a new version, mark the old one deprecated, and eventually retire it — and if your code just says "use the latest model," you find out about the change when your evals silently regress or a request starts returning an error.
 
 ## Pin the exact snapshot, not the family name
@@ -34,9 +38,24 @@ Providers publish deprecation and retirement dates for older snapshots, usually 
 
 A model swap is a mini-release, and it deserves the same safety net as any other production change. Before you touch the pin:
 
-1. Re-run your eval suite against the candidate model and diff the results — see [Catch Regressions with Evals in CI](/learn/production/eval-based-regression-testing). A new model can pass "it still works" smoke tests while quietly failing on edge cases your evals actually catch.
-2. Shadow or canary the new snapshot on a slice of real traffic before flipping everyone over, per [Canary and Shadow-Test Prompt or Model Changes](/learn/production/canary-and-shadow-releases).
-3. Keep a kill switch that can revert to the last known-good pin in one step, per [Put a Kill Switch on Every AI Feature](/learn/production/feature-flags-and-kill-switches) — a bad migration should be a config revert, not a hotfix.
+<Steps>
+<Step title="Diff the evals">
+Re-run your eval suite against the candidate model and diff the results — see [Catch Regressions with Evals in CI](/learn/production/eval-based-regression-testing). A new model can pass "it still works" smoke tests while quietly failing on edge cases your evals actually catch.
+</Step>
+<Step title="Shadow or canary it">
+Run the new snapshot on a slice of real traffic before flipping everyone over, per [Canary and Shadow-Test Prompt or Model Changes](/learn/production/canary-and-shadow-releases).
+</Step>
+<Step title="Keep a one-step revert">
+Keep a kill switch that can revert to the last known-good pin, per [Put a Kill Switch on Every AI Feature](/learn/production/feature-flags-and-kill-switches) — a bad migration should be a config revert, not a hotfix.
+</Step>
+</Steps>
+
+<InlineCheck
+  question="Your config says `model = 'vendor-latest'`. What can happen without a deploy on your side?"
+  options={['The provider can repoint the alias at a new snapshot — different personality, formatting, and tool behavior — with nothing in your pipeline recording it', 'Nothing — aliases are fixed once set', 'The provider emails you before every alias change']}
+  answer={0}
+  explanation="A rolling alias is a pointer the provider controls. Pinning a dated snapshot makes the change deliberate and reviewed — you decide when the weights under your feature change."
+/>
 
 ## What actually breaks
 

@@ -6,11 +6,28 @@ summary: "Probe an agent for taking destructive or over-privileged actions throu
 duration: "6 min read"
 ---
 
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Most red-teaming still asks "did the model say something bad?" But an agent with tools doesn't just talk — it deletes files, sends emails, and moves money. The failure mode that matters here isn't a harmful sentence, it's a harmful action. That means the eval has to watch the tool calls, not the chat transcript.
 
 ## Two different attack surfaces
 
 Excessive permissions and tool misuse are separate risks, and they need separate tests.
+
+<Compare title="Design flaw vs. behavioral flaw">
+<Pane title="Excessive permissions" tone="bad">
+- Design flaw — the agent was handed scope wider than any legitimate task needs
+- Test it by audit, not attack: enumerate every tool and ask whether the job requires it at this privilege level
+- A `delete_user` tool on a support bot is a bug even if nobody ever triggers it
+</Pane>
+<Pane title="Tool misuse" tone="neutral">
+- Behavioral flaw — the agent gets talked into using legitimate tools wrong
+- Needs adversarial probing: social-engineered escalations, injected content, parameter smuggling, chained innocuous steps
+- A $50-cap refund tool called for $5,000 because 'a manager approved it'
+</Pane>
+</Compare>
 
 **Excessive permissions** is a design flaw: the agent was handed a scope wider than any of its legitimate tasks require. A support bot with a `delete_user` tool it never needs, or a code agent that can `git push --force` to `main`, is a permissions bug even if it never gets tricked into misusing them. You test this by enumerating every tool and asking "does the agent's actual job require this, at this privilege level?" — no adversarial input required, just an audit against the [tool schema](/learn/tools-function-calling/designing-a-tool-schema).
 
@@ -32,4 +49,11 @@ The grader needs the tool-call trace, not just the final message — a model can
 
 The fix, once you find a hole, is rarely a better prompt. It's a tighter tool schema, a lower-privilege credential behind the tool, or a hard [approval gate](/learn/tools-function-calling/approval-gates-for-sensitive-tools) in front of the action — enforced in code, so no amount of clever phrasing in the conversation can talk the agent past it.
 
-**Related:** [Testing for Scope Escape](/learn/evals-red-teaming/scope-escape-and-tool-abuse), [Approval Gates for Sensitive Tool Calls](/learn/tools-function-calling/approval-gates-for-sensitive-tools), [Evaluating Agent Trajectories, Not Just Final Answers](/learn/evals-red-teaming/evaluating-agent-trajectories)
+<InlineCheck
+  question="An agent politely says 'I can't delete those records' in its reply — and emits the delete tool call anyway. Which artifact catches this?"
+  options={['The tool-call trace — the refusal lives in prose while the action lives in the call, so only grading the trace sees the failure', 'The chat transcript — the refusal is right there', 'The user\'s complaint afterward']}
+  answer={0}
+  explanation="A model can refuse in prose while still emitting the tool call, or apologize after the damage is done. The grader needs which tool fired with which arguments — checked programmatically against an allowlist — not the final message."
+/>
+
+**Related:** [Testing for Scope Escape](/learn/evals-red-teaming/scope-escape-and-tool-abuse), [Approval Gates for Sensitive Tool Calls](/learn/tools-function-calling/approval-gates-for-sensitive-tools), [Evaluating Agent Trajectories, Not Just Final Answers](/learn/evals-red-teaming/evaluating-agent-trajectories) · [Red Teaming and Misuse Evaluation](/learn/ai-foundations/reliable-ai/216-red-teaming-and-misuse-evaluation)

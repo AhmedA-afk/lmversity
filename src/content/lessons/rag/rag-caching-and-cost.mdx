@@ -6,6 +6,9 @@ summary: "Reuses embeddings, retrieved sets, and answers to cut latency and cost
 duration: "6 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A RAG pipeline redoes the same expensive work over and over: embed the query, search the index, rerank, then generate an answer — even when ten users just asked the same question in different words. Caching at each stage turns repeat work into a lookup.
 
 ## What's worth caching, and where
@@ -24,6 +27,10 @@ Exact-match caching (hash the query string, look it up) is simple and safe but o
 
 Semantic caching closes that gap: embed the incoming query, search a small cache index of past query embeddings, and treat anything above a similarity threshold as a hit. The threshold is the whole game. Set it too loose and you'll serve a cached answer to a question that only sounds similar — a fast, confident, wrong answer, which is worse than a cache miss. Set it too tight and the cache barely fires. Start conservative (0.95+ cosine similarity on a strong embedding model) and loosen only against measured precision, not intuition. See [cosine similarity](/learn/maths-foundations/cosine-similarity) for the mechanics of that threshold.
 
+<Callout kind="breaks" title="A loose semantic threshold is worse than no cache">
+A miss costs a normal lookup. A false hit serves a fast, confident, wrong answer to a question that merely *sounded* similar. Start conservative and loosen only against measured precision — never on intuition.
+</Callout>
+
 ## Invalidation is the actual hard part
 
 A RAG cache is only as safe as its ties to the underlying data. If a document is edited or deleted after its chunks were cached in an answer, that cached answer is now confidently citing something that no longer exists. Practical patterns:
@@ -35,5 +42,12 @@ A RAG cache is only as safe as its ties to the underlying data. If a document is
 ## What this buys you
 
 Done well, layered caching turns a RAG pipeline's cost curve from linear-in-queries to roughly linear-in-*distinct* queries — which for most support and internal-tools traffic is a small fraction of total volume. It's also latency win before it's a cost win: a cache hit returns in milliseconds instead of the seconds a full retrieve-then-generate round trip takes. Treat cache hit rate and cache precision (how often a "hit" was actually the right answer) as first-class metrics alongside the checks in [evaluating RAG quality](/learn/rag/evaluating-rag-quality) — a cache that's fast but occasionally wrong is a regression, not a win.
+
+<InlineCheck
+  question="Why put your index version or last-reindex timestamp inside the cache key?"
+  options={['A reindex makes every cached answer cite chunks that may no longer exist — versioning the key invalidates all of them at once, without tracking which answers depended on which chunks', 'To make cache keys unique', 'Because the model version changed']}
+  answer={0}
+  explanation="Cached answers are claims about the index as it was. Tie the cache key to the index version and a reindex becomes instant, total invalidation — no stale citations surviving a content update."
+/>
 
 **Related:** [Evaluating RAG Quality](/learn/rag/evaluating-rag-quality), [Incremental Indexing and Keeping an Index Fresh](/learn/rag/incremental-indexing-freshness), [Cache Prompts and Responses to Cut Cost](/learn/production/prompt-and-semantic-caching)

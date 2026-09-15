@@ -2,7 +2,7 @@
 title: "Finding Groups Nobody Labeled"
 track: "ai-foundations"
 status: live
-summary: "A fully hand-computed k-means run on 8 two-dimensional customers — two real iterations of assign/recompute — followed by a second run from different starting centroids that converg"
+summary: "Eight customers, two numbers each, and no column anywhere that says which \"type\" they are."
 duration: "16 min read"
 ---
 

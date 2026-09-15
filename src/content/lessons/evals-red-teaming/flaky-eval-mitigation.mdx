@@ -6,11 +6,28 @@ summary: "Separate real regressions from sampling noise and infra flakiness so y
 duration: "5 min read"
 ---
 
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 You rerun the same eval twice, same code, same dataset, and the score moves from 84% to 81%. Before you file a bug or roll back a change, you need to know whether that 3-point drop is a regression or just noise — because most evals have more than one source of flakiness, and they don't look the same.
 
 ## Where the noise comes from
 
 There are two distinct failure classes, and they need different fixes.
+
+<Compare title="Two kinds of flakiness">
+<Pane title="Sampling non-determinism" tone="neutral">
+- Genuine model variance — logits shift slightly even at temperature 0 under GPU batching; larger at higher temperatures
+- A single run's score is one sample from a distribution
+- Fix: sample each item 3-5x, report a mean with a confidence interval, only call it a regression when intervals don't overlap
+</Pane>
+<Pane title="Infra flakiness" tone="bad">
+- Harness failures that look like model variance — timeouts, truncated responses, judge hiccups, grader regex breaking on rare output shapes
+- Not randomness; your pipeline dropping or mangling data
+- Fix: cache calls by payload, retry transient errors before scoring, version dataset and grader together
+</Pane>
+</Compare>
 
 **Sampling non-determinism.** Even at temperature 0, most providers don't guarantee bit-identical output across calls — floating-point ops on GPUs execute in nondeterministic order under batching, so logits can shift by tiny amounts and occasionally flip a token. At higher temperatures this is expected and larger: the model is genuinely supposed to vary. Either way, a single run's score is a single sample from a distribution, not a fixed number.
 
@@ -29,5 +46,12 @@ Cache every model call keyed on the exact request payload, so a rerun of an unch
 ## Building this into your loop
 
 None of this matters if it's not automatic. Bake caching, retries, and multi-sample scoring into the harness your CI runs, not into a script someone remembers to invoke by hand — see [shipping changes by eval diff](/learn/evals-red-teaming/eval-driven-iteration) for how a stable score feeds that gate. A flaky eval that occasionally blocks a good change trains people to ignore it, which is worse than not having one.
+
+<InlineCheck
+  question="Why must transient-error retries happen before scoring rather than after?"
+  options={['A truncated or errored response counted as a real answer scores low and reads as a model regression — it\'s an infra failure masquerading as a score', 'Because retries after scoring are billed at a higher rate', 'Because the scorer cannot accept retries']}
+  answer={0}
+  explanation="A 429 backoff that silently truncates a response isn't a model failure — it's a transport failure. If it reaches the scorer as a real answer, you're measuring your network, not your model."
+/>
 
 **Related:** [Confidence Intervals and Sample Size for Eval Scores](/learn/evals-red-teaming/statistical-rigor-in-evals), [Shipping Changes by Eval Diff](/learn/evals-red-teaming/eval-driven-iteration), [Promptfoo, Braintrust, and Ragas: Picking an Eval Tool](/learn/evals-red-teaming/eval-tooling-landscape)

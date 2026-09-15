@@ -3,10 +3,9 @@ title: "Regularisation: Weight Decay, Early Stopping, and Label Smoothing"
 track: deep-learning
 status: live
 order: 117
-description: "Treat regularisation as a set of explicit inductive biases monitored against validation evidence."
+summary: "Treat regularisation as a set of explicit inductive biases monitored against validation evidence."
 ---
 
-# Regularisation: Weight Decay, Early Stopping, and Label Smoothing
 
 ## Why this matters
 
@@ -89,3 +88,5 @@ A complete solution has shape-consistent algebra, matching numerical evidence, a
 For **Regularisation: Weight Decay, Early Stopping, and Label Smoothing**, repeat the numerical studio with three deliberate changes: one change that should preserve the result, one that should change it in a predictable direction, and one boundary case that should trigger an assertion or expose a limitation. State the expected outcome before running the code. Then record the actual value, tensor shape, dtype, and any difference from the prediction.
 
 Treat a disagreement as evidence to investigate, not as a nuisance to tune away. Identify whether its first cause is data, representation, objective, derivative, optimiser state, precision, or evaluation protocol. A reviewer must be able to run the same fixed fixture and see the same pass/fail result. Finally, write one sentence separating what the experiment established from what it merely suggests about a production decision. This disciplined counterfactual check is how local calculations become reliable engineering evidence.
+
+**Related:** [Regularisation geometry: L1, L2, weight decay, and early stopping](/learn/maths-foundations/regularisation-geometry-l1-l2-weight-decay-and-early-stopping)

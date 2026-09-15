@@ -2,7 +2,7 @@
 title: "From Clean Table to Model-Ready Input"
 track: "python-data-apis"
 status: live
-summary: "Worked-example lesson: takes six validated product reviews through five verified transformations — field assembly, PII stripping, context-window truncation, batching, and final JSO"
+summary: "Your reviews table just passed validation — types are right, `rating` is in range, `review_id` is unique, nothing required is null."
 duration: "6 min read"
 ---
 

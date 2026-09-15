@@ -6,6 +6,10 @@ summary: "Designing retry logic, backoff, and fallback paths so an agent recover
 duration: "5 min read"
 ---
 
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 An agent that only works when every tool call succeeds on the first try isn't ready for production. Tools time out, APIs return malformed JSON, rate limits kick in, and the model itself sometimes calls a tool with the wrong arguments. What separates a fragile agent from a reliable one is how it handles the failure, not whether failures happen.
 
 ## What actually fails
@@ -30,6 +34,22 @@ return fallback_or_surface_error(result)
 ```
 
 The `is_retryable` check matters as much as the loop. A 429 or a timeout is retryable. A 400 saying the tool arguments were invalid is not — retrying identical bad input just returns the same error.
+
+<Compare title="Retryable vs. not">
+<Pane title="Retry with backoff" tone="good">
+Transient — network blips, rate limits, 500s, timeouts. Exponential backoff + jitter + hard cap; honor Retry-After.
+</Pane>
+<Pane title="Don't retry" tone="neutral">
+Permanent or malformed — 400 invalid args, file doesn't exist, record deleted. Identical input returns the identical error.
+</Pane>
+</Compare>
+
+<InlineCheck
+  question="A model calls a tool with a missing required field. What's the right recovery — blind retry or something else?"
+  options={['Feed the validation error back to the model so it can reformulate the call — \'user_id is required\' lets it self-correct next turn. Retrying identical bad input just returns the same error', 'Retry 5 times with backoff', 'Delete the tool from the list']}
+  answer={0}
+  explanation="Malformed calls need reformulation, not repetition. A clear schema validation error is input for the model's next attempt — which is why good tool schemas double as good error handling."
+/>
 
 ## Feed the error back to the model
 

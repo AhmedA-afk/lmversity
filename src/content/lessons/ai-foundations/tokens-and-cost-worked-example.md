@@ -2,7 +2,7 @@
 title: "Counting Tokens and Pricing a Call"
 track: "ai-foundations"
 status: live
-summary: "Worked-example lesson: traces one real support-ticket triage call through BPE tokenization (including how 'unbelievable' fragments), exact input/output token counts via count_token"
+summary: "Our system prompt burns 62 tokens before the customer ever says a word, the ticket itself burns another 84, and the model's JSON reply burns 55 more — a full round trip for under a tenth of a cent."
 duration: "2 min read"
 ---
 

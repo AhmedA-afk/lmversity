@@ -6,6 +6,8 @@ summary: "Persist agent state to disk so a task that runs for hours can crash or
 duration: "6 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 An agent that refactors a codebase for two hours, or works a support queue overnight, will eventually get killed — a deploy, a laptop sleeping, a process OOM. If all that state lived only in memory, the work is gone. Checkpointing is the practice of writing an agent's state to durable storage often enough that resuming costs seconds, not hours.
 
 ## What actually needs to be saved
@@ -28,6 +30,13 @@ Checkpointing on every token is wasteful; checkpointing only at the end defeats 
 - On a timer as a backstop (e.g. every 30 seconds) for tasks with long gaps between tool calls
 
 A checkpoint write should be a single atomic operation — write to a temp file or a new row, then swap or commit — so a crash mid-write never leaves a corrupt, half-written checkpoint that's worse than no checkpoint at all.
+
+<InlineCheck
+  question="Why isn't the message transcript alone enough to resume an agent run?"
+  options={['The transcript says what the agent saw, not what it did — tool side effects already committed (files written, branches created) must also be saved, or a resume re-runs the plan and duplicates work', 'Because transcripts are too long', 'Because the model forgets']}
+  answer={0}
+  explanation="State is what execution needs to continue correctly — task progress, committed side effects, a step cursor — not just what the model needs to sound coherent. Resuming on transcript alone means re-doing completed work."
+/>
 
 ## Resuming correctly
 

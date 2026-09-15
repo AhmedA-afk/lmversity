@@ -3,10 +3,9 @@ title: "Agents, Tools, and Approval Boundaries"
 track: ai-foundations
 status: live
 order: 311
-description: "Use an agent only when planning and state improve a workflow; constrain tools with typed contracts, least privilege, and human approval."
+summary: "Use an agent only when planning and state improve a workflow; constrain tools with typed contracts, least privilege, and human approval."
 ---
 
-# Agents, Tools, and Approval Boundaries
 
 ## Product question and learning objective
 

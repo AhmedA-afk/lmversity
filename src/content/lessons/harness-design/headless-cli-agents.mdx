@@ -6,6 +6,8 @@ summary: "Run agents non-interactively from a terminal or CI, with no chat UI an
 duration: "5 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Most agent demos live in a chat window: you type, the model thinks, you approve a tool call. Headless mode strips that away. You run one command, the agent works through a task on its own, and it exits with a result you can log, diff, or fail a build on.
 
 ## What "headless" actually changes
@@ -39,5 +41,12 @@ Headless agents are the backbone of CI-integrated AI: a GitHub Action that asks 
 ## The trade you're making
 
 Interactive mode trades speed for safety: a human in the loop catches mistakes before they land, at the cost of attention and latency. Headless mode inverts that — it's fast and scales to hundreds of runs, but every mistake ships unless your policy layer catches it first. The rule of thumb: only take a workflow headless once you'd trust the same permission configuration to run unattended on a machine you actually care about.
+
+<InlineCheck
+  question="What's the rule of thumb for when a workflow is ready to go headless?"
+  options={['When you\'d trust the same permission configuration to run unattended on a machine you care about — every mistake ships unless the policy layer catches it, since there\'s no human backstop', 'When it\'s faster than a person', 'When the model is accurate enough']}
+  answer={0}
+  explanation="Interactive mode buys safety with attention; headless inverts it. The gate isn't model quality — it's whether your deny-floors, sandboxing, and logging are strong enough to run unsupervised."
+/>
 
 **Related:** [Allow/Ask/Deny: Designing Approval Gates](/learn/harness-design/permission-and-approval-systems), [Deny-Floors: Rules No Prompt Can Override](/learn/harness-design/deny-floors-and-policy-layers), [Sandboxing Tool Execution in a Harness](/learn/harness-design/subprocess-isolation-and-sandboxing)

@@ -6,6 +6,9 @@ summary: "Pushes updates to a client instead of making it poll a resource for ch
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A resource is a fine way to hand a model a file, a database row, or a log tail — but what happens when that data changes a second after the client read it? Without subscriptions, the client's only option is to re-fetch on a timer and hope it isn't stale or wasting calls. MCP's subscription mechanism lets the server push a signal instead.
 
 ## How the handshake works
@@ -26,6 +29,10 @@ A server first declares support by setting `subscribe: true` under its `resource
 
 A client that no longer cares sends `resources/unsubscribe` with the same URI. Servers should also drop subscriptions when a session ends, since nothing in the protocol requires a client to unsubscribe cleanly before disconnecting.
 
+<Callout kind="note" title="A doorbell, not a delivery">
+`notifications/resources/updated` carries only the URI — no new content. The client still has to call `resources/read` again to pull the fresh data. The notification answers "is it worth re-fetching," not "what changed."
+</Callout>
+
 ## Don't confuse it with list-changed
 
 MCP has a second, easily-confused notification: `notifications/resources/list_changed`. That one fires when the *set* of available resources changes — a new file appears, an old one is deleted — and it doesn't require a subscription at all; a client just declares interest in list-changed events generally. Resource subscriptions are the opposite granularity: you've already listed the resource, you already read it, and now you want to know when *that specific one* mutates in place. Think of list-changed as "the directory changed" and subscribe as "the file changed."
@@ -33,6 +40,13 @@ MCP has a second, easily-confused notification: `notifications/resources/list_ch
 ## Why this matters for context
 
 The real payoff shows up once you connect this to how agents manage context. Polling a resource on every turn burns tokens and round-trips even when nothing changed, and it still misses updates that land between polls. Subscriptions flip that: the server tells the client exactly when a re-read is worth the cost, so the agent can leave a resource alone until it's told otherwise — a much cheaper pattern than reasoning about staleness on every turn, and one worth pairing with how you think about [MCP and the Context Window](/learn/mcp/mcp-context-window).
+
+<InlineCheck
+  question="What's the difference between `resources/list_changed` and a resource subscription?"
+  options={['list_changed fires when the *set* of resources changes — a file appeared or was deleted. A subscription fires when *one specific resource you already read* mutates in place. Directory changed vs file changed', 'They\'re the same notification with different names', 'list_changed requires a subscription first']}
+  answer={0}
+  explanation="Opposite granularities: list_changed tells you the menu changed, subscriptions tell you a specific dish did. A client declares general interest in list-changed; it subscribes per-URI."
+/>
 
 ## The catch: not every server supports it
 

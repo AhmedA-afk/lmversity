@@ -6,6 +6,9 @@ summary: "What promptfoo, Braintrust, and Ragas each actually give you out of th
 duration: "6 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Every eval tool promises to solve "does my AI feature actually work." None of them do it alone — they each automate a different slice of the pipeline: dataset management, grading, or tracing. Picking one is really about picking which slice you'd rather not build by hand.
 
 ## Three tools, three centers of gravity
@@ -18,6 +21,10 @@ Every eval tool promises to solve "does my AI feature actually work." None of th
 
 ## What none of them give you
 
+<Callout kind="note" title="The tool can't write the rubric">
+Every eval tool assumes you've already done the hard part — deciding what 'correct' means and building a golden dataset that represents real traffic. A tool runs your rubric a thousand times over a thousand rows; it can't tell you whether the rubric measures the right thing.
+</Callout>
+
 Every one of these tools assumes you've already done the hard part: deciding what "correct" means for your task, and assembling a [golden dataset](/learn/evals-red-teaming/building-a-golden-dataset) that actually represents production traffic. A tool can run your rubric a thousand times over a thousand rows — it can't write the rubric. Metric selection, judge calibration, and figuring out when your eval is silently rewarding the wrong behavior are still on you; see [Choosing Metrics That Actually Measure Success](/learn/evals-red-teaming/writing-eval-metrics) and [LLM-Judge Bias](/learn/evals-red-teaming/llm-judge-bias-and-calibration).
 
 None of them fully solve non-determinism either — rerun the same eval twice and scores can shift a point or two just from sampling noise, which is a separate problem from tool choice (see [Taming Flaky Evals](/learn/evals-red-teaming/flaky-eval-mitigation)).
@@ -27,5 +34,12 @@ None of them fully solve non-determinism either — rerun the same eval twice an
 If you're iterating on prompts or comparing models before you have a production app, start with promptfoo — it's the lowest-friction way to get a repeatable, CI-runnable comparison. If you already have a live app generating real traffic and want evals tied to production traces, Braintrust's unified logging-plus-eval model earns its overhead. If your task is specifically RAG, layer Ragas's metrics on top of whichever runner you're using — it's a metrics library, not a competitor to either.
 
 Many teams end up combining two: promptfoo or a custom harness for CI regression gates (see [Shipping Changes by Eval Diff](/learn/evals-red-teaming/eval-driven-iteration)), plus Braintrust or an equivalent for watching what's actually happening in production. The tool doesn't replace that decision — it just makes whichever decision you already made faster to execute.
+
+<InlineCheck
+  question="You're building a RAG pipeline and someone suggests replacing your eval runner with Ragas. What's the misframe?"
+  options={['Ragas is a metrics library purpose-built for RAG — faithfulness, answer relevance, context precision — not a general eval framework; you layer it on top of a runner, not instead of one', 'Ragas only works for non-RAG tasks', 'Ragas cannot be combined with any other tool']}
+  answer={0}
+  explanation="Ragas ships pre-built RAG metrics backed by LLM judges — it saves you re-deriving them. Outside RAG it has little to offer, and inside RAG it still needs something to run the evals."
+/>
 
 **Related:** [Building a Golden Dataset](/learn/evals-red-teaming/building-a-golden-dataset), [Choosing Metrics That Actually Measure Success](/learn/evals-red-teaming/writing-eval-metrics), [Offline Evals vs Production Monitoring](/learn/evals-red-teaming/offline-vs-online-evals)

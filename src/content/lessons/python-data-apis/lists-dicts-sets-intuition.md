@@ -2,7 +2,7 @@
 title: "How to Picture Lists, Dicts, and Sets"
 track: "python-data-apis"
 status: live
-summary: "Builds the mental models for lists, dicts, and sets as a shelf, labeled drawers, and a guest list — then shows, with runnable code and worked arithmetic, why membership checks are "
+summary: "You've written `x in container` a hundred times without asking what happens underneath it — and that's fine, until a script that felt instant on your laptop grinds to a crawl the moment you point it at a real dataset."
 duration: "14 min read"
 ---
 

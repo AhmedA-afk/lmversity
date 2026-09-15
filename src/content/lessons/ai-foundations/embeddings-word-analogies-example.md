@@ -2,7 +2,7 @@
 title: "king - man + woman: Reading Meaning as Arrows"
 track: "ai-foundations"
 status: live
-summary: "A worked example building a tiny 4-dimensional toy embedding space by hand, verifying that a consistent gender direction and plural direction exist, running king - man + woman = qu"
+summary: "You've probably seen the claim that `king - man + woman ≈ queen` tossed around as proof embeddings \"understand\" gender."
 duration: "1 min read"
 ---
 

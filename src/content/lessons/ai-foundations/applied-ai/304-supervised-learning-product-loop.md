@@ -3,10 +3,9 @@ title: "Supervised Learning in the Product Loop"
 track: ai-foundations
 status: live
 order: 304
-description: "Connect labels, loss, thresholds, and review queues to a real decision rather than treating accuracy as the product."
+summary: "Connect labels, loss, thresholds, and review queues to a real decision rather than treating accuracy as the product."
 ---
 
-# Supervised Learning in the Product Loop
 
 ## Product question and learning objective
 

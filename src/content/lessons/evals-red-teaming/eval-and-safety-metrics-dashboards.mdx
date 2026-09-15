@@ -6,6 +6,9 @@ summary: "Turn eval and red-team runs into a dashboard over time so regressions 
 duration: "6 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A single eval run tells you how the system performs today. It tells you nothing about whether last week's prompt tweak made things better or worse, or whether swapping model versions quietly broke a category you don't test manually anymore. That's what a tracking dashboard is for: turning eval results into a time series you can actually watch.
 
 ## What to log per run
@@ -34,8 +37,19 @@ Two views matter more than people expect:
 
 It's tempting to keep jailbreak and prompt-injection results in a separate security tracker from quality evals, since they're often run by a different team. Resist that. The two need to live on one timeline, because the tradeoffs between them are exactly what you're trying to catch: a change that raises quality scores by tightening instruction-following can simultaneously make the model more compliant with injected instructions it should refuse. If quality and safety dashboards are in different tools, nobody sees that tradeoff until it's in production.
 
+<InlineCheck
+  question="Why keep red-team pass rates and quality scores on the same dashboard timeline?"
+  options={['The tradeoff between them is the thing you\'re catching — a change that tightens instruction-following can raise quality scores while making the model more compliant with injected instructions it should refuse', 'Because dashboards charge per chart', 'Because red-team results are only meaningful as a percentage of quality scores']}
+  answer={0}
+  explanation="Safety and capability drift at different rates for different reasons — and they can move in opposite directions on the same change. Split across two tools, nobody sees the tradeoff until it ships."
+/>
+
 ## Alert on drift, not just failures
 
 A threshold-crossing alert catches sudden breaks. It won't catch slow drift, where a score drops half a point every week for two months. Track a rolling baseline (e.g., trailing 5-run average) alongside the raw score, and alert when the current run deviates meaningfully from that baseline, not just from a fixed line. This is the same failure mode as production monitoring dashboards — see [Offline Evals vs Production Monitoring](/learn/evals-red-teaming/offline-vs-online-evals) — where nobody notices a metric sliding until a user complains.
+
+<Callout kind="breaks" title="Threshold alerts can't see drift">
+A fixed line catches sudden breaks — not a half-point weekly slide that compounds for two months. Alert on deviation from a rolling baseline, not just the threshold.
+</Callout>
 
 **Related:** [Choosing Metrics That Actually Measure Success](/learn/evals-red-teaming/writing-eval-metrics), [Shipping Changes by Eval Diff](/learn/evals-red-teaming/eval-driven-iteration), [Offline Evals vs Production Monitoring](/learn/evals-red-teaming/offline-vs-online-evals)

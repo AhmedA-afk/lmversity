@@ -2,7 +2,7 @@
 title: "Normalizing Features and Embeddings"
 track: "python-data-apis"
 status: live
-summary: "A worked example that standardizes a raw feature matrix (subtract column mean, divide by column std) and L2-normalizes embedding rows so cosine similarity becomes a plain dot produ"
+summary: "You've got two kinds of vectors that both need scaling before they're comparable — but for different reasons and in different directions."
 duration: "16 min read"
 ---
 

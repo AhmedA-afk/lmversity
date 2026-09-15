@@ -7,6 +7,8 @@ duration: "5 min read"
 ---
 
 import PreFilterVsPostFilter from '../../../components/diagrams/PreFilterVsPostFilter.astro';
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
 
 Vector similarity alone doesn't know that a user shouldn't see another team's documents, or that a query about "this quarter's numbers" should exclude last year's report. Metadata filtering fixes that by narrowing the candidate set with structured fields before or alongside the similarity search.
 
@@ -23,6 +25,13 @@ There are two places to apply the filter, and the difference matters:
 - **Pre-filtering** restricts the candidate pool to matching metadata *before* running the similarity search. This is the safer default for permissions — if a user can't see a document, it should never enter the ranked list at all.
 - **Post-filtering** runs the vector search first, then drops results that fail the metadata check afterward. It's simpler to bolt on, but it's risky: if your top-k similarity search returns 10 results and 8 get filtered out, you may end up with too few (or zero) usable results, even though better matches existed further down the ranked list.
 
+<InlineCheck
+  question="A user's top-10 similarity search returns 10 results — post-filtering drops 8 on permissions. What went wrong?"
+  options={['The filter ran after retrieval instead of before it — eligible matches ranked 11+ never got searched. Pre-filtering (or pushing the filter into the index query) would have surfaced them', 'The embedding model needs retraining', 'top-k was set too high']}
+  answer={0}
+  explanation="Post-filtering can only remove what the vector search already returned — it can't promote the eligible results sitting just below the cutoff. For permissions especially, the unviewable document should never enter the ranked list at all."
+/>
+
 Most production systems lean toward pre-filtering, or a hybrid where the filter is pushed into the same query the vector database executes, so the index only searches within the allowed subset. See [Choosing a Vector Database](/learn/rag/choosing-a-vector-database) for how well different databases support this natively — it varies a lot, and it's one of the more consequential choices you'll make.
 
 ## Designing filterable metadata
@@ -34,6 +43,10 @@ Good metadata fields are decided at ingestion, not bolted on later, so plan them
 - **Category**: document type, product line, language, source system.
 
 Keep filter fields separate from the text you embed. Don't try to smuggle "only search HR docs" into the query text and hope the embedding model figures it out — it won't reliably. Express it as a structured filter (a `WHERE`-like clause most vector databases support) instead.
+
+<Callout kind="breaks" title="Permissions in the query text is a hope, not a filter">
+"Only search HR docs" written into the embedded query is a suggestion the embedding model may or may not honor — similarity doesn't understand access control. Scope is a structured `WHERE`-style clause, executed by the index, every time.
+</Callout>
 
 ## Combining with hybrid search
 

@@ -2,8 +2,9 @@
 title: "Calling REST APIs with requests"
 track: "python-data-apis"
 status: live
-summary: "Teaches the anatomy of an HTTP request/response — verbs, status codes, headers, JSON bodies — through live GET and POST calls with `requests`, anchoring the `response.status_code` "
+summary: "Every weather app, every chatbot, every dashboard that shows \"live\" data is doing the same thing under the hood: sending a small text message to a server and parsing a small text message back."
 duration: "14 min read"
+sources: ["httpbin-docs", "open-meteo-docs"]
 ---
 
 Every weather app, every chatbot, every dashboard that shows "live" data is doing the same thing under the hood: sending a small text message to a server and parsing a small text message back. Once you can read that exchange — not just call a function that hides it — you can debug *any* API, not just the ones with friendly Python wrappers.

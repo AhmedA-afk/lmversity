@@ -6,6 +6,9 @@ summary: "Strip personal data from prompts and completions before they're logged
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Every LLM call you log is a snapshot of what a real user typed — names, emails, phone numbers, sometimes medical or financial details, pasted straight into a prompt. If your logging pipeline captures raw prompts and completions, you've just built a second, less-guarded copy of your production database.
 
 ## Why this bites teams that skip it
@@ -50,6 +53,16 @@ Apply this at the same layer as your [structured logging](/learn/production/stru
 
 ## Don't forget the completion, and don't forget the provider
 
-Redaction has to run on both sides of the call: a model can echo back PII from the prompt, or generate new PII-shaped text (a plausible-looking name or number) on its own. And redaction of your *logs* doesn't touch what you sent to a third-party model provider in the first place — if the provider itself must never see raw PII, that redaction has to happen before the API call, not after.
+<Callout kind="breaks" title="Two easy misses">
+- **The completion.** A model can echo prompt PII back, or generate new PII-shaped text on its own — redact both sides of the call, not just the input.
+- **The provider.** Redacting your *logs* doesn't touch what you already sent over the wire. If the provider must never see raw PII, redaction has to run before the API call, not after.
+</Callout>
+
+<InlineCheck
+  question="Why can't PII cleanup be a job you run on logs after they're written?"
+  options={['Logs flow to weaker-controlled places — observability tools, shared channels, warehouses — so by cleanup time the PII has already propagated to each surface', 'Because log files are immutable once written', 'Because regex is too slow to run on a schedule']}
+  answer={0}
+  explanation="Redaction is a pipeline step that runs before anything hits disk or the wire. A cleanup job on stored logs arrives after the data has already fanned out to every downstream system."
+/>
 
 **Related:** [Log Every LLM Call as Structured Data](/learn/production/structured-logging-for-llm-calls), [Set a Data Retention Policy for AI Systems](/learn/production/data-retention-and-privacy-policy), [Monitor Production Traffic for Prompt Injection and Abuse](/learn/production/prompt-injection-monitoring)

@@ -3,10 +3,9 @@ title: "Applied Case: Public-Sector AI, Procurement, and Accountability"
 track: ai-foundations
 status: live
 order: 320
-description: "Use public-sector AI only with transparent purpose, legal authority, accessible recourse, and independent accountability."
+summary: "Use public-sector AI only with transparent purpose, legal authority, accessible recourse, and independent accountability."
 ---
 
-# Applied Case: Public-Sector AI, Procurement, and Accountability
 
 ## Product question and learning objective
 

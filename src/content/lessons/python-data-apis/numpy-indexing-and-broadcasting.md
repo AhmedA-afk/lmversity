@@ -2,7 +2,7 @@
 title: "Indexing, Masks, and Broadcasting"
 track: "python-data-apis"
 status: live
-summary: "A hands-on walkthrough of slicing, boolean masks, fancy indexing, and reshape on a real feature matrix, ending with vectorized per-column mean subtraction via broadcasting — with t"
+summary: "You already know a NumPy array is a grid of numbers with a shape and a dtype."
 duration: "22 min read"
 ---
 

@@ -3,7 +3,7 @@ title: "Capacity, latency, and cost engineering"
 track: "deep-learning"
 status: live
 order: 420
-summary: "Design for a service-level objective"
+summary: "Little's Law gives average in-system work (L=\\lambda W): arrival rate (lambda) times response time (W)."
 duration: "18–30 min"
 ---
 
@@ -62,7 +62,7 @@ A useful debug log includes run id, data/split id, model artifact id, host/devic
 
 ## Why this matters
 
-Serving capacity is constrained by arrival rate, batch size, compute time, memory, queueing, and tail latency. Averages hide the user experience: utilization near saturation produces disproportionately large queues. Define SLOs and a degradation strategy before traffic arrives.
+Serving capacity is constrained by arrival rate, [batch size](/learn/deep-learning/core/121-batch-size-gradient-noise-and-scaling-rules), compute time, memory, queueing, and tail latency. Averages hide the user experience: utilization near saturation produces disproportionately large queues. Define SLOs and a degradation strategy before traffic arrives.
 
 ## Worked scenario
 

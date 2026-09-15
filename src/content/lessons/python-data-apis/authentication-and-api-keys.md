@@ -2,7 +2,7 @@
 title: "Authenticating API Requests"
 track: "python-data-apis"
 status: live
-summary: "A hands-on walkthrough building a Python script that authenticates to a REST API with a bearer token pulled from an environment variable — including deliberately breaking the heade"
+summary: "Most API calls don't fail because your logic is wrong — they fail because one header is wrong."
 duration: "14 min read"
 ---
 
@@ -154,4 +154,4 @@ A couple of cheaper habits worth adding while you're in this code: never `print(
 - **Point it at a real LLM API.** OpenAI, Anthropic, and most providers use this identical `Authorization: Bearer <key>` (or a close variant like `x-api-key`) pattern — [calling LLM APIs in Python](/learn/python-data-apis/calling-llm-apis-in-python) walks through the same auth step against a real model endpoint instead of a test one.
 - **Support multiple keys per environment.** One `.env` for local dev, a different secret source for staging and prod, without touching the code that reads `os.environ["API_KEY"]`. [Secrets and config management](/learn/python-data-apis/secrets-and-config-management) shows the layering.
 
-**Related:** Authentication and API keys · [Loading secrets with dotenv](/learn/python-data-apis/loading-secrets-with-dotenv) · [Calling REST APIs with Python](/learn/python-data-apis/calling-rest-apis-with-python) · [Rate limits and retries](/learn/python-data-apis/rate-limits-and-retries) · [Parsing and validating API responses](/learn/python-data-apis/parsing-and-validating-api-responses)
+**Related:** [Loading secrets with dotenv](/learn/python-data-apis/loading-secrets-with-dotenv) · [Calling REST APIs with Python](/learn/python-data-apis/calling-rest-apis-with-python) · [Rate limits and retries](/learn/python-data-apis/rate-limits-and-retries) · [Parsing and validating API responses](/learn/python-data-apis/parsing-and-validating-api-responses)

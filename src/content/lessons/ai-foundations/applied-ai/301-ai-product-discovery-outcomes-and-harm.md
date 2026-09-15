@@ -3,10 +3,9 @@ title: "AI Product Discovery: Outcomes, Users, and Harm"
 track: ai-foundations
 status: live
 order: 301
-description: "Frame an AI opportunity as a measurable decision improvement, not a model demonstration."
+summary: "Frame an AI opportunity as a measurable decision improvement, not a model demonstration."
 ---
 
-# AI Product Discovery: Outcomes, Users, and Harm
 
 ## Product question and learning objective
 

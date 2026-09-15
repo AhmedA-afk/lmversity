@@ -2,7 +2,7 @@
 title: "How Text Becomes Its Own Answer Key"
 track: "ai-foundations"
 status: live
-summary: "A worked example that turns 'the cat sat on the ___' into a labeled training pair by hand, scales the same trick across a paragraph to show why raw text becomes free supervision, t"
+summary: "You already know the trick from grade-school fill-in-the-blank worksheets."
 duration: "16 min read"
 ---
 

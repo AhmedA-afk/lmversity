@@ -2,7 +2,7 @@
 title: "A Chatbot Grows a Tool Loop"
 track: "ai-foundations"
 status: live
-summary: "A worked trace of one weather question through a memory-only chatbot versus a tool-calling agent, showing the observe-think-act loop step by step and where the agent's extra machin"
+summary: "Ask a plain chatbot for the weather right now and it either hedges honestly or guesses confidently — it has no eyes on the sky and, until you tell it otherwise, no idea what city you're in."
 duration: "14 min read"
 ---
 

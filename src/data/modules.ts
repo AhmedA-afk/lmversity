@@ -18,6 +18,14 @@ export interface ModuleBoundary {
 }
 
 export const moduleMap: Record<string, ModuleBoundary[]> = {
+  'ai-for-designers': [
+    { name: 'What AI changes in design', startsAt: 'ai-for-designers-course-guide' },
+    { name: 'Design the behavior before the screen', startsAt: 'designing-the-ai-behavior-contract' },
+    { name: 'Trustworthy AI interactions', startsAt: 'designing-for-uncertainty' },
+    { name: 'Prototype and evaluate', startsAt: 'prototype-ai-behavior-without-a-model' },
+    { name: 'Capstone', startsAt: 'capstone-design-a-trustworthy-ai-feature' },
+  ],
+
   'ai-literacy': [
     { name: 'Deciding when to use AI', startsAt: 'what-ai-can-and-cant-do-overview' },
     { name: 'How AI produces answers', startsAt: 'data-model-output-loop' },

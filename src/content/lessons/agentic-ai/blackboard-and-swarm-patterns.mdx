@@ -6,6 +6,10 @@ summary: "How agents coordinate through a shared workspace or local rules instea
 duration: "6 min read"
 ---
 
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Every multi-agent pattern you've seen so far has a boss. An orchestrator hands out subtasks, waits for results, and decides what happens next. Blackboard and swarm patterns drop the boss entirely — agents coordinate through shared state or local interaction instead of a controller telling them what to do.
 
 ## The blackboard: a shared workspace, not a chain of command
@@ -24,8 +28,27 @@ In practice, LLM swarms show up as large pools of narrow, cheap agents working t
 
 ## When decentralization is worth it
 
+<Compare title="Who's in charge">
+<Pane title="Orchestrated" tone="neutral">
+A controller names the agents and their handoffs in advance. Debuggable trace — 'who called whom' is written down — but a bottleneck and single point of failure.
+</Pane>
+<Pane title="Blackboard" tone="neutral">
+No boss; agents react to a shared workspace. Order emerges from the data — but 'what happened' is a log of writes, and two agents can act on the same stale read.
+</Pane>
+<Pane title="Swarm" tone="neutral">
+No shared state at all — local rules only, global behavior emerges. Least mature in production; be skeptical of the label until you've seen the coordination rules.
+</Pane>
+</Compare>
+
 Both patterns solve the same problem orchestration has: a single controller is a bottleneck and a single point of failure, and it forces artificial ordering on work that's naturally parallel or exploratory. But they trade a debuggable, predictable trace for flexibility — you give up "here's exactly what happened and why" in exchange for agents that don't wait on each other.
 
 That trade only pays off past a certain scale or unpredictability. If you can name your agents and their handoffs in advance, an [orchestrator](/learn/agentic-ai/multi-agent-patterns) is easier to build, test, and fix. Reach for blackboard or swarm coordination when the set of relevant agents or the order they should act in genuinely can't be known ahead of time — and budget real effort for observability, because "what happened" is the first thing you lose.
 
-**Related:** [Multi-Agent Patterns: Orchestrator, Pipeline, Debate](/learn/agentic-ai/multi-agent-patterns), [Choosing an Orchestration Framework](/learn/agentic-ai/agent-orchestration-frameworks), [Agent-to-Agent Protocols](/learn/agentic-ai/agent-to-agent-protocols)
+<InlineCheck
+  question="What do you give up first when you drop the orchestrator?"
+  options={['The trace — decentralized coordination means no single \'who called whom\' log, so debugging and observability become the thing you have to engineer back in', 'Model quality', 'Token cost']}
+  answer={0}
+  explanation="Orchestration trades flexibility for a legible control flow. Remove the controller and 'what happened' is the first casualty — budget for observability before you budget for agents."
+/>
+
+**Related:** [Multi-Agent Patterns: Orchestrator, Pipeline, Debate](/learn/agentic-ai/multi-agent-patterns), [Choosing an Orchestration Framework](/learn/agentic-ai/agent-orchestration-frameworks), [Agent-to-Agent Protocols](/learn/agentic-ai/agent-to-agent-protocols) · [Multi-agent coordination and task allocation](/learn/classical-ai/agents-robotics/307-multi-agent-coordination-and-task-allocation)

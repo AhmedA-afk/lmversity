@@ -6,6 +6,8 @@ summary: "Hard-coded refusal and permission rules enforced outside the model's c
 duration: "5 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A system prompt is a suggestion the model can be talked out of. A deny-floor is not a suggestion — it's a check that runs in code, outside the model's context window entirely, and it fires the same way whether the model was persuaded, confused, or working exactly as intended.
 
 ## Why prompts alone aren't enough
@@ -39,5 +41,12 @@ That `is_denied` check has no access to "but the user said it was fine" — it e
 Deny-floors catch the worst outcomes; they don't replace good judgment for everything else. A harness that relies entirely on deny rules ends up either too permissive (the floor only catches catastrophic cases) or too restrictive (everything gets hard-blocked, and the agent can't do useful work). The floor is meant to sit underneath a graded system — most decisions still route through [approval gates](/learn/harness-design/permission-and-approval-systems) that ask a human or apply softer heuristics, inside the larger [control loop](/learn/harness-design/the-control-loop) that decides what runs and what waits.
 
 Think of it as the last line, not the whole defense: the floor exists so that even if every softer layer fails — a bad prompt, a compromised tool, an agent that's been talked into something — the one outcome you truly cannot afford still doesn't happen.
+
+<InlineCheck
+  question="What belongs on the deny-floor versus in the prompt?"
+  options={['Failures you can\'t tolerate even once — destructive filesystem ops, disallowed hosts, credential exfiltration — go on the floor. Preferences like style and verbosity stay in the prompt, where flexibility is a feature', 'Everything goes on the floor', 'Everything goes in the prompt']}
+  answer={0}
+  explanation="Deny-floors are expensive and rigid by design — reserved for catastrophic cases. Softer guidance lives in the prompt where a model can weigh it. A floor that tries to be everything becomes either too permissive or too restrictive."
+/>
 
 **Related:** [Building the Control Loop](/learn/harness-design/the-control-loop), [Allow/Ask/Deny: Designing Approval Gates](/learn/harness-design/permission-and-approval-systems), [The Harness: Everything Around the Model](/learn/harness-design/what-is-a-harness)

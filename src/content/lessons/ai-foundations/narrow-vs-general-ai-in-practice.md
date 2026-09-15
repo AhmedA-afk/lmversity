@@ -2,7 +2,7 @@
 title: "Narrow vs. General AI in Practice"
 track: "ai-foundations"
 status: live
-summary: "A worked example that scores a warehouse route optimizer, a chess engine, and a 2026 frontier chat LLM on breadth, transfer, and autonomy — then breaks the LLM's autonomy score on "
+summary: "\"Narrow vs. general\" gets taught as a light switch — flip it and you've got AGI."
 duration: "16 min read"
 ---
 

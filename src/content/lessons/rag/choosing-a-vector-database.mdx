@@ -6,6 +6,8 @@ summary: "Compare vector database options on indexing, filtering, hosting, and s
 duration: "6 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Every vector database does the same core job: store embeddings and return the nearest ones fast. The differences that actually matter show up in filtering, hosting model, and how much operational weight you're willing to carry.
 
 ## The real decision factors
@@ -23,6 +25,13 @@ Skip the marketing comparisons and ask four questions instead.
 ## A reasonable default path
 
 Start with `pgvector` or Chroma if you already have Postgres or are still prototyping — zero extra infrastructure, good enough recall, and you can migrate later. Move to Qdrant or Weaviate when filtered search or scale becomes a real bottleneck. Reach for Pinecone when you want the operational burden gone entirely and are fine paying for that. None of this is a permanent commitment: because retrieval sits behind a fairly stable interface (embed, search, filter), swapping the backing store later is usually a contained migration, not a rewrite of your [RAG pipeline](/learn/rag/building-a-rag-pipeline-end-to-end).
+
+<InlineCheck
+  question="Your data already lives in Postgres and search is a feature, not the product. What's the reasonable default?"
+  options={['pgvector — add an index to an existing table and query embeddings next to normal SQL, no new system to run; migrate to a dedicated store only when filtered search or scale becomes a real bottleneck', 'Pinecone for managed everything', 'Milvus for scale']}
+  answer={0}
+  explanation="A dedicated vector database pays off when search is first-class. Bolt-on vector columns in the store you already have carry you through prototypes and moderate scale — and the retrieval interface is stable enough that swapping later is a contained migration."
+/>
 
 ## What doesn't differentiate them much anymore
 

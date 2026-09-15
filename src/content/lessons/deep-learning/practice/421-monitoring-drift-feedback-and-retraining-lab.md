@@ -3,7 +3,7 @@ title: "Graded lab: monitoring, drift, and retraining signals"
 track: "deep-learning"
 status: live
 order: 421
-summary: "Observe the model after labels arrive late"
+summary: "For binned baseline (p_i) and current (q_i), PSI (=\\sum_i(q_i-p_i)\\log(q_i/p_i)) measures distribution shift, not task degradation."
 duration: "18–30 min"
 ---
 

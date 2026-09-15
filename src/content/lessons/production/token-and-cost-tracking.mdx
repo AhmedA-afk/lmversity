@@ -6,6 +6,9 @@ summary: "Attribute every LLM call's token spend to a feature, user, and prompt 
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A single "AI is expensive this month" invoice tells you nothing you can act on. Cost tracking means attaching a dollar figure to every individual call, then rolling those figures up by feature, by user, and by prompt version — so when spend spikes, you know exactly which line moved.
 
 ## Why the aggregate number is useless
@@ -43,7 +46,18 @@ Raw per-call rows are for debugging one incident; the dashboard you actually che
 
 Set a daily or hourly rollup job rather than computing this live on every dashboard load — at meaningful volume, querying raw call logs per page view gets slow and expensive in its own right.
 
+<InlineCheck
+  question="Why does per-prompt-version cost tracking catch regressions faster than a monthly invoice does?"
+  options={['A prompt change that pads the system prompt with unused context shows up immediately as \'v3 costs 40% more per call than v2\' — attributable the day it ships, not at month end', 'Because providers bill each prompt version separately', 'Because invoices only show output tokens, not input tokens']}
+  answer={0}
+  explanation="An aggregate total can't say which line moved. Tagging cost with feature, user, and prompt version turns a regression into a diff between two named versions the moment it lands."
+/>
+
 ## Turn the number into an action, not just a chart
+
+<Callout kind="production" title="A chart is not a control">
+Tracking without a threshold just makes the bill prettier. Wire the per-user and per-feature numbers to something that reacts: a soft cap that switches to a cheaper model, a hard cap that queues or rejects, an alert that fires at a multiple of trailing average — which is the job a [kill switch](/learn/production/feature-flags-and-kill-switches) exists to do.
+</Callout>
 
 Tracking without a threshold is just a nicer chart. Pair the per-user and per-feature numbers with actual limits: a soft cap that switches a user to a cheaper model, a hard cap that queues or rejects further requests, an alert that fires when a feature's daily spend crosses a set multiple of its trailing average. The tracking work only pays off once it's wired to something that reacts — which is exactly the job of a [kill switch](/learn/production/feature-flags-and-kill-switches) sitting in front of the feature.
 

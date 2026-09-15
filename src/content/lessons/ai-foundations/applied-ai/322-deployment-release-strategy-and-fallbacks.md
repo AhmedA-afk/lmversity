@@ -3,10 +3,9 @@ title: "Deployment, Release Strategy, and Safe Fallbacks"
 track: ai-foundations
 status: live
 order: 322
-description: "Release an AI system gradually with measurable gates, versioned dependencies, rollbacks, and a functioning manual fallback."
+summary: "Release an AI system gradually with measurable gates, versioned dependencies, rollbacks, and a functioning manual fallback."
 ---
 
-# Deployment, Release Strategy, and Safe Fallbacks
 
 ## Product question and learning objective
 

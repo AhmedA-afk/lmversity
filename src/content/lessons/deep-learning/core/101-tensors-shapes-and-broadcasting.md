@@ -3,10 +3,9 @@ title: "Tensors, Shapes, and Broadcasting"
 track: deep-learning
 status: live
 order: 101
-description: "Build a shape-first mental model for deep-learning arrays; most silent model bugs are shape bugs."
+summary: "Build a shape-first mental model for deep-learning arrays; most silent model bugs are shape bugs."
 ---
 
-# Tensors, Shapes, and Broadcasting
 
 ## Why this matters
 
@@ -89,3 +88,5 @@ A complete solution has shape-consistent algebra, matching numerical evidence, a
 For **Tensors, Shapes, and Broadcasting**, repeat the numerical studio with three deliberate changes: one change that should preserve the result, one that should change it in a predictable direction, and one boundary case that should trigger an assertion or expose a limitation. State the expected outcome before running the code. Then record the actual value, tensor shape, dtype, and any difference from the prediction.
 
 Treat a disagreement as evidence to investigate, not as a nuisance to tune away. Identify whether its first cause is data, representation, objective, derivative, optimiser state, precision, or evaluation protocol. A reviewer must be able to run the same fixed fixture and see the same pass/fail result. Finally, write one sentence separating what the experiment established from what it merely suggests about a production decision. This disciplined counterfactual check is how local calculations become reliable engineering evidence.
+
+**Related:** [Scalars, arrays, tensors, axes, shapes, and broadcasting](/learn/maths-foundations/scalars-arrays-tensors-axes-shapes-and-broadcasting)

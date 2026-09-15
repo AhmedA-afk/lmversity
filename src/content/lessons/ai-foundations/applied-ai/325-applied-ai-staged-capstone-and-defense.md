@@ -3,10 +3,9 @@ title: "Applied AI Staged Capstone and Technical Defense"
 track: ai-foundations
 status: live
 order: 325
-description: "Integrate discovery, data, model choice, evaluation, operations, and governance into an evidence-backed applied AI proposal and prototype."
+summary: "Integrate discovery, data, model choice, evaluation, operations, and governance into an evidence-backed applied AI proposal and prototype."
 ---
 
-# Applied AI Staged Capstone and Technical Defense
 
 ## Product question and learning objective
 
@@ -72,3 +71,5 @@ Submit five artifacts:
 5. A failure memo: earliest signal, user impact, containment, and the design change you would make (15 points).
 
 A passing submission is specific enough that another person can challenge its assumptions and reproduce its tests. Full credit requires a justified choice not to automate when evidence or controls are inadequate.
+
+**Related:** [Reliable AI Capstone and Technical Defense](/learn/ai-foundations/reliable-ai/228-reliable-ai-capstone-and-technical-defense)

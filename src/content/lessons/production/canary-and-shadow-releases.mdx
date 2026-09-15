@@ -6,6 +6,10 @@ summary: "Roll a new prompt or model to a slice of traffic, or run it silently i
 duration: "6 min read"
 ---
 
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A new system prompt passed every eval you wrote. That's not the same as knowing it will behave on the traffic you didn't think to test. Canary and shadow releases are how you find out with real requests, before a bad prompt or model swap becomes everyone's problem at once.
 
 ## Canary: let a slice of users feel it first
@@ -26,10 +30,32 @@ The cost is real, though literal, not reputational: you're paying for two infere
 
 ## Picking between them, or using both
 
+<Compare title="Canary vs. shadow">
+<Pane title="Canary" tone="neutral">
+- Real users see the new version — a small slice only
+- Measures real behavior: engagement, thumbs-down, retries
+- Some users get a worse experience if it's worse — needs an instant rollback
+- Costs nothing extra in inference
+</Pane>
+<Pane title="Shadow" tone="neutral">
+- Runs on live traffic but its output is never shown
+- Measures quality differences users can't see yet
+- Zero user risk — production's answer always ships
+- Costs double inference for the duration of the test
+</Pane>
+</Compare>
+
 Shadow first, canary second is the common sequence: shadow mode tells you the new version doesn't obviously break on real traffic, without any user ever seeing its output. Once shadow metrics look clean, a canary tells you how it performs when it's the one actually answering — including effects a shadow test can't see, like whether users engage differently with its tone or length.
 
 Skip straight to canary only when the change is small and you're confident behavioral risk is low — a minor prompt tweak, not a model family swap. For anything that changes cost, latency, or output shape meaningfully, shadow first is worth the extra inference spend.
 
 Either way, the release is only as good as what you're watching. Decide your [latency, cost, and quality thresholds](/learn/production/latency-and-cost-slos) before traffic starts flowing, not while you're staring at a dashboard trying to decide if a number looks bad.
+
+<InlineCheck
+  question="Your team swaps to a new model and wants to know whether its answers are worse on real traffic — without a single user seeing them. Which release pattern?"
+  options={['Shadow — the new model runs on live traffic in parallel, but only its logged output is scored; production answers as normal', 'Canary — route 5% of users to the new model and watch their error rate', 'Neither — an eval suite covers this case already']}
+  answer={0}
+  explanation="A shadow release decouples 'does it behave on real inputs' from 'does it behave when users see it.' Quality regressions get caught on logged comparisons with zero user exposure; a canary comes after, once shadow metrics look clean."
+/>
 
 **Related:** [Put a Kill Switch on Every AI Feature](/learn/production/feature-flags-and-kill-switches), [Set SLOs for Latency, Cost, and Quality](/learn/production/latency-and-cost-slos), [LLM-as-Judge: Grading Outputs with a Model](/learn/evals-red-teaming/llm-as-judge)

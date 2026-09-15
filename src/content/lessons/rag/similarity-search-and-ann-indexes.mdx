@@ -6,6 +6,10 @@ summary: "Skip exact nearest-neighbor search and use HNSW or IVF to find relevan
 duration: "6 min read"
 ---
 
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Once you have embeddings, retrieval means finding the vectors closest to your query vector. Doing that exactly gets slow fast — the fix is approximate nearest neighbor (ANN) search.
 
 ## Why exact search doesn't scale
@@ -28,8 +32,30 @@ IVF uses less memory than HNSW and builds faster, but recall depends heavily on 
 
 ## Choosing between them
 
+<Compare title="Two index families">
+<Pane title="HNSW (graph)" tone="good">
+- Multi-layer graph — hop the highway layer, then local streets
+- Excellent recall + low latency
+- Cost: higher memory (the graph lives in RAM), slower incremental builds
+- Default in most vector databases
+</Pane>
+<Pane title="IVF (partitions)" tone="neutral">
+- Cluster space into partitions; probe only the closest few
+- Lower memory, faster builds; pairs with PQ to shrink further
+- Cost: recall depends on `nprobe` — probe too few, miss boundary cases
+- Reach for it when memory, not latency, is the binding constraint
+</Pane>
+</Compare>
+
 For most applications starting out, this choice is made for you by whichever [vector database](/learn/rag/choosing-a-vector-database) you pick — HNSW is the default in Pinecone, Weaviate, and pgvector's default index. Reach for IVF-style indexes when memory is the binding constraint, not query latency: massive corpora on constrained hardware, or when the small recall trade-off is genuinely acceptable for the use case.
 
 Either way, an ANN index only finds vectors that are geometrically close — it says nothing about whether a document is actually relevant to a specific field. That's what [metadata filtering](/learn/rag/metadata-filtering-in-retrieval) and [reranking](/learn/rag/reranking-retrieved-results) are for.
+
+<InlineCheck
+  question="Why does exact (brute-force) nearest-neighbor search stop working at scale?"
+  options={['It\'s a linear scan — every query compares against every stored vector, so latency climbs in lockstep with corpus size; ten million vectors means ten million comparisons per query', 'Because cosine similarity is expensive to compute once', 'Because indexes can\'t store that many vectors']}
+  answer={0}
+  explanation="ANN indexes trade a small slice of recall for a large slice of speed — 'almost certainly among the nearest' in a fraction of the time. In practice the gap is small enough that most applications never notice."
+/>
 
 **Related:** [Embeddings and Semantic Similarity](/learn/rag/embeddings-and-semantic-similarity), [Choosing a Vector Database](/learn/rag/choosing-a-vector-database), [Cosine Similarity: Measuring How Alike Two Things Are](/learn/maths-foundations/cosine-similarity)

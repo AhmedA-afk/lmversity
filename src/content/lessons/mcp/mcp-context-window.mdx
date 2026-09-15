@@ -7,6 +7,9 @@ summary: Tool definitions are sent on every call. Ten verbose tools can quietly 
 duration: 11 min
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Every time the model takes a turn, the definitions of *all* your available tools are sent along with the prompt — names, descriptions, and full parameter schemas. It's easy to forget, because you wrote those definitions once and never see them again. But they're on the bill every single turn.
 
 ## Do the math on your own tools
@@ -21,6 +24,13 @@ Ten tools with rich descriptions and nested parameter schemas can easily run **1
 
 That's often larger than the prompt you were worrying about.
 
+<InlineCheck
+  question="You defined ten tools once. Why does an 8-turn task bill you for them eight times?"
+  options={['Every turn resends the full tool definitions with the prompt — the schema is a per-turn cost, not a one-time registration', 'Because tool results are also resent each turn', 'Because providers meter tool schemas separately from context']}
+  answer={0}
+  explanation="Tool definitions ride along in every model call — you wrote them once, but the model needs them on each turn to decide what to call. Verbose schemas multiply by every turn in the task."
+/>
+
 ## Three fixes, in order of payoff
 
 ### 1. Tighten the schemas
@@ -30,6 +40,10 @@ Long, chatty tool descriptions don't make the model smarter — they make it poo
 ### 2. Don't expose every tool at once
 
 If a task only touches three tools, the model only needs those three. Group tools and load the relevant set per task, rather than presenting all forty on every call. Fewer, sharper tools also improve tool-*choice* accuracy — the model picks better from a short menu.
+
+<Callout kind="note" title="The 5,000-token result is also context spend">
+Tool *results* pile into context too — a blob of JSON returned today sits in every remaining turn of the conversation. Return only what the model needs, or summarise before returning.
+</Callout>
 
 ### 3. Summarise tool *results*, not just definitions
 

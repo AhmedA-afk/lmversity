@@ -2,7 +2,7 @@
 title: "Navigating Nested JSON in Python"
 track: "python-data-apis"
 status: live
-summary: "A worked example that takes a realistic nested API response (user → orders → line items), walks it with loops and dict access, sums line-item totals with sum() + a generator expres"
+summary: "An API response for one user can nest three levels deep — user, then orders, then line items — before you reach an actual number worth adding up."
 duration: "13 min read"
 ---
 
@@ -242,4 +242,4 @@ The short version: a `KeyError` means you assumed a key exists and were wrong. `
 - Don't reach for a blanket `try/except` around the whole loop as a substitute for `.get()` — it's coarser than you need and can silently skip an entire order's worth of otherwise-good line items instead of defaulting the one field that's actually uncertain.
 - `sum(expr for x in items)` is usually cleaner than a manual accumulator loop once you're combining a lookup with an aggregation — see [comprehensions and generators](/learn/python-data-apis/comprehensions-and-generators).
 
-**Related:** Nested JSON in memory · [Data contracts and validation](/learn/python-data-apis/data-contracts-and-validation) · [Parsing and validating API responses](/learn/python-data-apis/parsing-and-validating-api-responses) · [Comprehensions and generators](/learn/python-data-apis/comprehensions-and-generators) · [Calling REST APIs with Python](/learn/python-data-apis/calling-rest-apis-with-python)
+**Related:** [Data contracts and validation](/learn/python-data-apis/data-contracts-and-validation) · [Parsing and validating API responses](/learn/python-data-apis/parsing-and-validating-api-responses) · [Comprehensions and generators](/learn/python-data-apis/comprehensions-and-generators) · [Calling REST APIs with Python](/learn/python-data-apis/calling-rest-apis-with-python)

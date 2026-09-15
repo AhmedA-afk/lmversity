@@ -6,6 +6,10 @@ summary: "Have the model grade its own retrieved chunks and re-retrieve, rewrite
 duration: "6 min read"
 ---
 
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Standard RAG trusts whatever the retriever hands back and generates from it, even if every chunk is irrelevant. Corrective RAG (CRAG) and Self-RAG fix this by making retrieval quality a checked step, not an assumption.
 
 ## The core idea: grade before you generate
@@ -31,6 +35,15 @@ Self-RAG, from Asai et al. (2023), pushes the check further by training a model 
 
 Because these judgments are learned during fine-tuning rather than prompted, Self-RAG needs a model trained specifically for it — you can't just ask an off-the-shelf model to emit calibrated reflection tokens and expect the same reliability. CRAG is the more practical starting point for most teams because it works as a wrapper around any retriever and any generator model, using prompted grading rather than a custom fine-tune.
 
+<Compare title="Two ways to grade retrieval">
+<Pane title="CRAG" tone="good">
+A separate grading pass — a prompted LLM call or small classifier scores each chunk, then branches: keep, discard + fall back to broader search, or blend. Wraps around any retriever and any generator.
+</Pane>
+<Pane title="Self-RAG" tone="neutral">
+The generator emits learned reflection tokens inline — whether to retrieve, whether a passage is relevant, whether its draft is supported, whether it's useful. Requires a model fine-tuned for it.
+</Pane>
+</Compare>
+
 ## Why "abstain or re-retrieve" beats "always answer"
 
 The failure mode both approaches target is the same one covered in [why models hallucinate](/learn/hallucinations/why-models-hallucinate): an LLM given irrelevant context doesn't reliably say "this doesn't answer the question" — it often blends the noise into a plausible-sounding but wrong answer. Grading retrieval before generation gives the pipeline an explicit off-ramp: re-retrieve with a rewritten query, expand to web search, or return "I don't have enough information" instead of guessing.
@@ -40,5 +53,12 @@ The tradeoff is latency and cost — grading adds at least one extra model call,
 ## When to reach for this
 
 Add a grading step once you've measured that irrelevant retrievals are actually reaching your generator — check this with the retrieval-precision metrics from [evaluating RAG quality](/learn/rag/evaluating-rag-quality) before adding the extra hop. If your retriever is already precise (tight metadata filters, a well-tuned reranker), the grading step mostly costs latency for little gain. It earns its place when queries are open-ended, the corpus is noisy, or an outdated-looking answer is worse than an honest "I don't know."
+
+<InlineCheck
+  question="Why does grading retrieved chunks before generation beat 'always answer'?"
+  options={['An LLM handed irrelevant context rarely abstains — it blends the noise into a plausible wrong answer. Grading gives the pipeline an off-ramp: re-retrieve, expand the search, or honestly say it doesn\'t know', 'Because grading is faster than generating', 'Because it removes the need for a retriever']}
+  answer={0}
+  explanation="The failure being fixed is silent confidence on bad context. A graded pipeline can detect 'nothing usable came back' and choose not to guess — an option standard retrieve-then-generate never has."
+/>
 
 **Related:** [Reranking Retrieved Results](/learn/rag/reranking-retrieved-results), [Agentic RAG: Iterative, Multi-Hop Retrieval](/learn/rag/agentic-rag), [Evaluating RAG Quality](/learn/rag/evaluating-rag-quality)

@@ -2,7 +2,7 @@
 title: "Why Stacking Linear Layers Gains You Nothing"
 track: "ai-foundations"
 status: live
-summary: "Intuition-first lesson proving that stacked linear layers collapse into one affine map (analogy, algebra, and a runnable numpy check), then showing why XOR is provably unsolvable b"
+summary: "Two dense layers with no activation between them aren't a deeper network — they're one linear layer wearing a trench coat."
 duration: "9 min read"
 ---
 

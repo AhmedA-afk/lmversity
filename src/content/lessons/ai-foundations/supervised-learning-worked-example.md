@@ -2,7 +2,7 @@
 title: "Supervised Learning, Worked by Hand"
 track: "ai-foundations"
 status: live
-summary: "A hand-computed walkthrough of one full supervised learning cycle on 5 labeled emails and 3 features — forward pass, loss, gradient, weight update, and the same trained output read"
+summary: "Every explanation of supervised learning eventually says some version of \"the model adjusts its weights to reduce error."
 duration: "25 min read"
 ---
 

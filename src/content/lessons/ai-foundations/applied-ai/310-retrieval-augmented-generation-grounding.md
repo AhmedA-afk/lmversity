@@ -3,10 +3,9 @@ title: "Retrieval-Augmented Generation and Grounded Answers"
 track: ai-foundations
 status: live
 order: 310
-description: "Design RAG as a chain of retrieval, evidence selection, generation, citation, and abstention with separately measured failures."
+summary: "Design RAG as a chain of retrieval, evidence selection, generation, citation, and abstention with separately measured failures."
 ---
 
-# Retrieval-Augmented Generation and Grounded Answers
 
 ## Product question and learning objective
 
@@ -72,3 +71,5 @@ Submit five artifacts:
 5. A failure memo: earliest signal, user impact, containment, and the design change you would make (15 points).
 
 A passing submission is specific enough that another person can challenge its assumptions and reproduce its tests. Full credit requires a justified choice not to automate when evidence or controls are inadequate.
+
+**Related:** [What is RAG (retrieval-augmented generation)?](/answers/what-is-rag)

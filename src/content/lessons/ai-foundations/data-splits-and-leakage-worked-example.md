@@ -2,8 +2,9 @@
 title: "Splits, Leakage, and the Lie of a Good Score"
 track: "ai-foundations"
 status: live
-summary: "A worked example where a churn classifier hits 0.99 accuracy for two stacked, fixable reasons — a target-derived feature and duplicate rows crossing the train/test boundary — then "
+summary: "A model that predicts churn with 99% accuracy looks like a win right up until you find out it's cheating."
 duration: "16 min read"
+sources: ["sklearn-groupshufflesplit-docs"]
 ---
 
 A model that predicts churn with 99% accuracy looks like a win right up until you find out it's cheating. Below is the exact anatomy of that cheat on one dataset, end to end: where the leak hides, how it survives a "correct-looking" workflow, and what the honest number turns out to be once you close it.

@@ -6,9 +6,22 @@ summary: "Plan-and-execute architectures that break a goal into ordered subtasks
 duration: "5 min read"
 ---
 
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Ask an agent to "migrate our API docs to the new format" and hand it tools one step at a time, and it'll often thrash: read a file, guess at a fix, read another file, forget why. Planning fixes this by making the agent write down the steps before it touches a single tool.
 
 ## Plan-and-execute, not think-then-act
+
+<Compare title="Where the plan lives">
+<Pane title="ReAct" tone="neutral">
+No explicit plan — the agent re-derives 'what's next' implicitly on every step. Great for short tasks; drifts and burns tokens on structured ones.
+</Pane>
+<Pane title="Plan-and-execute" tone="good">
+An explicit ordered subtask list written before any tool call, then executed step by step. Auditable, resumable, narrower prompts per step.
+</Pane>
+</Compare>
 
 [ReAct](/learn/agentic-ai/react-pattern) interleaves one thought with one action, over and over. That works well for short tasks, but on anything with real structure — a migration, a multi-file refactor, a research report — the agent re-derives the plan implicitly on every step, which burns tokens and drifts.
 
@@ -32,4 +45,11 @@ Separating planning from execution buys you three things. The plan is auditable 
 
 Planning upfront assumes you can see the shape of the problem before you start. For open-ended exploration — "find out why this metric dropped" — an early plan is often wrong by step 2, and rigidly executing it wastes more effort than ReAct's step-by-step guessing would have. The fix isn't to abandon planning but to keep it cheap to revise: treat the plan as a draft the agent can rewrite when a step surfaces something the original plan didn't account for, rather than a contract it's locked into.
 
-**Related:** [ReAct: Interleaving Reasoning and Acting](/learn/agentic-ai/react-pattern), [The Agent Loop: Sense, Think, Act](/learn/agentic-ai/the-agent-loop), [Decomposition: Splitting One Big Prompt into a Pipeline](/learn/prompt-engineering/task-decomposition)
+<InlineCheck
+  question="What are the three things separating planning from execution buys you?"
+  options={['Auditability (a human approves 5 lines before tools run), a checkpoint (crash on step 3 resumes from step 3), and narrower per-step prompts that keep the loop from degrading', 'Speed, cost, and accuracy', 'Caching, retries, and logging']}
+  answer={0}
+  explanation="The plan is a readable artifact before execution, a resume point during it, and a way to shrink each step's context. ReAct's implicit re-planning gets none of these."
+/>
+
+**Related:** [ReAct: Interleaving Reasoning and Acting](/learn/agentic-ai/react-pattern), [The Agent Loop: Sense, Think, Act](/learn/agentic-ai/the-agent-loop), [Decomposition: Splitting One Big Prompt into a Pipeline](/learn/prompt-engineering/task-decomposition) · [Deliberative agents: beliefs, goals, and intentions](/learn/classical-ai/agents-robotics/303-deliberative-agents-beliefs-goals-and-intentions)

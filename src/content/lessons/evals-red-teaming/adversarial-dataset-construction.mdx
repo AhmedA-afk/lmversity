@@ -6,6 +6,9 @@ summary: "Use named jailbreak-generation techniques as generators to build a red
 duration: "6 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Hand-writing jailbreak prompts doesn't scale, and it doesn't cover the failure modes you haven't imagined yet. The fix is to treat jailbreak research as a set of generators: each technique below is a recipe for producing many adversarial prompts automatically, which you then run through the model and log as a dataset.
 
 ## Crescendo: escalate across turns
@@ -19,6 +22,13 @@ To turn this into a dataset generator, template it: pick a target behavior, gene
 Many-shot jailbreaking exploits long context windows directly. It fills the prompt with dozens or hundreds of fabricated Q&A turns showing an assistant readily complying with a graduated series of borderline requests, then appends the real target request at the end. The model has no way to distinguish "this is my actual conversation history" from "this is a wall of adversarial priming" — it pattern-matches on the in-context examples and continues the trend.
 
 As a generator this is mechanical: write a template for one fake turn, vary the topic and compliance framing, and concatenate as many as your context budget allows. The interesting variable to sweep in your dataset isn't the content, it's the *count* — you want data points at 5, 20, 50, 200 shots to find where a given model's defenses start to erode, since this is fundamentally a scaling effect tied to context length.
+
+<InlineCheck
+  question="Why does a Crescendo-style attack evade single-turn red-teaming entirely?"
+  options={['No individual message looks like an attack — the harm lives in the trajectory, so a test harness that scores one prompt and one response has nothing to flag', 'Because it uses an encoding the filter cannot decode', 'Because it only works offline, away from monitoring']}
+  answer={0}
+  explanation="Crescendo's defense-bypass is structural: each turn is innocuous and cites the model's own prior answer. Only trajectory-aware testing — scoring whether any turn crossed the line — can see it."
+/>
 
 ## TAP: search instead of hand-tuning
 
@@ -37,5 +47,9 @@ This is worth running as its own pipeline before your red-team exercise, not dur
 ## Turning generators into a dataset
 
 None of these techniques is useful as a one-off demo. The point is to run each generator at scale, log every (prompt, response, score) triple, and dedupe against prompts you already have so the set keeps growing instead of repeating itself. Tag each entry with which generator produced it and which policy category it targets, so a failure can be traced back to "Crescendo against category X" rather than just "the model said something bad." That traceable, versioned set is what feeds a structured [red-team exercise](/learn/evals-red-teaming/adversarial-red-teaming-process) and an [automated adversarial testing](/learn/evals-red-teaming/automated-adversarial-testing) pipeline you can rerun on every model or prompt change.
+
+<Callout kind="note" title="The variable to sweep is the count">
+For many-shot attacks, content isn't the interesting axis — shot count is. Sample at 5, 20, 50, 200 shots to find where a model's defenses erode; it's a scaling effect tied to context length, not a phrasing trick.
+</Callout>
 
 **Related:** [Common Jailbreak Techniques and Their Defenses](/learn/evals-red-teaming/jailbreak-techniques-and-defenses), [Running a Structured Red-Team Exercise](/learn/evals-red-teaming/adversarial-red-teaming-process), [Automating Adversarial Probes](/learn/evals-red-teaming/automated-adversarial-testing)

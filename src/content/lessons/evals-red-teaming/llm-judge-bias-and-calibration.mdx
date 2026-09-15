@@ -6,6 +6,9 @@ summary: "Model judges have systematic blind spots — position, length, and sel
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 An LLM judge doesn't grade like a careful human grader. It has predictable, measurable biases that will quietly distort your eval scores unless you design around them — and each bias has a specific, cheap countermeasure.
 
 ## Position bias
@@ -29,6 +32,17 @@ The mitigation is to use a **different model family as judge** than the one unde
 ## Rubric anchoring
 
 The single highest-leverage fix across all three biases is giving the judge a detailed rubric with concrete anchors — what a 1, 3, and 5 look like, in specifics, not "poor/good/excellent." A vague prompt like "rate this response's quality 1-10" leaves the judge to invent its own criteria on the fly, which is exactly when position, length, and model-identity signals fill the gap. A rubric that spells out what to look for gives the judge something more reliable to actually grade against, shrinking (though not eliminating) all three effects at once.
+
+<InlineCheck
+  question="What's the mechanical fix for position bias in pairwise grading — and why does it work?"
+  options={['Run every comparison twice with the order swapped and count a win only if it holds in both directions — a verdict that flips with position was anchoring on order, not quality', 'Ask the judge to ignore whichever answer came first', 'Always put the newer model\'s output second']}
+  answer={0}
+  explanation="A real quality difference survives reordering; a position artifact doesn't. Flips get scored as ties instead of silently inflating one side's win rate — the cost is roughly doubling judge calls."
+/>
+
+<Callout kind="note" title="A measuring instrument, not a referee">
+Treat judge output the way you'd treat any instrument with known systematic error: calibrate it against a human-labeled sample before you rely on it, and re-validate periodically as models and rubrics drift.
+</Callout>
 
 None of this means model-graded evals are untrustworthy — it means treating judge output the way you'd treat any measurement instrument with known systematic error: calibrate it, and validate periodically against a human sample.
 

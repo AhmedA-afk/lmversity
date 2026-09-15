@@ -2,7 +2,7 @@
 title: "Sigmoid, Tanh, ReLU, GELU: Which and Why"
 track: "ai-foundations"
 status: live
-summary: "A practitioner's side-by-side of sigmoid, tanh, ReLU (plus its Leaky/ELU patches), and GELU — comparing range, gradient behavior, and failure modes — ending in a decision table and"
+summary: "The [activation-functions](/learn/ai-foundations/activation-functions) page told you these functions exist and roughly what they do."
 duration: "12 min read"
 ---
 

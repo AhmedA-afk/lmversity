@@ -6,6 +6,9 @@ summary: "Investigate bad outputs, cost spikes, and outages with a blameless pos
 duration: "6 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Your AI feature had a bad night: it hallucinated refund policies to customers, or a provider outage took chat down for two hours, or someone's prompt tweak 10x'd your token bill overnight. The incident is over. Now the real work starts — figuring out why it happened and making sure the same failure can't happen again the same way.
 
 ## Why AI incidents need their own postmortem shape
@@ -29,6 +32,17 @@ The postmortem is only useful if it produces things that outlive the meeting. Co
 - A missing guard becomes a real gate — a [kill switch](/learn/production/feature-flags-and-kill-switches) if none existed, or a tighter [canary rollout](/learn/production/canary-and-shadow-releases) so the next risky change only reaches 1% of traffic first.
 - A detection gap becomes an alert threshold in your [on-call playbook](/learn/production/on-call-playbooks-for-ai), not a vague "watch this more closely."
 
-Skip "be more careful next time" as an action item — it's not a system change, and it won't survive contact with the next deadline. The goal of an AI postmortem isn't to explain the incident well; it's to make the system that produced it measurably harder to fail the same way twice.
+<InlineCheck
+  question="What does 'blameless' mean in a postmortem — and what doesn't it mean?"
+  options={['It names the mechanism, not the person — and stays specific: timelines from logs, impact in numbers, root cause as a mechanical chain', 'It keeps the write-up vague so nobody feels blamed', 'It means skipping the root-cause section when the cause is a human error']}
+  answer={0}
+  explanation="Blameless is about *who* gets named, not *how much detail*. 'A system prompt edit removed a constraint' is blameless and specific; 'someone was careless' names a person; 'be more careful' is neither specific nor a system change."
+/>
+
+<Callout kind="breaks" title="Action items that rot">
+"Be more careful next time" is not a system change, and it won't survive contact with the next deadline. Every postmortem finding should land as an artifact — a regression case, a guard, an alert threshold — or it evaporates the moment the meeting ends.
+</Callout>
+
+The goal of an AI postmortem isn't to explain the incident well; it's to make the system that produced it measurably harder to fail the same way twice.
 
 **Related:** [Catch Regressions with Evals in CI](/learn/production/eval-based-regression-testing), [Write an On-Call Playbook for AI Failures](/learn/production/on-call-playbooks-for-ai), [Put a Kill Switch on Every AI Feature](/learn/production/feature-flags-and-kill-switches)

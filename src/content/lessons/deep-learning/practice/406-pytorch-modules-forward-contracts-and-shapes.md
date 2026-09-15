@@ -3,7 +3,7 @@ title: "PyTorch modules, forward contracts, and shape discipline"
 track: "deep-learning"
 status: live
 order: 406
-summary: "Design models that fail loudly"
+summary: "For linear input (X\\in\\mathbb R^{B\\times d}), logits are (Z=XW+\\mathbf1b^\\top\\in\\mathbb R^{B\\times C}), with (W\\in\\mathbb R^{d\\times C})."
 duration: "18–30 min"
 ---
 
@@ -77,7 +77,7 @@ For a classifier, assert `(batch, channels, height, width)` at input and `(batch
 
 ## Hands-on protocol
 
-Trace one batch through an MLP, a convolutional block, and attention. Write the parameter count and output shape after each block. Test batch size one, an odd image size, and an all-padding sequence.
+Trace one batch through an MLP, a convolutional block, and attention. Write the parameter count and output shape after each block. Test [batch size](/learn/deep-learning/core/121-batch-size-gradient-noise-and-scaling-rules) one, an odd image size, and an all-padding sequence.
 
 ## Failure modes to diagnose
 

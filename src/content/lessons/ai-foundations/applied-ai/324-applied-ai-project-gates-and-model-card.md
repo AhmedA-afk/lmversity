@@ -3,10 +3,9 @@ title: "Applied AI Project Gates and the Model Card"
 track: ai-foundations
 status: live
 order: 324
-description: "Make governance deliverables useful engineering artifacts: each gate should require evidence that changes a decision."
+summary: "Make governance deliverables useful engineering artifacts: each gate should require evidence that changes a decision."
 ---
 
-# Applied AI Project Gates and the Model Card
 
 ## Product question and learning objective
 

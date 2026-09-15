@@ -6,6 +6,9 @@ summary: "What evals buy you over eyeballing outputs: reproducibility, regressio
 duration: "4 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 You change a prompt, run it three times, the outputs look better, you ship. That's vibes-based iteration, and it works fine right up until it doesn't — usually the moment your app has more than a handful of inputs that matter, or more than one person touching the prompt.
 
 ## The problem with eyeballing
@@ -32,7 +35,18 @@ What that structure gives you that eyeballing can't:
 
 None of this requires a fancy framework. The smallest useful eval is a spreadsheet: inputs in one column, expected behavior in another, pass/fail in a third. The next lesson, [Building a Golden Dataset](/learn/evals-red-teaming/building-a-golden-dataset), covers how to pick the inputs that actually earn a place in that set — which matters more than the scoring mechanism itself.
 
+<InlineCheck
+  question="You tweak a prompt and it fixes the case you were staring at. What can vibes-based iteration never tell you about that change?"
+  options={['Whether the fix silently regressed five cases you weren\'t looking at — without a fixed test set, the regression is invisible', 'Whether the new prompt uses more tokens', 'Whether the output reads more confidently']}
+  answer={0}
+  explanation="Eyeballing only sees the cases you check. A fixed eval set reruns everything — including the inputs you weren't thinking about — so a fix that breaks something else surfaces immediately instead of two weeks later."
+/>
+
 ## When vibes are still fine
+
+<Callout kind="note" title="The signal to switch">
+Building and maintaining a test set costs time — for a prototype you're throwing away next week, it isn't worth paying. The shift should happen right around when you'd otherwise start saying "wait, did I break this." That instinct is the signal it's time to write the test set down.
+</Callout>
 
 Evals aren't free — building and maintaining a test set costs time, and for a prototype you're throwing away next week, that cost isn't worth paying. Vibes-based iteration is the right tool during early exploration, when you're still figuring out what "good" even looks like. The shift to evals should happen right around when you'd otherwise start saying "wait, did I break this" — that instinct is the signal it's time to write the test set down instead of trusting your memory of it.
 

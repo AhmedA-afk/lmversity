@@ -2,7 +2,7 @@
 title: "Pagination: Collecting Every Page"
 track: "python-data-apis"
 status: live
-summary: "Deep implementation walkthrough: build a local mock API serving offset/limit, cursor-token, and Link-header pagination, then write one Python client that fully drains each style in"
+summary: "Most list endpoints lie a little: `GET /customers` never actually returns *all* your customers, just the first slice of them plus a hint about how to get the next one."
 duration: "6 min read"
 ---
 

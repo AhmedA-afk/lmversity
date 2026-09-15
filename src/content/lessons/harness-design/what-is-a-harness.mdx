@@ -6,6 +6,9 @@ summary: "The harness is the code around the model: the loop, tool router, polic
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 An LLM by itself is a function that turns text into text. Ask it a question, it answers, and the conversation is over. What makes it feel like an "agent" that can browse the web, edit files, or run commands isn't the model at all — it's everything wired around it. That surrounding system is the **harness**.
 
 ## What the harness actually does
@@ -24,6 +27,17 @@ None of this is exotic. A harness can be a few hundred lines of Python around an
 Two agents built on the identical model can behave completely differently, because "the agent" is mostly harness. A better model gives you better *reasoning inside each step*. A better harness gives you better *tool selection, error recovery, safety guarantees, and task completion* — the things users actually notice as "this agent is good at its job."
 
 This is also why prompt injection and jailbreaks matter so much in agentic systems: if the policy layer is weak or missing, a clever prompt can talk the model into calling tools it should never touch. The fix isn't a smarter model — it's a harness with rules the model's output can't override. That's the whole idea behind [deny-floors](/learn/harness-design/deny-floors-and-policy-layers): hard limits enforced in code, not in a system prompt the model might talk itself out of.
+
+<Callout kind="breaks" title="Safety lives in the harness, not the model">
+A clever prompt can talk a model into requesting a dangerous tool call — but it can't talk the harness into executing one. If your safety depends on the model refusing, you don't have a policy layer, you have a hope.
+</Callout>
+
+<InlineCheck
+  question="Two agents run on the identical model but behave completely differently. What accounts for most of the difference?"
+  options={['The harness — tool selection, error recovery, policy enforcement, and context assembly are all harness code. The model only contributes the reasoning inside each step', 'The system prompt phrasing', 'The temperature setting']}
+  answer={0}
+  explanation="'The agent' is mostly harness. A better model improves reasoning per step; a better harness improves the things users actually notice — whether the tool fired correctly, whether errors recovered, whether the task finished."
+/>
 
 ## The mental model to keep
 

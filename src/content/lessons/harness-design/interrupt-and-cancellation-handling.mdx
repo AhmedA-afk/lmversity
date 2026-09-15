@@ -6,6 +6,8 @@ summary: "Design cancellation so an interrupted tool call leaves state consisten
 duration: "5 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A user hits Ctrl-C while your agent is three seconds into a file write or a database migration. The wrong response is killing the process outright — you get a half-written file, a lock nobody releases, or a model that "thinks" a tool call succeeded when it never finished. Cancellation is a design problem, not just an event to catch.
 
 ## Why the naive approach breaks state
@@ -38,5 +40,12 @@ The part that actually protects state isn't the abort signal — it's what the t
 - **Truthful reporting**: when a tool call is cancelled mid-flight, the result returned to the model must say so plainly — `"status": "cancelled", "partial": true` — never a success payload for work that didn't finish. An agent that thinks a cancelled edit succeeded will build its next several turns on a false premise, which is a state problem as much as a data problem; see [Checkpointing Long-Running Agent State](/learn/harness-design/state-and-checkpointing) for how that turn boundary gets persisted.
 
 The general rule: a tool call has three outcomes, not two — succeeded, failed, and cancelled — and only the harness that models all three lets the agent recover honestly instead of hallucinating a fourth.
+
+<InlineCheck
+  question="Why does a harness propagate a cancellation token and wait instead of calling process.exit on Ctrl-C?"
+  options={['Tool side effects outlive the process — kill mid-write and you get a truncated file, an unreleased git lock, or an orphaned subprocess still writing after the harness reported \'cancelled\'', 'Because Ctrl-C is slow', 'Because models can\'t be interrupted']}
+  answer={0}
+  explanation="Cancellation is cooperative: a token gets set, in-flight work observes it at safe checkpoints, subprocesses get SIGTERM with a grace period before SIGKILL, and cleanup confirms before the caller declares victory."
+/>
 
 **Related:** [Sandboxing Tool Execution in a Harness](/learn/harness-design/subprocess-isolation-and-sandboxing), [Checkpointing Long-Running Agent State](/learn/harness-design/state-and-checkpointing), [Scheduling Parallel Tool Calls Without Races](/learn/harness-design/parallel-tool-scheduling)

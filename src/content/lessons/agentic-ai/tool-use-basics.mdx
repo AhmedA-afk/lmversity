@@ -6,6 +6,10 @@ summary: "How an agent calls a function, reads the result, and folds it back int
 duration: "5 min read"
 ---
 
+import Steps from '../../../components/kit/Steps.astro';
+import Step from '../../../components/kit/Step.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 An LLM by itself can only produce text. A tool is what lets it check today's weather, query a database, or send an email — the bridge between "the model thinks" and "the model does."
 
 ## What a Tool Actually Is
@@ -14,17 +18,26 @@ A tool is a function the model can ask to have run. You describe it with a name,
 
 That handoff is the whole pattern:
 
-1. You send the model a prompt plus the list of available tools.
-2. The model decides a tool would help, and outputs a call: name plus arguments.
-3. Your code runs the real function with those arguments.
-4. You send the result back to the model as a new message.
-5. The model reads that result and either calls another tool or writes a final answer.
+<Steps>
+<Step title="Prompt + tool list">You send the model a prompt plus the list of available tools — name, description, input schema for each.</Step>
+<Step title="Model requests a call">The model decides a tool would help and outputs a structured call: name plus arguments. It never runs anything itself.</Step>
+<Step title="Your code executes">The real function runs with those arguments — your code, your permissions.</Step>
+<Step title="Result returns">The output goes back to the model as a new message in the conversation.</Step>
+<Step title="Decide again">The model reads the result and either calls another tool or writes a final answer.</Step>
+</Steps>
 
 This is the mechanism that turns a plain prompt into the beginning of an [agent loop](/learn/agentic-ai/the-agent-loop) — sense the result, think about what it means, act again if needed.
 
 ## Why the Description Matters More Than the Code
 
 The model picks a tool based only on its name, description, and parameter schema — it cannot see your implementation. A vague description like "gets data" leads to wrong or missed calls. A good one states exactly when to use the tool and what each parameter means, the same way you'd brief a new teammate who can't read your source. This is its own skill, covered in depth under tool schema design.
+
+<InlineCheck
+  question="What does the model actually output when it 'calls a tool'?"
+  options={['A structured request — tool name plus arguments. Your code executes the real function and sends the result back; the model never runs anything itself', 'It executes the function directly', 'It generates the function\'s source code']}
+  answer={0}
+  explanation="Tool calling is a request/response protocol. The model emits a call shape; your runtime owns execution — which is also where permissions and validation live."
+/>
 
 ## Parsing the Result Back In
 
@@ -34,4 +47,4 @@ Once your code runs the tool, the raw output — a JSON blob, an API response, a
 
 Calling a single tool and returning its output is a workflow, not agentic behavior. What makes it agentic is the model deciding, on its own, whether to call a tool at all, which one, and whether the result means it should call another before answering. A calculator plugin that always fires on math questions is a fixed workflow; a system that reads a user's request and chooses among a weather tool, a search tool, and a calculator — chaining them as needed — is exercising real [tool use](/learn/agentic-ai/tool-use-basics) inside a loop. That distinction is also why not every feature needs an agent at all.
 
-**Related:** [The Agent Loop: Sense, Think, Act](/learn/agentic-ai/the-agent-loop), [What Is Tool Calling](/learn/tools-function-calling/what-is-tool-calling), [Designing a Tool Schema](/learn/tools-function-calling/designing-a-tool-schema)
+**Related:** [The Agent Loop: Sense, Think, Act](/learn/agentic-ai/the-agent-loop), [What Is Tool Calling](/learn/tools-function-calling/what-is-tool-calling), [Designing a Tool Schema](/learn/tools-function-calling/designing-a-tool-schema) · [Tool use, planning, and action verification](/learn/classical-ai/agents-robotics/306-tool-use-planning-and-action-verification)

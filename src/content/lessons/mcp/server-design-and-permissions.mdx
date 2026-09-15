@@ -6,6 +6,11 @@ summary: "An MCP server should expose the smallest useful capabilities, document
 duration: "3 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 ## The short answer
 
 An MCP server should expose the smallest useful capabilities, document inputs and side effects, enforce authorization independently of the model, and return errors that help the client recover. A server description is an interface contract, not a permission grant.
@@ -33,6 +38,10 @@ token. Return the created issue ID for audit and retry safety.
 A request containing `../` should be rejected or resolved inside an allowed root.
 Do not rely on the model to sanitize a path.
 
+<Callout kind="breaks" title="The model is not your input sanitizer">
+A `../` in a path argument should be rejected or resolved inside an allowed root by the *server* — the model passing the argument is exactly the layer you can't trust to clean it.
+</Callout>
+
 ### Counterexample: one “admin” tool
 
 A catch-all tool hides side effects and makes evaluation difficult. Split reads,
@@ -46,19 +55,29 @@ test that treats tool output as untrusted.
 
 ## Two ways to see it
 
-### Protocol view
+<Compare title="Same tool list, two lenses">
+<Pane title="Protocol view" tone="good">
+Clear capabilities make clients interoperable and failures diagnosable — narrow tools are easier to call correctly.
+</Pane>
+<Pane title="Threat-model view" tone="neutral">
+Every capability is an attack surface with preconditions, impact, and containment — narrow tools are easier to secure too.
+</Pane>
+</Compare>
 
-Clear capabilities make clients interoperable and failures diagnosable.
-
-### Threat-model view
-
-Every capability is an attack surface with preconditions, impact, and containment.
+<InlineCheck
+  question="Why split one catch-all `admin` tool into separate read/draft/write tools?"
+  options={['A catch-all hides side effects and makes evaluation hard — separate tools let policy be specific about who can do what, and make each call auditable', 'Because MCP limits tools per server', 'To reduce context window usage']}
+  answer={0}
+  explanation="Granularity is what makes authorization enforceable. When one tool can do anything, a permission check can only say yes or no to everything — split tools let each capability carry its own scope."
+/>
 
 ## Hands-on
 
+<Callout kind="try" title="Try it">
 Build a local server with a read resource and a draft/write tool. Add path,
 identity, input, output, rate, and audit checks. Run tests for valid access,
 denied access, malformed input, traversal, and duplicate invocation.
+</Callout>
 
 ## Checkpoint
 

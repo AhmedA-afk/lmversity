@@ -6,6 +6,10 @@ summary: "Use a workflow when steps, transitions, and approvals are known."
 duration: "3 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+
 ## The short answer
 
 Use a workflow when steps, transitions, and approvals are known. Use an agent when the system must choose among bounded tools or steps based on changing information. The more freedom an agent has, the more you need limits on tools, time, state, cost, and escalation.
@@ -40,6 +44,10 @@ and ask for direction—not invent a new authority.
 
 An agent adds nondeterminism and cost where ordinary code can express the process.
 
+<Callout kind="breaks" title="Autonomy on a deterministic task">
+An agent on a three-step form buys nondeterminism, cost, and a new failure surface — in exchange for nothing code couldn't express. Autonomy must earn its place against a known sequence.
+</Callout>
+
 ## An illustrative story
 
 A team replaced a clear approval workflow with a “helpful” agent. It handled easy
@@ -48,14 +56,14 @@ model for classification and restored explicit code for authorization and writes
 
 ## Two ways to see it
 
-### Capability view
-
+<Compare>
+<Pane title="Capability view" tone="good">
 An agent is useful when deciding the next bounded action is the hard part.
-
-### Reliability view
-
-Every choice point is a new failure surface, so autonomy must earn its place with
-tests and recovery.
+</Pane>
+<Pane title="Reliability view" tone="neutral">
+Every choice point is a new failure surface — autonomy must earn its place with tests and recovery.
+</Pane>
+</Compare>
 
 ## Hands-on
 

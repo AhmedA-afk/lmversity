@@ -6,6 +6,8 @@ summary: "Design pre/post-tool-call hook points so users customize the harness's
 duration: "5 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Every harness eventually meets a user who wants behavior it doesn't ship: block a tool call under some condition, log every file edit to a separate audit trail, auto-format code after a write, or play a sound when a long task finishes. You could add a config flag for each request, but that list never ends. Hooks solve this differently: instead of anticipating every use case, you expose the moments in the control loop where outside code can run, and let users write that code themselves.
 
 ## What a hook actually is
@@ -27,6 +29,13 @@ The dangerous version of hooks is "run arbitrary code with no rules." The useful
 2. **Hooks run with a timeout and a hard exit code convention.** Exit 0 means proceed, a nonzero exit (commonly a specific code like 2) means block, and the hook's stderr becomes the reason shown to the model or user. No exit code should be ambiguous.
 3. **Hooks see the same data the [tool registry](/learn/harness-design/tool-routing-and-registries) dispatches to the tool** — nothing more. A hook for the Bash tool sees the command string, not the whole conversation.
 4. **Hook failures fail loud, not silent.** If a hook crashes or times out, the harness should treat that as a blocking error rather than silently skipping the check — otherwise a broken hook quietly becomes no hook.
+
+<InlineCheck
+  question="Why can hooks only narrow permission, never widen it?"
+  options={['The asymmetry is what makes hooks compose safely with deny-floors — a misbehaving hook can make the agent more restrictive but never less, so user code can\'t weaken harness policy', 'Because hooks are slow', 'Because hooks run as root']}
+  answer={0}
+  explanation="A pre-tool-call hook can turn allow into deny but never deny into allow. That one-way door is the entire safety argument for letting arbitrary user code sit in the execution path."
+/>
 
 ## Where hooks live in config, and why that matters
 

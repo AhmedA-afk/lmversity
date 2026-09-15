@@ -6,15 +6,27 @@ summary: "Understand the retrieve-then-generate pattern and the failure modes it
 duration: "5 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+import Steps from '../../../components/kit/Steps.astro';
+import Step from '../../../components/kit/Step.astro';
+
 Ask a model a question about your company's internal handbook and it will confidently make something up — not because it's broken, but because it has never seen that document. RAG (retrieval-augmented generation) fixes this by fetching the relevant text first, then handing it to the model as context before asking for an answer.
 
 ## The pattern
 
 RAG has three steps that repeat on every query:
 
-1. **Retrieve** — search a knowledge base (usually a vector database of your documents) for chunks relevant to the user's question.
-2. **Augment** — insert those chunks into the prompt, alongside the question.
-3. **Generate** — let the model answer using only what it was just given, instead of relying on what it memorized during training.
+<Steps>
+<Step title="Retrieve">
+Search a knowledge base — usually a vector database of your documents — for chunks relevant to the question.
+</Step>
+<Step title="Augment">
+Insert those chunks into the prompt, alongside the question.
+</Step>
+<Step title="Generate">
+The model answers using only what it was just handed — not what it memorized in training.
+</Step>
+</Steps>
 
 The model isn't learning your data. It's reading it, fresh, every single time — the way you'd hand a colleague the right page of a manual instead of expecting them to have memorized the whole thing.
 
@@ -38,6 +50,13 @@ RAG adds real complexity: a chunking strategy, an embedding model, a vector stor
 - The relevant material comfortably fits in a single prompt — just paste it in.
 - The task depends on reasoning or style, not facts you own — fine-tuning or better prompting fits better.
 - The knowledge is small and static enough to memorize once and rarely touch again.
+
+<InlineCheck
+  question="What does RAG actually change about a model's knowledge?"
+  options={['Nothing — it doesn\'t teach the model anything. It hands it the right text fresh on every query, so the answer is traceable to a source you control instead of a plausible guess', 'It fine-tunes the model on your documents', 'It expands the context window permanently']}
+  answer={0}
+  explanation="Retrieval is reading, not learning. The model's weights never see your corpus — which is exactly why a live index beats stale training data and why RAG answers can cite their source."
+/>
 
 If you do go the RAG route, the two decisions that matter most early on are how you split documents into chunks and how you turn those chunks into searchable vectors — covered next in [Chunking Strategies for Documents](/learn/rag/chunking-strategies-for-documents) and [Embeddings and Semantic Similarity](/learn/rag/embeddings-and-semantic-similarity).
 

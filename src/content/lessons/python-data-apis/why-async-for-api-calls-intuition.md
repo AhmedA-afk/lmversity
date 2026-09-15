@@ -2,7 +2,7 @@
 title: "Why Concurrency Speeds Up API Calls"
 track: "python-data-apis"
 status: live
-summary: "Intuition-building lesson using the waiter/kitchen analogy to explain why concurrency collapses wall-clock time for API calls, with a step-by-step mental simulation, worked arithme"
+summary: "A waiter who stands at one table until the food arrives can serve maybe ten customers a night."
 duration: "14 min read"
 ---
 

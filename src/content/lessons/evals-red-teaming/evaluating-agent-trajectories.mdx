@@ -6,6 +6,10 @@ summary: "Score the sequence of tool calls an agent made, not just its final ans
 duration: "6 min read"
 ---
 
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 An agent that books the correct flight after canceling three real reservations by mistake did not succeed. Final-answer grading would call that a pass. Trajectory evaluation looks at the path, not just the destination, and it's the only way to catch that kind of failure.
 
 ## Why the final answer isn't enough
@@ -36,8 +40,28 @@ trajectory = [
 # subset-match: {search_flights, book_flight} must appear, in order
 ```
 
+<Compare title="Two trajectory grading styles">
+<Pane title="Exact-match" tone="neutral">
+- Step sequence must equal a golden reference, step for step
+- Fine for narrow, deterministic tasks with basically one correct path
+- Brittle — fails a valid alternative route as readily as a real bug
+</Pane>
+<Pane title="Subset matching" tone="good">
+- Required tool calls must appear, in order or not — no step-for-step demand
+- Tolerates a different but still-valid route
+- The common case for open-ended agentic tasks
+</Pane>
+</Compare>
+
 ## Building this into your eval suite
 
 Trajectory checks slot into the same harness as your other evals — they just need the full trace as input, not only the final message. Store each run's complete tool-call log alongside its output when you build your [golden dataset](/learn/evals-red-teaming/building-a-golden-dataset), so you can grade both the answer and the path against reference examples. Combine automated trajectory assertions (cheap, fast, run on every commit) with periodic [human review](/learn/evals-red-teaming/human-evaluation-and-annotation) of a sample of traces — humans catch the "technically passed every check but this is a weird way to solve the problem" cases that rule-based grading misses. When you're deciding whether a change made the agent better or worse, diff trajectories across versions the same way you'd diff final-answer scores in [eval-driven iteration](/learn/evals-red-teaming/eval-driven-iteration) — a shorter, cleaner trajectory to the same correct answer is a real improvement even when the accuracy number doesn't move.
+
+<InlineCheck
+  question="An agent books the correct flight after mistakenly canceling three real reservations. What does final-answer grading report — and why?"
+  options={['A pass — it only inspects the endpoint, so destructive or lucky-path processes are invisible inside a correct answer', 'A fail — the bookings ledger is inconsistent', 'Inconclusive — it needs more runs to decide']}
+  answer={0}
+  explanation="Final-answer grading sees the destination, not the path. A right answer can hide looping tool calls, swallowed errors, or destructive actions — only trajectory evaluation scores how the answer was reached."
+/>
 
 **Related:** [Building a Golden Dataset](/learn/evals-red-teaming/building-a-golden-dataset), [LLM-as-Judge: Grading Outputs with a Model](/learn/evals-red-teaming/llm-as-judge), [Reading an Agent's Trace](/learn/agentic-ai/evaluating-agent-behavior-in-dev)

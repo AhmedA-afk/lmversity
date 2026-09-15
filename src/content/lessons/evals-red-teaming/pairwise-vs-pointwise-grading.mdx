@@ -4,7 +4,12 @@ track: "evals-red-teaming"
 status: live
 summary: "Score each output alone or make a judge pick a winner between two — the two grading modes behave very differently in practice."
 duration: "5 min read"
+sources: ["lmarena-leaderboard"]
 ---
+
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
 
 When you turn a model loose on a judge, you have to decide what question you're actually asking it. "How good is this response, on a scale of 1 to 5?" and "Which of these two responses is better?" sound similar. They produce different failure modes, different data, and different downstream decisions.
 
@@ -22,6 +27,28 @@ The cost is that pairwise comparisons scale quadratically if you want to rank mo
 
 ## Picking one for the job
 
+<Compare title="Two grading modes">
+<Pane title="Pointwise" tone="neutral">
+- One output → one absolute score (number, pass/fail, label)
+- Scales fine — one judge call per response
+- Noisy: judges can't hold a stable internal scale; a '7' today isn't guaranteed to equal a '7' next month
+- Use when you need a threshold, a trend line, or a per-category dashboard
+</Pane>
+<Pane title="Pairwise" tone="good">
+- Two outputs → which is better, or by how much
+- More reliable — relative judgment needs no internal scale
+- Tells you nothing about whether either output is actually good — two mediocre responses still produce a winner
+- Use for ship/no-ship comparisons between prompts, models, or configs
+</Pane>
+</Compare>
+
 Use pointwise when you need an absolute number you can threshold, trend, or report to stakeholders — regression gates, dashboards, per-category quality tracking. Use pairwise when the real question is comparative — did this prompt change help, is model B better than model A on your task — which is most of the time you're iterating. Many mature eval setups use both: pointwise checks for hard failures (did it hallucinate, did it violate a policy) alongside pairwise comparisons to drive the actual "should we ship this change" decision, an approach covered in [Shipping Changes by Eval Diff](/learn/evals-red-teaming/eval-driven-iteration). If you're grading with a model at all, start with the fundamentals in [LLM-as-Judge: Grading Outputs with a Model](/learn/evals-red-teaming/llm-as-judge) — the judging mode matters less than getting the judge itself calibrated first.
+
+<InlineCheck
+  question="A pairwise eval reports 'new prompt beats old prompt on 70% of cases.' What's the one thing this result can't tell you?"
+  options={['Whether either output is actually good — a winner emerges from two mediocre responses just as readily as from two strong ones', 'Whether the judge read both responses', 'Whether the new prompt costs more tokens']}
+  answer={0}
+  explanation="Pairwise comparison is purely relative — it ranks the two candidates against each other, not against 'good enough.' That's why mature setups pair pairwise diffs with pointwise hard-failure checks."
+/>
 
 **Related:** [LLM-as-Judge: Grading Outputs with a Model](/learn/evals-red-teaming/llm-as-judge), [LLM-Judge Bias: Position, Verbosity, and Self-Preference Effects](/learn/evals-red-teaming/llm-judge-bias-and-calibration), [Shipping Changes by Eval Diff](/learn/evals-red-teaming/eval-driven-iteration)

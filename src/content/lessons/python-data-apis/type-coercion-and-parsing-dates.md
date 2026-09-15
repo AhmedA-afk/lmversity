@@ -2,7 +2,7 @@
 title: "Type Coercion and Parsing Dates"
 track: "python-data-apis"
 status: live
-summary: "A hands-on pandas walkthrough that fixes a messy reviews dataset column by column — astype for safe casts, to_numeric(errors='coerce') for junk prices, to_datetime with an explicit"
+summary: "A CSV never lies about the data — it just lies about the types."
 duration: "22 min read"
 ---
 

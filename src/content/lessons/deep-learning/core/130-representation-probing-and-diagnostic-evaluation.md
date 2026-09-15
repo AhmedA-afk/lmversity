@@ -3,10 +3,9 @@ title: "Representation Probing and Diagnostic Evaluation"
 track: deep-learning
 status: live
 order: 130
-description: "Test what a representation exposes while avoiding claims a probe cannot support."
+summary: "Test what a representation exposes while avoiding claims a probe cannot support."
 ---
 
-# Representation Probing and Diagnostic Evaluation
 
 ## Why this matters
 

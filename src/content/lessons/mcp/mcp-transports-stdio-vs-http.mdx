@@ -6,6 +6,10 @@ summary: "Choose between stdio and HTTP/SSE transports based on where the server
 duration: "5 min read"
 ---
 
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 MCP defines what a client and server say to each other, but not how the bytes get there. That's the job of a transport, and MCP ships with two: stdio and Streamable HTTP. Picking the wrong one is the most common reason a working server refuses to connect.
 
 ## stdio: same machine, one client
@@ -35,11 +39,33 @@ Because it's just HTTP, this transport gets you everything HTTP already has: loa
 
 ## How to choose
 
+<Compare title="Two transports">
+<Pane title="stdio" tone="neutral">
+- Server = local subprocess the client spawns and owns
+- One JSON-RPC message per line over stdin/stdout — no network, no port
+- No auth concept — a locally spawned process is implicitly trusted
+- Can't be shared — each client starts its own copy
+</Pane>
+<Pane title="Streamable HTTP" tone="good">
+- Server = long-lived process reached at a URL
+- JSON-RPC over HTTP POST, upgradeable to SSE streams for progress/multi-message replies
+- Gets everything HTTP has: load balancers, logging, OAuth
+- Shared, remote, multi-client — requires real auth in front
+</Pane>
+</Compare>
+
 Ask where the server runs and who else needs it:
 
 - **Local-only, single user** → stdio. Simpler to build, nothing to deploy, no auth to design.
 - **Remote, shared, or third-party** → Streamable HTTP, with real auth in front of it.
 
 Many servers support both, picking the transport based on how they're launched. When you're [writing your first server](/learn/mcp/first-mcp-server), start with stdio — it's the fastest path to something that works — and only move to HTTP once you actually need remote or multi-client access. When something in either direction won't connect, transport mismatch is the first thing to check; see [debugging common MCP failures](/learn/mcp/debugging-common-mcp-failures).
+
+<InlineCheck
+  question="Why does stdio have no auth handshake at all?"
+  options={['A locally spawned subprocess is implicitly trusted by whoever launched it — there\'s no network boundary to authenticate across', 'Because stdio traffic is encrypted by the OS', 'Because MCP defers all auth to the model layer']}
+  answer={0}
+  explanation="Auth exists to decide who may call. When the client itself spawned the server on the same machine, that question is already answered — which is exactly why it breaks the moment the server moves to a URL."
+/>
 
 **Related:** [MCP Architecture: Hosts, Clients, Servers](/learn/mcp/mcp-architecture-hosts-clients-servers), [Connecting a Client to an MCP Server](/learn/mcp/connecting-a-client-to-an-mcp-server), [MCP Auth Fundamentals](/learn/mcp/mcp-auth-fundamentals)

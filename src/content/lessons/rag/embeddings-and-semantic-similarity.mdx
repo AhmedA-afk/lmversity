@@ -6,6 +6,9 @@ summary: "Turn text into vectors and understand what similar actually means once
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 An embedding is a piece of text turned into a list of numbers — a point in a high-dimensional space where meaning determines position. Get this right and retrieval works. Get it wrong and every RAG system built on top inherits the flaw.
 
 ## From words to points in space
@@ -33,6 +36,13 @@ top_matches = nearest_neighbors(query_vector, doc_vectors, k=5)
 Semantic similarity is not the same as relevance, and treating them as identical is the most common RAG bug. "What's the cancellation policy?" and "What's the refund policy?" embed close together because they're topically similar — but if your corpus has separate, different answers for each, the model can retrieve the wrong one with high confidence. Embeddings are also sensitive to chunk size and boundaries: a chunk that mixes two unrelated ideas produces a vector that represents neither one well. That's why [chunking strategy](/learn/rag/chunking-strategies-for-documents) is a real design decision, not busywork before the "real" step.
 
 Embedding models also differ meaningfully from each other — dimension count, training data, and cost per token all vary — and swapping models means re-embedding your entire corpus, since vectors from two different models aren't comparable to each other at all.
+
+<InlineCheck
+  question="Why does switching embedding models force you to re-embed the whole corpus?"
+  options={['Vectors from different models live in different spaces — a query embedded by model B has no meaningful distance to documents embedded by model A', 'Because the new model is larger', 'To deduplicate old vectors']}
+  answer={0}
+  explanation="An embedding is only comparable to other embeddings from the same model. Swap models and every stored vector becomes meaningless to the new one — it's a full-corpus migration, not a config flag."
+/>
 
 ## Where this fits
 

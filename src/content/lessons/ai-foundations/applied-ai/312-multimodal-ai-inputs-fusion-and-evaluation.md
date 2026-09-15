@@ -3,10 +3,9 @@ title: "Multimodal AI: Inputs, Fusion, and Evaluation"
 track: ai-foundations
 status: live
 order: 312
-description: "Combine text, images, audio, and structured data only when each modality contributes verified information and failure modes are measured."
+summary: "Combine text, images, audio, and structured data only when each modality contributes verified information and failure modes are measured."
 ---
 
-# Multimodal AI: Inputs, Fusion, and Evaluation
 
 ## Product question and learning objective
 

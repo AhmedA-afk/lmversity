@@ -3,7 +3,7 @@ title: "Configuration management, seeds, and reproducibility"
 track: "deep-learning"
 status: live
 order: 409
-summary: "Make a run a reconstructible object"
+summary: "A run identifier should hash the resolved configuration (c), code revision (r), manifest (m), and environment (e): (id=H(c,r,m,e))."
 duration: "18–30 min"
 ---
 

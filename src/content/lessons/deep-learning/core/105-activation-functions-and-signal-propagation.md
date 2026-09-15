@@ -3,10 +3,9 @@ title: "Activation Functions and Signal Propagation"
 track: deep-learning
 status: live
 order: 105
-description: "Select activations by gradient and output semantics, then reason about dead or saturated units."
+summary: "Select activations by gradient and output semantics, then reason about dead or saturated units."
 ---
 
-# Activation Functions and Signal Propagation
 
 ## Why this matters
 

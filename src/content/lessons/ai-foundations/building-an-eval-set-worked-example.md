@@ -2,7 +2,7 @@
 title: "Building a Small Eval You Can Trust"
 track: "ai-foundations"
 status: live
-summary: "A worked, end-to-end build of a 10-item support-reply eval — checklist-based pass criteria, automatic vs. LLM-judge scoring with runnable code, and a category-breakdown fix that fl"
+summary: "You don't need 500 questions to catch a model that will get your company in trouble."
 duration: "16 min read"
 ---
 

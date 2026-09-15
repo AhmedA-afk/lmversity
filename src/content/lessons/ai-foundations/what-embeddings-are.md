@@ -2,7 +2,7 @@
 title: "What Embeddings Are"
 track: "ai-foundations"
 status: live
-summary: "Foundational concept lesson defining embeddings as learned vectors whose geometry encodes meaning, contrasting one-hot encoding with dense learned embeddings, and showing with a ru"
+summary: "Type \"puppy\" into a search box built on embeddings and it can surface pages about dogs, leashes, and vets — even ones that never use the word \"puppy.\" That's not a synonym dictionary at work."
 duration: "14 min read"
 ---
 

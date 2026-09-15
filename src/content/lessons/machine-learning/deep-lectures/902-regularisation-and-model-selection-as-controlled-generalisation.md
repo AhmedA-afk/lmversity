@@ -1,5 +1,5 @@
 ---
-title: "Deep lecture: Regularisation and model selection as controlled generalisation"
+title: "Regularisation and model selection as controlled generalisation"
 track: "machine-learning"
 order: 902
 status: live
@@ -8,7 +8,6 @@ duration: "100 min lecture + 3 hr lab"
 updated: "2026-08-30"
 ---
 
-# Regularisation and model selection: choosing complexity without fooling yourself
 
 Training error answers a narrow question: how well can this fitted function reproduce rows it has already seen? Generalisation asks about new draws from the same operational population. Regularisation is the deliberate preference for some functions over others; model selection is the experimental discipline used to decide how strong that preference should be. Neither is a magic “overfitting switch.”
 

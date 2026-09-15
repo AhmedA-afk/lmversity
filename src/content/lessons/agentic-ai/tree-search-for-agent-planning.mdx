@@ -6,6 +6,10 @@ summary: "Why branching over candidate action sequences and backtracking beats a
 duration: "5 min read"
 ---
 
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A ReAct-style agent commits to one action, sees the result, and moves on. That works until an early step is subtly wrong and every later step inherits the mistake. Tree search fixes this by generating several candidate next steps at once, scoring them, and only continuing down the ones that look promising — with the option to back up and try a different branch.
 
 ## Why a single path fails on hard problems
@@ -20,8 +24,24 @@ Monte Carlo Tree Search goes a step further and is the right tool when actions h
 
 The difference from ToT in practice: ToT typically relies on the LLM's own judgment to prune ("which of these three approaches looks more promising?"), while MCTS relies on simulated or executed outcomes ("which of these three approaches actually passed more test cases when tried?"). MCTS is more expensive and more reliable when you have a real evaluator; ToT is cheaper and applicable when you only have the model's judgment to go on.
 
+<Compare title="What prunes the branches">
+<Pane title="Tree of Thoughts" tone="neutral">
+The model judges its own candidates — 'which approach looks more promising?' Cheaper, works with no external evaluator, shares the model's blind spots.
+</Pane>
+<Pane title="MCTS" tone="good">
+Simulated or executed outcomes — 'which branch actually passed more tests?' More expensive, more reliable when a real evaluator exists.
+</Pane>
+</Compare>
+
 ## The cost you're paying
 
 Both approaches multiply inference calls — generating and scoring several branches at each depth easily costs 5-30x a single linear pass, so they only pay for themselves when the task is genuinely hard to get right in one shot and wrong answers are expensive to ship. For anything with an obvious single good path, [planning before acting](/learn/agentic-ai/planning-and-task-decomposition) with a plain decomposition is faster and cheaper. Reach for tree search when the failure mode you're fighting is "the agent commits early and never recovers," and you can afford the extra calls to actually explore alternatives before committing.
 
-**Related:** [Planning Before Acting](/learn/agentic-ai/planning-and-task-decomposition), [ReAct: Interleaving Reasoning and Acting](/learn/agentic-ai/react-pattern), [Tree-of-Thought Prompting](/learn/prompt-engineering/tree-of-thought-prompting)
+<InlineCheck
+  question="What failure mode is tree search actually buying protection against?"
+  options={['Early commitment without recovery — a linear agent takes the first plausible step and every later step inherits the mistake. Branching + scoring + backtracking means a subtly-wrong first step can be abandoned', 'Slow tool calls', 'Context window overflow']}
+  answer={0}
+  explanation="A linear transcript has nothing to backtrack to. Tree search keeps alternative branches alive until their scores say otherwise — that's the whole reason to pay 5–30x the inference cost."
+/>
+
+**Related:** [Planning Before Acting](/learn/agentic-ai/planning-and-task-decomposition), [ReAct: Interleaving Reasoning and Acting](/learn/agentic-ai/react-pattern), [Tree-of-Thought Prompting](/learn/prompt-engineering/tree-of-thought-prompting) · [Adversarial Search: Games, Utilities, and Minimax](/learn/classical-ai/search-planning/112-adversarial-search-games-utilities-and-minimax) · [Alpha-Beta Pruning: Bounds, Move Ordering, and Exactness](/learn/classical-ai/search-planning/113-alpha-beta-pruning-bounds-move-ordering-and-exactness)

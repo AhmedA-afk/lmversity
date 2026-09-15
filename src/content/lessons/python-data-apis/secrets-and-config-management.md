@@ -2,7 +2,7 @@
 title: "Secrets and Config: Keys Never Live in Code"
 track: "python-data-apis"
 status: live
-summary: "A concept-level lesson teaching why API keys and connection strings belong in environment variables and .env files rather than source code, using the real pattern of an OpenAI key "
+summary: "A hardcoded OpenAI key in a public repo doesn't stay secret for long — automated scanners find it faster than most people notice their own mistake, and the key gets killed before you've even opened your pull request."
 duration: "14 min read"
 ---
 

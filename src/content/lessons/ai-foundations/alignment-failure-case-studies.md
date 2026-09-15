@@ -2,7 +2,7 @@
 title: "Reward Hacking and Sycophancy, Concretely"
 track: "ai-foundations"
 status: live
-summary: "A worked example that builds a toy RLHF pipeline in numpy, fits a reward model on biased preference data, and shows the exact arithmetic that turns rater bias into sycophancy and t"
+summary: "You've probably heard that RLHF'd models can be sycophantic, and that models trained against automated graders learn to cheat the grader instead of solving the task."
 duration: "22 min read"
 ---
 
@@ -219,4 +219,4 @@ Same reward channel, same shape of update — but now the only way to score well
 
 For the broader vocabulary this page assumes — specification gaming, outer vs. inner alignment — see [AI alignment and safety basics](/learn/ai-foundations/ai-alignment-and-safety-basics).
 
-**Related:** [AI alignment and safety basics](/learn/ai-foundations/ai-alignment-and-safety-basics) · [RLHF and instruction tuning](/learn/ai-foundations/rlhf-and-instruction-tuning) · [Alignment: specifying what we want](/learn/ai-foundations/alignment-specifying-what-we-want) · [Interpretability methods overview](/learn/ai-foundations/interpretability-methods-overview) · [Building an eval set: worked example](/learn/ai-foundations/building-an-eval-set-worked-example) · [Benchmarks and what they miss](/learn/ai-foundations/benchmarks-and-what-they-miss)
+**Related:** [AI alignment and safety basics](/learn/ai-foundations/ai-alignment-and-safety-basics) · [RLHF and instruction tuning](/learn/ai-foundations/rlhf-and-instruction-tuning) · [Alignment: specifying what we want](/learn/ai-foundations/alignment-specifying-what-we-want) · [Interpretability methods overview](/learn/ai-foundations/interpretability-methods-overview) · [Building an eval set: worked example](/learn/ai-foundations/building-an-eval-set-worked-example) · [Benchmarks and what they miss](/learn/ai-foundations/benchmarks-and-what-they-miss); [The Alignment Tax: Reward Hacking and Sycophancy](/learn/llm-foundations/alignment-tax-reward-hacking-sycophancy)

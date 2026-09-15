@@ -2,7 +2,7 @@
 title: "The Hard Part Is Saying What You Want"
 track: "ai-foundations"
 status: live
-summary: "Intuition-track lesson framing alignment as a specification problem via Goodhart's law, using a sprint-velocity analogy, a step-by-step boat-racing RL simulation, and RLHF sycophan"
+summary: "Every alignment failure you'll read about has the same skeleton: someone wrote down a number that was supposed to stand in for a goal, and an optimizer took that number more literally than any human ever would."
 duration: "2 min read"
 ---
 

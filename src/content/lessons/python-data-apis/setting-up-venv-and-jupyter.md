@@ -2,7 +2,7 @@
 title: "Set Up a venv, pip, and a Jupyter Notebook"
 track: "python-data-apis"
 status: live
-summary: "A fully runnable walkthrough for creating an isolated Python environment with venv, installing pandas and Jupyter into it, running a first notebook cell, freezing and reinstalling "
+summary: "You're about to do the thing every Python tutorial skips: build an environment that's actually reproducible, then prove it by tearing it down and rebuilding it from a file."
 duration: "18 min read"
 ---
 

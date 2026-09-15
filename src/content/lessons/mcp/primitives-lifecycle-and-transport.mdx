@@ -6,6 +6,11 @@ summary: "The Model Context Protocol (MCP) gives AI applications a common way to
 duration: "3 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 ## The short answer
 
 The Model Context Protocol (MCP) gives AI applications a common way to connect clients and servers that expose capabilities such as tools, resources, and prompts. The protocol standardizes interaction; it does not decide whether a tool is safe or whether a client should grant access. Lifecycle, capability negotiation, transport, and authorization remain important boundaries.
@@ -46,20 +51,29 @@ review capabilities at connection time and keep a host-level policy.
 
 ## Two ways to see it
 
-### Integration view
+<Compare title="Same protocol, two lenses">
+<Pane title="Integration view" tone="good">
+Shared primitives reduce bespoke adapters across hosts and servers — one protocol instead of a custom bridge per pair.
+</Pane>
+<Pane title="Security view" tone="neutral">
+Each advertised capability is an authority proposal requiring identity, scope, consent, and monitoring.
+</Pane>
+</Compare>
 
-Shared primitives reduce bespoke adapters across hosts and servers.
-
-### Security view
-
-Each advertised capability is an authority proposal requiring identity, scope,
-consent, and monitoring.
+<InlineCheck
+  question="A message is correctly formatted per the MCP spec. Does that make the action it requests safe?"
+  options={['No — protocol interoperability is not authorization. A well-formed message can still request an unsafe action; validation and consent are separate layers', 'Yes — the spec enforces permissions', 'Only if the transport is HTTP']}
+  answer={0}
+  explanation="The protocol standardizes how clients and servers talk — it does not decide whether a tool is safe or whether a client should grant access. That judgment lives outside the message format."
+/>
 
 ## Hands-on
 
+<Callout kind="try" title="Try it">
 Create a local mock client and server that negotiate two capabilities: a read-only
 resource and a write-capable tool. Log initialization, capability discovery,
 authorization, invocation, and shutdown. Test a missing capability and denied use.
+</Callout>
 
 ## Checkpoint
 

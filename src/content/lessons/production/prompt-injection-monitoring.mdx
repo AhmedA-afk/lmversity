@@ -6,6 +6,10 @@ summary: "Guardrails will miss things — watch live traffic for injection patte
 duration: "5 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+import Steps from '../../../components/kit/Steps.astro';
+import Step from '../../../components/kit/Step.astro';
+
 Your guardrail layer will let something through eventually. Monitoring is what tells you it happened before a user does.
 
 ## Why the guardrail isn't the whole plan
@@ -27,10 +31,27 @@ Build detection around a few concrete signal types, layered on top of your norma
 
 None of this needs a bespoke ML system to start. A practical setup:
 
-1. Run a lightweight classifier or regex/keyword pass over both input and output as part of the same step where you already do [structured logging](/learn/production/structured-logging-for-llm-calls) — tag each request with a risk score rather than a binary block decision.
-2. Emit that score as a field, and alert on aggregates (rate of high-risk requests per hour, per user, per endpoint) instead of trying to hand-review every flagged row.
-3. Route anything above a threshold into a review queue, and feed confirmed attacks back into your guardrail rules and your [regression eval suite](/learn/production/eval-based-regression-testing) so the same pattern gets caught earlier next time.
-4. Treat repeat offenders as a [rate-limiting](/learn/production/rate-limiting-llm-apps) problem, not just a content-filtering one — someone iterating against your prompt defenses is also a traffic pattern you can throttle.
+<Steps>
+<Step title="Score every request">
+Run a lightweight classifier or regex/keyword pass over input and output inside the same step where you already do [structured logging](/learn/production/structured-logging-for-llm-calls) — tag each request with a risk score, not a binary block decision.
+</Step>
+<Step title="Alert on aggregates">
+Emit the score as a field and alert on rates — high-risk requests per hour, per user, per endpoint — instead of hand-reviewing every flagged row.
+</Step>
+<Step title="Route and feed back">
+Send anything above threshold to a review queue, and feed confirmed attacks into your guardrail rules and [regression eval suite](/learn/production/eval-based-regression-testing) so the same pattern gets caught earlier next time.
+</Step>
+<Step title="Throttle the pattern">
+Treat repeat offenders as a [rate-limiting](/learn/production/rate-limiting-llm-apps) problem, not just a content-filtering one — someone iterating against your defenses is a traffic pattern you can throttle.
+</Step>
+</Steps>
+
+<InlineCheck
+  question="Your input filter blocks every injection pattern you know about. Why still monitor production traffic?"
+  options={['The filter is a point-in-time check — attacks evolve, and monitoring watches what actually happened across many requests to catch what got through', 'Monitoring is required by provider terms of service', 'Filters cannot inspect outputs, only inputs']}
+  answer={0}
+  explanation="A guardrail judges one request in isolation; monitoring sees the pattern across traffic. The gap between 'an attack started working' and 'you found out' is what monitoring exists to close."
+/>
 
 The goal isn't a system that blocks everything up front — that's the guardrail's job, and it will never be perfect. It's a system that shortens the time between "an attack started working" and "you know about it," so a novel jailbreak becomes a Tuesday-afternoon fix instead of a week of quiet exploitation.
 

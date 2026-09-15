@@ -3,10 +3,9 @@ title: "Initialization: Variance Preservation and Symmetry Breaking"
 track: deep-learning
 status: live
 order: 112
-description: "Initialize parameters so signals and gradients survive depth while neurons learn distinct features."
+summary: "Initialize parameters so signals and gradients survive depth while neurons learn distinct features."
 ---
 
-# Initialization: Variance Preservation and Symmetry Breaking
 
 ## Why this matters
 

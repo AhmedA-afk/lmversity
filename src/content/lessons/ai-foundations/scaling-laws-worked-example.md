@@ -2,7 +2,7 @@
 title: "Trading Compute, Data, and Parameters"
 track: "ai-foundations"
 status: live
-summary: "A worked example that solves the Chinchilla compute-optimal split by hand and in numpy for a fixed toy compute budget, shows why many early large models were undertrained, and uses"
+summary: "Ask an engineer how many tokens a given model size needs and you'll often get one number back: about 20 per parameter."
 duration: "16 min read"
 ---
 

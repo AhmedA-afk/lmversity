@@ -3,7 +3,7 @@ title: "Graded lab: experiment tracking and ablations"
 track: "deep-learning"
 status: live
 order: 410
-summary: "Learn from comparisons instead of dashboards"
+summary: "For an ablation contrast, estimate (Delta=m_{treatment}-m_{baseline}) under matched split, seed policy, budget, and stopping rule."
 duration: "18–30 min"
 ---
 

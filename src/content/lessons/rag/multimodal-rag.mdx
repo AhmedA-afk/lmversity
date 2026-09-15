@@ -6,6 +6,8 @@ summary: "Retrieve directly against charts, screenshots, and PDF pages by embedd
 duration: "6 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A slide deck's real content is a chart with a legend, not the OCR'd fragments next to it. Multimodal RAG skips text extraction entirely and retrieves against what the page actually looks like.
 
 ## Why text extraction loses information
@@ -23,5 +25,12 @@ Standard RAG runs documents through a parser that turns pages into text, then ch
 The practical pipeline for scanned reports and slide decks: render each page as an image (no text extraction step at all), embed every page with a visual embedding model, and store those vectors in your usual index (see [Choosing a Vector Database](/learn/rag/choosing-a-vector-database)). At query time, embed the text query with the same model family and retrieve the top matching page images directly. The generation step then hands the retrieved page images — not extracted text — to a multimodal LLM, which reads the chart or table straight off the pixels.
 
 The tradeoff is storage and compute: page-image indexes run larger than text indexes, and vision embedding models are typically slower than text ones. Reach for this approach when a document's meaning is genuinely visual — financial tables, scientific figures, UI screenshots, scanned forms — and fall back to standard text RAG, or a hybrid where you route by document type, everywhere else.
+
+<InlineCheck
+  question="Why does a caption lose to a page image for 'what value is in the top-right table cell?'"
+  options={['A caption can only hold what the captioner wrote down — exact cell values and spatial position rarely survive the summary. Visual/patch embeddings keep the pixels themselves matchable', 'Because captions are too short', 'Because tables can\'t be described']}
+  answer={0}
+  explanation="Captioning is lossy compression decided by the captioner, not the query. Native visual embedding retrieves against the page itself — a patch containing the cell can match a query token directly."
+/>
 
 **Related:** [Multi-Vector and Late-Interaction Retrieval (ColBERT)](/learn/rag/multi-vector-retrieval), [Parsing PDFs, Tables, and Scanned Documents for RAG](/learn/rag/parsing-documents-for-rag), [Choosing a Vector Database](/learn/rag/choosing-a-vector-database)

@@ -3,7 +3,7 @@ title: "Data contracts and schema audits"
 track: "deep-learning"
 status: live
 order: 401
-summary: "Define the dataset before the model"
+summary: "Let (D_v=(M_v,T_v,L_v)) denote a data version: immutable manifest (M_v), transform (T_v), and labeling policy (L_v)."
 duration: "18–30 min"
 ---
 
@@ -97,3 +97,5 @@ Write a contract and an automated audit before selecting an architecture. The re
 ## Further challenge
 
 Change one assumption in the scenario (time window, cost of a false positive, hardware budget, or user population). Predict which part of the system must change, then test that prediction with a small controlled run.
+
+**Related:** [Data contracts and schema evolution](/learn/machine-learning/ml-605-data-contracts-and-schema-evolution)

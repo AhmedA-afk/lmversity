@@ -1,5 +1,5 @@
 ---
-title: "Handling API Keys and Secrets Safely"
+title: "The Threat Model Behind API Key Storage"
 track: "genai-app-dev"
 status: live
 summary: "A leaked key is someone else's bill on your account — the fix is keeping secrets out of git, off the client, and rotatable without a redeploy."

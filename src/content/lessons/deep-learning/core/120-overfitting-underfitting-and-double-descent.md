@@ -3,10 +3,9 @@ title: "Overfitting, Underfitting, and Double Descent"
 track: deep-learning
 status: live
 order: 120
-description: "Read learning curves as evidence about capacity, data, and optimisation rather than as slogans."
+summary: "Read learning curves as evidence about capacity, data, and optimisation rather than as slogans."
 ---
 
-# Overfitting, Underfitting, and Double Descent
 
 ## Why this matters
 
@@ -53,7 +52,7 @@ Before moving on, answer: *What is the loss estimating? Which axes are being red
 
 ## Derivation and numerical studio
 
-Pairs (.60,.59),(.98,.75),(.99,.91) suggest underfit, overfit, and a better high-capacity regime, but repeats and split checks remain required. With 20% label noise, record when train error becomes zero while validation stalls. Sweep widths 16,64,256,1024 under identical budget. A claims model may need better labels or a frozen backbone instead of width. Debug confounded sweeps: schedules, augmentation, and batch size cannot change with capacity if the curve is to mean anything.
+Pairs (.60,.59),(.98,.75),(.99,.91) suggest underfit, overfit, and a better high-capacity regime, but repeats and split checks remain required. With 20% label noise, record when train error becomes zero while validation stalls. Sweep widths 16,64,256,1024 under identical budget. A claims model may need better labels or a frozen backbone instead of width. Debug confounded sweeps: schedules, augmentation, and [batch size](/learn/deep-learning/core/121-batch-size-gradient-noise-and-scaling-rules) cannot change with capacity if the curve is to mean anything.
 
 Perform the arithmetic before opening a framework. For each calculation, identify the scalar being differentiated or the axis being reduced, then check that the resulting tensor has the shape demanded by the next operation. This practice separates a valid derivation from code that merely happens to execute.
 

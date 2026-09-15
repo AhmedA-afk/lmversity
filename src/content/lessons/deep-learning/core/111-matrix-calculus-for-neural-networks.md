@@ -3,10 +3,9 @@ title: "Matrix Calculus for Neural Networks"
 track: deep-learning
 status: live
 order: 111
-description: "Use differentials and trace identities to derive gradients without coordinate-index chaos."
+summary: "Use differentials and trace identities to derive gradients without coordinate-index chaos."
 ---
 
-# Matrix Calculus for Neural Networks
 
 ## Why this matters
 

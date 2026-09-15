@@ -7,6 +7,7 @@ duration: "7 min read"
 ---
 
 import RagPipeline from '../../../components/diagrams/RagPipeline.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
 
 RAG isn't one technique, it's a relay race: ten-ish small systems, each with its own failure modes, handing a baton of "relevant text" to the next until an LLM turns it into an answer. Drop the baton anywhere in that chain and the final answer is wrong, no matter how good the model is.
 
@@ -57,6 +58,13 @@ Chunk size sits underneath all of it, because it's the one decision that shapes 
 
 One honest caveat that belongs on this page: sometimes the right move at any stage is not to build the pipeline at all. If your corpus is small enough to fit in a long context window, or your questions need computation rather than lookup, RAG adds failure modes for no real benefit — see [When RAG Is the Wrong Tool](/learn/rag/when-rag-is-the-wrong-tool) before you commit to building any of this.
 
+<InlineCheck
+  question="Why does the funnel run cheap-and-wide first, then expensive-and-narrow — never the reverse?"
+  options={['Cross-encoder reranking reads query+chunk together and is far slower than vector search — run it first and you pay its price on hundreds of chunks you\'d discard anyway. Wide retrieval is cheap; reranking spends it only on survivors', 'Because rerankers can only see 5 chunks', 'Because vector search is more accurate']}
+  answer={0}
+  explanation="Each stage's cost is justified by what the next stage needs. Retrieve 50 candidates with fast approximate search, then let the expensive accurate model decide which 5 deserved it."
+/>
+
 ## Where to start
 
 If you're building your first pipeline, read in roughly this order:
@@ -72,4 +80,4 @@ If you're building your first pipeline, read in roughly this order:
 
 Once that's solid, the next layer isn't a new pipeline — it's making pieces of this one smarter: [Query Rewriting and Expansion](/learn/rag/query-rewriting-and-expansion) and [Metadata Filtering in Retrieval](/learn/rag/metadata-filtering-in-retrieval) improve what gets searched for; [Parent Document Retrieval](/learn/rag/parent-document-retrieval), [Multi-Vector Retrieval](/learn/rag/multi-vector-retrieval), and [Contextual Retrieval](/learn/rag/contextual-retrieval) rethink what a "chunk" even is; and [Agentic RAG](/learn/rag/agentic-rag) and [Corrective/Self-RAG](/learn/rag/corrective-self-rag) let the system decide to retrieve again, or differently, when the first pass wasn't good enough.
 
-**Related:** [What Is RAG and When to Use It](/learn/rag/what-is-rag-and-when-to-use-it) · [Building a RAG Pipeline End to End](/learn/rag/building-a-rag-pipeline-end-to-end) · [Evaluating RAG Quality](/learn/rag/evaluating-rag-quality) · [When RAG Is the Wrong Tool](/learn/rag/when-rag-is-the-wrong-tool) · [RAG Capstone: Support Bot](/learn/rag/rag-capstone-support-bot)
+**Related:** [What Is RAG and When to Use It](/learn/rag/what-is-rag-and-when-to-use-it) · [Building a RAG Pipeline End to End](/learn/rag/building-a-rag-pipeline-end-to-end) · [Evaluating RAG Quality](/learn/rag/evaluating-rag-quality) · [When RAG Is the Wrong Tool](/learn/rag/when-rag-is-the-wrong-tool) · [RAG Capstone: Support Bot](/learn/rag/rag-capstone-support-bot); [The Whole Game: One Token, End to End](/learn/llm-foundations/whole-game-one-token-end-to-end)

@@ -3,7 +3,7 @@ title: "Graded lab: augmentation and sampling policy"
 track: "deep-learning"
 status: live
 order: 405
-summary: "Make transformations part of the hypothesis"
+summary: "Write the empirical objective as (hat R=\\frac1N\\sum_i \\ell(f(T_{\\theta}(x_i)),y_i))."
 duration: "18–30 min"
 ---
 

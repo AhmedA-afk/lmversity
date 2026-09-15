@@ -6,15 +6,27 @@ summary: "Design allow, ask, and deny rules for tool calls, and figure out where
 duration: "4 min read"
 ---
 
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Not every tool call deserves the same level of scrutiny. Reading a file and deleting a database are both "tool calls," but treating them identically is how agents either get too annoying to use or too dangerous to trust.
 
 ## Three Buckets, Not One Switch
 
 A permission system for an agent harness usually sorts every possible action into one of three buckets:
 
-- **Allow** — runs immediately, no friction. Reading a file, listing a directory, calling a read-only API.
-- **Ask** — pauses and shows a human what the agent wants to do before it happens. Writing a file, sending an email, running a shell command with side effects.
-- **Deny** — never runs, full stop, regardless of what the model argues for. Deleting production data, exfiltrating secrets, calling a tool outside the agent's declared scope.
+<Compare title="The three buckets">
+<Pane title="Allow" tone="good">
+Runs immediately, no friction. Reading a file, listing a directory, calling a read-only API.
+</Pane>
+<Pane title="Ask" tone="neutral">
+Pauses and shows a human what the agent wants before it happens. Writing a file, sending an email, a shell command with side effects.
+</Pane>
+<Pane title="Deny" tone="bad">
+Never runs, regardless of what the model argues. Deleting production data, exfiltrating secrets, calling a tool outside declared scope.
+</Pane>
+</Compare>
 
 The point of splitting into three instead of a single "human in the loop: yes/no" toggle is that most actions an agent takes are low-stakes and reversible. If you route all of them through a human, people stop reading the prompts and start clicking "approve" on autopilot — which defeats the purpose. Reserve Ask for the calls where a wrong move actually costs something, and let Allow absorb everything else so the approvals people do see are ones worth their attention.
 
@@ -32,5 +44,12 @@ Two mistakes show up constantly:
 - **Approval fatigue by default.** Starting everything in Ask and loosening later feels safe, but it trains users to rubber-stamp. Start from what's actually reversible and low-blast-radius, put that in Allow, and keep Ask for the genuinely consequential calls.
 
 A good rule of thumb: if undoing the action costs more than five minutes of someone's time, it belongs in Ask or Deny, not Allow.
+
+<InlineCheck
+  question="Why does routing every tool call through Ask defeat the purpose of the gate?"
+  options={['Approval fatigue — people stop reading the prompts and rubber-stamp. Ask works only if the approvals shown are the ones worth attention; Allow absorbs the low-stakes rest', 'Because it\'s slower', 'Because the model can skip it']}
+  answer={0}
+  explanation="An Ask gate's value is human judgment on consequential calls. Make humans approve grep and they approve everything — including the one that mattered."
+/>
 
 **Related:** [The Harness: Everything Around the Model](/learn/harness-design/what-is-a-harness), [Deny-Floors: Rules No Prompt Can Override](/learn/harness-design/deny-floors-and-policy-layers), [Building the Control Loop](/learn/harness-design/the-control-loop)

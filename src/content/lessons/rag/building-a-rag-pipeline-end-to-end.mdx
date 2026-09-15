@@ -6,11 +6,25 @@ summary: "Wire ingestion, chunking, retrieval, reranking, and generation into on
 duration: "8 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Every RAG tutorial teaches the pieces in isolation. In production they're one pipeline, and the order you wire them in matters more than any single component.
 
 ## The two pipelines, not one
 
 RAG is really two separate flows that happen to share a vector store.
+
+<Compare title="Two pipelines, one vector store">
+<Pane title="Ingestion (offline)" tone="neutral">
+Load → chunk → embed → write vectors + metadata. Runs on a schedule or webhook — this is where you can afford to be slow and careful.
+</Pane>
+<Pane title="Query (live)" tone="good">
+Embed query → retrieve → filter → rerank → prompt → generate. Runs on every user turn — every step carries a latency budget.
+</Pane>
+</Compare>
 
 The **ingestion pipeline** runs offline, ahead of any user query: load documents, split them with a [chunking strategy](/learn/rag/chunking-strategies-for-documents), turn each chunk into a vector with an [embedding model](/learn/rag/embeddings-and-semantic-similarity), and write vectors plus metadata into a [vector database](/learn/rag/choosing-a-vector-database). This runs on a schedule or a webhook, not on the request path.
 
@@ -37,6 +51,13 @@ Each arrow is a place you can improve quality without touching the others. If re
 
 Resist the urge to over-fetch and let the model sort it out. A wider K increases retrieval latency, embedding-search cost, and — counterintuitively — the model's chance of getting distracted by near-miss chunks. Retrieve generously (K of 20-50), then rerank down hard to the 3-8 chunks you actually put in the prompt.
 
+<InlineCheck
+  question="Why not just set K = 100 and let the model sort out which chunks matter?"
+  options={['Every extra chunk costs retrieval latency, context budget, and — counterintuitively — accuracy, since near-miss chunks distract the model. Retrieve wide (20–50), rerank down hard to 3–8', 'Because vector DBs cap K at 50', 'Because large K breaks the prompt format']}
+  answer={0}
+  explanation="More context isn't more signal. The reranker exists precisely to let you over-fetch cheaply, then spend model attention only on the chunks that survived a relevance pass."
+/>
+
 ## Wiring generation to the retrieved context
 
 The last step is easy to get wrong in a subtle way: dumping retrieved chunks into the prompt without structure. Label each chunk with its source, give the model an explicit instruction to answer only from the provided context, and require it to cite which chunk backed each claim — this is what makes [grounded answers with citations](/learn/rag/grounding-answers-with-citations) possible instead of the model quietly blending retrieved text with its own prior knowledge.
@@ -55,6 +76,10 @@ Question: <user query>
 ```
 
 ## Where pipelines actually fail
+
+<Callout kind="breaks" title="Failures live at the seams, not the components">
+A chunk that splits a table row, a query rewrite that drifts off intent, a reranker with a mismatched distance metric, a prompt template that silently truncates — each stage tests fine alone. Build end-to-end first, then measure to find which seam is costing accuracy.
+</Callout>
 
 Most RAG pipelines that "don't work" fail at the seams, not inside any one component: chunks that split a table row in two, a query rewrite that drifts off the original intent, a reranker with a different distance metric than the retriever expects, or a prompt template that silently truncates when too many chunks come back. Build the pipeline end to end first, even badly, then run it through [RAG evaluation](/learn/rag/evaluating-rag-quality) to find which seam is actually costing you accuracy — don't optimize any single stage before you can measure the whole thing.
 

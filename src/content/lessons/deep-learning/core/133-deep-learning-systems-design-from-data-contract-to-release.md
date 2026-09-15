@@ -3,10 +3,9 @@ title: "Deep Learning Systems Design: From Data Contract to Release"
 track: deep-learning
 status: live
 order: 133
-description: "Integrate the core into an end-to-end system where success includes safety, latency, monitoring, and rollback."
+summary: "Integrate the core into an end-to-end system where success includes safety, latency, monitoring, and rollback."
 ---
 
-# Deep Learning Systems Design: From Data Contract to Release
 
 ## Why this matters
 

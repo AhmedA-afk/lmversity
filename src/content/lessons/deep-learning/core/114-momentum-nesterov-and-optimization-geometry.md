@@ -3,10 +3,9 @@ title: "Momentum, Nesterov, and Optimisation Geometry"
 track: deep-learning
 status: live
 order: 114
-description: "Use momentum to damp ravines and distinguish velocity conventions correctly."
+summary: "Use momentum to damp ravines and distinguish velocity conventions correctly."
 ---
 
-# Momentum, Nesterov, and Optimisation Geometry
 
 ## Why this matters
 

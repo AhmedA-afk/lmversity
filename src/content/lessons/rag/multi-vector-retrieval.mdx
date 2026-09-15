@@ -6,6 +6,8 @@ summary: "Match queries against retrieved text token by token instead of squashi
 duration: "6 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Standard [embeddings](/learn/llm-foundations/what-are-embeddings) compress a whole chunk into one vector, so a query about "database indexing" and a chunk about "database backups" can land close together just because they share the word "database." Late-interaction retrieval keeps every token's own vector and compares them individually, so relevance is judged on which specific tokens actually line up.
 
 ## Why one vector loses information
@@ -23,6 +25,13 @@ score(query, doc) = Σ_over_query_tokens  max_over_doc_tokens( cosine(q_i, d_j) 
 ```
 
 That sum-of-max structure is the trick: it lets each query token independently find its best match anywhere in the document, instead of forcing one blended vector to represent the whole thing. A query token like "refund" can match a single sentence buried in an otherwise pricing-focused chunk, and that match isn't diluted by the surrounding tokens.
+
+<InlineCheck
+  question="A 200-word chunk is mostly about pricing with one sentence on refunds. Why does single-vector search miss it for a refund query — and why doesn't MaxSim?"
+  options={['One vector averages the chunk — the pricing majority drowns the refund sentence. MaxSim scores per-token, so the query token \'refund\' finds its best doc-token match undiluted', 'Because refund isn\'t in the vocabulary', 'Because the chunk is too long']}
+  answer={0}
+  explanation="A single embedding is a blend — detail gets averaged away. Late interaction keeps every token's vector, so a minority-topic sentence can still win its own match inside the sum-of-max score."
+/>
 
 ## The cost you're trading for it
 

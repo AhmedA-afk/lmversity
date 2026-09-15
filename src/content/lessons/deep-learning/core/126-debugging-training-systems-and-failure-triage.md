@@ -3,10 +3,9 @@ title: "Debugging Training Systems and Failure Triage"
 track: deep-learning
 status: live
 order: 126
-description: "Debug models with ordered tests that isolate data, objective, gradients, and loop mechanics."
+summary: "Debug models with ordered tests that isolate data, objective, gradients, and loop mechanics."
 ---
 
-# Debugging Training Systems and Failure Triage
 
 ## Why this matters
 

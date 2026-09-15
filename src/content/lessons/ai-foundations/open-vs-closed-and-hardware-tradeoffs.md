@@ -2,7 +2,7 @@
 title: "Open Weights or an API? Two Scenarios"
 track: "ai-foundations"
 status: live
-summary: "A worked cost-and-hardware comparison of a startup calling a closed API versus a hospital self-hosting an open-weight model for the same workload — with the GPU memory math, the mo"
+summary: "TicketFlow and Riverside General need the exact same thing from a language model: turn a page of messy text into a short, structured summary, a couple thousand times a day."
 duration: "15 min read"
 ---
 

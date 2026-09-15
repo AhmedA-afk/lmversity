@@ -6,6 +6,8 @@ summary: "How a harness merges settings from user, project, and session scopes i
 duration: "5 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A harness runs the same binary for every user, but no two setups look alike — one person wants a different default model, one repo needs a stricter sandbox, one session needs a permission bumped just for the next command. Config layering is how a harness reconciles all three without turning settings into a guessing game.
 
 ## The three scopes
@@ -46,6 +48,13 @@ Notice the effective config keeps `allow` from global and adds `deny` from proje
 ## Where deny floors break the rule
 
 Merge-by-priority has one deliberate exception. A `deny` rule set by an org or project is usually treated as a floor, not a default — no narrower scope, including a user's own local file, is allowed to remove it. If ordinary merging applied everywhere, a user could paste an `allow` rule locally and quietly punch a hole through a security boundary someone else put in place on purpose. Keeping deny floors outside the normal override chain is what makes project-level policy actually enforceable rather than advisory — the deeper mechanics of that live in [Deny-Floors: Rules No Prompt Can Override](/learn/harness-design/deny-floors-and-policy-layers).
+
+<InlineCheck
+  question="Why can't a user's local config remove a project's deny rule?"
+  options={['Deny floors sit outside the merge chain — if local scope could override them, a pasted allow rule would quietly punch through a security boundary someone else set deliberately', 'Because local files are gitignored', 'Because project files load last']}
+  answer={0}
+  explanation="Narrow-beats-broad governs preferences, not floors. The exception is the whole point of checked-in policy: it stays enforceable rather than advisory."
+/>
 
 ## Why layering earns its complexity
 

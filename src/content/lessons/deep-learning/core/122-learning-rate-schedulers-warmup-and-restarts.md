@@ -3,10 +3,9 @@ title: "Learning-Rate Schedulers, Warmup, and Restarts"
 track: deep-learning
 status: live
 order: 122
-description: "Design schedules around dynamics and budget, then inspect the actual learning rate applied."
+summary: "Design schedules around dynamics and budget, then inspect the actual learning rate applied."
 ---
 
-# Learning-Rate Schedulers, Warmup, and Restarts
 
 ## Why this matters
 
@@ -53,7 +52,7 @@ Before moving on, answer: *What is the loss estimating? Which axes are being red
 
 ## Derivation and numerical studio
 
-For ηmax=.01,ηmin=.001,T=100, cosine gives .01 at 0, .0055 at 50, .001 at 100. A five-step warmup is [.002,.004,.006,.008,.01]. Plateau schedules should see validation events, not individual noisy batches. A fixed-token training budget needs update-based time, especially when batch size changes. Debug checkpoint resumes without scheduler state and plot the actual LR trace rather than assuming configuration is applied.
+For ηmax=.01,ηmin=.001,T=100, cosine gives .01 at 0, .0055 at 50, .001 at 100. A five-step warmup is [.002,.004,.006,.008,.01]. Plateau schedules should see validation events, not individual noisy batches. A fixed-token training budget needs update-based time, especially when [batch size](/learn/deep-learning/core/121-batch-size-gradient-noise-and-scaling-rules) changes. Debug checkpoint resumes without scheduler state and plot the actual LR trace rather than assuming configuration is applied.
 
 Perform the arithmetic before opening a framework. For each calculation, identify the scalar being differentiated or the axis being reduced, then check that the resulting tensor has the shape demanded by the next operation. This practice separates a valid derivation from code that merely happens to execute.
 

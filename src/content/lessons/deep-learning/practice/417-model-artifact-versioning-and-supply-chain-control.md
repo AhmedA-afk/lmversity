@@ -3,7 +3,7 @@ title: "Model artifacts, versioning, and supply-chain control"
 track: "deep-learning"
 status: live
 order: 417
-summary: "Release identifiable and trusted binaries"
+summary: "A deployable artifact tuple is (A=(weights,architecture,preprocess,config,dependencies,evidence,signature))."
 duration: "18–30 min"
 ---
 

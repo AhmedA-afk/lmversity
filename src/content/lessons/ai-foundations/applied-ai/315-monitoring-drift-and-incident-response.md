@@ -3,10 +3,9 @@ title: "Monitoring, Drift, and Incident Response"
 track: ai-foundations
 status: live
 order: 315
-description: "Monitor inputs, outputs, business outcomes, and safety signals so a change becomes an actionable incident rather than an unexplained chart."
+summary: "Monitor inputs, outputs, business outcomes, and safety signals so a change becomes an actionable incident rather than an unexplained chart."
 ---
 
-# Monitoring, Drift, and Incident Response
 
 ## Product question and learning objective
 

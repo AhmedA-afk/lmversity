@@ -3,7 +3,7 @@ title: "Case study: vision quality inspection from line camera to operator"
 track: "deep-learning"
 status: live
 order: 428
-summary: "Integrate technical and operational choices"
+summary: "For routing loss (C= C_{FN}FN+C_{FP}FP+C_{review}N_{review}), select a threshold using defect harm and operator capacity, not accuracy."
 duration: "18–30 min"
 ---
 

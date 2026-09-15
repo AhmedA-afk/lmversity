@@ -6,6 +6,9 @@ summary: "Why an eval score is a noisy estimate, not a fact, and how to tell a r
 duration: "6 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Your eval says 82% this run and 84% last run. Did the change help, or would you get that same 2-point wobble just by rerunning the identical code twice? On a 100-example eval, you would — and treating that swing as signal is one of the most common ways teams fool themselves.
 
 ## An eval score is a sample, not a measurement
@@ -19,6 +22,10 @@ This is the Wilson or normal-approximation interval for a binomial proportion �
 The interval shrinks with the square root of n, so cutting the margin of error in half takes 4x the examples, not 2x. Rough rule of thumb: to reliably detect a 5-point difference between two versions with a few hundred test cases, you typically need low hundreds of examples per arm at minimum; to detect a 1-2 point difference, you need thousands. Most teams don't have that many good test cases, which means most teams should not trust small differences between versions at all.
 
 A practical shortcut: compute the confidence interval for your current n before you ship a change based on the score. If your interval width is wider than the improvement you're claiming, you don't have evidence yet — you have a coin flip that landed heads.
+
+<Callout kind="note" title="The honest report">
+Report a score with its interval or its n — "82% (n=100, ±8)" is honest; a bare "82%" invites false confidence. When a score moves by less than the interval width, treat it as unchanged and look at which specific cases flipped instead.
+</Callout>
 
 ```
 # Rough 95% CI for a proportion (normal approximation)
@@ -37,6 +44,13 @@ eval_ci(82, 100)
 ## Paired comparisons cut the noise dramatically
 
 If you're comparing model A against model B on the *same* set of examples, don't compute two independent confidence intervals and eyeball the overlap — that throws away information and understates your power. Instead, look at the paired differences: for each example, did A win, lose, or tie against B? A paired test (McNemar's test for binary pass/fail, or a paired t-test/bootstrap for continuous scores) only cares about the examples where the two versions disagreed, which is usually a small fraction of the set — so it detects real differences with far fewer examples than two unpaired intervals would need. This is the statistical version of what [Shipping Changes by Eval Diff](/learn/evals-red-teaming/eval-driven-iteration) is doing operationally: comparing the same cases before and after, not summary scores in isolation.
+
+<InlineCheck
+  question="Why does a paired comparison detect a real difference with fewer examples than two independent score intervals?"
+  options={['It only counts the examples where the two versions disagreed — the large majority where both pass or both fail cancels out, so the effective noise shrinks', 'Because paired tests skip the confidence-interval calculation', 'Because it averages the two models\' scores together']}
+  answer={0}
+  explanation="Two unpaired intervals carry the full sampling noise of both runs. A paired test restricts attention to discordant cases — usually a small fraction — which is exactly where the real difference lives."
+/>
 
 ## What this means day to day
 

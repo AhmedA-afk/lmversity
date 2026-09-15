@@ -3,10 +3,9 @@ title: "Evaluation, Thresholds, Calibration, and Uncertainty"
 track: deep-learning
 status: live
 order: 128
-description: "Turn model scores into decisions with suitable metrics, calibrated probabilities, and abstention logic."
+summary: "Turn model scores into decisions with suitable metrics, calibrated probabilities, and abstention logic."
 ---
 
-# Evaluation, Thresholds, Calibration, and Uncertainty
 
 ## Why this matters
 

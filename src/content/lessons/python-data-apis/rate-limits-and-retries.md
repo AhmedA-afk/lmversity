@@ -2,7 +2,7 @@
 title: "Rate Limits, Backoff, and Retries"
 track: "python-data-apis"
 status: live
-summary: "Implementation walkthrough teaching readers to read a 429's Retry-After header and build both a hand-rolled and tenacity-based exponential-backoff-with-jitter retry client — retryi"
+summary: "You fire off twenty calls in a loop, and call number twelve comes back with a `429`."
 duration: "7 min read"
 ---
 

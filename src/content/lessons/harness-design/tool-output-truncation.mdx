@@ -6,6 +6,8 @@ summary: "Handle multi-megabyte tool results with head/tail truncation, paginati
 duration: "5 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A single tool call can return more text than a whole conversation should hold. A grep over a large repo, a full HTTP response body, a database dump — any of these can return megabytes when the model only needed a few lines. Left unhandled, one oversized result silently evicts everything else in the window, or the call just fails at the token limit. A harness has to decide, at the tool-execution boundary, what actually reaches the model.
 
 ## Truncate at the boundary, not in the prompt
@@ -29,5 +31,12 @@ The other escape hatch is writing large output to a file and returning a path pl
 ## Set limits per tool, not globally
 
 A single global character cap treats a `list_files` result and a `read_file` result the same way, which is wrong in both directions — one wants a handful of names, the other might legitimately need thousands of lines of source. Budget truncation limits per tool type, and size them against your [token budget](/learn/context-engineering/token-budgeting-strategies) for that part of the loop, not against an arbitrary constant that made sense for one call site and nowhere else.
+
+<InlineCheck
+  question="Where in the pipeline should oversized tool output be capped?"
+  options={['At the tool-execution boundary, before the result is serialized into a message — waiting until context is full means a reactive, lossy compaction instead of prevention', 'In the system prompt', 'Inside the model\'s reasoning']}
+  answer={0}
+  explanation="One unhandled result can evict everything else in the window or fail the call outright. Capping at execution keeps the model's context clean by construction rather than by cleanup."
+/>
 
 **Related:** [Managing Context Inside a Long Session](/learn/harness-design/context-window-management-in-a-harness), [Tool Output Deduplication](/learn/context-engineering/tool-output-deduplication), [Compaction: Summarizing History to Reclaim Context Space](/learn/context-engineering/summarization-for-compaction)

@@ -2,7 +2,7 @@
 title: "Learning From Reward in a 4x4 Grid"
 track: "ai-foundations"
 status: live
-summary: "A worked example that runs a Q-learning agent through two literal episodes on a 4x4 gridworld with a +1 goal and a -1 pit, hand-verifying every table update, making epsilon-greedy "
+summary: "[reinforcement-learning-basics](/learn/ai-foundations/reinforcement-learning-basics) gives you the vocabulary — state, action, reward, policy."
 duration: "14 min read"
 ---
 

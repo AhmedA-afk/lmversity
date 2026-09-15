@@ -3,10 +3,9 @@ title: "Dropout, Ensembles, and Train/Eval Semantics"
 track: deep-learning
 status: live
 order: 118
-description: "Reason about dropout’s noise model and correctly use inverted scaling."
+summary: "Reason about dropout’s noise model and correctly use inverted scaling."
 ---
 
-# Dropout, Ensembles, and Train/Eval Semantics
 
 ## Why this matters
 

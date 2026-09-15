@@ -17,7 +17,7 @@ D. A UI component that happens to call an API
 
 <details><summary>Answer</summary>
 
-**Correct: B.** The call to the model is the one genuinely nondeterministic piece; everything around it — input assembly, validation, rendering, auth, storage — is code you can unit test like anything else. That shell-vs-core split is the frame the whole module uses.
+**Correct: C.** The call to the model is the one genuinely nondeterministic piece; everything around it — input assembly, validation, rendering, auth, storage — is code you can unit test like anything else. That shell-vs-core split is the frame the whole module uses.
 
 - A is wrong: treating the prompt as the entire feature is exactly the mistake that leads to no validation and no failure handling — see [The Deterministic Shell Around a Probabilistic Core](/learn/genai-app-dev/what-makes-a-feature-genai).
 - C is wrong: a GenAI feature does share auth, storage, and UI with a CRUD feature, but variance, latency, cost, and failure shape are genuinely new — it's not "the same thing plus a column."
@@ -34,7 +34,7 @@ D. It doesn't matter as long as the model receives it somewhere
 
 <details><summary>Answer</summary>
 
-**Correct: B.** The system message is the standing contract — true for every call this feature makes. Per-request content, like one specific ticket's text, belongs in the user message so the contract stays stable across requests.
+**Correct: C.** The system message is the standing contract — true for every call this feature makes. Per-request content, like one specific ticket's text, belongs in the user message so the contract stays stable across requests.
 
 - A is wrong: stuffing per-request data into the system message blurs the contract and, in a multi-turn setting, means you're re-sending (and re-paying for) content that should have been a single user turn.
 - C is wrong: there's no benefit to splitting one request's content across two roles — it just makes the prompt harder to reason about.
@@ -68,7 +68,7 @@ D. The user's operating system update
 
 <details><summary>Answer</summary>
 
-**Correct: B.** The lifecycle runs client → your API route → prompt assembly → provider → token stream → validation → UI — the provider's token stream back to your server is one of those named hops, and each hop carries its own latency and failure risk.
+**Correct: C.** The lifecycle runs client → your API route → prompt assembly → provider → token stream → validation → UI — the provider's token stream back to your server is one of those named hops, and each hop carries its own latency and failure risk.
 
 - A, C, and D are wrong: real infrastructure, but not part of the request path a single user action travels through — see [Tracing One Request Through Eight Hops](/learn/genai-app-dev/request-lifecycle-mental-model) for the full hop-by-hop map.
 
@@ -105,7 +105,7 @@ D. The bug is missing a `temperature` parameter
 
 <details><summary>Answer</summary>
 
-**Correct: B.** Anything referenced inside a client component ships in the JS bundle. A hardcoded key here is readable by anyone who opens dev tools — it's not a hypothetical risk, it's plaintext in a public file.
+**Correct: C.** Anything referenced inside a client component ships in the JS bundle. A hardcoded key here is readable by anyone who opens dev tools — it's not a hypothetical risk, it's plaintext in a public file.
 
 - A is wrong: this is exactly the antipattern — normal-looking code that leaks a secret, which is what makes it common in first features.
 - C is wrong: capitalization isn't the issue; the constructor call is syntactically fine.
@@ -127,7 +127,7 @@ D. The bug is that `prompt` should be an array of messages, not a string
 
 <details><summary>Answer</summary>
 
-**Correct: B.** With no timeout, a slow or hung provider call ties up the request — and often a worker — until something further up the stack gives up, if anything does. The fix is an explicit timeout shorter than any timeout above it.
+**Correct: C.** With no timeout, a slow or hung provider call ties up the request — and often a worker — until something further up the stack gives up, if anything does. The fix is an explicit timeout shorter than any timeout above it.
 
 - A is wrong: `await` is fine mechanically; the missing safeguard is a bound on how long it's allowed to wait.
 - C is wrong: `Response.json` is the right call if the result is meant to be JSON — that's not the defect here.
@@ -144,7 +144,7 @@ D. Writing a custom abstraction layer over multiple providers before shipping an
 
 <details><summary>Answer</summary>
 
-**Correct: B.** A provider SDK gives streaming, typed responses, and retry handling out of the box with minimal boilerplate — exactly what a small team on a tight deadline needs, without the lock-in-avoidance cost of an abstraction they don't need yet.
+**Correct: C.** A provider SDK gives streaming, typed responses, and retry handling out of the box with minimal boilerplate — exactly what a small team on a tight deadline needs, without the lock-in-avoidance cost of an abstraction they don't need yet.
 
 - A is wrong: raw HTTP means hand-rolling SSE parsing, retries, and types — control you're paying for in time this team doesn't have.
 - C is wrong: a full framework's abstractions (agents, memory, chains) solve problems this feature doesn't have yet, at the cost of a heavier learning curve and more moving parts.
@@ -161,7 +161,7 @@ D. Asking the model what a good summary would look like
 
 <details><summary>Answer</summary>
 
-**Correct: B.** A vague ask has no defined input shape, output shape, or definition of "good" — those have to be pinned down before code, or you're guessing at all three while also debugging.
+**Correct: C.** A vague ask has no defined input shape, output shape, or definition of "good" — those have to be pinned down before code, or you're guessing at all three while also debugging.
 
 - A is wrong: model choice is a real decision but doesn't resolve any of the ambiguity in what "summarize" means for this feature.
 - C is wrong: writing the prompt first without a spec means the prompt is guessing at the same ambiguities the spec exists to remove.
@@ -178,7 +178,7 @@ D. Trusting the output because the system prompt asked for a specific format
 
 <details><summary>Answer</summary>
 
-**Correct: B.** `JSON.parse` succeeding only proves the text was syntactically valid JSON — it says nothing about whether the fields your app depends on are present, correctly typed, or in range. Real validation checks the shape you actually need against a schema.
+**Correct: C.** `JSON.parse` succeeding only proves the text was syntactically valid JSON — it says nothing about whether the fields your app depends on are present, correctly typed, or in range. Real validation checks the shape you actually need against a schema.
 
 - A is wrong: this is the "no output validation" antipattern in disguise — it passes and still lets malformed data through.
 - C is wrong: non-empty is a weaker check than A, not a stronger one — it doesn't touch structure at all.

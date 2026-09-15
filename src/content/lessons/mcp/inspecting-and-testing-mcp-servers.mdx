@@ -4,7 +4,11 @@ track: "mcp"
 status: live
 summary: "Use the MCP Inspector and manual probes to verify a server's tools, resources, and prompts before shipping it."
 duration: "6 min read"
+sources: ["mcp-inspector-repo"]
 ---
+
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
 
 You just wrote an MCP server. Before you wire it into Claude or any other host, you want to see exactly what it advertises and confirm it actually works — without debugging through a chat UI that hides the raw protocol traffic.
 
@@ -30,7 +34,18 @@ Do the same for **Resources** (can the client list and read them? do URIs resolv
 
 The Inspector's log panel is the most useful part for debugging: it shows the exact JSON-RPC messages, including the initial handshake. If a tool call fails silently in a real client, reproduce it here first — you'll see whether the server returned a malformed response, whether the schema validation rejected the call before it even reached your code, or whether the transport itself dropped the connection. This matters more on [MCP Transports: stdio vs. HTTP](/learn/mcp/mcp-transports-stdio-vs-http), where stdio failures often look like the process just hanging with no error at all.
 
+<InlineCheck
+  question="Why reproduce a failing tool call in the MCP Inspector before debugging inside a real host?"
+  options={['The Inspector shows raw JSON-RPC including the handshake — you can see whether the server malformed the response, schema validation rejected the call, or the transport dropped it, with no client in between to blame', 'Because hosts cache tool results', 'Because the Inspector runs the model faster']}
+  answer={0}
+  explanation="Inside a host, a failure could live in your server, the protocol exchange, or the client layer. The Inspector removes the client entirely — whatever breaks there is provably the server's."
+/>
+
 ## Testing beyond the Inspector
+
+<Callout kind="note" title="Manual tool, not a regression net">
+The Inspector is human-driven — great for exploration, useless for catching a refactor that silently renames a tool or changes a parameter type. Write a script that opens a client connection, calls `tools/list`, asserts the schema, and calls each tool with fixed inputs.
+</Callout>
 
 The Inspector is a manual, human-driven tool — good for exploration, not for catching regressions automatically. Once a server is stable enough to matter, write a small script (or a test suite in whatever language your server is in) that opens a client connection, calls `tools/list`, and asserts the schema is what you expect, then calls each tool with fixed inputs and checks the output shape. That catches the case where a refactor silently changes a tool's name or parameter type and breaks every client depending on it — a problem covered further in [Versioning MCP Servers Without Breaking Clients](/learn/mcp/versioning-mcp-servers-without-breaking-clients).
 

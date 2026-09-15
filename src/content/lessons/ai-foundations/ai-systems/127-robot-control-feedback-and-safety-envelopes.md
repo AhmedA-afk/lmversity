@@ -3,15 +3,15 @@ title: "Robot Control, Feedback, and Safety Envelopes"
 track: "ai-foundations"
 status: live
 order: 127
+summary: "Turn desired plans into stable actions through feedback, saturation handling, and explicit safety envelopes."
 ---
 
-# Robot Control, Feedback, and Safety Envelopes
 
 ## Why this matters
 
 Turn desired plans into stable actions through feedback, saturation handling, and explicit safety envelopes. A serious AI system is not defined by a model name. It is defined by a decision boundary, the information available at the moment of action, the cost of being wrong, and the evidence that lets another person audit the result. This lesson treats the method as both a mathematical object and an operational commitment. The aim is to let you calculate a small example, implement a minimal version, inspect its failure modes, and decide when it should not be deployed.
 
-Start by separating four things that are often conflated: the world state, an agent's representation of that state, an action, and an outcome. A representation can be incomplete or wrong; an action can be legal but unwise; and an outcome can be good by luck. That separation makes debugging possible. It also prevents a common pattern in introductory AI: demonstrating a successful toy trace and assuming the same rule will survive noise, ambiguity, distribution shift, or an adversary.
+Start by separating four things that are often conflated: the world state, an agent's representation of that state, an action, and an outcome. A representation can be incomplete or wrong; an action can be legal but unwise; and an outcome can be good by luck. That separation makes debugging possible. It also prevents a common pattern in introductory AI: demonstrating a successful toy trace and assuming the same rule will survive noise, ambiguity, [distribution shift](/learn/ai-foundations/reliable-ai/204-distribution-shift-and-robustness), or an adversary.
 
 ## Core model and worked trace
 
@@ -72,3 +72,5 @@ Calculate a PID update, distinguish planning error from control error, and imple
 | Communication and provenance | 15 | Claims, data, limitations, and decision record are clear and auditable. |
 
 To reach mastery, do not merely produce a result. Explain which guarantee you rely on, what evidence would falsify it, and what a responsible system does when the guarantee no longer applies.
+
+**Related:** [Robot control, feedback, and stability](/learn/classical-ai/agents-robotics/317-robot-control-feedback-and-stability)

@@ -6,6 +6,8 @@ summary: "Prepend a short explanatory blurb to each chunk before embedding it, s
 duration: "5 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Chunking breaks a document into pieces so it can be embedded and searched, but a chunk out of context is often unreadable to a retrieval system. Contextual retrieval fixes this by rewriting each chunk to explain itself before it ever gets embedded.
 
 ## The problem chunking creates
@@ -26,6 +28,13 @@ chunk: "Revenue grew 3% over the previous quarter."
 ```
 
 Now the embedding vector carries the company, the filing type, the period, and the segment — all the disambiguating information a query needs to find it, even though none of that appeared in the original sentence.
+
+<InlineCheck
+  question="A chunk reads 'Revenue grew 3% over the previous quarter.' Why might 'Acme Q2 revenue growth' never match it?"
+  options={['Nothing in the chunk\'s vector points to Acme or Q2 — the title and surrounding paragraphs that disambiguated it were split into other chunks. Prepending a situating blurb before embedding puts that identifying info *in* the vector', 'Because numbers can\'t be embedded', 'Because the query is too long']}
+  answer={0}
+  explanation="An embedding can only encode what's in the text. Contextual retrieval writes the missing who/when/what into each chunk at index time, so the vector — and the BM25 index too — can actually be found by the query that needs it."
+/>
 
 ## Apply it to lexical search too
 

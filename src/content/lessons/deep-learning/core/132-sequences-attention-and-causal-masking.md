@@ -3,14 +3,13 @@ title: "Sequences, Attention, and Causal Masking"
 track: deep-learning
 status: live
 order: 132
-description: "Derive scaled dot-product attention and verify masks prevent future-token leakage."
+summary: "Derive scaled dot-product attention and verify masks prevent future-token leakage."
 ---
 
-# Sequences, Attention, and Causal Masking
 
 ## Why this matters
 
-Derive scaled dot-product attention and verify masks prevent future-token leakage. Treat this lesson as a working session: calculate on paper first, then make the smallest program that can falsify your reasoning. A deep-learning implementation is credible only when its tensor contracts, objective, and measurements agree.
+[Derive scaled dot-product attention](/learn/deep-learning/sequence-generative/309-attention-derivation) and verify masks prevent future-token leakage. Treat this lesson as a working session: calculate on paper first, then make the smallest program that can falsify your reasoning. A deep-learning implementation is credible only when its tensor contracts, objective, and measurements agree.
 
 ## Core derivation
 

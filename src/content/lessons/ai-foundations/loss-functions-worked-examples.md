@@ -2,7 +2,7 @@
 title: "MSE vs. Cross-Entropy on Real Numbers"
 track: "ai-foundations"
 status: live
-summary: "A single spam-email prediction, scored six different ways of confidence, run by hand through both MSE and cross-entropy — showing that the two losses don't just disagree by degree,"
+summary: "Feed the exact same six numbers into two different loss formulas and you get two very different verdicts on how bad your model's mistake is."
 duration: "14 min read"
 ---
 

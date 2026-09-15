@@ -6,6 +6,10 @@ summary: "What SWE-bench, WebArena, and GAIA actually measure, and why a high sc
 duration: "6 min read"
 ---
 
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A benchmark score tells you an agent cleared a fixed obstacle course, not that it will handle your obstacle course. Before you trust a leaderboard number, it helps to know what each major agent benchmark actually tests.
 
 ## SWE-bench: real GitHub issues, real repos
@@ -26,8 +30,27 @@ GAIA (General AI Assistants) poses questions that are trivial for a human with a
 
 ## Why the score isn't the whole story
 
+<Compare title="What each benchmark actually measures">
+<Pane title="SWE-bench" tone="neutral">
+Can the agent reproduce a real merged fix? Reads a large Python repo, localizes files, produces a patch that passes held-out tests.
+</Pane>
+<Pane title="WebArena" tone="neutral">
+Can it drive a real UI? Parses a DOM or screenshots, disambiguates instructions, recovers from misclicks — graded on end state.
+</Pane>
+<Pane title="GAIA" tone="neutral">
+Can it chain steps? Search, open documents, cross-reference facts, small calculations — leveled by steps required.
+</Pane>
+</Compare>
+
 All three benchmarks share the same blind spot: they measure whether the agent reached a correct end state, not how it got there. An agent can pass a SWE-bench task by overfitting to the visible test file instead of fixing the underlying bug. It can "solve" a WebArena task by a lucky sequence of clicks. It can nail a GAIA question and still be the kind of agent that quietly fabricates a source on a slightly different question. None of these benchmarks capture cost, latency, safety under adversarial input, or behavior on the long tail of messy real-world requests that don't look like curated test cases.
 
 Treat a leaderboard number as a floor, not a guarantee — a starting filter for which agent to try, not a substitute for [reading its actual trace](/learn/agentic-ai/evaluating-agent-behavior-in-dev) on tasks that look like yours.
+
+<InlineCheck
+  question="What do all three benchmarks share as a blind spot?"
+  options={['They measure whether the agent reached a correct end state — not how it got there. Cost, latency, safety, and process quality are invisible to the score', 'They only test English', 'They can\'t be run twice']}
+  answer={0}
+  explanation="An agent can pass by overfitting to a visible test file or a lucky click sequence. The score says the finish line was crossed — it says nothing about whether the run was efficient, safe, or repeatable."
+/>
 
 **Related:** [Inside a Coding Agent: How Claude Code and SWE-Agent Work](/learn/agentic-ai/coding-agent-architecture), [Reading an Agent's Trace](/learn/agentic-ai/evaluating-agent-behavior-in-dev), [Diagnosing Agent Failure Modes](/learn/agentic-ai/common-agent-failure-modes)

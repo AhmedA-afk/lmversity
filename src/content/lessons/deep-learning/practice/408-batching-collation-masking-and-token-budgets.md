@@ -3,7 +3,7 @@ title: "Batching, collation, masking, and token budgets"
 track: "deep-learning"
 status: live
 order: 408
-summary: "Ensure padding cannot become signal"
+summary: "Masked token loss is (L=-\\frac{1}{\\sum_{bt}m_{bt}}\\sum_{bt}m_{bt}\\log p(y_{bt}|x))."
 duration: "18–30 min"
 ---
 

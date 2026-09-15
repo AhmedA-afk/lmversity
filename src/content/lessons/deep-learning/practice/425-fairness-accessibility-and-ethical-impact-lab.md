@@ -3,7 +3,7 @@ title: "Graded lab: fairness, accessibility, and ethical impact"
 track: "deep-learning"
 status: live
 order: 425
-summary: "Evaluate harms beyond the aggregate"
+summary: "For a group (g), false-negative rate is (FN_g/(TP_g+FN_g)); comparing it across groups exposes one possible disparity, but equalizing it can conflict with calibration when base rates differ."
 duration: "18–30 min"
 ---
 

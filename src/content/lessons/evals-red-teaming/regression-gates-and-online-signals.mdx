@@ -6,6 +6,11 @@ summary: "An evaluation becomes operational when a change can fail a release gat
 duration: "3 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 ## The short answer
 
 An evaluation becomes operational when a change can fail a release gate and when live signals can reveal failures the offline set missed. Gate on risk-weighted behavior, not one average score; monitor quality, cost, latency, safety signals, and escalation after release.
@@ -38,6 +43,13 @@ route to review rather than declaring victory or failure.
 Positive feedback may be sparse, biased toward easy cases, or influenced by UI.
 Combine it with corrections, escalation, sampled review, and technical traces.
 
+<InlineCheck
+  question="A release shows strong thumbs-up rates but a spike in manual escalations. Which signal is trustworthy?"
+  options={['The escalations — thumbs-up is sparse, biased toward easy cases, and shaped by the UI; corrections, escalations, and technical traces are harder to fake', 'The thumbs-up — users are the ground truth', 'Neither — wait for the next release to decide']}
+  answer={0}
+  explanation="Positive feedback is a weak, self-selecting signal. Escalations and corrections cost the user effort, which is what makes them honest — combine signals rather than trusting the flattering one."
+/>
+
 ## An illustrative story
 
 A release passed every offline test but generated a spike in manual escalations.
@@ -46,20 +58,20 @@ incident became a fixture and the gate was split by document type.
 
 ## Two ways to see it
 
-### CI view
-
+<Compare title="Gate vs. sensor">
+<Pane title="CI view" tone="good">
 A gate is a decision rule that prevents known regressions from shipping.
+</Pane>
+<Pane title="Operations view" tone="neutral">
+Online signals discover unknown unknowns and must lead to an owner, a rollback, or an explicit decision to accept the behavior.
+</Pane>
+</Compare>
 
-### Operations view
-
-Online signals discover unknown unknowns and must lead to an owner, a rollback, or
-an explicit decision to accept the behavior.
-
-## Hands-on
-
+<Callout kind="try" title="Hands-on">
 Create a release report with fixed cases, slice deltas, cost/latency fields, and a
 manual-review threshold. Simulate a regression, block the release, then add the
 failure to the dataset and document the exception path.
+</Callout>
 
 ## Checkpoint
 

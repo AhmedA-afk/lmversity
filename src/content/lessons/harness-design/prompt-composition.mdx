@@ -6,6 +6,10 @@ summary: "How a harness assembles the system prompt from static rules, live cont
 duration: "6 min read"
 ---
 
+import Steps from '../../../components/kit/Steps.astro';
+import Step from '../../../components/kit/Step.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A harness doesn't ship one fixed system prompt. It builds a new one on every request, stitching together pieces that change independently — and the order and size of those pieces decides whether the model actually behaves.
 
 ## The pieces you're assembling
@@ -24,10 +28,20 @@ Each layer has a different owner and a different refresh rate. A harness that co
 
 Models weight instructions unevenly by position — content near the start and end of the prompt tends to get followed more reliably than content buried in the middle, an effect worth knowing about even without precise numbers (see [Context Ordering](/learn/context-engineering/context-ordering-and-recency-effects)). A practical convention:
 
-1. Identity and non-negotiable rules first (who the agent is, what it must never do).
-2. Tool definitions and how to use them.
-3. Environment and project-specific context.
-4. Task-specific instructions last, closest to the user's actual request.
+<Steps>
+<Step title="Identity and non-negotiable rules">
+Who the agent is, what it must never do — first position, most reliably followed.
+</Step>
+<Step title="Tool definitions">
+Names, descriptions, parameters, and how to use them.
+</Step>
+<Step title="Environment and project context">
+Working directory, OS, project config — the stable middle.
+</Step>
+<Step title="Task-specific instructions">
+Last position, closest to the user's actual request — where recency attention lands.
+</Step>
+</Steps>
 
 Deny-floor rules — the ones that must survive no matter what a user or a document later says — belong at the top *and* need runtime enforcement below the prompt, since a long enough prompt can still bury or dilute them. That's the subject of [Deny-Floors](/learn/harness-design/deny-floors-and-policy-layers).
 
@@ -50,5 +64,12 @@ Keeping each layer as a separate function makes it possible to cache the expensi
 ## Watch tool-schema bloat
 
 Every tool you register adds its full schema to the prompt on every turn, whether or not it's used. A harness with fifty tools can spend thousands of tokens on schemas before the user has said a word. [Tool Routing and Registries](/learn/harness-design/tool-routing-and-registries) covers scoping which tools are even loaded for a given session, which is usually the biggest lever for keeping runtime prompts lean.
+
+<InlineCheck
+  question="Why do deny-floor rules need runtime enforcement below the prompt, not just first position in it?"
+  options={['Position helps but doesn\'t guarantee — a long enough prompt can still bury or dilute a rule, and a user or document can contradict it. Only harness-level code can\'t be talked out of', 'Because the model ignores system prompts', 'For latency reasons']}
+  answer={0}
+  explanation="Prompt position is a bias, not a boundary. The rules that must survive any input have to live where no prompt can reach them — in the policy layer that gates execution."
+/>
 
 **Related:** [Token Budgeting](/learn/context-engineering/token-budgeting-strategies), [Deny-Floors: Rules No Prompt Can Override](/learn/harness-design/deny-floors-and-policy-layers), [Routing Tool Calls to Real Code](/learn/harness-design/tool-routing-and-registries)

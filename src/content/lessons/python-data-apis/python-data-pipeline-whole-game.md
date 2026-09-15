@@ -2,7 +2,7 @@
 title: "The Whole Game: Messy Data to a Model-Ready Pipeline"
 track: "python-data-apis"
 status: live
-summary: "Whole-game overview lesson for LMVersity's Python & Data track: walks one end-to-end pipeline (messy CSV tickets to pandas to cleaning/validation to LLM sentiment classification t"
+summary: "This track teaches one skill wearing a lot of costumes: turning data you don't control into a shape you do, cheaply enough and safely enough to hand to a model."
 duration: "2 min read"
 ---
 

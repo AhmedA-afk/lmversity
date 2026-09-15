@@ -7,6 +7,9 @@ summary: Stand up a working Model Context Protocol server that exposes a tool an
 duration: 20 min
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 The Model Context Protocol (MCP) is a standard way to give an AI client — Claude, an IDE, your own agent — a set of tools it can call. Instead of hand-wiring each integration, you expose tools once over MCP and any MCP-speaking client can use them. In twenty minutes you'll have a server that works.
 
 ## What you'll build
@@ -39,6 +42,10 @@ if __name__ == "__main__":
 
 That's a complete server. `FastMCP` handles the protocol; the `@mcp.tool()` decorator turns a plain function into a tool, and — this is the part people miss — **the docstring and type hints become the tool's schema the model reads.** Vague docstring, worse tool calls.
 
+<Callout kind="note" title="The docstring is the schema">
+`@mcp.tool()` doesn't just register the function — the docstring and type hints become the tool description the model reads when deciding whether to call it. "Count the words" gets called correctly; an empty docstring gets guessed at.
+</Callout>
+
 ## Run and inspect it
 
 ```bash
@@ -46,6 +53,13 @@ mcp dev server.py
 ```
 
 This launches the MCP Inspector, where you can see your tool listed and call it by hand. Calling a tool before wiring a model saves you from debugging two things at once.
+
+<InlineCheck
+  question="Why invoke `word_count` by hand in the MCP Inspector before connecting any model to it?"
+  options={['It isolates the variable — if the call fails there, the server is broken; if it fails only through a client, the wiring is. Testing first means never debugging server and client simultaneously', 'Because the Inspector warms up the model cache', 'Because clients refuse to list untested tools']}
+  answer={0}
+  explanation="A failure could live in the server, the transport, or the client config. Verifying the tool works in the Inspector removes the server from the suspect list before you add the model."
+/>
 
 ## Connect it to a client
 

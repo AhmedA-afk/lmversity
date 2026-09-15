@@ -3,10 +3,9 @@ title: "Reproducibility, Determinism, and Experiment Provenance"
 track: deep-learning
 status: live
 order: 127
-description: "Make results diagnosable months later, even when exact bitwise determinism is impossible."
+summary: "Make results diagnosable months later, even when exact bitwise determinism is impossible."
 ---
 
-# Reproducibility, Determinism, and Experiment Provenance
 
 ## Why this matters
 

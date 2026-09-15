@@ -19,7 +19,7 @@ D. Because three is the maximum number of methods an interface can have in TypeS
 
 <details><summary>Answer</summary>
 
-**Correct: B.** Every interface method is a maintenance obligation multiplied by every current and future adapter. Keeping the interface narrow and pushing provider-specific needs into the `providerOptions` escape hatch keeps that obligation small.
+**Correct: C.** Every interface method is a maintenance obligation multiplied by every current and future adapter. Keeping the interface narrow and pushing provider-specific needs into the `providerOptions` escape hatch keeps that obligation small.
 
 - A is false — interface size has no meaningful runtime performance cost in TypeScript; this is a maintainability argument, not a performance one.
 - B is correct.
@@ -59,7 +59,7 @@ D. Retry the same provider instantly, with no wait
 
 <details><summary>Answer</summary>
 
-**Correct: B.** A 429 with an explicit `retry-after` is the provider giving you the exact wait that's likely to succeed — honoring it is both correct and the fastest path back to a successful response.
+**Correct: C.** A 429 with an explicit `retry-after` is the provider giving you the exact wait that's likely to succeed — honoring it is both correct and the fastest path back to a successful response.
 
 - A is premature — a single 429 with guidance isn't the "sustained, provider is degraded" pattern that justifies failover; that's reserved for repeated 5xx or 429s that keep recurring.
 - B is correct.
@@ -79,7 +79,7 @@ D. Switch the request to streaming mode, which bypasses 5xx errors
 
 <details><summary>Answer</summary>
 
-**Correct: B.** A repeated pattern within a short window, not an isolated blip, is exactly the signal the retry-vs-failover boundary uses to decide the same provider trying again isn't likely to help — trip the circuit and move to the next link in the chain.
+**Correct: C.** A repeated pattern within a short window, not an isolated blip, is exactly the signal the retry-vs-failover boundary uses to decide the same provider trying again isn't likely to help — trip the circuit and move to the next link in the chain.
 
 - A ignores the pattern — one 500 is worth a retry, three in ten seconds is a provider having a bad day, and continuing to hammer it adds latency before you reach something that works.
 - B is correct.
@@ -99,7 +99,7 @@ D. Anthropic's API does not return a `stop_reason` field at all, so `raw` is the
 
 <details><summary>Answer</summary>
 
-**Correct: B.** Normalization is a deliberate, useful simplification for the common case, but it's lossy — and `raw` is the escape hatch back to the full-fidelity original for the cases that need the distinction it collapsed away.
+**Correct: C.** Normalization is a deliberate, useful simplification for the common case, but it's lossy — and `raw` is the escape hatch back to the full-fidelity original for the cases that need the distinction it collapsed away.
 
 - A is false — this has nothing to do with compiler requirements; it's an information-preservation decision.
 - B is correct.
@@ -119,7 +119,7 @@ D. It has no real effect — it's included purely for symmetry with `outputToken
 
 <details><summary>Answer</summary>
 
-**Correct: A.** Cache-read pricing is typically lower than fresh-input pricing, so a billing or cost-budget calculation that only sees a combined `inputTokens` number will overstate cost — the split is what makes downstream cost tracking accurate.
+**Correct: C.** Cache-read pricing is typically lower than fresh-input pricing, so a billing or cost-budget calculation that only sees a combined `inputTokens` number will overstate cost — the split is what makes downstream cost tracking accurate.
 
 - A is correct.
 - B misstates the issue — the numbers can be summed arithmetically; the problem is losing the *pricing-relevant* distinction, not an inability to add them.
@@ -139,7 +139,7 @@ D. Docker automatically encrypts any value passed via `ENV`
 
 <details><summary>Answer</summary>
 
-**Correct: B.** The risk isn't that the build-time approach is technically incapable — it's that the key persists in every artifact copy indefinitely, with no way for a provider-side revocation to reach those copies, unlike a runtime fetch that can be cut off everywhere at once.
+**Correct: C.** The risk isn't that the build-time approach is technically incapable — it's that the key persists in every artifact copy indefinitely, with no way for a provider-side revocation to reach those copies, unlike a runtime fetch that can be cut off everywhere at once.
 
 - A is false — Docker images can and do contain environment variables; that's exactly the mechanism being warned against.
 - B is correct.
@@ -159,7 +159,7 @@ D. Zero-downtime rotation requires disabling the `getSecret()` cache entirely
 
 <details><summary>Answer</summary>
 
-**Correct: B.** Because the old and new keys are both active during the overlap window, and every process's cache expires within a known TTL, there's no moment where a request holds a key that's already been invalidated.
+**Correct: C.** Because the old and new keys are both active during the overlap window, and every process's cache expires within a known TTL, there's no moment where a request holds a key that's already been invalidated.
 
 - A is the opposite of the drill described — the old key is revoked *last*, only after confirming no traffic still depends on it.
 - B is correct.
@@ -179,7 +179,7 @@ D. It only matters for the Anthropic adapter, not the OpenAI adapter
 
 <details><summary>Answer</summary>
 
-**Correct: B.** A normalized `ProviderError` type exists precisely so the UI layer maps a small, closed vocabulary to user-facing copy — independent of which vendor answered a given request.
+**Correct: C.** A normalized `ProviderError` type exists precisely so the UI layer maps a small, closed vocabulary to user-facing copy — independent of which vendor answered a given request.
 
 - A is wrong in this context — accuracy for debugging (where `raw` still belongs, in logs) is different from appropriateness for a user-facing message.
 - B is correct.
@@ -199,7 +199,7 @@ D. Route everything to the strong model, since correctness matters more than cos
 
 <details><summary>Answer</summary>
 
-**Correct: B.** This checks capability requirements *before* cost, exactly as [Cost- and Capability-Aware Routing in Action](/learn/genai-app-dev/cost-and-capability-based-routing) demonstrates: the tool-lookup task looks simple by length or volume, but its correctness depends on reliable tool-calling — a capability the cheap model doesn't have — so it's excluded from the cheap-model candidate set regardless of how "simple" it looks. Classification has no such requirement, so it safely routes to the cheap model. Troubleshooting needs both reasoning quality and context, so it goes to the strong model.
+**Correct: C.** This checks capability requirements *before* cost, exactly as [Cost- and Capability-Aware Routing in Action](/learn/genai-app-dev/cost-and-capability-based-routing) demonstrates: the tool-lookup task looks simple by length or volume, but its correctness depends on reliable tool-calling — a capability the cheap model doesn't have — so it's excluded from the cheap-model candidate set regardless of how "simple" it looks. Classification has no such requirement, so it safely routes to the cheap model. Troubleshooting needs both reasoning quality and context, so it goes to the strong model.
 
 - A ignores capability requirements entirely and risks silent tool-call failures on the order-lookup task — exactly the misclassification failure mode the worked example warns about.
 - B is correct.

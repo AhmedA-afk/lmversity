@@ -2,8 +2,9 @@
 title: "Load Secrets with .env and os.environ"
 track: "python-data-apis"
 status: live
-summary: "A hands-on walkthrough that builds a two-file config/client pattern: store a key in .env, gitignore it, load it into os.environ with python-dotenv, and fail fast at startup instead"
+summary: "The most common way an API key leaks isn't a hack — it's a `git add .` that swept up a `.env` file, or a key typed straight into a function call that later gets pasted into a bug report or a Jupyter notebook someone shares."
 duration: "14 min read"
+sources: ["httpbin-docs"]
 ---
 
 The most common way an API key leaks isn't a hack — it's a `git add .` that swept up a `.env` file, or a key typed straight into a function call that later gets pasted into a bug report or a Jupyter notebook someone shares. This walkthrough builds the boring, correct version: a key that lives in one untracked file, flows into `os.environ`, and makes your program refuse to start if it's missing — instead of quietly sending a request that was never going to work.

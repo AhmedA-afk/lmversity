@@ -2,7 +2,7 @@
 title: "Loading Data from CSV, JSON, and Parquet"
 track: "python-data-apis"
 status: live
-summary: "A hands-on walkthrough that loads the same small dataset four ways — read_csv with dtype hints, read_json, read_parquet, and a DataFrame built from a list of API dicts — showing wh"
+summary: "Every data source you touch as an AI builder picked its file format for its own reasons, not yours — and the exact same six rows behave differently depending on whether they arrive as CSV, JSON, Parquet, or a raw API response."
 duration: "28 min read"
 ---
 

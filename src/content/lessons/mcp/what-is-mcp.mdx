@@ -6,6 +6,9 @@ summary: "MCP is an open protocol that lets any AI app talk to any tool or data 
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Before MCP, connecting a model to your database, your file system, or your ticketing tool meant writing a bespoke integration for each pairing. Every AI app that wanted to talk to Slack wrote its own Slack glue. Every Slack-like tool that wanted to be usable by an AI app wrote its own AI-specific API. The result was an M×N problem: M applications times N tools, each combination hand-built.
 
 ## The standardization move
@@ -30,7 +33,18 @@ A model that can only produce text is limited to what was in its training data a
 
 MCP shifted the incentive. A company can write one MCP server for its product and reach every client that speaks the protocol — the same reasoning that made REST APIs and USB-C worth building in the first place. That's why, by 2026, MCP servers exist for a wide range of developer tools, SaaS products, and data sources, and most major AI coding tools and assistants ship an MCP client.
 
+<InlineCheck
+  question="M AI apps and N tools without a shared protocol means M×N integrations. What does MCP change that to — and why does that flip the tool-builder incentive?"
+  options={['M+N — a tool builder writes one MCP server and reaches every MCP client, so the integration pays off across the ecosystem instead of one app', 'M×N÷2 — it halves the work', 'N — one server per tool, with clients unchanged']}
+  answer={0}
+  explanation="Before MCP a Slack integration only worked inside the one app you built it for — not worth building for most tool authors. One server reaching every client makes the investment rational, which is why the ecosystem grew."
+/>
+
 ## What MCP is not
+
+<Callout kind="note" title="A transport layer, not a brain upgrade">
+MCP doesn't make a model smarter or more accurate — the model still decides when and how to use what a server exposes. And it doesn't eliminate integration work: someone still builds the server, decides what it exposes, and handles the untrusted content that comes back.
+</Callout>
 
 MCP is not a replacement for tool calling — it's a transport and discovery layer built on top of it. It doesn't make a model smarter or more accurate; a model still has to decide when and how to use what a server exposes, the same reasoning covered in [Designing a Tool Schema](/learn/tools-function-calling/designing-a-tool-schema). And it doesn't eliminate integration work — someone still has to build the server, decide what it exposes, and reason about what happens when the content that comes back is untrusted.
 

@@ -6,6 +6,8 @@ summary: "Instrument the control loop with structured spans so a slow or wrong a
 duration: "6 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A print statement tells you what happened. A trace tells you what happened, how long it took, what it cost, and what caused it — and that difference is the whole reason harness observability exists as its own discipline, not a footnote under logging.
 
 ## Why logging isn't enough
@@ -33,6 +35,13 @@ span: tool_call
 For model-call spans, the attributes that matter most are input/output token counts, the model ID actually used (after any [routing or fallback](/learn/harness-design/model-routing-and-fallback)), latency, and — if you're tracking spend — cost. The OpenTelemetry GenAI semantic conventions (see [Instrument LLM Calls with OpenTelemetry's GenAI Conventions](/learn/production/opentelemetry-genai-semantic-conventions)) standardize names like `gen_ai.request.model` and `gen_ai.usage.output_tokens` so your traces are queryable the same way across providers instead of every team inventing its own field names.
 
 Don't log full prompt and completion text into span attributes by default — it balloons trace storage and routinely leaks secrets or user data into a system with looser access controls than your primary logs. Store a truncated preview or a content hash on the span, and link out to the full transcript in your existing log store when you need to inspect it.
+
+<InlineCheck
+  question="Why do flat logs fail to explain an agent run that spawned parallel tool calls and a subagent?"
+  options={['An agent run is a tree, not a line — flat logs interleave concurrent branches, so you\'re manually reconstructing a call graph from timestamps. Spans carry parent IDs so the tree is the artifact', 'Because flat logs are too slow to write', 'Because subagents don\'t log']}
+  answer={0}
+  explanation="A span's parent ID means the tree structure is recorded as it happens — parallel tool calls and nested subagents just become branches. That's why one trace view can show the whole delegation chain with no special-casing."
+/>
 
 ## Wiring it into the control loop
 

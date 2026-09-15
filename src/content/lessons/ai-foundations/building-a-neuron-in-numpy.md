@@ -2,7 +2,7 @@
 title: "Building a Neuron and a Layer in NumPy"
 track: "ai-foundations"
 status: live
-summary: "An implementation walkthrough that turns the hand-computed neuron forward pass into ~15 lines of NumPy — a single neuron, then a vectorized layer via matrix multiply, then two laye"
+summary: "You already did this arithmetic with a calculator."
 duration: "6 min read"
 ---
 

@@ -2,7 +2,7 @@
 title: "Files and Formats: Text, Rows, and Columns"
 track: "python-data-apis"
 status: live
-summary: "A foundational tour of file formats — text vs binary, row-oriented vs columnar — with runnable CSV/JSON/JSONL/Parquet examples, real measured size comparisons, and safe file readin"
+summary: "You've got a folder with three files from three different sources: a nightly export from a database (a `.csv`), a payload your code logged from an API call (a `.json`), and a cleaned dataset a teammate handed you that loads in under a second even though it holds a few million rows (a `.parquet`)."
 duration: "15 min read"
 ---
 

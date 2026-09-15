@@ -3,10 +3,9 @@ title: "Perceptrons, Linear Separability, and Geometric Margins"
 track: deep-learning
 status: live
 order: 102
-description: "Understand the perceptron as a geometric classifier and know precisely when it must fail."
+summary: "Understand the perceptron as a geometric classifier and know precisely when it must fail."
 ---
 
-# Perceptrons, Linear Separability, and Geometric Margins
 
 ## Why this matters
 

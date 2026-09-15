@@ -2,7 +2,7 @@
 title: "pandas DataFrames and Series"
 track: "python-data-apis"
 status: live
-summary: "A foundational, hands-on introduction to the pandas DataFrame and Series — how they're built on NumPy, why every column has one dtype, and how to size up a support-ticket dataset w"
+summary: "You've just been handed a CSV export of every support ticket filed this quarter — tens of thousands of rows, a dozen columns, and no schema anyone can hand you."
 duration: "14 min read"
 ---
 

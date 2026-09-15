@@ -2,7 +2,7 @@
 title: "Why Inference Is Bottlenecked by Memory, Not Math"
 track: "ai-foundations"
 status: live
-summary: "An intuition-first lesson explaining why LLM inference is memory-bandwidth-bound rather than compute-bound: it builds a 'walk the weight warehouse for every token' mental model, co"
+summary: "Ask a model to output one word and ask it to write a careful, reasoned paragraph, and the cost per word comes out nearly the same — which is strange if you think of inference as \"thinking harder for harder questions.\" It isn't."
 duration: "14 min read"
 ---
 

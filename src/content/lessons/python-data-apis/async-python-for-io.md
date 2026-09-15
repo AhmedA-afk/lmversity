@@ -2,7 +2,7 @@
 title: "Async Python for I/O-Bound Work"
 track: "python-data-apis"
 status: live
-summary: "Introduces coroutines, the event loop, and async/await through runnable examples, then draws a precise line between I/O-bound work (where concurrency overlaps waiting and wins big)"
+summary: "Call an LLM API 200 times in a plain `for` loop and you'll spend most of that run doing nothing at all — your CPU sits idle while each request sits on the network waiting for a response."
 duration: "14 min read"
 ---
 
@@ -78,7 +78,7 @@ async def main_sequential():
 asyncio.run(main_sequential())
 ```
 
-Same coroutine, same `await`s — but each call is awaited to completion before the next starts, so nothing overlaps. Elapsed time: roughly 3 seconds. This is the shape of a naive loop calling an API 200 times, and closing exactly this gap for real HTTP and LLM calls is what /learn/python-data-apis/concurrent-api-calls-with-asyncio does next — swap `asyncio.sleep(delay)` for `await client.get(url)` on an async HTTP client, and the same overlap happens for real network requests.
+Same coroutine, same `await`s — but each call is awaited to completion before the next starts, so nothing overlaps. Elapsed time: roughly 3 seconds. This is the shape of a naive loop calling an API 200 times, and closing exactly this gap for real HTTP and LLM calls is what [Concurrent API Calls with asyncio](/learn/python-data-apis/concurrent-api-calls-with-asyncio) does next — swap `asyncio.sleep(delay)` for `await client.get(url)` on an async HTTP client, and the same overlap happens for real network requests.
 
 Now watch what happens when the work inside the coroutine is CPU-bound instead:
 
@@ -114,7 +114,7 @@ Here you'll see `start A`, `finish A`, `start B`, `finish B`, `start C`, `finish
 
 ## Where it shows up
 
-- **Calling APIs at scale** — the main reason this track covers async at all. When you need results from hundreds of REST or LLM endpoints, the bottleneck is almost always network wait, not your CPU. See /learn/python-data-apis/concurrent-api-calls-with-asyncio for the real pattern and /learn/python-data-apis/rate-limits-and-retries for what has to sit alongside it once you're firing off that many requests.
+- **Calling APIs at scale** — the main reason this track covers async at all. When you need results from hundreds of REST or LLM endpoints, the bottleneck is almost always network wait, not your CPU. See [Concurrent API Calls with asyncio](/learn/python-data-apis/concurrent-api-calls-with-asyncio) for the real pattern and [Rate Limits, Backoff, and Retries](/learn/python-data-apis/rate-limits-and-retries) for what has to sit alongside it once you're firing off that many requests.
 - **Calling multiple downstream services at once** while building a single response — a vector store, an LLM, and a cache queried in parallel instead of one after another.
 - **Web scraping and crawling**, where each fetch spends most of its time waiting on a remote server rather than doing local work.
 - **Servers handling many simultaneous clients** (frameworks like FastAPI, chat and websocket servers) — one process serves many connections at once because each connection spends most of its life idle, waiting on the next message.
@@ -128,15 +128,15 @@ It's worth being just as clear about where it doesn't show up: data cleaning wit
 
 **Blocking calls inside async functions.** `await asyncio.sleep(1)` yields control; `time.sleep(1)` does not — it blocks the entire thread, stalling every other coroutine on the same event loop. A synchronous HTTP call (`requests.get(...)`) made inside an `async def` has the same problem: it looks like it belongs there, but it stalls the whole program for its duration instead of letting other coroutines run. One blocking call is enough to silently turn all your concurrency back into sequential execution. If a library has no async version, run it in a thread instead of calling it directly: `await asyncio.to_thread(blocking_fn, ...)`.
 
-**Calling `asyncio.run()` where a loop is already running.** Jupyter notebooks already run their own event loop, so `asyncio.run(main())` in a notebook cell raises `RuntimeError: asyncio.run() cannot be called from a running event loop`. Inside a notebook, `await main()` directly in a cell instead — the notebook's loop is already there to drive it. This trips people up on day one of using asyncio in a notebook; see /learn/python-data-apis/setting-up-venv-and-jupyter for that environment.
+**Calling `asyncio.run()` where a loop is already running.** Jupyter notebooks already run their own event loop, so `asyncio.run(main())` in a notebook cell raises `RuntimeError: asyncio.run() cannot be called from a running event loop`. Inside a notebook, `await main()` directly in a cell instead — the notebook's loop is already there to drive it. This trips people up on day one of using asyncio in a notebook; see [Set Up a venv, pip, and a Jupyter Notebook](/learn/python-data-apis/setting-up-venv-and-jupyter) for that environment.
 
 ## Where next
 
 This lesson covered the foundation: coroutines, `await`, the event loop, and the line between I/O-bound work (where async wins big) and CPU-bound work (where it does nothing). From here:
 
-- /learn/python-data-apis/why-async-for-api-calls-intuition builds the intuition further before the code gets more elaborate.
-- /learn/python-data-apis/concurrent-api-calls-with-asyncio replaces `asyncio.sleep` above with real HTTP calls, and shows how to bound concurrency so you don't overwhelm an API.
-- /learn/python-data-apis/rate-limits-and-retries covers what has to sit alongside concurrency once you're firing off hundreds of real requests.
-- /learn/python-data-apis/batching-llm-calls-for-throughput puts it all together for LLM workloads specifically — hundreds of prompts processed concurrently instead of one at a time.
+- [Why Concurrency Speeds Up API Calls](/learn/python-data-apis/why-async-for-api-calls-intuition) builds the intuition further before the code gets more elaborate.
+- [Concurrent API Calls with asyncio](/learn/python-data-apis/concurrent-api-calls-with-asyncio) replaces `asyncio.sleep` above with real HTTP calls, and shows how to bound concurrency so you don't overwhelm an API.
+- [Rate Limits, Backoff, and Retries](/learn/python-data-apis/rate-limits-and-retries) covers what has to sit alongside concurrency once you're firing off hundreds of real requests.
+- [Batching LLM Calls for Throughput and Cost](/learn/python-data-apis/batching-llm-calls-for-throughput) puts it all together for LLM workloads specifically — hundreds of prompts processed concurrently instead of one at a time.
 
-**Related:** /learn/python-data-apis/concurrent-api-calls-with-asyncio · /learn/python-data-apis/why-async-for-api-calls-intuition · /learn/python-data-apis/batching-llm-calls-for-throughput · /learn/python-data-apis/rate-limits-and-retries
+**Related:** [Concurrent API Calls with asyncio](/learn/python-data-apis/concurrent-api-calls-with-asyncio) · [Why Concurrency Speeds Up API Calls](/learn/python-data-apis/why-async-for-api-calls-intuition) · [Batching LLM Calls for Throughput and Cost](/learn/python-data-apis/batching-llm-calls-for-throughput) · [Rate Limits, Backoff, and Retries](/learn/python-data-apis/rate-limits-and-retries)

@@ -1,5 +1,5 @@
 ---
-title: "Deep lecture: Probabilistic modelling, MLE/MAP/Bayesian inference, calibration, and uncertainty"
+title: "Probabilistic modelling: MLE/MAP, Bayesian inference, and calibration"
 track: "machine-learning"
 order: 904
 status: live
@@ -8,7 +8,6 @@ duration: "115 min lecture + 4 hr lab"
 updated: "2026-08-30"
 ---
 
-# Probabilistic modelling: uncertainty is a prediction product, not a disclaimer
 
 Many systems emit a number between zero and one, then call it a probability. That number becomes useful only when it is tied to an event, horizon, population, conditioning information, and validation procedure. A churn score is not “the chance the customer leaves” unless the event is specified—perhaps cancellation in the next 30 days conditional on being active today—and its calibration has been tested on a comparable future population. Probabilistic modelling supplies a language for making those commitments.
 
@@ -25,7 +24,7 @@ The posterior predictive integrates parameter uncertainty rather than pretending
 
 For a Bernoulli event with probability `p`, observing `y` has likelihood `p^y(1-p)^(1-y)`. For `n` independent observations with common rate `p`, the log likelihood is `k log p+(n-k)log(1-p)`, where `k=sum y_i`. Differentiation gives the MLE `p_hat=k/n`. Negative log likelihood is cross entropy. Thus fitting a classifier by log loss is not a technical ritual: it rewards honest probabilities and heavily penalises confident false predictions.
 
-A Gaussian prior `theta ~ Normal(0,tau^2 I)` adds `-||theta||^2/(2tau^2)` to log posterior. For Gaussian-noise linear regression, maximising this posterior is ridge regression. A Laplace prior adds an absolute-value penalty and yields lasso-like MAP estimation. Calling the latter “feature selection” can conceal its instability under correlated features: it often selects one of several exchangeable measurements without establishing that the others are irrelevant.
+A Gaussian prior `theta ~ Normal(0,tau^2 I)` adds `-||theta||^2/(2tau^2)` to log posterior. For Gaussian-noise [linear regression](/learn/machine-learning/derivations/01-linear-regression-normal-equations-and-geometry), maximising this posterior is ridge regression. A Laplace prior adds an absolute-value penalty and yields lasso-like MAP estimation. Calling the latter “feature selection” can conceal its instability under correlated features: it often selects one of several exchangeable measurements without establishing that the others are irrelevant.
 
 ### Worked example 1: MLE versus a Beta posterior
 
@@ -94,7 +93,7 @@ Write a small NumPy program that samples 50,000 values from `Beta(alpha+k,beta+n
 
 **Part A — model statement (15 points).** Specify event, horizon, population, conditioning variables, labels, and data-generation limitations. State a prior for at least one interpretable parameter and justify its scale.
 
-**Part B — derivations and calculations (25 points).** Derive Bernoulli MLE, Beta posterior update, MAP objective for Gaussian-prior logistic regression, and posterior predictive variance for a linear model. Solve three numeric cases, including a prior sensitivity comparison.
+**Part B — derivations and calculations (25 points).** Derive Bernoulli MLE, Beta posterior update, MAP objective for Gaussian-prior [logistic regression](/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian), and posterior predictive variance for a linear model. Solve three numeric cases, including a prior sensitivity comparison.
 
 **Part C — empirical probability audit (20 points).** Use chronological train/calibration/test partitions. Report log loss, Brier score, reliability curves with bin counts, calibration slope/intercept, and meaningful slices with uncertainty.
 

@@ -6,6 +6,9 @@ summary: "Instrument every hop in a pipeline with a shared trace ID so you can s
 duration: "6 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A single user request to an agent or RAG app can fan out into a dozen calls: a retrieval query, a rerank, two tool calls, and three LLM turns. When the answer comes back wrong or slow, logs alone won't tell you which of those hops was the problem — you need a trace.
 
 ## Why logs aren't enough
@@ -41,10 +44,21 @@ A span with just a duration is barely more useful than a log line. Attach:
 - **Model and parameter version**, so a regression traces back to a specific deploy
 - **Error and retry metadata**, tagged on the span that actually failed, not just the top-level request
 
+<Callout kind="note" title="A span with just a duration">
+A bare timing is barely more useful than a log line. What makes a trace worth having is what's attached: token counts and cost, retrieved document IDs and scores, the model and parameter version, and the error metadata on the span that actually failed.
+</Callout>
+
 ## Picking a backend
 
 You don't need to build this from scratch. OpenTelemetry is the standard instrumentation layer, and LLM-specific platforms (Langfuse, LangSmith, Arize Phoenix, Datadog LLM Observability, among others) add prompt/token-aware views on top of the same trace-and-span model, so you're not stuck staring at raw JSON. Whichever you pick, the win is the same: click into a slow or wrong request and see the exact hop that caused it, instead of guessing from aggregate metrics.
 
 Once tracing exists, it becomes the raw material for [setting SLOs](/learn/production/latency-and-cost-slos) on individual steps and for [on-call playbooks](/learn/production/on-call-playbooks-for-ai) that tell responders which span to check first.
+
+<InlineCheck
+  question="One user request fans out into retrieval, a rerank, two tool calls, and three LLM turns. Logs show one slow LLM call — what can't they tell you?"
+  options={['Which user request triggered it, what ran before and after it, and where it sits in the causal chain — that context is what the shared trace_id provides', 'The latency of the call — logs cannot store numbers', 'Which model served the call — logs never record the model']}
+  answer={0}
+  explanation="A log line is one isolated event. A trace stitches every span under one trace_id into the causal path, so a slow or wrong hop is locatable inside the fan-out instead of a guess from aggregate metrics."
+/>
 
 **Related:** [Log Every LLM Call as Structured Data](/learn/production/structured-logging-for-llm-calls), [Set SLOs for Latency, Cost, and Quality](/learn/production/latency-and-cost-slos), [Write an On-Call Playbook for AI Failures](/learn/production/on-call-playbooks-for-ai)

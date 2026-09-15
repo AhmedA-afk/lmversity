@@ -3,10 +3,9 @@ title: "Adaptive Optimisation: RMSProp, Adam, and AdamW"
 track: deep-learning
 status: live
 order: 115
-description: "Derive adaptive step scaling, understand bias correction, and separate AdamW’s weight decay from L2 coupling."
+summary: "Derive adaptive step scaling, understand bias correction, and separate AdamW’s weight decay from L2 coupling."
 ---
 
-# Adaptive Optimisation: RMSProp, Adam, and AdamW
 
 ## Why this matters
 

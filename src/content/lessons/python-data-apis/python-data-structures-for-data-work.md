@@ -2,7 +2,7 @@
 title: "Lists, Dicts, Tuples, Sets for Data"
 track: "python-data-apis"
 status: live
-summary: "How a support-ticket queue maps onto the four core Python structures — a ticket as a dict, the queue as a list of dicts, unique tags as a set, and a triage-board cell as a tuple — "
+summary: "Open any support ticket queue and you're looking at the same shape you'll fight with for the rest of your data career: one record, many records, the unique values buried inside them, and a fixed key you use to file things."
 duration: "14 min read"
 ---
 

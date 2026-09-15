@@ -3,7 +3,7 @@ title: "Graded staged capstone and technical defense"
 track: "deep-learning"
 status: live
 order: 430
-summary: "Defend an end-to-end deep learning system"
+summary: "A defensible capstone connects claim to evidence chain: (problem\\rightarrow data\\rightarrow split\\rightarrow implementation\\rightarrow experiments\\rightarrow evaluation\\rightarrow release\\rightarrow monitoring)."
 duration: "18–30 min"
 ---
 

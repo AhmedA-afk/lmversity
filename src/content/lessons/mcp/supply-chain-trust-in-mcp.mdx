@@ -6,6 +6,9 @@ summary: "What to check before pointing your agent at someone else's MCP server 
 duration: "6 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Installing an MCP server is running someone else's code with your credentials and your filesystem access. The `npx` or `uvx` one-liner in a README is a supply-chain decision dressed up as a setup step — treat it like one.
 
 ## What you're actually trusting
@@ -24,9 +27,20 @@ Check these, roughly in order of effort:
 - **Registry signals.** Official [MCP registries](/learn/mcp/mcp-registries-and-discovery) are starting to carry verification and provenance metadata, but a listing isn't a guarantee — registries index what's submitted, they don't audit tool logic line by line. Download counts and stars are weak signals at best; a popular package can still ship a malicious update.
 - **Update behavior.** A server pulled via `npx <package>@latest` re-fetches and can silently change on every run. Pin a version once you trust a release, the same discipline you'd want in production dependency management.
 
+<Callout kind="breaks" title="`@latest` re-fetches every run">
+`npx <package>@latest` resolves and pulls fresh each launch — the server you vetted on Monday isn't necessarily the code running on Friday. Pin a version once a release earns trust; review diffs on upgrade like any other dependency.
+</Callout>
+
 ## Run it isolated first
 
 The highest-leverage habit is running an unfamiliar server without your real credentials, in a place it can't do damage. Use [Inspecting and Testing MCP Servers](/learn/mcp/inspecting-and-testing-mcp-servers) to watch exactly what tools it exposes and what a call actually sends before connecting it to your main client. For anything you didn't write yourself, run it inside the kind of boundary described in [Sandboxing Untrusted MCP Servers](/learn/mcp/sandboxing-untrusted-servers) — a container or restricted process with no access to secrets it doesn't strictly need.
+
+<InlineCheck
+  question="Nothing in MCP stops a tool from logging its arguments to a remote endpoint before returning a result. What does that imply about vetting?"
+  options={['The trust boundary is the whole chain — maintainer, registry, dependencies, build step — and compromise anywhere looks identical to you: a normal-looking tool response. Read the tool implementations, check egress, scope credentials to minimum', 'It means MCP servers are always malicious', 'It means only first-party servers are safe']}
+  answer={0}
+  explanation="A server is code running with your credentials and your filesystem. Exfiltration doesn't need the protocol's permission — it just needs a network call inside the tool. That's why source-reading, permission cross-checks, and sandboxing come before connection."
+/>
 
 ## The ongoing risk, not just the install-time one
 

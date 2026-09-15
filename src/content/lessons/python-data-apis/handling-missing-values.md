@@ -2,7 +2,7 @@
 title: "Handling Missing and Empty Values"
 track: "python-data-apis"
 status: live
-summary: "A hands-on pandas walkthrough that detects NaN, None, and empty-string 'missing' in a reviews dataset, then applies a documented per-column mix of dropna, fillna, and imputation — "
+summary: "A rating column with three gaps and a rating column that's been zero-filled three times look identical in `.head()` — but one gives you a true average and the other silently drags it down by nearly a full star."
 duration: "30 min read"
 ---
 

@@ -6,9 +6,16 @@ summary: "Writing rubrics, sampling strategically, and checking inter-rater agre
 duration: "6 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Some judgments don't fit a script or a scoring function — "is this response actually helpful," "does this summary miss the point of the ticket," "would a lawyer sign off on this." For those, you need people. The trick is turning that into a repeatable process instead of a Slack thread where someone eyeballs ten outputs and calls it done.
 
 ## Write a rubric before you look at outputs
+
+<Callout kind="breaks" title="Anchoring on the first batch">
+A reviewer who reads ten outputs before defining "good" anchors on whatever looked best in that batch — and every later reviewer inherits the drift. Write the rubric first, from product requirements, with concrete pass/fail examples per item. Vague rubrics don't fail loudly; they produce noise that looks like signal.
+</Callout>
 
 The single biggest failure mode in human eval is starting from the outputs. A reviewer who reads ten responses before defining "good" will anchor on whatever looks best in that batch, and every later reviewer inherits the drift. Write the rubric first, from your product requirements — concrete criteria with example pass/fail cases for each one, not "rate 1-5 for quality." A rubric like "cites at least one source from the retrieved context" or "does not recommend a dosage outside the label" gives two reviewers a real chance of agreeing. Vague rubrics don't fail loudly; they just quietly produce noise that looks like signal. This is the same discipline behind [choosing metrics that actually measure success](/learn/evals-red-teaming/writing-eval-metrics) — a metric or a rubric item is only useful if it's falsifiable.
 
@@ -19,6 +26,13 @@ You can't have humans review everything in production, and you shouldn't try. St
 ## Check agreement before you trust the labels
 
 Two reviewers should occasionally grade the same items, blind to each other's answers. If they disagree constantly, the problem usually isn't the reviewers — it's the rubric, and it needs another pass before you trust a single one of the labels it produced. Cohen's kappa is the standard measure here because it corrects for chance agreement (two coin-flippers can "agree" 50% of the time on a binary label and mean nothing by it). You don't need a formal statistics background to use it: run it on a sample, and if it's low, go read the specific items where reviewers split and find the ambiguity they're actually disagreeing about.
+
+<InlineCheck
+  question="Two reviewers agree on 60% of a binary labeling task. Why is Cohen's kappa the right check instead of raw agreement?"
+  options={['Two coin-flippers agree 50% of the time on a binary label — kappa corrects for chance so 60% raw agreement is nearly meaningless without it', 'Kappa measures labeling speed, which raw agreement misses', 'Raw agreement is illegal in most annotation contracts']}
+  answer={0}
+  explanation="On a binary task, chance alone produces ~50% agreement. Kappa subtracts that baseline — so when kappa is low, the disagreement lives in the rubric's ambiguity, and the fix is rewriting the rubric, not blaming reviewers."
+/>
 
 ## Use human labels to calibrate the automated judge
 

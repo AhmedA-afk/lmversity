@@ -3,10 +3,9 @@ title: "Gradient Clipping, Exploding Gradients, and Sequence Stability"
 track: deep-learning
 status: live
 order: 123
-description: "Protect optimisation from rare destructive updates and distinguish clipping from a cure for poor modeling."
+summary: "Protect optimisation from rare destructive updates and distinguish clipping from a cure for poor modeling."
 ---
 
-# Gradient Clipping, Exploding Gradients, and Sequence Stability
 
 ## Why this matters
 

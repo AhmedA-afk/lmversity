@@ -6,6 +6,9 @@ summary: "How a harness implements read-plan-act-observe in code, turning model 
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Every agentic harness, underneath its UI and prompts, is one loop running over and over: ask the model what to do, do it, tell the model what happened, repeat. Understanding that loop in code demystifies almost everything a harness like this one does.
 
 ## The four steps, concretely
@@ -41,8 +44,19 @@ Plan and act get the attention because they look like the interesting part — t
 
 This is also why context management matters here more than almost anywhere else in the harness: the loop's memory *is* the messages array, and every observation you append grows it. A harness that lets that array grow unbounded eventually blows its context window mid-task; one that summarizes or drops old turns too eagerly gives the model amnesia about what it already tried.
 
+<Callout kind="breaks" title="Starve the observation step and the model re-plans against a stale world">
+Truncate tool output too aggressively — or skip appending it — and the model never sees the error. It retries commands that already failed, edits files it already edited, plans against state that no longer exists. The observation isn't bookkeeping; it's the model's only window into what happened.
+</Callout>
+
 ## Termination is a design choice, not a given
 
 The loop above stops when the model stops asking for tools — but a harness rarely trusts that alone. Real implementations add a hard cap on iterations, timeouts per tool call, and often a separate check for "is this task actually done" rather than "did the model say it's done." Without those guards, a model stuck in a bad plan will happily keep calling tools forever, and the harness — not the model — is what has to notice and stop it.
 
-**Related:** [The Harness: Everything Around the Model](/learn/harness-design/what-is-a-harness), [Allow/Ask/Deny: Designing Approval Gates](/learn/harness-design/permission-and-approval-systems), [Deny-Floors: Rules No Prompt Can Override](/learn/harness-design/deny-floors-and-policy-layers)
+<InlineCheck
+  question="In the control loop, where does policy actually get enforced?"
+  options={['In the gap between \'model asked\' and \'harness acted\' — the model emits a request, and the harness decides whether to honor it before executing anything', 'Inside the model\'s reasoning', 'In the tool schemas']}
+  answer={0}
+  explanation="The model can only ask — it emits a structured request and cannot touch your filesystem or network. Everything between that request and real side effects is harness code, which is why approval gates and deny-floors live there and nowhere else."
+/>
+
+**Related:** [The Harness: Everything Around the Model](/learn/harness-design/what-is-a-harness), [Allow/Ask/Deny: Designing Approval Gates](/learn/harness-design/permission-and-approval-systems), [Deny-Floors: Rules No Prompt Can Override](/learn/harness-design/deny-floors-and-policy-layers); [Building a Browser-Control Loop](/learn/tools-function-calling/building-a-browser-tool-loop)

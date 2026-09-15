@@ -2,7 +2,7 @@
 title: "Capstone: Messy Data to an LLM Pipeline"
 track: "python-data-apis"
 status: live
-summary: "Wrote the capstone lesson body for 'Capstone: Messy Data to an LLM Pipeline' — a full end-to-end project brief (ingest mixed CSV/JSON support tickets, normalize, validate with Pyda"
+summary: "You're the new data person at a support-tooling startup."
 duration: "7 min read"
 ---
 

@@ -6,6 +6,9 @@ summary: "Plan capacity around token throughput and tool-call fan-out, not just 
 duration: "6 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A traditional web request does one unit of work: hit the API, hit the database, return. An agent request does not. One user message can trigger a planning call, five tool calls, three of which call sub-agents, each making its own model calls to summarize results. Capacity planning built around "requests per second" was designed for the first world. It quietly breaks in the second.
 
 ## The request is not the unit of load
@@ -19,6 +22,17 @@ This means the thing you actually need to forecast is **downstream model calls p
 Instrument fan-out directly: calls-per-request, tokens-per-request (input and output separately, since they're priced and rate-limited differently), and tool-invocations-per-request. Then load-test by replaying realistic *tasks*, not synthetic single-turn prompts — a load test that only sends short one-shot questions will never surface the fan-out spike that a real "go build me X" request causes. Capture a sample of real production transcripts (redacted) and replay their task shapes at increasing concurrency.
 
 Watch three ceilings simultaneously: your own service's compute and concurrency limits, the model provider's tokens-per-minute and requests-per-minute limits (which agentic fan-out can exhaust far faster than raw traffic volume suggests), and any downstream tool APIs the agent calls, which usually have no idea they're now on an agent's critical path and will rate-limit you without warning.
+
+<Callout kind="breaks" title="The load test that lies to you">
+A load test built from short, single-turn prompts will pass at exactly the concurrency that fails in production. Fan-out is what breaks you, and only task-shaped replays — real transcripts, real "go build me X" requests — produce it. If your test traffic can't spawn 40 downstream calls, it isn't testing the thing that takes you down.
+</Callout>
+
+<InlineCheck
+  question="Two services each handle 100 incoming requests per second. Why can their backend model load differ by 5x or more?"
+  options={['Fan-out — each incoming request spawns a variable number of downstream model calls, and the distribution differs by system', 'Because one service probably has a slower database', 'They can\'t — 100 req/s is 100 req/s of model load']}
+  answer={0}
+  explanation="The incoming request is not the unit of load — downstream model calls per request is, and it's a heavy-tailed distribution. One system averaging 3x fan-out and another averaging 15x produce wildly different backend load at identical request rates."
+/>
 
 ## Plan headroom around the tail, not the average
 

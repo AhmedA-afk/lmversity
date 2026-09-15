@@ -3,7 +3,7 @@ title: "Mixed precision, compilation, and numerical stability"
 track: "deep-learning"
 status: live
 order: 414
-summary: "Speed up without losing the objective"
+summary: "Stable log-softmax uses (\\log\\sum_ie^{z_i}=a+\\log\\sum_ie^{z_i-a}) with (a=\\max_i z_i)."
 duration: "18–30 min"
 ---
 

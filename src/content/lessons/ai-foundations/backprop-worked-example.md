@@ -2,7 +2,7 @@
 title: "One Backprop Step, Fully Worked"
 track: "ai-foundations"
 status: live
-summary: "A fully worked backprop step on the 2-neuron network from the forward-pass lesson: every gradient computed by hand, one update applied, and the loss verified to drop — then the sam"
+summary: "You already pushed numbers forward through a tiny 2-neuron network and got a prediction."
 duration: "16 min read"
 ---
 

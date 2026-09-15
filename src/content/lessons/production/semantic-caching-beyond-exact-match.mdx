@@ -6,6 +6,9 @@ summary: "Use embedding similarity to catch paraphrased requests that exact-matc
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A user asks "What's your refund policy?" You cache the answer. Ten minutes later another user asks "How do refunds work?" — same intent, different words. An exact-match cache treats that as a miss, sends it to the model, and pays full price for an answer you already have sitting right there.
 
 ## Exact match is too literal for language
@@ -35,6 +38,15 @@ In practice this is a small vector index (often the same store you'd use for [si
 
 Set it too low and you'll return the refund policy answer to someone asking about shipping — a confidently wrong response that's worse than a cache miss. Set it too high and you barely improve on exact match. There's no universal number; it depends on your embedding model and how semantically dense your query space is. Tune it against a labeled set of "these should match" and "these should not" pairs, and re-check it whenever you change embedding models, since similarity scores aren't comparable across models.
 
-Semantic caching also fits queries poorly when the answer depends on volatile state — user identity, current time, live data — because two similar-sounding questions can need genuinely different answers. Scope it to stable, FAQ-shaped traffic, pair it with your cost dashboards so you can see the hit rate pay off, and keep a short TTL so stale answers age out.
+<Callout kind="breaks" title="Volatile state poisons the cache">
+Two similar-sounding questions can need genuinely different answers when the answer depends on user identity, current time, or live data. Scope semantic caching to stable, FAQ-shaped traffic and keep a short TTL so stale answers age out — never cache a query whose correct response can change between asks.
+</Callout>
+
+<InlineCheck
+  question="Your similarity threshold is set too low. What's the concrete failure?"
+  options={['A paraphrase of a different question clears the bar and serves a confidently wrong cached answer — worse than a cache miss', 'The cache fills up with duplicate entries', 'Embeddings get computed twice per request']}
+  answer={0}
+  explanation="A loose threshold doesn't just miss savings — it actively serves wrong answers. The shipping-policy question gets the refund-policy answer with full confidence, which is worse than paying for the model call."
+/>
 
 **Related:** [Cache Prompts and Responses to Cut Cost](/learn/production/prompt-and-semantic-caching), [Track Cost Per Request and Per User](/learn/production/token-and-cost-tracking), [Embeddings and Semantic Similarity](/learn/rag/embeddings-and-semantic-similarity)

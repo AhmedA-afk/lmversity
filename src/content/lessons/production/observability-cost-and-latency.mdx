@@ -6,6 +6,11 @@ summary: "Production AI needs traces that connect user intent, inputs, retrieval
 duration: "3 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 ## The short answer
 
 Production AI needs traces that connect user intent, inputs, retrieval, model calls, tool actions, outputs, errors, cost, and latency. Optimize these together: a cheap fast answer that is wrong or unsafe is not a successful service. Redact sensitive content and define retention before collecting traces.
@@ -45,21 +50,29 @@ A service met its average latency goal while users on mobile waited too long. Th
 tail was dominated by retries from one dependency. Percentiles and dependency
 spans exposed the issue that an average hid.
 
+<InlineCheck
+  question="A dashboard shows your feature hitting its average latency target, yet mobile users report it feeling slow. What does the trace data likely show?"
+  options={['The average hides the tail — retries from one dependency dominate p95+, which percentiles and dependency spans expose', 'The model got slower on mobile devices only', 'Average latency and user experience are unrelated metrics']}
+  answer={0}
+  explanation="Averages hide exactly the requests that hurt. A tail dominated by retries from one dependency looks fine at p50 — only percentile breakdowns and per-step spans surface it."
+/>
+
 ## Two ways to see it
 
-### Debugging view
-
+<Compare>
+<Pane title="Debugging view" tone="neutral">
 A trace lets you locate which step failed and reproduce it safely.
-
-### FinOps and trust view
-
+</Pane>
+<Pane title="FinOps and trust view" tone="neutral">
 Every token, retry, and stored output has a cost, privacy implication, and owner.
+</Pane>
+</Compare>
 
-## Hands-on
-
+<Callout kind="try" title="Hands-on">
 Instrument a mock RAG request with spans for validation, retrieval, model call,
 parsing, and policy. Inject a slow dependency and a rate limit. Produce a report
 with p50/p95-style latency fields, retry count, cost proxy, and redaction check.
+</Callout>
 
 ## Checkpoint
 

@@ -3,10 +3,9 @@ title: "Numerical Stability, LogSumExp, and Mixed Precision"
 track: deep-learning
 status: live
 order: 124
-description: "Prevent overflow, underflow, and precision loss in loss functions and accelerated training."
+summary: "Prevent overflow, underflow, and precision loss in loss functions and accelerated training."
 ---
 
-# Numerical Stability, LogSumExp, and Mixed Precision
 
 ## Why this matters
 
@@ -14,7 +13,7 @@ Prevent overflow, underflow, and precision loss in loss functions and accelerate
 
 ## Core derivation
 
-logΣexp(z)=m+logΣexp(z−m), m=max z. Stable softmax subtracts m. Mixed precision typically uses low precision for matrix work, higher precision accumulators, and dynamic loss scaling to avoid gradient underflow.
+logΣexp(z)=m+logΣexp(z−m), m=max z. Stable softmax subtracts m. [Mixed precision](/learn/deep-learning/practice/414-precision-compilation-and-numerical-stability) typically uses low precision for matrix work, higher precision accumulators, and dynamic loss scaling to avoid gradient underflow.
 
 Write the dimensions next to every expression. If an expression does not type-check, do not “fix” it by reshaping until you can say what each axis represents.
 

@@ -3,10 +3,9 @@ title: "MLPs: Composition, Capacity, and Universal Approximation"
 track: deep-learning
 status: live
 order: 103
-description: "Turn a perceptron into a multilayer function and connect width/depth to useful—not mystical—capacity."
+summary: "Turn a perceptron into a multilayer function and connect width/depth to useful—not mystical—capacity."
 ---
 
-# MLPs: Composition, Capacity, and Universal Approximation
 
 ## Why this matters
 

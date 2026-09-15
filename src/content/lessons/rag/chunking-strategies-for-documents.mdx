@@ -6,6 +6,8 @@ summary: "Split source documents into chunks that preserve meaning, sized for re
 duration: "5 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Before you can retrieve anything, you have to decide how to cut it up. Chunking is the step everyone skips past on the way to embeddings, and it's the step that quietly determines whether your [RAG](/learn/rag/what-is-rag-and-when-to-use-it) system actually works.
 
 ## Why chunk size is a trade-off, not a setting
@@ -13,6 +15,13 @@ Before you can retrieve anything, you have to decide how to cut it up. Chunking 
 A chunk is the unit you embed, store, and eventually hand back to the model as context. Make chunks too big — a whole chapter, say — and each one covers so many ideas that its embedding becomes a blurry average of all of them, so a specific query stops matching it well. Retrieval also drags in a lot of irrelevant text along with the useful sentence, wasting context budget and diluting the model's attention on what matters.
 
 Make chunks too small — a single sentence — and each one embeds cleanly and matches queries precisely, but it loses surrounding context. A sentence like "It doesn't apply to enterprise accounts" is useless on its own if the paragraph that defines "it" got split into a different chunk. You've optimized for precision and broken comprehension.
+
+<InlineCheck
+  question="Why do oversized chunks hurt retrieval?"
+  options={['Each chunk\'s embedding becomes a blurry average of every idea in it, so a specific query stops matching well — and whatever does match drags pages of irrelevant text into context', 'Because vector DBs reject long inputs', 'Because the model can\'t read more than one chunk']}
+  answer={0}
+  explanation="A chunk is the unit you embed. Cram a chapter into one and its vector represents everything and nothing — precision dies at index time, and context budget dies at read time."
+/>
 
 There's no universal right size. It depends on your documents and your queries: dense technical docs with self-contained paragraphs tolerate smaller chunks; narrative or legal text with long-range dependencies needs more room.
 
@@ -34,4 +43,4 @@ Whatever strategy you use, attach metadata to every chunk — source document, s
 
 Once you've settled on a chunking strategy, the next question is how those chunks get compared to a query at all — that's what [embeddings](/learn/rag/embeddings-and-semantic-similarity) are for, and it's worth measuring whether your choices actually help with [RAG evaluation](/learn/rag/evaluating-rag-quality) rather than assuming they do.
 
-**Related:** [What Is RAG and When to Use It](/learn/rag/what-is-rag-and-when-to-use-it), [Embeddings and Semantic Similarity](/learn/rag/embeddings-and-semantic-similarity), [Evaluating RAG Quality](/learn/rag/evaluating-rag-quality)
+**Related:** [What Is RAG and When to Use It](/learn/rag/what-is-rag-and-when-to-use-it), [Embeddings and Semantic Similarity](/learn/rag/embeddings-and-semantic-similarity), [Evaluating RAG Quality](/learn/rag/evaluating-rag-quality); [Strategies for Long Documents](/learn/structured-outputs/long-document-extraction-strategies)

@@ -6,6 +6,9 @@ summary: "Turn one-off red-teaming into an automated suite that fuzzes your agen
 duration: "6 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A manual red-team exercise finds real problems, but it only runs once. Automating adversarial probes means building a suite of attack prompts that runs on every release the same way your regression tests do, so a fix that reopens an old jailbreak gets caught before it ships.
 
 ## From one-off attacks to a repeatable suite
@@ -23,10 +26,21 @@ Neither approach helps if a human has to read every transcript. You need automat
 
 Run the judge on both the response and, where relevant, the agent's tool calls — a prompt injection that gets refused in text but still triggers a tool call is a failure your grader needs to see.
 
+<Callout kind="breaks" title="Refused in text, executed in tools">
+An injection that produces a polite refusal in the transcript but still fires a tool call is a failure — the grader that only reads response text will pass it. Judge the tool calls, not just the words.
+</Callout>
+
 ## Wiring it into CI
 
 The mechanics mirror [regression testing built from real bugs](/learn/evals-red-teaming/building-a-regression-suite): store probes and expected outcomes as data, run them against every candidate build, and fail the pipeline on a new pass-rate drop rather than on any single failure — adversarial prompts are inherently noisier than functional evals, so a threshold beats a hard gate. Track the pass rate over time the same way you'd track any other [eval metric across model versions](/learn/evals-red-teaming/eval-and-safety-metrics-dashboards), because a slow erosion is exactly what a single red-team day won't catch.
 
 Treat this suite as a floor, not a ceiling. Automated probes catch known attack families reliably; they rarely discover genuinely novel exploits the way a skilled human red-teamer does. Keep running periodic manual exercises and feed everything they find back into the automated corpus — that loop is what keeps the suite from going stale.
+
+<InlineCheck
+  question="Why gate the pipeline on a pass-rate drop rather than on any single adversarial failure?"
+  options={['Adversarial prompts are inherently noisier than functional evals — a hard gate on one failure trains people to ignore the suite, while a threshold catches real erosion', 'Because a single failure is always a judge error', 'Because pass rates are cheaper to compute than per-case results']}
+  answer={0}
+  explanation="Adversarial suites mix known-bad probes with mutated variants that misfire. Failing the build on any single miss creates alert fatigue; failing on a meaningful rate drop keeps the gate credible."
+/>
 
 **Related:** [Running a Structured Red-Team Exercise](/learn/evals-red-teaming/adversarial-red-teaming-process), [Turning Bugs into a Regression Suite](/learn/evals-red-teaming/building-a-regression-suite), [LLM-as-Judge: Grading Outputs with a Model](/learn/evals-red-teaming/llm-as-judge)

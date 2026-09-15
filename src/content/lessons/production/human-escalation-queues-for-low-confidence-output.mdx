@@ -6,6 +6,9 @@ summary: "Route flagged or uncertain responses into a human review queue with it
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Not every model response should go straight to the user. Some should stop at a human first — and that only works if the stop is a real system with a queue, an SLA, and an owner, not a Slack channel someone checks when they remember.
 
 ## What triggers escalation
@@ -13,6 +16,13 @@ Not every model response should go straight to the user. Some should stop at a h
 You need a rule that decides, per request, whether a human sees it before the user does. Common triggers: a confidence or entropy score below a threshold, a classifier flagging the topic as high-stakes (medical, legal, refunds above a dollar amount), the model itself emitting an "I'm not sure" signal, or a guardrail catching something odd in the output. Combine a couple of these rather than relying on one — raw token-probability confidence is often miscalibrated, so pairing it with a rules-based check (dollar thresholds, keyword lists, category tags) catches more real risk than either alone.
 
 The trigger decision has to happen inline, before the response ships — not in an async audit that finds the bad answer after the user already acted on it.
+
+<InlineCheck
+  question="Why pair a confidence score with a rules-based check instead of trusting the score alone?"
+  options={['Raw token-probability confidence is often miscalibrated — a rules layer (dollar thresholds, category tags) catches risk the score misses', 'Because confidence scores are too slow to compute inline', 'Because rules are required by most provider terms of service']}
+  answer={0}
+  explanation="Model confidence is a useful signal but a miscalibrated one. Layering it with deterministic rules — high-stakes categories, amount thresholds — catches more real risk than either trigger alone."
+/>
 
 ## Design the queue itself
 
@@ -31,6 +41,13 @@ Watch the escalation rate itself as a signal. If it creeps up, that's often a sy
 
 ## Avoid the two failure modes
 
-Too sensitive, and reviewers drown in noise and start rubber-stamping — which defeats the purpose. Too loose, and the queue misses the cases it exists for. Tune the threshold against real outcomes, not intuition, and revisit it whenever the underlying uncertainty signal changes — see [Escalation Design: Handing Off to a Human When Confidence Drops](/learn/hallucinations/escalation-design-for-uncertain-answers) for how to build the confidence signal that feeds this queue in the first place.
+<Callout kind="breaks" title="Too tight, too loose">
+- **Too sensitive:** reviewers drown in noise and start rubber-stamping — which defeats the purpose of review.
+- **Too loose:** the queue misses the cases it exists for.
+
+Tune the threshold against real outcomes, not intuition, and revisit it whenever the underlying uncertainty signal changes.
+</Callout>
+
+See [Escalation Design: Handing Off to a Human When Confidence Drops](/learn/hallucinations/escalation-design-for-uncertain-answers) for how to build the confidence signal that feeds this queue in the first place.
 
 **Related:** [Escalation Design: Handing Off to a Human When Confidence Drops](/learn/hallucinations/escalation-design-for-uncertain-answers), [Human-in-the-Loop Review Queues](/learn/genai-app-dev/human-in-the-loop-review-queues), [Set SLOs for Latency, Cost, and Quality](/learn/production/latency-and-cost-slos)

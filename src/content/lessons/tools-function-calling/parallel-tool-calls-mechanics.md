@@ -1,5 +1,5 @@
 ---
-title: "Parallel Tool Calls"
+title: "Parallel Tool Calls: The Wire-Level Contract"
 track: "tools-function-calling"
 status: live
 summary: "The wire-level shape of a batched tool-call turn, and what your harness owes the model before it will continue."

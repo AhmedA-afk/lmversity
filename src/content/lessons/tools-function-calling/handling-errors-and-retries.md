@@ -1,5 +1,5 @@
 ---
-title: "Handling Tool Errors and Retries"
+title: "When a Tool Call Fails: Code, Model, or Human"
 track: "tools-function-calling"
 status: live
 summary: "The core decision every failed tool call forces: fix it in code, fix it with the model, or hand it to a human."

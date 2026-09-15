@@ -3,10 +3,9 @@ title: "Core Mastery Capstone and Oral Defense"
 track: deep-learning
 status: live
 order: 134
-description: "Demonstrate end-to-end command of the module through a reproducible model investigation and technical defense."
+summary: "Demonstrate end-to-end command of the module through a reproducible model investigation and technical defense."
 ---
 
-# Core Mastery Capstone and Oral Defense
 
 ## Why this matters
 

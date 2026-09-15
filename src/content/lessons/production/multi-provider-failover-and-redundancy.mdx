@@ -6,6 +6,9 @@ summary: "Detect a provider outage or degradation and reroute traffic to a backu
 duration: "6 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Every model provider has bad days: a regional outage, a silent latency spike, a model that starts timing out at 20% of requests instead of 0.1%. If your app only knows how to talk to one provider, their bad day becomes your incident. Failover means your app notices the problem and routes around it automatically.
 
 ## What "down" actually means
@@ -42,10 +45,19 @@ The retry loop only helps if it's bounded. Give the whole failover chain one lat
 
 ## The part people skip: prompts don't port for free
 
-Swapping providers mid-incident silently breaks things if your prompt was tuned for one model's quirks — a system prompt that leans on a specific model's formatting habits, a JSON-mode call that behaves differently across vendors, a tool schema one model interprets more strictly than another. Before you wire up a fallback, verify the same prompt and schema actually produce acceptable output on it — see [prompt portability across models](/learn/prompt-engineering/prompt-portability-across-models). Test this in normal operation, not for the first time during an outage.
+<Callout kind="breaks" title="A fallback that fails differently">
+Swapping providers mid-incident silently breaks things if your prompt was tuned for one model's quirks — formatting habits, JSON-mode behavior, a tool schema another model reads more strictly. Verify the same prompt and schema produce acceptable output on the fallback *in normal operation*, not for the first time during an outage — see [prompt portability across models](/learn/prompt-engineering/prompt-portability-across-models).
+</Callout>
 
 ## Fail open, not silent
 
 A failover that swaps models without telling anyone is a trap: costs shift, quality shifts, and nobody notices until a user complains. Emit a structured event every time a request fails over — which provider, which model it landed on, why. Feed that into the same dashboards and alerts as [your on-call playbook](/learn/production/on-call-playbooks-for-ai), and keep a [kill switch](/learn/production/feature-flags-and-kill-switches) that can force traffic onto a known-good provider if the automated routing itself misbehaves. Automatic recovery should mean nobody gets paged at 3am — not that nobody ever finds out an outage happened.
+
+<InlineCheck
+  question="Your failover chain tries primary, then fallback_1, then fallback_2 — each with its own timeout budget. What's wrong with that?"
+  options={['Budgets stack — the user waits through primary\'s timeout, then fallback_1\'s, before the last hop; give the whole chain one latency budget', 'Nothing — each provider needs its own full timeout', 'The fallbacks should be tried in parallel instead of in sequence']}
+  answer={0}
+  explanation="A per-hop budget means worst-case latency is the sum of every timeout in the chain. One budget across the whole failover chain bounds what the user actually waits."
+/>
 
 **Related:** [Put an LLM Gateway in Front of Every Provider](/learn/production/llm-gateway-and-provider-abstraction), [Model Routing and Multi-Provider Failover](/learn/genai-app-dev/model-routing-and-failover), [Write an On-Call Playbook for AI Failures](/learn/production/on-call-playbooks-for-ai)

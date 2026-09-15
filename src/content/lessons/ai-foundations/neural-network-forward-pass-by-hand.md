@@ -2,7 +2,7 @@
 title: "A Forward Pass, One Number at a Time"
 track: "ai-foundations"
 status: live
-summary: "A fully-worked forward pass through a 2-input, 2-hidden-neuron, 1-output network — every multiply, sum, bias, and activation written out with real numbers, plus a demonstration of "
+summary: "A neural net doesn't do anything mysterious to a number — it multiplies, adds, and squashes it, over and over, at every neuron."
 duration: "14 min read"
 ---
 

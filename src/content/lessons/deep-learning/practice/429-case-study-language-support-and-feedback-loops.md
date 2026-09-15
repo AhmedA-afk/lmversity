@@ -3,7 +3,7 @@ title: "Case study: language support with human feedback loops"
 track: "deep-learning"
 status: live
 order: 429
-summary: "Design a language system under uncertainty"
+summary: "For a routing system, evaluate both model accuracy and workflow utility: correct routing, safe escalation, resolution time, and review burden."
 duration: "18–30 min"
 ---
 

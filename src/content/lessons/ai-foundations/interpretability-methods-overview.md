@@ -2,7 +2,7 @@
 title: "Ways to Peek Inside the Box"
 track: "ai-foundations"
 status: live
-summary: "A practitioner's tour of the three interpretability method families — attention visualization, probing, and feature/circuit analysis — grounded in the idea that a feature is a dire"
+summary: "The interpretability toolkit in depth: three families of methods, what each one can rigorously claim, and where each one quietly runs out of road."
 duration: "16 min read"
 ---
 

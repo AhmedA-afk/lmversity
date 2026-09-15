@@ -2,7 +2,7 @@
 title: "Cleaning Mistakes That Corrupt Data Silently"
 track: "python-data-apis"
 status: live
-summary: "A field guide to five pandas cleaning bugs that never raise an exception — view-vs-copy assignment, uncounted row drops, object-dtype columns hiding mixed types, iterrows mutation "
+summary: "The dangerous bugs in a cleaning pipeline aren't the ones that throw a traceback — those get fixed by lunchtime."
 duration: "16 min read"
 ---
 

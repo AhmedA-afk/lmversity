@@ -3,7 +3,7 @@ title: "Testing data, model, and training invariants"
 track: "deep-learning"
 status: live
 order: 411
-summary: "Test properties before long runs"
+summary: "For differentiable loss (L), a finite-difference gradient check compares (partial L/\\partial w\\approx[L(w+\\epsilon)-L(w-\\epsilon)]/(2\\epsilon)) with autograd on a tiny fixture."
 duration: "18–30 min"
 ---
 

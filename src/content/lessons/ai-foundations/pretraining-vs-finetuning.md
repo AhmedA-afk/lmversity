@@ -2,7 +2,7 @@
 title: "Pretraining vs. Fine-Tuning: Two Different Jobs"
 track: "ai-foundations"
 status: live
-summary: "A concept lesson separating expensive, once-per-model self-supervised pretraining from cheap, targeted fine-tuning, using a general-education vs on-the-job-training mental model, w"
+summary: "Ask a freshly pretrained base model a question and it might answer with more questions, or wander into a Wikipedia-style tangent, instead of helping you."
 duration: "14 min read"
 ---
 

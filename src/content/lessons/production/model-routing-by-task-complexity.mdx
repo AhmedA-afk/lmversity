@@ -6,6 +6,9 @@ summary: "Classify each request's difficulty first, then send it to the smallest
 duration: "6 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Not every request needs your best model. A support bot answering "what's your return window" doesn't need the same model as one drafting a legal summary — but most apps send both through the same endpoint, paying frontier prices for trivial work.
 
 ## The core idea: classify, then route
@@ -24,12 +27,23 @@ That last pattern — try cheap, escalate on low confidence — avoids a separat
 
 The economics only work because task difficulty is usually skewed: most production traffic is repetitive and easy (classification, extraction, short lookups), and only a minority of requests genuinely need frontier reasoning. If your traffic is 80% simple and 20% hard, and the cheap tier costs a fraction of the frontier tier per token, routing correctly can cut your total model spend dramatically while keeping the hard 20% at full quality.
 
-The failure mode is misrouting: an easy-looking request that's actually subtle (a short, calm-sounding message hiding a genuine edge case) gets routed to a weak model and comes back wrong or unhelpful. This is why routing decisions need the same scrutiny as any other model output — see [Track Cost Per Request](/learn/production/token-and-cost-tracking) for measuring what routing actually saves, and pair it with an escalation path rather than a hard cutoff: a low-confidence response from the cheap tier should trigger a retry on the frontier tier, not just ship as-is (see [Build an Escalation Queue for Low-Confidence Output](/learn/production/human-escalation-queues-for-low-confidence-output)).
+<Callout kind="breaks" title="Misrouting">
+The failure mode is an easy-looking request that's actually subtle — a short, calm-sounding message hiding a genuine edge case — routed to a weak model and coming back wrong. Routing decisions need the same scrutiny as any other model output: pair the router with an escalation path, not a hard cutoff. A low-confidence response from the cheap tier should trigger a retry on the frontier tier, not ship as-is (see [Build an Escalation Queue for Low-Confidence Output](/learn/production/human-escalation-queues-for-low-confidence-output)).
+</Callout>
+
+See [Track Cost Per Request](/learn/production/token-and-cost-tracking) for measuring what routing actually saves.
 
 ## Building it into your stack
 
 In practice, routing sits at the same layer as provider failover and load balancing — most teams implement it as one policy inside an [LLM gateway](/learn/production/llm-gateway-and-provider-abstraction) rather than scattering `if` statements through application code. That keeps the routing rules, the model tier list, and the fallback behavior in one place you can tune without redeploying every caller.
 
 Treat the routing policy itself as something you evaluate, not something you set once and forget: track accuracy and user-facing quality per tier, not just cost, and re-tune thresholds as model pricing and capability shift — a boundary that made sense six months ago may be leaving savings on the table, or quietly degrading quality, today.
+
+<InlineCheck
+  question="What makes model routing economically worth it — even after paying for a classification step on every request?"
+  options={['Task difficulty is skewed — most production traffic is repetitive and easy, so the cheap tier absorbs the bulk while frontier handles only the hard minority', 'The classifier is always free to run', 'Frontier models are billed per request, not per token']}
+  answer={0}
+  explanation="Routing pays because traffic is lopsided: if 80% of requests are simple and the cheap tier costs a fraction per token, correct routing cuts total spend while the hard 20% keeps full quality."
+/>
 
 **Related:** [Track Cost Per Request and Per User](/learn/production/token-and-cost-tracking), [Put an LLM Gateway in Front of Every Provider](/learn/production/llm-gateway-and-provider-abstraction), [Build an Escalation Queue for Low-Confidence Output](/learn/production/human-escalation-queues-for-low-confidence-output)

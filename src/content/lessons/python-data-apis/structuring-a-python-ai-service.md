@@ -2,7 +2,7 @@
 title: "Structuring the Pipeline as a Service"
 track: "python-data-apis"
 status: live
-summary: "Breaks the notebook pipeline into small pure functions — io, clean, validate, call, persist — with config injected explicitly and error handling placed deliberately at each functio"
+summary: "The first time you turn a notebook into a service, the code usually still *looks* like a notebook — one long function, a few module-level constants for the API key and file paths, and a `try/except` wrapped around the whole thing \"just in case.\" It runs."
 duration: "16 min read"
 ---
 

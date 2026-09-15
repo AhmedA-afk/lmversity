@@ -3,10 +3,9 @@ title: "Applied Case: Education AI, Learning, and Assessment Integrity"
 track: ai-foundations
 status: live
 order: 317
-description: "Use AI to improve learning feedback while protecting learner agency, accessibility, privacy, and assessment validity."
+summary: "Use AI to improve learning feedback while protecting learner agency, accessibility, privacy, and assessment validity."
 ---
 
-# Applied Case: Education AI, Learning, and Assessment Integrity
 
 ## Product question and learning objective
 

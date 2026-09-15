@@ -3,7 +3,7 @@ title: "Data versioning, lineage, and retention governance"
 track: "deep-learning"
 status: live
 order: 416
-summary: "Know exactly what trained the model"
+summary: "Represent provenance as a directed acyclic graph (raw\\rightarrow cleaned\\rightarrow split\\rightarrow run\\rightarrow artifact\\rightarrow deployment)."
 duration: "18–30 min"
 ---
 

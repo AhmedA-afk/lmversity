@@ -6,6 +6,10 @@ summary: "Why an agent's context window and its persistent memory are different 
 duration: "5 min read"
 ---
 
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 An agent forgets everything the moment its context window fills up or the session ends — unless you build it a way to remember. That's two separate jobs: holding what's relevant right now, and carrying what matters into the future.
 
 ## Short-term memory is the context window
@@ -26,8 +30,24 @@ Three patterns cover most real systems:
 
 ## Why the split matters
 
+<Compare title="Two memory systems, two jobs">
+<Pane title="Short-term = context window" tone="neutral">
+The current task: plan, recent tool results, conversation. Fast and free once present — gone on compaction or session end.
+</Pane>
+<Pane title="Long-term = deliberate storage" tone="good">
+Written explicitly, retrieved explicitly. Files, structured facts, vector store. Survives sessions; nothing lands there automatically.
+</Pane>
+</Compare>
+
 Treating these as one thing is where memory systems go wrong. Cramming everything into the context window burns tokens and triggers [context rot](/learn/context-engineering/context-rot) long before the window is technically full. Writing everything to long-term storage without a retrieval step just builds a write-only archive nobody reads back. The working pattern is closer to how you'd manage your own notes: keep only the active task in your head, write down what you'll need later, and go look it up when it becomes relevant again — not before.
 
 A concrete split: within one task, short-term memory carries the plan and the last few tool results — see [planning before acting](/learn/agentic-ai/planning-and-task-decomposition). Across tasks or sessions, long-term memory carries the facts that shouldn't have to be rediscovered every time — user preferences, prior decisions, what's already been tried and failed.
+
+<InlineCheck
+  question="What's wrong with writing every session's output to long-term storage 'just in case'?"
+  options={['Storage without a retrieval path is a write-only archive — nothing comes back when relevant. Long-term memory needs deliberate save *and* deliberate retrieval, or it\'s a landfill', 'Nothing — more memory is always better', 'It costs too much disk space']}
+  answer={0}
+  explanation="Memory is only useful if it returns to context at the right moment. The hard half isn't writing things down — it's the retrieval step that pulls back the right fact at the right time."
+/>
 
 **Related:** [The Agent Loop: Sense, Think, Act](/learn/agentic-ai/the-agent-loop), [Compaction: Summarizing History to Reclaim Context Space](/learn/context-engineering/summarization-for-compaction), [Embeddings and Semantic Similarity](/learn/rag/embeddings-and-semantic-similarity)

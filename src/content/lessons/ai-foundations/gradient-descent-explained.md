@@ -2,7 +2,7 @@
 title: "Gradient Descent: The Engine of Learning"
 track: "ai-foundations"
 status: live
-summary: "Deep CONCEPT lesson on gradient descent for LMVersity's AI Foundations track, covering the update rule, the bowl mental model, a worked single-parameter example with three learnin"
+summary: "Every training run boils down to one repeated act: the model makes a prediction, something scores how wrong it was, and then *something else* has to turn that \"wrongness\" into a specific instruction — nudge this weight up, that one down, by this much."
 duration: "3 min read"
 ---
 
@@ -142,4 +142,4 @@ Note this is strictly a training-time operation: once a model is deployed and ge
 
 You now have the whole mechanism in one dimension: what a gradient is, why subtracting it decreases loss, and what happens when the step size is wrong. The natural next moves are to see it computed automatically at scale and applied to something with more than one parameter. [Backpropagation](/learn/ai-foundations/backpropagation-explained) is the algorithm that produces the gradient for every weight in a real network so this update rule can run on all of them at once — walk through it concretely in the [backprop worked example](/learn/ai-foundations/backprop-worked-example). Then implement the full loop yourself in [Gradient Descent in NumPy](/learn/ai-foundations/gradient-descent-in-numpy), and check what stuck with the [training and optimization quiz](/learn/ai-foundations/training-and-optimization-quiz).
 
-**Related:** [Loss functions explained](/learn/ai-foundations/loss-functions-explained) · [Backpropagation explained](/learn/ai-foundations/backpropagation-explained) · [Gradient descent in NumPy](/learn/ai-foundations/gradient-descent-in-numpy) · [Backprop worked example](/learn/ai-foundations/backprop-worked-example) · [Training and optimization quiz](/learn/ai-foundations/training-and-optimization-quiz)
+**Related:** [Loss functions explained](/learn/ai-foundations/loss-functions-explained) · [Backpropagation explained](/learn/ai-foundations/backpropagation-explained) · [Gradient descent in NumPy](/learn/ai-foundations/gradient-descent-in-numpy) · [Backprop worked example](/learn/ai-foundations/backprop-worked-example) · [Training and optimization quiz](/learn/ai-foundations/training-and-optimization-quiz); [Is In-Context Learning Implicit Gradient Descent?](/learn/llm-foundations/is-in-context-learning-gradient-descent) · [Batch gradient descent and learning-rate choice](/learn/maths-foundations/batch-gradient-descent-and-learning-rate)

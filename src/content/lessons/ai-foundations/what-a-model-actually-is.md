@@ -2,7 +2,7 @@
 title: "What a Model Actually Is"
 track: "ai-foundations"
 status: live
-summary: "A deep concept lesson defining a model as a parameterized function f(x; w), showing the identical structure across a line, a logistic classifier, and a small neural net, and drawin"
+summary: "When someone says a model \"learned\" to flag spam or write a sentence, here is literally what happened: a fixed-shape function had its internal numbers nudged, over and over, until it did the job well."
 duration: "14 min read"
 ---
 
@@ -140,4 +140,4 @@ Every model you'll meet in this track fits the pattern:
 
 You now have the frame this entire track sits on top of: pick an architecture (hyperparameters), search for `w` (training), and the resulting model *is* that particular `w`, not the architecture alone — two networks with identical architecture but different `w` are two different models. Where you go next depends on which side of the search you want to see up close: how the search itself works, or how much structure the architecture can hold.
 
-**Related:** [Gradient descent, explained](/learn/ai-foundations/gradient-descent-explained) · [Backpropagation, explained](/learn/ai-foundations/backpropagation-explained) · [Classification vs. regression](/learn/ai-foundations/classification-vs-regression) · [Bias-variance tradeoff](/learn/ai-foundations/bias-variance-tradeoff) · [How LLMs work](/learn/ai-foundations/how-llms-work) · [Scaling laws](/learn/ai-foundations/scaling-laws)
+**Related:** [Gradient descent, explained](/learn/ai-foundations/gradient-descent-explained) · [Backpropagation, explained](/learn/ai-foundations/backpropagation-explained) · [Classification vs. regression](/learn/ai-foundations/classification-vs-regression) · [Bias-variance tradeoff](/learn/ai-foundations/bias-variance-tradeoff) · [How LLMs work](/learn/ai-foundations/how-llms-work) · [Scaling laws](/learn/ai-foundations/scaling-laws); [What a Language Model Actually Computes](/learn/llm-foundations/what-a-language-model-actually-computes); [What the Internet Actually Teaches a Model](/learn/llm-foundations/what-the-internet-teaches-a-model) · [How a language model actually answers, in the words you need](/roles/forward-deployed-engineer/ai/how-a-language-model-actually-answers)

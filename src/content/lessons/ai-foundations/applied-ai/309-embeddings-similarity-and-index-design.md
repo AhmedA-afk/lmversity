@@ -3,10 +3,9 @@ title: "Embeddings, Similarity, and Index Design"
 track: ai-foundations
 status: live
 order: 309
-description: "Build semantic retrieval by measuring whether nearest neighbours support the downstream task, not by admiring a scatter plot."
+summary: "Build semantic retrieval by measuring whether nearest neighbours support the downstream task, not by admiring a scatter plot."
 ---
 
-# Embeddings, Similarity, and Index Design
 
 ## Product question and learning objective
 

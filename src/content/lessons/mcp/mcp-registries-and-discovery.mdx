@@ -4,7 +4,11 @@ track: "mcp"
 status: live
 summary: "Publish and find MCP servers through a registry so clients discover them by name instead of hardcoded connection details."
 duration: "5 min read"
+sources: ["mcp-registry"]
 ---
+
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
 
 Once you've built more than one or two MCP servers, hardcoding their connection details into every client config stops scaling. A registry solves this the way a package registry solves it for libraries: publish once, discover by name.
 
@@ -23,6 +27,17 @@ The official [MCP registry](https://registry.modelcontextprotocol.io) that the p
 ## Versioning and trust are the hard part
 
 Discovery is the easy half. The hard half is what a registry entry can promise you once you've found it: is this the version you tested against, or has the author pushed a breaking change since? Registries generally carry version metadata precisely so a client can pin to a known-good release rather than always resolving to "latest" - the same discipline covered in [versioning MCP servers without breaking clients](/learn/mcp/versioning-mcp-servers-without-breaking-clients). And because a registry entry is just metadata someone submitted, a client still has to decide how much to trust an unfamiliar server before connecting it to a model with tool access - registry listing is not a security review. That's why the more consequential discovery decisions - "should this agent be allowed to install servers it finds at runtime" - lean on the same permission thinking as [securing MCP servers against prompt injection](/learn/mcp/securing-mcp-servers-against-prompt-injection).
+
+<Callout kind="breaks" title="A listing is not a review">
+A registry indexes what authors submitted — it doesn't audit tool logic line by line. Verification metadata and download counts are signals, not guarantees. Trust still has to be decided by whoever connects the server to a model with tool access.
+</Callout>
+
+<InlineCheck
+  question="Why do enterprises run private MCP registries alongside the public one?"
+  options={["A private registry lists only servers the company has vetted and approved — it turns 'should this agent install a server it found' into an admin policy instead of a per-user judgment call", 'For lower latency on tools/list', 'Because public registries require payment']}
+  answer={0}
+  explanation="Discovery answers 'what exists'; a private registry answers 'what's allowed.' Once auth and review matter, the directory becomes an enforcement point, not just a search index."
+/>
 
 ## When to reach for a registry
 

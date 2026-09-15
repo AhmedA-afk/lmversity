@@ -6,6 +6,10 @@ summary: "Map the host, client, and server roles in MCP and trace how a single t
 duration: "5 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+import Steps from '../../../components/kit/Steps.astro';
+import Step from '../../../components/kit/Step.astro';
+
 MCP has three moving parts with confusingly similar names. Once you can point at each one in a running app, the rest of the protocol stops feeling mysterious.
 
 ## The three roles
@@ -22,10 +26,20 @@ The one-client-per-server rule matters in practice: it's why a host can sandbox 
 
 Say you ask a host "what's in my GitHub inbox?" and it has a GitHub MCP server connected:
 
-1. The host's model decides a tool call is needed and picks `list_notifications` from the tools that client advertised.
-2. The **client** for that server sends the call as a JSON-RPC 2.0 request over whatever transport that connection uses.
-3. The **server** executes it — hits the GitHub API, formats a result — and sends back a JSON-RPC response.
-4. The client hands the result to the host, which feeds it back into the model's context so it can write the answer.
+<Steps>
+<Step title="The model decides">
+The host's model picks `list_notifications` from the tools that server's client advertised.
+</Step>
+<Step title="The client sends">
+The client pinned to that server sends the call as a JSON-RPC 2.0 request over the connection's transport.
+</Step>
+<Step title="The server executes">
+It hits the GitHub API, formats a result, and sends back a JSON-RPC response.
+</Step>
+<Step title="The host resumes">
+The client hands the result to the host, which feeds it into the model's context so it can write the answer.
+</Step>
+</Steps>
 
 Every arrow in that chain is JSON-RPC. Nothing host-specific leaks into the server, and nothing server-specific leaks into the host — the client is the seam that keeps them decoupled. This is the same shape covered in [Your First MCP Server](/learn/mcp/first-mcp-server), just named explicitly here.
 
@@ -37,6 +51,13 @@ The roles above don't say how bytes move — that's the transport, chosen per co
 - **Streamable HTTP** — the server runs as its own long-lived process (local or remote), and the client talks to it over HTTP, with the server able to stream multiple messages back on a request. This is how a hosted, shared, or remote server is reached.
 
 Same JSON-RPC messages either way — the transport just decides whether "the server" is a subprocess you launched or a URL you point at.
+
+<InlineCheck
+  question="A host talks to three MCP servers. Why does it run three clients instead of one shared connection?"
+  options={['One client per server isolates each connection — the host can sandbox it, and a misbehaving server can\'t see traffic meant for another', 'Because JSON-RPC only supports one request per process', 'Because three clients are faster than one']}
+  answer={0}
+  explanation="The client is the seam that keeps host and server decoupled. Pinning one client per server gives each connection its own session state and its own failure domain — one hanging server doesn't take the others down."
+/>
 
 ## Why the split earns its complexity
 

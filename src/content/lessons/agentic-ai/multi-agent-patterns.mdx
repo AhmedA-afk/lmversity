@@ -6,6 +6,10 @@ summary: "Three ways to split work across agents, and which topology actually fi
 duration: "6 min read"
 ---
 
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 One agent with a good [loop](/learn/agentic-ai/the-agent-loop) can go a long way. But some tasks are wide (many independent subtasks), some are deep (each step depends heavily on the last), and some are genuinely uncertain (you want more than one opinion before committing). Multi-agent systems exist to match your topology to which of those you actually have — not because "multi-agent" sounds more advanced.
 
 ## Orchestrator-Worker
@@ -28,6 +32,25 @@ Debate earns its cost on judgment calls where a single agent's first answer is u
 
 ## Picking a topology
 
+<Compare title="Match topology to task shape">
+<Pane title="Wide → Orchestrator-Worker" tone="good">
+Many independent subtasks — 'research five competitors.' One planner delegates narrow jobs, workers run in parallel, results stitch back.
+</Pane>
+<Pane title="Deep → Pipeline" tone="neutral">
+Each stage needs the previous one done — draft → critique → edit → fact-check. Fixed sequence, easiest to debug, rigid by design.
+</Pane>
+<Pane title="Uncertain → Debate" tone="neutral">
+High-stakes judgment calls — multiple attempts or adversarial positions, reconciled by a judge or rounds. Expensive; useless if agents share a blind spot.
+</Pane>
+</Compare>
+
 Start from the task's shape, not from what feels rigorous. Wide and independent → orchestrator-worker. Strictly sequential with distinct stages → pipeline. Genuinely uncertain or high-stakes judgment → debate. And before reaching for any of these, check whether you need [multiple agents at all](/learn/agentic-ai/when-not-to-use-an-agent) — a single well-scoped agent, or even a plain [workflow](/learn/agentic-ai/when-not-to-use-an-agent), is often cheaper and more debuggable than a multi-agent system built on habit. When you do run multiple agents, most real systems in 2026 are hybrids — an orchestrator whose workers are themselves small pipelines — rather than a pure instance of any one pattern.
 
-**Related:** [Planning Before Acting](/learn/agentic-ai/planning-and-task-decomposition), [Choosing an Orchestration Framework](/learn/agentic-ai/agent-orchestration-frameworks), [When a Workflow Beats an Agent](/learn/agentic-ai/when-not-to-use-an-agent)
+<InlineCheck
+  question="When does debate between agents add cost without adding safety?"
+  options={['When the task has a single mechanical correct answer, or when the agents share the same blind spot — you get confident, redundant agreement instead of a real check', 'When there are only two agents', 'When the judge model is small']}
+  answer={0}
+  explanation="Debate pays off on genuinely uncertain judgment calls. On a problem with one right answer, extra rounds multiply token spend without diversifying anything."
+/>
+
+**Related:** [Planning Before Acting](/learn/agentic-ai/planning-and-task-decomposition), [Choosing an Orchestration Framework](/learn/agentic-ai/agent-orchestration-frameworks), [When a Workflow Beats an Agent](/learn/agentic-ai/when-not-to-use-an-agent) · [Multi-agent coordination and task allocation](/learn/classical-ai/agents-robotics/307-multi-agent-coordination-and-task-allocation)

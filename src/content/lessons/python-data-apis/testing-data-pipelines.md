@@ -2,7 +2,7 @@
 title: "Testing a Data Pipeline with pytest"
 track: "python-data-apis"
 status: live
-summary: "Write pytest tests for a review-cleaning and schema-validation pipeline, then mock the LLM call with monkeypatch so the suite runs instantly and deterministically — with a test pro"
+summary: "A pipeline that calls an LLM on every row has two ways to ruin your afternoon: a test suite that hits the real API and fails on a rate limit, and a malformed row that slips past your checks and burns a request on garbage input."
 duration: "30 min read"
 ---
 

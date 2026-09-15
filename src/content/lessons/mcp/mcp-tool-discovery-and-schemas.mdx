@@ -6,6 +6,9 @@ summary: "How a client lists a server's tools and schemas at connection time and
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Before a model can call a tool, something has to tell it that the tool exists and what arguments it takes. In MCP, that "something" happens right after the connection handshake, and it's simpler than most people expect.
 
 ## The tools/list call
@@ -37,10 +40,21 @@ This is the part that's easy to miss: the client doesn't just display this list,
 
 Tool discovery isn't a one-time boot step baked into the client. A well-behaved client re-runs `tools/list` whenever it reconnects, and servers can send a `notifications/tools/list_changed` message mid-session if their tool set changes — a plugin gets enabled, a feature flag flips, an admin adds a new capability. The client is expected to re-fetch the list when it gets that notification, so the model's available tools can shift during a long-running session without a full restart.
 
+<Callout kind="note" title="The model never talks to the server">
+The client reshapes each MCP tool into the provider's own tool format before the model sees it. The model is deciding on a translation, not on the wire format — so a schema that's valid MCP but mismatched to the provider is silently invisible.
+</Callout>
+
 ## Why the description field carries more weight than it looks like
 
 Because the model only sees `name`, `description`, and `inputSchema`, the description is effectively the entire pitch for when to use a tool. A vague description ("does stuff with files") gives the model nothing to decide on; a specific one ("reads a file's contents given an absolute path; fails on directories") gives it a decision rule. This is why MCP server authors spend real effort on descriptions the same way API designers spend effort on docstrings — the schema is the contract, but the description is what actually steers behavior at inference time.
 
 Put together, discovery is the bridge between "a server exists" and "a model can act" — everything downstream, from execution to error handling, depends on this list being accurate and current.
+
+<InlineCheck
+  question="Your client fetched tools/list but the model never calls a tool — and no error appears. What's the likely cause in a hand-built client?"
+  options={['The MCP tool format wasn\'t translated into the provider\'s tool format — the model never saw the tool at all; the failure is silence, not an error', 'The server is down', 'The model is temperature-locked']}
+  answer={0}
+  explanation="The client owns a translation step: MCP's `inputSchema` shape and your provider's tool format aren't byte-identical. Skip the normalization and the tool simply never reaches the model — no error, just absence."
+/>
 
 **Related:** [MCP Tools, Resources, and Prompts](/learn/mcp/mcp-tools-resources-and-prompts), [Designing a Tool Schema](/learn/tools-function-calling/designing-a-tool-schema), [MCP and the Context Window](/learn/mcp/mcp-context-window)

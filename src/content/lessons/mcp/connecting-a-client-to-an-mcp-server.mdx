@@ -6,6 +6,11 @@ summary: "Configure a host app to discover, launch, and handshake with an MCP se
 duration: "6 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+import Steps from '../../../components/kit/Steps.astro';
+import Step from '../../../components/kit/Step.astro';
+
 An MCP server is useless until a host application's client actually connects to it. That connection is a config entry plus a handshake — get either wrong and the host silently shows zero tools instead of a helpful error.
 
 ## Where the config lives
@@ -29,9 +34,17 @@ For a remote server over HTTP, it's a URL instead of a command, plus whatever he
 
 Once the host spawns or dials the server, the client and server run MCP's initialization sequence before anything else can happen:
 
-1. The client sends `initialize`, stating the protocol version it speaks and what it supports.
-2. The server responds with its own protocol version, its capabilities (does it offer tools, resources, prompts?), and identifying info.
-3. The client sends `initialized` to confirm, and the session is live.
+<Steps>
+<Step title="initialize">
+The client states the protocol version it speaks and the capabilities it supports.
+</Step>
+<Step title="Server responds">
+The server returns its own protocol version, its capabilities (tools? resources? prompts?), and identifying info.
+</Step>
+<Step title="initialized">
+The client confirms — the session is live. Only now does `tools/list` run.
+</Step>
+</Steps>
 
 This isn't a formality — it's how a Claude Sonnet-class host avoids calling a tool the server never actually implements, and how the server learns it doesn't need to advertise features the client won't use. Only after this exchange does the client call `tools/list` to pull the actual [tool schemas](/learn/mcp/mcp-tool-discovery-and-schemas).
 
@@ -45,8 +58,19 @@ A connected server should show up in the host's UI as available, usually with a 
 
 The [MCP Inspector](/learn/mcp/inspecting-and-testing-mcp-servers) is worth reaching for here: it connects to your server outside of any host, so you can confirm the server itself is healthy before blaming the client config.
 
+<Callout kind="breaks" title="Zero tools is a silent failure">
+A server that crashes on startup shows up in the host as... nothing — zero tools, no error. Check that the `command` runs standalone, that relative paths survive the host's working directory, and read the server's stderr in the host's log panel before debugging anything else.
+</Callout>
+
 ## A note on trust
 
 A connected server can see every tool call and argument you send it, and — depending on what it exposes — can inject content straight into the model's context. Before pointing a real host at a third-party server, treat it the way you'd treat installing a CLI tool: know what it does, not just what it claims to do. That matters more once a server sits behind [auth](/learn/mcp/mcp-auth-fundamentals) or handles [untrusted input](/learn/mcp/securing-mcp-servers-against-prompt-injection).
+
+<InlineCheck
+  question="Why does the initialize handshake exchange capabilities before any tool list is fetched?"
+  options={['So neither side assumes features the other lacks — the client learns what the server implements and the server learns what the client supports, before a single tool call is attempted', 'It\'s a login — the server authenticates the client during initialize', 'To encrypt the channel before tools are listed']}
+  answer={0}
+  explanation="Initialize is capability negotiation, not a formality. A client that assumes `tools/list` works without reading the server's response is the classic hand-rolled-client bug — fine against well-behaved servers, silent breakage against older ones."
+/>
 
 **Related:** [MCP Transports: stdio vs. HTTP](/learn/mcp/mcp-transports-stdio-vs-http), [MCP Tool Discovery and Schemas](/learn/mcp/mcp-tool-discovery-and-schemas), [Inspecting and Testing MCP Servers](/learn/mcp/inspecting-and-testing-mcp-servers)

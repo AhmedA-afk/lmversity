@@ -4,7 +4,12 @@ track: "mcp"
 status: live
 summary: "How MCP's HTTP transport keeps one logical session alive across a dropped connection and replays what was missed."
 duration: "6 min read"
+published: "2026-09-15"
+updated: "2026-09-15"
 ---
+
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
 
 Streamable HTTP replaced the old HTTP+SSE transport in MCP because a browser tab or a flaky mobile connection drops all the time, and losing a tool result mid-stream shouldn't mean losing the whole session. The transport is built around one idea: the session and the connection are two different things.
 
@@ -26,11 +31,22 @@ Sessions solve "who are you." Resumability solves "what did I miss." Every event
 
 A server that implements resumability keeps a short-lived buffer (an event store) of recent messages per stream. On reconnect, it replays everything after that ID before resuming live delivery — so a tool call that was three progress notifications into a five-notification stream doesn't have to restart from zero, and the client doesn't have to guess whether a message actually arrived. This is opt-in on the server side: nothing in the spec requires a server to buffer anything, so a client should treat replay as a nice-to-have and design tool calls to be safe to retry regardless.
 
+<Callout kind="note" title="Replay is opt-in — retry-safety isn't">
+Nothing in the spec forces a server to buffer events for resumption. A client that treats `Last-Event-ID` replay as guaranteed will lose messages on servers that don't implement it. Design tool calls to be safely re-issued; let replay be a bonus, not a load-bearing assumption.
+</Callout>
+
 ```
 GET /mcp HTTP/1.1
 Mcp-Session-Id: 9f2c1e...
 Last-Event-ID: 42
 ```
+
+<InlineCheck
+  question="What makes a Streamable HTTP session survive a dropped TCP connection?"
+  options={['The `Mcp-Session-Id` header — the session lives in an ID the client resends on every request, not in the socket. Connection, SSE stream, even the browser tab can die and the session continues', 'The SSE stream stays open on the server', 'The client reconnects with the same IP address']}
+  answer={0}
+  explanation="Session and connection are deliberately separated. The header ID is the session's identity; the transport underneath is disposable — that's what makes a load balancer or gateway invisible to the client."
+/>
 
 ## Why this matters in practice
 

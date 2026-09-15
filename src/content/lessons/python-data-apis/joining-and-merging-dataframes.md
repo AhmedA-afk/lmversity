@@ -2,7 +2,7 @@
 title: "Joining and Merging DataFrames"
 track: "python-data-apis"
 status: live
-summary: "Deep implementation-walkthrough lesson on pandas merge/concat: builds a tickets+customers example, runs inner/left/outer joins with real captured output showing exactly where NaNs "
+summary: "Real data lives in more than one table — a tickets table over here, a customers table over there — and the moment you need \"who filed this ticket and what plan are they on,\" you need a join."
 duration: "2 min read"
 ---
 

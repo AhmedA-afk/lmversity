@@ -6,6 +6,10 @@ summary: "State is what the current run needs to continue; memory is information
 duration: "3 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+
 ## The short answer
 
 State is what the current run needs to continue; memory is information carried across runs. Store only what has a purpose, scope it to the user and task, and make every step resumable or safely repeatable. Recovery is a designed path, not “ask the model to try again.”
@@ -39,6 +43,10 @@ write check so recovery does not create duplicates.
 A stale remembered instruction should not override current permissions or policy.
 Memory supplies context; application policy decides authority.
 
+<Callout kind="breaks" title="Memory is context, not authority">
+A remembered instruction — however confidently stored — doesn't outrank current permissions or policy. Memory supplies context; authorization stays an application-layer decision evaluated fresh.
+</Callout>
+
 ## An illustrative story
 
 A travel assistant kept proposing an expired preference. The real bug was not
@@ -47,13 +55,14 @@ those fields made correction possible.
 
 ## Two ways to see it
 
-### Orchestration view
-
-State makes a run restartable and observable.
-
-### Privacy view
-
-Memory is retained user data with a purpose, owner, scope, and deletion path.
+<Compare>
+<Pane title="Orchestration view" tone="neutral">
+State makes a run restartable and observable — every step resumable or safely repeatable.
+</Pane>
+<Pane title="Privacy view" tone="good">
+Memory is retained user data: it needs a purpose, an owner, a scope, and a deletion path — not just a place to live.
+</Pane>
+</Compare>
 
 ## Hands-on
 
@@ -77,3 +86,5 @@ or tool. Authorization remains an application concern.
 - Continue: Observability, cost, and latency
 - Go deeper: Red-teaming LLM applications
 - Apply it: add a state schema and recovery table to an agent design.
+
+**Related:** [Agent memory, state, and world models](/learn/classical-ai/agents-robotics/305-agent-memory-state-and-world-models)

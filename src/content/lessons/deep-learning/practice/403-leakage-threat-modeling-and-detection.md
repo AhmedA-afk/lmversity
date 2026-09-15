@@ -3,7 +3,7 @@ title: "Leakage threat modelling and detection"
 track: "deep-learning"
 status: live
 order: 403
-summary: "Find forbidden paths to the label"
+summary: "For every feature (x_j), define availability (a_j) as the latest time it can be known and outcome time (t_y)."
 duration: "18–30 min"
 ---
 

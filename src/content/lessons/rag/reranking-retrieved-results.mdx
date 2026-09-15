@@ -6,6 +6,10 @@ summary: "Use a second-pass reranker to reorder retrieved chunks by relevance be
 duration: "6 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+import Steps from '../../../components/kit/Steps.astro';
+import Step from '../../../components/kit/Step.astro';
+
 Your vector search returns the top 50 chunks in milliseconds, but "fast and roughly relevant" isn't the same as "the 5 chunks that actually answer the question." Reranking adds a slower, smarter second pass that reorders a shortlist before it reaches the model.
 
 ## Why retrieval alone isn't enough
@@ -18,8 +22,14 @@ A reranker fixes this by trading speed for precision. Instead of comparing vecto
 
 Rerankers don't replace retrieval, they sit after it:
 
-1. **Retrieve wide.** Pull the top 20-100 candidates with your vector index (or [hybrid search](/learn/rag/hybrid-search-lexical-and-vector)) — cheap enough to over-fetch.
-2. **Rerank narrow.** Score each candidate against the query with a cross-encoder, then keep only the top 3-8.
+<Steps>
+<Step title="Retrieve wide">
+Pull the top 20–100 candidates with your vector index (or [hybrid search](/learn/rag/hybrid-search-lexical-and-vector)) — cheap enough to over-fetch.
+</Step>
+<Step title="Rerank narrow">
+Score each candidate against the query with a cross-encoder, then keep only the top 3–8 for the prompt.
+</Step>
+</Steps>
 
 This works because cross-encoders don't scale to millions of documents — scoring every chunk in a corpus against every query would be far too slow — but scoring 50 candidates takes tens of milliseconds. You get the coverage of broad retrieval and the precision of a model that actually reads both texts.
 
@@ -39,5 +49,12 @@ Whichever you pick, benchmark it against your own queries with [RAG quality eval
 ## When to skip it
 
 Reranking adds a network call or model inference on every query, so it's not free complexity. If your top-k from vector search is already precise — small, homogeneous corpus, well-separated topics — a reranker may not move the needle enough to justify the latency. Add it when you notice the right chunk is *in* your retrieved set but not near the top.
+
+<InlineCheck
+  question="What does a cross-encoder reranker see that vector similarity never does?"
+  options={['The query and the chunk *together* — it reads both texts at once, so it can catch negation, specificity, and whether a chunk answers the question or just mentions the topic', 'A bigger vector space', 'The full corpus at once']}
+  answer={0}
+  explanation="Vector similarity scores each chunk independently — vocabulary overlap can outrank a real answer. A cross-encoder reads query + candidate jointly, which is why it fixes order but can't scale to millions — hence the two-stage pattern."
+/>
 
 **Related:** [Hybrid Search: Lexical and Vector Combined](/learn/rag/hybrid-search-lexical-and-vector), [Similarity Search and ANN Indexes](/learn/rag/similarity-search-and-ann-indexes), [Evaluating RAG Quality](/learn/rag/evaluating-rag-quality)

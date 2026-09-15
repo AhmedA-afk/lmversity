@@ -1,5 +1,5 @@
 ---
-title: "Deep lecture: Time series, ranking, and recommender systems under temporal/exposure feedback"
+title: "Time series, ranking, and recommenders under temporal and exposure feedback"
 track: "machine-learning"
 order: 907
 status: live
@@ -8,7 +8,6 @@ duration: "120 min lecture + 5 hr lab"
 updated: "2026-08-30"
 ---
 
-# Time series, ranking, and recommenders: prediction changes the future data
 
 Forecasting, search ranking, and recommender systems look like different model families. They share a core difficulty: records arrive in time, actions control what is observed next, and an offline score can be disconnected from the actual decision. A demand forecast changes inventory; a ranker decides which items receive impressions; a recommender determines which ratings, clicks, and purchases are visible. Treating these as IID supervised-learning tables creates leakage and feedback bias that a random train/test split cannot reveal.
 

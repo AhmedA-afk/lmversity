@@ -1,5 +1,5 @@
 ---
-title: "Deep lecture: Trees, random forests, and boosting—from split objective to deployment"
+title: "Trees, random forests, and boosting—from split objective to deployment"
 track: "machine-learning"
 order: 903
 status: live
@@ -8,7 +8,6 @@ duration: "110 min lecture + 4 hr lab"
 updated: "2026-08-30"
 ---
 
-# Trees, random forests, and boosting: piecewise decisions with operational consequences
 
 Tree ensembles dominate much of practical tabular machine learning because they turn mixed, nonlinear inputs into a sequence of simple conditional decisions. They are also easy to misuse. A tree can discover a useful threshold, memorise an identifier, produce overconfident scores, or encode a policy that no one has reviewed. The central question is therefore not “which ensemble has the highest validation score?” It is: *what partition, loss, uncertainty, and decision rule are we willing to defend when the population changes?*
 

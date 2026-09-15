@@ -3,10 +3,9 @@ title: "Regression Losses: MSE, MAE, Huber, and Likelihood"
 track: deep-learning
 status: live
 order: 106
-description: "Choose regression objectives from assumptions about noise and business cost."
+summary: "Choose regression objectives from assumptions about noise and business cost."
 ---
 
-# Regression Losses: MSE, MAE, Huber, and Likelihood
 
 ## Why this matters
 

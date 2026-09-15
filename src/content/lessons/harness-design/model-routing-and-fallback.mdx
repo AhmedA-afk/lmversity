@@ -6,6 +6,10 @@ summary: "Route requests to the right model by task or cost, and fail over clean
 duration: "5 min read"
 ---
 
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A harness that only ever talks to one model, one endpoint, is one outage away from being useless. Model routing decides *which* model handles a given call; fallback decides what happens when that model can't.
 
 ## Routing by task, not by default
@@ -30,11 +34,26 @@ Fallback is the same mechanism triggered by an error instead of a task type: the
 
 The three fallback strategies you'll actually use:
 
-- **Retry the same model** — for transient errors (5xx, connection resets) with exponential backoff. This is usually correct first, since it doesn't change behavior.
-- **Fail over to a different provider** — for sustained outages or a rate-limit that backoff won't clear before the user gives up. This is where "model routing" and "model fallback" become the same code path: the fallback target is chosen by the same capability-tier logic as normal routing, just triggered by an exception instead of a task label.
-- **Degrade the request** — drop to a smaller model, or a smaller context window, rather than a different provider entirely. Useful when the failure is "this request is too expensive/too slow right now," not "the provider is down."
+<Compare title="Fallback is routing under failure">
+<Pane title="Retry the same model" tone="good">
+Transient errors — 5xx, connection resets — with exponential backoff. Usually correct first: it doesn't change behavior.
+</Pane>
+<Pane title="Fail over to another provider" tone="neutral">
+Sustained outage or a rate-limit backoff won't clear. The fallback target uses the same capability-tier logic as normal routing.
+</Pane>
+<Pane title="Degrade the request" tone="neutral">
+Drop to a smaller model or smaller context — for 'too expensive or too slow right now,' not 'provider is down.'
+</Pane>
+</Compare>
 
 The dangerous failure mode is silent degradation with no signal. If a harness quietly falls back from a frontier model to a much weaker one on every timeout, a user watching consistent-looking output has no way to know quality just dropped. Log every fallback event — which tier, why, what triggered it — the same way you'd log a [retry](/learn/harness-design/harness-observability). Treat model choice as part of the trace, not an implementation detail buried inside the call.
+
+<InlineCheck
+  question="Why route on a capability label ('reasoning-tier') instead of a model name?"
+  options={['A hardcoded model name means every call site breaks at once when it\'s deprecated; a tier label keeps the mapping in one place so a swap is a one-line change', 'Because names are case-sensitive', 'To make prompts shorter']}
+  answer={0}
+  explanation="Route on what the call needs, not which SKU fills it. The label-to-model mapping is config; the routing decision is code."
+/>
 
 Fallback also needs a circuit breaker, not just a retry loop. A provider that's down doesn't need five retries per request across a thousand concurrent calls — it needs the harness to notice after the first few failures and stop sending traffic there until a health check says it's back.
 

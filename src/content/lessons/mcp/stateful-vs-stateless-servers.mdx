@@ -6,6 +6,10 @@ summary: "Decide whether your MCP server remembers a session in memory or treats
 duration: "6 min read"
 ---
 
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 An MCP server has to make a foundational choice early: does it keep anything in memory between requests, or does it treat every tool call as if it just woke up? That choice ripples into how you deploy, scale, and recover the server.
 
 ## What "state" means here
@@ -15,6 +19,21 @@ A stateless server derives everything it needs from the request itself — argum
 A stateful server keeps something in RAM across calls within a session: an open database transaction, a half-built plan, a cache of files it already read, a conversation-scoped scratchpad. The [Streamable HTTP transport](/learn/mcp/streamable-http-deep-dive) formalizes this with a session ID the client sends on every request, letting a server correlate calls back to the same in-memory context.
 
 ## Why it matters more than it looks
+
+<Compare title="The fork in the road">
+<Pane title="Stateless" tone="good">
+- Derives everything from the request — args, token, a DB lookup keyed by an ID
+- Any instance answers any call — horizontal scaling, rolling deploys, health checks just work
+- A crash loses nothing, because there was nothing in memory to lose
+- Cost: per-call context re-fetch or re-send on every request
+</Pane>
+<Pane title="Stateful" tone="neutral">
+- Keeps session context in RAM — open transaction, scratchpad, cached index
+- Every call in a session must route back to the same instance, or state must move to Redis/DB
+- A restart silently drops in-flight client context — much worse over HTTP than local stdio
+- Worth it when setup is expensive or the interaction is genuinely a sequence
+</Pane>
+</Compare>
 
 The tradeoff shows up the moment you think about running more than one server process. A stateless server is trivial to horizontally scale — put five instances behind a load balancer, any of them can answer any request, and a crashed instance loses nothing because there was nothing to lose. This is the same reasoning behind [running MCP servers in production](/learn/mcp/running-mcp-servers-in-production): stateless servers fit naturally into normal web infrastructure — autoscaling groups, rolling deploys, health-checked pods.
 
@@ -35,5 +54,12 @@ Reach for stateless when the server is mostly a thin wrapper over an API or data
 ## A practical middle ground
 
 Most production MCP servers land somewhere in between: stateless about business data (always re-fetch from the database, never trust an in-memory copy) but stateful about session-scoped conveniences (an open connection, a per-session id used to look up [resource subscriptions](/learn/mcp/resource-subscriptions)). Design the tool schema so a client *could* replay a call against a fresh server instance and get a correct answer — even if in practice you're optimizing the happy path with cached state. That discipline is what keeps a stateful server debuggable instead of becoming a black box only its own memory understands.
+
+<InlineCheck
+  question="Your tool needs a large in-memory index that's expensive to rebuild. Stateless or stateful?"
+  options={['Stateful about the index, stateless about business data — cache the expensive setup in memory, but design the schema so a fresh instance could still replay the call correctly (just slower)', 'Fully stateless — rebuild the index on every call', 'Fully stateful — keep everything in server memory']}
+  answer={0}
+  explanation="The middle ground: state earns its keep when setup is expensive and reusable, but the tool contract should never *depend* on memory being warm. Replays must stay correct — cached state is an optimization, not a requirement."
+/>
 
 **Related:** [Streamable HTTP: Sessions, Resumption, and Reconnects](/learn/mcp/streamable-http-deep-dive), [Running MCP Servers in Production](/learn/mcp/running-mcp-servers-in-production), [Resource Subscriptions: Notifying Clients When Data Changes](/learn/mcp/resource-subscriptions)

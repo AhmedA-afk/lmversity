@@ -6,11 +6,24 @@ summary: "Retrieval-augmented generation (RAG) first turns documents into search
 duration: "3 min read"
 ---
 
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import Steps from '../../../components/kit/Steps.astro';
+import Step from '../../../components/kit/Step.astro';
+
 ## The short answer
 
 Retrieval-augmented generation (RAG) first turns documents into searchable units, retrieves candidates for a question, and gives selected context to a generator. Quality depends on the entire pipeline: parsing, chunk boundaries, metadata, search, ranking, freshness, and answer verification—not only on the embedding model.
 
 ## The pipeline
+
+<Steps>
+<Step title="Parse & clean">Turn raw sources into clean, structured text before anything else touches it.</Step>
+<Step title="Chunk">Split into searchable units that preserve structure and meaning.</Step>
+<Step title="Index">Embed and store chunks with their provenance metadata.</Step>
+<Step title="Retrieve & rerank">Pull candidates for the question, then select the evidence worth serving.</Step>
+<Step title="Answer">Generate from the selected context — grounded in what was actually retrieved.</Step>
+</Steps>
 
 ```text
 source -> parse -> clean -> chunk -> index -> retrieve -> rerank/select -> answer
@@ -49,15 +62,14 @@ dates. The fix was metadata and chunk boundaries, not a bigger generator.
 
 ## Two ways to see it
 
-### Retrieval view
-
-Measure whether the needed evidence appears in the candidate set and in a useful
-rank.
-
-### Answer view
-
-Measure whether the final answer uses only supported evidence and handles missing
-evidence honestly.
+<Compare>
+<Pane title="Retrieval view" tone="neutral">
+Measure whether the needed evidence appears in the candidate set and in a useful rank.
+</Pane>
+<Pane title="Answer view" tone="good">
+Measure whether the final answer uses only supported evidence and handles missing evidence honestly.
+</Pane>
+</Compare>
 
 ## Hands-on
 
@@ -81,3 +93,5 @@ surface what the corpus and index represent.
 - Continue: Grounding, citations, and context budgets
 - Go deeper: Embeddings and representations
 - Apply it: publish a retrieval report with five questions and the supporting chunks.
+
+**Related:** [Retrieving Few-Shot Examples at Runtime](/learn/prompt-engineering/dynamic-few-shot-retrieval)

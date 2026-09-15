@@ -4,7 +4,12 @@ track: "mcp"
 status: live
 summary: "Change a server's tools and schemas over time without breaking clients already connected to it."
 duration: "5 min read"
+published: "2026-09-15"
+updated: "2026-09-15"
 ---
+
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
 
 An MCP server is a dependency someone else's agent trusts. The moment you ship it, you've made a promise about what its tools do and what they expect — and every rename, removed field, or repurposed parameter breaks a client silently, usually mid-task, with no compiler to catch it.
 
@@ -25,6 +30,10 @@ Non-additive changes are the dangerous ones:
 - Changing what a parameter *means* (same name, new behavior) — this is worse than a rename because nothing signals the change
 - Tightening validation on an input that used to be accepted
 
+<Callout kind="breaks" title="Same name, new meaning is the silent killer">
+A renamed tool at least looks different in `tools/list`. A parameter whose meaning changed under the same name signals nothing — the model keeps calling it the old way and gets plausible-looking wrong results. When behavior must change, ship it under a new name and deprecate the old one.
+</Callout>
+
 If you must make one of these, don't overwrite the old tool in place. Publish the new behavior under a new name (`search_docs_v2`), keep the old tool working, and mark it deprecated in its description — a line like "Deprecated, use search_docs_v2" is often enough for a model to self-migrate, since it reads tool descriptions as part of [tool discovery](/learn/mcp/mcp-tool-discovery-and-schemas). Give it a real deprecation window before removal, not a same-day cutover.
 
 ## Protocol version vs. your server's version
@@ -32,6 +41,13 @@ If you must make one of these, don't overwrite the old tool in place. Publish th
 Keep two version concerns separate. The MCP *protocol* version is negotiated during initialization — the client and server agree on which spec revision they both speak, independent of anything you built. Your *server's* version — its tool set, its schemas, its business logic — is yours to manage, typically with ordinary semver on the package a client installs (`npm`, `pip`, a container tag).
 
 Treat a major version bump the way you'd treat any breaking release: document what changed, and expect that some connected clients will stay on the old major for a while because nobody re-pins a working config. Design for that world rather than assuming everyone upgrades on your schedule — it's the same discipline covered in [running MCP servers in production](/learn/mcp/running-mcp-servers-in-production).
+
+<InlineCheck
+  question="Why is a renamed MCP tool parameter more dangerous than a REST API breaking change?"
+  options={['REST breaks loudly — a 404 or schema error someone notices. MCP tools are discovered dynamically and called by a model that read the schema seconds ago; nothing throws at connection time, the model just calls it wrong or stops calling it, and it looks like a model problem', 'Because MCP has no versioning at all', 'Because clients cache schemas forever']}
+  answer={0}
+  explanation="Dynamic discovery plus model-mediated calls means there's no compiler and no error boundary — the contract is whatever the model inferred from the description. Silent breakage is the default failure mode."
+/>
 
 ## Test before you assume it's safe
 

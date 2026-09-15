@@ -1,5 +1,5 @@
 ---
-title: "Deep lecture: Statistical inference, resampling, multiple comparison, and decision thresholds"
+title: "Statistical inference: resampling, multiple comparisons, and decision thresholds"
 track: "machine-learning"
 order: 905
 status: live
@@ -8,7 +8,6 @@ duration: "105 min lecture + 4 hr lab"
 updated: "2026-08-30"
 ---
 
-# Statistical inference for machine learning: evidence is more than a leaderboard gap
 
 An evaluation table with three decimal places often creates a dangerous illusion: that a model is known to be better, a feature is known to matter, or a threshold is known to be optimal. In reality, metrics are estimates from a finite, often dependent sample; model development has usually involved many hidden comparisons; and the value of an action depends on errors, capacity, and changing prevalence. Statistical inference makes the uncertainty visible. It does not turn every product decision into a ritual of null-hypothesis testing.
 
@@ -16,7 +15,7 @@ Let `T(D)` be a statistic such as AUC, mean absolute error, uplift, or calibrati
 
 ## Sampling variation and paired comparisons
 
-Suppose models A and B are evaluated on the same examples. Comparing their separate metric intervals can be wasteful because their errors are correlated. Instead define per-example loss difference `d_i=loss_A(i)-loss_B(i)`. Its mean `d_bar` estimates expected advantage of B over A. A paired bootstrap resamples *rows of paired predictions*, recomputes the metric difference, and takes percentile or bias-corrected intervals. For classification AUC, resample examples with labels and both score vectors together. For grouped data, resample groups; for time series, use blocks. Resampling independent rows from repeated customers or adjacent days fabricates precision.
+Suppose models A and B are evaluated on the same examples. Comparing their separate metric intervals can be wasteful because their errors are correlated. Instead define per-example loss difference `d_i=loss_A(i)-loss_B(i)`. Its mean `d_bar` estimates expected advantage of B over A. A paired bootstrap resamples *rows of paired predictions*, recomputes the metric difference, and takes percentile or bias-corrected intervals. For classification AUC, resample examples with labels and both score vectors together. For grouped data, resample groups; for [time series](/learn/machine-learning/deep-lectures/907-time-series-ranking-and-recommender-systems-under-temporal-exposure-feedback), use blocks. Resampling independent rows from repeated customers or adjacent days fabricates precision.
 
 ### Worked example 1: a confidence interval for a mean loss difference
 

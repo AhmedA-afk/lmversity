@@ -2,7 +2,7 @@
 title: "Why Arrays Are Fast (and Lists Aren't)"
 track: "python-data-apis"
 status: live
-summary: "Wrote the full INTUITION-page lesson body (Markdown, no frontmatter/H1) for 'Why Arrays Are Fast (and Lists Aren't)' in LMVersity's Python & Data / NumPy Arrays module: a runnable"
+summary: "Sum a million numbers with a plain Python `for` loop, then sum the same million numbers with `np.sum`, and you're watching two machines do identical arithmetic at wildly different speeds — for a reason that has nothing to do with how cleverly either loop is written."
 duration: "14 min read"
 ---
 

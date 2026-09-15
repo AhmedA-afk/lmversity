@@ -6,6 +6,9 @@ summary: "Distinguish MCP's three primitives - tools to call, resources to read,
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Every MCP server exposes capability through three distinct primitives, and mixing them up is the most common design mistake when building a [first MCP server](/learn/mcp/first-mcp-server). Get the primitive right and the [host, client, and server roles](/learn/mcp/mcp-architecture-hosts-clients-servers) each know exactly who is supposed to act on what.
 
 ## Tools: things the model decides to call
@@ -24,6 +27,12 @@ A prompt in MCP is a reusable, parameterized instruction template the server exp
 
 ## Picking the right primitive
 
+<Callout kind="note" title="Who decides is the discriminator">
+- **Tool** — the model decides whether and when, possibly with side effects
+- **Resource** — the app or user decides to attach the data; no model decision
+- **Prompt** — a human explicitly invokes a workflow shortcut
+</Callout>
+
 A quick server-design checklist:
 
 - Does the model need to **decide** whether and when this happens, possibly with side effects? Use a **tool**.
@@ -31,5 +40,12 @@ A quick server-design checklist:
 - Is this a **workflow shortcut** a human explicitly invokes? Use a **prompt**.
 
 Most servers lean heavily on tools because that's what makes an agent capable of taking action. But a server that also exposes its stable, high-value read paths as resources - rather than wrapping everything in a tool call - gives the host more control over what lands in context, and gives the model one less irrelevant decision to make on every turn.
+
+<InlineCheck
+  question="Your server wraps a 'get the current project README' read path as a tool. What did that choice cost?"
+  options={['Context and a wasted decision — a side-effect-free read the app could attach ahead of time belongs behind a resource, not a tool call the model has to reason about', 'Nothing — tools and resources are interchangeable', 'The tool call fails silently without a docstring']}
+  answer={0}
+  explanation="If fetching has no side effects and the decision to include it can be made ahead of time, a resource puts the data in context directly — no tool-call round trip, no reasoning spent on 'should I read this.'"
+/>
 
 **Related:** [Your First MCP Server](/learn/mcp/first-mcp-server), [MCP Architecture: Hosts, Clients, Servers](/learn/mcp/mcp-architecture-hosts-clients-servers), [MCP and the Context Window](/learn/mcp/mcp-context-window)

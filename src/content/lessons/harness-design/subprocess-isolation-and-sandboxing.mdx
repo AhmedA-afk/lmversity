@@ -6,6 +6,8 @@ summary: "Running shell and code tools in isolated subprocesses so one bad comma
 duration: "6 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 An agent that can run shell commands or execute code is only as safe as the box you run them in. Sandboxing is the layer of the harness that decides what a tool call can actually touch — which files, which network, which processes — before the model's intent ever reaches the operating system.
 
 ## Why the model isn't the safety boundary
@@ -36,6 +38,13 @@ shell/code execution → full subprocess isolation: container +
 ```
 
 This is the same tiering that shows up in [Allow/Ask/Deny: Designing Approval Gates](/learn/harness-design/permission-and-approval-systems) — sandboxing and approval gates are two independent controls, and a well-designed harness uses both rather than picking one. A command can be both sandboxed *and* require human approval; sandboxing bounds the damage if approval is granted in error, approval bounds what happens even inside a permissive sandbox.
+
+<InlineCheck
+  question="Why use both sandboxing and approval gates rather than picking one?"
+  options={['They\'re independent controls covering different failures — approval bounds what runs even inside a permissive sandbox; sandboxing bounds the damage if approval is granted in error', 'Because two controls are faster', 'Because sandboxes can\'t run shell commands']}
+  answer={0}
+  explanation="Each control has a failure mode the other covers. Approval without sandboxing means a wrong 'yes' is unbounded; sandboxing without approval means everything inside the boundary runs unreviewed."
+/>
 
 ## The failure mode sandboxing prevents
 

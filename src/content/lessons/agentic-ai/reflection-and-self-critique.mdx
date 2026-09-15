@@ -6,6 +6,8 @@ summary: "Add a self-critique step so an agent evaluates its own output before d
 duration: "5 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Most agent loops stop the moment they produce an answer. Reflection adds one more step: before returning the output, the agent (or a second call) grades it against the original goal and decides whether to revise, retry, or ship as-is.
 
 ## Why grading yourself works
@@ -30,6 +32,13 @@ Stronger implementations replace the vague self-review with a checklist tied to 
 ## Where reflection actually helps
 
 Reflection earns its keep on tasks where errors are self-evident once you look — code that doesn't compile, a JSON blob missing a field, a plan that skips a stated constraint. It's much weaker on tasks where the model's blind spots are the *same* blind spot twice: if it doesn't know a fact, asking it to double-check its own answer rarely surfaces the gap. For that class of error, [grounding with source documents](/learn/hallucinations/grounding-with-source-documents) or an external check beats self-critique.
+
+<InlineCheck
+  question="When does reflection fail even though it runs correctly?"
+  options={['When the error is a blind spot, not a slip — if the model doesn\'t know a fact, asking it to re-check its own answer rarely surfaces the gap. Self-critique catches self-evident errors (won\'t compile, missing field), not missing knowledge', 'When it runs more than 3 times', 'When the checklist is too short']}
+  answer={0}
+  explanation="Generation and critique share the same model's knowledge. Reflection works where errors are visible on inspection; for gaps in what the model knows, external grounding or a real check beats another look."
+/>
 
 Reflection also costs real latency and tokens — every pass is another full model call. It's worth reserving for outputs where being wrong is expensive, not bolting onto every agent step by default. Pair it with real [error handling](/learn/agentic-ai/error-handling-and-retries) so a stuck RETRY loop doesn't run forever, and consider [evaluating the agent's trace](/learn/agentic-ai/evaluating-agent-behavior-in-dev) in dev to see whether reflection is actually catching anything or just adding delay.
 

@@ -3,10 +3,9 @@ title: "Self-Supervised Learning: Data, Representations, and Transfer"
 track: ai-foundations
 status: live
 order: 306
-description: "Use unlabeled structure to improve representations when labels are scarce, while checking whether the pretext task learned the needed signal."
+summary: "Use unlabeled structure to improve representations when labels are scarce, while checking whether the pretext task learned the needed signal."
 ---
 
-# Self-Supervised Learning: Data, Representations, and Transfer
 
 ## Product question and learning objective
 

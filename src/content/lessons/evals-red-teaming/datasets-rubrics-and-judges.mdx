@@ -6,6 +6,11 @@ summary: "An evaluation dataset makes behavior concrete; a rubric makes quality 
 duration: "3 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 ## The short answer
 
 An evaluation dataset makes behavior concrete; a rubric makes quality discussable; a judge applies the rubric consistently enough to compare versions. Start with representative and risk-weighted cases, include known failures, and inspect judge disagreement. A score without examples is a dashboard, not understanding.
@@ -21,7 +26,7 @@ version metadata so the dataset itself can be reviewed.
 ### Example A: extraction
 
 Score exact fields, null behavior, and preservation of source values separately.
-One aggregate “correct” label hides which contract failed.
+One aggregate "correct" label hides which contract failed.
 
 ### Example B: grounded answer
 
@@ -38,27 +43,35 @@ observable criteria and keep the disagreement as a training case for future judg
 A judge may reward style, length, or confident tone even when the user needs a
 short, cautious answer. Validate judge scores against human review.
 
-## An illustrative story
-
-A team improved its automated score by adding longer answers. Humans found them
-harder to use. The rubric had rewarded “more detail” without a relevance or
-verbosity constraint; the fix was a better criterion, not another prompt trick.
-
-## Two ways to see it
-
-### Measurement view
-
-The dataset defines what gets seen; the rubric defines what gets counted.
-
-### Governance view
-
-Evaluation is a record of which failures the team accepts, escalates, or blocks.
-
-## Hands-on
-
+<Callout kind="try" title="Hands-on">
 Create 30 synthetic cases across ordinary, ambiguous, missing-evidence,
 adversarial, and high-impact slices. Write a three-dimension rubric, score with a
 simple judge and a human sample, and record disagreements.
+</Callout>
+
+## An illustrative story
+
+A team improved its automated score by adding longer answers. Humans found them
+harder to use. The rubric had rewarded "more detail" without a relevance or
+verbosity constraint; the fix was a better criterion, not another prompt trick.
+
+<InlineCheck
+  question="Two reviewers disagree about whether a summary is complete. What's the correct response?"
+  options={['Rewrite the rubric with observable criteria — persistent disagreement is a rubric defect, and the disputed case becomes training data for future judges', 'Take the majority vote and move on', 'Add a third reviewer to break ties permanently']}
+  answer={0}
+  explanation="Disagreement that survives clear-eyed reading means the criterion isn't observable. Fix the rubric, and keep the hard case — it's exactly the kind of example that teaches a judge the boundary."
+/>
+
+## Two ways to see it
+
+<Compare title="Measurement vs. governance">
+<Pane title="Measurement view" tone="neutral">
+The dataset defines what gets seen; the rubric defines what gets counted.
+</Pane>
+<Pane title="Governance view" tone="good">
+Evaluation is a record of which failures the team accepts, escalates, or blocks.
+</Pane>
+</Compare>
 
 ## Checkpoint
 

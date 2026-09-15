@@ -6,6 +6,11 @@ summary: "Run a third-party MCP server in a container or restricted process inst
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 An MCP server you didn't write is just a program you agreed to run with your credentials, your filesystem access, and whatever network reach your shell already has. Sandboxing is the discipline of shrinking that blast radius before you ever type "connect."
 
 ## Why this is different from vetting
@@ -24,14 +29,29 @@ A stdio MCP server is a local child process. Left alone, it inherits your user's
 
 You don't need a research paper's worth of isolation for every server — match the mechanism to the risk:
 
-- **Containers (Docker/Podman)** are the default choice: cheap to set up, give you filesystem and network isolation via standard flags, and most MCP host configs already support launching a server as `docker run` instead of a bare command.
-- **User namespaces / restricted users** — run the server as an unprivileged, dedicated OS user with no access outside a designated working directory. Lighter than a container, good enough for a trusted-but-imperfect server.
-- **VM-level sandboxes (gVisor, Firecracker)** — for servers you actively distrust (found in a public registry, no known maintainer) or that need real compute, a stronger kernel boundary than a container's shared-kernel namespace is worth the extra setup cost.
+<Compare title="Match the wall to the threat">
+<Pane title="Containers (Docker/Podman)" tone="good">
+The default. Cheap, gives filesystem + network isolation via standard flags, and most host configs already accept `docker run` as the server command.
+</Pane>
+<Pane title="Restricted OS user" tone="neutral">
+An unprivileged dedicated user with no access outside a working directory. Lighter than a container — fine for a trusted-but-imperfect server.
+</Pane>
+<Pane title="VM sandbox (gVisor, Firecracker)" tone="neutral">
+A stronger kernel boundary than a shared-kernel container. For servers you actively distrust — public-registry finds, no known maintainer — or heavy compute.
+</Pane>
+</Compare>
 
 The tradeoffs here — and when each is overkill versus necessary — are the same ones a harness author faces when isolating any tool subprocess; see [Docker, gVisor, and Firecracker](/learn/harness-design/sandboxing-technology-choices) for the deeper comparison.
 
 ## A concrete default
 
 For a stdio server you didn't write yourself: run it in a container with `--network none` unless it demonstrably needs egress, mount only the one directory it should touch as read-only unless it needs to write, and set a memory limit. That single recipe stops the overwhelming majority of realistic MCP-server incidents — accidental file deletion, silent data exfiltration, resource exhaustion — without you having to reason about the server's code at all.
+
+<InlineCheck
+  question="You vetted a server — clean source, known publisher. Why sandbox it anyway?"
+  options={['Vetting is a point-in-time check — a package clean at review can turn hostile on the next update, and a tool description can carry prompt injection that misuses legitimate access. Sandboxing assumes misbehavior and caps what it costs', 'Because containers run faster', 'Because vetted servers still crash on large inputs']}
+  answer={0}
+  explanation="Vetting answers 'should I run this at all'; sandboxing answers 'what's the worst case if I'm wrong.' Clean review today doesn't bound tomorrow's update — containment doesn't care about intent."
+/>
 
 **Related:** [Supply-Chain Trust: Vetting Third-Party MCP Servers](/learn/mcp/supply-chain-trust-in-mcp), [Securing MCP Servers Against Prompt Injection](/learn/mcp/securing-mcp-servers-against-prompt-injection), [Docker, gVisor, and Firecracker: Choosing a Sandbox Boundary](/learn/harness-design/sandboxing-technology-choices)

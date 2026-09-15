@@ -3,10 +3,9 @@ title: "Applied AI Architecture Review"
 track: ai-foundations
 status: live
 order: 323
-description: "Review an end-to-end AI architecture by tracing each claim from data source through model behavior to human consequence."
+summary: "Review an end-to-end AI architecture by tracing each claim from data source through model behavior to human consequence."
 ---
 
-# Applied AI Architecture Review
 
 ## Product question and learning objective
 

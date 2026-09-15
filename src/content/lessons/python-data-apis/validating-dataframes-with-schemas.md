@@ -2,7 +2,7 @@
 title: "Validating Cleaned Data with a Schema"
 track: "python-data-apis"
 status: live
-summary: "A hands-on walkthrough that builds a pydantic schema for cleaned review data, turns it into a hard gate before any API call, and shows the exact error messages, thresholds, and fai"
+summary: "Your cleaning script ran without errors, which tells you nothing — a `dropna()` that missed a column, a rating scraped as `\"5\"` instead of `5`, a date parser that silently gave up on one row and left a string behind, none of that raises."
 duration: "18 min read"
 ---
 

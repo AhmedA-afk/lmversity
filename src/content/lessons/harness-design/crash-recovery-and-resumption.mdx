@@ -6,6 +6,8 @@ summary: "Reconstruct valid state and safely retry a tool call that died mid-exe
 duration: "6 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A checkpoint tells you where the agent was. It doesn't tell you whether the tool call in flight when the process died actually finished. That gap is where crash recovery gets hard.
 
 ## The problem checkpointing alone doesn't solve
@@ -39,5 +41,12 @@ Most of this burden should sit on the tool, not the recovery logic, because the 
 - Tools with no natural idempotency and no verification path are the ones to flag during [tool schema design](/learn/tools-function-calling/designing-a-tool-schema) — "send a Slack message" has no undo and no dedup; either accept that duplicates are possible after a crash, or require a client-generated message key the receiving side can dedupe on.
 
 On resume, the harness reloads the checkpoint, consults the intent log for anything left dangling, resolves each one (verify, retry-with-key, or surface to the user as unknown), and only then re-enters the control loop. Treat the "resume" code path as a first-class part of the loop, not an afterthought bolted on for the crash case — it runs less often, but it's the path that runs exactly when something has already gone wrong once.
+
+<InlineCheck
+  question="From the checkpoint's view, why can't you tell whether a mid-flight tool call is safe to retry?"
+  options={['Three cases look identical: never reached the target (safe), executed but unreported (retry duplicates the effect), or still running detached (retry races it). You need an intent log or idempotency keys to tell them apart', 'Because the checkpoint is encrypted', 'Because the model forgets']}
+  answer={0}
+  explanation="Blindly re-issuing the last call assumes the lucky case. For a write like 'send email' or 'charge card,' a wrong guess doubles an effect the user never asked for — which is why verification beats re-execution whenever a check exists."
+/>
 
 **Related:** [Checkpointing Long-Running Agent State](/learn/harness-design/state-and-checkpointing), [Handling Ctrl-C: Clean Interruption Mid-Tool-Call](/learn/harness-design/interrupt-and-cancellation-handling), [Handling Tool Errors and Retries](/learn/tools-function-calling/handling-tool-errors-and-retries)

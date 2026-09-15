@@ -3,7 +3,7 @@ title: "Splits, groups, and temporal validation"
 track: "deep-learning"
 status: live
 order: 402
-summary: "Create evidence for generalization"
+summary: "For a score (hat m) to estimate deployment performance, test examples must be independent of training conditional on the information available at decision time."
 duration: "18–30 min"
 ---
 

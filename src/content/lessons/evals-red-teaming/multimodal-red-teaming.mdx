@@ -6,6 +6,9 @@ summary: "Adversarial instructions hide in image pixels, audio waveforms, and do
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A text guardrail scans the user's message and the model's reply. It never looks inside a PNG, an MP3, or the metadata of an uploaded PDF — which is exactly where an attacker puts the instruction they want your model to follow instead.
 
 ## The attack surface moved to the file
@@ -23,6 +26,13 @@ Concretely, that means testing inputs like these:
 
 A keyword or classifier-based guardrail typically runs on the prompt string and the model's text output. If the injected instruction only exists as pixels, waveform, or a metadata field until the model's own perception turns it into "text" internally, no upstream filter ever sees it — the first thing in your pipeline that reads the malicious content *is the model itself*, after guardrails have already passed. This is the same blind spot as [structured extraction from documents and images](/learn/structured-outputs/structured-extraction-from-documents-and-images), except here the goal isn't accurate extraction — it's getting the model to extract and then *obey* something you never meant to send it.
 
+<InlineCheck
+  question="Why does a text-only input filter structurally miss an injection hidden in an uploaded PDF's metadata?"
+  options={['The instruction exists as a metadata field until the model\'s own perception renders it into content — the filter runs before the model reads anything, so the first component to see the attack is the model itself', 'Because PDFs are encrypted by default', 'Because metadata fields are too short to hold instructions']}
+  answer={0}
+  explanation="A text guardrail scans strings. An instruction living in pixels, waveforms, or document metadata becomes 'text' only inside the model — downstream of every guardrail you put in front of it."
+/>
+
 ## Building the test set
 
 Treat each modality as its own attack tree, the way you would for [a structured red-team exercise](/learn/evals-red-teaming/adversarial-red-teaming-process): enumerate what your pipeline actually does with a file (OCR it? transcribe it? pass raw bytes to a multimodal model?) and craft cases per stage. A few starting probes that generalize across products:
@@ -31,6 +41,10 @@ Treat each modality as its own attack tree, the way you would for [a structured 
 - Bury an instruction in the 40th page of a PDF, in a table cell, in a footnote — anywhere a human reviewer skims past but the model's context window ingests in full.
 - Test whether your pipeline strips or preserves file metadata before it reaches the model; if it preserves it, that field is now attacker-writable prompt space.
 - For audio, test transcription-then-LLM pipelines separately from native audio-understanding models — the two have different blind spots, and a fix for one won't cover the other.
+
+<Callout kind="breaks" title="Metadata is prompt space">
+Author fields, comments, revision history, alt text, hidden form fields — if your parsing pipeline dutifully extracts them and hands them to the model as content, every one is a writable channel for an instruction you never intended to send.
+</Callout>
 
 Feed confirmed findings into your [regression suite](/learn/evals-red-teaming/building-a-regression-suite) the same way you would a text jailbreak, and route the ones that generalize into [automated adversarial testing](/learn/evals-red-teaming/automated-adversarial-testing) so new file variants get checked on every model or pipeline change, not just the one you happened to think of by hand.
 

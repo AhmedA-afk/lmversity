@@ -2,7 +2,7 @@
 title: "Four Prompts That Reveal the Edges"
 track: "ai-foundations"
 status: live
-summary: "Worked-example lesson for LMVersity's AI Foundations track: runs one model through four contrasting prompts (fluent summary, 13-digit multiplication, citation request, multi-step "
+summary: "\"It's smart at some things and dumb at others\" is true and useless."
 duration: "14 min read"
 ---
 

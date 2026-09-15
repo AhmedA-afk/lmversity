@@ -6,6 +6,9 @@ summary: "Every failure you fix should leave behind a permanent test case, so it
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 You fix a bug, ship the patch, and move on. Three weeks later a prompt tweak or model upgrade brings the exact same failure back, and nobody notices until a user complains. A regression suite closes that loop: every real failure becomes a permanent test case that runs on every future change.
 
 ## Why "fixed" isn't the same as "fixed for good"
@@ -42,6 +45,17 @@ Two practical rules keep the suite useful instead of bloated:
 
 - **One case per distinct failure**, not per bug report. Five tickets about the same root cause should collapse into one regression case, or your suite balloons with redundant, slow-to-run duplicates.
 - **Never delete a passing case.** A case that's been green for a year is still cheap insurance; the moment you remove it is usually the moment that exact bug comes back.
+
+<Callout kind="note" title="Keep the trigger verbatim">
+Don't paraphrase a reported failure into something cleaner — the exact wording, typos, and context are often what exposed the bug. A sanitized rewrite can pass a suite that the original input would have failed.
+</Callout>
+
+<InlineCheck
+  question="Why does a regression case need an auto-gradable check (exact match, rule, or LLM-judge) instead of 'a human re-reads it'?"
+  options={['The suite only works if it runs automatically on every change — a case that needs manual reading never runs in CI', 'Because humans are slower readers than models', 'Because auto-graded cases cost less to store']}
+  answer={0}
+  explanation="A regression suite earns its keep by running on every pull request and prompt change without anyone remembering. A case that requires a human to judge it silently drops out of that loop."
+/>
 
 ## The compounding payoff
 

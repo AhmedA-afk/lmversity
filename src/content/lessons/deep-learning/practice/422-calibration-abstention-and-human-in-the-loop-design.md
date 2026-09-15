@@ -3,7 +3,7 @@ title: "Calibration, abstention, and human-in-the-loop design"
 track: "deep-learning"
 status: live
 order: 422
-summary: "Use uncertainty to route decisions"
+summary: "For a bin of predictions near (p), calibration compares (p) with observed frequency (hat p)."
 duration: "18–30 min"
 ---
 
@@ -97,3 +97,5 @@ Choose thresholds by utility, harm, and capacity; log whether the human accepted
 ## Further challenge
 
 Change one assumption in the scenario (time window, cost of a false positive, hardware budget, or user population). Predict which part of the system must change, then test that prediction with a small controlled run.
+
+**Related:** [Escalation and Human-in-the-Loop Design](/learn/hallucinations/escalation-human-in-the-loop)

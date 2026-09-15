@@ -3,7 +3,7 @@ title: "Adversarial security and model supply-chain risk"
 track: "deep-learning"
 status: live
 order: 423
-summary: "Threat-model the ML system end to end"
+summary: "A threat model specifies asset, adversary capability, likelihood, impact, control, detection, and recovery."
 duration: "18–30 min"
 ---
 
@@ -97,3 +97,5 @@ Prioritize defenses by realistic impact and provide an incident owner for each r
 ## Further challenge
 
 Change one assumption in the scenario (time window, cost of a false positive, hardware budget, or user population). Predict which part of the system must change, then test that prediction with a small controlled run.
+
+**Related:** [Model Supply Chain and Artifact Security](/learn/ai-foundations/reliable-ai/213-model-supply-chain-and-artifact-security)

@@ -2,7 +2,7 @@
 title: "Fitting a Line With Gradient Descent in NumPy"
 track: "ai-foundations"
 status: live
-summary: "A hands-on walkthrough that codes gradient descent from scratch to fit y = wx + b to noisy data — deriving both gradients by hand, watching the loss fall over 50 iterations, then c"
+summary: "Every optimizer running inside a modern neural network — SGD, RMSProp, Adam — is doing exactly three things you're about to code by hand: measure how wrong you are, work out which direction reduces that wrongness, and take a step."
 duration: "30 min read"
 ---
 

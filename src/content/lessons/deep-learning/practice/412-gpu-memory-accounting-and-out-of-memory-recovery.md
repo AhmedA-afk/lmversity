@@ -3,7 +3,7 @@ title: "GPU memory accounting and OOM recovery"
 track: "deep-learning"
 status: live
 order: 412
-summary: "Budget parameters, activations, and optimizer state"
+summary: "A rough fp32 AdamW parameter-state budget for (P) parameters is weights (4P), gradients (4P), moments (8P): (16P) bytes before activations."
 duration: "18–30 min"
 ---
 
@@ -62,7 +62,7 @@ A useful debug log includes run id, data/split id, model artifact id, host/devic
 
 ## Why this matters
 
-GPU memory is consumed by parameters, gradients, optimizer states, activations, temporary kernels, and fragmentation. Activations usually dominate during training; batch size, sequence length, and feature maps can grow memory much faster than parameter count.
+GPU memory is consumed by parameters, gradients, optimizer states, activations, temporary kernels, and fragmentation. Activations usually dominate during training; [batch size](/learn/deep-learning/core/121-batch-size-gradient-noise-and-scaling-rules), sequence length, and feature maps can grow memory much faster than parameter count.
 
 ## Worked scenario
 

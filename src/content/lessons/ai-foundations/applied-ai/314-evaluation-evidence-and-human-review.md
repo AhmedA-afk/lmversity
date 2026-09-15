@@ -3,10 +3,9 @@ title: "Evaluation Evidence and Human Review"
 track: ai-foundations
 status: live
 order: 314
-description: "Build an evaluation set that represents costly failures, adjudicates ambiguity, and says when a human must decide."
+summary: "Build an evaluation set that represents costly failures, adjudicates ambiguity, and says when a human must decide."
 ---
 
-# Evaluation Evidence and Human Review
 
 ## Product question and learning objective
 

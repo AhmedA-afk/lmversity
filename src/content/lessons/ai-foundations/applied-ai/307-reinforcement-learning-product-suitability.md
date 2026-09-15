@@ -3,10 +3,9 @@ title: "Reinforcement Learning: Product Suitability and Safe Constraints"
 track: ai-foundations
 status: live
 order: 307
-description: "Use RL only when actions alter future state and feedback can be observed; otherwise choose simpler prediction or optimization."
+summary: "Use RL only when actions alter future state and feedback can be observed; otherwise choose simpler prediction or optimization."
 ---
 
-# Reinforcement Learning: Product Suitability and Safe Constraints
 
 ## Product question and learning objective
 

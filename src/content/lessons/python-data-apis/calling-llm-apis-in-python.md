@@ -2,7 +2,7 @@
 title: "Calling an LLM Chat API"
 track: "python-data-apis"
 status: live
-summary: "Deep implementation walkthrough for LMVersity's Python & Data track: builds a runnable ticket-triage script against the Anthropic Messages API, covering system/user messages, read"
+summary: "A chat-completion call looks like a normal REST request right up until it fails in ways a normal REST client never does — the server can return HTTP 200 with an answer it cut off mid-sentence, or with a polite refusal instead of your data."
 duration: "3 min read"
 ---
 

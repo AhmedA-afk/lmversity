@@ -8,7 +8,6 @@ duration: "50–70 min"
 updated: "2026-08-30"
 ---
 
-# Case Study: Finance and Public Services
 
 Reliable AI is not a property that a model possesses in isolation. It is a claim about a
 specific system, a stated use, particular people, operating conditions, and the evidence
@@ -53,7 +52,7 @@ are explicit. Compare two slices rather than only a pooled score. If group A has
 A release decision based on “81% is good” hides an 18-point disparity that may be
 operationally decisive.
 
-For case study: finance and public services, use the same discipline with the relevant signals:
+For [case study](/learn/ai-foundations/reliable-ai/225-case-study-health-and-clinical-support): finance and public services, use the same discipline with the relevant signals:
 harm-weighted error, appeal overturns, service denial duration, subgroup performance, and audit exceptions. Estimate uncertainty rather than treating one run as final. For a proportion,
 a quick standard error is (sqrt{hat r(1-hat r)/N}); for low-volume or high-impact
 slices, collect more evidence or route cases to review. A threshold is not neutral:

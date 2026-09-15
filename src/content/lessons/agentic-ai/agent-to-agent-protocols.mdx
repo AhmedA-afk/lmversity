@@ -6,6 +6,10 @@ summary: "Emerging standards like A2A let agents built by different teams discov
 duration: "5 min read"
 ---
 
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 MCP solved how one agent talks to its tools. It didn't solve how one agent talks to *another agent* — one it doesn't control, built by a different team, possibly on a different framework entirely. That's the gap agent-to-agent protocols are trying to close.
 
 ## Why this is a different problem than tool calling
@@ -27,8 +31,24 @@ Google introduced Agent2Agent (A2A) in 2025, and it's since moved to Linux Found
 
 Notice what this is *not*: it's not a replacement for MCP. MCP governs how an agent uses tools and resources. A2A-style protocols govern how autonomous agents delegate work to each other as peers. A single system can use both — an agent might use MCP to query a database, and A2A to hand a sub-task to a partner company's agent.
 
+<Compare title="Two protocols, two relationships">
+<Pane title="MCP — agent ↔ tools" tone="neutral">
+You control both ends; the interface is a known, fixed schema. Synchronous call-and-response, like a function call over a wire.
+</Pane>
+<Pane title="A2A — agent ↔ agent" tone="good">
+Peer delegation across teams and frameworks: capability discovery (Agent Cards), tasks with lifecycle states, multi-turn exchange with artifacts.
+</Pane>
+</Compare>
+
+<InlineCheck
+  question="Why do agent-to-agent protocols need a task lifecycle (submitted → working → completed) instead of a synchronous call?"
+  options={['Agent work is long-running and async — minutes or days, with clarifying questions mid-task. A synchronous request/response can\'t represent \'still working\' or \'input required\'', 'Because HTTP is too slow', 'Because agents can\'t respond in one turn']}
+  answer={0}
+  explanation="A tool call returns in one shot. A delegated task may run for hours, pause for clarification, and carry files back. The state machine exists because the work does."
+/>
+
 ## Why "emerging" is the right word
 
 None of this is settled the way HTTP or OAuth is settled. Agent cards, task-state machines, and cross-vendor auth are all still being hammered out, and adoption is uneven — plenty of production multi-agent systems today just use REST APIs with bespoke conventions instead. Treat A2A as a signal of where the industry is heading — standardized discovery and delegation across organizational boundaries — rather than something you need in your stack today. If you're building [multi-agent systems](/learn/agentic-ai/multi-agent-patterns) entirely within one codebase, your own orchestrator's message-passing is still simpler and more reliable than adopting an external standard.
 
-**Related:** [Multi-Agent Patterns: Orchestrator, Pipeline, Debate](/learn/agentic-ai/multi-agent-patterns), [What Is MCP](/learn/mcp/what-is-mcp), [Choosing an Orchestration Framework](/learn/agentic-ai/agent-orchestration-frameworks)
+**Related:** [Multi-Agent Patterns: Orchestrator, Pipeline, Debate](/learn/agentic-ai/multi-agent-patterns), [What Is MCP](/learn/mcp/what-is-mcp), [Choosing an Orchestration Framework](/learn/agentic-ai/agent-orchestration-frameworks) · [Game theory, strategic agents, and mechanism design](/learn/classical-ai/agents-robotics/310-game-theory-strategic-agents-and-mechanism-design)

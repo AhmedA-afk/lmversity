@@ -6,6 +6,9 @@ summary: "Run a suite of prompts with expected behaviors in CI so a prompt or mo
 duration: "6 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 You change one line of a system prompt to fix a tone problem, ship it, and three days later support tickets spike because the model stopped calling a tool it always used to call. Nobody caught it because nobody tested it — the fix looked safe, and "safe" was never verified. An eval-based regression suite exists to catch exactly this before it reaches users.
 
 ## What goes in the suite
@@ -31,10 +34,21 @@ steps:
 
 `run_evals.py` replays every case against the candidate prompt/model and scores it. `compare_to_baseline.py` compares the new score to the last known-good baseline, case by case, not just on the aggregate — an aggregate score can hold steady while one important case flips from pass to fail underneath it. Fail the build on any regression past your threshold, and surface which specific cases broke so the diff is obvious in the PR, not buried in a dashboard.
 
+<InlineCheck
+  question="Your suite's aggregate score after a prompt change is identical to baseline. Why might the change still have broken something?"
+  options={['The aggregate can hold steady while a single important case flips from pass to fail underneath it — compare case by case, not just the total', 'It cannot — identical aggregate means identical behavior', 'Because the eval probably ran against the wrong model version']}
+  answer={0}
+  explanation="Averages hide movements. A regression gate compares each case against its own baseline so one flipped case surfaces in the PR instead of being smoothed over by the other 200 that held."
+/>
+
 ## What this catches that ad-hoc testing doesn't
 
 Manual spot-checking scales with how much you remember to check, which shrinks every time the prompt gets more complex. A regression suite doesn't forget the weird edge case from six months ago, and it runs the same way every time, so two changes made a day apart are graded on identical ground. It's also what makes [eval-driven iteration](/learn/evals-red-teaming/eval-driven-iteration) possible — you can only ship by eval diff if there's a suite producing that diff on every change.
 
 Keep the suite honest by pruning cases that no longer reflect real usage and adding new ones as fast as new failure modes show up. A regression suite that never grows stops earning its name.
+
+<Callout kind="breaks" title="The suite that only runs on code">
+The classic misfire is triggering the suite on code diffs only. Prompt edits, model swaps, and RAG index updates all move behavior without touching a line of application code — and they're exactly the changes manual spot-checking is worst at catching. Wire the suite to run on every change that can move behavior, or it's decorative.
+</Callout>
 
 **Related:** [Turning Bugs into a Regression Suite](/learn/evals-red-teaming/building-a-regression-suite), [LLM-as-Judge: Grading Outputs with a Model](/learn/evals-red-teaming/llm-as-judge), [Shipping Changes by Eval Diff](/learn/evals-red-teaming/eval-driven-iteration)

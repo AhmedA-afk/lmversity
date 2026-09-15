@@ -6,6 +6,9 @@ summary: "Update, delete, and re-embed only what changed, instead of rebuilding 
 duration: "6 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A RAG index isn't a one-time build — the underlying documents keep changing, and a full re-embed of everything every time a file is edited doesn't scale past a handful of documents. Incremental indexing is the discipline of touching only what actually changed.
 
 ## Why full rebuilds break down
@@ -22,6 +25,17 @@ The core mechanism is a content fingerprint per source document (or per chunk): 
 - **Deleted at the source** — delete the corresponding vectors. This step gets skipped more often than the others, and it's how indexes accumulate zombie chunks that point at documents nobody can open anymore.
 
 This requires your vector store to support deletion by a stable ID (usually the source document ID, or a composite of document ID plus chunk index) — confirm this before you pick one, since not every store makes deletion cheap. See [Choosing a Vector Database](/learn/rag/choosing-a-vector-database).
+
+<Callout kind="breaks" title="Skipped deletes become zombie chunks">
+The 'deleted at the source' branch is the one that gets skipped — and every skip leaves a vector pointing at a document nobody can open. Deletion by stable ID isn't optional plumbing; it's how your index stays honest.
+</Callout>
+
+<InlineCheck
+  question="A source document was edited. Why 'delete old chunks + reinsert fresh ones' instead of diffing and patching the changed chunk?"
+  options={['A small edit can shift every downstream chunk boundary — the changed text isn\'t stable to locate. Document-level delete-and-reinsert is the unit where the fingerprint is reliable', 'Because vectors can\'t be updated', 'Because diffing is slower']}
+  answer={0}
+  explanation="Chunk boundaries are derived, not fixed — patch one edit and every later boundary may move. Treat the document as the unit of change: delete all its chunks, re-chunk, re-embed."
+/>
 
 ## Sync strategies: poll, webhook, or CDC
 

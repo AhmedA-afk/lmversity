@@ -3,10 +3,9 @@ title: "Reverse-Mode Autodiff and Vector–Jacobian Products"
 track: deep-learning
 status: live
 order: 109
-description: "Explain why reverse mode trains networks cheaply and how it differs from explicitly building Jacobians."
+summary: "Explain why reverse mode trains networks cheaply and how it differs from explicitly building Jacobians."
 ---
 
-# Reverse-Mode Autodiff and Vector–Jacobian Products
 
 ## Why this matters
 

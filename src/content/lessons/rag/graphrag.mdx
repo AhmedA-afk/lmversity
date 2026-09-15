@@ -6,6 +6,8 @@ summary: "Build a knowledge graph from your documents so retrieval returns conne
 duration: "6 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Standard RAG retrieves the chunks that are semantically closest to a query. That works when the answer lives inside one chunk. It falls apart when the answer requires connecting facts scattered across many documents — "how are these three companies related to this lawsuit?" is a question about structure, not similarity. GraphRAG answers that by retrieving over a graph of entities and relationships instead of a flat list of text spans.
 
 ## How the graph gets built
@@ -28,5 +30,12 @@ This two-mode split is the practical reason to reach for GraphRAG: it's not a st
 GraphRAG earns its cost on corpora where relationships matter more than any single document: investigative research, compliance and legal discovery, organizational knowledge bases, or scientific literature where the value is in the connections between findings. It's a poor fit for FAQ-style or single-document lookup, where the extra indexing cost buys nothing over a well-tuned vector or [hybrid](/learn/rag/hybrid-search-lexical-and-vector) pipeline — that's a case for reading [When RAG Is the Wrong Tool](/learn/rag/when-rag-is-the-wrong-tool) as a lens on the "graph vs. flat" decision specifically, not just RAG-vs-nothing.
 
 In practice, teams often run GraphRAG as one retrieval path among several rather than a replacement: entity-heavy or synthesis questions go to the graph, everything else goes to standard vector retrieval. It's also worth pairing with [structured memory store](/learn/context-engineering/structured-memory-stores) thinking — a knowledge graph is one of a few shapes memory can take, and the choice between graph, vector, and key-value isn't unique to RAG indexing.
+
+<InlineCheck
+  question="Why can't standard vector RAG answer 'what are the main themes across this document set?'"
+  options={['No single chunk contains the whole theme — similarity search ranks chunks close to the query\'s surface form, and there is no chunk shaped like the answer. Synthesis questions need structure the index never built', 'Because the query is too short', 'Because themes aren\'t embedded']}
+  answer={0}
+  explanation="Flat retrieval can only return what exists as a span. GraphRAG's community summaries are index-time artifacts representing clusters — a shape no per-chunk index can produce at query time."
+/>
 
 **Related:** [Hybrid Search: Lexical and Vector Combined](/learn/rag/hybrid-search-lexical-and-vector), [When RAG Is the Wrong Tool](/learn/rag/when-rag-is-the-wrong-tool), [Structured Memory Stores: Vector, Key-Value, or Knowledge Graph](/learn/context-engineering/structured-memory-stores)

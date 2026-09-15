@@ -3,10 +3,9 @@ title: "Choosing Rules, Classical ML, Deep Learning, or an LLM"
 track: ai-foundations
 status: live
 order: 302
-description: "Choose the least complex intervention that can meet a clearly stated quality, latency, and governance target."
+summary: "Choose the least complex intervention that can meet a clearly stated quality, latency, and governance target."
 ---
 
-# Choosing Rules, Classical ML, Deep Learning, or an LLM
 
 ## Product question and learning objective
 

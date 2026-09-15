@@ -1,5 +1,5 @@
 ---
-title: "Prompt Caching for Speed and Cost"
+title: "What Makes a Prompt Prefix Cacheable"
 track: "genai-app-dev"
 status: live
 summary: "What actually makes a prefix cacheable, how the TTL tradeoff works, and how caching plugs into the rest of the perf-and-cost toolkit."

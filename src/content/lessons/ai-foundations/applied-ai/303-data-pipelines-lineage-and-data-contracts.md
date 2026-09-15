@@ -3,10 +3,9 @@ title: "Data Pipelines, Lineage, and Data Contracts"
 track: ai-foundations
 status: live
 order: 303
-description: "Treat the pipeline as a product: its schemas, ownership, freshness, and permissions determine whether a model is trustworthy."
+summary: "Treat the pipeline as a product: its schemas, ownership, freshness, and permissions determine whether a model is trustworthy."
 ---
 
-# Data Pipelines, Lineage, and Data Contracts
 
 ## Product question and learning objective
 

@@ -6,6 +6,9 @@ summary: "Autonomy isn't on or off — it's a dial you set per action, based on 
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 "Autonomous agent" sounds like a switch: either the model runs free, or a human clicks approve on every step. In practice it's neither. Autonomy is a dial, and you set it differently for different actions inside the same agent.
 
 ## Why one setting doesn't work
@@ -43,10 +46,21 @@ run_shell(rm -rf *) -> deny
 
 Notice "ask" isn't "always human." It can mean a second, cheaper model checks the plan, or a rule fires (e.g., dollar amount over a threshold), or a human is looped in only above a certain blast radius. The dial has more than two positions.
 
+<Callout kind="note" title="'Ask' has more positions than 'call a human'">
+An approval gate can be a rule (amount over a threshold), a cheaper model reviewing the plan, or a human looped in only above a blast radius. Per-action policy isn't binary — it's a ladder of checks matched to risk.
+</Callout>
+
+<InlineCheck
+  question="What two variables decide where an action sits on the autonomy dial?"
+  options={['Cost of being wrong + reversibility — cheap and reversible runs free, expensive and irreversible always gates, and the middle gets rules or spot-checks', 'Speed and accuracy', 'Tool count and context size']}
+  answer={0}
+  explanation="Autonomy isn't a property of the agent — it's a property of the action. Reading a file and deleting production data live in the same agent but at opposite ends of the dial."
+/>
+
 Get this wrong in the permissive direction and you get the failure modes covered in [diagnosing agent failure modes](/learn/agentic-ai/common-agent-failure-modes) — an agent confidently doing damage at speed. Get it wrong in the restrictive direction and the agent isn't worth using; you're back to [when a workflow beats an agent](/learn/agentic-ai/when-not-to-use-an-agent). The dial exists because both failure directions are real, and the right setting is a property of the action, not the agent.
 
 ## What to take away
 
 Don't ask "how autonomous should this agent be." Ask "for this specific action, what's the cost if it's wrong, and can I undo it." Answer that per action, and the autonomy dial sets itself.
 
-**Related:** [Allow/Ask/Deny: Designing Approval Gates](/learn/harness-design/permission-and-approval-systems), [Diagnosing Agent Failure Modes](/learn/agentic-ai/common-agent-failure-modes), [When a Workflow Beats an Agent](/learn/agentic-ai/when-not-to-use-an-agent)
+**Related:** [Allow/Ask/Deny: Designing Approval Gates](/learn/harness-design/permission-and-approval-systems), [Diagnosing Agent Failure Modes](/learn/agentic-ai/common-agent-failure-modes), [When a Workflow Beats an Agent](/learn/agentic-ai/when-not-to-use-an-agent) · [Robot safety constraints and runtime assurance](/learn/classical-ai/agents-robotics/320-robot-safety-constraints-and-runtime-assurance)

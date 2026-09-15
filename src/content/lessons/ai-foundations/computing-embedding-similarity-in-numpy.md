@@ -2,7 +2,7 @@
 title: "Cosine Similarity and Nearest Neighbors in NumPy"
 track: "ai-foundations"
 status: live
-summary: "Wrote the full markdown lesson body (implementation walkthrough) for 'Cosine Similarity and Nearest Neighbors in NumPy' — builds a runnable tiny semantic search engine in NumPy fro"
+summary: "Five hand-written sentences, a query, and a ranking built from scratch: cosine similarity and Euclidean distance computed in NumPy, on vectors small enough to inspect."
 duration: "4 min read"
 ---
 

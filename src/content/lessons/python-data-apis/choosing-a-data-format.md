@@ -2,7 +2,7 @@
 title: "CSV vs JSON vs JSONL vs Parquet"
 track: "python-data-apis"
 status: live
-summary: "A code-first comparison of CSV, JSON, JSONL, and Parquet — how each works, when it wins, its concrete failure mode, and relative cost — scored in a decision table and applied to th"
+summary: "Every file format is a bet about how the data gets used next — read once by a human, streamed record-by-record, or scanned column-by-column across gigabytes."
 duration: "22 min read"
 ---
 
@@ -246,4 +246,4 @@ only_us = pd.read_parquet("events/", engine="pyarrow", filters=[("country", "=",
 
 That combination — typed columns, compression, and the ability to read only what a query needs — is the entire reason Parquet exists, and it's wasted on a config file or a 200-row export. Match the format to what happens to the file *next*, not to what's easiest to write today. For a broader map of the format landscape and where these fit against alternatives like YAML or Avro, see choosing a data format.
 
-**Related:** /learn/python-data-apis/files-and-data-formats-overview · /learn/python-data-apis/choosing-a-data-format · /learn/python-data-apis/validating-dataframes-with-schemas · /learn/python-data-apis/data-contracts-and-validation · /learn/python-data-apis/files-and-formats-quiz
+**Related:** [Files and Formats: Text, Rows, and Columns](/learn/python-data-apis/files-and-data-formats-overview) · [CSV vs JSON vs JSONL vs Parquet](/learn/python-data-apis/choosing-a-data-format) · [Validating Cleaned Data with a Schema](/learn/python-data-apis/validating-dataframes-with-schemas) · [Design data contracts before model calls](/learn/python-data-apis/data-contracts-and-validation) · [Quiz: Files & Formats](/learn/python-data-apis/files-and-formats-quiz)

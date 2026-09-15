@@ -1,5 +1,5 @@
 ---
-title: "Deep lecture: Linear and logistic regression—from objective to deployment"
+title: "Linear and logistic regression—from objective to deployment"
 track: "machine-learning"
 order: 901
 status: live
@@ -8,7 +8,6 @@ duration: "95 min lecture + 3 hr lab"
 updated: "2026-08-30"
 ---
 
-# Linear and logistic regression: two views of conditional prediction
 
 Linear and logistic regression are not introductory relics. They are two of the clearest places to learn how a modelling assumption becomes an objective, an optimisation algorithm, a prediction, an uncertainty statement, and finally a decision. A practitioner who can derive and interrogate these models can reason about more complicated systems instead of treating them as library calls.
 

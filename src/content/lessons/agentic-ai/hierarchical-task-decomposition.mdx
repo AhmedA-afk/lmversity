@@ -6,6 +6,8 @@ summary: "Two ways to break a big goal into subtasks: plan the whole thing upfro
 duration: "6 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 ReAct decides the next step after seeing the last result. Plan-and-Execute decides all the steps before taking any of them. Most real agents end up somewhere between the two, and knowing why tells you when to reach for which.
 
 ## Two ways to break down a goal
@@ -22,8 +24,15 @@ The real fix isn't "planning" vs. "no planning" — it's giving the agent more t
 
 This is also why frameworks like [LangGraph](/learn/agentic-ai/choosing-an-agent-framework) model agents as graphs rather than a single loop: a planner node, an executor node, and a re-plan node that fires when execution invalidates an assumption. Re-planning is the piece that keeps Plan-and-Execute from being brittle — if step 3 discovers the schema is wrong, the run doesn't have to fail, it goes back to the planner with that new information and gets a revised plan for the remaining steps.
 
+<InlineCheck
+  question="Why does a flat ReAct loop drift on long tasks?"
+  options={['It treats \'read the file\' and \'ship the feature\' as same-size steps — nothing above the loop asks whether the next action still serves the goal, so dead ends compound', 'Because it runs out of tokens', 'Because it can\'t call tools twice']}
+  answer={0}
+  explanation="Hierarchy adds a second level to think at: a stable high-level plan with locally-reactive loops inside each subtask. A subtask's loop can't wander past its boundary — failures report back up instead of silently reshaping the run."
+/>
+
 ## When to reach for which
 
 Use flat ReAct for short, exploratory tasks where you can't know the steps until you've seen intermediate results — debugging, open-ended research, anything where step 2 genuinely depends on what step 1 returned. Use Plan-and-Execute when the task is long enough that an explicit plan is worth writing down: multi-file refactors, anything you want a human to approve before execution starts, or anywhere step count and cost need to be predictable in advance. For genuinely large goals, add re-planning so the upfront plan isn't a promise the agent can't keep.
 
-**Related:** [ReAct: Interleaving Reasoning and Acting](/learn/agentic-ai/react-pattern), [Planning Before Acting](/learn/agentic-ai/planning-and-task-decomposition), [Tree of Thoughts and MCTS: Search-Based Planning for Agents](/learn/agentic-ai/tree-search-for-agent-planning)
+**Related:** [ReAct: Interleaving Reasoning and Acting](/learn/agentic-ai/react-pattern), [Planning Before Acting](/learn/agentic-ai/planning-and-task-decomposition), [Tree of Thoughts and MCTS: Search-Based Planning for Agents](/learn/agentic-ai/tree-search-for-agent-planning) · [Task planning and execution monitoring](/learn/classical-ai/agents-robotics/318-task-planning-and-execution-monitoring) · [Hierarchical Task Networks: Decomposition, Methods, and Operational Knowledge](/learn/classical-ai/search-planning/121-hierarchical-task-networks-decomposition-methods-and-operational-knowledge)

@@ -6,6 +6,9 @@ summary: "Wrap AI features behind flags you can disable instantly, and design a 
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 AI features fail differently than normal code. A provider has an outage, a prompt regression makes the model start refusing valid requests, a cost spike shows up on your bill at 2am — and none of it trips a normal error boundary, because the code is running fine. The model is just behaving badly. The fix isn't better error handling. It's the ability to turn the feature off in seconds, without a deploy.
 
 ## Why normal error handling isn't enough
@@ -36,6 +39,17 @@ A kill switch that just returns an error isn't much better than no kill switch �
 - **Graceful degradation** — hide the AI-powered panel entirely rather than show an error state
 
 This is the same instinct behind [rate limit and retry handling](/learn/genai-app-dev/rate-limits-and-retry-strategies) — you're planning for the request to fail before it does, not improvising when it does.
+
+<Callout kind="breaks" title="A kill switch that ships an error">
+Flipping the flag and returning a 500 moves the outage from "bad AI output" to "broken feature" — users still notice. Every flag needs a fallback decided in advance: last good output, a simpler non-AI path, or hiding the panel entirely. The fallback is part of the switch, not an afterthought.
+</Callout>
+
+<InlineCheck
+  question="Why doesn't normal error handling catch a prompt regression that makes the model refuse valid requests?"
+  options={['The call succeeds — the code runs fine and returns a response, it just does the wrong thing, so nothing trips an error boundary', 'Because prompt regressions only appear in logs a day later', 'Because try/catch cannot wrap an LLM call']}
+  answer={0}
+  explanation="AI features fail successfully: the request completes, the response returns, and the content is wrong. That's why the mitigation is a flag you can flip in seconds — not better exception handling."
+/>
 
 ## Practice the flip
 

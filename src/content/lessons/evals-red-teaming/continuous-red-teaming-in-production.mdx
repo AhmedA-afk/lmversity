@@ -6,6 +6,9 @@ summary: "A red-team exercise is a snapshot; attackers don't stop after launch, 
 duration: "6 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A structured red-team exercise tells you how your system holds up against the attacks your team thought to try, on the day they tried them. It says nothing about the attack nobody on the team imagined, or the jailbreak technique that gets published three weeks after you ship. Continuous red-teaming is the practice of treating adversarial testing as an ongoing pipeline instead of a pre-launch checkbox.
 
 ## Why a one-time exercise expires
@@ -20,6 +23,13 @@ A bug bounty pays independent researchers to find and responsibly disclose vulne
 
 What makes AI bug bounties different from traditional ones is scope definition. "Get the model to say something offensive" is nearly always in scope somewhere on a large enough surface — that's not useful signal on its own. A well-run program instead specifies concrete harm classes tied to your actual product: for an agent with file-system access, a demonstrated path to reading files outside its working directory; for a customer-support bot, a demonstrated path to leaking another customer's data. Vague scope produces noise; specific scope produces triage-able reports.
 
+<InlineCheck
+  question="Why does a bug bounty scoped as 'make the model say something offensive' produce noise instead of signal?"
+  options={['On a large enough surface that outcome is almost always achievable — it isn\'t tied to a concrete harm your product can act on, unlike \'read files outside the working directory\' or \'leak another customer\'s data\'', 'Because offensive output is technically legal', 'Because researchers refuse to submit those reports']}
+  answer={0}
+  explanation="Bounty scope has to map to blast radius. 'Demonstrated path to a concrete harm' yields triage-able reports; 'made it say a bad word' yields an inbox of non-actionable findings."
+/>
+
 ## Watching live traffic for attack patterns
 
 The second channel is passive: instrument production to flag adversarial-looking input as it happens, rather than waiting for a researcher to report it. In practice this means a lightweight classifier or heuristic layer sitting alongside the main request path — flagging things like repeated attempts at the same prompt with small variations, known jailbreak fragments, or requests that trip your safety classifiers at unusual rates from a single account. This is the same instrumentation philosophy behind [Tracking Eval Scores Across Model Versions](/learn/evals-red-teaming/eval-and-safety-metrics-dashboards), but pointed at adversarial signal instead of quality metrics.
@@ -27,6 +37,10 @@ The second channel is passive: instrument production to flag adversarial-looking
 The output of this monitoring isn't just an alert — it's a feed. Flagged transcripts become candidate additions to your adversarial dataset (see [Crescendo, Many-Shot, and TAP: Building an Adversarial Prompt Set](/learn/evals-red-teaming/adversarial-dataset-construction)), so every real attack your system sees eventually becomes a regression test that future model or prompt versions are checked against before shipping.
 
 ## Closing the loop
+
+<Callout kind="note" title="The sensor isn't the value — the loop is">
+Flagged transcripts and bounty reports only pay off if they become test cases. A jailbreak found on Tuesday should be a regression case by Friday and a blocked pattern by the next release — one pipeline, not two disconnected compliance exercises.
+</Callout>
 
 Continuous red-teaming only pays off if findings actually change the system. That means routing bounty reports and flagged traffic into the same regression suite your offline evals run against, not a separate spreadsheet nobody revisits. A jailbreak found on Tuesday should be a test case by Friday and a blocked pattern by the next release. Treat the bounty program and the traffic monitor as sensors feeding one pipeline, not two disconnected compliance exercises — the value is in the loop closing, not in either sensor alone.
 

@@ -6,6 +6,10 @@ summary: "How a harness trims, summarizes, or pages history so a long-running ag
 duration: "5 min read"
 ---
 
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A coding agent that runs for two hours accumulates thousands of tool calls, file reads, and outputs. None of that shrinks on its own, and the context window does not grow to meet it. The harness has to actively manage what stays in view.
 
 ## The problem is bigger than "the window is full"
@@ -20,10 +24,29 @@ Running out of tokens is the obvious failure, but it is not the only one. Stuffi
 
 **Page or offload.** Instead of compressing history, some harnesses move it out of the prompt entirely — writing intermediate results to a scratch file or a state store and letting the agent re-read them on demand rather than carrying them in every turn. This pairs naturally with [Checkpointing Long-Running Agent State](/learn/harness-design/state-and-checkpointing): what's checkpointed to disk doesn't need to stay resident in context.
 
+<Compare title="Three levers, three costs">
+<Pane title="Trim" tone="good">
+Drop low-value content — passed-test stdout, stale file reads, already-retried errors. Cheap and lossless for anything the agent won't need again.
+</Pane>
+<Pane title="Summarize" tone="neutral">
+Compress old turns into a dense recap — decisions, files touched, open threads. Lossy: a detail needed three calls later can vanish.
+</Pane>
+<Pane title="Page / offload" tone="neutral">
+Move history out of the prompt to a scratch file or state store; agent re-reads on demand. No compression loss, but adds a retrieval step.
+</Pane>
+</Compare>
+
 ## Where the harness draws the line
 
 None of this happens uniformly — a harness typically reserves a fixed budget for system prompt and tool definitions, a shrinking budget for conversation history, and headroom for the model's next response. When history threatens to eat into that headroom, the harness triggers a trim or compaction pass rather than waiting for a hard failure. That budgeting discipline is the same problem context engineering solves at the prompt level, described in [Token Budgeting: Splitting a Fixed Context Window](/learn/context-engineering/token-budgeting-strategies) — a harness just has to apply it continuously, turn after turn, without an engineer watching.
 
 The practical result: a well-managed session can run far longer than the raw window would suggest, because the harness is constantly deciding what the model actually needs to see next, not just what happened.
+
+<InlineCheck
+  question="Why is 'wait until the window is nearly full' already too late?"
+  options={['Degradation starts before the hard limit — every past result stuffed back in dilutes signal, slows the model, and raises cost linearly with session length long before the window overflows', 'Because tokens get more expensive', 'Because the model stops mid-turn']}
+  answer={0}
+  explanation="The hard limit is the last failure, not the first. Context rot — signal drowned in noise the model doesn't need — sets in well before you run out of tokens."
+/>
 
 **Related:** [Compaction: Summarizing History to Reclaim Context Space](/learn/context-engineering/summarization-for-compaction), [Checkpointing Long-Running Agent State](/learn/harness-design/state-and-checkpointing), [Token Budgeting: Splitting a Fixed Context Window](/learn/context-engineering/token-budgeting-strategies)

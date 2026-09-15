@@ -6,15 +6,27 @@ summary: "Recognize when long context, fine-tuning, or plain search beats a retr
 duration: "5 min read"
 ---
 
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 RAG became the default answer to "the model doesn't know my data," and now teams reach for it even when a simpler tool would work better. Retrieval is a pipeline with real cost — chunking, embeddings, a vector store, evals — and that cost only pays off when the problem actually matches the pattern.
 
 ## The tell: what kind of problem is this?
 
 Before building retrieval, ask what's actually missing.
 
-- **Missing facts** the model needs *this specific answer* → RAG's home turf.
-- **Missing behavior** — a tone, a format, a domain vocabulary the model should produce by default → that's [fine-tuning](/learn/fine-tuning/fine-tune-vs-prompt-vs-rag) territory, not retrieval. RAG can hand a model facts; it can't teach it to write like your style guide.
-- **Missing nothing** — the knowledge already fits in the prompt → just paste it in. A ten-page contract or a single API spec doesn't need a vector database; it needs a text box.
+<Compare title="What's missing?">
+<Pane title="Missing facts" tone="good">
+The model needs *this specific answer* → RAG's home turf. Large, changing, private corpora.
+</Pane>
+<Pane title="Missing behavior" tone="neutral">
+A tone, format, or vocabulary it should produce by default → fine-tuning territory. RAG hands over facts; it can't teach style.
+</Pane>
+<Pane title="Missing nothing" tone="neutral">
+The knowledge already fits in the prompt → paste it in. A ten-page contract needs a text box, not a vector database.
+</Pane>
+</Compare>
 
 Retrieval solves a scale problem: too much material to fit in context, so you fetch only the relevant slice. If there's no scale problem, there's nothing for retrieval to solve.
 
@@ -29,6 +41,13 @@ Long context isn't free either — costs scale with size, latency grows, and [ve
 Not every "find the answer" problem needs semantic retrieval feeding a generation step. If a user just needs the right document, a keyword search or a lookup table gets there faster and with zero hallucination risk — you're not asking a model to synthesize anything, so don't put one in the loop. RAG earns its complexity when the answer requires *reading and combining* multiple sources, not just locating one.
 
 ## A quick gut check
+
+<InlineCheck
+  question="Your knowledge base is 40 pages and rarely changes. Build RAG?"
+  options={['No — it fits in a single prompt. Retrieval solves a scale problem: too much material to fit in context. No scale problem, nothing for RAG to solve — just stuff the context', 'Yes — RAG is always more accurate', 'Only if you need citations']}
+  answer={0}
+  explanation="Long context windows quietly ate RAG's easy cases. If the corpus fits and the model still reasons well at that size, a paste beats a pipeline — no chunking, no index, no missed-chunk failures."
+/>
 
 Before starting a RAG build, ask: is the knowledge large, does it change often, and does answering require synthesis across sources? If you answered no to any of those, you're probably reaching for RAG out of habit rather than need — go back to [What Is RAG and When to Use It](/learn/rag/what-is-rag-and-when-to-use-it) and match the tool to the actual shape of the problem.
 

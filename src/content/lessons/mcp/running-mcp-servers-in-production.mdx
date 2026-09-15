@@ -6,6 +6,9 @@ summary: "What changes when an MCP server stops being a local script and starts 
 duration: "6 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A server that works great from your editor's MCP config can still fall over the first week it serves real users. Production means other people depend on it being up, fast, and safe when they're not watching.
 
 ## Pick a transport that survives multiple clients
@@ -28,6 +31,17 @@ A client calling a broken tool needs a structured error it can reason about, not
 ```
 
 Vague errors push debugging work onto whoever is running the client, and in an agentic loop a vague error often just gets retried in a loop instead of fixed.
+
+<Callout kind="breaks" title="A dead server looks like a network blip">
+An MCP server that silently stops answering `tools/list` is indistinguishable from a network hiccup — until something actively health-checks it. Uptime and latency monitoring on the process itself is what turns "seems flaky" into "is down."
+</Callout>
+
+<InlineCheck
+  question="Why do vague errors like 'something went wrong' matter more in an agentic loop than in a web UI?"
+  options={["A human user sees the error and stops; an agent retries it in a loop — categorizing errors (invalid args vs rate-limit vs upstream-down) is what tells the client whether retrying can even help", "Because agents can't display error messages", 'Because vague errors leak stack traces']}
+  answer={0}
+  explanation="The client's response to an error is a decision, and an agent makes it automatically. 'Retryable or not' is the difference between a graceful backoff and an infinite retry loop at 2am."
+/>
 
 ## Treat it like any other service you're on the hook for
 

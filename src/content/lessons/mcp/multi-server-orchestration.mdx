@@ -6,6 +6,9 @@ summary: "Handling name collisions, priority, and context budget when a client c
 duration: "6 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 One server is easy. The moment a client connects to five or ten at once — filesystem, GitHub, a database, Slack, a couple of internal company servers — three problems show up that never appear in a single-server demo: names collide, tools compete for attention, and every server's schema eats context whether the model ever calls it or not.
 
 ## Name collisions
@@ -13,6 +16,10 @@ One server is easy. The moment a client connects to five or ten at once — file
 MCP servers don't know about each other. Two servers can both register a tool called `search`, or `create_issue`, or `query`, with no coordination between them. A client has to disambiguate before the model ever sees a tool list.
 
 The common fix is namespacing: the client prefixes each tool with its server's name at connection time, so `github.search` and `notion.search` sit side by side instead of clobbering one another. Some hosts expose the raw name to the model and only use the prefix internally for routing; others show the prefixed name directly so the model's own choice signals which server it means. Either way, the collision has to be resolved by the client — the protocol itself has no shared namespace, so two servers can legally define identical tool names and both be technically correct.
+
+<Callout kind="breaks" title="Collisions are legal">
+Two servers both defining a `search` tool isn't a bug either of them can see — MCP has no shared namespace to clash in. It's purely a client-side problem, and it has to be resolved before the model ever sees the tool list.
+</Callout>
 
 ## Priority and which server answers
 
@@ -29,6 +36,13 @@ The mitigations line up with what token-constrained agents already do elsewhere:
 - **Connect lazily.** Only attach servers relevant to the current task or project instead of every server the user has configured globally.
 - **Disclose progressively.** Some clients keep most servers' tools hidden until the model asks to search or expand them, rather than dumping every schema into the system prompt — the same idea covered in [Progressive Tool Disclosure](/learn/context-engineering/progressive-tool-disclosure).
 - **Prune descriptions.** A verbose, over-explained tool description costs the same tokens on turn one hundred as it did on turn one; trimming it once pays off every turn after.
+
+<InlineCheck
+  question="Ten servers are connected and one hangs during tool discovery. What should a production client do?"
+  options={['Connect concurrently with per-server timeouts and drop the dead server\'s tools from the list — one stalled process shouldn\'t freeze discovery for the other nine', 'Block until the hung server responds', 'Restart the entire session']}
+  answer={0}
+  explanation="Ten servers is ten independent points of failure. The client degrades gracefully — the dead server's tools disappear from the list, the session continues — rather than letting one bad server take down discovery for all."
+/>
 
 None of this is exotic — it's the ordinary discipline of budgeting a shared resource across tenants, applied to a context window instead of a server's CPU. The servers themselves stay unaware of each other; all of the coordination — naming, priority, and budget — is work the client has to do, which is exactly what pushes larger deployments toward a single gateway process that owns these decisions instead of leaving every client to solve them independently.
 

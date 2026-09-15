@@ -6,11 +6,18 @@ summary: "Run many agent instances in parallel across processes or machines with
 duration: "6 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A single-process harness runs one control loop talking to one model at a time. The moment you need throughput — a hundred repo scans, a thousand support tickets — you're running many control loops at once, and now you own problems a single loop never had: who owns a piece of work, what happens when a worker dies mid-call, and how results land back in one place without clobbering each other.
 
 ## Work distribution, not just parallel calls
 
 Firing off concurrent model calls with `Promise.all` or `asyncio.gather` is easy inside one process — it's [parallel tool scheduling](/learn/harness-design/parallel-tool-scheduling) at a smaller scale. Distributed orchestration is a different problem: work items live in a queue (Redis, SQS, a Postgres table with a `status` column) that many worker processes pull from independently. The queue, not the caller, is the source of truth for what's been claimed. A worker claims an item with an atomic operation — `SELECT ... FOR UPDATE SKIP LOCKED`, or a Redis `BRPOPLPUSH` — so two workers can never grab the same row. Without that atomicity you get duplicate model calls on the same input, which is wasted spend at best and duplicate side effects (two emails sent, two tickets filed) at worst.
+
+<Callout kind="breaks" title="A non-atomic claim is a duplicate side effect">
+Two workers grabbing the same work item doesn't just waste tokens — it can send the same email twice or file the same ticket twice. The claim has to be one atomic operation (`SKIP LOCKED`, `BRPOPLPUSH`), never read-then-write.
+</Callout>
 
 ## Leases, not locks, for crash safety
 
@@ -23,5 +30,12 @@ Workers can't share in-memory state, so anything that needs to be visible across
 ## Aggregating results
 
 Fan-out is the easy half; fan-in is where bugs hide. Give every work item a stable ID and write results keyed by that ID rather than appending to a list — appends from concurrent writers can interleave or drop under load. A results table (or a queue with an ID-keyed sink) lets a separate aggregation step run once, after checking every item reached a terminal state, rather than racing the workers themselves.
+
+<InlineCheck
+  question="Why do distributed workers claim work via a lease rather than a lock?"
+  options={['A lock held by a dead worker holds forever — a lease expires. If the worker doesn\'t heartbeat or finish before `visible_after`, the item becomes claimable again', 'Because leases are faster', 'Because locks need a database']}
+  answer={0}
+  explanation="Crash safety at the fleet level is the same problem as single-session crash recovery: the claimer might die mid-call. Set the lease longer than your slowest expected model call plus retries, or workers step on their own in-flight work."
+/>
 
 **Related:** [Parallel Tool Scheduling](/learn/harness-design/parallel-tool-scheduling), [Crash Recovery and Resumption](/learn/harness-design/crash-recovery-and-resumption), [Delegating Work to Subagents](/learn/harness-design/subagent-and-task-delegation)

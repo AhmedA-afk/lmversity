@@ -1,5 +1,5 @@
 ---
-title: "Code Execution as a Tool"
+title: "The Code Interpreter Tool: Highest Leverage, Least Trust"
 track: "tools-function-calling"
 status: live
 summary: "Give the model a run_python tool and let it write the logic itself instead of you pre-building an endpoint for every question."
@@ -61,4 +61,4 @@ Data-analysis assistants, "advanced analysis" chat features, coding agents, and 
 
 [Building a Sandboxed Code Interpreter](/learn/tools-function-calling/building-a-code-interpreter-tool) walks through actually implementing this tool end to end. [One Code Tool vs. Dozens of API Tools](/learn/tools-function-calling/code-execution-vs-many-tools) covers when this beats — or loses to — a registry of narrow functions. Read [Sandboxing Tool Execution](/learn/tools-function-calling/sandboxing-tool-execution) before you wire any of this up for real.
 
-**Related:** [Building a Sandboxed Code Interpreter](/learn/tools-function-calling/building-a-code-interpreter-tool), [One Code Tool vs. Dozens of API Tools](/learn/tools-function-calling/code-execution-vs-many-tools), [Sandboxing Tool Execution](/learn/tools-function-calling/sandboxing-tool-execution), [Approval Gates for Sensitive Tool Calls](/learn/tools-function-calling/approval-gates-for-sensitive-tools)
+**Related:** [Building a Sandboxed Code Interpreter](/learn/tools-function-calling/building-a-code-interpreter-tool), [One Code Tool vs. Dozens of API Tools](/learn/tools-function-calling/code-execution-vs-many-tools), [Sandboxing Tool Execution](/learn/tools-function-calling/sandboxing-tool-execution), [Approval Gates for Sensitive Tool Calls](/learn/tools-function-calling/approval-gates-for-sensitive-tools); [Code Execution as a Tool](/learn/tools-function-calling/code-execution-as-a-tool)

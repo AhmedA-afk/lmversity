@@ -6,6 +6,9 @@ summary: "Store prompts outside application code with their own history, review 
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A prompt hardcoded as a string literal in your codebase looks harmless until the day you need to change it without a deploy, roll it back at 2am, or figure out which version was live when a customer got a bad answer. Prompts are config, not code — and they deserve config's tooling.
 
 ## Why embedding a prompt in code is a trap
@@ -36,5 +39,16 @@ Some teams use a dedicated prompt-management platform (LangSmith, PromptLayer, L
 The entire reason to do this is the moment something breaks. If a new prompt version starts producing worse outputs, you want to flip a pointer back to the last-known-good version — not revert a merged application PR and redeploy the service. Treat "live" as a mutable pointer over immutable versions, the same pattern used for [feature flags and kill switches](/learn/production/feature-flags-and-kill-switches): every version you've ever shipped stays retrievable, and switching between them is a config write, not a code change.
 
 This pairs naturally with structured logging — if you [log every LLM call as structured data](/learn/production/structured-logging-for-llm-calls), tag each request with the prompt version that generated it. Now a regression isn't just fixable, it's diagnosable: you can filter production traffic by prompt version and see exactly when quality shifted.
+
+<InlineCheck
+  question="A new prompt version starts producing worse answers at 2am. What does rollback look like when prompts are versioned config vs. embedded strings?"
+  options={['Flip the \'live\' pointer back to the last-known-good version — a config write, no redeploy', 'Revert the merged application PR and run the deploy pipeline', 'Edit the string literal in a hotfix branch']}
+  answer={0}
+  explanation="'Live' is a mutable pointer over immutable versions. Every shipped version stays retrievable and switching is a config write — versus embedded strings, where rollback means a code revert, CI, and a redeploy."
+/>
+
+<Callout kind="production" title="Different risk, different owner">
+A prompt change and a code change are different kinds of risk — a product manager or prompt engineer should ship a wording fix without a code review or the backend release train. Versioned config is what separates the two.
+</Callout>
 
 **Related:** [Prompt Templates: Building Reusable, Parameterized Prompts](/learn/prompt-engineering/prompt-templates-and-variables), [Log Every LLM Call as Structured Data](/learn/production/structured-logging-for-llm-calls), [Put a Kill Switch on Every AI Feature](/learn/production/feature-flags-and-kill-switches)

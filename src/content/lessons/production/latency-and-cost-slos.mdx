@@ -6,6 +6,9 @@ summary: "Define measurable targets for an AI feature so you catch degradation b
 duration: "6 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 An SLO (service-level objective) is a number you commit to in advance, so "is this feature healthy" stops being a vibe check. For AI features, one target isn't enough — latency, cost, and quality drift independently, and each one can quietly wreck the product while the others look fine.
 
 ## Why one SLO isn't enough
@@ -26,8 +29,19 @@ Don't guess a target — pull one from your existing [structured logs](/learn/pr
 
 Leave headroom for a real budget: an SLO isn't "the value we hit on average," it's "the value we promise not to cross without paging someone." Give yourself an error budget — e.g., latency can exceed target for 2% of requests in a week before it's treated as an incident. That budget is what tells you whether last Tuesday's slow queries were noise or a trend.
 
+<InlineCheck
+  question="What are the three parts of an SLO you can actually alert on?"
+  options={['A metric, a percentile or aggregate, and a window — "p95 time-to-first-token under 800ms over a rolling 5-minute window"', 'A metric, a dashboard, and a weekly review meeting', 'A target, an owner, and a quarterly deadline']}
+  answer={0}
+  explanation="'Fast' is not an SLO. A measurable target names the metric (time-to-first-token), the aggregate (p95), and the measurement window (rolling 5 minutes) — anything less can't fire an alert."
+/>
+
+<Callout kind="breaks" title="The day-one violation">
+An SLO set tighter than where you already sit trains everyone to ignore alerts. Pull current p50/p95/p99 from your logs first, then set the target slightly tighter — an SLO is a promise you keep with an error budget, not an aspiration.
+</Callout>
+
 ## Turning SLOs into alerts
 
 An SLO with no alert attached is a document nobody reads. Wire each one to a threshold that fires *before* the user-facing symptom, not after: alert at 80% of error-budget burn, not at 100%. Route latency and cost alerts to whoever owns the model/provider config, and route quality alerts to whoever owns prompts and evals — they're rarely the same fix. Once alerts exist, pair them with an [on-call playbook](/learn/production/on-call-playbooks-for-ai) so the page comes with a next step, not just a number.
 
-**Related:** [Track Cost Per Request and Per User](/learn/production/token-and-cost-tracking), [Catch Regressions with Evals in CI](/learn/production/eval-based-regression-testing), [Write an On-Call Playbook for AI Failures](/learn/production/on-call-playbooks-for-ai)
+**Related:** [Track Cost Per Request and Per User](/learn/production/token-and-cost-tracking), [Catch Regressions with Evals in CI](/learn/production/eval-based-regression-testing), [Write an On-Call Playbook for AI Failures](/learn/production/on-call-playbooks-for-ai); [The Cost, Latency, and Quality Curve](/learn/context-engineering/cost-latency-quality-tradeoff-curve)

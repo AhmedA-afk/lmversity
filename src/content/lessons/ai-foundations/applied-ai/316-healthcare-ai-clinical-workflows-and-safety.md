@@ -3,10 +3,9 @@ title: "Applied Case: Healthcare AI and Clinical Workflow Safety"
 track: ai-foundations
 status: live
 order: 316
-description: "Design clinical-support systems as evidence-aware workflow aids with strict escalation, privacy, and prospective validation boundaries."
+summary: "Design clinical-support systems as evidence-aware workflow aids with strict escalation, privacy, and prospective validation boundaries."
 ---
 
-# Applied Case: Healthcare AI and Clinical Workflow Safety
 
 ## Product question and learning objective
 

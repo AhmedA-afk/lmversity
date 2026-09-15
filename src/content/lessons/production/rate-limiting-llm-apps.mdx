@@ -6,6 +6,9 @@ summary: "Cap requests per user, queue what overflows, and degrade gracefully so
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 An LLM API call is slow and expensive compared to a normal database query, which means the failure modes are different too: a traffic spike doesn't just slow your app down, it can burn through your monthly budget in an hour or trip your provider's account-wide rate limit and take every user down at once. Rate limiting and backpressure are how you put a ceiling on that.
 
 ## Two different limits, two different jobs
@@ -25,6 +28,13 @@ Rejecting the request outright is the simplest response, but often the wrong one
 
 Queuing has a limit of its own: don't let a queue grow unbounded while users stare at a spinner. Cap the queue depth and the max wait, and once either is exceeded, reject with a clear message rather than let latency creep past what anyone will wait for.
 
+<InlineCheck
+  question="Why does a hard 'reject with an error' response often make a traffic spike worse?"
+  options={['Clients retry immediately on a hard error, which adds load — backpressure (a bounded queue or a 429 with Retry-After) pushes back instead of dropping them', 'Because errors are billed at a higher rate than completions', 'Because rejected requests cannot be logged']}
+  answer={0}
+  explanation="A rejected caller that retries instantly amplifies the spike. A bounded queue or a Retry-After contract gives well-behaved clients a way to wait for capacity instead of hammering it."
+/>
+
 ## Degrade instead of failing outright
 
 The most resilient systems don't just accept-or-reject at the limiter — they have a cheaper fallback to degrade to. That can mean routing overflow traffic to a smaller, faster model instead of queuing it behind the primary one, serving a cached or approximate answer for read-heavy features (see [prompt and semantic caching](/learn/production/prompt-and-semantic-caching)), or temporarily disabling a non-critical AI feature via a [kill switch](/learn/production/feature-flags-and-kill-switches) while keeping the core product usable. Decide which of your AI features are essential and which can be shed under load *before* the incident, not during it — that decision belongs in the same [on-call playbook](/learn/production/on-call-playbooks-for-ai) that covers the rest of your failure response.
@@ -32,5 +42,9 @@ The most resilient systems don't just accept-or-reject at the limiter — they h
 ## What to watch
 
 Rate limiting only works if you can see it working. Track rejection and queue rates per user and per feature, and alert well before you're regularly hitting the ceiling — a limiter that's constantly saturated is a signal to raise a quota or add capacity, not just a safety net doing its job quietly forever.
+
+<Callout kind="note" title="Two limits, two jobs">
+The provider's account-wide rate limit and your own fairness policy are different ceilings. An account-level limiter keeps total outbound rate under the provider's ceiling (one user's spike → everyone's 429s, otherwise); a per-user limiter caps any single caller well below that. You need both — they fail in different directions.
+</Callout>
 
 **Related:** [Rate Limits and Retry Strategies](/learn/genai-app-dev/rate-limits-and-retry-strategies), [Put a Kill Switch on Every AI Feature](/learn/production/feature-flags-and-kill-switches), [Set SLOs for Latency, Cost, and Quality](/learn/production/latency-and-cost-slos)

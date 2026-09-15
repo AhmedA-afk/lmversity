@@ -6,6 +6,9 @@ summary: "Attach retrieved sources to generated answers so users and evaluators 
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A RAG pipeline that retrieves great chunks and reranks them well can still ship an answer nobody can verify. Citations close that gap: they turn "trust me" into "check chunk 3, paragraph 2."
 
 ## Why citations aren't optional
@@ -33,7 +36,18 @@ A cited answer isn't automatically a correct one — models can cite a real chun
 - **Existence check**: does the cited id correspond to a chunk that was actually retrieved? Cheap, catches outright fabricated ids.
 - **Entailment check**: does the cited chunk's text actually support the claim? This usually means a second, smaller model call — or an [LLM-as-judge](/learn/evals-red-teaming/llm-as-judge) — comparing claim against source.
 
+<Callout kind="breaks" title="A real citation can still be a wrong claim">
+A model can cite `[doc2]` next to a claim doc2 never made — the id exists, so the existence check passes. Only the entailment check catches a citation that's structurally valid but semantically unsupported.
+</Callout>
+
 Run the entailment check in your eval suite, not just at serve time; it's one of the highest-signal metrics for [evaluating RAG quality](/learn/rag/evaluating-rag-quality) because it measures faithfulness directly instead of inferring it from answer relevance.
+
+<InlineCheck
+  question="Why instruct the model to cite chunk ids like [doc1] instead of just asking it to 'cite your sources'?"
+  options={['Tagged ids make every claim machine-checkable — you can verify the id exists and the chunk entails the claim. A vague \"cite sources\" produces unverifiable prose references', 'Because models can\'t write footnotes', 'To save tokens in the response']}
+  answer={0}
+  explanation="Explicit structure is what turns a citation from decoration into data. Bracketed ids let you run existence and entailment checks automatically — 'see the refund policy' gives you nothing to verify."
+/>
 
 ## UI matters as much as the model prompt
 

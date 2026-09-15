@@ -2,7 +2,7 @@
 title: "Why 'Works on My Machine' Happens"
 track: "python-data-apis"
 status: live
-summary: "Wrote the full INTUITION-page lesson body for 'Why 'Works on My Machine' Happens' using the shared-counter/separate-kitchen analogy, a step-by-step mental simulation (pandas .appen"
+summary: "Your script runs clean, top to bottom, on your laptop."
 duration: "1 min read"
 ---
 
@@ -152,4 +152,4 @@ The kitchen picture is useful, but push on it and it cracks in a few honest plac
 
 None of that erases the lesson — isolation plus a pin fixes the overwhelming majority of "works on my machine" moments. It just means the recipe card can't be the *only* thing you ever check when something still goes sideways.
 
-**Related:** Why isolated environments make sense · [Python environments and venv](/learn/python-data-apis/python-environments-and-venv) · [Setting up venv and Jupyter](/learn/python-data-apis/setting-up-venv-and-jupyter) · [The whole-game data pipeline](/learn/python-data-apis/python-data-pipeline-whole-game) · [Environments & tooling quiz](/learn/python-data-apis/environments-tooling-quiz)
+**Related:** [Python environments and venv](/learn/python-data-apis/python-environments-and-venv) · [Setting up venv and Jupyter](/learn/python-data-apis/setting-up-venv-and-jupyter) · [The whole-game data pipeline](/learn/python-data-apis/python-data-pipeline-whole-game) · [Environments & tooling quiz](/learn/python-data-apis/environments-tooling-quiz)

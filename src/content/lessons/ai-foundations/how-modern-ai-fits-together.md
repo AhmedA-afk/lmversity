@@ -2,7 +2,7 @@
 title: "How Modern AI Fits Together"
 track: "ai-foundations"
 status: live
-summary: "Whole-game overview lesson for LMVersity's AI Foundations Orientation module: traces 'why does ChatGPT answer this way?' down through AI > ML > deep learning > training > foundati"
+summary: "This track won't teach you to build the next frontier model, and it isn't a coding bootcamp — it teaches you the mechanism well enough that \"AI\" stops being either magic or a chatbot with a search engine bolted on, and starts being a specific, traceable pipeline you can reason about."
 duration: "4 min read"
 ---
 

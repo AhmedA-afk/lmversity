@@ -2,7 +2,7 @@
 title: "Overfitting You Can See"
 track: "ai-foundations"
 status: live
-summary: "A hands-on, visual walkthrough of overfitting: fit degree-1, degree-4, and degree-15 polynomials to the same dozen noisy points, watch the high-degree curve memorize noise instead "
+summary: "Fit three curves to the same twelve noisy points, and the one that runs through all twelve exactly will usually be the worst guess at the thirteenth."
 duration: "12 min read"
 ---
 

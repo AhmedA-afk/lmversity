@@ -1,5 +1,5 @@
 ---
-title: "Streaming Partial Tool Calls"
+title: "Streaming Tool Calls: Partial JSON Is Never Input"
 track: "tools-function-calling"
 status: live
 summary: "A tool call's JSON is complete only once the stream ends — treat any earlier snapshot of it as a preview, never as input."

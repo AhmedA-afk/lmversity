@@ -6,6 +6,9 @@ summary: "Use OpenTelemetry's gen_ai.* attribute standard so LLM spans work with
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Every LLM call you make is a span waiting to happen — but if you name its attributes yourself, they only make sense to you. OpenTelemetry's GenAI semantic conventions give those spans a shared vocabulary so any OTel-compatible backend (Jaeger, Honeycomb, Datadog, Grafana Tempo) can render, filter, and alert on them without custom mapping code.
 
 ## Why a shared schema matters
@@ -23,6 +26,13 @@ A span for a single model call follows a fixed naming pattern — the operation 
 - `gen_ai.response.finish_reasons` — why generation stopped (`stop`, `length`, `tool_calls`)
 
 Prompt and completion content are handled separately from these low-cardinality attributes, usually as span events or log records gated behind an opt-in flag — because raw prompts are high-volume, often sensitive, and shouldn't blow up your span size or leak into a backend that isn't built to hold them. If you're capturing content, run it through your [PII redaction](/learn/production/pii-redaction-in-llm-logs) step first.
+
+<InlineCheck
+  question="Why can `gen_ai.request.model` and `gen_ai.response.model` legitimately differ on the same span?"
+  options={['The provider may auto-route or resolve an alias — what you asked for and what actually answered are different facts worth logging separately', 'It is a bug in the instrumentation', 'The response model is always the base model before fine-tuning']}
+  answer={0}
+  explanation="Request says what you asked for; response says what actually served it. When a provider aliases or auto-routes a model name, that gap is exactly what you need in a trace to explain a behavior change."
+/>
 
 ## Wiring it into your existing pipeline
 
@@ -44,6 +54,8 @@ with tracer.start_as_current_span("chat claude-sonnet-4") as span:
 
 Several SDKs (the OpenTelemetry Python and JS auto-instrumentation packages, plus instrumentation shipped by some LLM gateways) already do this wrapping for you — check before hand-rolling it. Once these spans exist, they slot straight into a [multi-step pipeline trace](/learn/production/tracing-multi-step-ai-pipelines): the LLM call becomes one labeled child span inside the larger agent or RAG trace, instead of an unlabeled black box.
 
-The conventions are still evolving — attribute names have changed as the spec matures from experimental to stable — so pin the semconv version your instrumentation targets and watch the changelog before upgrading a production pipeline.
+<Callout kind="note" title="A moving spec">
+The conventions are still evolving — attribute names have changed as the spec matures from experimental to stable. Pin the semconv version your instrumentation targets and watch the changelog before upgrading a production pipeline.
+</Callout>
 
 **Related:** [Trace Multi-Step Agent and RAG Pipelines](/learn/production/tracing-multi-step-ai-pipelines), [Track Cost Per Request and Per User](/learn/production/token-and-cost-tracking), [Log Every LLM Call as Structured Data](/learn/production/structured-logging-for-llm-calls)

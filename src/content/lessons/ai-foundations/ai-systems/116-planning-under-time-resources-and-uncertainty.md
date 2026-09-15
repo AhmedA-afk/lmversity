@@ -3,15 +3,15 @@ title: "Planning Under Time, Resources, and Uncertainty"
 track: "ai-foundations"
 status: live
 order: 116
+summary: "Extend simple planning when duration, consumption, observations, and failures make a linear action list insufficient."
 ---
 
-# Planning Under Time, Resources, and Uncertainty
 
 ## Why this matters
 
 Extend simple planning when duration, consumption, observations, and failures make a linear action list insufficient. A serious AI system is not defined by a model name. It is defined by a decision boundary, the information available at the moment of action, the cost of being wrong, and the evidence that lets another person audit the result. This lesson treats the method as both a mathematical object and an operational commitment. The aim is to let you calculate a small example, implement a minimal version, inspect its failure modes, and decide when it should not be deployed.
 
-Start by separating four things that are often conflated: the world state, an agent's representation of that state, an action, and an outcome. A representation can be incomplete or wrong; an action can be legal but unwise; and an outcome can be good by luck. That separation makes debugging possible. It also prevents a common pattern in introductory AI: demonstrating a successful toy trace and assuming the same rule will survive noise, ambiguity, distribution shift, or an adversary.
+Start by separating four things that are often conflated: the world state, an agent's representation of that state, an action, and an outcome. A representation can be incomplete or wrong; an action can be legal but unwise; and an outcome can be good by luck. That separation makes debugging possible. It also prevents a common pattern in introductory AI: demonstrating a successful toy trace and assuming the same rule will survive noise, ambiguity, [distribution shift](/learn/ai-foundations/reliable-ai/204-distribution-shift-and-robustness), or an adversary.
 
 ## Core model and worked trace
 
@@ -72,3 +72,5 @@ Produce a temporal/resource plan, calculate feasibility, and specify contingency
 | Communication and provenance | 15 | Claims, data, limitations, and decision record are clear and auditable. |
 
 To reach mastery, do not merely produce a result. Explain which guarantee you rely on, what evidence would falsify it, and what a responsible system does when the guarantee no longer applies.
+
+**Related:** [Planning and Task Decomposition](/learn/agentic-ai/planning-and-task-decomposition) — the modern-agent descendant of this classical machinery.

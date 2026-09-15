@@ -6,6 +6,10 @@ summary: "AI outages rarely look like server crashes - write runbooks for silent
 duration: "6 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+import Steps from '../../../components/kit/Steps.astro';
+import Step from '../../../components/kit/Step.astro';
+
 A normal on-call playbook assumes the pager fires because something is down. AI systems fail sideways instead: the API returns 200s while the model quietly gets worse, or a retry loop burns your monthly budget in an hour. You need a playbook built for those shapes of failure, not a copy-pasted infra runbook with "LLM" swapped in.
 
 ## Alert on the failure modes that are actually yours
@@ -23,11 +27,26 @@ Each of these needs a distinct threshold and a distinct page, because they call 
 
 A useful runbook answers three questions fast: what's the blast radius, what's the immediate mitigation, and who needs to know. For each alert above, write:
 
-1. **Confirm** - the one dashboard or query that tells you this is real, not a blip (e.g., "check the eval-score panel over the last 30 minutes, not a single data point").
-2. **Contain** - the fastest safe action. Usually this is flipping a [kill switch or feature flag](/learn/production/feature-flags-and-kill-switches) to fall back to a cached response, a smaller model, or a static message - not a code deploy.
-3. **Escalate** - who owns the next step if containment doesn't resolve it (model provider status page, the prompt owner, security if it looks like [prompt injection or abuse](/learn/production/prompt-injection-monitoring)).
+<Steps>
+<Step title="Confirm">
+The one dashboard or query that tells you this is real, not a blip — e.g., "check the eval-score panel over the last 30 minutes, not a single data point."
+</Step>
+<Step title="Contain">
+The fastest safe action. Usually flipping a [kill switch or feature flag](/learn/production/feature-flags-and-kill-switches) to fall back to a cached response, a smaller model, or a static message — not a code deploy.
+</Step>
+<Step title="Escalate">
+Who owns the next step if containment doesn't resolve it — model provider status page, the prompt owner, or security if it looks like [prompt injection or abuse](/learn/production/prompt-injection-monitoring).
+</Step>
+</Steps>
 
 Keep each entry short enough to execute at 3am under stress. If a step needs judgment calls that only make sense with full context, it belongs in a design doc, not the runbook.
+
+<InlineCheck
+  question="Why can't an AI on-call playbook be a normal infra runbook with 'LLM' swapped in?"
+  options={['AI systems fail sideways — the API returns 200s while quality drops or a retry loop burns budget, so the alerts and first responses are different shapes', 'Because LLM providers do not publish status pages', 'Because on-call rotations do not apply to AI teams']}
+  answer={0}
+  explanation="The failure modes are silent: nothing errors, so nothing pages. The playbook has to alert on eval-score drops, cost spikes, and tool-call failure rates — signals no uptime monitor watches."
+/>
 
 ## Rehearse it before you need it
 

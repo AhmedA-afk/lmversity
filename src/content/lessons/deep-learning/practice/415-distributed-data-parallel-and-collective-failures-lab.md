@@ -3,7 +3,7 @@ title: "Graded lab: distributed data parallel design"
 track: "deep-learning"
 status: live
 order: 415
-summary: "Scale the experiment, not the bugs"
+summary: "For rank-local counts (n_r) and correct (c_r), global accuracy is (sum_rc_r/\\sum_rn_r), not (R^{-1}\\sum_r c_r/n_r)."
 duration: "18–30 min"
 ---
 
@@ -62,7 +62,7 @@ A useful debug log includes run id, data/split id, model artifact id, host/devic
 
 ## Why this matters
 
-Distributed data parallelism replicates a model and partitions data, then all-reduces gradients. Correctness requires one global view of the data manifest, sampler epoch setting, metric reduction, checkpoint ownership, and failure handling. Scaling can alter batch size and optimizer dynamics.
+Distributed data parallelism replicates a model and partitions data, then all-reduces gradients. Correctness requires one global view of the data manifest, sampler epoch setting, metric reduction, checkpoint ownership, and failure handling. Scaling can alter [batch size](/learn/deep-learning/core/121-batch-size-gradient-noise-and-scaling-rules) and optimizer dynamics.
 
 ## Worked scenario
 

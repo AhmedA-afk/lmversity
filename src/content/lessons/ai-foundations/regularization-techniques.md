@@ -2,7 +2,7 @@
 title: "Regularization: Making Models Simpler on Purpose"
 track: "ai-foundations"
 status: live
-summary: "A hands-on tour of L2 weight decay, dropout, and early stopping — three different ways to deliberately limit how well a model fits its training data so it generalizes better — all "
+summary: "Every model you train has more freedom than it needs — enough free parameters to trace a path through every training point, noise included, if you let it."
 duration: "14 min read"
 ---
 

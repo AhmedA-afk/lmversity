@@ -6,6 +6,9 @@ summary: "Structured, per-iteration logs of every prompt, tool call, and result 
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 When an agent does the wrong thing three tool calls into a ten-call run, "it seemed confused" is not a diagnosis. The only way to find out what actually happened is to have written it down as it happened — every model call, every tool invocation, every result, in order, with enough structure to query later.
 
 ## What "every step" actually means
@@ -32,8 +35,19 @@ That shape lets you filter by session, replay a run step by step, or grep across
 
 The steps worth logging most carefully are the ones that go wrong: a tool that threw, a model response the harness rejected, a permission check that denied a call. These are exactly the events a developer reaches for when a user reports "the agent got stuck," and they're the ones most often silently swallowed because the happy path was the only path anyone tested. If a tool call is denied by a [deny-floor](/learn/harness-design/deny-floors-and-policy-layers) or an [approval gate](/learn/harness-design/permission-and-approval-systems), log the denial and the reason — otherwise a legitimate policy decision looks identical to an unexplained failure in the trace.
 
+<Callout kind="breaks" title="A silent denial looks exactly like a bug">
+If a policy layer blocks a call and nobody logs it, the trace shows the agent simply 'failing' to do something — and you debug a policy working as intended. Log the denial *and the reason* every time.
+</Callout>
+
 ## Logs are not the same thing as a trace
 
 Individual log lines answer "what happened at step 4." A trace — the full ordered sequence of steps for one session, often visualized as a timeline or tree — answers "how did the agent get from the user's request to this outcome." Building traceable logs from the start (consistent session IDs, step numbers, parent/child links for [delegated subagent work](/learn/harness-design/subagent-and-task-delegation)) is what makes that reconstruction possible later without re-running anything. It's also the foundation production systems build on when they move from "can I debug one run" to [tracing multi-step pipelines](/learn/production/tracing-multi-step-ai-pipelines) across many users and sessions at once.
+
+<InlineCheck
+  question="What makes a log traceable rather than just verbose?"
+  options={['Structure: one JSON record per event with a shared session ID and step numbers — so you can filter a run, replay it, or grep across thousands of runs for every edit_file failure', 'More log lines', 'Logging only errors']}
+  answer={0}
+  explanation="Free-text logs don't compose. A shared session/trace ID plus consistent step numbering is what turns 'what happened at step 4' into 'how did the agent get from the request to this outcome' — without re-running anything."
+/>
 
 **Related:** [Building the Control Loop](/learn/harness-design/the-control-loop), [Trace Multi-Step Agent and RAG Pipelines](/learn/production/tracing-multi-step-ai-pipelines), [Delegating Work to Subagents](/learn/harness-design/subagent-and-task-delegation)

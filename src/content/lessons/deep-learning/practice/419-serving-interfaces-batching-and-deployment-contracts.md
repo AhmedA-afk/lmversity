@@ -3,7 +3,7 @@ title: "Serving interfaces, batching, and deployment contracts"
 track: "deep-learning"
 status: live
 order: 419
-summary: "Ship the exact model you evaluated"
+summary: "The serving function should implement (y=f_v(T_v(x))), where both transform and model version are fixed by the release."
 duration: "18–30 min"
 ---
 

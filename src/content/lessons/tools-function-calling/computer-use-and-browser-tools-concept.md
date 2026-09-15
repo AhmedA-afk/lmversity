@@ -1,5 +1,5 @@
 ---
-title: "Computer-Use and Browser-Control Tools"
+title: "Computer Use: The Screenshot-and-Click Loop"
 track: "tools-function-calling"
 status: live
 summary: "When no API exists, the fallback isn't giving up — it's a screenshot-and-click loop that operates the UI a human would use."

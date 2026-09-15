@@ -6,6 +6,11 @@ summary: "Cut cost roughly in half on jobs nobody is waiting on by using async b
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+import Steps from '../../../components/kit/Steps.astro';
+import Step from '../../../components/kit/Step.astro';
+
 If a human isn't staring at a spinner waiting for the response, you're probably paying too much for it. Batch APIs trade latency for cost: submit a pile of requests, get results back in hours instead of milliseconds, and pay roughly half the per-token price.
 
 ## What actually counts as "batch work"
@@ -18,15 +23,35 @@ Anthropic's Message Batches API and OpenAI's Batch API both work the same way: y
 
 The mechanics are simple but the plumbing matters more than the API call itself:
 
-```
-1. Collect requests → JSONL file, one line per request, each tagged with custom_id
-2. Submit batch → get back a batch_id
-3. Poll status (or use a webhook if the provider supports one)
-4. On completion, download results → map custom_id back to your records
-5. Handle partial failures — some lines can fail independently
-```
+<Steps>
+<Step title="Collect requests">
+Write a JSONL file — one line per request, each tagged with its own `custom_id` so you can map results back later.
+</Step>
+<Step title="Submit the batch">
+Upload the file and get back a `batch_id`. This is a handoff, not a function call.
+</Step>
+<Step title="Wait for completion">
+Poll the batch status, or use a webhook if the provider supports one. Batches aren't guaranteed to finish in order, or even all at once.
+</Step>
+<Step title="Map results back">
+Download the results file and join each line to your records via `custom_id`.
+</Step>
+<Step title="Handle partial failures">
+Individual requests inside a batch can fail while the rest succeed — expect a results file that mixes successes and errors, not uniform output.
+</Step>
+</Steps>
 
-Two things trip people up. First, batches aren't guaranteed to finish in order, or even all at once — treat the whole thing as fire-and-forget with a callback, not a blocking call you `await`. Second, individual requests inside a batch can fail while the rest succeed, so your ingestion code needs to handle a results file that's a mix of successes and errors, not assume uniform output.
+<Callout kind="breaks" title="Where batches bite">
+- **Treating it like a blocking call.** A batch is fire-and-forget with a callback, not something you `await`. Code that assumes in-order, all-at-once completion will mishandle real batches.
+- **Assuming uniform results.** Your ingestion path must tolerate a mix of successes and per-line errors in the same file — the batch succeeding says nothing about any single request inside it.
+</Callout>
+
+<InlineCheck
+  question="A job re-scores last quarter's support tickets overnight. Nobody waits on the result. Interactive API or batch API — and why?"
+  options={['Batch — the defining trait is that a delay of minutes to a day is acceptable, so it earns the ~50% discount', 'Interactive — because the request volume is too small for a batch', 'Interactive — batch APIs only apply to embeddings jobs']}
+  answer={0}
+  explanation="Volume is not the test — latency tolerance is. If no user is waiting on the response, the workload belongs in a batch queue where the same tokens cost roughly half."
+/>
 
 ## Where it fits next to caching and routing
 

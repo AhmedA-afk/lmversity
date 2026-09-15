@@ -2,7 +2,7 @@
 title: "Comprehensions and Generators for Transforms"
 track: "python-data-apis"
 status: live
-summary: "Implementation-walkthrough lesson: refactor a manual loop over ticket dicts into list/dict comprehensions for transform+filter+re-key, then write a generator that streams a huge JS"
+summary: "Every for-loop that builds up a list one `.append()` at a time is doing the same three things: pull an item, maybe transform it, maybe keep it."
 duration: "2 min read"
 ---
 

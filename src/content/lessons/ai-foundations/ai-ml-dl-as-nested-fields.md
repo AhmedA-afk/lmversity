@@ -2,7 +2,7 @@
 title: "AI, ML, and Deep Learning as Nested Fields"
 track: "ai-foundations"
 status: live
-summary: "Wrote the INTUITION-type lesson 'AI, ML, and Deep Learning as Nested Fields' as GitHub-flavored Markdown (no frontmatter/H1, body only). Built one strong analogy (three ways to tra"
+summary: "Open any AI overview and you'll see the same picture: three circles, one nested inside the next, labeled AI, ML, and Deep Learning."
 duration: "7 min read"
 ---
 

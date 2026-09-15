@@ -6,6 +6,11 @@ summary: "When demand exceeds capacity, degrade to cached answers or smaller mod
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+import Steps from '../../../components/kit/Steps.astro';
+import Step from '../../../components/kit/Step.astro';
+
 Traditional web servers handle overload by rejecting requests once a queue fills up. AI features need a subtler response, because a rejected request and a degraded one cost you very different amounts of user trust — and because LLM capacity is expensive and slow to add on the fly.
 
 ## Why LLM traffic overloads differently
@@ -16,11 +21,23 @@ A normal API request takes milliseconds and one server can serve thousands of th
 
 Load shedding means deciding, ahead of time, what a request gets when full capacity isn't available — rather than a 503. Common fallback tiers, roughly cheapest and fastest first:
 
-- **Serve from cache.** If a semantically similar request was answered recently, return that answer instead of calling the model again. See [caching prompts and responses](/learn/production/prompt-and-semantic-caching).
-- **Route to a cheaper, faster model.** A smaller model gives a worse but still useful answer instead of no answer — see [routing by task complexity](/learn/production/model-routing-by-task-complexity).
-- **Return a canned or templated response** for the most common intents, skipping the model call entirely.
-- **Queue with a visible wait,** rather than a silent timeout, if the user's task tolerates delay.
-- **Shed by priority.** Serve paying tenants or latency-sensitive endpoints first; delay or drop batch and non-interactive traffic — this is what [per-tenant budgets](/learn/production/per-tenant-token-budgets-and-quotas) and [rate limiting](/learn/production/rate-limiting-llm-apps) exist to enforce.
+<Steps>
+<Step title="Serve from cache">
+If a semantically similar request was answered recently, return that answer instead of calling the model again. See [caching prompts and responses](/learn/production/prompt-and-semantic-caching).
+</Step>
+<Step title="Route to a cheaper, faster model">
+A smaller model gives a worse but still useful answer instead of no answer — see [routing by task complexity](/learn/production/model-routing-by-task-complexity).
+</Step>
+<Step title="Return a canned or templated response">
+For the most common intents, skip the model call entirely.
+</Step>
+<Step title="Queue with a visible wait">
+If the user's task tolerates delay, say so — a visible wait beats a silent timeout.
+</Step>
+<Step title="Shed by priority">
+Serve paying tenants or latency-sensitive endpoints first; delay or drop batch and non-interactive traffic — this is what [per-tenant budgets](/learn/production/per-tenant-token-budgets-and-quotas) and [rate limiting](/learn/production/rate-limiting-llm-apps) exist to enforce.
+</Step>
+</Steps>
 
 The order matters: check cache first, since it's nearly free, before deciding whether to fall back to a cheaper model or shed the request outright.
 
@@ -40,6 +57,17 @@ except (RateLimitError, TimeoutError):
 ```
 
 The critical discipline is deciding this ladder *before* an incident, not while your dashboard is on fire. Write it down as part of your [on-call playbook](/learn/production/on-call-playbooks-for-ai), so whoever is paged doesn't have to invent a strategy under pressure.
+
+<InlineCheck
+  question="Why doesn't 'add more servers' fix an overloaded LLM feature the way it fixes a web app?"
+  options={['The bottleneck is usually the provider — its rate limit and your token budget — not your own compute', 'Because LLM requests use more memory than web requests', 'Because load balancers cannot route streaming responses']}
+  answer={0}
+  explanation="An LLM call holds a rate-limit slot for seconds and is priced per token. Your servers can scale; the provider's quota can't — which is why the response to overload is a fallback ladder, not a bigger fleet."
+/>
+
+<Callout kind="breaks" title="Retry storms">
+Without shedding, client retries pile onto an already-struggling provider and turn a slowdown into a full outage. Shedding early — before the queue is deep — is what keeps the retry storm from forming.
+</Callout>
 
 ## What "falling over" looks like without this
 

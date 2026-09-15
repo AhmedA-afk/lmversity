@@ -2,7 +2,7 @@
 title: "GroupBy and Aggregation in Practice"
 track: "python-data-apis"
 status: live
-summary: "A worked example grouping 18 support tickets by category to compute count, mean resolution time, and a custom SLA-breach aggregate with groupby.agg — contrasted against value_count"
+summary: "Your support queue has thousands of closed tickets and one question that actually matters: which category of problem is failing customers the hardest?"
 duration: "14 min read"
 ---
 

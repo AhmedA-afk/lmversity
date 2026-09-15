@@ -57,6 +57,34 @@ if (existsSync(SOURCES_FILE)) {
   }
 }
 
+// --- entity registry --------------------------------------------------------
+// src/data/entities.json is the shared record for vendors, models, tools,
+// certifications, and standards — volatile facts live there so a correction
+// propagates. `officialSources` must resolve to sources.json ids.
+const ENTITIES_FILE = join(ROOT, 'src/data/entities.json');
+const ENTITY_KINDS = new Set([
+  'vendor', 'model-family', 'tool', 'framework',
+  'certification-program', 'standard', 'dataset',
+]);
+const ENTITY_STATUS = new Set(['current', 'deprecated', 'superseded', 'retired']);
+const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+if (existsSync(ENTITIES_FILE)) {
+  const raw = JSON.parse(readFileSync(ENTITIES_FILE, 'utf8'));
+  for (const [id, e] of Object.entries(raw)) {
+    if (id.startsWith('$')) continue;
+    const miss = ['name', 'kind', 'status', 'verifiedAt', 'officialSources']
+      .filter((k) => !e[k]);
+    if (miss.length) problems.push(`entities.json "${id}": missing ${miss.join(', ')}`);
+    if (e.kind && !ENTITY_KINDS.has(e.kind)) problems.push(`entities.json "${id}": unknown kind "${e.kind}"`);
+    if (e.status && !ENTITY_STATUS.has(e.status)) problems.push(`entities.json "${id}": unknown status "${e.status}"`);
+    if (e.verifiedAt && !DATE_RE.test(e.verifiedAt)) problems.push(`entities.json "${id}": verifiedAt must be YYYY-MM-DD`);
+    if (e.changeNote && typeof e.changeNote !== 'string') problems.push(`entities.json "${id}": changeNote must be a string`);
+    for (const sid of e.officialSources ?? []) {
+      if (!sourceRegistry.has(sid)) problems.push(`entities.json "${id}": officialSources references unknown source "${sid}"`);
+    }
+  }
+}
+
 // editorial pipeline stages — `status` is nav visibility, `reviewStatus` is the
 // editorial record; a live page must have passed review, a coming page must not
 // claim it has

@@ -6,6 +6,10 @@ summary: "Grounding means constraining an answer to evidence that the system can
 duration: "3 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+
 ## The short answer
 
 Grounding means constraining an answer to evidence that the system can identify and inspect. A citation is useful only when it points to the evidence that supports the claim. Context budgets force selection: include the most relevant, permitted, fresh evidence and define what happens when evidence is insufficient.
@@ -38,6 +42,10 @@ increase cost. Rank, deduplicate, and reserve space for the answer and citations
 An answer can cite a relevant page while making a claim that page does not support.
 Evaluate claim-level entailment or require a quote/span check.
 
+<Callout kind="breaks" title="Citation laundering">
+Citing a relevant page next to a claim that page doesn't support is worse than no citation — it borrows the page's credibility for an unsupported claim. Only claim-level entailment or a span check catches it.
+</Callout>
+
 ## An illustrative story
 
 A user trusted a response because it had three citations. The first citation
@@ -47,15 +55,14 @@ has inspectable support.”
 
 ## Two ways to see it
 
-### Context view
-
-Budget tokens like an editor budgets a briefing: relevance, diversity, freshness,
-and exceptions matter.
-
-### Trust view
-
-The question is not “did the model cite something?” but “can a reviewer follow the
-claim back to an authorized source?”
+<Compare>
+<Pane title="Context view" tone="neutral">
+Budget tokens like an editor budgets a briefing: relevance, diversity, freshness, and exceptions matter.
+</Pane>
+<Pane title="Trust view" tone="good">
+The question is not "did the model cite something?" but "can a reviewer follow the claim back to an authorized source?"
+</Pane>
+</Compare>
 
 ## Hands-on
 

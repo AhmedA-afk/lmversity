@@ -3,10 +3,9 @@ title: "Experimentation, A/B Tests, and Decision Quality"
 track: ai-foundations
 status: live
 order: 313
-description: "Run experiments that estimate causal impact on the intended outcome and protect users from premature optimization."
+summary: "Run experiments that estimate causal impact on the intended outcome and protect users from premature optimization."
 ---
 
-# Experimentation, A/B Tests, and Decision Quality
 
 ## Product question and learning objective
 

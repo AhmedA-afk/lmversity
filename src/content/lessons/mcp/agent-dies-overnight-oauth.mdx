@@ -7,6 +7,9 @@ summary: The classic MCP failure — everything works in the demo, then the agen
 duration: 14 min
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Here's a bug that has cost more debugging hours than almost any other in agent land: it works perfectly when you test it, and then hours later — often overnight — the agent quietly stops doing anything useful. The cause is almost always an **expired access token that never got refreshed.**
 
 ## The setup that fails
@@ -19,6 +22,10 @@ The failure is quiet for two reasons:
 
 1. The API returns a `401 Unauthorized`, but if your tool swallows errors it just returns nothing — and the model, handed nothing, moves on.
 2. Nobody's watching at 3am. The demo passed; everyone went home.
+
+<Callout kind="breaks" title="A swallowed 401 looks like an empty result">
+If your tool catches the auth error and returns nothing, the model can't tell "unauthorized" from "no data" — it just moves on, and the agent looks healthy while doing nothing. Surface auth failures as explicit tool errors, not empty responses.
+</Callout>
 
 ## The fix: refresh before you're asked
 
@@ -60,6 +67,13 @@ Call `token.valid()` on every request and expiry stops being your problem.
 - **Rotating refresh tokens.** Some providers hand you a *new* refresh token on each refresh and invalidate the old one. If you don't persist it, you're locked out next time. (Handled above — persist it.)
 - **Refresh tokens expire too**, just slowly (days to months, or on password change). When that happens you need real re-authentication, not another refresh. Fail *loudly* here.
 - **Never swallow the 401.** Surface auth failures as an explicit tool error so the model — and your logs — know what happened.
+
+<InlineCheck
+  question="Why refresh the access token proactively instead of waiting for a 401 and then refreshing?"
+  options={['Waiting for a 401 means a real request already failed — and if your tool swallows it, the failure is invisible. Proactive refresh means the expiry never reaches a user at all', 'Because refresh tokens expire faster than access tokens', 'Because providers charge per 401 response']}
+  answer={0}
+  explanation="The refresh token is long-lived precisely so you can mint a new access token before the old one dies. Refreshing only after a failure guarantees at least one dropped request — usually at 3am, unobserved."
+/>
 
 ## The takeaway
 

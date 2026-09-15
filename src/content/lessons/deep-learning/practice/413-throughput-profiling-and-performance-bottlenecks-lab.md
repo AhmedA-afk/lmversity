@@ -3,7 +3,7 @@ title: "Graded lab: profile an end-to-end training step"
 track: "deep-learning"
 status: live
 order: 413
-summary: "Measure before optimizing"
+summary: "Define step time (t=t_{load}+t_{transfer}+t_{forward}+t_{backward}+t_{update}+t_{sync}); throughput is examples or tokens divided by (t)."
 duration: "18–30 min"
 ---
 
@@ -66,7 +66,7 @@ Performance work starts with a trace spanning data read, host preparation, devic
 
 ## Worked scenario
 
-A GPU may look idle because JPEG decode blocks the host; a fast forward pass may be hidden by checkpoint serialization; a seemingly faster kernel may reduce numerical stability. Instrument each boundary.
+A GPU may look idle because JPEG decode blocks the host; a fast forward pass may be hidden by checkpoint serialization; a seemingly faster kernel may reduce [numerical stability](/learn/deep-learning/core/124-numerical-stability-logsumexp-and-mixed-precision). Instrument each boundary.
 
 ## Practical method
 

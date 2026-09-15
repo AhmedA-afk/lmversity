@@ -3,10 +3,9 @@ title: "SGD, Mini-batches, and Objective Estimation"
 track: deep-learning
 status: live
 order: 113
-description: "See minibatch training as stochastic estimation of a population objective, not merely a faster loop."
+summary: "See minibatch training as stochastic estimation of a population objective, not merely a faster loop."
 ---
 
-# SGD, Mini-batches, and Objective Estimation
 
 ## Why this matters
 
@@ -14,7 +13,7 @@ See minibatch training as stochastic estimation of a population objective, not m
 
 ## Core derivation
 
-Empirical risk R(θ)=N⁻¹Σℓ_i. A uniformly sampled batch gradient g_B=B⁻¹Σ∇ℓ_i is unbiased for ∇R, while Var(g_B) falls roughly with batch size under independence.
+Empirical risk R(θ)=N⁻¹Σℓ_i. A uniformly sampled batch gradient g_B=B⁻¹Σ∇ℓ_i is unbiased for ∇R, while Var(g_B) falls roughly with [batch size](/learn/deep-learning/core/121-batch-size-gradient-noise-and-scaling-rules) under independence.
 
 Write the dimensions next to every expression. If an expression does not type-check, do not “fix” it by reshaping until you can say what each axis represents.
 

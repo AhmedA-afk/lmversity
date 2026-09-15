@@ -6,6 +6,10 @@ summary: "Some tool calls are safe to fire concurrently; others corrupt state if
 duration: "5 min read"
 ---
 
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Modern models can emit several tool calls in one turn — three file reads and a grep, say. Your harness has to decide which of those can actually run at the same time, and which ones will step on each other if you let them.
 
 ## Reads are free, writes are not
@@ -16,11 +20,27 @@ Calls that mutate state are the risk. Two `Edit` calls against the same file, a 
 
 A working scheduler classifies each call along two axes: does it read or write, and what resource does it touch. Same-resource writes serialize. Reads against a resource that something else is concurrently writing either wait or get flagged as possibly-stale. Everything else — different files, different resources, pure reads — parallelizes freely.
 
+<Compare title="The scheduling rule">
+<Pane title="Reads — parallelize freely" tone="good">
+Three greps, a file read, a web search — observing state changes nothing. Different resources, no ordering dependency, run them all at once.
+</Pane>
+<Pane title="Writes — serialize by resource" tone="bad">
+Two edits to the same file, a write plus a read on the same path — last finisher wins silently and the model never learns its edit was clobbered.
+</Pane>
+</Compare>
+
 ## Building the conflict check
 
 You don't need a general-purpose lock manager. Most harnesses key on something coarse and cheap to compute: the file path for filesystem tools, the session or table name for a database tool, the URL host for network calls. Before dispatching a batch of calls the model requested in one turn, walk the batch and group by resource key. Within a group, if any call is a write, run that group's calls in submission order and hold the rest of the batch until it settles. Groups with no shared key run concurrently.
 
 This is deliberately conservative — it will serialize calls that would have been fine in parallel because they happened to share a coarse key (two edits to different lines of the same file, say). That's the right trade. A false serialization costs a little latency; a false parallelization costs correctness, and the failure is a corrupted file or a silently dropped edit that's hard to trace back to a race days later.
+
+<InlineCheck
+  question="Why is a deliberately conservative scheduler the right tradeoff?"
+  options={['The error costs are asymmetric — a false serialization costs latency; a false parallelization costs a silently corrupted file that surfaces as a bug days later, far from the race that caused it', 'Because parallel calls are always wrong', 'Because locks are expensive']}
+  answer={0}
+  explanation="Over-serializing is visible and cheap; under-serializing is invisible and corrupting. Bias toward the failure you can see."
+/>
 
 ## What still goes wrong
 

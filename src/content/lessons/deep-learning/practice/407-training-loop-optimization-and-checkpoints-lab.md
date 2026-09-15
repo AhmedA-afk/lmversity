@@ -3,7 +3,7 @@ title: "Graded lab: training loop, optimizer, and checkpoint"
 track: "deep-learning"
 status: live
 order: 407
-summary: "Turn an objective into an auditable run"
+summary: "For batch losses (l_b) with sizes (n_b), epoch mean is (sum_bn_bl_b/\\sum_bn_b), not (B^{-1}\\sum_bl_b) when sizes differ."
 duration: "18–30 min"
 ---
 
@@ -30,7 +30,7 @@ Compare a baseline that ignores this concern with a controlled intervention. Pre
 
 ### Scenario 3
 
-Gradient clipping converts an exploding norm from 200 to a configured threshold of 1; log both values.
+[Gradient clipping](/learn/deep-learning/core/123-gradient-clipping-exploding-gradients-and-sequence-stability) converts an exploding norm from 200 to a configured threshold of 1; log both values.
 
 Specify the failure boundary: when should the system abstain, quarantine data, block release, or escalate to a person rather than continue automatically?
 

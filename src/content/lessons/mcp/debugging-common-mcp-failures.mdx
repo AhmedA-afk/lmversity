@@ -6,6 +6,9 @@ summary: "Diagnose the most frequent MCP failures - silent tool errors, schema m
 duration: "6 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Most MCP problems don't look like problems. The client connects, the model calls a tool, and something quietly goes wrong - a truncated result, a tool the model never sees, a connection that dies mid-session. Here's how to recognize the three most common failure classes and where to look first.
 
 ## Silent tool errors
@@ -13,6 +16,13 @@ Most MCP problems don't look like problems. The client connects, the model calls
 A tool call can "succeed" at the protocol level while failing at the task level. The server catches an exception, wraps it in a normal result object, and returns it - so the client sees a completed call, not an error. The model then reasons over a string like `Error: file not found` as if it were real data, sometimes hallucinating a workaround instead of surfacing the failure.
 
 The fix is at the server: use MCP's `isError` flag on tool results instead of swallowing exceptions into plain text. That flag is what tells the client (and by extension the model) this call actually failed, rather than "succeeded" with an unhelpful payload. When you're building a server, test this path explicitly - call the tool with bad input and confirm the error surfaces as an error, not as content. See [MCP Tools, Resources, and Prompts](/learn/mcp/mcp-tools-resources-and-prompts) for how tool results are structured.
+
+<InlineCheck
+  question="A tool call returns `Error: file not found` as its payload, and the model treats it as data. What's the bug?"
+  options={['The server swallowed the exception into a normal result object — the protocol-level call "succeeded," so the model reasons over the error string instead of seeing a failure. Fix: set isError on the tool result', 'The model misread a valid response', 'The schema validation rejected the call']}
+  answer={0}
+  explanation="MCP separates protocol success from task success. Without `isError: true`, an exception rendered as plain text is indistinguishable from real output — and the model may hallucinate a workaround for a failure it never knew happened."
+/>
 
 ## Schema mismatches
 
@@ -25,6 +35,10 @@ This shows up most after a server update that isn't versioned. The client cached
 stdio and HTTP fail differently, and knowing which one you're on changes where you look.
 
 A **stdio** server is a child process the client spawns and talks to over stdin/stdout. It drops when the process crashes, when it writes something non-JSON-RPC to stdout (a stray `print()` statement is enough to corrupt the stream), or when the client kills it for taking too long to respond. Check the process's stderr - most stdio servers log there precisely because stdout is reserved for protocol messages.
+
+<Callout kind="breaks" title="One stray print() corrupts the stream">
+On stdio, stdout *is* the protocol — a single debug `print()` from your server interleaves non-JSON-RPC bytes into the message stream and the client's parser chokes. Log to stderr only; that's what it's reserved for.
+</Callout>
 
 A **remote HTTP** server drops for more ordinary reasons: an expired auth token, a load balancer idle-timeout closing a long-lived connection, or a network blip during a streamed response. These usually recover with a reconnect and retry, which is why production HTTP servers need backoff logic the client can rely on - a stdio process restart is not the same fix as a token refresh. Compare both transports in [MCP Transports: stdio vs. HTTP](/learn/mcp/mcp-transports-stdio-vs-http), and if the failure smells like an auth expiry specifically, start with [MCP Auth Fundamentals](/learn/mcp/mcp-auth-fundamentals).
 

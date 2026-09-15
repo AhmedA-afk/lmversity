@@ -1,8 +1,8 @@
 ---
-title: "Why LLMs Hallucinate"
+title: "Why LLMs Hallucinate, Derived From the Training Objective"
 track: "ai-foundations"
 status: live
-summary: "Deep-dive lesson deriving hallucination mechanistically from the next-token training objective (no reject option, fluency/content density mismatch, causal-mask snowballing), walkin"
+summary: "> Optional depth. [What LLMs Can and Cannot Do](/learn/ai-foundations/what-llms-can-and-cannot-do) tells you *that* models fabricate; this page derives *why*, down to the training objective, and shows precisely where each mitigation does and doesn't reach."
 duration: "1 min read"
 ---
 
@@ -124,4 +124,4 @@ Author and year hold steady — they were extractive, copied from the prompt eac
 - **"It gave me a source, so it must be real."** Treat this as evidence in the wrong direction. Sources are exactly where confidently-shaped fabrication is cheapest to produce, because citation formatting is one of the most rigid patterns in the training distribution — easy to nail regardless of whether the content underneath is real.
 - **"A bigger, newer model won't do this."** Scale shrinks the sparse regions (more facts become well-represented) but doesn't change the mechanism. Any question that lands outside what the model has dense support for can still get a fluent, wrong answer — and better prose quality can make it a more convincing one, not less.
 
-**Related:** [How LLMs Work](/learn/ai-foundations/how-llms-work) · [Loss Functions Explained](/learn/ai-foundations/loss-functions-explained) · [Evaluating RAG Quality](/learn/rag/evaluating-rag-quality) · [What LLMs Can and Cannot Do: Case Studies](/learn/ai-foundations/what-llms-can-and-cannot-do-case-studies)
+**Related:** [How LLMs Work](/learn/ai-foundations/how-llms-work) · [Loss Functions Explained](/learn/ai-foundations/loss-functions-explained) · [Evaluating RAG Quality](/learn/rag/evaluating-rag-quality) · [What LLMs Can and Cannot Do: Case Studies](/learn/ai-foundations/what-llms-can-and-cannot-do-case-studies) · [Why LLMs Hallucinate](/learn/llm-foundations/why-llms-hallucinate)

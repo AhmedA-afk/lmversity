@@ -2,7 +2,7 @@
 title: "Backpropagation: Credit Assignment via the Chain Rule"
 track: "ai-foundations"
 status: live
-summary: "A CONCEPT-page lesson on backpropagation for LMVersity's AI Foundations track, explaining it as chain-rule bookkeeping for credit assignment, with a fully worked 2-2-1 network exa"
+summary: "A network with a million weights makes one prediction and gets back exactly one number — the loss."
 duration: "2 min read"
 ---
 
@@ -123,4 +123,4 @@ It also shows up as a debugging technique in its own right: when people implemen
 
 Backprop is the calculus engine; it only makes sense sitting on top of the forward pass it walks backward through, and underneath the update rule it feeds. If either side is shaky, revisit [the forward pass by hand](/learn/ai-foundations/neural-network-forward-pass-by-hand) or [gradient descent](/learn/ai-foundations/gradient-descent-explained) first. Once this clicks, the [backprop worked example](/learn/ai-foundations/backprop-worked-example) runs the same network through several real training steps so you can watch the loss actually fall, and the [training and optimization quiz](/learn/ai-foundations/training-and-optimization-quiz) is a fast way to check the three-step model actually stuck.
 
-**Related:** [Neural network forward pass by hand](/learn/ai-foundations/neural-network-forward-pass-by-hand) · [Gradient descent, explained](/learn/ai-foundations/gradient-descent-explained) · [Gradient descent in NumPy](/learn/ai-foundations/gradient-descent-in-numpy) · [Loss functions, explained](/learn/ai-foundations/loss-functions-explained) · [Activation functions](/learn/ai-foundations/activation-functions) · [Backprop worked example](/learn/ai-foundations/backprop-worked-example)
+**Related:** [Neural network forward pass by hand](/learn/ai-foundations/neural-network-forward-pass-by-hand) · [Gradient descent, explained](/learn/ai-foundations/gradient-descent-explained) · [Gradient descent in NumPy](/learn/ai-foundations/gradient-descent-in-numpy) · [Loss functions, explained](/learn/ai-foundations/loss-functions-explained) · [Activation functions](/learn/ai-foundations/activation-functions) · [Backprop worked example](/learn/ai-foundations/backprop-worked-example) · [The chain rule](/learn/maths-foundations/the-chain-rule)

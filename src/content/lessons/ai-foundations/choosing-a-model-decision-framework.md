@@ -2,7 +2,7 @@
 title: "A Decision Framework for Picking a Model"
 track: "ai-foundations"
 status: live
-summary: "A one-screen, gate-by-gate decision tree (privacy, open weights, task difficulty, context length, latency/cost) for narrowing model choice to a shortlist, with a worked cost/latenc"
+summary: "[choosing-a-model](/learn/ai-foundations/choosing-a-model) lays out *what to weigh*."
 duration: "14 min read"
 ---
 

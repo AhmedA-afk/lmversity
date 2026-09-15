@@ -6,6 +6,8 @@ summary: "How screenshot-driven, coordinate-clicking agents work, and why you'd 
 duration: "6 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Most agents call tools through structured APIs. A computer-use agent skips that layer entirely: it looks at a screenshot, decides where to click or type, and drives a real mouse and keyboard, one action at a time.
 
 ## How the loop actually works
@@ -27,5 +29,12 @@ It's also useful for testing: driving your own product's UI the way a user would
 Whenever a real API exists, take it. Compare the two: a [tool call](/learn/tools-function-calling/what-is-tool-calling) to `create_invoice(customer_id, amount)` is one structured, validated, cheap request. The same action through computer use is a dozen screenshot round-trips — open the app, find the menu, click New, find the customer field, type, find the amount field, type, find Save, click, confirm — each one a chance to misclick, hit a modal it didn't expect, or get a stale screenshot mid-render. It's also fragile to UI change: a redesigned button layout breaks a coordinate-based agent in a way that never touches a well-versioned API contract.
 
 The practical rule: reach for computer use only when the interface truly has no programmatic door in, and expect to pay for it in latency, cost, and reliability compared to [tool use](/learn/agentic-ai/tool-use-basics).
+
+<InlineCheck
+  question="What's the weakest link in the computer-use loop?"
+  options={['Grounding — mapping \'the Submit button\' to pixel coordinates. A model can reason perfectly about what to do and still miss the button by twenty pixels', 'Screenshot resolution', 'Keyboard speed']}
+  answer={0}
+  explanation="Reasoning about what to click is the easy part; locating it in pixels is where the loop breaks. That's why a redesigned layout can break a coordinate-based agent even when its plan is correct."
+/>
 
 **Related:** [Giving Agents Tools](/learn/agentic-ai/tool-use-basics), [Computer-Use and Browser-Control Tools](/learn/tools-function-calling/computer-use-and-browser-tools), [Cost-Aware Agents: Budgeting Tokens Across a Long-Running Loop](/learn/agentic-ai/cost-aware-agent-loops)

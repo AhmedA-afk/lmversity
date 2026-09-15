@@ -7,6 +7,7 @@ duration: "4 min read"
 ---
 
 import AgentLoop from '../../../components/diagrams/AgentLoop.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
 
 A single prompt gets you one response. An agent gets you a *loop*: it looks at the current state, decides what to do, does it, and looks again — repeating until the task is actually finished.
 
@@ -39,6 +40,13 @@ Every real agent loop needs an explicit way to end, or it either stops too early
 - **No progress detected** — the harness notices the same error repeating and halts rather than retrying identically forever.
 - **Human handoff** — the agent decides it's stuck or the stakes are too high, and asks a person to take over.
 
+<InlineCheck
+  question="Why is 'the model decides when it's done' insufficient as the only stop condition?"
+  options={['A confused or stuck model can spin forever — burning tokens on an unsolvable task — or declare victory early. Layered exits (iteration cap, budget cap, no-progress detection, human handoff) make failure loud and cheap instead of silent and expensive', 'Because models always stop on time', 'Because stop conditions reduce token use']}
+  answer={0}
+  explanation="The loop's adaptability is its cost — every iteration is tokens, latency, and a chance to wander. The exits are what make the loop safe to run unattended."
+/>
+
 Designing an agent well means designing these exits as carefully as the loop itself — a good stop condition is the difference between an agent that fails loudly and cheaply versus one that fails silently after burning your budget. If the task genuinely doesn't need this back-and-forth — no uncertain intermediate steps, no tool output to react to — a fixed sequence will do the job more predictably; see [When a Workflow Beats an Agent](/learn/agentic-ai/when-not-to-use-an-agent).
 
-**Related:** [What Makes Something an Agent](/learn/agentic-ai/what-is-an-agent), [ReAct: Interleaving Reasoning and Acting](/learn/agentic-ai/react-pattern), [When a Workflow Beats an Agent](/learn/agentic-ai/when-not-to-use-an-agent)
+**Related:** [What Makes Something an Agent](/learn/agentic-ai/what-is-an-agent), [ReAct: Interleaving Reasoning and Acting](/learn/agentic-ai/react-pattern), [When a Workflow Beats an Agent](/learn/agentic-ai/when-not-to-use-an-agent) · [Agent architectures and rationality](/learn/classical-ai/agents-robotics/301-agent-architectures-and-rationality)

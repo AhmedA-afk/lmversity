@@ -6,6 +6,9 @@ summary: "A field guide to the ways agents actually break — loops, tool misuse
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Agents don't usually fail with a stack trace. They fail by quietly doing the wrong thing for ten steps in a row while sounding perfectly confident. Knowing the handful of shapes that failure takes turns a confusing trace into a quick diagnosis.
 
 ## Looping without progress
@@ -34,8 +37,19 @@ An agent declares the task done when it isn't — it ran a step that looked like
 
 The reliable fix is an external check the agent can't talk its way past — a test suite, a schema validator, a diff review — not just asking it to double-check itself. [Reflection](/learn/agentic-ai/reflection-and-self-critique) helps catch some of these, but it's not a substitute for ground truth.
 
+<Callout kind="breaks" title="'Done' narrated isn't 'done' verified">
+A file written isn't a file with the right content; a 200 isn't a fixed bug. If completion is decided by the model's own narration it will occasionally be wrong in the model's favor — gate 'done' on an external check it can't talk past.
+</Callout>
+
 ## Reading these in a live trace
 
 All four failures leave different fingerprints in the trace: loops show repeated action-result pairs, tool misuse shows in the arguments themselves, drift shows as a growing gap between the stated goal and the current action, and false completion shows as a "done" claim with no verifying step behind it. [Reading an Agent's Trace](/learn/agentic-ai/evaluating-agent-behavior-in-dev) walks through spotting these while the agent is still running, before they cost you a full session's budget.
+
+<InlineCheck
+  question="In a trace, you see the same action-result pair repeat with no state change. Which failure mode is that — and what's the fix?"
+  options={['Looping without progress — the tool result isn\'t telling the model anything new. The fix is harness-level: detect the repeated pattern and stop the loop, not a smarter model', 'Context drift — restate the goal', 'False completion — add a verifier']}
+  answer={0}
+  explanation="Each failure has a fingerprint: loops = repeated action-result pairs, misuse = bad arguments, drift = goal/action gap growing, false completion = 'done' with no verify step. Repeated pairs with unchanged state is the loop."
+/>
 
 **Related:** [Recovering When Tools Fail](/learn/agentic-ai/error-handling-and-retries), [Context Rot: When More Tokens Make the Model Worse](/learn/context-engineering/context-rot), [Reading an Agent's Trace](/learn/agentic-ai/evaluating-agent-behavior-in-dev)

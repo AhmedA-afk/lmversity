@@ -2,7 +2,7 @@
 title: "Concurrent API Calls with asyncio"
 track: "python-data-apis"
 status: live
-summary: "A hands-on walkthrough building an async HTTP fetcher with httpx and asyncio.gather, bounding concurrency with a semaphore, adding backoff retries, and measuring the real speedup a"
+summary: "If you've ever written a `for` loop that calls an API twenty times and watched it crawl, you already know the problem this lesson solves: most of that time isn't your CPU working, it's your program sitting idle waiting for a response."
 duration: "16 min read"
 ---
 

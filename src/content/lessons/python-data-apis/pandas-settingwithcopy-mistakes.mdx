@@ -2,7 +2,7 @@
 title: "SettingWithCopy and Other pandas Traps"
 track: "python-data-apis"
 status: live
-summary: "A hands-on, verified tour of pandas' SettingWithCopy trap and its cousins — chained indexing that silently fails, .copy() placed in the wrong spot, slices that mutate (or don't) th"
+summary: "Run `df[df[\"plan\"] == \"free\"][\"credits\"] = 50` and pandas throws a warning, then does exactly nothing — the DataFrame is unchanged and nothing tells you that later, when you're three functions away from the line that \"fixed\" it."
 duration: "18 min read"
 ---
 

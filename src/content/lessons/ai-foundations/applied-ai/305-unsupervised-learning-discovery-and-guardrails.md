@@ -3,10 +3,9 @@ title: "Unsupervised Learning for Discovery, Not Automatic Truth"
 track: ai-foundations
 status: live
 order: 305
-description: "Use clustering, anomaly detection, and dimensionality reduction to generate hypotheses, then validate them with domain evidence."
+summary: "Use clustering, anomaly detection, and dimensionality reduction to generate hypotheses, then validate them with domain evidence."
 ---
 
-# Unsupervised Learning for Discovery, Not Automatic Truth
 
 ## Product question and learning objective
 

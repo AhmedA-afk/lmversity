@@ -6,7 +6,26 @@ summary: "Threat-model your agent, build attack trees, and run a red-team pass t
 duration: "6 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+import Steps from '../../../components/kit/Steps.astro';
+import Step from '../../../components/kit/Step.astro';
+
 Ad-hoc jailbreak attempts find the easy bugs and miss everything else. A structured red-team exercise treats your agent like an attack surface: you enumerate what could go wrong before you start typing prompts, then work the list systematically.
+
+<Steps>
+<Step title="Threat-model the agent">
+Before writing any adversarial input, write down what you're protecting: what data it reads, what actions it takes, who can talk to it. Rank capabilities by blast radius.
+</Step>
+<Step title="Build attack trees">
+Branch each top threat into concrete attempts — crafted user messages, poisoned retrieved documents, malicious tool results, multi-turn false context.
+</Step>
+<Step title="Run the exercise">
+Work the tree systematically: one row per attempt with input, expected safe behavior, actual output, pass/fail. Variations on a successful branch often expose different root causes.
+</Step>
+<Step title="Write it up">
+Each finding gets the exact input, the vulnerable component, severity from your threat model, and a suggested fix — then folds into the regression suite.
+</Step>
+</Steps>
 
 ## Start with a threat model, not a prompt list
 
@@ -27,5 +46,12 @@ Work through the tree systematically: one row per attempt, with the input, the e
 ## Write it up like a security team would
 
 A red-team report that just lists "broke it 4 times" is not actionable. For each confirmed finding, include: the exact input, the vulnerable component (prompt, tool, retrieval layer), severity based on blast radius from your threat model, and a suggested fix or mitigation. Route findings that recur into your [regression suite](/learn/evals-red-teaming/building-a-regression-suite) so a fix can never silently regress, and feed the healthy ones into ongoing [eval and safety dashboards](/learn/evals-red-teaming/eval-and-safety-metrics-dashboards) so you can see whether new model versions reopen old wounds.
+
+<InlineCheck
+  question="Why rank the agent's capabilities by blast radius before writing any attack prompts?"
+  options={['Red-team hours are finite — a bot that issues refunds or a coding agent with shell access is worth attacking for concrete payoff, so the biggest blast radius gets probed first', 'Because larger capabilities are technically easier to attack', 'Because compliance requires a sorted capability list']}
+  answer={0}
+  explanation="For each capability, ask who benefits if it's misused. An even spread of effort across all capabilities means the most dangerous ones get the same shallow coverage as the harmless ones."
+/>
 
 **Related:** [Common Jailbreak Techniques and Their Defenses](/learn/evals-red-teaming/jailbreak-techniques-and-defenses), [Testing for Scope Escape](/learn/evals-red-teaming/scope-escape-and-tool-abuse), [Turning Bugs into a Regression Suite](/learn/evals-red-teaming/building-a-regression-suite)

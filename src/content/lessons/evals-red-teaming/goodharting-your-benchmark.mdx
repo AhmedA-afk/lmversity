@@ -6,6 +6,9 @@ summary: "Why an eval score you optimize hard enough eventually decouples from t
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Goodhart's Law, in its original economics phrasing, says any measure that becomes a target stops being a good measure. Applied to evals: the moment you start optimizing your agent against a benchmark, the benchmark's score and the real-world quality it was standing in for start to drift apart.
 
 ## Why this happens even when nobody cheats
@@ -25,7 +28,18 @@ Two practical defenses:
 - **Keep a shadow metric you never optimize.** A second eval set, ideally scored a different way (human review instead of LLM-judge, or a different judge model), that you track but don't tune against. When it stops moving with your primary score, that's your Goodhart signal.
 - **Refresh the benchmark itself.** Static benchmarks rot fastest — see [AI Benchmarks and What They Miss](/learn/ai-foundations/benchmarks-and-what-they-miss). Rotate in new examples, especially ones sourced from real production failures, so the target keeps moving instead of sitting still for the model (or the prompt engineer) to memorize.
 
+<InlineCheck
+  question="Your primary eval score has climbed smoothly for six straight releases while user complaints stayed flat. What does Goodhart's law predict is happening?"
+  options={['The score is decoupling from real quality — you\'re optimizing the proxy\'s shape, and a metric that rises smoothly without plateau is itself the warning sign', 'The product is genuinely improving — a rising score is always good news', 'The benchmark is too hard and needs easier cases']}
+  answer={0}
+  explanation="If the only number you steer by keeps rising while an independent signal doesn't move, the gap is the Goodhart signal — the system is learning what makes the proxy score go up, not what makes the product better."
+/>
+
 ## The honest takeaway
+
+<Callout kind="note" title="Why nobody has to cheat">
+A benchmark is always a static proxy for a changing distribution of real usage. Optimizing against it selects for whatever raises the proxy's score — and the cheapest way to raise a score is rarely the most robust way to improve the underlying behavior. The drift happens even to a well-designed benchmark, purely from repeated optimization.
+</Callout>
 
 You can't eval your way out of Goodharting — it's not a bug in a specific metric, it's a structural property of optimizing against any fixed proxy for long enough. The fix isn't a better single number; it's treating every benchmark score as provisional, pairing it with an independent check, and being suspicious of a metric that goes up smoothly for many releases in a row with no plateau. That smoothness is itself a signal something got easy to game.
 

@@ -6,6 +6,8 @@ summary: "Stream tokens and tool-call events to your UI as they happen instead o
 duration: "5 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 If your harness waits for a full response before showing anything, a ten-second tool-heavy turn feels broken even when it's working perfectly. Streaming turns that dead silence into a live feed of what the model is doing right now.
 
 ## Why block-until-done fails users
@@ -38,5 +40,12 @@ In the [control loop](/learn/harness-design/the-control-loop), streaming changes
 A single user request in an agentic harness often produces many streamed segments: assistant text, a tool call, a tool result, more assistant text, another tool call. Each of those can stream independently, so the UI needs to render a sequence of events, not just one message. This is also where [observability and logging](/learn/harness-design/observability-and-logging) earns its keep — persist every streamed event as it arrives so a crash mid-stream still leaves a reconstructable trace, instead of losing the whole turn because the final "done" event never came.
 
 The payoff isn't just perceived speed. Streaming gives users an early-abort point — they can see the model heading in the wrong direction and cancel before it burns the full token budget on a bad answer.
+
+<InlineCheck
+  question="Beyond perceived speed, what does streaming buy you in an agentic harness?"
+  options={['An early-abort point — the user can see the model heading wrong and cancel before it burns the full token budget on a bad answer, and a crash mid-stream still leaves a reconstructable trace if events are persisted as they arrive', 'Cheaper tokens', 'Fewer tool calls']}
+  answer={0}
+  explanation="Blocking until done turns a working 30-second run into something indistinguishable from a hang. Streaming surfaces partial progress the instant it exists — and gives the user a chance to stop a bad run early."
+/>
 
 **Related:** [Building the Control Loop](/learn/harness-design/the-control-loop), [Routing Tool Calls to Real Code](/learn/harness-design/tool-routing-and-registries), [Logging Every Step for Debuggability](/learn/harness-design/observability-and-logging)

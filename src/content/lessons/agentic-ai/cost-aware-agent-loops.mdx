@@ -6,6 +6,8 @@ summary: "Cap runaway spend in autonomous loops with step budgets, cheap-model t
 duration: "6 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 An agent loop has no natural stopping point built in — left alone, it will happily burn tokens on a fifty-step detour to answer a question that needed five. Cost-awareness means putting explicit limits and cheap-first habits into the loop itself, not hoping the model self-regulates.
 
 ## Step and token budgets
@@ -48,5 +50,12 @@ These heuristics work best combined with the [reflection](/learn/agentic-ai/refl
 ## Making budgets visible
 
 None of this works if spend is invisible until the bill arrives. Log token usage per step, not just per run, so you can see where a loop's cost actually concentrates — often it's not the reasoning steps but a handful of huge tool outputs getting fed back into context on every turn. That's a signal to prune or summarize, not just to budget harder.
+
+<InlineCheck
+  question="Why expose the agent's remaining budget to the agent itself?"
+  options={['So it can wrap up gracefully — synthesize a partial answer before the cap — instead of getting cut off mid-thought by a limit it couldn\'t see', 'So it can ask for more budget', 'To reduce per-call latency']}
+  answer={0}
+  explanation="A budget the agent can see is a signal it can act on — prioritize, stop exploring, return what it has. A hidden ceiling just truncates the run wherever it happens to be."
+/>
 
 **Related:** [Termination Conditions](/learn/agentic-ai/stopping-conditions-for-agents), [Reflection: Letting an Agent Grade Itself](/learn/agentic-ai/reflection-and-self-critique), [Route Requests to Cheap or Frontier Models by Difficulty](/learn/production/model-routing-by-task-complexity)

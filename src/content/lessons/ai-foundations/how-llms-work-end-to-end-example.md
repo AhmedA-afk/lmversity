@@ -2,7 +2,7 @@
 title: "From Prompt to Next Token, Traced"
 track: "ai-foundations"
 status: live
-summary: "A worked example that traces the exact prompt 'The capital of France is' through tokenization, embedding, attention, and the final softmax — with runnable numpy code, real GPT-2 to"
+summary: "Every explanation of \"how LLMs work\" eventually waves at a black box between typing a prompt and reading an answer."
 duration: "25 min read"
 ---
 

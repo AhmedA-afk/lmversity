@@ -3,7 +3,7 @@ title: "Privacy-preserving training and inference"
 track: "deep-learning"
 status: live
 order: 424
-summary: "Minimize data, access, and disclosure"
+summary: "For binary membership inference, an attacker distinguishes training members from nonmembers; excessive train-test confidence gaps can signal memorization."
 duration: "18–30 min"
 ---
 
@@ -97,3 +97,5 @@ Document purposes, data classes, access roles, retention, incident process, and 
 ## Further challenge
 
 Change one assumption in the scenario (time window, cost of a false positive, hardware budget, or user population). Predict which part of the system must change, then test that prediction with a small controlled run.
+
+**Related:** [Training vs. Inference](/learn/ai-foundations/training-vs-inference)

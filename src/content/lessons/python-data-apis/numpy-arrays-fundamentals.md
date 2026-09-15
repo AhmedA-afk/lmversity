@@ -2,7 +2,7 @@
 title: "NumPy Arrays: Shape, dtype, Axis"
 track: "python-data-apis"
 status: live
-summary: "Explains the NumPy ndarray as a typed, fixed-shape grid — using 10,000 embedding vectors as the running example — and shows why shape, dtype, and axis let one vectorized call repla"
+summary: "You call an embedding API 10,000 times, get back 10,000 lists of 768 numbers, and now you need to find which ones are similar to each other."
 duration: "14 min read"
 ---
 

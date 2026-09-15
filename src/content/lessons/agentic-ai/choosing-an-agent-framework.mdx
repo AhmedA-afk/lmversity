@@ -6,6 +6,10 @@ summary: "Three popular agent frameworks impose three different abstractions —
 duration: "6 min read"
 ---
 
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 None of these frameworks make your agent smarter. They each hand you a different mental model for wiring one agent to another, and that model shapes every bug you'll hit later.
 
 ## LangGraph: your agent is a graph
@@ -28,6 +32,25 @@ The tradeoff is that free-form conversation is harder to bound: without careful 
 
 ## Picking one
 
+<Compare title="Three mental models">
+<Pane title="LangGraph — agent as graph" tone="good">
+Explicit nodes, edges, shared state. You see cycles, retries, and human pauses in the wiring — at the cost of drawing the diagram first.
+</Pane>
+<Pane title="CrewAI — agent as role" tone="neutral">
+Cast a team: researcher, writer, reviewer. Fast to prototype, but little control-flow visibility — fixes are prompt tweaks, not wiring changes.
+</Pane>
+<Pane title="AutoGen — agent as conversation" tone="neutral">
+Agents message each other in a shared thread. Natural for debate/critique; free-form dialogue is harder to bound and terminate.
+</Pane>
+</Compare>
+
 The honest test isn't feature lists — it's which mental model matches the shape of your problem. Deterministic pipeline with branches and retries: LangGraph. Specialist roles handing off cleanly: CrewAI. Agents that need to argue with each other: AutoGen. And if your task is a fixed sequence of steps with no real decision-making, [a plain workflow beats any of them](/learn/agentic-ai/when-not-to-use-an-agent).
+
+<InlineCheck
+  question="What does an agent framework actually change — and what doesn't it?"
+  options={['It changes the mental model for wiring agents — graph, crew, or conversation — which shapes every bug you\'ll hit. It does not make the agent smarter', 'It makes the model more capable', 'It removes the need for stop conditions']}
+  answer={0}
+  explanation="The framework is an abstraction for coordination, not intelligence. Pick the model that matches your problem's shape; the reasoning quality comes from the agent design, not the library."
+/>
 
 **Related:** [Multi-Agent Patterns: Orchestrator, Pipeline, Debate](/learn/agentic-ai/multi-agent-patterns), [Choosing an Orchestration Framework](/learn/agentic-ai/agent-orchestration-frameworks), [Termination Conditions for Agents](/learn/agentic-ai/stopping-conditions-for-agents)

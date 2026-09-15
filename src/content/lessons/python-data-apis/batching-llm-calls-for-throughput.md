@@ -2,7 +2,7 @@
 title: "Batching LLM Calls for Throughput and Cost"
 track: "python-data-apis"
 status: live
-summary: "Worked example: classify 5,000 reviews with an async + semaphore-capped pipeline that writes results to JSONL as they land, so a crash resumes instead of restarting. Shows naive-vs"
+summary: "Five thousand reviews, one API call at a time, is a script that finishes just in time for you to not care about the result anymore — and if it dies at review 4,200, you start over from zero."
 duration: "18 min read"
 ---
 

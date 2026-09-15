@@ -6,6 +6,9 @@ summary: "Recognizable jailbreak patterns like roleplay framing, encoding tricks
 duration: "6 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A jailbreak is an attempt to get a model to ignore its own safety training and produce output it would otherwise refuse. Unlike [prompt injection](/learn/evals-red-teaming/prompt-injection-basics), which smuggles instructions in through untrusted content, a jailbreak is usually typed straight into the prompt by the user themselves. Knowing the common shapes helps you test for them before someone else finds them in production.
 
 ## Roleplay and persona framing
@@ -26,6 +29,10 @@ A blunter approach just tells the model to forget its instructions: "ignore all 
 
 ## Defenses that actually hold up
 
+<Callout kind="note" title="Jailbreak vs. injection">
+A jailbreak is typed straight into the prompt by the user — trying to get the model to ignore its own safety training. Prompt injection smuggles instructions in through untrusted content the user never wrote. Same goal, different delivery mechanism, different defenses.
+</Callout>
+
 No single technique stops all of these, which is why real defense is layered:
 
 - **Model-level training** is the strongest layer — it resists intent, not just surface phrasing, and doesn't need to be re-taught for every new encoding trick.
@@ -34,5 +41,12 @@ No single technique stops all of these, which is why real defense is layered:
 - **Rate limiting and pattern detection** flag the slow multi-turn escalation that single-message filters can't see.
 
 None of this replaces testing. Treat known jailbreak families as a standing part of your eval suite, not a one-time check — [automating adversarial probes](/learn/evals-red-teaming/automated-adversarial-testing) is how you catch a regression before an attacker does.
+
+<InlineCheck
+  question="Why is model-level safety training the strongest defensive layer against encoding tricks?"
+  options={['It resists the harmful intent regardless of surface form — a base64 filter must be re-taught every encoding, but a well-aligned model refuses the decoded intent either way', 'Because models cannot read base64 at all', 'Because training is cheaper than maintaining a filter list']}
+  answer={0}
+  explanation="Surface-level filters decode and scan known encodings — an arms race per encoding. Training against the underlying intent generalizes across phrasings the filter never saw."
+/>
 
 **Related:** [Prompt Injection: When Content Becomes Instructions](/learn/evals-red-teaming/prompt-injection-basics), [Testing for Scope Escape](/learn/evals-red-teaming/scope-escape-and-tool-abuse), [Automating Adversarial Probes](/learn/evals-red-teaming/automated-adversarial-testing)

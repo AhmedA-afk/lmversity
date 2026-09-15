@@ -6,6 +6,8 @@ summary: "Subagents run with fresh context instead of inheriting the parent's hi
 duration: "5 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 When an orchestrator spins up a subagent, it doesn't hand it a copy of everything that happened so far. It hands it a task description and lets it start clean. That choice is deliberate, not a limitation you work around.
 
 ## The problem a shared context creates
@@ -28,5 +30,12 @@ This is why orchestrator patterns delegate specific, bounded jobs — "find ever
 ## The tradeoff
 
 Isolation is not free. The subagent can't ask the parent's earlier self a clarifying question, and any nuance the orchestrator forgot to pass along is simply gone. Good delegation design is really a compression problem: deciding what slice of the parent's understanding is small enough to fit, yet complete enough to work with. That's the same judgment call made in [Context Handoff Between Agents](/learn/context-engineering/context-handoff-between-agents), and it's what separates a subagent call that saves the parent's context from one that just adds a confusing round trip.
+
+<InlineCheck
+  question="A parent agent spent 40 tool calls debugging — three abandoned approaches, a misread stack trace. Why shouldn't the subagent that writes the changelog inherit that history?"
+  options={['Dead-end turns compete for attention — a model conditioned on a long trace of confusion writes a confused summary. Clean context means every token in the window is relevant to the task', 'Because subagents have smaller context windows', 'To save API cost only']}
+  answer={0}
+  explanation="Isolation isn't just about tokens — it's about contamination. Failed attempts anchor the model on wrong framings; a clean slate plus a tight task description is why the subagent's output stays focused."
+/>
 
 **Related:** [Multi-Agent Patterns: Orchestrator, Pipeline, Debate](/learn/agentic-ai/multi-agent-patterns), [Delegating Work to Subagents](/learn/harness-design/subagent-and-task-delegation), [Context Handoff Between Agents: Passing the Slice, Not the Stack](/learn/context-engineering/context-handoff-between-agents)

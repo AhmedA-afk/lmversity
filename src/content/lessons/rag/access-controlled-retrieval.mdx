@@ -6,9 +6,16 @@ summary: "Filters retrieval results by what the requesting user is actually allo
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A RAG pipeline that ignores permissions is a search engine over everyone's secrets. The moment your index spans more than one user's documents — a shared drive, a support ticket system, a multi-tenant SaaS product — retrieval has to know not just what's relevant, but who's asking.
 
 ## The leak is in retrieval, not generation
+
+<Callout kind="breaks" title="By the prompt, it's already too late">
+"Only answer using documents the user may see" is a generation-time instruction applied to content the model already read. A retrieved confidential chunk is already in context — the instruction only governs whether the model repeats it, and imprecision or a clever query will leak it anyway. Enforcement must happen *in retrieval*.
+</Callout>
 
 Teams often reach for a system prompt fix: "only answer using documents the user is allowed to see." That doesn't work, because by the time the model sees those documents, they're already in context. A chunk from a confidential doc that gets retrieved has already been read by the model — the prompt instruction only affects whether it repeats it back, and a clever enough query, or a model that's simply imprecise, will leak it anyway.
 
@@ -29,6 +36,13 @@ Don't reinvent an access model in your retrieval layer — mirror whatever autho
 - **Attribute-based (ABAC)**: filters like `tenant_id = X AND clearance <= user.clearance`, useful when access depends on roles or classification levels rather than explicit grants.
 
 Whatever the model, keep permission checks in sync with the source system. A document that gets unshared needs its index metadata updated — or better, needs the underlying permission check re-evaluated live at query time rather than cached stale in the vector store, since [keeping an index fresh](/learn/rag/incremental-indexing-freshness) applies to permissions changes just as much as content changes.
+
+<InlineCheck
+  question="Why is post-filtering results by permission a broken primary defense?"
+  options={['Permissions correlate with relevance — a user\'s own private notes are often the most relevant hits, so dropping them after retrieval can gut the top-k to zero; it also leaks via timing/count side channels. Pre-filter keeps restricted chunks out of the candidate set entirely', 'Because post-filtering is slower', 'Because users can bypass the drop']}
+  answer={0}
+  explanation="Post-filter is a defense-in-depth backstop only. The index itself must search within the allowed subset — restricted chunks should never be candidates, not merely removed afterward."
+/>
 
 ## Watch the edges
 

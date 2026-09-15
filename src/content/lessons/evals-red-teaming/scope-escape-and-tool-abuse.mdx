@@ -6,6 +6,9 @@ summary: "Probing whether an agent bends a tool past its intended purpose, like 
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A tool's danger isn't fixed by what it's named for — it's fixed by what it can actually do. Scope escape is when an agent uses a tool for a purpose outside the one it was given, and testing for it means asking not "does this tool work" but "what's the worst legitimate-looking thing this tool could be talked into doing."
 
 ## The tool does more than its label promises
@@ -24,9 +27,20 @@ You're not testing whether the agent refuses obviously malicious requests — th
 
 A useful grading question isn't just did the agent comply, but did it even notice the request had left its intended lane — the strongest agents flag it rather than silently completing it.
 
+<InlineCheck
+  question="A `read_file` tool is 'scoped to the project directory' only by its description. Where does the real boundary live?"
+  options={['In filesystem permissions — the tool can read any path the process can reach, so a steered agent can read ~/.ssh/id_rsa no matter what the label says', 'In the tool description — the model honors documented scope', 'In the system prompt\'s refusal rules']}
+  answer={0}
+  explanation="A tool's stated purpose is prose; its reach is whatever the underlying credential allows. Scope escape is the gap between the two — which is why the fix is permission narrowing, not description editing."
+/>
+
 ## Fixing what the evals find
 
 When a probe succeeds, the fix is rarely a better refusal prompt — it's narrowing what the tool can physically do. Scope the credential, not the instruction: a database tool gets a read-only connection to specific tables, not admin creds the prompt merely asks it to use carefully. This is the same idea covered in [Executing Tool Calls Safely](/learn/tools-function-calling/executing-tool-calls-safely) and [Sandboxing Tool Execution](/learn/tools-function-calling/sandboxing-tool-execution) — the harness enforces the boundary so the model's judgment isn't the only thing standing between a request and the blast radius.
+
+<Callout kind="breaks" title="Scope the credential, not the instruction">
+A successful scope-escape probe is almost never fixed by a better refusal prompt — it's fixed by narrowing what the tool can physically do. A read-only connection to specific tables beats admin creds behind a polite request to be careful. The harness enforces the boundary; the model's judgment is a second opinion, not the wall.
+</Callout>
 
 Scope-escape cases belong in the same adversarial suite as prompt injection and jailbreak tests, and they should run every time a tool's permissions or underlying API changes, not just once at launch — a tool that was safely scoped last quarter can quietly gain reach when someone "just adds one more field" to its API.
 

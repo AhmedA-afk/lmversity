@@ -3,10 +3,9 @@ title: "The Forward Pass, Caches, and Batched Inference"
 track: deep-learning
 status: live
 order: 104
-description: "Make the forward pass auditable so its cached values support correct gradients and efficient inference."
+summary: "Make the forward pass auditable so its cached values support correct gradients and efficient inference."
 ---
 
-# The Forward Pass, Caches, and Batched Inference
 
 ## Why this matters
 

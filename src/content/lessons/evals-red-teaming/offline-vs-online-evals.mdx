@@ -6,6 +6,10 @@ summary: "Pre-deployment test suites catch known failure modes; production monit
 duration: "5 min read"
 ---
 
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Offline evals run before you ship, against inputs you chose. Production monitoring runs after you ship, against inputs a real user chose. They answer different questions, and a team that only has one of them is flying half-blind.
 
 ## What offline evals are for
@@ -24,8 +28,30 @@ This is where you catch things offline evals structurally can't: a model provide
 
 ## The two feed each other
 
+<Compare title="Two halves of the loop">
+<Pane title="Offline evals" tone="good">
+- Run before you ship, on inputs you chose
+- Reproducible — same suite, same version, same score
+- Catch the failure modes you anticipated
+- Blind spot: real-user phrasing, novel attacks, anything not in the set
+</Pane>
+<Pane title="Production monitoring" tone="neutral">
+- Runs after you ship, on inputs real users chose
+- Live signal — latency, refusals, corrections, flagged transcripts
+- Catches what you didn't think to test for: silent provider updates, drift, new jailbreaks
+- Blind spot: can't tell you if a *candidate* change helps — that's offline's job
+</Pane>
+</Compare>
+
 The relationship isn't offline-then-online, it's a loop. When production monitoring surfaces a failure — a user complaint, a bad transcript, a spike in refusals — that failure becomes a new test case, folded into your [regression suite](/learn/evals-red-teaming/building-a-regression-suite) so it can never silently reappear. And when you're deciding whether a metric is worth tracking live at all, you first validate it offline, where you can check it against cases with a known right answer.
 
 Skip offline evals and you ship changes with no idea whether they helped or hurt until users tell you. Skip production monitoring and you're defending against a threat model frozen on the day you built your test set — which is exactly the gap [prompt injection](/learn/evals-red-teaming/prompt-injection-basics) and novel jailbreaks live in.
 
-**Related:** [Building a Golden Dataset](/learn/evals-red-teaming/building-a-golden-dataset), [Shipping Changes by Eval Diff](/learn/evals-red-teaming/eval-driven-iteration), [LLM-as-Judge: Grading Outputs with a Model](/learn/evals-red-teaming/llm-as-judge)
+<InlineCheck
+  question="Production monitoring surfaces a new failure pattern. What happens to it in a healthy eval loop?"
+  options={['It becomes a new test case in the offline regression suite, so the same failure can never silently reappear', 'It gets logged and ignored until the next quarterly review', 'The production monitor is retrained on it']}
+  answer={0}
+  explanation="The loop runs both directions: production failures fold into the fixed test set as regression cases, and candidate live metrics get validated offline against cases with a known right answer."
+/>
+
+**Related:** [Building a Golden Dataset](/learn/evals-red-teaming/building-a-golden-dataset), [Shipping Changes by Eval Diff](/learn/evals-red-teaming/eval-driven-iteration), [LLM-as-Judge: Grading Outputs with a Model](/learn/evals-red-teaming/llm-as-judge) · [A/B Testing Prompts Against Real Traffic](/learn/prompt-engineering/ab-testing-prompts-in-production)

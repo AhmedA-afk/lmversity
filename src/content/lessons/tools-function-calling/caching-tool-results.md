@@ -1,5 +1,5 @@
 ---
-title: "Caching Tool Results Across Calls"
+title: "Which Tool Calls Are Safe to Cache"
 track: "tools-function-calling"
 status: live
 summary: "Cache deterministic, non-stale reads keyed on tool name plus normalized arguments — and never cache a write."

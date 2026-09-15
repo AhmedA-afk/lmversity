@@ -3,10 +3,9 @@ title: "Normalisation: BatchNorm, LayerNorm, and Training State"
 track: deep-learning
 status: live
 order: 116
-description: "Choose normalisation axes deliberately and understand its train/eval state behavior."
+summary: "Choose normalisation axes deliberately and understand its train/eval state behavior."
 ---
 
-# Normalisation: BatchNorm, LayerNorm, and Training State
 
 ## Why this matters
 
@@ -20,7 +19,7 @@ Write the dimensions next to every expression. If an expression does not type-ch
 
 ## Worked examples
 
-1) Normalise a 2×2 batch. 2) Compare batch size 1 behavior. 3) Locate axes in a sequence tensor (B,T,D). 4) Explain why eval output changes with wrong mode.
+1) Normalise a 2×2 batch. 2) Compare [batch size](/learn/deep-learning/core/121-batch-size-gradient-noise-and-scaling-rules) 1 behavior. 3) Locate axes in a sequence tensor (B,T,D). 4) Explain why eval output changes with wrong mode.
 
 For each example, state the assumption being made, perform the calculation, and name one observation that would tell you the assumption is false in a real training run.
 

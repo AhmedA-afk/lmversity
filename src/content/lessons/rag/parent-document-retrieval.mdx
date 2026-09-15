@@ -6,6 +6,9 @@ summary: "Search on small precise chunks, then hand the model the larger section
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Chunking for RAG has a built-in tension: small chunks embed well and match queries precisely, but they strip away the surrounding context the model needs to actually answer. Parent-document retrieval resolves this by decoupling what you search from what you serve.
 
 ## The core idea
@@ -13,6 +16,13 @@ Chunking for RAG has a built-in tension: small chunks embed well and match queri
 Instead of embedding one version of a document, you index two. Split each source document into small "child" chunks — a paragraph or two — and embed those for search. But each child stores a pointer back to its "parent": a larger section, or the whole document, that it was sliced from. When a query matches a child chunk, you don't send that chunk to the model. You look up its parent and send that instead.
 
 This fixes a specific failure mode. A 200-token chunk about "rate limiting retry behavior" might match a query almost perfectly on similarity, but if the actual answer needs the surrounding paragraph explaining which endpoints it applies to, a bare 200-token match gives the model half a fact. Retrieve small, read big.
+
+<InlineCheck
+  question="In parent-document retrieval, what actually gets embedded — and what gets sent to the model?"
+  options={['Children get embedded and searched; parents get served. Small chunks maximize match precision, then the pointer resolves each hit to the larger section the model actually needs', 'Parents get embedded; children are stored as metadata', 'Both get embedded twice']}
+  answer={0}
+  explanation="Search quality wants small, precise units; answer quality wants surrounding context. Indexing two linked versions lets each side of the tension be optimized independently."
+/>
 
 ## How it's implemented
 
@@ -45,5 +55,9 @@ The vector index only ever holds child embeddings — that's what stays small an
 Parent-document retrieval trades chunk precision for token cost — every match now pulls in a much larger block of text, so five matches can mean five full sections in the context window. It also doesn't help when the *parent* itself is too broad to be useful, or when the real answer requires synthesizing across parents that never matched at all. In those cases you're closer to needing multi-hop retrieval than a bigger context window per hit.
 
 It also isn't a substitute for good [chunking strategy](/learn/rag/chunking-strategies-for-documents) — you still have to choose sensible parent and child boundaries. And it composes well with [reranking](/learn/rag/reranking-retrieved-results): rerank the child matches before you resolve parents, so the parents you fetch are the ones that actually deserve the token budget.
+
+<Callout kind="note" title="Rerank children, then resolve parents">
+Each match pulls a whole parent section into context — five matches can mean five sections of tokens. Rerank the *child* hits first so only parents that earned the budget get fetched, and dedupe parent IDs since several children often share one.
+</Callout>
 
 **Related:** [Chunking Strategies for Documents](/learn/rag/chunking-strategies-for-documents), [Reranking Retrieved Results](/learn/rag/reranking-retrieved-results), [Contextual Retrieval: Prepending Context Before Embedding](/learn/rag/contextual-retrieval)

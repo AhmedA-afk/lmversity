@@ -6,6 +6,9 @@ summary: "A capstone spec for a citation-grounded, refusal-capable support bot w
 duration: "7 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 This is the assignment where RAG stops being a diagram and starts being a thing someone can actually break. You're building a support bot over real documentation that cites exactly where each claim came from, and — the part almost every weekend demo skips — knows when to shut up instead of guessing.
 
 There's no numbered walkthrough here. You've already built the pieces in [Building a RAG Pipeline End to End](/learn/rag/building-a-rag-pipeline-end-to-end); this page is the spec you build against. Treat it the way you'd treat a ticket from a product manager: the acceptance criteria are non-negotiable, the implementation is yours.
@@ -15,6 +18,10 @@ There's no numbered walkthrough here. You've already built the pieces in [Buildi
 Pick a real, moderately sized documentation set — a library, an API, a product — and build a bot that answers user questions from it. Not "answers questions in general with the docs as flavor text." Answers *only* from what's actually in the corpus, and says so when it can't.
 
 Imagine the person asking is a real user of that product: a developer stuck on an API's auth flow, a customer wondering if a feature exists. They don't want a confident paragraph that's half-invented. They want the two sentences from the docs that answer their question, with a pointer to where those sentences live — or an honest "I don't see that covered here, try [this page]." That second behavior is the one that separates a capstone from a chatbot demo. Most RAG side projects nail the happy path and fall apart the moment the answer isn't in the corpus; this spec makes the unhappy path a graded requirement, not an afterthought.
+
+<Callout kind="note" title="The refusal path is the graded requirement">
+Weekend demos nail the happy path. What separates a capstone from a chatbot demo is behavior when the answer *isn't* in the corpus — hedge or refuse, never confabulate. Build for that on purpose.
+</Callout>
 
 Scope it so you can actually finish: one corpus, one bot, a golden set small enough to read in one sitting but large enough to catch regressions.
 
@@ -79,5 +86,12 @@ Once the core spec is solid, these are worth your remaining time roughly in this
 - **A confidence signal.** Surface something like "low confidence, verify against the linked doc" when retrieval scores are borderline, rather than presenting every answer with the same tone of certainty.
 
 Ship the core spec first. Every extension above is worth more once the base bot actually refuses when it should — a clever reranker on top of a system that still hallucinates is polish on the wrong problem.
+
+<InlineCheck
+  question="Why does the spec require changing one thing and measuring the eval move — rather than adding several improvements at once?"
+  options={['Without a single isolated change, a moved score can\'t be attributed — you\'d never know which lever helped. And a flat score is a real result: report it', 'Because two changes are too slow to build', 'Because evals only test one thing at a time']}
+  answer={0}
+  explanation="This is what turns 'I think it got better' into 'it got better.' One variable + a rerun golden set gives you a comparable number — the habit that separates engineering from tinkering."
+/>
 
 **Related:** [Building a RAG Pipeline End to End](/learn/rag/building-a-rag-pipeline-end-to-end) · [Grounding Answers with Citations](/learn/rag/grounding-answers-with-citations) · [Evaluating RAG Quality](/learn/rag/evaluating-rag-quality) · [Corrective / Self-RAG](/learn/rag/corrective-self-rag) · [Hybrid Search: Lexical and Vector](/learn/rag/hybrid-search-lexical-and-vector) · [Choosing a Vector Database](/learn/rag/choosing-a-vector-database)

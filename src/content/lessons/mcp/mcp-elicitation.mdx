@@ -4,7 +4,13 @@ track: "mcp"
 status: live
 summary: "Lets an MCP server pause a tool call to ask the user a question, instead of failing or guessing."
 duration: "5 min read"
+published: "2026-09-15"
+updated: "2026-09-15"
 ---
+
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
 
 Most tool calls are one-shot: the client sends arguments, the server does the work, the result comes back. Elicitation breaks that pattern on purpose — it lets a server stop mid-call and ask the human a question before it finishes.
 
@@ -36,10 +42,29 @@ The schema on an elicitation request is intentionally narrow — flat objects wi
 
 The response carries an action — `accept`, `decline`, or `cancel` — separate from the content itself, so the server can tell "the user said no" apart from "the user gave an empty answer."
 
+<InlineCheck
+  question="Why is an elicitation's requestedSchema restricted to flat primitives — strings, numbers, booleans, enums?"
+  options={['The client must render the request as a generic form with zero domain knowledge — deeply nested structures can\'t be turned into a UI the client doesn\'t understand', 'Because JSON Schema can\'t express nesting', 'To keep the request under one TCP packet']}
+  answer={0}
+  explanation="The client owns the dialog. A server that could demand arbitrary structured data would be asking the client to render UI it has no idea how to draw — the flat-schema constraint is what makes a generic form possible at all."
+/>
+
 ## Why this has to be a client decision, not a server one
 
 A server cannot pop its own dialog box — it usually isn't even running in the same process as the UI. Routing the question through the client is what keeps a human in the loop for exactly the servers that need it, without every server needing its own UI layer. It also means the client — not the server — controls what elicitation is allowed to ask for and how often, which matters once you're connecting to servers you don't fully trust: see [Securing MCP Servers Against Prompt Injection](/learn/mcp/securing-mcp-servers-against-prompt-injection) for why an untrusted server asking arbitrary questions is itself a risk surface worth constraining.
 
-Elicitation is easy to confuse with two neighboring ideas. It is not the same as a tool's input schema, which is filled in once, up front, by the model — elicitation happens *during* execution, after the server has already started working and discovered it's missing something. And it's not [MCP Sampling](/learn/mcp/mcp-sampling), which lets a server borrow the client's LLM to generate text; elicitation borrows the client's *user*, not its model.
+Elicitation is easy to confuse with two neighboring ideas.
+
+<Compare title="Three things that look alike">
+<Pane title="Tool input schema" tone="neutral">
+Filled in once, up front, by the *model* — before the server starts any work.
+</Pane>
+<Pane title="Elicitation" tone="good">
+Happens *during* execution — the server is mid-task, discovers it's missing something, and borrows the client's *user* to fill the gap.
+</Pane>
+<Pane title="Sampling" tone="neutral">
+The server borrows the client's *LLM* to generate text — not the user. Also mid-task, but asks for a completion, not an answer.
+</Pane>
+</Compare>
 
 **Related:** [MCP Sampling: Letting a Server Borrow the Client's LLM](/learn/mcp/mcp-sampling), [MCP Tools, Resources, and Prompts](/learn/mcp/mcp-tools-resources-and-prompts), [Securing MCP Servers Against Prompt Injection](/learn/mcp/securing-mcp-servers-against-prompt-injection)

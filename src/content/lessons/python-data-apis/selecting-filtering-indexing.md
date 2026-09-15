@@ -2,7 +2,7 @@
 title: "Selecting, Filtering, and Indexing Rows"
 track: "python-data-apis"
 status: live
-summary: "A hands-on walkthrough of loc, iloc, and boolean masks on a support-ticket DataFrame — nailing the label-vs-position distinction, combining conditions safely, and avoiding the brac"
+summary: "A DataFrame is only useful once you can carve it up — and pandas gives you three different ways to do it that look similar, behave differently, and will absolutely bite you if you mix them up."
 duration: "22 min read"
 ---
 

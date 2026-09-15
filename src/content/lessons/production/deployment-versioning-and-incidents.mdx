@@ -6,6 +6,11 @@ summary: "Deploy the complete behavior—not just a model: prompt, model version
 duration: "3 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 ## The short answer
 
 Deploy the complete behavior—not just a model: prompt, model version, retrieval index, tool schemas, policies, parser, configuration, and evaluation report. Release gradually, observe the result, and keep a tested rollback or containment path. An incident plan must say who can stop the system and how users are informed.
@@ -38,6 +43,13 @@ perfect fix. Containment is a legitimate release action.
 Restoring a model while leaving a new prompt or tool schema can preserve the
 failure. Roll back the behavior bundle or isolate the changed component.
 
+<InlineCheck
+  question="An incident follows a bad release. The team rolls back the model version — and the failure continues. Why?"
+  options={['The behavior bundle has more than the model in it — a new prompt, retrieval index, or tool schema still in place can preserve the failure', 'Rollbacks always take several minutes to propagate', 'The eval suite was not run after the rollback']}
+  answer={0}
+  explanation="The release artifact is the whole behavior bundle, not the model alone. Rolling back one component while the changed prompt or index stays live restores nothing — roll back the bundle, or isolate the component that actually changed."
+/>
+
 ## An illustrative story
 
 A team rolled back a model and saw no improvement because a new retrieval index
@@ -46,20 +58,21 @@ release artifact from “model version” to “system behavior bundle.”
 
 ## Two ways to see it
 
-### Release view
-
+<Compare>
+<Pane title="Release view" tone="neutral">
 Make behavior changes small, attributable, and reversible.
-
-### Incident view
-
+</Pane>
+<Pane title="Incident view" tone="neutral">
 Stop impact first, preserve evidence safely, communicate clearly, then fix and
 turn the failure into a regression test.
+</Pane>
+</Compare>
 
-## Hands-on
-
+<Callout kind="try" title="Hands-on">
 Write a release manifest for a mock AI service. Simulate a bad prompt and a bad
 index, detect each from a test or signal, roll back the full bundle, and create a
 post-incident record with owner and follow-up test.
+</Callout>
 
 ## Checkpoint
 

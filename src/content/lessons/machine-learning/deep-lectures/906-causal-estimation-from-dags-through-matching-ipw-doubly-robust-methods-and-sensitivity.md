@@ -1,5 +1,5 @@
 ---
-title: "Deep lecture: Causal estimation—from DAGs through matching, IPW, doubly robust methods, and sensitivity"
+title: "Causal estimation: DAGs, matching, IPW, doubly robust methods, and sensitivity"
 track: "machine-learning"
 order: 906
 status: live
@@ -8,7 +8,6 @@ duration: "120 min lecture + 5 hr lab"
 updated: "2026-08-30"
 ---
 
-# Causal estimation: modelling the consequence of an action
 
 Predictive ML estimates patterns in observed labels. Causal estimation asks a different question: what would change if we intervened? A retention model can predict who will leave; it cannot by itself tell us whom to discount. High-risk customers may be those least responsive to an offer, and historical offers may have targeted exactly those people. Causal work starts by defining an intervention, population, outcome horizon, and counterfactual estimand before choosing an algorithm.
 

@@ -2,7 +2,7 @@
 title: "Parsing and Validating API Responses"
 track: "python-data-apis"
 status: live
-summary: "A worked example that takes a real LLM classification call through json.loads and a pydantic model, then deliberately breaks it three ways — a missing field, a stringified number, "
+summary: "An LLM API call doesn't hand you a Python object."
 duration: "16 min read"
 ---
 

@@ -2,7 +2,7 @@
 title: "The Data Cleaning Workflow"
 track: "python-data-apis"
 status: live
-summary: "Teaches the repeatable profile-fix-validate-re-profile loop for cleaning raw data, worked through a batch of messy scraped product reviews in pandas, with an emphasis on reproducib"
+summary: "A repeatable four-step cleaning loop — profile, fix, validate, document — run against every batch of raw data before it reaches a model."
 duration: "16 min read"
 ---
 

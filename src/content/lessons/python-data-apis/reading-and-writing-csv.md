@@ -2,7 +2,7 @@
 title: "Reading and Writing CSV Without Pain"
 track: "python-data-apis"
 status: live
-summary: "A hands-on walkthrough that builds a deliberately messy sales CSV (quoted commas, a junk title row, a stray duplicate header, one row in a different encoding), reads it correctly w"
+summary: "Every \"CSV\" you get from someone else's system is really three problems wearing one file extension: what delimiter is this, what encoding is this, and did whoever generated it actually follow the quoting rules."
 duration: "22 min read"
 ---
 

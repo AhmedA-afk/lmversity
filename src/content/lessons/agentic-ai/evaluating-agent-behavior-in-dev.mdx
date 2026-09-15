@@ -6,6 +6,9 @@ summary: "Inspecting step-by-step traces and logs to debug agent behavior before
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 When an agent does something wrong, the fix is almost never a guess. It's in the trace: the ordered record of every thought, tool call, and result the agent produced on its way to the (bad) answer. Reading that trace closely, before you write a single formal eval, is the fastest way to find out what actually broke.
 
 ## What a trace looks like
@@ -29,6 +32,10 @@ Common things to check at that junction:
 - Did the tool result actually contain what the model assumed it contained?
 - Did the model's next thought correctly summarize the result, or did it quietly hallucinate a detail?
 
+<Callout kind="note" title="Read the trace backward">
+Don't start at the wrong final answer and ask why. Find the last step that was still correct — the break is almost always in the very next step: a bad argument, a misread result, a skipped plan step.
+</Callout>
+
 This is also where you'll recognize the recurring shapes of failure — the same handful of patterns show up over and over once you've read enough traces. It's worth knowing them by name before you start; see [Diagnosing Agent Failure Modes](/learn/agentic-ai/common-agent-failure-modes).
 
 ## Why this comes before formal evals
@@ -36,6 +43,13 @@ This is also where you'll recognize the recurring shapes of failure — the same
 Writing an eval suite is an investment: you need test cases, a grading method, and infrastructure to run it repeatedly. That investment pays off once you know what you're measuring. Early in development, you usually don't — you're still discovering how the agent fails at all. Reading five or ten traces by hand tells you which failure modes are actually common versus theoretical, which is exactly the input a good eval needs.
 
 Trace-reading doesn't replace evals; it's the reconnaissance that makes them worth writing. Skip it and you risk building an eval suite that measures the wrong thing carefully.
+
+<InlineCheck
+  question="Why read traces by hand before building a formal eval suite?"
+  options={['Early on you don\'t yet know which failure modes are common versus theoretical — five or ten traces tell you what the eval should actually measure. Skip it and you may carefully measure the wrong thing', 'Because evals are too expensive to run', 'Because traces are easier to read']}
+  answer={0}
+  explanation="An eval is an investment in measuring something. Trace-reading is the reconnaissance that tells you what's worth measuring — which failures are real in your system, not just theoretically possible."
+/>
 
 ## A minimal habit
 

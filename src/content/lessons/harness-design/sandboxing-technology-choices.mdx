@@ -6,6 +6,10 @@ summary: "Compare container, gVisor, and microVM isolation for untrusted tool ex
 duration: "6 min read"
 ---
 
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 When your harness lets a model run shell commands, write files, or hit the network, you're deciding how much you trust code you didn't write and can't fully predict. The sandbox boundary you pick trades isolation strength against startup latency, and the tradeoff isn't the same at every layer of the stack.
 
 ## Plain containers: fast, shared kernel
@@ -22,6 +26,18 @@ Firecracker is a microVM — a stripped-down KVM-based virtual machine built by 
 
 ## Picking a boundary for your harness
 
+<Compare title="Isolation strength vs. startup latency">
+<Pane title="Plain container" tone="neutral">
+Tens of ms to start, but shares the host kernel — a kernel bug is an escape. A permission boundary, not a security boundary.
+</Pane>
+<Pane title="gVisor" tone="good">
+Userspace syscall layer shrinks the exposed kernel surface; still container-fast. Pays overhead on syscall-heavy workloads.
+</Pane>
+<Pane title="Firecracker microVM" tone="neutral">
+Own kernel per run — escaping means beating the hypervisor. ~125ms boot; usable per-turn if the stakes warrant it.
+</Pane>
+</Compare>
+
 Match the boundary to what the tool call can actually touch:
 
 - **Trusted, in-repo tools** (linting, running your own test suite) — a plain container or even no sandbox is fine; the risk is bugs, not adversarial input.
@@ -29,5 +45,12 @@ Match the boundary to what the tool call can actually touch:
 - **Fully untrusted, high-stakes execution** (running arbitrary code from an external MCP server, or multi-tenant SaaS where one customer's agent must never see another's) — Firecracker or an equivalent microVM, accepting the extra ~100ms per session.
 
 The general pattern: isolation strength and startup latency move together, so the right choice is set by what's on the other side of the sandbox boundary, not by a fixed policy. This is the deeper mechanics behind the broader question of [sandboxing tool execution in a harness](/learn/harness-design/subprocess-isolation-and-sandboxing) — that lesson covers the harness-side wiring; this one covers what's actually enforcing the boundary underneath it.
+
+<InlineCheck
+  question="Why is a bare Docker container not a real security boundary for model-generated code?"
+  options={['It shares the host kernel — isolation is namespaces and cgroups, and a kernel exploit escapes the whole thing. It\'s a permission boundary, not a security one', 'Because Docker is slow', 'Because containers can\'t run shell commands']}
+  answer={0}
+  explanation="Namespaces isolate processes from each other, but every container talks to the same kernel. For truly untrusted, model-generated code you need a layer that shrinks the kernel surface (gVisor) or removes it entirely (microVM)."
+/>
 
 **Related:** [Sandboxing Tool Execution in a Harness](/learn/harness-design/subprocess-isolation-and-sandboxing), [Sandboxing Tool Execution](/learn/tools-function-calling/sandboxing-tool-execution), [Sandboxing Untrusted MCP Servers](/learn/mcp/sandboxing-untrusted-servers)

@@ -3,10 +3,9 @@ title: "Privacy, Security, and Sensitive Data in Applied AI"
 track: ai-foundations
 status: live
 order: 321
-description: "Treat privacy and security as system properties: data minimization, access controls, threat modelling, redaction, and retention must be designed together."
+summary: "Treat privacy and security as system properties: data minimization, access controls, threat modelling, redaction, and retention must be designed together."
 ---
 
-# Privacy, Security, and Sensitive Data in Applied AI
 
 ## Product question and learning objective
 

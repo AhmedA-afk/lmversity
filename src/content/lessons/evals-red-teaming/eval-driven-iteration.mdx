@@ -6,17 +6,33 @@ summary: "Treat a score delta between eval runs like a code diff you review befo
 duration: "6 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+import Steps from '../../../components/kit/Steps.astro';
+import Step from '../../../components/kit/Step.astro';
+
 You changed a system prompt, swapped a model, or tweaked a retrieval step. How do you know the change actually helped? Not by reading five transcripts and feeling better about them — by running your eval suite twice and reviewing the diff.
 
 ## The loop
 
 Eval-driven iteration is a small, repeatable cycle: change something, run the eval suite, compare the new scores to the baseline, decide whether to keep the change. It's the same discipline as code review, applied to prompts, models, and pipelines instead of source files.
 
-1. **Baseline** — run your current version against your eval set and save the results.
-2. **Change** — make one deliberate edit: a prompt wording, a temperature, a retrieval parameter, a model swap.
-3. **Re-run** — run the exact same eval set against the new version.
-4. **Diff** — compare per-case scores, not just the aggregate.
-5. **Decide** — merge, revert, or investigate.
+<Steps>
+<Step title="Baseline">
+Run your current version against your eval set and save the results.
+</Step>
+<Step title="Change">
+Make one deliberate edit: a prompt wording, a temperature, a retrieval parameter, a model swap.
+</Step>
+<Step title="Re-run">
+Run the exact same eval set against the new version.
+</Step>
+<Step title="Diff">
+Compare per-case scores, not just the aggregate.
+</Step>
+<Step title="Decide">
+Merge, revert, or investigate.
+</Step>
+</Steps>
 
 This only works if you already have a suite worth running — see [Building a Golden Dataset](/learn/evals-red-teaming/building-a-golden-dataset) and [Choosing Metrics That Actually Measure Success](/learn/evals-red-teaming/writing-eval-metrics) if you don't have one yet.
 
@@ -31,6 +47,13 @@ case_058  nested_json_extraction    PASS -> PASS (same)
 ```
 
 A case that flips from pass to fail is the thing you actually need to look at — read that transcript before you approve the change, the same way you'd read a suspicious hunk in a pull request rather than trusting that "tests passed."
+
+<InlineCheck
+  question="An eval run reports the aggregate score rose from 82% to 85%. Why can't you approve the change on that number alone?"
+  options={['Averages hide movement in both directions — the change may have fixed easy cases while breaking hard ones that used to pass; only a per-case diff shows the flips', 'Because 85% rounds down to 80%', 'Because eval scores are always inflated by the judge']}
+  answer={0}
+  explanation="A net gain can ship a real regression — ten easy fixes masking three broken edge cases. The per-case diff is the pull request; the aggregate is just the test count."
+/>
 
 ## Treat it like code review
 

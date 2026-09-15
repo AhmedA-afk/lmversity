@@ -3,10 +3,9 @@ title: "Classification Losses: CE, BCE, NLL, and Logits"
 track: deep-learning
 status: live
 order: 107
-description: "Derive classification losses from likelihood and match every loss to the model output tensor."
+summary: "Derive classification losses from likelihood and match every loss to the model output tensor."
 ---
 
-# Classification Losses: CE, BCE, NLL, and Logits
 
 ## Why this matters
 
@@ -53,7 +52,7 @@ Before moving on, answer: *What is the loss estimating? Which axes are being red
 
 ## Derivation and numerical studio
 
-For logits [2,1,-1] and class 0, logsumexp is 2.349 and CE is .349. For binary z=-2,y=1, BCE-with-logits is 2.127; z=2,y=0 is also 2.127. For three independent labels, targets [1,0,1] require three BCE terms, never a coupled softmax. An alert may have multiple simultaneous incident types, unlike one-species image classification. Debug by asserting target ranges and testing logits ±100; probabilities must not be passed to a logits loss.
+For logits [2,1,-1] and class 0, logsumexp is 2.349 and CE is .349. For binary z=-2,y=1, BCE-with-logits is 2.127; z=2,y=0 is also 2.127. For three independent labels, targets [1,0,1] require three BCE terms, never a coupled softmax. An alert may have multiple simultaneous incident types, unlike one-species [image classification](/learn/deep-learning/vision/209-image-classification-and-error-analysis). Debug by asserting target ranges and testing logits ±100; probabilities must not be passed to a logits loss.
 
 Perform the arithmetic before opening a framework. For each calculation, identify the scalar being differentiated or the axis being reduced, then check that the resulting tensor has the shape demanded by the next operation. This practice separates a valid derivation from code that merely happens to execute.
 

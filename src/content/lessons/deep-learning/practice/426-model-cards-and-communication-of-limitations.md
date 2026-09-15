@@ -3,7 +3,7 @@ title: "Model cards and communicating limitations"
 track: "deep-learning"
 status: live
 order: 426
-summary: "Make claims bounded and auditable"
+summary: "A claim in a model card should bind to evidence: “on dataset (D_v), time range (T), and slice (S), metric (m) was (x\\pm u).” This is stronger and more honest than “the model is accurate.” Limitations are operational instructions for safe use, not disclaimers appended after marketing."
 duration: "18–30 min"
 ---
 

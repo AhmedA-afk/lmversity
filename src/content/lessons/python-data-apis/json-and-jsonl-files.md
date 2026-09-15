@@ -2,7 +2,7 @@
 title: "JSON vs JSONL: Whole Files and Streams"
 track: "python-data-apis"
 status: live
-summary: "A hands-on build of a batch LLM job that appends one JSON record per line instead of building one big JSON document, plus a generator-based reader that makes a mid-run crash cost y"
+summary: "A batch job that calls an LLM on ten thousand rows can run for hours, and hours-long processes crash: a rate limit, a flaky network, an OOM kill, a laptop lid closed at the wrong moment."
 duration: "22 min read"
 ---
 
@@ -224,4 +224,4 @@ def iter_jsonl(path):
 - **Go faster.** The loop here is sequential on purpose, so the crash-and-resume behavior is easy to see. Once that's solid, [batching LLM calls for throughput](/learn/python-data-apis/batching-llm-calls-for-throughput) covers running many requests concurrently — the append-one-line-per-result pattern still works, but you'll want a single writer (or a lock) so concurrent tasks don't interleave partial writes.
 - **Analyze the results.** JSONL is a great write log for a running job and a mediocre format for analysis once it's done. Load the finished file into a dataframe, or convert it to a columnar format if you're going to query it repeatedly at scale — [Parquet and columnar formats](/learn/python-data-apis/parquet-and-columnar-formats) covers when that trade is worth making.
 
-**Related:** JSON and JSONL files · [Rate limits and retries](/learn/python-data-apis/rate-limits-and-retries) · [Batching LLM calls for throughput](/learn/python-data-apis/batching-llm-calls-for-throughput) · [Data contracts and validation](/learn/python-data-apis/data-contracts-and-validation) · [Parquet and columnar formats](/learn/python-data-apis/parquet-and-columnar-formats)
+**Related:** [Rate limits and retries](/learn/python-data-apis/rate-limits-and-retries) · [Batching LLM calls for throughput](/learn/python-data-apis/batching-llm-calls-for-throughput) · [Data contracts and validation](/learn/python-data-apis/data-contracts-and-validation) · [Parquet and columnar formats](/learn/python-data-apis/parquet-and-columnar-formats)

@@ -3,10 +3,9 @@ title: "Hyperparameter Search and Experiment Design"
 track: deep-learning
 status: live
 order: 125
-description: "Run tuning as a controlled experiment with budgets, priors, and honest selection."
+summary: "Run tuning as a controlled experiment with budgets, priors, and honest selection."
 ---
 
-# Hyperparameter Search and Experiment Design
 
 ## Why this matters
 

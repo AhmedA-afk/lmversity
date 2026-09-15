@@ -3,10 +3,9 @@ title: "Applied Case: Finance AI, Controls, Fairness, and Model Risk"
 track: ai-foundations
 status: live
 order: 318
-description: "Build financial AI under model-risk governance: traceability, stress tests, challenge processes, and protected-class analysis are product requirements."
+summary: "Build financial AI under model-risk governance: traceability, stress tests, challenge processes, and protected-class analysis are product requirements."
 ---
 
-# Applied Case: Finance AI, Controls, Fairness, and Model Risk
 
 ## Product question and learning objective
 

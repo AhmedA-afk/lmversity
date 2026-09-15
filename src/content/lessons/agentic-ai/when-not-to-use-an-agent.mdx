@@ -6,6 +6,8 @@ summary: "Recognizing tasks where a deterministic pipeline or a single prompt is
 duration: "5 min read"
 ---
 
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 An agent earns its keep when a task's path can't be known in advance. Most tasks aren't like that — and forcing them into an agent loop trades predictability for flexibility you don't need.
 
 ## The default should be the simplest thing that works
@@ -28,5 +30,12 @@ Flip these signs around and you get the real case for an agent: open-ended debug
 ## The practical test
 
 Before reaching for an agent framework, try writing the task as a flowchart. If you can draw it — box, arrow, box, arrow — with no box that says "model decides what to do next," you've just designed your workflow. Build that instead, and save the agent loop for the box you genuinely can't draw.
+
+<InlineCheck
+  question="'Summarize this doc and email it' — agent or workflow?"
+  options={['Workflow — the steps never change: read, summarize, send. An agent adds nondeterminism, latency, and cost to make a decision that was never in doubt', 'Agent — it uses an LLM', 'Agent — two tools means decisions']}
+  answer={0}
+  explanation="The agent case requires that the path can't be known in advance. A fixed sequence with a model called at the judgment steps is a workflow — cheaper, testable, and identical every run."
+/>
 
 **Related:** [What Makes Something an Agent](/learn/agentic-ai/what-is-an-agent), [The Agent Loop: Sense, Think, Act](/learn/agentic-ai/the-agent-loop), [ReAct: Interleaving Reasoning and Acting](/learn/agentic-ai/react-pattern)

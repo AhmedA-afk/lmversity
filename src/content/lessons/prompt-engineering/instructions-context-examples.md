@@ -86,3 +86,5 @@ semantic errors that satisfy a schema.
 - Continue: Structured output
 - Go deeper: Red-teaming LLM applications
 - Apply it: create a reusable prompt skeleton with named blocks and test fixtures.
+
+**Related:** [Context Engineering vs Prompt Engineering](/learn/context-engineering/context-engineering-vs-prompting)

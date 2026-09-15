@@ -2,7 +2,7 @@
 title: "Sweeping Model Complexity"
 track: "ai-foundations"
 status: live
-summary: "A worked example that sweeps polynomial degree on one dataset, tabulates train vs. validation error to reveal the classical U-shaped curve and its sweet spot, then pushes complexit"
+summary: "A model isn't \"good\" or \"bad\" in the abstract — it's good or bad *at a given complexity setting*, and that setting is a dial you control directly: polynomial degree, tree depth, hidden units, number of layers."
 duration: "20 min read"
 ---
 

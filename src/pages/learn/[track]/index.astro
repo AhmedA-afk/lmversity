@@ -20,6 +20,14 @@ const lessons = await getCollection('lessons');
 const inTrack = lessons.filter((l) => l.id.startsWith(`${track.id}/`));
 const summaryFor = new Map(inTrack.map((l) => [l.id, l.data.summary ?? '']));
 const durationFor = new Map(inTrack.map((l) => [l.id, l.data.duration ?? '']));
+// A node only earns a link when a lesson file actually exists — `coming`
+// nodes keep their slug in the registry but render dimmed, so the outline is
+// visible without emitting dead routes.
+const liveKeys = new Set(inTrack.map((l) => l.id));
+const isLive = (slug?: string) => Boolean(slug) && liveKeys.has(`${track.id}/${slug}`);
+const count = inTrack.length;
+const planned = track.nodes.length;
+const coming = count === 0;
 
 const minutes = inTrack.reduce((total, l) => {
   const n = parseInt((l.data.duration ?? '').replace(/\D+/g, ''), 10);
@@ -29,7 +37,7 @@ const hours = Math.max(1, Math.round(minutes / 60));
 
 const modules = groupTrack(track);
 const quickGuide = quickGuides[track.id];
-const playable = track.nodes.filter((n) => n.slug);
+const playable = track.nodes.filter((n) => isLive(n.slug));
 const first = playable[0];
 
 const levelForGroup: Record<string, string> = {
@@ -44,16 +52,35 @@ const level = levelForGroup[track.group] ?? 'All levels';
 
 // The same facts the chips show, in extractable form — schema and markup can't drift.
 const trackFaq = [
-  { q: `Is the ${track.name} track free?`, a: `Yes — all ${inTrack.length} lessons are free, with no account and no paywall.` },
-  { q: `How long does ${track.name} take?`, a: `About ${hours} hours across ${inTrack.length} lessons. Work through it in order or jump to the lesson you need.` },
+  {
+    q: `Is the ${track.name} track free?`,
+    a: coming
+      ? `Yes — the track is in development, and all ${planned} planned lessons will be free, with no account and no paywall.`
+      : `Yes — all ${count} lessons are free, with no account and no paywall.`,
+  },
+  {
+    q: `How long does ${track.name} take?`,
+    a: coming
+      ? `The track is in development — ${planned} lessons are planned. The outline below shows the full path.`
+      : `About ${hours} hours across ${count} lessons. Work through it in order or jump to the lesson you need.`,
+  },
   { q: `What level is the ${track.name} track?`, a: `${level}. ${track.summary}` },
 ];
 ---
 <Layout
-  title={`${track.name}: ${inTrack.length} free lessons`}
-  description={`${track.summary} ${inTrack.length} free lessons, about ${hours} hours. No paywall, no sign-up.`}
+  title={coming ? `${track.name} — free course, in development` : `${track.name}: ${count} free lessons`}
+  description={
+    coming
+      ? `${track.summary} ${planned} lessons planned — all free, no account, no paywall.`
+      : `${track.summary} ${count} free lessons, about ${hours} hours. No paywall, no sign-up.`
+  }
   type="course"
-  course={{ level, lessonCount: inTrack.length, sections: modules?.map((m) => m.name), workload: `PT${hours}H` }}
+  course={{
+    level,
+    lessonCount: count,
+    sections: modules?.map((m) => m.name),
+    workload: count ? `PT${hours}H` : undefined,
+  }}
   faq={trackFaq}
   image={ogImage(`track-${track.id}`)}
   imageAlt={`${track.name} — ${inTrack.length} free lessons on LMVersity`}
@@ -73,8 +100,17 @@ const trackFaq = [
     <h1>{track.name}</h1>
     <p class="summary">{track.summary}</p>
     <div class="facts">
-      <span class="chip">{inTrack.length} lessons</span>
-      <span class="chip">~{hours} hours</span>
+      {coming ? (
+        <>
+          <span class="chip">In development</span>
+          <span class="chip">{planned} lessons planned</span>
+        </>
+      ) : (
+        <>
+          <span class="chip">{count} lessons</span>
+          <span class="chip">~{hours} hours</span>
+        </>
+      )}
       <span class="chip">{level}</span>
       <span class="chip">Free, no account</span>
     </div>
@@ -118,7 +154,7 @@ const trackFaq = [
                 <li class="lesson" data-side-item>
                   <span class="ln mono">{String(mod.offset + i + 1).padStart(2, '0')}</span>
                   <span class="body">
-                    {nd.slug ? (
+                    {isLive(nd.slug) ? (
                       <a href={`/learn/${track.id}/${nd.slug}`} class="title" data-lesson-link={`${track.id}/${nd.slug}`}>
                         <svg class="check" width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 5"></path></svg>
                         {nd.title}
@@ -126,11 +162,11 @@ const trackFaq = [
                     ) : (
                       <span class="title dim">{nd.title}</span>
                     )}
-                    {nd.slug && summaryFor.get(`${track.id}/${nd.slug}`) && (
+                    {isLive(nd.slug) && summaryFor.get(`${track.id}/${nd.slug}`) && (
                       <span class="lsum">{summaryFor.get(`${track.id}/${nd.slug}`)}</span>
                     )}
                   </span>
-                  <span class="right mono">{nd.slug ? durationFor.get(`${track.id}/${nd.slug}`) : nd.eta}</span>
+                  <span class="right mono">{isLive(nd.slug) ? durationFor.get(`${track.id}/${nd.slug}`) : (nd.eta ?? 'Soon')}</span>
                 </li>
               ))}
             </ol>
@@ -143,7 +179,7 @@ const trackFaq = [
           <li class="lesson" data-side-item>
             <span class="ln mono">{String(i + 1).padStart(2, '0')}</span>
             <span class="body">
-              {nd.slug ? (
+              {isLive(nd.slug) ? (
                 <a href={`/learn/${track.id}/${nd.slug}`} class="title" data-lesson-link={`${track.id}/${nd.slug}`}>
                   <svg class="check" width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 5"></path></svg>
                   {nd.title}
@@ -151,11 +187,11 @@ const trackFaq = [
               ) : (
                 <span class="title dim">{nd.title}</span>
               )}
-              {nd.slug && summaryFor.get(`${track.id}/${nd.slug}`) && (
+              {isLive(nd.slug) && summaryFor.get(`${track.id}/${nd.slug}`) && (
                 <span class="lsum">{summaryFor.get(`${track.id}/${nd.slug}`)}</span>
               )}
             </span>
-            <span class="right mono">{nd.slug ? durationFor.get(`${track.id}/${nd.slug}`) : nd.eta}</span>
+            <span class="right mono">{isLive(nd.slug) ? durationFor.get(`${track.id}/${nd.slug}`) : (nd.eta ?? 'Soon')}</span>
           </li>
         ))}
       </ol>

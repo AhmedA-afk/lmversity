@@ -3,7 +3,7 @@ title: "Streaming datasets, caching, and sharding"
 track: "deep-learning"
 status: live
 order: 404
-summary: "Feed accelerators without changing the experiment"
+summary: "Let throughput be (min(r_{decode},r_{host},r_{transfer},r_{device}))."
 duration: "18–30 min"
 ---
 

@@ -4,7 +4,11 @@ track: "production"
 status: live
 summary: "Route every model call through a gateway so provider swaps, fallback, and cost tracking never touch application code."
 duration: "5 min read"
+sources: ["litellm-repo", "portkey-docs"]
 ---
+
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
 
 The moment you call two different provider SDKs from application code, you've coupled your product to their APIs. An LLM gateway is a thin proxy that sits between your app and every model provider, so your code always talks to one interface — and everything about which provider actually handles the request becomes configuration, not code.
 
@@ -35,9 +39,20 @@ App code
 
 The app never names a specific vendor model. It names a logical alias, and the gateway resolves that alias to whatever's currently correct — which is also what makes [canary and shadow-testing model changes](/learn/production/canary-and-shadow-releases) possible without touching a single call site.
 
+<InlineCheck
+  question="Why should application code name a logical alias like 'team-default' instead of a provider's model ID?"
+  options={['The gateway resolves the alias, so swaps, fallbacks, and canaries become config changes — call sites never move', 'Aliases are shorter to type than provider model IDs', 'Provider model IDs are secret and cannot appear in code']}
+  answer={0}
+  explanation="The alias decouples 'which model' from the code. Repointing it — to a cheaper model, a fallback provider, or a 5% canary — happens in gateway configuration, not across every call site in the codebase."
+/>
+
 ## Where it fits with the rest of your stack
 
 A gateway is not a replacement for [structured logging of every call](/learn/production/structured-logging-for-llm-calls) or for [multi-provider failover](/learn/production/multi-provider-failover-and-redundancy) — it's usually the mechanism that implements both. Most teams put logging, cost tracking, and failover *inside* the gateway layer specifically because it's the one place every request already passes through, rather than reimplementing them in each service that calls a model.
+
+<Callout kind="note" title="When it's still overkill">
+A single prototype calling one provider directly is fine — the gateway earns its keep the moment you want A/B tests on real traffic, automatic failover during a provider outage, per-team cost attribution, or a new-model trial without a code change.
+</Callout>
 
 The tradeoff is a new piece of infrastructure to run and a new hop of latency (usually single-digit milliseconds for a well-run proxy). For anything beyond a single-provider prototype, that's a small price for never again grepping the codebase for a hardcoded model name.
 

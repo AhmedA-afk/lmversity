@@ -6,6 +6,10 @@ summary: "Rewrite vague or conversational queries into forms that retrieve bette
 duration: "6 min read"
 ---
 
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 The query a user types is rarely the query you want to embed and search with. "What about the pricing thing we discussed?" carries almost no retrievable signal on its own — fix that before it ever reaches your index, not after.
 
 ## Why the raw query fails
@@ -28,6 +32,15 @@ Rewriting turns the raw query into a self-contained, retrieval-shaped one, usual
 
 A useful pattern is HyDE (Hypothetical Document Embeddings): ask the model to draft a short *hypothetical answer* to the question, then embed that answer instead of the question. Answers and document chunks share more vocabulary and structure with each other than questions do with answers, so this often out-retrieves embedding the raw query directly.
 
+<Compare title="Rewrite vs. expand">
+<Pane title="Rewriting" tone="good">
+One better query — resolve pronouns into nouns, strip filler, normalize toward document vocabulary. Fixes "what about the pricing thing."
+</Pane>
+<Pane title="Expansion" tone="neutral">
+More queries — generate paraphrases or sub-questions, retrieve for each, merge results. Fixes a single phrasing's narrow blast radius.
+</Pane>
+</Compare>
+
 ## Expansion: search more than one way
 
 Expansion doesn't rewrite the query — it adds queries. Generate two or three paraphrases or sub-questions, run retrieval for each, and merge the results (deduplicated, or fed into a reranker). This helps when a single phrasing has a narrow blast radius: "How do I reset my password" and "account access recovery steps" can retrieve genuinely different chunks that are each partially right.
@@ -43,6 +56,13 @@ expansions:
 - "Team plan pricing Acme"
 - "annual billing discount Acme subscription"
 ```
+
+<InlineCheck
+  question="Why does HyDE embed a hypothetical answer instead of the question itself?"
+  options={['Answers and document chunks share more vocabulary and structure with each other than questions do with answers — an embedded draft answer lands closer to real chunks in vector space', 'Because hypothetical answers are shorter', 'Because questions can\'t be embedded directly']}
+  answer={0}
+  explanation="Retrieval matches surface form to surface form. A generated answer — even a wrong one — is shaped like the documents you're searching, so it retrieves better than the question that produced it."
+/>
 
 ## Where this sits in the pipeline
 

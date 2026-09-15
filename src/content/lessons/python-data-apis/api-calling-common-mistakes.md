@@ -2,7 +2,7 @@
 title: "API Calling Mistakes That Bite in Production"
 track: "python-data-apis"
 status: live
-summary: "A common-mistakes lesson covering five documented production API-calling failures — missing timeouts, ignored status codes, retried non-idempotent POSTs, hardcoded keys, and unchec"
+summary: "Every one of these will pass code review, pass your local tests, and then bite someone in production — usually at 2am, usually on the one call you didn't think twice about."
 duration: "14 min read"
 ---
 

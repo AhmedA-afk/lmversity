@@ -3,10 +3,9 @@ title: "Backpropagation by Hand for Dense Networks"
 track: deep-learning
 status: live
 order: 110
-description: "Do a complete dense-network gradient calculation before trusting an autodiff library."
+summary: "Do a complete dense-network gradient calculation before trusting an autodiff library."
 ---
 
-# Backpropagation by Hand for Dense Networks
 
 ## Why this matters
 

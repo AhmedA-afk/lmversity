@@ -6,6 +6,10 @@ summary: "One endpoint that aggregates, filters, and re-exposes several backend 
 duration: "5 min read"
 ---
 
+import Compare from '../../../components/kit/Compare.astro';
+import Pane from '../../../components/kit/Pane.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 An agent with fifteen MCP servers configured doesn't have fifteen clean connections — it has fifteen processes to launch, fifteen sets of credentials to manage, and a tool list so long the model starts picking the wrong tool. The gateway pattern fixes this by putting one MCP server in front of all the others.
 
 ## What a gateway actually does
@@ -24,15 +28,31 @@ This buys three things a raw multi-server setup doesn't have:
 
 There are two ways a gateway can handle a call, and they behave differently.
 
-**Pass-through** forwards the request to the matching backend and returns its response untouched. Simple, low-latency, and it preserves streaming and structured output exactly as the backend produced them.
-
-**Aggregation** is heavier: the gateway calls multiple backends for one incoming request and merges the results — for example, a single `search` tool on the gateway that fans out to a docs server and a ticket server and returns a combined result list. This is genuinely useful for the model (one tool call instead of two), but it means the gateway now owns merge logic, partial-failure handling, and its own opinion about result ranking. That's a real piece of software, not just a proxy.
+<Compare title="Two ways to forward">
+<Pane title="Pass-through" tone="good">
+- Forwards to the matching backend, returns the response untouched
+- Simple, low-latency — preserves streaming and structured output as produced
+- The default for most production gateways
+</Pane>
+<Pane title="Aggregation" tone="neutral">
+- One incoming call fans out to multiple backends, merges results
+- One tool call for the model instead of two — genuinely useful
+- But now the gateway owns merge logic, partial-failure handling, and ranking — a real piece of software, not a proxy
+</Pane>
+</Compare>
 
 Most production gateways are pass-through by default and add aggregation only for the handful of tools where combining results is worth the complexity.
 
 ## Where it breaks down
 
 A gateway is a single point of failure and a single point of trust. If it goes down, every backend behind it is unreachable even though the backends themselves are healthy — see [Running MCP Servers in Production](/learn/mcp/running-mcp-servers-in-production) for the operational side of that risk. And because the gateway holds credentials for everything behind it, compromising the gateway compromises the whole fleet — treat it with the same scrutiny you'd give any [sandboxed](/learn/mcp/sandboxing-untrusted-servers) boundary.
+
+<InlineCheck
+  question="Why is a gateway both a single point of failure and a single point of trust?"
+  options={['It proxies every backend and holds all their credentials — if it dies, healthy backends are unreachable; if it\'s compromised, every credential behind it is too', 'Because it adds one network hop', 'Because it rewrites tool schemas']}
+  answer={0}
+  explanation="Centralizing is the point and the risk. Fifteen backends behind one gateway means one outage darkens fifteen servers — and one breach hands over fifteen sets of credentials."
+/>
 
 The pattern also doesn't remove the need for [tool discovery](/learn/mcp/mcp-tool-discovery-and-schemas) design — it just moves the decision of what the model sees from "whatever every server happens to expose" to "whatever the gateway operator curates," which is a better place for that decision to live, but still a decision someone has to make deliberately rather than let sprawl by default.
 

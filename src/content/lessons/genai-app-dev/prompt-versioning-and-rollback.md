@@ -1,5 +1,5 @@
 ---
-title: "Prompt Versioning and Safe Rollbacks"
+title: "Prompt Versioning: Pin, Diff, and Roll Back"
 track: "genai-app-dev"
 status: live
 summary: "Prompts are production config, not strings — pin them per environment, diff every change, and make rollback a pointer flip."

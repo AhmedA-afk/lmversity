@@ -6,6 +6,9 @@ summary: "Implement the initialize handshake, tool discovery, and the tool-call 
 duration: "7 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 Every MCP SDK hides the same three moves: negotiate a session, ask the server what it can do, and feed tool results back to the model in a loop. Writing those three moves by hand once is the fastest way to stop treating MCP as magic.
 
 ## The handshake is a capability negotiation, not a login
@@ -48,7 +51,18 @@ while True:
 
 Two things break this loop in practice. First, a server can be slow or hang — a from-scratch client needs its own timeout around `tools/call`, because MCP doesn't guarantee one. Second, when you're juggling more than one server, the loop needs to route each call by which server actually owns that tool name; see [Orchestrating Multiple MCP Servers in One Client Session](/learn/mcp/multi-server-orchestration) once you're past a single connection.
 
+<InlineCheck
+  question="What's the single most common bug in a hand-rolled MCP client?"
+  options={['Skipping the server\'s initialize response and assuming tools/list will work — it succeeds against well-behaved servers and breaks silently against older ones', 'Sending JSON-RPC 1.0 instead of 2.0', 'Forgetting to close the stdio pipe on exit']}
+  answer={0}
+  explanation="The handshake is capability negotiation, not a login formality. A client that doesn't read what the server actually implements has no error to show — just a tool list that never arrives."
+/>
+
 ## Where the SDK earns its keep
+
+<Callout kind="note" title="Build it once, ship the SDK">
+The three moves — handshake, discovery, tool-call loop — are worth writing by hand once for understanding. What SDKs quietly handle is the plumbing: request-ID bookkeeping across concurrent calls, notification handling, reconnect logic for HTTP sessions. Don't hand-roll that part in production.
+</Callout>
 
 None of this is hard to build once. What's hard to get right by hand is what the SDKs quietly handle: request-ID bookkeeping across concurrent calls, notification handling (progress, cancellation, resource-changed events), and reconnect logic for Streamable HTTP sessions. Build the client from scratch to understand the protocol, then switch back to the SDK for anything you actually ship — the loop above is the part worth internalizing; the plumbing around it isn't.
 

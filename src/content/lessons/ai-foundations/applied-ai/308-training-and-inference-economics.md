@@ -3,10 +3,9 @@ title: "Training and Inference Economics"
 track: ai-foundations
 status: live
 order: 308
-description: "Translate model quality into unit economics, capacity, and an explicit operating envelope before committing to an architecture."
+summary: "Translate model quality into unit economics, capacity, and an explicit operating envelope before committing to an architecture."
 ---
 
-# Training and Inference Economics
 
 ## Product question and learning objective
 
@@ -72,3 +71,5 @@ Submit five artifacts:
 5. A failure memo: earliest signal, user impact, containment, and the design change you would make (15 points).
 
 A passing submission is specific enough that another person can challenge its assumptions and reproduce its tests. Full credit requires a justified choice not to automate when evidence or controls are inadequate.
+
+**Related:** [Training vs. Inference](/learn/ai-foundations/training-vs-inference) · [Training Time vs Inference Time](/learn/llm-foundations/training-time-vs-inference-time)

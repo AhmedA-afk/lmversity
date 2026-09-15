@@ -8,7 +8,6 @@ duration: "50–70 min"
 updated: "2026-08-30"
 ---
 
-# Case Study: Generative Agents in Critical Workflows
 
 Reliable AI is not a property that a model possesses in isolation. It is a claim about a
 specific system, a stated use, particular people, operating conditions, and the evidence
@@ -53,7 +52,7 @@ are explicit. Compare two slices rather than only a pooled score. If group A has
 A release decision based on “81% is good” hides an 18-point disparity that may be
 operationally decisive.
 
-For case study: generative agents in critical workflows, use the same discipline with the relevant signals:
+For [case study](/learn/ai-foundations/reliable-ai/225-case-study-health-and-clinical-support): generative agents in critical workflows, use the same discipline with the relevant signals:
 tool-call precision, policy violations, verification coverage, human escalation, and rollback success. Estimate uncertainty rather than treating one run as final. For a proportion,
 a quick standard error is (sqrt{hat r(1-hat r)/N}); for low-volume or high-impact
 slices, collect more evidence or route cases to review. A threshold is not neutral:

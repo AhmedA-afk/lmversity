@@ -3,10 +3,9 @@ title: "Applied Case: Manufacturing AI for Quality and Maintenance"
 track: ai-foundations
 status: live
 order: 319
-description: "Tie sensing, prediction, intervention, and maintenance economics into a closed-loop industrial system."
+summary: "Tie sensing, prediction, intervention, and maintenance economics into a closed-loop industrial system."
 ---
 
-# Applied Case: Manufacturing AI for Quality and Maintenance
 
 ## Product question and learning objective
 

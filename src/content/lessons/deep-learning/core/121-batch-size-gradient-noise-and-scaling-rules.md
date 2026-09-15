@@ -3,10 +3,9 @@ title: "Batch Size, Gradient Noise, and Scaling Rules"
 track: deep-learning
 status: live
 order: 121
-description: "Use batch size as an optimisation and systems choice, not a superstition."
+summary: "Use batch size as an optimisation and systems choice, not a superstition."
 ---
 
-# Batch Size, Gradient Noise, and Scaling Rules
 
 ## Why this matters
 

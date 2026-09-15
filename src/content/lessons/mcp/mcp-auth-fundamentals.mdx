@@ -6,6 +6,9 @@ summary: "How MCP servers authenticate clients and users, so only permitted call
 duration: "9 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A local MCP server launched over stdio inherits your OS user's permissions — there's no separate login. The moment a server moves to HTTP and other people can reach it, that assumption breaks, and MCP needs a real answer to "who is calling, and what are they allowed to do."
 
 ## The model: OAuth 2.1, not a custom scheme
@@ -33,9 +36,20 @@ The client follows that link, discovers the authorization server, and kicks off 
 
 Once a client has a token, the token should carry **scopes** — narrow, specific permissions, not "full account access." A tool that reads calendar events and a tool that deletes files should require different scopes, so a user (or an admin) can grant one without the other. Design your tool set with this in mind from the start: bundling a destructive tool into the same scope as a read-only one means every client that needs to read also gets to delete.
 
+<Callout kind="breaks" title="Bundled scopes delete by default">
+Put a destructive tool in the same scope as a read-only one and every client that needs to read also gets to delete. Scope tokens to the narrowest permission each tool actually needs — or accept that "read access" quietly means "everything access."
+</Callout>
+
 ## What this isn't
 
 Auth answers *who is calling*. It doesn't answer *is this request safe to execute* — a fully authenticated user can still trigger a tool call shaped by a prompt-injected instruction. That's a separate problem, covered in [Securing MCP Servers Against Prompt Injection](/learn/mcp/securing-mcp-servers-against-prompt-injection). Auth also doesn't keep working tokens working forever — once you've got authentication in place, the next failure mode is a token that silently expires; see [The Agent That Dies Overnight: OAuth](/learn/mcp/agent-dies-overnight-oauth).
+
+<InlineCheck
+  question="A request arrives with a perfectly valid OAuth token. What does auth still not tell you?"
+  options={['Whether the request is safe to execute — an authenticated user can still fire a tool call shaped by a prompt-injected instruction; auth is identity, not intent', 'Whether the token has expired', 'Whether the client supports tools']}
+  answer={0}
+  explanation="A valid token proves who is calling, not whether the call should run. Prompt injection rides in on legitimate credentials — which is why auth and injection defense are separate layers."
+/>
 
 ## The takeaway
 

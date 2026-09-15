@@ -3,10 +3,9 @@ title: "Convolutional Inductive Biases and Shape Accounting"
 track: deep-learning
 status: live
 order: 131
-description: "Connect local connectivity and equivariance to exact convolution shapes and practical image pipelines."
+summary: "Connect local connectivity and equivariance to exact convolution shapes and practical image pipelines."
 ---
 
-# Convolutional Inductive Biases and Shape Accounting
 
 ## Why this matters
 

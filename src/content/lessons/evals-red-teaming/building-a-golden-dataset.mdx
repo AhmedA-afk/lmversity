@@ -6,6 +6,9 @@ summary: "Curate a small, labeled set of real inputs and expected outputs so you
 duration: "5 min read"
 ---
 
+import Callout from '../../../components/kit/Callout.astro';
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
 A golden dataset is the fixed set of test cases you run every time you change a prompt, a tool, or a model. Without one, you're stuck doing what the last lesson called [vibes-based iteration](/learn/evals-red-teaming/why-evals-matter): you change something, skim a few outputs, and decide it "feels better." A golden dataset turns that feeling into a number.
 
 ## What goes in it
@@ -37,6 +40,17 @@ Don't invent cases from your head first. Pull them from reality, in this order:
 
 Aim for coverage over volume at first. Twenty to fifty well-chosen, labeled examples that span your real distribution beat five hundred near-duplicates. You can grow the set later; you can't fix a biased one by adding more of the same bias.
 
+<Callout kind="note" title="Pull from reality, in this order">
+Don't invent cases from your head first — real usage logs surface the phrasing, typos, and edge cases you'd never write yourself. Then known failures (each bug becomes a regression test), deliberate edge cases, and the boring middle. A set that's all edge cases optimizes for rare inputs at the expense of the common ones.
+</Callout>
+
+<InlineCheck
+  question="Why tag each example with what it's checking instead of just tracking one overall score?"
+  options={['So a regression shows up as \'we broke billing-category cases\' — a targeted signal — not just \'the score dropped\'', 'Because storage limits require examples to be categorized', 'Because tags make the dataset load faster']}
+  answer={0}
+  explanation="A bare aggregate tells you something broke; labels tell you what. 'Tone cases dropped' points at a fixable prompt change, while 'score fell 4 points' starts a guessing game."
+/>
+
 ## Keep it labeled and versioned
 
 Tag each example with what it's checking (tone, factual accuracy, refusal behavior, format) so a regression shows up as "we broke billing-category cases," not just "the score dropped." Store the dataset in version control alongside the prompt it tests — when you change the prompt, you want a diff of both, and when a score moves, you want to know whether the prompt changed, the dataset changed, or the model did.
@@ -45,4 +59,4 @@ Tag each example with what it's checking (tone, factual accuracy, refusal behavi
 
 Once the dataset exists, "did this change help?" becomes a rerun, not a debate. You can compare two prompt versions, two models, or two tool configurations on the exact same inputs and get a pass rate instead of an impression. It's also the foundation everything else in evals builds on — an LLM-as-judge setup is only as trustworthy as the golden examples you calibrate it against.
 
-**Related:** [Why Vibes-Based Iteration Breaks Down](/learn/evals-red-teaming/why-evals-matter), [Prompt Injection: When Content Becomes Instructions](/learn/evals-red-teaming/prompt-injection-basics)
+**Related:** [Why Vibes-Based Iteration Breaks Down](/learn/evals-red-teaming/why-evals-matter), [Prompt Injection: When Content Becomes Instructions](/learn/evals-red-teaming/prompt-injection-basics) · [Building a Prompt Eval Dataset](/learn/prompt-engineering/building-an-eval-dataset)

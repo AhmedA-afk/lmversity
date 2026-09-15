@@ -3,7 +3,7 @@ title: "Incidents, rollbacks, and postmortems"
 track: "deep-learning"
 status: live
 order: 427
-summary: "Recover safely and learn without blame"
+summary: "An incident timeline separates detection time, mitigation time, recovery time, and full-resolution time."
 duration: "18–30 min"
 ---
 

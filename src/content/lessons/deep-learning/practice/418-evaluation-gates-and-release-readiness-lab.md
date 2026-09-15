@@ -3,7 +3,7 @@ title: "Graded lab: evaluate a release candidate"
 track: "deep-learning"
 status: live
 order: 418
-summary: "Translate metrics into a release decision"
+summary: "A gate is a boolean conjunction over precommitted constraints: (G=G_{quality}\\land G_{slice}\\land G_{robustness}\\land G_{latency}\\land G_{safety}\\)."
 duration: "18–30 min"
 ---
 

@@ -2,7 +2,7 @@
 title: "Virtual Environments: One Sandbox per Project"
 track: "python-data-apis"
 status: live
-summary: "A hands-on walkthrough of what a Python virtual environment actually is — its own interpreter reference, its own site-packages, its own PATH — using the concrete break of one machi"
+summary: "Your legacy ETL script needs pandas 1.5. The new pipeline you're building this week needs pandas 2.2."
 duration: "12 min read"
 ---
 
@@ -159,4 +159,4 @@ python -m pip -V # confirm which environment pip will write into
 
 Once per-project isolation feels automatic, the next layer is making that environment reproducible and safe to hand to a teammate or a CI runner: locking exact versions, and keeping secrets out of the code that ships alongside it. Try the [environments & tooling quiz](/learn/python-data-apis/environments-tooling-quiz) to check the mental model, then move on to loading configuration and API keys without hardcoding them.
 
-**Related:** Python environments and venv · [why isolated environments make sense](/learn/python-data-apis/why-isolated-environments-intuition) · [setting up venv and Jupyter](/learn/python-data-apis/setting-up-venv-and-jupyter) · [pandas dataframes fundamentals](/learn/python-data-apis/pandas-dataframes-fundamentals) · [environments & tooling quiz](/learn/python-data-apis/environments-tooling-quiz)
+**Related:** [why isolated environments make sense](/learn/python-data-apis/why-isolated-environments-intuition) · [setting up venv and Jupyter](/learn/python-data-apis/setting-up-venv-and-jupyter) · [pandas dataframes fundamentals](/learn/python-data-apis/pandas-dataframes-fundamentals) · [environments & tooling quiz](/learn/python-data-apis/environments-tooling-quiz)
