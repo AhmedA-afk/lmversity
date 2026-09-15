@@ -10728,7 +10728,7 @@ const unsortedTracks: Track[] = [
     "n": "24",
     "name": "Agent Frameworks",
     "group": "Agentic",
-    "meta": "13 lessons",
+    "meta": "18 lessons",
     "summary": "Framework-by-framework coverage of agent SDKs and orchestration libraries — each module shows the raw-SDK baseline first, then what the framework actually adds, and when plain code is enough.",
     "nodes": [
       {
@@ -10807,6 +10807,36 @@ const unsortedTracks: Track[] = [
         "slug": "mastra-typescript-agents",
         "status": "live",
         "prereq": ["vercel-ai-sdk"]
+      },
+      {
+        "title": "DSPy: programming, not prompting",
+        "slug": "dspy-programmatic-prompting",
+        "status": "live",
+        "prereq": ["raw-sdk-agent-baseline"]
+      },
+      {
+        "title": "Haystack: explicit pipelines for retrieval and agents",
+        "slug": "haystack-pipelines",
+        "status": "live",
+        "prereq": ["raw-sdk-agent-baseline"]
+      },
+      {
+        "title": "Instructor, Outlines, Guidance: the constrained-output libraries",
+        "slug": "structured-output-libraries",
+        "status": "live",
+        "prereq": ["raw-sdk-agent-baseline"]
+      },
+      {
+        "title": "n8n, Zapier, Make, Pipedream: bounded no-code AI workflows",
+        "slug": "no-code-ai-workflows",
+        "status": "live",
+        "prereq": ["raw-sdk-agent-baseline"]
+      },
+      {
+        "title": "Comparing frameworks — and the escape hatches that matter",
+        "slug": "framework-comparison-and-escape-hatches",
+        "status": "live",
+        "prereq": ["raw-sdk-agent-baseline"]
       }
     ]
   }

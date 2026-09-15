@@ -1,12 +1,12 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T13:52:01.244Z",
+  "generatedAt": "2026-09-15T13:55:06.834Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2430,
+  "itemCount": 2435,
   "counts": {
    "byFamily": {
-    "lesson": 2052,
+    "lesson": 2057,
     "project": 31,
     "quiz": 89,
     "reference": 59,
@@ -22,10 +22,10 @@
     "glossary": 1
    },
    "byStatus": {
-    "live": 2430
+    "live": 2435
    },
    "byKind": {
-    "concept": 1753,
+    "concept": 1758,
     "comparison": 102,
     "worked-example": 29,
     "capstone": 31,
@@ -58,7 +58,7 @@
     "endpoint": 4
    },
    "byTrack": {
-    "agent-frameworks": 14,
+    "agent-frameworks": 19,
     "agentic-ai": 31,
     "ai-foundations": 161,
     "ai-literacy": 60,
@@ -98,7 +98,7 @@
     "fde": 193
    },
    "byFreshness": {
-    "release-sensitive": 308,
+    "release-sensitive": 313,
     "pricing-sensitive": 340,
     "periodic": 1344,
     "certification-sensitive": 99,
@@ -375,6 +375,180 @@
    }
   },
   {
+   "id": "les-2105",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "DSPy: programming, not prompting",
+   "slug": "agent-frameworks/dspy-programmatic-prompting",
+   "route": "/learn/agent-frameworks/dspy-programmatic-prompting",
+   "collection": "lessons",
+   "path": "src/content/lessons/agent-frameworks/dspy-programmatic-prompting.md",
+   "track": "agent-frameworks",
+   "module": null,
+   "status": "live",
+   "summary": "DSPy treats the LLM pipeline as a program — signatures declare inputs and outputs, modules compose them, and optimizers compile better prompts and weights from your data instead of hand-tuning strings.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 356,
+   "headings": [
+    "The short answer",
+    "The vocabulary",
+    "What it adds over the raw loop",
+    "When plain code is enough",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agent-frameworks/raw-sdk-agent-baseline",
+    "/learn/evals-red-teaming/datasets-rubrics-and-judges",
+    "/learn/prompt-engineering/few-shot-prompting",
+    "/learn/structured-outputs/schema-design-for-reliability"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 6,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "DSPy treats the LLM pipeline as a program — signatures declare inputs and outputs, modules compose them, and optimizers compile better prompts and weights from your data instead of hand-tuning strings.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/agent-frameworks/haystack-pipelines",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: DSPy, LangGraph, Mastra"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 1,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2106",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Comparing frameworks — and the escape hatches that matter",
+   "slug": "agent-frameworks/framework-comparison-and-escape-hatches",
+   "route": "/learn/agent-frameworks/framework-comparison-and-escape-hatches",
+   "collection": "lessons",
+   "path": "src/content/lessons/agent-frameworks/framework-comparison-and-escape-hatches.md",
+   "track": "agent-frameworks",
+   "module": null,
+   "status": "live",
+   "summary": "A systematic comparison of the agent frameworks in this track across control flow, state, persistence, tools, evaluation, observability, deployment, maintenance, and the escape hatches that decide real migrations.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 580,
+   "headings": [
+    "The short answer",
+    "The nine dimensions",
+    "The comparison",
+    "The honest patterns",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agent-frameworks/raw-sdk-agent-baseline",
+    "/learn/agentic-ai/agent-orchestration-frameworks",
+    "/learn/agentic-ai/choosing-an-agent-framework",
+    "/learn/agentic-ai/when-not-to-use-an-agent"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 8,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "A systematic comparison of the agent frameworks in this track across control flow, state, persistence, tools, evaluation, observability, deployment, maintenance, and the escape hatches that decide real migrations.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/agent-frameworks",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: MCP, OpenAI, Claude, Vertex, LangGraph, LlamaIndex, PydanticAI, Agno, CrewAI, Mastra, Haystack, DSPy"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 1,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-2093",
    "family": "lesson",
    "kind": "concept",
@@ -438,6 +612,92 @@
    "freshnessClass": "release-sensitive",
    "freshnessSignals": [
     "vendor/tool mentions: Vertex, Gemini, OpenAI"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2107",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Haystack: explicit pipelines for retrieval and agents",
+   "slug": "agent-frameworks/haystack-pipelines",
+   "route": "/learn/agent-frameworks/haystack-pipelines",
+   "collection": "lessons",
+   "path": "src/content/lessons/agent-frameworks/haystack-pipelines.md",
+   "track": "agent-frameworks",
+   "module": null,
+   "status": "live",
+   "summary": "Haystack builds LLM apps as explicit pipelines — components with declared inputs and outputs wired into a graph — covering retrieval, generation, and agents with the same composable model.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 362,
+   "headings": [
+    "The short answer",
+    "The model",
+    "What it adds over the raw loop",
+    "When plain code is enough",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agent-frameworks/llamaindex-data-framework",
+    "/learn/agent-frameworks/raw-sdk-agent-baseline",
+    "/learn/rag/ingestion-chunking-and-retrieval"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 7,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Haystack builds LLM apps as explicit pipelines — components with declared inputs and outputs wired into a graph — covering retrieval, generation, and agents with the same composable model.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/agent-frameworks/structured-output-libraries",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Haystack, OpenSearch, Elasticsearch, pgvector, LlamaIndex, LangGraph"
    ],
    "owner": null,
    "reviewer": null,
@@ -782,7 +1042,7 @@
    "promisedOutcome": "Mastra is the TypeScript-native agent framework — agents, typed workflows with suspend/resume, memory, RAG tooling, and evals — for JS/TS backends rather than Python-first stacks.",
    "jobToBeDone": null,
    "prerequisite": null,
-   "nextAction": "/learn/agent-frameworks",
+   "nextAction": "/learn/agent-frameworks/dspy-programmatic-prompting",
    "practiceType": "none",
    "freshnessClass": "pricing-sensitive",
    "freshnessSignals": [
@@ -889,6 +1149,93 @@
     "completeness": 1,
     "prerequisiteFit": 2,
     "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2108",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "n8n, Zapier, Make, Pipedream: bounded no-code AI workflows",
+   "slug": "agent-frameworks/no-code-ai-workflows",
+   "route": "/learn/agent-frameworks/no-code-ai-workflows",
+   "collection": "lessons",
+   "path": "src/content/lessons/agent-frameworks/no-code-ai-workflows.md",
+   "track": "agent-frameworks",
+   "module": null,
+   "status": "live",
+   "summary": "Automation platforms put LLM calls inside drag-and-drop workflows — bounded, observable, and operable by non-engineers — a real answer for fixed-shape automations and a trap for anything agentic.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 497,
+   "headings": [
+    "The short answer",
+    "What they actually offer",
+    "Where they fit against the frameworks",
+    "What they add over the raw loop",
+    "When plain code is enough",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agent-frameworks/raw-sdk-agent-baseline",
+    "/learn/agentic-ai/agents-vs-workflows",
+    "/learn/agentic-ai/when-not-to-use-an-agent"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 7,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Automation platforms put LLM calls inside drag-and-drop workflows — bounded, observable, and operable by non-engineers — a real answer for fixed-shape automations and a trap for anything agentic.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/agent-frameworks/framework-comparison-and-escape-hatches",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: n8n, Zapier, Pipedream, LangChain"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 1,
     "linking": 2,
@@ -1154,6 +1501,94 @@
     "metadata": 1,
     "linking": 2,
     "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2109",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Instructor, Outlines, Guidance: the constrained-output libraries",
+   "slug": "agent-frameworks/structured-output-libraries",
+   "route": "/learn/agent-frameworks/structured-output-libraries",
+   "collection": "lessons",
+   "path": "src/content/lessons/agent-frameworks/structured-output-libraries.md",
+   "track": "agent-frameworks",
+   "module": null,
+   "status": "live",
+   "summary": "Three libraries enforce structure at three different layers — Instructor validates and retries with Pydantic, Outlines constrains decoding at the token level, Guidance interleaves generation and control — pick by where the guarantee has to live.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 399,
+   "headings": [
+    "The short answer",
+    "The three layers",
+    "What they add over the raw loop",
+    "When plain code is enough",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agent-frameworks/raw-sdk-agent-baseline",
+    "/learn/local-inference/sglang-serving-and-structured-generation",
+    "/learn/prompt-engineering/validation-and-repair-loop",
+    "/learn/structured-outputs/constrained-decoding-under-the-hood",
+    "/learn/structured-outputs/cross-provider-landscape"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 6,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Three libraries enforce structure at three different layers — Instructor validates and retries with Pydantic, Outlines constrains decoding at the token level, Guidance interleaves generation and control — pick by where the guarantee has to live.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/agent-frameworks/no-code-ai-workflows",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Instructor, Outlines, OpenAI, vLLM, llama.cpp, Anthropic, SGLang, Gemini"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 1,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
     "demand": null
@@ -10048,7 +10483,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (238w vs ~772w)",
+   "dispositionReason": "thin vs family median (238w vs ~771w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -53377,7 +53812,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -54459,7 +54894,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -65334,7 +65769,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -85252,7 +85687,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -87715,7 +88150,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (277w vs ~772w)",
+   "dispositionReason": "thin vs family median (277w vs ~771w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -91433,7 +91868,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (269w vs ~772w)",
+   "dispositionReason": "thin vs family median (269w vs ~771w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -156504,7 +156939,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -170819,7 +171254,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -203648,14 +204083,14 @@
    ],
    "features": {
     "group": "Agentic",
-    "declaredMeta": "13 lessons",
-    "nodeCount": 13,
-    "liveNodes": 13,
+    "declaredMeta": "18 lessons",
+    "nodeCount": 18,
+    "liveNodes": 18,
     "comingNodes": 0,
     "headingOnlyNodes": 0,
-    "fileCount": 13,
+    "fileCount": 18,
     "kinds": {
-     "concept": 13
+     "concept": 18
     },
     "modules": 0,
     "quickGuide": false
@@ -206789,6 +207224,25 @@
  "duplicates": [
   {
    "a": {
+    "route": "/learn/prompt-engineering/meta-prompting-to-draft-prompts",
+    "slug": "prompt-engineering/meta-prompting-to-draft-prompts",
+    "title": "Meta-Prompting: Using a Model to Write Prompts",
+    "track": "prompt-engineering"
+   },
+   "b": {
+    "route": "/learn/prompt-engineering/meta-prompting-with-models",
+    "slug": "prompt-engineering/meta-prompting-with-models",
+    "title": "Meta-Prompting: Using a Model to Write Your Prompts",
+    "track": "prompt-engineering"
+   },
+   "jaccard": 1,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
     "route": "/learn/llm-foundations/grouped-query-attention",
     "slug": "llm-foundations/grouped-query-attention",
     "title": "Grouped-Query and Multi-Query Attention",
@@ -206827,20 +207281,20 @@
   },
   {
    "a": {
-    "route": "/learn/prompt-engineering/meta-prompting-to-draft-prompts",
-    "slug": "prompt-engineering/meta-prompting-to-draft-prompts",
-    "title": "Meta-Prompting: Using a Model to Write Prompts",
-    "track": "prompt-engineering"
+    "route": "/learn/tools-function-calling/structured-output-vs-tool-calls-when",
+    "slug": "tools-function-calling/structured-output-vs-tool-calls-when",
+    "title": "Structured Output vs. Tool Calls: Which and When",
+    "track": "tools-function-calling"
    },
    "b": {
-    "route": "/learn/prompt-engineering/meta-prompting-with-models",
-    "slug": "prompt-engineering/meta-prompting-with-models",
-    "title": "Meta-Prompting: Using a Model to Write Your Prompts",
-    "track": "prompt-engineering"
+    "route": "/learn/tools-function-calling/structured-output-vs-tool-calls",
+    "slug": "tools-function-calling/structured-output-vs-tool-calls",
+    "title": "Structured Output vs. Tool Calls",
+    "track": "tools-function-calling"
    },
    "jaccard": 1,
    "containment": 1,
-   "slugStem": false,
+   "slugStem": true,
    "alreadyLinked": true,
    "sameTrack": true
   },
@@ -206856,25 +207310,6 @@
     "slug": "prompt-engineering/task-framing",
     "title": "Task framing: intent, constraints, and acceptance criteria",
     "track": "prompt-engineering"
-   },
-   "jaccard": 1,
-   "containment": 1,
-   "slugStem": true,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/tools-function-calling/structured-output-vs-tool-calls-when",
-    "slug": "tools-function-calling/structured-output-vs-tool-calls-when",
-    "title": "Structured Output vs. Tool Calls: Which and When",
-    "track": "tools-function-calling"
-   },
-   "b": {
-    "route": "/learn/tools-function-calling/structured-output-vs-tool-calls",
-    "slug": "tools-function-calling/structured-output-vs-tool-calls",
-    "title": "Structured Output vs. Tool Calls",
-    "track": "tools-function-calling"
    },
    "jaccard": 1,
    "containment": 1,
@@ -207302,6 +207737,25 @@
   },
   {
    "a": {
+    "route": "/learn/prompt-engineering/automatic-prompt-optimization-dspy",
+    "slug": "prompt-engineering/automatic-prompt-optimization-dspy",
+    "title": "Automatic Prompt Optimization With DSPy",
+    "track": "prompt-engineering"
+   },
+   "b": {
+    "route": "/learn/prompt-engineering/automatic-prompt-optimization",
+    "slug": "prompt-engineering/automatic-prompt-optimization",
+    "title": "Automatic Prompt Optimization with Tools Like DSPy",
+    "track": "prompt-engineering"
+   },
+   "jaccard": 0.67,
+   "containment": 1,
+   "slugStem": true,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
     "route": "/learn/ai-foundations/ai-vs-ml-vs-deep-learning",
     "slug": "ai-foundations/ai-vs-ml-vs-deep-learning",
     "title": "AI vs. Machine Learning vs. Deep Learning",
@@ -207354,25 +207808,6 @@
    "jaccard": 0.67,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/prompt-engineering/automatic-prompt-optimization-dspy",
-    "slug": "prompt-engineering/automatic-prompt-optimization-dspy",
-    "title": "Automatic Prompt Optimization With DSPy",
-    "track": "prompt-engineering"
-   },
-   "b": {
-    "route": "/learn/prompt-engineering/automatic-prompt-optimization",
-    "slug": "prompt-engineering/automatic-prompt-optimization",
-    "title": "Automatic Prompt Optimization with Tools Like DSPy",
-    "track": "prompt-engineering"
-   },
-   "jaccard": 0.67,
-   "containment": 1,
-   "slugStem": true,
    "alreadyLinked": true,
    "sameTrack": true
   },
@@ -207644,25 +208079,6 @@
   },
   {
    "a": {
-    "route": "/learn/context-engineering/conversation-memory-and-state",
-    "slug": "context-engineering/conversation-memory-and-state",
-    "title": "Memory vs State: What Persists Across Turns and Sessions",
-    "track": "context-engineering"
-   },
-   "b": {
-    "route": "/learn/context-engineering/cross-session-memory-architecture",
-    "slug": "context-engineering/cross-session-memory-architecture",
-    "title": "Memory Across Sessions",
-    "track": "context-engineering"
-   },
-   "jaccard": 0.5,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
     "route": "/learn/context-engineering/tokens-are-not-words",
     "slug": "context-engineering/tokens-are-not-words",
     "title": "Tokens Are Not Words",
@@ -207679,6 +208095,44 @@
    "slugStem": false,
    "alreadyLinked": true,
    "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/prompt-engineering/what-prompting-is",
+    "slug": "prompt-engineering/what-prompting-is",
+    "title": "What prompting actually is",
+    "track": "prompt-engineering"
+   },
+   "b": {
+    "route": "/learn/prompt-engineering/what-role-prompting-changes",
+    "slug": "prompt-engineering/what-role-prompting-changes",
+    "title": "What Role Prompting Actually Changes",
+    "track": "prompt-engineering"
+   },
+   "jaccard": 0.5,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/context-engineering/conversation-memory-and-state",
+    "slug": "context-engineering/conversation-memory-and-state",
+    "title": "Memory vs State: What Persists Across Turns and Sessions",
+    "track": "context-engineering"
+   },
+   "b": {
+    "route": "/learn/context-engineering/cross-session-memory-architecture",
+    "slug": "context-engineering/cross-session-memory-architecture",
+    "title": "Memory Across Sessions",
+    "track": "context-engineering"
+   },
+   "jaccard": 0.5,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
   },
   {
    "a": {
@@ -207717,25 +208171,6 @@
    "slugStem": false,
    "alreadyLinked": true,
    "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/prompt-engineering/what-prompting-is",
-    "slug": "prompt-engineering/what-prompting-is",
-    "title": "What prompting actually is",
-    "track": "prompt-engineering"
-   },
-   "b": {
-    "route": "/learn/prompt-engineering/what-role-prompting-changes",
-    "slug": "prompt-engineering/what-role-prompting-changes",
-    "title": "What Role Prompting Actually Changes",
-    "track": "prompt-engineering"
-   },
-   "jaccard": 0.5,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
   },
   {
    "a": {
@@ -208100,6 +208535,25 @@
   },
   {
    "a": {
+    "route": "/learn/prompt-engineering/role-prompting",
+    "slug": "prompt-engineering/role-prompting",
+    "title": "Role Prompting: What Personas Actually Change",
+    "track": "prompt-engineering"
+   },
+   "b": {
+    "route": "/learn/prompt-engineering/what-prompting-is",
+    "slug": "prompt-engineering/what-prompting-is",
+    "title": "What prompting actually is",
+    "track": "prompt-engineering"
+   },
+   "jaccard": 0.4,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
     "route": "/learn/classical-ai/agents-robotics/305-agent-memory-state-and-world-models",
     "slug": "classical-ai/agents-robotics/305-agent-memory-state-and-world-models",
     "title": "Agent memory, state, and world models",
@@ -208135,25 +208589,6 @@
    "slugStem": false,
    "alreadyLinked": false,
    "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/prompt-engineering/role-prompting",
-    "slug": "prompt-engineering/role-prompting",
-    "title": "Role Prompting: What Personas Actually Change",
-    "track": "prompt-engineering"
-   },
-   "b": {
-    "route": "/learn/prompt-engineering/what-prompting-is",
-    "slug": "prompt-engineering/what-prompting-is",
-    "title": "What prompting actually is",
-    "track": "prompt-engineering"
-   },
-   "jaccard": 0.4,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
   },
   {
    "a": {
@@ -208423,15 +208858,15 @@
   },
   {
    "a": {
-    "route": "/learn/context-engineering/progressive-tool-disclosure-in-depth",
-    "slug": "context-engineering/progressive-tool-disclosure-in-depth",
-    "title": "Progressive Tool Disclosure",
+    "route": "/learn/context-engineering/tool-output-deduplication-deep",
+    "slug": "context-engineering/tool-output-deduplication-deep",
+    "title": "Tool Output Deduplication",
     "track": "context-engineering"
    },
    "b": {
-    "route": "/learn/context-engineering/progressive-tool-disclosure",
-    "slug": "context-engineering/progressive-tool-disclosure",
-    "title": "Progressive Tool Disclosure: Hiding Tools Until They're Needed",
+    "route": "/learn/context-engineering/tool-output-deduplication",
+    "slug": "context-engineering/tool-output-deduplication",
+    "title": "Tool Output Deduplication: Stopping Repeated Results from Eating the Budget",
     "track": "context-engineering"
    },
    "jaccard": 0.38,
@@ -208442,15 +208877,15 @@
   },
   {
    "a": {
-    "route": "/learn/context-engineering/tool-output-deduplication-deep",
-    "slug": "context-engineering/tool-output-deduplication-deep",
-    "title": "Tool Output Deduplication",
+    "route": "/learn/context-engineering/progressive-tool-disclosure-in-depth",
+    "slug": "context-engineering/progressive-tool-disclosure-in-depth",
+    "title": "Progressive Tool Disclosure",
     "track": "context-engineering"
    },
    "b": {
-    "route": "/learn/context-engineering/tool-output-deduplication",
-    "slug": "context-engineering/tool-output-deduplication",
-    "title": "Tool Output Deduplication: Stopping Repeated Results from Eating the Budget",
+    "route": "/learn/context-engineering/progressive-tool-disclosure",
+    "slug": "context-engineering/progressive-tool-disclosure",
+    "title": "Progressive Tool Disclosure: Hiding Tools Until They're Needed",
     "track": "context-engineering"
    },
    "jaccard": 0.38,
@@ -209107,6 +209542,25 @@
   },
   {
    "a": {
+    "route": "/learn/prompt-engineering/instructions-context-examples",
+    "slug": "prompt-engineering/instructions-context-examples",
+    "title": "Separate instructions, context, examples, and output contracts",
+    "track": "prompt-engineering"
+   },
+   "b": {
+    "route": "/learn/prompt-engineering/sectioning-a-prompt-into-blocks",
+    "slug": "prompt-engineering/sectioning-a-prompt-into-blocks",
+    "title": "Sectioning: Instructions, Context, Examples, Output",
+    "track": "prompt-engineering"
+   },
+   "jaccard": 0.57,
+   "containment": 0.8,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
     "route": "/learn/genai-app-dev/background-jobs-for-long-running-ai-tasks",
     "slug": "genai-app-dev/background-jobs-for-long-running-ai-tasks",
     "title": "Background Jobs for Long-Running AI Tasks",
@@ -209142,25 +209596,6 @@
    "slugStem": false,
    "alreadyLinked": true,
    "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/prompt-engineering/instructions-context-examples",
-    "slug": "prompt-engineering/instructions-context-examples",
-    "title": "Separate instructions, context, examples, and output contracts",
-    "track": "prompt-engineering"
-   },
-   "b": {
-    "route": "/learn/prompt-engineering/sectioning-a-prompt-into-blocks",
-    "slug": "prompt-engineering/sectioning-a-prompt-into-blocks",
-    "title": "Sectioning: Instructions, Context, Examples, Output",
-    "track": "prompt-engineering"
-   },
-   "jaccard": 0.57,
-   "containment": 0.8,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
   },
   {
    "a": {
@@ -209563,6 +209998,25 @@
   },
   {
    "a": {
+    "route": "/learn/agent-frameworks/dspy-programmatic-prompting",
+    "slug": "agent-frameworks/dspy-programmatic-prompting",
+    "title": "DSPy: programming, not prompting",
+    "track": "agent-frameworks"
+   },
+   "b": {
+    "route": "/learn/prompt-engineering/prompting-is-not-deterministic-programming",
+    "slug": "prompt-engineering/prompting-is-not-deterministic-programming",
+    "title": "Prompting Is Not Programming: Living With Nondeterminism",
+    "track": "prompt-engineering"
+   },
+   "jaccard": 0.5,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
     "route": "/learn/deep-learning/sequence-generative/310-multihead-and-cross-attention",
     "slug": "deep-learning/sequence-generative/310-multihead-and-cross-attention",
     "title": "Understand multi-head and cross-attention",
@@ -209598,6 +210052,44 @@
    "slugStem": false,
    "alreadyLinked": true,
    "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/ai-foundations/applied-ai/310-retrieval-augmented-generation-grounding",
+    "slug": "ai-foundations/applied-ai/310-retrieval-augmented-generation-grounding",
+    "title": "Retrieval-Augmented Generation and Grounded Answers",
+    "track": "ai-foundations"
+   },
+   "b": {
+    "route": "/answers/what-is-rag",
+    "slug": "what-is-rag",
+    "title": "What is RAG (retrieval-augmented generation)?",
+    "track": "answers"
+   },
+   "jaccard": 0.5,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/rag/rag-caching-and-cost",
+    "slug": "rag/rag-caching-and-cost",
+    "title": "Caching Retrieval and Generation in a RAG Pipeline",
+    "track": "rag"
+   },
+   "b": {
+    "route": "/answers/what-is-rag",
+    "slug": "what-is-rag",
+    "title": "What is RAG (retrieval-augmented generation)?",
+    "track": "answers"
+   },
+   "jaccard": 0.5,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
   },
   {
    "a": {
@@ -209788,6 +210280,63 @@
    "slugStem": false,
    "alreadyLinked": false,
    "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/genai-app-dev/quiz-state-structured-tools",
+    "slug": "genai-app-dev/quiz-state-structured-tools",
+    "title": "Quiz: State, Structured Output, and Tools",
+    "track": "genai-app-dev"
+   },
+   "b": {
+    "route": "/learn/prompt-engineering/decomposition-output-quiz",
+    "slug": "prompt-engineering/decomposition-output-quiz",
+    "title": "Quiz: Decomposition and Structured Output",
+    "track": "prompt-engineering"
+   },
+   "jaccard": 0.5,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/genai-app-dev/state-and-tools-cheatsheet",
+    "slug": "genai-app-dev/state-and-tools-cheatsheet",
+    "title": "State, Structured Output, and Tools Cheatsheet",
+    "track": "genai-app-dev"
+   },
+   "b": {
+    "route": "/learn/prompt-engineering/decomposition-output-cheatsheet",
+    "slug": "prompt-engineering/decomposition-output-cheatsheet",
+    "title": "Decomposition and Structured-Output Cheatsheet",
+    "track": "prompt-engineering"
+   },
+   "jaccard": 0.5,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/genai-app-dev/structured-output-failures",
+    "slug": "genai-app-dev/structured-output-failures",
+    "title": "Structured Output Failures and Repair Traps",
+    "track": "genai-app-dev"
+   },
+   "b": {
+    "route": "/learn/structured-outputs/failure-modes-taxonomy",
+    "slug": "structured-outputs/failure-modes-taxonomy",
+    "title": "A Taxonomy of Structured-Output Failures",
+    "track": "structured-outputs"
+   },
+   "jaccard": 0.5,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": false
   },
   {
    "a": {
@@ -210076,44 +210625,6 @@
   },
   {
    "a": {
-    "route": "/learn/ai-foundations/applied-ai/310-retrieval-augmented-generation-grounding",
-    "slug": "ai-foundations/applied-ai/310-retrieval-augmented-generation-grounding",
-    "title": "Retrieval-Augmented Generation and Grounded Answers",
-    "track": "ai-foundations"
-   },
-   "b": {
-    "route": "/answers/what-is-rag",
-    "slug": "what-is-rag",
-    "title": "What is RAG (retrieval-augmented generation)?",
-    "track": "answers"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/rag/rag-caching-and-cost",
-    "slug": "rag/rag-caching-and-cost",
-    "title": "Caching Retrieval and Generation in a RAG Pipeline",
-    "track": "rag"
-   },
-   "b": {
-    "route": "/answers/what-is-rag",
-    "slug": "what-is-rag",
-    "title": "What is RAG (retrieval-augmented generation)?",
-    "track": "answers"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": false
-  },
-  {
-   "a": {
     "route": "/learn/machine-learning/ml-503-hypothesis-tests-permutation-tests-and-effect-sizes",
     "slug": "machine-learning/ml-503-hypothesis-tests-permutation-tests-and-effect-sizes",
     "title": "Hypothesis tests, permutation tests, and effect sizes",
@@ -210206,63 +210717,6 @@
    "slugStem": false,
    "alreadyLinked": true,
    "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/genai-app-dev/state-and-tools-cheatsheet",
-    "slug": "genai-app-dev/state-and-tools-cheatsheet",
-    "title": "State, Structured Output, and Tools Cheatsheet",
-    "track": "genai-app-dev"
-   },
-   "b": {
-    "route": "/learn/prompt-engineering/decomposition-output-cheatsheet",
-    "slug": "prompt-engineering/decomposition-output-cheatsheet",
-    "title": "Decomposition and Structured-Output Cheatsheet",
-    "track": "prompt-engineering"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/genai-app-dev/quiz-state-structured-tools",
-    "slug": "genai-app-dev/quiz-state-structured-tools",
-    "title": "Quiz: State, Structured Output, and Tools",
-    "track": "genai-app-dev"
-   },
-   "b": {
-    "route": "/learn/prompt-engineering/decomposition-output-quiz",
-    "slug": "prompt-engineering/decomposition-output-quiz",
-    "title": "Quiz: Decomposition and Structured Output",
-    "track": "prompt-engineering"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/genai-app-dev/structured-output-failures",
-    "slug": "genai-app-dev/structured-output-failures",
-    "title": "Structured Output Failures and Repair Traps",
-    "track": "genai-app-dev"
-   },
-   "b": {
-    "route": "/learn/structured-outputs/failure-modes-taxonomy",
-    "slug": "structured-outputs/failure-modes-taxonomy",
-    "title": "A Taxonomy of Structured-Output Failures",
-    "track": "structured-outputs"
-   },
-   "jaccard": 0.5,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": false
   },
   {
    "a": {
@@ -210415,6 +210869,25 @@
    "slugStem": false,
    "alreadyLinked": true,
    "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/deep-learning/sequence-generative/324-retrieval-augmented-generation",
+    "slug": "deep-learning/sequence-generative/324-retrieval-augmented-generation",
+    "title": "Design retrieval-augmented generation as an evidence pipeline",
+    "track": "deep-learning"
+   },
+   "b": {
+    "route": "/answers/what-is-rag",
+    "slug": "what-is-rag",
+    "title": "What is RAG (retrieval-augmented generation)?",
+    "track": "answers"
+   },
+   "jaccard": 0.43,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
   },
   {
    "a": {
@@ -210618,25 +211091,6 @@
     "slug": "llm-foundations/rlhf-reward-models-and-ppo",
     "title": "RLHF: Reward Models and PPO",
     "track": "llm-foundations"
-   },
-   "jaccard": 0.43,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/deep-learning/sequence-generative/324-retrieval-augmented-generation",
-    "slug": "deep-learning/sequence-generative/324-retrieval-augmented-generation",
-    "title": "Design retrieval-augmented generation as an evidence pipeline",
-    "track": "deep-learning"
-   },
-   "b": {
-    "route": "/answers/what-is-rag",
-    "slug": "what-is-rag",
-    "title": "What is RAG (retrieval-augmented generation)?",
-    "track": "answers"
    },
    "jaccard": 0.43,
    "containment": 0.75,
@@ -211330,6 +211784,44 @@
   },
   {
    "a": {
+    "route": "/learn/context-engineering/over-retrieval-and-stuffing-mistakes",
+    "slug": "context-engineering/over-retrieval-and-stuffing-mistakes",
+    "title": "Over-Retrieval and Over-Stuffing",
+    "track": "context-engineering"
+   },
+   "b": {
+    "route": "/learn/context-engineering/retrieval-vs-stuffing-cheatsheet",
+    "slug": "context-engineering/retrieval-vs-stuffing-cheatsheet",
+    "title": "Retrieval vs Stuffing Cheatsheet",
+    "track": "context-engineering"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/context-engineering/retrieval-vs-stuffing-cheatsheet",
+    "slug": "context-engineering/retrieval-vs-stuffing-cheatsheet",
+    "title": "Retrieval vs Stuffing Cheatsheet",
+    "track": "context-engineering"
+   },
+   "b": {
+    "route": "/learn/rag/retrieval-cheatsheet",
+    "slug": "rag/retrieval-cheatsheet",
+    "title": "Vector Retrieval Cheatsheet",
+    "track": "rag"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
     "route": "/learn/ai-literacy/data-model-output-loop",
     "slug": "ai-literacy/data-model-output-loop",
     "title": "See AI as a data, model, and output loop",
@@ -211368,25 +211860,6 @@
   },
   {
    "a": {
-    "route": "/learn/rag/chunking-quiz",
-    "slug": "rag/chunking-quiz",
-    "title": "Chunking: Check Yourself",
-    "track": "rag"
-   },
-   "b": {
-    "route": "/learn/rag/reranking-quiz",
-    "slug": "rag/reranking-quiz",
-    "title": "Reranking: Check Yourself",
-    "track": "rag"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
     "route": "/learn/ai-literacy/what-ai-actually-is-quiz",
     "slug": "ai-literacy/what-ai-actually-is-quiz",
     "title": "Quiz: what AI is and isn't",
@@ -211402,6 +211875,25 @@
    "containment": 0.67,
    "slugStem": true,
    "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/rag/chunking-quiz",
+    "slug": "rag/chunking-quiz",
+    "title": "Chunking: Check Yourself",
+    "track": "rag"
+   },
+   "b": {
+    "route": "/learn/rag/reranking-quiz",
+    "slug": "rag/reranking-quiz",
+    "title": "Reranking: Check Yourself",
+    "track": "rag"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": false,
    "sameTrack": true
   },
   {
@@ -211910,44 +212402,6 @@
     "slug": "classical-ai/agents-robotics/324-agents-robotics-staged-capstone-and-technical-defense",
     "title": "Agents and robotics staged capstone and technical defense",
     "track": "classical-ai"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/context-engineering/over-retrieval-and-stuffing-mistakes",
-    "slug": "context-engineering/over-retrieval-and-stuffing-mistakes",
-    "title": "Over-Retrieval and Over-Stuffing",
-    "track": "context-engineering"
-   },
-   "b": {
-    "route": "/learn/context-engineering/retrieval-vs-stuffing-cheatsheet",
-    "slug": "context-engineering/retrieval-vs-stuffing-cheatsheet",
-    "title": "Retrieval vs Stuffing Cheatsheet",
-    "track": "context-engineering"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/context-engineering/retrieval-vs-stuffing-cheatsheet",
-    "slug": "context-engineering/retrieval-vs-stuffing-cheatsheet",
-    "title": "Retrieval vs Stuffing Cheatsheet",
-    "track": "context-engineering"
-   },
-   "b": {
-    "route": "/learn/rag/retrieval-cheatsheet",
-    "slug": "rag/retrieval-cheatsheet",
-    "title": "Vector Retrieval Cheatsheet",
-    "track": "rag"
    },
    "jaccard": 0.5,
    "containment": 0.67,
@@ -212945,25 +213399,6 @@
   },
   {
    "a": {
-    "route": "/learn/ai-foundations/scaling-laws",
-    "slug": "ai-foundations/scaling-laws",
-    "title": "Scaling Laws: Why Bigger Models Keep Getting Better",
-    "track": "ai-foundations"
-   },
-   "b": {
-    "route": "/learn/llm-foundations/scaling-laws-what-they-predict",
-    "slug": "llm-foundations/scaling-laws-what-they-predict",
-    "title": "Scaling Laws: What They Predict",
-    "track": "llm-foundations"
-   },
-   "jaccard": 0.22,
-   "containment": 0.5,
-   "slugStem": true,
-   "alreadyLinked": true,
-   "sameTrack": false
-  },
-  {
-   "a": {
     "route": "/learn/structured-outputs/streaming-structured-output-model",
     "slug": "structured-outputs/streaming-structured-output-model",
     "title": "Consuming Structured Output as It Streams",
@@ -212983,22 +213418,22 @@
   },
   {
    "a": {
-    "route": "/learn/context-engineering/just-in-time-context-loading-pattern",
-    "slug": "context-engineering/just-in-time-context-loading-pattern",
-    "title": "The Just-in-Time Loading Pattern",
-    "track": "context-engineering"
+    "route": "/learn/ai-foundations/scaling-laws",
+    "slug": "ai-foundations/scaling-laws",
+    "title": "Scaling Laws: Why Bigger Models Keep Getting Better",
+    "track": "ai-foundations"
    },
    "b": {
-    "route": "/learn/context-engineering/just-in-time-context-loading",
-    "slug": "context-engineering/just-in-time-context-loading",
-    "title": "Just-in-Time Context: Letting the Agent Fetch Instead of Preload",
-    "track": "context-engineering"
+    "route": "/learn/llm-foundations/scaling-laws-what-they-predict",
+    "slug": "llm-foundations/scaling-laws-what-they-predict",
+    "title": "Scaling Laws: What They Predict",
+    "track": "llm-foundations"
    },
-   "jaccard": 0.2,
+   "jaccard": 0.22,
    "containment": 0.5,
    "slugStem": true,
    "alreadyLinked": true,
-   "sameTrack": true
+   "sameTrack": false
   },
   {
    "a": {
@@ -213012,6 +213447,25 @@
     "slug": "structured-outputs/evaluating-structured-output-quality",
     "title": "Evaluating Structured Output: Validity, Accuracy, and Completeness Are Different Axes",
     "track": "structured-outputs"
+   },
+   "jaccard": 0.2,
+   "containment": 0.5,
+   "slugStem": true,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/context-engineering/just-in-time-context-loading-pattern",
+    "slug": "context-engineering/just-in-time-context-loading-pattern",
+    "title": "The Just-in-Time Loading Pattern",
+    "track": "context-engineering"
+   },
+   "b": {
+    "route": "/learn/context-engineering/just-in-time-context-loading",
+    "slug": "context-engineering/just-in-time-context-loading",
+    "title": "Just-in-Time Context: Letting the Agent Fetch Instead of Preload",
+    "track": "context-engineering"
    },
    "jaccard": 0.2,
    "containment": 0.5,
@@ -213116,25 +213570,6 @@
   },
   {
    "a": {
-    "route": "/learn/maths-foundations/cosine-similarity-angular-distance-embedding-retrieval",
-    "slug": "maths-foundations/cosine-similarity-angular-distance-embedding-retrieval",
-    "title": "Cosine similarity, angular distance, and embedding retrieval",
-    "track": "maths-foundations"
-   },
-   "b": {
-    "route": "/learn/maths-foundations/cosine-similarity",
-    "slug": "maths-foundations/cosine-similarity",
-    "title": "Cosine Similarity: Measuring How Alike Two Things Are",
-    "track": "maths-foundations"
-   },
-   "jaccard": 0.2,
-   "containment": 0.33,
-   "slugStem": true,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
     "route": "/learn/prompt-engineering/structured-output",
     "slug": "prompt-engineering/structured-output",
     "title": "Structured output: make the model speak a contract",
@@ -213151,6 +213586,25 @@
    "slugStem": true,
    "alreadyLinked": true,
    "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/maths-foundations/cosine-similarity-angular-distance-embedding-retrieval",
+    "slug": "maths-foundations/cosine-similarity-angular-distance-embedding-retrieval",
+    "title": "Cosine similarity, angular distance, and embedding retrieval",
+    "track": "maths-foundations"
+   },
+   "b": {
+    "route": "/learn/maths-foundations/cosine-similarity",
+    "slug": "maths-foundations/cosine-similarity",
+    "title": "Cosine Similarity: Measuring How Alike Two Things Are",
+    "track": "maths-foundations"
+   },
+   "jaccard": 0.2,
+   "containment": 0.33,
+   "slugStem": true,
+   "alreadyLinked": true,
+   "sameTrack": true
   },
   {
    "a": {
@@ -213232,9 +213686,36 @@
    ]
   },
   {
+   "route": "/learn/agent-frameworks/dspy-programmatic-prompting",
+   "slug": "agent-frameworks/dspy-programmatic-prompting",
+   "title": "DSPy: programming, not prompting",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/agent-frameworks/framework-comparison-and-escape-hatches",
+   "slug": "agent-frameworks/framework-comparison-and-escape-hatches",
+   "title": "Comparing frameworks — and the escape hatches that matter",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
    "route": "/learn/agent-frameworks/google-adk",
    "slug": "agent-frameworks/google-adk",
    "title": "Google ADK: workflow agents and multi-agent teams",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/agent-frameworks/haystack-pipelines",
+   "slug": "agent-frameworks/haystack-pipelines",
+   "title": "Haystack: explicit pipelines for retrieval and agents",
    "family": "lesson",
    "flags": [
     "release-sensitive page with no updated/review date"
@@ -213286,6 +213767,15 @@
    ]
   },
   {
+   "route": "/learn/agent-frameworks/no-code-ai-workflows",
+   "slug": "agent-frameworks/no-code-ai-workflows",
+   "title": "n8n, Zapier, Make, Pipedream: bounded no-code AI workflows",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
    "route": "/learn/agent-frameworks/openai-agents-sdk",
    "slug": "agent-frameworks/openai-agents-sdk",
    "title": "OpenAI Agents SDK: agents, handoffs, and guardrails",
@@ -213298,6 +213788,15 @@
    "route": "/learn/agent-frameworks/pydanticai-typed-agents",
    "slug": "agent-frameworks/pydanticai-typed-agents",
    "title": "PydanticAI: agents that type-check",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/agent-frameworks/structured-output-libraries",
+   "slug": "agent-frameworks/structured-output-libraries",
+   "title": "Instructor, Outlines, Guidance: the constrained-output libraries",
    "family": "lesson",
    "flags": [
     "release-sensitive page with no updated/review date"

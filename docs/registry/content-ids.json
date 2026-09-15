@@ -1,7 +1,7 @@
 {
  "version": 1,
  "next": {
-  "les": 2104,
+  "les": 2109,
   "que": 7,
   "sce": 6,
   "blo": 10,
@@ -9668,6 +9668,26 @@
   "lessons/agent-frameworks/vercel-ai-sdk.md": {
    "id": "les-2104",
    "fp": "72dba2650ed243eb5695fa36cddd1eb1f5540abf"
+  },
+  "lessons/agent-frameworks/dspy-programmatic-prompting.md": {
+   "id": "les-2105",
+   "fp": "e8704aca59a27f6658d11d36cd45fd75cd8efcf3"
+  },
+  "lessons/agent-frameworks/framework-comparison-and-escape-hatches.md": {
+   "id": "les-2106",
+   "fp": "a3ef013714a86bef811c92e792c835327d527f3c"
+  },
+  "lessons/agent-frameworks/haystack-pipelines.md": {
+   "id": "les-2107",
+   "fp": "a58b989a42dd05d29eb6dd196da52c58cc882759"
+  },
+  "lessons/agent-frameworks/no-code-ai-workflows.md": {
+   "id": "les-2108",
+   "fp": "64162aac36044b78394c4052402290272699d02a"
+  },
+  "lessons/agent-frameworks/structured-output-libraries.md": {
+   "id": "les-2109",
+   "fp": "344aaaea6e7d8dc88482a9cfdb34d0ff6b054807"
   }
  },
  "retired": {

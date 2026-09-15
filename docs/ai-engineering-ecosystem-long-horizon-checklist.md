@@ -970,13 +970,25 @@ consolidation into a parent track, or a clearer curated-path role.
 - [x] Vercel AI SDK for streaming, tools, structured output, providers, and generative UI.
       *(2026-09: `vercel-ai-sdk` — all five areas; plumbing-vs-framework
       distinction made explicit)*
-- [ ] DSPy for programmatic prompting and optimization.
-- [ ] Haystack for pipelines, retrieval, and agents.
-- [ ] Instructor for structured output where it remains relevant.
-- [ ] Outlines, Guidance, and grammar-constrained generation candidates.
-- [ ] n8n, Zapier, Make, and Pipedream for bounded no-code and low-code AI workflows.
-- [ ] Compare frameworks by control flow, state, persistence, tool interfaces, evaluation,
+- [x] DSPy for programmatic prompting and optimization.
+      *(2026-09: `dspy-programmatic-prompting` — signatures, modules,
+      MIPROv2/BootstrapFewShot optimizers, when metrics+trainsets justify it)*
+- [x] Haystack for pipelines, retrieval, and agents.
+      *(2026-09: `haystack-pipelines` — components/Pipeline/routers,
+      document stores, agents as pipeline nodes)*
+- [x] Instructor for structured output where it remains relevant.
+      *(2026-09: `structured-output-libraries` — validate-and-retry niche
+      vs native structured outputs, honestly scoped)*
+- [x] Outlines, Guidance, and grammar-constrained generation candidates.
+      *(2026-09: same lesson — decode-time enforcement (Outlines) vs
+      prompt-program interleave (Guidance), layered comparison)*
+- [x] n8n, Zapier, Make, and Pipedream for bounded no-code and low-code AI workflows.
+      *(2026-09: `no-code-ai-workflows` — all four positioned; the
+      "agent trapped in a node" failure mode named)*
+- [x] Compare frameworks by control flow, state, persistence, tool interfaces, evaluation,
       observability, deployment, maintenance, and escape hatches.
+      *(2026-09: `framework-comparison-and-escape-hatches` — all nine
+      dimensions in a 14-framework matrix + honest patterns)*
 - [x] Include “when plain code is enough” in every framework module.
       *(2026-09: convention established — every `agent-frameworks` module carries
       a dedicated section; keep enforcing as new modules land)*
@@ -2719,7 +2731,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-15 — Agent Frameworks: typed/specialized tier (6 lessons)
 
-- Commit: pending. `pydanticai-typed-agents` (Agent[Deps,Output], DI,
+- Commit: `4b62ee3`. `pydanticai-typed-agents` (Agent[Deps,Output], DI,
   output_type, evals/Logfire), `agno-teams-and-agentos` (knowledge/memory/
   guardrails as constructor args + serving runtime), `microsoft-agent-frameworks`
   (SK + AutoGen + MAF convergence — both Microsoft rows in one honest story),
@@ -2734,6 +2746,26 @@ validation, deployment status, measured result when available, blockers, and nex
   microsoft.github.io/autogen, docs.crewai.com, mastra.ai, ai-sdk.dev).
 - Validation: `check:content` clean (2,104); build 2,441 pages;
   `check:links` 0 dead (5,261 routes); registry 2,430 items.
+
+### 2026-09-15 — Agent Frameworks section complete (all 21 rows)
+
+- Commit: `fd6cb16`. Final 5 lessons: `dspy-programmatic-prompting`
+  (signatures + optimizers — prompt as compile artifact),
+  `haystack-pipelines` (component DAGs, agents as nodes),
+  `structured-output-libraries` (Instructor retry-layer vs Outlines
+  decode-layer vs Guidance prompt-program — covers 2 rows),
+  `no-code-ai-workflows` (n8n/Zapier/Make/Pipedream bounded scope), and
+  `framework-comparison-and-escape-hatches` (9-dimension × 14-framework
+  matrix capstone). Track complete at 18 lessons.
+- Checklist: all 21 agent/application-framework rows now ticked — the
+  largest single section closed this session. Conventions held throughout:
+  raw-SDK baseline first in every module, "when plain code is enough" in
+  every module, no benchmark numbers without measurement framing.
+- Sources: 4 new verified records (dspy.ai, docs.haystack.deepset.ai,
+  python.useinstructor.com, docs.n8n.io). Track total: 13 sources.
+- Validation: `check:content` clean (2,109); build 2,446 pages;
+  `check:links` 0 dead (5,271 routes); registry 2,435 items.
+- Next batch: Phase 6B RAG/data tooling, observability, or security rows.
 
 ### 2026-09-14 — Master ecosystem backlog created
 

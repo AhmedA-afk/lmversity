@@ -343,6 +343,42 @@
     "claims": ["generateText/streamText/generateObject", "useChat React hooks", "tool calling and generative UI"],
     "status": "current"
   },
+  "dspy-docs": {
+    "title": "DSPy documentation",
+    "publisher": "DSPy",
+    "accessedAt": "2026-09-15",
+    "url": "https://dspy.ai/",
+    "type": "official-docs",
+    "claims": ["signatures and modules", "optimizers (MIPROv2, BootstrapFewShot)", "compile-based prompt optimization"],
+    "status": "current"
+  },
+  "haystack-docs": {
+    "title": "Haystack documentation",
+    "publisher": "deepset",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.haystack.deepset.ai/docs/intro",
+    "type": "official-docs",
+    "claims": ["component pipelines", "retrievers and document stores", "agent components"],
+    "status": "current"
+  },
+  "instructor-docs": {
+    "title": "Instructor documentation",
+    "publisher": "Instructor",
+    "accessedAt": "2026-09-15",
+    "url": "https://python.useinstructor.com/",
+    "type": "official-docs",
+    "claims": ["response_model structured output", "validation and retry loop"],
+    "status": "current"
+  },
+  "n8n-docs": {
+    "title": "n8n documentation",
+    "publisher": "n8n",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.n8n.io/",
+    "type": "official-docs",
+    "claims": ["workflow automation with AI nodes", "self-hostable"],
+    "status": "current"
+  },
   "google-adk-docs": {
     "title": "Agent Development Kit documentation",
     "publisher": "Google",
