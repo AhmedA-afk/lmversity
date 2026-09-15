@@ -1,6 +1,6 @@
 # Content registry — audit views
 
-Generated 2026-09-15T08:46:24.724Z by `scripts/build-content-registry.mjs`.
+Generated 2026-09-15T08:51:01.571Z by `scripts/build-content-registry.mjs`.
 2410 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
@@ -98,28 +98,30 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 Mechanical per-track audit. Practice-ending = last node of a module is quiz/lab/capstone/worked-example/drill;
 dead-end = the track's final live node is a plain concept; orphan boundary = a module `startsAt` slug absent from the track's nodes.
 
-### ai-literacy — 56 files, 9 modules
+### ai-literacy — 56 files, 9 modules — starts: "What AI can and can't do: the whole picture"
 
 - missing kinds: common-mistakes
 - 6 island lessons (no in-body links)
 - 5 duplicate-candidate pairs in track
+- promise gap: no live node title covers "no code required"
 
-### maths-foundations — 193 files, 17 modules
+### maths-foundations — 193 files, 17 modules — starts: "Vectors: The Basic Unit of Data"
 
 - modules without practice ending: "The essential maths for AI" ends on convexity-and-loss-landscapes (concept); "Single-variable calculus" ends on one-dimensional-optimisation-clinic (concept); "Decompositions and numerical linear algebra" ends on kernel-matrices-and-kernel-trick (concept); "Mathematical language and computation" ends on sequences-recurrences-polynomials-quadratics-and-growth-rates (concept) +12 more
 - dead-end finish: last live lesson is s4-6-causal-graphical-models-do-calculus-and-identifiability-limits (concept)
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet
 - 7 island lessons (no in-body links)
 - 10 duplicate-candidate pairs in track
+- promise gap: no live node title covers "The minimum maths"
 
-### python-data-apis — 57 files, 7 modules
+### python-data-apis — 57 files, 7 modules — starts: "The Whole Game: Messy Data to a Model-Ready Pipeline"
 
 - modules without practice ending: "Getting started" ends on python-data-pipeline-whole-game (concept); "NumPy" ends on selecting-filtering-indexing (concept)
 - missing kinds: worked-example, cheatsheet
 - 2 island lessons (no in-body links)
 - 3 duplicate-candidate pairs in track
 
-### ai-foundations — 160 files, 9 modules
+### ai-foundations — 160 files, 9 modules — starts: "How LLMs actually work"
 
 - modules without practice ending: "How models work" ends on ai-ml-dl-as-nested-fields (concept); "Inside the network" ends on ai-alignment-and-safety-basics (concept); "The wider picture" ends on why-nonlinearity-matters (concept)
 - dead-end finish: last live lesson is why-nonlinearity-matters (concept)
@@ -128,14 +130,14 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - 2 thin vs family median
 - 4 duplicate-candidate pairs in track
 
-### llm-foundations — 131 files, 6 modules
+### llm-foundations — 131 files, 6 modules — starts: "The Whole Game: One Token, End to End"
 
 - modules without practice ending: "From text to tokens" ends on what-are-embeddings (concept); "Training and generation" ends on instruction-tuning-and-rlhf (concept); "The model landscape" ends on multimodal-llms-explained (concept); "Architecture internals" ends on grouped-query-attention (concept)
 - missing kinds: worked-example, common-mistakes, cheatsheet
 - 2 thin vs family median
 - 20 duplicate-candidate pairs in track
 
-### classical-ai — 83 files, 4 modules
+### classical-ai — 83 files, 4 modules — starts: "State Spaces: Representation, Actions, Goals, and Costs"
 
 - modules without practice ending: "Agents, robotics, and hybrid systems" ends on constraint-satisfaction (concept); "Original concept recaps" ends on uncertainty-and-decision (concept)
 - dead-end finish: last live lesson is uncertainty-and-decision (concept)
@@ -143,7 +145,7 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - 78 island lessons (no in-body links)
 - 2 duplicate-candidate pairs in track
 
-### machine-learning — 208 files, 12 modules
+### machine-learning — 208 files, 12 modules — starts: "How to use the Classical ML course"
 
 - modules without practice ending: "Orientation and problem framing" ends on generalization-and-evaluation (concept); "Data, features, and decisions" ends on ml-115-case-study-triage-under-review-capacity (concept); "Maths, objectives, and generalisation" ends on regularization-and-bias-variance (concept); "Linear and generalised models" ends on ml-216-case-study-demand-forecast-with-uncertainty (concept) +7 more
 - dead-end finish: last live lesson is deep-lectures/907-time-series-ranking-and-recommender-systems-under-temporal-exposure-feedback (concept)
@@ -151,8 +153,9 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - 109 island lessons (no in-body links)
 - 34 thin vs family median
 - 13 duplicate-candidate pairs in track
+- promise gap: no live node title covers "model families"
 
-### deep-learning — 136 files, 6 modules
+### deep-learning — 136 files, 6 modules — starts: "How to use the Deep Learning programme"
 
 - modules without practice ending: "Programme orientation" ends on dl-001-how-to-use-the-deep-learning-program (concept); "Sequences, transformers, generation, and RL" ends on sequence-generative/338-rlhf-preference-optimization-and-alignment-bridge (concept); "Concept recaps" ends on neural-networks-and-representations (concept)
 - dead-end finish: last live lesson is neural-networks-and-representations (concept)
@@ -160,49 +163,50 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - 74 island lessons (no in-body links)
 - 3 duplicate-candidate pairs in track
 
-### prompt-engineering — 142 files, 7 modules
+### prompt-engineering — 142 files, 7 modules — starts: "The Whole Game: One Task From Vague Ask to Reliable Prompt"
 
 - modules without practice ending: "Prompt anatomy" ends on role-prompting (concept); "Examples and reasoning" ends on negative-instructions-pitfall (concept); "Reliability and iteration" ends on multi-turn-prompt-design (concept); "Prompts in production" ends on extended-thinking-and-reasoning-effort (concept) +2 more
 - 10 island lessons (no in-body links)
 - 2 thin vs family median
 - 23 duplicate-candidate pairs in track
 
-### context-engineering — 132 files, 5 modules
+### context-engineering — 132 files, 5 modules — starts: "The Whole Game of Context Engineering"
 
 - modules without practice ending: "Assembling context" ends on context-window-testing-and-eval (concept); "How long contexts fail" ends on context-observability-and-token-accounting (concept)
 - missing kinds: worked-example
 - 26 duplicate-candidate pairs in track
 
-### structured-outputs — 122 files, 5 modules
+### structured-outputs — 122 files, 5 modules — starts: "The Whole Game of Structured Output"
 
 - modules without practice ending: "Making it reliable" ends on structured-output-failure-modes (concept); "Harder schema shapes" ends on schema-versioning-and-migration (concept)
 - missing kinds: common-mistakes
 - 1 thin vs family median
 - 10 duplicate-candidate pairs in track
 
-### hallucinations — 132 files, 0 modules
+### hallucinations — 132 files, 0 modules — starts: "The Whole Game: From Fabrication to Trustworthy Systems"
 
 - missing kinds: worked-example, common-mistakes
 - 8 duplicate-candidate pairs in track
+- promise gap: no live node title covers "contain it"
 
-### genai-app-dev — 130 files, 6 modules
+### genai-app-dev — 130 files, 6 modules — starts: "The Whole Game: Build a Support-Reply Drafter End to End"
 
 - modules without practice ending: "Your first feature" ends on designing-chat-ux (concept); "Cost, latency and limits" ends on rate-limits-and-retry-strategies (concept); "Reliability and safety" ends on quiz-shipping-operating (concept); "Beyond the first version" ends on prompt-versioning-rollback (concept) +1 more
 - missing kinds: quiz, worked-example, common-mistakes
 - 2 island lessons (no in-body links)
 - 19 duplicate-candidate pairs in track
 
-### rag — 56 files, 0 modules
+### rag — 56 files, 0 modules — starts: "RAG, End to End: The Whole Game"
 
 - 2 island lessons (no in-body links)
 - 6 duplicate-candidate pairs in track
 
-### tools-function-calling — 123 files, 5 modules
+### tools-function-calling — 123 files, 5 modules — starts: "The Whole Game: A Tool Call From Question to Answer"
 
 - modules without practice ending: "Tool calling basics" ends on tool-choice-and-forcing-tool-use (concept); "Multi-step and parallel use" ends on testing-and-debugging-tool-calls (concept); "Schemas at scale" ends on streaming-partial-tool-calls (concept)
 - 29 duplicate-candidate pairs in track
 
-### mcp — 57 files, 0 modules
+### mcp — 57 files, 0 modules — starts: "What Is MCP"
 
 - dead-end finish: last live lesson is server-design-and-permissions (concept)
 - missing kinds: capstone
@@ -210,45 +214,50 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - 1 thin vs family median
 - 43 duplicate-candidate pairs in track
 
-### agentic-ai — 28 files, 7 modules
+### agentic-ai — 28 files, 7 modules — starts: "What Makes Something an Agent"
 
 - modules without practice ending: "What an agent is" ends on react-pattern (concept); "Planning and memory" ends on error-handling-and-retries (concept); "Orchestration and control" ends on when-not-to-use-an-agent (concept); "Failure and evaluation" ends on stopping-conditions-for-agents (concept) +3 more
 - dead-end finish: last live lesson is state-memory-and-recovery (concept)
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
 - 2 island lessons (no in-body links)
+- promise gap: no live node title covers "when to reach for one instead of a plain prompt"
 
-### harness-design — 26 files, 6 modules
+### harness-design — 26 files, 6 modules — starts: "The Harness: Everything Around the Model"
 
 - modules without practice ending: "What a harness is" ends on prompt-composition (concept); "Permissions and isolation" ends on subprocess-isolation-and-sandboxing (concept); "State and streaming" ends on context-window-management-in-a-harness (concept); "Extension and configuration" ends on tool-output-truncation (concept) +2 more
 - dead-end finish: last live lesson is distributed-harness-orchestration (concept)
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
+- promise gap: no live node title covers "The engineering scaffold"; "that turns a raw model into a working"
 
-### evals-red-teaming — 28 files, 6 modules
+### evals-red-teaming — 28 files, 6 modules — starts: "Why Vibes-Based Iteration Breaks Down"
 
 - modules without practice ending: "Why evals matter" ends on writing-eval-metrics (concept); "Judges and regression suites" ends on eval-driven-iteration (concept); "Attacks" ends on automated-adversarial-testing (concept); "Making evals trustworthy" ends on goodharting-your-benchmark (concept) +2 more
 - dead-end finish: last live lesson is regression-gates-and-online-signals (concept)
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
 - 2 island lessons (no in-body links)
 
-### production — 28 files, 0 modules
+### production — 28 files, 0 modules — starts: "Log Every LLM Call as Structured Data"
 
 - dead-end finish: last live lesson is deployment-versioning-and-incidents (concept)
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
 - 2 island lessons (no in-body links)
+- promise gap: no live node title covers "control the bill"
 
-### fine-tuning — 26 files, 7 modules
+### fine-tuning — 26 files, 7 modules — starts: "Decide: Fine-Tune, Prompt, or RAG?"
 
 - modules without practice ending: "Should you fine-tune at all" ends on synthetic-data-generation (concept); "Methods" ends on fine-tuning-run-hyperparameters (concept); "Training and evaluation" ends on evaluating-a-fine-tuned-model (concept); "Serving a fine-tuned model" ends on merging-and-versioning-adapters (concept) +3 more
 - dead-end finish: last live lesson is choosing-managed-vs-self-hosted-fine-tuning (comparison)
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
+- promise gap: no live node title covers "shrink"
 
-### responsible-ai — 6 files, 0 modules
+### responsible-ai — 6 files, 0 modules — starts: "Risk before model: frame the system, not just the prompt"
 
 - dead-end finish: last live lesson is privacy-fairness-and-accessibility (concept)
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
 - 5 island lessons (no in-body links)
 - 1 thin vs family median
 - 1 duplicate-candidate pairs in track
+- promise gap: no live node title covers "Safety"; "building AI you can defend"
 
 ### ai-for-designers — 0 files, 5 modules
 

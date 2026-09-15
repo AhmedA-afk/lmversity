@@ -1016,6 +1016,13 @@ md.push('Mechanical per-track audit. Practice-ending = last node of a module is 
 md.push('dead-end = the track\'s final live node is a plain concept; orphan boundary = a module `startsAt` slug absent from the track\'s nodes.');
 md.push('');
 const PRACTICE_KINDS = new Set(['quiz', 'lab', 'capstone', 'worked-example', 'drill', 'project']);
+const PROMISE_STOP = new Set(('the a an and or of to in for on that it its your you how what when why is are can cant '
+  + 'do does not no from through into with without at by be as so if than then them they their this these those '
+  + 'all any every each one two out up over under again once just only own same very too most more some such '
+  + 'about between after before while during against off both few other which who will would should could has '
+  + 'have had been being get make use used using work works working well actually really need needs needed know '
+  + 'right way ways thing things still instead lets let makes made give gives turn turns ai ml llm llms model models '
+  + 'system systems feature features app apps').split(' '));
 for (const t of tracks) {
   const files = lessonItems.filter((i) => i.track === t.id && i.status !== 'coming');
   if (!files.length && !(t.nodes ?? []).length) continue;
@@ -1079,7 +1086,23 @@ for (const t of tracks) {
   if (dups) flags.push(`${dups} duplicate-candidate pairs in track`);
   const coming = order.filter((s) => !lessonIdsOnDisk.has(`${t.id}/${s}`)).length;
   if (coming) flags.push(`${coming} planned nodes unbuilt`);
-  md.push(`### ${t.id} — ${files.length} files, ${bounds.length} modules`);
+  // promise coverage — each summary clause should have a live node whose
+  // title plausibly covers it (word-stem match: first 5 chars for len>=5)
+  const liveTitleText = liveOrder
+    .map((s) => `${nodeByTrackSlug.get(`${t.id}/${s}`)?.node.title ?? ''} ${s}`)
+    .join(' ').toLowerCase();
+  const hit = (w) => liveTitleText.includes(w) || (w.length >= 5 && liveTitleText.includes(w.slice(0, 5)));
+  const promiseClauses = (t.summary ?? '')
+    .split(/[,—:;.]| and | or /i).map((c) => c.trim()).filter(Boolean);
+  const uncovered = [];
+  for (const c of liveOrder.length ? promiseClauses : []) {
+    const terms = c.toLowerCase().replace(/[^a-z0-9\s-]/g, ' ').split(/\s+/)
+      .filter((w) => w.length >= 3 && !PROMISE_STOP.has(w));
+    if (terms.length && !terms.some(hit)) uncovered.push(`"${c}"`);
+  }
+  if (uncovered.length) flags.push(`promise gap: no live node title covers ${uncovered.join('; ')}`);
+  const firstTitle = firstLive ? nodeByTrackSlug.get(`${t.id}/${firstLive}`)?.node.title ?? firstLive : null;
+  md.push(`### ${t.id} — ${files.length} files, ${bounds.length} modules${firstTitle ? ` — starts: "${firstTitle}"` : ''}`);
   md.push('');
   if (flags.length) for (const f of flags) md.push(`- ${f}`);
   else md.push('- clean');

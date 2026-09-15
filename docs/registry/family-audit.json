@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-15T07:56:24.011Z",
+ "generatedAt": "2026-09-15T08:47:19.408Z",
  "findings": {
   "answers": [
    {
@@ -36,6 +36,28 @@
     "flags": []
    },
    {
+    "slug": "can-i-run-an-llm-locally",
+    "firstParaWords": 37,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 5,
+    "internal": 5,
+    "external": 0,
+    "words": 469,
+    "flags": []
+   },
+   {
+    "slug": "deploy-an-llm-app-to-production",
+    "firstParaWords": 66,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 9,
+    "external": 0,
+    "words": 361,
+    "flags": []
+   },
+   {
     "slug": "difference-between-ai-and-machine-learning",
     "firstParaWords": 65,
     "answerFirst": true,
@@ -66,6 +88,17 @@
     "internal": 7,
     "external": 0,
     "words": 919,
+    "flags": []
+   },
+   {
+    "slug": "how-much-does-an-llm-app-cost",
+    "firstParaWords": 66,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 6,
+    "external": 0,
+    "words": 458,
     "flags": []
    },
    {
@@ -297,6 +330,17 @@
     "internal": 9,
     "external": 0,
     "words": 925,
+    "flags": []
+   },
+   {
+    "slug": "what-is-prompt-injection",
+    "firstParaWords": 61,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 5,
+    "internal": 5,
+    "external": 0,
+    "words": 406,
     "flags": []
    },
    {
@@ -2375,8 +2419,8 @@
     ],
     "answersMarked": 6,
     "perOptionRationale": 6,
-    "internal": 0,
-    "words": 1429,
+    "internal": 12,
+    "words": 1320,
     "flags": []
    },
    {
@@ -3059,11 +3103,11 @@
    },
    {
     "slug": "tools-function-calling/tool-schema-design-cheatsheet",
-    "words": 291,
+    "words": 262,
     "tableRows": 8,
     "bullets": 5,
-    "density": 4.5,
-    "internal": 0,
+    "density": 5,
+    "internal": 5,
     "flags": []
    }
   ],
@@ -3321,8 +3365,8 @@
     "cause": 6,
     "fix": 6,
     "prevent": 1,
-    "words": 1169,
-    "internal": 0,
+    "words": 1100,
+    "internal": 6,
     "flags": []
    },
    {

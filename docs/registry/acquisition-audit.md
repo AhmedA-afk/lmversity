@@ -1,11 +1,11 @@
 # Acquisition & practice family audit — mechanical pass
 
-Generated 2026-09-15T07:56:24.013Z by `scripts/audit-families.mjs`.
+Generated 2026-09-15T08:47:19.409Z by `scripts/audit-families.mjs`.
 Structural checks only; originality/correctness are scored in the review pass.
 
 ## Findings
 
-- **Straight answers (29)**: 0 flagged — answer-first openings, FAQ and related metadata hold across the family.
+- **Straight answers (33)**: 0 flagged — answer-first openings, FAQ and related metadata hold across the family.
 - **Guides (9)**: all have `related` lesson lists and ordered steps; 0/9 have **zero in-body internal links** (continuation lives only in the frontmatter block); `rag-fine-tuning-or-a-longer-prompt` has no code.
 - **Blog (10)**: all dated; none never link into the curriculum.
 - **Interview (7)**: 7/7 topics have a follow-up prompt on every question plus a weak-vs-strong rubric.
@@ -25,16 +25,19 @@ Structural checks only; originality/correctness are scored in the review pass.
 5. **Quiz answer-position rebalance** — 41% of correct answers sit at B across 603 lesson-quiz questions (was ~66% B before the automated rebalance; residual skew is in questions whose rationale references options by bare letter — fix those when files are next edited by hand).
 6. **Per-option rationale gaps** — 0 quiz files where some answers state a letter without walking the options.
 
-## Straight answers (29)
+## Straight answers (33)
 
 | item | 1st para | faq | related | int links | ext | words | flags |
 |---|------------------|---|
 | ai-engineer-interview-questions | 48w ✓ | 1 | 6 | 8 | 0 | 1210 | — |
 | ai-engineer-roadmap | 59w ✓ | 1 | 6 | 8 | 0 | 2002 | — |
 | ai-engineer-vs-ml-engineer | 70w ✓ | 1 | 6 | 6 | 0 | 977 | — |
+| can-i-run-an-llm-locally | 37w ✓ | 1 | 5 | 5 | 0 | 469 | — |
+| deploy-an-llm-app-to-production | 66w ✓ | 1 | 6 | 9 | 0 | 361 | — |
 | difference-between-ai-and-machine-learning | 65w ✓ | 1 | 6 | 7 | 0 | 1009 | — |
 | free-forward-deployed-engineer-course | 69w ✓ | 1 | 6 | 8 | 0 | 2002 | — |
 | how-do-llms-work | 62w ✓ | 1 | 6 | 7 | 0 | 919 | — |
+| how-much-does-an-llm-app-cost | 66w ✓ | 1 | 6 | 6 | 0 | 458 | — |
 | how-to-become-an-ai-engineer | 73w ✓ | 1 | 6 | 8 | 0 | 1977 | — |
 | how-to-build-a-rag-app | 64w ✓ | 1 | 6 | 8 | 0 | 1234 | — |
 | how-to-evaluate-an-llm-app | 52w ✓ | 1 | 6 | 8 | 0 | 1228 | — |
@@ -56,6 +59,7 @@ Structural checks only; originality/correctness are scored in the review pass.
 | what-is-an-ai-agent | 71w ✓ | 1 | 6 | 6 | 0 | 1053 | — |
 | what-is-lmv | 55w ✓ | 1 | 6 | 6 | 0 | 731 | — |
 | what-is-mcp | 65w ✓ | 1 | 6 | 9 | 0 | 925 | — |
+| what-is-prompt-injection | 61w ✓ | 1 | 5 | 5 | 0 | 406 | — |
 | what-is-rag | 55w ✓ | 1 | 6 | 13 | 0 | 926 | — |
 | what-skills-does-an-ai-engineer-need | 53w ✓ | 1 | 6 | 8 | 0 | 1251 | — |
 
@@ -307,7 +311,7 @@ Structural checks only; originality/correctness are scored in the review pass.
 | tools-function-calling/orchestration-cheatsheet | 559 | 20 | 5 | 4.5 | 9 | — |
 | tools-function-calling/scaling-tools-cheatsheet | 472 | 13 | 4 | 3.6 | 10 | — |
 | tools-function-calling/tool-calling-glossary-cheatsheet | 516 | 13 | 4 | 3.3 | 14 | — |
-| tools-function-calling/tool-schema-design-cheatsheet | 291 | 8 | 5 | 4.5 | 0 | — |
+| tools-function-calling/tool-schema-design-cheatsheet | 262 | 8 | 5 | 5 | 5 | — |
 
 ## Common-mistake pages (24)
 
@@ -335,6 +339,6 @@ Structural checks only; originality/correctness are scored in the review pass.
 | tools-function-calling/foundations-common-mistakes | 5 | 5 | 5 | 5 | 1 | 6 | 828 | — |
 | tools-function-calling/orchestration-common-mistakes | 5 | 5 | 5 | 5 | 1 | 7 | 999 | — |
 | tools-function-calling/reliability-common-mistakes | 5 | 5 | 5 | 5 | 1 | 6 | 903 | — |
-| tools-function-calling/schema-design-common-mistakes | 6 | 6 | 6 | 6 | 1 | 0 | 1169 | — |
+| tools-function-calling/schema-design-common-mistakes | 6 | 6 | 6 | 6 | 1 | 6 | 1100 | — |
 | tools-function-calling/tool-selection-common-mistakes | 5 | 5 | 5 | 5 | 1 | 8 | 1042 | — |
 

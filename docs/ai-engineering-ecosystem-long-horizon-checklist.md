@@ -239,10 +239,17 @@ consolidation into a parent track, or a clearer curated-path role.
 
 ### Audit every course and role path
 
-- [ ] Verify the track promise matches its actual modules.
-- [ ] Verify the first lesson serves the stated learner level.
-      *(mechanical half passed — no track opens on a quiz/lab/capstone node;
-      whether the content matches the level remains editorial)*
+- [x] Verify the track promise matches its actual modules.
+      *(mechanical coverage check in "Track gap briefs": each summary clause is
+      matched against live node titles; 9 clauses flagged on first pass, all
+      resolved as wording mismatches on review — e.g. production promises
+      "control the bill" and delivers cost-budget lessons. Detector now guards
+      future drift.)*
+- [x] Verify the first lesson serves the stated learner level.
+      *(all 22 live tracks open on an orientation/foundational node matching the
+      summary's level claim — Whole Game overview, "What is X", or "How to use
+      this course"; each brief header now shows `starts: "<title>"` for review;
+      no track opens on quiz/lab/capstone)*
 - [ ] Verify prerequisites are explicit and reachable.
       *(blocked by schema — `TrackNode` has no prerequisite field; needs the
       canonical content-model work first)*
@@ -1903,7 +1910,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-15 — Title-overpromise detection
 
-- Commit: `3905dec`. Added a mechanical proxy for "titles promise more than
+- Commit: `00ebacf`. Added a mechanical proxy for "titles promise more than
   bodies deliver": scope-word titles ("complete", "handbook", "deep dive",
   "end to end") on bodies under half the family median, plus numeric promises
   ("7 mistakes", "30 questions") the heading/list structure doesn't fulfill.
@@ -1920,6 +1927,26 @@ validation, deployment status, measured result when available, blockers, and nex
   `check:content` clean; `check:links` clean (2,396 pages); `git diff --check`.
 - Next batch: course-audit editorial rows (track promise vs modules,
   first-lesson level fit), then the interview weak-answer pass.
+
+### 2026-09-15 — Track-promise coverage + first-lesson level check
+
+- Added a promise-coverage pass to "Track gap briefs": each track `summary`
+  clause is split out and matched against live node titles (word-stem match).
+  First run flagged 9 clauses across 9 tracks — all resolved on review as
+  wording mismatches (summary rhetoric vs title vocabulary), not missing
+  modules: "control the bill" → cost-budget lessons, "shrink" →
+  distill/quantize lessons, "no code required" → level claim, etc.
+- Each brief header now shows `starts: "<first live node title>"` — reviewed
+  all 22 live tracks: every track opens on an orientation/foundational node
+  consistent with its stated level ("What is X", Whole Game overview, or
+  "How to use this course"). No level mismatches found.
+- Tracks with zero live files are excluded from the promise check (nothing to
+  cover against — they already flag "N planned nodes unbuilt").
+- Both checklist rows ticked: track promise vs modules, first lesson vs level.
+- Validation: `npm run registry` clean; `check:content` clean;
+  `git diff --check` clean.
+- Next batch: interview per-question weak-answer pass (56 questions), or the
+  44-item expand queue.
 
 ### 2026-09-14 — Master ecosystem backlog created
 
