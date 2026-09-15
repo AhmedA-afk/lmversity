@@ -1,7 +1,7 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T09:42:18.585Z",
+  "generatedAt": "2026-09-15T09:49:03.214Z",
   "generator": "scripts/build-content-registry.mjs",
   "itemCount": 2387,
   "counts": {
@@ -4039,7 +4039,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 987,
+   "wordCount": 988,
    "headings": [
     "Why this matters",
     "Core model and worked trace",
@@ -4049,7 +4049,8 @@
     "Assignment and rubric"
    ],
    "internalLinks": [
-    "/learn/ai-foundations/reliable-ai/204-distribution-shift-and-robustness"
+    "/learn/ai-foundations/reliable-ai/204-distribution-shift-and-robustness",
+    "/learn/classical-ai/search-planning/115-constraint-satisfaction-problems-variables-domains-and-constraints"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -4068,7 +4069,7 @@
     "sourcesSection": false,
     "runnableSignals": false,
     "listItems": 5,
-    "numericClaims": 2,
+    "numericClaims": 3,
     "specFormat": true,
     "mathDense": false,
     "linksToPractice": false
@@ -4695,7 +4696,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 994,
+   "wordCount": 995,
    "headings": [
     "Why this matters",
     "Core model and worked trace",
@@ -4705,7 +4706,8 @@
     "Assignment and rubric"
    ],
    "internalLinks": [
-    "/learn/ai-foundations/reliable-ai/204-distribution-shift-and-robustness"
+    "/learn/ai-foundations/reliable-ai/204-distribution-shift-and-robustness",
+    "/learn/maths-foundations/independence-and-conditional-independence"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -6335,7 +6337,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 917,
+   "wordCount": 918,
    "headings": [
     "Product question and learning objective",
     "Quantitative decision studio",
@@ -6344,7 +6346,10 @@
     "Failure diagnostics",
     "Graded practice"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/ai-foundations/training-vs-inference",
+    "/learn/llm-foundations/training-time-vs-inference-time"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -6379,8 +6384,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -6391,7 +6396,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -6495,7 +6500,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 907,
+   "wordCount": 908,
    "headings": [
     "Product question and learning objective",
     "Quantitative decision studio",
@@ -6504,7 +6509,9 @@
     "Failure diagnostics",
     "Graded practice"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/answers/what-is-rag"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -6539,8 +6546,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -6551,7 +6558,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -7695,7 +7702,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 919,
+   "wordCount": 920,
    "headings": [
     "Product question and learning objective",
     "Quantitative decision studio",
@@ -7704,7 +7711,9 @@
     "Failure diagnostics",
     "Graded practice"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/ai-foundations/reliable-ai/228-reliable-ai-capstone-and-technical-defense"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -7722,7 +7731,7 @@
     "sourcesSection": false,
     "runnableSignals": false,
     "listItems": 9,
-    "numericClaims": 15,
+    "numericClaims": 16,
     "specFormat": false,
     "mathDense": false,
     "linksToPractice": false
@@ -7880,7 +7889,8 @@
     "/learn/ai-foundations/gradient-descent-in-numpy",
     "/learn/ai-foundations/loss-functions-explained",
     "/learn/ai-foundations/neural-network-forward-pass-by-hand",
-    "/learn/ai-foundations/training-and-optimization-quiz"
+    "/learn/ai-foundations/training-and-optimization-quiz",
+    "/learn/maths-foundations/the-chain-rule"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -9569,7 +9579,8 @@
     "/learn/ai-foundations/training-and-optimization-quiz",
     "/learn/ai-foundations/training-vs-inference",
     "/learn/ai-foundations/what-is-a-neural-network",
-    "/learn/llm-foundations/is-in-context-learning-gradient-descent"
+    "/learn/llm-foundations/is-in-context-learning-gradient-descent",
+    "/learn/maths-foundations/batch-gradient-descent-and-learning-rate"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -12035,7 +12046,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1283,
+   "wordCount": 1284,
    "headings": [
     "What must be true before a claim is credible",
     "Technical model and worked calculation",
@@ -12045,7 +12056,9 @@
     "Assignment: build and defend a reliability case",
     "Exercises: evidence before assertion"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/hallucinations/uncertainty-quiz"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -12082,8 +12095,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -12094,7 +12107,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 1,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -12952,7 +12965,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1475,
+   "wordCount": 1476,
    "headings": [
     "What must be true before a claim is credible",
     "Technical model and worked calculation",
@@ -12963,7 +12976,9 @@
     "Prompt injection and tool-use boundaries",
     "Exercises: evidence before assertion"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/evals-red-teaming/tool-use-red-teaming"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -13000,8 +13015,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -13012,7 +13027,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 1,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -13956,7 +13971,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1286,
+   "wordCount": 1287,
    "headings": [
     "What must be true before a claim is credible",
     "Technical model and worked calculation",
@@ -13966,7 +13981,9 @@
     "Assignment: build and defend a reliability case",
     "Exercises: evidence before assertion"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/ai-foundations/applied-ai/325-applied-ai-staged-capstone-and-defense"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -13984,7 +14001,7 @@
     "sourcesSection": false,
     "runnableSignals": true,
     "listItems": 15,
-    "numericClaims": 5,
+    "numericClaims": 6,
     "specFormat": true,
     "mathDense": false,
     "linksToPractice": false
@@ -15177,9 +15194,11 @@
     "Why the split matters practically"
    ],
    "internalLinks": [
+    "/learn/ai-foundations/applied-ai/308-training-and-inference-economics",
     "/learn/ai-foundations/how-llms-work",
     "/learn/ai-foundations/tokens-context-cost",
     "/learn/context-engineering/context-engineering-vs-prompting",
+    "/learn/deep-learning/practice/424-privacy-preserving-training-and-inference",
     "/learn/llm-foundations/context-window-mechanics",
     "/learn/maths-foundations/backpropagation-intuition",
     "/learn/maths-foundations/gradient-descent-intuition"
@@ -15201,7 +15220,7 @@
     "sourcesSection": false,
     "runnableSignals": false,
     "listItems": 3,
-    "numericClaims": 0,
+    "numericClaims": 2,
     "specFormat": false,
     "mathDense": false,
     "linksToPractice": false
@@ -15448,7 +15467,8 @@
     "/learn/ai-foundations/supervised-learning-explained",
     "/learn/ai-foundations/what-is-a-neural-network",
     "/learn/llm-foundations/what-a-language-model-actually-computes",
-    "/learn/llm-foundations/what-the-internet-teaches-a-model"
+    "/learn/llm-foundations/what-the-internet-teaches-a-model",
+    "/roles/forward-deployed-engineer/ai/how-a-language-model-actually-answers"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -15884,6 +15904,7 @@
     "/learn/ai-foundations/what-llms-can-and-cannot-do",
     "/learn/ai-foundations/what-llms-can-and-cannot-do-case-studies",
     "/learn/llm-foundations/causal-masking",
+    "/learn/llm-foundations/why-llms-hallucinate",
     "/learn/maths-foundations/entropy-and-uncertainty",
     "/learn/rag/evaluating-rag-quality",
     "/learn/rag/what-is-rag-and-when-to-use-it"
@@ -26993,7 +27014,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1145,
+   "wordCount": 1146,
    "headings": [
     "Why this lesson matters",
     "Formal model and calculation",
@@ -27004,7 +27025,9 @@
     "Graded exercise",
     "Mastery checkpoint"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/ai-foundations/ai-systems/113-constraint-satisfaction-models-and-propagation"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -27022,7 +27045,7 @@
     "sourcesSection": false,
     "runnableSignals": true,
     "listItems": 10,
-    "numericClaims": 4,
+    "numericClaims": 5,
     "specFormat": true,
     "mathDense": true,
     "linksToPractice": false
@@ -27039,8 +27062,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -27051,7 +27074,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 2,
     "originality": null,
     "accessibility": null,
@@ -45070,7 +45093,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 810,
+   "wordCount": 811,
    "headings": [
     "Technical calculation and derivation",
     "Three distinct worked scenarios",
@@ -45086,7 +45109,9 @@
     "Evidence checklist",
     "Further challenge"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/ai-foundations/training-vs-inference"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -45121,8 +45146,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -45133,7 +45158,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -53257,6 +53282,7 @@
     "Grading: log the call, not the chat"
    ],
    "internalLinks": [
+    "/learn/ai-foundations/reliable-ai/216-red-teaming-and-misuse-evaluation",
     "/learn/evals-red-teaming/evaluating-agent-trajectories",
     "/learn/evals-red-teaming/scope-escape-and-tool-abuse",
     "/learn/tools-function-calling/approval-gates-for-sensitive-tools",
@@ -53279,7 +53305,7 @@
     "sourcesSection": false,
     "runnableSignals": false,
     "listItems": 11,
-    "numericClaims": 6,
+    "numericClaims": 7,
     "specFormat": false,
     "mathDense": false,
     "linksToPractice": false
@@ -77816,6 +77842,7 @@
     "10. A model assigns very high token-probability to a specific factual claim that turns out to be false — a commonly repeated misconception. What does this tell you about logprob confidence as a signal?"
    ],
    "internalLinks": [
+    "/learn/ai-foundations/reliable-ai/205-uncertainty-calibration-and-abstention",
     "/learn/hallucinations/abstention-as-a-skill",
     "/learn/hallucinations/calibration-error-reliability-diagrams",
     "/learn/hallucinations/confidence-antipatterns",
@@ -77846,7 +77873,7 @@
     "sourcesSection": false,
     "runnableSignals": false,
     "listItems": 39,
-    "numericClaims": 8,
+    "numericClaims": 9,
     "specFormat": true,
     "mathDense": false,
     "linksToPractice": false
@@ -90325,6 +90352,7 @@
     "How to choose"
    ],
    "internalLinks": [
+    "/learn/ai-foundations/applied-ai/308-training-and-inference-economics",
     "/learn/ai-foundations/training-vs-inference",
     "/learn/llm-foundations/fine-tuning-mistakes-forgetting",
     "/learn/llm-foundations/parameters-activations-and-data",
@@ -90350,7 +90378,7 @@
     "sourcesSection": false,
     "runnableSignals": false,
     "listItems": 0,
-    "numericClaims": 0,
+    "numericClaims": 1,
     "specFormat": false,
     "mathDense": false,
     "linksToPractice": false
@@ -91634,6 +91662,7 @@
     "Where next"
    ],
    "internalLinks": [
+    "/learn/ai-foundations/why-llms-hallucinate",
     "/learn/llm-foundations/alignment-tax-reward-hacking-sycophancy",
     "/learn/llm-foundations/hallucination-taxonomy-and-mitigations",
     "/learn/llm-foundations/pretraining-explained",
@@ -110099,7 +110128,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 698,
+   "wordCount": 699,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -110114,6 +110143,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/ai-foundations/gradient-descent-explained",
     "/learn/maths-foundations/conditioning-scaling-initialisation-and-normalisation",
     "/learn/maths-foundations/gradient-descent-intuition",
     "/learn/maths-foundations/stochastic-and-minibatch-gradient-descent"
@@ -115085,7 +115115,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 900,
+   "wordCount": 901,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -115098,6 +115128,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/ai-foundations/ai-systems/121-bayesian-networks-conditional-independence-and-inference",
     "/learn/maths-foundations/law-of-total-probability"
    ],
    "externalLinks": [],
@@ -115117,7 +115148,7 @@
     "sourcesSection": false,
     "runnableSignals": false,
     "listItems": 7,
-    "numericClaims": 1,
+    "numericClaims": 2,
     "specFormat": true,
     "mathDense": false,
     "linksToPractice": false
@@ -125330,6 +125361,7 @@
     "Continue, go deeper, apply it"
    ],
    "internalLinks": [
+    "/learn/ai-foundations/backpropagation-explained",
     "/learn/maths-foundations/computational-graphs-and-local-derivatives",
     "/learn/maths-foundations/critical-points-monotonicity-and-extrema",
     "/learn/maths-foundations/gradient-descent-intuition",
@@ -183263,7 +183295,7 @@
    "published": "2026-09-08",
    "updated": "2026-09-08",
    "verified": null,
-   "wordCount": 926,
+   "wordCount": 934,
    "headings": [
     "The short version",
     "Why RAG exists",
@@ -183276,6 +183308,7 @@
     "/blog/rag-is-not-a-truth-machine",
     "/guides/build-a-rag-pipeline-over-your-own-documents",
     "/guides/rag-fine-tuning-or-a-longer-prompt",
+    "/learn/ai-foundations/applied-ai/310-retrieval-augmented-generation-grounding",
     "/learn/context-engineering/when-long-context-beats-rag",
     "/learn/hallucinations/why-rag-still-hallucinates",
     "/learn/rag",
@@ -183304,8 +183337,8 @@
      "/learn/rag/choosing-a-vector-database",
      "/guides/build-a-rag-pipeline-over-your-own-documents"
     ],
-    "listItems": 18,
-    "numericClaims": 0
+    "listItems": 19,
+    "numericClaims": 1
    },
    "searchIntent": "answer",
    "primaryAudience": "general",
@@ -183906,7 +183939,7 @@
    "published": "2026-09-02",
    "updated": "2026-09-02",
    "verified": null,
-   "wordCount": 1086,
+   "wordCount": 1087,
    "headings": [
     "What the model is actually doing",
     "The context window is the whole world",
@@ -183916,7 +183949,9 @@
     "Three failure patterns this explains",
     "What you should be able to do now"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/ai-foundations/what-a-model-actually-is"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -183946,8 +183981,8 @@
    "owner": null,
    "reviewer": null,
    "nextReview": null,
-   "disposition": "investigate",
-   "dispositionReason": "zero in-body internal links",
+   "disposition": "keep",
+   "dispositionReason": null,
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -183958,7 +183993,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 1,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -203239,7 +203274,7 @@
    "jaccard": 0.67,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -203809,7 +203844,7 @@
    "jaccard": 0.5,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -204075,7 +204110,7 @@
    "jaccard": 0.4,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -204113,7 +204148,7 @@
    "jaccard": 0.4,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -204360,7 +204395,7 @@
    "jaccard": 0.33,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -204512,7 +204547,7 @@
    "jaccard": 0.29,
    "containment": 1,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -204987,7 +205022,7 @@
    "jaccard": 0.57,
    "containment": 0.8,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -205709,7 +205744,7 @@
    "jaccard": 0.5,
    "containment": 0.75,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -206355,7 +206390,7 @@
    "jaccard": 0.43,
    "containment": 0.75,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -206374,7 +206409,7 @@
    "jaccard": 0.43,
    "containment": 0.75,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -206887,7 +206922,7 @@
    "jaccard": 0.38,
    "containment": 0.75,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -207628,7 +207663,7 @@
    "jaccard": 0.5,
    "containment": 0.67,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -207647,7 +207682,7 @@
    "jaccard": 0.5,
    "containment": 0.67,
    "slugStem": false,
-   "alreadyLinked": false,
+   "alreadyLinked": true,
    "sameTrack": false
   },
   {
@@ -209549,7 +209584,7 @@
    "title": "Quiz: Uncertainty and Calibration",
    "family": "quiz",
    "flags": [
-    "8 numeric claims with no sources section or external link"
+    "9 numeric claims with no sources section or external link"
    ]
   },
   {

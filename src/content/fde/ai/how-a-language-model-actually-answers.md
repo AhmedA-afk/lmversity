@@ -57,3 +57,5 @@ You will meet these on-site. All three come back to the same mechanic.
 An interviewer, or a customer's own engineer, can ask "why is it hallucinating here" and a weak answer starts talking about model quality. A strong answer asks what was actually in the context window for that specific call, and whether the eval set from the previous lesson already has a labelled example that looks like this failure.
 
 Write the one-paragraph script now: exactly what you will say, in plain words, the first time a business stakeholder in the room asks why the system got something wrong. It is usually some version of "the model didn't have the right document in front of it when it answered, here is how we fix that" — never "the AI made a mistake".
+
+**Related:** [What a Model Actually Is](/learn/ai-foundations/what-a-model-actually-is)

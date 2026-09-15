@@ -1,6 +1,6 @@
 # Content registry — audit views
 
-Generated 2026-09-15T09:42:18.585Z by `scripts/build-content-registry.mjs`.
+Generated 2026-09-15T09:49:03.214Z by `scripts/build-content-registry.mjs`.
 2387 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
@@ -124,7 +124,7 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - modules without practice ending: "How models work" ends on ai-ml-dl-as-nested-fields (concept); "Inside the network" ends on ai-alignment-and-safety-basics (concept); "The wider picture" ends on why-nonlinearity-matters (concept)
 - dead-end finish: last live lesson is why-nonlinearity-matters (concept)
 - missing kinds: common-mistakes, cheatsheet
-- 46 island lessons (no in-body links)
+- 42 island lessons (no in-body links)
 - 1 thin vs family median
 - 4 duplicate-candidate pairs in track
 
@@ -140,7 +140,7 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - modules without practice ending: "Agents, robotics, and hybrid systems" ends on constraint-satisfaction (concept); "Original concept recaps" ends on uncertainty-and-decision (concept)
 - dead-end finish: last live lesson is uncertainty-and-decision (concept)
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet
-- 72 island lessons (no in-body links)
+- 71 island lessons (no in-body links)
 - 2 duplicate-candidate pairs in track
 
 ### machine-learning — 208 files, 12 modules — starts: "How to use the Classical ML course"
@@ -157,7 +157,7 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - modules without practice ending: "Programme orientation" ends on dl-001-how-to-use-the-deep-learning-program (concept); "Sequences, transformers, generation, and RL" ends on sequence-generative/338-rlhf-preference-optimization-and-alignment-bridge (concept); "Concept recaps" ends on neural-networks-and-representations (concept)
 - dead-end finish: last live lesson is neural-networks-and-representations (concept)
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet
-- 64 island lessons (no in-body links)
+- 63 island lessons (no in-body links)
 - 3 duplicate-candidate pairs in track
 
 ### prompt-engineering — 142 files, 7 modules — starts: "The Whole Game: One Task From Vague Ask to Reliable Prompt"
@@ -260,8 +260,8 @@ and split always need a written human reason (see checklist).
 
 | disposition | items |
 |---|---:|
-| keep | 1953 |
-| investigate | 429 |
+| keep | 1960 |
+| investigate | 422 |
 | expand | 5 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
@@ -273,7 +273,7 @@ and split always need a written human reason (see checklist).
 | handsOn | 2170 | 1.49 | 527 | 53 | 1590 |
 | explanationQuality | 2170 | 1.96 | 20 | 56 | 2094 |
 | metadata | 2170 | 1.87 | 0 | 284 | 1886 |
-| linking | 2081 | 1.41 | 429 | 371 | 1281 |
+| linking | 2081 | 1.41 | 422 | 378 | 1281 |
 | freshnessHealth | 2387 | 0.78 | 790 | 1334 | 263 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
@@ -281,7 +281,7 @@ and split always need a written human reason (see checklist).
 
 ### Non-keep dispositions
 
-#### investigate: zero in-body internal links (429)
+#### investigate: zero in-body internal links (422)
 
 - /learn/agentic-ai/agents-vs-workflows — Choose an agent only when a workflow is not enough
 - /learn/agentic-ai/state-memory-and-recovery — Design agent state, memory, and recovery explicitly
@@ -292,9 +292,7 @@ and split always need a written human reason (see checklist).
 - /learn/ai-foundations/applied-ai/305-unsupervised-learning-discovery-and-guardrails — Unsupervised Learning for Discovery, Not Automatic Truth
 - /learn/ai-foundations/applied-ai/306-self-supervised-learning-data-and-transfer — Self-Supervised Learning: Data, Representations, and Transfer
 - /learn/ai-foundations/applied-ai/307-reinforcement-learning-product-suitability — Reinforcement Learning: Product Suitability and Safe Constraints
-- /learn/ai-foundations/applied-ai/308-training-and-inference-economics — Training and Inference Economics
 - /learn/ai-foundations/applied-ai/309-embeddings-similarity-and-index-design — Embeddings, Similarity, and Index Design
-- /learn/ai-foundations/applied-ai/310-retrieval-augmented-generation-grounding — Retrieval-Augmented Generation and Grounded Answers
 - /learn/ai-foundations/applied-ai/311-agents-tools-and-approval-boundaries — Agents, Tools, and Approval Boundaries
 - /learn/ai-foundations/applied-ai/312-multimodal-ai-inputs-fusion-and-evaluation — Multimodal AI: Inputs, Fusion, and Evaluation
 - /learn/ai-foundations/applied-ai/313-experimentation-ab-tests-and-decision-quality — Experimentation, A/B Tests, and Decision Quality
@@ -313,7 +311,6 @@ and split always need a written human reason (see checklist).
 - /learn/ai-foundations/reliable-ai/202-labels-annotation-and-ground-truth — Labels, Annotation, and the Limits of Ground Truth
 - /learn/ai-foundations/reliable-ai/203-benchmarks-evaluations-and-capability-claims — Benchmarks, Evaluations, and Defensible Capability Claims
 - /learn/ai-foundations/reliable-ai/204-distribution-shift-and-robustness — Distribution Shift, Robustness, and Monitoring
-- /learn/ai-foundations/reliable-ai/205-uncertainty-calibration-and-abstention — Uncertainty, Calibration, and Abstention
 - /learn/ai-foundations/reliable-ai/206-hallucination-grounding-and-verification — Hallucination, Grounding, and Verification
 - /learn/ai-foundations/reliable-ai/207-interpretability-and-explanation-boundaries — Interpretability, Explanations, and Their Boundaries
 - /learn/ai-foundations/reliable-ai/208-fairness-problem-formulation-and-measurement — Fairness: Problem Formulation and Measurement
@@ -322,8 +319,11 @@ and split always need a written human reason (see checklist).
 - /learn/ai-foundations/reliable-ai/211-privacy-preserving-learning-and-release — Privacy-Preserving Learning and Release
 - /learn/ai-foundations/reliable-ai/212-adversarial-ml-and-input-security — Adversarial ML and Input Security
 - /learn/ai-foundations/reliable-ai/215-human-feedback-preference-data-and-rlhf — Human Feedback, Preference Data, and RLHF
-- /learn/ai-foundations/reliable-ai/216-red-teaming-and-misuse-evaluation — Red Teaming and Misuse Evaluation
-- … 389 more in content-registry.json
+- /learn/ai-foundations/reliable-ai/217-governance-risk-tiers-and-accountability — Governance, Risk Tiers, and Accountability
+- /learn/ai-foundations/reliable-ai/218-audits-evidence-and-independent-review — Audits, Evidence, and Independent Review
+- /learn/ai-foundations/reliable-ai/219-incident-response-rollback-and-learning — AI Incidents, Rollback, and Organisational Learning
+- /learn/ai-foundations/reliable-ai/220-human-in-the-loop-and-meaningful-oversight — Human-in-the-Loop and Meaningful Oversight
+- … 382 more in content-registry.json
 
 #### expand: thin vs family median (238w vs ~779w) (1)
 
@@ -347,7 +347,7 @@ and split always need a written human reason (see checklist).
 
 ## Duplicate candidates
 
-334 pairs by title/slug similarity (119 not already cross-linked) — candidates for the merge/redirect editorial pass, not verdicts. Pairs where one already links to the other are marked linked — often deliberate two-part lessons.
+334 pairs by title/slug similarity (106 not already cross-linked) — candidates for the merge/redirect editorial pass, not verdicts. Pairs where one already links to the other are marked linked — often deliberate two-part lessons.
 
 | item A | item B | jac | contain | stem | linked | scope |
 |---|---|---:|---:|---|---|---|
@@ -382,7 +382,7 @@ and split always need a written human reason (see checklist).
 | /learn/ai-foundations/ai-vs-ml-vs-deep-learning | /answers/difference-between-ai-and-machine-learning | 0.67 | 1 |  | yes | ai-foundations × answers |
 | /learn/deep-learning/core/129-transfer-learning-fine-tuning-and-domain-shift | /learn/deep-learning/vision/211-transfer-learning-and-fine-tuning | 0.67 | 1 |  | yes | same track |
 | /learn/prompt-engineering/automatic-prompt-optimization-dspy | /learn/prompt-engineering/automatic-prompt-optimization | 0.67 | 1 | yes | yes | same track |
-| /learn/ai-foundations/applied-ai/308-training-and-inference-economics | /learn/ai-foundations/training-vs-inference | 0.67 | 1 |  |  | same track |
+| /learn/ai-foundations/applied-ai/308-training-and-inference-economics | /learn/ai-foundations/training-vs-inference | 0.67 | 1 |  | yes | same track |
 | /learn/ai-foundations/training-vs-inference | /learn/llm-foundations/training-time-vs-inference-time | 0.67 | 1 |  | yes | ai-foundations × llm-foundations |
 | /learn/ai-foundations/embeddings-quiz | /learn/maths-foundations/the-geometry-of-embeddings | 0.67 | 1 |  | yes | ai-foundations × maths-foundations |
 | /learn/context-engineering/context-engineering-vs-prompting | /learn/prompt-engineering/what-prompt-engineering-is | 0.67 | 1 |  |  | context-engineering × prompt-engineering |
@@ -648,7 +648,7 @@ Largest queue; full list in JSON. Vendor-signal sample:
 - /learn/ai-literacy/meet-skills-connectors-and-agents — Meet skills, connectors, and agents — safely
 - /learn/ai-literacy/seven-first-ai-workflows-lab — Lab: seven first AI workflows for everyday work
 
-### zero in-body internal links (template nav still applies) (483)
+### zero in-body internal links (template nav still applies) (474)
 
 - /learn/agentic-ai/agents-vs-workflows — Choose an agent only when a workflow is not enough
 - /learn/agentic-ai/state-memory-and-recovery — Design agent state, memory, and recovery explicitly
@@ -659,9 +659,7 @@ Largest queue; full list in JSON. Vendor-signal sample:
 - /learn/ai-foundations/applied-ai/305-unsupervised-learning-discovery-and-guardrails — Unsupervised Learning for Discovery, Not Automatic Truth
 - /learn/ai-foundations/applied-ai/306-self-supervised-learning-data-and-transfer — Self-Supervised Learning: Data, Representations, and Transfer
 - /learn/ai-foundations/applied-ai/307-reinforcement-learning-product-suitability — Reinforcement Learning: Product Suitability and Safe Constraints
-- /learn/ai-foundations/applied-ai/308-training-and-inference-economics — Training and Inference Economics
 - /learn/ai-foundations/applied-ai/309-embeddings-similarity-and-index-design — Embeddings, Similarity, and Index Design
-- /learn/ai-foundations/applied-ai/310-retrieval-augmented-generation-grounding — Retrieval-Augmented Generation and Grounded Answers
 - /learn/ai-foundations/applied-ai/311-agents-tools-and-approval-boundaries — Agents, Tools, and Approval Boundaries
 - /learn/ai-foundations/applied-ai/312-multimodal-ai-inputs-fusion-and-evaluation — Multimodal AI: Inputs, Fusion, and Evaluation
 - /learn/ai-foundations/applied-ai/313-experimentation-ab-tests-and-decision-quality — Experimentation, A/B Tests, and Decision Quality
@@ -676,12 +674,10 @@ Largest queue; full list in JSON. Vendor-signal sample:
 - /learn/ai-foundations/applied-ai/322-deployment-release-strategy-and-fallbacks — Deployment, Release Strategy, and Safe Fallbacks
 - /learn/ai-foundations/applied-ai/323-applied-ai-architecture-review — Applied AI Architecture Review
 - /learn/ai-foundations/applied-ai/324-applied-ai-project-gates-and-model-card — Applied AI Project Gates and the Model Card
-- /learn/ai-foundations/applied-ai/325-applied-ai-staged-capstone-and-defense — Applied AI Staged Capstone and Technical Defense
 - /learn/ai-foundations/reliable-ai/201-provenance-consent-and-data-rights — Provenance, Consent, and Data Rights
 - /learn/ai-foundations/reliable-ai/202-labels-annotation-and-ground-truth — Labels, Annotation, and the Limits of Ground Truth
 - /learn/ai-foundations/reliable-ai/203-benchmarks-evaluations-and-capability-claims — Benchmarks, Evaluations, and Defensible Capability Claims
 - /learn/ai-foundations/reliable-ai/204-distribution-shift-and-robustness — Distribution Shift, Robustness, and Monitoring
-- /learn/ai-foundations/reliable-ai/205-uncertainty-calibration-and-abstention — Uncertainty, Calibration, and Abstention
 - /learn/ai-foundations/reliable-ai/206-hallucination-grounding-and-verification — Hallucination, Grounding, and Verification
 - /learn/ai-foundations/reliable-ai/207-interpretability-and-explanation-boundaries — Interpretability, Explanations, and Their Boundaries
 - /learn/ai-foundations/reliable-ai/208-fairness-problem-formulation-and-measurement — Fairness: Problem Formulation and Measurement
@@ -690,7 +686,11 @@ Largest queue; full list in JSON. Vendor-signal sample:
 - /learn/ai-foundations/reliable-ai/211-privacy-preserving-learning-and-release — Privacy-Preserving Learning and Release
 - /learn/ai-foundations/reliable-ai/212-adversarial-ml-and-input-security — Adversarial ML and Input Security
 - /learn/ai-foundations/reliable-ai/215-human-feedback-preference-data-and-rlhf — Human Feedback, Preference Data, and RLHF
-- … 443 more
+- /learn/ai-foundations/reliable-ai/217-governance-risk-tiers-and-accountability — Governance, Risk Tiers, and Accountability
+- /learn/ai-foundations/reliable-ai/218-audits-evidence-and-independent-review — Audits, Evidence, and Independent Review
+- /learn/ai-foundations/reliable-ai/219-incident-response-rollback-and-learning — AI Incidents, Rollback, and Organisational Learning
+- /learn/ai-foundations/reliable-ai/220-human-in-the-loop-and-meaningful-oversight — Human-in-the-Loop and Meaningful Oversight
+- … 434 more
 
 ### live file not in curriculum (0)
 
@@ -826,6 +826,6 @@ Largest queue; full list in JSON. Vendor-signal sample:
 - /answers/what-is-lmv — What is LMV? LMV is LMVersity, a free AI engineering curriculum (731 words, updated 2026-09-08)
 - /answers/what-is-mcp — What is MCP (Model Context Protocol)? (925 words, updated 2026-09-08)
 - /answers/what-is-prompt-injection — What is prompt injection? (406 words, updated 2026-09-15)
-- /answers/what-is-rag — What is RAG (retrieval-augmented generation)? (926 words, updated 2026-09-08)
+- /answers/what-is-rag — What is RAG (retrieval-augmented generation)? (934 words, updated 2026-09-08)
 - /answers/what-skills-does-an-ai-engineer-need — What skills does an AI engineer need? The honest list (1251 words, updated 2026-09-08)
 

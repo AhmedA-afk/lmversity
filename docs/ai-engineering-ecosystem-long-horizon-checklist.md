@@ -1186,7 +1186,14 @@ Credentials to monitor:
 
 ### AI Foundations
 
-- [ ] Resolve overlap with AI Literacy, Classical AI, ML, and LLM Foundations.
+- [x] Resolve overlap with AI Literacy, Classical AI, ML, and LLM Foundations.
+      *(registry dup-detector found 34 pairs touching ai-foundations: 17 were
+      already cross-linked (mostly deliberate two-part lessons); 13 same-topic
+      pairs now cross-link both ways — including the identical-slug
+      `why-llms-hallucinate` twin and the numbered-course↔named-lesson pairs
+      (bayesian networks, constraint satisfaction, training/inference). The 4
+      still-unlinked are weak-relation or triple-capstone pairs queued for
+      editorial merge/canonical verdicts, not blind linking)*
 - [ ] Add system-selection cases, data/evidence reasoning, deployment boundaries,
       and responsible-AI integration.
 - [ ] Ensure classical search, knowledge, planning, uncertainty, and robotics modules
@@ -2087,7 +2094,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-15 — AI Literacy track gaps closed
 
-- Three new lessons: `meet-skills-connectors-and-agents` (capability ladder +
+- Commit: `d415f60`. Three new lessons: `meet-skills-connectors-and-agents` (capability ladder +
   permission table + three safety defaults), `seven-first-ai-workflows-lab`
   (task→prompt→artifact→check card for each of research, writing, planning,
   spreadsheet, document, presentation, image), and
@@ -2099,6 +2106,25 @@ validation, deployment status, measured result when available, blockers, and nex
   `check:links` 0 dead; registry + family audit clean.
 - Next batch: next track-section rows (AI Foundations overlap resolution,
   Maths Foundations diagnostics/practice) or editorial status workflow.
+
+### 2026-09-15 — AI Foundations overlap pass
+
+- Cross-linked 13 same-topic duplicate pairs touching `ai-foundations` in
+  both directions via the `**Related:**` convention: the identical-slug
+  `why-llms-hallucinate` twins (ai-foundations ↔ llm-foundations),
+  `backpropagation-explained` ↔ `the-chain-rule`, `gradient-descent-explained`
+  ↔ `batch-gradient-descent-and-learning-rate`, the `ai-systems/` numbered
+  files ↔ their `classical-ai` twins (bayesian networks, constraint
+  satisfaction), the training-vs-inference triangle, `310-retrieval-…` ↔ the
+  `/answers/what-is-rag` page, red-teaming and uncertainty pairs, and the
+  in-track capstone pair. One pair linked to the FDE page across audiences.
+- ai-foundations unlinked dup pairs: 17 → 4 (remaining are weak-relation or
+  cross-track capstone triplets queued for editorial merge/canonical
+  verdicts). Global unlinked queue: 119 → 106.
+- Validation: registry + `check:content` clean; build 2,398 pages;
+  `check:links` 0 dead.
+- Next batch: Maths Foundations diagnostics/practice rows, or the remaining
+  track-section rows.
 
 ### 2026-09-14 — Master ecosystem backlog created
 

@@ -8,7 +8,6 @@ duration: "50–70 min"
 updated: "2026-08-30"
 ---
 
-# Uncertainty, Calibration, and Abstention
 
 Reliable AI is not a property that a model possesses in isolation. It is a claim about a
 specific system, a stated use, particular people, operating conditions, and the evidence
@@ -179,3 +178,5 @@ re-enabling the affected capability.
 For full credit, calculations and judgments must be traceable to stated assumptions.
 A polished narrative without a measurable boundary, a reproducible artifact, or a
 responsible owner earns no more than partial credit.
+
+**Related:** [Quiz: Uncertainty and Calibration](/learn/hallucinations/uncertainty-quiz)

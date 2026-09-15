@@ -206,7 +206,7 @@
   },
   "lessons/ai-foundations/ai-systems/113-constraint-satisfaction-models-and-propagation.md": {
    "id": "les-0048",
-   "fp": "95f53f0c3da35e22c71e5243475fdee0ee4f8c59"
+   "fp": "e9f80ef69bc55ceaeb35814e48e35256ac4d4f90"
   },
   "lessons/ai-foundations/ai-systems/114-backtracking-mrv-lcv-and-constraint-learning.md": {
    "id": "les-0049",
@@ -238,7 +238,7 @@
   },
   "lessons/ai-foundations/ai-systems/121-bayesian-networks-conditional-independence-and-inference.md": {
    "id": "les-0056",
-   "fp": "68ce87912091fa2918cad25514c1845de2a9ae19"
+   "fp": "01883182f3d17886240a7166912563ee1ea2766d"
   },
   "lessons/ai-foundations/ai-systems/122-probabilistic-inference-sampling-and-approximation.md": {
    "id": "les-0057",
@@ -318,7 +318,7 @@
   },
   "lessons/ai-foundations/applied-ai/308-training-and-inference-economics.md": {
    "id": "les-0076",
-   "fp": "7acb18f0d3c10bccbdf7a5bbd0086145ec25203d"
+   "fp": "6deaa2539c737d23a6548283cbb9d0b62e812c3d"
   },
   "lessons/ai-foundations/applied-ai/309-embeddings-similarity-and-index-design.md": {
    "id": "les-0077",
@@ -326,7 +326,7 @@
   },
   "lessons/ai-foundations/applied-ai/310-retrieval-augmented-generation-grounding.md": {
    "id": "les-0078",
-   "fp": "52288e8eedd3d12edebf87a5c39fa66cf16831c1"
+   "fp": "bb370f2b14f964e9b54482d8c4e0545ccd01bc0b"
   },
   "lessons/ai-foundations/applied-ai/311-agents-tools-and-approval-boundaries.md": {
    "id": "les-0079",
@@ -386,7 +386,7 @@
   },
   "lessons/ai-foundations/applied-ai/325-applied-ai-staged-capstone-and-defense.md": {
    "id": "les-0093",
-   "fp": "7f7feb5c601b0c26961783af695b7db5883e7409"
+   "fp": "c978399d76d29952e355f3415fd944eee7907752"
   },
   "lessons/ai-foundations/backprop-worked-example.md": {
    "id": "les-0094",
@@ -394,7 +394,7 @@
   },
   "lessons/ai-foundations/backpropagation-explained.md": {
    "id": "les-0095",
-   "fp": "972e299fcd2cb1a5fb391dffd351fac484f57dfc"
+   "fp": "4d9b2614bdb923c9666df054cd6b320fdaa2005c"
   },
   "lessons/ai-foundations/benchmarks-and-what-they-miss.mdx": {
    "id": "les-0096",
@@ -470,7 +470,7 @@
   },
   "lessons/ai-foundations/gradient-descent-explained.md": {
    "id": "les-0114",
-   "fp": "f9e1d16ee516e63fe51bdb796b1aa96fb37367af"
+   "fp": "4397e23c6fed77c9d9e1236d3e91da18fd076b8d"
   },
   "lessons/ai-foundations/gradient-descent-in-numpy.md": {
    "id": "les-0115",
@@ -582,7 +582,7 @@
   },
   "lessons/ai-foundations/reliable-ai/205-uncertainty-calibration-and-abstention.md": {
    "id": "les-0142",
-   "fp": "245733a528e3c456de64b338dc6e3a5198dc4b7f"
+   "fp": "96b60c717f93c9ff203883d019fdc768922e8624"
   },
   "lessons/ai-foundations/reliable-ai/206-hallucination-grounding-and-verification.md": {
    "id": "les-0143",
@@ -626,7 +626,7 @@
   },
   "lessons/ai-foundations/reliable-ai/216-red-teaming-and-misuse-evaluation.md": {
    "id": "les-0153",
-   "fp": "356844b2b7670b28789f0efd8a460bdea82fca94"
+   "fp": "7d1359d688067a1b734c2aea35c3edc1400c4b5e"
   },
   "lessons/ai-foundations/reliable-ai/217-governance-risk-tiers-and-accountability.md": {
    "id": "les-0154",
@@ -674,7 +674,7 @@
   },
   "lessons/ai-foundations/reliable-ai/228-reliable-ai-capstone-and-technical-defense.md": {
    "id": "les-0165",
-   "fp": "f506abc11834b0329f58f8104f0be67bc3877774"
+   "fp": "5a34fb613974b89e310d36787b09ea81553192cd"
   },
   "lessons/ai-foundations/rlhf-and-instruction-tuning.mdx": {
    "id": "les-0166",
@@ -730,7 +730,7 @@
   },
   "lessons/ai-foundations/training-vs-inference.mdx": {
    "id": "les-0179",
-   "fp": "093d9c905ec7ede5bc65a163a602777399dba349"
+   "fp": "3f43adc5da3e7aaf564a56f5422ca1cd3e66aed4"
   },
   "lessons/ai-foundations/unsupervised-clustering-worked-example.md": {
    "id": "les-0180",
@@ -742,7 +742,7 @@
   },
   "lessons/ai-foundations/what-a-model-actually-is.md": {
    "id": "les-0182",
-   "fp": "4a285756d40fe2ccbdf0f6d861c172db15f6ef87"
+   "fp": "36c74ead328f2f68474c0e0bc9baeefc6795621d"
   },
   "lessons/ai-foundations/what-embeddings-are.md": {
    "id": "les-0183",
@@ -762,7 +762,7 @@
   },
   "lessons/ai-foundations/why-llms-hallucinate.md": {
    "id": "les-0187",
-   "fp": "e9a80222b9de626ee3a52b6a766cf823be9f500e"
+   "fp": "8f685d98accafa5492dbdc428d1ef40f011b5430"
   },
   "lessons/ai-foundations/why-nonlinearity-matters.md": {
    "id": "les-0188",
@@ -1266,7 +1266,7 @@
   },
   "lessons/classical-ai/search-planning/115-constraint-satisfaction-problems-variables-domains-and-constraints.md": {
    "id": "les-0313",
-   "fp": "9eee6fc44c2e1e4e5a71f645ccfc32fe7730e4d6"
+   "fp": "b2c22feffa0dabc3148f67198ee0ec13de1e2aa4"
   },
   "lessons/classical-ai/search-planning/116-csp-propagation-arc-consistency-forward-checking-and-global-constraints.md": {
    "id": "les-0314",
@@ -2098,7 +2098,7 @@
   },
   "lessons/deep-learning/practice/424-privacy-preserving-training-and-inference.md": {
    "id": "les-0521",
-   "fp": "b8c1c9a377877baf3b1558ef512b7ccf46e8f2bb"
+   "fp": "b9c75cdc94bbad04f8c434e9815507870515042c"
   },
   "lessons/deep-learning/practice/425-fairness-accessibility-and-ethical-impact-lab.md": {
    "id": "les-0522",
@@ -2498,7 +2498,7 @@
   },
   "lessons/evals-red-teaming/tool-use-red-teaming.mdx": {
    "id": "les-0621",
-   "fp": "3daf9e6def63a07f193be6baa409ae7a3ae37b30"
+   "fp": "235ca4e5203aea353200a48ff68147167cdd9672"
   },
   "lessons/evals-red-teaming/why-evals-matter.mdx": {
    "id": "les-0622",
@@ -3622,7 +3622,7 @@
   },
   "lessons/hallucinations/uncertainty-quiz.md": {
    "id": "les-0902",
-   "fp": "419571ca13a29adffdc8e08122127cc493dba8b6"
+   "fp": "4bcd0f0d1a9f710e57eac9a7475786eb358669ce"
   },
   "lessons/hallucinations/ux-of-uncertainty.md": {
    "id": "les-0903",
@@ -4206,7 +4206,7 @@
   },
   "lessons/llm-foundations/training-time-vs-inference-time.mdx": {
    "id": "les-1048",
-   "fp": "9dc3003471ba3356ccdf9298c08529b3820e7cfc"
+   "fp": "16dc01ccde7431833ba12bf3cb2b7952f2cab8f7"
   },
   "lessons/llm-foundations/transformer-block-quiz.mdx": {
    "id": "les-1049",
@@ -4266,7 +4266,7 @@
   },
   "lessons/llm-foundations/why-llms-hallucinate.mdx": {
    "id": "les-1063",
-   "fp": "224d145a58ef21d8f16361d689a81c0d81505a6e"
+   "fp": "7acacdffbef2dcb3ee500d6d691fb03649197ccd"
   },
   "lessons/llm-foundations/why-models-need-tokens-not-characters.mdx": {
    "id": "les-1064",
@@ -5138,7 +5138,7 @@
   },
   "lessons/maths-foundations/batch-gradient-descent-and-learning-rate.md": {
    "id": "les-1281",
-   "fp": "5e60cb6fcea0724238fe7844778e2f03da691386"
+   "fp": "0bbbe7bd20136026d1502d70303ee258d7ff456d"
   },
   "lessons/maths-foundations/bayes-rule-and-base-rates.md": {
    "id": "les-1282",
@@ -5370,7 +5370,7 @@
   },
   "lessons/maths-foundations/independence-and-conditional-independence.md": {
    "id": "les-1339",
-   "fp": "21c2e3a4b5306069c18b7cc3836f61ca77c14659"
+   "fp": "8c09d0b7bd9042dac84d6e855fe4210d1a56873b"
   },
   "lessons/maths-foundations/integrals-accumulation-and-probability-mass.md": {
    "id": "les-1340",
@@ -5842,7 +5842,7 @@
   },
   "lessons/maths-foundations/the-chain-rule.md": {
    "id": "les-1457",
-   "fp": "df5cc3090c7ba5da493bcfc2e82569e821e1ee37"
+   "fp": "414a36505ddf1c779ad5dcd3cda0262c49fd9318"
   },
   "lessons/maths-foundations/the-geometry-of-embeddings.mdx": {
    "id": "les-1458",
@@ -8494,7 +8494,7 @@
   },
   "answers/what-is-rag.md": {
    "id": "ans-0028",
-   "fp": "4f726ff3bb2e5e3d132c091a2d99b34a94e7f31f"
+   "fp": "805d350623e2c77f691c19531e6911bef249e8d5"
   },
   "answers/what-skills-does-an-ai-engineer-need.md": {
    "id": "ans-0029",
@@ -8526,7 +8526,7 @@
   },
   "fde/ai/how-a-language-model-actually-answers.md": {
    "id": "fde-0007",
-   "fp": "7ef50ebc02987d9ff9829a29be1bd02d782bedbf"
+   "fp": "059b129b70d7ca69679afd11b6396c8466118a51"
   },
   "fde/ai/indic-languages-voice-and-whatsapp-surfaces.md": {
    "id": "fde-0008",

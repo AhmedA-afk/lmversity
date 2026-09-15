@@ -70,3 +70,4 @@ RAG is a full track on LMVersity, not a single lesson: the [RAG track](/learn/ra
 - [Building a RAG Pipeline End to End](/learn/rag/building-a-rag-pipeline-end-to-end) — the concrete, worked build.
 - [Choosing a Vector Database](/learn/rag/choosing-a-vector-database) — the retrieval infrastructure decision most teams face next.
 - [Build a RAG Pipeline Over Your Own Documents](/guides/build-a-rag-pipeline-over-your-own-documents) — a hands-on guide for building one yourself.
+- [Retrieval-Augmented Generation and Grounded Answers](/learn/ai-foundations/applied-ai/310-retrieval-augmented-generation-grounding) — the AI Foundations lesson on how grounding works.

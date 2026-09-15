@@ -71,4 +71,4 @@ The chain rule does not choose a useful parameterisation or prevent saturation. 
 - Go deeper: [Computational graphs and local derivatives](/learn/maths-foundations/computational-graphs-and-local-derivatives)
 - Apply it: Loss, gradients, and [gradient descent](/learn/maths-foundations/gradient-descent-intuition)
 
-**Related:** [Partial Derivatives and the Chain Rule](/learn/maths-foundations/partial-derivatives-and-chain-rule)
+**Related:** [Partial Derivatives and the Chain Rule](/learn/maths-foundations/partial-derivatives-and-chain-rule) · [Backpropagation: Credit Assignment via the Chain Rule](/learn/ai-foundations/backpropagation-explained)

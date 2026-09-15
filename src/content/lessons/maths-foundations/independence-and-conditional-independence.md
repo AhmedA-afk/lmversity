@@ -141,3 +141,5 @@ subgroups without pretending they are one homogeneous population.
 - Continue: Law of total probability
 - Go deeper: Classifiers, thresholds, and calibration
 - Apply it: Base rates, Bayes, and simulation
+
+**Related:** [Bayesian Networks, Conditional Independence, and Inference](/learn/ai-foundations/ai-systems/121-bayesian-networks-conditional-independence-and-inference)
