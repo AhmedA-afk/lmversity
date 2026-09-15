@@ -1390,7 +1390,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-14 — Content registry and audit ledger built
 
-- Status: complete for Phase 0 "build the audit ledger"; scoring pass not started.
+- Commit: `eacb4b0`. Status: complete for Phase 0 "build the audit ledger"; scoring pass not started.
 - Scope: all 7 content collections + curriculum, modules, quizzes, roles, FDE plan,
   quick guides, glossary, static routes.
 - Files changed: `scripts/build-content-registry.mjs` (new), `scripts/build-content-dates.mjs`
@@ -1414,6 +1414,35 @@ validation, deployment status, measured result when available, blockers, and nex
 - Next batch: score audit dimensions per item (Phase 0 "Score every item"), starting with
   the acquisition families (9 guides, 10 posts, 29 answers, 7 interview topics, 6 scenarios,
   6 practice banks) — small enough to finish in one reviewable batch.
+
+### 2026-09-15 — Acquisition & practice family audit (mechanical pass)
+
+- Built `scripts/audit-families.mjs` (`npm run audit:families`) — structural checks for every
+  acquisition/practice family, emitting `docs/registry/family-audit.json` and
+  `docs/registry/acquisition-audit.md`. Handles all five quiz markup variants found in the
+  wild (`## N.`, `## Question N:`, `### N.`, `**N.**`, `**QN.**` stems; dash, bold, paren and
+  bare-letter options; `**Correct: X.**` and `**Answer X**` marks).
+- Coverage: 29 answers, 9 guides, 10 posts, 7 interview topics (56 questions), 6 scenarios,
+  6 centralized banks (48 questions), 83 lesson quiz pages (603 questions), 29 worked
+  examples, 48 cheatsheets, 24 common-mistake pages. 0 duplicate question stems corpus-wide.
+- What holds: all answers are answer-first with FAQ + related metadata; all guides carry
+  `related` lesson lists and ordered steps; all posts are dated; all 603 lesson-quiz
+  questions have a marked correct answer; all worked examples have runnable code.
+- What doesn't: **centralized banks put 100% of correct answers at index 0–1** (positional
+  bias learners can exploit) and have 1 total lesson link across 48 questions; lesson-quiz
+  answer positions skew B 66% / C 19% / A 11% / D 3%; all 6 scenarios are ~192-word
+  walkthroughs missing constraints/options/postmortem sections; 5/7 interview topics have
+  no follow-up prompts or rubric; 9/9 guides have zero in-body internal links;
+  `why-there-is-no-certificate` never links into the curriculum;
+  `rag-fine-tuning-or-a-longer-prompt` has no code; 11 quiz files have answer blocks that
+  don't discuss every option.
+- The checklist's per-family "Review" items stay open: this pass is the mechanical half —
+  intent, originality, evidence and tone still need the editorial scoring pass. A first-pass
+  backlog order (value + dependency) is in the audit doc; demand ordering awaits analytics.
+- Validation: `npm run check:content` clean; `git diff --check` clean; `check:links` clean —
+  no content files touched. Commit: `34a26b8`.
+- Next batch: backlog item 1 — reshuffle centralized-bank answer positions and wire each
+  question to its remediation lesson (bounded: one data file).
 
 ### 2026-09-14 — Master ecosystem backlog created
 

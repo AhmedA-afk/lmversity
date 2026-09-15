@@ -1,0 +1,3354 @@
+{
+ "generatedAt": "2026-09-15T06:02:55.758Z",
+ "findings": {
+  "answers": [
+   {
+    "slug": "ai-engineer-interview-questions",
+    "firstParaWords": 48,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 8,
+    "external": 0,
+    "words": 1210,
+    "flags": []
+   },
+   {
+    "slug": "ai-engineer-roadmap",
+    "firstParaWords": 59,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 8,
+    "external": 0,
+    "words": 2002,
+    "flags": []
+   },
+   {
+    "slug": "ai-engineer-vs-ml-engineer",
+    "firstParaWords": 70,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 6,
+    "external": 0,
+    "words": 977,
+    "flags": []
+   },
+   {
+    "slug": "difference-between-ai-and-machine-learning",
+    "firstParaWords": 65,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 7,
+    "external": 0,
+    "words": 1009,
+    "flags": []
+   },
+   {
+    "slug": "free-forward-deployed-engineer-course",
+    "firstParaWords": 69,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 8,
+    "external": 0,
+    "words": 2002,
+    "flags": []
+   },
+   {
+    "slug": "how-do-llms-work",
+    "firstParaWords": 62,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 7,
+    "external": 0,
+    "words": 919,
+    "flags": []
+   },
+   {
+    "slug": "how-to-become-an-ai-engineer",
+    "firstParaWords": 73,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 8,
+    "external": 0,
+    "words": 1977,
+    "flags": []
+   },
+   {
+    "slug": "how-to-build-a-rag-app",
+    "firstParaWords": 64,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 8,
+    "external": 0,
+    "words": 1234,
+    "flags": []
+   },
+   {
+    "slug": "how-to-evaluate-an-llm-app",
+    "firstParaWords": 52,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 8,
+    "external": 0,
+    "words": 1228,
+    "flags": []
+   },
+   {
+    "slug": "how-to-fine-tune-an-llm",
+    "firstParaWords": 63,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 8,
+    "external": 0,
+    "words": 1260,
+    "flags": []
+   },
+   {
+    "slug": "how-to-learn-machine-learning-free",
+    "firstParaWords": 63,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 8,
+    "external": 0,
+    "words": 1183,
+    "flags": []
+   },
+   {
+    "slug": "how-to-use-claude-code",
+    "firstParaWords": 59,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 7,
+    "external": 1,
+    "words": 1310,
+    "flags": []
+   },
+   {
+    "slug": "how-to-use-openai-codex",
+    "firstParaWords": 58,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 6,
+    "external": 2,
+    "words": 1207,
+    "flags": []
+   },
+   {
+    "slug": "is-ai-engineering-hard",
+    "firstParaWords": 58,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 6,
+    "external": 0,
+    "words": 1249,
+    "flags": []
+   },
+   {
+    "slug": "learn-ai-engineering-free",
+    "firstParaWords": 54,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 8,
+    "external": 0,
+    "words": 1806,
+    "flags": []
+   },
+   {
+    "slug": "llm-vs-generative-ai",
+    "firstParaWords": 70,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 7,
+    "external": 0,
+    "words": 910,
+    "flags": []
+   },
+   {
+    "slug": "openai-vs-chatgpt",
+    "firstParaWords": 64,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 7,
+    "external": 0,
+    "words": 1005,
+    "flags": []
+   },
+   {
+    "slug": "prompt-engineering-vs-context-engineering",
+    "firstParaWords": 62,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 6,
+    "external": 0,
+    "words": 949,
+    "flags": []
+   },
+   {
+    "slug": "rag-vs-fine-tuning",
+    "firstParaWords": 65,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 7,
+    "internal": 7,
+    "external": 0,
+    "words": 902,
+    "flags": []
+   },
+   {
+    "slug": "what-is-a-forward-deployed-engineer",
+    "firstParaWords": 62,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 6,
+    "external": 0,
+    "words": 1201,
+    "flags": []
+   },
+   {
+    "slug": "what-is-a-large-language-model",
+    "firstParaWords": 70,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 10,
+    "external": 0,
+    "words": 1018,
+    "flags": []
+   },
+   {
+    "slug": "what-is-a-vector-database",
+    "firstParaWords": 70,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 8,
+    "external": 0,
+    "words": 858,
+    "flags": []
+   },
+   {
+    "slug": "what-is-agentic-ai",
+    "firstParaWords": 66,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 6,
+    "external": 0,
+    "words": 954,
+    "flags": []
+   },
+   {
+    "slug": "what-is-an-agent-harness",
+    "firstParaWords": 66,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 7,
+    "internal": 7,
+    "external": 0,
+    "words": 879,
+    "flags": []
+   },
+   {
+    "slug": "what-is-an-ai-agent",
+    "firstParaWords": 71,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 6,
+    "external": 0,
+    "words": 1053,
+    "flags": []
+   },
+   {
+    "slug": "what-is-lmv",
+    "firstParaWords": 55,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 6,
+    "external": 0,
+    "words": 731,
+    "flags": []
+   },
+   {
+    "slug": "what-is-mcp",
+    "firstParaWords": 65,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 9,
+    "external": 0,
+    "words": 925,
+    "flags": []
+   },
+   {
+    "slug": "what-is-rag",
+    "firstParaWords": 55,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 13,
+    "external": 0,
+    "words": 926,
+    "flags": []
+   },
+   {
+    "slug": "what-skills-does-an-ai-engineer-need",
+    "firstParaWords": 53,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 6,
+    "internal": 8,
+    "external": 0,
+    "words": 1251,
+    "flags": []
+   }
+  ],
+  "guides": [
+   {
+    "slug": "build-a-rag-pipeline-over-your-own-documents",
+    "steps": 6,
+    "related": 4,
+    "codeBlocks": 5,
+    "hasFailureSection": true,
+    "hasVerifySection": true,
+    "internal": 0,
+    "external": 0,
+    "words": 761,
+    "flags": [
+     "no in-body internal links (only the related block)"
+    ]
+   },
+   {
+    "slug": "build-a-tool-calling-agent-from-scratch",
+    "steps": 5,
+    "related": 4,
+    "codeBlocks": 3,
+    "hasFailureSection": true,
+    "hasVerifySection": false,
+    "internal": 0,
+    "external": 0,
+    "words": 538,
+    "flags": [
+     "no in-body internal links (only the related block)"
+    ]
+   },
+   {
+    "slug": "build-an-mcp-server-in-python",
+    "steps": 6,
+    "related": 4,
+    "codeBlocks": 8,
+    "hasFailureSection": true,
+    "hasVerifySection": false,
+    "internal": 0,
+    "external": 0,
+    "words": 703,
+    "flags": [
+     "no in-body internal links (only the related block)"
+    ]
+   },
+   {
+    "slug": "cut-your-llm-bill",
+    "steps": 6,
+    "related": 3,
+    "codeBlocks": 4,
+    "hasFailureSection": true,
+    "hasVerifySection": false,
+    "internal": 0,
+    "external": 0,
+    "words": 803,
+    "flags": [
+     "no in-body internal links (only the related block)"
+    ]
+   },
+   {
+    "slug": "defend-against-prompt-injection",
+    "steps": 6,
+    "related": 4,
+    "codeBlocks": 4,
+    "hasFailureSection": false,
+    "hasVerifySection": true,
+    "internal": 0,
+    "external": 0,
+    "words": 778,
+    "flags": [
+     "no in-body internal links (only the related block)"
+    ]
+   },
+   {
+    "slug": "get-reliable-json-out-of-an-llm",
+    "steps": 5,
+    "related": 3,
+    "codeBlocks": 7,
+    "hasFailureSection": false,
+    "hasVerifySection": false,
+    "internal": 0,
+    "external": 0,
+    "words": 621,
+    "flags": [
+     "no in-body internal links (only the related block)"
+    ]
+   },
+   {
+    "slug": "rag-fine-tuning-or-a-longer-prompt",
+    "steps": 5,
+    "related": 4,
+    "codeBlocks": 0,
+    "hasFailureSection": false,
+    "hasVerifySection": false,
+    "internal": 0,
+    "external": 0,
+    "words": 859,
+    "flags": [
+     "no code — a build guide without runnable steps",
+     "no in-body internal links (only the related block)"
+    ]
+   },
+   {
+    "slug": "ship-your-first-ai-feature-to-production",
+    "steps": 6,
+    "related": 3,
+    "codeBlocks": 2,
+    "hasFailureSection": true,
+    "hasVerifySection": true,
+    "internal": 0,
+    "external": 0,
+    "words": 834,
+    "flags": [
+     "no in-body internal links (only the related block)"
+    ]
+   },
+   {
+    "slug": "write-your-first-eval-for-an-ai-feature",
+    "steps": 5,
+    "related": 3,
+    "codeBlocks": 4,
+    "hasFailureSection": false,
+    "hasVerifySection": false,
+    "internal": 0,
+    "external": 0,
+    "words": 686,
+    "flags": [
+     "no in-body internal links (only the related block)"
+    ]
+   }
+  ],
+  "blog": [
+   {
+    "slug": "agents-need-a-harness",
+    "published": true,
+    "updated": false,
+    "tags": 3,
+    "learnLinks": 1,
+    "internal": 2,
+    "external": 0,
+    "words": 191,
+    "flags": []
+   },
+   {
+    "slug": "how-to-learn-ai-in-2026",
+    "published": true,
+    "updated": false,
+    "tags": 3,
+    "learnLinks": 3,
+    "internal": 5,
+    "external": 0,
+    "words": 251,
+    "flags": []
+   },
+   {
+    "slug": "lmversity-launch-note",
+    "published": true,
+    "updated": false,
+    "tags": 3,
+    "learnLinks": 1,
+    "internal": 1,
+    "external": 0,
+    "words": 220,
+    "flags": []
+   },
+   {
+    "slug": "rag-is-not-a-truth-machine",
+    "published": true,
+    "updated": false,
+    "tags": 3,
+    "learnLinks": 1,
+    "internal": 1,
+    "external": 0,
+    "words": 219,
+    "flags": []
+   },
+   {
+    "slug": "read-the-loop-before-you-pick-a-framework",
+    "published": true,
+    "updated": false,
+    "tags": 3,
+    "learnLinks": 2,
+    "internal": 3,
+    "external": 0,
+    "words": 525,
+    "flags": []
+   },
+   {
+    "slug": "stopping-conditions-for-agents",
+    "published": true,
+    "updated": false,
+    "tags": 3,
+    "learnLinks": 2,
+    "internal": 3,
+    "external": 0,
+    "words": 537,
+    "flags": []
+   },
+   {
+    "slug": "the-context-window-got-bigger-and-it-did-not-fix-this",
+    "published": true,
+    "updated": false,
+    "tags": 3,
+    "learnLinks": 3,
+    "internal": 3,
+    "external": 0,
+    "words": 578,
+    "flags": []
+   },
+   {
+    "slug": "the-mcp-mistakes-that-show-up-at-3am",
+    "published": true,
+    "updated": false,
+    "tags": 3,
+    "learnLinks": 2,
+    "internal": 3,
+    "external": 0,
+    "words": 631,
+    "flags": []
+   },
+   {
+    "slug": "why-there-is-no-certificate",
+    "published": true,
+    "updated": false,
+    "tags": 3,
+    "learnLinks": 0,
+    "internal": 1,
+    "external": 0,
+    "words": 522,
+    "flags": [
+     "no links into the curriculum"
+    ]
+   },
+   {
+    "slug": "your-rag-problem-is-a-retrieval-problem",
+    "published": true,
+    "updated": false,
+    "tags": 3,
+    "learnLinks": 2,
+    "internal": 3,
+    "external": 0,
+    "words": 700,
+    "flags": []
+   }
+  ],
+  "interview": [
+   {
+    "slug": "agents",
+    "questions": 8,
+    "withLinks": 4,
+    "thinAnswers": 0,
+    "hasFollowUps": false,
+    "hasRubric": false,
+    "words": 531,
+    "flags": [
+     "no follow-up prompts or rubric (checklist wants both)"
+    ]
+   },
+   {
+    "slug": "ai-system-design",
+    "questions": 8,
+    "withLinks": 3,
+    "thinAnswers": 0,
+    "hasFollowUps": false,
+    "hasRubric": false,
+    "words": 494,
+    "flags": [
+     "no follow-up prompts or rubric (checklist wants both)"
+    ]
+   },
+   {
+    "slug": "evals",
+    "questions": 8,
+    "withLinks": 3,
+    "thinAnswers": 0,
+    "hasFollowUps": false,
+    "hasRubric": true,
+    "words": 527,
+    "flags": []
+   },
+   {
+    "slug": "llm-basics",
+    "questions": 8,
+    "withLinks": 5,
+    "thinAnswers": 0,
+    "hasFollowUps": false,
+    "hasRubric": false,
+    "words": 575,
+    "flags": [
+     "no follow-up prompts or rubric (checklist wants both)"
+    ]
+   },
+   {
+    "slug": "mcp",
+    "questions": 8,
+    "withLinks": 3,
+    "thinAnswers": 0,
+    "hasFollowUps": false,
+    "hasRubric": false,
+    "words": 496,
+    "flags": [
+     "no follow-up prompts or rubric (checklist wants both)"
+    ]
+   },
+   {
+    "slug": "prompt-engineering",
+    "questions": 8,
+    "withLinks": 6,
+    "thinAnswers": 0,
+    "hasFollowUps": false,
+    "hasRubric": false,
+    "words": 553,
+    "flags": [
+     "no follow-up prompts or rubric (checklist wants both)"
+    ]
+   },
+   {
+    "slug": "rag",
+    "questions": 8,
+    "withLinks": 4,
+    "thinAnswers": 0,
+    "hasFollowUps": false,
+    "hasRubric": true,
+    "words": 510,
+    "flags": [
+     "no follow-up prompts or rubric (checklist wants both)"
+    ]
+   }
+  ],
+  "scenarios": [
+   {
+    "slug": "agent-approval",
+    "sections": [
+     "The situation",
+     "The first decision",
+     "Guided reasoning",
+     "What to test first"
+    ],
+    "covered": [
+     "situation",
+     "decision",
+     "implementation",
+     "evaluation"
+    ],
+    "missing": [
+     "constraints",
+     "options",
+     "postmortem"
+    ],
+    "internal": 2,
+    "words": 199,
+    "flags": [
+     "missing: constraints, options, postmortem"
+    ]
+   },
+   {
+    "slug": "document-qa",
+    "sections": [
+     "The situation",
+     "The first decision",
+     "Guided reasoning",
+     "What to test first"
+    ],
+    "covered": [
+     "situation",
+     "options",
+     "decision",
+     "evaluation"
+    ],
+    "missing": [
+     "constraints",
+     "implementation",
+     "postmortem"
+    ],
+    "internal": 2,
+    "words": 190,
+    "flags": [
+     "missing: constraints, implementation, postmortem"
+    ]
+   },
+   {
+    "slug": "eval-release",
+    "sections": [
+     "The situation",
+     "The first decision",
+     "Guided reasoning",
+     "What to test first"
+    ],
+    "covered": [
+     "situation",
+     "decision",
+     "implementation",
+     "evaluation",
+     "postmortem"
+    ],
+    "missing": [
+     "constraints",
+     "options"
+    ],
+    "internal": 2,
+    "words": 189,
+    "flags": [
+     "missing: constraints, options"
+    ]
+   },
+   {
+    "slug": "mcp-team-server",
+    "sections": [
+     "The situation",
+     "The first decision",
+     "Guided reasoning",
+     "What to test first"
+    ],
+    "covered": [
+     "situation",
+     "decision",
+     "implementation",
+     "evaluation"
+    ],
+    "missing": [
+     "constraints",
+     "options",
+     "postmortem"
+    ],
+    "internal": 1,
+    "words": 187,
+    "flags": [
+     "missing: constraints, options, postmortem"
+    ]
+   },
+   {
+    "slug": "streaming-research",
+    "sections": [
+     "The situation",
+     "The first decision",
+     "Guided reasoning",
+     "What to test first"
+    ],
+    "covered": [
+     "situation",
+     "decision",
+     "implementation",
+     "evaluation",
+     "postmortem"
+    ],
+    "missing": [
+     "constraints",
+     "options"
+    ],
+    "internal": 2,
+    "words": 172,
+    "flags": [
+     "missing: constraints, options"
+    ]
+   },
+   {
+    "slug": "support-assistant",
+    "sections": [
+     "The situation",
+     "The first decision",
+     "Guided reasoning",
+     "What to test first"
+    ],
+    "covered": [
+     "situation",
+     "constraints",
+     "decision",
+     "implementation",
+     "evaluation"
+    ],
+    "missing": [
+     "options",
+     "postmortem"
+    ],
+    "internal": 2,
+    "words": 213,
+    "flags": [
+     "missing: options, postmortem"
+    ]
+   }
+  ],
+  "practice": [
+   {
+    "id": "ai-foundations",
+    "questions": 8,
+    "answerPositions": {
+     "0": 5,
+     "1": 3
+    },
+    "withLessonLinks": 1,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "prompt-engineering",
+    "questions": 8,
+    "answerPositions": {
+     "0": 8
+    },
+    "withLessonLinks": 0,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "rag",
+    "questions": 8,
+    "answerPositions": {
+     "0": 8
+    },
+    "withLessonLinks": 0,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "agents",
+    "questions": 8,
+    "answerPositions": {
+     "0": 8
+    },
+    "withLessonLinks": 0,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "mcp",
+    "questions": 8,
+    "answerPositions": {
+     "0": 8
+    },
+    "withLessonLinks": 0,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "evals",
+    "questions": 8,
+    "answerPositions": {
+     "0": 8
+    },
+    "withLessonLinks": 0,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   }
+  ],
+  "lessonQuizzes": [
+   {
+    "slug": "ai-foundations/capabilities-and-eval-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 8,
+    "words": 2487,
+    "flags": []
+   },
+   {
+    "slug": "ai-foundations/embeddings-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 10,
+    "words": 2047,
+    "flags": []
+   },
+   {
+    "slug": "ai-foundations/foundation-models-and-llms-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 11,
+    "words": 2191,
+    "flags": []
+   },
+   {
+    "slug": "ai-foundations/generalization-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 10,
+    "words": 2592,
+    "flags": []
+   },
+   {
+    "slug": "ai-foundations/learning-paradigms-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 11,
+    "words": 3475,
+    "flags": []
+   },
+   {
+    "slug": "ai-foundations/neural-networks-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 8,
+    "words": 2116,
+    "flags": []
+   },
+   {
+    "slug": "ai-foundations/orientation-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 13,
+    "words": 2274,
+    "flags": []
+   },
+   {
+    "slug": "ai-foundations/practical-models-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 9,
+    "words": 2446,
+    "flags": []
+   },
+   {
+    "slug": "ai-foundations/safety-and-interpretability-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 10,
+    "words": 2513,
+    "flags": []
+   },
+   {
+    "slug": "ai-foundations/training-and-optimization-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 10,
+    "words": 2190,
+    "flags": []
+   },
+   {
+    "slug": "ai-literacy/cost-and-limits-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 12,
+    "words": 2169,
+    "flags": []
+   },
+   {
+    "slug": "ai-literacy/deciding-when-and-which-ai-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 9,
+    "words": 1797,
+    "flags": []
+   },
+   {
+    "slug": "ai-literacy/how-ai-produces-answers-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 10,
+    "words": 2157,
+    "flags": []
+   },
+   {
+    "slug": "ai-literacy/judging-and-verifying-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 10,
+    "words": 2121,
+    "flags": []
+   },
+   {
+    "slug": "ai-literacy/privacy-bias-and-ethics-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 5,
+    "words": 2084,
+    "flags": []
+   },
+   {
+    "slug": "ai-literacy/prompting-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 6,
+    "words": 1610,
+    "flags": []
+   },
+   {
+    "slug": "ai-literacy/what-ai-actually-is-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 18,
+    "words": 2117,
+    "flags": []
+   },
+   {
+    "slug": "context-engineering/budgeting-and-observability-quiz",
+    "questions": 12,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 12,
+    "perOptionRationale": 12,
+    "internal": 17,
+    "words": 1910,
+    "flags": []
+   },
+   {
+    "slug": "context-engineering/compaction-memory-quiz",
+    "questions": 12,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 12,
+    "perOptionRationale": 12,
+    "internal": 14,
+    "words": 3747,
+    "flags": []
+   },
+   {
+    "slug": "context-engineering/failure-modes-quiz",
+    "questions": 12,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 12,
+    "perOptionRationale": 12,
+    "internal": 9,
+    "words": 2290,
+    "flags": []
+   },
+   {
+    "slug": "context-engineering/foundations-quiz",
+    "questions": 12,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 12,
+    "perOptionRationale": 10,
+    "internal": 14,
+    "words": 2217,
+    "flags": [
+     "2 answer block(s) don't discuss every option"
+    ]
+   },
+   {
+    "slug": "context-engineering/multi-agent-and-capstone-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 6,
+    "words": 1338,
+    "flags": []
+   },
+   {
+    "slug": "context-engineering/retrieval-and-jit-quiz",
+    "questions": 12,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 12,
+    "perOptionRationale": 12,
+    "internal": 14,
+    "words": 2965,
+    "flags": []
+   },
+   {
+    "slug": "context-engineering/selection-ordering-quiz",
+    "questions": 12,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 12,
+    "perOptionRationale": 12,
+    "internal": 13,
+    "words": 3043,
+    "flags": []
+   },
+   {
+    "slug": "context-engineering/tools-caching-quiz",
+    "questions": 12,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 12,
+    "perOptionRationale": 12,
+    "internal": 13,
+    "words": 2261,
+    "flags": []
+   },
+   {
+    "slug": "hallucinations/detection-quiz",
+    "questions": 10,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 10,
+    "perOptionRationale": 10,
+    "internal": 13,
+    "words": 2338,
+    "flags": []
+   },
+   {
+    "slug": "hallucinations/evaluation-quiz",
+    "questions": 10,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 10,
+    "perOptionRationale": 10,
+    "internal": 6,
+    "words": 2712,
+    "flags": []
+   },
+   {
+    "slug": "hallucinations/foundations-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 8,
+    "words": 1155,
+    "flags": []
+   },
+   {
+    "slug": "hallucinations/mitigation-quiz",
+    "questions": 12,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 12,
+    "perOptionRationale": 12,
+    "internal": 17,
+    "words": 2236,
+    "flags": []
+   },
+   {
+    "slug": "hallucinations/production-quiz",
+    "questions": 10,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 10,
+    "perOptionRationale": 10,
+    "internal": 14,
+    "words": 3054,
+    "flags": []
+   },
+   {
+    "slug": "hallucinations/taxonomy-quiz",
+    "questions": 12,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 12,
+    "perOptionRationale": 12,
+    "internal": 5,
+    "words": 2681,
+    "flags": []
+   },
+   {
+    "slug": "hallucinations/uncertainty-quiz",
+    "questions": 10,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 10,
+    "perOptionRationale": 5,
+    "internal": 12,
+    "words": 1575,
+    "flags": [
+     "5 answer block(s) don't discuss every option"
+    ]
+   },
+   {
+    "slug": "llm-foundations/behavior-and-capstone-quiz",
+    "questions": 8,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 8,
+    "perOptionRationale": 8,
+    "internal": 5,
+    "words": 1810,
+    "flags": []
+   },
+   {
+    "slug": "llm-foundations/decoding-inference-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 6,
+    "words": 1498,
+    "flags": []
+   },
+   {
+    "slug": "llm-foundations/efficient-architectures-quiz",
+    "questions": 8,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 8,
+    "perOptionRationale": 8,
+    "internal": 9,
+    "words": 1816,
+    "flags": []
+   },
+   {
+    "slug": "llm-foundations/tokenization-embeddings-quiz",
+    "questions": 9,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 9,
+    "perOptionRationale": 4,
+    "internal": 14,
+    "words": 1649,
+    "flags": [
+     "5 answer block(s) don't discuss every option"
+    ]
+   },
+   {
+    "slug": "llm-foundations/training-pipeline-quiz",
+    "questions": 8,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 8,
+    "perOptionRationale": 8,
+    "internal": 10,
+    "words": 1782,
+    "flags": []
+   },
+   {
+    "slug": "llm-foundations/transformer-block-quiz",
+    "questions": 8,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 8,
+    "perOptionRationale": 8,
+    "internal": 9,
+    "words": 1593,
+    "flags": []
+   },
+   {
+    "slug": "llm-foundations/whole-game-quiz",
+    "questions": 9,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 9,
+    "perOptionRationale": 8,
+    "internal": 11,
+    "words": 1604,
+    "flags": [
+     "1 answer block(s) don't discuss every option"
+    ]
+   },
+   {
+    "slug": "mcp/mcp-auth-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 2,
+    "words": 966,
+    "flags": []
+   },
+   {
+    "slug": "mcp/mcp-debugging-quiz",
+    "questions": 5,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 5,
+    "perOptionRationale": 5,
+    "internal": 2,
+    "words": 760,
+    "flags": []
+   },
+   {
+    "slug": "mcp/mcp-deployment-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 2,
+    "words": 848,
+    "flags": []
+   },
+   {
+    "slug": "mcp/mcp-primitives-quiz",
+    "questions": 5,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 5,
+    "perOptionRationale": 5,
+    "internal": 2,
+    "words": 760,
+    "flags": []
+   },
+   {
+    "slug": "mcp/mcp-server-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 2,
+    "words": 1068,
+    "flags": []
+   },
+   {
+    "slug": "mcp/mcp-transports-quiz",
+    "questions": 5,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 5,
+    "perOptionRationale": 5,
+    "internal": 2,
+    "words": 829,
+    "flags": []
+   },
+   {
+    "slug": "prompt-engineering/decomposition-output-quiz",
+    "questions": 10,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 10,
+    "perOptionRationale": 1,
+    "internal": 9,
+    "words": 2196,
+    "flags": [
+     "9 answer block(s) don't discuss every option"
+    ]
+   },
+   {
+    "slug": "prompt-engineering/eval-shipping-quiz",
+    "questions": 10,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 10,
+    "perOptionRationale": 10,
+    "internal": 11,
+    "words": 1998,
+    "flags": []
+   },
+   {
+    "slug": "prompt-engineering/examples-icl-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 6,
+    "words": 2081,
+    "flags": []
+   },
+   {
+    "slug": "prompt-engineering/foundations-quiz",
+    "questions": 10,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 10,
+    "perOptionRationale": 7,
+    "internal": 7,
+    "words": 1763,
+    "flags": [
+     "3 answer block(s) don't discuss every option"
+    ]
+   },
+   {
+    "slug": "prompt-engineering/reasoning-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 5,
+    "words": 1044,
+    "flags": []
+   },
+   {
+    "slug": "prompt-engineering/robustness-capstone-quiz",
+    "questions": 10,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 10,
+    "perOptionRationale": 10,
+    "internal": 7,
+    "words": 1886,
+    "flags": []
+   },
+   {
+    "slug": "prompt-engineering/roles-steering-quiz",
+    "questions": 10,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 10,
+    "perOptionRationale": 4,
+    "internal": 6,
+    "words": 1924,
+    "flags": [
+     "6 answer block(s) don't discuss every option"
+    ]
+   },
+   {
+    "slug": "prompt-engineering/structure-formatting-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 12,
+    "words": 1633,
+    "flags": []
+   },
+   {
+    "slug": "python-data-apis/ai-service-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 8,
+    "words": 2283,
+    "flags": []
+   },
+   {
+    "slug": "python-data-apis/api-calling-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 9,
+    "words": 2366,
+    "flags": []
+   },
+   {
+    "slug": "python-data-apis/async-and-batching-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 6,
+    "words": 1899,
+    "flags": []
+   },
+   {
+    "slug": "python-data-apis/data-cleaning-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 6,
+    "words": 1950,
+    "flags": []
+   },
+   {
+    "slug": "python-data-apis/environments-tooling-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 5,
+    "words": 1898,
+    "flags": []
+   },
+   {
+    "slug": "python-data-apis/files-and-formats-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 7,
+    "words": 1739,
+    "flags": []
+   },
+   {
+    "slug": "python-data-apis/numpy-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 5,
+    "words": 2029,
+    "flags": []
+   },
+   {
+    "slug": "python-data-apis/pandas-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 6,
+    "words": 1669,
+    "flags": []
+   },
+   {
+    "slug": "python-data-apis/python-data-structures-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 6,
+    "words": 1449,
+    "flags": []
+   },
+   {
+    "slug": "python-data-apis/secrets-config-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 5,
+    "words": 1925,
+    "flags": []
+   },
+   {
+    "slug": "rag/chunking-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 6,
+    "words": 1755,
+    "flags": []
+   },
+   {
+    "slug": "rag/hybrid-search-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 6,
+    "words": 1774,
+    "flags": []
+   },
+   {
+    "slug": "rag/rag-eval-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 5,
+    "internal": 7,
+    "words": 2401,
+    "flags": [
+     "1 answer block(s) don't discuss every option"
+    ]
+   },
+   {
+    "slug": "rag/reranking-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 8,
+    "words": 1724,
+    "flags": []
+   },
+   {
+    "slug": "rag/retrieval-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 7,
+    "words": 1507,
+    "flags": []
+   },
+   {
+    "slug": "rag/vector-db-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 8,
+    "words": 2043,
+    "flags": []
+   },
+   {
+    "slug": "structured-outputs/capstone-and-eval-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 9,
+    "words": 1386,
+    "flags": []
+   },
+   {
+    "slug": "structured-outputs/extraction-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 11,
+    "words": 1401,
+    "flags": []
+   },
+   {
+    "slug": "structured-outputs/foundations-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 6,
+    "words": 974,
+    "flags": []
+   },
+   {
+    "slug": "structured-outputs/mechanisms-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 10,
+    "words": 1313,
+    "flags": []
+   },
+   {
+    "slug": "structured-outputs/reliability-design-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 12,
+    "words": 1784,
+    "flags": []
+   },
+   {
+    "slug": "structured-outputs/runtime-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 11,
+    "words": 1593,
+    "flags": []
+   },
+   {
+    "slug": "structured-outputs/schema-design-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 8,
+    "words": 1224,
+    "flags": []
+   },
+   {
+    "slug": "tools-function-calling/advanced-tools-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 8,
+    "words": 1233,
+    "flags": []
+   },
+   {
+    "slug": "tools-function-calling/execution-safety-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 0,
+    "internal": 8,
+    "words": 1350,
+    "flags": [
+     "6 answer block(s) don't discuss every option"
+    ]
+   },
+   {
+    "slug": "tools-function-calling/foundations-quiz",
+    "questions": 10,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 10,
+    "perOptionRationale": 10,
+    "internal": 9,
+    "words": 1626,
+    "flags": []
+   },
+   {
+    "slug": "tools-function-calling/orchestration-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 2,
+    "internal": 10,
+    "words": 1312,
+    "flags": [
+     "4 answer block(s) don't discuss every option"
+    ]
+   },
+   {
+    "slug": "tools-function-calling/reliability-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 10,
+    "words": 1282,
+    "flags": []
+   },
+   {
+    "slug": "tools-function-calling/schema-design-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 1,
+    "internal": 0,
+    "words": 1429,
+    "flags": [
+     "5 answer block(s) don't discuss every option"
+    ]
+   },
+   {
+    "slug": "tools-function-calling/tool-selection-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 9,
+    "words": 1466,
+    "flags": []
+   }
+  ],
+  "workedExamples": [
+   {
+    "slug": "ai-foundations/agents-vs-chatbots-worked-example",
+    "codeBlocks": 14,
+    "internal": 8,
+    "words": 1733,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "ai-foundations/backprop-worked-example",
+    "codeBlocks": 13,
+    "internal": 9,
+    "words": 1441,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "ai-foundations/bias-variance-worked-example",
+    "codeBlocks": 7,
+    "internal": 8,
+    "words": 1547,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "ai-foundations/building-an-eval-set-worked-example",
+    "codeBlocks": 9,
+    "internal": 10,
+    "words": 1432,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "ai-foundations/data-splits-and-leakage-worked-example",
+    "codeBlocks": 6,
+    "internal": 7,
+    "words": 1506,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "ai-foundations/scaling-laws-worked-example",
+    "codeBlocks": 6,
+    "internal": 6,
+    "words": 1603,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "ai-foundations/supervised-learning-worked-example",
+    "codeBlocks": 4,
+    "internal": 6,
+    "words": 1954,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "ai-foundations/tokens-and-cost-worked-example",
+    "codeBlocks": 13,
+    "internal": 7,
+    "words": 1392,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "ai-foundations/unsupervised-clustering-worked-example",
+    "codeBlocks": 3,
+    "internal": 8,
+    "words": 1720,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "ai-literacy/catch-a-hallucination-worked-example",
+    "codeBlocks": 3,
+    "internal": 7,
+    "words": 1578,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "ai-literacy/spot-bias-in-ai-output-worked-example",
+    "codeBlocks": 6,
+    "internal": 6,
+    "words": 1614,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "mcp/mcp-auth-worked-example",
+    "codeBlocks": 6,
+    "internal": 2,
+    "words": 564,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "mcp/mcp-debugging-worked-example",
+    "codeBlocks": 9,
+    "internal": 2,
+    "words": 675,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "mcp/mcp-deployment-worked-example",
+    "codeBlocks": 7,
+    "internal": 2,
+    "words": 567,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "mcp/mcp-primitives-worked-example",
+    "codeBlocks": 7,
+    "internal": 2,
+    "words": 546,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "mcp/mcp-server-worked-example",
+    "codeBlocks": 10,
+    "internal": 2,
+    "words": 639,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "mcp/mcp-transports-worked-example",
+    "codeBlocks": 8,
+    "internal": 2,
+    "words": 508,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "prompt-engineering/structured-prompt-worked-example",
+    "codeBlocks": 3,
+    "internal": 7,
+    "words": 694,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "rag/chunking-worked-example",
+    "codeBlocks": 10,
+    "internal": 6,
+    "words": 1838,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "rag/hybrid-search-worked-example",
+    "codeBlocks": 9,
+    "internal": 10,
+    "words": 1694,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "rag/rag-eval-worked-example",
+    "codeBlocks": 5,
+    "internal": 7,
+    "words": 1794,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "rag/reranking-worked-example",
+    "codeBlocks": 2,
+    "internal": 6,
+    "words": 1624,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "rag/retrieval-worked-example",
+    "codeBlocks": 4,
+    "internal": 6,
+    "words": 1400,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "rag/vector-db-worked-example",
+    "codeBlocks": 5,
+    "internal": 5,
+    "words": 1246,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "structured-outputs/from-prose-to-parsed-worked-example",
+    "codeBlocks": 6,
+    "internal": 8,
+    "words": 603,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "structured-outputs/gbnf-grammar-worked-example",
+    "codeBlocks": 3,
+    "internal": 6,
+    "words": 695,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "structured-outputs/reason-then-emit-worked-example",
+    "codeBlocks": 7,
+    "internal": 4,
+    "words": 677,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "structured-outputs/status-enum-worked-example",
+    "codeBlocks": 4,
+    "internal": 4,
+    "words": 666,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "tools-function-calling/self-correction-worked-example",
+    "codeBlocks": 8,
+    "internal": 5,
+    "words": 667,
+    "hasOutcome": true,
+    "flags": []
+   }
+  ],
+  "cheatsheets": [
+   {
+    "slug": "ai-literacy/ai-literacy-master-cheatsheet",
+    "words": 835,
+    "tableRows": 6,
+    "bullets": 14,
+    "density": 2.4,
+    "internal": 35,
+    "flags": []
+   },
+   {
+    "slug": "ai-literacy/everyday-prompting-cheatsheet",
+    "words": 708,
+    "tableRows": 6,
+    "bullets": 6,
+    "density": 1.7,
+    "internal": 9,
+    "flags": [
+     "low list/table density — check scanability"
+    ]
+   },
+   {
+    "slug": "context-engineering/context-engineering-master-cheatsheet",
+    "words": 719,
+    "tableRows": 6,
+    "bullets": 14,
+    "density": 2.8,
+    "internal": 5,
+    "flags": []
+   },
+   {
+    "slug": "context-engineering/failure-mode-cheatsheet",
+    "words": 600,
+    "tableRows": 18,
+    "bullets": 5,
+    "density": 3.8,
+    "internal": 9,
+    "flags": []
+   },
+   {
+    "slug": "context-engineering/memory-and-compaction-cheatsheet",
+    "words": 768,
+    "tableRows": 34,
+    "bullets": 10,
+    "density": 5.7,
+    "internal": 11,
+    "flags": []
+   },
+   {
+    "slug": "context-engineering/retrieval-vs-stuffing-cheatsheet",
+    "words": 597,
+    "tableRows": 8,
+    "bullets": 5,
+    "density": 2.2,
+    "internal": 7,
+    "flags": []
+   },
+   {
+    "slug": "context-engineering/selection-and-ordering-cheatsheet",
+    "words": 686,
+    "tableRows": 20,
+    "bullets": 10,
+    "density": 4.4,
+    "internal": 10,
+    "flags": []
+   },
+   {
+    "slug": "context-engineering/token-budget-cheatsheet",
+    "words": 641,
+    "tableRows": 18,
+    "bullets": 13,
+    "density": 4.8,
+    "internal": 14,
+    "flags": []
+   },
+   {
+    "slug": "context-engineering/tools-and-caching-cheatsheet",
+    "words": 636,
+    "tableRows": 14,
+    "bullets": 6,
+    "density": 3.1,
+    "internal": 10,
+    "flags": []
+   },
+   {
+    "slug": "genai-app-dev/perf-cost-cheatsheet",
+    "words": 628,
+    "tableRows": 26,
+    "bullets": 0,
+    "density": 4.1,
+    "internal": 13,
+    "flags": []
+   },
+   {
+    "slug": "genai-app-dev/provider-layer-cheatsheet",
+    "words": 681,
+    "tableRows": 23,
+    "bullets": 7,
+    "density": 4.4,
+    "internal": 8,
+    "flags": []
+   },
+   {
+    "slug": "genai-app-dev/reliability-safety-cheatsheet",
+    "words": 602,
+    "tableRows": 6,
+    "bullets": 16,
+    "density": 3.7,
+    "internal": 13,
+    "flags": []
+   },
+   {
+    "slug": "genai-app-dev/shipping-operating-cheatsheet",
+    "words": 529,
+    "tableRows": 14,
+    "bullets": 11,
+    "density": 4.7,
+    "internal": 12,
+    "flags": []
+   },
+   {
+    "slug": "genai-app-dev/state-and-tools-cheatsheet",
+    "words": 679,
+    "tableRows": 16,
+    "bullets": 13,
+    "density": 4.3,
+    "internal": 13,
+    "flags": []
+   },
+   {
+    "slug": "genai-app-dev/streaming-ux-cheatsheet",
+    "words": 631,
+    "tableRows": 22,
+    "bullets": 15,
+    "density": 5.9,
+    "internal": 10,
+    "flags": []
+   },
+   {
+    "slug": "hallucinations/detection-cheatsheet",
+    "words": 559,
+    "tableRows": 22,
+    "bullets": 0,
+    "density": 3.9,
+    "internal": 14,
+    "flags": []
+   },
+   {
+    "slug": "hallucinations/evaluation-cheatsheet",
+    "words": 686,
+    "tableRows": 22,
+    "bullets": 9,
+    "density": 4.5,
+    "internal": 6,
+    "flags": []
+   },
+   {
+    "slug": "hallucinations/foundations-cheatsheet",
+    "words": 485,
+    "tableRows": 15,
+    "bullets": 7,
+    "density": 4.5,
+    "internal": 14,
+    "flags": []
+   },
+   {
+    "slug": "hallucinations/mitigation-cheatsheet",
+    "words": 495,
+    "tableRows": 13,
+    "bullets": 5,
+    "density": 3.6,
+    "internal": 17,
+    "flags": []
+   },
+   {
+    "slug": "hallucinations/production-reliability-cheatsheet",
+    "words": 556,
+    "tableRows": 15,
+    "bullets": 8,
+    "density": 4.1,
+    "internal": 22,
+    "flags": []
+   },
+   {
+    "slug": "hallucinations/uncertainty-cheatsheet",
+    "words": 456,
+    "tableRows": 11,
+    "bullets": 5,
+    "density": 3.5,
+    "internal": 11,
+    "flags": []
+   },
+   {
+    "slug": "mcp/mcp-auth-cheatsheet",
+    "words": 310,
+    "tableRows": 19,
+    "bullets": 9,
+    "density": 9,
+    "internal": 1,
+    "flags": []
+   },
+   {
+    "slug": "mcp/mcp-debugging-cheatsheet",
+    "words": 312,
+    "tableRows": 24,
+    "bullets": 5,
+    "density": 9.3,
+    "internal": 0,
+    "flags": []
+   },
+   {
+    "slug": "mcp/mcp-deployment-cheatsheet",
+    "words": 430,
+    "tableRows": 27,
+    "bullets": 14,
+    "density": 9.5,
+    "internal": 0,
+    "flags": []
+   },
+   {
+    "slug": "mcp/mcp-primitives-cheatsheet",
+    "words": 345,
+    "tableRows": 28,
+    "bullets": 5,
+    "density": 9.6,
+    "internal": 0,
+    "flags": []
+   },
+   {
+    "slug": "mcp/mcp-server-cheatsheet",
+    "words": 372,
+    "tableRows": 19,
+    "bullets": 11,
+    "density": 8.1,
+    "internal": 2,
+    "flags": []
+   },
+   {
+    "slug": "mcp/mcp-transports-cheatsheet",
+    "words": 356,
+    "tableRows": 32,
+    "bullets": 10,
+    "density": 11.8,
+    "internal": 1,
+    "flags": []
+   },
+   {
+    "slug": "prompt-engineering/decomposition-output-cheatsheet",
+    "words": 1004,
+    "tableRows": 16,
+    "bullets": 11,
+    "density": 2.7,
+    "internal": 13,
+    "flags": []
+   },
+   {
+    "slug": "prompt-engineering/eval-versioning-cheatsheet",
+    "words": 695,
+    "tableRows": 14,
+    "bullets": 22,
+    "density": 5.2,
+    "internal": 9,
+    "flags": []
+   },
+   {
+    "slug": "prompt-engineering/few-shot-design-cheatsheet",
+    "words": 700,
+    "tableRows": 15,
+    "bullets": 7,
+    "density": 3.1,
+    "internal": 14,
+    "flags": []
+   },
+   {
+    "slug": "prompt-engineering/prompt-first-principles-cheatsheet",
+    "words": 560,
+    "tableRows": 8,
+    "bullets": 6,
+    "density": 2.5,
+    "internal": 6,
+    "flags": []
+   },
+   {
+    "slug": "prompt-engineering/robustness-safety-cheatsheet",
+    "words": 623,
+    "tableRows": 20,
+    "bullets": 13,
+    "density": 5.3,
+    "internal": 8,
+    "flags": []
+   },
+   {
+    "slug": "rag/chunking-cheatsheet",
+    "words": 999,
+    "tableRows": 7,
+    "bullets": 19,
+    "density": 2.6,
+    "internal": 8,
+    "flags": []
+   },
+   {
+    "slug": "rag/hybrid-search-cheatsheet",
+    "words": 991,
+    "tableRows": 21,
+    "bullets": 5,
+    "density": 2.6,
+    "internal": 11,
+    "flags": []
+   },
+   {
+    "slug": "rag/rag-eval-cheatsheet",
+    "words": 1371,
+    "tableRows": 19,
+    "bullets": 14,
+    "density": 2.4,
+    "internal": 6,
+    "flags": []
+   },
+   {
+    "slug": "rag/reranking-cheatsheet",
+    "words": 922,
+    "tableRows": 19,
+    "bullets": 3,
+    "density": 2.4,
+    "internal": 7,
+    "flags": []
+   },
+   {
+    "slug": "rag/retrieval-cheatsheet",
+    "words": 1043,
+    "tableRows": 24,
+    "bullets": 0,
+    "density": 2.3,
+    "internal": 5,
+    "flags": []
+   },
+   {
+    "slug": "rag/vector-db-cheatsheet",
+    "words": 1188,
+    "tableRows": 14,
+    "bullets": 15,
+    "density": 2.4,
+    "internal": 6,
+    "flags": []
+   },
+   {
+    "slug": "structured-outputs/cross-provider-and-eval-cheatsheet",
+    "words": 666,
+    "tableRows": 18,
+    "bullets": 13,
+    "density": 4.7,
+    "internal": 6,
+    "flags": []
+   },
+   {
+    "slug": "structured-outputs/decoding-mechanisms-cheatsheet",
+    "words": 520,
+    "tableRows": 17,
+    "bullets": 3,
+    "density": 3.8,
+    "internal": 8,
+    "flags": []
+   },
+   {
+    "slug": "structured-outputs/extraction-pipeline-cheatsheet",
+    "words": 419,
+    "tableRows": 10,
+    "bullets": 0,
+    "density": 2.4,
+    "internal": 7,
+    "flags": []
+   },
+   {
+    "slug": "structured-outputs/failure-and-repair-cheatsheet",
+    "words": 564,
+    "tableRows": 10,
+    "bullets": 5,
+    "density": 2.7,
+    "internal": 10,
+    "flags": []
+   },
+   {
+    "slug": "structured-outputs/field-design-cheatsheet",
+    "words": 511,
+    "tableRows": 13,
+    "bullets": 0,
+    "density": 2.5,
+    "internal": 10,
+    "flags": []
+   },
+   {
+    "slug": "tools-function-calling/error-handling-cheatsheet",
+    "words": 418,
+    "tableRows": 14,
+    "bullets": 5,
+    "density": 4.5,
+    "internal": 9,
+    "flags": []
+   },
+   {
+    "slug": "tools-function-calling/orchestration-cheatsheet",
+    "words": 559,
+    "tableRows": 20,
+    "bullets": 5,
+    "density": 4.5,
+    "internal": 9,
+    "flags": []
+   },
+   {
+    "slug": "tools-function-calling/scaling-tools-cheatsheet",
+    "words": 472,
+    "tableRows": 13,
+    "bullets": 4,
+    "density": 3.6,
+    "internal": 10,
+    "flags": []
+   },
+   {
+    "slug": "tools-function-calling/tool-calling-glossary-cheatsheet",
+    "words": 516,
+    "tableRows": 13,
+    "bullets": 4,
+    "density": 3.3,
+    "internal": 14,
+    "flags": []
+   },
+   {
+    "slug": "tools-function-calling/tool-schema-design-cheatsheet",
+    "words": 291,
+    "tableRows": 8,
+    "bullets": 5,
+    "density": 4.5,
+    "internal": 0,
+    "flags": []
+   }
+  ],
+  "mistakes": [
+   {
+    "slug": "context-engineering/budgeting-common-mistakes",
+    "mistakes": 6,
+    "symptom": 6,
+    "cause": 6,
+    "fix": 6,
+    "prevent": 1,
+    "words": 846,
+    "internal": 9,
+    "flags": []
+   },
+   {
+    "slug": "context-engineering/relevance-filtering-common-mistakes",
+    "mistakes": 6,
+    "symptom": 6,
+    "cause": 6,
+    "fix": 6,
+    "prevent": 1,
+    "words": 979,
+    "internal": 9,
+    "flags": []
+   },
+   {
+    "slug": "mcp/mcp-auth-common-mistakes",
+    "mistakes": 6,
+    "symptom": 6,
+    "cause": 6,
+    "fix": 6,
+    "prevent": 0,
+    "words": 664,
+    "internal": 2,
+    "flags": []
+   },
+   {
+    "slug": "mcp/mcp-debugging-common-mistakes",
+    "mistakes": 5,
+    "symptom": 5,
+    "cause": 5,
+    "fix": 5,
+    "prevent": 0,
+    "words": 553,
+    "internal": 2,
+    "flags": []
+   },
+   {
+    "slug": "mcp/mcp-deployment-common-mistakes",
+    "mistakes": 6,
+    "symptom": 6,
+    "cause": 6,
+    "fix": 6,
+    "prevent": 0,
+    "words": 669,
+    "internal": 3,
+    "flags": []
+   },
+   {
+    "slug": "mcp/mcp-primitives-common-mistakes",
+    "mistakes": 5,
+    "symptom": 5,
+    "cause": 5,
+    "fix": 5,
+    "prevent": 1,
+    "words": 616,
+    "internal": 2,
+    "flags": []
+   },
+   {
+    "slug": "mcp/mcp-server-common-mistakes",
+    "mistakes": 6,
+    "symptom": 6,
+    "cause": 6,
+    "fix": 6,
+    "prevent": 1,
+    "words": 792,
+    "internal": 2,
+    "flags": []
+   },
+   {
+    "slug": "mcp/mcp-transports-common-mistakes",
+    "mistakes": 5,
+    "symptom": 5,
+    "cause": 5,
+    "fix": 5,
+    "prevent": 0,
+    "words": 644,
+    "internal": 2,
+    "flags": []
+   },
+   {
+    "slug": "prompt-engineering/robustness-common-mistakes",
+    "mistakes": 6,
+    "symptom": 6,
+    "cause": 6,
+    "fix": 6,
+    "prevent": 1,
+    "words": 873,
+    "internal": 6,
+    "flags": []
+   },
+   {
+    "slug": "python-data-apis/api-calling-common-mistakes",
+    "mistakes": 6,
+    "symptom": 5,
+    "cause": 5,
+    "fix": 5,
+    "prevent": 1,
+    "words": 1581,
+    "internal": 8,
+    "flags": [
+     "1 mistake(s) without a named symptom",
+     "1 mistake(s) without a cause",
+     "1 mistake(s) without a fix"
+    ]
+   },
+   {
+    "slug": "python-data-apis/data-cleaning-common-mistakes",
+    "mistakes": 5,
+    "symptom": 5,
+    "cause": 5,
+    "fix": 5,
+    "prevent": 1,
+    "words": 1546,
+    "internal": 8,
+    "flags": []
+   },
+   {
+    "slug": "rag/chunking-common-mistakes",
+    "mistakes": 5,
+    "symptom": 5,
+    "cause": 5,
+    "fix": 5,
+    "prevent": 1,
+    "words": 1879,
+    "internal": 7,
+    "flags": []
+   },
+   {
+    "slug": "rag/hybrid-search-common-mistakes",
+    "mistakes": 5,
+    "symptom": 5,
+    "cause": 5,
+    "fix": 5,
+    "prevent": 1,
+    "words": 1681,
+    "internal": 7,
+    "flags": []
+   },
+   {
+    "slug": "rag/rag-eval-common-mistakes",
+    "mistakes": 5,
+    "symptom": 5,
+    "cause": 5,
+    "fix": 5,
+    "prevent": 1,
+    "words": 1744,
+    "internal": 9,
+    "flags": []
+   },
+   {
+    "slug": "rag/reranking-common-mistakes",
+    "mistakes": 6,
+    "symptom": 6,
+    "cause": 6,
+    "fix": 6,
+    "prevent": 1,
+    "words": 1750,
+    "internal": 7,
+    "flags": []
+   },
+   {
+    "slug": "rag/retrieval-common-mistakes",
+    "mistakes": 5,
+    "symptom": 5,
+    "cause": 5,
+    "fix": 5,
+    "prevent": 1,
+    "words": 1698,
+    "internal": 7,
+    "flags": []
+   },
+   {
+    "slug": "rag/vector-db-common-mistakes",
+    "mistakes": 5,
+    "symptom": 5,
+    "cause": 5,
+    "fix": 5,
+    "prevent": 1,
+    "words": 1708,
+    "internal": 8,
+    "flags": []
+   },
+   {
+    "slug": "tools-function-calling/advanced-tools-common-mistakes",
+    "mistakes": 5,
+    "symptom": 5,
+    "cause": 5,
+    "fix": 5,
+    "prevent": 1,
+    "words": 773,
+    "internal": 9,
+    "flags": []
+   },
+   {
+    "slug": "tools-function-calling/execution-safety-common-mistakes",
+    "mistakes": 5,
+    "symptom": 5,
+    "cause": 5,
+    "fix": 5,
+    "prevent": 1,
+    "words": 1014,
+    "internal": 8,
+    "flags": []
+   },
+   {
+    "slug": "tools-function-calling/foundations-common-mistakes",
+    "mistakes": 5,
+    "symptom": 5,
+    "cause": 5,
+    "fix": 5,
+    "prevent": 1,
+    "words": 828,
+    "internal": 6,
+    "flags": []
+   },
+   {
+    "slug": "tools-function-calling/orchestration-common-mistakes",
+    "mistakes": 5,
+    "symptom": 5,
+    "cause": 5,
+    "fix": 5,
+    "prevent": 1,
+    "words": 999,
+    "internal": 7,
+    "flags": []
+   },
+   {
+    "slug": "tools-function-calling/reliability-common-mistakes",
+    "mistakes": 5,
+    "symptom": 5,
+    "cause": 5,
+    "fix": 5,
+    "prevent": 1,
+    "words": 903,
+    "internal": 6,
+    "flags": []
+   },
+   {
+    "slug": "tools-function-calling/schema-design-common-mistakes",
+    "mistakes": 6,
+    "symptom": 6,
+    "cause": 6,
+    "fix": 6,
+    "prevent": 1,
+    "words": 1169,
+    "internal": 0,
+    "flags": []
+   },
+   {
+    "slug": "tools-function-calling/tool-selection-common-mistakes",
+    "mistakes": 5,
+    "symptom": 5,
+    "cause": 5,
+    "fix": 5,
+    "prevent": 1,
+    "words": 1042,
+    "internal": 8,
+    "flags": []
+   }
+  ]
+ },
+ "duplicateStems": []
+}

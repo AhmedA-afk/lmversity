@@ -17,6 +17,7 @@
     "check:links": "node scripts/check-links.mjs",
     "check:content": "node scripts/check-content.mjs",
     "registry": "node scripts/build-content-registry.mjs",
+    "audit:families": "node scripts/audit-families.mjs",
     "dates": "node scripts/build-content-dates.mjs",
     "prelaunch": "npm run og && npm run build && npm run check:links",
     "illustrations": "python3 scripts/generate-illustrations.py",
