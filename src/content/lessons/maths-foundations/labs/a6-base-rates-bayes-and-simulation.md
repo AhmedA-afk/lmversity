@@ -31,7 +31,7 @@ practice ladder. The artifact
 must contain:
 
 1. the A6 problem statement in your own words;
-2. event notation and assumptions from conditional probability,
+2. event notation and assumptions from [conditional probability](/learn/maths-foundations/conditional-probability),
    total probability, and Bayes’ rule;
 3. the exact frequency-table solution;
 4. a seeded individual-case simulation and a comparison with the table;
@@ -85,7 +85,7 @@ without the condition. Apply the conditional rates inside each true-label group:
 | `T−` no flag    | 20 (FN)  | 18,810 (TN) | 18,830 |
 | **total**       | **200**  | **19,800** | **20,000** |
 
-The table is a concrete version of the law of total probability. Every cell has
+The table is a concrete version of [the law of total probability](/learn/maths-foundations/law-of-total-probability). Every cell has
 an input group, a conditional rate, and an output count. Check that rows and
 columns add to the same grand total before calculating a posterior.
 
@@ -373,6 +373,6 @@ and escalation path are specified.
 
 ## Continue, go deeper, apply it
 
-- Continue: Random variables and support
+- Continue: [Random variables and support](/learn/maths-foundations/random-variables-and-support)
 - Go deeper: Monte Carlo estimation and standard errors
 - Apply it: Classifiers, thresholds, and calibration

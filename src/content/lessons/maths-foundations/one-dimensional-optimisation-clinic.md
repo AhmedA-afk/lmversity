@@ -50,7 +50,7 @@ Loss decrease on one fixture does not prove generalisation or convergence on a n
 
 ## Hands-on
 
-Implement gradient descent with optional backtracking for a quadratic and one non-quadratic loss. Plot the trace and save the best point.
+Implement [gradient descent](/learn/maths-foundations/gradient-descent-intuition) with optional backtracking for a quadratic and one non-quadratic loss. Plot the trace and save the best point.
 
 **Failure state:** run the quadratic with `ηk>2`, and allow a log-loss step to cross zero. **Test:** assert divergence is flagged and invalid-domain proposals are rejected before evaluation. **Reset:** reload the saved best point, lower `η`, and rerun.
 
@@ -67,6 +67,6 @@ One-dimensional descent does not guarantee success in non-convex, stochastic, or
 
 ## Continue, go deeper, apply it
 
-- Continue: Partial derivatives and coordinate-wise sensitivity
-- Go deeper: Hessians, curvature, and saddle points
+- Continue: [Partial derivatives and coordinate-wise sensitivity](/learn/maths-foundations/partial-derivatives-and-coordinate-wise-sensitivity)
+- Go deeper: [Hessians, curvature, and saddle points](/learn/maths-foundations/hessians-curvature-and-saddle-points)
 - Apply it: Optimisation, loss, and gradient descent

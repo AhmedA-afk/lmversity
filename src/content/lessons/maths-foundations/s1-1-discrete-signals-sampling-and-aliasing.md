@@ -120,6 +120,6 @@ resampling. It also does not say how much margin a production sensor needs.
 
 ## Continue, go deeper, apply it
 
-- Continue: Convolution and correlation
+- Continue: [Convolution and correlation](/learn/maths-foundations/s1-2-convolution-and-correlation)
 - Go deeper: Fourier bases and the DFT
-- Apply it: Image transforms, interpolation, and invariance
+- Apply it: [Image transforms, interpolation, and invariance](/learn/maths-foundations/s1-7-image-transforms-interpolation-and-invariance)

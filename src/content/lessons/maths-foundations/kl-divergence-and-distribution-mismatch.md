@@ -8,7 +8,7 @@ duration: "4 min read"
 
 ## The short answer
 
-KL divergence measures the extra expected log loss incurred when distribution Q is used to represent data from P: `D_KL(P||Q)=sum P(x) log(P(x)/Q(x))`. It is nonnegative and zero only when P=Q almost everywhere, but it is asymmetric and can be infinite when Q assigns zero where P has mass. Treat it as directed mismatch, not a symmetric distance.
+[KL divergence](/learn/maths-foundations/kl-divergence) measures the extra expected log loss incurred when distribution Q is used to represent data from P: `D_KL(P||Q)=sum P(x) log(P(x)/Q(x))`. It is nonnegative and zero only when P=Q almost everywhere, but it is asymmetric and can be infinite when Q assigns zero where P has mass. Treat it as directed mismatch, not a symmetric distance.
 
 ## Why this matters
 
@@ -92,6 +92,6 @@ KL does not identify causal shift, guarantee model harm, or function as a symmet
 
 ## Continue, go deeper, apply it
 
-- Continue: Mutual information and representation relevance
+- Continue: [Mutual information and representation relevance](/learn/maths-foundations/mutual-information-and-representation-relevance)
 - Go deeper: Latent variables and ELBO intuition
 - Apply it: Grounding, citations, and context budgets

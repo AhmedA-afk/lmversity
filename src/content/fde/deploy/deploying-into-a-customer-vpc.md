@@ -144,7 +144,7 @@ The most common hard blocker in an AI deployment into a private VPC: your servic
 
 1. **Allowlist the vendor's hostname on the proxy.** Fastest, most fragile. Vendor IPs change, the allowlist is per-hostname, and someone will ask why customer data is crossing to a third party at all.
 2. **Use the cloud-native private endpoint.** Bedrock via a VPC interface endpoint, Azure OpenAI via a private endpoint, Vertex via Private Service Connect. Traffic never traverses the public internet; it stays on the cloud provider's backbone inside their account. This is the answer that gets approved in banks, and it is why "which cloud is the model on" is a first-call question, not a detail.
-3. **Self-host the model inside the perimeter.** Highest cost, no external dependency, and the only option once you go further down the spectrum. Covered later in this phase.
+3. **Self-host the model inside the perimeter.** Highest cost, no external dependency, and the only option once you go further down [the spectrum](/roles/forward-deployed-engineer/deploy/the-spectrum-from-saas-to-air-gapped). Covered later in this phase.
 
 Have a view on which one you are proposing before the security call, and know the second one exists. An FDE who says "we can use the Bedrock VPC endpoint in your account, so no data leaves your VPC boundary" has changed the temperature of the room.
 

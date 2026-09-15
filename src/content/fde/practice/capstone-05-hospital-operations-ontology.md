@@ -87,7 +87,7 @@ This capstone still has a hard gate on this line, exactly as the other four do. 
 
 **Part one: the question set, scored against a baseline.** Fifteen real operational questions Priyanka or a bed manager would actually ask: "how many ICU beds are free right now, across all sites," "which patients at site ngr-c are past their expected discharge date," "what is average length of stay this month at ngr-b, ICU ward only." For each, write the gold answer by hand against the raw exports — this is tedious on purpose, because it is also the baseline. Time yourself doing it by hand, the way a Nilgiri analyst does today. That time is your baseline number.
 
-**Part two: the access-control set.** For each of the three roles, a list of questions that role should be able to answer and a list it should not — a ward nurse asking for another ward's patient list, a bed manager asking for a named patient's diagnosis at another site, the COO asking for anything patient-level anywhere. This is the leak-rate gate from Capstone 01, restated for an ontology instead of a retrieval system: it must be zero.
+**Part two: the access-control set.** For each of the three roles, a list of questions that role should be able to answer and a list it should not — a ward nurse asking for another ward's patient list, a bed manager asking for a named patient's diagnosis at another site, the COO asking for anything patient-level anywhere. This is the leak-rate gate from [Capstone 01](/roles/forward-deployed-engineer/practice/capstone-01-permissioned-research-assistant), restated for an ontology instead of a retrieval system: it must be zero.
 
 **The scorer.**
 

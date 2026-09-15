@@ -44,4 +44,4 @@ updated: "2026-08-30"
 
 ## Extension problems
 
-Derive the expected Brier score decomposition into uncertainty, resolution, and reliability for binned forecasts. Design a calibration audit that handles class imbalance, temporal shift, and small protected-group sample sizes.
+Derive the expected Brier score decomposition into uncertainty, resolution, and reliability for binned forecasts. Design a calibration audit that handles [class imbalance](/learn/machine-learning/ml-509-class-imbalance-resampling-and-class-weights), temporal shift, and small protected-group sample sizes.

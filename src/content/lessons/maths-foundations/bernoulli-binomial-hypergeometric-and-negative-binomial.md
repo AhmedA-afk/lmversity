@@ -135,7 +135,7 @@ and record whether each draw returns the token.
 
 These families do not make a rate constant, a visit independent, or a label
 correct. Overdispersion, temporal dependence, and heterogeneous probabilities
-can invalidate the simple formulas. Categorical and Multinomial models extend
+can invalidate the simple formulas. [Categorical and Multinomial models](/learn/maths-foundations/categorical-and-multinomial-models) extend
 the same logic beyond two outcomes.
 
 ## Continue, go deeper, apply it

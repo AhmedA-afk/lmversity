@@ -35,7 +35,7 @@ You have four days, working across the Rotterdam, Hamburg and Warsaw hubs, with 
 | Jonas Richter | Data Protection Officer | A documented lawful basis and a DPIA before anything touches personal data | A GDPR complaint that reopens the works council's original objection |
 | Isabelle Faure | Works Council representative, drivers' side | Written proof the new tool cannot become an individual driver score | A repeat of the blocked project under a different name |
 | Piotr Nowak | Dispatch Team Lead, Warsaw hub | A queue he can actually clear by the end of a shift | Another tool that adds fields to fill in rather than removing his backlog |
-| Sven Bakker | Head of IT Infrastructure | Everything hosted inside EU-region cloud, no exceptions | A data residency breach flagged by a public-sector customer's own auditors |
+| Sven Bakker | Head of IT Infrastructure | Everything hosted inside EU-region cloud, no exceptions | A [data residency](/roles/forward-deployed-engineer/data/data-residency-dpdp-gdpr-hipaa) breach flagged by a public-sector customer's own auditors |
 
 What each of them says, in the first meeting:
 

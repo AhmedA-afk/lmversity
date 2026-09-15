@@ -94,6 +94,6 @@ Bias–variance language does not identify the right target, fix selection bias,
 
 ## Continue, go deeper, apply it
 
-- Continue: Likelihood and log-likelihood
-- Go deeper: Confidence intervals and their frequentist meaning
+- Continue: [Likelihood and log-likelihood](/learn/maths-foundations/likelihood-and-log-likelihood)
+- Go deeper: [Confidence intervals and their frequentist meaning](/learn/maths-foundations/confidence-intervals-and-frequentist-meaning)
 - Apply it: Probability and statistics for ML

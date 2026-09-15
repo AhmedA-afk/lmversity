@@ -94,6 +94,6 @@ Diagnostics narrow causes; they do not prove global optimality, data validity, o
 
 ## Continue, go deeper, apply it
 
-- Continue: Newton, quasi-Newton, and coordinate-descent methods
-- Go deeper: Convex sets, convex functions, and guarantees
+- Continue: [Newton, quasi-Newton, and coordinate-descent methods](/learn/maths-foundations/newton-quasi-newton-and-coordinate-descent)
+- Go deeper: [Convex sets, convex functions, and guarantees](/learn/maths-foundations/convex-sets-functions-and-guarantees)
 - Apply it: Interpretability and error analysis

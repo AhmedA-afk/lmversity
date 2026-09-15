@@ -163,6 +163,6 @@ structure, sparsity, and task labels decide whether the geometry is useful.
 
 ## Continue, go deeper, apply it
 
-- Continue: Similarity-search design clinic
+- Continue: [Similarity-search design clinic](/learn/maths-foundations/similarity-search-design-clinic)
 - Go deeper: Linear algebra for ML
 - Apply it: A1 embedding geometry lab

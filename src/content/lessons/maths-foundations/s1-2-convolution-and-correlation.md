@@ -114,6 +114,6 @@ pleasant filtered signal can still erase the feature needed by a task.
 
 ## Continue, go deeper, apply it
 
-- Continue: Discrete convolution in CNNs
-- Go deeper: Frequency filtering and the convolution theorem
-- Apply it: Vision/audio case study
+- Continue: [Discrete convolution in CNNs](/learn/maths-foundations/s1-3-discrete-convolution-in-cnns)
+- Go deeper: [Frequency filtering and the convolution theorem](/learn/maths-foundations/s1-5-frequency-filtering-and-convolution-theorem)
+- Apply it: [Vision/audio case study](/learn/maths-foundations/s1-8-vision-audio-case-study)

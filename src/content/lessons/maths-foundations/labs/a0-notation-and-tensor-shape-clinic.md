@@ -198,7 +198,7 @@ column, record the decision the shape enables or blocks.
 | 6 | `X + sample_bias` | Predicted shape and the different meaning of a row bias. |
 | 7 | `X + 5.0` | Predicted shape and what a scalar broadcast preserves. |
 | 8 | `X + np.array([1.0, 2.0])` | Expected failure boundary and the incompatible aligned lengths. |
-| 9 | `X @ w` | Output shape and the axis contracted by matrix multiplication. |
+| 9 | `X @ w` | Output shape and the axis contracted by [matrix multiplication](/learn/maths-foundations/matrix-multiplication-mechanics). |
 | 10 | `X * w` | Output shape and why this is not the same as row scoring. |
 | 11 | `np.mean(X, axis=0)` | Output shape and whether the batch or feature axis was reduced. |
 | 12 | `np.mean(X, axis=1, keepdims=True)` | Output shape and why `keepdims` matters for later broadcasting. |
@@ -387,6 +387,6 @@ review after the shape boundary passes.
 
 ## Continue, go deeper, apply it
 
-- Continue: Vectors as coordinates and features
-- Go deeper: Partial derivatives and coordinate-wise sensitivity
+- Continue: [Vectors as coordinates](/learn/maths-foundations/vectors-as-coordinates-features) and features
+- Go deeper: [Partial derivatives and coordinate-wise sensitivity](/learn/maths-foundations/partial-derivatives-and-coordinate-wise-sensitivity)
 - Apply it: Linear algebra for ML

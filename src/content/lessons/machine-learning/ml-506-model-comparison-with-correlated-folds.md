@@ -68,4 +68,4 @@ Even perfect accounting for fold dependence does not establish that the data dis
 
 ## Continue, go deeper, apply it
 
-Continue with error analysis as a research loop. Go deeper with nested validation and external validation design. Apply this by making fold assignments a versioned project asset.
+Continue with [error analysis as a research loop](/learn/machine-learning/ml-507-error-analysis-as-a-research-loop). Go deeper with nested validation and external validation design. Apply this by making fold assignments a versioned project asset.

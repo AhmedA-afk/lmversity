@@ -1604,7 +1604,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-15 — Duplicate-candidate detection across content collections
 
-- Phase 0 "Identify duplicate or conflicting explanations". The registry now
+- Commit: `80a0e21`. Phase 0 "Identify duplicate or conflicting explanations". The registry now
   emits a `duplicates` array: fuzzy title-token similarity (Jaccard ≥0.5 or
   containment ≥0.7) plus slug-stem containment (`cosine-similarity` ⊂
   `cosine-similarity-angular-distance-embedding-retrieval`), scoped to lessons,
@@ -1625,6 +1625,38 @@ validation, deployment status, measured result when available, blockers, and nex
 - Next batch: start the island-linking pass on one track — `machine-learning`
   (162 islands) — using curriculum neighbours and duplicate-free canonical
   targets; then scale per track.
+
+### 2026-09-15 — Island-lesson concept-mention linking (first pass)
+
+- Works the investigate queue's largest bucket: live lessons with zero in-body
+  internal links (was 768 items: 653 lessons + 115 FDE).
+- Method: a gated linker (`/tmp`, not committed) builds a phrase→route map from
+  each track's lesson titles (full title + the distinctive prefix before the
+  first comma/colon/dash), then wraps the first in-body mention of each phrase
+  in a markdown link. Guards: skip code fences, headings, blockquotes, lines
+  already containing links, bold-marker lines, self-links, track-name phrases
+  ("classical AI" was wrongly matching its own hub page until stoplisted),
+  max 3 links per file, first-mention only.
+- Measured result: **768 → 464 islands** (−304). maths-foundations went 155→7;
+  machine-learning 162→109; deep-learning 125→74; ai-foundations 80→48;
+  classical-ai 80→78; FDE 115→97. Total links inserted: 337 files, ~488 links.
+- Many maths files already carried a plain-text "Continue / go deeper / apply
+  it" tail naming sibling lessons — the linker converted those pointers into
+  real links, which is the intended continuation behaviour.
+- The remaining 464 paraphrase their onward pointers ("a target-definition
+  review" → `ml-103-target-design-and-label-quality`) — fuzzy-matching those
+  has real wrong-target risk, so they stay for the editorial pass.
+- Working-tree note: 289 touched files had clean link-only diffs and were
+  committed; ~48 more touched files also carry unrelated in-flight user edits
+  and were deliberately left uncommitted — their links ride with the user's
+  own commit.
+- Validation: `npm run check:links` clean — all ~488 new routes resolve
+  (2,392 pages checked); `npm run check:content` clean; `npm run registry`
+  regenerated (dispositions now keep 1,872 / investigate 464 / expand 70);
+  `git diff --check` clean.
+- Next batch: course/role-path audit section — per-track gap briefs
+  (prerequisites, module endings in practice, dead-end final lessons) using
+  the registry's coverage matrix.
 
 ### 2026-09-14 — Master ecosystem backlog created
 

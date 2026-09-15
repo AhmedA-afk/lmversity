@@ -155,6 +155,6 @@ and a complete basis does not make the representation useful for a task.
 
 ## Continue, go deeper, apply it
 
-- Continue: Projections and residuals
+- Continue: [Projections and residuals](/learn/maths-foundations/projections-and-residuals)
 - Go deeper: Linear algebra for ML
 - Apply it: A1 embedding geometry lab

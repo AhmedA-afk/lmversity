@@ -69,7 +69,7 @@ and which assumptions would need monitoring.
 
 ## What this does not solve
 
-Decision theory cannot supply missing evidence or make a value judgment disappear.
+[Decision theory](/learn/classical-ai/knowledge-uncertainty/222-decision-theory-expected-utility-and-action-selection) cannot supply missing evidence or make a value judgment disappear.
 Stakeholders still need to approve which harms count and who bears them.
 
 ## Continue, go deeper, apply it

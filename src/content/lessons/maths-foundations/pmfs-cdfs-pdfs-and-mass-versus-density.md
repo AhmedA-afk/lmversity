@@ -131,6 +131,6 @@ compress these distributions into useful summaries, with information lost.
 
 ## Continue, go deeper, apply it
 
-- Continue: Expectation and linearity
+- Continue: [Expectation and linearity](/learn/maths-foundations/expectation-and-linearity)
 - Go deeper: Probability and statistics for ML
 - Apply it: Base rates, Bayes, and simulation

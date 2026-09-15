@@ -22,11 +22,11 @@ For binary y∈{0,1} and predicted p, `CE(y,p)=−[y log p+(1−y)log(1−p)]`. 
 
 ### Assumptions and derivation
 
-The equality to negative log-likelihood follows because the likelihood is a product of the probability assigned to each observed label; taking negative logs turns the product into a sum, and averaging divides by n. Cross-entropy equals entropy plus KL divergence, so it is minimised at the true distribution in expectation. Finite data, misspecification, label noise, and shifts remain.
+The equality to negative log-likelihood follows because the likelihood is a product of the probability assigned to each observed label; taking negative logs turns the product into a sum, and averaging divides by n. Cross-entropy equals entropy plus [KL divergence](/learn/maths-foundations/kl-divergence), so it is minimised at the true distribution in expectation. Finite data, misspecification, label noise, and shifts remain.
 
 ## AI use
 
-Use cross-entropy for probabilistic classification and next-token objectives when log probability is the decision-relevant signal. Check label encoding, class weights, reduction (`mean` versus `sum`), ignored labels, and numerical stability. Do not compare losses from incompatible tokenisations, denominators, or label spaces.
+Use cross-entropy for probabilistic classification and next-token objectives when log probability is the decision-relevant signal. Check label encoding, class weights, reduction (`mean` versus `sum`), ignored labels, and [numerical stability](/learn/maths-foundations/numerical-stability-softmax-logsumexp-and-safe-probabilities). Do not compare losses from incompatible tokenisations, denominators, or label spaces.
 
 ## Worked examples and variations
 
@@ -86,6 +86,6 @@ Cross-entropy does not guarantee calibration, fairness, causal validity, or usef
 
 ## Continue, go deeper, apply it
 
-- Continue: KL divergence and distribution mismatch
+- Continue: [KL divergence and distribution mismatch](/learn/maths-foundations/kl-divergence-and-distribution-mismatch)
 - Go deeper: Likelihood, cross-entropy, and classification objectives
 - Apply it: Logistic regression

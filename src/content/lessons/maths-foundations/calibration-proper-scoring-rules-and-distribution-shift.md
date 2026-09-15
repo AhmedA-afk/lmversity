@@ -18,7 +18,7 @@ A reviewer, triage queue, or resource planner needs probabilities that mean what
 
 ## How it works
 
-For predictions pᵢ and binary labels yᵢ, the Brier score is the mean squared probability error, `mean((pᵢ−yᵢ)²)`. Log loss is `−mean(yᵢ log pᵢ + (1−yᵢ) log(1−pᵢ))`. A reliability table groups predictions into bins and compares average p with observed event frequency. A proper scoring rule is optimised in expectation by reporting the true conditional probability, under its assumptions.
+For predictions pᵢ and binary labels yᵢ, the Brier score is the mean squared probability error, `mean((pᵢ−yᵢ)²)`. Log loss is `−mean(yᵢ log pᵢ + (1−yᵢ) log(1−pᵢ))`. A reliability table groups predictions into bins and compares average p with observed event frequency. A proper scoring rule is optimised in expectation by reporting the true [conditional probability](/learn/maths-foundations/conditional-probability), under its assumptions.
 
 ### Assumptions and derivation
 
@@ -87,6 +87,6 @@ Calibration does not guarantee discrimination, fairness, causal validity, or saf
 
 ## Continue, go deeper, apply it
 
-- Continue: Causal inference foundations
-- Go deeper: KL divergence and distribution mismatch
+- Continue: [Causal inference foundations](/learn/maths-foundations/causal-inference-foundations)
+- Go deeper: [KL divergence and distribution mismatch](/learn/maths-foundations/kl-divergence-and-distribution-mismatch)
 - Apply it: Fairness and subgroup evaluation

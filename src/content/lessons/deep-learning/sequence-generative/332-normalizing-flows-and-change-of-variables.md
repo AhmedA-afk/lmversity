@@ -17,7 +17,7 @@ A correct mental model separates the mathematical object, the learning signal, a
 
 For scalar $x=2z+1$ and $z\sim\mathcal N(0,1)$, subtract $\log 2$ from the base log density at $z=(x-1)/2$.
 
-Write shapes beside every expression. For a batch-major tensor, use B × T × d; make the direction of each matrix multiplication explicit. Numerical stability is part of the derivation: subtract the maximum logit before softmax, aggregate log-probabilities rather than products, and define exactly how masked terms are excluded.
+Write shapes beside every expression. For a batch-major tensor, use B × T × d; make the direction of each matrix multiplication explicit. [Numerical stability](/learn/deep-learning/core/124-numerical-stability-logsumexp-and-mixed-precision) is part of the derivation: subtract the maximum logit before softmax, aggregate log-probabilities rather than products, and define exactly how masked terms are excluded.
 
 ## Worked examples
 

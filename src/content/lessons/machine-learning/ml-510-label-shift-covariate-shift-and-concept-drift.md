@@ -10,7 +10,7 @@ updated: "2026-08-30"
 
 ## The short answer
 
-Distribution shift is not one problem. Covariate shift changes the inputs, label shift changes outcome prevalence, and concept drift changes how inputs relate to outcomes. Detecting a shift does not say performance has failed; stable aggregate metrics do not prove every risk is controlled. Monitor data, outcomes, calibration, slices, and workflow changes, then investigate with delayed labels and domain context.
+Distribution shift is not one problem. Covariate shift changes the inputs, label shift changes outcome prevalence, and concept drift changes how inputs relate to outcomes. Detecting a shift does not say performance has failed; stable aggregate metrics do not prove every risk is controlled. [Monitor data](/learn/machine-learning/drift-and-monitoring), outcomes, calibration, slices, and workflow changes, then investigate with delayed labels and domain context.
 
 ## Why this matters
 
@@ -68,4 +68,4 @@ Monitoring cannot guarantee future safety or establish why a distribution moved.
 
 ## Continue, go deeper, apply it
 
-Continue with causal diagrams for ML practitioners. Go deeper with conformal prediction and post-deployment evaluation. Apply this by versioning a monitoring runbook with the model.
+Continue with [causal diagrams for ML practitioners](/learn/machine-learning/ml-511-causal-diagrams-for-ml-practitioners). Go deeper with conformal prediction and post-deployment evaluation. Apply this by versioning a monitoring runbook with the model.

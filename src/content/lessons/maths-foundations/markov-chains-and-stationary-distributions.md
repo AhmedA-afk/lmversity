@@ -34,7 +34,7 @@ of the matrix’s average.
 
 **Derivation:** condition on the current state and sum over it:
 `P(S_{t+2}=j|S_t=i)=Σ_k P(S_{t+2}=j|S_{t+1}=k)P(S_{t+1}=k|S_t=i)`.
-This is matrix multiplication, so repeated conditioning gives `P^m` and
+This is [matrix multiplication](/learn/maths-foundations/matrix-multiplication-mechanics), so repeated conditioning gives `P^m` and
 `p_{t+m}=p_tP^m`.
 
 ### Numerical and visual perspective
@@ -134,6 +134,6 @@ a policy or reward model.
 
 ## Continue, go deeper, apply it
 
-- Continue: Importance sampling and weighted estimates
+- Continue: [Importance sampling and weighted estimates](/learn/maths-foundations/importance-sampling-and-weighted-estimates)
 - Go deeper: Search and planning
 - Apply it: Likelihood, priors, and sampling assignment

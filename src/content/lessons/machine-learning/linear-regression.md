@@ -8,7 +8,7 @@ duration: "3 min read"
 
 ## The short answer
 
-Linear regression predicts a numeric target as a weighted combination of features. It is fast, inspectable, and often a strong baseline. Its assumptions—linearity, error structure, feature availability, and stable relationships—are hypotheses to test, not facts granted by the algorithm.
+[Linear regression](/learn/machine-learning/derivations/01-linear-regression-normal-equations-and-geometry) predicts a numeric target as a weighted combination of features. It is fast, inspectable, and often a strong baseline. Its assumptions—linearity, error structure, feature availability, and stable relationships—are hypotheses to test, not facts granted by the algorithm.
 
 ## The mechanism
 
@@ -73,7 +73,7 @@ good performance on a new population.
 
 ## Continue, go deeper, apply it
 
-- Continue: Logistic regression
+- Continue: [Logistic regression](/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian)
 - Go deeper: Causal questions versus predictive models
 - Apply it: publish a transparent baseline report with residual plots.
 

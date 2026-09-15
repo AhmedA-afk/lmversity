@@ -30,7 +30,7 @@ For training inputs `X`, targets `y`, kernel matrix `K`, and noise variance
 The kernel must be positive semidefinite so it defines valid joint covariance.
 The squared-exponential kernel encodes very smooth functions; Matérn kernels
 allow rougher paths. In practice solve linear systems rather than explicitly
-forming an inverse, and add jitter for numerical stability.
+forming an inverse, and add jitter for [numerical stability](/learn/maths-foundations/numerical-stability-softmax-logsumexp-and-safe-probabilities).
 
 ## Worked examples and variations
 
@@ -111,6 +111,6 @@ coverage, and exact inference scales poorly with dataset size without approximat
 
 ## Continue, go deeper, apply it
 
-- Continue: Causal graphical models and identifiability limits
-- Go deeper: Variational inference and the ELBO
+- Continue: [Causal graphical models](/learn/maths-foundations/s4-6-causal-graphical-models-do-calculus-and-identifiability-limits) and identifiability limits
+- Go deeper: [Variational inference and the ELBO](/learn/maths-foundations/s4-4-variational-inference-and-the-elbo)
 - Apply it: Causal questions versus predictive models

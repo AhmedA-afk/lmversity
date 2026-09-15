@@ -46,4 +46,4 @@ Permutation importance does not provide an explanation for one prediction, a cau
 
 ## Continue, go deeper, apply it
 
-Compare grouped and conditional importance with partial dependence and SHAP. Store the split, metric, repetitions, cohorts, and feature definitions beside every importance report.
+Compare grouped and conditional importance with [partial dependence](/learn/machine-learning/ml-313-partial-dependence-ice-and-ale) and SHAP. Store the split, metric, repetitions, cohorts, and feature definitions beside every importance report.

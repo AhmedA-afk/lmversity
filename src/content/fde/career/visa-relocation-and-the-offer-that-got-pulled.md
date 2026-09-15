@@ -20,7 +20,7 @@ Preparation for an FDE loop usually focuses on the technical and case-study roun
 
 ## What happened
 
-The account documented in the module on startup loops is worth returning to in full here. A candidate went through a five-stage ElevenLabs FDE loop: a recruiter screen that pressed hard on individual ownership, a timed online assessment, live coding in a shared document, a case study built around an airline CTO scenario, and a final CTO round. They performed well enough to receive a verbal yes.
+The account documented in the module on [startup loops](/roles/forward-deployed-engineer/career/startup-loops-and-the-airline-cto-case) is worth returning to in full here. A candidate went through a five-stage ElevenLabs FDE loop: a recruiter screen that pressed hard on individual ownership, a timed online assessment, live coding in a shared document, a case study built around an airline CTO scenario, and a final CTO round. They performed well enough to receive a verbal yes.
 
 The offer was then rescinded. The candidate's own account of why: "they decided they only want to hire in SF... they saw some immigration risks." This happened despite the candidate being willing to relocate. Nothing about the candidate's technical performance is reported to have changed between the verbal yes and the reversal; the decision came from a different part of the company, later, and overrode the loop's own outcome.
 

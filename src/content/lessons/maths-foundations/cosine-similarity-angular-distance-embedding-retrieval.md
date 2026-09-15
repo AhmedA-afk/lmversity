@@ -8,7 +8,7 @@ duration: "5 min read"
 
 ## The short answer
 
-Cosine similarity compares direction rather than raw length:
+[Cosine similarity](/learn/maths-foundations/cosine-similarity) compares direction rather than raw length:
 `cos(q,x)=q·x/(||q||||x||)`. It ranks vectors by angle when magnitude should
 not dominate, which is common for text embeddings. Angular distance is
 `arccos(cos(q,x))`; `1−cos` is a convenient dissimilarity but should not be
@@ -34,7 +34,7 @@ cos(q,x) = q̂·x̂ = (q·x)/(||q||||x||)
 angular_distance(q,x) = arccos(cos(q,x)).
 ```
 
-The angle relation from the dot product gives this directly. For unit vectors,
+The angle relation from [the dot product](/learn/maths-foundations/dot-product-explained) gives this directly. For unit vectors,
 there is also a useful equivalence:
 
 ```text
@@ -165,6 +165,6 @@ missing access filter. Evaluate retrieval with task-specific reviewed cases.
 
 ## Continue, go deeper, apply it
 
-- Continue: Orthogonality and orthonormal coordinates
+- Continue: [Orthogonality and orthonormal coordinates](/learn/maths-foundations/orthogonality-orthonormal-coordinates)
 - Go deeper: Ingestion, chunking, and retrieval
 - Apply it: A1 embedding geometry lab

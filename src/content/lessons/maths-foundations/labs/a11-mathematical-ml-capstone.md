@@ -96,7 +96,7 @@ L(w) = (1/n) Σᵢ [logaddexp(0,zᵢ) − yᵢzᵢ]
 ```
 
 where `X̄` includes a leading intercept column. The gradient follows from
-`dL/dz=σ(z)−y` and the chain rule. Use the loss for probability quality; choose
+`dL/dz=σ(z)−y` and [the chain rule](/learn/maths-foundations/the-chain-rule). Use the loss for probability quality; choose
 the action threshold separately from the model’s default `0.5` cutoff.
 
 If you choose the tiny-network option, use `h=tanh(X̄_no_bias W₁+b₁)` and a
@@ -120,7 +120,7 @@ analytic gradient; update the same initial weights under two optimisers.
 ### Example B: the tiny-network option
 
 **Input:** the same fixture and split, with a one-hidden-layer `tanh` model.
-**Mechanism:** backpropagate BCE through output sigmoid, matrix multiplication,
+**Mechanism:** backpropagate BCE through output sigmoid, [matrix multiplication](/learn/maths-foundations/matrix-multiplication-mechanics),
   `tanh`, and hidden weights. **Output:** a second probability model, not an
   automatic improvement. **Inspect:** parameter count, gradient check, seed
   sensitivity, and calibration. **Decision:** keep it only if its evidence changes
@@ -166,7 +166,7 @@ label column, then show the guard that rejects it.
 ### Mathematical view
 
 The capstone is a chain of claims: the data split defines the sample, the model
-defines a conditional probability, the loss defines the objective, the optimiser
+defines a [conditional probability](/learn/maths-foundations/conditional-probability), the loss defines the objective, the optimiser
 defines the path, and the metrics define the decision evidence. A result is only
 as meaningful as the weakest unstated assumption in that chain.
 

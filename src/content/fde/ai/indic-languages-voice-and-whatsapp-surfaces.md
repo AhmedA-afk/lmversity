@@ -44,7 +44,7 @@ A voice interface tested on an office wifi connection with a good microphone beh
 
 ## The FDE angle
 
-None of this is a localisation checklist to run through once near the end of a build. A system designed WhatsApp-first, Hinglish-aware, and network-resilient from the start looks different at the architecture level than one designed for a clean web chat interface and adapted afterward — the session-window and template constraints alone shape what kinds of proactive workflows are even possible, and retrofitting them after a design assumes free-form messaging is a rebuild. Raise these constraints in the first discovery conversation with a customer whose users are WhatsApp-first, the same way you would raise data residency or an air-gapped requirement: as an architectural input, not a detail to handle during implementation.
+None of this is a localisation checklist to run through once near the end of a build. A system designed WhatsApp-first, Hinglish-aware, and network-resilient from the start looks different at the architecture level than one designed for a clean web chat interface and adapted afterward — the session-window and template constraints alone shape what kinds of proactive workflows are even possible, and retrofitting them after a design assumes free-form messaging is a rebuild. Raise these constraints in the first discovery conversation with a customer whose users are WhatsApp-first, the same way you would raise [data residency](/roles/forward-deployed-engineer/data/data-residency-dpdp-gdpr-hipaa) or an air-gapped requirement: as an architectural input, not a detail to handle during implementation.
 
 ## What you should be able to do now
 

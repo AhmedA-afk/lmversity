@@ -8,7 +8,7 @@ duration: "5 min read"
 
 ## The short answer
 
-The dot product `a·b=Σᵢaᵢbᵢ` compresses two equal-length vectors into one
+[The dot product](/learn/maths-foundations/dot-product-explained) `a·b=Σᵢaᵢbᵢ` compresses two equal-length vectors into one
 scalar. It measures aligned magnitude: `a·b=||a||||b||cosθ`. A bilinear score
 `aᵀWb` inserts a learned interaction matrix between the vectors. In AI, dot
 products score linear models, attention, and retrieval, but a large score may
@@ -58,7 +58,7 @@ scoring, but it should not be assumed symmetric.
 `cosθ=11/(5√5)≈0.984`. **Output:** a positive, strongly aligned score.
 **Inspect:** the vectors are not identical; the angle is small, not zero.
 **Decision:** use the score for ranking only after deciding whether its scale
-should be comparable across vector norms.
+should be comparable across [vector norms](/learn/maths-foundations/vector-norms).
 
 ### Example B: a learned bilinear interaction
 
@@ -164,6 +164,6 @@ the score is a defensible signal.
 
 ## Continue, go deeper, apply it
 
-- Continue: Norms and distances
+- Continue: [Norms and distances](/learn/maths-foundations/norms-and-distances)
 - Go deeper: Linear algebra for ML
 - Apply it: A1 embedding geometry lab

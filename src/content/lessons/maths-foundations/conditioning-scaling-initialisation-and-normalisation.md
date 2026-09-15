@@ -91,6 +91,6 @@ Scaling does not fix leakage, wrong labels, non-convexity, or a bad objective. N
 
 ## Continue, go deeper, apply it
 
-- Continue: Numerical stability: softmax and log-sum-exp
-- Go deeper: Optimisation diagnostics and second-order perspective
+- Continue: [Numerical stability](/learn/maths-foundations/numerical-stability-softmax-logsumexp-and-safe-probabilities): softmax and log-sum-exp
+- Go deeper: [Optimisation diagnostics and second-order perspective](/learn/maths-foundations/optimisation-diagnostics-and-second-order-perspective)
 - Apply it: Neural networks and representations

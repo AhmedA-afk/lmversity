@@ -10,7 +10,7 @@ updated: "2026-08-30"
 
 ## The short answer
 
-Diagnostics test the *model-data match*, not whether linear regression is fashionable. Inspect residual patterns, leverage, influence, dependence, and validation performance before interpreting a coefficient or a p-value.
+Diagnostics test the *model-data match*, not whether [linear regression](/learn/machine-learning/derivations/01-linear-regression-normal-equations-and-geometry) is fashionable. Inspect residual patterns, leverage, influence, dependence, and validation performance before interpreting a coefficient or a p-value.
 
 ## Why this matters
 

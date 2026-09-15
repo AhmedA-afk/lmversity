@@ -50,7 +50,7 @@ Run subgroup *evaluation* for at least `sex` and `race` where sample sizes allow
 ## Required baselines and comparisons
 
 1. Majority-class and prevalence baselines.
-2. Regularised logistic regression with a column-transformer pipeline.
+2. Regularised [logistic regression](/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian) with a column-transformer pipeline.
 3. A non-linear model such as a depth-controlled tree ensemble.
 4. A calibrated version of the selected model, using a validation-only calibration procedure.
 

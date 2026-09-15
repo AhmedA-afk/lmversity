@@ -74,7 +74,7 @@ objective acceptable because it converges.
 
 ## Continue, go deeper, apply it
 
-- Continue: Linear regression
+- Continue: [Linear regression](/learn/machine-learning/derivations/01-linear-regression-normal-equations-and-geometry)
 - Go deeper: Loss, gradients, and optimization in deep learning
 - Apply it: add a gradient-check test to a learning implementation.
 

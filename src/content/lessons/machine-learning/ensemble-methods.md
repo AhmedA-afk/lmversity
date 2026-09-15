@@ -74,7 +74,7 @@ does not represent the product outcome.
 ## Continue, go deeper, apply it
 
 - Continue: Cross-validation and experimental design
-- Go deeper: Decision trees and entropy
+- Go deeper: [Decision trees](/learn/machine-learning/derivations/06-decision-tree-impurity-and-information-gain-calculations) and entropy
 - Apply it: publish an ensemble comparison with an error-overlap matrix.
 
 ## Why averaging can help

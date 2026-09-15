@@ -80,7 +80,7 @@ explanation can be incomplete. Transparency does not equal fairness or causality
 - Apply it: publish an error gallery with rejected explanations.
 ## Formal extension
 
-Interpretability answers a question for an audience: debugging, explanation, audit, or recourse. Permutation importance, partial dependence, SHAP-style attributions, and counterfactuals have different assumptions and can fail under correlated or unsupported features.
+Interpretability answers a question for an audience: debugging, explanation, audit, or recourse. Permutation importance, [partial dependence](/learn/machine-learning/ml-313-partial-dependence-ice-and-ale), SHAP-style attributions, and counterfactuals have different assumptions and can fail under correlated or unsupported features.
 
 ## Worked calculation or protocol
 

@@ -10,7 +10,7 @@ updated: "2026-08-30"
 
 ## The short answer
 
-An anomaly model should prioritise cases for investigation, not silently decide who is fraudulent. This case study designs a score-to-review workflow with evidence, threshold economics, outcome logging, and a safe path for legitimate customers.
+An anomaly model should prioritise cases for investigation, not silently decide who is fraudulent. This [case study](/learn/machine-learning/ml-115-case-study-triage-under-review-capacity) designs a score-to-review workflow with evidence, threshold economics, outcome logging, and a safe path for legitimate customers.
 
 ## Why this matters
 

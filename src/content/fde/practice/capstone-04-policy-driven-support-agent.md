@@ -82,7 +82,7 @@ Commit this before the parameterised template or the agent exist.
 **The scorer**, four numbers:
 
 - **Per-intent action accuracy.** Does the agent choose the policy-mandated action, scored separately for each intent so a regression in one intent cannot hide inside a good average.
-- **Conflict-routing rate.** On the conflict set, does it route to a human every time. This is a gate: it must be 100%, the same role the leak-rate gate plays in Capstone 01.
+- **Conflict-routing rate.** On the conflict set, does it route to a human every time. This is a gate: it must be 100%, the same role the leak-rate gate plays in [Capstone 01](/roles/forward-deployed-engineer/practice/capstone-01-permissioned-research-assistant).
 - **Stale-policy rate.** Does the agent ever apply a superseded policy version.
 - **Scale-degradation curve.** Run the same scorer at 20 policies, 80 policies, and the full 180, and report accuracy at each point. This is the number the original case is actually about: does parameterisation hold its accuracy as the policy count grows, unlike hand-written prompts.
 

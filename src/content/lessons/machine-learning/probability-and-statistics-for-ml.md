@@ -96,7 +96,7 @@ A Bernoulli model says y is 1 with probability p. For ten independent observatio
 log L(p) = 7 log(p) + 3 log(1-p)
 ~~~
 
-Taking its derivative and setting it to zero yields 7/p - 3/(1-p) = 0, hence p = 0.7. Logistic regression generalizes this estimation idea by making p vary with features through a sigmoid. Maximum likelihood chooses the parameters whose implied probabilities make observed labels least surprising.
+Taking its derivative and setting it to zero yields 7/p - 3/(1-p) = 0, hence p = 0.7. [Logistic regression](/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian) generalizes this estimation idea by making p vary with features through a sigmoid. Maximum likelihood chooses the parameters whose implied probabilities make observed labels least surprising.
 
 ## Sampling variation and intervals
 

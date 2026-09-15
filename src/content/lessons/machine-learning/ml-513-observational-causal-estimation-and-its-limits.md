@@ -10,7 +10,7 @@ updated: "2026-08-30"
 
 ## The short answer
 
-When randomization is unavailable, causal estimation relies on assumptions about treatment assignment, measured confounders, overlap, measurement, and interference. Methods such as adjustment, matching, weighting, difference-in-differences, and instrumental variables answer different questions under different conditions. State the estimand, draw the causal assumptions, test what can be tested, run sensitivity analyses, and limit conclusions to what the design supports.
+When randomization is unavailable, [causal estimation](/learn/machine-learning/deep-lectures/906-causal-estimation-from-dags-through-matching-ipw-doubly-robust-methods-and-sensitivity) relies on assumptions about treatment assignment, measured confounders, overlap, measurement, and interference. Methods such as adjustment, matching, weighting, difference-in-differences, and instrumental variables answer different questions under different conditions. State the estimand, draw the causal assumptions, test what can be tested, run sensitivity analyses, and limit conclusions to what the design supports.
 
 ## Why this matters
 
@@ -68,4 +68,4 @@ No observational estimator can prove assumptions that are not identified by the 
 
 ## Continue, go deeper, apply it
 
-Continue with fairness definitions and impossibility tradeoffs. Go deeper with target-trial emulation and sensitivity analysis. Apply this by attaching an assumptions table to every observational impact estimate.
+Continue with [fairness definitions and impossibility tradeoffs](/learn/machine-learning/ml-514-fairness-definitions-and-impossibility-tradeoffs). Go deeper with target-trial emulation and sensitivity analysis. Apply this by attaching an assumptions table to every observational impact estimate.

@@ -9,7 +9,7 @@ duration: "25 min read"
 
 Batch normalization uses (\hat{x}=(x-mu_B)/\sqrt{sigma_B^2+\epsilon}) then
 learns (gamma\hat{x}+eta). Training uses batch statistics; evaluation uses
-running estimates. With batch size 2, those estimates are noisy. GroupNorm normalizes
+running estimates. With [batch size](/learn/deep-learning/core/121-batch-size-gradient-noise-and-scaling-rules) 2, those estimates are noisy. GroupNorm normalizes
 within each sample and is often safer for high-resolution detection with tiny batches;
 LayerNorm normalizes feature dimensions and is standard in transformers.
 

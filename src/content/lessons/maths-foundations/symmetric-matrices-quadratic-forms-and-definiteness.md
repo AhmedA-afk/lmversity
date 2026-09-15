@@ -109,7 +109,7 @@ and symmetry against the data-generation calculation.
 
 ### Visual view
 
-Positive definite level sets are closed ellipses/ellipsoids around a minimum.
+Positive definite [level sets](/learn/maths-foundations/level-sets-tangent-planes-and-constrained-movement) are closed ellipses/ellipsoids around a minimum.
 Positive semidefinite forms have a flat axis. An indefinite form has hyperbolic
 level sets and a saddle: moving one way raises the value while another lowers it.
 

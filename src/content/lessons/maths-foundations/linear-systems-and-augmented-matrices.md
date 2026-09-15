@@ -125,6 +125,6 @@ noise, measurement error, or whether the chosen variables explain the world.
 
 ## Continue, go deeper, apply it
 
-- Continue: Gaussian elimination and row-echelon form
-- Go deeper: Matrix–matrix multiplication and batching
+- Continue: [Gaussian elimination and row-echelon form](/learn/maths-foundations/gaussian-elimination-and-row-echelon-form)
+- Go deeper: [Matrix–matrix multiplication and batching](/learn/maths-foundations/matrix-matrix-multiplication-and-batching)
 - Apply it: Linear regression

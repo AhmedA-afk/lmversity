@@ -105,6 +105,6 @@ trajectories. It also does not choose actions; that requires an MDP and a policy
 
 ## Continue, go deeper, apply it
 
-- Continue: Markov decision processes
-- Go deeper: Bellman expectation equations
-- Apply it: Policies, exploration, and occupancy
+- Continue: [Markov decision processes](/learn/maths-foundations/s2-3-markov-decision-processes)
+- Go deeper: [Bellman expectation equations](/learn/maths-foundations/s2-4-bellman-expectation-equations)
+- Apply it: [Policies, exploration, and occupancy](/learn/maths-foundations/s2-6-policies-exploration-and-occupancy)

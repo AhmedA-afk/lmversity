@@ -1,6 +1,6 @@
 # Content registry — audit views
 
-Generated 2026-09-15T07:25:24.098Z by `scripts/build-content-registry.mjs`.
+Generated 2026-09-15T07:31:08.489Z by `scripts/build-content-registry.mjs`.
 2406 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
@@ -70,9 +70,9 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 | track | files | concept | worked ex. | mistakes | compared | cheatsheet | quiz | lab | capstone | % code | % check | % sources | med. words | quick guide | quiz bank |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | ai-literacy | 56 | 41 | 2 | 0 | 2 | 2 | 7 | 0 | 2 | 64% | 0% | 2% | 1549 | — | — |
-| maths-foundations | 193 | 179 | 0 | 0 | 2 | 0 | 0 | 11 | 1 | 71% | 0% | 0% | 780 | — | — |
+| maths-foundations | 193 | 179 | 0 | 0 | 2 | 0 | 0 | 11 | 1 | 71% | 0% | 0% | 771 | — | — |
 | python-data-apis | 57 | 44 | 0 | 2 | 0 | 0 | 10 | 0 | 1 | 98% | 0% | 4% | 1615 | — | — |
-| ai-foundations | 160 | 127 | 9 | 0 | 10 | 0 | 10 | 0 | 4 | 68% | 0% | 1% | 1011 | — | yes |
+| ai-foundations | 160 | 127 | 9 | 0 | 10 | 0 | 10 | 0 | 4 | 68% | 0% | 1% | 1009 | — | yes |
 | llm-foundations | 131 | 113 | 0 | 0 | 10 | 0 | 7 | 0 | 1 | 48% | 94% | 0% | 796 | — | — |
 | classical-ai | 83 | 80 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 96% | 0% | 0% | 901 | — | — |
 | machine-learning | 208 | 185 | 0 | 0 | 1 | 0 | 0 | 19 | 3 | 19% | 0% | 6% | 407 | — | — |
@@ -101,60 +101,31 @@ and split always need a written human reason (see checklist).
 
 | disposition | items |
 |---|---:|
-| keep | 1568 |
-| investigate | 768 |
+| keep | 1872 |
+| investigate | 464 |
 | expand | 70 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
 | intentClarity | 2189 | 1.89 | 25 | 184 | 1980 |
 | correctnessSources | 43 | 1.28 | 0 | 31 | 12 |
-| completeness | 2304 | 1.65 | 44 | 715 | 1545 |
+| completeness | 2304 | 1.65 | 44 | 710 | 1550 |
 | prerequisiteFit | 2243 | 2.00 | 3 | 0 | 2240 |
 | handsOn | 2189 | 1.48 | 550 | 49 | 1590 |
 | explanationQuality | 2189 | 1.93 | 45 | 56 | 2088 |
 | metadata | 2189 | 1.85 | 25 | 281 | 1883 |
-| linking | 2100 | 1.19 | 815 | 78 | 1207 |
-| freshnessHealth | 2406 | 0.78 | 786 | 1357 | 263 |
+| linking | 2100 | 1.35 | 508 | 348 | 1244 |
+| freshnessHealth | 2406 | 0.78 | 787 | 1356 | 263 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
 
 ### Non-keep dispositions
 
-#### investigate: zero in-body internal links (768)
+#### investigate: zero in-body internal links (464)
 
 - /learn/agentic-ai/agents-vs-workflows — Choose an agent only when a workflow is not enough
 - /learn/agentic-ai/state-memory-and-recovery — Design agent state, memory, and recovery explicitly
-- /learn/ai-foundations/ai-systems/101-ai-problem-framing-and-rational-action — AI Problem Framing and Rational Action
-- /learn/ai-foundations/ai-systems/102-intelligent-agents-observations-and-action-loops — Intelligent Agents: Observations and Action Loops
-- /learn/ai-foundations/ai-systems/103-state-spaces-and-search-problem-design — State Spaces and Search Problem Design
-- /learn/ai-foundations/ai-systems/104-breadth-first-search-and-layered-exploration — Breadth-First Search and Layered Exploration
-- /learn/ai-foundations/ai-systems/105-depth-first-search-backtracking-and-cycle-safety — Depth-First Search, Backtracking, and Cycle Safety
-- /learn/ai-foundations/ai-systems/106-uniform-cost-search-and-cost-sensitive-planning — Uniform-Cost Search and Cost-Sensitive Planning
-- /learn/ai-foundations/ai-systems/107-a-star-search-admissibility-and-consistency — A* Search: Admissibility, Consistency, and Reopening
-- /learn/ai-foundations/ai-systems/108-heuristic-design-relaxations-and-search-diagnostics — Heuristic Design, Relaxations, and Search Diagnostics
-- /learn/ai-foundations/ai-systems/109-local-search-hill-climbing-and-stochastic-optimization — Local Search, Hill Climbing, and Stochastic Optimization
-- /learn/ai-foundations/ai-systems/110-adversarial-search-minimax-and-game-values — Adversarial Search: Minimax and Game Values
-- /learn/ai-foundations/ai-systems/111-alpha-beta-pruning-and-move-ordering — Alpha-Beta Pruning and Move Ordering
-- /learn/ai-foundations/ai-systems/112-imperfect-information-and-utility-under-risk — Imperfect Information and Utility Under Risk
-- /learn/ai-foundations/ai-systems/113-constraint-satisfaction-models-and-propagation — Constraint Satisfaction Problems and Propagation
-- /learn/ai-foundations/ai-systems/114-backtracking-mrv-lcv-and-constraint-learning — Backtracking, MRV, LCV, and Constraint Learning
-- /learn/ai-foundations/ai-systems/115-classical-planning-strips-and-plan-graphs — Classical Planning: STRIPS and Plan Graphs
-- /learn/ai-foundations/ai-systems/116-planning-under-time-resources-and-uncertainty — Planning Under Time, Resources, and Uncertainty
-- /learn/ai-foundations/ai-systems/117-knowledge-representation-ontologies-and-rules — Knowledge Representation: Ontologies and Rules
-- /learn/ai-foundations/ai-systems/118-propositional-logic-satisfiability-and-resolution — Propositional Logic, Satisfiability, and Resolution
-- /learn/ai-foundations/ai-systems/119-first-order-logic-unification-and-rule-inference — First-Order Logic, Unification, and Rule Inference
-- /learn/ai-foundations/ai-systems/120-reasoning-with-uncertainty-probability-and-utility — Reasoning with Uncertainty: Probability and Utility
-- /learn/ai-foundations/ai-systems/121-bayesian-networks-conditional-independence-and-inference — Bayesian Networks, Conditional Independence, and Inference
-- /learn/ai-foundations/ai-systems/122-probabilistic-inference-sampling-and-approximation — Probabilistic Inference, Sampling, and Approximation
-- /learn/ai-foundations/ai-systems/123-symbolic-statistical-and-neuro-symbolic-ai — Symbolic, Statistical, and Neuro-Symbolic AI
-- /learn/ai-foundations/ai-systems/124-expert-systems-explanations-and-maintenance — Expert Systems, Explanations, and Maintenance
-- /learn/ai-foundations/ai-systems/125-robotics-perception-state-estimation-and-sensor-fusion — Robotics Perception, State Estimation, and Sensor Fusion
-- /learn/ai-foundations/ai-systems/126-robot-motion-planning-and-collision-safety — Robot Motion Planning and Collision Safety
-- /learn/ai-foundations/ai-systems/127-robot-control-feedback-and-safety-envelopes — Robot Control, Feedback, and Safety Envelopes
-- /learn/ai-foundations/ai-systems/128-multi-agent-coordination-communication-and-allocation — Multi-Agent Coordination, Communication, and Allocation
-- /learn/ai-foundations/ai-systems/129-multi-agent-strategic-behavior-mechanisms-and-safety — Multi-Agent Strategic Behavior, Mechanisms, and Safety
 - /learn/ai-foundations/applied-ai/301-ai-product-discovery-outcomes-and-harm — AI Product Discovery: Outcomes, Users, and Harm
 - /learn/ai-foundations/applied-ai/302-choosing-rules-classical-ml-deep-learning-or-llm — Choosing Rules, Classical ML, Deep Learning, or an LLM
 - /learn/ai-foundations/applied-ai/303-data-pipelines-lineage-and-data-contracts — Data Pipelines, Lineage, and Data Contracts
@@ -164,7 +135,36 @@ and split always need a written human reason (see checklist).
 - /learn/ai-foundations/applied-ai/307-reinforcement-learning-product-suitability — Reinforcement Learning: Product Suitability and Safe Constraints
 - /learn/ai-foundations/applied-ai/308-training-and-inference-economics — Training and Inference Economics
 - /learn/ai-foundations/applied-ai/309-embeddings-similarity-and-index-design — Embeddings, Similarity, and Index Design
-- … 728 more in content-registry.json
+- /learn/ai-foundations/applied-ai/310-retrieval-augmented-generation-grounding — Retrieval-Augmented Generation and Grounded Answers
+- /learn/ai-foundations/applied-ai/311-agents-tools-and-approval-boundaries — Agents, Tools, and Approval Boundaries
+- /learn/ai-foundations/applied-ai/312-multimodal-ai-inputs-fusion-and-evaluation — Multimodal AI: Inputs, Fusion, and Evaluation
+- /learn/ai-foundations/applied-ai/313-experimentation-ab-tests-and-decision-quality — Experimentation, A/B Tests, and Decision Quality
+- /learn/ai-foundations/applied-ai/314-evaluation-evidence-and-human-review — Evaluation Evidence and Human Review
+- /learn/ai-foundations/applied-ai/315-monitoring-drift-and-incident-response — Monitoring, Drift, and Incident Response
+- /learn/ai-foundations/applied-ai/316-healthcare-ai-clinical-workflows-and-safety — Applied Case: Healthcare AI and Clinical Workflow Safety
+- /learn/ai-foundations/applied-ai/317-education-ai-learning-and-assessment-integrity — Applied Case: Education AI, Learning, and Assessment Integrity
+- /learn/ai-foundations/applied-ai/318-finance-ai-controls-fairness-and-model-risk — Applied Case: Finance AI, Controls, Fairness, and Model Risk
+- /learn/ai-foundations/applied-ai/319-manufacturing-ai-quality-and-maintenance — Applied Case: Manufacturing AI for Quality and Maintenance
+- /learn/ai-foundations/applied-ai/320-public-sector-ai-procurement-and-accountability — Applied Case: Public-Sector AI, Procurement, and Accountability
+- /learn/ai-foundations/applied-ai/321-privacy-security-and-sensitive-data — Privacy, Security, and Sensitive Data in Applied AI
+- /learn/ai-foundations/applied-ai/322-deployment-release-strategy-and-fallbacks — Deployment, Release Strategy, and Safe Fallbacks
+- /learn/ai-foundations/applied-ai/323-applied-ai-architecture-review — Applied AI Architecture Review
+- /learn/ai-foundations/applied-ai/324-applied-ai-project-gates-and-model-card — Applied AI Project Gates and the Model Card
+- /learn/ai-foundations/reliable-ai/201-provenance-consent-and-data-rights — Provenance, Consent, and Data Rights
+- /learn/ai-foundations/reliable-ai/202-labels-annotation-and-ground-truth — Labels, Annotation, and the Limits of Ground Truth
+- /learn/ai-foundations/reliable-ai/203-benchmarks-evaluations-and-capability-claims — Benchmarks, Evaluations, and Defensible Capability Claims
+- /learn/ai-foundations/reliable-ai/204-distribution-shift-and-robustness — Distribution Shift, Robustness, and Monitoring
+- /learn/ai-foundations/reliable-ai/205-uncertainty-calibration-and-abstention — Uncertainty, Calibration, and Abstention
+- /learn/ai-foundations/reliable-ai/206-hallucination-grounding-and-verification — Hallucination, Grounding, and Verification
+- /learn/ai-foundations/reliable-ai/207-interpretability-and-explanation-boundaries — Interpretability, Explanations, and Their Boundaries
+- /learn/ai-foundations/reliable-ai/208-fairness-problem-formulation-and-measurement — Fairness: Problem Formulation and Measurement
+- /learn/ai-foundations/reliable-ai/209-fairness-mitigation-and-governance — Fairness Mitigation and Governance
+- /learn/ai-foundations/reliable-ai/210-privacy-threat-modeling-and-minimization — Privacy Threat Modeling and Data Minimization
+- /learn/ai-foundations/reliable-ai/211-privacy-preserving-learning-and-release — Privacy-Preserving Learning and Release
+- /learn/ai-foundations/reliable-ai/212-adversarial-ml-and-input-security — Adversarial ML and Input Security
+- /learn/ai-foundations/reliable-ai/213-model-supply-chain-and-artifact-security — Model Supply Chain and Artifact Security
+- /learn/ai-foundations/reliable-ai/214-alignment-objectives-and-reward-hacking — Alignment Objectives and Reward Hacking
+- … 424 more in content-registry.json
 
 #### expand: planned stub — no content yet (26)
 
@@ -195,52 +195,52 @@ and split always need a written human reason (see checklist).
 - ai-for-designers/prototype-and-evaluation-quiz — Quiz: prototype and evaluation
 - ai-for-designers/capstone-design-a-trustworthy-ai-feature — Capstone: design a trustworthy AI feature end to end
 
-#### expand: thin vs family median (193w vs ~782w) (3)
+#### expand: thin vs family median (193w vs ~780w) (3)
 
 - /learn/machine-learning/public-data-projects/bank-marketing-project — Public-data project: Bank Marketing decision support
 - /learn/machine-learning/public-data-projects/bike-sharing-project — Public-data project: Bike Sharing forecasting
 - /learn/machine-learning/public-data-projects/online-retail-project — Public-data project: Online Retail customer analysis
 
-#### expand: thin vs family median (264w vs ~782w) (2)
+#### expand: thin vs family median (264w vs ~780w) (2)
 
 - /learn/machine-learning/assessments/ml-845-assignment-04-unsupervised-decision-support — Assignment 4: unsupervised learning without inventing stories
 - /learn/machine-learning/assessments/ml-846-assignment-05-temporal-risk-aware-system — Assignment 5: build a time-aware, risk-aware ML system
 
-#### expand: thin vs family median (226w vs ~782w) (2)
+#### expand: thin vs family median (226w vs ~780w) (2)
 
 - /learn/machine-learning/assessments/ml-847-model-report-template — Model report template: predictive system review
 - /learn/machine-learning/reproductions/adaboost-reproduction — Paper reproduction: AdaBoost and the training-error bound
 
-#### expand: thin vs family median (191w vs ~782w) (2)
+#### expand: thin vs family median (191w vs ~780w) (2)
 
 - /learn/machine-learning/public-data-projects/aps-failure-project — Public-data project: APS Failure under imbalance
 - /learn/machine-learning/public-data-projects/movielens-project — Public-data project: MovieLens recommendation
 
-#### expand: thin vs family median (238w vs ~782w) (1)
+#### expand: thin vs family median (238w vs ~780w) (1)
 
 - /learn/ai-foundations/choosing-a-model — Choosing a model in 2026
 
-#### expand: thin vs family median (231w vs ~782w) (1)
+#### expand: thin vs family median (231w vs ~780w) (1)
 
 - /learn/ai-foundations/tokens-context-cost — Tokens, context & cost
 
-#### expand: thin vs family median (277w vs ~782w) (1)
+#### expand: thin vs family median (277w vs ~780w) (1)
 
 - /learn/llm-foundations/next-token-prediction — Next-Token Prediction: The One Objective
 
-#### expand: thin vs family median (269w vs ~782w) (1)
+#### expand: thin vs family median (269w vs ~780w) (1)
 
 - /learn/llm-foundations/tokenization-explained — Tokenization: How Text Becomes Tokens
 
-#### expand: thin vs family median (281w vs ~782w) (1)
+#### expand: thin vs family median (279w vs ~780w) (1)
 
 - /learn/machine-learning/assessments/ml-843-assignment-02-linear-models-calibration — Assignment 2: derive, implement, and calibrate a linear decision model
 
-#### expand: thin vs family median (246w vs ~782w) (1)
+#### expand: thin vs family median (246w vs ~780w) (1)
 
 - /learn/machine-learning/assessments/ml-844-assignment-03-tree-ensemble-debugging — Assignment 3: compare trees and ensembles through a debugging clinic
 
-#### expand: thin vs family median (233w vs ~782w) (1)
+#### expand: thin vs family median (233w vs ~780w) (1)
 
 - /learn/machine-learning/assessments/ml-848-model-report-template-high-stakes — Model report template: high-stakes review and human oversight
 
@@ -248,31 +248,31 @@ and split always need a written human reason (see checklist).
 
 - /learn/machine-learning/assessments/ml-849-staged-capstone-handbook — Staged capstone handbook: from proposal to production review
 
-#### expand: thin vs family median (291w vs ~782w) (1)
+#### expand: thin vs family median (291w vs ~780w) (1)
 
 - /learn/machine-learning/derivations/01-linear-regression-normal-equations-and-geometry — Linear regression: normal equations and geometry
 
-#### expand: thin vs family median (296w vs ~782w) (1)
+#### expand: thin vs family median (296w vs ~780w) (1)
 
 - /learn/machine-learning/derivations/02-gradient-descent-and-convergence-for-linear-models — Gradient descent and convergence for linear models
 
-#### expand: thin vs family median (283w vs ~782w) (1)
+#### expand: thin vs family median (278w vs ~780w) (1)
 
 - /learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian — Logistic regression: likelihood, gradient, and Hessian
 
-#### expand: thin vs family median (300w vs ~782w) (1)
+#### expand: thin vs family median (298w vs ~780w) (1)
 
 - /learn/machine-learning/derivations/04-map-mle-and-regularization-as-priors — MAP, MLE, and regularization as priors
 
-#### expand: thin vs family median (290w vs ~782w) (1)
+#### expand: thin vs family median (290w vs ~780w) (1)
 
 - /learn/machine-learning/derivations/08-pca-svd-and-best-low-rank-approximation — PCA, SVD, and best low-rank approximation
 
-#### expand: thin vs family median (317w vs ~886w) (1)
+#### expand: thin vs family median (315w vs ~886w) (1)
 
 - /learn/machine-learning/ml-215-lab-linear-model-diagnostic-notebook — Lab: linear-model diagnostic notebook
 
-#### expand: thin vs family median (354w vs ~886w) (1)
+#### expand: thin vs family median (352w vs ~886w) (1)
 
 - /learn/machine-learning/ml-705-lab-fraud-detection-under-class-imbalance — Lab: fraud detection under class imbalance
 
@@ -312,31 +312,31 @@ and split always need a written human reason (see checklist).
 
 - /learn/machine-learning/ml-871-executable-lab-studio — Executable Classical ML lab studio
 
-#### expand: thin vs family median (201w vs ~782w) (1)
+#### expand: thin vs family median (201w vs ~780w) (1)
 
 - /learn/machine-learning/public-data-projects/adult-income-project — Public-data project: Adult income prediction
 
-#### expand: thin vs family median (212w vs ~782w) (1)
+#### expand: thin vs family median (212w vs ~780w) (1)
 
 - /learn/machine-learning/reproductions/linear-regression-reproduction — Paper reproduction: least squares, shrinkage, and prediction
 
-#### expand: thin vs family median (210w vs ~782w) (1)
+#### expand: thin vs family median (210w vs ~780w) (1)
 
 - /learn/machine-learning/reproductions/pca-reconstruction-reproduction — Paper reproduction: low-rank reconstruction
 
-#### expand: thin vs family median (208w vs ~782w) (1)
+#### expand: thin vs family median (208w vs ~780w) (1)
 
 - /learn/machine-learning/reproductions/random-forest-reproduction — Paper reproduction: random forests and out-of-bag evidence
 
-#### expand: thin vs family median (214w vs ~782w) (1)
+#### expand: thin vs family median (214w vs ~780w) (1)
 
 - /learn/machine-learning/reproductions/svm-kernel-reproduction — Paper reproduction: margins and kernels
 
-#### expand: thin vs family median (288w vs ~782w) (1)
+#### expand: thin vs family median (288w vs ~780w) (1)
 
 - /learn/mcp/first-mcp-server — Build your first MCP server in Python (20 min)
 
-#### expand: thin vs family median (196w vs ~782w) (1)
+#### expand: thin vs family median (196w vs ~780w) (1)
 
 - /learn/prompt-engineering/answer-first-prompting — Answer-first prompting
 
@@ -348,7 +348,7 @@ and split always need a written human reason (see checklist).
 
 - /learn/responsible-ai/adversarial-testing-lab — Lab: turn a prompt injection finding into a regression test
 
-#### expand: thin vs family median (149w vs ~782w) (1)
+#### expand: thin vs family median (149w vs ~780w) (1)
 
 - /learn/structured-outputs/incremental-json-repair — Incremental JSON Repair: Fixing Truncated Output Instead of Discarding It
 
@@ -358,7 +358,7 @@ and split always need a written human reason (see checklist).
 
 ## Duplicate candidates
 
-357 pairs by title/slug similarity (234 not already cross-linked) — candidates for the merge/redirect editorial pass, not verdicts. Pairs where one already links to the other are marked linked — often deliberate two-part lessons.
+357 pairs by title/slug similarity (227 not already cross-linked) — candidates for the merge/redirect editorial pass, not verdicts. Pairs where one already links to the other are marked linked — often deliberate two-part lessons.
 
 | item A | item B | jac | contain | stem | linked | scope |
 |---|---|---:|---:|---|---|---|
@@ -427,12 +427,12 @@ _… 297 more pairs in content-registry.json (`duplicates`)_
 
 ## Freshness queues
 
-- periodic: 1357
+- periodic: 1356
 - pricing-sensitive: 334
 - release-sensitive: 283
 - durable: 263
 - certification-sensitive: 97
-- policy-sensitive: 72
+- policy-sensitive: 73
 
 ### certification-sensitive (97)
 
@@ -502,7 +502,7 @@ _… 297 more pairs in content-registry.json (`duplicates`)_
 - /learn/ai-literacy/judging-and-verifying-quiz — Quiz: judging and verifying
 - … 304 more in content-registry.json
 
-### policy-sensitive (72)
+### policy-sensitive (73)
 
 - /learn/agentic-ai/state-memory-and-recovery — Design agent state, memory, and recovery explicitly
 - /learn/ai-foundations/open-weight-vs-closed-models — Open-Weight vs. Closed Models
@@ -534,7 +534,7 @@ _… 297 more pairs in content-registry.json (`duplicates`)_
 - /learn/machine-learning/public-data-projects/ml-892-bank-marketing-temporal-campaign — Public-data project: Bank marketing campaign under time and contact constraints
 - /learn/machine-learning/public-data-projects/ml-894-online-retail-cohort-and-anomaly-study — Public-data project: Online Retail cohort, demand, and anomaly study
 - /learn/machine-learning/public-data-projects/ml-895-movielens-recommendation-and-feedback — Public-data project: MovieLens recommendation with temporal and feedback-loop audits
-- … 42 more in content-registry.json
+- … 43 more in content-registry.json
 
 ### release-sensitive (283)
 
@@ -579,40 +579,10 @@ Largest queue; full list in JSON. Vendor-signal sample:
 ### no published or updated date (0)
 
 
-### zero in-body internal links (template nav still applies) (876)
+### zero in-body internal links (template nav still applies) (539)
 
 - /learn/agentic-ai/agents-vs-workflows — Choose an agent only when a workflow is not enough
 - /learn/agentic-ai/state-memory-and-recovery — Design agent state, memory, and recovery explicitly
-- /learn/ai-foundations/ai-systems/101-ai-problem-framing-and-rational-action — AI Problem Framing and Rational Action
-- /learn/ai-foundations/ai-systems/102-intelligent-agents-observations-and-action-loops — Intelligent Agents: Observations and Action Loops
-- /learn/ai-foundations/ai-systems/103-state-spaces-and-search-problem-design — State Spaces and Search Problem Design
-- /learn/ai-foundations/ai-systems/104-breadth-first-search-and-layered-exploration — Breadth-First Search and Layered Exploration
-- /learn/ai-foundations/ai-systems/105-depth-first-search-backtracking-and-cycle-safety — Depth-First Search, Backtracking, and Cycle Safety
-- /learn/ai-foundations/ai-systems/106-uniform-cost-search-and-cost-sensitive-planning — Uniform-Cost Search and Cost-Sensitive Planning
-- /learn/ai-foundations/ai-systems/107-a-star-search-admissibility-and-consistency — A* Search: Admissibility, Consistency, and Reopening
-- /learn/ai-foundations/ai-systems/108-heuristic-design-relaxations-and-search-diagnostics — Heuristic Design, Relaxations, and Search Diagnostics
-- /learn/ai-foundations/ai-systems/109-local-search-hill-climbing-and-stochastic-optimization — Local Search, Hill Climbing, and Stochastic Optimization
-- /learn/ai-foundations/ai-systems/110-adversarial-search-minimax-and-game-values — Adversarial Search: Minimax and Game Values
-- /learn/ai-foundations/ai-systems/111-alpha-beta-pruning-and-move-ordering — Alpha-Beta Pruning and Move Ordering
-- /learn/ai-foundations/ai-systems/112-imperfect-information-and-utility-under-risk — Imperfect Information and Utility Under Risk
-- /learn/ai-foundations/ai-systems/113-constraint-satisfaction-models-and-propagation — Constraint Satisfaction Problems and Propagation
-- /learn/ai-foundations/ai-systems/114-backtracking-mrv-lcv-and-constraint-learning — Backtracking, MRV, LCV, and Constraint Learning
-- /learn/ai-foundations/ai-systems/115-classical-planning-strips-and-plan-graphs — Classical Planning: STRIPS and Plan Graphs
-- /learn/ai-foundations/ai-systems/116-planning-under-time-resources-and-uncertainty — Planning Under Time, Resources, and Uncertainty
-- /learn/ai-foundations/ai-systems/117-knowledge-representation-ontologies-and-rules — Knowledge Representation: Ontologies and Rules
-- /learn/ai-foundations/ai-systems/118-propositional-logic-satisfiability-and-resolution — Propositional Logic, Satisfiability, and Resolution
-- /learn/ai-foundations/ai-systems/119-first-order-logic-unification-and-rule-inference — First-Order Logic, Unification, and Rule Inference
-- /learn/ai-foundations/ai-systems/120-reasoning-with-uncertainty-probability-and-utility — Reasoning with Uncertainty: Probability and Utility
-- /learn/ai-foundations/ai-systems/121-bayesian-networks-conditional-independence-and-inference — Bayesian Networks, Conditional Independence, and Inference
-- /learn/ai-foundations/ai-systems/122-probabilistic-inference-sampling-and-approximation — Probabilistic Inference, Sampling, and Approximation
-- /learn/ai-foundations/ai-systems/123-symbolic-statistical-and-neuro-symbolic-ai — Symbolic, Statistical, and Neuro-Symbolic AI
-- /learn/ai-foundations/ai-systems/124-expert-systems-explanations-and-maintenance — Expert Systems, Explanations, and Maintenance
-- /learn/ai-foundations/ai-systems/125-robotics-perception-state-estimation-and-sensor-fusion — Robotics Perception, State Estimation, and Sensor Fusion
-- /learn/ai-foundations/ai-systems/126-robot-motion-planning-and-collision-safety — Robot Motion Planning and Collision Safety
-- /learn/ai-foundations/ai-systems/127-robot-control-feedback-and-safety-envelopes — Robot Control, Feedback, and Safety Envelopes
-- /learn/ai-foundations/ai-systems/128-multi-agent-coordination-communication-and-allocation — Multi-Agent Coordination, Communication, and Allocation
-- /learn/ai-foundations/ai-systems/129-multi-agent-strategic-behavior-mechanisms-and-safety — Multi-Agent Strategic Behavior, Mechanisms, and Safety
-- /learn/ai-foundations/ai-systems/130-ai-systems-capstone-assurance-case-and-oral-defense — AI Systems Capstone: Assurance Case and Oral Defense
 - /learn/ai-foundations/applied-ai/301-ai-product-discovery-outcomes-and-harm — AI Product Discovery: Outcomes, Users, and Harm
 - /learn/ai-foundations/applied-ai/302-choosing-rules-classical-ml-deep-learning-or-llm — Choosing Rules, Classical ML, Deep Learning, or an LLM
 - /learn/ai-foundations/applied-ai/303-data-pipelines-lineage-and-data-contracts — Data Pipelines, Lineage, and Data Contracts
@@ -621,7 +591,37 @@ Largest queue; full list in JSON. Vendor-signal sample:
 - /learn/ai-foundations/applied-ai/306-self-supervised-learning-data-and-transfer — Self-Supervised Learning: Data, Representations, and Transfer
 - /learn/ai-foundations/applied-ai/307-reinforcement-learning-product-suitability — Reinforcement Learning: Product Suitability and Safe Constraints
 - /learn/ai-foundations/applied-ai/308-training-and-inference-economics — Training and Inference Economics
-- … 836 more
+- /learn/ai-foundations/applied-ai/309-embeddings-similarity-and-index-design — Embeddings, Similarity, and Index Design
+- /learn/ai-foundations/applied-ai/310-retrieval-augmented-generation-grounding — Retrieval-Augmented Generation and Grounded Answers
+- /learn/ai-foundations/applied-ai/311-agents-tools-and-approval-boundaries — Agents, Tools, and Approval Boundaries
+- /learn/ai-foundations/applied-ai/312-multimodal-ai-inputs-fusion-and-evaluation — Multimodal AI: Inputs, Fusion, and Evaluation
+- /learn/ai-foundations/applied-ai/313-experimentation-ab-tests-and-decision-quality — Experimentation, A/B Tests, and Decision Quality
+- /learn/ai-foundations/applied-ai/314-evaluation-evidence-and-human-review — Evaluation Evidence and Human Review
+- /learn/ai-foundations/applied-ai/315-monitoring-drift-and-incident-response — Monitoring, Drift, and Incident Response
+- /learn/ai-foundations/applied-ai/316-healthcare-ai-clinical-workflows-and-safety — Applied Case: Healthcare AI and Clinical Workflow Safety
+- /learn/ai-foundations/applied-ai/317-education-ai-learning-and-assessment-integrity — Applied Case: Education AI, Learning, and Assessment Integrity
+- /learn/ai-foundations/applied-ai/318-finance-ai-controls-fairness-and-model-risk — Applied Case: Finance AI, Controls, Fairness, and Model Risk
+- /learn/ai-foundations/applied-ai/319-manufacturing-ai-quality-and-maintenance — Applied Case: Manufacturing AI for Quality and Maintenance
+- /learn/ai-foundations/applied-ai/320-public-sector-ai-procurement-and-accountability — Applied Case: Public-Sector AI, Procurement, and Accountability
+- /learn/ai-foundations/applied-ai/321-privacy-security-and-sensitive-data — Privacy, Security, and Sensitive Data in Applied AI
+- /learn/ai-foundations/applied-ai/322-deployment-release-strategy-and-fallbacks — Deployment, Release Strategy, and Safe Fallbacks
+- /learn/ai-foundations/applied-ai/323-applied-ai-architecture-review — Applied AI Architecture Review
+- /learn/ai-foundations/applied-ai/324-applied-ai-project-gates-and-model-card — Applied AI Project Gates and the Model Card
+- /learn/ai-foundations/applied-ai/325-applied-ai-staged-capstone-and-defense — Applied AI Staged Capstone and Technical Defense
+- /learn/ai-foundations/reliable-ai/201-provenance-consent-and-data-rights — Provenance, Consent, and Data Rights
+- /learn/ai-foundations/reliable-ai/202-labels-annotation-and-ground-truth — Labels, Annotation, and the Limits of Ground Truth
+- /learn/ai-foundations/reliable-ai/203-benchmarks-evaluations-and-capability-claims — Benchmarks, Evaluations, and Defensible Capability Claims
+- /learn/ai-foundations/reliable-ai/204-distribution-shift-and-robustness — Distribution Shift, Robustness, and Monitoring
+- /learn/ai-foundations/reliable-ai/205-uncertainty-calibration-and-abstention — Uncertainty, Calibration, and Abstention
+- /learn/ai-foundations/reliable-ai/206-hallucination-grounding-and-verification — Hallucination, Grounding, and Verification
+- /learn/ai-foundations/reliable-ai/207-interpretability-and-explanation-boundaries — Interpretability, Explanations, and Their Boundaries
+- /learn/ai-foundations/reliable-ai/208-fairness-problem-formulation-and-measurement — Fairness: Problem Formulation and Measurement
+- /learn/ai-foundations/reliable-ai/209-fairness-mitigation-and-governance — Fairness Mitigation and Governance
+- /learn/ai-foundations/reliable-ai/210-privacy-threat-modeling-and-minimization — Privacy Threat Modeling and Data Minimization
+- /learn/ai-foundations/reliable-ai/211-privacy-preserving-learning-and-release — Privacy-Preserving Learning and Release
+- /learn/ai-foundations/reliable-ai/212-adversarial-ml-and-input-security — Adversarial ML and Input Security
+- /learn/ai-foundations/reliable-ai/213-model-supply-chain-and-artifact-security — Model Supply Chain and Artifact Security
+- … 499 more
 
 ### live file not in curriculum (0)
 

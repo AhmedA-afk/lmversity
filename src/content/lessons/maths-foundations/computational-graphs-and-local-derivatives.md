@@ -12,7 +12,7 @@ A computational graph turns a formula into nodes for values and operations, with
 
 ## Why this matters
 
-Most backward bugs are graph bugs: a missing edge, stale cache, overwritten intermediate, or forgotten contribution from a reused value. Drawing the graph makes the chain rule operational and gives a place to attach tests.
+Most backward bugs are graph bugs: a missing edge, stale cache, overwritten intermediate, or forgotten contribution from a reused value. Drawing the graph makes [the chain rule](/learn/maths-foundations/the-chain-rule) operational and gives a place to attach tests.
 
 ## How it works
 
@@ -65,6 +65,6 @@ A correct graph can still encode a wrong loss or data contract. It also does not
 
 ## Continue, go deeper, apply it
 
-- Continue: Forward-mode automatic differentiation
-- Go deeper: Reverse-mode autodiff and backpropagation
+- Continue: [Forward-mode automatic differentiation](/learn/maths-foundations/forward-mode-automatic-differentiation)
+- Go deeper: [Reverse-mode autodiff and backpropagation](/learn/maths-foundations/reverse-mode-autodiff-and-backpropagation)
 - Apply it: Gradient checking and debugging

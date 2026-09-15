@@ -73,6 +73,6 @@ A derivative is local and can be undefined at a kink or boundary. It does not es
 
 ## Continue, go deeper, apply it
 
-- Continue: Finite differences and numerical derivative checks
-- Go deeper: Differentiation rules
-- Apply it: Loss, gradients, and gradient descent
+- Continue: [Finite differences and numerical derivative checks](/learn/maths-foundations/finite-differences-and-numerical-derivative-checks)
+- Go deeper: [Differentiation rules](/learn/maths-foundations/differentiation-rules)
+- Apply it: Loss, gradients, and [gradient descent](/learn/maths-foundations/gradient-descent-intuition)

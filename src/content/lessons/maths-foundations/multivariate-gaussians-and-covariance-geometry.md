@@ -139,6 +139,6 @@ continuous feature vectors.
 
 ## Continue, go deeper, apply it
 
-- Continue: Beta and Dirichlet priors
+- Continue: [Beta and Dirichlet priors](/learn/maths-foundations/beta-and-dirichlet-priors)
 - Go deeper: Linear algebra for ML
 - Apply it: Likelihood, priors, and sampling assignment

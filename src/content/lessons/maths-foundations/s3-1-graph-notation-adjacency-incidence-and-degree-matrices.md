@@ -66,7 +66,7 @@ map and a diagonal feature/adjacency alignment test catch this class of failure.
 
 ### Matrix view
 
-Rows and columns are indexed by the same node ordering; matrix multiplication
+Rows and columns are indexed by the same node ordering; [matrix multiplication](/learn/maths-foundations/matrix-multiplication-mechanics)
 turns topology into aggregation. The ordering is part of the data contract.
 
 ### Relationship view
@@ -102,6 +102,6 @@ make every downstream mathematical operation precise but irrelevant.
 
 ## Continue, go deeper, apply it
 
-- Continue: Random walks and transition operators
-- Go deeper: Graph Laplacians and smoothness
+- Continue: [Random walks and transition operators](/learn/maths-foundations/s3-2-random-walks-and-transition-operators)
+- Go deeper: [Graph Laplacians and smoothness](/learn/maths-foundations/s3-3-graph-laplacians-and-smoothness)
 - Apply it: Message passing and oversmoothing

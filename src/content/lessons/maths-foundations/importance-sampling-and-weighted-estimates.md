@@ -134,6 +134,6 @@ empirical distributions offer robust descriptive summaries for observed data.
 
 ## Continue, go deeper, apply it
 
-- Continue: Quantiles, order statistics, empirical distributions, and anomaly thresholds
+- Continue: [Quantiles, order statistics, empirical distributions, and anomaly thresholds](/learn/maths-foundations/quantiles-order-statistics-empirical-distributions-and-anomaly-thresholds)
 - Go deeper: Bayesian and generative learning
 - Apply it: Likelihood, priors, and sampling assignment

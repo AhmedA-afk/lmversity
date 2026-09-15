@@ -11,7 +11,7 @@ duration: "6 min read"
 An orthogonal projection keeps the component of a vector that lies in a chosen
 subspace and discards the perpendicular component. For a full-column-rank
 matrix `A`, the projector onto `col(A)` is `P = A(AᵀA)⁻¹Aᵀ`; it satisfies
-`P²=P` and `Pᵀ=P`. In AI, this is the geometry behind least squares, residuals,
+`P²=P` and `Pᵀ=P`. In AI, this is the geometry behind [least squares](/learn/maths-foundations/least-squares-normal-equations-and-projection-geometry), residuals,
 feature subspaces, and removing a known direction from a representation.
 
 ## Why this matters
@@ -168,7 +168,7 @@ formula), rerun the fixtures, and save the passing report.
 - [ ] Given a projector `P`, explain why `P²=P` and why `I−P` removes the target
   subspace.
 - [ ] Compute the projection and residual for `u=(1,2)`, `x=(3,1)` and verify
-  the dot product by hand.
+  [the dot product](/learn/maths-foundations/dot-product-explained) by hand.
 - [ ] State the assumption behind `A(AᵀA)⁻¹Aᵀ` and name a decomposition that can
   avoid relying on explicit normal equations.
 
@@ -181,6 +181,6 @@ It also does not make a rank-deficient or badly scaled matrix safe automatically
 
 ## Continue, go deeper, apply it
 
-- Continue: Gram–Schmidt orthogonalisation
+- Continue: [Gram–Schmidt orthogonalisation](/learn/maths-foundations/gram-schmidt-orthogonalisation)
 - Go deeper: Linear algebra for ML
 - Apply it: Least squares and regression

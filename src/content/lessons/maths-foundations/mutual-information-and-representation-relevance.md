@@ -18,7 +18,7 @@ Representation learning tries to preserve information useful for a task while di
 
 ## How it works
 
-The joint distribution P(X,Y) is compared with the product of marginals P(X)P(Y). If they match, knowing X does not change the distribution of Y and the KL divergence is zero. If X determines Y, `H(Y|X)=0` and `I(X;Y)=H(Y)`.
+The joint distribution P(X,Y) is compared with the product of marginals P(X)P(Y). If they match, knowing X does not change the distribution of Y and the [KL divergence](/learn/maths-foundations/kl-divergence) is zero. If X determines Y, `H(Y|X)=0` and `I(X;Y)=H(Y)`.
 
 ### Assumptions and derivation
 
@@ -88,6 +88,6 @@ MI does not prove causality, fairness, robustness, or generalisation. Estimation
 
 ## Continue, go deeper, apply it
 
-- Continue: Likelihood, cross-entropy, and classification objectives
+- Continue: [Likelihood, cross-entropy, and classification objectives](/learn/maths-foundations/likelihood-cross-entropy-and-classification-objectives)
 - Go deeper: Latent variables and ELBO intuition
 - Apply it: PCA and dimensionality reduction

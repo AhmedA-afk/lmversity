@@ -68,4 +68,4 @@ A diagram cannot identify unknown confounders or validate arrows from imaginatio
 
 ## Continue, go deeper, apply it
 
-Continue with randomized experiments and online A/B tests. Go deeper with potential outcomes and identification. Apply this by requiring a causal diagram before approving an observational impact claim.
+Continue with [randomized experiments and online A/B tests](/learn/machine-learning/ml-512-randomized-experiments-and-online-ab-tests). Go deeper with potential outcomes and identification. Apply this by requiring a causal diagram before approving an observational impact claim.

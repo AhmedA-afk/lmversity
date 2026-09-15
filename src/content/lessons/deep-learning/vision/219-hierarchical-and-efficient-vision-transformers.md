@@ -33,7 +33,7 @@ non-multiple input sizes; invalid padded tokens can become a shortcut.
 
 Make a cost table for global, 7x7 windowed, and pooled attention at 1024 resolution.
 Implement padding masks and unit-test that adding right/bottom padding does not change
-valid-region logits. Propose a hierarchical backbone for small-object detection and
+valid-region logits. Propose a hierarchical backbone for small-[object detection](/learn/deep-learning/vision/212-object-detection-boxes-and-iou) and
 justify stage strides, token counts, and expected latency. Include a seam-focused error
 analysis on tiled imagery.
 

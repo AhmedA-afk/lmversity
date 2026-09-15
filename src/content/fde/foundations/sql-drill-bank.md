@@ -108,7 +108,7 @@ Write each answer yourself before reading the approach line — the approach is 
 23. **The gap, in days, between each customer's consecutive orders.**
     Approach: `order_date - LAG(order_date) OVER (PARTITION BY customer_id ORDER BY order_date)`.
 24. **Percentage of total revenue each region contributes.**
-    Approach: `SUM(amount) OVER (PARTITION BY region) / SUM(amount) OVER ()` — two window functions, one partitioned, one not.
+    Approach: `SUM(amount) OVER (PARTITION BY region) / SUM(amount) OVER ()` — two [window functions](/roles/forward-deployed-engineer/foundations/window-functions-second-highest-per-category), one partitioned, one not.
 
 ## Data quality
 

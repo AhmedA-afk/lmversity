@@ -29,7 +29,7 @@ Read enough FDE postings and you stop seeing one job. Twenty-eight were fetched 
 
 ## The split
 
-**Applied-AI FDE.** Anthropic, Cohere, Glean, Harvey, Retool, Sarvam, Snowflake Cortex, Databricks AI-FDE, Palantir's Forward Deployed AI Engineer, Baseten, Vercel's AI track, OpenAI's FDE template. The requirement that defines this pile is production LLM work: agents, evaluation frameworks, retrieval, and increasingly MCP servers named as a deliverable.
+**Applied-AI FDE.** Anthropic, Cohere, Glean, Harvey, Retool, Sarvam, Snowflake Cortex, Databricks AI-FDE, Palantir's Forward Deployed AI Engineer, Baseten, Vercel's AI track, OpenAI's FDE template. The requirement that defines this pile is production LLM work: agents, evaluation frameworks, retrieval, and increasingly [MCP servers](/roles/forward-deployed-engineer/ai/mcp-servers-and-when-a-plain-function-is-simpler) named as a deliverable.
 
 **Platform and infrastructure FDE.** Palantir's FDSE, Databricks' Senior FDE, Sierra's deployed infrastructure role, Shield AI, C3.ai, HackerRank, and, notably, OpenAI's *FDSE* template. The defining requirement is full-stack or infrastructure depth: Postgres or MySQL, Spark internals, Terraform, container orchestration, cloud networking, sometimes a vendor certification.
 

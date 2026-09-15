@@ -98,7 +98,7 @@ recording the reviewed failure and rerunning the comparison.
 ### Production case: model-version drift
 
 **Input:** queries are encoded with a new embedding model while the index still
-contains old-model vectors. **Mechanism:** the dot product is computable but
+contains old-model vectors. **Mechanism:** [the dot product](/learn/maths-foundations/dot-product-explained) is computable but
 the coordinate spaces are not guaranteed comparable. **Output:** unexplained
 recall drop or score drift. **Inspect:** model ID and dimension metadata on both
 query and index, plus a canary set of reviewed pairs. **Decision:** rebuild,

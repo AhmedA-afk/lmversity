@@ -90,6 +90,6 @@ Curvature-aware methods do not guarantee global convergence on non-convex object
 
 ## Continue, go deeper, apply it
 
-- Continue: Objectives, losses, empirical risk, and constraints
-- Go deeper: Regularisation geometry
-- Apply it: Optimisation, loss, and gradient descent
+- Continue: [Objectives, losses, empirical risk, and constraints](/learn/maths-foundations/objectives-losses-empirical-risk-and-constraints)
+- Go deeper: [Regularisation geometry](/learn/maths-foundations/regularisation-geometry-l1-l2-weight-decay-and-early-stopping)
+- Apply it: Optimisation, loss, and [gradient descent](/learn/maths-foundations/gradient-descent-intuition)

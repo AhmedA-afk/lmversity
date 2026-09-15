@@ -7,7 +7,7 @@ summary: "Integrate visual modelling, evaluation, robustness, and operations int
 duration: "35 min read"
 ---
 
-Choose one of: small-object detection, boundary-sensitive segmentation, visual
+Choose one of: small-[object detection](/learn/deep-learning/vision/212-object-detection-boxes-and-iou), boundary-sensitive segmentation, visual
 retrieval, or edge classification. Your goal is not a leaderboard score; it is a
 reproducible decision system with a stated operating domain and a credible failure
 response.

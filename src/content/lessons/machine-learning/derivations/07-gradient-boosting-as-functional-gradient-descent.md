@@ -49,4 +49,4 @@ Functional descent optimizes the chosen empirical loss, not calibration, fairnes
 
 ## Nearby course topics
 
-Continue with gradient boosting from residuals, boosting hyperparameters and early stopping, calibration, and ensemble methods.
+Continue with gradient boosting from residuals, [boosting hyperparameters and early stopping](/learn/machine-learning/ml-310-boosting-hyperparameters-and-early-stopping), calibration, and ensemble methods.

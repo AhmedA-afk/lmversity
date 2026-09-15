@@ -96,7 +96,7 @@ Push it to GitHub as a public repository. Public, not private, is deliberate: th
 
 **8. Write your first journal entry, in first person, today.**
 
-Not a to-do list. An honest paragraph. Two prompts to answer in it, both pulled from earlier orientation pages: your own one-paragraph definition of what a Forward Deployed Engineer is, in your own words, before you know much more — and, against the thirteen responsibilities from "What a Forward Deployed Engineer actually does," which ones you have genuinely done before, in any job, project or club, and which you have never touched. Write "none" where it's none. This entry is the baseline you compare against in Phase 08, and a baseline that flatters you is useless to you later.
+Not a to-do list. An honest paragraph. Two prompts to answer in it, both pulled from earlier orientation pages: your own one-paragraph definition of what a Forward Deployed Engineer is, in your own words, before you know much more — and, against the thirteen responsibilities from "[What a Forward Deployed Engineer actually does](/roles/forward-deployed-engineer/orientation/what-a-forward-deployed-engineer-does)," which ones you have genuinely done before, in any job, project or club, and which you have never touched. Write "none" where it's none. This entry is the baseline you compare against in Phase 08, and a baseline that flatters you is useless to you later.
 
 ## Definition of done
 

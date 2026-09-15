@@ -50,4 +50,4 @@ An SVM cannot infer cost, causality, or a safe action threshold from labels alon
 
 ## Continue, go deeper, apply it
 
-Compare margin regularization with logistic regression and then move to tree-based partitioning.
+Compare margin regularization with [logistic regression](/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian) and then move to tree-based partitioning.

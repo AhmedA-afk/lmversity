@@ -126,6 +126,6 @@ the transformed distribution when analytic inversion is inconvenient.
 
 ## Continue, go deeper, apply it
 
-- Continue: Sampling, inverse transform, and rejection sampling
+- Continue: [Sampling, inverse transform, and rejection sampling](/learn/maths-foundations/sampling-inverse-transform-and-rejection-sampling)
 - Go deeper: Probability and statistics for ML
 - Apply it: Likelihood, priors, and sampling assignment

@@ -76,7 +76,7 @@ Now go get the people you have not met. Half an hour each, separately, never tog
 - **Security or compliance.** What data may leave the perimeter, what the retention rules are, whether they have a questionnaire for you. In India, ask specifically about DPDP Act obligations and any sectoral regulator guidance that applies; in the EU, about the lawful basis and the DPA; in US healthcare, about the BAA.
 - **The business owner one level above your sponsor.** Not to go over anyone's head; to hear the sentence they use about this project.
 
-Fill in the stakeholder table from the decomposition method: role, wants, measured on, can veto.
+Fill in the stakeholder table from [the decomposition method](/roles/forward-deployed-engineer/field/the-decomposition-method): role, wants, measured on, can veto.
 
 ## Day 5: The written baseline
 

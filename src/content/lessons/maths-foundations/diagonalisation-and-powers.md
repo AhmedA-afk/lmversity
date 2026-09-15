@@ -169,6 +169,6 @@ description also does not replace task-level evaluation of an AI system.
 
 ## Continue, go deeper, apply it
 
-- Continue: Symmetric matrices, quadratic forms, and definiteness
+- Continue: [Symmetric matrices](/learn/maths-foundations/symmetric-matrices-quadratic-forms-and-definiteness), quadratic forms, and definiteness
 - Go deeper: Time-series and temporal validation
 - Apply it: Neural networks and representations

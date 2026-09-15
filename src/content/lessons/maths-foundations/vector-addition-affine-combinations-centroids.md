@@ -167,6 +167,6 @@ result.
 
 ## Continue, go deeper, apply it
 
-- Continue: Dot products and bilinear scores
-- Go deeper: Vector means, centring, and feature standardisation
+- Continue: [Dot products and bilinear scores](/learn/maths-foundations/dot-products-bilinear-scores)
+- Go deeper: [Vector means, centring, and feature standardisation](/learn/maths-foundations/vector-means-centring-feature-standardisation)
 - Apply it: A1 embedding geometry lab

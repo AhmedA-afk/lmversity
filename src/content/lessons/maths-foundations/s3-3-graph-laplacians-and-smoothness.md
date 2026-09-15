@@ -103,6 +103,6 @@ degree or component effects.
 
 ## Continue, go deeper, apply it
 
-- Continue: Spectral clustering and embeddings
-- Go deeper: Random walks and transition operators
-- Apply it: Message passing and oversmoothing
+- Continue: [Spectral clustering and embeddings](/learn/maths-foundations/s3-4-spectral-clustering-and-embeddings)
+- Go deeper: [Random walks and transition operators](/learn/maths-foundations/s3-2-random-walks-and-transition-operators)
+- Apply it: [Message passing and oversmoothing](/learn/maths-foundations/s3-5-message-passing-and-oversmoothing)

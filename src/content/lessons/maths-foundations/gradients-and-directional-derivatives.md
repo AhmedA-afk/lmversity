@@ -34,7 +34,7 @@ For a small vector move `Δx`, `f(x+Δx)≈f(x)+∇f(x)·Δx`. Set `Δx=tu`, wit
 
 ### Counterexample: gradient magnitude is not output change
 
-**Input:** `f(x,y)=x+y` at `(0,0)`, move `Δ=(0.1,0.1)`. **Mechanism:** `∇f=(1,1)` has norm `√2`, but actual change is `0.2`; the first-order formula uses the dot product. **Output:** reporting `√2` as the change is wrong. **Inspect:** include direction and step length. **Decision:** report `∇f·Δ` or a directional rate, not the vector alone.
+**Input:** `f(x,y)=x+y` at `(0,0)`, move `Δ=(0.1,0.1)`. **Mechanism:** `∇f=(1,1)` has norm `√2`, but actual change is `0.2`; the first-order formula uses [the dot product](/learn/maths-foundations/dot-product-explained). **Output:** reporting `√2` as the change is wrong. **Inspect:** include direction and step length. **Decision:** report `∇f·Δ` or a directional rate, not the vector alone.
 
 ## Two ways to see it
 
@@ -65,6 +65,6 @@ The gradient is local, coordinate-dependent, and blind to higher-order effects. 
 
 ## Continue, go deeper, apply it
 
-- Continue: Level sets, tangent planes, and constrained movement
-- Go deeper: Reverse-mode autodiff and backpropagation
+- Continue: [Level sets, tangent planes, and constrained movement](/learn/maths-foundations/level-sets-tangent-planes-and-constrained-movement)
+- Go deeper: [Reverse-mode autodiff and backpropagation](/learn/maths-foundations/reverse-mode-autodiff-and-backpropagation)
 - Apply it: Loss, gradients, and gradient descent

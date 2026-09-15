@@ -123,6 +123,6 @@ to axes and scale.
 
 ## Continue, go deeper, apply it
 
-- Continue: Sets, logic, and proof habits
+- Continue: [Sets, logic, and proof habits](/learn/maths-foundations/sets-logic-and-proof-habits)
 - Go deeper: Mathematics Foundations checklist
 - Apply it: Linear regression from scratch

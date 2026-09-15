@@ -132,7 +132,7 @@ Complete this inspection table. Distances are shown in exact form first.
 Write three rankings:
 
 1. dot product, descending;
-2. cosine similarity, descending;
+2. [cosine similarity](/learn/maths-foundations/cosine-similarity-angular-distance-embedding-retrieval), descending;
 3. L2 distance, ascending.
 
 Then answer: which candidate is nearest under cosine, and which is nearest
@@ -378,13 +378,13 @@ evaluation, and downstream answer tests.
 
 ## Continue, go deeper, apply it
 
-- Continue: Similarity-search design clinic
+- Continue: [Similarity-search design clinic](/learn/maths-foundations/similarity-search-design-clinic)
 - Go deeper: Ingestion, chunking, and retrieval
 - Apply it: Linear algebra for ML
 
 ## M1 reference route
 
-- M1.1 Vectors as coordinates, measurements, and features
+- M1.1 [Vectors as coordinates, measurements, and features](/learn/maths-foundations/vectors-as-coordinates-features)
 - M1.2 Vector addition, affine combinations, and centroids
 - M1.3 Dot products and bilinear scores
 - M1.4 Norms and distances

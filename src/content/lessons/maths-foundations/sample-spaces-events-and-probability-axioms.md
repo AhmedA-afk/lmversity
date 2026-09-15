@@ -140,6 +140,6 @@ reasoning, and model checking come next.
 
 ## Continue, go deeper, apply it
 
-- Continue: Counting, permutations, combinations, and inclusion–exclusion
+- Continue: [Counting, permutations, combinations, and inclusion–exclusion](/learn/maths-foundations/counting-permutations-combinations-and-inclusion-exclusion)
 - Go deeper: Mathematics Foundations checklist
 - Apply it: Use probability to describe uncertainty and data variation

@@ -132,6 +132,6 @@ an algebraic blind spot may be harmless or harmful depending on the task.
 
 ## Continue, go deeper, apply it
 
-- Continue: Span, linear independence, basis, and dimension
-- Go deeper: Rank, pivots, and identifiability
+- Continue: [Span, linear independence, basis, and dimension](/learn/maths-foundations/span-linear-independence-basis-and-dimension)
+- Go deeper: [Rank, pivots, and identifiability](/learn/maths-foundations/rank-pivots-and-identifiability)
 - Apply it: Linear algebra for ML

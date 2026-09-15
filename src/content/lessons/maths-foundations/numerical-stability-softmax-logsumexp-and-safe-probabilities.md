@@ -98,6 +98,6 @@ Stable arithmetic does not fix a wrong class order, exploding model scale, poor 
 
 ## Continue, go deeper, apply it
 
-- Continue: Optimisation diagnostics and second-order perspective
+- Continue: [Optimisation diagnostics and second-order perspective](/learn/maths-foundations/optimisation-diagnostics-and-second-order-perspective)
 - Go deeper: Cross-entropy and negative log-likelihood
 - Apply it: API lifecycle and structured output

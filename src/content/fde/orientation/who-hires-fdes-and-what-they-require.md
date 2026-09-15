@@ -71,7 +71,7 @@ Counts are out of 28 fetched postings.
 | Vertical domain experience | 0 | 7 | **7 / 28** |
 | Security, compliance, guardrails | 2 | 3 | **5 / 28** |
 | Prompt engineering | 3 | 1 | **4 / 28** |
-| MCP servers named | 3 | 0 | **3 / 28** |
+| [MCP servers](/roles/forward-deployed-engineer/ai/mcp-servers-and-when-a-plain-function-is-simpler) named | 3 | 0 | **3 / 28** |
 | AI-coding-tool fluency required | 1 | 2 | **3 / 28** |
 | Vendor certification | 1 | 0 | **1 / 28** |
 | Security clearance | 0 | 0 | **0 / 28** |
@@ -88,7 +88,7 @@ The reason this matters: the highest-weighted round in most FDE interview loops 
 
 **Agents beat evals beat retrieval beats prompting.** Agents in 11, evals in 9, RAG in 9, prompt engineering in 4. In 2026 language, "production LLM experience" means you have built something agentic and can prove it works. Three postings, Anthropic and Vercel and Sarvam, name MCP servers as a deliverable outright.
 
-**Degrees are mostly optional.** A hard gate in 7 of 28, and three of those say "or equivalent". The strict ones are defence (Shield AI), C3.ai, Baseten and Retool. Palantir lists preferred fields rather than requiring a degree. If you do not have a degree, this is one of the more open engineering markets available to you, and the evidence portfolio in Phase 09 is what replaces the credential.
+**Degrees are mostly optional.** A hard gate in 7 of 28, and three of those say "or equivalent". The strict ones are defence (Shield AI), C3.ai, Baseten and Retool. Palantir lists preferred fields rather than requiring a degree. If you do not have a degree, this is one of the more open engineering markets available to you, and [the evidence portfolio](/roles/forward-deployed-engineer/orientation/the-evidence-portfolio) in Phase 09 is what replaces the credential.
 
 **Certification is rare but not free.** One posting in twenty-eight required a vendor certification, and it was Databricks. If you target one platform vendor, budget for its certification. Do not collect them speculatively.
 

@@ -75,7 +75,7 @@ the decision. It controls one kind of complexity.
 
 ## Continue, go deeper, apply it
 
-- Continue: Decision trees and entropy
+- Continue: [Decision trees](/learn/machine-learning/derivations/06-decision-tree-impurity-and-information-gain-calculations) and entropy
 - Go deeper: Cross-validation and experimental design
 - Apply it: add a regularization sweep and stability note to a model report.
 
@@ -102,7 +102,7 @@ With one standardized feature and an unregularized slope estimate 4, a ridge-lik
 
 ## Debugging clinic: instability hidden by a good score
 
-Resample your training set 30 times, fit the same regularization setting, and record selected features and coefficients. If validation score is stable but the top features change radically, avoid a strong feature-story claim. Compare ridge, lasso, and elastic net on the same folds. Verify that scaling and imputation are fit inside each fold; otherwise the sweep itself leaks information.
+Resample your training set 30 times, fit the same regularization setting, and record selected features and coefficients. If validation score is stable but the top features change radically, avoid a strong feature-story claim. Compare [ridge, lasso, and elastic net](/learn/machine-learning/ml-203-ridge-lasso-and-elastic-net) on the same folds. Verify that scaling and imputation are fit inside each fold; otherwise the sweep itself leaks information.
 
 ## Assessment: tune without contaminating a test set
 

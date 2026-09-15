@@ -165,6 +165,6 @@ useful. Those require data contracts, validation, and model evaluation.
 
 ## Continue, go deeper, apply it
 
-- Continue: Matrix addition, scaling, transpose, and symmetry
+- Continue: [Matrix addition, scaling, transpose, and symmetry](/learn/maths-foundations/matrix-addition-scaling-transpose-and-symmetry)
 - Go deeper: Linear algebra for ML
 - Apply it: Linear regression from scratch

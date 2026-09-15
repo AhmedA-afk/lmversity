@@ -89,6 +89,6 @@ A limit does not estimate how quickly an approximation becomes good, and continu
 
 ## Continue, go deeper, apply it
 
-- Continue: Derivatives as rate, slope, and sensitivity
+- Continue: [Derivatives as rate, slope, and sensitivity](/learn/maths-foundations/derivatives-rate-slope-sensitivity)
 - Go deeper: Mathematics Foundations checklist
-- Apply it: Loss, gradients, and gradient descent
+- Apply it: Loss, gradients, and [gradient descent](/learn/maths-foundations/gradient-descent-intuition)

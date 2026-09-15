@@ -16,7 +16,7 @@ Machine learning is useful when examples can teach a system a mapping or structu
 
 ## Worked example
 
-Baseline: predict the most common class. Better baseline: a rule using last-login recency. Candidate model: logistic regression. If the candidate wins only on a random split but loses on a time split, it learned the past too specifically.
+Baseline: predict the most common class. Better baseline: a rule using last-login recency. Candidate model: [logistic regression](/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian). If the candidate wins only on a random split but loses on a time split, it learned the past too specifically.
 
 ## A small story
 

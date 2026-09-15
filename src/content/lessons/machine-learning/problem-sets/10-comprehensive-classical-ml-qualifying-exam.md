@@ -18,8 +18,8 @@ You are building a model to prioritize follow-up for 50,000 customers each month
 2. Is the account-manager note safe as described? Explain with a timeline and propose a point-in-time data contract.
 3. Prevalence is 4%. At a threshold, validation TP=600, FP=1,400, FN=1,400, TN=46,600. Compute precision, recall, and number of contacts. Is this threshold capacity-feasible?
 4. Write the logistic negative log-likelihood for one observation and derive its gradient contribution with respect to (\beta).
-5. You compare a regularized logistic regression and gradient-boosted tree. Give a split/tuning/evaluation design that respects repeated customers and time. Include how model choice is made.
-6. The tree has higher AUC, but logistic regression has better calibration near the top 2,000. Which model should you prefer? Give a conditional answer using decision value and explain what extra evidence is required.
+5. You compare a regularized [logistic regression](/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian) and gradient-boosted tree. Give a split/tuning/evaluation design that respects repeated customers and time. Include how model choice is made.
+6. The tree has higher AUC, but [logistic regression](/learn/machine-learning/ml-206-logistic-regression-likelihood-and-odds) has better calibration near the top 2,000. Which model should you prefer? Give a conditional answer using decision value and explain what extra evidence is required.
 7. A feature’s permutation importance is large, but it measures whether a customer logged into an account-management page. List three reasons this is not proof that increasing logins reduces churn.
 8. An A/B test offers outreach to the top-ranked 2,000 customers. Define treatment/control, primary outcome, at least two guardrails, and one interference risk.
 9. After deployment, mean predicted risk rises from .07 to .13 while contact uptake falls. Give a prioritized incident response: three checks before retraining, an action safeguard, and an owner/artifact to record.

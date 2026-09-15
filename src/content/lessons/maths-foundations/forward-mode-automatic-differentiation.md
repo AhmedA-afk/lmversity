@@ -72,6 +72,6 @@ Forward mode does not produce every derivative in one pass and does not remove f
 
 ## Continue, go deeper, apply it
 
-- Continue: Reverse-mode autodiff and backpropagation
-- Go deeper: Jacobians for vector-valued functions
-- Apply it: Gradient checking and debugging
+- Continue: [Reverse-mode autodiff and backpropagation](/learn/maths-foundations/reverse-mode-autodiff-and-backpropagation)
+- Go deeper: [Jacobians for vector-valued functions](/learn/maths-foundations/jacobians-for-vector-valued-functions)
+- Apply it: [Gradient checking and debugging](/learn/maths-foundations/gradient-checking-and-debugging)

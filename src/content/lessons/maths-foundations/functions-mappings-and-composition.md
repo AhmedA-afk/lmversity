@@ -145,6 +145,6 @@ data quality, and decision policy remain separate work.
 
 ## Continue, go deeper, apply it
 
-- Continue: Algebra for model equations
+- Continue: [Algebra for model equations](/learn/maths-foundations/algebra-for-model-equations)
 - Go deeper: Mathematics Foundations checklist
 - Apply it: Problem framing and baselines

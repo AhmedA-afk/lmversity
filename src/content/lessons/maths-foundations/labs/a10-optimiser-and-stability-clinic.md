@@ -8,7 +8,7 @@ duration: "11 min read"
 
 ## The short answer
 
-This lab compares batch gradient descent, deterministic SGD, momentum, Adam, and a curvature-aware Newton update on the same tiny least-squares model. You will make the raw feature scale fail, show an unstable learning rate, repair the conditioning with unit-RMS scaling, and test log-sum-exp as a separate stable numerical identity. Every run starts from the same parameters, seed, data exposure, and declared state reset.
+This lab compares batch [gradient descent](/learn/maths-foundations/gradient-descent-intuition), deterministic SGD, momentum, Adam, and a curvature-aware Newton update on the same tiny least-squares model. You will make the raw feature scale fail, show an unstable learning rate, repair the conditioning with unit-RMS scaling, and test log-sum-exp as a separate stable numerical identity. Every run starts from the same parameters, seed, data exposure, and declared state reset.
 
 ## Why this matters
 
@@ -191,7 +191,7 @@ h2, w2 = run("sgd", X_scaled, .8)
 assert np.array_equal(h1, h2) and np.array_equal(w1, w2)
 ```
 
-Record `np.__version__`, the condition numbers, each history's first/last loss and maximum gradient/update norm, the final prediction residual, and the exact seed. With the fixture and settings above, the scaled final losses are approximately: GD `0`, SGD `0`, momentum `1.37e−5`, Adam `5.62e−6`, and Newton `0`.
+Record `np.__version__`, the [condition numbers](/learn/maths-foundations/condition-numbers-stability-and-solvers), each history's first/last loss and maximum gradient/update norm, the final prediction residual, and the exact seed. With the fixture and settings above, the scaled final losses are approximately: GD `0`, SGD `0`, momentum `1.37e−5`, Adam `5.62e−6`, and Newton `0`.
 
 ## Failure modes, tests, and reset
 
@@ -261,6 +261,6 @@ This clinic does not establish that a lower training objective generalises, that
 
 ## Continue, go deeper, apply it
 
-- Continue: Learning-rate schedules, warm-up, and gradient clipping
+- Continue: [Learning-rate schedules, warm-up, and gradient clipping](/learn/maths-foundations/learning-rate-schedules-warmup-and-gradient-clipping)
 - Go deeper: Optimisation diagnostics and second-order perspective
 - Apply it: Regularisation geometry

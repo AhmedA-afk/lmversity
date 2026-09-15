@@ -143,5 +143,5 @@ loss for a product decision. It minimises one declared geometric error.
 ## Continue, go deeper, apply it
 
 - Continue: Mathematics Foundations assignments
-- Go deeper: Inverses and why solving beats explicit inversion
+- Go deeper: [Inverses and why solving beats explicit inversion](/learn/maths-foundations/inverses-and-why-solving-beats-explicit-inversion)
 - Apply it: Linear regression

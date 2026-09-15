@@ -112,6 +112,6 @@ description under assumptions, but both add estimation and model risk.
 
 ## Continue, go deeper, apply it
 
-- Continue: Markov reward processes and return
-- Go deeper: Hidden Markov models
+- Continue: [Markov reward processes and return](/learn/maths-foundations/s2-2-markov-reward-processes-and-return)
+- Go deeper: [Hidden Markov models](/learn/maths-foundations/s2-9-hidden-markov-models-filtering-and-decoding)
 - Apply it: Agents: state, memory, and recovery

@@ -18,7 +18,7 @@ Using OLS for probabilities can predict below zero or above one. Using it for sp
 
 ## How it works
 
-Choose a response family, a mean-variance relationship, and a link. Logistic regression uses Bernoulli likelihood and logit link; Poisson uses count likelihood and log link. Parameters are estimated by maximum likelihood, often with iteratively reweighted least squares. Check residual patterns, overdispersion, separation, and predictive calibration—not merely coefficient signs.
+Choose a response family, a mean-variance relationship, and a link. [Logistic regression](/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian) uses Bernoulli likelihood and logit link; Poisson uses count likelihood and log link. Parameters are estimated by maximum likelihood, often with iteratively reweighted least squares. Check residual patterns, overdispersion, separation, and predictive calibration—not merely coefficient signs.
 
 ## Worked examples and variations
 
@@ -34,7 +34,7 @@ GLMs transform a linear score into the target's legal range. Likelihood sees the
 
 ## Hands-on
 
-Fit Gaussian, logistic, and Poisson models to appropriately typed targets; compare their output ranges. Intentionally fit OLS to a binary label and find impossible predictions. Reset with logistic regression and evaluate calibration, not just accuracy. State the chosen family and why its variance pattern is plausible.
+Fit Gaussian, logistic, and Poisson models to appropriately typed targets; compare their output ranges. Intentionally fit OLS to a binary label and find impossible predictions. Reset with [logistic regression](/learn/machine-learning/ml-206-logistic-regression-likelihood-and-odds) and evaluate calibration, not just accuracy. State the chosen family and why its variance pattern is plausible.
 
 ## Checkpoint
 

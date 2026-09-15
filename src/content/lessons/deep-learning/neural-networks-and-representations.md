@@ -16,7 +16,7 @@ Early layers can learn local or simple patterns; later layers combine them into 
 
 ## Worked example
 
-Train a tiny classifier on two classes. A high training score with a low validation score suggests overfitting. Add data augmentation or regularization, then recheck both the metric and the errors. Do not call the representation “understanding” just because a nearest-neighbor visualization looks organized.
+Train a tiny classifier on two classes. A high training score with a low validation score suggests overfitting. Add [data augmentation](/learn/deep-learning/core/119-data-augmentation-invariances-and-leakage) or regularization, then recheck both the metric and the errors. Do not call the representation “understanding” just because a nearest-neighbor visualization looks organized.
 
 ## A small story
 

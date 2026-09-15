@@ -18,7 +18,7 @@ Validation is a simulation of the decision you will make after deployment. A lea
 
 ## How it works
 
-First state the prediction moment, the information available then, and the unit being predicted. A group split puts every record from one unit in exactly one partition. A temporal split trains on earlier observations and evaluates on later observations. Use rolling windows when the model will be refreshed repeatedly. For grouped time series, apply both constraints: groups cannot cross folds and training dates must precede evaluation dates.
+First state the prediction moment, the information available then, and the unit being predicted. A group split puts every record from one unit in exactly one partition. A temporal split trains on earlier observations and evaluates on later observations. Use rolling windows when the model will be refreshed repeatedly. For grouped [time series](/learn/machine-learning/deep-lectures/907-time-series-ranking-and-recommender-systems-under-temporal-exposure-feedback), apply both constraints: groups cannot cross folds and training dates must precede evaluation dates.
 
 Build transformations, imputers, feature selection, target encoding, and resampling inside each training fold. Decide the split and primary metric before looking at a long sequence of results. A holdout estimates one future-like sample; it is evidence, not a guarantee.
 

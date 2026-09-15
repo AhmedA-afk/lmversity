@@ -164,6 +164,6 @@ variance is a reconstruction summary; it is not evidence of task usefulness.
 
 ## Continue, go deeper, apply it
 
-- Continue: Covariance matrices and whitening
+- Continue: [Covariance matrices and whitening](/learn/maths-foundations/covariance-and-whitening)
 - Go deeper: PCA and dimensionality reduction
 - Apply it: Generalisation and evaluation

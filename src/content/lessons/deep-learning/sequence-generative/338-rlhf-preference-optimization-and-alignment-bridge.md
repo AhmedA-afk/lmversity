@@ -17,7 +17,7 @@ A correct mental model separates the mathematical object, the learning signal, a
 
 If reward differences are 2 and 0, preference probability for the first is $\sigma(2)\approx.88$; disagreement should remain visible, not averaged away silently.
 
-Write shapes beside every expression. For a batch-major tensor, use B × T × d; make the direction of each matrix multiplication explicit. Numerical stability is part of the derivation: subtract the maximum logit before softmax, aggregate log-probabilities rather than products, and define exactly how masked terms are excluded.
+Write shapes beside every expression. For a batch-major tensor, use B × T × d; make the direction of each matrix multiplication explicit. [Numerical stability](/learn/deep-learning/core/124-numerical-stability-logsumexp-and-mixed-precision) is part of the derivation: subtract the maximum logit before softmax, aggregate log-probabilities rather than products, and define exactly how masked terms are excluded.
 
 ## Worked examples
 

@@ -91,7 +91,7 @@ P(default | income missing)  = 56 / 280 = 20%
 
 An indicator for “income missing” may improve prediction. That does **not** prove missing income causes default. It could mean a channel fails to collect income, applicants decline to disclose it, or a policy asks only some groups. Preserve the indicator, impute a numeric value using train-only data, and investigate the process before allowing a high-stakes decision to rely on it.
 
-Missing-data mechanisms matter. MCAR means missingness is unrelated to observed and unobserved values; MAR means it can be explained by observed variables; MNAR means it depends on an unobserved value itself. You rarely prove one from a dataset. Treat the assumed mechanism as a sensitivity question, not a fact.
+[Missing-data mechanisms](/learn/machine-learning/ml-108-missing-data-mechanisms) matter. MCAR means missingness is unrelated to observed and unobserved values; MAR means it can be explained by observed variables; MNAR means it depends on an unobserved value itself. You rarely prove one from a dataset. Treat the assumed mechanism as a sensitivity question, not a fact.
 
 ## Safe preprocessing example
 

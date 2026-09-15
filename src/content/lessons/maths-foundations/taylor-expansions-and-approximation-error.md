@@ -71,6 +71,6 @@ Taylor expansions do not guarantee convergence over a desired domain or preserve
 
 ## Continue, go deeper, apply it
 
-- Continue: Integrals, accumulation, and probability mass
-- Go deeper: Notation, indices, sums, and products
-- Apply it: Floating-point and numerical stability practice
+- Continue: [Integrals, accumulation, and probability mass](/learn/maths-foundations/integrals-accumulation-and-probability-mass)
+- Go deeper: [Notation, indices, sums, and products](/learn/maths-foundations/notation-indices-sums-and-products)
+- Apply it: Floating-point and [numerical stability](/learn/maths-foundations/numerical-stability-softmax-logsumexp-and-safe-probabilities) practice

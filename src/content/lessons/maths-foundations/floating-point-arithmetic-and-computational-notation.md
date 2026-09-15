@@ -150,6 +150,6 @@ bit-for-bit identical training results.
 
 ## Continue, go deeper, apply it
 
-- Continue: Visual reasoning and diagnostic plots
-- Go deeper: Algebra for model equations
-- Apply it: Optimisation, loss, and gradient descent
+- Continue: [Visual reasoning and diagnostic plots](/learn/maths-foundations/visual-reasoning-and-diagnostic-plots)
+- Go deeper: [Algebra for model equations](/learn/maths-foundations/algebra-for-model-equations)
+- Apply it: Optimisation, loss, and [gradient descent](/learn/maths-foundations/gradient-descent-intuition)

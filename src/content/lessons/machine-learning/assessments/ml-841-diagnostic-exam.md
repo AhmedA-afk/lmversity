@@ -10,7 +10,7 @@ updated: "2026-08-30"
 
 ## Purpose
 
-Use this before Assignment 1. It diagnoses reasoning, not library recall. Work without an LLM or notebook for Part A; use a calculator only where stated. Keep your written reasoning: it becomes the first item in your learning portfolio.
+Use this before [Assignment 1](/learn/machine-learning/assessments/ml-842-assignment-01-reproducible-baseline). It diagnoses reasoning, not library recall. Work without an LLM or notebook for Part A; use a calculator only where stated. Keep your written reasoning: it becomes the first item in your learning portfolio.
 
 ## Exam blueprint
 
@@ -19,7 +19,7 @@ Use this before Assignment 1. It diagnoses reasoning, not library recall. Work w
 | A | Interpret a binary-risk table; calculate prevalence, precision, recall, specificity, and expected decision cost at two thresholds | 20 |
 | B | Derive the mean-squared-error gradient for one linear-regression coefficient and complete two gradient steps | 15 |
 | C | Diagnose a deliberately leaky customer-churn split and propose a time-safe replacement | 15 |
-| D | Compare regularised linear regression, a tree ensemble, and kNN for three data conditions | 15 |
+| D | Compare regularised [linear regression](/learn/machine-learning/derivations/01-linear-regression-normal-equations-and-geometry), a tree ensemble, and kNN for three data conditions | 15 |
 | E | Explain why a high AUC can still be unsafe; propose calibration and slice checks | 10 |
 | F | Compute one PCA projection from a centred two-dimensional dataset and state what information is lost | 10 |
 | G | Read an experiment log and identify the one unsupported conclusion, one missing control, and one reproducibility defect | 15 |

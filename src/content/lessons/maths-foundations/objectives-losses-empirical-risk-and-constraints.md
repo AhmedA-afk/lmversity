@@ -81,7 +81,7 @@ Write an objective card for a binary triage model with one primary loss, two rep
 ## Checkpoint
 
 - [ ] Distinguish loss, metric, empirical risk, and business cost.
-- [ ] Write one constrained optimisation problem for an AI decision.
+- [ ] Write one [constrained optimisation](/learn/maths-foundations/constrained-optimisation-lagrange-multipliers-and-kkt-intuition) problem for an AI decision.
 - [ ] Explain why a differentiable surrogate needs metric validation.
 - [ ] Give one failure caused by optimising an average only.
 
@@ -91,6 +91,6 @@ An explicit objective does not make the data representative, the metric valid, o
 
 ## Continue, go deeper, apply it
 
-- Continue: Convex sets, convex functions, and guarantees
-- Go deeper: Effect sizes, power, and sample-size planning
+- Continue: [Convex sets, convex functions, and guarantees](/learn/maths-foundations/convex-sets-functions-and-guarantees)
+- Go deeper: [Effect sizes](/learn/maths-foundations/effect-sizes-power-and-sample-size-planning), power, and sample-size planning
 - Apply it: Problem framing and baselines

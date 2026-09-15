@@ -65,6 +65,6 @@ Subgradients do not guarantee fast convergence, unique solutions, or a desirable
 
 ## Continue, go deeper, apply it
 
-- Continue: Constrained optimisation, Lagrange multipliers, and KKT intuition
+- Continue: [Constrained optimisation, Lagrange multipliers, and KKT intuition](/learn/maths-foundations/constrained-optimisation-lagrange-multipliers-and-kkt-intuition)
 - Go deeper: Regularisation and bias–variance
-- Apply it: Gradient checking and debugging
+- Apply it: [Gradient checking and debugging](/learn/maths-foundations/gradient-checking-and-debugging)

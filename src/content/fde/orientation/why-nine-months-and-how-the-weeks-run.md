@@ -31,7 +31,7 @@ The path runs in four stages, and they are not evenly weighted, because the job 
 
 **Stage 3, The field, weeks 25 to 32.** Deploy into someone else's environment — a VPC, a customer-managed Kubernetes cluster, an air-gapped enclave — then run discovery, scoping and bootcamps against simulated customers, and close the loop by turning what you built into a memo about what generalises. This stage exists because nothing else in the learning landscape provides it: no course found in the research behind this path supplies a customer to practise discovery and decomposition against, and this tier is the one every FDE interview loop tests hardest.
 
-**Stage 4, Hireable, weeks 33 to 36.** The interview loops company by company, the take-home with a recorded walkthrough, and the evidence portfolio assembled from everything the first three stages left behind.
+**Stage 4, Hireable, weeks 33 to 36.** The interview loops company by company, [the take-home with a recorded walkthrough](/roles/forward-deployed-engineer/career/the-take-home-with-a-recorded-walkthrough), and the evidence portfolio assembled from everything the first three stages left behind.
 
 ## The week-by-week shape
 
@@ -41,8 +41,8 @@ The path runs in four stages, and they are not evenly weighted, because the job 
 | 2–5 | Python for the field, SQL without Googling | — |
 | 6–8 | Shell and Linux, Git in other people's repos, HTTP and auth | First decomposition drill in week 8 |
 | 9–12 | Containers, one cloud, networking; deploy a service unaided | Weekly drill |
-| 13–16 | Engineering craft: ship, debug, make reliable, calibrate | Weekly drill, Bootcamp 01 |
-| 17–20 | Enterprise data, connectors, domain modelling, identity and residency | Weekly drill, Bootcamp 02 |
+| 13–16 | Engineering craft: ship, debug, make reliable, calibrate | Weekly drill, [Bootcamp 01](/roles/forward-deployed-engineer/practice/bootcamp-01-meridian-cooperative-bank) |
+| 17–20 | Enterprise data, connectors, domain modelling, identity and residency | Weekly drill, [Bootcamp 02](/roles/forward-deployed-engineer/practice/bootcamp-02-arogya-hospital-group) |
 | 21–24 | AI application engineering, eval first | Weekly drill, Capstones 01 and 04 |
 | 25–27 | Deploying into someone else's environment | Weekly drill, Bootcamp 03, Capstone 02 |
 | 28–31 | The customer: discovery to adoption | Bootcamps 04, 05 and 06, Capstone 03 |

@@ -12,7 +12,7 @@ outcomes:
   - Recognise the signs of a schema that is not properly normalised, and explain the practical cost of that.
 ---
 
-Before window functions, before joins, before any SQL syntax at all, there is a single idea that explains why enterprise data looks the way it does: a well-designed database avoids storing the same fact twice. Everything else in this module — why joins exist, why a row count can silently triple, why a legacy schema needs reverse-engineering — follows from this one idea and the ways real systems fall short of it.
+Before [window functions](/roles/forward-deployed-engineer/foundations/window-functions-second-highest-per-category), before joins, before any SQL syntax at all, there is a single idea that explains why enterprise data looks the way it does: a well-designed database avoids storing the same fact twice. Everything else in this module — why joins exist, why a row count can silently triple, why a legacy schema needs reverse-engineering — follows from this one idea and the ways real systems fall short of it.
 
 ## Why not one big table
 

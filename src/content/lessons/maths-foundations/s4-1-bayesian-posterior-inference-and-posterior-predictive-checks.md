@@ -109,6 +109,6 @@ statistics do not guarantee validity on unmeasured or shifted data.
 
 ## Continue, go deeper, apply it
 
-- Continue: Conjugacy and exponential-family structure
-- Go deeper: Variational inference and the ELBO
+- Continue: [Conjugacy and exponential-family structure](/learn/maths-foundations/s4-2-conjugacy-and-exponential-family-structure)
+- Go deeper: [Variational inference and the ELBO](/learn/maths-foundations/s4-4-variational-inference-and-the-elbo)
 - Apply it: Statistical probability and uncertainty for ML

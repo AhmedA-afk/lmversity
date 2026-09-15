@@ -34,7 +34,7 @@ model, or treatment.
 Submit one reproducible Python script or notebook containing:
 
 1. the frozen A/B and paired model-comparison fixtures below;
-2. hand calculations for two effect sizes and at least one uncertainty quantity;
+2. hand calculations for two [effect sizes](/learn/maths-foundations/effect-sizes-power-and-sample-size-planning) and at least one uncertainty quantity;
 3. a bootstrap interval and standard error for the A/B risk difference;
 4. a randomisation/permutation p-value with the null and alternative stated;
 5. a paired bootstrap and paired permutation analysis for the model losses;
@@ -506,6 +506,6 @@ deterministic checks proves only that this analysis matches this frozen fixture.
 
 ## Continue, go deeper, apply it
 
-- Continue: Self-information and coding intuition
-- Go deeper: A/B experiments, sequential testing, and multiple comparisons
+- Continue: [Self-information and coding intuition](/learn/maths-foundations/self-information-and-coding-intuition)
+- Go deeper: [A/B experiments, sequential testing, and multiple comparisons](/learn/maths-foundations/ab-experiments-sequential-testing-and-multiple-comparisons)
 - Apply it: Causal inference foundations

@@ -40,7 +40,7 @@ Keep an index file mapping every output figure to the raw-data hash, split hash,
 - Histograms or Lorenz-style cumulative plots of training weights at rounds 1, 25, 100, and the selected round.
 - A table listing the ten highest-weight examples at the selected round, including whether each was intentionally flipped. Do not publish patient-identifying fields.
 - Test confusion matrices, ROC-AUC only as a secondary metric, balanced accuracy, sensitivity, specificity, and calibration warning.
-- A table comparing AdaBoost, one stump, majority class, and logistic regression across all three conditions.
+- A table comparing AdaBoost, one stump, majority class, and [logistic regression](/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian) across all three conditions.
 
 ## Calculations to show
 

@@ -16,7 +16,7 @@ only when the inverse itself is the object you need to inspect or apply.
 
 ## Why this matters
 
-Writing `w=(XᵀX)⁻¹Xᵀy` is useful for deriving least squares, but it is often a
+Writing `w=(XᵀX)⁻¹Xᵀy` is useful for deriving [least squares](/learn/maths-foundations/least-squares-normal-equations-and-projection-geometry), but it is often a
 bad implementation default. Explicit inversion does extra work and can amplify
 numerical error. The correct computational question is “what solves this system,
 for this right-hand side?” not “how do I manufacture an inverse?”
@@ -131,5 +131,5 @@ squares rather than exact solving.
 ## Continue, go deeper, apply it
 
 - Continue: Least squares, normal equations, and projection geometry
-- Go deeper: Invertibility, determinants, and volume intuition
+- Go deeper: [Invertibility, determinants, and volume intuition](/learn/maths-foundations/invertibility-determinants-and-volume-intuition)
 - Apply it: Linear regression

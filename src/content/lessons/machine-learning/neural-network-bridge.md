@@ -21,7 +21,7 @@ shortcuts and consume more data and compute.
 
 ### Example A: tiny tabular network
 
-Compare a one-hidden-layer model with logistic regression. If the network does not
+Compare a one-hidden-layer model with [logistic regression](/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian). If the network does not
 win on the decision metric, its extra complexity is not justified.
 
 ### Example B: image representation

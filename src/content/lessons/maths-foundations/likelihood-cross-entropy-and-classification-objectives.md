@@ -8,7 +8,7 @@ duration: "4 min read"
 
 ## The short answer
 
-Softmax turns class logits into a categorical probability vector, and average cross-entropy is the negative log-likelihood of the observed labels under that model. This makes classification training a probabilistic objective, not merely a rule for selecting the largest score. Check label encoding, class order, reduction, weights, and numerical stability before interpreting a loss.
+Softmax turns class logits into a categorical probability vector, and average cross-entropy is the negative log-likelihood of the observed labels under that model. This makes classification training a probabilistic objective, not merely a rule for selecting the largest score. Check label encoding, class order, reduction, weights, and [numerical stability](/learn/maths-foundations/numerical-stability-softmax-logsumexp-and-safe-probabilities) before interpreting a loss.
 
 ## Why this matters
 
@@ -91,6 +91,6 @@ Cross-entropy does not guarantee calibrated or fair probabilities, correct label
 
 ## Continue, go deeper, apply it
 
-- Continue: Naive Bayes and generative versus discriminative modelling
+- Continue: [Naive Bayes and generative versus discriminative modelling](/learn/maths-foundations/naive-bayes-and-generative-vs-discriminative-modeling)
 - Go deeper: Numerical stability: softmax and log-sum-exp
 - Apply it: Logistic regression

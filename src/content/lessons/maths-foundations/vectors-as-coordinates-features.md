@@ -42,7 +42,7 @@ x = [ x₁ ]
 ```
 
 The row form `xᵀ=[x₁ x₂]` contains the same coordinates but has a different
-orientation for matrix multiplication. A dataset with `n` observations and `d`
+orientation for [matrix multiplication](/learn/maths-foundations/matrix-multiplication-mechanics). A dataset with `n` observations and `d`
 features is commonly a matrix `X∈Rⁿˣᵈ`; row `i` is one observation and column
 `j` is one feature. State that convention instead of assuming it.
 
@@ -189,6 +189,6 @@ operations that are only meaningful after the coordinate contract is sound.
 
 ## Continue, go deeper, apply it
 
-- Continue: Vector addition, affine combinations, and centroids
+- Continue: [Vector addition](/learn/maths-foundations/vector-addition-affine-combinations-centroids), affine combinations, and centroids
 - Go deeper: Linear algebra for ML
 - Apply it: A1 embedding geometry lab

@@ -17,13 +17,13 @@ A correct mental model separates the mathematical object, the learning signal, a
 
 Warmup ramps $\eta_t$ from zero before decay, reducing early unstable updates when activations and optimizer moments are uncalibrated.
 
-Write shapes beside every expression. For a batch-major tensor, use B × T × d; make the direction of each matrix multiplication explicit. Numerical stability is part of the derivation: subtract the maximum logit before softmax, aggregate log-probabilities rather than products, and define exactly how masked terms are excluded.
+Write shapes beside every expression. For a batch-major tensor, use B × T × d; make the direction of each matrix multiplication explicit. [Numerical stability](/learn/deep-learning/core/124-numerical-stability-logsumexp-and-mixed-precision) is part of the derivation: subtract the maximum logit before softmax, aggregate log-probabilities rather than products, and define exactly how masked terms are excluded.
 
 ## Worked examples
 
 ### Example 1 — hand calculation
 
-If loss becomes NaN in mixed precision, check overflow, loss scaling, attention-mask values, and batch outliers in that order.
+If loss becomes NaN in [mixed precision](/learn/deep-learning/practice/414-precision-compilation-and-numerical-stability), check overflow, loss scaling, attention-mask values, and batch outliers in that order.
 
 Record intermediate values and units. A hand-sized calculation catches transposes, an incorrect softmax axis, and accidental averaging faster than a large training run.
 
@@ -78,7 +78,7 @@ Full credit requires a correct derivation or calculation (30%), reproducible cod
 
 Design a controlled experiment around a tiny overfit run on fewer than 100 examples. If this fails, scaling the dataset or hardware is premature. Do not start with a full-scale model. First make a synthetic fixture where the correct behavior is known, calculate the expected result, and assert it in a test. Then repeat on a small real or realistically noisy slice. Keep the data contract explicit: what one record means, which fields are available at decision time, what constitutes a group or sequence boundary, and what information is forbidden. Save the seed, environment, input fingerprint, configuration, and the exact metric denominator with each result.
 
-Log loss scale, gradient norm, parameter norm, update norm, sequence length, and skipped optimizer steps. Run an ablation matrix for warmup, clipping, precision, and batch size; change one condition per comparison.
+Log loss scale, gradient norm, parameter norm, update norm, sequence length, and skipped optimizer steps. Run an ablation matrix for warmup, clipping, precision, and [batch size](/learn/deep-learning/core/121-batch-size-gradient-noise-and-scaling-rules); change one condition per comparison.
 
 Use an ablation ledger with one row per comparison: hypothesis, changed factor, fixed factors, result, uncertainty, and interpretation. If a run fails, preserve it. Failed runs often expose a wrong mask, target alignment error, numerical saturation, leakage route, or metric mismatch. Inspect five wins and five losses selected before seeing their predicted score. For every failure, specify whether the remedy belongs in data, objective, architecture, optimization, decoding, retrieval, policy, or human process. Do not solve an evaluation failure by quietly changing the test set.
 

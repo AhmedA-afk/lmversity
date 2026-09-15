@@ -79,7 +79,7 @@ that should not be automated.
 - Apply it: write a batch/online decision record and outage runbook.
 ## Formal extension
 
-Serving is a data-contract problem before it is an endpoint choice. The online feature computation must reproduce the as-of rule used in training. Batch scoring, shadow mode, canaries, and rollback are experiments on operational risk.
+Serving is a data-contract problem before it is an endpoint choice. The online feature computation must reproduce the as-of rule used in training. [Batch scoring](/learn/machine-learning/ml-610-batch-scoring-online-serving-and-shadow-mode), shadow mode, canaries, and rollback are experiments on operational risk.
 
 ## Worked calculation or protocol
 

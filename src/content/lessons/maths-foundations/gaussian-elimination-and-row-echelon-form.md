@@ -126,11 +126,11 @@ the tolerance, and rerun the original residual checks.
 
 Elimination does not make an inconsistent system consistent, choose among free
 solutions, or guarantee stability for an ill-conditioned matrix. For noisy,
-overdetermined data, least squares and numerically stable factorizations are the
+overdetermined data, [least squares](/learn/maths-foundations/least-squares-normal-equations-and-projection-geometry) and numerically stable factorizations are the
 next tools.
 
 ## Continue, go deeper, apply it
 
-- Continue: Rank, pivots, and identifiability
-- Go deeper: Linear systems and augmented matrices
+- Continue: [Rank, pivots, and identifiability](/learn/maths-foundations/rank-pivots-and-identifiability)
+- Go deeper: [Linear systems and augmented matrices](/learn/maths-foundations/linear-systems-and-augmented-matrices)
 - Apply it: Linear regression

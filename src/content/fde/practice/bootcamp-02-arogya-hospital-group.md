@@ -237,7 +237,7 @@ Score each out of 5. Under 21 out of 30, run it again with the same pack and dif
 | Discovery | You found the backdated fitness flag and the bed-numbering crosswalk by asking and cross-checking against the OCR notes, not by reading the generator. |
 | Ontology | Written before any transformation. Names the join that does not work between HIS and pharmacy bed numbers, and what you did instead. |
 | Reconciliation | You can explain the gap between the raw flag number and your number in three sentences to a non-technical sponsor. |
-| Constraint handling | Nothing you built queries the production HIS or calls a hosted model with patient data. You asked for the security questionnaire on Day 1. |
+| Constraint handling | Nothing you built queries the production HIS or calls a hosted model with patient data. You asked for [the security questionnaire](/roles/forward-deployed-engineer/deploy/the-security-questionnaire-walkthrough) on Day 1. |
 | Adoption | A nurse and a pharmacy assistant both used the queue unaided by Day 3 and again on Day 5. |
 | The memo | Recommends one thing, declines at least one thing explicitly, and states a falsifier with a date. |
 

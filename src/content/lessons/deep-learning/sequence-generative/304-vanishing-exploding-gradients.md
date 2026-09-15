@@ -17,7 +17,7 @@ A correct mental model separates the mathematical object, the learning signal, a
 
 In a linear recurrence $h_t=Wh_{t-1}$, eigenvalues of $W$ make this visible. $0.9^{100}\approx2.7\times10^{-5}$ while $1.1^{100}\approx1.38\times10^4$.
 
-Write shapes beside every expression. For a batch-major tensor, use B × T × d; make the direction of each matrix multiplication explicit. Numerical stability is part of the derivation: subtract the maximum logit before softmax, aggregate log-probabilities rather than products, and define exactly how masked terms are excluded.
+Write shapes beside every expression. For a batch-major tensor, use B × T × d; make the direction of each matrix multiplication explicit. [Numerical stability](/learn/deep-learning/core/124-numerical-stability-logsumexp-and-mixed-precision) is part of the derivation: subtract the maximum logit before softmax, aggregate log-probabilities rather than products, and define exactly how masked terms are excluded.
 
 ## Worked examples
 
@@ -35,7 +35,7 @@ State the decision owner, the loss of an error, and the legal information set at
 
 ### Example 3 — boundary case
 
-Gradient clipping $g\leftarrow g\min(1,c/\|g\|)$ changes the step but does not restore information lost to vanishing gradients.
+[Gradient clipping](/learn/deep-learning/core/123-gradient-clipping-exploding-gradients-and-sequence-stability) $g\leftarrow g\min(1,c/\|g\|)$ changes the step but does not restore information lost to vanishing gradients.
 
 Turn this into a regression test: the test should fail if a future token, pad item, duplicated example, or forbidden identifier changes the output.
 

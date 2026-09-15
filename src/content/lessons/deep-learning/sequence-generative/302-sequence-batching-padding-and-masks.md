@@ -17,7 +17,7 @@ A correct mental model separates the mathematical object, the learning signal, a
 
 Masked mean is $\sum_{i,t}m_{it}h_{it}/\sum_{i,t}m_{it}$; cross-entropy is likewise summed only over valid targets. This is an estimator of the intended token risk.
 
-Write shapes beside every expression. For a batch-major tensor, use B × T × d; make the direction of each matrix multiplication explicit. Numerical stability is part of the derivation: subtract the maximum logit before softmax, aggregate log-probabilities rather than products, and define exactly how masked terms are excluded.
+Write shapes beside every expression. For a batch-major tensor, use B × T × d; make the direction of each matrix multiplication explicit. [Numerical stability](/learn/deep-learning/core/124-numerical-stability-logsumexp-and-mixed-precision) is part of the derivation: subtract the maximum logit before softmax, aggregate log-probabilities rather than products, and define exactly how masked terms are excluded.
 
 ## Worked examples
 

@@ -8,7 +8,7 @@ duration: "12 min read"
 
 ## The short answer
 
-Least squares finds the line whose predictions are closest to noisy observations
+[Least squares](/learn/maths-foundations/least-squares-normal-equations-and-projection-geometry) finds the line whose predictions are closest to noisy observations
 under squared Euclidean error. In this lab you will solve one fixed regression by
 centred projection geometry, by hand-built normal equations, and with a stable
 numerical solver. The three coefficient vectors and fitted values must agree
@@ -21,7 +21,7 @@ The formula for linear regression is often presented as a single library call or
 as `A⁺b`. That hides three decisions: what outputs the columns of `A` can
 express, which point in that column space is closest to the target, and whether
 the coefficients are identifiable. The M2 lessons connect these decisions through
-matrices, rank, null spaces, inverses, and projection geometry.
+matrices, rank, [null spaces](/learn/maths-foundations/null-spaces-column-spaces-row-spaces-and-the-fundamental-picture), inverses, and projection geometry.
 
 This lab makes the connections reviewable. The hand route tests whether the
 learner can derive the answer; the normal-equation route tests the algebra; the
@@ -376,5 +376,5 @@ agreement establish algebraic and computational consistency, not model validity.
 ## Continue, go deeper, apply it
 
 - Continue: Least squares, normal equations, and projection geometry
-- Go deeper: Inverses and why solving beats explicit inversion
+- Go deeper: [Inverses and why solving beats explicit inversion](/learn/maths-foundations/inverses-and-why-solving-beats-explicit-inversion)
 - Apply it: Linear regression

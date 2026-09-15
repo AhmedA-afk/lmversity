@@ -68,4 +68,4 @@ Error analysis does not make a subjective label objective, and it cannot replace
 
 ## Continue, go deeper, apply it
 
-Continue with slice discovery and subgroup reliability. Go deeper with label-quality audits and decision analysis. Apply this by adding an error-review table to every model release.
+Continue with [slice discovery and subgroup reliability](/learn/machine-learning/ml-508-slice-discovery-and-subgroup-reliability). Go deeper with label-quality audits and decision analysis. Apply this by adding an error-review table to every model release.

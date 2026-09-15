@@ -8,7 +8,7 @@ duration: "4 min read"
 
 ## The short answer
 
-Stochastic gradient descent estimates the full-data gradient from one example; mini-batch descent averages a batch. Under representative sampling, the estimate is approximately unbiased, but it has variance. Small batches update cheaply and noisily; large batches are smoother and more memory-hungry. Compare methods at equal data exposure, track gradient noise and validation behaviour, and do not treat batch size as a free performance knob.
+Stochastic [gradient descent](/learn/maths-foundations/gradient-descent-intuition) estimates the full-data gradient from one example; mini-batch descent averages a batch. Under representative sampling, the estimate is approximately unbiased, but it has variance. Small batches update cheaply and noisily; large batches are smoother and more memory-hungry. Compare methods at equal data exposure, track gradient noise and validation behaviour, and do not treat batch size as a free performance knob.
 
 ## Why this matters
 
@@ -91,5 +91,5 @@ Stochasticity does not guarantee escape from bad regions, good generalisation, o
 ## Continue, go deeper, apply it
 
 - Continue: Momentum, Nesterov, RMSProp, and Adam
-- Go deeper: Conditioning, scaling, initialisation, and normalisation
+- Go deeper: [Conditioning, scaling, initialisation, and normalisation](/learn/maths-foundations/conditioning-scaling-initialisation-and-normalisation)
 - Apply it: Optimisation, loss, and gradient descent

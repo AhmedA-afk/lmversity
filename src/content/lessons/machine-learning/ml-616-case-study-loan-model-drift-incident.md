@@ -42,7 +42,7 @@ What evidence distinguishes an income-unit error from a threshold change? Which 
 
 ## What this does not solve
 
-This case study does not provide legal advice or a universal lending policy. It illustrates disciplined investigation; real high-impact systems require jurisdiction-specific compliance, independent review, and affected-person safeguards.
+This [case study](/learn/machine-learning/ml-115-case-study-triage-under-review-capacity) does not provide legal advice or a universal lending policy. It illustrates disciplined investigation; real high-impact systems require jurisdiction-specific compliance, independent review, and affected-person safeguards.
 
 ## Continue, go deeper, apply it
 

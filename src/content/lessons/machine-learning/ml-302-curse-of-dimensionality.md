@@ -36,7 +36,7 @@ In a unit hypercube, keeping the same sample density requires sample count to gr
 
 ## Hands-on
 
-Generate a binary dataset with 5 informative and 195 noise features. Compare logistic regression with regularization, kNN, and a tree as noise dimensions grow. Deliberately select the top features using all rows before cross-validation; observe the optimistic result. Reset by placing selection inside each fold and plot the gap.
+Generate a binary dataset with 5 informative and 195 noise features. Compare [logistic regression](/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian) with regularization, kNN, and a tree as noise dimensions grow. Deliberately select the top features using all rows before cross-validation; observe the optimistic result. Reset by placing selection inside each fold and plot the gap.
 
 ## Checkpoint
 

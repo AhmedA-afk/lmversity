@@ -132,6 +132,6 @@ sampling, uncertainty, and metric-definition review.
 
 ## Continue, go deeper, apply it
 
-- Continue: Sequences, recurrences, polynomials, quadratics, and growth rates
+- Continue: [Sequences, recurrences, polynomials, quadratics, and growth rates](/learn/maths-foundations/sequences-recurrences-polynomials-quadratics-and-growth-rates)
 - Go deeper: Units, scales, and normalisation
 - Apply it: Imbalanced data and metrics

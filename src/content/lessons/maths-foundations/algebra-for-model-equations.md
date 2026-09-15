@@ -132,6 +132,6 @@ assumption and derive a testable implementation.
 
 ## Continue, go deeper, apply it
 
-- Continue: Notation, indices, sums, and products
+- Continue: [Notation, indices, sums, and products](/learn/maths-foundations/notation-indices-sums-and-products)
 - Go deeper: Mathematics Foundations checklist
 - Apply it: Linear regression from scratch

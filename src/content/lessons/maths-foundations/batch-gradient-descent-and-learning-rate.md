@@ -8,7 +8,7 @@ duration: "4 min read"
 
 ## The short answer
 
-Batch gradient descent repeatedly evaluates the gradient of the objective on all available training data and updates parameters by `θ ← θ − η∇J(θ)`. The learning rate η controls how far each step moves. Too small is slow; too large can oscillate or diverge. Use a controlled objective, record loss and gradient norms, and choose η from observed behaviour plus a predeclared budget.
+Batch [gradient descent](/learn/maths-foundations/gradient-descent-intuition) repeatedly evaluates the gradient of the objective on all available training data and updates parameters by `θ ← θ − η∇J(θ)`. The learning rate η controls how far each step moves. Too small is slow; too large can oscillate or diverge. Use a controlled objective, record loss and gradient norms, and choose η from observed behaviour plus a predeclared budget.
 
 ## Why this matters
 
@@ -93,6 +93,6 @@ Batch GD does not choose a correct objective, escape every non-convex issue, or 
 
 ## Continue, go deeper, apply it
 
-- Continue: Stochastic and mini-batch gradient descent
-- Go deeper: Conditioning, scaling, initialisation, and normalisation
+- Continue: [Stochastic and mini-batch gradient descent](/learn/maths-foundations/stochastic-and-minibatch-gradient-descent)
+- Go deeper: [Conditioning, scaling, initialisation, and normalisation](/learn/maths-foundations/conditioning-scaling-initialisation-and-normalisation)
 - Apply it: Optimisation, loss, and gradient descent

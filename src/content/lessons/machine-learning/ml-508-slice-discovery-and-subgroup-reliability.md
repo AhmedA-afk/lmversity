@@ -68,4 +68,4 @@ Subgroup metrics cannot choose a fairness definition, explain structural inequal
 
 ## Continue, go deeper, apply it
 
-Continue with class imbalance and cost-sensitive learning. Go deeper with fairness definitions and participatory evaluation. Apply this by making a slice report part of release review.
+Continue with [class imbalance](/learn/machine-learning/ml-509-class-imbalance-resampling-and-class-weights) and cost-sensitive learning. Go deeper with fairness definitions and participatory evaluation. Apply this by making a slice report part of release review.

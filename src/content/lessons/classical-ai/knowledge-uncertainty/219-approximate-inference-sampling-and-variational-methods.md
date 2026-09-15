@@ -10,7 +10,7 @@ tags: ["classical AI", "knowledge and uncertainty", "reasoning"]
 
 ## Why this lesson matters
 
-Estimate beliefs when exact inference is too expensive, and communicate approximation error rather than presenting a single number as exact. Knowledge-based AI is strongest when it makes its representation and uncertainty explicit: a reader can inspect what the system was told, which inference step it took, and which assumption would change the recommendation. That is a different promise from a system that only produces a score. It is especially valuable where a decision must be reviewed, justified, or revised as new evidence arrives.
+Estimate beliefs when [exact inference](/learn/classical-ai/knowledge-uncertainty/218-exact-inference-variable-elimination-and-belief-propagation) is too expensive, and communicate approximation error rather than presenting a single number as exact. Knowledge-based AI is strongest when it makes its representation and uncertainty explicit: a reader can inspect what the system was told, which inference step it took, and which assumption would change the recommendation. That is a different promise from a system that only produces a score. It is especially valuable where a decision must be reviewed, justified, or revised as new evidence arrives.
 
 This lesson treats the formal machinery as a practical instrument. The aim is not to memorize notation. The aim is to decide what claims a system may make, what it must keep uncertain, and what a human needs to see before trusting a result. Begin by writing the question, the available evidence, the permitted actions, and the cost of a wrong conclusion. Only then choose a representation or inference procedure.
 

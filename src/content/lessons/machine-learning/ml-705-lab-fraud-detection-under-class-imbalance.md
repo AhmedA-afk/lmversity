@@ -18,7 +18,7 @@ With rare outcomes, a model can claim high accuracy by predicting â€œnot fraudâ€
 
 ## How it works
 
-Build features available before authorization or review. Split by event time and prevent the same entity from leaking across validation where appropriate. Compare a rules baseline, class-weighted logistic regression, and a tree model. Plot PR curves and precision-recall at top-k queues. Use confirmed labels only after a realistic maturity delay. Treat class weights and resampling as training choices, never substitutes for capacity-based evaluation.
+Build features available before authorization or review. Split by event time and prevent the same entity from leaking across validation where appropriate. Compare a rules baseline, class-weighted [logistic regression](/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian), and a tree model. Plot PR curves and precision-recall at top-k queues. Use confirmed labels only after a realistic maturity delay. Treat class weights and resampling as training choices, never substitutes for capacity-based evaluation.
 
 ## Worked examples and variations (4 examples incl. boundary/counterexample)
 

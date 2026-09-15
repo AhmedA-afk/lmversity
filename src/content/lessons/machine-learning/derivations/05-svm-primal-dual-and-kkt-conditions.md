@@ -48,4 +48,4 @@ SVM scores are not probabilities without calibration, kernel matrices scale poor
 
 ## Nearby course topics
 
-Continue with kernels and nearest neighbors, logistic regression, calibration, and regularization as priors.
+Continue with kernels and nearest neighbors, [logistic regression](/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian), calibration, and regularization as priors.

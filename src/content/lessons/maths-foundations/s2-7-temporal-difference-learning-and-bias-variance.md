@@ -103,6 +103,6 @@ not prove the policy is safe or aligned.
 
 ## Continue, go deeper, apply it
 
-- Continue: RL safety and offline-data warnings
-- Go deeper: Bellman expectation equations
-- Apply it: Optimisation, loss, and gradient descent
+- Continue: [RL safety and offline-data warnings](/learn/maths-foundations/s2-8-rl-safety-and-offline-data-warnings)
+- Go deeper: [Bellman expectation equations](/learn/maths-foundations/s2-4-bellman-expectation-equations)
+- Apply it: Optimisation, loss, and [gradient descent](/learn/maths-foundations/gradient-descent-intuition)

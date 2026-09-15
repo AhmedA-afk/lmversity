@@ -120,6 +120,6 @@ averages.
 
 ## Continue, go deeper, apply it
 
-- Continue: Variance, standard deviation, and bias–variance language
+- Continue: [Variance, standard deviation, and bias–variance language](/learn/maths-foundations/variance-standard-deviation-and-bias-variance)
 - Go deeper: Probability and statistics for ML
 - Apply it: Mathematics Foundations assignments

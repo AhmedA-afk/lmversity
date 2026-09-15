@@ -105,6 +105,6 @@ augmentation can hurt when it overwhelms the original data distribution.
 
 ## Continue, go deeper, apply it
 
-- Continue: Vision/audio case study
-- Go deeper: Discrete signals, sampling, and aliasing
+- Continue: [Vision/audio case study](/learn/maths-foundations/s1-8-vision-audio-case-study)
+- Go deeper: [Discrete signals, sampling, and aliasing](/learn/maths-foundations/s1-1-discrete-signals-sampling-and-aliasing)
 - Apply it: Privacy, fairness, and accessibility

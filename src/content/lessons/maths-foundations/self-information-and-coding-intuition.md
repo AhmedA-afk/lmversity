@@ -84,6 +84,6 @@ Self-information depends on the model, context, tokenisation, and event support.
 
 ## Continue, go deeper, apply it
 
-- Continue: Entropy and uncertainty
+- Continue: [Entropy and uncertainty](/learn/maths-foundations/entropy-and-uncertainty)
 - Go deeper: Cross-entropy and negative log-likelihood
 - Apply it: Attention and transformers

@@ -73,7 +73,7 @@ the objective should optimize attention at all.
 
 ## Continue, go deeper, apply it
 
-- Continue: Time series and temporal validation
+- Continue: [Time series](/learn/machine-learning/deep-lectures/907-time-series-ranking-and-recommender-systems-under-temporal-exposure-feedback) and temporal validation
 - Go deeper: Clustering and k-means
 - Apply it: write a recommender metric contract with an exploration policy.
 ## Formal extension

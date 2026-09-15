@@ -18,7 +18,7 @@ Churn models often become retrospective dashboards: they use cancellation signal
 
 ## How it works
 
-Define an observation window, a gap that prevents last-minute leakage, and a prediction horizon. Create customer-period rows, aggregate events only inside the observation window, and split by time and customer. Compare a regularized logistic regression with a tree ensemble. Evaluate PR-AUC, recall at the team’s weekly capacity, calibration, and incremental business value against a simple inactivity rule. Review errors with retention staff before designing outreach.
+Define an observation window, a gap that prevents last-minute leakage, and a prediction horizon. Create customer-period rows, aggregate events only inside the observation window, and split by time and customer. Compare a regularized [logistic regression](/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian) with a tree ensemble. Evaluate PR-AUC, recall at the team’s weekly capacity, calibration, and incremental business value against a simple inactivity rule. Review errors with retention staff before designing outreach.
 
 ## Worked examples and variations (4 examples incl. boundary/counterexample)
 

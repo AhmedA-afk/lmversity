@@ -109,6 +109,6 @@ miss features that were never measured.
 
 ## Continue, go deeper, apply it
 
-- Continue: Gaussian processes and kernel uncertainty
-- Go deeper: Markov chain Monte Carlo
+- Continue: [Gaussian processes and kernel uncertainty](/learn/maths-foundations/s4-5-gaussian-processes-and-kernel-uncertainty)
+- Go deeper: [Markov chain Monte Carlo](/learn/maths-foundations/s4-3-markov-chain-monte-carlo)
 - Apply it: Loss, gradients, and optimisation

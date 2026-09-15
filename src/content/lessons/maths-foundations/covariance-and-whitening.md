@@ -173,6 +173,6 @@ An identity sample covariance is not proof of a good probabilistic model.
 
 ## Continue, go deeper, apply it
 
-- Continue: Condition numbers, stability, and practical solvers
+- Continue: [Condition numbers, stability, and practical solvers](/learn/maths-foundations/condition-numbers-stability-and-solvers)
 - Go deeper: Probability and statistics for ML
 - Apply it: Features, leakage, and missingness

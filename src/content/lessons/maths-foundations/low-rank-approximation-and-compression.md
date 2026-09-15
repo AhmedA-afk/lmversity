@@ -153,6 +153,6 @@ introduces an algorithmic error that must be measured separately.
 
 ## Continue, go deeper, apply it
 
-- Continue: PCA from variance maximisation and SVD
+- Continue: [PCA from variance maximisation and SVD](/learn/maths-foundations/pca-from-variance-and-svd)
 - Go deeper: PCA and dimensionality reduction
 - Apply it: Generalisation and evaluation

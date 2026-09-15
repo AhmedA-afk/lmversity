@@ -125,6 +125,6 @@ averages often settle and when a normal approximation is useful.
 
 ## Continue, go deeper, apply it
 
-- Continue: Law of large numbers and central limit theorem
+- Continue: [Law of large numbers and central limit theorem](/learn/maths-foundations/law-of-large-numbers-and-central-limit-theorem)
 - Go deeper: Probability and statistics for ML
 - Apply it: Likelihood, priors, and sampling assignment

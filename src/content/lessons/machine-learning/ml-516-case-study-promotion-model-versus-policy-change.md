@@ -10,7 +10,7 @@ updated: "2026-08-30"
 
 ## The short answer
 
-A model that predicts which customers will purchase during a promotion does not tell you whether sending a promotion caused a purchase. In this case study, build separate evidence paths: one for forecasting demand and one for deciding whether a policy change is beneficial. The second needs an intervention design or explicit, contestable observational assumptions.
+A model that predicts which customers will purchase during a promotion does not tell you whether sending a promotion caused a purchase. In this [case study](/learn/machine-learning/ml-115-case-study-triage-under-review-capacity), build separate evidence paths: one for forecasting demand and one for deciding whether a policy change is beneficial. The second needs an intervention design or explicit, contestable observational assumptions.
 
 ## Why this matters
 

@@ -71,6 +71,6 @@ A Jacobian is local and first-order. It does not capture curvature, global inver
 
 ## Continue, go deeper, apply it
 
-- Continue: Hessians, curvature, and saddle points
-- Go deeper: Forward-mode automatic differentiation
+- Continue: [Hessians, curvature, and saddle points](/learn/maths-foundations/hessians-curvature-and-saddle-points)
+- Go deeper: [Forward-mode automatic differentiation](/learn/maths-foundations/forward-mode-automatic-differentiation)
 - Apply it: Linear algebra for ML

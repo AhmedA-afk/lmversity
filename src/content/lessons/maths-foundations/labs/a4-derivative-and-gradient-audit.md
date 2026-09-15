@@ -183,6 +183,6 @@ Passing this audit does not prove that the loss is appropriate, the data are val
 
 ## Continue, go deeper, apply it
 
-- Continue: Reverse-mode autodiff and backpropagation
-- Go deeper: Gradient checking and debugging
-- Apply it: A5 · Backpropagation from scratch
+- Continue: [Reverse-mode autodiff and backpropagation](/learn/maths-foundations/reverse-mode-autodiff-and-backpropagation)
+- Go deeper: [Gradient checking and debugging](/learn/maths-foundations/gradient-checking-and-debugging)
+- Apply it: [A5 · Backpropagation from scratch](/learn/maths-foundations/labs/a5-backpropagation-from-scratch)

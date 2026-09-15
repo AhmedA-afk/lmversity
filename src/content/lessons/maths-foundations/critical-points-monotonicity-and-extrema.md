@@ -67,6 +67,6 @@ One-dimensional tests do not classify high-dimensional saddles or prove a global
 
 ## Continue, go deeper, apply it
 
-- Continue: Second derivatives, curvature, and local quadratic models
-- Go deeper: One-dimensional optimisation clinic
-- Apply it: Optimisation, loss, and gradient descent
+- Continue: [Second derivatives, curvature, and local quadratic models](/learn/maths-foundations/second-derivatives-curvature-and-local-quadratic-models)
+- Go deeper: [One-dimensional optimisation clinic](/learn/maths-foundations/one-dimensional-optimisation-clinic)
+- Apply it: Optimisation, loss, and [gradient descent](/learn/maths-foundations/gradient-descent-intuition)

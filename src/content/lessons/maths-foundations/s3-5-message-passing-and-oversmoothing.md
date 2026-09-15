@@ -56,7 +56,7 @@ row is undefined without a policy; adding a self-loop preserves its own feature.
 **Input:** a graph with distinct one-hot node features and repeated normalized
 aggregation without residuals. **Mechanism:** neighbour mixing contracts differences.
 **Output:** embeddings become nearly identical after enough layers. **Inspect:**
-pairwise variance or cosine similarity by depth. **Decision:** stop, skip, or
+pairwise variance or [cosine similarity](/learn/maths-foundations/cosine-similarity-angular-distance-embedding-retrieval) by depth. **Decision:** stop, skip, or
 redesign the propagation before adding more depth.
 
 ## An illustrative story
@@ -106,5 +106,5 @@ and a low-collision embedding can still encode a harmful shortcut.
 ## Continue, go deeper, apply it
 
 - Continue: Probabilistic-research extensions
-- Go deeper: Spectral clustering and embeddings
+- Go deeper: [Spectral clustering and embeddings](/learn/maths-foundations/s3-4-spectral-clustering-and-embeddings)
 - Apply it: Neural networks and representations

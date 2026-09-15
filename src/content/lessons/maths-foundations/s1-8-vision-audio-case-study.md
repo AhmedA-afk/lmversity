@@ -118,5 +118,5 @@ miss microphone, placement, codec, environment, or annotation shifts.
 ## Continue, go deeper, apply it
 
 - Continue: Sequential decision-making and RL
-- Go deeper: Spectrograms, windowing, and time–frequency trade-offs
+- Go deeper: [Spectrograms, windowing, and time–frequency trade-offs](/learn/maths-foundations/s1-6-spectrograms-windowing-and-time-frequency-trade-offs)
 - Apply it: Interpretability and error analysis

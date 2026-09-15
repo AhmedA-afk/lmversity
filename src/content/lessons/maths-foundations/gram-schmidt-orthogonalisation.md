@@ -175,6 +175,6 @@ also depends on the chosen inner product; changing the metric changes the answer
 
 ## Continue, go deeper, apply it
 
-- Continue: QR factorisation and least-squares solving
+- Continue: [QR factorisation and least-squares solving](/learn/maths-foundations/qr-factorisation-and-least-squares)
 - Go deeper: Linear algebra for ML
 - Apply it: Linear regression

@@ -41,7 +41,7 @@ He was remote at the time, during the pandemic, which is not the normal shape. P
 
 Colin Jarvis runs OpenAI's FDE team, which started at two people and which he described in August 2026 as around 140, with a separate deployment organisation of roughly 200 handling support and scale.
 
-His description of a day is the opposite end of the spectrum from Brian's. An FDE "might spend the full day talking with the payments team to understand what specific things are important to them so that the migration would be successful", and then shift to "writing tests, migration code, or building progress UIs". On-site time is about 50%, varying sharply by region: he cites roughly 80% for FDEs based in the UAE and Japan, and two to three weeks a month in Europe and the US.
+His description of a day is the opposite end of [the spectrum](/roles/forward-deployed-engineer/deploy/the-spectrum-from-saas-to-air-gapped) from Brian's. An FDE "might spend the full day talking with the payments team to understand what specific things are important to them so that the migration would be successful", and then shift to "writing tests, migration code, or building progress UIs". On-site time is about 50%, varying sharply by region: he cites roughly 80% for FDEs based in the UAE and Japan, and two to three weeks a month in Europe and the US.
 
 The engagement arc he describes has four parts, and it is worth learning because it is the arc this entire path is sequenced against:
 

@@ -55,4 +55,4 @@ This notebook does not validate a production data pipeline, authorize automated 
 
 ## Continue, go deeper, apply it
 
-Submit the notebook with a one-page model card. Apply the same template to the demand case study next.
+Submit the notebook with a one-page model card. Apply the same template to the demand [case study](/learn/machine-learning/ml-115-case-study-triage-under-review-capacity) next.

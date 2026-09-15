@@ -24,7 +24,7 @@ Write an explanation brief before selecting a technique: name the decision owner
 
 1. A credit-risk analyst needs a notice for one declined applicant. Use a plain-language local reason and actionable eligibility policy; global importances cannot justify that individual outcome.
 2. A fraud team asks why alerts doubled overnight. Compare score and feature distributions by model version and ingestion batch; a per-case explanation is the wrong granularity.
-3. An oncology research group asks whether a biomarker causes response. SHAP values describe model association, not intervention effects; require a causal study design.
+3. An oncology research group asks whether a biomarker causes response. [SHAP values](/learn/machine-learning/ml-603-shap-values-assumptions-and-misuse) describe model association, not intervention effects; require a causal study design.
 4. A demand-planning lead asks whether the model relies too much on promotion. Use partial-dependence or conditional effect plots plus subgroup slices, then check correlated-price and promotion features.
 5. Boundary case: a simple monotone scorecard may be interpretable to reviewers, but a dense policy with hundreds of thresholds is not automatically understandable merely because it is not a neural network.
 

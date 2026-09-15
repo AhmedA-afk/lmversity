@@ -8,7 +8,7 @@ duration: "3 min read"
 
 ## The short answer
 
-Logistic regression applies a sigmoid to a linear score to model a probability-like value for binary classification. It is a useful baseline because its boundary and feature effects are relatively inspectable. The threshold, class weighting, calibration, and label policy still determine how that score becomes a decision.
+[Logistic regression](/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian) applies a sigmoid to a linear score to model a probability-like value for binary classification. It is a useful baseline because its boundary and feature effects are relatively inspectable. The threshold, class weighting, calibration, and label policy still determine how that score becomes a decision.
 
 ## The mechanism
 
@@ -56,7 +56,7 @@ The score is evidence for a decision with a threshold, review queue, and appeal.
 
 ## Hands-on
 
-Implement logistic regression for a two-feature fixture. Compare a 0.5 threshold,
+Implement [logistic regression](/learn/machine-learning/ml-206-logistic-regression-likelihood-and-odds) for a two-feature fixture. Compare a 0.5 threshold,
 an operating-capacity threshold, and a calibrated or review-band policy. Inspect
 four false positives and four false negatives.
 

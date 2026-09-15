@@ -88,6 +88,6 @@ Randomisation does not solve interference, noncompliance, missing outcomes, or a
 
 ## Continue, go deeper, apply it
 
-- Continue: Self-information and coding intuition
-- Go deeper: Data-generating processes, sampling, and selection bias
+- Continue: [Self-information and coding intuition](/learn/maths-foundations/self-information-and-coding-intuition)
+- Go deeper: [Data-generating processes, sampling, and selection bias](/learn/maths-foundations/data-generating-processes-sampling-and-selection-bias)
 - Apply it: Causal questions versus predictive models

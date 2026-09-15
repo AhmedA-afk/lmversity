@@ -109,6 +109,6 @@ constrained in ways a simple MDP does not capture.
 
 ## Continue, go deeper, apply it
 
-- Continue: Bellman expectation equations
-- Go deeper: RL safety and offline-data warnings
+- Continue: [Bellman expectation equations](/learn/maths-foundations/s2-4-bellman-expectation-equations)
+- Go deeper: [RL safety and offline-data warnings](/learn/maths-foundations/s2-8-rl-safety-and-offline-data-warnings)
 - Apply it: Agents versus workflows

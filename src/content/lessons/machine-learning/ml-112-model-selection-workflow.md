@@ -27,7 +27,7 @@ problem contract -> split -> baselines -> candidate families
 
 ## Worked examples and variations
 
-1. Tabular classification: compare regularized logistic regression, a tree ensemble, and a simple rule under identical grouped folds.
+1. Tabular classification: compare regularized [logistic regression](/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian), a tree ensemble, and a simple rule under identical grouped folds.
 2. Forecasting: select using rolling origins, then reserve the latest period for final assessment.
 3. Sparse text: begin with TF–IDF plus linear classifier before introducing a more complex representation.
 4. Boundary case: a tiny dataset may not support a stable held-out test; report uncertainty and seek more data rather than claiming precision.

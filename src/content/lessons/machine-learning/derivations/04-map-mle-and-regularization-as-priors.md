@@ -48,4 +48,4 @@ Priors encode choices and can dominate small datasets. MAP discards posterior sp
 
 ## Nearby course topics
 
-Continue with ridge, lasso and elastic net, Bayesian and generative learning, logistic regression, and uncertainty intervals.
+Continue with ridge, lasso and elastic net, Bayesian and generative learning, [logistic regression](/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian), and uncertainty intervals.

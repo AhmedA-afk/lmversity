@@ -104,6 +104,6 @@ graphs require approximations whose numerical error must be checked.
 
 ## Continue, go deeper, apply it
 
-- Continue: Message passing and oversmoothing
-- Go deeper: Graph Laplacians and smoothness
+- Continue: [Message passing and oversmoothing](/learn/maths-foundations/s3-5-message-passing-and-oversmoothing)
+- Go deeper: [Graph Laplacians and smoothness](/learn/maths-foundations/s3-3-graph-laplacians-and-smoothness)
 - Apply it: Clustering and k-means

@@ -8,7 +8,7 @@ duration: "3 min read"
 
 ## The short answer
 
-Class imbalance makes aggregate metrics easy to misread because the majority class can dominate the score. Choose metrics from the action: precision, recall, ranking quality, calibration, cost, and review capacity each answer a different question. Report the confusion matrix and relevant slices beside any summary number.
+[Class imbalance](/learn/machine-learning/ml-509-class-imbalance-resampling-and-class-weights) makes aggregate metrics easy to misread because the majority class can dominate the score. Choose metrics from the action: precision, recall, ranking quality, calibration, cost, and review capacity each answer a different question. Report the confusion matrix and relevant slices beside any summary number.
 
 ## The metric map
 

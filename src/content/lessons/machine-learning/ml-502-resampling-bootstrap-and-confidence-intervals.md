@@ -10,7 +10,7 @@ updated: "2026-08-30"
 
 ## The short answer
 
-A single validation score is an estimate with sampling noise. Bootstrap resampling and repeated valid splits approximate how a metric varies under a specified sampling scheme. Report an interval and the resampling unit, not only a point estimate. Do not bootstrap individual rows when rows within a person, session, or time series are dependent.
+A single validation score is an estimate with sampling noise. Bootstrap resampling and repeated valid splits approximate how a metric varies under a specified sampling scheme. Report an interval and the resampling unit, not only a point estimate. Do not bootstrap individual rows when rows within a person, session, or [time series](/learn/machine-learning/deep-lectures/907-time-series-ranking-and-recommender-systems-under-temporal-exposure-feedback) are dependent.
 
 ## Why this matters
 
@@ -68,4 +68,4 @@ Resampling cannot repair leakage, label error, distribution shift, or an irrelev
 
 ## Continue, go deeper, apply it
 
-Continue with hypothesis tests and effect sizes. Go deeper with hierarchical and Bayesian uncertainty models. Apply this by requiring intervals for every model-change proposal.
+Continue with [hypothesis tests](/learn/machine-learning/ml-503-hypothesis-tests-permutation-tests-and-effect-sizes) and effect sizes. Go deeper with hierarchical and Bayesian uncertainty models. Apply this by requiring intervals for every model-change proposal.

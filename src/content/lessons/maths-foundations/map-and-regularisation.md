@@ -96,6 +96,6 @@ MAP does not prove a prior is correct, quantify all posterior uncertainty, or re
 
 ## Continue, go deeper, apply it
 
-- Continue: Confidence intervals and their frequentist meaning
+- Continue: [Confidence intervals and their frequentist meaning](/learn/maths-foundations/confidence-intervals-and-frequentist-meaning)
 - Go deeper: Latent variables and ELBO intuition
 - Apply it: Regularisation and bias–variance

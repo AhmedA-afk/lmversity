@@ -47,7 +47,7 @@ These come from the companies' own postings and their leaders' own accounts, not
 6. Systems integration with whatever the customer already runs: SSO, document management, a twenty-year-old Oracle schema, a SOAP endpoint nobody maintains, occasionally a COBOL migration.
 7. Deploy and operate in constrained environments. Sierra's forward-deployed infrastructure role is entirely about "VPC configuration and infrastructure provisioning" inside customer-owned clouds, upgrades, rollbacks and incident support.
 8. Build evals and guardrails. OpenAI's head of FDE calls the practice "eval-driven development" and lists "evaluation frameworks and labeled datasets" first among the things his team builds.
-9. Ship the AI-specific artifacts when the product is an AI product: agents, MCP servers, prompt chains, retrieval layers, fine-tunes. Anthropic's posting names "MCP servers, sub-agents, and agent skills" as deliverables.
+9. Ship the AI-specific artifacts when the product is an AI product: agents, [MCP servers](/roles/forward-deployed-engineer/ai/mcp-servers-and-when-a-plain-function-is-simpler), prompt chains, retrieval layers, fine-tunes. Anthropic's posting names "MCP servers, sub-agents, and agent skills" as deliverables.
 
 **Making it stick, then making it product**
 

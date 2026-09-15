@@ -9,14 +9,14 @@ duration: "5 min read"
 ## The short answer
 
 The product `AB` is defined when the columns of `A` equal the rows of `B`, and
-its entry `(i,j)` is the dot product of row `i` of `A` with column `j` of `B`.
+its entry `(i,j)` is [the dot product](/learn/maths-foundations/dot-product-explained) of row `i` of `A` with column `j` of `B`.
 It composes transformations and applies one weight matrix to a whole batch. The
 order matters: `AB` and `BA` usually mean different maps, even when both happen
 to be defined.
 
 ## Why this matters
 
-Batch inference is matrix multiplication: a batch `X` can pass through a layer
+Batch inference is [matrix multiplication](/learn/maths-foundations/matrix-multiplication-mechanics): a batch `X` can pass through a layer
 without a Python loop. But two conventions are common. With examples as rows,
 `XWᵀ` is typical; with examples as columns, `WX` is typical. Mixing conventions
 is one of the easiest ways to get a fast, consistently wrong model.
@@ -136,6 +136,6 @@ products.
 
 ## Continue, go deeper, apply it
 
-- Continue: Linear systems and augmented matrices
+- Continue: [Linear systems and augmented matrices](/learn/maths-foundations/linear-systems-and-augmented-matrices)
 - Go deeper: Matrix–vector multiplication
 - Apply it: Linear regression

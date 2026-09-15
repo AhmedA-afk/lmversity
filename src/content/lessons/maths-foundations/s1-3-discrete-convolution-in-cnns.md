@@ -116,4 +116,4 @@ and correct shapes do not guarantee useful or fair representations.
 
 - Continue: Fourier bases and the DFT
 - Go deeper: Losses, gradients, and optimisation
-- Apply it: Vision/audio case study
+- Apply it: [Vision/audio case study](/learn/maths-foundations/s1-8-vision-audio-case-study)

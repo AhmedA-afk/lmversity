@@ -47,7 +47,7 @@ Use repeated stratified cross-validation or a fixed validation split *within* th
 ## Required model comparisons
 
 1. Always-negative, prevalence, and simple rule/score baselines.
-2. Regularised logistic regression with imputation and missingness indicators.
+2. Regularised [logistic regression](/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian) with imputation and missingness indicators.
 3. A non-linear tree ensemble with class weighting or an explicitly tuned cost strategy.
 4. A calibrated selected model with a capacity-limited review policy.
 
@@ -56,7 +56,7 @@ Report metric uncertainty or fold variation. Include an ablation removing missin
 ## Deliverables
 
 - Licence/provenance file and a complete data card.
-- Parsing/data-quality report for `na`, class imbalance, and histogram columns.
+- Parsing/data-quality report for `na`, [class imbalance](/learn/machine-learning/ml-509-class-imbalance-resampling-and-class-weights), and histogram columns.
 - Fold-safe pipelines, model-comparison table, and calibration artefacts.
 - A cost/capacity decision memo with sensitivity analysis and a “do not automate” boundary.
 - Final locked-test report and reproducible environment/commands.

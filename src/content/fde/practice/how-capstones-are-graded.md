@@ -20,7 +20,7 @@ sources:
 
 Every capstone in this module is rebuilt from a deployment that a company has talked about publicly. None of them are graded on whether your version resembles the original. They are graded on whether you did the eight things an enterprise buyer checks before they let software touch their data, and whether you can prove each one with a file in a repository.
 
-Read this page before you start Capstone 01, and score yourself against it before you publish anything.
+Read this page before you start [Capstone 01](/roles/forward-deployed-engineer/practice/capstone-01-permissioned-research-assistant), and score yourself against it before you publish anything.
 
 ## The eight requirements
 
@@ -32,7 +32,7 @@ The order matters and it is checkable. Your repository history has to show the l
 
 OpenAI's head of FDE, Colin Jarvis, describes this as eval-driven development, and the examples he gives are small: on the order of twenty expert-labelled examples to start, and a rough feasibility heuristic of getting seven or eight of ten right in a playground before committing to a build. Those figures come from a talk, transcribed in the ZenML LLMOps database, not from a paper. Treat them as a practitioner's rule of thumb, which is what they are, and which is enough. Twenty labelled examples you actually argued about are worth more than two hundred you generated.
 
-The baseline is the part people skip. If you cannot beat a keyword search, a regex, a lookup table, or "always answer the most common class", you have not shown anything. Capstone 05 has no model in it at all and still needs a baseline: the spreadsheet the hospital uses today.
+The baseline is the part people skip. If you cannot beat a keyword search, a regex, a lookup table, or "always answer the most common class", you have not shown anything. [Capstone 05](/roles/forward-deployed-engineer/practice/capstone-05-hospital-operations-ontology) has no model in it at all and still needs a baseline: the spreadsheet the hospital uses today.
 
 ### 2. The system runs somewhere that is not your laptop. Hard gate.
 

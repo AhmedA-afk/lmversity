@@ -10,7 +10,7 @@ updated: "2026-08-30"
 
 ## The short answer
 
-Logistic regression models $p(y=1|x)=\sigma(X\beta)$, where the sigmoid maps any score to a probability. Each coefficient changes *log-odds* holding the other modelled variables fixed; it is not automatically a change in probability or a causal effect.
+[Logistic regression](/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian) models $p(y=1|x)=\sigma(X\beta)$, where the sigmoid maps any score to a probability. Each coefficient changes *log-odds* holding the other modelled variables fixed; it is not automatically a change in probability or a causal effect.
 
 ## Why this matters
 

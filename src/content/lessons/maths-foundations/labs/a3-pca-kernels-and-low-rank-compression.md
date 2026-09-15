@@ -424,14 +424,14 @@ evaluation.
 
 ## Continue, go deeper, apply it
 
-- Continue: PCA from variance maximisation and SVD
-- Go deeper: Kernel matrices and the kernel trick
+- Continue: [PCA from variance maximisation and SVD](/learn/maths-foundations/pca-from-variance-and-svd)
+- Go deeper: [Kernel matrices and the kernel trick](/learn/maths-foundations/kernel-matrices-and-kernel-trick)
 - Apply it: PCA and dimensionality reduction in ML
 
 ## M3 reference route
 
 - SVD
-- Low-rank approximation and compression
+- [Low-rank approximation and compression](/learn/maths-foundations/low-rank-approximation-and-compression)
 - PCA from variance and SVD
 - Covariance and whitening
 - Condition numbers, stability, and practical solvers

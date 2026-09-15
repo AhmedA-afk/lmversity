@@ -50,7 +50,7 @@ Curvature depends on parameterisation and units. Rescaling a feature changes the
 
 ## Hands-on
 
-Simulate gradient descent on `½kx²` for `k=1` and `k=50`, using the same three learning rates. Plot loss and distance to zero.
+Simulate [gradient descent](/learn/maths-foundations/gradient-descent-intuition) on `½kx²` for `k=1` and `k=50`, using the same three learning rates. Plot loss and distance to zero.
 
 **Failure state:** choose `η=0.05` for `k=50`, which gives `ηk=2.5` and diverges. **Test:** assert that loss is non-increasing only for the stable fixtures and flag the divergent trace. **Reset:** reduce `η` below `2/k`, rerun, and compare convergence.
 
@@ -67,6 +67,6 @@ One-dimensional curvature does not capture interactions among coordinates, noise
 
 ## Continue, go deeper, apply it
 
-- Continue: Taylor expansions and approximation error
-- Go deeper: Hessians, curvature, and saddle points
+- Continue: [Taylor expansions and approximation error](/learn/maths-foundations/taylor-expansions-and-approximation-error)
+- Go deeper: [Hessians, curvature, and saddle points](/learn/maths-foundations/hessians-curvature-and-saddle-points)
 - Apply it: Optimisation, loss, and gradient descent

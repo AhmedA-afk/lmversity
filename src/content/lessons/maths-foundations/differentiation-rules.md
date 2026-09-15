@@ -68,10 +68,10 @@ Implement the four rules for scalar functions and compare them with finite diffe
 
 ## What this does not solve
 
-Rules do not remove the need for the chain rule, domain analysis, or numerical checks. They also do not make a non-smooth function differentiable at every point.
+Rules do not remove the need for [the chain rule](/learn/maths-foundations/the-chain-rule), domain analysis, or numerical checks. They also do not make a non-smooth function differentiable at every point.
 
 ## Continue, go deeper, apply it
 
 - Continue: The chain rule
-- Go deeper: Derivatives of affine layers and elementwise activations
+- Go deeper: [Derivatives of affine layers and elementwise activations](/learn/maths-foundations/derivatives-of-affine-layers-and-elementwise-activations)
 - Apply it: Logistic regression

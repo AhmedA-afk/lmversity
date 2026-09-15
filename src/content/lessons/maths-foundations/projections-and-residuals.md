@@ -12,7 +12,7 @@ The projection of `x` onto a nonzero direction `u` is
 `p=((x·u)/(u·u))u`. The residual `r=x−p` is the part left over, and it is
 orthogonal to `u`. With an orthonormal basis matrix `Q`, projection onto its
 span is `QQᵀx`. In AI, this separates explained signal from error and underlies
-least squares, dimensionality reduction, and orthogonal feature components.
+[least squares](/learn/maths-foundations/least-squares-normal-equations-and-projection-geometry), dimensionality reduction, and orthogonal feature components.
 
 ## Why this matters
 
@@ -148,6 +148,6 @@ fact, not evidence that the discarded information is harmless.
 
 ## Continue, go deeper, apply it
 
-- Continue: Angles, margins, and separating hyperplanes
+- Continue: [Angles, margins, and separating hyperplanes](/learn/maths-foundations/angles-margins-separating-hyperplanes)
 - Go deeper: Linear algebra for ML
 - Apply it: A1 embedding geometry lab

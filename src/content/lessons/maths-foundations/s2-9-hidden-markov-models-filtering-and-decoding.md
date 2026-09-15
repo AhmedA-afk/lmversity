@@ -112,6 +112,6 @@ mis-specified model rather than strong evidence.
 
 ## Continue, go deeper, apply it
 
-- Continue: Graph notation, adjacency, incidence, and degree matrices
+- Continue: [Graph notation, adjacency, incidence, and degree matrices](/learn/maths-foundations/s3-1-graph-notation-adjacency-incidence-and-degree-matrices)
 - Go deeper: Bayesian posterior inference and predictive checks
 - Apply it: Probabilistic modelling in ML

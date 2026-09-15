@@ -44,7 +44,7 @@ Use rolling-origin evaluation: train through time `t`, validate on a following b
 ## Required model comparisons
 
 1. Mean and seasonal-naive baselines.
-2. Regularised linear regression with calendar and lag features.
+2. Regularised [linear regression](/learn/machine-learning/derivations/01-linear-regression-normal-equations-and-geometry) with calendar and lag features.
 3. A tree ensemble with the identical information set.
 4. A count-aware alternative or transformed-target model, with an explanation of its assumptions.
 

@@ -163,7 +163,7 @@ E_p[g(X)] = E_q[g(X) p(X)/q(X)]
          = E_q[x²/(2x)] = 1/3.
 ```
 
-The correct seeded estimate at 10,000 draws is about `0.333255`. Deliberately use `q/p` instead; it produces about `0.798583`, a persistent bias that more samples do not cure. This is an optional extension connected to importance sampling and weighted estimates.
+The correct seeded estimate at 10,000 draws is about `0.333255`. Deliberately use `q/p` instead; it produces about `0.798583`, a persistent bias that more samples do not cure. This is an optional extension connected to [importance sampling and weighted estimates](/learn/maths-foundations/importance-sampling-and-weighted-estimates).
 
 ## Two ways to see it
 
@@ -223,6 +223,6 @@ MLE and MAP do not prove that a likelihood or prior is appropriate, and a Monte 
 
 ## Continue, go deeper, apply it
 
-- Continue: Law of large numbers and central limit theorem
+- Continue: [Law of large numbers and central limit theorem](/learn/maths-foundations/law-of-large-numbers-and-central-limit-theorem)
 - Go deeper: MAP and regularisation
-- Apply it: Bootstrap methods
+- Apply it: [Bootstrap methods](/learn/maths-foundations/bootstrap-methods)

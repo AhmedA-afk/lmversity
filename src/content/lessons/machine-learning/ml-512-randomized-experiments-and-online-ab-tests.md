@@ -68,4 +68,4 @@ Randomization does not automatically transfer a result to another population, fu
 
 ## Continue, go deeper, apply it
 
-Continue with observational causal estimation and its limits. Go deeper with cluster experiments and sequential analysis. Apply this by keeping the experiment protocol and assignment code under version control.
+Continue with [observational causal estimation and its limits](/learn/machine-learning/ml-513-observational-causal-estimation-and-its-limits). Go deeper with cluster experiments and sequential analysis. Apply this by keeping the experiment protocol and assignment code under version control.

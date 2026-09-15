@@ -41,7 +41,7 @@ Add $\lambda I$ to the Hessian (not its intercept entry) and observe how it hand
 
 ## Answers and checkpoint
 
-Why is logistic regression concave in log-likelihood form? $X^TWX\succeq0$, so $-X^TWX\preceq0$. What is $p(1-p)$ at $p=.5$? $.25$, its largest value.
+Why is [logistic regression](/learn/machine-learning/ml-206-logistic-regression-likelihood-and-odds) concave in log-likelihood form? $X^TWX\succeq0$, so $-X^TWX\preceq0$. What is $p(1-p)$ at $p=.5$? $.25$, its largest value.
 
 ## Limitations
 
@@ -49,4 +49,4 @@ Correct likelihood does not guarantee calibrated probabilities under misspecific
 
 ## Nearby course topics
 
-Continue with generalized linear models, calibration, MAP/MLE regularization, thresholds and abstention.
+Continue with [generalized linear models](/learn/machine-learning/ml-205-generalized-linear-models), calibration, MAP/MLE regularization, thresholds and abstention.

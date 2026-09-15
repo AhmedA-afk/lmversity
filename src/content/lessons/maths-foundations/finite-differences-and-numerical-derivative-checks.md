@@ -72,6 +72,6 @@ Finite differences can be expensive, noisy, and misleading near non-smooth point
 
 ## Continue, go deeper, apply it
 
-- Continue: Differentiation rules
-- Go deeper: Gradient checking and debugging
-- Apply it: Derivatives as rate, slope, and sensitivity
+- Continue: [Differentiation rules](/learn/maths-foundations/differentiation-rules)
+- Go deeper: [Gradient checking and debugging](/learn/maths-foundations/gradient-checking-and-debugging)
+- Apply it: [Derivatives as rate, slope, and sensitivity](/learn/maths-foundations/derivatives-rate-slope-sensitivity)

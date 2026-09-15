@@ -123,6 +123,6 @@ does not make features predictive or causally meaningful.
 
 ## Continue, go deeper, apply it
 
-- Continue: Invertibility, determinants, and volume intuition
-- Go deeper: Null spaces, column spaces, row spaces, and the fundamental picture
+- Continue: [Invertibility, determinants, and volume intuition](/learn/maths-foundations/invertibility-determinants-and-volume-intuition)
+- Go deeper: [Null spaces, column spaces, row spaces, and the fundamental picture](/learn/maths-foundations/null-spaces-column-spaces-row-spaces-and-the-fundamental-picture)
 - Apply it: Linear algebra for ML

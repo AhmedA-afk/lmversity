@@ -103,6 +103,6 @@ restart, and disconnected components.
 
 ## Continue, go deeper, apply it
 
-- Continue: Graph Laplacians and smoothness
-- Go deeper: Spectral clustering and embeddings
-- Apply it: Message passing and oversmoothing
+- Continue: [Graph Laplacians and smoothness](/learn/maths-foundations/s3-3-graph-laplacians-and-smoothness)
+- Go deeper: [Spectral clustering and embeddings](/learn/maths-foundations/s3-4-spectral-clustering-and-embeddings)
+- Apply it: [Message passing and oversmoothing](/learn/maths-foundations/s3-5-message-passing-and-oversmoothing)

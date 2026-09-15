@@ -158,6 +158,6 @@ whose absolute scale is meaningful. Validate the choice on the task.
 
 ## Continue, go deeper, apply it
 
-- Continue: Geometry in high dimensions
+- Continue: [Geometry in high dimensions](/learn/maths-foundations/geometry-in-high-dimensions)
 - Go deeper: Linear algebra for ML
 - Apply it: A1 embedding geometry lab

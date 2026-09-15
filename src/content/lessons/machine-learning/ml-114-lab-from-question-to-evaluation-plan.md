@@ -63,4 +63,4 @@ Planning does not supply consent, policy authority, reliable labels, or producti
 
 ## Continue, go deeper, apply it
 
-Use the plan to build the first pipeline, then revisit each assumption after the baseline’s error analysis. The next case study asks you to make the plan under a real operational constraint.
+Use the plan to build the first pipeline, then revisit each assumption after the baseline’s error analysis. The next [case study](/learn/machine-learning/ml-115-case-study-triage-under-review-capacity) asks you to make the plan under a real operational constraint.

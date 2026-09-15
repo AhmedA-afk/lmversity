@@ -10,7 +10,7 @@ updated: "2026-08-30"
 
 ## Goal
 
-Using the Assignment 1 dataset or a supplied binary classification dataset, show that you understand the model beneath the library call. Your notebook must implement batch gradient descent for linear or logistic regression using NumPy only, then compare it to a pipeline implementation.
+Using the Assignment 1 dataset or a supplied binary classification dataset, show that you understand the model beneath the library call. Your notebook must implement batch gradient descent for linear or [logistic regression](/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian) using NumPy only, then compare it to a pipeline implementation.
 
 ## Required work
 

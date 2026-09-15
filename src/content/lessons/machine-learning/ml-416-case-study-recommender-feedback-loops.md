@@ -48,5 +48,5 @@ Exploration alone cannot resolve unsafe content, manipulation, or value conflict
 
 ## Continue, go deeper, apply it
 
-Continue to causal evaluation and online experimentation. Apply this case study before using engagement logs as unquestioned training labels.
+Continue to causal evaluation and online experimentation. Apply this [case study](/learn/machine-learning/ml-115-case-study-triage-under-review-capacity) before using engagement logs as unquestioned training labels.
 

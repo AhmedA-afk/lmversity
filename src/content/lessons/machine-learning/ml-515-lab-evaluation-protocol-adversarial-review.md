@@ -68,4 +68,4 @@ Adversarial review cannot make harmful objectives acceptable or substitute for s
 
 ## Continue, go deeper, apply it
 
-Continue with the promotion-model versus policy-change case study. Go deeper by scheduling periodic post-launch reviews. Apply this by adding an adversarial review gate to every high-impact release.
+Continue with the promotion-model versus policy-change [case study](/learn/machine-learning/ml-115-case-study-triage-under-review-capacity). Go deeper by scheduling periodic post-launch reviews. Apply this by adding an adversarial review gate to every high-impact release.

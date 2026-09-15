@@ -48,4 +48,4 @@ HMMs impose memory-one states and conditionally independent emissions; real sequ
 
 ## Nearby course topics
 
-Continue with HMMs and temporal modeling, time-series validation, Gaussian mixtures/EM, and forecasting under delayed labels.
+Continue with HMMs and temporal modeling, time-series validation, [Gaussian mixtures](/learn/machine-learning/derivations/09-gaussian-mixtures-em-and-latent-variable-inference)/EM, and forecasting under delayed labels.

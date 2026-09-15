@@ -129,6 +129,6 @@ support and tail assumptions.
 
 ## Continue, go deeper, apply it
 
-- Continue: Gaussian distributions and standardisation
+- Continue: [Gaussian distributions and standardisation](/learn/maths-foundations/gaussian-distributions-and-standardisation)
 - Go deeper: Anomaly detection
 - Apply it: Likelihood, priors, and sampling assignment

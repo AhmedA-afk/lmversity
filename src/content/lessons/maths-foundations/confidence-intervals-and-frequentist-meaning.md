@@ -85,6 +85,6 @@ Confidence intervals do not prove a hypothesis, guarantee future coverage under 
 
 ## Continue, go deeper, apply it
 
-- Continue: Bootstrap methods
-- Go deeper: Hypothesis tests, p-values, and permutation tests
+- Continue: [Bootstrap methods](/learn/maths-foundations/bootstrap-methods)
+- Go deeper: [Hypothesis tests, p-values, and permutation tests](/learn/maths-foundations/hypothesis-tests-p-values-and-permutation-tests)
 - Apply it: Cross-validation and experimental design

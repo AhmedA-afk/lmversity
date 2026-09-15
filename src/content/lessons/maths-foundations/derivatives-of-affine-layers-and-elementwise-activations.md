@@ -71,6 +71,6 @@ Layer derivatives do not guarantee a well-trained network, useful representation
 
 ## Continue, go deeper, apply it
 
-- Continue: Computational graphs and local derivatives
-- Go deeper: Non-smooth optimisation and subgradients
+- Continue: [Computational graphs and local derivatives](/learn/maths-foundations/computational-graphs-and-local-derivatives)
+- Go deeper: [Non-smooth optimisation and subgradients](/learn/maths-foundations/non-smooth-optimisation-and-subgradients)
 - Apply it: Neural networks and representations

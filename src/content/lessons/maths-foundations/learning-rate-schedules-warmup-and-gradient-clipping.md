@@ -93,6 +93,6 @@ Schedules and clipping do not make a model’s objective correct, data represent
 
 ## Continue, go deeper, apply it
 
-- Continue: Conditioning, scaling, initialisation, and normalisation
-- Go deeper: Numerical stability: softmax and log-sum-exp
-- Apply it: Optimisation, loss, and gradient descent
+- Continue: [Conditioning, scaling, initialisation, and normalisation](/learn/maths-foundations/conditioning-scaling-initialisation-and-normalisation)
+- Go deeper: [Numerical stability](/learn/maths-foundations/numerical-stability-softmax-logsumexp-and-safe-probabilities): softmax and log-sum-exp
+- Apply it: Optimisation, loss, and [gradient descent](/learn/maths-foundations/gradient-descent-intuition)

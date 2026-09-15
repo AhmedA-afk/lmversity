@@ -110,6 +110,6 @@ calibration.
 
 ## Continue, go deeper, apply it
 
-- Continue: Image transforms, interpolation, and invariance
-- Go deeper: Frequency filtering and the convolution theorem
-- Apply it: Vision/audio case study
+- Continue: [Image transforms, interpolation, and invariance](/learn/maths-foundations/s1-7-image-transforms-interpolation-and-invariance)
+- Go deeper: [Frequency filtering and the convolution theorem](/learn/maths-foundations/s1-5-frequency-filtering-and-convolution-theorem)
+- Apply it: [Vision/audio case study](/learn/maths-foundations/s1-8-vision-audio-case-study)

@@ -82,7 +82,7 @@ Commit this before the constraints module or the agent exist.
 
 **The scorer**, computed from your own code, not judged by eye:
 
-- **Feasibility rate.** Does the proposed plan satisfy every constraint: MOQ met, material matches the BOM, lead time leaves the due date achievable. This is a gate. A single infeasible proposed plan in the final run is a failed capstone, the same way a permission leak fails Capstone 01.
+- **Feasibility rate.** Does the proposed plan satisfy every constraint: MOQ met, material matches the BOM, lead time leaves the due date achievable. This is a gate. A single infeasible proposed plan in the final run is a failed capstone, the same way a permission leak fails [Capstone 01](/roles/forward-deployed-engineer/practice/capstone-01-permissioned-research-assistant).
 - **Cost delta vs. baseline.** The baseline is "always reorder from the cheapest listed supplier, ignoring lead time and the tariff event" — the naive rule Chakra effectively runs today. Report the delta on every scenario, not an average that hides the bad ones.
 - **Unmeetable-due-date detection.** On the scenarios where no feasible plan exists, does the system say so, or does it silently propose something that violates a constraint to look useful.
 - **Latency.** Time from event to a reviewable plan. Rekha's Friday deadline is not decorative.
@@ -91,7 +91,7 @@ Run the baseline through the scorer and write the number down before you build a
 
 ## The build, in stages
 
-**Stage 1: the data layer.** Expose suppliers, the BOM and open orders as query endpoints — a small FastAPI service backed by Postgres, not a shared spreadsheet and not a vector store. The agent reads through this API; nothing is copied into a prompt wholesale. This is the "data without movement" pattern the case describes: the orchestration happens by calling into the systems of record, not by centralising them.
+**Stage 1: the data layer.** Expose suppliers, the BOM and open orders as query endpoints — a small FastAPI service backed by Postgres, not a shared spreadsheet and not a vector store. The agent reads through this API; nothing is copied into a prompt wholesale. This is the "[data without movement](/roles/forward-deployed-engineer/data/data-without-movement-apis-and-mcp-as-a-data-layer)" pattern the case describes: the orchestration happens by calling into the systems of record, not by centralising them.
 
 **Stage 2: the constraints module, `constraints.py`, containing nothing else.**
 

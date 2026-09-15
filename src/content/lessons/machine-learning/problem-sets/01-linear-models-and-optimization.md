@@ -19,7 +19,7 @@ Show algebra, state assumptions, and distinguish a numerical answer from an inte
 3. Use your answer to question 1 to predict at (x=3). Compute the residuals and mean squared error on the training data.
 4. A colleague fits the same data with `fit_intercept=False` after passing only the raw feature (x=[0,1,2]). Explain, quantitatively, why this is a different model. Compute its slope.
 5. Let (X^TX=\begin{bmatrix}3&3\\3&5\end{bmatrix}). Find its eigenvalues and use them to give the condition number (largest divided by smallest eigenvalue). What does it suggest about gradient descent?
-6. For logistic regression with (p_i=\sigma(x_i^T\beta)), derive the gradient of average negative log likelihood. Why is using squared error with a sigmoid usually a poorer optimization choice?
+6. For [logistic regression](/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian) with (p_i=\sigma(x_i^T\beta)), derive the gradient of average negative log likelihood. Why is using squared error with a sigmoid usually a poorer optimization choice?
 7. With (\beta=(-1,1)) for intercept and one feature, calculate (p(y=1\mid x)) for (x=0,1,3). Under a 0.5 threshold, classify each.
 8. Debug this update: `beta = beta - eta * X.T @ (y - p) / n`. State the sign error and write the correct update for minimizing logistic negative log likelihood.
 

@@ -8,7 +8,7 @@ duration: "5 min read"
 
 ## The short answer
 
-Count outcomes by asking whether order matters, whether repetition is allowed, and whether cases overlap. The product rule gives sequential choices; permutations count ordered selections; combinations count unordered selections; inclusion–exclusion subtracts overlap. In AI, these distinctions prevent wrong sample spaces, duplicate test cases, and inflated estimates of rare-event coverage.
+Count outcomes by asking whether order matters, whether repetition is allowed, and whether cases overlap. The product rule gives sequential choices; permutations count ordered selections; combinations count unordered selections; inclusion–exclusion subtracts overlap. In AI, these distinctions prevent wrong [sample spaces](/learn/maths-foundations/sample-spaces-events-and-probability-axioms), duplicate test cases, and inflated estimates of rare-event coverage.
 
 ## Why this matters
 
@@ -143,6 +143,6 @@ outcomes separately.
 
 ## Continue, go deeper, apply it
 
-- Continue: Conditional probability
+- Continue: [Conditional probability](/learn/maths-foundations/conditional-probability)
 - Go deeper: Mathematics Foundations assignments
 - Apply it: Problem framing and baselines

@@ -86,6 +86,6 @@ Power is conditional on a design and alternative; it does not measure truth, pra
 
 ## Continue, go deeper, apply it
 
-- Continue: A/B experiments, sequential testing, and multiple comparisons
+- Continue: [A/B experiments, sequential testing, and multiple comparisons](/learn/maths-foundations/ab-experiments-sequential-testing-and-multiple-comparisons)
 - Go deeper: Calibration, scoring rules, and distribution shift
 - Apply it: Imbalanced data and metrics

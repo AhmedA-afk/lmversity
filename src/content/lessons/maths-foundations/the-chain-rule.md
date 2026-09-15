@@ -67,6 +67,6 @@ The chain rule does not choose a useful parameterisation or prevent saturation. 
 
 ## Continue, go deeper, apply it
 
-- Continue: Critical points, monotonicity, and extrema
-- Go deeper: Computational graphs and local derivatives
-- Apply it: Loss, gradients, and gradient descent
+- Continue: [Critical points, monotonicity, and extrema](/learn/maths-foundations/critical-points-monotonicity-and-extrema)
+- Go deeper: [Computational graphs and local derivatives](/learn/maths-foundations/computational-graphs-and-local-derivatives)
+- Apply it: Loss, gradients, and [gradient descent](/learn/maths-foundations/gradient-descent-intuition)

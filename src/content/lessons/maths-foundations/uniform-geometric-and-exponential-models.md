@@ -127,6 +127,6 @@ with event counts and provide a related diagnostic.
 
 ## Continue, go deeper, apply it
 
-- Continue: Poisson counts and rate assumptions
+- Continue: [Poisson counts and rate assumptions](/learn/maths-foundations/poisson-counts-and-rate-assumptions)
 - Go deeper: Uncertainty and decision
 - Apply it: Likelihood, priors, and sampling assignment

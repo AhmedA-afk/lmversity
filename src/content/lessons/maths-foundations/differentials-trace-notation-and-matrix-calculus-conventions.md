@@ -74,6 +74,6 @@ Notation cannot correct a wrong objective, data shape, or model semantics. It on
 
 ## Continue, go deeper, apply it
 
-- Continue: Derivatives of affine layers and elementwise activations
-- Go deeper: Reverse-mode autodiff and backpropagation
+- Continue: [Derivatives of affine layers and elementwise activations](/learn/maths-foundations/derivatives-of-affine-layers-and-elementwise-activations)
+- Go deeper: [Reverse-mode autodiff and backpropagation](/learn/maths-foundations/reverse-mode-autodiff-and-backpropagation)
 - Apply it: Linear regression

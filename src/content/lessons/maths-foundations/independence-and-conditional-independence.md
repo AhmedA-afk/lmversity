@@ -133,7 +133,7 @@ cross out the `(0,0)` state before comparing frequencies.
 
 Finite data rarely proves independence; it only gives evidence for or against a
 model assumption. Independence also does not imply identical distributions,
-causality, or fairness. The law of total probability lets you combine dependent
+causality, or fairness. [The law of total probability](/learn/maths-foundations/law-of-total-probability) lets you combine dependent
 subgroups without pretending they are one homogeneous population.
 
 ## Continue, go deeper, apply it

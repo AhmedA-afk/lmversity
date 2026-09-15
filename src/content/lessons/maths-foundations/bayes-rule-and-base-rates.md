@@ -133,6 +133,6 @@ evidence and assumptions supplied; it is not a guarantee or a causal effect.
 
 ## Continue, go deeper, apply it
 
-- Continue: Random variables and support
+- Continue: [Random variables and support](/learn/maths-foundations/random-variables-and-support)
 - Go deeper: Classifiers, thresholds, and calibration
 - Apply it: Base rates, Bayes, and simulation

@@ -18,7 +18,7 @@ In screening, false negatives and false positives have asymmetric human costs. A
 
 ## How it works
 
-Specify the index time, reference standard, follow-up window, and exclusion criteria with a clinical advisor. Use a locked temporal or external test set. Start with logistic regression, then compare a non-linear model only if it adds clinically meaningful benefit. Report sensitivity, specificity, PPV, NPV, ROC/PR curves, calibration plot, confidence intervals, and missing-data behavior. Set thresholds for human review, not autonomous treatment.
+Specify the index time, reference standard, follow-up window, and exclusion criteria with a clinical advisor. Use a locked temporal or external test set. Start with [logistic regression](/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian), then compare a non-linear model only if it adds clinically meaningful benefit. Report sensitivity, specificity, PPV, NPV, ROC/PR curves, calibration plot, confidence intervals, and missing-data behavior. Set thresholds for human review, not autonomous treatment.
 
 ## Worked examples and variations (4 examples incl. boundary/counterexample)
 

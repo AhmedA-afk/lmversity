@@ -43,7 +43,7 @@ with constants and separate terms depending on which input changed. In the
 almost lost and its recovered coefficient is highly sensitive.
 
 Practical choices follow the structure: use `np.linalg.solve(A,b)` for a regular
-square system, QR for full-rank least squares, and SVD/pseudoinverse when rank or
+square system, QR for full-rank [least squares](/learn/maths-foundations/least-squares-normal-equations-and-projection-geometry), and SVD/pseudoinverse when rank or
 the small singular spectrum is central. Avoid explicitly forming `A⁻¹` unless a
 mathematical derivation—not a solve—requires it.
 
@@ -174,6 +174,6 @@ evaluated.
 
 ## Continue, go deeper, apply it
 
-- Continue: Kernel matrices and the kernel trick
-- Go deeper: Optimisation, loss, and gradient descent
+- Continue: [Kernel matrices and the kernel trick](/learn/maths-foundations/kernel-matrices-and-kernel-trick)
+- Go deeper: Optimisation, loss, and [gradient descent](/learn/maths-foundations/gradient-descent-intuition)
 - Apply it: ML systems and reproducibility

@@ -49,4 +49,4 @@ Impurity reduction is a training criterion, not evidence of causal relevance or 
 
 ## Nearby course topics
 
-Continue with decision-tree splitting criteria, random forests, gradient boosting, and feature leakage.
+Continue with [decision-tree splitting criteria](/learn/machine-learning/ml-305-decision-tree-splitting-criteria), random forests, gradient boosting, and feature leakage.

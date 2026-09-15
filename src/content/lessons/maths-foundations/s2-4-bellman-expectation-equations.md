@@ -101,6 +101,6 @@ small sampled residuals while failing on unvisited states.
 
 ## Continue, go deeper, apply it
 
-- Continue: Bellman optimality and value iteration
+- Continue: [Bellman optimality and value iteration](/learn/maths-foundations/s2-5-bellman-optimality-and-value-iteration)
 - Go deeper: Temporal-difference learning
-- Apply it: Markov decision processes
+- Apply it: [Markov decision processes](/learn/maths-foundations/s2-3-markov-decision-processes)

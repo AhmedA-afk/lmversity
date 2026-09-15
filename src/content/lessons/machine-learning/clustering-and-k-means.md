@@ -94,7 +94,7 @@ For points [1, 2, 8, 9] on a line and k=2, centroids initialized near 1 and 9 le
 
 The inertia curve always decreases as k grows, so an elbow is subjective. Silhouette score compares within-cluster distance with nearest-other-cluster distance, but it also favors certain shapes and may reward a representation artifact. Compare several k values using stability across resamples, representative examples, domain review, and a downstream task only if that task is legitimate.
 
-K-means assumes roughly spherical, similarly scaled clusters under Euclidean geometry. It struggles with rings, crescents, highly unequal density, and categories encoded as arbitrary integer distances. Use a different representation or compare alternatives such as Gaussian mixtures, density methods, or hierarchical clustering when assumptions visibly fail.
+K-means assumes roughly spherical, similarly scaled clusters under Euclidean geometry. It struggles with rings, crescents, highly unequal density, and categories encoded as arbitrary integer distances. Use a different representation or compare alternatives such as [Gaussian mixtures](/learn/machine-learning/derivations/09-gaussian-mixtures-em-and-latent-variable-inference), density methods, or hierarchical clustering when assumptions visibly fail.
 
 ## Debugging clinic: expose scale and seed dependence
 

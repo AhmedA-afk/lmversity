@@ -73,7 +73,7 @@ noise or importance model; it is not a free way to improve a metric.
 
 **Input:** `A=I` and any `b`. **Mechanism:** `Q=I`, `R=I`, so `x̂=b` and the
 residual is zero. **Output:** an exact solve. **Inspect:** `QᵀQ=I` and
-`||Ax̂−b||=0`. **Decision:** least squares includes exact solving as a special
+`||Ax̂−b||=0`. **Decision:** [least squares](/learn/maths-foundations/least-squares-normal-equations-and-projection-geometry) includes exact solving as a special
 case; do not conclude that all real data will be exactly representable.
 
 ### Counterexample: a dependent feature
@@ -172,6 +172,6 @@ misleading evaluation split.
 
 ## Continue, go deeper, apply it
 
-- Continue: Eigenvalues and eigenvectors
+- Continue: [Eigenvalues and eigenvectors](/learn/maths-foundations/eigenvalues-and-eigenvectors)
 - Go deeper: Linear regression
 - Apply it: Problem framing and baselines

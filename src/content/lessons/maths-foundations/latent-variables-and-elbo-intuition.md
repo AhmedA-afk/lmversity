@@ -92,6 +92,6 @@ ELBO optimisation does not guarantee identifiable or human-meaningful latents, e
 
 ## Continue, go deeper, apply it
 
-- Continue: Exponential families, sufficient statistics, and GLM intuition
+- Continue: [Exponential families, sufficient statistics, and GLM intuition](/learn/maths-foundations/exponential-families-sufficient-statistics-and-glm)
 - Go deeper: MAP and regularisation
 - Apply it: Neural networks and representations

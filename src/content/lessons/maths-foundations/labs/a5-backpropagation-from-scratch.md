@@ -218,6 +218,6 @@ This network is a teaching fixture, not evidence that an XOR-sized model is suit
 
 ## Continue, go deeper, apply it
 
-- Continue: Gradient checking and debugging
-- Go deeper: Derivatives of affine layers and elementwise activations
+- Continue: [Gradient checking and debugging](/learn/maths-foundations/gradient-checking-and-debugging)
+- Go deeper: [Derivatives of affine layers and elementwise activations](/learn/maths-foundations/derivatives-of-affine-layers-and-elementwise-activations)
 - Apply it: Deep learning: loss, gradients, and optimisation

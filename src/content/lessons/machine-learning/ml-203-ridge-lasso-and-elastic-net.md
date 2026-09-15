@@ -46,4 +46,4 @@ Regularization cannot correct leakage, missing causal confounders, nonlinear tar
 
 ## Continue, go deeper, apply it
 
-Continue with regularization paths and generalized linear models. Use ridge as a strong numeric baseline before expensive feature selection.
+Continue with regularization paths and [generalized linear models](/learn/machine-learning/ml-205-generalized-linear-models). Use ridge as a strong numeric baseline before expensive feature selection.

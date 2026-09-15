@@ -25,7 +25,7 @@ For discrete `Y`,
 `E[X|Y=y]=Σ_x x p(x|y)`.
 
 The random quantity `E[X|Y]` takes the value `E[X|Y=y]` whenever `Y=y`. Applying
-the law of total probability to the joint table gives
+[the law of total probability](/learn/maths-foundations/law-of-total-probability) to the joint table gives
 
 `E[X]=Σ_y E[X|Y=y]P(Y=y)`.
 
@@ -143,6 +143,6 @@ The next module chooses concrete distribution families and sampling procedures.
 
 ## Continue, go deeper, apply it
 
-- Continue: Bernoulli, Binomial, Hypergeometric, and Negative Binomial models
+- Continue: [Bernoulli, Binomial, Hypergeometric, and Negative Binomial models](/learn/maths-foundations/bernoulli-binomial-hypergeometric-and-negative-binomial)
 - Go deeper: Probability and statistics for ML
 - Apply it: Base rates, Bayes, and simulation

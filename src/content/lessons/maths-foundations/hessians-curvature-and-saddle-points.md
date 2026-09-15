@@ -71,6 +71,6 @@ The Hessian is local, expensive in large models, and sensitive to parameterisati
 
 ## Continue, go deeper, apply it
 
-- Continue: Differentials, trace notation, and matrix-calculus conventions
-- Go deeper: Second derivatives, curvature, and local quadratic models
-- Apply it: Optimisation, loss, and gradient descent
+- Continue: [Differentials, trace notation, and matrix-calculus conventions](/learn/maths-foundations/differentials-trace-notation-and-matrix-calculus-conventions)
+- Go deeper: [Second derivatives, curvature, and local quadratic models](/learn/maths-foundations/second-derivatives-curvature-and-local-quadratic-models)
+- Apply it: Optimisation, loss, and [gradient descent](/learn/maths-foundations/gradient-descent-intuition)

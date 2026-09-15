@@ -16,7 +16,7 @@ still be wrong if rows and columns were assigned opposite meanings.
 
 ## Why this matters
 
-The dot product is the smallest reusable unit of many models. A linear regressor
+[The dot product](/learn/maths-foundations/dot-product-explained) is the smallest reusable unit of many models. A linear regressor
 scores features, a graph layer aggregates neighbours, and a rotation changes
 coordinates—all use `Ax`. Understanding the expansion makes signs, sparsity,
 units, and missing bias terms visible.
@@ -127,6 +127,6 @@ linear or affine calculation combines the coordinates.
 
 ## Continue, go deeper, apply it
 
-- Continue: Matrix–matrix multiplication and batching
-- Go deeper: Matrix addition, scaling, transpose, and symmetry
+- Continue: [Matrix–matrix multiplication and batching](/learn/maths-foundations/matrix-matrix-multiplication-and-batching)
+- Go deeper: [Matrix addition, scaling, transpose, and symmetry](/learn/maths-foundations/matrix-addition-scaling-transpose-and-symmetry)
 - Apply it: Linear algebra for ML

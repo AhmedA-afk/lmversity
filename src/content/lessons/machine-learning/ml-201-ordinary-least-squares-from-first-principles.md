@@ -14,7 +14,7 @@ Ordinary least squares (OLS) chooses the linear prediction whose residuals have 
 
 ## Why this matters
 
-Linear regression is the baseline for pricing, forecasting, policy analysis, and model debugging. Its coefficients are useful only when you know what data representation, loss, and assumptions produced them. OLS also supplies the vocabulary behind regularization, gradients, projection, and uncertainty estimates.
+[Linear regression](/learn/machine-learning/derivations/01-linear-regression-normal-equations-and-geometry) is the baseline for pricing, forecasting, policy analysis, and model debugging. Its coefficients are useful only when you know what data representation, loss, and assumptions produced them. OLS also supplies the vocabulary behind regularization, gradients, projection, and uncertainty estimates.
 
 ## How it works
 

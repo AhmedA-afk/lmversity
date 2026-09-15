@@ -94,6 +94,6 @@ These optimisers do not guarantee convergence on arbitrary non-convex objectives
 
 ## Continue, go deeper, apply it
 
-- Continue: Regularisation geometry: L1, L2, weight decay, and early stopping
-- Go deeper: Optimisation diagnostics and second-order perspective
+- Continue: [Regularisation geometry: L1, L2, weight decay, and early stopping](/learn/maths-foundations/regularisation-geometry-l1-l2-weight-decay-and-early-stopping)
+- Go deeper: [Optimisation diagnostics and second-order perspective](/learn/maths-foundations/optimisation-diagnostics-and-second-order-perspective)
 - Apply it: Loss, gradients, and optimisation

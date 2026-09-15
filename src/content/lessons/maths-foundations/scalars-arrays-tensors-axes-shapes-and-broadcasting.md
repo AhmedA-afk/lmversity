@@ -148,6 +148,6 @@ checks, data contracts, and model evaluation.
 
 ## Continue, go deeper, apply it
 
-- Continue: Units, scales, normalisation, and dimensionless quantities
+- Continue: [Units, scales, normalisation, and dimensionless quantities](/learn/maths-foundations/units-scales-normalisation)
 - Go deeper: Mathematics Foundations checklist
 - Apply it: Linear algebra for ML

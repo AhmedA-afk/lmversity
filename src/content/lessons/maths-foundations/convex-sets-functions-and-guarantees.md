@@ -26,7 +26,7 @@ The local-to-global statement requires both the objective and feasible set to be
 
 ## AI use
 
-Recognise convex least squares, logistic regression with convex regularisation, and some allocation problems as settings with stronger guarantees. Recognise neural networks, matrix factorisation, and many latent-variable objectives as non-convex. Use the distinction to choose diagnostics, restarts, and claims.
+Recognise convex [least squares](/learn/maths-foundations/least-squares-normal-equations-and-projection-geometry), logistic regression with convex regularisation, and some allocation problems as settings with stronger guarantees. Recognise neural networks, matrix factorisation, and many latent-variable objectives as non-convex. Use the distinction to choose diagnostics, restarts, and claims.
 
 ## Worked examples and variations
 
@@ -36,7 +36,7 @@ Recognise convex least squares, logistic regression with convex regularisation, 
 
 ### Example B — meaningful variation
 
-**Input:** f(x)=x². **Mechanism:** `f(tx+(1−t)y)≤t f(x)+(1−t)f(y)` follows from the nonnegative second derivative. **Output:** unique global minimum at x=0. **Inspect:** tangent at any point is a lower bound. **Next decision:** gradient descent has a global target on this unconstrained problem.
+**Input:** f(x)=x². **Mechanism:** `f(tx+(1−t)y)≤t f(x)+(1−t)f(y)` follows from the nonnegative second derivative. **Output:** unique global minimum at x=0. **Inspect:** tangent at any point is a lower bound. **Next decision:** [gradient descent](/learn/maths-foundations/gradient-descent-intuition) has a global target on this unconstrained problem.
 
 ### Example C — boundary case
 
@@ -89,6 +89,6 @@ Convexity does not guarantee fast convergence, good data, or useful objectives. 
 
 ## Continue, go deeper, apply it
 
-- Continue: Batch gradient descent and learning-rate choice
+- Continue: [Batch gradient descent and learning-rate choice](/learn/maths-foundations/batch-gradient-descent-and-learning-rate)
 - Go deeper: Optimisation diagnostics and second-order perspective
 - Apply it: Optimisation, loss, and gradient descent

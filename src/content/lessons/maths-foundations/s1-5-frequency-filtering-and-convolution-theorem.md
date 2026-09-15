@@ -108,6 +108,6 @@ parameters and assumptions rather than eliminating the trade-off.
 
 ## Continue, go deeper, apply it
 
-- Continue: Spectrograms, windowing, and time–frequency trade-offs
+- Continue: [Spectrograms, windowing, and time–frequency trade-offs](/learn/maths-foundations/s1-6-spectrograms-windowing-and-time-frequency-trade-offs)
 - Go deeper: Fourier bases and the DFT
-- Apply it: Vision/audio case study
+- Apply it: [Vision/audio case study](/learn/maths-foundations/s1-8-vision-audio-case-study)

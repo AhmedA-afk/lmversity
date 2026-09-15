@@ -142,7 +142,7 @@ Every failure path ends in an instruction, not silence. That is the actual deliv
 
 ## What still needs an update path
 
-A frozen bundle answers "how does version one get in." It does not answer "how does version two get in six months from now," which is a separate, harder conversation about cadence, approval time, and who signs off on each release crossing the boundary. That is the subject of the lesson on continuous delivery into many customer sites later in this phase — treat this bundle as the unit that pattern repeats, not as a one-time event.
+A frozen bundle answers "how does version one get in." It does not answer "how does version two get in six months from now," which is a separate, harder conversation about cadence, approval time, and who signs off on each release crossing the boundary. That is the subject of the lesson on [continuous delivery into many customer sites](/roles/forward-deployed-engineer/deploy/continuous-delivery-into-many-customer-sites) later in this phase — treat this bundle as the unit that pattern repeats, not as a one-time event.
 
 ## Where this goes wrong
 

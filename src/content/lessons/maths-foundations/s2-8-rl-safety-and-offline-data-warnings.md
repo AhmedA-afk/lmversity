@@ -22,7 +22,7 @@ money, physical systems, or access to tools.
 Separate three objects: reward `R`, hard constraints `C`, and data support
 `d_beta(s,a)` from the behaviour policy. A high estimated `Q(s,a)` is not evidence
 that `a` is safe when `d_beta` is near zero. Safety can be enforced with action
-masks, shields, constrained optimisation, human approval, conservative fallbacks,
+masks, shields, [constrained optimisation](/learn/maths-foundations/constrained-optimisation-lagrange-multipliers-and-kkt-intuition), human approval, conservative fallbacks,
 and monitoring. Every mechanism needs a failure test; a reward penalty alone is
 not a hard constraint.
 
@@ -104,6 +104,6 @@ boundaries beyond an RL algorithm.
 
 ## Continue, go deeper, apply it
 
-- Continue: Hidden Markov models, filtering, and decoding
-- Go deeper: Policies, exploration, and occupancy
+- Continue: [Hidden Markov models, filtering, and decoding](/learn/maths-foundations/s2-9-hidden-markov-models-filtering-and-decoding)
+- Go deeper: [Policies, exploration, and occupancy](/learn/maths-foundations/s2-6-policies-exploration-and-occupancy)
 - Apply it: Regression gates and online signals

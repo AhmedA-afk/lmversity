@@ -94,6 +94,6 @@ Tests do not establish practical value, causality without design assumptions, or
 
 ## Continue, go deeper, apply it
 
-- Continue: Effect sizes, power, and sample-size planning
-- Go deeper: A/B experiments, sequential testing, and multiple comparisons
+- Continue: [Effect sizes](/learn/maths-foundations/effect-sizes-power-and-sample-size-planning), power, and sample-size planning
+- Go deeper: [A/B experiments, sequential testing, and multiple comparisons](/learn/maths-foundations/ab-experiments-sequential-testing-and-multiple-comparisons)
 - Apply it: Cross-validation and experimental design

@@ -46,7 +46,7 @@ Evaluate PR-AUC, ROC-AUC, log loss, Brier score, calibration, lift/precision at 
 ## Required model comparisons
 
 1. Contact nobody / contact everyone / prevalence baselines.
-2. Regularised logistic regression using pre-call features only.
+2. Regularised [logistic regression](/learn/machine-learning/derivations/03-logistic-regression-likelihood-gradient-and-hessian) using pre-call features only.
 3. A tuned tree ensemble using the same availability contract.
 4. A calibrated selected model and a budgeted ranking policy.
 
