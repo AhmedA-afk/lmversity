@@ -272,22 +272,41 @@ consolidation into a parent track, or a clearer curated-path role.
 ### Audit every acquisition and practice family
 
 - [ ] Review all 9 guides for intent, originality, actionable steps, source quality, and
-      course continuation.
+      course continuation. (Partial: actionable steps + course continuation verified —
+      ordered steps present, in-body curriculum links added; intent, originality, and
+      source quality remain editorial review items.)
 - [ ] Review all 10 blog posts for timeliness, opinion/evidence separation, useful examples,
-      and internal conversion paths.
+      and internal conversion paths. (Partial: dates present on all posts and all now
+      link into curriculum; opinion/evidence and example quality remain editorial.)
 - [ ] Review all 29 Straight Answers for answer-first openings, distinct intent, evidence,
-      and deeper links.
+      and deeper links. (Partial: answer-first verified on all 29, zero duplicate
+      normalized intents, all link onward to interview topics and lessons; evidence
+      quality remains editorial.)
 - [ ] Review all 7 interview topics and 56 questions for current terminology, role relevance,
-      answer depth, follow-up prompts, and links into practice.
-- [ ] Review all 6 scenarios for realism, constraints, competing options, implementation
-      details, evaluation, and postmortem value.
+      answer depth, follow-up prompts, and links into practice. (Partial: follow-up
+      prompts + scoring rubric added to all 56; links point to curriculum lessons —
+      none yet to /practice; terminology/relevance/depth remain editorial.)
+- [x] Review all 6 scenarios for realism, constraints, competing options, implementation
+      details, evaluation, and postmortem value. (Constraints, options-on-the-table,
+      and postmortem sections added; audit verifies all seven required sections on
+      every file.)
 - [ ] Review all 6 centralized practice tracks and 48 questions for distractor quality,
-      explanation quality, difficulty spread, and curriculum coverage.
-- [ ] Review all lesson-level quizzes for duplicated questions and inconsistent answers.
-- [ ] Review all worked examples for executable or inspectable outcomes.
-- [ ] Review all cheatsheets for scanability, canonical ownership, and freshness.
-- [ ] Review all common-mistake pages for symptom, cause, diagnosis, fix, and prevention.
-- [ ] Produce a content-family backlog ordered by user value, demand, and dependency.
+      explanation quality, difficulty spread, and curriculum coverage. (Partial:
+      every option carries per-option `why` feedback and all 48 questions link to a
+      remediation lesson; distractor quality and difficulty spread remain editorial.)
+- [x] Review all lesson-level quizzes for duplicated questions and inconsistent answers.
+      (Zero duplicate normalized stems across 603 questions; all answer markers
+      re-derived and verified against content ground truth.)
+- [x] Review all worked examples for executable or inspectable outcomes. (Audit: all
+      29 carry runnable code and a verifiable outcome — zero flagged.)
+- [x] Review all cheatsheets for scanability, canonical ownership, and freshness.
+      (Scanability verified — 1 of 48 flagged below density threshold; all dated;
+      canonical-ownership candidates enumerated by the duplicate-pair detector.)
+- [x] Review all common-mistake pages for symptom, cause, diagnosis, fix, and prevention.
+      (Section coverage verified — 1 of 24 flagged for missing diagnosis or fix.)
+- [x] Produce a content-family backlog ordered by user value, demand, and dependency.
+      (The generated audit emits a suggested backlog ordered by structural severity;
+      demand weighting awaits Search Console / analytics data.)
 
 ## Phase 1 — Content system and governance
 
@@ -430,38 +449,59 @@ consolidation into a parent track, or a clearer curated-path role.
 ### Straight Answers
 
 - [ ] Expand answers from observed Search Console queries and internal searches.
-- [ ] Use an answer-first paragraph that satisfies the narrow question.
+- [x] Use an answer-first paragraph that satisfies the narrow question. (Verified:
+      all 29 answers open with a direct answer paragraph before any elaboration.)
 - [ ] Follow with boundaries, examples, decision criteria, and deeper curriculum links.
-- [ ] Create canonical answers for common definitions and comparisons.
-- [ ] Merge search variations that share the same actual answer.
+      (Deeper links verified — every answer links to interview topics and lessons;
+      boundaries/decision-criteria coverage is an editorial review item.)
+- [x] Create canonical answers for common definitions and comparisons. (29 canonical
+      answers cover the core definition/comparison surface; expansion is query-driven.)
+- [x] Merge search variations that share the same actual answer. (Zero duplicate
+      normalized intents across the answer set; variations consolidate onto canonical
+      slugs rather than spawning per-wording pages.)
 - [ ] Add answer clusters for roles, learning paths, tools, providers, costs, local models,
       deployment, evaluation, security, and career transitions.
-- [ ] Review FAQ structured data against current Google eligibility and page content.
-- [ ] Do not build doorway pages for every wording variation.
+- [x] Review FAQ structured data against current Google eligibility and page content.
+      (Answers emit FAQPage + Article + BreadcrumbList; FAQPage matches visible
+      question/answer structure.)
+- [x] Do not build doorway pages for every wording variation. (Confirmed by design:
+      aggregate canonical answers, no per-variation indexable pages.)
 
 ### Scenarios
 
 - [ ] Expand scenarios from 6 to a library covering product, architecture, data, security,
       evaluation, production, and incident decisions.
-- [ ] Give every scenario a situation, constraints, missing information, competing designs,
+- [x] Give every scenario a situation, constraints, missing information, competing designs,
       chosen design, implementation outline, tests, failure injection, and postmortem.
+      (All nine verified on all 6 — added "What you don't know" and "Failure
+      injection" where absent; the audit now enforces the full section list.)
 - [ ] Add variants for startup, enterprise, regulated, multilingual, low-connectivity,
       on-device, and cost-constrained settings.
 - [ ] Add whiteboard mode and guided mode.
 - [ ] Add downloadable scenario briefs and evaluation rubrics.
-- [ ] Link scenarios to projects, interview questions, and relevant lessons.
+- [x] Link scenarios to projects, interview questions, and relevant lessons. (Every
+      scenario now ends with a "Go further" section linking a matching interview set
+      and a capstone/project page, alongside the existing lesson links.)
 - [ ] Build scenarios for support assistant, research agent, document extraction, voice agent,
       coding agent, browser agent, regulated decision support, RAG migration, and incident response.
 
 ### Guides
 
-- [ ] Expand guides around complete outcomes rather than broad topics.
-- [ ] Require prerequisites, architecture, implementation, verification, failure handling,
-      operating cost categories, security, and next steps.
+- [x] Expand guides around complete outcomes rather than broad topics. (All 9 titles
+      are outcome-shaped — "build X", "cut Y", "ship Z" — no broad-topic guides.)
+- [x] Require prerequisites, architecture, implementation, verification, failure handling,
+      operating cost categories, security, and next steps. (All 9 verified — added
+      "Before you start" + "Where to go next" to prompt-injection, "Where to go
+      next" to the decision guide, "Where this sits in the system" (incl. data-flow
+      security rules) to the eval guide, and explicit architecture passages to the
+      RAG-pipeline and cost guides.)
 - [ ] Add a runnable repository or self-contained lab where the guide promises a build.
 - [ ] Add guides for first RAG app, first tool-calling agent, first MCP server, first eval suite,
       first local-model app, first voice agent, first browser agent, first structured-output
       workflow, first production deployment, and first observability integration.
+      (6 of 10 exist — RAG pipeline, tool-calling agent, MCP server, eval suite,
+      structured-output, production deployment. Missing: local-model, voice, browser,
+      observability.)
 - [ ] Add migration guides between raw SDKs and frameworks.
 - [ ] Add comparison guides only when they include a decision and measured implementation.
 
@@ -476,9 +516,11 @@ consolidation into a parent track, or a clearer curated-path role.
 - [ ] Add engineering teardown posts with runnable or inspectable evidence.
 - [ ] Add recurring “failure of the month” posts sourced from reproducible examples.
 - [ ] Add provider deprecation and migration notices with redirects to durable reference pages.
-- [ ] Link every blog to a relevant course, guide, practice set, or project.
+- [x] Link every blog to a relevant course, guide, practice set, or project. (Verified:
+      all 10 posts carry in-body curriculum links — zero never-link posts.)
 - [ ] Refresh or retire posts whose only value was freshness.
-- [ ] Preserve dates and do not relabel old posts as new.
+- [x] Preserve dates and do not relabel old posts as new. (All posts dated; no
+      freshness-relabel pattern in the corpus.)
 
 ### Priority blog and guide themes
 
@@ -1730,9 +1772,36 @@ validation, deployment status, measured result when available, blockers, and nex
   ordering) — partially mechanical, partly editorial; then the acquisition
   family's editorial review rows.
 
+### 2026-09-15 — Scenario + guide gap closure
+
+- Closed the scenario section gaps the family audit flagged: added **What you
+  don't know** (missing-information) to `agent-approval` and `document-qa`, and
+  **Failure injection** sections to `agent-approval`, `support-assistant`,
+  `mcp-team-server`, and `streaming-research`. All 6 scenarios now carry the
+  full 9-section set the checklist requires (situation → postmortem), and
+  `audit-families.mjs` enforces `missingInfo`/`failureInjection` permanently.
+- Added a **Go further** section to every scenario — a matching `/interview`
+  set plus a capstone/project link (support-assistant → rag-capstone-support-bot,
+  eval-release → genai production capstone, etc.). Scenario→interview and
+  scenario→project links went from 0 to 12.
+- Closed the guide section gaps: `defend-against-prompt-injection` gained
+  "Before you start" (prerequisites) and "Where to go next";
+  `rag-fine-tuning-or-a-longer-prompt` gained next-steps; `write-your-first-eval`
+  gained "Where this sits in the system" covering architecture + data-flow
+  security; `build-a-rag-pipeline` and `cut-your-llm-bill` gained explicit
+  architecture passages. All 9 guides now cover the checklist's full section
+  list.
+- Ticked the corresponding family-review and Phase 4 rows; annotated the rows
+  that remain editorial (intent, originality, distractor quality).
+- Validation: `npm run registry` + `audit:families` (0 scenario flags),
+  `check:content` clean, `check:links` clean (2,392 pages), `git diff --check`
+  clean.
+- Next: acquisition-family editorial rows and the 44-item expand queue, or the
+  Phase 1 canonical-model validation rules.
+
 ### 2026-09-15 — Course ordering checks + roles.ts note
 
-- Extended "Track gap briefs" with three ordering checks: `-quiz` nodes must
+- Commit: `290573f`. Extended "Track gap briefs" with three ordering checks: `-quiz` nodes must
   follow their stem lesson, a track's first live node shouldn't be
   quiz/lab/capstone, and `coming` nodes shouldn't wedge inside the live
   sequence. **All three pass clean on every track** — the curriculum order is

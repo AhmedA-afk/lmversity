@@ -146,10 +146,12 @@ for (const f of list(join(CONTENT, 'questions'), /\.mdx$/)) {
 const SCENARIO_SECTIONS = {
   situation: /situation|context|brief/i,
   constraints: /constraint|requirement|limit|must not/i,
+  missingInfo: /missing|unknown|don.t know|assum/i,
   options: /option|alternative|trade-?off|approach|choice/i,
   decision: /decision|design|chosen|plan/i,
   implementation: /implement|build|architect|steps|guided reasoning|how/i,
   evaluation: /test|evaluat|measure|metric|verify/i,
+  failureInjection: /failure injection|inject|deliberately break|chaos/i,
   postmortem: /postmortem|went wrong|incident|retro|failure/i,
 };
 for (const f of list(join(CONTENT, 'scenarios'), /\.mdx$/)) {

@@ -155,6 +155,20 @@ it will happily rate a fluent, wrong answer above a terse, correct one —
 [LLM judge bias and calibration](/learn/evals-red-teaming/llm-judge-bias-and-calibration)
 catalogs these.
 
+## Where this sits in the system
+
+Architecturally, the eval is a second application next to your feature, not part of the request path: it
+reads a frozen set of inputs, runs the feature's real pipeline on them, and writes scores
+to a file you can diff. Nothing in production calls it. It runs in CI on prompt, model, or
+retrieval changes — the gate from step 4 — and on a schedule when you want drift signal.
+
+Two security rules follow from that position. First, the eval set is real-looking data, so
+treat it like production data: anonymise or synthesise customer examples rather than
+exporting them, and keep the file in the repo's access boundary. Second, if your grader is
+a model call, its inputs and outputs leave your system — a judge prompt containing customer
+text is a data flow to a third party, so grade synthetic cases or run the judge where the
+data is allowed to go.
+
 ## What this buys you
 
 A number that moves when quality moves. From that point on, "the new prompt is better" is a

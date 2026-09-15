@@ -16,6 +16,14 @@ You need to let employees ask questions over project documents. Some documents a
 - Roles differ inside a tenant — "same company" is not "same permission."
 - Retrieval results are shared infrastructure (caches, prewarm jobs); anything cached per query rather than per authorized scope can cross a boundary.
 
+## What you don't know
+
+- How permissions actually change during the day — group edits, share links, role changes — and which path propagates fastest.
+- Whether "confidential" is a property of documents or of chunks; a public document can quote a private one.
+- The real revocation latency requirement: seconds, or merely "before the next query."
+- Whether citation surfaces leak metadata — titles, author names, page counts — even when body text is filtered.
+- Who answers "should this user have seen this" after the fact, and what audit trail they need.
+
 ## Options on the table
 
 **One index per tenant.** Rejected: it still does not express roles inside a tenant, and every new group becomes an operations project instead of a metadata row.
@@ -45,3 +53,7 @@ The postmortem that shaped this design: a retrieval cache keyed only on the quer
 ## What to test first
 
 Test a user whose access was revoked, a document updated after indexing, two documents with the same title, a query that mixes public and private facts, and a prompt injection embedded in a document.
+
+## Go further
+
+Pressure-test the design with the [RAG interview set](/interview/rag), or apply the same grounding discipline in the [trustworthy Q&A capstone](/learn/hallucinations/capstone-trustworthy-qa-system).

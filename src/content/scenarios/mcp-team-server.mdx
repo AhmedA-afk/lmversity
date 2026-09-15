@@ -43,6 +43,18 @@ MCP is an interoperability layer, not a reason to widen permissions. Read [MCP a
 
 The first version of the log-reading tool returned whole files. A routine "why did this build fail" question pulled tens of thousands of log lines into the model's context — the failure line survived, but the context around it was truncated, and the model answered from the visible middle. Worse, the log happened to contain a line that read like an instruction, and the host's model repeated it back as a suggestion. The fix was boring on purpose: bounded results, byte limits, and a resource link for the full file so the client — not the tool — decides how much to read.
 
+## Failure injection
+
+- Return a log file containing a line that reads like an instruction — the tool must deliver it as data, and the boundary is the client's problem only if the tool did its job.
+- Serve a result that exceeds the byte cap mid-stream and confirm truncation is explicit, not silent.
+- Drop the client's capability advertisement and check the server degrades rather than assumes.
+- Replay an identical draft-creation request with a network blip in between — idempotency decides whether the team gets one draft or two.
+- Revoke a repository token mid-session and verify the error reaches the model as an error, not as an empty result.
+
 ## What to test first
 
 Test an unauthorized repository, a malicious issue body, a huge log result, a deleted branch, a client with partial capabilities, and a repeated draft-creation request.
+
+## Go further
+
+Work the protocol boundary questions in the [MCP interview set](/interview/mcp), or build a scoped tool surface in the [tool-using agent capstone](/learn/tools-function-calling/capstone-build-a-tool-using-agent).

@@ -8286,27 +8286,27 @@
   },
   "scenarios/agent-approval.mdx": {
    "id": "sce-0001",
-   "fp": "b891d7f82e70e006e07331d78571c3fe9397713e"
+   "fp": "d81dab007fc1bdc5edd19a9877529573786ad810"
   },
   "scenarios/document-qa.mdx": {
    "id": "sce-0002",
-   "fp": "be23955672f89bc438794e54a24f61c3d6217813"
+   "fp": "02f48c6f89e1c0b42948604bade4bd9687cb131e"
   },
   "scenarios/eval-release.mdx": {
    "id": "sce-0003",
-   "fp": "f3e1cd685957e8411e1fa215425743ac43333182"
+   "fp": "0fd4502e741ff37a6e6488d327d77049f62328d8"
   },
   "scenarios/mcp-team-server.mdx": {
    "id": "sce-0004",
-   "fp": "fa4cf8170dff16f6eb91a1c76069edd08563936c"
+   "fp": "b72a0379373fb168b35377256f2b65d13b6c9f56"
   },
   "scenarios/streaming-research.mdx": {
    "id": "sce-0005",
-   "fp": "6e69208c5a403d1c8f30f4d830b6e9d84eece5e8"
+   "fp": "5d6984600d3fa178ba73291ca1a81f582a950cc2"
   },
   "scenarios/support-assistant.mdx": {
    "id": "sce-0006",
-   "fp": "20d5c47c821f09e58937c3527dc1559f230c9163"
+   "fp": "742545c86a001374dcbda84738d6d85ecc064bae"
   },
   "blog/agents-need-a-harness.mdx": {
    "id": "blo-0001",
@@ -8350,7 +8350,7 @@
   },
   "guides/build-a-rag-pipeline-over-your-own-documents.md": {
    "id": "gui-0001",
-   "fp": "04ef8d8e0ebcdb4fccef0d0e37b71c417e4ffaa1"
+   "fp": "9e0f3fabe6bffaa4f1859a097b1e403bd6966b64"
   },
   "guides/build-a-tool-calling-agent-from-scratch.md": {
    "id": "gui-0002",
@@ -8362,11 +8362,11 @@
   },
   "guides/cut-your-llm-bill.md": {
    "id": "gui-0004",
-   "fp": "3776a9676f4748c9139a963794772a193b40a1f8"
+   "fp": "2c82898c03e1a4aab6d6809dfde4b79aa718b0ca"
   },
   "guides/defend-against-prompt-injection.md": {
    "id": "gui-0005",
-   "fp": "923a87929490a172c3da7252071736122125c69b"
+   "fp": "0c8e0d834b64b2e1708c7d9276ca20d64d692655"
   },
   "guides/get-reliable-json-out-of-an-llm.md": {
    "id": "gui-0006",
@@ -8374,7 +8374,7 @@
   },
   "guides/rag-fine-tuning-or-a-longer-prompt.md": {
    "id": "gui-0007",
-   "fp": "54c9e17a768a49f45fe322f9379cc79be15aefa0"
+   "fp": "3e6f4affbb598fbef98241d3a2d19732a9f03bec"
   },
   "guides/ship-your-first-ai-feature-to-production.md": {
    "id": "gui-0008",
@@ -8382,7 +8382,7 @@
   },
   "guides/write-your-first-eval-for-an-ai-feature.md": {
    "id": "gui-0009",
-   "fp": "0272dd0085a4eff79312224021f76f254fce854b"
+   "fp": "1ad4cad12abfb8dd279d9d57302c659ada8976ee"
   },
   "answers/ai-engineer-interview-questions.md": {
    "id": "ans-0001",

@@ -1,6 +1,6 @@
 # Acquisition & practice family audit — mechanical pass
 
-Generated 2026-09-15T07:14:02.166Z by `scripts/audit-families.mjs`.
+Generated 2026-09-15T07:56:24.013Z by `scripts/audit-families.mjs`.
 Structural checks only; originality/correctness are scored in the review pass.
 
 ## Findings
@@ -9,7 +9,7 @@ Structural checks only; originality/correctness are scored in the review pass.
 - **Guides (9)**: all have `related` lesson lists and ordered steps; 0/9 have **zero in-body internal links** (continuation lives only in the frontmatter block); `rag-fine-tuning-or-a-longer-prompt` has no code.
 - **Blog (10)**: all dated; none never link into the curriculum.
 - **Interview (7)**: 7/7 topics have a follow-up prompt on every question plus a weak-vs-strong rubric.
-- **Scenarios (6)**: ~451 words avg; missing sections: none.
+- **Scenarios (6)**: ~561 words avg; missing sections: none.
 - **Centralized practice banks**: 48 questions across 6 tracks, 48 total lesson links.
 - **Lesson quiz pages (83 files, 603 questions)**: all questions carry a marked correct answer; 0 duplicate stems corpus-wide; correct-answer positions skew B 41%, C 22%, A 19%, D 17%; 0 files have answer blocks that don't discuss every option.
 - **Worked examples (29)**: 0 flagged — every file has runnable code and an inspectable outcome.
@@ -63,15 +63,15 @@ Structural checks only; originality/correctness are scored in the review pass.
 
 | item | steps | related | code | failure § | verify § | int links | words | flags |
 |---|---------------------|---|
-| build-a-rag-pipeline-over-your-own-documents | 6 | 4 | 5 | ✓ | ✓ | 4 | 773 | — |
+| build-a-rag-pipeline-over-your-own-documents | 6 | 4 | 5 | ✓ | ✓ | 4 | 838 | — |
 | build-a-tool-calling-agent-from-scratch | 5 | 4 | 3 | ✓ | — | 4 | 534 | — |
 | build-an-mcp-server-in-python | 6 | 4 | 8 | ✓ | — | 4 | 725 | — |
-| cut-your-llm-bill | 6 | 3 | 4 | ✓ | — | 3 | 833 | — |
-| defend-against-prompt-injection | 6 | 4 | 4 | — | ✓ | 3 | 795 | — |
+| cut-your-llm-bill | 6 | 3 | 4 | ✓ | — | 3 | 875 | — |
+| defend-against-prompt-injection | 6 | 4 | 4 | — | ✓ | 6 | 917 | — |
 | get-reliable-json-out-of-an-llm | 5 | 3 | 7 | — | — | 3 | 638 | — |
-| rag-fine-tuning-or-a-longer-prompt | 5 | 4 | 0 | — | — | 3 | 881 | no code — a build guide without runnable steps |
+| rag-fine-tuning-or-a-longer-prompt | 5 | 4 | 0 | — | — | 6 | 918 | no code — a build guide without runnable steps |
 | ship-your-first-ai-feature-to-production | 6 | 3 | 2 | ✓ | ✓ | 3 | 851 | — |
-| write-your-first-eval-for-an-ai-feature | 5 | 3 | 4 | — | — | 3 | 703 | — |
+| write-your-first-eval-for-an-ai-feature | 5 | 3 | 4 | — | — | 3 | 861 | — |
 
 ## Blog (10)
 
@@ -104,12 +104,12 @@ Structural checks only; originality/correctness are scored in the review pass.
 
 | item | sections | int links | words | flags |
 |---|---------|---|
-| agent-approval | 7 | 2 | 459 | — |
-| document-qa | 7 | 2 | 428 | — |
-| eval-release | 7 | 2 | 436 | — |
-| mcp-team-server | 7 | 1 | 459 | — |
-| streaming-research | 7 | 2 | 434 | — |
-| support-assistant | 7 | 2 | 490 | — |
+| agent-approval | 10 | 4 | 656 | — |
+| document-qa | 9 | 4 | 529 | — |
+| eval-release | 8 | 4 | 451 | — |
+| mcp-team-server | 9 | 3 | 584 | — |
+| streaming-research | 9 | 4 | 545 | — |
+| support-assistant | 9 | 4 | 601 | — |
 
 ## Centralized practice banks
 

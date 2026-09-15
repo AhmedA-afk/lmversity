@@ -25,7 +25,9 @@ the same 4,000 tokens of instructions ride along on every request, a retry loop 
 ceiling, and every query — trivial or hard — goes to the largest model available.
 
 Here are the levers in the order I would actually pull them: highest saving per hour of
-work first.
+work first. It helps to see where they attach — every request has the same architecture:
+context goes in, a model is chosen, output comes out, and retry or agent loops multiply the
+whole thing. The levers below map onto those four points in order.
 
 ## Step 0 — Measure, or you will optimise the wrong thing
 

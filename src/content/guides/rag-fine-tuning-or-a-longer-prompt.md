@@ -122,3 +122,9 @@ baseline to prove it was worth it.
 
 That afternoon routinely saves a fine-tuning project. The eval set you build for it is the
 same one you will need afterwards regardless of which path you take.
+
+## Where to go next
+
+- Retrieval won the experiment? [Build a RAG pipeline over your own documents](/guides/build-a-rag-pipeline-over-your-own-documents) is the next step.
+- If the gap was behavioural, the [fine-tuning track](/learn/fine-tuning) covers data curation through evaluation.
+- Whichever path you pick, [write an eval for the feature](/guides/write-your-first-eval-for-an-ai-feature) so the next comparison is a measurement, not a debate.

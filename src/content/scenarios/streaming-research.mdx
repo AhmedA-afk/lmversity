@@ -42,6 +42,18 @@ Streaming improves perceived responsiveness; it does not make an unsupported cla
 
 An early build streamed citation links into the draft as the model produced them, before validation ran. A source URL that no longer resolved sat on screen, styled identically to verified ones, for the rest of the run — and into the exported brief, because the export copied the rendered text. The postmortem produced two rules that cost little and save much: intermediate artifacts render with their stage label attached, and citations are only styled as citations after they validate. The failure was not the missing source; it was the UI lying about how much checking had happened.
 
+## Failure injection
+
+- Kill a source mid-retrieval so its citation arrives as a 404 after the draft already referenced it.
+- Stall the token stream for thirty seconds — the UI must show a stalled run, not a finished-looking one.
+- Cancel during a tool call and confirm the tool result arriving afterwards is discarded, not appended.
+- Feed two sources that flatly contradict each other and check the draft shows the conflict instead of picking one.
+- Validate a citation after the run ends and confirm the export re-checks rather than trusting the rendered text.
+
 ## What to test first
 
 Test cancellation during retrieval, a source that disappears, conflicting sources, a partial network disconnect, a citation validation failure, and a user navigating away mid-run.
+
+## Go further
+
+Rehearse the streaming and trace questions in the [agents interview set](/interview/agents), or build a bounded research agent in the [context-managed agent project](/learn/context-engineering/build-a-budgeted-context-managed-agent).

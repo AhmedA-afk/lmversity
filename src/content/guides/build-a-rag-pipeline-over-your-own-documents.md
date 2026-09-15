@@ -36,6 +36,12 @@ A script that answers a question about your own files and shows you the exact pa
 used. Roughly 120 lines. It is deliberately small enough to read in one sitting, because
 you will need to change it.
 
+The architecture is a five-stage pipeline, one function per stage: **parse** files into
+chunks with metadata → **embed** and store them → **retrieve** the best candidates for a
+question → **ground** the model's answer in those passages → **check** citations. Each
+stage is boring and replaceable — swap the embedding model, the store, or the grader without
+rewriting the rest, which is exactly what you will do in production.
+
 ## Step 1 — Parse, and keep the metadata
 
 The single most common early mistake is throwing away where the text came from. Keep the

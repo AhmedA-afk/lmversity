@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-15T07:14:02.164Z",
+ "generatedAt": "2026-09-15T07:56:24.011Z",
  "findings": {
   "answers": [
    {
@@ -332,7 +332,7 @@
     "hasVerifySection": true,
     "internal": 4,
     "external": 0,
-    "words": 773,
+    "words": 838,
     "flags": []
    },
    {
@@ -368,7 +368,7 @@
     "hasVerifySection": false,
     "internal": 3,
     "external": 0,
-    "words": 833,
+    "words": 875,
     "flags": []
    },
    {
@@ -378,9 +378,9 @@
     "codeBlocks": 4,
     "hasFailureSection": false,
     "hasVerifySection": true,
-    "internal": 3,
+    "internal": 6,
     "external": 0,
-    "words": 795,
+    "words": 917,
     "flags": []
    },
    {
@@ -402,9 +402,9 @@
     "codeBlocks": 0,
     "hasFailureSection": false,
     "hasVerifySection": false,
-    "internal": 3,
+    "internal": 6,
     "external": 0,
-    "words": 881,
+    "words": 918,
     "flags": [
      "no code — a build guide without runnable steps"
     ]
@@ -430,7 +430,7 @@
     "hasVerifySection": false,
     "internal": 3,
     "external": 0,
-    "words": 703,
+    "words": 861,
     "flags": []
    }
   ],
@@ -624,24 +624,29 @@
     "sections": [
      "The situation",
      "Constraints",
+     "What you don't know",
      "Options on the table",
      "The first decision",
      "Guided reasoning",
      "What went wrong",
-     "What to test first"
+     "Failure injection",
+     "What to test first",
+     "Go further"
     ],
     "covered": [
      "situation",
      "constraints",
+     "missingInfo",
      "options",
      "decision",
      "implementation",
      "evaluation",
+     "failureInjection",
      "postmortem"
     ],
     "missing": [],
-    "internal": 2,
-    "words": 459,
+    "internal": 4,
+    "words": 656,
     "flags": []
    },
    {
@@ -649,24 +654,28 @@
     "sections": [
      "The situation",
      "Constraints",
+     "What you don't know",
      "Options on the table",
      "The first decision",
      "Guided reasoning",
      "What went wrong",
-     "What to test first"
+     "What to test first",
+     "Go further"
     ],
     "covered": [
      "situation",
      "constraints",
+     "missingInfo",
      "options",
      "decision",
      "implementation",
      "evaluation",
+     "failureInjection",
      "postmortem"
     ],
     "missing": [],
-    "internal": 2,
-    "words": 428,
+    "internal": 4,
+    "words": 529,
     "flags": []
    },
    {
@@ -678,20 +687,23 @@
      "The first decision",
      "Guided reasoning",
      "What went wrong",
-     "What to test first"
+     "What to test first",
+     "Go further"
     ],
     "covered": [
      "situation",
      "constraints",
+     "missingInfo",
      "options",
      "decision",
      "implementation",
      "evaluation",
+     "failureInjection",
      "postmortem"
     ],
     "missing": [],
-    "internal": 2,
-    "words": 436,
+    "internal": 4,
+    "words": 451,
     "flags": []
    },
    {
@@ -703,20 +715,24 @@
      "The first decision",
      "Guided reasoning",
      "What went wrong",
-     "What to test first"
+     "Failure injection",
+     "What to test first",
+     "Go further"
     ],
     "covered": [
      "situation",
      "constraints",
+     "missingInfo",
      "options",
      "decision",
      "implementation",
      "evaluation",
+     "failureInjection",
      "postmortem"
     ],
     "missing": [],
-    "internal": 1,
-    "words": 459,
+    "internal": 3,
+    "words": 584,
     "flags": []
    },
    {
@@ -728,20 +744,24 @@
      "The first decision",
      "Guided reasoning",
      "What went wrong",
-     "What to test first"
+     "Failure injection",
+     "What to test first",
+     "Go further"
     ],
     "covered": [
      "situation",
      "constraints",
+     "missingInfo",
      "options",
      "decision",
      "implementation",
      "evaluation",
+     "failureInjection",
      "postmortem"
     ],
     "missing": [],
-    "internal": 2,
-    "words": 434,
+    "internal": 4,
+    "words": 545,
     "flags": []
    },
    {
@@ -753,20 +773,24 @@
      "The first decision",
      "Guided reasoning",
      "What went wrong",
-     "What to test first"
+     "Failure injection",
+     "What to test first",
+     "Go further"
     ],
     "covered": [
      "situation",
      "constraints",
+     "missingInfo",
      "options",
      "decision",
      "implementation",
      "evaluation",
+     "failureInjection",
      "postmortem"
     ],
     "missing": [],
-    "internal": 2,
-    "words": 490,
+    "internal": 4,
+    "words": 601,
     "flags": []
    }
   ],

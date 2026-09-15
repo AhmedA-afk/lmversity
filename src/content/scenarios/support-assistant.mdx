@@ -42,6 +42,18 @@ The important boundary is between drafting and sending. A fluent draft can be he
 
 In the first month, a customer on an annual plan was quoted a monthly-plan refund window. Retrieval had found the right article — a deprecated version of it. The document ID was stable, but its status field said `superseded`, and nothing checked it. The reviewer caught this one; the fix was to validate article status in application code, not to ask the model to be more careful. The second lesson was quieter: the intents most likely to produce a confident wrong answer were the policy ones, which is why escalation conditions are defined in the intent list rather than inferred from confidence.
 
+## Failure injection
+
+- Retire a policy article between index refreshes, then ask the question that used to cite it — the draft must not quote a `superseded` source.
+- Embed a paragraph in a doc page instructing the model to quote a different refund window.
+- Return two plan rules that genuinely conflict and check whether the draft picks one silently or escalates.
+- Break the reviewer queue so drafts pile up with no send path — the failure is invisible unless queue depth is instrumented.
+- Return an empty retrieval result and check whether the model drafts anyway.
+
 ## What to test first
 
 Test outdated articles, conflicting plan rules, missing evidence, angry messages, requests for account data, and a customer who asks the assistant to ignore its instructions. Keep these cases in a held-out regression set.
+
+## Go further
+
+Drill the retrieval side with the [RAG interview set](/interview/rag), or build the grounded-support shape end to end in the [support-bot capstone](/learn/rag/rag-capstone-support-bot).

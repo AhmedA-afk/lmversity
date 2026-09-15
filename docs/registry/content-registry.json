@@ -1,7 +1,7 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T07:43:28.134Z",
+  "generatedAt": "2026-09-15T07:55:38.783Z",
   "generator": "scripts/build-content-registry.mjs",
   "itemCount": 2406,
   "counts": {
@@ -169589,19 +169589,24 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 459,
+   "wordCount": 656,
    "headings": [
     "The situation",
     "Constraints",
+    "What you don't know",
     "Options on the table",
     "The first decision",
     "Guided reasoning",
     "What went wrong",
-    "What to test first"
+    "Failure injection",
+    "What to test first",
+    "Go further"
    ],
    "internalLinks": [
+    "/interview/agents",
     "/learn/agentic-ai/when-not-to-use-an-agent",
-    "/learn/harness-design/the-control-loop"
+    "/learn/harness-design/the-control-loop",
+    "/learn/tools-function-calling/capstone-build-a-tool-using-agent"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -169639,7 +169644,7 @@
     "handsOn": 1,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -169663,18 +169668,22 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 428,
+   "wordCount": 529,
    "headings": [
     "The situation",
     "Constraints",
+    "What you don't know",
     "Options on the table",
     "The first decision",
     "Guided reasoning",
     "What went wrong",
-    "What to test first"
+    "What to test first",
+    "Go further"
    ],
    "internalLinks": [
+    "/interview/rag",
     "/learn/context-engineering/retrieval-vs-context-stuffing",
+    "/learn/hallucinations/capstone-trustworthy-qa-system",
     "/learn/rag"
    ],
    "externalLinks": [],
@@ -169711,7 +169720,7 @@
     "handsOn": 1,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -169735,7 +169744,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 436,
+   "wordCount": 451,
    "headings": [
     "The situation",
     "Constraints",
@@ -169743,11 +169752,14 @@
     "The first decision",
     "Guided reasoning",
     "What went wrong",
-    "What to test first"
+    "What to test first",
+    "Go further"
    ],
    "internalLinks": [
+    "/interview/evals",
     "/learn/evals-red-teaming/building-a-golden-dataset",
-    "/learn/evals-red-teaming/why-evals-matter"
+    "/learn/evals-red-teaming/why-evals-matter",
+    "/learn/genai-app-dev/capstone-ship-a-genai-assistant"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -169783,7 +169795,7 @@
     "handsOn": 1,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -169807,7 +169819,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 459,
+   "wordCount": 476,
    "headings": [
     "The situation",
     "Constraints",
@@ -169815,10 +169827,13 @@
     "The first decision",
     "Guided reasoning",
     "What went wrong",
-    "What to test first"
+    "What to test first",
+    "Go further"
    ],
    "internalLinks": [
-    "/learn/mcp/mcp-architecture-hosts-clients-servers"
+    "/interview/mcp",
+    "/learn/mcp/mcp-architecture-hosts-clients-servers",
+    "/learn/tools-function-calling/capstone-build-a-tool-using-agent"
    ],
    "externalLinks": [
     "https://modelcontextprotocol.io/specification/2025-06-18/server/tools"
@@ -169858,7 +169873,7 @@
     "handsOn": 1,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -169882,7 +169897,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 434,
+   "wordCount": 452,
    "headings": [
     "The situation",
     "Constraints",
@@ -169890,9 +169905,12 @@
     "The first decision",
     "Guided reasoning",
     "What went wrong",
-    "What to test first"
+    "What to test first",
+    "Go further"
    ],
    "internalLinks": [
+    "/interview/agents",
+    "/learn/context-engineering/build-a-budgeted-context-managed-agent",
     "/learn/genai-app-dev/streaming-responses-to-the-ui",
     "/learn/rag/evaluating-rag-quality"
    ],
@@ -169930,7 +169948,7 @@
     "handsOn": 1,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -169954,7 +169972,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 490,
+   "wordCount": 601,
    "headings": [
     "The situation",
     "Constraints",
@@ -169962,11 +169980,15 @@
     "The first decision",
     "Guided reasoning",
     "What went wrong",
-    "What to test first"
+    "Failure injection",
+    "What to test first",
+    "Go further"
    ],
    "internalLinks": [
+    "/interview/rag",
     "/learn/hallucinations/grounding-with-source-documents",
-    "/learn/harness-design/permission-and-approval-systems"
+    "/learn/harness-design/permission-and-approval-systems",
+    "/learn/rag/rag-capstone-support-bot"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -170002,7 +170024,7 @@
     "handsOn": 1,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 1,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -170773,7 +170795,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 773,
+   "wordCount": 838,
    "headings": [
     "What you'll have at the end",
     "Step 1 — Parse, and keep the metadata",
@@ -171032,7 +171054,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 833,
+   "wordCount": 875,
    "headings": [
     "Step 0 — Measure, or you will optimise the wrong thing",
     "Lever 1 — Prompt caching (largest saving, smallest effort)",
@@ -171118,20 +171140,25 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 795,
+   "wordCount": 917,
    "headings": [
+    "Before you start",
     "Step 1 — Find where untrusted text enters",
     "Step 2 — Stop relying on the system prompt",
     "Step 3 — Put the permission on the tool",
     "Step 4 — Separate reading from acting",
     "Step 5 — A human on the irreversible",
     "Step 6 — Test it like an attacker",
-    "The honest summary"
+    "The honest summary",
+    "Where to go next"
    ],
    "internalLinks": [
     "/learn/evals-red-teaming/adversarial-red-teaming-process",
     "/learn/evals-red-teaming/prompt-injection-basics",
-    "/learn/harness-design/permission-and-approval-systems"
+    "/learn/harness-design/permission-and-approval-systems",
+    "/learn/responsible-ai/adversarial-testing-lab",
+    "/scenarios/agent-approval",
+    "/scenarios/document-qa"
    ],
    "externalLinks": [],
    "structuredData": [
@@ -171257,7 +171284,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 2,
+    "completeness": 1,
     "prerequisiteFit": null,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -171286,17 +171313,21 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 881,
+   "wordCount": 918,
    "headings": [
     "The one distinction that decides it",
     "Start with the prompt, always",
     "Choose retrieval when",
     "Choose fine-tuning when",
     "The four questions that settle it",
-    "Run this experiment before you commit"
+    "Run this experiment before you commit",
+    "Where to go next"
    ],
    "internalLinks": [
+    "/guides/build-a-rag-pipeline-over-your-own-documents",
+    "/guides/write-your-first-eval-for-an-ai-feature",
     "/learn/context-engineering/retrieval-vs-context-stuffing",
+    "/learn/fine-tuning",
     "/learn/fine-tuning/fine-tune-vs-prompt-vs-rag",
     "/learn/rag/when-rag-is-the-wrong-tool"
    ],
@@ -171456,13 +171487,14 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 703,
+   "wordCount": 861,
    "headings": [
     "Step 1 — Define correct, in writing",
     "Step 2 — Twenty examples, chosen deliberately",
     "Step 3 — The cheapest grader that works",
     "Step 4 — Run it, baseline it, gate on it",
     "Step 5 — Grade the grader",
+    "Where this sits in the system",
     "What this buys you"
    ],
    "internalLinks": [

@@ -1,6 +1,6 @@
 # Content registry — audit views
 
-Generated 2026-09-15T07:43:28.134Z by `scripts/build-content-registry.mjs`.
+Generated 2026-09-15T07:55:38.783Z by `scripts/build-content-registry.mjs`.
 2406 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
@@ -272,12 +272,12 @@ and split always need a written human reason (see checklist).
 |---|---:|---:|---:|---:|---:|
 | intentClarity | 2189 | 1.89 | 25 | 184 | 1980 |
 | correctnessSources | 43 | 1.28 | 0 | 31 | 12 |
-| completeness | 2304 | 1.65 | 44 | 710 | 1550 |
+| completeness | 2304 | 1.65 | 44 | 711 | 1549 |
 | prerequisiteFit | 2243 | 2.00 | 3 | 0 | 2240 |
 | handsOn | 2189 | 1.48 | 550 | 49 | 1590 |
 | explanationQuality | 2189 | 1.93 | 45 | 56 | 2088 |
 | metadata | 2189 | 1.85 | 25 | 281 | 1883 |
-| linking | 2100 | 1.35 | 508 | 348 | 1244 |
+| linking | 2100 | 1.35 | 508 | 342 | 1250 |
 | freshnessHealth | 2406 | 0.78 | 787 | 1356 | 263 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
@@ -879,24 +879,24 @@ Largest queue; full list in JSON. Vendor-signal sample:
 
 ### scenario (6)
 
-- /scenarios/agent-approval — An agent that can update customer records (459 words, updated 2026-08-30)
-- /scenarios/document-qa — Document Q&A with permissions intact (428 words, updated 2026-08-30)
-- /scenarios/eval-release — A release that improves quality but raises cost (436 words, updated 2026-08-30)
-- /scenarios/mcp-team-server — An MCP server for a small engineering team (459 words, updated 2026-08-30)
-- /scenarios/streaming-research — A research feature that streams useful work (434 words, updated 2026-08-30)
-- /scenarios/support-assistant — A support assistant that must show its work (490 words, updated 2026-08-30)
+- /scenarios/agent-approval — An agent that can update customer records (656 words, updated 2026-08-30)
+- /scenarios/document-qa — Document Q&A with permissions intact (529 words, updated 2026-08-30)
+- /scenarios/eval-release — A release that improves quality but raises cost (451 words, updated 2026-08-30)
+- /scenarios/mcp-team-server — An MCP server for a small engineering team (476 words, updated 2026-08-30)
+- /scenarios/streaming-research — A research feature that streams useful work (452 words, updated 2026-08-30)
+- /scenarios/support-assistant — A support assistant that must show its work (601 words, updated 2026-08-30)
 
 ### guide (9)
 
-- /guides/build-a-rag-pipeline-over-your-own-documents — Build a RAG pipeline over your own documents (773 words, updated 2026-08-30)
+- /guides/build-a-rag-pipeline-over-your-own-documents — Build a RAG pipeline over your own documents (838 words, updated 2026-08-30)
 - /guides/build-a-tool-calling-agent-from-scratch — Build a tool-calling agent from scratch, no framework (534 words, updated 2026-08-30)
 - /guides/build-an-mcp-server-in-python — Build an MCP server in Python and connect it to Claude (725 words, updated 2026-08-30)
-- /guides/cut-your-llm-bill — Cut your LLM bill without hurting quality (833 words, updated 2026-08-30)
-- /guides/defend-against-prompt-injection — Defend a tool-using app against prompt injection (795 words, updated 2026-08-30)
+- /guides/cut-your-llm-bill — Cut your LLM bill without hurting quality (875 words, updated 2026-08-30)
+- /guides/defend-against-prompt-injection — Defend a tool-using app against prompt injection (917 words, updated 2026-08-30)
 - /guides/get-reliable-json-out-of-an-llm — Get reliable JSON out of an LLM (638 words, updated 2026-08-30)
-- /guides/rag-fine-tuning-or-a-longer-prompt — RAG, fine-tuning, or a longer prompt? (881 words, updated 2026-08-30)
+- /guides/rag-fine-tuning-or-a-longer-prompt — RAG, fine-tuning, or a longer prompt? (918 words, updated 2026-08-30)
 - /guides/ship-your-first-ai-feature-to-production — Ship your first AI feature to production (851 words, updated 2026-08-30)
-- /guides/write-your-first-eval-for-an-ai-feature — Write your first eval for an AI feature (703 words, updated 2026-08-30)
+- /guides/write-your-first-eval-for-an-ai-feature — Write your first eval for an AI feature (861 words, updated 2026-08-30)
 
 ### blog (10)
 

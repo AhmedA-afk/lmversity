@@ -16,6 +16,14 @@ An operations team wants an agent to look up a customer, identify a duplicate ac
 - The lookup data is occasionally stale — a "duplicate" may be two recently-split accounts that are both legitimate.
 - Every write needs an audit trail: who approved, what the agent proposed, what the checks saw.
 
+## What you don't know
+
+- Whether the CRM already runs its own duplicate detection, and whether proposals should reuse it or supersede it.
+- The real false-positive rate — how often flagged pairs are legitimate sibling accounts, recent splits, or regional subsidiaries.
+- What unmerging actually costs in hours, and who does it.
+- Whether reviewers work a queue asynchronously or approve live inside the tool — the evidence bundle has to survive the handoff either way.
+- Which fields are authoritative for identity (tax ID, billing entity) and which are merely suggestive (name, contact person).
+
 ## Options on the table
 
 **Fully autonomous merge.** Rejected: the cost asymmetry is the whole problem — detection errors are cheap, merge errors are not.
@@ -43,6 +51,18 @@ This is a good case for a small agent inside a strict harness. The [control loop
 
 The pilot surfaced its edge within a week: two accounts shared a company name and a billing contact but held different tax IDs — a regional subsidiary, not a duplicate. The name-similarity check had scored them highly and the evidence bundle looked convincing enough that the reviewer nearly approved. Nobody had told the checks what makes two accounts *distinct*, only what makes them similar. The fix was a hard rule — different tax IDs or different billing entities reject the proposal outright — and a review-note convention: every proposal must state the strongest evidence *against* merging, not just for it.
 
+## Failure injection
+
+- Serve a lookup result from last quarter's snapshot and check whether the evidence bundle carries a freshness signal.
+- Feed the agent the same tool result twice and see whether it loops or notices.
+- Drop the approval event after the reviewer clicks approve — the write must not proceed on a missing event.
+- Kill the write tool mid-merge and confirm the partial state is detectable and reversible.
+- Construct a proposal where the strongest evidence *against* merging is missing from the bundle, and see if the reviewer catches its absence.
+
 ## What to test first
 
 Test two customers with similar names, a stale lookup, a reviewer rejecting the proposal, a repeated tool result, an expired approval, and a tool error after the write has begun.
+
+## Go further
+
+Try the [agents interview set](/interview/agents) for follow-up questions on approval boundaries, or build this shape in the [tool-using agent capstone](/learn/tools-function-calling/capstone-build-a-tool-using-agent).

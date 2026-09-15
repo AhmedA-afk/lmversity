@@ -30,6 +30,14 @@ The uncomfortable part is that there is no known way to make a model reliably di
 instructions in its context from data in its context. So the defence cannot be "teach it to
 tell them apart". It has to be architectural.
 
+## Before you start
+
+This guide assumes you already have an LLM feature in front of you — a chatbot, an agent, a
+RAG pipeline — with at least one tool or data source attached, and that you can change the
+application code around it. If you are still choosing the shape of the system, read
+[permission and approval systems](/learn/harness-design/permission-and-approval-systems)
+first; several decisions below are much cheaper before the tools exist.
+
 ## Step 1 — Find where untrusted text enters
 
 Write down every path by which text you did not author reaches the model. Typically:
@@ -158,3 +166,9 @@ You cannot eliminate prompt injection at the model layer today. What you can do 
 successful injection worthless: narrow tools, server-side permissions, a separation between
 reading and acting, and a human on anything you cannot undo. Design as though the model
 will eventually follow the attacker's instructions — because occasionally, it will.
+
+## Where to go next
+
+- Turn your break tests into a standing suite with [adversarial testing lab](/learn/responsible-ai/adversarial-testing-lab) so model upgrades cannot quietly reopen a hole you already closed.
+- If your system reads documents or web pages, the [document Q&A scenario](/scenarios/document-qa) applies the same boundary discipline to retrieval.
+- For agent-shaped systems, the [agent approval scenario](/scenarios/agent-approval) works through what a human gate needs to see before a consequential write.
