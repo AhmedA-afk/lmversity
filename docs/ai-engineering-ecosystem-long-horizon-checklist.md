@@ -2328,7 +2328,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-16 — Phase 4: guides, scenarios, blog themes (17 rows)
 
-- Commit: `PENDING`. Status: complete.
+- Commit: `ae7524f` (blog) + `344491a` (guides/scenarios). Status: complete.
 - Scope: 5 guides (first local-model app, first voice agent, first
   browser agent, observability integration, SDK↔framework migration —
   completing the 10-item first-X set); 6 scenarios (incident-response,
