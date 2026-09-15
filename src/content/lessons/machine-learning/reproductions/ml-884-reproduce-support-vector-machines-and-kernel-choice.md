@@ -6,6 +6,7 @@ status: "live"
 summary: "Compare linear and nonlinear SVMs with nested validation, margin diagnostics, and a disciplined kernel-selection report."
 duration: "110 min study + 6–8 hr project"
 updated: "2026-08-30"
+sources: ["uci-har-dataset", "cortes-vapnik-svm-paper", "cortes95-svm-pdf"]
 ---
 
 ## Research question

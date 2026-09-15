@@ -1,6 +1,6 @@
 # Content registry — audit views
 
-Generated 2026-09-15T11:25:16.079Z by `scripts/build-content-registry.mjs`.
+Generated 2026-09-15T13:28:57.373Z by `scripts/build-content-registry.mjs`.
 2401 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
@@ -493,6 +493,8 @@ _… 92 more in content-registry.json (`sourcingFlags`)_
 
 ## Freshness queues
 
+Review order: volatile classes first, oldest last-verified date first; undated items lead each queue. `verified`/`updated`/`published` supply the last-verified date — git-derived when frontmatter is absent.
+
 - periodic: 1341
 - pricing-sensitive: 337
 - release-sensitive: 286
@@ -500,141 +502,141 @@ _… 92 more in content-registry.json (`sourcingFlags`)_
 - certification-sensitive: 99
 - policy-sensitive: 75
 
-### certification-sensitive (99)
+### certification-sensitive (99) — oldest-verified first
 
-- /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access
-- /learn/ai-foundations/reliable-ai/201-provenance-consent-and-data-rights — Provenance, Consent, and Data Rights
-- /learn/ai-foundations/reliable-ai/202-labels-annotation-and-ground-truth — Labels, Annotation, and the Limits of Ground Truth
-- /learn/ai-foundations/reliable-ai/203-benchmarks-evaluations-and-capability-claims — Benchmarks, Evaluations, and Defensible Capability Claims
-- /learn/ai-foundations/reliable-ai/204-distribution-shift-and-robustness — Distribution Shift, Robustness, and Monitoring
-- /learn/ai-foundations/reliable-ai/205-uncertainty-calibration-and-abstention — Uncertainty, Calibration, and Abstention
-- /learn/ai-foundations/reliable-ai/206-hallucination-grounding-and-verification — Hallucination, Grounding, and Verification
-- /learn/ai-foundations/reliable-ai/207-interpretability-and-explanation-boundaries — Interpretability, Explanations, and Their Boundaries
-- /learn/ai-foundations/reliable-ai/208-fairness-problem-formulation-and-measurement — Fairness: Problem Formulation and Measurement
-- /learn/ai-foundations/reliable-ai/209-fairness-mitigation-and-governance — Fairness Mitigation and Governance
-- /learn/ai-foundations/reliable-ai/210-privacy-threat-modeling-and-minimization — Privacy Threat Modeling and Data Minimization
-- /learn/ai-foundations/reliable-ai/211-privacy-preserving-learning-and-release — Privacy-Preserving Learning and Release
-- /learn/ai-foundations/reliable-ai/212-adversarial-ml-and-input-security — Adversarial ML and Input Security
-- /learn/ai-foundations/reliable-ai/213-model-supply-chain-and-artifact-security — Model Supply Chain and Artifact Security
-- /learn/ai-foundations/reliable-ai/214-alignment-objectives-and-reward-hacking — Alignment Objectives and Reward Hacking
-- /learn/ai-foundations/reliable-ai/215-human-feedback-preference-data-and-rlhf — Human Feedback, Preference Data, and RLHF
-- /learn/ai-foundations/reliable-ai/216-red-teaming-and-misuse-evaluation — Red Teaming and Misuse Evaluation
-- /learn/ai-foundations/reliable-ai/217-governance-risk-tiers-and-accountability — Governance, Risk Tiers, and Accountability
-- /learn/ai-foundations/reliable-ai/218-audits-evidence-and-independent-review — Audits, Evidence, and Independent Review
-- /learn/ai-foundations/reliable-ai/219-incident-response-rollback-and-learning — AI Incidents, Rollback, and Organisational Learning
-- /learn/ai-foundations/reliable-ai/220-human-in-the-loop-and-meaningful-oversight — Human-in-the-Loop and Meaningful Oversight
-- /learn/ai-foundations/reliable-ai/221-contestability-appeals-and-recource — Contestability, Appeals, and Recourse
-- /learn/ai-foundations/reliable-ai/222-societal-impact-labor-and-power — Societal Impact, Labour, and Power
-- /learn/ai-foundations/reliable-ai/223-environmental-impact-and-compute-governance — Environmental Impact and Compute Governance
-- /learn/ai-foundations/reliable-ai/224-safety-cases-and-deployment-assurance — Safety Cases and Deployment Assurance
-- /learn/ai-foundations/reliable-ai/225-case-study-health-and-clinical-support — Case Study: Health and Clinical Support
-- /learn/ai-foundations/reliable-ai/226-case-study-finance-and-public-services — Case Study: Finance and Public Services
-- /learn/ai-foundations/reliable-ai/227-case-study-generative-agents-and-critical-workflows — Case Study: Generative Agents in Critical Workflows
-- /learn/ai-foundations/reliable-ai/228-reliable-ai-capstone-and-technical-defense — Reliable AI Capstone and Technical Defense
-- /learn/ai-foundations/safety-and-interpretability-quiz — Safety & Interpretability: Reason About Risk
+- /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access *(verified undated)*
+- /learn/tools-function-calling/building-a-database-tool — Lab: build a read-only database tool *(verified undated)*
+- /learn/harness-design/deny-floors-and-policy-layers — Deny-Floors: Rules No Prompt Can Override *(verified 2026-08-29)*
+- /learn/ai-foundations/reliable-ai/201-provenance-consent-and-data-rights — Provenance, Consent, and Data Rights *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/202-labels-annotation-and-ground-truth — Labels, Annotation, and the Limits of Ground Truth *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/203-benchmarks-evaluations-and-capability-claims — Benchmarks, Evaluations, and Defensible Capability Claims *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/204-distribution-shift-and-robustness — Distribution Shift, Robustness, and Monitoring *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/205-uncertainty-calibration-and-abstention — Uncertainty, Calibration, and Abstention *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/206-hallucination-grounding-and-verification — Hallucination, Grounding, and Verification *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/207-interpretability-and-explanation-boundaries — Interpretability, Explanations, and Their Boundaries *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/208-fairness-problem-formulation-and-measurement — Fairness: Problem Formulation and Measurement *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/209-fairness-mitigation-and-governance — Fairness Mitigation and Governance *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/210-privacy-threat-modeling-and-minimization — Privacy Threat Modeling and Data Minimization *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/211-privacy-preserving-learning-and-release — Privacy-Preserving Learning and Release *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/212-adversarial-ml-and-input-security — Adversarial ML and Input Security *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/213-model-supply-chain-and-artifact-security — Model Supply Chain and Artifact Security *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/214-alignment-objectives-and-reward-hacking — Alignment Objectives and Reward Hacking *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/215-human-feedback-preference-data-and-rlhf — Human Feedback, Preference Data, and RLHF *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/216-red-teaming-and-misuse-evaluation — Red Teaming and Misuse Evaluation *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/217-governance-risk-tiers-and-accountability — Governance, Risk Tiers, and Accountability *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/218-audits-evidence-and-independent-review — Audits, Evidence, and Independent Review *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/219-incident-response-rollback-and-learning — AI Incidents, Rollback, and Organisational Learning *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/220-human-in-the-loop-and-meaningful-oversight — Human-in-the-Loop and Meaningful Oversight *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/221-contestability-appeals-and-recource — Contestability, Appeals, and Recourse *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/222-societal-impact-labor-and-power — Societal Impact, Labour, and Power *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/223-environmental-impact-and-compute-governance — Environmental Impact and Compute Governance *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/224-safety-cases-and-deployment-assurance — Safety Cases and Deployment Assurance *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/225-case-study-health-and-clinical-support — Case Study: Health and Clinical Support *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/226-case-study-finance-and-public-services — Case Study: Finance and Public Services *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/227-case-study-generative-agents-and-critical-workflows — Case Study: Generative Agents in Critical Workflows *(verified 2026-08-30)*
 - … 69 more in content-registry.json
 
-### pricing-sensitive (337)
+### pricing-sensitive (337) — oldest-verified first
 
-- /learn/agentic-ai/stopping-conditions-for-agents — Termination Conditions: Teaching an Agent When It's Done
-- /learn/ai-foundations/ai-systems/110-adversarial-search-minimax-and-game-values — Adversarial Search: Minimax and Game Values
-- /learn/ai-foundations/building-an-eval-set-worked-example — Building a Small Eval You Can Trust
-- /learn/ai-foundations/capabilities-and-eval-quiz — Capabilities & Evaluation: What Would You Trust?
-- /learn/ai-foundations/choosing-a-model-decision-framework — A Decision Framework for Picking a Model
-- /learn/ai-foundations/choosing-a-model — Choosing a model in 2026
-- /learn/ai-foundations/classification-vs-regression — Classification vs. Regression: The Two Basic Prediction Tasks
-- /learn/ai-foundations/data-splits-and-leakage-worked-example — Splits, Leakage, and the Lie of a Good Score
-- /learn/ai-foundations/foundation-models-and-llms-quiz — Foundation Models & LLMs: Check Your Model
-- /learn/ai-foundations/generalization-quiz — Generalization: Will It Hold Up?
-- /learn/ai-foundations/inference-cost-and-latency-intuition — Why Inference Is Bottlenecked by Memory, Not Math
-- /learn/ai-foundations/interpretability-methods-overview — Ways to Peek Inside the Box
-- /learn/ai-foundations/learning-paradigms-quiz — Which Kind of Learning Is This?
-- /learn/ai-foundations/open-vs-closed-and-hardware-tradeoffs — Open Weights or an API? Two Scenarios
-- /learn/ai-foundations/orientation-quiz — Orientation: Check Your Map
-- /learn/ai-foundations/practical-models-quiz — Choosing & Running: Make the Call
-- /learn/ai-foundations/pretraining-vs-finetuning — Pretraining vs. Fine-Tuning: Two Different Jobs
-- /learn/ai-foundations/supervised-learning-explained — Supervised Learning, Explained
-- /learn/ai-foundations/tokens-and-cost-worked-example — Counting Tokens and Pricing a Call
-- /learn/ai-foundations/tokens-context-cost — Tokens, context & cost
-- /learn/ai-foundations/what-a-model-actually-is — What a Model Actually Is
-- /learn/ai-literacy/ai-is-not-a-search-engine — Stop treating AI like Google
-- /learn/ai-literacy/ai-literacy-master-cheatsheet — Cheatsheet: the AI literacy master reference
-- /learn/ai-literacy/compare-ai-tools-for-one-real-task — Comparing AI tools for one real task
-- /learn/ai-literacy/cost-and-limits-quiz — Quiz: cost, limits, and tradeoffs
-- /learn/ai-literacy/free-vs-paid-ai-what-you-get — Free vs. paid AI: what you actually get
-- /learn/ai-literacy/how-ai-produces-answers-quiz — Quiz: how AI produces answers
-- /learn/ai-literacy/how-to-ask-ai-clearly — How to ask AI for exactly what you want
-- /learn/ai-literacy/is-ai-worth-it-for-this-task — Is AI worth it here? A cost-benefit walkthrough
-- /learn/ai-literacy/judging-and-verifying-quiz — Quiz: judging and verifying
+- /learn/machine-learning/predictive-ml-vs-generative-ai — Separate predictive-ML choices from generative-AI choices *(verified undated)*
+- /learn/ai-foundations/choosing-a-model — Choosing a model in 2026 *(verified 2026-08-29)*
+- /learn/ai-foundations/tokens-context-cost — Tokens, context & cost *(verified 2026-08-29)*
+- /learn/evals-red-teaming/building-a-golden-dataset — Building a Golden Dataset *(verified 2026-08-29)*
+- /learn/production/token-and-cost-tracking — Track Cost Per Request and Per User *(verified 2026-08-29)*
+- /learn/prompt-engineering/chain-of-thought-prompting — Chain-of-Thought: Getting the Model to Show Its Work *(verified 2026-08-29)*
+- /learn/prompt-engineering/few-shot-prompting — Few-Shot Prompting: Teaching by Example *(verified 2026-08-29)*
+- /learn/prompt-engineering/system-vs-user-prompts — System Prompts vs User Prompts *(verified 2026-08-29)*
+- /learn/agentic-ai/stopping-conditions-for-agents — Termination Conditions: Teaching an Agent When It's Done *(verified 2026-08-30)*
+- /learn/ai-foundations/ai-systems/110-adversarial-search-minimax-and-game-values — Adversarial Search: Minimax and Game Values *(verified 2026-08-30)*
+- /learn/ai-foundations/building-an-eval-set-worked-example — Building a Small Eval You Can Trust *(verified 2026-08-30)*
+- /learn/ai-foundations/capabilities-and-eval-quiz — Capabilities & Evaluation: What Would You Trust? *(verified 2026-08-30)*
+- /learn/ai-foundations/choosing-a-model-decision-framework — A Decision Framework for Picking a Model *(verified 2026-08-30)*
+- /learn/ai-foundations/classification-vs-regression — Classification vs. Regression: The Two Basic Prediction Tasks *(verified 2026-08-30)*
+- /learn/ai-foundations/data-splits-and-leakage-worked-example — Splits, Leakage, and the Lie of a Good Score *(verified 2026-08-30)*
+- /learn/ai-foundations/foundation-models-and-llms-quiz — Foundation Models & LLMs: Check Your Model *(verified 2026-08-30)*
+- /learn/ai-foundations/generalization-quiz — Generalization: Will It Hold Up? *(verified 2026-08-30)*
+- /learn/ai-foundations/inference-cost-and-latency-intuition — Why Inference Is Bottlenecked by Memory, Not Math *(verified 2026-08-30)*
+- /learn/ai-foundations/interpretability-methods-overview — Ways to Peek Inside the Box *(verified 2026-08-30)*
+- /learn/ai-foundations/learning-paradigms-quiz — Which Kind of Learning Is This? *(verified 2026-08-30)*
+- /learn/ai-foundations/open-vs-closed-and-hardware-tradeoffs — Open Weights or an API? Two Scenarios *(verified 2026-08-30)*
+- /learn/ai-foundations/orientation-quiz — Orientation: Check Your Map *(verified 2026-08-30)*
+- /learn/ai-foundations/practical-models-quiz — Choosing & Running: Make the Call *(verified 2026-08-30)*
+- /learn/ai-foundations/pretraining-vs-finetuning — Pretraining vs. Fine-Tuning: Two Different Jobs *(verified 2026-08-30)*
+- /learn/ai-foundations/supervised-learning-explained — Supervised Learning, Explained *(verified 2026-08-30)*
+- /learn/ai-foundations/tokens-and-cost-worked-example — Counting Tokens and Pricing a Call *(verified 2026-08-30)*
+- /learn/ai-foundations/what-a-model-actually-is — What a Model Actually Is *(verified 2026-08-30)*
+- /learn/ai-literacy/ai-is-not-a-search-engine — Stop treating AI like Google *(verified 2026-08-30)*
+- /learn/ai-literacy/ai-literacy-master-cheatsheet — Cheatsheet: the AI literacy master reference *(verified 2026-08-30)*
+- /learn/ai-literacy/compare-ai-tools-for-one-real-task — Comparing AI tools for one real task *(verified 2026-08-30)*
 - … 307 more in content-registry.json
 
-### policy-sensitive (75)
+### policy-sensitive (75) — oldest-verified first
 
-- /learn/agentic-ai/state-memory-and-recovery — Design agent state, memory, and recovery explicitly
-- /learn/ai-foundations/open-weight-vs-closed-models — Open-Weight vs. Closed Models
-- /learn/ai-literacy/ai-vs-human-thinking-compared — AI vs. a human expert: a side-by-side
-- /learn/ai-literacy/data-privacy-provenance-and-policy — Protect data with privacy, provenance, and policy boundaries
-- /learn/classical-ai/knowledge-uncertainty/215-knowledge-graphs-queries-provenance-and-embeddings — Knowledge graphs: queries, provenance, and embeddings
-- /learn/deep-learning/practice/416-data-versioning-lineage-and-retention-governance — Data versioning, lineage, and retention governance
-- /learn/deep-learning/sequence-generative/318-language-model-training-data-and-scaling — Train language models with data governance and scaling discipline
-- /learn/deep-learning/sequence-generative/325-multimodal-representations-and-fusion — Model text, images, audio, and structured signals together
-- /learn/deep-learning/sequence-generative/334-generative-safety-copyright-and-provenance — Deploy generative systems with safety, copyright, and provenance controls
-- /learn/deep-learning/vision/211-transfer-learning-and-fine-tuning — Transfer learning and fine-tuning
-- /learn/deep-learning/vision/230-vision-capstone-and-mastery-check — Vision systems capstone: evidence from data to deployment
-- /learn/fine-tuning/picking-a-base-model-to-fine-tune — Choose a Base Model to Fine-Tune
-- /learn/genai-app-dev/extracting-typed-data-from-freeform — Extracting Typed Records From Freeform Text
-- /learn/hallucinations/leading-prompt-fabrication — Worked Example: False Premises and Leading Questions
-- /learn/llm-foundations/read-a-model-card-lab — Lab: read a model card like an engineer
-- /learn/machine-learning/assessments/ml-842-assignment-01-reproducible-baseline — Assignment 1: frame a decision and ship a reproducible baseline
-- /learn/machine-learning/assessments/ml-847-model-report-template — Model report template: predictive system review
-- /learn/machine-learning/assessments/ml-848-model-report-template-high-stakes — Model report template: high-stakes review and human oversight
-- /learn/machine-learning/assessments/ml-849-staged-capstone-handbook — Staged capstone handbook: from proposal to production review
-- /learn/machine-learning/ml-114-lab-from-question-to-evaluation-plan — Lab: from question to evaluation plan
-- /learn/machine-learning/ml-512-randomized-experiments-and-online-ab-tests — Randomized experiments and online A/B tests
-- /learn/machine-learning/ml-707-lab-content-ranking-with-feedback — Lab: content ranking with feedback
-- /learn/machine-learning/problem-sets/10-comprehensive-classical-ml-qualifying-exam — Problem Set 10: Comprehensive Classical ML Qualifying Exam
-- /learn/machine-learning/public-data-projects/adult-income-project — Public-data project: Adult income prediction
-- /learn/machine-learning/public-data-projects/aps-failure-project — Public-data project: APS Failure under imbalance
-- /learn/machine-learning/public-data-projects/bank-marketing-project — Public-data project: Bank Marketing decision support
-- /learn/machine-learning/public-data-projects/bike-sharing-project — Public-data project: Bike Sharing forecasting
-- /learn/machine-learning/public-data-projects/ml-891-adult-income-decision-audit — Public-data project: Adult income decision audit
-- /learn/machine-learning/public-data-projects/ml-892-bank-marketing-temporal-campaign — Public-data project: Bank marketing campaign under time and contact constraints
-- /learn/machine-learning/public-data-projects/ml-894-online-retail-cohort-and-anomaly-study — Public-data project: Online Retail cohort, demand, and anomaly study
+- /learn/llm-foundations/read-a-model-card-lab — Lab: read a model card like an engineer *(verified undated)*
+- /learn/responsible-ai/consent-contestability-and-impact — Consent, contestability, and the costs nobody measures *(verified undated)*
+- /privacy — Privacy *(verified undated)*
+- /terms — Terms *(verified undated)*
+- /learn/agentic-ai/state-memory-and-recovery — Design agent state, memory, and recovery explicitly *(verified 2026-08-30)*
+- /learn/ai-foundations/open-weight-vs-closed-models — Open-Weight vs. Closed Models *(verified 2026-08-30)*
+- /learn/ai-literacy/ai-vs-human-thinking-compared — AI vs. a human expert: a side-by-side *(verified 2026-08-30)*
+- /learn/ai-literacy/data-privacy-provenance-and-policy — Protect data with privacy, provenance, and policy boundaries *(verified 2026-08-30)*
+- /learn/classical-ai/knowledge-uncertainty/215-knowledge-graphs-queries-provenance-and-embeddings — Knowledge graphs: queries, provenance, and embeddings *(verified 2026-08-30)*
+- /learn/deep-learning/practice/416-data-versioning-lineage-and-retention-governance — Data versioning, lineage, and retention governance *(verified 2026-08-30)*
+- /learn/deep-learning/sequence-generative/318-language-model-training-data-and-scaling — Train language models with data governance and scaling discipline *(verified 2026-08-30)*
+- /learn/deep-learning/sequence-generative/325-multimodal-representations-and-fusion — Model text, images, audio, and structured signals together *(verified 2026-08-30)*
+- /learn/deep-learning/sequence-generative/334-generative-safety-copyright-and-provenance — Deploy generative systems with safety, copyright, and provenance controls *(verified 2026-08-30)*
+- /learn/deep-learning/vision/211-transfer-learning-and-fine-tuning — Transfer learning and fine-tuning *(verified 2026-08-30)*
+- /learn/deep-learning/vision/230-vision-capstone-and-mastery-check — Vision systems capstone: evidence from data to deployment *(verified 2026-08-30)*
+- /learn/fine-tuning/picking-a-base-model-to-fine-tune — Choose a Base Model to Fine-Tune *(verified 2026-08-30)*
+- /learn/genai-app-dev/extracting-typed-data-from-freeform — Extracting Typed Records From Freeform Text *(verified 2026-08-30)*
+- /learn/hallucinations/leading-prompt-fabrication — Worked Example: False Premises and Leading Questions *(verified 2026-08-30)*
+- /learn/machine-learning/assessments/ml-842-assignment-01-reproducible-baseline — Assignment 1: frame a decision and ship a reproducible baseline *(verified 2026-08-30)*
+- /learn/machine-learning/assessments/ml-847-model-report-template — Model report template: predictive system review *(verified 2026-08-30)*
+- /learn/machine-learning/assessments/ml-848-model-report-template-high-stakes — Model report template: high-stakes review and human oversight *(verified 2026-08-30)*
+- /learn/machine-learning/assessments/ml-849-staged-capstone-handbook — Staged capstone handbook: from proposal to production review *(verified 2026-08-30)*
+- /learn/machine-learning/ml-114-lab-from-question-to-evaluation-plan — Lab: from question to evaluation plan *(verified 2026-08-30)*
+- /learn/machine-learning/ml-512-randomized-experiments-and-online-ab-tests — Randomized experiments and online A/B tests *(verified 2026-08-30)*
+- /learn/machine-learning/ml-707-lab-content-ranking-with-feedback — Lab: content ranking with feedback *(verified 2026-08-30)*
+- /learn/machine-learning/problem-sets/10-comprehensive-classical-ml-qualifying-exam — Problem Set 10: Comprehensive Classical ML Qualifying Exam *(verified 2026-08-30)*
+- /learn/machine-learning/public-data-projects/adult-income-project — Public-data project: Adult income prediction *(verified 2026-08-30)*
+- /learn/machine-learning/public-data-projects/aps-failure-project — Public-data project: APS Failure under imbalance *(verified 2026-08-30)*
+- /learn/machine-learning/public-data-projects/bank-marketing-project — Public-data project: Bank Marketing decision support *(verified 2026-08-30)*
+- /learn/machine-learning/public-data-projects/bike-sharing-project — Public-data project: Bike Sharing forecasting *(verified 2026-08-30)*
 - … 45 more in content-registry.json
 
-### release-sensitive (286)
+### release-sensitive (286) — oldest-verified first
 
-Largest queue; full list in JSON. Vendor-signal sample:
-- /learn/agentic-ai/agent-benchmarks — Claude
-- /learn/agentic-ai/agent-orchestration-frameworks — LangGraph, CrewAI, AutoGen, OpenAI, Claude
-- /learn/agentic-ai/agent-to-agent-protocols — MCP
-- /learn/agentic-ai/choosing-an-agent-framework — LangGraph, CrewAI, AutoGen
-- /learn/agentic-ai/coding-agent-architecture — Claude
-- /learn/agentic-ai/hierarchical-task-decomposition — LangGraph
-- /learn/agentic-ai/persistent-agent-memory — Claude
-- /learn/ai-foundations/foundation-models-explained — GPT-4, Claude, Gemini
-- /learn/ai-foundations/how-llms-work-end-to-end-example — GPT-2
-- /learn/ai-foundations/how-modern-ai-fits-together — ChatGPT
-- /learn/ai-foundations/interpretability-black-box-problem — Anthropic, Claude
-- /learn/ai-foundations/narrow-ai-vs-general-ai — Claude
-- /learn/ai-foundations/narrow-vs-general-ai-in-practice — GPT-5, Claude, Gemini
-- /learn/ai-foundations/scaling-laws — OpenAI, GPT-3
-- /learn/ai-literacy/common-myths-about-ai-debunked — ChatGPT, Copilot
-- /learn/ai-literacy/expecting-too-much-or-too-little — ChatGPT
-- /learn/ai-literacy/meet-skills-connectors-and-agents — MCP
-- /learn/ai-literacy/types-of-ai-you-meet-every-day — ChatGPT, Claude, Gemini
-- /learn/context-engineering/counting-tokens-in-practice — OpenAI, Claude, Anthropic
-- /learn/context-engineering/foundations-quiz — Claude
-- /learn/context-engineering/just-in-time-context-loading — Claude
-- /learn/context-engineering/progressive-tool-disclosure — MCP, Claude
-- /learn/context-engineering/scratchpad-and-working-memory-patterns — Claude
-- /learn/context-engineering/structured-memory-stores-compared — Redis
-- /learn/context-engineering/structured-memory-stores — Redis, Pinecone, Weaviate, pgvector
-- /learn/deep-learning/sequence-generative/317-language-model-objectives-and-tokenization — Perplexity
-- /learn/deep-learning/sequence-generative/320-language-model-evaluation-calibration-and-behavior — Perplexity
-- /learn/deep-learning/vision/223-pruning-sparsity-and-quantization — Unstructured
-- /learn/evals-red-teaming/eval-tooling-landscape — Promptfoo, Braintrust, Ragas, OpenAI, Anthropic
-- /learn/evals-red-teaming/evaluating-agent-trajectories — LangSmith, Braintrust
+Largest queue; full list in JSON. Oldest-verified sample:
+- /learn/ai-literacy/meet-skills-connectors-and-agents — MCP *(verified undated)*
+- /learn/python-data-apis/observability-for-ai-services — OpenTelemetry *(verified undated)*
+- /learn/tools-function-calling/tool-discovery-at-runtime — MCP *(verified undated)*
+- /learn/genai-app-dev/streaming-responses-to-the-ui — Anthropic, OpenAI *(verified 2026-08-29)*
+- /learn/harness-design/what-is-a-harness — Claude, Cursor *(verified 2026-08-29)*
+- /learn/mcp/agent-dies-overnight-oauth — MCP *(verified 2026-08-29)*
+- /learn/mcp/first-mcp-server — MCP, Model Context Protocol, Claude *(verified 2026-08-29)*
+- /learn/mcp/mcp-architecture-hosts-clients-servers — MCP, Claude *(verified 2026-08-29)*
+- /learn/mcp/mcp-context-window — MCP *(verified 2026-08-29)*
+- /learn/mcp/mcp-tools-resources-and-prompts — MCP *(verified 2026-08-29)*
+- /learn/mcp/what-is-mcp — MCP, Model Context Protocol, Anthropic *(verified 2026-08-29)*
+- /learn/prompt-engineering/delimiters-and-formatting — Claude *(verified 2026-08-29)*
+- /learn/tools-function-calling/designing-a-tool-schema — Claude, OpenAI *(verified 2026-08-29)*
+- /learn/agentic-ai/agent-benchmarks — Claude *(verified 2026-08-30)*
+- /learn/agentic-ai/agent-orchestration-frameworks — LangGraph, CrewAI, AutoGen, OpenAI, Claude *(verified 2026-08-30)*
+- /learn/agentic-ai/agent-to-agent-protocols — MCP *(verified 2026-08-30)*
+- /learn/agentic-ai/choosing-an-agent-framework — LangGraph, CrewAI, AutoGen *(verified 2026-08-30)*
+- /learn/agentic-ai/coding-agent-architecture — Claude *(verified 2026-08-30)*
+- /learn/agentic-ai/hierarchical-task-decomposition — LangGraph *(verified 2026-08-30)*
+- /learn/agentic-ai/persistent-agent-memory — Claude *(verified 2026-08-30)*
+- /learn/ai-foundations/foundation-models-explained — GPT-4, Claude, Gemini *(verified 2026-08-30)*
+- /learn/ai-foundations/how-llms-work-end-to-end-example — GPT-2 *(verified 2026-08-30)*
+- /learn/ai-foundations/interpretability-black-box-problem — Anthropic, Claude *(verified 2026-08-30)*
+- /learn/ai-foundations/narrow-ai-vs-general-ai — Claude *(verified 2026-08-30)*
+- /learn/ai-foundations/narrow-vs-general-ai-in-practice — GPT-5, Claude, Gemini *(verified 2026-08-30)*
+- /learn/ai-foundations/scaling-laws — OpenAI, GPT-3 *(verified 2026-08-30)*
+- /learn/ai-literacy/common-myths-about-ai-debunked — ChatGPT, Copilot *(verified 2026-08-30)*
+- /learn/ai-literacy/expecting-too-much-or-too-little — ChatGPT *(verified 2026-08-30)*
+- /learn/ai-literacy/types-of-ai-you-meet-every-day — ChatGPT, Claude, Gemini *(verified 2026-08-30)*
+- /learn/context-engineering/counting-tokens-in-practice — OpenAI, Claude, Anthropic *(verified 2026-08-30)*
 - … 256 more
 
 ## Missing-data queues

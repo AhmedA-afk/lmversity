@@ -22,6 +22,7 @@ related:
   - /learn/harness-design/sandboxing-technology-choices
   - /learn/harness-design/deny-floors-and-policy-layers
   - /blog/agents-need-a-harness
+sources: ["openai-codex-repo", "openai-platform-docs"]
 ---
 
 OpenAI Codex is OpenAI's coding agent: a CLI, with IDE integrations, that reads your repository, plans a change, edits files, runs commands and tests, and iterates until a task is done, with your approval at each step. Treat it like any coding agent: give it a scoped task, review its plan, and check every diff before you commit.

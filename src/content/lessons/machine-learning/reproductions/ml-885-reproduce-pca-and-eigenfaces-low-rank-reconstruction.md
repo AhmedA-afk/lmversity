@@ -6,6 +6,7 @@ status: "live"
 summary: "Reproduce the low-rank reconstruction mechanism behind eigenfaces while auditing identity, privacy, and benchmark limits."
 duration: "110 min study + 6–8 hr project"
 updated: "2026-08-30"
+sources: ["turk-pentland-eigenfaces-paper", "sklearn-olivetti-dataset", "att-faces-database"]
 ---
 
 ## Research question

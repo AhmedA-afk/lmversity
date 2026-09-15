@@ -4,6 +4,7 @@ track: "structured-outputs"
 status: live
 summary: "A map of how Anthropic, OpenAI, Google, and OSS engines get to structured JSON, and what actually survives a provider swap."
 duration: "7 min read"
+sources: ["google-gemini-docs", "anthropic-docs", "llamacpp-grammars", "openai-platform-docs"]
 ---
 
 [Cross-Provider Structured Output](/learn/structured-outputs/cross-provider-structured-output-differences) already showed you three roads to the same JSON and where field requiredness and refusal shapes diverge. This lesson zooms out further: it adds the fourth road most teams forget about, gives you a framework for sorting "portable" from "provider-specific" before you write a line of adapter code, and names the escaping quirks that break things even when every provider claims success.

@@ -6,6 +6,7 @@ status: "live"
 summary: "Reimplement AdaBoost, inspect its evolving example weights, and test a bounded claim under controlled label noise."
 duration: "100 min study + 5–7 hr project"
 updated: "2026-08-30"
+sources: ["uci-breast-cancer-dataset", "freund-schapire-adaboost-paper"]
 ---
 
 ## Research question

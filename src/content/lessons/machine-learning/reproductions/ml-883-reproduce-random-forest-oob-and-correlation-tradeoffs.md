@@ -6,6 +6,7 @@ status: "live"
 summary: "Recreate a random forest experiment with out-of-bag evaluation and test the strength-versus-correlation trade-off."
 duration: "100 min study + 6–8 hr project"
 updated: "2026-08-30"
+sources: ["uci-covertype-dataset", "breiman-random-forests-paper"]
 ---
 
 ## Research question

@@ -4,6 +4,7 @@ track: "structured-outputs"
 status: live
 summary: "JSON mode guarantees your output parses. It has no idea what keys, types, or shape you actually wanted."
 duration: "5 min read"
+sources: ["rfc8259-json"]
 ---
 
 Turn on JSON mode and every response parses. That feels like the problem is solved — until you look at what actually came back.

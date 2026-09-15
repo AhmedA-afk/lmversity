@@ -14,6 +14,15 @@ const lessons = defineCollection({
     /** First-published date. When absent the build falls back to the real
      *  git-derived value in src/data/content-dates.json — never invented. */
     published: z.string().optional(),
+    /** Source-registry ids (src/data/sources.json) backing volatile claims. */
+    sources: z.array(z.string()).default([]),
+    /** Editorial pipeline stage. Existing published pages are 'live'; the
+     *  earlier stages exist for work in flight (see the checklist's
+     *  editorial-status workflow). */
+    reviewStatus: z.enum([
+      'proposed', 'researched', 'drafted', 'technically-reviewed',
+      'copy-reviewed', 'browser-verified', 'live', 'refresh-due', 'retired',
+    ]).default('live'),
   }),
 });
 
@@ -24,6 +33,8 @@ const questions = defineCollection({
     topic: z.string(),
     description: z.string(),
     order: z.number().default(0),
+    /** Source-registry ids backing volatile claims. */
+    sources: z.array(z.string()).default([]),
   }),
 });
 
@@ -34,6 +45,8 @@ const scenarios = defineCollection({
     scenario: z.string(),
     description: z.string(),
     order: z.number().default(0),
+    /** Source-registry ids backing volatile claims. */
+    sources: z.array(z.string()).default([]),
   }),
 });
 
@@ -107,6 +120,8 @@ const answers = defineCollection({
     featured: z.boolean().default(false),
     faq: z.array(z.object({ q: z.string(), a: z.string() })).default([]),
     related: z.array(z.string()).default([]),
+    /** Source-registry ids backing volatile claims. */
+    sources: z.array(z.string()).default([]),
   }),
 });
 

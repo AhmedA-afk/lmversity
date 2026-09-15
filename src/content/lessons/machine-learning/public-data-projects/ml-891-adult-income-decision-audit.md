@@ -6,6 +6,7 @@ status: live
 summary: "Build, audit, and communicate a census-income classifier without treating a historical label as a decision rule."
 duration: "8–12 hours"
 updated: "2026-08-30"
+sources: ["uci-adult-dataset"]
 ---
 
 ## Project brief

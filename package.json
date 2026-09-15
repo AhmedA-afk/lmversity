@@ -16,6 +16,7 @@
     "assets": "npm run fonts && npm run icons && npm run og",
     "check:links": "node scripts/check-links.mjs",
     "check:content": "node scripts/check-content.mjs",
+    "check:sources": "node scripts/check-external-sources.mjs",
     "registry": "node scripts/build-content-registry.mjs",
     "audit:families": "node scripts/audit-families.mjs",
     "dates": "node scripts/build-content-dates.mjs",

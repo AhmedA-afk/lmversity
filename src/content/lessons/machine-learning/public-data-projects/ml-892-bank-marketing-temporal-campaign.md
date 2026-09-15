@@ -6,6 +6,7 @@ status: live
 summary: "Design a leakage-safe term-deposit campaign model and defend which information could exist at each decision point."
 duration: "8–12 hours"
 updated: "2026-08-30"
+sources: ["uci-bank-marketing-dataset"]
 ---
 
 ## Project brief

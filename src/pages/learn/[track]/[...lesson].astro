@@ -8,6 +8,7 @@ import { groupTrack } from '../../../data/modules';
 import { ogImage } from '../../../data/og-images';
 import { site } from '../../../data/site';
 import contentDates from '../../../data/content-dates.json';
+import sourceRegistry from '../../../data/sources.json';
 
 export async function getStaticPaths() {
   const lessons = await getCollection('lessons');
@@ -50,6 +51,13 @@ const summaryFor = new Map(allLessons.map((l) => [l.id, l.data.summary ?? '']));
 const fileDates = (contentDates as Record<string, { published?: string; updated?: string }>)[`lessons/${entry.id}`];
 const published = entry.data.published ?? fileDates?.published;
 const modified = entry.data.updated ?? fileDates?.updated;
+
+// Resolve `sources:` ids into titled citations — ids that never resolve are
+// caught by check:content before this page can build.
+type SourceEntry = { title: string; publisher: string; url: string; type: string; status: string };
+const citedSources = (entry.data.sources ?? [])
+  .map((id: string) => ({ id, s: (sourceRegistry as Record<string, SourceEntry>)[id] }))
+  .filter((x) => x.s);
 ---
 <Layout
   title={track ? `${entry.data.title} · ${track.name}` : entry.data.title}
@@ -214,6 +222,20 @@ const modified = entry.data.updated ?? fileDates?.updated;
         </section>
       )}
 
+      {citedSources.length > 0 && (
+        <section class="sources" aria-label="Sources">
+          <div class="eyebrow">Sources</div>
+          <ol>
+            {citedSources.map(({ id, s }) => (
+              <li>
+                <a href={s.url} rel="nofollow noopener" target="_blank">{s.title}</a>
+                <span> — {s.publisher}{s.status !== 'current' ? ` (${s.status})` : ''}</span>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
+
       <ReportError title={entry.data.title} url={`${site.url}/learn/${trackId}/${slug}`} />
 
       {/* Below every interactive element — actions, pager and related links —
@@ -309,6 +331,10 @@ const modified = entry.data.updated ?? fileDates?.updated;
   .related li { display: flex; flex-direction: column; gap: 3px; }
   .related a { font: 500 14px/1.35 'IBM Plex Sans', 'IBM Plex Sans Fallback', sans-serif; }
   .related span { font-size: 12.5px; line-height: 1.5; color: var(--muted); }
+
+  .sources { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--rule); }
+  .sources ol { margin: 12px 0 0; padding-left: 18px; font-size: 12.5px; line-height: 1.7; color: var(--muted); }
+  .sources a { font: 500 13px/1.4 'IBM Plex Sans', 'IBM Plex Sans Fallback', sans-serif; }
 
   .toc ul { list-style: none; padding: 0; margin: 12px 0 0; display: flex; flex-direction: column; gap: 8px; overflow-y: auto; }
   .toc li.sub { padding-left: 12px; }

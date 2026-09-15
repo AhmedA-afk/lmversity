@@ -6,6 +6,7 @@ status: live
 summary: "Build time-respecting retail analyses while handling cancellations, missing customer identifiers, and unstable transaction semantics."
 duration: "10–14 hours"
 updated: "2026-08-30"
+sources: ["uci-online-retail-dataset"]
 ---
 
 ## Project brief

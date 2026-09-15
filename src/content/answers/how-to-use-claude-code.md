@@ -22,6 +22,7 @@ related:
   - /learn/harness-design/hooks-as-extension-points
   - /learn/mcp/what-is-mcp
   - /blog/agents-need-a-harness
+sources: ["anthropic-docs"]
 ---
 
 Claude Code is Anthropic's agentic coding tool, run from a terminal or inside an IDE, that reads your codebase, plans a change, edits files, runs commands and tests, and shows you diffs to approve. Use it well by giving it project context through a CLAUDE.md file, asking it to plan before editing, and reviewing every diff before you commit.

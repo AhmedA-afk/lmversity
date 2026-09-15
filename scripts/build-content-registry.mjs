@@ -396,6 +396,7 @@ for (const file of [...walk(LESSONS, /\.(md|mdx)$/)].sort()) {
     track, module: modName, status: fm.status || 'live',
     summary: fm.summary,
     published: fm.published || dates.published, updated: fm.updated || dates.updated,
+    sources: fm.sources ?? [], reviewStatus: fm.reviewStatus ?? 'live',
     wordCount: a.wordCount, headings: a.headings.filter((h) => h.depth === 2).map((h) => h.text).slice(0, 50),
     internalLinks: a.internalLinks, externalLinks: a.externalLinks,
     structuredData: STRUCTURED_DATA.lessons,
@@ -1227,24 +1228,33 @@ if (sourcingFlags.length) {
 md.push('');
 md.push('## Freshness queues');
 md.push('');
+md.push('Review order: volatile classes first, oldest last-verified date first; undated items lead each queue. `verified`/`updated`/`published` supply the last-verified date — git-derived when frontmatter is absent.');
+md.push('');
 for (const [c, n] of Object.entries(byFresh).sort((a, b) => b[1] - a[1])) md.push(`- ${c}: ${n}`);
 md.push('');
+const staleness = (i) => Date.parse(i.verified ?? i.updated ?? i.published ?? '') || 0;
 for (const cls of ['certification-sensitive', 'pricing-sensitive', 'policy-sensitive']) {
-  const list = items.filter((i) => i.freshnessClass === cls);
+  const list = items.filter((i) => i.freshnessClass === cls)
+    .sort((a, b) => staleness(a) - staleness(b));
   if (!list.length) continue;
-  md.push(`### ${cls} (${list.length})`);
+  md.push(`### ${cls} (${list.length}) — oldest-verified first`);
   md.push('');
-  for (const i of list.slice(0, 30)) md.push(`- ${i.route ?? i.slug} — ${i.title}`);
+  for (const i of list.slice(0, 30)) {
+    const d = i.verified ?? i.updated ?? i.published ?? 'undated';
+    md.push(`- ${i.route ?? i.slug} — ${i.title} *(verified ${d})*`);
+  }
   if (list.length > 30) md.push(`- … ${list.length - 30} more in content-registry.json`);
   md.push('');
 }
-const release = items.filter((i) => i.freshnessClass === 'release-sensitive');
-md.push(`### release-sensitive (${release.length})`);
+const release = items.filter((i) => i.freshnessClass === 'release-sensitive')
+  .sort((a, b) => staleness(a) - staleness(b));
+md.push(`### release-sensitive (${release.length}) — oldest-verified first`);
 md.push('');
-md.push('Largest queue; full list in JSON. Vendor-signal sample:');
+md.push('Largest queue; full list in JSON. Oldest-verified sample:');
 for (const i of release.slice(0, 30)) {
   const v = (i.freshnessSignals.find((s) => s.startsWith('vendor')) ?? '').replace('vendor/tool mentions: ', '');
-  md.push(`- ${i.route ?? i.slug} — ${v || i.title}`);
+  const d = i.verified ?? i.updated ?? i.published ?? 'undated';
+  md.push(`- ${i.route ?? i.slug} — ${v || i.title} *(verified ${d})*`);
 }
 if (release.length > 30) md.push(`- … ${release.length - 30} more`);
 md.push('');

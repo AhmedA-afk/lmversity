@@ -22,12 +22,46 @@ const ROOT = new URL('..', import.meta.url).pathname;
 const LESSONS_DIR = join(ROOT, 'src/content/lessons');
 const CURRICULUM = join(ROOT, 'src/data/curriculum.ts');
 
+const problems = [];
+
 const KNOWN_FRONTMATTER_KEYS = new Set([
   'title', 'track', 'order', 'status', 'summary', 'duration', 'updated', 'published',
+  'sources', 'reviewStatus',
   // legacy keys present on some older .md files; harmless but tracked so new
   // unknown keys still fail loudly
   'tags', 'draft',
 ]);
+
+// --- source registry --------------------------------------------------------
+// src/data/sources.json is the single source of truth for external citations;
+// lessons reference entries by id in `sources:` frontmatter.
+const SOURCES_FILE = join(ROOT, 'src/data/sources.json');
+const SOURCE_TYPES = new Set([
+  'official-docs', 'spec', 'model-card', 'system-card', 'paper',
+  'certification-guide', 'repo', 'changelog', 'independent', 'article',
+  'dataset',
+]);
+const SOURCE_STATUS = new Set(['current', 'superseded', 'dead']);
+const sourceRegistry = new Map();
+if (existsSync(SOURCES_FILE)) {
+  const raw = JSON.parse(readFileSync(SOURCES_FILE, 'utf8'));
+  for (const [id, s] of Object.entries(raw)) {
+    if (id.startsWith('$')) continue; // $schema comment key
+    sourceRegistry.set(id, s);
+    const miss = ['title', 'publisher', 'url', 'type', 'status', 'accessedAt']
+      .filter((k) => !s[k]);
+    if (miss.length) problems.push(`sources.json "${id}": missing ${miss.join(', ')}`);
+    if (s.type && !SOURCE_TYPES.has(s.type)) problems.push(`sources.json "${id}": unknown type "${s.type}"`);
+    if (s.status && !SOURCE_STATUS.has(s.status)) problems.push(`sources.json "${id}": unknown status "${s.status}"`);
+    if (s.url && !/^https:\/\//.test(s.url)) problems.push(`sources.json "${id}": url must be https`);
+  }
+}
+
+// editorial pipeline stages — `status` is nav visibility, `reviewStatus` is the
+// editorial record; a live page must have passed review, a coming page must not
+// claim it has
+const PRE_LIVE_STAGES = new Set(['proposed', 'researched', 'drafted', 'technically-reviewed', 'copy-reviewed', 'browser-verified']);
+const REVIEW_STAGES = new Set([...PRE_LIVE_STAGES, 'live', 'refresh-due', 'retired']);
 
 function* walk(dir) {
   for (const name of readdirSync(dir)) {
@@ -41,11 +75,27 @@ function parseFrontmatter(src) {
   const m = src.match(/^---\n([\s\S]*?)\n---\n?/);
   if (!m) return { fm: {}, body: src, raw: '' };
   const fm = {};
+  let lastKey = null;
   for (const line of m[1].split('\n')) {
     const kv = line.match(/^([A-Za-z_][\w-]*)\s*:\s*(.*)$/);
-    if (kv) fm[kv[1]] = kv[2].replace(/^["']|["']$/g, '');
+    if (kv) {
+      lastKey = kv[1];
+      fm[lastKey] = kv[2].replace(/^["']|["']$/g, '');
+    } else if (lastKey && /^\s*-\s*/.test(line)) {
+      // YAML block list: `key:` followed by `  - item` lines
+      const item = line.replace(/^\s*-\s*/, '').replace(/^["']|["']$/g, '');
+      const prev = fm[lastKey];
+      fm[lastKey] = prev === '' ? item : `${prev},${item}`;
+    }
   }
   return { fm, body: src.slice(m[0].length), raw: m[1] };
+}
+
+// `sources` may be inline `["a", "b"]` or a block list (normalized to
+// comma-joined by parseFrontmatter); return clean id array either way
+function fmList(v) {
+  if (!v) return [];
+  return v.replace(/^\[|\]$/g, '').split(',').map((s) => s.trim().replace(/^["']|["']$/g, '')).filter(Boolean);
 }
 
 function bodyH1s(body) {
@@ -83,7 +133,6 @@ for (const { id, from, to } of trackSpans) {
   trackOrder.set(id, order);
 }
 
-const problems = [];
 const seenNodes = new Set(); // "track/slug" covered by a real file
 
 for (const file of walk(LESSONS_DIR)) {
@@ -129,6 +178,26 @@ for (const file of walk(LESSONS_DIR)) {
   else if (fm.status !== 'coming') {
     problems.push(`${rel}: file has no curriculum node — it builds a route but is invisible in nav (rule 14)`);
   }
+
+  // `sources:` ids must resolve to registry entries — a dangling id is a
+  // citation to nothing; the required-source side (which classes must cite)
+  // is the sourcingFlags queue in the registry until backfill lands
+  for (const sid of fmList(fm.sources)) {
+    if (!sourceRegistry.has(sid)) problems.push(`${rel}: sources[] id "${sid}" is not in src/data/sources.json`);
+  }
+
+  // editorial workflow: nav status and reviewStatus must agree
+  if (fm.reviewStatus !== undefined && !REVIEW_STAGES.has(fm.reviewStatus)) {
+    problems.push(`${rel}: unknown reviewStatus "${fm.reviewStatus}"`);
+  }
+  const stage = fm.reviewStatus ?? 'live';
+  const nav = fm.status ?? 'live';
+  if (nav === 'live' && PRE_LIVE_STAGES.has(stage)) {
+    problems.push(`${rel}: status is live but reviewStatus is "${stage}" — a live page must have passed review`);
+  }
+  if (nav === 'coming' && (stage === 'live' || stage === 'retired')) {
+    problems.push(`${rel}: status is coming but reviewStatus is "${stage}"`);
+  }
 }
 
 // live curriculum nodes that resolve to no file → dead nav links
@@ -167,6 +236,20 @@ if (existsSync(ANSWERS_DIR)) {
     const rel = relative(ANSWERS_DIR, file);
     if (intentSeen.has(norm)) problems.push(`answers: "${fm.title}" duplicates the normalized intent of ${intentSeen.get(norm)}`);
     else intentSeen.set(norm, rel);
+  }
+}
+
+// source-ref validation for the other collections that can declare `sources:`
+for (const dirName of ['questions', 'scenarios', 'answers', 'guides', 'blog']) {
+  const dir = join(ROOT, 'src/content', dirName);
+  if (!existsSync(dir)) continue;
+  for (const file of walk(dir)) {
+    const { fm } = parseFrontmatter(readFileSync(file, 'utf8'));
+    for (const sid of fmList(fm.sources)) {
+      if (!sourceRegistry.has(sid)) {
+        problems.push(`${dirName}/${relative(dir, file)}: sources[] id "${sid}" is not in src/data/sources.json`);
+      }
+    }
   }
 }
 

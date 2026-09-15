@@ -1,0 +1,673 @@
+{
+  "$schema": "Source registry — every external source a page may cite by id.\nFields: title, publisher, author?, publishedAt?, accessedAt, url,\ntype (official-docs|spec|model-card|system-card|paper|certification-guide|\nrepo|changelog|independent|article), claims (what the source supports),\nstatus (current|superseded|dead). Lessons cite ids via `sources:` frontmatter.",
+
+  "google-people-first-content": {
+    "title": "Creating helpful, reliable, people-first content",
+    "publisher": "Google Search Central",
+    "accessedAt": "2026-09-15",
+    "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+    "type": "official-docs",
+    "claims": ["People-first content guidance", "E-E-A-T framing"],
+    "status": "current"
+  },
+  "google-spam-policies": {
+    "title": "Spam policies for Google Web Search",
+    "publisher": "Google Search Central",
+    "accessedAt": "2026-09-15",
+    "url": "https://developers.google.com/search/docs/essentials/spam-policies",
+    "type": "official-docs",
+    "claims": ["Scaled-content and programmatic-SEO rules"],
+    "status": "current"
+  },
+  "google-ai-features-search": {
+    "title": "AI features and your website",
+    "publisher": "Google Search Central",
+    "accessedAt": "2026-09-15",
+    "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+    "type": "official-docs",
+    "claims": ["AI search feature behavior for publishers"],
+    "status": "current"
+  },
+  "google-search-console-start": {
+    "title": "Get started with Search Console",
+    "publisher": "Google Search Central",
+    "accessedAt": "2026-09-15",
+    "url": "https://developers.google.com/search/docs/monitor-debug/search-console-start",
+    "type": "official-docs",
+    "claims": ["Search Console setup and monitoring"],
+    "status": "current"
+  },
+  "google-course-structured-data": {
+    "title": "Course structured data",
+    "publisher": "Google Search Central",
+    "accessedAt": "2026-09-15",
+    "url": "https://developers.google.com/search/docs/appearance/structured-data/course",
+    "type": "official-docs",
+    "claims": ["Course structured-data requirements"],
+    "status": "current"
+  },
+  "agentskills-spec": {
+    "title": "Agent Skills overview and specification",
+    "publisher": "Agent Skills",
+    "accessedAt": "2026-09-15",
+    "url": "https://agentskills.io/home",
+    "type": "spec",
+    "claims": ["Agent Skills format and SKILL.md specification"],
+    "status": "current"
+  },
+  "github-agent-skills-docs": {
+    "title": "About Agent Skills",
+    "publisher": "GitHub Docs",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.github.com/en/copilot/concepts/agents/about-agent-skills",
+    "type": "official-docs",
+    "claims": ["GitHub Copilot Agent Skills behavior"],
+    "status": "current"
+  },
+  "openai-academy-skills": {
+    "title": "Using skills",
+    "publisher": "OpenAI Academy",
+    "accessedAt": "2026-09-15",
+    "url": "https://openai.com/academy/skills/",
+    "type": "official-docs",
+    "claims": ["OpenAI skills feature scope"],
+    "status": "current"
+  },
+  "anthropic-skills-docs": {
+    "title": "Agent Skills documentation",
+    "publisher": "Anthropic",
+    "accessedAt": "2026-09-15",
+    "url": "https://platform.claude.com/docs/en/managed-agents/skills",
+    "type": "official-docs",
+    "claims": ["Anthropic Agent Skills behavior"],
+    "status": "current"
+  },
+  "openai-codex-docs": {
+    "title": "Codex and developer documentation",
+    "publisher": "OpenAI",
+    "accessedAt": "2026-09-15",
+    "url": "https://developers.openai.com/",
+    "type": "official-docs",
+    "claims": ["Codex product scope", "OpenAI developer platform"],
+    "status": "current"
+  },
+  "anthropic-claude-code-docs": {
+    "title": "Claude Code quickstart and how it works",
+    "publisher": "Anthropic",
+    "accessedAt": "2026-09-15",
+    "url": "https://code.claude.com/docs/en/quickstart",
+    "type": "official-docs",
+    "claims": ["Claude Code capabilities and usage"],
+    "status": "current"
+  },
+  "google-gemini-docs": {
+    "title": "Gemini API documentation",
+    "publisher": "Google",
+    "accessedAt": "2026-09-15",
+    "url": "https://ai.google.dev/",
+    "type": "official-docs",
+    "claims": ["Gemini API surface", "Gemini CLI"],
+    "status": "current"
+  },
+  "meta-llama-resources": {
+    "title": "Llama developer resources",
+    "publisher": "Meta",
+    "accessedAt": "2026-09-15",
+    "url": "https://ai.meta.com/llama/get-started/",
+    "type": "official-docs",
+    "claims": ["Llama model family and access"],
+    "status": "current"
+  },
+  "cognition-devin-kb": {
+    "title": "Devin Knowledge Base",
+    "publisher": "Cognition",
+    "accessedAt": "2026-09-15",
+    "url": "https://knowledge.cognition.ai/",
+    "type": "official-docs",
+    "claims": ["Devin product capabilities"],
+    "status": "current"
+  },
+  "xai-grok-docs": {
+    "title": "Grok model documentation",
+    "publisher": "xAI",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.x.ai/developers/models",
+    "type": "official-docs",
+    "claims": ["Grok model lineup and API"],
+    "status": "current"
+  },
+  "mistral-model-docs": {
+    "title": "Mistral model documentation",
+    "publisher": "Mistral AI",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.mistral.ai/models",
+    "type": "official-docs",
+    "claims": ["Mistral model lineup and API"],
+    "status": "current"
+  },
+  "deepseek-api-docs": {
+    "title": "DeepSeek API platform",
+    "publisher": "DeepSeek",
+    "accessedAt": "2026-09-15",
+    "url": "https://www.deepseek.com/platform/",
+    "type": "official-docs",
+    "claims": ["DeepSeek models and API"],
+    "status": "current"
+  },
+  "sarvam-api-docs": {
+    "title": "Sarvam AI API documentation",
+    "publisher": "Sarvam AI",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.sarvam.ai/",
+    "type": "official-docs",
+    "claims": ["Sarvam models for Indian languages"],
+    "status": "current"
+  },
+  "google-gemma-docs": {
+    "title": "Gemma documentation",
+    "publisher": "Google",
+    "accessedAt": "2026-09-15",
+    "url": "https://ai.google.dev/gemma/docs/get_started",
+    "type": "official-docs",
+    "claims": ["Gemma open model family"],
+    "status": "current"
+  },
+  "cohere-model-docs": {
+    "title": "Cohere model documentation",
+    "publisher": "Cohere",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.cohere.com/docs/models",
+    "type": "official-docs",
+    "claims": ["Cohere model lineup and API"],
+    "status": "current"
+  },
+  "huggingface-inference-endpoints": {
+    "title": "Inference Endpoints documentation",
+    "publisher": "Hugging Face",
+    "accessedAt": "2026-09-15",
+    "url": "https://huggingface.co/docs/inference-endpoints/index",
+    "type": "official-docs",
+    "claims": ["Hosted inference endpoint behavior"],
+    "status": "current"
+  },
+  "ollama-docs": {
+    "title": "Ollama tool-calling and embedding API docs",
+    "publisher": "Ollama",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.ollama.com/capabilities/tool-calling",
+    "type": "official-docs",
+    "claims": ["Local model tool calling", "Ollama embedding API"],
+    "status": "current"
+  },
+  "langchain-langgraph-docs": {
+    "title": "LangGraph overview",
+    "publisher": "LangChain",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+    "type": "official-docs",
+    "claims": ["LangGraph agent orchestration model"],
+    "status": "current"
+  },
+  "agno-docs": {
+    "title": "Agno agents and workflows overview",
+    "publisher": "Agno",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.agno.com/agents/overview",
+    "type": "official-docs",
+    "claims": ["Agno agent framework behavior"],
+    "status": "current"
+  },
+  "langfuse-docs": {
+    "title": "Langfuse platform and evaluation concepts",
+    "publisher": "Langfuse",
+    "accessedAt": "2026-09-15",
+    "url": "https://langfuse.com/docs",
+    "type": "official-docs",
+    "claims": ["LLM observability and evaluation concepts"],
+    "status": "current"
+  },
+  "aider-docs": {
+    "title": "Aider official documentation",
+    "publisher": "Aider",
+    "accessedAt": "2026-09-15",
+    "url": "https://aider.chat/docs/",
+    "type": "official-docs",
+    "claims": ["Aider coding-assistant behavior"],
+    "status": "current"
+  },
+  "stagehand-docs": {
+    "title": "Stagehand documentation",
+    "publisher": "Browserbase",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.stagehand.dev/v3/references/stagehand",
+    "type": "official-docs",
+    "claims": ["Stagehand browser-agent API"],
+    "status": "current"
+  },
+  "browserbase-docs": {
+    "title": "Browserbase browser-agent documentation",
+    "publisher": "Browserbase",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.browserbase.com/use-cases/agents",
+    "type": "official-docs",
+    "claims": ["Hosted browser-agent infrastructure"],
+    "status": "current"
+  },
+  "aws-certification-directory": {
+    "title": "AI and machine-learning certifications",
+    "publisher": "AWS",
+    "accessedAt": "2026-09-15",
+    "url": "https://aws.amazon.com/certification/",
+    "type": "certification-guide",
+    "claims": ["AWS certification lineup"],
+    "status": "current"
+  },
+  "microsoft-credential-directory": {
+    "title": "Microsoft credential directory",
+    "publisher": "Microsoft Learn",
+    "accessedAt": "2026-09-15",
+    "url": "https://learn.microsoft.com/en-us/credentials/browse/?credential_types=certification",
+    "type": "certification-guide",
+    "claims": ["Microsoft certification lineup"],
+    "status": "current"
+  },
+  "google-cloud-certifications": {
+    "title": "Google Cloud certification directory",
+    "publisher": "Google Cloud",
+    "accessedAt": "2026-09-15",
+    "url": "https://cloud.google.com/learn/certification",
+    "type": "certification-guide",
+    "claims": ["Google Cloud certification lineup"],
+    "status": "current"
+  },
+  "nvidia-certifications": {
+    "title": "NVIDIA certification directory",
+    "publisher": "NVIDIA",
+    "accessedAt": "2026-09-15",
+    "url": "https://www.nvidia.com/en-us/learn/certification/",
+    "type": "certification-guide",
+    "claims": ["NVIDIA certification lineup"],
+    "status": "current"
+  },
+
+  "sklearn-groupshufflesplit-docs": {
+    "title": "GroupShuffleSplit API reference",
+    "publisher": "scikit-learn",
+    "accessedAt": "2026-09-15",
+    "url": "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupShuffleSplit.html",
+    "type": "official-docs",
+    "claims": ["GroupShuffleSplit semantics for group-aware splits"],
+    "status": "current"
+  },
+  "lmarena-leaderboard": {
+    "title": "LMArena leaderboard",
+    "publisher": "LMArena",
+    "accessedAt": "2026-09-15",
+    "url": "https://lmarena.ai",
+    "type": "independent",
+    "claims": ["Crowd-sourced pairwise model comparisons"],
+    "status": "current"
+  },
+  "vllm-repo": {
+    "title": "vLLM inference engine repository",
+    "publisher": "vLLM project",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/vllm-project/vllm",
+    "type": "repo",
+    "claims": ["vLLM serving architecture and features"],
+    "status": "current"
+  },
+  "mergekit-repo": {
+    "title": "mergekit repository",
+    "publisher": "arcee-ai",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/arcee-ai/mergekit",
+    "type": "repo",
+    "claims": ["Model-merging methods SLERP/TIES/DARE"],
+    "status": "current"
+  },
+  "uci-adult-dataset": {
+    "title": "Adult dataset",
+    "publisher": "UCI Machine Learning Repository",
+    "accessedAt": "2026-09-15",
+    "url": "https://archive.ics.uci.edu/dataset/2/adult",
+    "type": "dataset",
+    "claims": ["Adult census income dataset provenance and schema"],
+    "status": "current"
+  },
+  "uci-bank-marketing-dataset": {
+    "title": "Bank Marketing dataset",
+    "publisher": "UCI Machine Learning Repository",
+    "accessedAt": "2026-09-15",
+    "url": "https://archive.ics.uci.edu/dataset/222/bank%2Bmarketing",
+    "type": "dataset",
+    "claims": ["Bank marketing campaign dataset provenance"],
+    "status": "current"
+  },
+  "uci-bike-sharing-dataset": {
+    "title": "Bike Sharing dataset",
+    "publisher": "UCI Machine Learning Repository",
+    "accessedAt": "2026-09-15",
+    "url": "https://archive.ics.uci.edu/dataset/275/bike%2Bsharing%2Bdataset",
+    "type": "dataset",
+    "claims": ["Bike sharing demand dataset provenance"],
+    "status": "current"
+  },
+  "uci-online-retail-dataset": {
+    "title": "Online Retail dataset",
+    "publisher": "UCI Machine Learning Repository",
+    "accessedAt": "2026-09-15",
+    "url": "https://archive.ics.uci.edu/dataset/502/online%2Bretail",
+    "type": "dataset",
+    "claims": ["Online retail transactions dataset provenance"],
+    "status": "current"
+  },
+  "grouplens-movielens-25m": {
+    "title": "MovieLens 25M dataset",
+    "publisher": "GroupLens",
+    "accessedAt": "2026-09-15",
+    "url": "https://grouplens.org/datasets/movielens/25m/",
+    "type": "dataset",
+    "claims": ["MovieLens ratings dataset provenance"],
+    "status": "current"
+  },
+  "uci-aps-failure-dataset": {
+    "title": "APS Failure at Scania Trucks dataset",
+    "publisher": "UCI Machine Learning Repository",
+    "accessedAt": "2026-09-15",
+    "url": "https://archive.ics.uci.edu/dataset/421/aps%2Bfailure%2Bat%2Bscania%2Btrucks",
+    "type": "dataset",
+    "claims": ["APS failure dataset provenance and cost asymmetry"],
+    "status": "current"
+  },
+  "uci-auto-mpg-dataset": {
+    "title": "Auto MPG dataset",
+    "publisher": "UCI Machine Learning Repository",
+    "accessedAt": "2026-09-15",
+    "url": "https://archive.ics.uci.edu/dataset/9/auto+mpg",
+    "type": "dataset",
+    "claims": ["Auto MPG dataset provenance"],
+    "status": "current"
+  },
+  "gallica-statlog-source": {
+    "title": "Gallica scan of original source material",
+    "publisher": "BnF Gallica",
+    "accessedAt": "2026-09-15",
+    "url": "https://gallica.bnf.fr/ark:/12148/bpt6k965753",
+    "type": "paper",
+    "claims": ["Historical source for early regression work"],
+    "status": "current"
+  },
+  "uci-breast-cancer-dataset": {
+    "title": "Breast Cancer Wisconsin (Diagnostic) dataset",
+    "publisher": "UCI Machine Learning Repository",
+    "accessedAt": "2026-09-15",
+    "url": "https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic",
+    "type": "dataset",
+    "claims": ["Breast cancer diagnostic dataset provenance"],
+    "status": "current"
+  },
+  "freund-schapire-adaboost-paper": {
+    "title": "A decision-theoretic generalization of on-line learning (AdaBoost)",
+    "publisher": "ScienceDirect",
+    "author": "Freund & Schapire",
+    "accessedAt": "2026-09-15",
+    "url": "https://www.sciencedirect.com/science/article/pii/S002200009791504X",
+    "type": "paper",
+    "claims": ["Original AdaBoost algorithm and weight updates"],
+    "status": "current"
+  },
+  "uci-covertype-dataset": {
+    "title": "Covertype dataset",
+    "publisher": "UCI Machine Learning Repository",
+    "accessedAt": "2026-09-15",
+    "url": "https://archive.ics.uci.edu/dataset/31/covertype",
+    "type": "dataset",
+    "claims": ["Covertype dataset provenance"],
+    "status": "current"
+  },
+  "breiman-random-forests-paper": {
+    "title": "Random Forests",
+    "publisher": "UC Berkeley Statistics",
+    "author": "Leo Breiman",
+    "accessedAt": "2026-09-15",
+    "url": "https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf",
+    "type": "paper",
+    "claims": ["Random forest algorithm and OOB error"],
+    "status": "current"
+  },
+  "uci-har-dataset": {
+    "title": "Human Activity Recognition dataset",
+    "publisher": "UCI Machine Learning Repository",
+    "accessedAt": "2026-09-15",
+    "url": "https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones",
+    "type": "dataset",
+    "claims": ["HAR smartphone dataset provenance"],
+    "status": "current"
+  },
+  "cortes-vapnik-svm-paper": {
+    "title": "Support-Vector Networks",
+    "publisher": "Springer (Machine Learning)",
+    "author": "Cortes & Vapnik",
+    "publishedAt": "1995",
+    "accessedAt": "2026-09-15",
+    "url": "https://doi.org/10.1007/BF00994018",
+    "type": "paper",
+    "claims": ["Original SVM formulation and kernel choice"],
+    "status": "current"
+  },
+  "cortes95-svm-pdf": {
+    "title": "Support-Vector Networks (author-hosted PDF)",
+    "publisher": "UIC Math",
+    "author": "Cortes & Vapnik",
+    "publishedAt": "1995",
+    "accessedAt": "2026-09-15",
+    "url": "https://homepages.math.uic.edu/~lreyzin/papers/cortes95.pdf",
+    "type": "paper",
+    "claims": ["SVM formulation — accessible mirror"],
+    "status": "current"
+  },
+  "turk-pentland-eigenfaces-paper": {
+    "title": "Eigenfaces for Recognition",
+    "publisher": "MIT Press Journals",
+    "author": "Turk & Pentland",
+    "publishedAt": "1991",
+    "accessedAt": "2026-09-15",
+    "url": "https://direct.mit.edu/jocn/article/3/1/71/3025/Eigenfaces-for-Recognition",
+    "type": "paper",
+    "claims": ["PCA/eigenfaces method"],
+    "status": "current"
+  },
+  "sklearn-olivetti-dataset": {
+    "title": "Olivetti faces dataset (real-world datasets docs)",
+    "publisher": "scikit-learn",
+    "accessedAt": "2026-09-15",
+    "url": "https://scikit-learn.org/stable/datasets/real_world.html#olivetti-faces-dataset",
+    "type": "official-docs",
+    "claims": ["Olivetti faces dataset provenance"],
+    "status": "current"
+  },
+  "att-faces-database": {
+    "title": "AT&T Face Database",
+    "publisher": "Cambridge DTG",
+    "accessedAt": "2026-09-15",
+    "url": "https://www.cl.cam.ac.uk/research/dtg/attarchive/facedatabase.html",
+    "type": "dataset",
+    "claims": ["Original faces dataset provenance"],
+    "status": "current"
+  },
+  "mcp-inspector-repo": {
+    "title": "MCP Inspector repository",
+    "publisher": "Model Context Protocol",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/modelcontextprotocol/inspector",
+    "type": "repo",
+    "claims": ["MCP server inspection tool"],
+    "status": "current"
+  },
+  "mcp-registry": {
+    "title": "MCP Registry",
+    "publisher": "Model Context Protocol",
+    "accessedAt": "2026-09-15",
+    "url": "https://registry.modelcontextprotocol.io",
+    "type": "official-docs",
+    "claims": ["Official MCP server registry"],
+    "status": "current"
+  },
+  "mcp-specification": {
+    "title": "MCP specification 2025-06-18",
+    "publisher": "Model Context Protocol",
+    "accessedAt": "2026-09-15",
+    "url": "https://modelcontextprotocol.io/specification/2025-06-18/",
+    "type": "spec",
+    "claims": ["MCP protocol specification"],
+    "status": "current"
+  },
+  "mcp-spec-server-tools": {
+    "title": "MCP specification — server tools",
+    "publisher": "Model Context Protocol",
+    "accessedAt": "2026-09-15",
+    "url": "https://modelcontextprotocol.io/specification/2025-06-18/server/tools",
+    "type": "spec",
+    "claims": ["MCP tools/list and tool-call protocol"],
+    "status": "current"
+  },
+  "litellm-repo": {
+    "title": "LiteLLM repository",
+    "publisher": "BerriAI",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/BerriAI/litellm",
+    "type": "repo",
+    "claims": ["LiteLLM gateway/provider-abstraction behavior"],
+    "status": "current"
+  },
+  "portkey-docs": {
+    "title": "Portkey AI gateway",
+    "publisher": "Portkey",
+    "accessedAt": "2026-09-15",
+    "url": "https://portkey.ai/",
+    "type": "official-docs",
+    "claims": ["Portkey gateway capabilities"],
+    "status": "current"
+  },
+  "httpbin-docs": {
+    "title": "httpbin service",
+    "publisher": "httpbin.org",
+    "accessedAt": "2026-09-15",
+    "url": "https://httpbin.org",
+    "type": "official-docs",
+    "claims": ["HTTP request-echo test service"],
+    "status": "current"
+  },
+  "open-meteo-docs": {
+    "title": "Open-Meteo API",
+    "publisher": "Open-Meteo",
+    "accessedAt": "2026-09-15",
+    "url": "https://open-meteo.com",
+    "type": "official-docs",
+    "claims": ["Free weather API used in examples"],
+    "status": "current"
+  },
+  "hnswlib-repo": {
+    "title": "hnswlib repository",
+    "publisher": "nmslib",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/nmslib/hnswlib",
+    "type": "repo",
+    "claims": ["HNSW approximate nearest-neighbor index"],
+    "status": "current"
+  },
+  "nist-ai-rmf": {
+    "title": "NIST AI Risk Management Framework",
+    "publisher": "NIST",
+    "accessedAt": "2026-09-15",
+    "url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
+    "type": "official-docs",
+    "claims": ["AI risk-management framework core"],
+    "status": "current"
+  },
+  "anthropic-docs": {
+    "title": "Anthropic documentation",
+    "publisher": "Anthropic",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.anthropic.com",
+    "type": "official-docs",
+    "claims": ["Anthropic API and tool-use documentation"],
+    "status": "current"
+  },
+  "openai-platform-docs": {
+    "title": "OpenAI platform documentation",
+    "publisher": "OpenAI",
+    "accessedAt": "2026-09-15",
+    "url": "https://platform.openai.com",
+    "type": "official-docs",
+    "claims": ["OpenAI API surface and structured outputs"],
+    "status": "current"
+  },
+  "owasp-llm-top10": {
+    "title": "OWASP Top 10 for LLM Applications",
+    "publisher": "OWASP",
+    "accessedAt": "2026-09-15",
+    "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
+    "type": "independent",
+    "claims": ["LLM application risk taxonomy incl. prompt injection"],
+    "status": "current"
+  },
+  "attention-is-all-you-need": {
+    "title": "Attention Is All You Need",
+    "publisher": "arXiv",
+    "author": "Vaswani et al.",
+    "publishedAt": "2017",
+    "accessedAt": "2026-09-15",
+    "url": "https://arxiv.org/abs/1706.03762",
+    "type": "paper",
+    "claims": ["Transformer architecture"],
+    "status": "current"
+  },
+  "llamacpp-grammars": {
+    "title": "llama.cpp grammars README",
+    "publisher": "ggml-org",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/ggml-org/llama.cpp/blob/master/grammars/README.md",
+    "type": "repo",
+    "claims": ["GBNF grammar-constrained decoding in llama.cpp"],
+    "status": "current"
+  },
+  "outlines-repo": {
+    "title": "Outlines repository",
+    "publisher": "dottxt-ai",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/dottxt-ai/outlines",
+    "type": "repo",
+    "claims": ["Structured generation library"],
+    "status": "current"
+  },
+  "rfc8259-json": {
+    "title": "RFC 8259 — The JavaScript Object Notation (JSON) Data Interchange Format",
+    "publisher": "IETF",
+    "publishedAt": "2017-12",
+    "accessedAt": "2026-09-15",
+    "url": "https://www.rfc-editor.org/rfc/rfc8259",
+    "type": "spec",
+    "claims": ["JSON format specification"],
+    "status": "current"
+  },
+  "wikipedia-ebnf": {
+    "title": "Extended Backus–Naur form",
+    "publisher": "Wikipedia",
+    "accessedAt": "2026-09-15",
+    "url": "https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form",
+    "type": "article",
+    "claims": ["EBNF grammar notation reference"],
+    "status": "current"
+  },
+  "openai-codex-repo": {
+    "title": "OpenAI Codex repository",
+    "publisher": "OpenAI",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/openai/codex",
+    "type": "repo",
+    "claims": ["Codex CLI source and behavior"],
+    "status": "current"
+  }
+}

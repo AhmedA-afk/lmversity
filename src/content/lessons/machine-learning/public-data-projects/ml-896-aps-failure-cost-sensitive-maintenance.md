@@ -6,6 +6,7 @@ status: live
 summary: "Build a cost-sensitive failure-triage study without confusing a benchmark label with a maintenance decision."
 duration: "10–14 hours"
 updated: "2026-08-30"
+sources: ["uci-aps-failure-dataset"]
 ---
 
 ## Project brief

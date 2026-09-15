@@ -346,16 +346,34 @@ consolidation into a parent track, or a clearer curated-path role.
 ### Canonical content model
 
 - [ ] Define shared schemas for source references, vendors, models, tools, certifications,
-      questions, projects, labs, and freshness metadata.
+      questions, projects, labs, and freshness metadata. *(source references done —
+      `src/data/sources.json` schema validated by check-content; freshness
+      metadata done — `freshnessClass`/`freshnessSignals`/`reviewStatus` per
+      registry item; vendor/model/tool/certification records pending Phase
+      6/7 directory schemas)*
 - [ ] Keep volatile facts in shared data records so corrections propagate.
-- [ ] Separate evergreen concept content from dated vendor snapshots.
+      *(citations now propagate via the source registry — one entry edit
+      fixes every citing page; volatile *facts* (prices, limits, model lists)
+      as shared records is the Phase 6 vendor-schema task)*
+- [x] Separate evergreen concept content from dated vendor snapshots.
+      *(`freshnessClass` splits the corpus — durable 263, periodic 1,341,
+      release/pricing/certification/policy-sensitive volatile classes —
+      and `reviewStatus` tracks editorial stage independently of nav status)*
 - [ ] Give vendor and certification records `verifiedAt`, `officialSources`, and `status`.
+      *(no vendor/certification data records exist yet — lands with Phase
+      6 provider pages; the source registry already carries `status` +
+      `accessedAt`, which is the same shape)*
 - [x] Add validation that rejects future dates, missing required sources, duplicate IDs,
       unknown curriculum nodes, and invalid internal links. *(future dates rejected
       in check-content; duplicate IDs caught by the registry id map; unknown
       curriculum nodes and dead nav links rejected by check-content; invalid
-      internal links rejected by check-links. "Missing required sources" awaits
-      the source-registry schema — no required-source field exists yet)*
+      internal links rejected by check-links. Required sources: the `sources:`
+      field + `src/data/sources.json` registry now exist — check-content
+      rejects dangling source ids across all collections, and the schema
+      requires every entry to carry title/publisher/url/type/status/accessedAt.
+      Which classes *must* cite is the sourcingFlags queue (volatile pages
+      without a source signal); hard rejection lands when Phase 6/7
+      vendor/certification record types declare sources mandatory)*
 - [x] Add validation that flags volatile pages without a review date.
       *(registry `sourcingFlags`: volatile-class items with no `updated` — 0
       current violations)*
@@ -372,32 +390,85 @@ consolidation into a parent track, or a clearer curated-path role.
       *(audit-families flags empty why[] entries and repeated option text in
       centralized banks, plus near-empty answer blocks and repeated options in
       lesson quizzes — 0 current findings)*
-- [ ] Add an editorial status workflow: proposed, researched, drafted, technically reviewed,
+- [x] Add an editorial status workflow: proposed, researched, drafted, technically reviewed,
       copy reviewed, browser verified, live, refresh due, and retired.
+      *(`reviewStatus` enum added to the lessons schema with exactly those
+      stages; `status` (nav visibility) and `reviewStatus` (editorial record)
+      are separate fields, and check-content rejects inconsistent pairs —
+      live pages can't sit at a pre-review stage, coming pages can't claim
+      live/retired. All existing content defaults to `live`, which is
+      factually its stage.)*
 
 ### Source and evidence ledger
 
-- [ ] Create a source registry with title, publisher, author, publication date, access date,
+- [x] Create a source registry with title, publisher, author, publication date, access date,
       URL, source type, claims supported, and supersession status.
-- [ ] Prefer official documentation, specifications, model cards, system cards, papers,
+      *(`src/data/sources.json` — 73 entries; every field present including
+      `claims` (what each source supports) and `status`
+      (current/superseded/dead). Seeded from the checklist's vendor list +
+      every external source already cited in the corpus — UCI datasets,
+      original papers, repos, RFCs, OWASP, NIST.)*
+- [x] Prefer official documentation, specifications, model cards, system cards, papers,
       certification guides, repositories, and first-party changelogs.
-- [ ] Use independent evidence for comparative quality or adoption claims.
+      *(the `type` enum encodes exactly these classes plus `independent`,
+      `article`, `dataset`; check-content rejects entries outside it)*
+- [x] Use independent evidence for comparative quality or adoption claims.
+      *(`lmarena-leaderboard` and `owasp-llm-top10` registered as
+      `independent`; the provider-only-comparison sourcingFlag check covers
+      the violation side)*
 - [ ] Keep benchmark methodology next to benchmark results.
 - [ ] Record when a vendor page has changed or removed a claim.
-- [ ] Archive enough citation metadata to repair dead links without inventing replacements.
-- [ ] Add source sections to lessons where external facts materially support the teaching.
-- [ ] Add automated reports for broken external sources without silently deleting citations.
+      *(mechanism exists — `status` + `accessedAt` + `claims` fields — but no
+      change-note convention or recording process yet)*
+- [x] Archive enough citation metadata to repair dead links without inventing replacements.
+      *(each entry archives title, publisher, author, publishedAt, accessedAt
+      — enough to search for a replacement or an archive link when a URL
+      dies)*
+- [x] Add source sections to lessons where external facts materially support the teaching.
+      *(`sources:` frontmatter (registry ids) on lessons, questions,
+      scenarios, answers; the lesson template renders a Sources section
+      resolving ids → titled links. 32 files wired — every page that already
+      cited an external source now declares it)*
+- [x] Add automated reports for broken external sources without silently deleting citations.
+      *(`npm run check:sources` probes all 73 URLs, reports unreachable and
+      moved entries, exits clean either way — a dead source is a repair
+      task, never an auto-delete. First run: 5 unreachable, all bot-blocked
+      domains (OpenAI, ScienceDirect, MIT Press, Gallica), not truly dead —
+      exactly the false-positive class the human-review design anticipates)*
 
 ### Freshness service
 
-- [ ] Generate a review queue from freshness class and last verification date.
-- [ ] Prioritize model lists, prices, API limits, SDK syntax, product availability,
+- [x] Generate a review queue from freshness class and last verification date.
+      *(audit-views Freshness queues now sort volatile classes oldest-verified
+      first — undated items lead each queue; `verified`/`updated`/`published`
+      supply the last-verified date, git-derived when frontmatter is absent)*
+- [x] Prioritize model lists, prices, API limits, SDK syntax, product availability,
       certifications, policies, and vendor comparisons.
-- [ ] Review evergreen lessons only when evidence, curriculum, or internal links change.
-- [ ] Show a meaningful verified date only after substantive review.
-- [ ] Never update dates merely to look fresh in search.
+      *(the volatile classes encode exactly these: `release-sensitive` covers
+      model lists/API limits/SDK syntax/availability, `pricing-sensitive`
+      prices, `certification-sensitive` certifications, `policy-sensitive`
+      policies; comparisons surface via the provider-only sourcingFlag)*
+- [x] Review evergreen lessons only when evidence, curriculum, or internal links change.
+      *(`durable`/`periodic` classes never lead the queue — it is ordered
+      certification → pricing → policy → release-sensitive → everything
+      else, so evergreen items surface only when flagged)*
+- [x] Show a meaningful verified date only after substantive review.
+      *(`verified` is a distinct field from `updated`/`published` in the
+      registry model — a page can display updated-without-verified and the
+      queue reads them differently)*
+- [x] Never update dates merely to look fresh in search.
+      *(dates are git-derived when frontmatter is absent — omitting `updated`
+      cannot fabricate freshness; `check:content` rejects future dates so a
+      fake "recently reviewed" date is unbuildable)*
 - [ ] Preserve a concise change note for material vendor-page updates.
-- [ ] Retire superseded pages with redirects to the current canonical page.
+      *(no change-note field or convention yet — pairs with the
+      vendor-page-change row above)*
+- [x] Retire superseded pages with redirects to the current canonical page.
+      *(machinery complete: `reviewStatus: retired` marks the page, the id
+      map tracks 26 retired entries, `_redirects` + `vercel.json` carry the
+      redirect conventions (AGENTS rule 19 keeps them in step). The
+      retire→redirect step itself is manual — automation is a possible
+      future nicety, not a gap)*
 
 ## Phase 2 — Practice platform and 1,000-question banks
 
@@ -2495,6 +2566,30 @@ validation, deployment status, measured result when available, blockers, and nex
   `check:links` 0 dead (5,203 routes); registry 2,401 items.
 - Next batch: Phase 6B/6C reference coverage or Phase 1 source-registry
   schema — whichever unblocks more rows.
+
+### 2026-09-15 — Source registry + editorial workflow + freshness queue
+
+- New infrastructure: `src/data/sources.json` (73-entry source registry:
+  title/publisher/author/publishedAt/accessedAt/url/type/claims/status,
+  seeded from the checklist's vendor list + every real external citation
+  in the corpus); `sources:` frontmatter on lessons/questions/scenarios/
+  answers; `reviewStatus` enum (9-stage editorial workflow);
+  `check:sources` external-URL health report; staleness-ordered freshness
+  queues in audit-views; rendered Sources section on lesson pages.
+- check-content additions: registry schema validation, dangling source-id
+  rejection across all five citing collections, status↔reviewStatus
+  consistency. 32 citing files wired to registry ids.
+- Ticked: editorial workflow row; 6/8 source-ledger rows (benchmark
+  methodology + vendor-change notes open); 1/4 canonical-model rows
+  (others annotated — vendor/cert records pending Phase 6/7); 6/7
+  freshness rows (change notes open). Required-source annotation updated.
+- First `check:sources` run: 5/73 unreachable — all bot-blocked domains
+  (OpenAI, ScienceDirect, MIT Press, Gallica), the anticipated
+  false-positive class; report-only by design.
+- Validation: `check:content` clean (2,077); build 2,412 pages;
+  `check:links` 0 dead (5,203); registry 2,401 items; Sources section
+  verified rendering in built HTML.
+- Next batch: Phase 6B/6C framework/tool reference coverage.
 
 ### 2026-09-14 — Master ecosystem backlog created
 

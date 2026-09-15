@@ -4,6 +4,7 @@ track: "rag"
 status: live
 summary: "Trace one real query through an HNSW index end to end — top-k output, a near-duplicate result, and actual recall/latency numbers as ef gets dialed down."
 duration: "7 min read"
+sources: ["hnswlib-repo"]
 ---
 
 A user types "How do I rotate an expired API key?" into a support chatbot. Somewhere behind that, one 768-number vector gets compared against 120,000 others and comes back with a ranked list in under a millisecond. Let's build that exact index, run that exact query, and watch what the top-k list actually contains — including the result nobody asked for twice.

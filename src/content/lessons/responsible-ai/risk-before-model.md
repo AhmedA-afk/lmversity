@@ -4,6 +4,7 @@ track: "responsible-ai"
 status: live
 summary: "Responsible AI starts before model selection. Define who can be affected, what the system can change, what information it sees, what failure costs."
 duration: "3 min read"
+sources: ["nist-ai-rmf"]
 ---
 
 ## The short answer

@@ -4,6 +4,7 @@ track: "structured-outputs"
 status: live
 summary: "How libraries like Outlines and llguidance mask invalid tokens at every step to force output into any formal grammar, not just JSON."
 duration: "6 min read"
+sources: ["wikipedia-ebnf", "outlines-repo"]
 ---
 
 JSON mode is really a special case of a more general trick: at every decoding step, block every token that couldn't possibly lead to valid output. That trick works for any formal grammar, not just JSON — SQL, regexes, Python, a custom DSL for your product.

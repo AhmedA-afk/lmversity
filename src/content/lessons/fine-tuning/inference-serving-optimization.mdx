@@ -4,6 +4,7 @@ track: "fine-tuning"
 status: live
 summary: "Serve LLMs faster and cheaper with continuous batching and KV cache management, the two levers behind vLLM and TGI."
 duration: "6 min read"
+sources: ["vllm-repo"]
 ---
 
 A fine-tuned model that's slow or expensive to serve doesn't help anyone. Two ideas do most of the work in modern serving frameworks: batching requests together intelligently, and reusing the memory that attention needs instead of recomputing it.

@@ -6,6 +6,7 @@ status: live
 summary: "Evaluate collaborative filtering honestly with time, cold-start, popularity, and representation constraints in view."
 duration: "10–14 hours"
 updated: "2026-08-30"
+sources: ["grouplens-movielens-25m"]
 ---
 
 ## Project brief

@@ -6,6 +6,7 @@ status: "live"
 summary: "Rebuild ordinary least squares from the historical method, verify its geometry, and report when its assumptions fail."
 duration: "90 min study + 4–6 hr project"
 updated: "2026-08-30"
+sources: ["uci-auto-mpg-dataset", "gallica-statlog-source"]
 ---
 
 ## Research question

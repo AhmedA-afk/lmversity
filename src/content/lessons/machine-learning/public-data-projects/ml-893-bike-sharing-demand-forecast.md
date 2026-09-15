@@ -6,6 +6,7 @@ status: live
 summary: "Forecast rental demand from past-available information while proving that the split and features respect time."
 duration: "8–12 hours"
 updated: "2026-08-30"
+sources: ["uci-bike-sharing-dataset"]
 ---
 
 ## Project brief
