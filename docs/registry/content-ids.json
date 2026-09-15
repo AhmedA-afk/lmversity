@@ -1,7 +1,7 @@
 {
  "version": 1,
  "next": {
-  "les": 2091,
+  "les": 2095,
   "que": 7,
   "sce": 6,
   "blo": 10,
@@ -11,7 +11,7 @@
   "rol": 12,
   "prc": 6,
   "pag": 22,
-  "trk": 24,
+  "trk": 25,
   "qgd": 4,
   "stb": 25
  },
@@ -9613,6 +9613,25 @@
   "lessons/local-inference/sglang-serving-and-structured-generation.md": {
    "id": "les-2091",
    "fp": "21598cffe3e40fa35c307333acf6a74a03ea04a8"
+  },
+  "lessons/agent-frameworks/claude-agent-sdk.md": {
+   "id": "les-2092",
+   "fp": "771b7e587a6e3416a303a685d93450891cee6766"
+  },
+  "lessons/agent-frameworks/google-adk.md": {
+   "id": "les-2093",
+   "fp": "b39e50884b6d4450a27bb8d6b2a40174489f20de"
+  },
+  "lessons/agent-frameworks/openai-agents-sdk.md": {
+   "id": "les-2094",
+   "fp": "049c6318298b31b0c84919a93d9747ba87b06f8e"
+  },
+  "lessons/agent-frameworks/raw-sdk-agent-baseline.md": {
+   "id": "les-2095",
+   "fp": "6b4597678cb20f64e8c1cc96cb15632a0728bb31"
+  },
+  "data:track/agent-frameworks": {
+   "id": "trk-0025"
   }
  },
  "retired": {

@@ -931,10 +931,16 @@ consolidation into a parent track, or a clearer curated-path role.
 
 ### Agent and application frameworks
 
-- [ ] Raw SDK baseline before each framework tutorial.
-- [ ] OpenAI Agents SDK.
-- [ ] Claude Agent SDK.
-- [ ] Google Agent Development Kit.
+- [x] Raw SDK baseline before each framework tutorial.
+      *(2026-09: `raw-sdk-agent-baseline` opens the `agent-frameworks` track;
+      every framework lesson links back to it and carries a
+      "when plain code is enough" section)*
+- [x] OpenAI Agents SDK. *(2026-09: `openai-agents-sdk` — agents, handoffs,
+      guardrails, sessions, tracing, hosted tools)*
+- [x] Claude Agent SDK. *(2026-09: `claude-agent-sdk` — Claude Code harness as
+      a library: built-in tools, subagents, MCP, permissions, sessions)*
+- [x] Google Agent Development Kit. *(2026-09: `google-adk` — LlmAgent +
+      Sequential/Parallel/Loop workflow agents, state, Vertex AI path)*
 - [ ] LangChain agents and integrations.
 - [ ] LangGraph state, nodes, edges, durable execution, interrupts, and checkpoints.
 - [ ] LlamaIndex ingestion, indexes, query engines, workflows, agents, and agentic RAG.
@@ -952,7 +958,9 @@ consolidation into a parent track, or a clearer curated-path role.
 - [ ] n8n, Zapier, Make, and Pipedream for bounded no-code and low-code AI workflows.
 - [ ] Compare frameworks by control flow, state, persistence, tool interfaces, evaluation,
       observability, deployment, maintenance, and escape hatches.
-- [ ] Include “when plain code is enough” in every framework module.
+- [x] Include “when plain code is enough” in every framework module.
+      *(2026-09: convention established — every `agent-frameworks` module carries
+      a dedicated section; keep enforcing as new modules land)*
 
 ### RAG and data tooling
 
@@ -2654,6 +2662,25 @@ validation, deployment status, measured result when available, blockers, and nex
   `check:links` 0 dead (5,233 routes); registry 2,416 items.
 - Next batch: Phase 6B agent/application frameworks (raw-SDK baseline,
   Agents SDK, LangGraph, LlamaIndex, PydanticAI, etc.).
+
+### 2026-09-15 — Agent Frameworks track: baseline + provider SDKs
+
+- Commit: `f88f9a4`. New track `agent-frameworks` (n 24, Agentic group) with 4
+  lessons: `raw-sdk-agent-baseline` (the while-loop every framework wraps),
+  `openai-agents-sdk` (agents/handoffs/guardrails/sessions/tracing),
+  `claude-agent-sdk` (Claude Code harness as a library: built-in tools,
+  subagents, MCP, permissions), `google-adk` (LlmAgent + Sequential/Parallel/
+  Loop workflow agents — control flow as code, not prompt).
+- Checklist: 5 rows ticked (raw-SDK baseline row, the three provider SDKs,
+  and the "when plain code is enough" convention — each module carries the
+  section; keep enforcing as modules land). 16 framework rows remain open.
+- 3 new verified source records (openai.github.io/openai-agents-python,
+  docs.claude.com agent-sdk, google.github.io/adk-docs).
+- Validation: `check:content` clean (2,095); build 2,432 pages;
+  `check:links` 0 dead (5,243 routes); registry 2,421 items.
+- Next batch: LangChain/LangGraph/LlamaIndex, then the typed frameworks
+  (PydanticAI/Agno/SK/AutoGen/CrewAI/Mastra), then specialized tooling
+  (Vercel AI SDK/DSPy/Haystack/Instructor/no-code) + comparison capstone.
 
 ### 2026-09-14 — Master ecosystem backlog created
 

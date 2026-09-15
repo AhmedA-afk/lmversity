@@ -10722,6 +10722,39 @@ const unsortedTracks: Track[] = [
         "prereq": ["what-local-inference-actually-means"]
       }
     ]
+  },
+  {
+    "id": "agent-frameworks",
+    "n": "24",
+    "name": "Agent Frameworks",
+    "group": "Agentic",
+    "meta": "4 lessons",
+    "summary": "Framework-by-framework coverage of agent SDKs and orchestration libraries — each module shows the raw-SDK baseline first, then what the framework actually adds, and when plain code is enough.",
+    "nodes": [
+      {
+        "title": "The raw-SDK baseline every framework wraps",
+        "slug": "raw-sdk-agent-baseline",
+        "status": "live"
+      },
+      {
+        "title": "OpenAI Agents SDK: agents, handoffs, and guardrails",
+        "slug": "openai-agents-sdk",
+        "status": "live",
+        "prereq": ["raw-sdk-agent-baseline"]
+      },
+      {
+        "title": "Claude Agent SDK: the Claude Code harness as a library",
+        "slug": "claude-agent-sdk",
+        "status": "live",
+        "prereq": ["raw-sdk-agent-baseline"]
+      },
+      {
+        "title": "Google ADK: workflow agents and multi-agent teams",
+        "slug": "google-adk",
+        "status": "live",
+        "prereq": ["raw-sdk-agent-baseline"]
+      }
+    ]
   }
 ];
 

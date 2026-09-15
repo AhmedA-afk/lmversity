@@ -1,12 +1,12 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T13:42:00.632Z",
+  "generatedAt": "2026-09-15T13:45:40.024Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2416,
+  "itemCount": 2421,
   "counts": {
    "byFamily": {
-    "lesson": 2039,
+    "lesson": 2043,
     "project": 31,
     "quiz": 89,
     "reference": 59,
@@ -16,16 +16,16 @@
     "blog": 10,
     "guide": 9,
     "answer": 33,
-    "track": 33,
+    "track": 34,
     "role": 12,
     "page": 21,
     "glossary": 1
    },
    "byStatus": {
-    "live": 2416
+    "live": 2421
    },
    "byKind": {
-    "concept": 1740,
+    "concept": 1744,
     "comparison": 102,
     "worked-example": 29,
     "capstone": 31,
@@ -43,7 +43,7 @@
     "reference": 7,
     "drill": 13,
     "bootcamp": 6,
-    "track": 23,
+    "track": 24,
     "quick-guide": 4,
     "role-path": 12,
     "fde-phase": 10,
@@ -58,6 +58,7 @@
     "endpoint": 4
    },
    "byTrack": {
+    "agent-frameworks": 5,
     "agentic-ai": 31,
     "ai-foundations": 161,
     "ai-literacy": 60,
@@ -97,11 +98,11 @@
     "fde": 193
    },
    "byFreshness": {
-    "release-sensitive": 299,
-    "periodic": 1342,
+    "release-sensitive": 301,
+    "pricing-sensitive": 338,
+    "periodic": 1344,
     "certification-sensitive": 99,
     "policy-sensitive": 76,
-    "pricing-sensitive": 337,
     "durable": 263
    }
   },
@@ -110,6 +111,355 @@
   "duplicatesNote": "duplicate candidates are fuzzy title/slug similarity only — the editorial pass decides keep/merge/redirect with a written reason."
  },
  "items": [
+  {
+   "id": "les-2092",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Claude Agent SDK: the Claude Code harness as a library",
+   "slug": "agent-frameworks/claude-agent-sdk",
+   "route": "/learn/agent-frameworks/claude-agent-sdk",
+   "collection": "lessons",
+   "path": "src/content/lessons/agent-frameworks/claude-agent-sdk.md",
+   "track": "agent-frameworks",
+   "module": null,
+   "status": "live",
+   "summary": "The Claude Agent SDK exposes the same agent harness that powers Claude Code — subagents, MCP tools, a permission system, and file access — for building your own agents in Python or TypeScript.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 426,
+   "headings": [
+    "The short answer",
+    "What \"harness as a library\" means",
+    "What it adds over the raw loop",
+    "When plain code is enough",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agent-frameworks/openai-agents-sdk",
+    "/learn/agent-frameworks/raw-sdk-agent-baseline",
+    "/learn/agentic-ai/agent-permissions-and-authorization",
+    "/learn/agentic-ai/coding-agent-architecture",
+    "/learn/agentic-ai/subagent-context-isolation",
+    "/learn/mcp/what-is-mcp"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 8,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "The Claude Agent SDK exposes the same agent harness that powers Claude Code — subagents, MCP tools, a permission system, and file access — for building your own agents in Python or TypeScript.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/agent-frameworks/google-adk",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Claude, MCP, Anthropic, OpenAI"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2093",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Google ADK: workflow agents and multi-agent teams",
+   "slug": "agent-frameworks/google-adk",
+   "route": "/learn/agent-frameworks/google-adk",
+   "collection": "lessons",
+   "path": "src/content/lessons/agent-frameworks/google-adk.md",
+   "track": "agent-frameworks",
+   "module": null,
+   "status": "live",
+   "summary": "Google's Agent Development Kit builds multi-agent systems from LlmAgents plus deterministic workflow agents — Sequential, Parallel, Loop — with sessions, state, and deployment to Vertex AI.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 394,
+   "headings": [
+    "The short answer",
+    "The two kinds of agents",
+    "What it adds over the raw loop",
+    "When plain code is enough",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agent-frameworks/raw-sdk-agent-baseline",
+    "/learn/agentic-ai/agents-vs-workflows",
+    "/learn/agentic-ai/hierarchical-task-decomposition",
+    "/learn/agentic-ai/multi-agent-patterns"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 7,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Google's Agent Development Kit builds multi-agent systems from LlmAgents plus deterministic workflow agents — Sequential, Parallel, Loop — with sessions, state, and deployment to Vertex AI.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/agent-frameworks",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: Vertex, Gemini, OpenAI"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2094",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "OpenAI Agents SDK: agents, handoffs, and guardrails",
+   "slug": "agent-frameworks/openai-agents-sdk",
+   "route": "/learn/agent-frameworks/openai-agents-sdk",
+   "collection": "lessons",
+   "path": "src/content/lessons/agent-frameworks/openai-agents-sdk.md",
+   "track": "agent-frameworks",
+   "module": null,
+   "status": "live",
+   "summary": "OpenAI's Agents SDK wraps the raw agent loop in four primitives — agents, handoffs, guardrails, and sessions — plus built-in tracing and hosted tools.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 366,
+   "headings": [
+    "The short answer",
+    "The four primitives",
+    "What it adds over the raw loop",
+    "When plain code is enough",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agent-frameworks/raw-sdk-agent-baseline",
+    "/learn/agentic-ai/agent-permissions-and-authorization",
+    "/learn/agentic-ai/multi-agent-patterns"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 7,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "OpenAI's Agents SDK wraps the raw agent loop in four primitives — agents, handoffs, guardrails, and sessions — plus built-in tracing and hosted tools.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/agent-frameworks/claude-agent-sdk",
+   "practiceType": "none",
+   "freshnessClass": "pricing-sensitive",
+   "freshnessSignals": [
+    "pricing/cost mention",
+    "vendor/tool mentions: OpenAI, MCP"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2095",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "The raw-SDK baseline every framework wraps",
+   "slug": "agent-frameworks/raw-sdk-agent-baseline",
+   "route": "/learn/agent-frameworks/raw-sdk-agent-baseline",
+   "collection": "lessons",
+   "path": "src/content/lessons/agent-frameworks/raw-sdk-agent-baseline.md",
+   "track": "agent-frameworks",
+   "module": null,
+   "status": "live",
+   "summary": "Every agent framework is plumbing around one loop — messages in, tool calls out, execute, repeat — so learn the loop in raw SDK code before learning anyone's abstraction over it.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 399,
+   "headings": [
+    "The short answer",
+    "The loop in raw code",
+    "What the loop already gives you",
+    "What the loop doesn't give you",
+    "When plain code is enough",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agentic-ai/agents-vs-workflows",
+    "/learn/agentic-ai/the-agent-loop",
+    "/learn/agentic-ai/when-not-to-use-an-agent",
+    "/learn/tools-function-calling/tool-calling-across-providers"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 11,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Every agent framework is plumbing around one loop — messages in, tool calls out, execute, repeat — so learn the loop in raw SDK code before learning anyone's abstraction over it.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/agent-frameworks/openai-agents-sdk",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
   {
    "id": "les-0001",
    "family": "lesson",
@@ -8911,7 +9261,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (238w vs ~775w)",
+   "dispositionReason": "thin vs family median (238w vs ~774w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -86578,7 +86928,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (277w vs ~775w)",
+   "dispositionReason": "thin vs family median (277w vs ~774w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -90296,7 +90646,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (269w vs ~775w)",
+   "dispositionReason": "thin vs family median (269w vs ~774w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -202480,6 +202830,81 @@
    }
   },
   {
+   "id": "trk-0025",
+   "family": "track",
+   "kind": "track",
+   "title": "Agent Frameworks",
+   "slug": "agent-frameworks",
+   "route": "/learn/agent-frameworks",
+   "collection": null,
+   "path": "src/data/curriculum.ts",
+   "track": "agent-frameworks",
+   "module": null,
+   "status": "live",
+   "summary": "Framework-by-framework coverage of agent SDKs and orchestration libraries — each module shows the raw-SDK baseline first, then what the framework actually adds, and when plain code is enough.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": null,
+   "headings": [],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [
+    "Course",
+    "CourseInstance",
+    "Syllabus",
+    "Offer",
+    "FAQPage",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "group": "Agentic",
+    "declaredMeta": "4 lessons",
+    "nodeCount": 4,
+    "liveNodes": 4,
+    "comingNodes": 0,
+    "headingOnlyNodes": 0,
+    "fileCount": 4,
+    "kinds": {
+     "concept": 4
+    },
+    "modules": 0,
+    "quickGuide": false
+   },
+   "searchIntent": "course-hub",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Framework-by-framework coverage of agent SDKs and orchestration libraries — each module shows the raw-SDK baseline first, then what the framework actually adds, and when plain code is enough.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": null,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "rol-0002",
    "family": "role",
    "kind": "role-path",
@@ -205577,6 +206002,25 @@
  "duplicates": [
   {
    "a": {
+    "route": "/learn/llm-foundations/grouped-query-attention",
+    "slug": "llm-foundations/grouped-query-attention",
+    "title": "Grouped-Query and Multi-Query Attention",
+    "track": "llm-foundations"
+   },
+   "b": {
+    "route": "/learn/llm-foundations/multi-query-and-grouped-query-attention",
+    "slug": "llm-foundations/multi-query-and-grouped-query-attention",
+    "title": "Multi-Query and Grouped-Query Attention",
+    "track": "llm-foundations"
+   },
+   "jaccard": 1,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
     "route": "/learn/prompt-engineering/meta-prompting-to-draft-prompts",
     "slug": "prompt-engineering/meta-prompting-to-draft-prompts",
     "title": "Meta-Prompting: Using a Model to Write Prompts",
@@ -205610,25 +206054,6 @@
    "jaccard": 1,
    "containment": 1,
    "slugStem": true,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/llm-foundations/grouped-query-attention",
-    "slug": "llm-foundations/grouped-query-attention",
-    "title": "Grouped-Query and Multi-Query Attention",
-    "track": "llm-foundations"
-   },
-   "b": {
-    "route": "/learn/llm-foundations/multi-query-and-grouped-query-attention",
-    "slug": "llm-foundations/multi-query-and-grouped-query-attention",
-    "title": "Multi-Query and Grouped-Query Attention",
-    "track": "llm-foundations"
-   },
-   "jaccard": 1,
-   "containment": 1,
-   "slugStem": false,
    "alreadyLinked": true,
    "sameTrack": true
   },
@@ -205843,6 +206268,25 @@
   },
   {
    "a": {
+    "route": "/learn/structured-outputs/building-an-extraction-eval-harness",
+    "slug": "structured-outputs/building-an-extraction-eval-harness",
+    "title": "Building an Eval Harness",
+    "track": "structured-outputs"
+   },
+   "b": {
+    "route": "/learn/tools-function-calling/building-a-tool-use-eval-harness",
+    "slug": "tools-function-calling/building-a-tool-use-eval-harness",
+    "title": "Building Your Own Eval Harness",
+    "track": "tools-function-calling"
+   },
+   "jaccard": 0.75,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": false
+  },
+  {
+   "a": {
     "route": "/learn/harness-design/the-control-loop",
     "slug": "harness-design/the-control-loop",
     "title": "Building the Control Loop",
@@ -205954,25 +206398,6 @@
    "slugStem": false,
    "alreadyLinked": true,
    "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/structured-outputs/building-an-extraction-eval-harness",
-    "slug": "structured-outputs/building-an-extraction-eval-harness",
-    "title": "Building an Eval Harness",
-    "track": "structured-outputs"
-   },
-   "b": {
-    "route": "/learn/tools-function-calling/building-a-tool-use-eval-harness",
-    "slug": "tools-function-calling/building-a-tool-use-eval-harness",
-    "title": "Building Your Own Eval Harness",
-    "track": "tools-function-calling"
-   },
-   "jaccard": 0.75,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": false
   },
   {
    "a": {
@@ -206869,25 +207294,6 @@
   },
   {
    "a": {
-    "route": "/learn/classical-ai/agents-robotics/305-agent-memory-state-and-world-models",
-    "slug": "classical-ai/agents-robotics/305-agent-memory-state-and-world-models",
-    "title": "Agent memory, state, and world models",
-    "track": "classical-ai"
-   },
-   "b": {
-    "route": "/learn/context-engineering/memory-vs-state-distinction",
-    "slug": "context-engineering/memory-vs-state-distinction",
-    "title": "Memory vs State",
-    "track": "context-engineering"
-   },
-   "jaccard": 0.4,
-   "containment": 1,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": false
-  },
-  {
-   "a": {
     "route": "/learn/agentic-ai/the-agent-loop",
     "slug": "agentic-ai/the-agent-loop",
     "title": "The Agent Loop: Sense, Think, Act",
@@ -206898,6 +207304,25 @@
     "slug": "tools-function-calling/the-tool-call-loop",
     "title": "The Agent Loop",
     "track": "tools-function-calling"
+   },
+   "jaccard": 0.4,
+   "containment": 1,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/classical-ai/agents-robotics/305-agent-memory-state-and-world-models",
+    "slug": "classical-ai/agents-robotics/305-agent-memory-state-and-world-models",
+    "title": "Agent memory, state, and world models",
+    "track": "classical-ai"
+   },
+   "b": {
+    "route": "/learn/context-engineering/memory-vs-state-distinction",
+    "slug": "context-engineering/memory-vs-state-distinction",
+    "title": "Memory vs State",
+    "track": "context-engineering"
    },
    "jaccard": 0.4,
    "containment": 1,
@@ -207838,25 +208263,6 @@
   },
   {
    "a": {
-    "route": "/learn/genai-app-dev/background-jobs-for-long-running-ai-tasks",
-    "slug": "genai-app-dev/background-jobs-for-long-running-ai-tasks",
-    "title": "Background Jobs for Long-Running AI Tasks",
-    "track": "genai-app-dev"
-   },
-   "b": {
-    "route": "/learn/genai-app-dev/background-jobs-for-long-tasks",
-    "slug": "genai-app-dev/background-jobs-for-long-tasks",
-    "title": "Moving Long Tasks to Background Jobs",
-    "track": "genai-app-dev"
-   },
-   "jaccard": 0.57,
-   "containment": 0.8,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
     "route": "/learn/prompt-engineering/prompt-versioning-and-change-management",
     "slug": "prompt-engineering/prompt-versioning-and-change-management",
     "title": "Prompt Versioning: Treating Prompts Like Code",
@@ -207867,6 +208273,25 @@
     "slug": "prompt-engineering/prompt-versioning-like-code",
     "title": "Versioning Prompts Like Production Code",
     "track": "prompt-engineering"
+   },
+   "jaccard": 0.57,
+   "containment": 0.8,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/genai-app-dev/background-jobs-for-long-running-ai-tasks",
+    "slug": "genai-app-dev/background-jobs-for-long-running-ai-tasks",
+    "title": "Background Jobs for Long-Running AI Tasks",
+    "track": "genai-app-dev"
+   },
+   "b": {
+    "route": "/learn/genai-app-dev/background-jobs-for-long-tasks",
+    "slug": "genai-app-dev/background-jobs-for-long-tasks",
+    "title": "Moving Long Tasks to Background Jobs",
+    "track": "genai-app-dev"
    },
    "jaccard": 0.57,
    "containment": 0.8,
@@ -211992,6 +212417,33 @@
   }
  ],
  "sourcingFlags": [
+  {
+   "route": "/learn/agent-frameworks/claude-agent-sdk",
+   "slug": "agent-frameworks/claude-agent-sdk",
+   "title": "Claude Agent SDK: the Claude Code harness as a library",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/agent-frameworks/google-adk",
+   "slug": "agent-frameworks/google-adk",
+   "title": "Google ADK: workflow agents and multi-agent teams",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/agent-frameworks/openai-agents-sdk",
+   "slug": "agent-frameworks/openai-agents-sdk",
+   "title": "OpenAI Agents SDK: agents, handoffs, and guardrails",
+   "family": "lesson",
+   "flags": [
+    "pricing-sensitive page with no updated/review date"
+   ]
+  },
   {
    "route": "/learn/agentic-ai/agent-permissions-and-authorization",
    "slug": "agentic-ai/agent-permissions-and-authorization",

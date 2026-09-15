@@ -253,6 +253,33 @@
     "claims": ["mlx_lm.generate/server commands", "mlx-community model format"],
     "status": "current"
   },
+  "openai-agents-sdk-docs": {
+    "title": "OpenAI Agents SDK documentation",
+    "publisher": "OpenAI",
+    "accessedAt": "2026-09-15",
+    "url": "https://openai.github.io/openai-agents-python/",
+    "type": "official-docs",
+    "claims": ["Agents SDK primitives: agents, handoffs, guardrails, sessions", "Runner and tracing"],
+    "status": "current"
+  },
+  "claude-agent-sdk-docs": {
+    "title": "Claude Agent SDK overview",
+    "publisher": "Anthropic",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.claude.com/en/api/agent-sdk/overview",
+    "type": "official-docs",
+    "claims": ["Agent SDK harness: built-in tools, subagents, MCP, permissions, sessions"],
+    "status": "current"
+  },
+  "google-adk-docs": {
+    "title": "Agent Development Kit documentation",
+    "publisher": "Google",
+    "accessedAt": "2026-09-15",
+    "url": "https://google.github.io/adk-docs/",
+    "type": "official-docs",
+    "claims": ["LlmAgent and workflow agents", "sessions and state", "Vertex AI deployment"],
+    "status": "current"
+  },
   "onnxruntime-docs": {
     "title": "ONNX Runtime documentation",
     "publisher": "Microsoft",
