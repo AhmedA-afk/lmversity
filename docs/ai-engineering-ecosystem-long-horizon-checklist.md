@@ -1379,8 +1379,12 @@ template renders all six sections; `/roles` index gained a boundaries section.
       delegation, evaluation, observability, and recovery.
       *(served: `harness-design` track — all named topics have dedicated lessons
       incl. three case studies and MCP/skill integrations)*
-- [ ] Voice AI Engineering — speech recognition, synthesis, realtime transport,
+- [x] Voice AI Engineering — speech recognition, synthesis, realtime transport,
       turn-taking, interruption, latency, telephony, multilingual evaluation, and safety.
+      *(new `voice-ai` track (8 lessons): pipeline architectures, production STT,
+      voice design, realtime transport/turn-taking, orchestration, evals,
+      system design + provider-neutral lab; telephony covered in transport
+      lesson, multilingual eval via the multilingual-evaluation lesson)*
 - [ ] Multimodal AI Engineering — image, audio, video, document, and mixed-input systems.
 - [x] Local and Open-Weight AI — Ollama, llama.cpp, model selection, licenses,
       quantization, hardware, serving, fine-tuning, and privacy.
@@ -2240,9 +2244,30 @@ Credentials to monitor:
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
 
+### 2026-09-15 — Phase 7: Voice AI Engineering track (1 candidate row)
+
+- Commit: `5b50f5a`. Status: complete.
+- Content: new `voice-ai` track — 8-lesson MVP: `voice-ai-pipeline-overview`
+  (cascade vs S2S, latency budget), `speech-recognition-in-production`
+  (streaming/finals/endpointing/domain adaptation), `speech-synthesis-and-
+  voice-design` (streaming TTS, cloning, SSML, consistency),
+  `realtime-transport-and-turn-taking` (WebRTC/WS/SIP, full-duplex,
+  barge-in), `voice-agent-orchestration` (tools under silence budget, state
+  vs LLM flow, voice prompts), `voice-evaluation-and-testing` (WER limits,
+  perceptual, latency percentiles, scripted calls),
+  `voice-ai-system-design` (own-vs-rent per layer, voice compliance
+  surface), `voice-agent-lab` (provider-neutral build).
+- Data: 5 new source records (OpenAI Realtime, Deepgram, ElevenLabs,
+  LiveKit, Pipecat — all verified); track registered n:29, group Building.
+- Validation: `check:content` clean (2177 lessons); build 2576 pages;
+  `check:links` 2576 pages / 5531 routes, 0 dead; registry 2533 items.
+- Next: remaining candidate-course builds — Multimodal AI Engineering,
+  Multilingual/Indic AI Engineering, AI Automation for Operations
+  (AI-for-Designers has its own 334-row sub-checklist).
+
 ### 2026-09-15 — Phase 7: cert records, university courses, course-gate (12 rows)
 
-- Commit: `edc8dbd`. Status: complete.
+- Commit: `802595b`. Status: complete.
 - Data: `certifications.json` — all 13 records now carry the full field set
   (`prerequisites`, `languages`, `renewal`, `officialPrep` added across the
   board); 3 new records — `snowflake-genai-specialty`, `oracle-genai-professional`,

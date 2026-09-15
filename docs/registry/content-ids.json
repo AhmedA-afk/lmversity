@@ -1,7 +1,7 @@
 {
  "version": 1,
  "next": {
-  "les": 2169,
+  "les": 2178,
   "que": 7,
   "sce": 6,
   "blo": 10,
@@ -10069,6 +10069,42 @@
   },
   "page:/skill-catalog": {
    "id": "pag-0026"
+  },
+  "lessons/ai-for-designers/ai-for-designers-course-guide.md": {
+   "id": "les-2170",
+   "fp": "9b70be823040a0d3968cf1a98ee6750b11c40843"
+  },
+  "lessons/voice-ai/realtime-transport-and-turn-taking.md": {
+   "id": "les-2171",
+   "fp": "120ee4dd03842ca362d4c72b54e3ff8d74c388fb"
+  },
+  "lessons/voice-ai/speech-recognition-in-production.md": {
+   "id": "les-2172",
+   "fp": "09b70604083603f9e46692c4a62082ca4c83fada"
+  },
+  "lessons/voice-ai/speech-synthesis-and-voice-design.md": {
+   "id": "les-2173",
+   "fp": "8bfc3fc1d5fc2bc551d1e7677c6155399c0c401e"
+  },
+  "lessons/voice-ai/voice-agent-lab.md": {
+   "id": "les-2174",
+   "fp": "534e00d75061925fc6d7403e0e73a3bffd21a4db"
+  },
+  "lessons/voice-ai/voice-agent-orchestration.md": {
+   "id": "les-2175",
+   "fp": "ec2189bfeefa90257206cf04b94a1b5959248b11"
+  },
+  "lessons/voice-ai/voice-ai-pipeline-overview.md": {
+   "id": "les-2176",
+   "fp": "99ada0743a8e26212dc9e7bd77bfe031aa6d6474"
+  },
+  "lessons/voice-ai/voice-ai-system-design.md": {
+   "id": "les-2177",
+   "fp": "f0aa0318d38c8f72a8705d6f00b5e5d0d23e0eef"
+  },
+  "lessons/voice-ai/voice-evaluation-and-testing.md": {
+   "id": "les-2178",
+   "fp": "30978001d14675d453e4e388bf07d2bb0eb6856d"
   }
  },
  "retired": {

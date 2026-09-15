@@ -963,6 +963,17 @@
   ],
   "status": "current"
  },
+ "deepgram-docs": {
+  "title": "Deepgram documentation",
+  "publisher": "Deepgram",
+  "url": "https://developers.deepgram.com",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "streaming ASR, endpointing, diarization, voice-agent APIs"
+  ]
+ },
  "deepseek-api-docs": {
   "title": "DeepSeek API platform",
   "publisher": "DeepSeek",
@@ -1054,6 +1065,17 @@
    "kNN queries with filters"
   ],
   "status": "current"
+ },
+ "elevenlabs-docs": {
+  "title": "ElevenLabs documentation",
+  "publisher": "ElevenLabs",
+  "url": "https://docs.elevenlabs.io",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "TTS streaming, voice cloning, SSML control"
+  ]
  },
  "fireworks-docs": {
   "title": "Fireworks AI documentation",
@@ -1735,6 +1757,17 @@
   ],
   "status": "current"
  },
+ "livekit-docs": {
+  "title": "LiveKit documentation",
+  "publisher": "LiveKit",
+  "url": "https://docs.livekit.io",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "WebRTC SFU, realtime audio transport, agents framework"
+  ]
+ },
  "llamacpp-grammars": {
   "title": "llama.cpp grammars README",
   "publisher": "ggml-org",
@@ -2300,6 +2333,17 @@
   ],
   "status": "current"
  },
+ "openai-realtime-docs": {
+  "title": "Realtime API guide",
+  "publisher": "OpenAI",
+  "url": "https://platform.openai.com/docs/guides/realtime",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "speech-to-speech realtime API, WebRTC/WebSocket, voice agents"
+  ]
+ },
  "openai-status": {
   "title": "OpenAI status page",
   "publisher": "OpenAI",
@@ -2435,6 +2479,17 @@
    "namespaces and metadata filtering"
   ],
   "status": "current"
+ },
+ "pipecat-docs": {
+  "title": "Pipecat documentation",
+  "publisher": "Pipecat",
+  "url": "https://docs.pipecat.ai",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-15",
+  "claims": [
+   "voice/multimodal agent framework, VAD-ASR-LLM-TTS orchestration"
+  ]
  },
  "playwright-docs": {
   "title": "Playwright documentation",

@@ -1,4 +1,4 @@
-// AUTO-GENERATED unified taxonomy (22 tracks; Codex content ported).
+// AUTO-GENERATED unified taxonomy (23 tracks; Codex content ported).
 export type NodeStatus = 'live' | 'curated' | 'coming';
 export interface TrackNode { title: string; slug?: string; status: NodeStatus; eta?: string; prereq?: string[]; }
 export interface Track { id: string; n: string; name: string; group: string; meta: string; summary: string; nodes: TrackNode[]; }
@@ -10653,6 +10653,24 @@ const unsortedTracks: Track[] = [
     ]
   },
   {
+    "id": "voice-ai",
+    "n": "29",
+    "name": "Voice AI Engineering",
+    "group": "Building",
+    "meta": "8 lessons",
+    "summary": "Voice agents end to end: cascaded ASR-LLM-TTS vs speech-to-speech, streaming STT, voice design, realtime transport and turn-taking, orchestration, evals, and the build-vs-buy system design.",
+    "nodes": [
+      { "title": "The voice AI pipeline: cascaded vs speech-to-speech", "slug": "voice-ai-pipeline-overview", "status": "live" },
+      { "title": "Speech recognition in production", "slug": "speech-recognition-in-production", "status": "live" },
+      { "title": "Speech synthesis and voice design", "slug": "speech-synthesis-and-voice-design", "status": "live" },
+      { "title": "Realtime transport and turn-taking", "slug": "realtime-transport-and-turn-taking", "status": "live" },
+      { "title": "Voice agent orchestration", "slug": "voice-agent-orchestration", "status": "live" },
+      { "title": "Evaluating voice agents", "slug": "voice-evaluation-and-testing", "status": "live" },
+      { "title": "Voice AI system design", "slug": "voice-ai-system-design", "status": "live" },
+      { "title": "Lab: build a minimal voice agent", "slug": "voice-agent-lab", "status": "live" }
+    ]
+  },
+  {
     "id": "web-agents",
     "n": "27",
     "name": "Web & Browser Agents",
@@ -11202,6 +11220,165 @@ const unsortedTracks: Track[] = [
         "slug": "framework-comparison-and-escape-hatches",
         "status": "live",
         "prereq": ["raw-sdk-agent-baseline"]
+      }
+    ]
+  },
+  {
+    "id": "ai-for-designers",
+    "n": "25",
+    "name": "AI for Designers",
+    "group": "Building",
+    "meta": "25 lessons",
+    "summary": "A free course for designers: use AI well inside your design work, and design AI features people can trust — ending in an evaluated case study and an engineer-ready handoff.",
+    "nodes": [
+      {
+        "title": "AI for Designers: course guide, lanes, and your first case study",
+        "slug": "ai-for-designers-course-guide",
+        "status": "live"
+      },
+      {
+        "title": "A designer's mental model for generative AI",
+        "slug": "designer-mental-model-for-generative-ai",
+        "status": "live",
+        "prereq": ["ai-for-designers-course-guide"]
+      },
+      {
+        "title": "Deterministic vs probabilistic interfaces, compared",
+        "slug": "deterministic-vs-probabilistic-interfaces-compared",
+        "status": "live",
+        "prereq": ["designer-mental-model-for-generative-ai"]
+      },
+      {
+        "title": "Choosing where AI belongs: a worked example",
+        "slug": "choosing-where-ai-belongs-worked-example",
+        "status": "live",
+        "prereq": ["deterministic-vs-probabilistic-interfaces-compared"]
+      },
+      {
+        "title": "AI product design: common mistakes",
+        "slug": "ai-product-design-common-mistakes",
+        "status": "live",
+        "prereq": ["choosing-where-ai-belongs-worked-example"]
+      },
+      {
+        "title": "Quiz: AI product design foundations",
+        "slug": "ai-product-design-foundations-quiz",
+        "status": "live",
+        "prereq": ["ai-product-design-common-mistakes"]
+      },
+      {
+        "title": "Designing the AI behavior contract",
+        "slug": "designing-the-ai-behavior-contract",
+        "status": "live",
+        "prereq": ["ai-product-design-foundations-quiz"]
+      },
+      {
+        "title": "Mapping AI capabilities to user tasks",
+        "slug": "mapping-ai-capabilities-to-user-tasks",
+        "status": "live",
+        "prereq": ["designing-the-ai-behavior-contract"]
+      },
+      {
+        "title": "AI feature state model: a worked example",
+        "slug": "ai-feature-state-model-worked-example",
+        "status": "live",
+        "prereq": ["mapping-ai-capabilities-to-user-tasks"]
+      },
+      {
+        "title": "AI interaction states cheatsheet",
+        "slug": "ai-interaction-state-cheatsheet",
+        "status": "live",
+        "prereq": ["ai-feature-state-model-worked-example"]
+      },
+      {
+        "title": "Prompts as interaction specs",
+        "slug": "prompt-as-interaction-spec",
+        "status": "live",
+        "prereq": ["ai-interaction-state-cheatsheet"]
+      },
+      {
+        "title": "Quiz: behavior before interface",
+        "slug": "behavior-before-interface-quiz",
+        "status": "live",
+        "prereq": ["prompt-as-interaction-spec"]
+      },
+      {
+        "title": "Designing for uncertainty",
+        "slug": "designing-for-uncertainty",
+        "status": "live",
+        "prereq": ["behavior-before-interface-quiz"]
+      },
+      {
+        "title": "Sources, confidence, and explanations, compared",
+        "slug": "sources-confidence-and-explanations-compared",
+        "status": "live",
+        "prereq": ["designing-for-uncertainty"]
+      },
+      {
+        "title": "Correction, undo, and recovery patterns",
+        "slug": "correction-undo-and-recovery-patterns",
+        "status": "live",
+        "prereq": ["sources-confidence-and-explanations-compared"]
+      },
+      {
+        "title": "Human review and approval boundaries",
+        "slug": "human-review-and-approval-boundaries",
+        "status": "live",
+        "prereq": ["correction-undo-and-recovery-patterns"]
+      },
+      {
+        "title": "Trust patterns: a redesign worked example",
+        "slug": "trust-patterns-worked-example",
+        "status": "live",
+        "prereq": ["human-review-and-approval-boundaries"]
+      },
+      {
+        "title": "Quiz: trust and recovery",
+        "slug": "trust-and-recovery-quiz",
+        "status": "live",
+        "prereq": ["trust-patterns-worked-example"]
+      },
+      {
+        "title": "Prototype AI behavior without a model",
+        "slug": "prototype-ai-behavior-without-a-model",
+        "status": "live",
+        "prereq": ["trust-and-recovery-quiz"]
+      },
+      {
+        "title": "Creating a realistic AI test set",
+        "slug": "creating-a-realistic-ai-test-set",
+        "status": "live",
+        "prereq": ["prototype-ai-behavior-without-a-model"]
+      },
+      {
+        "title": "Designing a UX evaluation rubric",
+        "slug": "designing-a-ux-evaluation-rubric",
+        "status": "live",
+        "prereq": ["creating-a-realistic-ai-test-set"]
+      },
+      {
+        "title": "Testing an AI prototype: a worked example",
+        "slug": "test-an-ai-prototype-worked-example",
+        "status": "live",
+        "prereq": ["designing-a-ux-evaluation-rubric"]
+      },
+      {
+        "title": "AI prototype testing: common mistakes",
+        "slug": "ai-prototype-testing-common-mistakes",
+        "status": "live",
+        "prereq": ["test-an-ai-prototype-worked-example"]
+      },
+      {
+        "title": "Quiz: prototype and evaluation",
+        "slug": "prototype-and-evaluation-quiz",
+        "status": "live",
+        "prereq": ["ai-prototype-testing-common-mistakes"]
+      },
+      {
+        "title": "Capstone: design a trustworthy AI feature",
+        "slug": "capstone-design-a-trustworthy-ai-feature",
+        "status": "live",
+        "prereq": ["prototype-and-evaluation-quiz"]
       }
     ]
   }
