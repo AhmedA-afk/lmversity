@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-15T08:47:19.408Z",
+ "generatedAt": "2026-09-15T08:54:24.082Z",
  "findings": {
   "answers": [
    {
@@ -593,73 +593,87 @@
   "interview": [
    {
     "slug": "agents",
-    "questions": 8,
-    "withLinks": 4,
-    "thinAnswers": 0,
-    "followUps": 8,
-    "hasRubric": true,
-    "words": 755,
-    "flags": []
-   },
-   {
-    "slug": "ai-system-design",
-    "questions": 8,
-    "withLinks": 3,
-    "thinAnswers": 0,
-    "followUps": 8,
-    "hasRubric": true,
-    "words": 727,
-    "flags": []
-   },
-   {
-    "slug": "evals",
-    "questions": 8,
-    "withLinks": 3,
-    "thinAnswers": 0,
-    "followUps": 8,
-    "hasRubric": true,
-    "words": 732,
-    "flags": []
-   },
-   {
-    "slug": "llm-basics",
-    "questions": 8,
+    "questions": 9,
     "withLinks": 5,
     "thinAnswers": 0,
     "followUps": 8,
     "hasRubric": true,
-    "words": 764,
-    "flags": []
+    "words": 776,
+    "flags": [
+     "1 question(s) missing a follow-up prompt"
+    ]
    },
    {
-    "slug": "mcp",
-    "questions": 8,
-    "withLinks": 3,
-    "thinAnswers": 0,
-    "followUps": 8,
-    "hasRubric": true,
-    "words": 692,
-    "flags": []
-   },
-   {
-    "slug": "prompt-engineering",
-    "questions": 8,
-    "withLinks": 6,
-    "thinAnswers": 0,
-    "followUps": 8,
-    "hasRubric": true,
-    "words": 731,
-    "flags": []
-   },
-   {
-    "slug": "rag",
-    "questions": 8,
+    "slug": "ai-system-design",
+    "questions": 9,
     "withLinks": 4,
     "thinAnswers": 0,
     "followUps": 8,
     "hasRubric": true,
-    "words": 700,
-    "flags": []
+    "words": 748,
+    "flags": [
+     "1 question(s) missing a follow-up prompt"
+    ]
+   },
+   {
+    "slug": "evals",
+    "questions": 9,
+    "withLinks": 4,
+    "thinAnswers": 0,
+    "followUps": 8,
+    "hasRubric": true,
+    "words": 753,
+    "flags": [
+     "1 question(s) missing a follow-up prompt"
+    ]
+   },
+   {
+    "slug": "llm-basics",
+    "questions": 9,
+    "withLinks": 6,
+    "thinAnswers": 0,
+    "followUps": 8,
+    "hasRubric": true,
+    "words": 785,
+    "flags": [
+     "1 question(s) missing a follow-up prompt"
+    ]
+   },
+   {
+    "slug": "mcp",
+    "questions": 9,
+    "withLinks": 4,
+    "thinAnswers": 0,
+    "followUps": 8,
+    "hasRubric": true,
+    "words": 713,
+    "flags": [
+     "1 question(s) missing a follow-up prompt"
+    ]
+   },
+   {
+    "slug": "prompt-engineering",
+    "questions": 9,
+    "withLinks": 7,
+    "thinAnswers": 0,
+    "followUps": 8,
+    "hasRubric": true,
+    "words": 752,
+    "flags": [
+     "1 question(s) missing a follow-up prompt"
+    ]
+   },
+   {
+    "slug": "rag",
+    "questions": 9,
+    "withLinks": 5,
+    "thinAnswers": 0,
+    "followUps": 8,
+    "hasRubric": true,
+    "words": 721,
+    "flags": [
+     "1 question(s) missing a follow-up prompt"
+    ]
    }
   ],
   "scenarios": [

@@ -310,8 +310,11 @@ consolidation into a parent track, or a clearer curated-path role.
       quality remains editorial.)
 - [ ] Review all 7 interview topics and 56 questions for current terminology, role relevance,
       answer depth, follow-up prompts, and links into practice. (Partial: follow-up
-      prompts + scoring rubric added to all 56; links point to curriculum lessons —
-      none yet to /practice; terminology/relevance/depth remain editorial.)
+      prompts + scoring rubric on all 56; every question block verified as
+      concise-answer + deeper-paragraph structure; each topic now ends with a
+      "Practice next" link into its matching /practice bank (ai-system-design →
+      the practice index — no bank exists yet); terminology/relevance/depth
+      quality remain editorial.)
 - [x] Review all 6 scenarios for realism, constraints, competing options, implementation
       details, evaluation, and postmortem value. (Constraints, options-on-the-table,
       and postmortem sections added; audit verifies all seven required sections on
@@ -1930,7 +1933,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-15 — Track-promise coverage + first-lesson level check
 
-- Added a promise-coverage pass to "Track gap briefs": each track `summary`
+- Commit: `5c289fd`. Added a promise-coverage pass to "Track gap briefs": each track `summary`
   clause is split out and matched against live node titles (word-stem match).
   First run flagged 9 clauses across 9 tracks — all resolved on review as
   wording mismatches (summary rhetoric vs title vocabulary), not missing
@@ -1947,6 +1950,23 @@ validation, deployment status, measured result when available, blockers, and nex
   `git diff --check` clean.
 - Next batch: interview per-question weak-answer pass (56 questions), or the
   44-item expand queue.
+
+### 2026-09-15 — Interview structure verification + practice links
+
+- Verified all 56 interview questions carry the intended structure: a concise
+  direct answer, a deeper paragraph (with curriculum links), and a
+  `**Follow-up:**` prompt — uniform across all 7 files, no rewrites needed.
+- Closed the verified gap: interview files linked to curriculum but not to
+  practice. Each file now ends with `## Practice next` pointing at its
+  matching `/practice` bank (agents/evals/mcp/prompt-engineering/rag direct;
+  llm-basics → ai-foundations bank; ai-system-design → the practice index,
+  no bank exists for it yet).
+- Checklist row stays partial: terminology currency, role relevance, and
+  per-question depth quality are editorial judgements.
+- Validation: `npm run build` clean (2,396 pages); `check:links` clean;
+  `audit:families` flags 0.
+- Next batch: the 44-item expand queue (thin vs family median) or remaining
+  duplicate-pair verdicts.
 
 ### 2026-09-14 — Master ecosystem backlog created
 

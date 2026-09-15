@@ -1,6 +1,6 @@
 # Acquisition & practice family audit — mechanical pass
 
-Generated 2026-09-15T08:47:19.409Z by `scripts/audit-families.mjs`.
+Generated 2026-09-15T08:54:24.083Z by `scripts/audit-families.mjs`.
 Structural checks only; originality/correctness are scored in the review pass.
 
 ## Findings
@@ -8,7 +8,7 @@ Structural checks only; originality/correctness are scored in the review pass.
 - **Straight answers (33)**: 0 flagged — answer-first openings, FAQ and related metadata hold across the family.
 - **Guides (9)**: all have `related` lesson lists and ordered steps; 0/9 have **zero in-body internal links** (continuation lives only in the frontmatter block); `rag-fine-tuning-or-a-longer-prompt` has no code.
 - **Blog (10)**: all dated; none never link into the curriculum.
-- **Interview (7)**: 7/7 topics have a follow-up prompt on every question plus a weak-vs-strong rubric.
+- **Interview (7)**: 0/7 topics have a follow-up prompt on every question plus a weak-vs-strong rubric.
 - **Scenarios (6)**: ~561 words avg; missing sections: none.
 - **Centralized practice banks**: 48 questions across 6 tracks, 48 total lesson links.
 - **Lesson quiz pages (83 files, 603 questions)**: all questions carry a marked correct answer; 0 duplicate stems corpus-wide; correct-answer positions skew B 41%, C 22%, A 19%, D 17%; 0 files have answer blocks that don't discuss every option.
@@ -96,13 +96,13 @@ Structural checks only; originality/correctness are scored in the review pass.
 
 | item | questions | with links | thin answers | follow-ups | rubric | words | flags |
 |---|------------------|---|
-| agents | 8 | 4 | 0 | 8/8 | ✓ | 755 | — |
-| ai-system-design | 8 | 3 | 0 | 8/8 | ✓ | 727 | — |
-| evals | 8 | 3 | 0 | 8/8 | ✓ | 732 | — |
-| llm-basics | 8 | 5 | 0 | 8/8 | ✓ | 764 | — |
-| mcp | 8 | 3 | 0 | 8/8 | ✓ | 692 | — |
-| prompt-engineering | 8 | 6 | 0 | 8/8 | ✓ | 731 | — |
-| rag | 8 | 4 | 0 | 8/8 | ✓ | 700 | — |
+| agents | 9 | 5 | 0 | 8/9 | ✓ | 776 | 1 question(s) missing a follow-up prompt |
+| ai-system-design | 9 | 4 | 0 | 8/9 | ✓ | 748 | 1 question(s) missing a follow-up prompt |
+| evals | 9 | 4 | 0 | 8/9 | ✓ | 753 | 1 question(s) missing a follow-up prompt |
+| llm-basics | 9 | 6 | 0 | 8/9 | ✓ | 785 | 1 question(s) missing a follow-up prompt |
+| mcp | 9 | 4 | 0 | 8/9 | ✓ | 713 | 1 question(s) missing a follow-up prompt |
+| prompt-engineering | 9 | 7 | 0 | 8/9 | ✓ | 752 | 1 question(s) missing a follow-up prompt |
+| rag | 9 | 5 | 0 | 8/9 | ✓ | 721 | 1 question(s) missing a follow-up prompt |
 
 ## Scenarios (6)
 
