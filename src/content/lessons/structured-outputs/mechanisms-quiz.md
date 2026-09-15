@@ -11,19 +11,19 @@ Check what stuck from this module before moving on to schema design.
 **1. You turn on JSON mode and prompt a model to extract a customer's name and order total. It returns `{"customer": "Jordan Kim", "total": "42.50"}` — the field names don't match your intended schema and `total` is a string, not a number. What happened?**
 
 A. JSON mode failed — this shouldn't be possible with the flag on
-B. JSON mode worked exactly as designed — it guarantees valid syntax, not your specific field names or types
-C. The model ignored the JSON mode flag entirely
-D. This only happens at high temperature; lowering it would fix the field names
+B. The model ignored the JSON mode flag entirely
+C. This only happens at high temperature; lowering it would fix the field names
+D. JSON mode worked exactly as designed — it guarantees valid syntax, not your specific field names or types
 
 <details>
 <summary>Answer</summary>
 
-**Correct: B.** JSON mode compiles one fixed, generic JSON grammar and enforces only that the output is syntactically valid — balanced braces, quoted keys, correct primitive types (string/number/bool/null/object/array). It was never given your schema, so it has no way to know `customer` should have been `customer_name` or that the total should be a number. This is the entire subject of [What JSON Mode Does and Doesn't Promise](/learn/structured-outputs/json-mode-what-it-guarantees).
+**Correct: D.** JSON mode compiles one fixed, generic JSON grammar and enforces only that the output is syntactically valid — balanced braces, quoted keys, correct primitive types (string/number/bool/null/object/array). It was never given your schema, so it has no way to know `customer` should have been `customer_name` or that the total should be a number. This is the entire subject of [What JSON Mode Does and Doesn't Promise](/learn/structured-outputs/json-mode-what-it-guarantees).
 
 - A is wrong: the output is valid JSON, so JSON mode did exactly what it promises — the promise is just narrower than assumed.
-- B is correct.
-- C is wrong: nothing here indicates the flag was ignored — valid syntax with wrong field names is JSON mode's normal behavior, not a malfunction.
-- D is wrong: temperature affects which tokens are sampled among legal options; it doesn't give JSON mode knowledge of a schema it was never given.
+- D is correct.
+- B is wrong: nothing here indicates the flag was ignored — valid syntax with wrong field names is JSON mode's normal behavior, not a malfunction.
+- C is wrong: temperature affects which tokens are sampled among legal options; it doesn't give JSON mode knowledge of a schema it was never given.
 
 </details>
 
@@ -48,19 +48,19 @@ D. Flags them for a validation step to catch after generation finishes
 
 **3. Which of these is typically enforced by schema-constrained decoding at decode time, without needing a separate validation step afterward?**
 
-A. `"minLength": 5` on a string field
-B. `"minimum": 1, "maximum": 5"` on an integer field
-C. `"enum": ["low", "medium", "high"]` on a string field
+A. `"enum": ["low", "medium", "high"]` on a string field
+B. `"minLength": 5` on a string field
+C. `"minimum": 1, "maximum": 5"` on an integer field
 D. A cross-field rule that `end_date` must be after `start_date`
 
 <details>
 <summary>Answer</summary>
 
-**Correct: C.** Enum membership compiles almost directly into the grammar — each allowed value becomes one accepted literal path, so the field can never come back with a value outside the set. Length bounds, numeric ranges, and cross-field rules are typically not enforced at decode time, even when your provider's schema syntax accepts the keyword — see [Compiling a Schema into a Constraint](/learn/structured-outputs/schema-constrained-decoding-explained) for exactly why each one falls on the wrong side of the line.
+**Correct: A.** Enum membership compiles almost directly into the grammar — each allowed value becomes one accepted literal path, so the field can never come back with a value outside the set. Length bounds, numeric ranges, and cross-field rules are typically not enforced at decode time, even when your provider's schema syntax accepts the keyword — see [Compiling a Schema into a Constraint](/learn/structured-outputs/schema-constrained-decoding-explained) for exactly why each one falls on the wrong side of the line.
 
-- A is wrong: most implementations don't enforce string length bounds at decode time.
-- B is wrong: a smooth numeric range doesn't map onto a small set of accepted paths the way an enum does, and most engines skip it.
-- C is correct.
+- B is wrong: most implementations don't enforce string length bounds at decode time.
+- C is wrong: a smooth numeric range doesn't map onto a small set of accepted paths the way an enum does, and most engines skip it.
+- A is correct.
 - D is wrong: this requires comparing two field values, which the grammar can't evaluate — it's exactly the kind of rule that needs [post-generation validation](/learn/structured-outputs/the-validation-layer).
 
 </details>
@@ -107,18 +107,18 @@ D. Regex-constrained decoding over the whole response
 
 A. Grammar/schema compilation is paid on every single request, regardless of whether the schema has been used before
 B. Per-token masking overhead scales with prompt length, not output length
-C. Compilation is typically a one-time cost per distinct schema that can be cached and amortized across requests reusing that schema; per-token masking overhead is paid on every token of every constrained response
-D. Constrained decoding has no quality effects — any cost is purely latency
+C. Constrained decoding has no quality effects — any cost is purely latency
+D. Compilation is typically a one-time cost per distinct schema that can be cached and amortized across requests reusing that schema; per-token masking overhead is paid on every token of every constrained response
 
 <details>
 <summary>Answer</summary>
 
-**Correct: C.** These are two separate costs with two different shapes: compilation happens once per distinct grammar/schema and libraries cache the result, so cost amortizes toward zero as the same schema gets reused; masking overhead is a small but nonzero tax paid at every generation step, scaling with how many tokens you generate. Full breakdown in [The Cost of Constraints](/learn/structured-outputs/what-constraints-cost-you).
+**Correct: D.** These are two separate costs with two different shapes: compilation happens once per distinct grammar/schema and libraries cache the result, so cost amortizes toward zero as the same schema gets reused; masking overhead is a small but nonzero tax paid at every generation step, scaling with how many tokens you generate. Full breakdown in [The Cost of Constraints](/learn/structured-outputs/what-constraints-cost-you).
 
 - A is wrong: this is the opposite of how caching works — a stable, reused schema pays the compile cost once, not per request.
 - B is wrong: masking cost scales with the number of tokens *generated* under constraint, not with how long the prompt was.
-- C is correct.
-- D is wrong: constraint strength and correctness are different axes — see [When Tight Constraints Hurt Reasoning](/learn/structured-outputs/constraints-and-model-quality-interaction) for a real quality cost, separate from latency.
+- D is correct.
+- C is wrong: constraint strength and correctness are different axes — see [When Tight Constraints Hurt Reasoning](/learn/structured-outputs/constraints-and-model-quality-interaction) for a real quality cost, separate from latency.
 
 </details>
 

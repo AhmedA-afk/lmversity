@@ -26,13 +26,13 @@ You are building a server that reads the user's local Obsidian vault and exposes
 Your local HTTP server runs with `host="0.0.0.0"` and no authentication, because it is "just local".
 
 - **A.** Fine — a server on a laptop is not routable from the internet.
-- **B.** Every device on the same network can reach the tools, and without auth that is full access to whatever the server touches.
-- **C.** Fine as long as the port is above 1024.
-- **D.** Only a problem if the tools can write; read-only tools are safe.
+- **B.** Fine as long as the port is above 1024.
+- **C.** Only a problem if the tools can write; read-only tools are safe.
+- **D.** Every device on the same network can reach the tools, and without auth that is full access to whatever the server touches.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** `0.0.0.0` binds every interface, including the shared Wi-Fi. Combined with no auth, anyone on the network can call every tool. Bind to `127.0.0.1`. **A** confuses internet-routable with locally reachable; the threat is the network you joined. **C** port numbers are not an access control. **D** a read tool over someone's notes, credentials or database is a serious disclosure on its own.
+**Correct: D.** `0.0.0.0` binds every interface, including the shared Wi-Fi. Combined with no auth, anyone on the network can call every tool. Bind to `127.0.0.1`. **A** confuses internet-routable with locally reachable; the threat is the network you joined. **B** port numbers are not an access control. **C** a read tool over someone's notes, credentials or database is a serious disclosure on its own.
 
 </details>
 
@@ -55,14 +55,14 @@ Your HTTP server keeps session state in a module-level dictionary. It passes eve
 
 One tool takes 60–120 seconds. Over stdio it was reliable. Deployed over HTTP behind a proxy it fails perhaps a fifth of the time, with a truncated response rather than an error.
 
-- **A.** The server is running out of memory on long calls.
-- **B.** An idle timeout in the proxy or load balancer is cutting a connection that has gone quiet.
+- **A.** An idle timeout in the proxy or load balancer is cutting a connection that has gone quiet.
+- **B.** The server is running out of memory on long calls.
 - **C.** The model is cancelling the request.
 - **D.** Streamable HTTP caps response duration by design.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** Silence on a connection is what idle timeouts act on, and network infrastructure enforces limits that a local pipe never had. Stream progress so the connection is not idle, shorten the unit of work, and make retries safe. **A** memory pressure produces errors and restarts, not truncation correlated with duration. **C** possible in principle but would not correlate with the proxy hop. **D** the protocol imposes no such cap; the infrastructure does.
+**Correct: A.** Silence on a connection is what idle timeouts act on, and network infrastructure enforces limits that a local pipe never had. Stream progress so the connection is not idle, shorten the unit of work, and make retries safe. **B** memory pressure produces errors and restarts, not truncation correlated with duration. **C** possible in principle but would not correlate with the proxy hop. **D** the protocol imposes no such cap; the infrastructure does.
 
 </details>
 

@@ -17,13 +17,13 @@ A founder types this into a chatbot: `Write a marketing email.` The result comes
 Which lever is most responsible for that outcome?
 
 - **A.** Task — the AI doesn't know what action to take
-- **B.** Context — the AI doesn't know the product, the audience, or why this email is going out now
-- **C.** Format — the AI doesn't know how long the email should be
-- **D.** Tone — the AI doesn't know how formal to sound
+- **B.** Format — the AI doesn't know how long the email should be
+- **C.** Tone — the AI doesn't know how formal to sound
+- **D.** Context — the AI doesn't know the product, the audience, or why this email is going out now
 
 <details><summary>Answer</summary>
 
-**Correct: B.** The task is actually fine — "write an email, and make it a marketing one" is an unambiguous instruction. What's missing is everything the email needs to be *about*: what's being sold, to whom, and what's new. With no context, the model doesn't fail — it fills the vacuum with the most statistically average marketing email it can produce, which is exactly what came back. **A** is the tempting trap: the whole prompt *feels* vague, so it's easy to blame "task," but the deliverable and action are both specified. **C** is a real gap — length matters — but a perfectly-sized email about nothing is still nothing. **D** is also a real, smaller gap, but tone problems produce an email that sounds wrong, not one that's about the wrong (or no) product.
+**Correct: D.** The task is actually fine — "write an email, and make it a marketing one" is an unambiguous instruction. What's missing is everything the email needs to be *about*: what's being sold, to whom, and what's new. With no context, the model doesn't fail — it fills the vacuum with the most statistically average marketing email it can produce, which is exactly what came back. **A** is the tempting trap: the whole prompt *feels* vague, so it's easy to blame "task," but the deliverable and action are both specified. **B** is a real gap — length matters — but a perfectly-sized email about nothing is still nothing. **C** is also a real, smaller gap, but tone problems produce an email that sounds wrong, not one that's about the wrong (or no) product.
 
 </details>
 
@@ -46,14 +46,14 @@ Someone types: `Summarize my meeting notes into three action items.` No notes ar
 
 A team's standing prompt is: `Write product descriptions in our brand voice — punchy, a little irreverent, no corporate speak.` Every result is close-ish but inconsistent: sometimes too stiff, sometimes trying too hard to be funny. What's the single most effective next move?
 
-- **A.** Add more adjectives describing the voice: "witty, bold, confident, fun"
-- **B.** Tell the AI to "really nail the tone this time, it's important"
-- **C.** Paste 2-3 existing product descriptions that already nail the voice, and ask it to match that style
+- **A.** Paste 2-3 existing product descriptions that already nail the voice, and ask it to match that style
+- **B.** Add more adjectives describing the voice: "witty, bold, confident, fun"
+- **C.** Tell the AI to "really nail the tone this time, it's important"
 - **D.** Ask the AI to first define what "punchy and irreverent" means, then write the description
 
 <details><summary>Answer</summary>
 
-**Correct: C.** This is the case for showing instead of describing. "Punchy" and "irreverent" are labels — a real example carries word choice, sentence rhythm, and where the jokes land in a way no adjective list can. This is also a context move: you're handing over source material, just like question 2, except here the material *defines a style* rather than supplying facts. **A** feels like more specificity, but stacking adjectives ("witty, bold, confident, fun") actually adds ambiguity — each one is still a label the model has to interpret, and now there are four inconsistent labels instead of one. **B** adds urgency, not information; the model has nothing new to act on, it just gets told the stakes are higher. **D** sounds clever but wastes a step — the AI's generic definition of "punchy" isn't your brand's definition, so you've added a detour without grounding it in anything specific to you.
+**Correct: A.** This is the case for showing instead of describing. "Punchy" and "irreverent" are labels — a real example carries word choice, sentence rhythm, and where the jokes land in a way no adjective list can. This is also a context move: you're handing over source material, just like question 2, except here the material *defines a style* rather than supplying facts. **B** feels like more specificity, but stacking adjectives ("witty, bold, confident, fun") actually adds ambiguity — each one is still a label the model has to interpret, and now there are four inconsistent labels instead of one. **C** adds urgency, not information; the model has nothing new to act on, it just gets told the stakes are higher. **D** sounds clever but wastes a step — the AI's generic definition of "punchy" isn't your brand's definition, so you've added a detour without grounding it in anything specific to you.
 
 </details>
 
@@ -76,14 +76,14 @@ Someone pastes their resume and writes just that above it: `Help me with my resu
 
 Prompt: `Draft a message to my landlord about the broken heater.` The AI drafts something factually fine — it mentions the heater, asks for a repair — but reads stiff, cold, and faintly like a legal notice. Which lever's absence caused *this specific* problem?
 
-- **A.** Tone — the prompt never said how the message should come across
-- **B.** Task — the prompt didn't say what the message should accomplish
+- **A.** Task — the prompt didn't say what the message should accomplish
+- **B.** Tone — the prompt never said how the message should come across
 - **C.** Context — the prompt didn't mention how long the heater's been broken or any earlier attempts to reach the landlord
 - **D.** Format — the prompt didn't specify email vs. text vs. letter
 
 <details><summary>Answer</summary>
 
-**Correct: A.** Left unspecified, models tend to default toward a neutral-to-formal register, and a request framed around a "broken heater" and "the landlord" nudges that default toward something that reads like a formal complaint. That's a tone symptom, not a facts or structure symptom — fix it by naming the register you want ("firm but friendly, not a legal threat"). **B** is tempting but the task is actually clear: draft a message, about the heater, to the landlord. **C** would make the message more persuasive and specific, and it's a real gap worth closing — but even with those details added, an unset tone still produces a cold, detailed complaint rather than a warm one. **D** affects length and structure (a text is shorter than a letter) but not warmth — you can just as easily get a stiff, lawsuit-sounding text message as a stiff email.
+**Correct: B.** Left unspecified, models tend to default toward a neutral-to-formal register, and a request framed around a "broken heater" and "the landlord" nudges that default toward something that reads like a formal complaint. That's a tone symptom, not a facts or structure symptom — fix it by naming the register you want ("firm but friendly, not a legal threat"). **A** is tempting but the task is actually clear: draft a message, about the heater, to the landlord. **C** would make the message more persuasive and specific, and it's a real gap worth closing — but even with those details added, an unset tone still produces a cold, detailed complaint rather than a warm one. **D** affects length and structure (a text is shorter than a letter) but not warmth — you can just as easily get a stiff, lawsuit-sounding text message as a stiff email.
 
 </details>
 
@@ -95,12 +95,12 @@ What's the most accurate read of this rewrite?
 
 - **A.** Good habit — always specify all four levers for consistency
 - **B.** Wrong, because "task" should never be stated explicitly, only implied
-- **C.** Correct, because more detail always produces a better answer
-- **D.** Overkill — the original question already had one unambiguous interpretation and one correct answer, so there was no gap to close
+- **C.** Overkill — the original question already had one unambiguous interpretation and one correct answer, so there was no gap to close
+- **D.** Correct, because more detail always produces a better answer
 
 <details><summary>Answer</summary>
 
-**Correct: D.** The four-lever check is a diagnostic for closing a *real* ambiguity — it's not a template to run on every message. "What's the capital of France?" has exactly one reasonable reading and one correct answer; there's no task, context, format, or tone gap for the extra scaffolding to fix, so it just adds typing and tokens for the same answer you'd have gotten anyway. **A** sounds disciplined but is actually cargo-culting a checklist — the skill this whole module is teaching is judging *whether and which* lever is missing, not mechanically stacking all four every time. **B** invents a rule that doesn't exist; stating the task explicitly is fine, it's just unnecessary when the task was already obvious. **C** is a common and costly myth — extra instructions have a real cost in time and (for paid tools) usage, see [what using AI actually costs](/learn/ai-literacy/what-using-ai-actually-costs) — and padding an already-clear prompt doesn't make a factual answer more correct.
+**Correct: C.** The four-lever check is a diagnostic for closing a *real* ambiguity — it's not a template to run on every message. "What's the capital of France?" has exactly one reasonable reading and one correct answer; there's no task, context, format, or tone gap for the extra scaffolding to fix, so it just adds typing and tokens for the same answer you'd have gotten anyway. **A** sounds disciplined but is actually cargo-culting a checklist — the skill this whole module is teaching is judging *whether and which* lever is missing, not mechanically stacking all four every time. **B** invents a rule that doesn't exist; stating the task explicitly is fine, it's just unnecessary when the task was already obvious. **D** is a common and costly myth — extra instructions have a real cost in time and (for paid tools) usage, see [what using AI actually costs](/learn/ai-literacy/what-using-ai-actually-costs) — and padding an already-clear prompt doesn't make a factual answer more correct.
 
 </details>
 

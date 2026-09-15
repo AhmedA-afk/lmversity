@@ -2,7 +2,7 @@
 title: "Quiz: pandas DataFrames"
 track: "python-data-apis"
 status: live
-summary: "A 6-question self-check on pandas DataFrames: loc vs iloc (label vs position, inclusive vs exclusive slicing), predicting groupby.agg output, picking the right merge how=, spotting"
+summary: "Six scenarios, no trivia — every wrong option here is a mistake someone actually ships."
 duration: "15 min read"
 ---
 
@@ -35,17 +35,17 @@ print(top)
 What do `top.loc[1]` and `top.iloc[1]` return?
 
 - A. Both return kip's row — once you sort, `.loc` and `.iloc` line back up.
-- B. `top.loc[1]` returns kip's row; `top.iloc[1]` returns ash's row.
-- C. `top.loc[1]` raises a `KeyError` — label `1` no longer exists after sorting.
+- B. `top.loc[1]` raises a `KeyError` — label `1` no longer exists after sorting.
+- C. `top.loc[1]` returns kip's row; `top.iloc[1]` returns ash's row.
 - D. `top.iloc[1]` returns kip's row; `top.loc[1]` returns ash's row.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** `sort_values` reorders rows but never touches their index labels — kip's row was built with label `1` and keeps it no matter where it physically ends up. `top.loc[1]` looks up *label* 1 and finds kip. `top.iloc[1]` ignores labels and grabs whatever sits in physical row 1 of the *current* order — after sorting, that's ash. Same digit, two different rows, because one indexer reads labels and the other reads position — see [selecting, filtering, and indexing](/learn/python-data-apis/selecting-filtering-indexing) for the full mental model.
+**Correct: C.** `sort_values` reorders rows but never touches their index labels — kip's row was built with label `1` and keeps it no matter where it physically ends up. `top.loc[1]` looks up *label* 1 and finds kip. `top.iloc[1]` ignores labels and grabs whatever sits in physical row 1 of the *current* order — after sorting, that's ash. Same digit, two different rows, because one indexer reads labels and the other reads position — see [selecting, filtering, and indexing](/learn/python-data-apis/selecting-filtering-indexing) for the full mental model.
 
 **A.** Tempting because `.loc[1]` and `.iloc[1]` do agree — but only when the index is still its untouched default `0..n-1` order. The moment you sort, filter, concatenate, or set a custom index, that coincidence breaks, and the two indexers quietly start disagreeing for the same integer.
 
-**C.** Label `1` never went anywhere — `sort_values` (like `sort_index`, boolean masks, `.drop()`, etc.) rearranges or removes rows without renumbering the survivors. You'd only get a `KeyError` here after calling `.reset_index(drop=True)`, which replaces the labels with a fresh range.
+**B.** Label `1` never went anywhere — `sort_values` (like `sort_index`, boolean masks, `.drop()`, etc.) rearranges or removes rows without renumbering the survivors. You'd only get a `KeyError` here after calling `.reset_index(drop=True)`, which replaces the labels with a fresh range.
 
 **D.** This swaps which indexer does what. `.iloc` is the position-based one; `.loc` is the label-based one. Memorize it by the vowel: `.loc` = **lo**okup by label.
 
@@ -70,19 +70,19 @@ b = df.iloc[1:3]
 How many rows end up in `a` and in `b`?
 
 - A. 2 rows in both — both slices exclude the stop value, same as Python list slicing.
-- B. 3 rows in `a`, 2 rows in `b`.
-- C. 2 rows in `a`, 3 rows in `b`.
-- D. 3 rows in both — a colon slice is inclusive on both indexers.
+- B. 2 rows in `a`, 3 rows in `b`.
+- C. 3 rows in both — a colon slice is inclusive on both indexers.
+- D. 3 rows in `a`, 2 rows in `b`.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** `df.loc[1:3]` is a *label* slice: it keeps every row from label `1` through label `3` **inclusive** — three rows. `df.iloc[1:3]` is a *position* slice, and position slicing follows the same convention as ordinary Python list slicing — stop is **exclusive** — so it keeps positions 1 and 2, two rows. Same two numbers, different rule, because `.loc` is answering "which labels" (where there's no natural "one past" a label) and `.iloc` is answering "which positions" (where there is).
+**Correct: D.** `df.loc[1:3]` is a *label* slice: it keeps every row from label `1` through label `3` **inclusive** — three rows. `df.iloc[1:3]` is a *position* slice, and position slicing follows the same convention as ordinary Python list slicing — stop is **exclusive** — so it keeps positions 1 and 2, two rows. Same two numbers, different rule, because `.loc` is answering "which labels" (where there's no natural "one past" a label) and `.iloc` is answering "which positions" (where there is).
 
 **A.** This describes `.iloc`, not `.loc`. Assuming `.loc` slicing behaves like a Python list slice is one of the most common off-by-one bugs when porting NumPy or list code to pandas.
 
-**C.** Backwards — `.loc` is the inclusive one, `.iloc` is the exclusive one, for the reason above.
+**B.** Backwards — `.loc` is the inclusive one, `.iloc` is the exclusive one, for the reason above.
 
-**D.** Only `.loc` is inclusive; `.iloc` keeps its exclusive stop no matter the syntax. If both indexers were inclusive, `df.iloc[0:len(df)]` would overshoot and raise an `IndexError` instead of returning the whole frame.
+**C.** Only `.loc` is inclusive; `.iloc` keeps its exclusive stop no matter the syntax. If both indexers were inclusive, `df.iloc[0:len(df)]` would overshoot and raise an `IndexError` instead of returning the whole frame.
 
 </details>
 
@@ -105,16 +105,16 @@ print(result)
 
 What does `result.loc["west", "mean"]` evaluate to?
 
-- A. 550.0
-- B. ≈183.33
+- A. ≈183.33
+- B. 550.0
 - C. 125.0
 - D. 200.0
 
 <details><summary>Answer</summary>
 
-**Correct: B.** groupby-agg first splits `sales` into an east group (100, 150) and a west group (200, 50, 300), then runs every function against each group independently. West's mean is (200 + 50 + 300) / 3 = 550 / 3 ≈ 183.33.
+**Correct: A.** groupby-agg first splits `sales` into an east group (100, 150) and a west group (200, 50, 300), then runs every function against each group independently. West's mean is (200 + 50 + 300) / 3 = 550 / 3 ≈ 183.33.
 
-**A.** That's `result.loc["west", "sum"]` — the raw total, before dividing by the count. Easy to grab by accident because `sum` and `mean` sit one column apart in the printed table.
+**B.** That's `result.loc["west", "sum"]` — the raw total, before dividing by the count. Easy to grab by accident because `sum` and `mean` sit one column apart in the printed table.
 
 **C.** That's east's mean, not west's — (100 + 150) / 2 = 125. Reading the wrong region's row is the single most common `groupby.agg` mistake, especially once you have more groups than fit on one screen.
 

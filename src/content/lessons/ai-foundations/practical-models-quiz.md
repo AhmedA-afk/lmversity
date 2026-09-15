@@ -2,7 +2,7 @@
 title: "Choosing & Running: Make the Call"
 track: "ai-foundations"
 status: live
-summary: "Six scenario-based MCQs on choosing open vs. closed models, estimating relative cost from token counts, why the frontier model isn't the default, and when a fine-tuned small model "
+summary: "Every real model choice is a constraint-satisfaction problem wearing a technology decision's clothes."
 duration: "18 min read"
 ---
 
@@ -92,17 +92,17 @@ D. It doesn't matter — autocomplete UIs debounce requests anyway, so model lat
 A company processes 2 million invoices a month, extracting five fixed fields (vendor name, invoice number, date, line-item total, tax amount) into structured JSON. They have 50,000 historical invoices with verified-correct extractions sitting around. Which approach is most likely to beat calling a frontier general-purpose model directly, and why?
 
 A. A frontier model with a long, carefully engineered prompt — bigger models always generalize better, so they'll win on a narrow task like this too.
-B. A small model fine-tuned on the 50,000 labeled examples — the task is narrow and well-defined with abundant labeled data, so fine-tuning can match or beat frontier accuracy on this exact pattern, at a fraction of the per-call cost and latency across 2 million calls a month.
-C. Neither — abandon LLMs and hand-write a regex/rules parser; model-based approaches are too unreliable for structured extraction at this volume.
+B. Neither — abandon LLMs and hand-write a regex/rules parser; model-based approaches are too unreliable for structured extraction at this volume.
+C. A small model fine-tuned on the 50,000 labeled examples — the task is narrow and well-defined with abundant labeled data, so fine-tuning can match or beat frontier accuracy on this exact pattern, at a fraction of the per-call cost and latency across 2 million calls a month.
 D. The frontier model — fine-tuning only helps with subjective, open-ended tasks like creative writing, not structured extraction.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** This is the textbook case for [fine-tuning](/learn/ai-foundations/pretraining-vs-finetuning) beating a frontier model: a narrow, repetitive task, a fixed output schema, and tens of thousands of labeled examples that are exactly what the model needs to see. Fine-tuning bakes your specific document formats and edge cases into a much smaller model, so it doesn't need broad world knowledge to do this one job well — and at 2 million calls a month, the per-call cost and latency savings compound into a decisive advantage.
+**Correct: C.** This is the textbook case for [fine-tuning](/learn/ai-foundations/pretraining-vs-finetuning) beating a frontier model: a narrow, repetitive task, a fixed output schema, and tens of thousands of labeled examples that are exactly what the model needs to see. Fine-tuning bakes your specific document formats and edge cases into a much smaller model, so it doesn't need broad world knowledge to do this one job well — and at 2 million calls a month, the per-call cost and latency savings compound into a decisive advantage.
 
 **A** is the "bigger always generalizes better" myth this module exists to correct. General capability matters most on broad, novel, or open-ended tasks. On a narrow, in-distribution task like this one, a model tuned specifically on your data can match or exceed a much larger general model, because the job has shrunk from "understand anything" to "recognize this one pattern precisely."
 
-**C** overcorrects in the opposite direction. Hand-written rules are brittle exactly where invoices are messy — different vendors, layouts, date formats, and line-item structures break regex parsers constantly. That fuzziness is precisely what a model (fine-tuned or not) handles better than rigid pattern matching. It also throws away the 50,000 labeled examples, which are a resource, not a reason to avoid models.
+**B** overcorrects in the opposite direction. Hand-written rules are brittle exactly where invoices are messy — different vendors, layouts, date formats, and line-item structures break regex parsers constantly. That fuzziness is precisely what a model (fine-tuned or not) handles better than rigid pattern matching. It also throws away the 50,000 labeled examples, which are a resource, not a reason to avoid models.
 
 **D** has the fine-tuning use case backwards. Fine-tuning is most reliable, and easiest to measure, on narrow structured tasks like extraction and classification — you can score outputs directly against labeled examples. Subjective, open-ended generation is actually the *harder* place to prove fine-tuning helped, not the natural home for it.
 
@@ -113,19 +113,19 @@ D. The frontier model — fine-tuning only helps with subjective, open-ended tas
 Your team expects a new feature to generate about 20 million model calls a month. A colleague argues: "The cost difference between these two models is only $0.003 per call — that's basically free, so let's just use whichever one is easier to integrate." What's wrong with that reasoning, if anything?
 
 A. Nothing — $0.003 is negligible regardless of context, so ease of integration should decide it.
-B. Treating a small per-call number as automatically negligible ignores volume: at 20 million calls a month, $0.003 per call is $60,000 a month — volume is exactly what turns a rounding error into a real budget line, so cost-per-call has to be evaluated against expected scale, not in isolation.
-C. It's wrong because closed models never charge per-call, only via flat subscription, so the comparison is invalid to begin with.
-D. It's wrong because integration ease should never factor into a model choice — only benchmark performance should.
+B. It's wrong because closed models never charge per-call, only via flat subscription, so the comparison is invalid to begin with.
+C. It's wrong because integration ease should never factor into a model choice — only benchmark performance should.
+D. Treating a small per-call number as automatically negligible ignores volume: at 20 million calls a month, $0.003 per call is $60,000 a month — volume is exactly what turns a rounding error into a real budget line, so cost-per-call has to be evaluated against expected scale, not in isolation.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** `$0.003 × 20,000,000 = $60,000`. Volume is a first-class constraint alongside budget, privacy, and latency precisely because it multiplies small per-unit numbers into real ones — a difference that looks trivial at the scale of a single request stops looking trivial at the scale of your actual traffic. Always check a per-call number against your expected volume before calling it negligible.
+**Correct: D.** `$0.003 × 20,000,000 = $60,000`. Volume is a first-class constraint alongside budget, privacy, and latency precisely because it multiplies small per-unit numbers into real ones — a difference that looks trivial at the scale of a single request stops looking trivial at the scale of your actual traffic. Always check a per-call number against your expected volume before calling it negligible.
 
 **A** makes exactly the mistake the scenario is testing: reasoning about cost from a single call in isolation, without multiplying by how many calls you'll actually make. That's the same error as thinking a fraction-of-a-cent difference "doesn't matter" without asking "compared to what volume?"
 
-**C** is factually off — most closed frontier APIs meter usage per-token (which is what makes a "$0.003 per call" comparison meaningful in the first place), even where subscription tiers also exist. More importantly, it dodges the actual reasoning error instead of addressing it: whether or not the pricing model is per-call, the mistake was skipping the volume multiplication.
+**B** is factually off — most closed frontier APIs meter usage per-token (which is what makes a "$0.003 per call" comparison meaningful in the first place), even where subscription tiers also exist. More importantly, it dodges the actual reasoning error instead of addressing it: whether or not the pricing model is per-call, the mistake was skipping the volume multiplication.
 
-**D** swings too far the other way. Integration ease is a legitimate tiebreaker *once* cost and quality are genuinely close — the flaw in the colleague's reasoning isn't that they considered it, it's that they dismissed a real $60,000/month cost gap as negligible before getting there.
+**C** swings too far the other way. Integration ease is a legitimate tiebreaker *once* cost and quality are genuinely close — the flaw in the colleague's reasoning isn't that they considered it, it's that they dismissed a real $60,000/month cost gap as negligible before getting there.
 
 </details>
 
@@ -133,18 +133,18 @@ D. It's wrong because integration ease should never factor into a model choice �
 
 An internal tool drafts legal-contract summaries for lawyers to review before anything reaches a client. Volume is about 200 requests a day. Every summary gets read carefully for several minutes regardless of how fast it was generated. Budget is generously funded. There's no special data-residency requirement — the company already routes these same contracts to an external e-discovery vendor. Given this constraint set, what should most drive the model choice?
 
-A. Latency — faster responses always improve user experience, in any context.
-B. Cost — small per-call savings compound importantly at any volume.
-C. Output quality — at this volume and budget, neither cost nor latency is actually binding (the human review step absorbs any latency gap, and 200 requests a day won't stress a generous budget), so this is a case where you should just spend on the best available model for a high-stakes task.
+A. Output quality — at this volume and budget, neither cost nor latency is actually binding (the human review step absorbs any latency gap, and 200 requests a day won't stress a generous budget), so this is a case where you should just spend on the best available model for a high-stakes task.
+B. Latency — faster responses always improve user experience, in any context.
+C. Cost — small per-call savings compound importantly at any volume.
 D. Open vs. closed licensing — that should be the first filter applied to every model decision, before looking at the task.
 
 <details><summary>Answer</summary>
 
-**Correct: C.** The whole point of [reasoning from a decision framework](/learn/ai-foundations/choosing-a-model-decision-framework) is that constraints sometimes *don't* bind, and you have to notice that too. Nothing here forces a cheaper, faster, or smaller choice: budget is ample, volume is low, latency differences vanish into a multi-minute human read, and there's no data-residency requirement. That's the flip side of "the biggest model isn't the default" — it's not a blanket bias against big models, it's matching the model to the constraints that are actually in front of you. Here, none of the usual pressures apply, and the task (legal accuracy, real stakes) is exactly the kind that rewards spending the available budget on the best available quality.
+**Correct: A.** The whole point of [reasoning from a decision framework](/learn/ai-foundations/choosing-a-model-decision-framework) is that constraints sometimes *don't* bind, and you have to notice that too. Nothing here forces a cheaper, faster, or smaller choice: budget is ample, volume is low, latency differences vanish into a multi-minute human read, and there's no data-residency requirement. That's the flip side of "the biggest model isn't the default" — it's not a blanket bias against big models, it's matching the model to the constraints that are actually in front of you. Here, none of the usual pressures apply, and the task (legal accuracy, real stakes) is exactly the kind that rewards spending the available budget on the best available quality.
 
-**A**'s "always" is the tell. This is precisely the low-volume, human-reviewed context where a latency difference of a few seconds disappears into several minutes of human reading time and changes nothing about the outcome.
+**B**'s "always" is the tell. This is precisely the low-volume, human-reviewed context where a latency difference of a few seconds disappears into several minutes of human reading time and changes nothing about the outcome.
 
-**B** is the mirror image of question 5: at 200 requests a day, even a meaningfully larger per-call cost difference is a trivial total dollar amount against a budget already described as generous. Optimizing for a savings the budget won't notice just trades away quality on a high-stakes task for no real benefit.
+**C** is the mirror image of question 5: at 200 requests a day, even a meaningfully larger per-call cost difference is a trivial total dollar amount against a budget already described as generous. Optimizing for a savings the budget won't notice just trades away quality on a high-stakes task for no real benefit.
 
 **D** treats licensing as a universal first filter rather than one lens among several — relevant when privacy, control, or self-hosting is actually at stake, and irrelevant here since the company already sends these contracts externally to another vendor. Nothing in this constraint set makes open vs. closed the deciding factor; quality is.
 

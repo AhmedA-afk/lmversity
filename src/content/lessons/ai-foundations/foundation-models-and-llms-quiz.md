@@ -2,7 +2,7 @@
 title: "Foundation Models & LLMs: Check Your Model"
 track: "ai-foundations"
 status: live
-summary: "A 6-question self-check quiz for the Foundation Models & LLMs module, testing understanding (not recall) of why LLMs predict tokens rather than facts, what fine-tuning can and can'"
+summary: "Six scenarios, no vocabulary recall. Each one is designed to catch the exact place where a plausible-sounding mental model breaks — the same places engineers get burned in production."
 duration: "12 min read"
 ---
 
@@ -34,17 +34,17 @@ You ask a model "What's the capital of France?" and it answers "Paris." What is 
 
 Your base model reasons fine but won't reliably output strict, valid JSON. A teammate proposes fine-tuning on a few thousand prompt → correctly-formatted-JSON examples. Separately, you also want the model to know about a product that launched last week, after its training cutoff. Which is accurate?
 
-- A. Fine-tuning is a good fit for the JSON formatting problem. It's a poor, unreliable way to teach durable new facts like the product launch — a few thousand examples is a tiny signal next to the trillions of tokens the model was pretrained on, and pushing hard on a narrow dataset risks memorizing your exact examples (or degrading general ability) rather than building reliable recall.
-- B. Both problems are equally well-suited to fine-tuning — it's just more gradient descent on new data, so it teaches new facts and new behaviors equally well.
+- A. Both problems are equally well-suited to fine-tuning — it's just more gradient descent on new data, so it teaches new facts and new behaviors equally well.
+- B. Fine-tuning is a good fit for the JSON formatting problem. It's a poor, unreliable way to teach durable new facts like the product launch — a few thousand examples is a tiny signal next to the trillions of tokens the model was pretrained on, and pushing hard on a narrow dataset risks memorizing your exact examples (or degrading general ability) rather than building reliable recall.
 - C. Neither problem can be solved with fine-tuning. Output format and factual recency are both locked in at pretraining time.
 - D. Fine-tuning should be used for the factual-knowledge problem, and the JSON-formatting problem should be solved with prompting alone, never fine-tuning.
 
 <details>
 <summary>Answer</summary>
 
-**Correct: A.** [Fine-tuning](/learn/ai-foundations/pretraining-vs-finetuning) is strongest at *reshaping behavior* on top of capability the model already has — format, tone, task-following, refusal patterns. It's weak at *injecting knowledge* reliably, because there's no mechanism forcing the model to generalize a handful of examples about one product into robust recall — you get something closer to inconsistent memorization. For facts outside the training window, retrieval (handing the model the source text at inference time) is the more trustworthy tool.
+**Correct: B.** [Fine-tuning](/learn/ai-foundations/pretraining-vs-finetuning) is strongest at *reshaping behavior* on top of capability the model already has — format, tone, task-following, refusal patterns. It's weak at *injecting knowledge* reliably, because there's no mechanism forcing the model to generalize a handful of examples about one product into robust recall — you get something closer to inconsistent memorization. For facts outside the training window, retrieval (handing the model the source text at inference time) is the more trustworthy tool.
 
-**B** — This is the trap. "More training" isn't a uniform knob — a few thousand examples targeting a narrow behavior is a completely different signal-to-noise regime than trillions of tokens of diverse pretraining, and it can even come at a cost (catastrophic forgetting of other abilities if you overfit the fine-tuning set).
+**A** — This is the trap. "More training" isn't a uniform knob — a few thousand examples targeting a narrow behavior is a completely different signal-to-noise regime than trillions of tokens of diverse pretraining, and it can even come at a cost (catastrophic forgetting of other abilities if you overfit the fine-tuning set).
 
 **C** — Wrong in the other direction. Behavior absolutely can be changed after pretraining — that's the entire premise of instruction tuning and [RLHF](/learn/ai-foundations/rlhf-and-instruction-tuning), which is why the same base model can be turned into something that follows formatting instructions it previously ignored.
 
@@ -56,15 +56,15 @@ Your base model reasons fine but won't reliably output strict, valid JSON. A tea
 
 You're building a chat feature. Turn 1 is cheap. By turn 20, every response costs noticeably more and takes longer — even though the user keeps typing short, single-sentence messages and the replies are the same length as always. Why?
 
-- A. The model has to re-read the entire conversation history as input tokens on every single call — it has no memory between requests — so the input token count, and the cost, grows with the length of the conversation, not just the new message.
-- B. API pricing tiers automatically increase the longer a single conversation runs.
-- C. The model "gets tired" and needs more compute to hold quality steady as the conversation gets longer.
+- A. API pricing tiers automatically increase the longer a single conversation runs.
+- B. The model "gets tired" and needs more compute to hold quality steady as the conversation gets longer.
+- C. The model has to re-read the entire conversation history as input tokens on every single call — it has no memory between requests — so the input token count, and the cost, grows with the length of the conversation, not just the new message.
 - D. Only output tokens are billed, so this must mean the model is quietly generating longer, more detailed answers as the conversation goes on.
 
 <details>
 <summary>Answer</summary>
 
-**Correct: A.** The model is stateless between calls — nothing persists in its weights or activations from one request to the next. So the client has to resend the whole transcript every time:
+**Correct: C.** The model is stateless between calls — nothing persists in its weights or activations from one request to the next. So the client has to resend the whole transcript every time:
 
 ```python
 # Turn 1
@@ -82,9 +82,9 @@ messages = [
 
 Input tokens are billed (and take time to process) whether they're brand new or the same history you sent last turn. This is the mechanical link between [tokens and cost](/learn/ai-foundations/tokens-and-cost-worked-example) that catches people building their first chat feature — cost scales with conversation length, not message length.
 
-**B** — There's no such escalating-tier mechanism triggered by conversation length; the per-token rate doesn't change mid-conversation. This is a plausible-sounding invented explanation, which is worth noticing as a pattern in itself.
+**A** — There's no such escalating-tier mechanism triggered by conversation length; the per-token rate doesn't change mid-conversation. This is a plausible-sounding invented explanation, which is worth noticing as a pattern in itself.
 
-**C** — Anthropomorphizes the model. There's no fatigue state; each call is an independent forward pass.
+**B** — Anthropomorphizes the model. There's no fatigue state; each call is an independent forward pass.
 
 **D** — Wrong on the premise (most APIs bill both input and output tokens) and wrong on the diagnosis — the growth here is on the input side (resent history), which this option doesn't even consider.
 
@@ -116,21 +116,21 @@ A research team trains a series of small and mid-size models, plots loss against
 
 Your team has a fixed compute budget for one training run — a set number of GPU-hours, no more. An engineer argues: "We should make the model as many parameters as memory allows, since bigger models are more capable." What's wrong with that reasoning?
 
-- A. For a fixed compute budget, model size and training-data size trade off against each other. Pouring most of the budget into parameters while leaving too few tokens to train on produces an *undertrained* large model — one that a smaller model trained on proportionally more data, using the same total compute, would actually beat. Compute has to be balanced across both axes, not maxed out on one.
-- B. Nothing is wrong with it — for any fixed compute budget, the largest possible model always reaches the lowest loss, full stop.
-- C. The real problem is that larger models are always slower at inference, so the fix is to pick the smallest model that fits in memory, regardless of training data.
-- D. Compute budget only limits training *time*, not final quality, so parameter count doesn't matter as long as training eventually finishes.
+- A. Nothing is wrong with it — for any fixed compute budget, the largest possible model always reaches the lowest loss, full stop.
+- B. The real problem is that larger models are always slower at inference, so the fix is to pick the smallest model that fits in memory, regardless of training data.
+- C. Compute budget only limits training *time*, not final quality, so parameter count doesn't matter as long as training eventually finishes.
+- D. For a fixed compute budget, model size and training-data size trade off against each other. Pouring most of the budget into parameters while leaving too few tokens to train on produces an *undertrained* large model — one that a smaller model trained on proportionally more data, using the same total compute, would actually beat. Compute has to be balanced across both axes, not maxed out on one.
 
 <details>
 <summary>Answer</summary>
 
-**Correct: A.** This is the finding that corrected a lot of early "just make it bigger" intuition: for a given compute budget (measured in FLOPs, not GPU count or wall-clock time), there's a balance point between how many parameters you train and how many tokens you train them on. Many early large models were sized up without scaling their training data proportionally, and were measurably undertrained relative to what the same compute could have achieved with a smaller model and more data. "Bigger" only wins if the data scales with it — [scaling laws](/learn/ai-foundations/scaling-laws) are precisely what expose this trade-off instead of treating parameter count as a free-standing virtue.
+**Correct: D.** This is the finding that corrected a lot of early "just make it bigger" intuition: for a given compute budget (measured in FLOPs, not GPU count or wall-clock time), there's a balance point between how many parameters you train and how many tokens you train them on. Many early large models were sized up without scaling their training data proportionally, and were measurably undertrained relative to what the same compute could have achieved with a smaller model and more data. "Bigger" only wins if the data scales with it — [scaling laws](/learn/ai-foundations/scaling-laws) are precisely what expose this trade-off instead of treating parameter count as a free-standing virtue.
 
-**B** — The absolute language ("always," "full stop") is itself a tell. This is the exact claim the compute-optimal finding overturns: past a certain point, more parameters with insufficient data trains worse than fewer parameters with more data, for the same compute spend.
+**A** — The absolute language ("always," "full stop") is itself a tell. This is the exact claim the compute-optimal finding overturns: past a certain point, more parameters with insufficient data trains worse than fewer parameters with more data, for the same compute spend.
 
-**C** — Inference speed is a real cost (see [inference cost and latency intuition](/learn/ai-foundations/inference-cost-and-latency-intuition)), but it's a different problem from *training*-compute allocation, and "smallest model regardless of data" ignores the actual lever the question is about.
+**B** — Inference speed is a real cost (see [inference cost and latency intuition](/learn/ai-foundations/inference-cost-and-latency-intuition)), but it's a different problem from *training*-compute allocation, and "smallest model regardless of data" ignores the actual lever the question is about.
 
-**D** — Compute is the constraint on achievable loss, not just a clock — that's the whole premise of plotting loss against compute in the first place. If parameter count vs. data split didn't matter, there would be no such thing as an undertrained model.
+**C** — Compute is the constraint on achievable loss, not just a clock — that's the whole premise of plotting loss against compute in the first place. If parameter count vs. data split didn't matter, there would be no such thing as an undertrained model.
 
 </details>
 

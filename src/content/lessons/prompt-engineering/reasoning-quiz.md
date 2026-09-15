@@ -11,13 +11,13 @@ duration: "9 min read"
 You need to label incoming chat messages `urgent`/`normal` from an explicit statement in the text, under a strict low-latency requirement. What's the best default technique?
 
 - **A.** Chain-of-thought with a "let's think step by step" trigger.
-- **B.** Zero-shot direct labeling.
-- **C.** Tree-of-thought with three branches.
-- **D.** Self-consistency with nine samples.
+- **B.** Tree-of-thought with three branches.
+- **C.** Self-consistency with nine samples.
+- **D.** Zero-shot direct labeling.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** The label is decidable from an explicit statement with no real composition, and latency is the binding constraint — see [when chain-of-thought hurts](/learn/prompt-engineering/when-cot-hurts-accuracy). **A** adds reasoning tokens that can talk the model out of a correct snap read, and adds latency for no benefit. **C** tree-of-thought is for discrete branching search, not classification with no search space. **D** nine samples multiplies both cost and latency exposure for a task that doesn't need voting to begin with.
+**Correct: D.** The label is decidable from an explicit statement with no real composition, and latency is the binding constraint — see [when chain-of-thought hurts](/learn/prompt-engineering/when-cot-hurts-accuracy). **A** adds reasoning tokens that can talk the model out of a correct snap read, and adds latency for no benefit. **B** tree-of-thought is for discrete branching search, not classification with no search space. **C** nine samples multiplies both cost and latency exposure for a task that doesn't need voting to begin with.
 
 </details>
 
@@ -25,14 +25,14 @@ You need to label incoming chat messages `urgent`/`normal` from an explicit stat
 
 A team adds "think step by step" to a sentiment classifier. Their eval shows accuracy drop slightly, and responses are roughly 40 times longer. What's the most likely explanation?
 
-- **A.** The model is broken and needs fine-tuning.
-- **B.** Forced deliberation gave the model room to construct and follow a rationalized alternate reading of otherwise-clear text, and the added length is a direct cost of the extra reasoning tokens.
+- **A.** Forced deliberation gave the model room to construct and follow a rationalized alternate reading of otherwise-clear text, and the added length is a direct cost of the extra reasoning tokens.
+- **B.** The model is broken and needs fine-tuning.
 - **C.** Sentiment classification always benefits from more reasoning, so adding even more tokens will fix it.
 - **D.** Self-consistency is required to fix this.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** This is exactly the mechanism in [when chain-of-thought hurts](/learn/prompt-engineering/when-cot-hurts-accuracy): reasoning tokens condition the final answer on whatever the model wrote, including a manufactured countervailing reason a snap read never needed. **A** nothing here indicates a broken model — the behavior is a predictable prompting effect. **C** contradicts the observed result; more reasoning on a task that doesn't need it doesn't reliably help and can hurt further. **D** self-consistency assumes some reasoning is worth ensembling — the fix here is removing reasoning, not voting over more of it.
+**Correct: A.** This is exactly the mechanism in [when chain-of-thought hurts](/learn/prompt-engineering/when-cot-hurts-accuracy): reasoning tokens condition the final answer on whatever the model wrote, including a manufactured countervailing reason a snap read never needed. **B** nothing here indicates a broken model — the behavior is a predictable prompting effect. **C** contradicts the observed result; more reasoning on a task that doesn't need it doesn't reliably help and can hurt further. **D** self-consistency assumes some reasoning is worth ensembling — the fix here is removing reasoning, not voting over more of it.
 
 </details>
 
@@ -56,13 +56,13 @@ At per-sample accuracy p = 0.7 with independent errors, what's true about going 
 Which of these is a genuinely useful check, rather than cargo-cult reasoning theater?
 
 - **A.** Asking the model to restate the question in its own words before answering.
-- **B.** Asking a fresh, independently-sampled pass to check a claim against retrieved evidence the first pass never saw.
-- **C.** Adding "let's think step by step" to a single-fact lookup.
+- **B.** Adding "let's think step by step" to a single-fact lookup.
+- **C.** Asking a fresh, independently-sampled pass to check a claim against retrieved evidence the first pass never saw.
 - **D.** Asking the same context to "double-check your work" with no new information supplied.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** It's genuine because it introduces information the first pass didn't have — retrieved evidence — which is the actual requirement for a check to catch anything, per [cargo-cult reasoning](/learn/prompt-engineering/cargo-cult-reasoning). **A** restating the question isn't a computed intermediate result; it's narration. **C** a lookup has no sub-steps to decompose. **D** re-reading the same context with nothing new tends to rubber-stamp the original answer rather than catch an error in it.
+**Correct: C.** It's genuine because it introduces information the first pass didn't have — retrieved evidence — which is the actual requirement for a check to catch anything, per [cargo-cult reasoning](/learn/prompt-engineering/cargo-cult-reasoning). **A** restating the question isn't a computed intermediate result; it's narration. **B** a lookup has no sub-steps to decompose. **D** re-reading the same context with nothing new tends to rubber-stamp the original answer rather than catch an error in it.
 
 </details>
 
@@ -72,12 +72,12 @@ A task requires arranging six delivery stops into a route respecting three hard 
 
 - **A.** Plain zero-shot.
 - **B.** Self-consistency over five independent full chain-of-thought attempts.
-- **C.** Tree-of-thought, branching on next-stop choices and pruning infeasible partial routes.
-- **D.** Native extended thinking only, with no other technique.
+- **C.** Native extended thinking only, with no other technique.
+- **D.** Tree-of-thought, branching on next-stop choices and pruning infeasible partial routes.
 
 <details><summary>Answer</summary>
 
-**Correct: C.** This is exactly the shape [tree-of-thought: when the complexity pays off](/learn/prompt-engineering/tree-of-thought-when-worth-it) describes: a discrete search where an early wrong move dead-ends the whole attempt, and partial routes can be checked against the constraints. **A** has no mechanism to satisfy three hard constraints at once without search. **B** underperforms here specifically because a bad first stop isn't independent, scattered noise — it's a shared dead end every attempt starting from it hits alike, so voting across full attempts doesn't correct it. **D** may help on a reasoning model but doesn't provide the explicit backtracking-with-constraint-checking that branch-and-prune gives you.
+**Correct: D.** This is exactly the shape [tree-of-thought: when the complexity pays off](/learn/prompt-engineering/tree-of-thought-when-worth-it) describes: a discrete search where an early wrong move dead-ends the whole attempt, and partial routes can be checked against the constraints. **A** has no mechanism to satisfy three hard constraints at once without search. **B** underperforms here specifically because a bad first stop isn't independent, scattered noise — it's a shared dead end every attempt starting from it hits alike, so voting across full attempts doesn't correct it. **C** may help on a reasoning model but doesn't provide the explicit backtracking-with-constraint-checking that branch-and-prune gives you.
 
 </details>
 

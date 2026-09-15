@@ -2,7 +2,7 @@
 title: "Training & Optimization: Debug the Run"
 track: "ai-foundations"
 status: live
-summary: "A 6-question self-check where learners read loss-curve scenarios (diverging, oscillating, plateaued, and overfit-vs-healthy), diagnose the mechanism, and pick the right fix — plus "
+summary: "A loss curve is a symptom, not a diagnosis — the same shape can come from different causes, and the same cause can produce different shapes depending on what else is going on."
 duration: "15 min read"
 ---
 
@@ -103,20 +103,20 @@ w = w - lr * grad
 
 What is `w` after exactly one step?
 
-- **A.** 1.8
-- **B.** 1.4
-- **C.** 0.2
-- **D.** 9
+- **A.** 1.4
+- **B.** 0.2
+- **C.** 9
+- **D.** 1.8
 
 <details><summary>Answer</summary>
 
-**Correct: A.** `dL/dw = 2(w - 5)`. At `w = 1`: `2 * (1 - 5) = 2 * -4 = -8`. Apply the update: `w_new = w - η * grad = 1 - 0.1 * (-8) = 1 + 0.8 = 1.8`. Notice the direction: the gradient was negative, so subtracting it *increases* `w`, moving it toward 5 — the actual minimum of `(w-5)^2`. That's the whole mechanism in [Gradient Descent, Explained](/learn/ai-foundations/gradient-descent-explained): you always move opposite the gradient's sign, scaled by `η`.
+**Correct: D.** `dL/dw = 2(w - 5)`. At `w = 1`: `2 * (1 - 5) = 2 * -4 = -8`. Apply the update: `w_new = w - η * grad = 1 - 0.1 * (-8) = 1 + 0.8 = 1.8`. Notice the direction: the gradient was negative, so subtracting it *increases* `w`, moving it toward 5 — the actual minimum of `(w-5)^2`. That's the whole mechanism in [Gradient Descent, Explained](/learn/ai-foundations/gradient-descent-explained): you always move opposite the gradient's sign, scaled by `η`.
 
-**B** — 1.4 comes from dropping the factor of 2 from the power rule — treating the gradient as `(w - 5) = -4` instead of `2(w - 5) = -8`. That gives `1 - 0.1 * (-4) = 1.4`. It's a common chain-rule slip when differentiating a squared term: the exponent has to come down as a coefficient.
+**A** — 1.4 comes from dropping the factor of 2 from the power rule — treating the gradient as `(w - 5) = -4` instead of `2(w - 5) = -8`. That gives `1 - 0.1 * (-4) = 1.4`. It's a common chain-rule slip when differentiating a squared term: the exponent has to come down as a coefficient.
 
-**C** — 0.2 comes from adding the gradient instead of subtracting it: `w + η * grad = 1 + 0.1 * (-8) = 0.2`. That's gradient *ascent* — climbing the loss surface instead of descending it. The minus sign in the update rule isn't cosmetic; it's what makes the algorithm move downhill.
+**B** — 0.2 comes from adding the gradient instead of subtracting it: `w + η * grad = 1 + 0.1 * (-8) = 0.2`. That's gradient *ascent* — climbing the loss surface instead of descending it. The minus sign in the update rule isn't cosmetic; it's what makes the algorithm move downhill.
 
-**D** — 9 comes from applying the raw gradient as the step itself and forgetting to scale it by the learning rate: `w - grad = 1 - (-8) = 9`. Without `η`, even a small, well-behaved landscape produces an uncontrolled jump — this is essentially what a learning rate that's far too high looks like in miniature.
+**C** — 9 comes from applying the raw gradient as the step itself and forgetting to scale it by the learning rate: `w - grad = 1 - (-8) = 9`. Without `η`, even a small, well-behaved landscape produces an uncontrolled jump — this is essentially what a learning rate that's far too high looks like in miniature.
 
 </details>
 

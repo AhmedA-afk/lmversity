@@ -34,18 +34,18 @@ D. The model is not capable of vision-based extraction.
 You chunk a 40-page contract with a 1-page overlap. A clause spans pages 15 through 17. What's the most likely failure?
 
 A. The clause will be extracted correctly and completely by every chunk that touches it.
-B. The clause will be truncated in every chunk that sees it, because a 1-page overlap isn't wide enough to contain a clause that spans three pages.
-C. The extraction will fail schema validation because the clause text is too long.
+B. The extraction will fail schema validation because the clause text is too long.
+C. The clause will be truncated in every chunk that sees it, because a 1-page overlap isn't wide enough to contain a clause that spans three pages.
 D. The merge step will automatically detect that the clause is too long and split it into two separate records.
 
 <details>
 <summary>Answer</summary>
 
-**Correct: B.** Overlap has to be sized to your longest expected entity — a 1-page overlap can't fully contain a clause spanning three pages inside any single chunk's window, so every chunk that sees part of it sees a truncated fragment.
+**Correct: C.** Overlap has to be sized to your longest expected entity — a 1-page overlap can't fully contain a clause spanning three pages inside any single chunk's window, so every chunk that sees part of it sees a truncated fragment.
 
 - A is wrong: it assumes the overlap is wide enough by coincidence, but nothing here guarantees that, and the premise (overlap of 1 page vs. a 3-page clause) argues against it.
-- B is correct: see the boundary hazard in [Strategies for Long Documents](/learn/structured-outputs/long-document-extraction-strategies) and the worked failure case in [Extracting Clauses from a 40-Page Contract](/learn/structured-outputs/contract-clause-extraction-example).
-- C is wrong: schema validation only checks that `text` is a string of the right type — a truncated string is still a perfectly valid string.
+- C is correct: see the boundary hazard in [Strategies for Long Documents](/learn/structured-outputs/long-document-extraction-strategies) and the worked failure case in [Extracting Clauses from a 40-Page Contract](/learn/structured-outputs/contract-clause-extraction-example).
+- B is wrong: schema validation only checks that `text` is a string of the right type — a truncated string is still a perfectly valid string.
 - D is wrong: merge logic collapses duplicate or overlapping extractions of the same entity; it doesn't invent a split of one entity into two records.
 
 </details>
@@ -55,19 +55,19 @@ D. The merge step will automatically detect that the clause is too long and spli
 Why does forcing a model to call a tool work as an extraction mechanism, even when the tool is never executed?
 
 A. Because `tool_choice` automatically validates the output against a JSON Schema more strictly than any other mechanism ever could.
-B. Because to produce a valid tool-call at all, the model must supply arguments matching the tool's `input_schema` — which you've defined to be your extraction schema.
-C. Because tools always run in a sandboxed environment that double-checks their inputs before anything else happens.
-D. Because forced tool calls bypass the need for any validation on your side.
+B. Because tools always run in a sandboxed environment that double-checks their inputs before anything else happens.
+C. Because forced tool calls bypass the need for any validation on your side.
+D. Because to produce a valid tool-call at all, the model must supply arguments matching the tool's `input_schema` — which you've defined to be your extraction schema.
 
 <details>
 <summary>Answer</summary>
 
-**Correct: B.** The tool is never executed — its only role is to exist as a schema the model has to fill in order to produce a call at all, which is exactly [Tool Calling as an Extraction Mechanism](/learn/structured-outputs/tool-and-function-schemas-for-extraction) describes.
+**Correct: D.** The tool is never executed — its only role is to exist as a schema the model has to fill in order to produce a call at all, which is exactly [Tool Calling as an Extraction Mechanism](/learn/structured-outputs/tool-and-function-schemas-for-extraction) describes.
 
 - A is wrong: strict, guaranteed-valid arguments require explicitly opting into strict schema enforcement (e.g. `strict: true`) — it isn't automatic just because you used `tool_choice`.
-- B is correct.
-- C is wrong: this scenario never executes the tool at all, so sandboxing is irrelevant to why the mechanism works.
-- D is wrong: it's the opposite of the guidance — you still need to validate the arguments you get back, per [Forcing a Tool Call to Extract](/learn/structured-outputs/function-calling-extraction-implementation).
+- D is correct.
+- B is wrong: this scenario never executes the tool at all, so sandboxing is irrelevant to why the mechanism works.
+- C is wrong: it's the opposite of the guidance — you still need to validate the arguments you get back, per [Forcing a Tool Call to Extract](/learn/structured-outputs/function-calling-extraction-implementation).
 
 </details>
 
@@ -96,19 +96,19 @@ D. Increasing `max_tokens` on the extraction request.
 
 Why is an extraction with no page number, span, or source-text field harder to trust in production, even if it's schema-valid and passes every cross-field check you currently have?
 
-A. It isn't — cross-field checks are a complete substitute for grounding.
-B. Because grounding is required by the JSON Schema specification for any array field.
-C. Because your cross-field checks can only catch the errors you thought to check for; grounding is what lets a human verify the rest without re-reading the whole document.
+A. Because your cross-field checks can only catch the errors you thought to check for; grounding is what lets a human verify the rest without re-reading the whole document.
+B. It isn't — cross-field checks are a complete substitute for grounding.
+C. Because grounding is required by the JSON Schema specification for any array field.
 D. Because ungrounded fields always take longer to extract than grounded ones.
 
 <details>
 <summary>Answer</summary>
 
-**Correct: C.** Cross-field checks are powerful but finite — they only catch the specific inconsistencies you anticipated and coded for. Grounding covers everything else by making verification cheap. See [Grounding Extractions in the Source](/learn/structured-outputs/grounding-and-citations-in-extraction).
+**Correct: A.** Cross-field checks are powerful but finite — they only catch the specific inconsistencies you anticipated and coded for. Grounding covers everything else by making verification cheap. See [Grounding Extractions in the Source](/learn/structured-outputs/grounding-and-citations-in-extraction).
 
-- A is wrong: no set of cross-field checks is exhaustive; grounding exists precisely for the errors those checks don't anticipate.
-- B is wrong: there's no such requirement in JSON Schema — grounding is a design choice you add to a schema, not a spec rule.
-- C is correct.
+- B is wrong: no set of cross-field checks is exhaustive; grounding exists precisely for the errors those checks don't anticipate.
+- C is wrong: there's no such requirement in JSON Schema — grounding is a design choice you add to a schema, not a spec rule.
+- A is correct.
 - D is wrong: grounding fields are typically cheap (a page number, a short text span) and don't meaningfully change extraction latency.
 
 </details>

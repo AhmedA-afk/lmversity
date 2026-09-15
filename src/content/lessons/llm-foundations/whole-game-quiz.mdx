@@ -34,18 +34,18 @@ D. A confidence score for the whole input sequence
 
 In the autoregressive generation loop, what happens immediately after a token is sampled?
 
-A. The model is retrained on that token
-B. The token is discarded and a fresh prompt is used
-C. The token is appended to the sequence and fed back in as input
+A. The token is appended to the sequence and fed back in as input
+B. The model is retrained on that token
+C. The token is discarded and a fresh prompt is used
 D. The vocabulary is reduced by one token
 
 <details>
 <summary>Answer</summary>
 
-**Correct: C.** That append-and-refeed step is the entire mechanism behind [the autoregressive generation loop](/learn/llm-foundations/the-autoregressive-generation-loop) — it's what turns one next-token prediction into arbitrarily long text.
+**Correct: A.** That append-and-refeed step is the entire mechanism behind [the autoregressive generation loop](/learn/llm-foundations/the-autoregressive-generation-loop) — it's what turns one next-token prediction into arbitrarily long text.
 
-- A is wrong because weights never change during generation — only during training or fine-tuning, a completely separate regime (see [training time vs. inference time](/learn/llm-foundations/training-time-vs-inference-time)).
-- B is wrong because throwing the token away would mean the loop never progresses past one token.
+- B is wrong because weights never change during generation — only during training or fine-tuning, a completely separate regime (see [training time vs. inference time](/learn/llm-foundations/training-time-vs-inference-time)).
+- C is wrong because throwing the token away would mean the loop never progresses past one token.
 - D is wrong because the vocabulary — the set of tokens the model can choose from — is fixed by the tokenizer and never shrinks during generation.
 
 </details>
@@ -115,18 +115,18 @@ D. The optimizer's gradient buffers
 A user sets temperature to 0, hoping for "the smartest possible answer." What does that setting actually change?
 
 A. It makes the model retrieve more accurate facts from training
-B. It makes sampling deterministic — always pick the single highest-probability token — without changing what the model knows
-C. It increases the model's parameter count for this request
-D. It expands the context window
+B. It increases the model's parameter count for this request
+C. It expands the context window
+D. It makes sampling deterministic — always pick the single highest-probability token — without changing what the model knows
 
 <details>
 <summary>Answer</summary>
 
-**Correct: B.** Temperature reshapes the softmax distribution *after* the forward pass has already produced its logits — at temperature 0, sampling collapses to always taking the top of that existing distribution. See [myths about how LLMs work](/learn/llm-foundations/myths-about-how-llms-work) and [sampling, temperature, and top-p](/learn/llm-foundations/sampling-temperature-top-p).
+**Correct: D.** Temperature reshapes the softmax distribution *after* the forward pass has already produced its logits — at temperature 0, sampling collapses to always taking the top of that existing distribution. See [myths about how LLMs work](/learn/llm-foundations/myths-about-how-llms-work) and [sampling, temperature, and top-p](/learn/llm-foundations/sampling-temperature-top-p).
 
 - A is wrong because temperature never touches the model's knowledge or its weights — it can only make an already-wrong logit less (or, at 0, still equally) likely to be picked.
-- C is wrong because parameter count is fixed the moment training ends; no runtime setting changes it.
-- D is wrong because context window size is an architectural property, unrelated to how a token is sampled from a distribution.
+- B is wrong because parameter count is fixed the moment training ends; no runtime setting changes it.
+- C is wrong because context window size is an architectural property, unrelated to how a token is sampled from a distribution.
 
 </details>
 

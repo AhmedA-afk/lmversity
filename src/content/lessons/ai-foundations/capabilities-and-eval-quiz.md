@@ -2,7 +2,7 @@
 title: "Capabilities & Evaluation: What Would You Trust?"
 track: "ai-foundations"
 status: live
-summary: "6-question self-check quiz for the AI Foundations 'Capabilities & Evaluation' module, testing prediction of reliability from benchmark scores, spotting misleading aggregate scores,"
+summary: "A vendor's model scores 88% on a public benchmark of grade-school arithmetic word problems — single question in, single number out, one step of reasoning."
 duration: "14 min read"
 ---
 
@@ -135,17 +135,17 @@ Given that the benchmark and its answers have been public long enough to plausib
 You need to decide whether to trust a model for a new internal task: pulling structured fields (vendor, amount, due date) off scanned invoices. Four approaches are on the table for answering "can I trust this?"
 
 - **A.** Ask the model directly how confident it is in its own invoice-extraction accuracy, and use that number.
-- **B.** Check its score on a general public document-understanding leaderboard and assume that transfers to your invoices.
-- **C.** Build a small labeled eval set of your actual invoices — including the messy scans and edge cases — run the model against it, and measure error rate broken out by field.
+- **B.** Build a small labeled eval set of your actual invoices — including the messy scans and edge cases — run the model against it, and measure error rate broken out by field.
+- **C.** Check its score on a general public document-understanding leaderboard and assume that transfers to your invoices.
 - **D.** Deploy it and see whether customers complain.
 
 <details><summary>Answer</summary>
 
-**Correct: C.** This is the only option that measures the thing you actually need to know: performance on your task's real distribution, not a proxy for it. [Building an eval set](/learn/ai-foundations/building-an-eval-set-worked-example) that's representative of your actual documents — different vendors, layouts, scan quality, the annoying edge cases — and scoring it per field (not blended, per Question 2's lesson) gives you a number you can actually act on: which fields are reliable enough to trust unsupervised, and which need a human in the loop or a verification step downstream.
+**Correct: B.** This is the only option that measures the thing you actually need to know: performance on your task's real distribution, not a proxy for it. [Building an eval set](/learn/ai-foundations/building-an-eval-set-worked-example) that's representative of your actual documents — different vendors, layouts, scan quality, the annoying edge cases — and scoring it per field (not blended, per Question 2's lesson) gives you a number you can actually act on: which fields are reliable enough to trust unsupervised, and which need a human in the loop or a verification step downstream.
 
 **A** repeats Question 4's mechanism: a model's stated confidence is generated text, not introspection over a calibrated internal error estimate. Fluent certainty ("I'm about 95% confident") carries no more guarantee of accuracy than the confident-but-wrong function signature did — there's no mechanism producing that number from an actual accuracy measurement.
 
-**B** repeats Question 1's mechanism: a general leaderboard measures a different task distribution (different documents, different failure modes) than your specific invoices. It's a weak prior at best, not a substitute for measuring your own task.
+**C** repeats Question 1's mechanism: a general leaderboard measures a different task distribution (different documents, different failure modes) than your specific invoices. It's a weak prior at best, not a substitute for measuring your own task.
 
 **D** skips evaluation entirely and lets production be the test set. That means failures — a missed due date, a wrong amount — surface as real damage (bad data, annoyed customers) instead of being caught cheaply beforehand. It's not "no evaluation," it's evaluation happening at the worst possible time and cost.
 

@@ -2,7 +2,7 @@
 title: "Quiz: Secrets & Configuration"
 track: "python-data-apis"
 status: live
-summary: "A 6-question scenario-based self-check on .gitignore judgment, why env vars beat hardcoded secrets, the correct incident response after a committed key, and the classic 'works on m"
+summary: "Six scenarios, not six definitions — the way secrets actually go wrong is never \"I didn't know what `.gitignore` does,\" it's misapplying the idea under time pressure."
 duration: "12 min read"
 ---
 
@@ -99,12 +99,12 @@ What's the most likely cause?
 
 - A) The teammate's Python version doesn't support `os.getenv`.
 - B) `load_dotenv()` only works on the operating system it was originally written on.
-- C) `.env` is (correctly) excluded from version control, so it never reached the teammate's clone — `os.getenv("OPENAI_API_KEY")` returns `None` because that variable doesn't exist anywhere on their machine.
-- D) The teammate needs to run `pip install --upgrade openai` to fix the authentication error.
+- C) The teammate needs to run `pip install --upgrade openai` to fix the authentication error.
+- D) `.env` is (correctly) excluded from version control, so it never reached the teammate's clone — `os.getenv("OPENAI_API_KEY")` returns `None` because that variable doesn't exist anywhere on their machine.
 
 <details><summary>Answer</summary>
 
-**Correct: C.** `.env` being gitignored is working exactly as intended — that's why it's excluded — but it means a fresh clone has no secrets at all. `load_dotenv()` silently finds no file, `os.getenv` returns `None`, and the API call fails with an error that *looks* like an auth problem (and technically is one — "None" isn't a valid key) but is really a missing-file problem. The fix isn't to commit `.env` — that defeats the point. It's to commit a `.env.example` with the variable names and no values (`OPENAI_API_KEY=`) and tell teammates to copy it to `.env` and fill in their own key; see [loading secrets with dotenv](/learn/python-data-apis/loading-secrets-with-dotenv) for the full pattern. **A** and **D** are the classic wrong reflex when you hit an auth error — blame the tooling or version before checking whether the secret exists at all; `os.getenv` has been in the standard library for decades and upgrading a package won't materialize a missing key. **B** is fabricated — `python-dotenv` behaves the same across operating systems; the difference between machines here is which files exist on disk, not which OS is running.
+**Correct: D.** `.env` being gitignored is working exactly as intended — that's why it's excluded — but it means a fresh clone has no secrets at all. `load_dotenv()` silently finds no file, `os.getenv` returns `None`, and the API call fails with an error that *looks* like an auth problem (and technically is one — "None" isn't a valid key) but is really a missing-file problem. The fix isn't to commit `.env` — that defeats the point. It's to commit a `.env.example` with the variable names and no values (`OPENAI_API_KEY=`) and tell teammates to copy it to `.env` and fill in their own key; see [loading secrets with dotenv](/learn/python-data-apis/loading-secrets-with-dotenv) for the full pattern. **A** and **C** are the classic wrong reflex when you hit an auth error — blame the tooling or version before checking whether the secret exists at all; `os.getenv` has been in the standard library for decades and upgrading a package won't materialize a missing key. **B** is fabricated — `python-dotenv` behaves the same across operating systems; the difference between machines here is which files exist on disk, not which OS is running.
 
 </details>
 
@@ -119,14 +119,14 @@ a1b2c3d fix typo
 
 Your teammate says: "I noticed `.env` got committed with the real key, so I deleted the file and pushed a new commit removing it. We're good now, right?"
 
-- A) Yes — the file is gone from the latest commit, so the key is no longer accessible to anyone.
-- B) No — the key still exists in commit `890abcd`'s history (anyone who already cloned, or any bot scanning public commits, still has it). Treat the key as compromised and rotate/revoke it at the provider immediately; only then worry about cleaning history.
+- A) No — the key still exists in commit `890abcd`'s history (anyone who already cloned, or any bot scanning public commits, still has it). Treat the key as compromised and rotate/revoke it at the provider immediately; only then worry about cleaning history.
+- B) Yes — the file is gone from the latest commit, so the key is no longer accessible to anyone.
 - C) No — deleting the file was fine, but they also need to add `.env` to `.gitignore` before this counts as fixed.
 - D) Yes, as long as the repository stays private — only teammates with access could ever see the old commit.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** Deleting a file in a later commit doesn't erase it from earlier commits — `git show 890abcd:.env` still prints the real key, and it will keep printing it for as long as that commit exists in any clone, fork, or CI cache. The one step you fully control is at the provider: revoke or rotate the credential so the leaked string stops working, regardless of who has seen it. History cleanup (`git filter-repo`, BFG, or just accepting the repo's history is tainted) matters too, but it's secondary — rotating is what actually neutralizes the leak, and it's true even for a key that was only ever public for a few minutes, since scanning tools move fast. **A** is the misunderstanding at the center of this question — git history is additive, not a stack where the last commit is the only one that exists. **C** describes good hygiene for *next time*, but as "the fix" for *this* leak it's a no-op — `.gitignore` only affects future tracking, not a credential already sitting in history. **D** confuses repo visibility (who can currently browse it) with whether the credential itself is still valid — the string is compromised the moment it's pushed anywhere outside your own head, private repo or not, since access lists change, repos get made public, and anyone who already cloned keeps their copy regardless.
+**Correct: A.** Deleting a file in a later commit doesn't erase it from earlier commits — `git show 890abcd:.env` still prints the real key, and it will keep printing it for as long as that commit exists in any clone, fork, or CI cache. The one step you fully control is at the provider: revoke or rotate the credential so the leaked string stops working, regardless of who has seen it. History cleanup (`git filter-repo`, BFG, or just accepting the repo's history is tainted) matters too, but it's secondary — rotating is what actually neutralizes the leak, and it's true even for a key that was only ever public for a few minutes, since scanning tools move fast. **B** is the misunderstanding at the center of this question — git history is additive, not a stack where the last commit is the only one that exists. **C** describes good hygiene for *next time*, but as "the fix" for *this* leak it's a no-op — `.gitignore` only affects future tracking, not a credential already sitting in history. **D** confuses repo visibility (who can currently browse it) with whether the credential itself is still valid — the string is compromised the moment it's pushed anywhere outside your own head, private repo or not, since access lists change, repos get made public, and anyone who already cloned keeps their copy regardless.
 
 </details>
 

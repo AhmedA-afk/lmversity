@@ -36,19 +36,19 @@ D. The position embedding
 `d_k = 2`. A query `q = [1, 1]` is compared against two keys, `k1 = [1, 0]` and `k2 = [0, 1]`. What are the resulting attention weights over `k1` and `k2` after scaling by `sqrt(d_k)` and applying softmax?
 
 A. `[1.0, 0.0]`
-B. `[0.5, 0.5]`
-C. `[0.73, 0.27]`
-D. It depends on the value vectors, which aren't given
+B. `[0.73, 0.27]`
+C. It depends on the value vectors, which aren't given
+D. `[0.5, 0.5]`
 
 <details>
 <summary>Answer</summary>
 
-**Correct: B.** `q · k1 = 1` and `q · k2 = 1` — identical scores, so after scaling and softmax they must come out equal.
+**Correct: D.** `q · k1 = 1` and `q · k2 = 1` — identical scores, so after scaling and softmax they must come out equal.
 
 - **A is incorrect.** This would require one score to dominate the other; here they're identical before and after scaling.
-- **B is correct.** `q · k1 = (1)(1) + (1)(0) = 1`, `q · k2 = (1)(0) + (1)(1) = 1`. Scaling both by `1/sqrt(2)` keeps them equal, and softmax over two equal values always splits 50/50.
-- **C is incorrect.** This is a plausible-looking unequal split, but the two raw scores are exactly equal — there's no basis for an uneven weight here.
-- **D is incorrect.** The weights come entirely from Q and K; V only determines what those weights get multiplied against afterward, not the weights themselves. See [Scaled Dot-Product Attention in Numpy](/learn/llm-foundations/scaled-dot-product-attention-in-numpy).
+- **D is correct.** `q · k1 = (1)(1) + (1)(0) = 1`, `q · k2 = (1)(0) + (1)(1) = 1`. Scaling both by `1/sqrt(2)` keeps them equal, and softmax over two equal values always splits 50/50.
+- **B is incorrect.** This is a plausible-looking unequal split, but the two raw scores are exactly equal — there's no basis for an uneven weight here.
+- **C is incorrect.** The weights come entirely from Q and K; V only determines what those weights get multiplied against afterward, not the weights themselves. See [Scaled Dot-Product Attention in Numpy](/learn/llm-foundations/scaled-dot-product-attention-in-numpy).
 
 </details>
 
@@ -56,18 +56,18 @@ D. It depends on the value vectors, which aren't given
 
 Why does attention divide scores by `sqrt(d_k)` before applying softmax?
 
-A. To force every score to be positive before softmax runs
-B. Because dot products of higher-dimensional vectors have larger variance, which pushes softmax toward saturated, near-one-hot outputs with vanishing gradients if left unscaled
+A. Because dot products of higher-dimensional vectors have larger variance, which pushes softmax toward saturated, near-one-hot outputs with vanishing gradients if left unscaled
+B. To force every score to be positive before softmax runs
 C. To make sure the value vectors sum to exactly 1
 D. Because softmax requires its inputs to be between -1 and 1
 
 <details>
 <summary>Answer</summary>
 
-**Correct: B.** The variance of a dot product of `d_k` independent unit-variance terms grows with `d_k`; dividing by `sqrt(d_k)` cancels that growth and keeps the logit variance at 1 regardless of dimension.
+**Correct: A.** The variance of a dot product of `d_k` independent unit-variance terms grows with `d_k`; dividing by `sqrt(d_k)` cancels that growth and keeps the logit variance at 1 regardless of dimension.
 
-- **A is incorrect.** Softmax handles negative inputs fine — scaling isn't about sign, it's about magnitude and variance.
-- **B is correct.** See the full derivation and numeric example in [Why Divide by the Square Root of d_k](/learn/llm-foundations/why-divide-by-sqrt-dk).
+- **B is incorrect.** Softmax handles negative inputs fine — scaling isn't about sign, it's about magnitude and variance.
+- **A is correct.** See the full derivation and numeric example in [Why Divide by the Square Root of d_k](/learn/llm-foundations/why-divide-by-sqrt-dk).
 - **C is incorrect.** That's confusing the scaling factor with softmax's own normalization (which does make weights sum to 1) — the `sqrt(d_k)` division happens before softmax and serves a different purpose.
 - **D is incorrect.** Softmax accepts any real-valued input; there's no such range requirement.
 
@@ -98,19 +98,19 @@ D. To the block's final output, after the feed-forward step
 
 With `d_model = 512` and 8 attention heads, what is each head's Q/K dimension, and how does total compute compare to running one attention operation over the full 512 dimensions?
 
-A. 64 per head; roughly the same total compute as one wide head
-B. 512 per head; about 8x more total compute
-C. 64 per head; about 8x more total compute, since each head redoes the full computation
+A. 512 per head; about 8x more total compute
+B. 64 per head; about 8x more total compute, since each head redoes the full computation
+C. 64 per head; roughly the same total compute as one wide head
 D. 8 per head; roughly the same total compute as one wide head
 
 <details>
 <summary>Answer</summary>
 
-**Correct: A.** `512 / 8 = 64` per head, and because each head does proportionally less work over a proportionally smaller dimension, the total compute across all 8 heads stays close to what one full-width head would cost.
+**Correct: C.** `512 / 8 = 64` per head, and because each head does proportionally less work over a proportionally smaller dimension, the total compute across all 8 heads stays close to what one full-width head would cost.
 
-- **A is correct.** See [Multi-Head Attention: Why Many Heads](/learn/llm-foundations/multi-head-attention-why-many-heads) for why splitting doesn't multiply cost the way it multiplies the number of independent attention patterns.
-- **B is incorrect.** This mixes up the per-head dimension with the full model dimension — heads operate on slices, not the full width each.
-- **C is incorrect.** Each head operates on a smaller slice, not a redundant full copy — the per-head cost shrinks along with the per-head dimension.
+- **C is correct.** See [Multi-Head Attention: Why Many Heads](/learn/llm-foundations/multi-head-attention-why-many-heads) for why splitting doesn't multiply cost the way it multiplies the number of independent attention patterns.
+- **A is incorrect.** This mixes up the per-head dimension with the full model dimension — heads operate on slices, not the full width each.
+- **B is incorrect.** Each head operates on a smaller slice, not a redundant full copy — the per-head cost shrinks along with the per-head dimension.
 - **D is incorrect.** `512 / 8 = 64`, not 8 — 8 is the number of heads, not the per-head dimension.
 
 </details>
@@ -120,19 +120,19 @@ D. 8 per head; roughly the same total compute as one wide head
 What's the key structural difference between the attention sublayer and the feed-forward sublayer in a transformer block?
 
 A. The feed-forward block uses softmax and attention does not
-B. Attention mixes information across positions; the feed-forward block processes each position independently, with the same weights applied to every token
-C. The feed-forward block only runs during training, not at inference
-D. Attention has learned parameters, while the feed-forward block does not
+B. The feed-forward block only runs during training, not at inference
+C. Attention has learned parameters, while the feed-forward block does not
+D. Attention mixes information across positions; the feed-forward block processes each position independently, with the same weights applied to every token
 
 <details>
 <summary>Answer</summary>
 
-**Correct: B.** Attention is the only sublayer where one token's output can depend on another token's input; the FFN runs the identical two-layer MLP on every position independently, with zero cross-position mixing.
+**Correct: D.** Attention is the only sublayer where one token's output can depend on another token's input; the FFN runs the identical two-layer MLP on every position independently, with zero cross-position mixing.
 
 - **A is incorrect.** It's the reverse — attention uses softmax to turn scores into weights; the standard FFN has no softmax at all.
-- **B is correct.** See [The Feed-Forward Block and Its Role](/learn/llm-foundations/the-feed-forward-block-role) for the "attention moves, FFN processes" framing.
-- **C is incorrect.** The FFN runs at both training and inference, exactly like attention — every forward pass uses it.
-- **D is incorrect.** Both sublayers have learned parameters — attention's Q/K/V/output projections, and the FFN's two (or three, for SwiGLU) weight matrices.
+- **D is correct.** See [The Feed-Forward Block and Its Role](/learn/llm-foundations/the-feed-forward-block-role) for the "attention moves, FFN processes" framing.
+- **B is incorrect.** The FFN runs at both training and inference, exactly like attention — every forward pass uses it.
+- **C is incorrect.** Both sublayers have learned parameters — attention's Q/K/V/output projections, and the FFN's two (or three, for SwiGLU) weight matrices.
 
 </details>
 

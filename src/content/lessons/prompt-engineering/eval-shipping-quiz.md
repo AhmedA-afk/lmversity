@@ -13,17 +13,17 @@ Ten questions covering the module end to end - eval design, scoring method, A/B 
 **1. You write a prompt, then hand-pick five inputs from memory to test it before shipping. What's the main problem with this eval set?**
 
 A. It's too small to be worth running at all
-B. The inputs were selected by the same person who wrote the prompt, biasing them toward cases it already handles
-C. Hand-picked inputs can't be stored as JSONL
+B. Hand-picked inputs can't be stored as JSONL
+C. The inputs were selected by the same person who wrote the prompt, biasing them toward cases it already handles
 D. It doesn't include a rubric
 
 <details><summary>Answer</summary>
 
-**Correct: B.** Selecting your own test inputs after writing the prompt reproduces the exact selection bias covered in [Why You Evaluate Before You Ship](/learn/prompt-engineering/why-eval-before-ship) - you unconsciously pick cases you expect to work, then feel reassured when they do.
+**Correct: C.** Selecting your own test inputs after writing the prompt reproduces the exact selection bias covered in [Why You Evaluate Before You Ship](/learn/prompt-engineering/why-eval-before-ship) - you unconsciously pick cases you expect to work, then feel reassured when they do.
 
 - A is wrong: size matters, but it's not the *main* problem here - a small set of genuinely representative, independently-sourced cases is far more useful than a large set that's all self-selected.
-- B is correct.
-- C is wrong: any input can be stored as JSONL regardless of how it was chosen - format isn't the issue.
+- C is correct.
+- B is wrong: any input can be stored as JSONL regardless of how it was chosen - format isn't the issue.
 - D is wrong: a rubric matters for open-ended scoring, but this prompt (or any) can fail an eval on missing rubric criteria independent of where the inputs came from - the input-selection bias is the deeper problem.
 
 </details>
@@ -31,34 +31,34 @@ D. It doesn't include a rubric
 **2. Why tag eval cases as `ordinary`, `edge`, or `failure` instead of just reporting one overall pass rate?**
 
 A. Tags are required for JSONL files to parse correctly
-B. It lets you see which specific kind of input a prompt struggles with, not just an aggregate number
-C. It makes the eval run faster
-D. Untagged cases can't be added to a golden set
+B. It makes the eval run faster
+C. Untagged cases can't be added to a golden set
+D. It lets you see which specific kind of input a prompt struggles with, not just an aggregate number
 
 <details><summary>Answer</summary>
 
-**Correct: B.** As shown in [Building a Prompt Eval Dataset](/learn/prompt-engineering/building-an-eval-dataset), an 83% overall pass rate can hide a category that's completely broken - breaking the report out by tag turns that into "100% on ordinary, 50% on edge cases," which is actionable in a way the average never was.
+**Correct: D.** As shown in [Building a Prompt Eval Dataset](/learn/prompt-engineering/building-an-eval-dataset), an 83% overall pass rate can hide a category that's completely broken - breaking the report out by tag turns that into "100% on ordinary, 50% on edge cases," which is actionable in a way the average never was.
 
 - A is wrong: tags are plain JSON fields with no bearing on whether the file parses.
-- B is correct.
-- C is wrong: tagging doesn't change how many model calls the run makes.
-- D is wrong: a golden set can be built from any cases you choose to curate; tagging is a convenience for reporting, not a requirement for golden status.
+- D is correct.
+- B is wrong: tagging doesn't change how many model calls the run makes.
+- C is wrong: a golden set can be built from any cases you choose to curate; tagging is a convenience for reporting, not a requirement for golden status.
 
 </details>
 
 **3. Your prompt drafts a customer-support reply - open-ended text with no single correct string. Which scoring approach fits?**
 
-A. Exact-match against one canonical reply
-B. A rubric with score anchors, applied by an LLM judge
+A. A rubric with score anchors, applied by an LLM judge
+B. Exact-match against one canonical reply
 C. Word-count comparison against the canonical reply
 D. Skip scoring since the output is subjective
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [Rubric Scoring With an LLM Judge](/learn/prompt-engineering/rubric-and-llm-judge) exists precisely for output where two different strings can both be correct - a fixed rubric with concrete anchors per dimension makes "good" checkable without requiring one canonical answer.
+**Correct: A.** [Rubric Scoring With an LLM Judge](/learn/prompt-engineering/rubric-and-llm-judge) exists precisely for output where two different strings can both be correct - a fixed rubric with concrete anchors per dimension makes "good" checkable without requiring one canonical answer.
 
-- A is wrong: exact-match assumes one right string, which doesn't exist for open-ended replies - it would fail correct-but-differently-worded output.
-- B is correct.
+- B is wrong: exact-match assumes one right string, which doesn't exist for open-ended replies - it would fail correct-but-differently-worded output.
+- A is correct.
 - C is wrong: word count says nothing about accuracy, tone, or completeness - a reply can hit any target length while being wrong on every rubric dimension.
 - D is wrong: "subjective" doesn't mean unscoreable - it means you need a rubric with anchors instead of a single string to compare against.
 
@@ -176,17 +176,17 @@ D. Test with the same two or three examples you tried by hand originally
 
 A. Yes - the golden gate passing is the main requirement, and it did
 B. Yes - the canary metric didn't regress, so nothing else matters
-C. No - a rollback target should always be instantly available before ramping, regardless of how clean the canary looked
-D. No, but only because A/B tests always require exactly two full weeks of data before any decision
+C. No, but only because A/B tests always require exactly two full weeks of data before any decision
+D. No - a rollback target should always be instantly available before ramping, regardless of how clean the canary looked
 
 <details><summary>Answer</summary>
 
-**Correct: C.** [Versioning Prompts Like Production Code](/learn/prompt-engineering/prompt-versioning-like-code) and the ship/rollback checklist in [Evaluation and Versioning Cheatsheet](/learn/prompt-engineering/eval-versioning-cheatsheet) both treat an instantly-retrievable rollback target as a precondition for ramping, not a nice-to-have - without one, a problem that surfaces at higher traffic has no fast way back, no matter how good every other signal looked.
+**Correct: D.** [Versioning Prompts Like Production Code](/learn/prompt-engineering/prompt-versioning-like-code) and the ship/rollback checklist in [Evaluation and Versioning Cheatsheet](/learn/prompt-engineering/eval-versioning-cheatsheet) both treat an instantly-retrievable rollback target as a precondition for ramping, not a nice-to-have - without one, a problem that surfaces at higher traffic has no fast way back, no matter how good every other signal looked.
 
 - A is wrong: the golden gate only proves no *known* regression - it says nothing about the spot-check failure or the missing rollback path, both of which are separate real risks.
 - B is wrong: a flat canary metric is necessary but not sufficient - it doesn't address the unresolved spot-check failure or the inability to revert quickly if the ramp goes badly.
-- C is correct.
-- D is wrong: there's no universal fixed duration - the right runtime is whatever was pre-registered based on the traffic and effect size needed, not a fixed two weeks in all cases. The real blocker here is the missing rollback path, not the calendar.
+- D is correct.
+- C is wrong: there's no universal fixed duration - the right runtime is whatever was pre-registered based on the traffic and effect size needed, not a fixed two weeks in all cases. The real blocker here is the missing rollback path, not the calendar.
 
 </details>
 

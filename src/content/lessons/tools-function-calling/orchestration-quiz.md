@@ -82,17 +82,17 @@ D. `[D]`, then `[B, C]`, then `[A]` — dependents are scheduled before their de
 
 ## 5. A streamed tool-call handler calls `json.loads()` on the accumulated argument buffer after every single delta, not just after the completion event, so it can update a UI as soon as possible. What's the most likely observed failure?
 
-A. Nothing goes wrong; `json.loads` handles partial strings gracefully by design
-B. The handler crashes with a JSON decode error on most deltas, because a partial buffer like `{"city": "Lis` is not valid JSON until the object is actually closed
+A. The handler crashes with a JSON decode error on most deltas, because a partial buffer like `{"city": "Lis` is not valid JSON until the object is actually closed
+B. Nothing goes wrong; `json.loads` handles partial strings gracefully by design
 C. The failure only appears with Anthropic's API, never with OpenAI's
 D. This only fails if the tool has more than five arguments
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [Streaming Partial Tool Calls](/learn/tools-function-calling/streaming-partial-tool-calls-concept) and [Parsing Streamed Argument Deltas](/learn/tools-function-calling/parsing-streamed-tool-call-deltas) are both built around exactly this: a strict parser run against a mid-stream buffer will fail on nearly every delta except the ones that happen to land on a coincidentally-complete-looking string, because the buffer genuinely isn't valid JSON until the final delta closes it.
+**Correct: A.** [Streaming Partial Tool Calls](/learn/tools-function-calling/streaming-partial-tool-calls-concept) and [Parsing Streamed Argument Deltas](/learn/tools-function-calling/parsing-streamed-tool-call-deltas) are both built around exactly this: a strict parser run against a mid-stream buffer will fail on nearly every delta except the ones that happen to land on a coincidentally-complete-looking string, because the buffer genuinely isn't valid JSON until the final delta closes it.
 
-- A is the core misconception — `json.loads` has no special partial-input mode; it either parses a complete, well-formed document or raises.
-- B is correct.
+- B is the core misconception — `json.loads` has no special partial-input mode; it either parses a complete, well-formed document or raises.
+- A is correct.
 - C is wrong — both providers stream arguments as incremental fragments; the failure mode is about when you parse, not which provider you're using.
 - D is an arbitrary, unfounded threshold — the failure happens on a one-argument tool just as readily as a ten-argument one, any time you parse before the buffer is complete.
 

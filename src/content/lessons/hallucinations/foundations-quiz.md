@@ -10,17 +10,17 @@ Six questions, each tied back to a specific lesson in this module. Work through 
 
 **1. A support bot's RAG system retrieves the 2022 refund policy document instead of the current 2024 one, and accurately summarizes it: "30 days." The actual 2024 policy is 45 days. What kind of failure is this?**
 
-A. Hallucination - the model invented the number
-B. Retrieval error - the model faithfully reported the wrong source
+A. Retrieval error - the model faithfully reported the wrong source
+B. Hallucination - the model invented the number
 C. Reasoning mistake - the model miscalculated
 D. Dataset bias - the model defaulted to a common industry figure
 
 <details><summary>Answer</summary>
 
-**Correct: B.** The model was faithful to its input - the input itself was wrong because the retriever fetched an outdated document. The fix belongs in the retrieval pipeline, not in how the model generates text.
+**Correct: A.** The model was faithful to its input - the input itself was wrong because the retriever fetched an outdated document. The fix belongs in the retrieval pipeline, not in how the model generates text.
 
-- A: Wrong. Hallucination requires a claim unsupported by anything the model was given. Here the number came straight from an actual (if outdated) retrieved document - nothing was invented.
-- B: Correct. Faithful-to-bad-input is still wrong, but it's a different bug with a different owner than a hallucination.
+- B: Wrong. Hallucination requires a claim unsupported by anything the model was given. Here the number came straight from an actual (if outdated) retrieved document - nothing was invented.
+- A: Correct. Faithful-to-bad-input is still wrong, but it's a different bug with a different owner than a hallucination.
 - C: Wrong. No calculation happened; the model directly restated a figure already stated in the retrieved text.
 - D: Wrong. Nothing here suggests a training-data skew - the number came from a specific, identifiable (wrong) document.
 
@@ -71,17 +71,17 @@ See [When 'Making Things Up' Is Actually the Goal](/learn/hallucinations/when-ha
 **4. Context given to the model: "Remote work requests must be submitted at least two weeks in advance." Model output: "Per the 2024 employee handbook, remote work requests must be submitted at least two weeks in advance. Under Chapter 7, Section 3.2, team leads may grant exceptions without HR approval, per the flexibility clause added in the 2023 revision." Given only that one sentence of context, which part is the fabrication?**
 
 A. "at least two weeks in advance" - the timing itself
-B. "Chapter 7, Section 3.2" and the exception clause about team leads and the 2023 revision
-C. None of it - this is a faithful, complete expansion of the source
+B. None of it - this is a faithful, complete expansion of the source
+C. "Chapter 7, Section 3.2" and the exception clause about team leads and the 2023 revision
 D. All of it - this is a reasoning mistake, not a hallucination
 
 <details><summary>Answer</summary>
 
-**Correct: B.** Nothing in the supplied context mentions a chapter, section number, exception process, or revision year - this is invented detail dressed in specific, official-sounding language.
+**Correct: C.** Nothing in the supplied context mentions a chapter, section number, exception process, or revision year - this is invented detail dressed in specific, official-sounding language.
 
 - A: Wrong. This detail is directly supported by the given context - it's the one grounded part of the answer.
-- B: Correct. Same pattern as the fabricated DOI worked through in the anatomy lesson: structurally plausible, entirely unsupported.
-- C: Wrong. Large parts of the answer have no basis in the one sentence provided.
+- C: Correct. Same pattern as the fabricated DOI worked through in the anatomy lesson: structurally plausible, entirely unsupported.
+- B: Wrong. Large parts of the answer have no basis in the one sentence provided.
 - D: Wrong. This is confident invention of unsupported specifics - the definition of hallucination - not a calculation or logic error.
 
 See [Worked Example: Dissecting One Real Hallucination](/learn/hallucinations/anatomy-of-a-hallucination).
@@ -110,19 +110,19 @@ See [Variants: Hallucination in Text, Code, Vision, and Structured Output](/lear
 
 **6. A team sets decoding temperature to 0 on a factual-lookup endpoint and considers hallucination handled. What does temperature 0 actually do?**
 
-A. Removes sampling randomness so the highest-probability token is always chosen, but doesn't change whether that token is correct
-B. Forces the model to only output tokens it has high confidence are factually true
-C. Disables the model's ability to fabricate entirely
-D. Has no effect on hallucination in either direction
+A. Forces the model to only output tokens it has high confidence are factually true
+B. Disables the model's ability to fabricate entirely
+C. Has no effect on hallucination in either direction
+D. Removes sampling randomness so the highest-probability token is always chosen, but doesn't change whether that token is correct
 
 <details><summary>Answer</summary>
 
-**Correct: A.** Temperature reshapes how you sample from an already-fixed probability distribution; it does nothing to that distribution's accuracy. If the wrong token has the highest probability, temperature 0 (greedy decoding) picks it every single time.
+**Correct: D.** Temperature reshapes how you sample from an already-fixed probability distribution; it does nothing to that distribution's accuracy. If the wrong token has the highest probability, temperature 0 (greedy decoding) picks it every single time.
 
-- A: Correct. Removing variance is not the same as removing error - it just makes the error deterministic and repeatable.
-- B: Wrong. There is no separate "factually true" confidence channel the model can filter by; see the intuition lesson on why no such internal signal exists.
-- C: Wrong. Fabrication happens whenever learned probability mass sits on a wrong continuation, regardless of decoding temperature.
-- D: Wrong. It does have an effect - it can create false confidence by making a wrong answer perfectly stable across runs.
+- D: Correct. Removing variance is not the same as removing error - it just makes the error deterministic and repeatable.
+- A: Wrong. There is no separate "factually true" confidence channel the model can filter by; see the intuition lesson on why no such internal signal exists.
+- B: Wrong. Fabrication happens whenever learned probability mass sits on a wrong continuation, regardless of decoding temperature.
+- C: Wrong. It does have an effect - it can create false confidence by making a wrong answer perfectly stable across runs.
 
 See [Common Myths: 'Bigger Models Don't Hallucinate' and Other Errors](/learn/hallucinations/myths-about-hallucination).
 

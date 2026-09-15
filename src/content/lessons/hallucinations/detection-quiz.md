@@ -34,19 +34,19 @@ D. None of the above — without white-box access, no detection is possible.
 You're building a RAG system and already have the retrieved source document for each answer. You want a fast, cheap first-pass check for whether the answer adds anything the source doesn't support. What's the best default first step?
 
 A. Retrieval-based fact checking, since it introduces new evidence.
-B. NLI entailment classification between each answer claim and the matching source sentence.
-C. Ensemble cross-checking across three different model families.
-D. Self-consistency sampling, since RAG answers are still generated text.
+B. Ensemble cross-checking across three different model families.
+C. Self-consistency sampling, since RAG answers are still generated text.
+D. NLI entailment classification between each answer claim and the matching source sentence.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [Implementation: NLI Entailment as a Grounding Check](/learn/hallucinations/nli-entailment-grounding-check-impl) is built for exactly this case — the source is already known, so a small, fast NLI model can flag neutral or contradicted claims without spending any LLM tokens.
+**Correct: D.** [Implementation: NLI Entailment as a Grounding Check](/learn/hallucinations/nli-entailment-grounding-check-impl) is built for exactly this case — the source is already known, so a small, fast NLI model can flag neutral or contradicted claims without spending any LLM tokens.
 
 **A** solves a different problem — retrieval-based checking is for when you don't already have the right source and need to go find evidence, which isn't the situation here.
 
-**C** is far more expensive than the task requires — cross-checking is for open-domain factuality without a fixed source, not for checking faithfulness to one you already have.
+**B** is far more expensive than the task requires — cross-checking is for open-domain factuality without a fixed source, not for checking faithfulness to one you already have.
 
-**D** misses the point of RAG faithfulness — resampling checks whether the model's *answer* is stable, not whether that answer actually stays within what the *source* supports; a hallucinated addition can resample identically every time.
+**C** misses the point of RAG faithfulness — resampling checks whether the model's *answer* is stable, not whether that answer actually stays within what the *source* supports; a hallucinated addition can resample identically every time.
 
 </details>
 
@@ -54,16 +54,16 @@ D. Self-consistency sampling, since RAG answers are still generated text.
 
 An agent calls a calculator tool, gets a result, then writes a summary sentence using that number. You want to check whether the summary correctly reflects the tool's output. What's the most direct check?
 
-A. LLM-as-judge, asking a separate model whether the summary "sounds accurate."
-B. Self-verification: have the model re-derive the number from the same inputs, independently, and compare to what the summary states.
+A. Self-verification: have the model re-derive the number from the same inputs, independently, and compare to what the summary states.
+B. LLM-as-judge, asking a separate model whether the summary "sounds accurate."
 C. Retrieval-based fact checking against a search index.
 D. Ensemble cross-checking across three different model providers.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [Implementation: Self-Verification and Chain-of-Verification](/learn/hallucinations/self-verification-chain-impl) is exactly this shape for a checkable computation — re-derive independently and compare, which catches a misstatement of the tool's own output directly and cheaply.
+**Correct: A.** [Implementation: Self-Verification and Chain-of-Verification](/learn/hallucinations/self-verification-chain-impl) is exactly this shape for a checkable computation — re-derive independently and compare, which catches a misstatement of the tool's own output directly and cheaply.
 
-**A** is weaker for a purely numeric consistency check — a judge without access to the actual inputs is guessing at plausibility, not verifying the number was transcribed correctly.
+**B** is weaker for a purely numeric consistency check — a judge without access to the actual inputs is guessing at plausibility, not verifying the number was transcribed correctly.
 
 **C** is the wrong tool — there's nothing to search for here; the "evidence" is the tool call's own inputs, not something in a search index.
 
@@ -118,17 +118,17 @@ D. Agreement is impossible unless the models are literally the same weights.
 A model claims a historical figure won an award they didn't actually win. Its self-verification pass generates a fresh, independent question about the claim, answers it in isolation with no view of the draft, and gets the same wrong answer — so the check passes. What's the correct explanation for why isolation didn't help here?
 
 A. Isolation was implemented incorrectly; if done right, it always catches fabrications.
-B. The draft and the fresh verification answer both drew on the same underlying parametric belief — isolation prevents the model from re-reading its own text, but it can't prevent the model from holding the same wrong belief twice.
-C. Self-verification only works for numeric claims, not claims about people.
+B. Self-verification only works for numeric claims, not claims about people.
+C. The draft and the fresh verification answer both drew on the same underlying parametric belief — isolation prevents the model from re-reading its own text, but it can't prevent the model from holding the same wrong belief twice.
 D. The verification question was too similar in wording to the original claim.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [Worked Example: When Self-Verification Rubber-Stamps a Lie](/learn/hallucinations/self-verification-when-it-fails) walks through exactly this mechanism — a widely-shared misconception is the model's actual best answer both times, so isolating the check from the draft removes one confound (literal re-reading) but not the deeper one (a shared source of belief).
+**Correct: C.** [Worked Example: When Self-Verification Rubber-Stamps a Lie](/learn/hallucinations/self-verification-when-it-fails) walks through exactly this mechanism — a widely-shared misconception is the model's actual best answer both times, so isolating the check from the draft removes one confound (literal re-reading) but not the deeper one (a shared source of belief).
 
 **A** misdiagnoses a structural limitation as an implementation bug — the isolation was done correctly in this scenario; it simply doesn't address the failure mode in play here.
 
-**C** is an invented restriction with no basis — self-verification's blind spot applies to any claim type where the same systematic error is baked uniformly into the model's training, numeric or not.
+**B** is an invented restriction with no basis — self-verification's blind spot applies to any claim type where the same systematic error is baked uniformly into the model's training, numeric or not.
 
 **D** identifies a real, separate concern (question phrasing affecting anchoring) but isn't the explanation for this specific failure — the questions here were genuinely independent in wording; the problem is shared belief, not leading phrasing.
 
@@ -139,19 +139,19 @@ D. The verification question was too similar in wording to the original claim.
 You need to check a batch of RAG answers for faithfulness, and you want a score you can use to rank answers by how confidently hallucinated they seem, not just a yes/no per answer. What should you reach for?
 
 A. A single LLM-as-judge call per answer, since one call is cheaper.
-B. ChainPoll-style polling: ask the judge the same question multiple times with chain-of-thought and average the votes into a continuous score.
-C. Self-consistency on the original generator, since that's cheaper than running a separate judge at all.
-D. NLI entailment, since it directly outputs a probability.
+B. Self-consistency on the original generator, since that's cheaper than running a separate judge at all.
+C. NLI entailment, since it directly outputs a probability.
+D. ChainPoll-style polling: ask the judge the same question multiple times with chain-of-thought and average the votes into a continuous score.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [Implementation: ChainPoll-Style Ensemble Judging](/learn/hallucinations/chainpoll-detector-impl) is built precisely for this need — a graded, continuous score that supports ranking and threshold tuning, which a single binary judge call can't provide on its own.
+**Correct: D.** [Implementation: ChainPoll-Style Ensemble Judging](/learn/hallucinations/chainpoll-detector-impl) is built precisely for this need — a graded, continuous score that supports ranking and threshold tuning, which a single binary judge call can't provide on its own.
 
 **A** is cheaper but gives you exactly the binary output the question says isn't sufficient — one YES/NO per answer, no way to distinguish a confidently bad answer from a borderline one.
 
-**C** checks the generator's own stability, not whether the *judge* considers the answer faithful to the source — a different question than the one asked here.
+**B** checks the generator's own stability, not whether the *judge* considers the answer faithful to the source — a different question than the one asked here.
 
-**D** is incorrect about what NLI outputs — the implementation in this module returns a three-way label (entailment/neutral/contradiction), not a continuous probability score, per [Implementation: NLI Entailment as a Grounding Check](/learn/hallucinations/nli-entailment-grounding-check-impl).
+**C** is incorrect about what NLI outputs — the implementation in this module returns a three-way label (entailment/neutral/contradiction), not a continuous probability score, per [Implementation: NLI Entailment as a Grounding Check](/learn/hallucinations/nli-entailment-grounding-check-impl).
 
 </details>
 
@@ -159,18 +159,18 @@ D. NLI entailment, since it directly outputs a probability.
 
 A retrieval-based fact check searches for evidence on a claim and finds nothing relevant. What's the correct interpretation?
 
-A. The claim is definitely false.
-B. The claim is definitely true, since nothing contradicts it.
-C. The result is ambiguous — it could mean false, true-but-obscure, or simply outside the index's coverage, and treating it as automatically false is a common mistake.
+A. The result is ambiguous — it could mean false, true-but-obscure, or simply outside the index's coverage, and treating it as automatically false is a common mistake.
+B. The claim is definitely false.
+C. The claim is definitely true, since nothing contradicts it.
 D. The check has malfunctioned and should be retried with the same query.
 
 <details><summary>Answer</summary>
 
-**Correct: C.** [Retrieval-Based Fact Checking as Detection](/learn/hallucinations/retrieval-based-factuality-check) names this ambiguity explicitly, and [Common Mistakes: When Detectors Give False Comfort](/learn/hallucinations/detection-false-comfort) lists collapsing "unsupported" into "false" as a specific trap that produces false positives on true-but-obscure claims.
+**Correct: A.** [Retrieval-Based Fact Checking as Detection](/learn/hallucinations/retrieval-based-factuality-check) names this ambiguity explicitly, and [Common Mistakes: When Detectors Give False Comfort](/learn/hallucinations/detection-false-comfort) lists collapsing "unsupported" into "false" as a specific trap that produces false positives on true-but-obscure claims.
 
-**A** is the exact mistake the lesson warns against — absence of evidence is not evidence of falsehood.
+**B** is the exact mistake the lesson warns against — absence of evidence is not evidence of falsehood.
 
-**B** overcorrects in the opposite direction — nothing contradicting a claim doesn't establish it's true either; it might just be unfindable.
+**C** overcorrects in the opposite direction — nothing contradicting a claim doesn't establish it's true either; it might just be unfindable.
 
 **D** assumes malfunction without basis — an empty result from a working search is a normal, expected outcome for claims outside index coverage, not a sign of a broken pipeline.
 
@@ -202,17 +202,17 @@ D. Skip detection entirely, since no method fits a tight budget.
 A team ships a factual-QA feature with no grounding at all, relying entirely on a self-consistency check to catch hallucinations after generation and retry once on a flag. What does [Deep Dive: Detect-Then-Regenerate vs. Prevent-at-Source](/learn/hallucinations/detecting-vs-preventing) suggest is the structural limit of this design, no matter how the retry loop is tuned?
 
 A. Retrying enough times will eventually drive the hallucination rate to zero.
-B. The residual hallucination rate can shrink with more retries but never reaches zero, because it's bounded by the detector's own recall ceiling — and grounding the generation upfront would lower the base rate the detector has to catch in the first place.
-C. Detection and prevention are interchangeable, so this design is equivalent to adding retrieval grounding instead.
+B. Detection and prevention are interchangeable, so this design is equivalent to adding retrieval grounding instead.
+C. The residual hallucination rate can shrink with more retries but never reaches zero, because it's bounded by the detector's own recall ceiling — and grounding the generation upfront would lower the base rate the detector has to catch in the first place.
 D. The retry loop's cost is fixed regardless of how often the detector flags an answer.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** The deep dive derives exactly this: retries shrink residual risk by roughly a factor of `(1 − r)` per round but can't exceed the detector's recall ceiling, while prevention (grounding) would instead lower the base rate `h₀` that the detector has to work against — the two compound rather than substitute for each other.
+**Correct: C.** The deep dive derives exactly this: retries shrink residual risk by roughly a factor of `(1 − r)` per round but can't exceed the detector's recall ceiling, while prevention (grounding) would instead lower the base rate `h₀` that the detector has to work against — the two compound rather than substitute for each other.
 
 **A** contradicts the derivation directly — recall `r` is never 1, so some fraction of hallucinations always survives no matter how many retry rounds run, bounded retries or not.
 
-**C** denies the real distinction the whole lesson is built on — detection catches a fraction of what generation produces; prevention changes what generation produces in the first place. They address different parts of the problem.
+**B** denies the real distinction the whole lesson is built on — detection catches a fraction of what generation produces; prevention changes what generation produces in the first place. They address different parts of the problem.
 
 **D** is false — the lesson is explicit that detect-then-regenerate's cost is variable, scaling with how often the detector actually flags an answer, unlike prevention's flat, always-paid cost.
 

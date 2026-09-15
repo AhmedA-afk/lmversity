@@ -1,5 +1,5 @@
 ---
-title: "Foundations Quiz"
+title: "Context Engineering: Foundations Quiz"
 track: "context-engineering"
 status: live
 summary: "Twelve questions on window anatomy, tokenization, the prompting boundary, message roles, and the stateless-model insight."
@@ -11,17 +11,17 @@ Twelve questions covering this module. Two are scenarios — a budget-cutting de
 ## 1. A "200k context window" advertised by a provider mostly means what, in practice?
 
 A. 200k tokens of usable space for your task's own content, guaranteed
-B. A shared budget that the system prompt, tool definitions, history, retrieved context, and the output reserve all draw from before your task gets any of it
-C. The maximum number of words the model can understand in one conversation
+B. The maximum number of words the model can understand in one conversation
+C. A shared budget that the system prompt, tool definitions, history, retrieved context, and the output reserve all draw from before your task gets any of it
 D. The number of turns a conversation can have before it must end
 
 <details><summary>Answer</summary>
 
-**Correct: B.** As covered in [Context Window Anatomy](/learn/context-engineering/context-window-anatomy), the advertised total is a ceiling shared by several competing categories, not a dedicated allowance for your task's content alone.
+**Correct: C.** As covered in [Context Window Anatomy](/learn/context-engineering/context-window-anatomy), the advertised total is a ceiling shared by several competing categories, not a dedicated allowance for your task's content alone.
 
 - A is wrong: system prompt, tools, and history all draw from the same total before your actual content does.
-- B is correct.
-- C is wrong: the unit is tokens, not words, and the two aren't interchangeable — see question 5.
+- C is correct.
+- B is wrong: the unit is tokens, not words, and the two aren't interchangeable — see question 5.
 - D is wrong: there's no fixed turn limit; the constraint is total tokens, not turn count.
 
 </details>
@@ -29,18 +29,18 @@ D. The number of turns a conversation can have before it must end
 ## 2. Which claim about the "~4 characters per token" rule of thumb is accurate?
 
 A. It's a safe upper bound for any input, including URLs and JSON
-B. It holds reasonably well for plain English prose, but URLs, minified JSON, and CJK text commonly use more tokens per character than it predicts
-C. It's exact for every tokenizer and every language
-D. It only applies to code, never to prose
+B. It's exact for every tokenizer and every language
+C. It only applies to code, never to prose
+D. It holds reasonably well for plain English prose, but URLs, minified JSON, and CJK text commonly use more tokens per character than it predicts
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [Tokens Are Not Words](/learn/context-engineering/tokens-are-not-words) walks through exactly this: the rule is a rough English-prose average, and URLs, dense punctuation-heavy formats, and non-space-delimited scripts like CJK all tend to cost more tokens per character than it predicts, not fewer.
+**Correct: D.** [Tokens Are Not Words](/learn/context-engineering/tokens-are-not-words) walks through exactly this: the rule is a rough English-prose average, and URLs, dense punctuation-heavy formats, and non-space-delimited scripts like CJK all tend to cost more tokens per character than it predicts, not fewer.
 
 - A is wrong: it's optimistic in exactly the wrong direction for those cases — a budget sized against it would overflow, not stay safely under.
-- B is correct.
-- C is wrong: tokenization is vocabulary- and tokenizer-specific; there's no universal exact ratio.
-- D is backwards: the rule of thumb is meant for prose specifically, and breaks down on code and other structured text.
+- D is correct.
+- B is wrong: tokenization is vocabulary- and tokenizer-specific; there's no universal exact ratio.
+- C is backwards: the rule of thumb is meant for prose specifically, and breaks down on code and other structured text.
 
 </details>
 
@@ -64,17 +64,17 @@ D. Rephrase the user's question to be more polite
 
 ## 4. The same fact — "annual plans have no cancellation fee" — is placed in a system prompt in one version of an agent and in a prior assistant turn in another. What's the key behavioral difference?
 
-A. There is no difference; all roles are treated identically
-B. The system-prompt version is sent on every call and benefits from caching; the assistant-turn version only persists if history retains that turn, and if it were ever stated wrong there, it becomes sticky precedent that's hard to dislodge
+A. The system-prompt version is sent on every call and benefits from caching; the assistant-turn version only persists if history retains that turn, and if it were ever stated wrong there, it becomes sticky precedent that's hard to dislodge
+B. There is no difference; all roles are treated identically
 C. Only the assistant-turn version is ever seen by the model
 D. Only the system-prompt version can ever be wrong
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [System, User, Assistant, Tool: Roles as Structure](/learn/context-engineering/message-roles-and-structure) covers exactly this contrast — role changes persistence, caching behavior, and how much authority the content carries.
+**Correct: A.** [System, User, Assistant, Tool: Roles as Structure](/learn/context-engineering/message-roles-and-structure) covers exactly this contrast — role changes persistence, caching behavior, and how much authority the content carries.
 
-- A is wrong: the whole lesson is that role changes real behavior, not just labeling.
-- B is correct.
+- B is wrong: the whole lesson is that role changes real behavior, not just labeling.
+- A is correct.
 - C is wrong: both versions are visible to the model whenever they're part of the sent request.
 - D is wrong: content in any role can be wrong; the roles differ in persistence and stickiness, not in some immunity to error.
 
@@ -101,17 +101,17 @@ D. Only the system prompt persists automatically; everything else must be resent
 ## 6. What is the KV cache, precisely?
 
 A. A form of long-term memory the model builds up across many conversations
-B. A provider-side reuse of attention key/value tensors for a repeated prefix — a compute optimization, not a way the model retains information it wasn't given this call
-C. A database where the model stores facts users have told it
+B. A database where the model stores facts users have told it
+C. A provider-side reuse of attention key/value tensors for a repeated prefix — a compute optimization, not a way the model retains information it wasn't given this call
 D. A cache of previous users' conversations, shared across sessions
 
 <details><summary>Answer</summary>
 
-**Correct: B.** As precisely stated in [The Stateless Model Behind the Stateful Agent](/learn/context-engineering/stateless-model-stateful-agent), the KV cache reuses computed representations for identical prefixes to save compute — the tokens still have to be present in the request; nothing is being remembered on the model's behalf.
+**Correct: C.** As precisely stated in [The Stateless Model Behind the Stateful Agent](/learn/context-engineering/stateless-model-stateful-agent), the KV cache reuses computed representations for identical prefixes to save compute — the tokens still have to be present in the request; nothing is being remembered on the model's behalf.
 
 - A is wrong: it has nothing to do with cross-conversation memory; it's scoped to prefix reuse within near-identical requests.
-- B is correct.
-- C is wrong: it's not a fact store at all — it's a tensor-reuse optimization.
+- C is correct.
+- B is wrong: it's not a fact store at all — it's a tensor-reuse optimization.
 - D is wrong and would also be a serious privacy issue; the KV cache is not a mechanism for sharing content across separate users' sessions.
 
 </details>
@@ -155,34 +155,34 @@ D. Move the entire history slice into the system prompt
 ## 9. What does the desk-and-filing-cabinet analogy for the context window get wrong if taken too literally?
 
 A. It correctly implies the model tidies its own desk with judgment, the way a person would
-B. It implies a full desk is fine as long as things still fit, and it doesn't capture that every token you carry costs money and latency on every call, unlike physical paper
-C. It correctly implies there's no cost to a full context window as long as the hard limit isn't hit
-D. It's accurate in every respect and has no breaking point
+B. It correctly implies there's no cost to a full context window as long as the hard limit isn't hit
+C. It's accurate in every respect and has no breaking point
+D. It implies a full desk is fine as long as things still fit, and it doesn't capture that every token you carry costs money and latency on every call, unlike physical paper
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [The Window as Working Memory](/learn/context-engineering/context-window-as-working-memory) states this explicitly: nothing tidies the window automatically, and unlike a physical desk, every token carried costs money and latency regardless of whether the window is "full."
+**Correct: D.** [The Window as Working Memory](/learn/context-engineering/context-window-as-working-memory) states this explicitly: nothing tidies the window automatically, and unlike a physical desk, every token carried costs money and latency regardless of whether the window is "full."
 
 - A is backwards: the lesson explicitly notes the model has no built-in instinct to triage its own context — all tidying has to be engineered by you.
-- B is correct.
-- C is wrong: dilution costs quality well before the hard token limit is reached — see [Context Rot](/learn/context-engineering/context-rot).
-- D is wrong: analogies are useful precisely because they have identifiable breaking points, and this one has at least two.
+- D is correct.
+- B is wrong: dilution costs quality well before the hard token limit is reached — see [Context Rot](/learn/context-engineering/context-rot).
+- C is wrong: analogies are useful precisely because they have identifiable breaking points, and this one has at least two.
 
 </details>
 
 ## 10. Why shouldn't you use a generic tokenizer library like tiktoken to count tokens for a Claude request?
 
-A. It's not runnable in Python
-B. Token counts are model-specific; tiktoken is built for a different model family and can meaningfully undercount or overcount relative to Claude's actual tokenizer
+A. Token counts are model-specific; tiktoken is built for a different model family and can meaningfully undercount or overcount relative to Claude's actual tokenizer
+B. It's not runnable in Python
 C. There's no way to count tokens for any model programmatically
 D. It only works for images, not text
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [Counting Tokens in Practice](/learn/context-engineering/counting-tokens-in-practice) is explicit about this: token counts depend on the specific tokenizer a model family uses, and a count from the wrong tokenizer is simply wrong for the model you're actually budgeting against — use the real counting endpoint for the model you're targeting.
+**Correct: A.** [Counting Tokens in Practice](/learn/context-engineering/counting-tokens-in-practice) is explicit about this: token counts depend on the specific tokenizer a model family uses, and a count from the wrong tokenizer is simply wrong for the model you're actually budgeting against — use the real counting endpoint for the model you're targeting.
 
-- A is false; it's a perfectly runnable library, just for the wrong tokenizer.
-- B is correct.
+- B is false; it's a perfectly runnable library, just for the wrong tokenizer.
+- A is correct.
 - C is false — a per-model token-counting endpoint is exactly the tool built for this.
 - D is false and irrelevant; tokenization here concerns text, not images.
 

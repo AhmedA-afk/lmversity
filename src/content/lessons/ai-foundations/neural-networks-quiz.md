@@ -2,7 +2,7 @@
 title: "Neural Networks: Trace and Predict"
 track: "ai-foundations"
 status: live
-summary: "A six-question self-check where you hand-compute a forward pass, predict what happens when an activation gets stripped out, match activation shapes to their names, and build intuit"
+summary: "You can define \"forward pass\" and \"activation function\" perfectly and still ship code that's secretly broken — a network collapsed to a straight line, or a weight matrix transposed into nonsense."
 duration: "15 min read"
 ---
 
@@ -13,13 +13,13 @@ You can define "forward pass" and "activation function" perfectly and still ship
 A single neuron takes inputs x = [2, 3], weights w = [0.5, -1], and bias b = 2, followed by a sigmoid activation. What does the neuron output?
 
 - A. 0
-- B. 0.5
-- C. 1
-- D. 6
+- B. 1
+- C. 6
+- D. 0.5
 
 <details><summary>Answer</summary>
 
-**Correct: B.** First find the weighted sum: z = 0.5(2) + (-1)(3) + 2 = 1 - 3 + 2 = 0. Then apply the activation: sigmoid(0) = 1 / (1 + e^0) = 0.5. Worth keeping as a landmark fact: sigmoid always outputs exactly 0.5 when its input lands on 0, no matter which weights and inputs produced that 0. If you want to check hand-arithmetic like this without trusting your mental math, it's three lines:
+**Correct: D.** First find the weighted sum: z = 0.5(2) + (-1)(3) + 2 = 1 - 3 + 2 = 0. Then apply the activation: sigmoid(0) = 1 / (1 + e^0) = 0.5. Worth keeping as a landmark fact: sigmoid always outputs exactly 0.5 when its input lands on 0, no matter which weights and inputs produced that 0. If you want to check hand-arithmetic like this without trusting your mental math, it's three lines:
 
 ```python
 import numpy as np
@@ -31,9 +31,9 @@ print(1 / (1 + np.exp(-z)))  # 0.5
 
 **A** is the value of z before the activation is applied — the weighted sum plus bias, correctly computed, but the neuron isn't done yet. Forgetting the final squashing step is one of the most common hand-trace errors, and it's easy to miss because the number looks perfectly plausible sitting on its own.
 
-**C** treats sigmoid like a step function: "z is non-negative, so the neuron fires, output 1." Sigmoid is smooth, not a switch — at z = 0 it sits exactly on the fence at 0.5, and only approaches 0 or 1 as z moves far in either direction. See [activation functions compared](/learn/ai-foundations/activation-functions-compared) for what actually separates a smooth squashing curve from a hard threshold.
+**B** treats sigmoid like a step function: "z is non-negative, so the neuron fires, output 1." Sigmoid is smooth, not a switch — at z = 0 it sits exactly on the fence at 0.5, and only approaches 0 or 1 as z moves far in either direction. See [activation functions compared](/learn/ai-foundations/activation-functions-compared) for what actually separates a smooth squashing curve from a hard threshold.
 
-**D** comes from dropping the minus sign on the second weight — treating (-1)(3) as +3 instead of -3 — and then, on top of that, forgetting to apply the activation at all and reporting the raw (already wrong) sum. Two stacked mistakes, but a genuinely common combination when you're doing this by hand under time pressure.
+**C** comes from dropping the minus sign on the second weight — treating (-1)(3) as +3 instead of -3 — and then, on top of that, forgetting to apply the activation at all and reporting the raw (already wrong) sum. Two stacked mistakes, but a genuinely common combination when you're doing this by hand under time pressure.
 
 </details>
 
@@ -84,13 +84,13 @@ You're handed a plot with no legend. For every input below 0, the output is exac
 You're feeding a batch of 32 examples, each with 10 features, into a layer with 4 hidden units, computed as output = x @ W + b, where x has shape (32, 10). What shape does W need to be for the matrix multiply to work and produce the right output?
 
 - A. (4, 10)
-- B. (32, 4)
-- C. (10, 32)
-- D. (10, 4)
+- B. (10, 4)
+- C. (32, 4)
+- D. (10, 32)
 
 <details><summary>Answer</summary>
 
-**Correct: D.** Matrix multiplication needs the inner dimensions to match: x is (32, 10), so W's first dimension must be 10. The output takes the outer dimensions, so W's second dimension has to be 4 to get a (32, 4) result — one row of 4 hidden-unit values per example. You can sanity-check any shape question like this without doing the multiplication by hand:
+**Correct: B.** Matrix multiplication needs the inner dimensions to match: x is (32, 10), so W's first dimension must be 10. The output takes the outer dimensions, so W's second dimension has to be 4 to get a (32, 4) result — one row of 4 hidden-unit values per example. You can sanity-check any shape question like this without doing the multiplication by hand:
 
 ```python
 import numpy as np
@@ -104,9 +104,9 @@ print(out.shape)  # (32, 4)
 
 **A** is the weight-matrix shape you'd need under the other common convention — W as (out_features, in_features), used when you write the math as W @ x.T instead of x @ W. Both conventions are legitimate and both show up in real code; mixing them up mid-project is one of the most common shape bugs you'll actually hit. [Building a neuron in numpy](/learn/ai-foundations/building-a-neuron-in-numpy) walks through keeping this straight.
 
-**B** is the shape of the layer's output, not its weights — a natural mix-up, since "what shape comes out of this layer" and "what shape are the numbers that produce it" feel like they should be the same question, but a (32, 4) output can come from many different weight shapes depending on the input size.
+**C** is the shape of the layer's output, not its weights — a natural mix-up, since "what shape comes out of this layer" and "what shape are the numbers that produce it" feel like they should be the same question, but a (32, 4) output can come from many different weight shapes depending on the input size.
 
-**C** puts the batch size into the weight matrix, which should never happen — weights are shared across every example in a batch. If they depended on how many examples you happened to feed in at once, you couldn't change your batch size without retraining the whole layer.
+**D** puts the batch size into the weight matrix, which should never happen — weights are shared across every example in a batch. If they depended on how many examples you happened to feed in at once, you couldn't change your batch size without retraining the whole layer.
 
 </details>
 
@@ -114,18 +114,18 @@ print(out.shape)  # (32, 4)
 
 A classifier ends with a softmax layer producing probabilities over 5 classes. You remove only that final softmax — nothing else about the model changes — and look at the raw outputs (the logits) instead. Compared to the probabilities softmax would have produced, what's true of the logits?
 
-- A. They preserve the same ranking of classes as the probabilities would, but they're no longer bounded between 0 and 1 or guaranteed to sum to 1.
-- B. They're meaningless — without softmax there's no way to tell which class the model favors.
-- C. They're identical to the probabilities, just written differently.
+- A. They're meaningless — without softmax there's no way to tell which class the model favors.
+- B. They're identical to the probabilities, just written differently.
+- C. They preserve the same ranking of classes as the probabilities would, but they're no longer bounded between 0 and 1 or guaranteed to sum to 1.
 - D. The network collapses to a linear model, the same way it would if you removed a hidden-layer activation.
 
 <details><summary>Answer</summary>
 
-**Correct: A.** Softmax computes exp(z_i) divided by the same shared sum of exp(z_j) across all classes for a given example — that shared denominator is one positive constant, so it can only rescale every class's score, never reorder them. Whatever ordering the logits have, the probabilities have the identical ordering, which is exactly why plenty of real inference code skips softmax entirely and just takes argmax(logits) when it only needs the predicted class. What you lose by dropping softmax is the guarantee that the numbers behave like a probability distribution — nonnegative, summing to 1 — not the information about which class wins. [Loss functions explained](/learn/ai-foundations/loss-functions-explained) covers why many cross-entropy implementations fold the softmax step in internally for exactly this kind of reason.
+**Correct: C.** Softmax computes exp(z_i) divided by the same shared sum of exp(z_j) across all classes for a given example — that shared denominator is one positive constant, so it can only rescale every class's score, never reorder them. Whatever ordering the logits have, the probabilities have the identical ordering, which is exactly why plenty of real inference code skips softmax entirely and just takes argmax(logits) when it only needs the predicted class. What you lose by dropping softmax is the guarantee that the numbers behave like a probability distribution — nonnegative, summing to 1 — not the information about which class wins. [Loss functions explained](/learn/ai-foundations/loss-functions-explained) covers why many cross-entropy implementations fold the softmax step in internally for exactly this kind of reason.
 
-**B** overstates the damage: "not a valid probability" and "meaningless" aren't the same thing. The relative ordering and magnitude gaps between classes are all still sitting right there in the logits.
+**A** overstates the damage: "not a valid probability" and "meaningless" aren't the same thing. The relative ordering and magnitude gaps between classes are all still sitting right there in the logits.
 
-**C** confuses two numbers that agree on ranking with numbers that are the same value. Logits can be any real number — negative, above 1, whatever the last linear layer happens to output — while softmax specifically rescales them into [0, 1] summing to 1. They agree on which class wins; they don't agree on the actual values.
+**B** confuses two numbers that agree on ranking with numbers that are the same value. Logits can be any real number — negative, above 1, whatever the last linear layer happens to output — while softmax specifically rescales them into [0, 1] summing to 1. They agree on which class wins; they don't agree on the actual values.
 
 **D** borrows the answer from a different question. Removing a hidden-layer activation collapses the network because it breaks the composition chain running through every subsequent layer. Softmax sits at the very end, with nothing computed after it — removing it doesn't ripple backward and collapse anything upstream; it just changes what the final numbers mean.
 

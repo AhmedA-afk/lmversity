@@ -123,19 +123,19 @@ You chat with an AI assistant for twenty minutes, and it correctly recalls somet
 You ask two different AI chatbots the same factual question and get two different answers. What's the most accurate takeaway?
 
 - A. One of them is definitely broken or badly trained
-- B. This is expected — each system generates its most likely-sounding response from its own training data and process, so disagreement alone doesn't tell you which (if either) is correct; you still have to verify
-- C. AI companies deliberately tune answers to differ so their product feels distinct from competitors
-- D. Whichever one answers with more confidence and detail is the more trustworthy one
+- B. AI companies deliberately tune answers to differ so their product feels distinct from competitors
+- C. Whichever one answers with more confidence and detail is the more trustworthy one
+- D. This is expected — each system generates its most likely-sounding response from its own training data and process, so disagreement alone doesn't tell you which (if either) is correct; you still have to verify
 
 <details><summary>Answer</summary>
 
-**Correct: B.** Different training data, different model sizes and architectures, and some randomness in how text gets generated are all, individually, enough to produce different phrasing — or a genuinely different fact. Disagreement between two models is data about how different they are, not a verdict on which one is right. Treat it as a prompt to check the actual source, not as evidence for either side. See [uncertainty and verification](/learn/ai-literacy/uncertainty-and-verification).
+**Correct: D.** Different training data, different model sizes and architectures, and some randomness in how text gets generated are all, individually, enough to produce different phrasing — or a genuinely different fact. Disagreement between two models is data about how different they are, not a verdict on which one is right. Treat it as a prompt to check the actual source, not as evidence for either side. See [uncertainty and verification](/learn/ai-literacy/uncertainty-and-verification).
 
 **A** assumes disagreement always has a broken party on one side. It doesn't — two independently built systems can each be working exactly as designed and still land on different phrasing, different emphasis, or different facts.
 
-**C** reaches for a deliberate explanation where a much simpler one covers it: these are genuinely different systems, and there's no need for a differentiation strategy to explain why they don't converge on identical text.
+**B** reaches for a deliberate explanation where a much simpler one covers it: these are genuinely different systems, and there's no need for a differentiation strategy to explain why they don't converge on identical text.
 
-**D** is the trap the whole module points at. Confidence and detail are generated the same way the rest of the answer is — they're a writing style, not a signal of accuracy. See [why AI sounds so confident](/learn/ai-literacy/why-ai-sounds-so-confident).
+**C** is the trap the whole module points at. Confidence and detail are generated the same way the rest of the answer is — they're a writing style, not a signal of accuracy. See [why AI sounds so confident](/learn/ai-literacy/why-ai-sounds-so-confident).
 
 </details>
 

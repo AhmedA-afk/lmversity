@@ -1,5 +1,5 @@
 ---
-title: "Foundations Quiz"
+title: "Tool Calling: Foundations Quiz"
 track: "tools-function-calling"
 status: live
 summary: "Ten questions on the loop, message roles, and the core intuition — check what actually stuck."
@@ -18,17 +18,17 @@ Ten questions. No calculators needed — just the mental model from the rest of 
 ```
 
 A. Message [1]
-B. Message [2]
-C. Message [3]
+B. Message [3]
+C. Message [2]
 D. Message [4]
 
 <details><summary>Answer</summary>
 
-**Correct: B.** Message [2] is the assistant asking for the tool — a `tool_use` block naming `get_weather` and its arguments, before anything has run.
+**Correct: C.** Message [2] is the assistant asking for the tool — a `tool_use` block naming `get_weather` and its arguments, before anything has run.
 
 - A is wrong: [1] is the original user question, containing no tool machinery at all.
-- B is correct: the `tool_use` type and the un-executed `name`/`input` pair mark this as the request, not a result.
-- C is wrong: [3] is the *result* of running the tool, sent back with a matching `tool_use_id` — the answer to the request, not the request itself.
+- C is correct: the `tool_use` type and the un-executed `name`/`input` pair mark this as the request, not a result.
+- B is wrong: [3] is the *result* of running the tool, sent back with a matching `tool_use_id` — the answer to the request, not the request itself.
 - D is wrong: [4] is the model's final natural-language answer, produced only after it saw [3].
 
 </details>
@@ -37,33 +37,33 @@ D. Message [4]
 
 A. Message [1]
 B. Message [2]
-C. Message [3]
-D. Message [4]
+C. Message [4]
+D. Message [3]
 
 <details><summary>Answer</summary>
 
-**Correct: C.** Message [3] carries `type: "tool_result"` and `tool_use_id: "t1"`, matching it to the request in message [2].
+**Correct: D.** Message [3] carries `type: "tool_result"` and `tool_use_id: "t1"`, matching it to the request in message [2].
 
 - A is wrong: [1] predates any tool involvement.
 - B is wrong: [2] is the request the result answers, not the result itself.
-- C is correct: the `tool_result` type and matching id are exactly what marks a message as the answer to a specific prior tool call.
-- D is wrong: [4] is downstream of the result — the model's answer built *from* it, not the result itself.
+- D is correct: the `tool_result` type and matching id are exactly what marks a message as the answer to a specific prior tool call.
+- C is wrong: [4] is downstream of the result — the model's answer built *from* it, not the result itself.
 
 </details>
 
 **3. A user asks: "Rewrite this paragraph in a more formal tone," and pastes the paragraph in the same message. Does this task need a tool?**
 
-A. Yes — text rewriting always benefits from a grammar-check tool
-B. No — the input is already fully present in the conversation and nothing needs to be looked up or changed elsewhere
+A. No — the input is already fully present in the conversation and nothing needs to be looked up or changed elsewhere
+B. Yes — text rewriting always benefits from a grammar-check tool
 C. Yes — the model can't be trusted to rewrite text without verifying it against a style guide via a tool
 D. It depends on which model is being used
 
 <details><summary>Answer</summary>
 
-**Correct: B.** None of the four gaps from [Why a Model Needs Tools at All](/learn/tools-function-calling/why-models-need-tools) apply — nothing is stale, private, side-effecting, or arithmetic. This is a pure text transformation of data already in hand.
+**Correct: A.** None of the four gaps from [Why a Model Needs Tools at All](/learn/tools-function-calling/why-models-need-tools) apply — nothing is stale, private, side-effecting, or arithmetic. This is a pure text transformation of data already in hand.
 
-- A is wrong: there's no indication a grammar tool is needed or was requested; adding one is unjustified overhead.
-- B is correct: the task is self-contained — a transformation of already-provided text.
+- B is wrong: there's no indication a grammar tool is needed or was requested; adding one is unjustified overhead.
+- A is correct: the task is self-contained — a transformation of already-provided text.
 - C is wrong: this invents a need for verification the task never asked for.
 - D is wrong: the tool-need decision is about the *task's shape*, not which model happens to be running it.
 
@@ -100,17 +100,17 @@ response = client.messages.create(model=MODEL, tools=tools, messages=messages)
 ```
 
 A. The `tools` parameter is missing from the second call
-B. The assistant's own tool-call message (`response.content` from the first call) was never appended to `messages`
-C. `max_tokens` was never set
+B. `max_tokens` was never set
+C. The assistant's own tool-call message (`response.content` from the first call) was never appended to `messages`
 D. The tool result should be sent as an `assistant`-role message, not `user`
 
 <details><summary>Answer</summary>
 
-**Correct: B.** The tool result was appended, but the assistant turn that *asked* for the tool — `{"role": "assistant", "content": response.content}` — never was. Without it, the conversation the model sees is missing its own request, and `tool_use_id` has nothing in the history to match against.
+**Correct: C.** The tool result was appended, but the assistant turn that *asked* for the tool — `{"role": "assistant", "content": response.content}` — never was. Without it, the conversation the model sees is missing its own request, and `tool_use_id` has nothing in the history to match against.
 
 - A is wrong: `tools` is present in both calls in the snippet shown.
-- B is correct: this is exactly the forgotten-append mistake from [Beginner Tool-Calling Mistakes](/learn/tools-function-calling/foundations-common-mistakes).
-- C is wrong: a missing `max_tokens` would raise a clear validation error, not this quieter failure.
+- C is correct: this is exactly the forgotten-append mistake from [Beginner Tool-Calling Mistakes](/learn/tools-function-calling/foundations-common-mistakes).
+- B is wrong: a missing `max_tokens` would raise a clear validation error, not this quieter failure.
 - D is wrong: Anthropic's `tool_result` blocks belong in a `user`-role message — that part of the snippet is already correct.
 
 </details>
@@ -118,34 +118,34 @@ D. The tool result should be sent as an `assistant`-role message, not `user`
 **6. The model's response contains two `tool_use` blocks in the same turn. What should your code do?**
 
 A. Execute only the first one — models rarely need more than one tool per turn
-B. Execute both, and send both results back in one message before calling the model again
-C. Execute both, but send each result back in its own separate message
-D. Reject the response as malformed — one turn should only ever request one tool
+B. Execute both, but send each result back in its own separate message
+C. Reject the response as malformed — one turn should only ever request one tool
+D. Execute both, and send both results back in one message before calling the model again
 
 <details><summary>Answer</summary>
 
-**Correct: B.** Multiple `tool_use` blocks in one turn are meant to run concurrently, with all matching `tool_result` blocks returned together in a single follow-up message — see [Parallel Tool Calls](/learn/tools-function-calling/parallel-tool-calls).
+**Correct: D.** Multiple `tool_use` blocks in one turn are meant to run concurrently, with all matching `tool_result` blocks returned together in a single follow-up message — see [Parallel Tool Calls](/learn/tools-function-calling/parallel-tool-calls).
 
 - A is wrong: dropping the second call silently leaves the model's second request unanswered.
-- B is correct: this is the standard parallel tool-call pattern.
-- C is wrong: splitting results across multiple messages is a known anti-pattern that can train the model to stop attempting parallel calls.
-- D is wrong: multiple `tool_use` blocks in one turn are valid, common, and expected.
+- D is correct: this is the standard parallel tool-call pattern.
+- B is wrong: splitting results across multiple messages is a known anti-pattern that can train the model to stop attempting parallel calls.
+- C is wrong: multiple `tool_use` blocks in one turn are valid, common, and expected.
 
 </details>
 
 **7. On OpenAI's API, `tool_call.function.arguments` is:**
 
-A. A plain Python dict, ready to index directly
-B. A JSON-formatted string that must be parsed before use
+A. A JSON-formatted string that must be parsed before use
+B. A plain Python dict, ready to index directly
 C. Always empty — arguments are sent separately
 D. An XML fragment
 
 <details><summary>Answer</summary>
 
-**Correct: B.** Unlike Anthropic's pre-parsed `input`, OpenAI's `arguments` field is a string that must be run through `json.loads()` (or your language's equivalent) before you can read individual fields.
+**Correct: A.** Unlike Anthropic's pre-parsed `input`, OpenAI's `arguments` field is a string that must be run through `json.loads()` (or your language's equivalent) before you can read individual fields.
 
-- A is wrong: that's how Anthropic's `input` field behaves, not OpenAI's `arguments`.
-- B is correct: treating it as a string to parse, not a ready-made object, is the exact distinction covered in [Tool Calling Across Providers](/learn/tools-function-calling/tool-calling-across-providers).
+- B is wrong: that's how Anthropic's `input` field behaves, not OpenAI's `arguments`.
+- A is correct: treating it as a string to parse, not a ready-made object, is the exact distinction covered in [Tool Calling Across Providers](/learn/tools-function-calling/tool-calling-across-providers).
 - C is wrong: arguments are very much present in this field, just string-encoded.
 - D is wrong: the format is JSON, not XML.
 
@@ -190,18 +190,18 @@ D. The conversation history must contain a typo that accidentally declared the t
 **10. "Extract the vendor name, amount, and due date from this invoice text into JSON" and "check whether this invoice has already been paid, and mark it paid if not" — which technique fits each, respectively?**
 
 A. Tool call, then tool call
-B. Structured output, then tool call
-C. Tool call, then structured output
-D. Structured output, then structured output
+B. Tool call, then structured output
+C. Structured output, then structured output
+D. Structured output, then tool call
 
 <details><summary>Answer</summary>
 
-**Correct: B.** The first task transforms data already present in the conversation into a shaped answer — nothing needs to happen outside the response, which is structured output. The second needs a real lookup (has it been paid?) and a real side effect (mark it paid), which only a tool call can provide — see [Structured Output vs. Tool Calls: Which and When](/learn/tools-function-calling/structured-output-vs-tool-calls-when).
+**Correct: D.** The first task transforms data already present in the conversation into a shaped answer — nothing needs to happen outside the response, which is structured output. The second needs a real lookup (has it been paid?) and a real side effect (mark it paid), which only a tool call can provide — see [Structured Output vs. Tool Calls: Which and When](/learn/tools-function-calling/structured-output-vs-tool-calls-when).
 
 - A is wrong: the first task has no action to execute — a tool call would be unjustified overhead.
-- B is correct: extraction-from-given-text is structured output; lookup-then-act is a tool call.
-- C is wrong: this reverses the two tasks' correct techniques.
-- D is wrong: the second task requires a real side effect (marking paid), which structured output alone cannot cause.
+- D is correct: extraction-from-given-text is structured output; lookup-then-act is a tool call.
+- B is wrong: this reverses the two tasks' correct techniques.
+- C is wrong: the second task requires a real side effect (marking paid), which structured output alone cannot cause.
 
 </details>
 

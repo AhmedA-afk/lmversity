@@ -11,13 +11,13 @@ duration: "8 min read"
 A server reads the user's local git repositories and exposes commit search. Someone proposes hosting it so the whole team can share one instance.
 
 - **A.** Sensible — one deployment beats twenty installs.
-- **B.** It cannot work: the repositories are on individual machines and a hosted server can reach none of them.
-- **C.** It works with per-user OAuth to the git provider.
-- **D.** It works if each user uploads their repositories first.
+- **B.** It works with per-user OAuth to the git provider.
+- **C.** It works if each user uploads their repositories first.
+- **D.** It cannot work: the repositories are on individual machines and a hosted server can reach none of them.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** This is a location problem, not a deployment one, and no transport solves it. **A** assumes the server can see the data. **C** would be a different server against a hosted git API — a legitimate product, but not this one, and it loses local branches and uncommitted work. **D** turns a local tool into a sync product nobody asked for.
+**Correct: D.** This is a location problem, not a deployment one, and no transport solves it. **A** assumes the server can see the data. **B** would be a different server against a hosted git API — a legitimate product, but not this one, and it loses local branches and uncommitted work. **C** turns a local tool into a sync product nobody asked for.
 
 </details>
 
@@ -25,14 +25,14 @@ A server reads the user's local git repositories and exposes commit search. Some
 
 You add bearer verification to a shared server. Every request is authenticated. A colleague reports seeing another team's tickets.
 
-- **A.** The token audience is not being checked.
-- **B.** Middleware establishes who is calling; the tools still query everything. They need per-principal scoping.
+- **A.** Middleware establishes who is calling; the tools still query everything. They need per-principal scoping.
+- **B.** The token audience is not being checked.
 - **C.** Session identifiers are colliding.
 - **D.** The database connection is shared across requests.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** The step that gets skipped when a local server goes multi-user. Authentication answers *who*; only the tool can answer *what they get*, by scoping every query. **A** an audience gap admits wrong callers rather than showing an admitted caller the wrong rows. **C** would be a session bug on top of tools that are unscoped anyway. **D** connection sharing is a performance concern, not an authorisation one.
+**Correct: A.** The step that gets skipped when a local server goes multi-user. Authentication answers *who*; only the tool can answer *what they get*, by scoping every query. **B** an audience gap admits wrong callers rather than showing an admitted caller the wrong rows. **C** would be a session bug on top of tools that are unscoped anyway. **D** connection sharing is a performance concern, not an authorisation one.
 
 </details>
 
@@ -56,13 +56,13 @@ Deployed behind two replicas, roughly half of all sessions fail on their second 
 A client is connected to six servers, each exposing eight to twelve tools. Users report the assistant has become slower, more expensive and worse at choosing tools.
 
 - **A.** Too many connections; the client cannot keep up.
-- **B.** Every tool's name, description and schema is sent on every request — a large standing cost and a harder selection problem.
-- **C.** The servers are competing for the same port.
+- **B.** The servers are competing for the same port.
+- **C.** Every tool's name, description and schema is sent on every request — a large standing cost and a harder selection problem.
 - **D.** The model needs a larger context window.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** Around sixty tool definitions ride along on every single turn. That is cost, latency and crowding, plus more near-identical options to choose badly between. Fewer sharper tools, servers a user can toggle, or a gateway presenting a filtered subset. **A** connection count is not the bottleneck. **C** stdio servers use no ports. **D** a bigger window pays the same tax more expensively.
+**Correct: C.** Around sixty tool definitions ride along on every single turn. That is cost, latency and crowding, plus more near-identical options to choose badly between. Fewer sharper tools, servers a user can toggle, or a gateway presenting a filtered subset. **A** connection count is not the bottleneck. **B** stdio servers use no ports. **D** a bigger window pays the same tax more expensively.
 
 </details>
 
@@ -71,13 +71,13 @@ A client is connected to six servers, each exposing eight to twelve tools. Users
 Your published server renames `search_docs` to `search_documentation` for clarity. Users on the installed version report the assistant "forgot how to search".
 
 - **A.** They need to restart their client.
-- **B.** A rename removes the old tool for everyone who has not upgraded; keep the old name as an alias and deprecate it.
-- **C.** Publish a changelog entry.
-- **D.** Tool names are internal and cannot cause this.
+- **B.** Publish a changelog entry.
+- **C.** Tool names are internal and cannot cause this.
+- **D.** A rename removes the old tool for everyone who has not upgraded; keep the old name as an alias and deprecate it.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** For a published server the schema is a public interface and you cannot contact installed users. Add, alias and deprecate — never rename in place. **A** a restart gives them the same old version. **C** worth doing and it does not reach anyone who has already installed. **D** the name is exactly what the model selects on, so removing it removes the capability.
+**Correct: D.** For a published server the schema is a public interface and you cannot contact installed users. Add, alias and deprecate — never rename in place. **A** a restart gives them the same old version. **B** worth doing and it does not reach anyone who has already installed. **C** the name is exactly what the model selects on, so removing it removes the capability.
 
 </details>
 

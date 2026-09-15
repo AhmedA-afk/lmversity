@@ -100,17 +100,17 @@ Answer B's Python-version claim was accurate the day the underlying training dat
 What's actually the fastest reliable way to check whether Answer B's recommendation still holds?
 
 - **A.** Ask the AI what today's date is and whether its answer is still current.
-- **B.** Go to the tool's own authoritative source — Python's official site or docs — and read off the current version directly.
-- **C.** Trust it, since programming languages don't release new versions that often.
+- **B.** Trust it, since programming languages don't release new versions that often.
+- **C.** Go to the tool's own authoritative source — Python's official site or docs — and read off the current version directly.
 - **D.** Ask a second AI system the same question and go with whichever response sounds more confident.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** For anything that changes on its own schedule — software versions, prices, staffing, live scores — the fix isn't to interrogate the model, it's to check the primary source that's actually being kept up to date. That's the move covered in [verification tactics by task type](/learn/ai-literacy/verification-tactics-by-task-type) for fast-moving facts.
+**Correct: C.** For anything that changes on its own schedule — software versions, prices, staffing, live scores — the fix isn't to interrogate the model, it's to check the primary source that's actually being kept up to date. That's the move covered in [verification tactics by task type](/learn/ai-literacy/verification-tactics-by-task-type) for fast-moving facts.
 
 **A** is tempting but wrong: a model doesn't carry a live sense of "now" layered on top of its training. Asking it to self-assess its own recency just produces another generated-sounding answer, not an actual check against reality.
 
-**C** is wrong because it's a factual assumption doing all the work. Plenty of widely-used tools ship meaningful updates on a regular cadence, and "this category doesn't change much" is a guess, not a check.
+**B** is wrong because it's a factual assumption doing all the work. Plenty of widely-used tools ship meaningful updates on a regular cadence, and "this category doesn't change much" is a guess, not a check.
 
 **D** is wrong because a second model has the same structural problem — a training cutoff and no built-in "how old is this fact" flag — and you've now added "which one sounds more confident" as your deciding factor, which isn't a signal of accuracy for either one.
 

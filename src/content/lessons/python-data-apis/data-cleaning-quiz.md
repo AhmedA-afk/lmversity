@@ -2,7 +2,7 @@
 title: "Quiz: Data Cleaning & Validation"
 track: "python-data-apis"
 status: live
-summary: "A 6-question self-check on choosing fillna vs dropna, what errors='coerce' actually does to bad values, where schema checks belong in a pipeline, and a worked scenario on unvalidat"
+summary: "You've seen `fillna`, `dropna`, `errors='coerce'`, and schema checks separately — this quiz checks whether you can pick the right tool under pressure, not just recite what each one does."
 duration: "12 min read"
 ---
 
@@ -71,17 +71,17 @@ predictions = model.predict(df)
 You want to add a schema check — required columns present, dtypes correct, values in expected ranges. Where does it belong?
 
 - **A.** Inside `load_raw`, right after reading the CSV — check the raw data's shape before anything else touches it
-- **B.** Right after `clean(df)` returns, before it's handed to `engineer_features` — validate what your cleaning step actually promised to produce
-- **C.** As the first line inside `model.predict`, so the model itself guards its input
+- **B.** As the first line inside `model.predict`, so the model itself guards its input
+- **C.** Right after `clean(df)` returns, before it's handed to `engineer_features` — validate what your cleaning step actually promised to produce
 - **D.** Nowhere in the code — schema problems show up as bad predictions, so catch them by monitoring output quality in production
 
 <details><summary>Answer</summary>
 
-**Correct: B.** The check that matters most is the one on `clean(df)`'s *output* — that's the contract the rest of your pipeline is trusting. If `clean` has a bug (a `coerce` that quietly produces way more `NaN`s than expected, a `dropna()` that eats more rows than intended, a dtype that didn't convert), you want to know the instant `clean` returns, not three stages later when a model is already scoring on it. This is the core idea behind [validating dataframes with schemas](/learn/python-data-apis/validating-dataframes-with-schemas) — you're not just checking the world, you're checking your own code.
+**Correct: C.** The check that matters most is the one on `clean(df)`'s *output* — that's the contract the rest of your pipeline is trusting. If `clean` has a bug (a `coerce` that quietly produces way more `NaN`s than expected, a `dropna()` that eats more rows than intended, a dtype that didn't convert), you want to know the instant `clean` returns, not three stages later when a model is already scoring on it. This is the core idea behind [validating dataframes with schemas](/learn/python-data-apis/validating-dataframes-with-schemas) — you're not just checking the world, you're checking your own code.
 
 **A** — checking the raw input has real value (see [data contracts and validation](/learn/python-data-apis/data-contracts-and-validation)), but it only tells you the input was reasonable. It can't catch a bug *inside* `clean` — a broken join, a bad coercion, an over-aggressive `dropna` — because none of that has happened yet at this point in the pipeline.
 
-**C** — by the time `model.predict` runs, feature engineering has already transformed the bad data into something that looks like a normal (wrong) feature vector, often with no obvious error to catch. It also couples data-quality logic to the model class, and if `predict` is called per-row or in a loop, you'd be re-validating the same schema over and over for no benefit.
+**B** — by the time `model.predict` runs, feature engineering has already transformed the bad data into something that looks like a normal (wrong) feature vector, often with no obvious error to catch. It also couples data-quality logic to the model class, and if `predict` is called per-row or in a loop, you'd be re-validating the same schema over and over for no benefit.
 
 **D** — this makes validation purely reactive. You'd be finding out about the problem from a stakeholder asking why forecasts look off, days or weeks after the bad data entered the pipeline, instead of failing loudly the same run it happened.
 

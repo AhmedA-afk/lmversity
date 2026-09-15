@@ -13,19 +13,19 @@ Six questions on the highest-power, highest-risk tools in this track, and on kno
 A restaurant has a public reservations API integrated with a major booking platform. Your agent needs to book a table there. What should it use?
 
 A. A computer-use loop against the restaurant's website, since it always works regardless of what integrations exist
-B. A dedicated `book_table` API tool
-C. A `run_python` code-execution tool that scrapes the page
-D. Whichever the model prefers on a given run
+B. A `run_python` code-execution tool that scrapes the page
+C. Whichever the model prefers on a given run
+D. A dedicated `book_table` API tool
 
 <details>
 <summary>Answer</summary>
 
-**Correct: B.** When a clean API exists, use it — it's cheaper, faster, and fails with structured errors instead of a misclick. See [API Tools vs. Computer Use for the Same Task](/learn/tools-function-calling/api-tools-vs-computer-use).
+**Correct: D.** When a clean API exists, use it — it's cheaper, faster, and fails with structured errors instead of a misclick. See [API Tools vs. Computer Use for the Same Task](/learn/tools-function-calling/api-tools-vs-computer-use).
 
 - A is wrong: computer use is the fallback for when no API exists, not the default — it's slower, pricier per step, and breaks when the page re-renders.
-- B is correct: prefer an API tool whenever one exists.
-- C is wrong: this reaches for the general-purpose tool where a purpose-built one already exists, and scraping is more brittle than either option.
-- D is wrong: tool choice shouldn't be arbitrary — the harness should route to the API tool as a design decision, not leave it to chance.
+- D is correct: prefer an API tool whenever one exists.
+- B is wrong: this reaches for the general-purpose tool where a purpose-built one already exists, and scraping is more brittle than either option.
+- C is wrong: tool choice shouldn't be arbitrary — the harness should route to the API tool as a design decision, not leave it to chance.
 
 </details>
 
@@ -33,18 +33,18 @@ D. Whichever the model prefers on a given run
 
 You write a test that mocks a `tool_call` object with a missing required field and asserts the dispatcher returns a validation error — no model is called. Which layer does this test?
 
-A. Selection
-B. Execution
+A. Execution
+B. Selection
 C. Integration
 D. Benchmarking
 
 <details>
 <summary>Answer</summary>
 
-**Correct: B.** This is a deterministic test of your dispatcher's own logic, with no model in the loop — that's the execution layer. See [Testing Tool Calls](/learn/tools-function-calling/testing-tool-calls-strategies).
+**Correct: A.** This is a deterministic test of your dispatcher's own logic, with no model in the loop — that's the execution layer. See [Testing Tool Calls](/learn/tools-function-calling/testing-tool-calls-strategies).
 
-- A is wrong: selection tests check whether the *model* picks the right tool, which requires calling the model — this test never does.
-- B is correct: mocking the call and testing your own validation code is exactly the execution layer.
+- B is wrong: selection tests check whether the *model* picks the right tool, which requires calling the model — this test never does.
+- A is correct: mocking the call and testing your own validation code is exactly the execution layer.
 - C is wrong: integration tests exercise the full loop across multiple turns; this is a single isolated assertion.
 - D is wrong: benchmarking is a separate activity (like BFCL) for measuring model tool-calling competence in general, not a layer of your own test suite.
 

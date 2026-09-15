@@ -30,17 +30,17 @@ D. Because the prompt tells the model which pre-written answer to retrieve
 
 A. Add "please always be accurate about prices" to the system prompt
 B. Increase the temperature so it considers more possibilities
-C. Retrieve the current price and put it directly in the prompt's context
-D. Add three more examples of correctly-formatted prices to a few-shot section
+C. Add three more examples of correctly-formatted prices to a few-shot section
+D. Retrieve the current price and put it directly in the prompt's context
 
 <details><summary>Answer</summary>
 
-**Correct: C.** This is a [what prompting cannot fix](/learn/prompt-engineering/what-prompting-cannot-fix) case — the model has no way to know a fact that postdates its training and isn't in context. Putting the actual current price into the prompt turns this into a prompt-solvable problem.
+**Correct: D.** This is a [what prompting cannot fix](/learn/prompt-engineering/what-prompting-cannot-fix) case — the model has no way to know a fact that postdates its training and isn't in context. Putting the actual current price into the prompt turns this into a prompt-solvable problem.
 
 - A is wrong: asking for accuracy doesn't grant the model information it doesn't have — it's still just conditioning tokens, not a fact source.
 - B is wrong: temperature affects sampling randomness, not what the model knows; more randomness makes an already-wrong answer less consistent, not more correct.
-- C is correct.
-- D is wrong: examples fix format and tone, not missing factual knowledge — the model would still confidently apply the old price in the new format.
+- D is correct.
+- C is wrong: examples fix format and tone, not missing factual knowledge — the model would still confidently apply the old price in the new format.
 
 </details>
 
@@ -64,17 +64,17 @@ D. "Write about the meeting in as much detail as possible."
 
 ## 4. You're building a prompt that extracts a shipping address from an email into JSON for a downstream parser. What temperature is the best starting point?
 
-A. Around 1.0, to make sure it considers creative interpretations of the address
-B. Around 0 to 0.2, since there's one correct shape and consistency matters
+A. Around 0 to 0.2, since there's one correct shape and consistency matters
+B. Around 1.0, to make sure it considers creative interpretations of the address
 C. Temperature doesn't apply to extraction tasks
 D. As high as possible, so you get more diverse address formats
 
 <details><summary>Answer</summary>
 
-**Correct: B.** Extraction has one right answer per input, so you want the sampling distribution to consistently collapse to it — see [temperature for prompt engineers](/learn/prompt-engineering/temperature-and-determinism-for-prompters).
+**Correct: A.** Extraction has one right answer per input, so you want the sampling distribution to consistently collapse to it — see [temperature for prompt engineers](/learn/prompt-engineering/temperature-and-determinism-for-prompters).
 
-- A is wrong: "creative interpretation" of a shipping address is exactly what you don't want — it invites formatting drift or invented details.
-- B is correct.
+- B is wrong: "creative interpretation" of a shipping address is exactly what you don't want — it invites formatting drift or invented details.
+- A is correct.
 - C is wrong: temperature applies to every generation call, including extraction — it's just that low is almost always the right setting for this task type.
 - D is wrong: diverse formats are a liability here, not a feature, since a downstream parser expects one stable shape.
 
@@ -119,17 +119,17 @@ D. Temperature is too low; raise it so the model explores shorter completions
 ## 7. You run the same prompt on the same input twice and get two different, both-plausible-looking answers. What does this tell you?
 
 A. The model is broken and needs to be reported
-B. Your prompt has a syntax error
-C. This is expected sampling behavior; if you need one shape of answer every time, lower temperature and test across multiple reruns before trusting either output
+B. This is expected sampling behavior; if you need one shape of answer every time, lower temperature and test across multiple reruns before trusting either output
+C. Your prompt has a syntax error
 D. The prompt is too short
 
 <details><summary>Answer</summary>
 
-**Correct: C.** See [prompting is not deterministic programming](/learn/prompt-engineering/prompting-is-not-deterministic-programming) — unless temperature is pinned to 0 (and even then, near-certainly), sampling variance is expected, not a malfunction.
+**Correct: B.** See [prompting is not deterministic programming](/learn/prompt-engineering/prompting-is-not-deterministic-programming) — unless temperature is pinned to 0 (and even then, near-certainly), sampling variance is expected, not a malfunction.
 
 - A is wrong: this is normal behavior for a sampling process, not a defect.
-- B is wrong: prompts don't have "syntax errors" in the way code does — there's no parser to reject malformed instructions.
-- C is correct.
+- C is wrong: prompts don't have "syntax errors" in the way code does — there's no parser to reject malformed instructions.
+- B is correct.
 - D is wrong: length has no direct bearing on whether sampling produces varied output; a short prompt at high temperature and a long one can both vary.
 
 </details>
@@ -137,17 +137,17 @@ D. The prompt is too short
 ## 8. A colleague shows you a short, clever one-line prompt that nailed the three examples they tried. What should you ask before adopting it?
 
 A. Nothing — three correct examples is a solid enough sample
-B. Whether it was tested on inputs it wasn't tuned against, including ambiguous or edge-case ones
-C. Whether it uses a persona, since personas guarantee reliability
+B. Whether it uses a persona, since personas guarantee reliability
+C. Whether it was tested on inputs it wasn't tuned against, including ambiguous or edge-case ones
 D. Whether it's shorter than your current prompt
 
 <details><summary>Answer</summary>
 
-**Correct: B.** This is the exact trap covered in [reliability beats cleverness](/learn/prompt-engineering/reliability-over-clever-tricks) — three hand-picked successes tell you almost nothing about behavior on inputs you haven't tried yet.
+**Correct: C.** This is the exact trap covered in [reliability beats cleverness](/learn/prompt-engineering/reliability-over-clever-tricks) — three hand-picked successes tell you almost nothing about behavior on inputs you haven't tried yet.
 
 - A is wrong: three examples, especially ones likely chosen because they worked, is a very small and probably biased sample.
-- B is correct.
-- C is wrong: a persona can shift tone, but it doesn't enforce constraints or guarantee correctness on edge cases.
+- C is correct.
+- B is wrong: a persona can shift tone, but it doesn't enforce constraints or guarantee correctness on edge cases.
 - D is wrong: brevity is not a proxy for reliability — a shorter prompt can just mean fewer constraints were specified.
 
 </details>

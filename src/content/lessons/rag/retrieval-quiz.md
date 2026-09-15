@@ -27,14 +27,14 @@ You've deployed an HNSW index and recall@10 on a sample of test queries is lower
 
 A teammate says "our index has 95% recall" but can't explain how that number was computed. What's actually required to calculate recall@k for an ANN index?
 
-- A. Compare each query's ANN top-k results against the true top-k from an exact (brute-force/flat) search on the same queries
-- B. Check the recall estimate most vector databases report automatically
-- C. Measure how often users click the top result
-- D. Compare your `ef_search` setting against numbers published by the index library's authors
+- A. Check the recall estimate most vector databases report automatically
+- B. Measure how often users click the top result
+- C. Compare your `ef_search` setting against numbers published by the index library's authors
+- D. Compare each query's ANN top-k results against the true top-k from an exact (brute-force/flat) search on the same queries
 
 <details><summary>Answer</summary>
 
-**Correct: A.** Recall@k is defined *relative to ground truth* — the actual nearest neighbors. There's no way to know how many of your ANN results are "real" hits without running (or sampling) an exact search to compare against. **B** is wrong for most setups: databases don't know your ground truth, so they can't self-report recall — some tuning utilities compute it as part of a parameter sweep, but that's still running exact search under the hood, not magic. **C** conflates recall with a UX signal; click-through is confounded by ranking, presentation, and relevance judgment — it's a different metric measuring a different thing. **D** is only ever a rough prior — published numbers come from someone else's data, dimensionality, and hardware, and won't transfer to your corpus.
+**Correct: D.** Recall@k is defined *relative to ground truth* — the actual nearest neighbors. There's no way to know how many of your ANN results are "real" hits without running (or sampling) an exact search to compare against. **A** is wrong for most setups: databases don't know your ground truth, so they can't self-report recall — some tuning utilities compute it as part of a parameter sweep, but that's still running exact search under the hood, not magic. **B** conflates recall with a UX signal; click-through is confounded by ranking, presentation, and relevance judgment — it's a different metric measuring a different thing. **C** is only ever a rough prior — published numbers come from someone else's data, dimensionality, and hardware, and won't transfer to your corpus.
 
 </details>
 
@@ -57,14 +57,14 @@ You swap in a new embedding model whose docs say it was "trained with a dot-prod
 
 You compute dot-product similarity directly on raw embeddings (no normalization step) and notice a handful of unusually long documents dominate the top of *every* result list, regardless of the query. What's going on, and what's the fix?
 
-- A. Those documents' embeddings have larger norm, which inflates raw dot product regardless of relevance; normalize vectors to unit length before indexing, or use cosine similarity
-- B. The index is corrupted — rebuild it from scratch
+- A. The index is corrupted — rebuild it from scratch
+- B. Those documents' embeddings have larger norm, which inflates raw dot product regardless of relevance; normalize vectors to unit length before indexing, or use cosine similarity
 - C. Increase `ef_search`/`nprobe` so search explores more candidates instead of favoring long documents
 - D. The embedding model is broken and needs retraining
 
 <details><summary>Answer</summary>
 
-**Correct: A.** Dot product is magnitude-sensitive: `score = |a| |b| cos(θ)`. If some vectors have a larger norm — often correlated with document length — they'll score higher across almost every query, independent of actual relevance. Normalizing to unit length (or switching to cosine, which does the normalizing for you) removes the magnitude term and leaves pure directional similarity. Background: [norms and distances](/learn/maths-foundations/norms-and-distances). **B** — the index is doing exactly what dot product asks of it; nothing is corrupted. **C** — recall/latency knobs don't touch which metric is used or how magnitude is weighted; irrelevant here. **D** — retraining a model is a massive overreaction to what's usually a one-line normalization fix.
+**Correct: B.** Dot product is magnitude-sensitive: `score = |a| |b| cos(θ)`. If some vectors have a larger norm — often correlated with document length — they'll score higher across almost every query, independent of actual relevance. Normalizing to unit length (or switching to cosine, which does the normalizing for you) removes the magnitude term and leaves pure directional similarity. Background: [norms and distances](/learn/maths-foundations/norms-and-distances). **A** — the index is doing exactly what dot product asks of it; nothing is corrupted. **C** — recall/latency knobs don't touch which metric is used or how magnitude is weighted; irrelevant here. **D** — retraining a model is a massive overreaction to what's usually a one-line normalization fix.
 
 </details>
 
@@ -72,14 +72,14 @@ You compute dot-product similarity directly on raw embeddings (no normalization 
 
 Your corpus is about 20,000 document chunks — comfortably small, fits in memory. A teammate wants to set up an IVF-PQ index with product quantization "to future-proof for scale." What should you push back on?
 
-- A. At this size, exact brute-force (flat) search is almost certainly fast enough and gives perfect recall for free; IVF-PQ's tuning overhead and quantization error aren't earning their cost yet — add it later if the corpus actually grows
-- B. Nothing — you should always use the most scalable index available so you never have to migrate later
-- C. IVF-PQ is strictly worse than HNSW at every scale, so HNSW should replace it instead
+- A. Nothing — you should always use the most scalable index available so you never have to migrate later
+- B. IVF-PQ is strictly worse than HNSW at every scale, so HNSW should replace it instead
+- C. At this size, exact brute-force (flat) search is almost certainly fast enough and gives perfect recall for free; IVF-PQ's tuning overhead and quantization error aren't earning their cost yet — add it later if the corpus actually grows
 - D. Product quantization only reduces latency, not memory, so it's irrelevant to the future-proofing argument anyway
 
 <details><summary>EAnswer</summary>
 
-**Correct: A.** At 20K vectors, a linear scan over every vector is typically a few milliseconds — there's no recall to trade away because it's exact, and you skip the real cost of PQ: accepting some accuracy loss from compression and taking on `nlist`/`nprobe` tuning for a problem you don't have yet. If the corpus grows into the millions, that's the point to revisit — see [choosing a vector database](/learn/rag/choosing-a-vector-database) for how that decision actually shifts with scale. **B** ignores that premature complexity has a real, ongoing cost — more moving parts, more failure modes, more tuning surface — paid starting today, for a benefit you may never need. **C** is false: IVF-PQ vs. HNSW isn't strictly ordered, it depends on your scale, memory budget, and recall requirements. **D** is backwards — PQ's whole point is compressing vectors into small codes to cut memory footprint; that's precisely the axis "future-proofing" is usually worried about.
+**Correct: C.** At 20K vectors, a linear scan over every vector is typically a few milliseconds — there's no recall to trade away because it's exact, and you skip the real cost of PQ: accepting some accuracy loss from compression and taking on `nlist`/`nprobe` tuning for a problem you don't have yet. If the corpus grows into the millions, that's the point to revisit — see [choosing a vector database](/learn/rag/choosing-a-vector-database) for how that decision actually shifts with scale. **A** ignores that premature complexity has a real, ongoing cost — more moving parts, more failure modes, more tuning surface — paid starting today, for a benefit you may never need. **B** is false: IVF-PQ vs. HNSW isn't strictly ordered, it depends on your scale, memory budget, and recall requirements. **D** is backwards — PQ's whole point is compressing vectors into small codes to cut memory footprint; that's precisely the axis "future-proofing" is usually worried about.
 
 </details>
 
@@ -87,14 +87,14 @@ Your corpus is about 20,000 document chunks — comfortably small, fits in memor
 
 Your corpus grows from 500K to 50M vectors. Recall on your existing HNSW index (same `M`, same `ef_search`) starts feeling worse, and memory usage has ballooned. What's the best explanation?
 
-- A. Index choice at scale is a three-way tradeoff between speed, recall, and memory — HNSW's graph plus full-precision vectors barely fit (or don't fit affordably) in RAM anymore, pushing you toward compression (product/scalar quantization) or an IVF-based approach that trades some exactness for memory headroom
-- B. HNSW recall intrinsically degrades as a dataset grows, regardless of memory — no parameter tuning or index change can help
-- C. This is purely a latency problem; recall is unaffected by scale
-- D. Switch to Euclidean distance instead of cosine, since Euclidean scales better to large datasets
+- A. HNSW recall intrinsically degrades as a dataset grows, regardless of memory — no parameter tuning or index change can help
+- B. This is purely a latency problem; recall is unaffected by scale
+- C. Switch to Euclidean distance instead of cosine, since Euclidean scales better to large datasets
+- D. Index choice at scale is a three-way tradeoff between speed, recall, and memory — HNSW's graph plus full-precision vectors barely fit (or don't fit affordably) in RAM anymore, pushing you toward compression (product/scalar quantization) or an IVF-based approach that trades some exactness for memory headroom
 
 <details><summary>Answer</summary>
 
-**Correct: A.** The tradeoff people usually reason about is just speed vs. recall, but memory is the third axis that determines what's even feasible — HNSW stores full vectors plus graph links per node, and that gets expensive fast at 50M scale. The realistic path is compressing vectors or moving to an index built for that footprint, accepting a bit less recall in exchange for fitting in memory at all. **B** overstates it — recall itself doesn't have to degrade with scale if you keep enough RAM and `ef_search` high enough; what actually breaks is the *budget* for doing that, which is the real constraint people hit. **C** is wrong — if the team responds to the memory problem by cutting `M` or `ef_search` to save space, that directly tanks recall; the two aren't independent at scale. **D** — distance metric choice doesn't address a memory or scale problem at all; that's a different axis entirely (see Question 3).
+**Correct: D.** The tradeoff people usually reason about is just speed vs. recall, but memory is the third axis that determines what's even feasible — HNSW stores full vectors plus graph links per node, and that gets expensive fast at 50M scale. The realistic path is compressing vectors or moving to an index built for that footprint, accepting a bit less recall in exchange for fitting in memory at all. **A** overstates it — recall itself doesn't have to degrade with scale if you keep enough RAM and `ef_search` high enough; what actually breaks is the *budget* for doing that, which is the real constraint people hit. **B** is wrong — if the team responds to the memory problem by cutting `M` or `ef_search` to save space, that directly tanks recall; the two aren't independent at scale. **C** — distance metric choice doesn't address a memory or scale problem at all; that's a different axis entirely (see Question 3).
 
 </details>
 

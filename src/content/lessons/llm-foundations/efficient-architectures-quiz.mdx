@@ -15,18 +15,18 @@ Eight questions covering the ground from [The Quadratic Attention Bottleneck](/l
 You increase context length from 4k to 16k tokens — a 4x increase. By what factor does the raw attention score matrix (per head, per layer) grow?
 
 A) 4x
-B) 8x
-C) 16x
+B) 16x
+C) 8x
 D) It stays the same, because the KV cache absorbs the extra length
 
 <details>
 <summary>Answer</summary>
 
-**Correct: C.** The score matrix is n × n, so a 4x increase in sequence length produces a 4² = 16x increase in matrix size.
+**Correct: B.** The score matrix is n × n, so a 4x increase in sequence length produces a 4² = 16x increase in matrix size.
 
 - A) This is the *sequence length's* growth factor, not the score matrix's — it's the mistake of treating attention cost as linear when it's quadratic.
-- B) Not derived from anything in the setup — there's no operation here that produces an 8x factor.
-- C) Correct — quadratic growth means squaring the growth factor of the input: 4² = 16.
+- C) Not derived from anything in the setup — there's no operation here that produces an 8x factor.
+- B) Correct — quadratic growth means squaring the growth factor of the input: 4² = 16.
 - D) The KV cache is a real, separate structure, but it scales *linearly* with sequence length (4x, not 16x) and doesn't change how the score matrix itself scales — the two are different bottlenecks with different growth rates.
 
 </details>
@@ -35,19 +35,19 @@ D) It stays the same, because the KV cache absorbs the extra length
 
 A model uses grouped-query attention with 32 query heads split into 8 groups. Which statement is correct?
 
-A) There are 8 distinct K/V pairs, each shared by 4 query heads, and attention FLOPs are roughly unchanged from full multi-head attention
-B) There are 8 distinct K/V pairs, and the model performs roughly 8x fewer attention FLOPs than full multi-head attention
-C) There is only 1 shared K/V pair, used by all 32 query heads
+A) There are 8 distinct K/V pairs, and the model performs roughly 8x fewer attention FLOPs than full multi-head attention
+B) There is only 1 shared K/V pair, used by all 32 query heads
+C) There are 8 distinct K/V pairs, each shared by 4 query heads, and attention FLOPs are roughly unchanged from full multi-head attention
 D) GQA reduces the number of query heads from 32 down to 8
 
 <details>
 <summary>Answer</summary>
 
-**Correct: A.** Grouping reduces the number of distinct key/value sets, which shrinks the KV cache and the K/V projection cost — but each of the 32 query heads still computes its own dot products against its group's keys over the full sequence, so the dominant attention FLOPs (the Q·Kᵀ and softmax·V steps) are essentially unaffected by grouping.
+**Correct: C.** Grouping reduces the number of distinct key/value sets, which shrinks the KV cache and the K/V projection cost — but each of the 32 query heads still computes its own dot products against its group's keys over the full sequence, so the dominant attention FLOPs (the Q·Kᵀ and softmax·V steps) are essentially unaffected by grouping.
 
-- A) Correct — this is the core distinction the whole module draws: GQA is a memory and bandwidth optimization, not primarily a FLOPs optimization.
-- B) This is the common misconception the correct answer corrects — fewer distinct K/V sets doesn't mean fewer query-to-key comparisons; there are still 32 query heads each attending over the sequence.
-- C) That describes MQA (group count = 1), not GQA with 8 groups.
+- C) Correct — this is the core distinction the whole module draws: GQA is a memory and bandwidth optimization, not primarily a FLOPs optimization.
+- A) This is the common misconception the correct answer corrects — fewer distinct K/V sets doesn't mean fewer query-to-key comparisons; there are still 32 query heads each attending over the sequence.
+- B) That describes MQA (group count = 1), not GQA with 8 groups.
 - D) GQA never changes the number of query heads — it only changes how many distinct key/value heads those query heads share.
 
 </details>
@@ -56,20 +56,20 @@ D) GQA reduces the number of query heads from 32 down to 8
 
 A model has 2 layers, 32 query heads but only 4 KV heads (GQA), a head dimension of 8, and is serving a single sequence of 1,024 tokens with the cache stored in fp16 (2 bytes per number). What's the total KV cache size for this sequence?
 
-A) 256 KiB
-B) 2 MiB
-C) 512 KiB
-D) 128 KiB
+A) 2 MiB
+B) 512 KiB
+C) 128 KiB
+D) 256 KiB
 
 <details>
 <summary>Answer</summary>
 
-**Correct: A.** `elements = 2 (K and V) × 2 layers × 4 KV heads × 8 head_dim × 1,024 tokens = 131,072`; `bytes = 131,072 × 2 (fp16) = 262,144 bytes = 256 KiB`.
+**Correct: D.** `elements = 2 (K and V) × 2 layers × 4 KV heads × 8 head_dim × 1,024 tokens = 131,072`; `bytes = 131,072 × 2 (fp16) = 262,144 bytes = 256 KiB`.
 
-- A) Correct — the formula uses `num_kv_heads` (4), not the query head count.
-- B) This is what you get if you mistakenly plug in the 32 query heads instead of the 4 KV heads: `2 × 2 × 32 × 8 × 1,024 × 2 = 2,097,152 bytes = 2 MiB`. It's the exact error tested in Question 2 — conflating query heads with KV heads.
-- C) This is what you get by using fp32 (4 bytes) instead of the stated fp16 (2 bytes): `131,072 × 4 = 524,288 bytes = 512 KiB`. Always match the precision given in the problem.
-- D) This is what you get by forgetting the factor of 2 for storing both K *and* V: `1 × 2 × 4 × 8 × 1,024 × 2 = 131,072 bytes = 128 KiB` — half the correct answer.
+- D) Correct — the formula uses `num_kv_heads` (4), not the query head count.
+- A) This is what you get if you mistakenly plug in the 32 query heads instead of the 4 KV heads: `2 × 2 × 32 × 8 × 1,024 × 2 = 2,097,152 bytes = 2 MiB`. It's the exact error tested in Question 2 — conflating query heads with KV heads.
+- B) This is what you get by using fp32 (4 bytes) instead of the stated fp16 (2 bytes): `131,072 × 4 = 524,288 bytes = 512 KiB`. Always match the precision given in the problem.
+- C) This is what you get by forgetting the factor of 2 for storing both K *and* V: `1 × 2 × 4 × 8 × 1,024 × 2 = 131,072 bytes = 128 KiB` — half the correct answer.
 
 </details>
 
@@ -77,18 +77,18 @@ D) 128 KiB
 
 Which best describes what FlashAttention computes, relative to naive full-matrix attention?
 
-A) An approximation of softmax attention, trading a small accuracy loss for speed
-B) The exact same softmax attention output, just computed in blocks with less memory traffic
+A) The exact same softmax attention output, just computed in blocks with less memory traffic
+B) An approximation of softmax attention, trading a small accuracy loss for speed
 C) A sparse approximation that skips some token pairs entirely
 D) A lower-precision, quantized version of attention
 
 <details>
 <summary>Answer</summary>
 
-**Correct: B.** The online-softmax recurrence produces bit-for-bit-equivalent results (up to floating-point rounding) to the naive computation — it changes how the computation is organized in memory, not what it computes.
+**Correct: A.** The online-softmax recurrence produces bit-for-bit-equivalent results (up to floating-point rounding) to the naive computation — it changes how the computation is organized in memory, not what it computes.
 
-- A) This is the most common misconception about FlashAttention — it is exact, not an approximation. Nothing about the math it performs differs from naive attention.
-- B) Correct — this is the "IO-aware, not approximate" point stressed throughout [FlashAttention: The Tiling and Online-Softmax Idea](/learn/llm-foundations/flash-attention-intuition-and-tiling).
+- B) This is the most common misconception about FlashAttention — it is exact, not an approximation. Nothing about the math it performs differs from naive attention.
+- A) Correct — this is the "IO-aware, not approximate" point stressed throughout [FlashAttention: The Tiling and Online-Softmax Idea](/learn/llm-foundations/flash-attention-intuition-and-tiling).
 - C) That describes sliding-window or sparse attention (see [Sparse, Sliding-Window, and Linear Attention](/learn/llm-foundations/sparse-sliding-and-linear-attention)), which is a genuinely different technique that does skip token pairs — FlashAttention computes every pair, just without materializing the full matrix at once.
 - D) FlashAttention doesn't require any change in numerical precision — it can be, and is, used with the same precision as any other attention implementation.
 

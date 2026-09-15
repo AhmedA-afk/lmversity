@@ -2,7 +2,7 @@
 title: "Quiz: Async & Batching"
 track: "python-data-apis"
 status: live
-summary: "A 6-question self-check on async/await mechanics, asyncio.gather's return order, why semaphores exist, why async doesn't speed up CPU-bound work, and diagnosing/fixing a rate-limit"
+summary: "Six scenarios where the code looks fine and isn't."
 duration: "12 min read"
 ---
 
@@ -27,16 +27,16 @@ asyncio.run(main())
 
 When `fetch_price("AAPL")` hits `await asyncio.sleep(1)`, what does control actually pass to?
 
-- A. The operating system's thread scheduler, which pauses the whole Python process
-- B. The asyncio event loop, which is now free to run any other ready coroutine (like `fetch_price("MSFT")`) until this one's wait is over
+- A. The asyncio event loop, which is now free to run any other ready coroutine (like `fetch_price("MSFT")`) until this one's wait is over
+- B. The operating system's thread scheduler, which pauses the whole Python process
 - C. The caller of `fetch_price`, which gets the return value immediately
 - D. A background thread that runs the sleep timer while the main thread blocks
 
 <details><summary>Answer</summary>
 
-**Correct: B.** `await` doesn't pause your program — it suspends *this coroutine* and gives the event loop a chance to run something else that's ready to make progress. That's the entire mechanism behind concurrency in asyncio: one thread, one loop, and coroutines that voluntarily yield at `await` points. Run the snippet and you'll see `starting AAPL`, `starting MSFT`, then (after ~1 second) both `done` lines — proof that MSFT started while AAPL was "waiting."
+**Correct: A.** `await` doesn't pause your program — it suspends *this coroutine* and gives the event loop a chance to run something else that's ready to make progress. That's the entire mechanism behind concurrency in asyncio: one thread, one loop, and coroutines that voluntarily yield at `await` points. Run the snippet and you'll see `starting AAPL`, `starting MSFT`, then (after ~1 second) both `done` lines — proof that MSFT started while AAPL was "waiting."
 
-**A** is the mental model for OS-level threading, not asyncio. Nothing here touches the OS scheduler; it's all cooperative, single-threaded control flow inside the Python process. **C** confuses `await` with a plain function return — if that were true, `fetch_price` could never resume after the sleep, since the caller already moved on. **D** is a natural guess if you're picturing `setTimeout`-style timers, but `asyncio.sleep` doesn't spin up a thread — it registers a wake-up time with the same single-threaded event loop and yields back to it.
+**B** is the mental model for OS-level threading, not asyncio. Nothing here touches the OS scheduler; it's all cooperative, single-threaded control flow inside the Python process. **C** confuses `await` with a plain function return — if that were true, `fetch_price` could never resume after the sleep, since the caller already moved on. **D** is a natural guess if you're picturing `setTimeout`-style timers, but `asyncio.sleep` doesn't spin up a thread — it registers a wake-up time with the same single-threaded event loop and yields back to it.
 
 </details>
 
@@ -64,16 +64,16 @@ asyncio.run(main())
 
 What gets printed?
 
-- A. `['slow', 'fast']` — the list matches the order the arguments were passed to `gather()`, regardless of which one finished first
-- B. `['fast', 'slow']` — whichever coroutine finishes first appears first in the list
+- A. `['fast', 'slow']` — whichever coroutine finishes first appears first in the list
+- B. `['slow', 'fast']` — the list matches the order the arguments were passed to `gather()`, regardless of which one finished first
 - C. Whichever one happens to finish first, non-deterministically — order isn't guaranteed
 - D. A single combined value, since `gather()` merges results into one object
 
 <details><summary>Answer</summary>
 
-**Correct: A.** `gather()` returns a list positionally matched to the awaitables you passed it — first argument's result at index 0, second at index 1, and so on — no matter which one actually completed first under the hood. `fast()` finishes in 0.1s and `slow()` takes 2s, but the printed list is still `['slow', 'fast']` because that's the order they were passed in. This is exactly why `gather()` is the right tool when you need "call five things concurrently, then process results as a batch, matched to their inputs" — you don't have to track which result belongs to which input yourself.
+**Correct: B.** `gather()` returns a list positionally matched to the awaitables you passed it — first argument's result at index 0, second at index 1, and so on — no matter which one actually completed first under the hood. `fast()` finishes in 0.1s and `slow()` takes 2s, but the printed list is still `['slow', 'fast']` because that's the order they were passed in. This is exactly why `gather()` is the right tool when you need "call five things concurrently, then process results as a batch, matched to their inputs" — you don't have to track which result belongs to which input yourself.
 
-**B** is a reasonable guess if you're thinking of a race, but that's not what `gather()` does — you're thinking of `asyncio.as_completed()`, which *does* yield results in completion order (as an iterator, not a list) and is the right tool when you want to react to whichever result lands first. **C** would be true if `gather()` had no ordering guarantee at all — but determinism here is the whole point; the API is designed so you never have to guess. **D** mixes up `gather()` with something like `asyncio.wait()`'s more complex return shape, or just an assumption that concurrency implies merging — it doesn't; you get one result per awaitable, same as if you'd called them one at a time in a loop.
+**A** is a reasonable guess if you're thinking of a race, but that's not what `gather()` does — you're thinking of `asyncio.as_completed()`, which *does* yield results in completion order (as an iterator, not a list) and is the right tool when you want to react to whichever result lands first. **C** would be true if `gather()` had no ordering guarantee at all — but determinism here is the whole point; the API is designed so you never have to guess. **D** mixes up `gather()` with something like `asyncio.wait()`'s more complex return shape, or just an assumption that concurrency implies merging — it doesn't; you get one result per awaitable, same as if you'd called them one at a time in a loop.
 
 </details>
 
@@ -170,15 +170,15 @@ results = asyncio.run(main(urls))  # urls has 2,000 entries
 You run this against an API with a documented limit of 50 requests/second. Partway through the batch, responses start coming back as `429 Too Many Requests`. What's the most direct fix?
 
 - A. Catch the `429`s and immediately retry each failed call the same way
-- B. Bound concurrency with an `asyncio.Semaphore` so only N requests are in flight at once, instead of all 2,000 at the same time
-- C. Replace `asyncio.gather` with `asyncio.as_completed` — it processes results as they finish, which naturally limits concurrency
-- D. Lower the per-request timeout so failed calls free up a "slot" faster
+- B. Replace `asyncio.gather` with `asyncio.as_completed` — it processes results as they finish, which naturally limits concurrency
+- C. Lower the per-request timeout so failed calls free up a "slot" faster
+- D. Bound concurrency with an `asyncio.Semaphore` so only N requests are in flight at once, instead of all 2,000 at the same time
 
 <details><summary>Answer</summary>
 
-**Correct: B.** The root cause is that `[fetch(client, url) for url in urls]` builds all 2,000 coroutines up front and `gather()` schedules every one of them essentially at once — there's nothing here capping how many hit the network simultaneously. Wrapping `fetch` in `async with sem:` (with `sem = asyncio.Semaphore(50)` or similar, tuned to sit safely under the documented limit) means at most N requests are ever in flight, and the rest wait their turn automatically. That's the direct fix for *this* failure mode — pair it with backoff-and-retry (see [rate limits and retries](/learn/python-data-apis/rate-limits-and-retries)) for the requests that still fail despite bounded concurrency, and see [concurrent API calls with asyncio](/learn/python-data-apis/concurrent-api-calls-with-asyncio) for the full pattern.
+**Correct: D.** The root cause is that `[fetch(client, url) for url in urls]` builds all 2,000 coroutines up front and `gather()` schedules every one of them essentially at once — there's nothing here capping how many hit the network simultaneously. Wrapping `fetch` in `async with sem:` (with `sem = asyncio.Semaphore(50)` or similar, tuned to sit safely under the documented limit) means at most N requests are ever in flight, and the rest wait their turn automatically. That's the direct fix for *this* failure mode — pair it with backoff-and-retry (see [rate limits and retries](/learn/python-data-apis/rate-limits-and-retries)) for the requests that still fail despite bounded concurrency, and see [concurrent API calls with asyncio](/learn/python-data-apis/concurrent-api-calls-with-asyncio) for the full pattern.
 
-**A** treats the symptom, not the cause — retrying the failed calls at the same unbounded concurrency just re-triggers the same 429s; you'd need both backoff *and* a concurrency cap, and the cap is what actually stops it from happening again. **C** is a genuine, common misconception: `as_completed()` changes how you *consume* results (as they finish, rather than all at once at the end) — it does not change how many coroutines are scheduled or running concurrently. All 2,000 tasks are still created and still hit the network at effectively the same time; you've just changed the loop that reads their results. **D** doesn't reduce how many requests go out simultaneously — it just makes the ones that do fail, fail faster, which doesn't relieve pressure on the rate limiter at all and can even mean more retries pile up sooner.
+**A** treats the symptom, not the cause — retrying the failed calls at the same unbounded concurrency just re-triggers the same 429s; you'd need both backoff *and* a concurrency cap, and the cap is what actually stops it from happening again. **B** is a genuine, common misconception: `as_completed()` changes how you *consume* results (as they finish, rather than all at once at the end) — it does not change how many coroutines are scheduled or running concurrently. All 2,000 tasks are still created and still hit the network at effectively the same time; you've just changed the loop that reads their results. **C** doesn't reduce how many requests go out simultaneously — it just makes the ones that do fail, fail faster, which doesn't relieve pressure on the rate limiter at all and can even mean more retries pile up sooner.
 
 </details>
 

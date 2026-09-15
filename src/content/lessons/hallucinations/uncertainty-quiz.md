@@ -11,17 +11,17 @@ Ten questions covering the whole module. The bin-arithmetic and signal-choice qu
 ## 1. On a reliability diagram, a bin plotted below the diagonal line means what?
 
 A. The model answered too few questions in that bin to matter
-B. The bin's stated confidence is higher than its empirical accuracy — overconfidence
-C. The bin's stated confidence is lower than its empirical accuracy — underconfidence
+B. The bin's stated confidence is lower than its empirical accuracy — underconfidence
+C. The bin's stated confidence is higher than its empirical accuracy — overconfidence
 D. The entropy of that bin's answers is zero
 
 <details><summary>Answer</summary>
 
-**Correct: B.** The diagonal is `accuracy = confidence`; a point below it has accuracy lower than the confidence claimed for it, which is overconfidence — see [Deep Dive: Calibration Error and Reliability Diagrams](/learn/hallucinations/calibration-error-reliability-diagrams).
+**Correct: C.** The diagonal is `accuracy = confidence`; a point below it has accuracy lower than the confidence claimed for it, which is overconfidence — see [Deep Dive: Calibration Error and Reliability Diagrams](/learn/hallucinations/calibration-error-reliability-diagrams).
 
 - A is wrong: bin size is shown by marker size or reported separately, not by vertical position.
-- B is correct.
-- C is backwards — that's a point *above* the diagonal.
+- C is correct.
+- B is backwards — that's a point *above* the diagonal.
 - D is wrong: entropy over sampled answers is a different measurement entirely and isn't what the diagram's axes represent.
 
 </details>
@@ -66,17 +66,17 @@ D. Increase the temperature to 0 and trust the single deterministic output compl
 
 A. RLHF makes the model factually less knowledgeable
 B. RLHF changes the tokenizer, which corrupts logprob values
-C. Preference optimization rewards confident-sounding answers because human raters tend to prefer them, flattening the confidence-accuracy relationship regardless of underlying correctness
-D. RLHF always disables logprob access entirely
+C. RLHF always disables logprob access entirely
+D. Preference optimization rewards confident-sounding answers because human raters tend to prefer them, flattening the confidence-accuracy relationship regardless of underlying correctness
 
 <details><summary>Answer</summary>
 
-**Correct: C.** The reward model is trained on human preference comparisons, and raters tend to favor decisive-sounding answers over honestly hedged ones — optimizing against that reward pushes verbalized and behavioral confidence toward the high end independent of actual accuracy. See [Why Instruction-Tuning and RLHF Degrade Calibration](/learn/hallucinations/why-rlhf-hurts-calibration).
+**Correct: D.** The reward model is trained on human preference comparisons, and raters tend to favor decisive-sounding answers over honestly hedged ones — optimizing against that reward pushes verbalized and behavioral confidence toward the high end independent of actual accuracy. See [Why Instruction-Tuning and RLHF Degrade Calibration](/learn/hallucinations/why-rlhf-hurts-calibration).
 
 - A is wrong: RLHF doesn't necessarily reduce factual knowledge — the issue is the confidence-accuracy relationship, not the knowledge itself.
 - B is wrong: RLHF doesn't alter tokenization.
-- C is correct.
-- D is wrong: logprob availability is an API/deployment decision, unrelated to whether RLHF was applied.
+- D is correct.
+- C is wrong: logprob availability is an API/deployment decision, unrelated to whether RLHF was applied.
 
 </details>
 
@@ -118,17 +118,17 @@ D. 0.025
 
 ## 7. Why is a verbalized confidence score generally worse evidence than an elicited (derived) one, even when both are trying to describe the same underlying uncertainty?
 
-A. Verbalized scores are always lower than elicited ones
-B. A verbalized score is generated text from the same next-token process as the answer itself, with no privileged access to the model's actual internal state, and is additionally biased toward round, confident-sounding numbers
+A. A verbalized score is generated text from the same next-token process as the answer itself, with no privileged access to the model's actual internal state, and is additionally biased toward round, confident-sounding numbers
+B. Verbalized scores are always lower than elicited ones
 C. Elicited confidence requires no computation at all
 D. Verbalized confidence is only available in older models
 
 <details><summary>Answer</summary>
 
-**Correct: B.** See [Verbalized vs. Elicited Confidence](/learn/hallucinations/verbalized-vs-elicited-confidence) and [Intuition: Fluency Is Not Confidence](/learn/hallucinations/why-fluent-text-feels-confident) — the model has no introspective channel into whether a fact was well-represented in training versus pattern-completed, so a self-report is just more generated text, with an observed bias toward round, high numbers on top.
+**Correct: A.** See [Verbalized vs. Elicited Confidence](/learn/hallucinations/verbalized-vs-elicited-confidence) and [Intuition: Fluency Is Not Confidence](/learn/hallucinations/why-fluent-text-feels-confident) — the model has no introspective channel into whether a fact was well-represented in training versus pattern-completed, so a self-report is just more generated text, with an observed bias toward round, high numbers on top.
 
-- A is wrong: verbalized scores skew high (overconfident), not low.
-- B is correct.
+- B is wrong: verbalized scores skew high (overconfident), not low.
+- A is correct.
 - C is backwards: elicited confidence (logprobs, resampling, entailment clustering) requires more computation, not less — that's part of its cost, not a reason to prefer it.
 - D is wrong: verbalized confidence is available in essentially any current model with a text interface.
 

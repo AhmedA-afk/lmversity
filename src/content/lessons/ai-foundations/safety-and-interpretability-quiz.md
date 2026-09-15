@@ -2,7 +2,7 @@
 title: "Safety & Interpretability: Reason About Risk"
 track: "ai-foundations"
 status: live
-summary: "A 6-question scenario quiz testing whether learners can spot proxy gaming in a reward, correctly separate near-term from speculative AI risk, state the limits of an interpretabilit"
+summary: "Six scenarios, no vocabulary matching. Each one asks you to do the actual job: catch the exploit hiding in a reward before you ship it, sort a real near-term harm from a speculative one without dismissing either, and say exactly what a diagnostic tool proved and what it didn't."
 duration: "14 min read"
 ---
 

@@ -11,18 +11,18 @@ Six questions covering this module: what crosses a handoff, why subagents get is
 **Q1.** A worker subagent finishes a task and is about to hand its result back to the orchestrator. Which of the following most belongs in that handoff?
 
 A. The worker's full sequence of tool calls, so the orchestrator can verify how the answer was reached.
-B. The worker's final answer, restated with no supporting detail, to keep the payload as small as possible.
-C. The worker's answer, the key decisions behind it, and a pointer to the source material — not the raw trace.
+B. The worker's answer, the key decisions behind it, and a pointer to the source material — not the raw trace.
+C. The worker's final answer, restated with no supporting detail, to keep the payload as small as possible.
 D. A copy of the orchestrator's original task description, so the worker's context is preserved for later.
 
 <details>
 <summary>Answer</summary>
 
-**Correct: C.** The answer, the decisions behind it, and a pointer back to source is the report-not-notebook shape this module builds toward.
+**Correct: B.** The answer, the decisions behind it, and a pointer back to source is the report-not-notebook shape this module builds toward.
 
 - **A:** This is the transcript-dumping mistake — it hands the orchestrator work to redo instead of information to use.
-- **B:** Too thin. An answer with zero provenance can't be checked or trusted; see [What a Subagent Should Return](/learn/context-engineering/what-a-subagent-should-return).
-- **C:** Correct — the conclusion, the decisions behind it, and pointers back to source, formalized in [Designing a Handoff Payload](/learn/context-engineering/handoff-payload-design).
+- **C:** Too thin. An answer with zero provenance can't be checked or trusted; see [What a Subagent Should Return](/learn/context-engineering/what-a-subagent-should-return).
+- **B:** Correct — the conclusion, the decisions behind it, and pointers back to source, formalized in [Designing a Handoff Payload](/learn/context-engineering/handoff-payload-design).
 - **D:** The orchestrator already has its own task description; sending it back adds tokens without adding information.
 
 </details>
@@ -30,18 +30,18 @@ D. A copy of the orchestrator's original task description, so the worker's conte
 **Q2.** An orchestrator dispatches a subagent to search a codebase for a specific bug pattern. Why should the subagent's 50,000-token search trace stay inside the subagent's own context window instead of being copied into the orchestrator's?
 
 A. Because the orchestrator's context window is technically smaller than the subagent's.
-B. Because copying it would let the orchestrator's later reasoning be conditioned on noise and dead ends it can't evaluate, and any subagent failure would corrupt the orchestrator's context directly instead of just producing a bad result.
-C. Because subagents are not allowed to share any information with an orchestrator under any circumstances.
+B. Because subagents are not allowed to share any information with an orchestrator under any circumstances.
+C. Because copying it would let the orchestrator's later reasoning be conditioned on noise and dead ends it can't evaluate, and any subagent failure would corrupt the orchestrator's context directly instead of just producing a bad result.
 D. Because tool outputs are automatically deleted once a subagent finishes.
 
 <details>
 <summary>Answer</summary>
 
-**Correct: B.** Isolation is about fault containment and signal, not window size.
+**Correct: C.** Isolation is about fault containment and signal, not window size.
 
 - **A:** Window size isn't the reason — even with a huge window, the trace is still noise relative to the orchestrator's task.
-- **B:** Correct — this is the fault-containment argument in [Subagent Context Isolation](/learn/context-engineering/subagent-context-isolation): isolation keeps a subagent's failure recoverable, a bad result, instead of corrosive, poisoned orchestrator context.
-- **C:** Isolation doesn't mean zero information crosses — the result and its provenance should still cross, deliberately, via the handoff.
+- **C:** Correct — this is the fault-containment argument in [Subagent Context Isolation](/learn/context-engineering/subagent-context-isolation): isolation keeps a subagent's failure recoverable, a bad result, instead of corrosive, poisoned orchestrator context.
+- **B:** Isolation doesn't mean zero information crosses — the result and its provenance should still cross, deliberately, via the handoff.
 - **D:** Nothing is automatically deleted; the trace still exists in the subagent's own window, it's simply never copied to the orchestrator's.
 
 </details>
@@ -87,36 +87,36 @@ D. `{"verdict": "safe"}`, since the migration is mostly fine and the backfill is
 **Q5.** During an architecture review of a multi-agent RAG pipeline, you find that a review agent — whose job is to catch policy violations before a reply is sent — only receives a compacted summary of the customer's messages, never the verbatim text. What's the risk, and what's the fix?
 
 A. No real risk — a good summary always preserves everything a review step would need.
-B. The summary may have already paraphrased away an exact commitment or phrase the review agent needed to check against, so the fix is to carve out the verbatim snippet for this specific agent even though other agents downstream are fine with the compacted version.
-C. The fix is to stop compacting anywhere in the pipeline, for any agent, to be safe.
-D. This isn't a context problem at all — it's a policy-training problem for the review agent.
+B. The fix is to stop compacting anywhere in the pipeline, for any agent, to be safe.
+C. This isn't a context problem at all — it's a policy-training problem for the review agent.
+D. The summary may have already paraphrased away an exact commitment or phrase the review agent needed to check against, so the fix is to carve out the verbatim snippet for this specific agent even though other agents downstream are fine with the compacted version.
 
 <details>
 <summary>Answer</summary>
 
-**Correct: B.** Compaction is a per-agent decision, not a global one.
+**Correct: D.** Compaction is a per-agent decision, not a global one.
 
 - **A:** This is exactly the assumption that breaks — see [Reviewing a Full Context Architecture](/learn/context-engineering/end-to-end-context-architecture-review), where compaction quietly drops a specific date and commitment the review step needed intact.
-- **B:** Correct — an agent whose job depends on exact original content needs that content preserved even if every other consumer is fine working from a summary.
-- **C:** Overcorrecting — most agents in the pipeline are fine with the compacted version, and reverting all compaction reintroduces the cost problem compaction exists to solve.
-- **D:** The review agent's instructions might be fine; the input it's reasoning over is what's incomplete — that's a context problem, not a training problem.
+- **D:** Correct — an agent whose job depends on exact original content needs that content preserved even if every other consumer is fine working from a summary.
+- **B:** Overcorrecting — most agents in the pipeline are fine with the compacted version, and reverting all compaction reintroduces the cost problem compaction exists to solve.
+- **C:** The review agent's instructions might be fine; the input it's reasoning over is what's incomplete — that's a context problem, not a training problem.
 
 </details>
 
 **Q6.** You're building the capstone support agent and need to decide, in order, how to approach its context design. Per the master cheatsheet's decision order, what should you settle first?
 
-A. The exact wording of the cache-stable prompt prefix.
-B. Whether the task is actually bottlenecked by context at all, before budgeting or designing anything else.
+A. Whether the task is actually bottlenecked by context at all, before budgeting or designing anything else.
+B. The exact wording of the cache-stable prompt prefix.
 C. The handoff schema to the specialist subagent.
 D. Which compaction method — rolling window vs. hierarchical summarization — to use.
 
 <details>
 <summary>Answer</summary>
 
-**Correct: B.** Confirm the bottleneck before you design around it.
+**Correct: A.** Confirm the bottleneck before you design around it.
 
-- **A:** Cache layout comes near the end of the order in [Context Engineering Master Cheatsheet](/learn/context-engineering/context-engineering-master-cheatsheet) — deciding it first tends to lock in a prefix shape you'll have to redo once budgeting forces a different split.
-- **B:** Correct — the first decision in the cheatsheet's order is confirming context is actually the bottleneck, before any budget or structure gets designed around it.
+- **B:** Cache layout comes near the end of the order in [Context Engineering Master Cheatsheet](/learn/context-engineering/context-engineering-master-cheatsheet) — deciding it first tends to lock in a prefix shape you'll have to redo once budgeting forces a different split.
+- **A:** Correct — the first decision in the cheatsheet's order is confirming context is actually the bottleneck, before any budget or structure gets designed around it.
 - **C:** Handoff design is last in the order, and only applies once more than one agent is involved — a real capstone requirement, just not the first decision.
 - **D:** Compaction method is a mid-pipeline decision, made after the budget is set and only for whichever segment actually needs it.
 

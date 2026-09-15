@@ -29,12 +29,12 @@ You retrieve the top 100 candidates from vector search, then rerank them. To sav
 
 - A. The reranker will run out of memory since it needs more documents to compare against
 - B. Cross-encoder accuracy degrades on any individual pair when it's given fewer candidates overall
-- C. You've capped the reranker's ceiling — it can only reorder what's inside those 10, so a genuinely relevant document sitting at rank 40 in the first-stage list is now excluded before reranking ever runs, and no reordering step downstream can bring it back
-- D. RRF requires at least 50 candidates per source to compute correctly
+- C. RRF requires at least 50 candidates per source to compute correctly
+- D. You've capped the reranker's ceiling — it can only reorder what's inside those 10, so a genuinely relevant document sitting at rank 40 in the first-stage list is now excluded before reranking ever runs, and no reordering step downstream can bring it back
 
 <details><summary>Answer</summary>
 
-**Correct: C.** Reranking is strictly a reordering operation over whatever set it's handed — shrinking the candidate pool trades recall (does the right doc even make the cut) for latency and cost, and that trade is invisible until you hit a query where it bites. **A** is wrong — memory isn't the constraint; a cross-encoder scores one query-document pair at a time, so the set size affects total compute, not memory pressure. **B** is wrong — a cross-encoder's judgment of a single pair doesn't depend on how many other pairs are in the batch; each score is computed independently. **D** is a fabricated constraint smuggled in from a different technique (see question 5) — RRF has no minimum-candidate requirement.
+**Correct: D.** Reranking is strictly a reordering operation over whatever set it's handed — shrinking the candidate pool trades recall (does the right doc even make the cut) for latency and cost, and that trade is invisible until you hit a query where it bites. **A** is wrong — memory isn't the constraint; a cross-encoder scores one query-document pair at a time, so the set size affects total compute, not memory pressure. **B** is wrong — a cross-encoder's judgment of a single pair doesn't depend on how many other pairs are in the batch; each score is computed independently. **C** is a fabricated constraint smuggled in from a different technique (see question 5) — RRF has no minimum-candidate requirement.
 
 </details>
 
@@ -42,14 +42,14 @@ You retrieve the top 100 candidates from vector search, then rerank them. To sav
 
 A colleague says: "the cross-encoder is more accurate, so let's just use it for initial retrieval too and skip the bi-encoder stage." Why doesn't that work at corpus scale?
 
-- A. Cross-encoders can only score text pairs shorter than 128 tokens, making them incompatible with full documents
-- B. Cross-encoders need labeled query-document pairs collected from your specific corpus, so they can't generalize to a new domain
-- C. A cross-encoder feeds the query and a candidate document into the model together in one forward pass, so its score can't be precomputed or stored in an index — every query would require one fresh inference call per document, meaning millions of forward passes just to answer a single question
+- A. A cross-encoder feeds the query and a candidate document into the model together in one forward pass, so its score can't be precomputed or stored in an index — every query would require one fresh inference call per document, meaning millions of forward passes just to answer a single question
+- B. Cross-encoders can only score text pairs shorter than 128 tokens, making them incompatible with full documents
+- C. Cross-encoders need labeled query-document pairs collected from your specific corpus, so they can't generalize to a new domain
 - D. Cross-encoders only do lexical matching, not semantic similarity
 
 <details><summary>Answer</summary>
 
-**Correct: C.** This is the structural reason reranking exists as a *second stage* rather than a replacement for retrieval: the bi-encoder's separability (query and doc encoded independently) is what lets you index ahead of time; the cross-encoder's joint encoding is what makes it accurate — and those two properties are mutually exclusive. You use the cheap, indexable one to narrow millions down to dozens, then spend the cross-encoder's cost only on those dozens. **A** names a real practical limit (context window) but not the reason full-corpus use is infeasible — even a cross-encoder with no length limit would still cost one inference per document per query. **B** is backwards — cross-encoders are generally pretrained/fine-tuned like other transformer models and transfer reasonably across domains; that's not the blocker here. **D** is simply false — semantic scoring via joint attention is precisely the cross-encoder's advantage over lexical methods like [hybrid keyword search](/learn/rag/hybrid-search-lexical-and-vector).
+**Correct: A.** This is the structural reason reranking exists as a *second stage* rather than a replacement for retrieval: the bi-encoder's separability (query and doc encoded independently) is what lets you index ahead of time; the cross-encoder's joint encoding is what makes it accurate — and those two properties are mutually exclusive. You use the cheap, indexable one to narrow millions down to dozens, then spend the cross-encoder's cost only on those dozens. **B** names a real practical limit (context window) but not the reason full-corpus use is infeasible — even a cross-encoder with no length limit would still cost one inference per document per query. **C** is backwards — cross-encoders are generally pretrained/fine-tuned like other transformer models and transfer reasonably across domains; that's not the blocker here. **D** is simply false — semantic scoring via joint attention is precisely the cross-encoder's advantage over lexical methods like [hybrid keyword search](/learn/rag/hybrid-search-lexical-and-vector).
 
 </details>
 
@@ -73,19 +73,19 @@ Your pipeline retrieves 50 candidates, then reranks all 50 with a cross-encoder,
 You're combining results from a BM25 keyword search and a vector search into one list. Why does Reciprocal Rank Fusion (RRF) fit this better than averaging the two systems' raw scores?
 
 - A. RRF trains a small cross-encoder on the fly to blend the two score distributions
-- B. BM25 scores and cosine similarities live on incomparable scales with different ranges and distributions — RRF sidesteps that entirely by using only each document's *rank position* in each list, not its raw score
-- C. RRF is a drop-in replacement for cross-encoder reranking that gets you the same accuracy for a fraction of the compute
+- B. RRF is a drop-in replacement for cross-encoder reranking that gets you the same accuracy for a fraction of the compute
+- C. BM25 scores and cosine similarities live on incomparable scales with different ranges and distributions — RRF sidesteps that entirely by using only each document's *rank position* in each list, not its raw score
 - D. RRF requires normalizing both score distributions to [0,1] before it can fuse them
 
 <details><summary>Answer</summary>
 
-**Correct: B.** The formula per document is a sum over each list it appears in:
+**Correct: C.** The formula per document is a sum over each list it appears in:
 
 ```text
 score(d) = Σ  1 / (k + rank_i(d))
 ```
 
-where `rank_i(d)` is the document's position in list *i* and `k` is a small constant (often 60) that dampens the effect of any single very-high rank. Because it only needs ranks, not scores, RRF fuses [hybrid search](/learn/rag/hybrid-search-lexical-and-vector) legs without you ever having to make BM25 and cosine similarity commensurable — which is genuinely hard to do well. **A** invents a training step; RRF is a fixed, deterministic formula with no learning involved. **C** is the most common mix-up on this page: RRF only reorders based on *where* candidates ranked across lists — it never looks at query-document content the way a cross-encoder does, so it's a cheap fusion step, not a substitute for the accuracy gain in question 1. The two compose well: RRF-fuse two retrievers, *then* cross-encoder rerank the fused top-k. **D** describes exactly the score-normalization problem RRF was designed to avoid — needing it would defeat the point.
+where `rank_i(d)` is the document's position in list *i* and `k` is a small constant (often 60) that dampens the effect of any single very-high rank. Because it only needs ranks, not scores, RRF fuses [hybrid search](/learn/rag/hybrid-search-lexical-and-vector) legs without you ever having to make BM25 and cosine similarity commensurable — which is genuinely hard to do well. **A** invents a training step; RRF is a fixed, deterministic formula with no learning involved. **B** is the most common mix-up on this page: RRF only reorders based on *where* candidates ranked across lists — it never looks at query-document content the way a cross-encoder does, so it's a cheap fusion step, not a substitute for the accuracy gain in question 1. The two compose well: RRF-fuse two retrievers, *then* cross-encoder rerank the fused top-k. **D** describes exactly the score-normalization problem RRF was designed to avoid — needing it would defeat the point.
 
 </details>
 

@@ -33,14 +33,14 @@ You have a fixed training budget of `C` FLOPs, and you're using `C ≈ 6ND` with
 A scaling-law fit predicts loss will fall from 2.9 to 2.4 as you 10x your compute budget, and it does, right on schedule. A specific downstream benchmark that requires getting a 6-step instruction exactly right, however, sits at 2% success both before and after — no visible improvement. What's the most defensible conclusion?
 
 - **A.** The scaling law is wrong — a real improvement in loss should show up everywhere.
-- **B.** The model didn't actually improve; the loss number must be measured incorrectly.
-- **C.** Loss is an average over next-token prediction; a strict multi-step pass/fail score can stay near zero across a smooth loss improvement until the underlying per-step accuracy crosses whatever threshold that specific task's exponent requires.
+- **B.** Loss is an average over next-token prediction; a strict multi-step pass/fail score can stay near zero across a smooth loss improvement until the underlying per-step accuracy crosses whatever threshold that specific task's exponent requires.
+- **C.** The model didn't actually improve; the loss number must be measured incorrectly.
 - **D.** 6-step tasks are fundamentally impossible for language models regardless of scale.
 
 <details>
 <summary>Answer</summary>
 
-**Correct: C.** This is the exact mechanism behind the emergence-and-metric debate covered earlier in this module: a k-step exact-match score scales like `p^k` for per-step accuracy `p`, so a smoothly improving `p` can leave the scored success rate looking flat for a long stretch before it visibly moves. **A** conflates a smooth aggregate statistic with every possible downstream measurement moving in lockstep — they don't have to. **B** loss and task success are different measurements of different things; neither being wrong is required to explain the mismatch. **D** the mirage argument is specifically that thresholded tasks *can* and often do improve — just not visibly, until the underlying rate clears the threshold.
+**Correct: B.** This is the exact mechanism behind the emergence-and-metric debate covered earlier in this module: a k-step exact-match score scales like `p^k` for per-step accuracy `p`, so a smoothly improving `p` can leave the scored success rate looking flat for a long stretch before it visibly moves. **A** conflates a smooth aggregate statistic with every possible downstream measurement moving in lockstep — they don't have to. **C** loss and task success are different measurements of different things; neither being wrong is required to explain the mismatch. **D** the mirage argument is specifically that thresholded tasks *can* and often do improve — just not visibly, until the underlying rate clears the threshold.
 
 </details>
 
@@ -49,14 +49,14 @@ A scaling-law fit predicts loss will fall from 2.9 to 2.4 as you 10x your comput
 Which statement most accurately describes the induction-head mechanism behind in-context learning?
 
 - **A.** A single attention head that stores a compressed summary of every example in the prompt.
-- **B.** Two heads working together: one marks what token preceded each position, the other searches for the current token's earlier occurrence and copies whatever followed it.
-- **C.** A separate optimizer module that runs actual gradient updates on the in-context examples.
+- **B.** A separate optimizer module that runs actual gradient updates on the in-context examples.
+- **C.** Two heads working together: one marks what token preceded each position, the other searches for the current token's earlier occurrence and copies whatever followed it.
 - **D.** A lookup table built during pretraining that maps exact prompts to memorized answers.
 
 <details>
 <summary>Answer</summary>
 
-**Correct: B.** This is the two-stage circuit from in-context learning mechanics: a previous-token head writes what came before each position into that position's representation, and the induction head queries by the current token to find an earlier match and copy what followed it. **A** describes something closer to a summarization mechanism, not the specific copy-what-followed circuit that's been directly identified. **C** describes the separate, more contested "implicit gradient descent" hypothesis — real in some constructed settings, not the same claim as the induction-head account, and not settled as the general explanation. **D** prompts are far too varied for exact memorization to explain generalization to novel example sets.
+**Correct: C.** This is the two-stage circuit from in-context learning mechanics: a previous-token head writes what came before each position into that position's representation, and the induction head queries by the current token to find an earlier match and copy what followed it. **A** describes something closer to a summarization mechanism, not the specific copy-what-followed circuit that's been directly identified. **B** describes the separate, more contested "implicit gradient descent" hypothesis — real in some constructed settings, not the same claim as the induction-head account, and not settled as the general explanation. **D** prompts are far too varied for exact memorization to explain generalization to novel example sets.
 
 </details>
 
@@ -65,14 +65,14 @@ Which statement most accurately describes the induction-head mechanism behind in
 A model given a hard multi-step arithmetic problem answers correctly when allowed to write out intermediate steps, but answers incorrectly when forced to respond with only the final number. What's the best mechanistic explanation?
 
 - **A.** The model is being lazy on the direct-answer version and could do better if incentivized.
-- **B.** Writing out intermediate steps creates additional forward passes, each able to attend back over prior steps — externalizing state that a single forward pass has no room to hold internally.
-- **C.** The direct-answer version uses a different, weaker part of the network.
-- **D.** Chain of thought works purely because it primes the model with confidence, not because of any computational difference.
+- **B.** The direct-answer version uses a different, weaker part of the network.
+- **C.** Chain of thought works purely because it primes the model with confidence, not because of any computational difference.
+- **D.** Writing out intermediate steps creates additional forward passes, each able to attend back over prior steps — externalizing state that a single forward pass has no room to hold internally.
 
 <details>
 <summary>Answer</summary>
 
-**Correct: B.** As covered in this module's chain-of-thought lesson, a transformer has fixed compute depth per token; forcing a single-token answer caps the sequential computation available to the problem, while each emitted reasoning token is a full additional forward pass that can condition on everything emitted so far. **A** "laziness" isn't a mechanism — there's no motivational state to invoke. **C** the same weights and layers process both versions; nothing routes to a different sub-network. **D** confidence framing doesn't add computation; the actual mechanism is extra forward passes, not tone.
+**Correct: D.** As covered in this module's chain-of-thought lesson, a transformer has fixed compute depth per token; forcing a single-token answer caps the sequential computation available to the problem, while each emitted reasoning token is a full additional forward pass that can condition on everything emitted so far. **A** "laziness" isn't a mechanism — there's no motivational state to invoke. **B** the same weights and layers process both versions; nothing routes to a different sub-network. **C** confidence framing doesn't add computation; the actual mechanism is extra forward passes, not tone.
 
 </details>
 
@@ -80,15 +80,15 @@ A model given a hard multi-step arithmetic problem answers correctly when allowe
 
 What's the key structural difference between the RL stage used to train reasoning models and standard RLHF?
 
-- **A.** Reasoning-model RL uses a much larger base model.
-- **B.** Standard RLHF optimizes against a learned reward model trained on human preferences; reasoning-model RL optimizes against a programmatically checkable outcome (does the answer match, do the tests pass), removing the learned-approximator failure mode.
+- **A.** Standard RLHF optimizes against a learned reward model trained on human preferences; reasoning-model RL optimizes against a programmatically checkable outcome (does the answer match, do the tests pass), removing the learned-approximator failure mode.
+- **B.** Reasoning-model RL uses a much larger base model.
 - **C.** Reasoning-model RL doesn't use reinforcement learning at all — it's pure supervised fine-tuning on long examples.
 - **D.** They are functionally identical; "reasoning model" is a branding difference.
 
 <details>
 <summary>Answer</summary>
 
-**Correct: B.** This module's lesson on how reasoning models are trained covers exactly this: a verifiable reward (checkable code tests, matched final answers) is an external, exact check, unlike a reward model that's a learned, foolable proxy for human preference. **A** model size is an independent variable, not the defining structural difference. **C** the recipe does use RL (PPO/GRPO-style policy optimization) on top of an optional supervised cold start — it's not SFT alone. **D** the reward signal's source (verifiable outcome vs. learned preference model) is a real mechanistic difference with real consequences for what gets optimized.
+**Correct: A.** This module's lesson on how reasoning models are trained covers exactly this: a verifiable reward (checkable code tests, matched final answers) is an external, exact check, unlike a reward model that's a learned, foolable proxy for human preference. **B** model size is an independent variable, not the defining structural difference. **C** the recipe does use RL (PPO/GRPO-style policy optimization) on top of an optional supervised cold start — it's not SFT alone. **D** the reward signal's source (verifiable outcome vs. learned preference model) is a real mechanistic difference with real consequences for what gets optimized.
 
 </details>
 
@@ -113,14 +113,14 @@ A user asks a coding assistant: *"What parameters does `pandas.DataFrame.fast_me
 Under an early-fusion multimodal architecture, why does adding a high-resolution image to a prompt noticeably shrink the effective context budget left for text?
 
 - **A.** Images are stored as a single opaque token regardless of resolution, so this shouldn't happen.
-- **B.** The vision encoder's patches, once projected into the language model's embedding dimension, are inserted directly into the same token sequence the text occupies — more patches (higher resolution) means more tokens competing for the same context window.
-- **C.** Images use a completely separate, unlimited context window from text.
+- **B.** Images use a completely separate, unlimited context window from text.
+- **C.** The vision encoder's patches, once projected into the language model's embedding dimension, are inserted directly into the same token sequence the text occupies — more patches (higher resolution) means more tokens competing for the same context window.
 - **D.** Only the image's file size in bytes counts against the context window, not its patch count.
 
 <details>
 <summary>Answer</summary>
 
-**Correct: B.** As covered in this module's multimodal lesson, early fusion splices projected patch vectors directly into the same sequence as text tokens — patch count (which grows with image area, not linear resolution) drives token cost, and those tokens draw from the identical context budget as text. **A** a single opaque token is not how early fusion works — patch count scales with resolution, which is exactly why it eats budget. **C** cross-attention architectures avoid consuming the primary sequence's budget, but that's a different, named alternative to early fusion, not a property of early fusion itself. **D** token cost is driven by patch grid size, not file size — a visually simple but high-resolution image can cost more tokens than a complex low-resolution one.
+**Correct: C.** As covered in this module's multimodal lesson, early fusion splices projected patch vectors directly into the same sequence as text tokens — patch count (which grows with image area, not linear resolution) drives token cost, and those tokens draw from the identical context budget as text. **A** a single opaque token is not how early fusion works — patch count scales with resolution, which is exactly why it eats budget. **B** cross-attention architectures avoid consuming the primary sequence's budget, but that's a different, named alternative to early fusion, not a property of early fusion itself. **D** token cost is driven by patch grid size, not file size — a visually simple but high-resolution image can cost more tokens than a complex low-resolution one.
 
 </details>
 
@@ -130,13 +130,13 @@ A team runs a support bot for a product catalog that changes weekly, and they're
 
 - **A.** Fine-tune the model weekly on the updated catalog.
 - **B.** Add the entire catalog to the system prompt on every call.
-- **C.** Use retrieval-augmented generation so each query pulls current catalog data at query time, leaving the model's weights untouched.
-- **D.** Increase the sampling temperature so the model is more likely to say something new.
+- **C.** Increase the sampling temperature so the model is more likely to say something new.
+- **D.** Use retrieval-augmented generation so each query pulls current catalog data at query time, leaving the model's weights untouched.
 
 <details>
 <summary>Answer</summary>
 
-**Correct: C.** Per this module's adaptation-strategy comparison, fast-changing factual knowledge is the textbook RAG scenario — retrieval keeps facts current without a retraining cycle. **A** weekly fine-tuning is a real option in principle but is the expensive, slow-to-update choice for something that's purely a freshness problem, not a style or behavior problem. **B** stuffing an entire catalog into every prompt burns context budget and cost on every call and doesn't scale as the catalog grows. **D** temperature controls the shape of the sampling distribution over tokens the model already would produce — it has no mechanism for injecting facts the model doesn't have.
+**Correct: D.** Per this module's adaptation-strategy comparison, fast-changing factual knowledge is the textbook RAG scenario — retrieval keeps facts current without a retraining cycle. **A** weekly fine-tuning is a real option in principle but is the expensive, slow-to-update choice for something that's purely a freshness problem, not a style or behavior problem. **B** stuffing an entire catalog into every prompt burns context budget and cost on every call and doesn't scale as the catalog grows. **C** temperature controls the shape of the sampling distribution over tokens the model already would produce — it has no mechanism for injecting facts the model doesn't have.
 
 </details>
 

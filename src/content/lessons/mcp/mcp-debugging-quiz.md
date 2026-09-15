@@ -11,13 +11,13 @@ duration: "7 min read"
 Your server does not appear in the client. What is the first thing to do?
 
 - **A.** Rewrite the client config with different path formats until it works.
-- **B.** Run the server directly, then under the inspector, then read the client's log.
-- **C.** Reinstall the client.
-- **D.** Add verbose logging to every tool and try again.
+- **B.** Reinstall the client.
+- **C.** Add verbose logging to every tool and try again.
+- **D.** Run the server directly, then under the inspector, then read the client's log.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** The client is the layer with the least diagnostic output — it reports a stdout write, a crashed process, a bad path and a protocol error identically. Each rung of the ladder eliminates a class of cause. **A** is guessing, and it is where most debugging time is lost. **C** treats a configuration problem as an installation one. **D** logging inside tools tells you nothing about a server that never started, and if it logs to stdout it creates a second bug.
+**Correct: D.** The client is the layer with the least diagnostic output — it reports a stdout write, a crashed process, a bad path and a protocol error identically. Each rung of the ladder eliminates a class of cause. **A** is guessing, and it is where most debugging time is lost. **B** treats a configuration problem as an installation one. **C** logging inside tools tells you nothing about a server that never started, and if it logs to stdout it creates a second bug.
 
 </details>
 
@@ -40,14 +40,14 @@ Three tools work; the fourth kills the connection every time. Under the inspecto
 
 Your server works in your client. In a colleague's, one tool returns nothing and the assistant carries on. The inspector shows the tool working correctly.
 
-- **A.** Their client is caching an old tool list.
-- **B.** The tool depends on a capability their client did not announce — sampling or elicitation.
+- **A.** The tool depends on a capability their client did not announce — sampling or elicitation.
+- **B.** Their client is caching an old tool list.
 - **C.** Their machine lacks a dependency.
 - **D.** They are on a different protocol version and need to upgrade.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** Failure that correlates with the client rather than the input points at negotiation. Capabilities are announced at initialisation precisely because implementations differ; using one that was not announced fails quietly. Check, and degrade. **A** a stale list would show missing or renamed tools, not a silent no-op. **C** a missing dependency raises on their side and the inspector would fail there too. **D** possible, but the specific silence on one tool while others work points at a capability, not a version.
+**Correct: A.** Failure that correlates with the client rather than the input points at negotiation. Capabilities are announced at initialisation precisely because implementations differ; using one that was not announced fails quietly. Check, and degrade. **B** a stale list would show missing or renamed tools, not a silent no-op. **C** a missing dependency raises on their side and the inspector would fail there too. **D** possible, but the specific silence on one tool while others work points at a capability, not a version.
 
 </details>
 
@@ -71,13 +71,13 @@ Users complain the assistant answers billing questions from general knowledge. E
 You can write exactly one automated test for your MCP server. Which catches the most?
 
 - **A.** A unit test of each tool's business logic.
-- **B.** A test that starts the server, lists the tools, and calls each with a valid input, asserting no error and a bounded result size.
-- **C.** A test that the client config file is valid JSON.
+- **B.** A test that the client config file is valid JSON.
+- **C.** A test that starts the server, lists the tools, and calls each with a valid input, asserting no error and a bounded result size.
 - **D.** A load test at a hundred concurrent calls.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** It exercises the wiring, which is where MCP servers actually break: startup, stdout pollution, tool registration, schema changes, handler errors and result growth. **A** valuable, and it passes happily while the server fails to start at all. **C** catches one narrow class and nothing about the server. **D** load is a real concern for hosted servers and not the first failure you will hit.
+**Correct: C.** It exercises the wiring, which is where MCP servers actually break: startup, stdout pollution, tool registration, schema changes, handler errors and result growth. **A** valuable, and it passes happily while the server fails to start at all. **B** catches one narrow class and nothing about the server. **D** load is a real concern for hosted servers and not the first failure you will hit.
 
 </details>
 

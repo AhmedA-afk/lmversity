@@ -42,15 +42,14 @@ Your 200K-vector corpus stores each document's metadata as one JSON blob — `au
 
 Your original embedding model output normalized unit vectors, so dot product and cosine similarity gave identical rankings — you configured the index metric as dot product and never thought about it again. You swap in a new embedding model whose output vectors are *not* normalized and vary a lot in magnitude, but you leave the index metric set to dot product "because it was working fine." No errors appear, but retrieval quality quietly degrades, and results don't match what a manual cosine calculation would rank first.
 
-- **A.** Dot product is sensitive to vector magnitude as well as direction, so with unnormalized vectors, longer vectors get ranked higher regardless of semantic closeness — switch the index metric to cosine, or normalize vectors before indexing.
-- **B.** The HNSW graph needs more connections per node (a higher `M`) to keep up with the new embedding model.
+- **A.** The HNSW graph needs more connections per node (a higher `M`) to keep up with the new embedding model.
+- **B.** Dot product is sensitive to vector magnitude as well as direction, so with unnormalized vectors, longer vectors get ranked higher regardless of semantic closeness — switch the index metric to cosine, or normalize vectors before indexing.
 - **C.** This is almost certainly a chunking regression from the model swap, not a metric issue.
 - **D.** Dot product and cosine similarity always produce identical rankings, so the metric setting can't be the cause.
-</details>
 
 <details><summary>Answer</summary>
 
-**Correct: A.** Dot product equals cosine similarity times the product of the two vectors' magnitudes — they only agree when vectors are normalized to unit length. Once magnitude varies by document, dot product starts rewarding "long" vectors independent of actual semantic match, which is exactly the kind of silent, no-error quality drop described here. See [Dot Product, Explained](/learn/maths-foundations/dot-product-explained) and [Cosine Similarity & Angular Distance](/learn/maths-foundations/cosine-similarity-angular-distance-embedding-retrieval) for the full geometric picture. **B** is an ANN graph-quality knob; it has nothing to do with which vectors get ranked highest for a given distance metric. **C** is a plausible-sounding decoy — a model swap easily makes you suspect the chunking pipeline — but the stem gives you the actual mechanism (magnitude variance + unnormalized vectors) directly, and chasing chunking here would waste real debugging time. **D** is the misconception the whole question is testing: that equivalence only holds for normalized vectors, and the scenario explicitly says the new model doesn't normalize.
+**Correct: B.** Dot product equals cosine similarity times the product of the two vectors' magnitudes — they only agree when vectors are normalized to unit length. Once magnitude varies by document, dot product starts rewarding "long" vectors independent of actual semantic match, which is exactly the kind of silent, no-error quality drop described here. See [Dot Product, Explained](/learn/maths-foundations/dot-product-explained) and [Cosine Similarity & Angular Distance](/learn/maths-foundations/cosine-similarity-angular-distance-embedding-retrieval) for the full geometric picture. **A** is an ANN graph-quality knob; it has nothing to do with which vectors get ranked highest for a given distance metric. **C** is a plausible-sounding decoy — a model swap easily makes you suspect the chunking pipeline — but the stem gives you the actual mechanism (magnitude variance + unnormalized vectors) directly, and chasing chunking here would waste real debugging time. **D** is the misconception the whole question is testing: that equivalence only holds for normalized vectors, and the scenario explicitly says the new model doesn't normalize.
 
 </details>
 
@@ -63,7 +62,7 @@ A team picks a managed vector database because "obviously it's cheaper — we do
 - **C.** Self-hosting only becomes viable above roughly a million vectors; below that, managed is effectively required.
 - **D.** Managed vector databases can't support metadata filtering, so any team that needs filters has to self-host.
 
-<details><summary>EAnswer</summary>
+<details><summary>Answer</summary>
 
 **Correct: A.** "Cheaper" only means something once you decide what you're pricing — infra spend alone, or infra spend plus the salaried time of whoever would otherwise be patching, scaling, and getting paged for a self-hosted cluster. A team without spare ops capacity can rationally pay a premium indefinitely and be making the right call every month. **B** treats a real cost difference as automatically a mistake, ignoring that the team is trading dollars for time and risk on purpose — that's not the same as being wrong. **C** invents a scale threshold that doesn't generally hold; the right side of this trade-off depends on team capacity and requirements (compliance, data residency, control), not a fixed vector count. **D** was true of some early products but isn't a property of "managed" as a category — plenty of managed vector databases support rich metadata filtering; don't let one vendor's gap become your mental model for the whole category.
 
@@ -74,13 +73,13 @@ A team picks a managed vector database because "obviously it's cheaper — we do
 You run a multi-tenant SaaS product: each of your customers has their own document set, all stored in one shared vector index with a `tenant_id` metadata filter applied per query. At 5,000 customers this is fine. You grow to 50,000 customers and 500M total vectors (still only ~10K vectors per tenant on average), and filtered query latency keeps climbing even though each individual tenant's data is small. What's the structural fix?
 
 - **A.** Add more read replicas to spread query load across more machines.
-- **B.** Partition by `tenant_id` — separate indexes or shards per tenant (or per tenant group) — so each query only ever searches that tenant's small index instead of filtering a query against one enormous shared one.
-- **C.** Switch from HNSW to IVF, since IVF is inherently better suited to metadata-filtered queries.
+- **B.** Switch from HNSW to IVF, since IVF is inherently better suited to metadata-filtered queries.
+- **C.** Partition by `tenant_id` — separate indexes or shards per tenant (or per tenant group) — so each query only ever searches that tenant's small index instead of filtering a query against one enormous shared one.
 - **D.** Add more metadata fields so filters are more selective.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** The problem isn't dataset size in the abstract — it's that every query still has to traverse (or apply the filter within) one graph built across all 500M vectors, even though it only cares about 10K of them. Sharding by tenant collapses each query's actual search space back down to tenant-sized, which is the standard pattern once "filter on tenant_id" stops scaling inside a single collection. **A** helps with concurrent query *throughput* across tenants, but does nothing for the latency of any single query, which is still searching the same oversized shared index. **C** treats index type as if it were the lever here — HNSW vs. IVF is a real trade-off (build time, recall, memory), but neither one solves the "your filter is a needle in a 500M-vector haystack" problem; that's a partitioning problem, not an index-family problem. **D** assumes the issue is filter expressiveness, but the filter is already perfectly selective (one tenant) — the cost is running that filter against a shared structure sized for everyone, not a lack of precision in the filter itself.
+**Correct: C.** The problem isn't dataset size in the abstract — it's that every query still has to traverse (or apply the filter within) one graph built across all 500M vectors, even though it only cares about 10K of them. Sharding by tenant collapses each query's actual search space back down to tenant-sized, which is the standard pattern once "filter on tenant_id" stops scaling inside a single collection. **A** helps with concurrent query *throughput* across tenants, but does nothing for the latency of any single query, which is still searching the same oversized shared index. **B** treats index type as if it were the lever here — HNSW vs. IVF is a real trade-off (build time, recall, memory), but neither one solves the "your filter is a needle in a 500M-vector haystack" problem; that's a partitioning problem, not an index-family problem. **D** assumes the issue is filter expressiveness, but the filter is already perfectly selective (one tenant) — the cost is running that filter against a shared structure sized for everyone, not a lack of precision in the filter itself.
 
 </details>
 
@@ -88,14 +87,14 @@ You run a multi-tenant SaaS product: each of your customers has their own docume
 
 Your HNSW index held 2M vectors comfortably in memory. You've grown to 40M vectors. The index barely fits on your largest instance, and you've had to lower `ef_search` to keep latency in check — which is now costing you recall on exactly the queries that matter most. What's the most direct lever to reclaim headroom, short of an indefinite hardware-scaling treadmill?
 
-- **A.** Apply vector quantization (scalar or product quantization) to shrink the memory footprint per vector, giving you room to raise `ef_search` back up within your existing RAM budget.
-- **B.** Switch the distance metric from cosine to Euclidean, which uses less memory per vector.
-- **C.** Reduce the embedding dimension, since higher-dimensional vectors always hurt recall at scale anyway.
-- **D.** Turn off metadata filtering, since filters are what's consuming the extra memory as the index grows.
+- **A.** Switch the distance metric from cosine to Euclidean, which uses less memory per vector.
+- **B.** Reduce the embedding dimension, since higher-dimensional vectors always hurt recall at scale anyway.
+- **C.** Turn off metadata filtering, since filters are what's consuming the extra memory as the index grows.
+- **D.** Apply vector quantization (scalar or product quantization) to shrink the memory footprint per vector, giving you room to raise `ef_search` back up within your existing RAM budget.
 
 <details><summary>Answer</summary>
 
-**Correct: A.** Quantization trades a small, usually acceptable amount of precision for a large reduction in per-vector memory (and often faster distance computation), which is exactly the lever that lets you afford a higher `ef_search` — and therefore better recall — within the RAM you already have. It's the standard move to reach for before, or alongside, sharding across more machines. **B** is a category error: which distance metric you compute has no bearing on how many bytes each stored vector occupies — memory is driven by dimensionality, precision (float32 vs. int8, etc.), and graph edge count, not metric choice. **C** contains a false universal claim — lower dimensions don't "always" help recall, they trade off against how much semantic distinction the embedding can represent — and it requires re-embedding your entire 40M-vector corpus with a different model, which is a far bigger undertaking than quantizing vectors you already have. **D** misattributes the memory pressure: raw vector storage plus the HNSW graph's edge lists are what dominate index memory at this scale; metadata filters add comparatively little, and disabling them wouldn't meaningfully change the picture your latest numbers describe.
+**Correct: D.** Quantization trades a small, usually acceptable amount of precision for a large reduction in per-vector memory (and often faster distance computation), which is exactly the lever that lets you afford a higher `ef_search` — and therefore better recall — within the RAM you already have. It's the standard move to reach for before, or alongside, sharding across more machines. **A** is a category error: which distance metric you compute has no bearing on how many bytes each stored vector occupies — memory is driven by dimensionality, precision (float32 vs. int8, etc.), and graph edge count, not metric choice. **B** contains a false universal claim — lower dimensions don't "always" help recall, they trade off against how much semantic distinction the embedding can represent — and it requires re-embedding your entire 40M-vector corpus with a different model, which is a far bigger undertaking than quantizing vectors you already have. **C** misattributes the memory pressure: raw vector storage plus the HNSW graph's edge lists are what dominate index memory at this scale; metadata filters add comparatively little, and disabling them wouldn't meaningfully change the picture your latest numbers describe.
 
 </details>
 

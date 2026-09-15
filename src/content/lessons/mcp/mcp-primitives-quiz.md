@@ -40,14 +40,14 @@ Your refund server exposes solid tools. Colleagues get inconsistent results: som
 
 Your server uses sampling to summarise a document before returning it. It works in your client. In a colleague's client the tool returns nothing and the assistant moves on.
 
-- **A.** Their client is out of date; tell them to upgrade.
-- **B.** Sampling is a negotiated capability — check whether it was announced and have a path when it was not.
+- **A.** Sampling is a negotiated capability — check whether it was announced and have a path when it was not.
+- **B.** Their client is out of date; tell them to upgrade.
 - **C.** Sampling requires an HTTP transport.
 - **D.** The summary exceeded the context window.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** Capabilities are announced at initialisation because implementations differ. Using an unannounced one fails mid-task with no useful message. Check, and degrade — return the untruncated text, or do the summarising in code. **A** may be true and does not make your server correct. **C** sampling is transport-independent. **D** would produce an error or truncation, not silence in one client only.
+**Correct: A.** Capabilities are announced at initialisation because implementations differ. Using an unannounced one fails mid-task with no useful message. Check, and degrade — return the untruncated text, or do the summarising in code. **B** may be true and does not make your server correct. **C** sampling is transport-independent. **D** would produce an error or truncation, not silence in one client only.
 
 </details>
 
@@ -71,13 +71,13 @@ A tool returns your upstream API's response verbatim — around 40,000 character
 Which of these is correctly a **tool** rather than a resource?
 
 - **A.** `get_api_docs()` — returns your service's API documentation.
-- **B.** `list_tables()` — returns the database schema, identical every time.
-- **C.** `search_orders(customer_email, since)` — queries orders matching arguments the model must choose.
+- **B.** `search_orders(customer_email, since)` — queries orders matching arguments the model must choose.
+- **C.** `list_tables()` — returns the database schema, identical every time.
 - **D.** `get_company_holidays()` — returns this year's holiday list.
 
 <details><summary>Answer</summary>
 
-**Correct: C.** There is a genuine decision in the arguments — which customer, what date range — and it depends on the conversation. **A**, **B** and **D** all return the same content regardless of context, so calling them spends a turn to learn something the host could have supplied. They are resources.
+**Correct: B.** There is a genuine decision in the arguments — which customer, what date range — and it depends on the conversation. **A**, **C** and **D** all return the same content regardless of context, so calling them spends a turn to learn something the host could have supplied. They are resources.
 
 </details>
 

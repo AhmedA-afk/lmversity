@@ -10,17 +10,17 @@ Twelve questions covering the whole mitigation module. Each answer links back to
 
 ## 1. A support bot invents a specific dollar figure for a cancellation fee when no policy document was ever supplied to it. Which lever should be applied first?
 
-A. Constrain the output to a JSON schema
-B. Ground the answer in the actual retrieved policy document
+A. Ground the answer in the actual retrieved policy document
+B. Constrain the output to a JSON schema
 C. Add a "don't hallucinate" instruction to the system prompt
 D. Raise the abstention threshold
 
 <details><summary>Answer</summary>
 
-**Correct: B.** The model has no evidence at all for this fact — the problem is missing information, which grounding fixes directly by giving it the real document to read instead of recall from. See [grounding fundamentals](/learn/hallucinations/grounding-fundamentals).
+**Correct: A.** The model has no evidence at all for this fact — the problem is missing information, which grounding fixes directly by giving it the real document to read instead of recall from. See [grounding fundamentals](/learn/hallucinations/grounding-fundamentals).
 
-- A is wrong: a schema would only constrain the *shape* of the fabricated number (say, forcing it to be a valid currency format) — it wouldn't stop the model from inventing a number in the first place, since there's no schema constraint here.
-- B is correct.
+- B is wrong: a schema would only constrain the *shape* of the fabricated number (say, forcing it to be a valid currency format) — it wouldn't stop the model from inventing a number in the first place, since there's no schema constraint here.
+- A is correct.
 - C is wrong: a vague "don't hallucinate" instruction gives the model no new information and no specific behavior change — see [mitigation antipatterns](/learn/hallucinations/mitigation-antipatterns).
 - D is wrong: raising the abstention threshold might make the model refuse more often, but it doesn't address why it was confidently wrong in the first place, and it's a blunter, more coverage-costly fix than just giving it the evidence.
 
@@ -65,18 +65,18 @@ D. The model ignores context in favor of parametric memory
 ## 4. One retrieved chunk (an old pricing page) says a plan costs $10/month; another retrieved chunk (a newer page) says $12/month. The model answers "$11/month." Which failure mode is this?
 
 A. Retrieval misses the answer
-B. Context contradicts itself
-C. The model over-extrapolates beyond the passage
-D. The model ignores context in favor of parametric memory
+B. The model over-extrapolates beyond the passage
+C. The model ignores context in favor of parametric memory
+D. Context contradicts itself
 
 <details><summary>Answer</summary>
 
-**Correct: B.** Two retrieved sources disagree, and the model resolved the disagreement by blending them into a number that matches neither source — a fabrication dressed up with real citations. See [why RAG still hallucinates](/learn/hallucinations/why-rag-still-hallucinates).
+**Correct: D.** Two retrieved sources disagree, and the model resolved the disagreement by blending them into a number that matches neither source — a fabrication dressed up with real citations. See [why RAG still hallucinates](/learn/hallucinations/why-rag-still-hallucinates).
 
 - A is wrong: both relevant chunks were retrieved successfully.
-- B is correct.
-- C is wrong: over-extrapolation is about going beyond a single passage's claim, not reconciling two conflicting ones.
-- D is wrong: the model didn't ignore the retrieved context — it used both pieces, just badly.
+- D is correct.
+- B is wrong: over-extrapolation is about going beyond a single passage's claim, not reconciling two conflicting ones.
+- C is wrong: the model didn't ignore the retrieved context — it used both pieces, just badly.
 
 </details>
 
@@ -119,17 +119,17 @@ D. The enum should have included a "correct" flag per id
 ## 7. A model's answer includes the sentence "The warranty covers accidental damage for 12 months [doc1]." `doc1` is a real, retrieved document. An automated check confirms `doc1` exists in the retrieved set and passes the citation. Is that enough to trust the claim?
 
 A. Yes — if the citation points to a real, retrieved document, the claim is verified
-B. No — the check only confirmed the citation exists, not that `doc1` actually supports the claim; an entailment check is still needed
-C. Yes, as long as the document was retrieved with a high similarity score
+B. Yes, as long as the document was retrieved with a high similarity score
+C. No — the check only confirmed the citation exists, not that `doc1` actually supports the claim; an entailment check is still needed
 D. No — the citation format itself is invalid, that's the real problem
 
 <details><summary>Answer</summary>
 
-**Correct: B.** This is precisely the gap [the citation verification loop](/learn/hallucinations/citation-verification-loop) walks through: `doc1` might actually say the warranty does *not* cover accidental damage. An existence check catches fabricated ids; it says nothing about whether the cited text supports the specific claim next to it. That needs a separate entailment check — see [NLI entailment grounding checks](/learn/hallucinations/nli-entailment-grounding-check-impl).
+**Correct: C.** This is precisely the gap [the citation verification loop](/learn/hallucinations/citation-verification-loop) walks through: `doc1` might actually say the warranty does *not* cover accidental damage. An existence check catches fabricated ids; it says nothing about whether the cited text supports the specific claim next to it. That needs a separate entailment check — see [NLI entailment grounding checks](/learn/hallucinations/nli-entailment-grounding-check-impl).
 
 - A is wrong: this is the exact "decorative citation" trap called out in [mitigation antipatterns](/learn/hallucinations/mitigation-antipatterns).
-- B is correct.
-- C is wrong: similarity score reflects retrieval relevance, not whether the passage's content entails the specific claim.
+- C is correct.
+- B is wrong: similarity score reflects retrieval relevance, not whether the passage's content entails the specific claim.
 - D is wrong: the format is fine — `[doc1]` is a correctly formatted, real citation. The problem is content, not format.
 
 </details>
@@ -138,33 +138,33 @@ D. No — the citation format itself is invalid, that's the real problem
 
 A. Strict-RAG grounding plus a cite-or-abstain instruction
 B. Schema-constrain the output to a fixed enum of pre-approved taglines
-C. Minimal grounding and constraint — let the model generate freely
-D. A high abstention threshold that refuses uncertain suggestions
+C. A high abstention threshold that refuses uncertain suggestions
+D. Minimal grounding and constraint — let the model generate freely
 
 <details><summary>Answer</summary>
 
-**Correct: C.** There's no factual claim being made and no ground truth to be faithful to — the task is generative by design. Forcing grounding, citations, or constraint onto it doesn't reduce a meaningful hallucination risk; it just makes the tool worse at its actual job. See [when hallucination is desirable](/learn/hallucinations/when-hallucination-is-desirable) and [mitigation by task type](/learn/hallucinations/mitigation-by-task-type).
+**Correct: D.** There's no factual claim being made and no ground truth to be faithful to — the task is generative by design. Forcing grounding, citations, or constraint onto it doesn't reduce a meaningful hallucination risk; it just makes the tool worse at its actual job. See [when hallucination is desirable](/learn/hallucinations/when-hallucination-is-desirable) and [mitigation by task type](/learn/hallucinations/mitigation-by-task-type).
 
 - A is wrong: there's nothing to ground against or cite — this would make the tool refuse to do the one thing it's for.
 - B is wrong: an enum of pre-approved taglines defeats the purpose of a tool meant to generate new ones.
-- C is correct.
-- D is wrong: a high abstention threshold on a creative task just produces unhelpful refusals with no faithfulness benefit, since there's no factual claim to be unfaithful to.
+- D is correct.
+- C is wrong: a high abstention threshold on a creative task just produces unhelpful refusals with no faithfulness benefit, since there's no factual claim to be unfaithful to.
 
 </details>
 
 ## 9. An agent can call a `cancel_subscription(customer_id)` tool. The risk is the model inventing a plausible-looking but wrong `customer_id`, which would cancel the wrong account. What's the strongest first mitigation?
 
-A. Add a prompt instruction asking the model to double-check the id before calling the tool
-B. Schema-constrain `customer_id` to only the real ids currently in scope for the conversation
+A. Schema-constrain `customer_id` to only the real ids currently in scope for the conversation
+B. Add a prompt instruction asking the model to double-check the id before calling the tool
 C. Add more retrieved context about the customer
 D. Require a citation for the `customer_id` argument
 
 <details><summary>Answer</summary>
 
-**Correct: B.** This is a structural fabrication risk with a bounded, known set of valid values — exactly the case constrained generation is built for. Making a fabricated id structurally unreachable is a much stronger guarantee than asking the model to be careful. See [structured output decoding](/learn/hallucinations/structured-output-decoding-impl) and [tool-call argument fabrication](/learn/hallucinations/tool-call-argument-fabrication).
+**Correct: A.** This is a structural fabrication risk with a bounded, known set of valid values — exactly the case constrained generation is built for. Making a fabricated id structurally unreachable is a much stronger guarantee than asking the model to be careful. See [structured output decoding](/learn/hallucinations/structured-output-decoding-impl) and [tool-call argument fabrication](/learn/hallucinations/tool-call-argument-fabrication).
 
-- A is wrong: a prompt instruction is a policy nudge, not a guarantee — exactly the "prompting isn't a switch" limit from [mitigation antipatterns](/learn/hallucinations/mitigation-antipatterns).
-- B is correct.
+- B is wrong: a prompt instruction is a policy nudge, not a guarantee — exactly the "prompting isn't a switch" limit from [mitigation antipatterns](/learn/hallucinations/mitigation-antipatterns).
+- A is correct.
 - C is wrong: more context can help pick the *right* id among valid ones, but it doesn't prevent a fabricated one — that's a constraint problem, not a grounding one.
 - D is wrong: citation requirements are built for verifiable claims in prose, not for constraining a single structured argument to a known-valid set.
 
@@ -209,18 +209,18 @@ D. Separating stated facts from inference
 ## 12. A team retrieves the top 20 chunks for every query "to be safe," instead of the top 3. Answers become vaguer and start blending facts from clearly unrelated sections. What's the fix?
 
 A. Retrieve even more chunks so the right one is more likely to be included
-B. Add a relevance-grading step and retrieve fewer, more precisely scoped chunks
-C. Turn off the citation requirement so the model can synthesize more freely
-D. Force the entire output into a rigid JSON schema
+B. Turn off the citation requirement so the model can synthesize more freely
+C. Force the entire output into a rigid JSON schema
+D. Add a relevance-grading step and retrieve fewer, more precisely scoped chunks
 
 <details><summary>Answer</summary>
 
-**Correct: B.** This is the "dump huge unfiltered context" antipattern directly: more retrieved chunks doesn't mean more grounding, it means more dilution and more chances for an irrelevant or contradictory chunk to pull the answer off course. See [mitigation antipatterns](/learn/hallucinations/mitigation-antipatterns), [context engineering for grounding](/learn/hallucinations/context-engineering-for-grounding), and [corrective RAG](/learn/hallucinations/corrective-rag-pattern-impl) for the grading mechanism.
+**Correct: D.** This is the "dump huge unfiltered context" antipattern directly: more retrieved chunks doesn't mean more grounding, it means more dilution and more chances for an irrelevant or contradictory chunk to pull the answer off course. See [mitigation antipatterns](/learn/hallucinations/mitigation-antipatterns), [context engineering for grounding](/learn/hallucinations/context-engineering-for-grounding), and [corrective RAG](/learn/hallucinations/corrective-rag-pattern-impl) for the grading mechanism.
 
 - A is wrong: this is the same mistake taken further — more volume doesn't fix a precision problem, it worsens dilution.
-- B is correct.
-- C is wrong: removing citations makes the output less checkable without addressing why it's vague and blended in the first place.
-- D is wrong: a rigid schema constrains output *shape* — it doesn't fix the underlying context-dilution problem, which is about what evidence the model is reading, not how the answer is formatted.
+- D is correct.
+- B is wrong: removing citations makes the output less checkable without addressing why it's vague and blended in the first place.
+- C is wrong: a rigid schema constrains output *shape* — it doesn't fix the underlying context-dilution problem, which is about what evidence the model is reading, not how the answer is formatted.
 
 </details>
 

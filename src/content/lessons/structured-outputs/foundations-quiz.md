@@ -30,33 +30,33 @@ D. All three layers at once
 
 A. Syntactic validity
 B. Schema conformance
-C. Semantic correctness
-D. None — this is expected, correct behavior
+C. None — this is expected, correct behavior
+D. Semantic correctness
 
 <details><summary>Answer</summary>
 
-**Correct: C.** The object is valid JSON and perfectly shaped, but "low" priority and no human escalation for a recurring, frustrated customer is factually the wrong call — see [Three Layers of Reliability](/learn/structured-outputs/what-reliable-structure-really-means).
+**Correct: D.** The object is valid JSON and perfectly shaped, but "low" priority and no human escalation for a recurring, frustrated customer is factually the wrong call — see [Three Layers of Reliability](/learn/structured-outputs/what-reliable-structure-really-means).
 
 - A is wrong: nothing about parsing failed here.
 - B is wrong: every key, type, and enum value is exactly what the schema required.
-- C is correct.
-- D is wrong: the priority and escalation decision are objectively mismatched to the ticket's content, which is precisely what a semantic-layer check would catch.
+- D is correct.
+- C is wrong: the priority and escalation decision are objectively mismatched to the ticket's content, which is precisely what a semantic-layer check would catch.
 
 </details>
 
 ## 3. Which statement correctly matches a mechanism to what it uniquely adds over the one before it?
 
-A. JSON mode adds schema conformance over prompt-only
-B. Schema-constrained decoding adds shape guarantees (right keys and types) over JSON mode's syntax-only guarantee
+A. Schema-constrained decoding adds shape guarantees (right keys and types) over JSON mode's syntax-only guarantee
+B. JSON mode adds schema conformance over prompt-only
 C. Grammar-constrained decoding adds semantic correctness over schema-constrained decoding
 D. Prompt-only guarantees valid JSON syntax on every call
 
 <details><summary>Answer</summary>
 
-**Correct: B.** JSON mode only guarantees syntax; schema-constrained decoding constrains generation to also match a specific schema's keys, types, and required fields. See [Four Roads to Structured Output](/learn/structured-outputs/three-ways-to-get-json-overview).
+**Correct: A.** JSON mode only guarantees syntax; schema-constrained decoding constrains generation to also match a specific schema's keys, types, and required fields. See [Four Roads to Structured Output](/learn/structured-outputs/three-ways-to-get-json-overview).
 
-- A is wrong: JSON mode guarantees syntax only, not any particular shape.
-- B is correct.
+- B is wrong: JSON mode guarantees syntax only, not any particular shape.
+- A is correct.
 - C is wrong: grammar-constrained decoding generalizes shape/syntax constraints to arbitrary formats — it still cannot verify that a value is true, which is what semantic correctness requires.
 - D is wrong: prompt-only has no enforcement mechanism at all; validity is best-effort.
 
@@ -102,17 +102,17 @@ D. 4/day; meets the target
 
 A. Schema-constrained decoding at generation time
 B. The JSON parsing step
-C. Schema validation against the Pydantic model
-D. None of the decoding mechanisms or the shape-validation step catch this — it needs a semantic or business-rule check, or human review
+C. None of the decoding mechanisms or the shape-validation step catch this — it needs a semantic or business-rule check, or human review
+D. Schema validation against the Pydantic model
 
 <details><summary>Answer</summary>
 
-**Correct: D.** The value is a syntactically valid, correctly typed float that satisfies every shape constraint — nothing about layers 1 or 2 has any way to detect that it's numerically wrong. See [What One Bad Field Costs Downstream](/learn/structured-outputs/cost-of-getting-it-wrong-intuition) and [Three Layers of Reliability](/learn/structured-outputs/what-reliable-structure-really-means).
+**Correct: C.** The value is a syntactically valid, correctly typed float that satisfies every shape constraint — nothing about layers 1 or 2 has any way to detect that it's numerically wrong. See [What One Bad Field Costs Downstream](/learn/structured-outputs/cost-of-getting-it-wrong-intuition) and [Three Layers of Reliability](/learn/structured-outputs/what-reliable-structure-really-means).
 
 - A is wrong: schema-constrained decoding only enforces shape at generation time — it has no access to the true invoice total to compare against.
 - B is wrong: JSON parsing only checks that the text is syntactically valid JSON.
-- C is wrong: schema validation checks type and shape (a float, present, in range if bounded) — `1240.00` passes all of that just as easily as `12400.00` would.
-- D is correct.
+- D is wrong: schema validation checks type and shape (a float, present, in range if bounded) — `1240.00` passes all of that just as easily as `12400.00` would.
+- C is correct.
 
 </details>
 

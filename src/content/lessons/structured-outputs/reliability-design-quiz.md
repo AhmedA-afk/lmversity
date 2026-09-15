@@ -12,14 +12,14 @@ Six scenarios, not six definitions — each one puts you in front of a schema or
 
 A team building an invoice-extraction schema wraps every field inside three levels of nested objects "to keep things organized," even though every value is a single scalar that appears exactly once per invoice — nothing repeats, nothing needs to travel together as a unit. Which of the four reliability properties does this violate, and what failure does that invite?
 
-- **A.** It violates "closed over open" — the nested objects behave like free-form dicts that accept arbitrary keys.
-- **B.** It violates "shallow over deep" — each added level is a place the model can misplace a value or close a bracket a token early, with no grouping benefit to justify the risk, since nothing here repeats or needs to stay bound together.
+- **A.** It violates "shallow over deep" — each added level is a place the model can misplace a value or close a bracket a token early, with no grouping benefit to justify the risk, since nothing here repeats or needs to stay bound together.
+- **B.** It violates "closed over open" — the nested objects behave like free-form dicts that accept arbitrary keys.
 - **C.** It violates "self-describing over cryptic" — nested field names are inherently harder to read than flat ones.
 - **D.** It violates "explicit over inferred" — nested objects force the model to infer types instead of having them enforced.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** Depth is a structural cost paid for every level regardless of whether that level groups anything real — see [When to Flatten and When to Nest](/learn/structured-outputs/flat-vs-nested-tradeoffs). Here it groups nothing, so the schema is paying the cost with no offsetting benefit. **A** nesting alone doesn't make a schema open — these are still fixed, named properties at each level, not an `additionalProperties: true` dict; openness and depth are separate axes. **C** a flat field named clearly (`invoice_total`) is no more or less self-describing than the same name nested three levels deep — naming quality and nesting depth don't interact this way. **D** type enforcement (string, integer, enum) is a property of the leaf field's own schema, not of how many objects wrap around it — a deeply nested integer is still just as strictly typed as a flat one.
+**Correct: A.** Depth is a structural cost paid for every level regardless of whether that level groups anything real — see [When to Flatten and When to Nest](/learn/structured-outputs/flat-vs-nested-tradeoffs). Here it groups nothing, so the schema is paying the cost with no offsetting benefit. **B** nesting alone doesn't make a schema open — these are still fixed, named properties at each level, not an `additionalProperties: true` dict; openness and depth are separate axes. **C** a flat field named clearly (`invoice_total`) is no more or less self-describing than the same name nested three levels deep — naming quality and nesting depth don't interact this way. **D** type enforcement (string, integer, enum) is a property of the leaf field's own schema, not of how many objects wrap around it — a deeply nested integer is still just as strictly typed as a flat one.
 
 </details>
 
@@ -58,13 +58,13 @@ A resume-parsing schema has a required, non-nullable `graduation_year: integer` 
 A `customer.phone` field changes from `string` (always populated) to `string | null` (now sometimes absent) in the next release. Nobody adds a `schema_version` field or bumps an existing one. Months later, a downstream report averaging call duration by "has a phone on file" is quietly wrong for records written before the change. What actually went wrong?
 
 - **A.** Widening `phone` to also allow `null` was itself a breaking change and should never have shipped without a major version bump.
-- **B.** The type change itself was safe — every old record's real phone number is still a valid string under the new type. The actual failure is that nothing marks which records predate `null` becoming legal, so a consumer can't distinguish "genuinely no phone" from "written before this field could express that," and the report silently conflates the two.
-- **C.** The dashboard team should have anticipated the change without being told, since `null` is a standard JSON value every consumer should already expect.
+- **B.** The dashboard team should have anticipated the change without being told, since `null` is a standard JSON value every consumer should already expect.
+- **C.** The type change itself was safe — every old record's real phone number is still a valid string under the new type. The actual failure is that nothing marks which records predate `null` becoming legal, so a consumer can't distinguish "genuinely no phone" from "written before this field could express that," and the report silently conflates the two.
 - **D.** This wouldn't have happened if `phone` had been made `required` instead of nullable.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [Versioning a Schema Without Breaking Consumers](/learn/structured-outputs/schema-versioning-basics) draws exactly this line: widening a type is additive and safe on its own — old data stays valid. The real damage here is silent drift with no version marker, which is the most dangerous row in that lesson's decision table precisely because nothing fails loudly. **A** widening to include `null` doesn't invalidate any existing record; per the safe/breaking table, this is an additive change, not a breaking one. **C** no consumer can "anticipate" a change it was never told about — that's the entire argument for stamping a version, not an excuse to skip it. **D** making `phone` required again would just reintroduce the older, worse failure — a required field forces a value even where the source genuinely has none, per question 3.
+**Correct: C.** [Versioning a Schema Without Breaking Consumers](/learn/structured-outputs/schema-versioning-basics) draws exactly this line: widening a type is additive and safe on its own — old data stays valid. The real damage here is silent drift with no version marker, which is the most dangerous row in that lesson's decision table precisely because nothing fails loudly. **A** widening to include `null` doesn't invalidate any existing record; per the safe/breaking table, this is an additive change, not a breaking one. **B** no consumer can "anticipate" a change it was never told about — that's the entire argument for stamping a version, not an excuse to skip it. **D** making `phone` required again would just reintroduce the older, worse failure — a required field forces a value even where the source genuinely has none, per question 3.
 
 </details>
 
@@ -73,13 +73,13 @@ A `customer.phone` field changes from `string` (always populated) to `string | n
 An engineer wants to improve a 30-field extraction schema's reliability by splitting it into two 15-field passes, reasoning: "each pass only has to get 15 fields right instead of 30, so the combined accuracy will be higher." Assuming per-field accuracy `a` is measured and comes out identical in both the one-pass and two-pass versions, is this reasoning correct?
 
 - **A.** Yes — requiring two smaller passes to each succeed is always mathematically better than requiring one large pass to succeed.
-- **B.** No — if per-field accuracy `a` doesn't change, `a^15 × a^15` equals `a^30` exactly. The split gains nothing from the arithmetic alone; any real accuracy gain has to come from the split actually raising per-field accuracy, not from the pass count itself.
-- **C.** No — splitting a schema always lowers accuracy, because the extra round trip and merge step introduce new errors that outweigh any gain.
-- **D.** The comparison is meaningless, because per-field accuracy can't be modeled as a probability in the first place.
+- **B.** No — splitting a schema always lowers accuracy, because the extra round trip and merge step introduce new errors that outweigh any gain.
+- **C.** The comparison is meaningless, because per-field accuracy can't be modeled as a probability in the first place.
+- **D.** No — if per-field accuracy `a` doesn't change, `a^15 × a^15` equals `a^30` exactly. The split gains nothing from the arithmetic alone; any real accuracy gain has to come from the split actually raising per-field accuracy, not from the pass count itself.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [Complexity vs Accuracy, and When to Split](/learn/structured-outputs/schema-complexity-vs-model-accuracy) works through this exact algebra: `a^15 × a^15 = a^30` for any `a`, so splitting with unchanged per-field accuracy is a wash by construction. The real lever is whether a narrower pass actually raises `a` — less to track per generation, less interference between fields — which has to be measured, not assumed. **A** this is the tempting-but-wrong intuition the lesson corrects directly; the multiplication alone buys nothing when `a` is held constant. **C** overstates a real cost (round trips, merge complexity) into an absolute rule — splitting can still be a net win when it measurably raises `a`, or even at unchanged `a`, when isolating failures makes repair cheaper. **D** the independence-based probability model is a stated simplification, not an exact law, but it's a legitimate and useful approximation for reasoning about the tradeoff — dismissing it as meaningless throws away a genuinely useful mental model.
+**Correct: D.** [Complexity vs Accuracy, and When to Split](/learn/structured-outputs/schema-complexity-vs-model-accuracy) works through this exact algebra: `a^15 × a^15 = a^30` for any `a`, so splitting with unchanged per-field accuracy is a wash by construction. The real lever is whether a narrower pass actually raises `a` — less to track per generation, less interference between fields — which has to be measured, not assumed. **A** this is the tempting-but-wrong intuition the lesson corrects directly; the multiplication alone buys nothing when `a` is held constant. **B** overstates a real cost (round trips, merge complexity) into an absolute rule — splitting can still be a net win when it measurably raises `a`, or even at unchanged `a`, when isolating failures makes repair cheaper. **C** the independence-based probability model is a stated simplification, not an exact law, but it's a legitimate and useful approximation for reasoning about the tradeoff — dismissing it as meaningless throws away a genuinely useful mental model.
 
 </details>
 

@@ -219,7 +219,8 @@ const quizAnswerPos = {};
 const Q_BOUNDARY = /\n(?=#{2,3}\s+(?:(?:Question\s+)\d+[.:]?|\d+[.:])|\*\*Q?\d+\.)/;
 const OPT_RE = /^(?:-\s+)?(?:\*\*)?[A-E][.)]/gm;
 const ANS_RE = /\*\*(?:Correct:|Answer)\s*([A-E])\.?\s*\*\*/;
-const LETTER_RE = /\*\*([A-E])\b|^[ \t]*-?[ \t]*([A-E])(?=[:.)]| is )/gm;
+// Answer blocks discuss options as `**A**`, `(A)`, or line-start `- A is…` / `A.` / `A)`.
+const LETTER_RE = /\*\*([A-E])\b|\(([A-E])\)|^[ \t]*-?[ \t]*([A-E])\b/gm;
 function* walkQ(dir) {
   for (const n of readdirSync(dir)) {
     const p = join(dir, n);
@@ -239,7 +240,7 @@ for (const f of [...walkQ(join(CONTENT, 'lessons'))].sort()) {
     if (mark) { answers++; quizAnswerPos[mark[1]] = (quizAnswerPos[mark[1]] ?? 0) + 1; }
     const det = b.match(/<details>[\s\S]*?<\/details>/);
     const letters = new Set();
-    if (det) for (const m of det[0].replace(ANS_RE, '').matchAll(LETTER_RE)) letters.add(m[1] ?? m[2]);
+    if (det) for (const m of det[0].replace(ANS_RE, '').matchAll(LETTER_RE)) letters.add(m[1] ?? m[2] ?? m[3]);
     if (det && letters.size >= Math.max(2, opts - 1)) rationaleForAll++;
     const stem = b.split('\n')[0]
       .replace(/^[#\s*]+/, '').replace(/\*\*$/, '')
@@ -255,6 +256,7 @@ for (const f of [...walkQ(join(CONTENT, 'lessons'))].sort()) {
     perOptionRationale: rationaleForAll,
     internal: internalLinks(body).length, words: words(body),
     flags: [
+      ...((body.match(/<details>/g) || []).length !== (body.match(/<\/details>/g) || []).length ? ['unbalanced <details> tags — an answer block is missing its close tag'] : []),
       ...(answers < qBlocks.length ? [`${qBlocks.length - answers} question(s) without a marked correct answer`] : []),
       ...(rationaleForAll < qBlocks.length ? [`${qBlocks.length - rationaleForAll} answer block(s) don't discuss every option`] : []),
       ...(qBlocks.length === 0 ? ['no `## N.` / `## Question N` headings found — check format'] : []),
@@ -371,7 +373,7 @@ const md = ['# Acquisition & practice family audit — mechanical pass', '', `Ge
   md.push('4. ~~Guide in-body links~~ — **done**: every guide now links into the curriculum from body prose; `why-there-is-no-certificate` links to `/learn`.');
   const totalMarked = Object.values(bPos).reduce((a, b) => a + b, 0);
   const topPos = Object.entries(bPos).sort((a, b) => b[1] - a[1])[0];
-  md.push(`5. **Quiz answer-position rebalance** — ${topPos ? `${Math.round((topPos[1] / totalMarked) * 100)}% of correct answers sit at ${topPos[0]}` : ''} across ${totalMarked} lesson-quiz questions; redistribute when files are next touched.`);
+  md.push(`5. **Quiz answer-position rebalance** — ${topPos ? `${Math.round((topPos[1] / totalMarked) * 100)}% of correct answers sit at ${topPos[0]}` : ''} across ${totalMarked} lesson-quiz questions (was ~66% B before the automated rebalance; residual skew is in questions whose rationale references options by bare letter — fix those when files are next edited by hand).`);
   md.push(`6. **Per-option rationale gaps** — ${flagged(findings.lessonQuizzes).length} quiz files where some answers state a letter without walking the options.`);
   md.push('');
 }

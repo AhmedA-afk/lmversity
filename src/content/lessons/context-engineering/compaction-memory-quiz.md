@@ -115,16 +115,16 @@ At turn 1 of a long session, a user says: "Never suggest a paid plan — I'm onl
 
 An agent debugging a flaky test logs each ruled-out hypothesis to an external scratchpad file, separate from the conversation. A compaction pass then folds the last 20 turns into a summary that only says "several fixes were attempted without success." Asked to try something new, what should the agent do, and why?
 
-- **A.** Propose a fix it already tried, since the summary no longer specifies which ones failed.
-- **B.** Read the scratchpad, which still holds an exact list of ruled-out hypotheses because compaction never touched it, and avoid repeating any of them.
+- **A.** Read the scratchpad, which still holds an exact list of ruled-out hypotheses because compaction never touched it, and avoid repeating any of them.
+- **B.** Propose a fix it already tried, since the summary no longer specifies which ones failed.
 - **C.** Ask the user to repeat which fixes were already tried, since that information is unrecoverable.
 - **D.** Ignore the scratchpad, since it isn't part of the conversation the model sees.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** This is the exact scenario [scratchpad and working-memory patterns](/learn/context-engineering/scratchpad-working-memory-patterns) builds toward: the scratchpad lives outside the message array, so a compaction pass that operates only on that array has no effect on it. Reading it back deliberately at the point it's needed recovers the full, undamaged list.
+**Correct: A.** This is the exact scenario [scratchpad and working-memory patterns](/learn/context-engineering/scratchpad-working-memory-patterns) builds toward: the scratchpad lives outside the message array, so a compaction pass that operates only on that array has no effect on it. Reading it back deliberately at the point it's needed recovers the full, undamaged list.
 
-**A** reproduces the regression the scratchpad exists to prevent — trusting only the vague conversational summary, when a complete record sits one read away, throws away the entire benefit of having built the scratchpad.
+**B** reproduces the regression the scratchpad exists to prevent — trusting only the vague conversational summary, when a complete record sits one read away, throws away the entire benefit of having built the scratchpad.
 
 **C** treats recoverable information as lost. Asking the user to repeat something already logged is exactly the "repeated question" cost from [what to remember, what to forget](/learn/context-engineering/what-to-remember-vs-forget) — avoidable here because a store with the answer already exists.
 
@@ -158,17 +158,17 @@ A booking agent collects `{destination, date, seat, payment_step}` while a user 
 A user tells a coding assistant "I'm on Python 3.9" in one session, then a month later mentions in an unrelated session "we migrated, I'm on 3.11 now." The memory store's write path marks the old fact `status: superseded` rather than deleting it, and the read path filters to the latest non-superseded fact. In a brand-new session today, what should the assistant reference, and why does marking-superseded-rather-than-deleting matter?
 
 - **A.** 3.9, since that was the first and most explicitly stated fact.
-- **B.** 3.11, because the read path filters to the latest non-superseded entry; keeping the old entry (rather than deleting it) preserves an audit trail without letting it interfere with retrieval.
-- **C.** It should ask the user again, since two conflicting facts exist in the store and neither can be trusted.
+- **B.** It should ask the user again, since two conflicting facts exist in the store and neither can be trusted.
+- **C.** 3.11, because the read path filters to the latest non-superseded entry; keeping the old entry (rather than deleting it) preserves an audit trail without letting it interfere with retrieval.
 - **D.** Both versions, mentioning that compatibility should be checked for either, to be safe.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [Memory across sessions](/learn/context-engineering/cross-session-memory-architecture) builds exactly this write/read pair: a correction supersedes the earlier value rather than sitting beside it as an equally-weighted alternative, and the read path's filter (`status != "superseded"`) resolves to 3.11 deterministically. Keeping the 3.9 row instead of deleting it means you can still trace, later, what the assistant believed and when it changed — without that stale row ever winning a read.
+**Correct: C.** [Memory across sessions](/learn/context-engineering/cross-session-memory-architecture) builds exactly this write/read pair: a correction supersedes the earlier value rather than sitting beside it as an equally-weighted alternative, and the read path's filter (`status != "superseded"`) resolves to 3.11 deterministically. Keeping the 3.9 row instead of deleting it means you can still trace, later, what the assistant believed and when it changed — without that stale row ever winning a read.
 
 **A** treats "stated first" as the tiebreaker, when a later explicit correction should always take precedence over an earlier stated fact — that's the entire point of the supersede step in the write path.
 
-**C** ignores that the system already resolved the conflict correctly. Re-asking the user discards work the read-path filter already did, and reproduces the "repeated question" cost from a different angle — costing the user's time to work around a problem that isn't actually present.
+**B** ignores that the system already resolved the conflict correctly. Re-asking the user discards work the read-path filter already did, and reproduces the "repeated question" cost from a different angle — costing the user's time to work around a problem that isn't actually present.
 
 **D** hedges in a way that surfaces an ambiguity the versioning design specifically exists to remove — mentioning both versions makes the assistant look like it doesn't know something it does, in fact, know.
 
@@ -178,20 +178,20 @@ A user tells a coding assistant "I'm on Python 3.9" in one session, then a month
 
 A team needs their agent's memory to answer: (1) "What's this user's preferred contact method?" (2) "Has this user, in any past session, expressed frustration with slow page loads, however they phrased it?" (3) "Which of this user's projects rely on the same third-party API as their most recently opened one?" Which store pairing is correct?
 
-- **A.** (1) key-value, (2) vector, (3) knowledge graph.
-- **B.** (1) knowledge graph, (2) key-value, (3) vector.
-- **C.** All three should use one vector store, since it can handle any free-text or structured query with the right prompt.
-- **D.** (1) vector, (2) knowledge graph, (3) key-value.
+- **A.** (1) knowledge graph, (2) key-value, (3) vector.
+- **B.** All three should use one vector store, since it can handle any free-text or structured query with the right prompt.
+- **C.** (1) vector, (2) knowledge graph, (3) key-value.
+- **D.** (1) key-value, (2) vector, (3) knowledge graph.
 
 <details><summary>Answer</summary>
 
-**Correct: A.** This is the exact routing exercise in [structured memory stores compared](/learn/context-engineering/structured-memory-stores-compared): query 1 is an exact-key lookup (key-value), query 2 needs to match a sentiment expressed in unknown, varied phrasing (vector, for fuzzy semantic recall), and query 3 is a multi-hop relationship traversal (knowledge graph) that neither a key lookup nor a similarity search can express.
+**Correct: D.** This is the exact routing exercise in [structured memory stores compared](/learn/context-engineering/structured-memory-stores-compared): query 1 is an exact-key lookup (key-value), query 2 needs to match a sentiment expressed in unknown, varied phrasing (vector, for fuzzy semantic recall), and query 3 is a multi-hop relationship traversal (knowledge graph) that neither a key lookup nor a similarity search can express.
 
-**B** swaps every pairing away from its fit — a single settable value doesn't need graph traversal, and "however they phrased it" is precisely the case an exact-key store can't handle.
+**A** swaps every pairing away from its fit — a single settable value doesn't need graph traversal, and "however they phrased it" is precisely the case an exact-key store can't handle.
 
-**C** repeats the lesson's opening warning: a vector store answers "find things like this" well, but has no native mechanism for "how does X relate to Y" — similarity between embeddings isn't the same as a relationship, so query 3 specifically breaks this approach regardless of prompting.
+**B** repeats the lesson's opening warning: a vector store answers "find things like this" well, but has no native mechanism for "how does X relate to Y" — similarity between embeddings isn't the same as a relationship, so query 3 specifically breaks this approach regardless of prompting.
 
-**D** also mismatches every entry: query 1 needs no fuzzy matching, query 2 needs no graph traversal, and query 3 — a relational question — can't be expressed as a single key-value lookup.
+**C** also mismatches every entry: query 1 needs no fuzzy matching, query 2 needs no graph traversal, and query 3 — a relational question — can't be expressed as a single key-value lookup.
 
 </details>
 
@@ -199,16 +199,16 @@ A team needs their agent's memory to answer: (1) "What's this user's preferred c
 
 Two designs for a support agent's memory-write policy: Design A writes every message the user sends to a searchable store, unfiltered. Design B writes only messages that pass an explicit "decision, constraint, or preference" filter. Six months in, which failure is Design A more likely to produce, and which is Design B more likely to produce if its filter is too strict?
 
-- **A.** Design A: repeated questions from the agent. Design B: retrieval noise.
-- **B.** Design A: retrieval noise from irrelevant or contradictory entries crowding out real facts. Design B: repeated questions, because a real preference got filtered out and never written.
+- **A.** Design A: retrieval noise from irrelevant or contradictory entries crowding out real facts. Design B: repeated questions, because a real preference got filtered out and never written.
+- **B.** Design A: repeated questions from the agent. Design B: retrieval noise.
 - **C.** Both designs produce identical failures, since total data volume is the only thing that matters.
 - **D.** Design A has no failure mode, since more stored data can only help; Design B is strictly worse by definition.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** This is the two-sided cost named directly in [what to remember, what to forget](/learn/context-engineering/what-to-remember-vs-forget): recording everything, unfiltered, means every future retrieval competes against noise and stale near-duplicates — the "transcript recorder" failure. An overly strict filter on the other side means real preferences never get written at all, so the agent re-asks things a good policy would have captured the first time — the "amnesiac" failure from the opposite direction.
+**Correct: A.** This is the two-sided cost named directly in [what to remember, what to forget](/learn/context-engineering/what-to-remember-vs-forget): recording everything, unfiltered, means every future retrieval competes against noise and stale near-duplicates — the "transcript recorder" failure. An overly strict filter on the other side means real preferences never get written at all, so the agent re-asks things a good policy would have captured the first time — the "amnesiac" failure from the opposite direction.
 
-**A** swaps the two directions — unfiltered storage costs you at read time (noise), not by causing fewer answers to exist; an overly strict filter is what causes information to never be written and later get re-asked.
+**B** swaps the two directions — unfiltered storage costs you at read time (noise), not by causing fewer answers to exist; an overly strict filter is what causes information to never be written and later get re-asked.
 
 **C** ignores that *what* gets written and how cleanly it's filtered determines which specific failure shows up — volume alone doesn't distinguish a noisy store from a starved one.
 

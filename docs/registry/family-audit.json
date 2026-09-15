@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-15T06:53:10.337Z",
+ "generatedAt": "2026-09-15T07:14:02.164Z",
  "findings": {
   "answers": [
    {
@@ -1233,12 +1233,10 @@
      4
     ],
     "answersMarked": 12,
-    "perOptionRationale": 10,
+    "perOptionRationale": 12,
     "internal": 14,
     "words": 2217,
-    "flags": [
-     "2 answer block(s) don't discuss every option"
-    ]
+    "flags": []
    },
    {
     "slug": "context-engineering/multi-agent-and-capstone-quiz",
@@ -1468,12 +1466,10 @@
      4
     ],
     "answersMarked": 10,
-    "perOptionRationale": 5,
+    "perOptionRationale": 10,
     "internal": 12,
     "words": 1575,
-    "flags": [
-     "5 answer block(s) don't discuss every option"
-    ]
+    "flags": []
    },
    {
     "slug": "llm-foundations/behavior-and-capstone-quiz",
@@ -1545,12 +1541,10 @@
      4
     ],
     "answersMarked": 9,
-    "perOptionRationale": 4,
+    "perOptionRationale": 9,
     "internal": 14,
     "words": 1649,
-    "flags": [
-     "5 answer block(s) don't discuss every option"
-    ]
+    "flags": []
    },
    {
     "slug": "llm-foundations/training-pipeline-quiz",
@@ -1605,12 +1599,10 @@
      4
     ],
     "answersMarked": 9,
-    "perOptionRationale": 8,
+    "perOptionRationale": 9,
     "internal": 11,
     "words": 1604,
-    "flags": [
-     "1 answer block(s) don't discuss every option"
-    ]
+    "flags": []
    },
    {
     "slug": "mcp/mcp-auth-quiz",
@@ -1727,12 +1719,10 @@
      4
     ],
     "answersMarked": 10,
-    "perOptionRationale": 1,
+    "perOptionRationale": 10,
     "internal": 9,
     "words": 2196,
-    "flags": [
-     "9 answer block(s) don't discuss every option"
-    ]
+    "flags": []
    },
    {
     "slug": "prompt-engineering/eval-shipping-quiz",
@@ -1788,12 +1778,10 @@
      4
     ],
     "answersMarked": 10,
-    "perOptionRationale": 7,
+    "perOptionRationale": 10,
     "internal": 7,
     "words": 1763,
-    "flags": [
-     "3 answer block(s) don't discuss every option"
-    ]
+    "flags": []
    },
    {
     "slug": "prompt-engineering/reasoning-quiz",
@@ -1849,12 +1837,10 @@
      4
     ],
     "answersMarked": 10,
-    "perOptionRationale": 4,
+    "perOptionRationale": 10,
     "internal": 6,
     "words": 1924,
-    "flags": [
-     "6 answer block(s) don't discuss every option"
-    ]
+    "flags": []
    },
    {
     "slug": "prompt-engineering/structure-formatting-quiz",
@@ -2088,12 +2074,10 @@
      4
     ],
     "answersMarked": 6,
-    "perOptionRationale": 5,
+    "perOptionRationale": 6,
     "internal": 7,
     "words": 2401,
-    "flags": [
-     "1 answer block(s) don't discuss every option"
-    ]
+    "flags": []
    },
    {
     "slug": "rag/reranking-quiz",
@@ -2294,12 +2278,10 @@
      4
     ],
     "answersMarked": 6,
-    "perOptionRationale": 0,
+    "perOptionRationale": 6,
     "internal": 8,
     "words": 1350,
-    "flags": [
-     "6 answer block(s) don't discuss every option"
-    ]
+    "flags": []
    },
    {
     "slug": "tools-function-calling/foundations-quiz",
@@ -2334,12 +2316,10 @@
      4
     ],
     "answersMarked": 6,
-    "perOptionRationale": 2,
+    "perOptionRationale": 6,
     "internal": 10,
     "words": 1312,
-    "flags": [
-     "4 answer block(s) don't discuss every option"
-    ]
+    "flags": []
    },
    {
     "slug": "tools-function-calling/reliability-quiz",
@@ -2370,12 +2350,10 @@
      4
     ],
     "answersMarked": 6,
-    "perOptionRationale": 1,
+    "perOptionRationale": 6,
     "internal": 0,
     "words": 1429,
-    "flags": [
-     "5 answer block(s) don't discuss every option"
-    ]
+    "flags": []
    },
    {
     "slug": "tools-function-calling/tool-selection-quiz",

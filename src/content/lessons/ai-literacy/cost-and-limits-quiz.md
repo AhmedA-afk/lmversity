@@ -75,16 +75,16 @@ Which of these people has the clearest case for paying for AI rather than using 
 
 Which of these is a limit no amount of clever prompting fixes, as opposed to a problem a clearer prompt would mostly solve?
 
-- **A.** It states a fact that doesn't exist, in the same confident tone it uses for facts that check out.
-- **B.** It gives you a generic, one-size-fits-all answer because you didn't say who it's for or what you already tried.
+- **A.** It gives you a generic, one-size-fits-all answer because you didn't say who it's for or what you already tried.
+- **B.** It states a fact that doesn't exist, in the same confident tone it uses for facts that check out.
 - **C.** It ignores the format you needed — a table instead of the bullet points you actually wanted.
 - **D.** It answers a noticeably different question than the one you meant to ask.
 
 <details><summary>Answer</summary>
 
-**Correct: A.** This is the deep, architectural one. The model is trained to produce fluent, plausible-sounding text, not to consult a truth-checked database and flag what it's unsure of — it has no reliable internal "I don't actually know this" signal. That means a fabricated statistic gets stated with the exact same confidence as a verified one, and no phrasing — "only tell me true things," "double-check yourself," "cite your sources" — reliably changes that, because the model can't distinguish confident-and-true from confident-and-fabricated at the moment it's generating text. This is precisely [why AI sounds so confident](/learn/ai-literacy/why-ai-sounds-so-confident) even when it's wrong, and it's the reason verification stays your job no matter how good your prompt is.
+**Correct: B.** This is the deep, architectural one. The model is trained to produce fluent, plausible-sounding text, not to consult a truth-checked database and flag what it's unsure of — it has no reliable internal "I don't actually know this" signal. That means a fabricated statistic gets stated with the exact same confidence as a verified one, and no phrasing — "only tell me true things," "double-check yourself," "cite your sources" — reliably changes that, because the model can't distinguish confident-and-true from confident-and-fabricated at the moment it's generating text. This is precisely [why AI sounds so confident](/learn/ai-literacy/why-ai-sounds-so-confident) even when it's wrong, and it's the reason verification stays your job no matter how good your prompt is.
 
-**B** feels like a hard ceiling but is usually starvation of context — the model mirrors the vagueness of the ask. Tell it who the answer is for, what "specific" means here, and what you've already ruled out, and generic answers usually sharpen up fast. That's a prompting fix, not a limit.
+**A** feels like a hard ceiling but is usually starvation of context — the model mirrors the vagueness of the ask. Tell it who the answer is for, what "specific" means here, and what you've already ruled out, and generic answers usually sharpen up fast. That's a prompting fix, not a limit.
 
 **C** is one of the most reliably steerable things about model output. Say "a table with these three columns" and it complies almost every time. Treating this as a limit usually just means the format was never specified.
 
@@ -119,18 +119,18 @@ You've internalized "weigh verification cost against stakes." Here's a harder ve
 
 - **A.** Fine to trust as-is — medical information is well-documented, so AI is unlikely to get it wrong.
 - **B.** This is the sweet spot from the earlier framework: the check is quick, so it's worth using AI here without extra steps.
-- **C.** A quick skim isn't real verification here: the stakes are irreversible, and "reads plausible to a non-expert" isn't the same as "confirmed by someone qualified." The better move is using AI to prepare sharp questions for the pharmacist, not to replace them.
-- **D.** Avoid AI completely for anything health-related — go straight to a professional every time.
+- **C.** Avoid AI completely for anything health-related — go straight to a professional every time.
+- **D.** A quick skim isn't real verification here: the stakes are irreversible, and "reads plausible to a non-expert" isn't the same as "confirmed by someone qualified." The better move is using AI to prepare sharp questions for the pharmacist, not to replace them.
 
 <details><summary>Answer</summary>
 
-**Correct: C.** This is the nuance the earlier questions were building toward: "quick to read" and "quick to verify" are not the same thing. Your friend can skim the summary fast, but skimming doesn't let a non-expert catch a wrong dosage note or a missed interaction with something else they're taking — they're not qualified to spot the error even if it's sitting right there in plain text. And the downside here is irreversible: a health outcome, not an email you can send a correction for. When you can't personally confirm correctness *and* a miss can't be undone, the right move is to use AI upstream — to turn "what should I even ask about this" into a sharp list of questions — and route the actual decision to a qualified check. This is the harder version of [should I use AI for this?](/learn/ai-literacy/should-i-use-ai-for-this-worked-decisions).
+**Correct: D.** This is the nuance the earlier questions were building toward: "quick to read" and "quick to verify" are not the same thing. Your friend can skim the summary fast, but skimming doesn't let a non-expert catch a wrong dosage note or a missed interaction with something else they're taking — they're not qualified to spot the error even if it's sitting right there in plain text. And the downside here is irreversible: a health outcome, not an email you can send a correction for. When you can't personally confirm correctness *and* a miss can't be undone, the right move is to use AI upstream — to turn "what should I even ask about this" into a sharp list of questions — and route the actual decision to a qualified check. This is the harder version of [should I use AI for this?](/learn/ai-literacy/should-i-use-ai-for-this-worked-decisions).
 
 **A** assumes documentation existing somewhere means the summary correctly reflects it for this specific person's specific combination of medications — which is exactly the kind of detail a general summary can blend or miss.
 
 **B** is the trap this question is built to catch. "Easy to skim" got mistaken for "easy to verify." The framework from question 1 still holds, but skimming a plausible-sounding paragraph isn't a verification step when you're not qualified to catch what's wrong with it — and irreversible stakes raise the bar even when the check *feels* effortless.
 
-**D** throws out real value. AI is genuinely useful here as prep — turning vague worry into specific, well-formed questions for the pharmacist — which is a different job from being the final word on a medical decision. Banning it outright loses that without adding any safety.
+**C** throws out real value. AI is genuinely useful here as prep — turning vague worry into specific, well-formed questions for the pharmacist — which is a different job from being the final word on a medical decision. Banning it outright loses that without adding any safety.
 
 </details>
 

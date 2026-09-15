@@ -28,13 +28,13 @@ D. The chunk containing the error code is too short to embed meaningfully
 A user asks "why does my app crash when I close the lid," and the correct doc says "the process terminates on sleep/suspend due to an unhandled signal." There's almost no literal word overlap. BM25 buries this doc near the bottom of its results; a dense retriever surfaces it in the top 3. Why?
 
 A. BM25 is fundamentally broken and should be replaced by dense retrieval across the board
-B. Dense embeddings capture semantic and topical relatedness independent of shared vocabulary — "closing the lid" and "sleep/suspend" land near each other in embedding space even with zero shared tokens
-C. The dense retriever got lucky here; this pattern isn't something you can rely on
+B. The dense retriever got lucky here; this pattern isn't something you can rely on
+C. Dense embeddings capture semantic and topical relatedness independent of shared vocabulary — "closing the lid" and "sleep/suspend" land near each other in embedding space even with zero shared tokens
 D. BM25 would rank this doc just as high if the query were longer
 
 <details><summary>Answer</summary>
 
-**Correct: B.** This is the flip side of Question 1: dense retrieval's whole value proposition is bridging vocabulary gaps between how a user asks and how a doc is written, because embeddings encode meaning rather than surface tokens. **A** takes a real win and turns it into an overcorrection — Question 1 showed exactly the case where BM25 wins; the fix isn't picking a permanent favorite, it's fusing both, which is the entire premise of [hybrid search](/learn/rag/hybrid-search-lexical-and-vector). **C** undersells a systematic property of models trained on semantic similarity as luck — it's reproducible, not a fluke. **D** misdiagnoses the gap as a length problem; BM25's blind spot is lexical overlap, not query size, and a longer query with equally different vocabulary wouldn't help at all.
+**Correct: C.** This is the flip side of Question 1: dense retrieval's whole value proposition is bridging vocabulary gaps between how a user asks and how a doc is written, because embeddings encode meaning rather than surface tokens. **A** takes a real win and turns it into an overcorrection — Question 1 showed exactly the case where BM25 wins; the fix isn't picking a permanent favorite, it's fusing both, which is the entire premise of [hybrid search](/learn/rag/hybrid-search-lexical-and-vector). **B** undersells a systematic property of models trained on semantic similarity as luck — it's reproducible, not a fluke. **D** misdiagnoses the gap as a length problem; BM25's blind spot is lexical overlap, not query size, and a longer query with equally different vocabulary wouldn't help at all.
 
 </details>
 
@@ -43,13 +43,13 @@ D. BM25 would rank this doc just as high if the query were longer
 You have BM25 scores (unbounded — say, 2 to 60 depending on term rarity and document length) and cosine similarities (bounded, 0 to 1). Rather than normalizing and averaging these directly, most production hybrid systems use Reciprocal Rank Fusion (RRF), which combines results using only each document's rank position in each list. Why is rank position the safer signal to fuse on?
 
 A. Rank position is always more accurate than raw score
-B. BM25 and cosine scores come from different, incompatible distributions with no natural shared scale — a BM25 score of 12 and a cosine score of 0.12 aren't comparable in any principled way, but "ranked 3rd" means the same thing regardless of which retriever produced it
-C. RRF is a learned model that automatically discovers the right scale for each retriever
-D. Raw scores are too slow to compute in real time, so rank is used instead
+B. RRF is a learned model that automatically discovers the right scale for each retriever
+C. Raw scores are too slow to compute in real time, so rank is used instead
+D. BM25 and cosine scores come from different, incompatible distributions with no natural shared scale — a BM25 score of 12 and a cosine score of 0.12 aren't comparable in any principled way, but "ranked 3rd" means the same thing regardless of which retriever produced it
 
 <details><summary>Answer</summary>
 
-**Correct: B.** Rank position sidesteps the cross-scale comparison problem entirely — you never have to answer "how much BM25 equals how much cosine similarity," because both lists are just orderings. See the [worked example](/learn/rag/hybrid-search-worked-example) for RRF computed step by step over real ranked lists. **A** confuses "avoids an apples-to-oranges comparison" with "more accurate" — accuracy depends on how good each underlying retriever is, not on the fusion mechanism. **C** describes a learned reranker, not RRF — RRF is a fixed formula, `1/(k + rank)`, with no training involved; that simplicity is part of why it's a common default. **D** is just false — both raw scores and rank positions are cheap to compute from results you already have; speed was never the reason to prefer one over the other.
+**Correct: D.** Rank position sidesteps the cross-scale comparison problem entirely — you never have to answer "how much BM25 equals how much cosine similarity," because both lists are just orderings. See the [worked example](/learn/rag/hybrid-search-worked-example) for RRF computed step by step over real ranked lists. **A** confuses "avoids an apples-to-oranges comparison" with "more accurate" — accuracy depends on how good each underlying retriever is, not on the fusion mechanism. **B** describes a learned reranker, not RRF — RRF is a fixed formula, `1/(k + rank)`, with no training involved; that simplicity is part of why it's a common default. **C** is just false — both raw scores and rank positions are cheap to compute from results you already have; speed was never the reason to prefer one over the other.
 
 </details>
 
@@ -57,14 +57,14 @@ D. Raw scores are too slow to compute in real time, so rank is used instead
 
 A team min-max normalizes each query's BM25 scores and cosine scores to `[0, 1]`, then averages them 50/50. On one query, the BM25 scores look like `[41, 3.5, 3.2, 3.0, ...]` — one dominant hit and a long, flat tail. After min-max scaling, that entire tail collapses to values near 0, effectively zeroing out BM25's opinion about every document except the top one. What's the underlying problem?
 
-A. Min-max normalization is too computationally expensive to run per query
-B. Min-max scaling is defined relative to that specific result set's min and max, so a single outlier reshapes the whole distribution — the effective weighting between BM25 and vector scores silently shifts from query to query in ways nobody tuned for
+A. Min-max scaling is defined relative to that specific result set's min and max, so a single outlier reshapes the whole distribution — the effective weighting between BM25 and vector scores silently shifts from query to query in ways nobody tuned for
+B. Min-max normalization is too computationally expensive to run per query
 C. A 50/50 weighting is never appropriate in hybrid search
 D. BM25 scores should never be used numerically, only for ranking documents
 
 <details><summary>EAnswer</summary>
 
-**Correct: B.** This is a real, recurring [fusion pitfall](/learn/rag/hybrid-search-common-mistakes): per-query min-max normalization makes your fusion behavior a function of that query's score distribution, not a stable, tunable weighting — one outlier query and BM25's contribution effectively disappears for everything but the top hit. **A** is a non-issue; normalization is cheap, the problem is what it does to the numbers, not how long it takes. **C** overreaches — 50/50 can be a perfectly reasonable weight; the bug here is upstream, in feeding that weight normalized values that shift meaning per query. **D** overcorrects in the other direction — BM25 scores are used numerically all the time, that's how it ranks at all; the actual fix is a fusion method less sensitive to per-query outliers (RRF, or normalization calibrated globally rather than per result set).
+**Correct: A.** This is a real, recurring [fusion pitfall](/learn/rag/hybrid-search-common-mistakes): per-query min-max normalization makes your fusion behavior a function of that query's score distribution, not a stable, tunable weighting — one outlier query and BM25's contribution effectively disappears for everything but the top hit. **B** is a non-issue; normalization is cheap, the problem is what it does to the numbers, not how long it takes. **C** overreaches — 50/50 can be a perfectly reasonable weight; the bug here is upstream, in feeding that weight normalized values that shift meaning per query. **D** overcorrects in the other direction — BM25 scores are used numerically all the time, that's how it ranks at all; the actual fix is a fusion method less sensitive to per-query outliers (RRF, or normalization calibrated globally rather than per result set).
 
 </details>
 

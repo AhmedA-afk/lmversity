@@ -54,18 +54,18 @@ D. It doesn't need to live anywhere; strict mode requires no special handling.
 
 A pipeline reports 99% valid-rate and 97% schema-conformance rate, and a stakeholder concludes the pipeline is "basically done." What's missing from that conclusion?
 
-A. Nothing — those two numbers are sufficient to judge extraction quality.
-B. Both numbers can be measured with no gold data at all, and neither says anything about whether the field *values* are actually correct — that requires field-level accuracy and exact-match, which need labeled gold data.
+A. Both numbers can be measured with no gold data at all, and neither says anything about whether the field *values* are actually correct — that requires field-level accuracy and exact-match, which need labeled gold data.
+B. Nothing — those two numbers are sufficient to judge extraction quality.
 C. The numbers are meaningless without knowing the model's parameter count.
 D. Valid-rate and schema-conformance always move together, so reporting both is redundant.
 
 <details>
 <summary>Answer</summary>
 
-**Correct: B.** Valid-rate and schema-conformance are the two cheapest, least informative metrics precisely because they need no gold labels — they say nothing about correctness. See [Metrics for Structured-Output Quality](/learn/structured-outputs/evaluating-structured-output-quality-metrics).
+**Correct: A.** Valid-rate and schema-conformance are the two cheapest, least informative metrics precisely because they need no gold labels — they say nothing about correctness. See [Metrics for Structured-Output Quality](/learn/structured-outputs/evaluating-structured-output-quality-metrics).
 
-- A: This is the exact mistake the module warns against — high outer-ring metrics implying a claim about the inner rings they never measured.
-- B: Correct.
+- B: This is the exact mistake the module warns against — high outer-ring metrics implying a claim about the inner rings they never measured.
+- A: Correct.
 - C: Model size is unrelated to which axis a metric measures; this doesn't address the actual gap.
 - D: They can diverge — a response can conform to every type and required-field rule while still being wrong on every value; conformance says nothing about whether the schema was satisfied with correct or incorrect data.
 

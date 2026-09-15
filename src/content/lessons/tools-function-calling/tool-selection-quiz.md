@@ -47,32 +47,32 @@ D. Switch to `tool_choice: "none"` until the confusion is resolved
 **3. Your registry is 12 tools today and you're deciding whether to build retrieval now, before it grows. What does [Selection Accuracy at 5, 50, and 200 Tools](/learn/tools-function-calling/measuring-selection-accuracy-vs-count) suggest you do?**
 
 A. Build retrieval now — it's cheap insurance against future growth
-B. Run the accuracy eval at your current size and realistic future sizes first; a 12-tool registry likely doesn't need retrieval yet, and the eval is what tells you when it will
-C. Skip evaluation — the [Scaling Tools Cheatsheet](/learn/tools-function-calling/scaling-tools-cheatsheet) thresholds are exact, so just build to match your projected size today
-D. Add `tool_choice: "any"` instead, since forcing a call is a substitute for retrieval
+B. Skip evaluation — the [Scaling Tools Cheatsheet](/learn/tools-function-calling/scaling-tools-cheatsheet) thresholds are exact, so just build to match your projected size today
+C. Add `tool_choice: "any"` instead, since forcing a call is a substitute for retrieval
+D. Run the accuracy eval at your current size and realistic future sizes first; a 12-tool registry likely doesn't need retrieval yet, and the eval is what tells you when it will
 
 <details><summary>Answer</summary>
 
-**Correct: B.** At 12 tools you're comfortably under the "send all" range from the cheatsheet, and the whole point of the eval-first approach is to confirm the actual threshold on your registry rather than pre-building infrastructure for a problem you don't have yet.
+**Correct: D.** At 12 tools you're comfortably under the "send all" range from the cheatsheet, and the whole point of the eval-first approach is to confirm the actual threshold on your registry rather than pre-building infrastructure for a problem you don't have yet.
 
 - A is wrong: retrieval has real ongoing cost (a vector store, re-embedding on registry changes, recall tuning) — building it before you need it is pure overhead with nothing to show for it yet.
-- C is wrong: the cheatsheet thresholds are explicitly starting points ("start here, then measure"), not exact cutoffs — your own eval is the source of truth.
-- D is wrong: `tool_choice` and retrieval solve different problems — forcing a call doesn't make the *right* call more likely among a crowded candidate set.
+- B is wrong: the cheatsheet thresholds are explicitly starting points ("start here, then measure"), not exact cutoffs — your own eval is the source of truth.
+- C is wrong: `tool_choice` and retrieval solve different problems — forcing a call doesn't make the *right* call more likely among a crowded candidate set.
 
 </details>
 
 **4. A retrieval pipeline is in place at k=15 over a 200-tool registry. A user's phrasing doesn't closely match the correct tool's description, so it scores 18th and gets cut. What just happened, and what's the fix?**
 
-A. This is a precision failure — the fix is lowering k
-B. This is a recall failure — the correct tool never made it into context at all; fix by widening k, blending in keyword matching, or pinning the tool
+A. This is a recall failure — the correct tool never made it into context at all; fix by widening k, blending in keyword matching, or pinning the tool
+B. This is a precision failure — the fix is lowering k
 C. This is expected and requires no fix — the model will ask a clarifying question instead
 D. This means retrieval should be replaced with `tool_choice: "none"`
 
 <details><summary>Answer</summary>
 
-**Correct: B.** This is the recall-vs-precision distinction: recall failures mean the right tool was excluded before the model ever saw it, which is worse than a precision failure (too many candidates shown) because the model has no way to recover — it'll pick the nearest wrong match or hallucinate a call. [Retrieval Over a 200-Tool Registry](/learn/tools-function-calling/rag-over-tools-retrieval) and [Tool Selection Mistakes at Scale](/learn/tools-function-calling/tool-selection-common-mistakes) both cover this.
+**Correct: A.** This is the recall-vs-precision distinction: recall failures mean the right tool was excluded before the model ever saw it, which is worse than a precision failure (too many candidates shown) because the model has no way to recover — it'll pick the nearest wrong match or hallucinate a call. [Retrieval Over a 200-Tool Registry](/learn/tools-function-calling/rag-over-tools-retrieval) and [Tool Selection Mistakes at Scale](/learn/tools-function-calling/tool-selection-common-mistakes) both cover this.
 
-- A is wrong: precision failures are about too many *irrelevant* tools being included, which is the opposite problem — lowering k would make this specific failure worse, not better, by cutting off even more borderline-scoring correct tools.
+- B is wrong: precision failures are about too many *irrelevant* tools being included, which is the opposite problem — lowering k would make this specific failure worse, not better, by cutting off even more borderline-scoring correct tools.
 - C is wrong: the model has no way to know a tool it wasn't shown exists — it won't ask about something it can't see, it'll either misfire or hallucinate.
 - D is wrong: `none` disables tool calling for the turn entirely, unrelated to fixing a retrieval recall gap.
 

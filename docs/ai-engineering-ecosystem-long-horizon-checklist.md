@@ -1522,6 +1522,50 @@ validation, deployment status, measured result when available, blockers, and nex
 - Next batch: backlog items 5–6 — lesson-quiz answer-position rebalance (B ~66%
   across 603 questions) and the 11 files with thin per-option rationale.
 
+### 2026-09-15 — Lesson-quiz answer-position rebalance and rationale audit repair
+
+- Commit: `2a51574`. Backlog items 5–6. Scope: 83 quiz files, 603 questions
+  across `src/content/lessons/`.
+- Answer positions rebalanced by an AST-free transform script (`/tmp`, not
+  committed): for each question it permutes the option lines, moves the correct
+  option to a scheduled target slot, rewrites the `**Correct: X.**` marker, and
+  rewrites letter references inside the rationale (`**A** …`, `(B)`, `- C:`,
+  `A. ` at line start) to the new positions. Questions whose rationale contains
+  bare mid-sentence letters that might be option references are skipped by a
+  safety gate — 217 of 603 skipped, left for manual editorial pass.
+- Measured result: correct-answer distribution went from A 14%/B 66%/C 15%/D 5%
+  to **A 19%/B 41%/C 22%/D 17%**. Residual B skew lives almost entirely in the
+  217 gate-skipped questions.
+- Recovery incident, documented for the record: the first transform run wrote
+  `**Xorrect: Y.**` markers (a broad regex hit the `C` in "Correct"), and a
+  follow-up broad repair temporarily clobbered markers corpus-wide. Recovery
+  path: restored files to HEAD or to pre-transform user state where the buggy
+  output could be reproduced exactly (63 files), repaired markers in place for
+  the rest, then re-ran the corrected transform. Every marker was subsequently
+  re-derived from ground truth — the HEAD commit tells which option *text* is
+  correct; the verifier checks the marker letter equals that text's current
+  position. Result: **578/578 verifiable questions match; 0 mismatches.** Two
+  ambiguous cases (near-duplicate option texts) were fixed by hand.
+- Also fixed two real markup bugs the sweep exposed: `rag/rag-eval-quiz.md` had
+  an unclosed `<details>` on Q2 (would have swallowed following questions on the
+  rendered page); `rag/vector-db-quiz.md` had a stray `</details>` and a typo'd
+  `<summary>EAnswer</summary>`. The audit now checks `<details>` balance
+  permanently.
+- The "11 files missing per-option rationale" finding resolved to mostly audit
+  regex false positives — `(A)` inline-paren references and `- D discards…`
+  bullets weren't recognized. Detector broadened; 0 files flagged.
+- `scripts/audit-families.mjs` also gained: question-format coverage for all
+  five quiz markup dialects, the position histogram, details-balance check, and
+  honest backlog wording for the residual skew.
+- Validation: `npm run audit:families` (0 flags, distribution above),
+  `npm run check:content` clean (2,060 files matched), `npm run check:links`
+  clean (2,392 pages), `git diff --check` clean. Spot-checked transformed files
+  confirm marker and rationale letters track the permuted options.
+- Next batch: editorial scoring pass per Phase 0 "Score every item" — the
+  registry's `disposition: "unscored"` fields, starting with the 885 lessons
+  lacking in-body links and the acquisition families' intent/evidence/tone
+  dimensions.
+
 ### 2026-09-14 — Master ecosystem backlog created
 
 - Status: research and operating plan complete; execution not started.

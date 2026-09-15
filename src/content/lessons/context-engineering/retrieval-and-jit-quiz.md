@@ -12,14 +12,14 @@ Twelve questions on the calls this module is actually about: when to stuff, when
 
 A team has a single 15-page internal onboarding doc (roughly 7,000 tokens) that every new-hire chatbot query might need to reference. What's the right call?
 
-- A. Stuff the whole document into context on every call — it's small, stable, and building retrieval for it adds failure modes with no real benefit
-- B. Build a retrieval pipeline immediately, since any external knowledge source should be retrieved, not stuffed
+- A. Build a retrieval pipeline immediately, since any external knowledge source should be retrieved, not stuffed
+- B. Stuff the whole document into context on every call — it's small, stable, and building retrieval for it adds failure modes with no real benefit
 - C. Chunk it into paragraphs and embed each one before ever measuring whether stuffing would have worked
 - D. Summarize it down to 500 tokens and stuff the summary instead of the original
 
 <details><summary>Answer</summary>
 
-**Correct: A.** At 7,000 tokens, the document fits comfortably alongside a conversation and the model's own reasoning — there's no retrieval problem to solve, and a retriever here would add ranking and chunk-boundary failure modes for a corpus small enough that none of that was needed. See [Stuff It or Retrieve It](/learn/context-engineering/stuffing-vs-retrieval-decision). **B** treats "external" as the deciding factor, but size and predictability are what actually matter, not whether the content originated outside the prompt. **C** jumps straight to infrastructure without checking whether the simpler option already works — exactly the reflex this lesson warns against. **D** throws away detail the model might need (a specific policy line, an exact number) to solve a token-cost problem that stuffing the full 7,000 tokens didn't actually have.
+**Correct: B.** At 7,000 tokens, the document fits comfortably alongside a conversation and the model's own reasoning — there's no retrieval problem to solve, and a retriever here would add ranking and chunk-boundary failure modes for a corpus small enough that none of that was needed. See [Stuff It or Retrieve It](/learn/context-engineering/stuffing-vs-retrieval-decision). **A** treats "external" as the deciding factor, but size and predictability are what actually matter, not whether the content originated outside the prompt. **C** jumps straight to infrastructure without checking whether the simpler option already works — exactly the reflex this lesson warns against. **D** throws away detail the model might need (a specific policy line, an exact number) to solve a token-cost problem that stuffing the full 7,000 tokens didn't actually have.
 
 </details>
 
@@ -27,14 +27,14 @@ A team has a single 15-page internal onboarding doc (roughly 7,000 tokens) that 
 
 A 300-page contract has a term defined once in section 2 and referenced with legal consequences in sections 9, 15, and 28. A chunked retrieval system is asked "does the indemnification clause in section 15 apply given the affiliate definition." Why does chunked retrieval struggle here even with a good retriever?
 
-- A. A query about section 15 has no strong topical similarity to the definitions in section 2, so a similarity-based retriever has little reason to fetch a chunk that doesn't resemble the query, even though it's required to answer correctly
-- B. Chunked retrieval always fails on any document longer than 50 pages, regardless of content
-- C. Retrieval only fails when the embedding model is outdated
+- A. Chunked retrieval always fails on any document longer than 50 pages, regardless of content
+- B. Retrieval only fails when the embedding model is outdated
+- C. A query about section 15 has no strong topical similarity to the definitions in section 2, so a similarity-based retriever has little reason to fetch a chunk that doesn't resemble the query, even though it's required to answer correctly
 - D. This has nothing to do with retrieval — it's purely a prompt-wording problem
 
 <details><summary>Answer</summary>
 
-**Correct: A.** Retrieval finds chunks that resemble the query; it doesn't know that an unrelated-looking section is a structural dependency for answering correctly. This is the core argument in [When Long Context Beats RAG](/learn/context-engineering/when-long-context-beats-rag) — cross-references spanning a document are exactly the case where stuffing the whole thing outperforms chunked retrieval, because stuffing never has to guess which distant section is relevant. **B** overstates it — plenty of 50+ page documents retrieve fine when queries map cleanly onto single sections; length alone isn't the trigger, cross-reference structure is. **C** is a real failure mode for other reasons, but it doesn't explain this specific gap — even a perfect embedding model has no signal that a definitions section is relevant to an indemnification question, because the two don't discuss similar content. **D** dismisses a real structural limitation as a wording issue; no rephrasing of the query fixes a retriever that was never going to fetch section 2 for a section-15 question.
+**Correct: C.** Retrieval finds chunks that resemble the query; it doesn't know that an unrelated-looking section is a structural dependency for answering correctly. This is the core argument in [When Long Context Beats RAG](/learn/context-engineering/when-long-context-beats-rag) — cross-references spanning a document are exactly the case where stuffing the whole thing outperforms chunked retrieval, because stuffing never has to guess which distant section is relevant. **A** overstates it — plenty of 50+ page documents retrieve fine when queries map cleanly onto single sections; length alone isn't the trigger, cross-reference structure is. **B** is a real failure mode for other reasons, but it doesn't explain this specific gap — even a perfect embedding model has no signal that a definitions section is relevant to an indemnification question, because the two don't discuss similar content. **D** dismisses a real structural limitation as a wording issue; no rephrasing of the query fixes a retriever that was never going to fetch section 2 for a section-15 question.
 
 </details>
 
@@ -42,14 +42,14 @@ A 300-page contract has a term defined once in section 2 and referenced with leg
 
 What does the just-in-time (JIT) loading pattern keep permanently in context, and what does it defer?
 
-- A. It keeps a lightweight index (names, summaries, IDs) permanently in context, and defers full content until the model requests it
-- B. It keeps full content for everything permanently in context, and defers only the index
-- C. It defers everything, including the index, until the very last turn of the conversation
-- D. It keeps full content for the first item only, and defers the index for all others
+- A. It keeps full content for everything permanently in context, and defers only the index
+- B. It defers everything, including the index, until the very last turn of the conversation
+- C. It keeps full content for the first item only, and defers the index for all others
+- D. It keeps a lightweight index (names, summaries, IDs) permanently in context, and defers full content until the model requests it
 
 <details><summary>Answer</summary>
 
-**Correct: A.** This is the defining shape of the pattern: a cheap, complete index stays resident so the model knows what exists, while expensive full content hydrates only on demand — see [The Just-in-Time Loading Pattern](/learn/context-engineering/just-in-time-context-loading-pattern). **B** inverts the pattern entirely — that's eager stuffing, the exact thing JIT is designed to avoid. **C** breaks the pattern at its foundation: without an eager index, the model has no way to know what's available to fetch in the first place — [Lazy vs Eager Loading](/learn/context-engineering/lazy-vs-eager-context-loading) makes this point directly with the demand-paging analogy. **D** describes an arbitrary, inconsistent policy that isn't what JIT loading refers to at all.
+**Correct: D.** This is the defining shape of the pattern: a cheap, complete index stays resident so the model knows what exists, while expensive full content hydrates only on demand — see [The Just-in-Time Loading Pattern](/learn/context-engineering/just-in-time-context-loading-pattern). **A** inverts the pattern entirely — that's eager stuffing, the exact thing JIT is designed to avoid. **B** breaks the pattern at its foundation: without an eager index, the model has no way to know what's available to fetch in the first place — [Lazy vs Eager Loading](/learn/context-engineering/lazy-vs-eager-context-loading) makes this point directly with the demand-paging analogy. **C** describes an arbitrary, inconsistent policy that isn't what JIT loading refers to at all.
 
 </details>
 
@@ -72,14 +72,14 @@ In the demand-paging analogy for lazy vs. eager context loading, what does the "
 
 In a JIT loader implementation with a hydration token budget, why should the budget check happen *before* a document is added to the running hydrated total, rather than after?
 
-- A. Checking before hydration prevents committing a fetch that would blow the budget, so the failure is caught and reported cleanly instead of silently exceeding the intended limit
-- B. It doesn't matter which order the check happens in, as long as the total is eventually correct
+- A. It doesn't matter which order the check happens in, as long as the total is eventually correct
+- B. Checking before hydration prevents committing a fetch that would blow the budget, so the failure is caught and reported cleanly instead of silently exceeding the intended limit
 - C. Checking after hydration is actually preferred because it allows the budget to flex upward automatically
 - D. The order only matters for performance, not correctness
 
 <details><summary>Answer</summary>
 
-**Correct: A.** [Building a Just-in-Time Loader](/learn/context-engineering/building-a-jit-loader) implements this as a guard that runs before the hydration is committed — the same "fail before spending" discipline used elsewhere for validation. Checking after the fact means the budget has already been exceeded by the time anyone notices. **B** is wrong precisely because order determines whether an overage is prevented or merely detected after the damage — those are very different outcomes for cost control. **C** inverts the purpose of a budget guard entirely; a budget that flexes upward whenever it's hit isn't a budget. **D** misses that this is a correctness issue, not a performance one — an after-the-fact check lets an agent temporarily exceed a hard limit it was supposed to respect.
+**Correct: B.** [Building a Just-in-Time Loader](/learn/context-engineering/building-a-jit-loader) implements this as a guard that runs before the hydration is committed — the same "fail before spending" discipline used elsewhere for validation. Checking after the fact means the budget has already been exceeded by the time anyone notices. **A** is wrong precisely because order determines whether an overage is prevented or merely detected after the damage — those are very different outcomes for cost control. **C** inverts the purpose of a budget guard entirely; a budget that flexes upward whenever it's hit isn't a budget. **D** misses that this is a correctness issue, not a performance one — an after-the-fact check lets an agent temporarily exceed a hard limit it was supposed to respect.
 
 </details>
 
@@ -87,14 +87,14 @@ In a JIT loader implementation with a hydration token budget, why should the bud
 
 A coding agent has 45 tools registered across git operations, file editing, deployment, and database access. What's the main cost of exposing all 45 tool schemas on every single turn, beyond raw token count?
 
-- A. A long, undifferentiated tool list degrades the model's own tool-selection accuracy — more near-duplicate options increase the chance of calling the wrong tool or filling in arguments incorrectly
-- B. There is no cost beyond token count; tool selection accuracy is unrelated to how many tools are registered
-- C. Extra tools only slow down the tool itself when called, not the model's decision-making
+- A. There is no cost beyond token count; tool selection accuracy is unrelated to how many tools are registered
+- B. Extra tools only slow down the tool itself when called, not the model's decision-making
+- C. A long, undifferentiated tool list degrades the model's own tool-selection accuracy — more near-duplicate options increase the chance of calling the wrong tool or filling in arguments incorrectly
 - D. Registering more tools always makes a model faster, since it has more options to try
 
 <details><summary>Answer</summary>
 
-**Correct: A.** [Progressive Tool Disclosure](/learn/context-engineering/progressive-tool-disclosure-in-depth) makes this the central argument: tool selection is a classification problem solved at inference time, and every additional near-duplicate option (like a `search_users` next to a `find_users`) is another way to pick wrong — a cost separate from and additional to the token cost of the schemas themselves. **B** ignores exactly the selection-accuracy dynamic the lesson demonstrates. **C** misattributes the cost — the tool's own execution speed is unrelated to how many *other* tools are registered; the cost shows up in the model's decision before any tool is even called. **D** has the relationship backwards; more options to disambiguate between generally slows and complicates decision-making, it doesn't speed it up.
+**Correct: C.** [Progressive Tool Disclosure](/learn/context-engineering/progressive-tool-disclosure-in-depth) makes this the central argument: tool selection is a classification problem solved at inference time, and every additional near-duplicate option (like a `search_users` next to a `find_users`) is another way to pick wrong — a cost separate from and additional to the token cost of the schemas themselves. **A** ignores exactly the selection-accuracy dynamic the lesson demonstrates. **B** misattributes the cost — the tool's own execution speed is unrelated to how many *other* tools are registered; the cost shows up in the model's decision before any tool is even called. **D** has the relationship backwards; more options to disambiguate between generally slows and complicates decision-making, it doesn't speed it up.
 
 </details>
 
@@ -117,14 +117,14 @@ In a retrieve-then-filter pipeline, why is a reranking step needed after initial
 
 At a million-token context window, does the lost-in-the-middle effect (reduced model attention to content in the middle of a long context) still apply?
 
-- A. Yes — a bigger window means a bigger absolute "middle" zone, so the effect doesn't disappear and may leave more total tokens sitting in the weakest-attention region
-- B. No — extremely large windows are specifically engineered to eliminate lost-in-the-middle effects
-- C. It only applies to windows under 50,000 tokens
-- D. It only matters if the content in the middle is retrieved rather than stuffed
+- A. No — extremely large windows are specifically engineered to eliminate lost-in-the-middle effects
+- B. It only applies to windows under 50,000 tokens
+- C. It only matters if the content in the middle is retrieved rather than stuffed
+- D. Yes — a bigger window means a bigger absolute "middle" zone, so the effect doesn't disappear and may leave more total tokens sitting in the weakest-attention region
 
 <details><summary>Answer</summary>
 
-**Correct: A.** [Strategies for Million-Token Windows](/learn/context-engineering/million-token-window-strategies) is direct about this: a larger window doesn't repeal lost-in-the-middle, it just means there's more room for content to fall into the zone where recall is weakest. This is exactly why the lesson recommends patterns like structured tables of contents and positional anchoring rather than treating the larger window as a fix in itself. **B** states the opposite of what the lesson establishes — a bigger container doesn't fix an attention pattern that isn't about container size. **C** invents a size threshold that isn't supported; [Lost in the Middle](/learn/context-engineering/lost-in-the-middle) describes the effect generally, and it doesn't switch off at large sizes. **D** confuses two separate issues — lost-in-the-middle is about position within whatever's in context, independent of whether that content arrived via stuffing or retrieval.
+**Correct: D.** [Strategies for Million-Token Windows](/learn/context-engineering/million-token-window-strategies) is direct about this: a larger window doesn't repeal lost-in-the-middle, it just means there's more room for content to fall into the zone where recall is weakest. This is exactly why the lesson recommends patterns like structured tables of contents and positional anchoring rather than treating the larger window as a fix in itself. **A** states the opposite of what the lesson establishes — a bigger container doesn't fix an attention pattern that isn't about container size. **B** invents a size threshold that isn't supported; [Lost in the Middle](/learn/context-engineering/lost-in-the-middle) describes the effect generally, and it doesn't switch off at large sizes. **C** confuses two separate issues — lost-in-the-middle is about position within whatever's in context, independent of whether that content arrived via stuffing or retrieval.
 
 </details>
 
@@ -147,14 +147,14 @@ Why does a multi-agent handoff pass a pointer (like `artifact://report/3`) rathe
 
 With a 1,200-token retrieval budget and 10 ranked candidate chunks whose sizes vary, why does a "walk the ranked list and keep checking past a chunk that doesn't fit" approach usually beat truncating the concatenated list at exactly 1,200 tokens?
 
-- A. Walking and skipping keeps every included chunk whole and intact, while flat truncation can cut a chunk mid-sentence and silently drop several lower-but-still-relevant chunks that would have fit had the process kept scanning
-- B. Both approaches always produce identical results, so the distinction doesn't matter in practice
+- A. Both approaches always produce identical results, so the distinction doesn't matter in practice
+- B. Walking and skipping keeps every included chunk whole and intact, while flat truncation can cut a chunk mid-sentence and silently drop several lower-but-still-relevant chunks that would have fit had the process kept scanning
 - C. Truncation is always faster, so the quality tradeoff is worth accepting
 - D. Walking and skipping ignores relevance ranking entirely and just picks chunks at random until the budget fills
 
 <details><summary>Answer</summary>
 
-**Correct: A.** [How Retrieval and Budget Interact](/learn/context-engineering/retrieval-budget-interaction) traces exactly this: flat truncation at a token count can slice partway through a chunk based purely on where the running total happens to cross the line, while a fill-to-budget walk that keeps scanning past a chunk that doesn't fit can seat a smaller, still-relevant chunk further down the list — and never splits a chunk in half. **B** is contradicted directly by the traced example, where the two methods produce different final selections. **C** trades away answer quality (a half-chunk that reads as complete but is missing its conclusion) for a speed difference that's typically negligible at this scale. **D** misdescribes the algorithm — it walks in ranked order and respects relevance; it doesn't randomize anything.
+**Correct: B.** [How Retrieval and Budget Interact](/learn/context-engineering/retrieval-budget-interaction) traces exactly this: flat truncation at a token count can slice partway through a chunk based purely on where the running total happens to cross the line, while a fill-to-budget walk that keeps scanning past a chunk that doesn't fit can seat a smaller, still-relevant chunk further down the list — and never splits a chunk in half. **A** is contradicted directly by the traced example, where the two methods produce different final selections. **C** trades away answer quality (a half-chunk that reads as complete but is missing its conclusion) for a speed difference that's typically negligible at this scale. **D** misdescribes the algorithm — it walks in ranked order and respects relevance; it doesn't randomize anything.
 
 </details>
 
@@ -162,14 +162,14 @@ With a 1,200-token retrieval budget and 10 ranked candidate chunks whose sizes v
 
 A team retrieves `top_k=25` chunks for every query "to be safe," reasoning that the model can just ignore whatever isn't relevant. What's the actual risk of this approach?
 
-- A. The model can't cleanly ignore irrelevant injected content — every extra chunk competes for attention with the ones that matter, diluting focus and adding cost without adding signal past the point where quality actually improves
-- B. There is no risk — more retrieved context is strictly better regardless of relevance, since irrelevant chunks are functionally invisible to the model
-- C. The only cost is a minor increase in latency; answer quality is unaffected by chunk count
+- A. There is no risk — more retrieved context is strictly better regardless of relevance, since irrelevant chunks are functionally invisible to the model
+- B. The only cost is a minor increase in latency; answer quality is unaffected by chunk count
+- C. The model can't cleanly ignore irrelevant injected content — every extra chunk competes for attention with the ones that matter, diluting focus and adding cost without adding signal past the point where quality actually improves
 - D. High top_k only matters for very small corpora, not large ones
 
 <details><summary>Answer</summary>
 
-**Correct: A.** [Over-Retrieval and Over-Stuffing](/learn/context-engineering/over-retrieval-and-stuffing-mistakes) names this directly: injected content isn't ignorable the way a skimmed search result is, and past a certain k, additional chunks are net-negative — more cost, more noise, no added signal. This connects to [Context Rot](/learn/context-engineering/context-rot), which documents how irrelevant tokens degrade quality, not just cost. **B** is precisely the false intuition the mistake is built on — "the model can just ignore it" doesn't hold in practice. **C** understates the risk; the lesson describes real quality symptoms (citing the wrong source, blending details from unrelated chunks) not just a latency cost. **D** has it backwards — the risk of over-retrieval scales with corpus size and chunk variety, not the other way around.
+**Correct: C.** [Over-Retrieval and Over-Stuffing](/learn/context-engineering/over-retrieval-and-stuffing-mistakes) names this directly: injected content isn't ignorable the way a skimmed search result is, and past a certain k, additional chunks are net-negative — more cost, more noise, no added signal. This connects to [Context Rot](/learn/context-engineering/context-rot), which documents how irrelevant tokens degrade quality, not just cost. **A** is precisely the false intuition the mistake is built on — "the model can just ignore it" doesn't hold in practice. **B** understates the risk; the lesson describes real quality symptoms (citing the wrong source, blending details from unrelated chunks) not just a latency cost. **D** has it backwards — the risk of over-retrieval scales with corpus size and chunk variety, not the other way around.
 
 </details>
 

@@ -13,18 +13,18 @@ Six questions covering the field-design decisions from this module. Work through
 A field must always appear as a key in the output object — your downstream code does positional/fixed-shape access and can't tolerate a missing key — but the value itself may legitimately be unknown for some records. Which declaration is correct?
 
 **A.** Leave the field out of `required`, type it as a plain string.
-**B.** Make it required, type it as `[string, null]` (nullable, required).
-**C.** Make it required, default it to an empty string when unknown.
-**D.** Make it both optional and nullable.
+**B.** Make it required, default it to an empty string when unknown.
+**C.** Make it both optional and nullable.
+**D.** Make it required, type it as `[string, null]` (nullable, required).
 
 <details><summary>Answer</summary>
 
-**Correct: B.** Required-and-nullable is exactly "always a key, sometimes null" — the two properties you need are independent, and this is the one combination that gets both right.
+**Correct: D.** Required-and-nullable is exactly "always a key, sometimes null" — the two properties you need are independent, and this is the one combination that gets both right.
 
 - **A** is wrong: leaving the field out of `required` means it can be *absent*, which is the opposite of "must always appear as a key."
-- **B** is correct.
-- **C** is wrong: an empty string is not the same signal as an explicit null, and code that checks for `null` won't catch it — see [The Optional-vs-Nullable Bugs](/learn/structured-outputs/optional-vs-nullable-mistakes).
-- **D** is wrong: making it optional reopens the possibility of the key being absent, which the scenario explicitly rules out.
+- **D** is correct.
+- **B** is wrong: an empty string is not the same signal as an explicit null, and code that checks for `null` won't catch it — see [The Optional-vs-Nullable Bugs](/learn/structured-outputs/optional-vs-nullable-mistakes).
+- **C** is wrong: making it optional reopens the possibility of the key being absent, which the scenario explicitly rules out.
 
 </details>
 
@@ -54,17 +54,17 @@ The fix is adding an explicit `"other"` value to the enum, paired with a nullabl
 
 Why does a discriminated (tagged) union behave more reliably than an untagged union of the same underlying shapes?
 
-**A.** Tagged unions are validated faster, which reduces the chance of a timeout mid-parse.
-**B.** The tag is checked first and selects one specific schema to validate against, so there's no risk of the object matching the wrong branch by coincidence.
+**A.** The tag is checked first and selects one specific schema to validate against, so there's no risk of the object matching the wrong branch by coincidence.
+**B.** Tagged unions are validated faster, which reduces the chance of a timeout mid-parse.
 **C.** Untagged unions can't be expressed in JSON Schema at all, so the comparison doesn't apply.
 **D.** Tagged unions don't allow `additionalProperties: false`, so they're actually less strict.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** The discriminator removes the guessing — the parser doesn't need to try each shape and hope exactly one fits, because the tag tells it which one applies before it looks at anything else.
+**Correct: A.** The discriminator removes the guessing — the parser doesn't need to try each shape and hope exactly one fits, because the tag tells it which one applies before it looks at anything else.
 
-- **A** is wrong: the reliability difference is about correctness of the match, not raw performance.
-- **B** is correct.
+- **B** is wrong: the reliability difference is about correctness of the match, not raw performance.
+- **A** is correct.
 - **C** is wrong: `oneOf` expresses an untagged union just fine in JSON Schema — it's valid, just ambiguous when branches overlap.
 - **D** is wrong: closing each variant with `additionalProperties: false` is fully compatible with — and recommended alongside — a discriminated union; see [An Event Stream as a Discriminated Union](/learn/structured-outputs/event-log-discriminated-union-example).
 
@@ -95,17 +95,17 @@ You're modeling a payment amount: it must always be present, must never be negat
 Which of these is the "stringly-typed" antipattern from [Schema-Shape Antipatterns](/learn/structured-outputs/schema-shape-antipatterns)?
 
 **A.** A date field typed as a string, with a description specifying ISO-8601 format.
-**B.** A quantity field typed as `"quantity": "5"` — a number, quoted as a string, in the schema's type declaration.
-**C.** An enum field where every value is a lowercase string.
+**B.** An enum field where every value is a lowercase string.
+**C.** A quantity field typed as `"quantity": "5"` — a number, quoted as a string, in the schema's type declaration.
 **D.** A discriminator field typed as `Literal["click"]`.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** Typing a genuinely numeric value as a string throws away the one guarantee that would have caught a malformed value — `"quantity": "five"` or `"quantity": "5 units"` both pass a string-typed schema without complaint.
+**Correct: C.** Typing a genuinely numeric value as a string throws away the one guarantee that would have caught a malformed value — `"quantity": "five"` or `"quantity": "5 units"` both pass a string-typed schema without complaint.
 
 - **A** is wrong: JSON Schema has no native date type, so a described, format-constrained string is the *correct* choice for dates, not the antipattern — see [Field Descriptions Are Inline Prompts](/learn/structured-outputs/field-descriptions-as-prompts).
-- **B** is correct.
-- **C** is wrong: enum values are strings by nature in JSON Schema — that's not a type mismatch, it's how enums are expressed.
+- **C** is correct.
+- **B** is wrong: enum values are strings by nature in JSON Schema — that's not a type mismatch, it's how enums are expressed.
 - **D** is wrong: a literal-typed discriminator is the correct, recommended pattern for tagged unions, not an antipattern.
 
 </details>

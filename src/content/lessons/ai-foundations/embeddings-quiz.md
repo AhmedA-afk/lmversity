@@ -2,7 +2,7 @@
 title: "Embeddings: Geometry of Meaning"
 track: "ai-foundations"
 status: live
-summary: "A six-question self-check on embedding geometry — ranking vectors by cosine similarity, why magnitude gets divided out, what dense vectors buy over one-hot, and the trap of treatin"
+summary: "You've read about embeddings; this is where you find out whether the geometry actually clicked."
 duration: "14 min read"
 ---
 
@@ -55,17 +55,17 @@ You'll get `A: dot=0.5, cosine=1.0`, `B: dot=100.0, cosine=0.995`, `C: dot=2.0, 
 A retrieval system embeds document X as vector `v`. A bug duplicates X's text before embedding, and — because of how the model pools token vectors — this happens to scale the result to roughly `2v`: same direction, twice the length. A fixed query `q` is compared against both `v` and `2v` using cosine similarity. What happens to the score?
 
 - A. It doubles, since the vector's magnitude doubled
-- B. It stays exactly the same
-- C. It depends on the query's own magnitude — you can't say without knowing `‖q‖`
+- B. It depends on the query's own magnitude — you can't say without knowing `‖q‖`
+- C. It stays exactly the same
 - D. It becomes undefined, because cosine similarity only works on unit vectors
 
 <details><summary>Answer</summary>
 
-**Correct: B.** Cosine similarity divides by *both* vectors' norms: `cos(q, kv) = (q·kv) / (‖q‖·‖kv‖) = k(q·v) / (‖q‖·k‖v‖)`. The `k` cancels exactly, for any positive scalar `k`. So `cos(q, v) = cos(q, 2v)`, full stop — direction is all that survives, length is divided out. This is the mechanism behind "cosine ignores magnitude": it isn't a rule someone imposed, it's algebra falling out of the formula.
+**Correct: C.** Cosine similarity divides by *both* vectors' norms: `cos(q, kv) = (q·kv) / (‖q‖·‖kv‖) = k(q·v) / (‖q‖·k‖v‖)`. The `k` cancels exactly, for any positive scalar `k`. So `cos(q, v) = cos(q, 2v)`, full stop — direction is all that survives, length is divided out. This is the mechanism behind "cosine ignores magnitude": it isn't a rule someone imposed, it's algebra falling out of the formula.
 
 **A** is the natural but backwards intuition — treating cosine like a dot product, where doubling one vector really does double the raw score. Cosine is dot product *after* normalizing away exactly that effect, so it's immune to it by construction.
 
-**C** sounds appropriately cautious, which is what makes it a good trap — but it's wrong for a specific reason: `‖q‖` appears in the denominator identically whether you're comparing against `v` or `2v`, so it cancels out of the *comparison* even though it affects the absolute score. The equality `cos(q,v) = cos(q,2v)` holds no matter what `q` is.
+**B** sounds appropriately cautious, which is what makes it a good trap — but it's wrong for a specific reason: `‖q‖` appears in the denominator identically whether you're comparing against `v` or `2v`, so it cancels out of the *comparison* even though it affects the absolute score. The equality `cos(q,v) = cos(q,2v)` holds no matter what `q` is.
 
 **D** confuses "cosine can be computed on unit vectors" with "cosine requires unit vectors." The formula normalizes internally — that's the whole point. It's defined for any pair of nonzero vectors of any length.
 
@@ -117,20 +117,20 @@ You inspect a trained word-embedding model. Dimension 47 has high positive value
 
 You have a fixed number of randomly scattered points, and you keep increasing the number of dimensions each point lives in. For a random query point, what tends to happen to the *contrast* between its nearest neighbor's distance and its farthest neighbor's distance?
 
-- A. The gap tends to shrink — in high dimensions, distances to a random query start to concentrate, so "nearest" and "farthest" become relatively less distinguishable using raw distance alone
-- B. The gap tends to grow, making nearest-neighbor search easier as dimensions increase
-- C. Dimensionality has no systematic effect on the spread of distances
-- D. The nearest neighbor becomes undefined once the number of dimensions exceeds the number of points
+- A. The gap tends to grow, making nearest-neighbor search easier as dimensions increase
+- B. Dimensionality has no systematic effect on the spread of distances
+- C. The nearest neighbor becomes undefined once the number of dimensions exceeds the number of points
+- D. The gap tends to shrink — in high dimensions, distances to a random query start to concentrate, so "nearest" and "farthest" become relatively less distinguishable using raw distance alone
 
 <details><summary>Answer</summary>
 
-**Correct: A.** This is the "curse of dimensionality" effect on distance: as dimensions pile up, distances between random points concentrate around a similar value, so the ratio of farthest-to-nearest shrinks toward 1. Raw Euclidean distance gets progressively less discriminative as a plain "how similar are these" signal in high dimensions — one real reason retrieval systems lean on cosine similarity and on structure the model actually learned (not just raw distance in an arbitrary high-dimensional space) to get useful rankings. [high-dimensional-spaces](/learn/maths-foundations/high-dimensional-spaces) works through this more carefully, and it's part of why [cosine-similarity-angular-distance-embedding-retrieval](/learn/maths-foundations/cosine-similarity-angular-distance-embedding-retrieval) is the default tool for embedding retrieval rather than raw Euclidean distance.
+**Correct: D.** This is the "curse of dimensionality" effect on distance: as dimensions pile up, distances between random points concentrate around a similar value, so the ratio of farthest-to-nearest shrinks toward 1. Raw Euclidean distance gets progressively less discriminative as a plain "how similar are these" signal in high dimensions — one real reason retrieval systems lean on cosine similarity and on structure the model actually learned (not just raw distance in an arbitrary high-dimensional space) to get useful rankings. [high-dimensional-spaces](/learn/maths-foundations/high-dimensional-spaces) works through this more carefully, and it's part of why [cosine-similarity-angular-distance-embedding-retrieval](/learn/maths-foundations/cosine-similarity-angular-distance-embedding-retrieval) is the default tool for embedding retrieval rather than raw Euclidean distance.
 
-**B** has the direction backwards — it's the mirror image of what actually happens and matches nobody's intuition once you've seen the math, but it's a natural guess if you've never sat with the concentration-of-measure result.
+**A** has the direction backwards — it's the mirror image of what actually happens and matches nobody's intuition once you've seen the math, but it's a natural guess if you've never sat with the concentration-of-measure result.
 
-**C** is the "nothing to see here" answer — tempting if dimensionality feels like it should be a neutral parameter, but it isn't; it systematically reshapes the geometry.
+**B** is the "nothing to see here" answer — tempting if dimensionality feels like it should be a neutral parameter, but it isn't; it systematically reshapes the geometry.
 
-**D** confuses two different problems. Needing at least as many dimensions as points to fit them *exactly* on a specific structure (like a hyperplane) is a different question from whether a nearest neighbor exists — nearest neighbor is always well-defined for any finite set of points in any number of dimensions, as long as no two points are literally identical.
+**C** confuses two different problems. Needing at least as many dimensions as points to fit them *exactly* on a specific structure (like a hyperplane) is a different question from whether a nearest neighbor exists — nearest neighbor is always well-defined for any finite set of points in any number of dimensions, as long as no two points are literally identical.
 
 </details>
 

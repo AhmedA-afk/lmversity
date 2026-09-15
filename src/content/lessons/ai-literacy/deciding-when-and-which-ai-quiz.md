@@ -27,14 +27,14 @@ Your manager asks: "What's the latest on the merger you've been tracking — did
 
 An HR colleague wants to summarize a stack of performance reviews — names, salary details, disciplinary notes — and reaches for the free AI chatbot she uses for everything else, to save an afternoon of work.
 
-- **A.** Go ahead — it's just for internal use, so where the data goes doesn't matter.
-- **B.** Pause before pasting anything in. Check whether the organization has an approved tool with a data-handling agreement, or strip identifying details first — a free consumer chatbot's terms often allow using your input to improve the model, which is a real exposure for salary and disciplinary data.
+- **A.** Pause before pasting anything in. Check whether the organization has an approved tool with a data-handling agreement, or strip identifying details first — a free consumer chatbot's terms often allow using your input to improve the model, which is a real exposure for salary and disciplinary data.
+- **B.** Go ahead — it's just for internal use, so where the data goes doesn't matter.
 - **C.** Paste it in, then delete the input afterward — deleting it removes the risk.
 - **D.** Skip AI entirely for this task — anything touching personal information should always be done by hand.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** This is the "avoid or use carefully" case, not a flat yes or a flat no. The right move is checking what you're actually agreeing to — an enterprise tier with a real data agreement, an on-device option, or just redacting names and numbers before you paste anything — see [what not to paste into AI](/learn/ai-literacy/what-not-to-paste-into-ai) for the fuller checklist. **A** is the trap: "internal use" describes your intent, not what the vendor's terms actually permit once the text leaves your machine. **C** assumes deletion is retroactive — by the time you delete your input, it's already been transmitted and possibly logged or used; you can't un-send it. **D** overcorrects — a properly scoped tool can absolutely help here, so banning AI outright throws away a real time-saver over a solvable problem.
+**Correct: A.** This is the "avoid or use carefully" case, not a flat yes or a flat no. The right move is checking what you're actually agreeing to — an enterprise tier with a real data agreement, an on-device option, or just redacting names and numbers before you paste anything — see [what not to paste into AI](/learn/ai-literacy/what-not-to-paste-into-ai) for the fuller checklist. **B** is the trap: "internal use" describes your intent, not what the vendor's terms actually permit once the text leaves your machine. **C** assumes deletion is retroactive — by the time you delete your input, it's already been transmitted and possibly logged or used; you can't un-send it. **D** overcorrects — a properly scoped tool can absolutely help here, so banning AI outright throws away a real time-saver over a solvable problem.
 
 </details>
 
@@ -42,14 +42,14 @@ An HR colleague wants to summarize a stack of performance reviews — names, sal
 
 You're organizing a neighborhood bake sale and need fifteen punny name ideas plus a short, upbeat flyer blurb. There's no fact to get wrong here — it's pure wordplay and tone.
 
-- **A.** This is a great fit for a general-purpose AI assistant — ask for a big batch of options, skim for the ones that land, and iterate on tone. Verification here is just "do I like this," not fact-checking.
-- **B.** Skip AI — creative writing needs a human touch AI can't fake.
+- **A.** Skip AI — creative writing needs a human touch AI can't fake.
+- **B.** This is a great fit for a general-purpose AI assistant — ask for a big batch of options, skim for the ones that land, and iterate on tone. Verification here is just "do I like this," not fact-checking.
 - **C.** Use AI, but treat every pun and phrase as a claim you need to verify before using it.
 - **D.** This is too trivial to bother with AI — save it for harder problems.
 
 <details><summary>Answer</summary>
 
-**Correct: A.** This is the case the module keeps pointing at as a genuinely strong fit: high volume of options, low cost if a few are bad, and no factual claim to be wrong about. You're the entire quality bar. **B** overstates AI's limits — brainstorming and wordplay are exactly where it's fast and useful, not a weakness to route around. **C** borrows the [verification](/learn/ai-literacy/uncertainty-and-verification) mindset from a domain where it doesn't apply — there's nothing here that can be "true" or "false," so treating puns like facts just adds pointless friction. **D** has it backwards: low-stakes, high-volume tasks are precisely where the time saved is worth the most relative to the (near-zero) risk.
+**Correct: B.** This is the case the module keeps pointing at as a genuinely strong fit: high volume of options, low cost if a few are bad, and no factual claim to be wrong about. You're the entire quality bar. **A** overstates AI's limits — brainstorming and wordplay are exactly where it's fast and useful, not a weakness to route around. **C** borrows the [verification](/learn/ai-literacy/uncertainty-and-verification) mindset from a domain where it doesn't apply — there's nothing here that can be "true" or "false," so treating puns like facts just adds pointless friction. **D** has it backwards: low-stakes, high-volume tasks are precisely where the time saved is worth the most relative to the (near-zero) risk.
 
 </details>
 
@@ -59,12 +59,12 @@ A friend pastes their recent bloodwork numbers into an AI chatbot and asks wheth
 
 - **A.** Fine to trust it — AI has absorbed huge amounts of medical literature, probably more than one rushed doctor has memorized.
 - **B.** Never use AI for anything health-related, under any circumstance.
-- **C.** Use it, and just ask "are you sure?" — if it confirms, that's a good second opinion.
-- **D.** AI can be a reasonable first pass — help decode unfamiliar terms, draft questions for the appointment — but this is high-stakes and hard to verify from the outside, so it shouldn't replace the doctor or be treated as the final word on the numbers.
+- **C.** AI can be a reasonable first pass — help decode unfamiliar terms, draft questions for the appointment — but this is high-stakes and hard to verify from the outside, so it shouldn't replace the doctor or be treated as the final word on the numbers.
+- **D.** Use it, and just ask "are you sure?" — if it confirms, that's a good second opinion.
 
 <details><summary>Answer</summary>
 
-**Correct: D.** High-stakes doesn't mean "never touch it," it means the bar for trusting the output unverified gets much higher — sometimes high enough that you shouldn't rely on it as the final answer at all. Using AI to prep smarter questions for the doctor is fine; using it *instead of* the doctor isn't, because it has none of the context (history, other symptoms, an actual exam) that interpretation of bloodwork depends on. **A** mistakes broad training data for correct judgment about one specific person's numbers. **B** overcorrects — it throws away a genuinely useful prep step over a risk that a narrower use avoids. **C** is a trap that shows up constantly: asking a model to confirm itself isn't independent verification, it's just asking the same source the same question again, and models tend to agree rather than push back. See [the verification checklist](/learn/ai-literacy/the-verification-checklist) for what actual verification looks like instead.
+**Correct: C.** High-stakes doesn't mean "never touch it," it means the bar for trusting the output unverified gets much higher — sometimes high enough that you shouldn't rely on it as the final answer at all. Using AI to prep smarter questions for the doctor is fine; using it *instead of* the doctor isn't, because it has none of the context (history, other symptoms, an actual exam) that interpretation of bloodwork depends on. **A** mistakes broad training data for correct judgment about one specific person's numbers. **B** overcorrects — it throws away a genuinely useful prep step over a risk that a narrower use avoids. **D** is a trap that shows up constantly: asking a model to confirm itself isn't independent verification, it's just asking the same source the same question again, and models tend to agree rather than push back. See [the verification checklist](/learn/ai-literacy/the-verification-checklist) for what actual verification looks like instead.
 
 </details>
 
@@ -73,13 +73,13 @@ A friend pastes their recent bloodwork numbers into an AI chatbot and asks wheth
 Every Monday you take a raw export of 500 sales rows and retype it into a fixed template — same three columns, same rules, every single week. Lately you've been opening a chat AI tab and pasting in a batch at a time, asking it to reformat each chunk.
 
 - **A.** Keep doing what you're doing — chat AI is the right tool for any reformatting job.
-- **B.** This is a good candidate to actually automate — a spreadsheet formula, a template, or a simple "do this every time" tool — rather than re-prompting a chat assistant by hand each week. The rules are fixed and the task repeats identically; that's what automation is for. A chat tool earns its keep on a task that's different each time, not one that's the same every time.
-- **C.** Stop using AI for this — repetitive data work should always be done by hand to avoid mistakes.
-- **D.** Ask the AI to remember the rules permanently so you never have to explain them again.
+- **B.** Stop using AI for this — repetitive data work should always be done by hand to avoid mistakes.
+- **C.** Ask the AI to remember the rules permanently so you never have to explain them again.
+- **D.** This is a good candidate to actually automate — a spreadsheet formula, a template, or a simple "do this every time" tool — rather than re-prompting a chat assistant by hand each week. The rules are fixed and the task repeats identically; that's what automation is for. A chat tool earns its keep on a task that's different each time, not one that's the same every time.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** This is the [task-vs-automation](/learn/ai-literacy/task-or-automation) line: a chat assistant is well-suited to something that changes shape every time you do it, but a fixed, identical, recurring transformation is exactly what a formula, template, or small automation handles more reliably — and it does it without you sitting in the loop re-explaining the rules weekly. **A** ignores that reliability and repeatability, not conversational flexibility, are what this job actually needs. **C** doesn't reduce errors — manual retyping is usually where the errors come from — and it throws away a solvable, worth-automating task. **D** misses that most chat tools don't retain memory across sessions by default, and even if one did, "remembering rules" doesn't change the underlying mismatch: this needs a deterministic process, not a conversation.
+**Correct: D.** This is the [task-vs-automation](/learn/ai-literacy/task-or-automation) line: a chat assistant is well-suited to something that changes shape every time you do it, but a fixed, identical, recurring transformation is exactly what a formula, template, or small automation handles more reliably — and it does it without you sitting in the loop re-explaining the rules weekly. **A** ignores that reliability and repeatability, not conversational flexibility, are what this job actually needs. **B** doesn't reduce errors — manual retyping is usually where the errors come from — and it throws away a solvable, worth-automating task. **C** misses that most chat tools don't retain memory across sessions by default, and even if one did, "remembering rules" doesn't change the underlying mismatch: this needs a deterministic process, not a conversation.
 
 </details>
 
@@ -87,14 +87,14 @@ Every Monday you take a raw export of 500 sales rows and retype it into a fixed 
 
 You need your local DMV's exact current phone number and hours before you drive over. You open an AI chatbot and ask it directly.
 
-- **A.** Good move — AI is faster than searching yourself and gives you a clean, direct answer.
-- **B.** Better to check the DMV's official site or a maps listing directly. This is a simple lookup with exactly one correct, verifiable answer, and a generative model can state a wrong or outdated number with the same confident tone as a correct one — [AI is not a search engine](/learn/ai-literacy/ai-is-not-a-search-engine), it's a text predictor, and for facts like this the primary source is faster to trust and just as fast to reach.
+- **A.** Better to check the DMV's official site or a maps listing directly. This is a simple lookup with exactly one correct, verifiable answer, and a generative model can state a wrong or outdated number with the same confident tone as a correct one — [AI is not a search engine](/learn/ai-literacy/ai-is-not-a-search-engine), it's a text predictor, and for facts like this the primary source is faster to trust and just as fast to reach.
+- **B.** Good move — AI is faster than searching yourself and gives you a clean, direct answer.
 - **C.** Ask the AI, then ask it "are you sure that's correct?" as your verification step.
 - **D.** Avoid AI and avoid searching online too — call a friend who might know instead.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** When there's a single authoritative source and an exact answer, going straight to that source beats asking a model to reconstruct it from patterns in its training data — hours and phone numbers change, and nothing in a fluent-sounding answer tells you whether it's current. **A** confuses speed with correctness; a wrong answer delivered instantly is still wrong. **C** is the same false-verification trap as questions 1 and 4 — asking the same model to confirm itself isn't an independent check, it's just a second guess from the same source. **D** overcorrects past the point that matters: the issue isn't digital tools in general, it's using a generative model specifically for something that has one exact, checkable answer sitting on an official page.
+**Correct: A.** When there's a single authoritative source and an exact answer, going straight to that source beats asking a model to reconstruct it from patterns in its training data — hours and phone numbers change, and nothing in a fluent-sounding answer tells you whether it's current. **B** confuses speed with correctness; a wrong answer delivered instantly is still wrong. **C** is the same false-verification trap as questions 1 and 4 — asking the same model to confirm itself isn't an independent check, it's just a second guess from the same source. **D** overcorrects past the point that matters: the issue isn't digital tools in general, it's using a generative model specifically for something that has one exact, checkable answer sitting on an official page.
 
 </details>
 

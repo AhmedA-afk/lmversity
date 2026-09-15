@@ -2,7 +2,7 @@
 title: "Generalization: Will It Hold Up?"
 track: "ai-foundations"
 status: live
-summary: "A six-question self-check on reading train/validation gaps, spotting two different flavors of data leakage, and understanding why repeatedly checking a test set quietly destroys it"
+summary: "You can't tell whether a model will hold up in the real world by staring at its architecture — you read the gap between training and validation error, and you make sure nothing leaked across that gap before you trust it."
 duration: "15 min read"
 ---
 

@@ -39,16 +39,16 @@ D. Semantic failure; ground the `id` field against a source of truth before proc
 
 A response fails validation only because a required field is truncated mid-string — a syntactic issue. Instead of trying anything else first, the team's repair code immediately opens a fresh model call with the validation error attached. What's the mistake?
 
-A. There's no mistake — re-asking with the specific error is always the correct first move.
-B. It skipped rung one (deterministic fixups); a truncated string closes with a free bracket-closer and never needed a model call at all.
+A. It skipped rung one (deterministic fixups); a truncated string closes with a free bracket-closer and never needed a model call at all.
+B. There's no mistake — re-asking with the specific error is always the correct first move.
 C. It should have skipped straight to constrained regeneration instead, since that rung is the most reliable.
 D. Re-asking is never appropriate for a syntactic failure, only for structural ones.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [The Repair Ladder](/learn/structured-outputs/auto-repair-strategies) is explicit that you climb only as far as needed — a syntactic truncation is exactly what a deterministic, free fixup resolves, and reaching for a model call first pays a real cost for something rung one likely solves in milliseconds.
+**Correct: A.** [The Repair Ladder](/learn/structured-outputs/auto-repair-strategies) is explicit that you climb only as far as needed — a syntactic truncation is exactly what a deterministic, free fixup resolves, and reaching for a model call first pays a real cost for something rung one likely solves in milliseconds.
 
-**A** treats a habit as a rule — re-asking is a reasonable *second* move, not an unconditional first one, once cheaper options are ruled out.
+**B** treats a habit as a rule — re-asking is a reasonable *second* move, not an unconditional first one, once cheaper options are ruled out.
 
 **C** picks the most expensive rung for a cheaply-fixable problem, the exact inefficiency the ladder is built to prevent — reliability isn't the only variable, cost is too, and rung one is both reliable and free for this failure shape.
 

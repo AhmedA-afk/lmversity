@@ -2,7 +2,7 @@
 title: "Quiz: Building the Service"
 track: "python-data-apis"
 status: live
-summary: "Six scenario-based MCQs on testing a Python AI service — pure functions, mocking for determinism, where validation lives in the module layout, injected vs imported config, and whic"
+summary: "You've seen the shape of a well-structured service — a pure core, a client you can swap out, config that gets handed in rather than reached for."
 duration: "12 min read"
 ---
 

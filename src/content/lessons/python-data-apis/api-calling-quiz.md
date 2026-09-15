@@ -60,17 +60,17 @@ def call_api(method, url, **kwargs):
 It retries on *any* status code 400 or above, with exponential backoff. What's actually wrong with this, and what's the fix?
 
 - A. Nothing — retrying with exponential backoff on any failure is the standard safe pattern.
-- B. It retries 400/401/403/404 the same as 429/500, which just fails identically three times and burns your backoff window for nothing. Worse: if `method` is `POST` and the *response* got lost after the server already created the resource, blindly retrying can create it twice. The fix is to only retry on 429 and 5xx (plus network-level timeouts), and to only retry non-idempotent methods when you're passing an idempotency key the server can use to dedupe.
-- C. The real problem is it should also retry on 200, just to be safe.
+- B. The real problem is it should also retry on 200, just to be safe.
+- C. It retries 400/401/403/404 the same as 429/500, which just fails identically three times and burns your backoff window for nothing. Worse: if `method` is `POST` and the *response* got lost after the server already created the resource, blindly retrying can create it twice. The fix is to only retry on 429 and 5xx (plus network-level timeouts), and to only retry non-idempotent methods when you're passing an idempotency key the server can use to dedupe.
 - D. `time.sleep` is the bug — you should never sleep inside a retry loop; fail immediately and make the caller retry instead.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** "Safe to retry" depends on two independent things: whether the *error* is transient (429/5xx usually are; 4xx client errors usually aren't — the request itself is wrong and retrying sends the identical wrong request three times), and whether the *operation* is idempotent (a `GET` is safe to repeat; a `POST` that creates an order is not, unless the API gives you a way to dedupe, like an idempotency key). This function ignores both distinctions.
+**Correct: C.** "Safe to retry" depends on two independent things: whether the *error* is transient (429/5xx usually are; 4xx client errors usually aren't — the request itself is wrong and retrying sends the identical wrong request three times), and whether the *operation* is idempotent (a `GET` is safe to repeat; a `POST` that creates an order is not, unless the API gives you a way to dedupe, like an idempotency key). This function ignores both distinctions.
 
 **A** is the naive version of "just retry on failure," and it's exactly what breaks in production: a 401 doesn't fix itself in 1, 2, then 4 seconds — you've just added 7 seconds of latency to a request that was always going to fail, and if it's a POST, you may not even know whether the *first* attempt actually succeeded server-side before the response was lost.
 
-**C** doesn't make sense as stated — retrying a request that already succeeded wastes a call and, for a non-idempotent one, can duplicate a real side effect (charging a card twice, creating a second row). There's no scenario where retrying a 200 helps you.
+**B** doesn't make sense as stated — retrying a request that already succeeded wastes a call and, for a non-idempotent one, can duplicate a real side effect (charging a card twice, creating a second row). There's no scenario where retrying a 200 helps you.
 
 **D** gets the direction backwards. The sleep *is* the backoff — that's the correct, standard part of this pattern. The bug isn't that you wait between attempts; it's *which* status codes you decide are worth waiting for.
 
@@ -94,19 +94,19 @@ You call `GET /users?page=1` and get back:
 What pagination style is this, and how do you correctly fetch the next page?
 
 - A. Offset-based pagination — just call `?page=2` next.
-- B. Cursor-based pagination — take the opaque `next_cursor` value and pass it back verbatim as a parameter (e.g. `?cursor=eyJpZCI6MTAwfQ==`) on the next request. You keep looping until `has_more` is `false`; you never compute a page number yourself.
-- C. Link-header pagination — check the HTTP response headers for a `Link: <...>; rel="next"` entry and follow that URL.
-- D. This is offset pagination wearing a disguise — base64-decode the string and you'll find it's just a row offset underneath.
+- B. Link-header pagination — check the HTTP response headers for a `Link: <...>; rel="next"` entry and follow that URL.
+- C. This is offset pagination wearing a disguise — base64-decode the string and you'll find it's just a row offset underneath.
+- D. Cursor-based pagination — take the opaque `next_cursor` value and pass it back verbatim as a parameter (e.g. `?cursor=eyJpZCI6MTAwfQ==`) on the next request. You keep looping until `has_more` is `false`; you never compute a page number yourself.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** The tell is `next_cursor` plus `has_more`: the server is handing you a pointer to resume from, not a page count. Your job is to treat it as opaque — pass it back exactly as given — and stop when `has_more` is `false`. This is the more general reference for the whole family: [Pagination patterns](/learn/python-data-apis/pagination-patterns).
+**Correct: D.** The tell is `next_cursor` plus `has_more`: the server is handing you a pointer to resume from, not a page count. Your job is to treat it as opaque — pass it back exactly as given — and stop when `has_more` is `false`. This is the more general reference for the whole family: [Pagination patterns](/learn/python-data-apis/pagination-patterns).
 
 **A** is a real pagination style — you'll see `page`/`per_page` or `offset`/`limit` params elsewhere — but the signal here is different. There's no page number anywhere in this response for you to increment; the server is explicitly not giving you one, and constructing `page=2` yourself will either be ignored or hit an endpoint that doesn't support it.
 
-**C** is also a real style (it's how the GitHub API works), but the pagination info there lives in HTTP response *headers*, not the JSON body. If you're grabbing `response.headers['Link']`, you're doing link-header pagination; this example puts everything in the body instead, so that's not what's happening here.
+**B** is also a real style (it's how the GitHub API works), but the pagination info there lives in HTTP response *headers*, not the JSON body. If you're grabbing `response.headers['Link']`, you're doing link-header pagination; this example puts everything in the body instead, so that's not what's happening here.
 
-**D** is the tempting trap precisely because cursors are often base64-encoded, so it *looks* decodable. But the entire point of an opaque cursor is that the server can encode whatever it wants inside it — an ID, a timestamp, a signed pointer into an index — and change that encoding at any time without breaking clients, as long as clients keep treating it as opaque. Code that decodes and reconstructs it will work today and quietly break the day the API team changes the internal format.
+**C** is the tempting trap precisely because cursors are often base64-encoded, so it *looks* decodable. But the entire point of an opaque cursor is that the server can encode whatever it wants inside it — an ID, a timestamp, a signed pointer into an index — and change that encoding at any time without breaking clients, as long as clients keep treating it as opaque. Code that decodes and reconstructs it will work today and quietly break the day the API team changes the internal format.
 
 </details>
 

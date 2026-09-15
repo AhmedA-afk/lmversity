@@ -1,6 +1,6 @@
 # Acquisition & practice family audit — mechanical pass
 
-Generated 2026-09-15T06:53:10.339Z by `scripts/audit-families.mjs`.
+Generated 2026-09-15T07:14:02.166Z by `scripts/audit-families.mjs`.
 Structural checks only; originality/correctness are scored in the review pass.
 
 ## Findings
@@ -11,7 +11,7 @@ Structural checks only; originality/correctness are scored in the review pass.
 - **Interview (7)**: 7/7 topics have a follow-up prompt on every question plus a weak-vs-strong rubric.
 - **Scenarios (6)**: ~451 words avg; missing sections: none.
 - **Centralized practice banks**: 48 questions across 6 tracks, 48 total lesson links.
-- **Lesson quiz pages (83 files, 603 questions)**: all questions carry a marked correct answer; 0 duplicate stems corpus-wide; correct-answer positions skew B 66%, C 19%, A 11%, D 3%; 11 files have answer blocks that don't discuss every option.
+- **Lesson quiz pages (83 files, 603 questions)**: all questions carry a marked correct answer; 0 duplicate stems corpus-wide; correct-answer positions skew B 41%, C 22%, A 19%, D 17%; 0 files have answer blocks that don't discuss every option.
 - **Worked examples (29)**: 0 flagged — every file has runnable code and an inspectable outcome.
 - **Cheatsheets (48)**: 1 flagged for scanability/length.
 - **Common-mistake pages (24)**: 1 flagged; the symptom→cause→fix pattern holds elsewhere.
@@ -22,8 +22,8 @@ Structural checks only; originality/correctness are scored in the review pass.
 2. ~~Scenario depth pass~~ — **done**: constraints/options/postmortem added to all six.
 3. ~~Interview follow-ups + rubric~~ — **done**: follow-up prompt per question + "How to score your answers" rubric per topic.
 4. ~~Guide in-body links~~ — **done**: every guide now links into the curriculum from body prose; `why-there-is-no-certificate` links to `/learn`.
-5. **Quiz answer-position rebalance** — 66% of correct answers sit at B across 603 lesson-quiz questions; redistribute when files are next touched.
-6. **Per-option rationale gaps** — 11 quiz files where some answers state a letter without walking the options.
+5. **Quiz answer-position rebalance** — 41% of correct answers sit at B across 603 lesson-quiz questions (was ~66% B before the automated rebalance; residual skew is in questions whose rationale references options by bare letter — fix those when files are next edited by hand).
+6. **Per-option rationale gaps** — 0 quiz files where some answers state a letter without walking the options.
 
 ## Straight answers (29)
 
@@ -146,7 +146,7 @@ Structural checks only; originality/correctness are scored in the review pass.
 | context-engineering/budgeting-and-observability-quiz | 12 | 4/4/4/4/4/4/4/4/4/4/4/4 | 12 | 12 | — |
 | context-engineering/compaction-memory-quiz | 12 | 4/4/4/4/4/4/4/4/4/4/4/4 | 12 | 12 | — |
 | context-engineering/failure-modes-quiz | 12 | 4/4/4/4/4/4/4/4/4/4/4/4 | 12 | 12 | — |
-| context-engineering/foundations-quiz | 12 | 4/4/4/4/4/4/4/4/4/4/4/4 | 12 | 10 | 2 answer block(s) don't discuss every option |
+| context-engineering/foundations-quiz | 12 | 4/4/4/4/4/4/4/4/4/4/4/4 | 12 | 12 | — |
 | context-engineering/multi-agent-and-capstone-quiz | 6 | 4/4/4/4/4/4 | 6 | 6 | — |
 | context-engineering/retrieval-and-jit-quiz | 12 | 4/4/4/4/4/4/4/4/4/4/4/4 | 12 | 12 | — |
 | context-engineering/selection-ordering-quiz | 12 | 4/4/4/4/4/4/4/4/4/4/4/4 | 12 | 12 | — |
@@ -157,27 +157,27 @@ Structural checks only; originality/correctness are scored in the review pass.
 | hallucinations/mitigation-quiz | 12 | 4/4/4/4/4/4/4/4/4/4/4/4 | 12 | 12 | — |
 | hallucinations/production-quiz | 10 | 4/4/4/4/4/4/4/4/4/4 | 10 | 10 | — |
 | hallucinations/taxonomy-quiz | 12 | 4/4/4/4/4/4/4/4/4/4/4/4 | 12 | 12 | — |
-| hallucinations/uncertainty-quiz | 10 | 4/4/4/4/4/4/4/4/4/4 | 10 | 5 | 5 answer block(s) don't discuss every option |
+| hallucinations/uncertainty-quiz | 10 | 4/4/4/4/4/4/4/4/4/4 | 10 | 10 | — |
 | llm-foundations/behavior-and-capstone-quiz | 8 | 4/4/4/4/4/4/4/4 | 8 | 8 | — |
 | llm-foundations/decoding-inference-quiz | 6 | 4/4/4/4/4/4 | 6 | 6 | — |
 | llm-foundations/efficient-architectures-quiz | 8 | 4/4/4/4/4/4/4/4 | 8 | 8 | — |
-| llm-foundations/tokenization-embeddings-quiz | 9 | 4/4/4/4/4/4/4/4/4 | 9 | 4 | 5 answer block(s) don't discuss every option |
+| llm-foundations/tokenization-embeddings-quiz | 9 | 4/4/4/4/4/4/4/4/4 | 9 | 9 | — |
 | llm-foundations/training-pipeline-quiz | 8 | 4/4/4/4/4/4/4/4 | 8 | 8 | — |
 | llm-foundations/transformer-block-quiz | 8 | 4/4/4/4/4/4/4/4 | 8 | 8 | — |
-| llm-foundations/whole-game-quiz | 9 | 4/4/4/4/4/4/4/4/4 | 9 | 8 | 1 answer block(s) don't discuss every option |
+| llm-foundations/whole-game-quiz | 9 | 4/4/4/4/4/4/4/4/4 | 9 | 9 | — |
 | mcp/mcp-auth-quiz | 6 | 4/4/4/4/4/4 | 6 | 6 | — |
 | mcp/mcp-debugging-quiz | 5 | 4/4/4/4/4 | 5 | 5 | — |
 | mcp/mcp-deployment-quiz | 6 | 4/4/4/4/4/4 | 6 | 6 | — |
 | mcp/mcp-primitives-quiz | 5 | 4/4/4/4/4 | 5 | 5 | — |
 | mcp/mcp-server-quiz | 6 | 4/4/4/4/4/4 | 6 | 6 | — |
 | mcp/mcp-transports-quiz | 5 | 4/4/4/4/4 | 5 | 5 | — |
-| prompt-engineering/decomposition-output-quiz | 10 | 4/4/4/4/4/4/4/4/4/4 | 10 | 1 | 9 answer block(s) don't discuss every option |
+| prompt-engineering/decomposition-output-quiz | 10 | 4/4/4/4/4/4/4/4/4/4 | 10 | 10 | — |
 | prompt-engineering/eval-shipping-quiz | 10 | 4/4/4/4/4/4/4/4/4/4 | 10 | 10 | — |
 | prompt-engineering/examples-icl-quiz | 6 | 4/4/4/4/4/4 | 6 | 6 | — |
-| prompt-engineering/foundations-quiz | 10 | 4/4/4/4/4/4/4/4/4/4 | 10 | 7 | 3 answer block(s) don't discuss every option |
+| prompt-engineering/foundations-quiz | 10 | 4/4/4/4/4/4/4/4/4/4 | 10 | 10 | — |
 | prompt-engineering/reasoning-quiz | 6 | 4/4/4/4/4/4 | 6 | 6 | — |
 | prompt-engineering/robustness-capstone-quiz | 10 | 4/4/4/4/4/4/4/4/4/4 | 10 | 10 | — |
-| prompt-engineering/roles-steering-quiz | 10 | 4/4/4/4/4/4/4/4/4/4 | 10 | 4 | 6 answer block(s) don't discuss every option |
+| prompt-engineering/roles-steering-quiz | 10 | 4/4/4/4/4/4/4/4/4/4 | 10 | 10 | — |
 | prompt-engineering/structure-formatting-quiz | 6 | 4/4/4/4/4/4 | 6 | 6 | — |
 | python-data-apis/ai-service-quiz | 6 | 4/4/4/4/4/4 | 6 | 6 | — |
 | python-data-apis/api-calling-quiz | 6 | 4/4/4/4/4/4 | 6 | 6 | — |
@@ -191,7 +191,7 @@ Structural checks only; originality/correctness are scored in the review pass.
 | python-data-apis/secrets-config-quiz | 6 | 4/4/4/4/4/4 | 6 | 6 | — |
 | rag/chunking-quiz | 6 | 4/4/4/4/4/4 | 6 | 6 | — |
 | rag/hybrid-search-quiz | 6 | 4/4/4/4/4/4 | 6 | 6 | — |
-| rag/rag-eval-quiz | 6 | 4/4/4/4/4/4 | 6 | 5 | 1 answer block(s) don't discuss every option |
+| rag/rag-eval-quiz | 6 | 4/4/4/4/4/4 | 6 | 6 | — |
 | rag/reranking-quiz | 6 | 4/4/4/4/4/4 | 6 | 6 | — |
 | rag/retrieval-quiz | 6 | 4/4/4/4/4/4 | 6 | 6 | — |
 | rag/vector-db-quiz | 6 | 4/4/4/4/4/4 | 6 | 6 | — |
@@ -203,21 +203,21 @@ Structural checks only; originality/correctness are scored in the review pass.
 | structured-outputs/runtime-quiz | 6 | 4/4/4/4/4/4 | 6 | 6 | — |
 | structured-outputs/schema-design-quiz | 6 | 4/4/4/4/4/4 | 6 | 6 | — |
 | tools-function-calling/advanced-tools-quiz | 6 | 4/4/4/4/4/4 | 6 | 6 | — |
-| tools-function-calling/execution-safety-quiz | 6 | 4/4/4/4/4/4 | 6 | 0 | 6 answer block(s) don't discuss every option |
+| tools-function-calling/execution-safety-quiz | 6 | 4/4/4/4/4/4 | 6 | 6 | — |
 | tools-function-calling/foundations-quiz | 10 | 4/4/4/4/4/4/4/4/4/4 | 10 | 10 | — |
-| tools-function-calling/orchestration-quiz | 6 | 4/4/4/4/4/4 | 6 | 2 | 4 answer block(s) don't discuss every option |
+| tools-function-calling/orchestration-quiz | 6 | 4/4/4/4/4/4 | 6 | 6 | — |
 | tools-function-calling/reliability-quiz | 6 | 4/4/4/4/4/4 | 6 | 6 | — |
-| tools-function-calling/schema-design-quiz | 6 | 4/4/4/4/4/4 | 6 | 1 | 5 answer block(s) don't discuss every option |
+| tools-function-calling/schema-design-quiz | 6 | 4/4/4/4/4/4 | 6 | 6 | — |
 | tools-function-calling/tool-selection-quiz | 6 | 4/4/4/4/4/4 | 6 | 6 | — |
 
 ### Correct-answer position across 603 marked questions
 
 | position | count | share |
 |---|---|---|
-| A | 69 | 11% |
-| B | 399 | 66% |
-| C | 117 | 19% |
-| D | 18 | 3% |
+| A | 117 | 19% |
+| B | 247 | 41% |
+| C | 135 | 22% |
+| D | 104 | 17% |
 
 ### Duplicate question stems across quiz pages: 0
 

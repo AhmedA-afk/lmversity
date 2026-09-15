@@ -146,17 +146,17 @@ D. Masking rules only apply for the first 5 turns by design
 A prompt reliably gets the right tone and stays on-topic, but the exact three-field structure of the answer (title / author / reason) comes out differently formatted almost every run. Which lever most directly fixes this?
 
 A. Add a more impressive role description
-B. An explicit format instruction (or a couple of worked examples) specifying the literal template
-C. Lower the temperature to reduce randomness
-D. Move the instructions from the system prompt to the user prompt
+B. Lower the temperature to reduce randomness
+C. Move the instructions from the system prompt to the user prompt
+D. An explicit format instruction (or a couple of worked examples) specifying the literal template
 
 <details><summary>Answer</summary>
 
-**Correct: B.** Tone and topic are already handled — the missing piece is the literal syntax, which is exactly what an explicit format instruction (or, if there's a genuine ambiguity, a worked example) pins down that a role never specifies.
+**Correct: D.** Tone and topic are already handled — the missing piece is the literal syntax, which is exactly what an explicit format instruction (or, if there's a genuine ambiguity, a worked example) pins down that a role never specifies.
 
 - A is wrong because the scenario states tone and topic already work — piling on more role language doesn't add syntax-level precision a persona was never built to provide.
-- C is wrong because temperature affects sampling variance in word choice, not which structural template the model defaults to using.
-- D is wrong because moving instructions to the user prompt makes them less durable across turns, not more precise about output shape — an unrelated axis entirely.
+- B is wrong because temperature affects sampling variance in word choice, not which structural template the model defaults to using.
+- C is wrong because moving instructions to the user prompt makes them less durable across turns, not more precise about output shape — an unrelated axis entirely.
 
 </details>
 

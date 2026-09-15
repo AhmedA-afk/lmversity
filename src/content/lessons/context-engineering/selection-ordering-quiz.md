@@ -34,19 +34,19 @@ D. Chunk A, because longer chunks always carry more total information.
 A pipeline retrieves the top 8 chunks by similarity score for a policy question. All 8 individually clear a relevance threshold. The final answer is still weak. Inspecting the 8, three of them restate the same policy in slightly different wording. What's the most likely fix?
 
 A. Increase the similarity threshold so fewer, higher-scoring chunks are admitted.
-B. Add a redundancy pass that drops near-duplicate chunks after relevance scoring, keeping the highest-ranked of each duplicate cluster.
-C. Retrieve more chunks so the signal has a better chance of winning out.
-D. Switch the embedding model, since the current one is clearly broken.
+B. Retrieve more chunks so the signal has a better chance of winning out.
+C. Switch the embedding model, since the current one is clearly broken.
+D. Add a redundancy pass that drops near-duplicate chunks after relevance scoring, keeping the highest-ranked of each duplicate cluster.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** This is the exact gap [Relevance Filtering in Depth](/learn/context-engineering/relevance-filtering-in-depth) targets — a naive top-k by similarity keeps near-duplicates because each one independently clears the bar; only a pairwise redundancy check catches that three slots are one idea repeated.
+**Correct: D.** This is the exact gap [Relevance Filtering in Depth](/learn/context-engineering/relevance-filtering-in-depth) targets — a naive top-k by similarity keeps near-duplicates because each one independently clears the bar; only a pairwise redundancy check catches that three slots are one idea repeated.
 
 **A** would remove weak candidates but wouldn't catch three chunks that are each genuinely, individually relevant — the problem here isn't low relevance, it's overlap between relevant chunks.
 
-**C** compounds the actual problem — more chunks without a redundancy check means more opportunities for duplication, not less, and adds more competing content per [Signal-to-Noise in the Window](/learn/context-engineering/signal-to-noise-in-context).
+**B** compounds the actual problem — more chunks without a redundancy check means more opportunities for duplication, not less, and adds more competing content per [Signal-to-Noise in the Window](/learn/context-engineering/signal-to-noise-in-context).
 
-**D** jumps to the most drastic fix without evidence — nothing in the symptom (near-duplicate content correctly scoring high) indicates the embedding model is malfunctioning; it's behaving exactly as expected.
+**C** jumps to the most drastic fix without evidence — nothing in the symptom (near-duplicate content correctly scoring high) indicates the embedding model is malfunctioning; it's behaving exactly as expected.
 
 </details>
 
@@ -54,16 +54,16 @@ D. Switch the embedding model, since the current one is clearly broken.
 
 A team argues: "we have 150K tokens of window and we're only using 20K, so there's no cost to retrieving 10 more marginal chunks just in case." What's wrong with that reasoning?
 
-A. Nothing — if the tokens fit under the limit, there's no cost to including them.
-B. Token budget and attention quality are different resources; marginal chunks still compete for the model's attention even when the window has spare capacity.
+A. Token budget and attention quality are different resources; marginal chunks still compete for the model's attention even when the window has spare capacity.
+B. Nothing — if the tokens fit under the limit, there's no cost to including them.
 C. It's wrong only because it will increase latency, not because of any accuracy concern.
 D. It's wrong only for models with small context windows; large-window models are immune to this effect.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [Signal-to-Noise in the Window](/learn/context-engineering/signal-to-noise-in-context) makes exactly this distinction — having spare token budget doesn't mean spare quality, because every additional passage, however cheap, is competing for the same limited attention as the content that actually matters.
+**Correct: A.** [Signal-to-Noise in the Window](/learn/context-engineering/signal-to-noise-in-context) makes exactly this distinction — having spare token budget doesn't mean spare quality, because every additional passage, however cheap, is competing for the same limited attention as the content that actually matters.
 
-**A** is the fallacy the lesson is built to correct — "it fits" answers a budget question, not an attention-quality question, and the two are independent.
+**B** is the fallacy the lesson is built to correct — "it fits" answers a budget question, not an attention-quality question, and the two are independent.
 
 **C** understates the concern — latency is a real cost too, but the lesson's core claim is specifically about accuracy degrading from diluted attention, not just slower responses.
 
@@ -97,17 +97,17 @@ D. The effect is a training bug specific to one model family and doesn't general
 An agent's system prompt sets a rule at session start. Forty turns later, the agent violates that rule. Which explanation correctly distinguishes primacy from recency?
 
 A. The system prompt was silently deleted from context somewhere around turn 20.
-B. Primacy still gives the system prompt a structural edge from its early position, but forty turns of more-recent content now compete for the same attention, and recency's pull has grown enough to outweigh it.
-C. Recency and primacy are the same effect described with two different names.
+B. Recency and primacy are the same effect described with two different names.
+C. Primacy still gives the system prompt a structural edge from its early position, but forty turns of more-recent content now compete for the same attention, and recency's pull has grown enough to outweigh it.
 D. The model has a fixed memory limit of roughly twenty turns, after which earlier content stops mattering entirely.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [Recency and Primacy Effects](/learn/context-engineering/recency-and-primacy-effects) is explicit that this isn't primacy fading — the system prompt's structural advantage from position is unchanged. What changes is the ratio: forty turns of intervening, more-recent content increasingly outweighs it in the attention competition.
+**Correct: C.** [Recency and Primacy Effects](/learn/context-engineering/recency-and-primacy-effects) is explicit that this isn't primacy fading — the system prompt's structural advantage from position is unchanged. What changes is the ratio: forty turns of intervening, more-recent content increasingly outweighs it in the attention competition.
 
 **A** assumes deletion, which contradicts the premise — the instruction is still present in context; this is a dilution failure, not a truncation failure, and the two need different fixes.
 
-**C** collapses a real distinction the lesson draws carefully — primacy and recency are two separate structural advantages that happen to point the same way in short sessions and diverge in long ones.
+**B** collapses a real distinction the lesson draws carefully — primacy and recency are two separate structural advantages that happen to point the same way in short sessions and diverge in long ones.
 
 **D** invents a hard cutoff that doesn't reflect how the effect actually works — it's a gradual, competitive dilution, not a fixed-turn memory wall.
 
@@ -119,18 +119,18 @@ You're assembling context for a question that depends on exactly one fact buried
 
 A. Wherever the retriever ranked it internally — reordering isn't necessary if the content is present.
 B. In the exact middle of the six documents, since that's the most "neutral" position.
-C. At the very start or very end of the assembled context — the two positions with the strongest recall — not left in the middle regardless of retrieval rank.
-D. It doesn't matter, since the fact is short and short facts aren't affected by position.
+C. It doesn't matter, since the fact is short and short facts aren't affected by position.
+D. At the very start or very end of the assembled context — the two positions with the strongest recall — not left in the middle regardless of retrieval rank.
 
 <details><summary>Answer</summary>
 
-**Correct: C.** This is the direct payoff of [Ordering Context for Attention](/learn/context-engineering/ordering-context-for-attention): with one decision-critical fact and several lower-stakes supporting documents, the critical one should be forced to an edge position, and the supporting documents can safely absorb the weaker middle position instead.
+**Correct: D.** This is the direct payoff of [Ordering Context for Attention](/learn/context-engineering/ordering-context-for-attention): with one decision-critical fact and several lower-stakes supporting documents, the critical one should be forced to an edge position, and the supporting documents can safely absorb the weaker middle position instead.
 
 **A** is the exact failure [Selection and Ordering Mistakes](/learn/context-engineering/relevance-filtering-common-mistakes) calls out — raw retrieval order has no relationship to where content should sit for the model's attention, and it can easily leave the one critical document at the worst position by accident.
 
 **B** picks precisely the position [Lost in the Middle, Explained](/learn/context-engineering/lost-in-the-middle-explained) shows has the weakest recall — "neutral" here actually means "worst," not safest.
 
-**D** is false — the positional effect is about where a fact sits relative to the sequence, not how many tokens it takes up; a short fact in the middle is just as vulnerable as a long one.
+**C** is false — the positional effect is about where a fact sits relative to the sequence, not how many tokens it takes up; a short fact in the middle is just as vulnerable as a long one.
 
 </details>
 
@@ -138,16 +138,16 @@ D. It doesn't matter, since the fact is short and short facts aren't affected by
 
 You run a needle-in-a-haystack experiment to measure your own model's position sensitivity. Your needle fact is "the meeting was held in Paris." The model gets it right at every position you test, including deep in the middle, with no dip in recall at all. What should you check before concluding your pipeline is immune to the effect?
 
-A. Nothing — a flat, high recall curve at every position is conclusive proof of immunity.
-B. Whether "Paris" is a guessable, plausible answer the model could produce from general world knowledge or context clues, independent of whether it actually read the needle.
+A. Whether "Paris" is a guessable, plausible answer the model could produce from general world knowledge or context clues, independent of whether it actually read the needle.
+B. Nothing — a flat, high recall curve at every position is conclusive proof of immunity.
 C. Whether the plot was rendered in the correct color scheme.
 D. Whether the haystack filler was written in the same programming language as the pipeline.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [Reproducing Lost in the Middle Yourself](/learn/context-engineering/reproducing-lost-in-the-middle) flags exactly this trap — a needle that's guessable from world knowledge or plausible surrounding context produces a "hit" whether or not the model actually retrieved it from the haystack, which can flatten your curve for the wrong reason. An arbitrary, made-up identifier with no prior plausibility is the fix.
+**Correct: A.** [Reproducing Lost in the Middle Yourself](/learn/context-engineering/reproducing-lost-in-the-middle) flags exactly this trap — a needle that's guessable from world knowledge or plausible surrounding context produces a "hit" whether or not the model actually retrieved it from the haystack, which can flatten your curve for the wrong reason. An arbitrary, made-up identifier with no prior plausibility is the fix.
 
-**A** takes the flat curve at face value without ruling out the confound — a genuinely uninformative test can produce a misleadingly flat result.
+**B** takes the flat curve at face value without ruling out the confound — a genuinely uninformative test can produce a misleadingly flat result.
 
 **C** and **D** aren't relevant to whether the test result is valid — visual styling and filler's programming language (haystack filler is prose, not code, in this test) have no bearing on whether the needle content is actually what drove a correct answer.
 
@@ -179,17 +179,17 @@ D. Switch to a larger model, since citation accuracy is purely a function of mod
 Your prompt-assembly code already holds retrieved documents as a list of Python dicts (with `id`, `source`, and `text` fields) and needs to hand them to the model as part of a larger programmatically-built prompt. No human will read the raw prompt text. Which format fits best by default?
 
 A. XML tags, because XML is always the safest choice regardless of context.
-B. JSON, since the data already exists as objects and serializing them avoids hand-formatting a string.
-C. Markdown headers, since they're the easiest for a human to read.
+B. Markdown headers, since they're the easiest for a human to read.
+C. JSON, since the data already exists as objects and serializing them avoids hand-formatting a string.
 D. A plain `===` delimiter string, since it's the cheapest option token-wise.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [XML vs Markdown vs JSON Delimiters](/learn/context-engineering/xml-vs-markdown-vs-json-delimiting) calls out this exact case — when a prompt is assembled by code from data that already exists as objects, JSON serialization is the natural fit and avoids the escaping and formatting risk of hand-building a string in another format.
+**Correct: C.** [XML vs Markdown vs JSON Delimiters](/learn/context-engineering/xml-vs-markdown-vs-json-delimiting) calls out this exact case — when a prompt is assembled by code from data that already exists as objects, JSON serialization is the natural fit and avoids the escaping and formatting risk of hand-building a string in another format.
 
 **A** overstates a real strength into a blanket rule — XML earns its place for untrusted content needing a hard boundary, but that's not the deciding factor here; the deciding factor is that the data is already object-shaped.
 
-**C** picks the format optimized for human readability in a scenario the question explicitly says has no human reader of the raw prompt — that advantage doesn't apply here.
+**B** picks the format optimized for human readability in a scenario the question explicitly says has no human reader of the raw prompt — that advantage doesn't apply here.
 
 **D** picks the cheapest option without weighing its weakest boundary — for a mostly-trusted, code-assembled payload the concern isn't cost, it's that this format has no field structure for the id/source/text pairs already in your data.
 
@@ -200,19 +200,19 @@ D. A plain `===` delimiter string, since it's the cheapest option token-wise.
 An agent reliably follows a "confirm before deleting" rule for the first ten turns of a session, then stops following it around turn twenty, even though the rule is still present in the system prompt on every call. What's the most targeted fix?
 
 A. Rewrite the system prompt to be even longer and more emphatic.
-B. Conditionally restate the rule right before any turn that looks like it's about to trigger a destructive action, so it benefits from recency near the point of generation.
-C. Shorten the session to under ten turns so the rule never has a chance to be forgotten.
-D. Repeat the entire system prompt after every single turn, regardless of content.
+B. Shorten the session to under ten turns so the rule never has a chance to be forgotten.
+C. Repeat the entire system prompt after every single turn, regardless of content.
+D. Conditionally restate the rule right before any turn that looks like it's about to trigger a destructive action, so it benefits from recency near the point of generation.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [Placing Instructions So They Stick](/learn/context-engineering/placing-instructions-for-adherence) shows this exact fix — a conditional restatement right before the risky action gives the rule fresh recency benefit exactly where it's needed, without diluting every other turn with an unrelated reminder.
+**Correct: D.** [Placing Instructions So They Stick](/learn/context-engineering/placing-instructions-for-adherence) shows this exact fix — a conditional restatement right before the risky action gives the rule fresh recency benefit exactly where it's needed, without diluting every other turn with an unrelated reminder.
 
 **A** targets wording strength when the actual problem is positional — a longer, more emphatic instruction at the same early position still loses the same recency competition as the transcript grows.
 
-**C** avoids the problem rather than solving it, and isn't viable for any agent that legitimately needs long sessions.
+**B** avoids the problem rather than solving it, and isn't viable for any agent that legitimately needs long sessions.
 
-**D** is the over-restatement failure the same lesson warns about — reminding on every turn regardless of relevance dilutes the reminder's own signal, per [Signal-to-Noise in the Window](/learn/context-engineering/signal-to-noise-in-context).
+**C** is the over-restatement failure the same lesson warns about — reminding on every turn regardless of relevance dilutes the reminder's own signal, per [Signal-to-Noise in the Window](/learn/context-engineering/signal-to-noise-in-context).
 
 </details>
 
@@ -220,16 +220,16 @@ D. Repeat the entire system prompt after every single turn, regardless of conten
 
 A pipeline reranks ten retrieved candidates and hands the top 5, in reranked order, to the model. On one particular query, none of the ten candidates are actually relevant — the retriever simply had nothing good to return. What does reranking alone fail to catch here?
 
-A. Nothing — reranking always guarantees the top results are good enough to use.
-B. Reranking only produces an ordering among the candidates it's given; it has no mechanism to reject a candidate set that's uniformly bad, which is a filtering job.
+A. Reranking only produces an ordering among the candidates it's given; it has no mechanism to reject a candidate set that's uniformly bad, which is a filtering job.
+B. Nothing — reranking always guarantees the top results are good enough to use.
 C. This can only happen if the reranker model itself is broken.
 D. Reranking and filtering are the same operation, so this scenario is impossible by definition.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** [Filtering vs Reranking](/learn/context-engineering/filtering-vs-reranking) draws exactly this line — reranking answers "which is more relevant than which" and will confidently order even a uniformly bad candidate set from least-bad to most-bad, because rejecting candidates outright was never its job. Only a filtering step with a threshold can say "none of these clear the bar."
+**Correct: A.** [Filtering vs Reranking](/learn/context-engineering/filtering-vs-reranking) draws exactly this line — reranking answers "which is more relevant than which" and will confidently order even a uniformly bad candidate set from least-bad to most-bad, because rejecting candidates outright was never its job. Only a filtering step with a threshold can say "none of these clear the bar."
 
-**A** states the false assumption the question is designed to surface — reranking says nothing about absolute quality, only relative order within the set it's given.
+**B** states the false assumption the question is designed to surface — reranking says nothing about absolute quality, only relative order within the set it's given.
 
 **C** misdiagnoses working-as-intended behavior as a bug — a reranker correctly ordering ten irrelevant documents is doing exactly what reranking is supposed to do; the gap is the missing filter step.
 

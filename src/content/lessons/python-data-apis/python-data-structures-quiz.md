@@ -18,18 +18,18 @@ result = [n if n % 2 == 0 else -n for n in nums]
 print(result)
 ```
 
-- **A.** `[-1, 2, -3, 4, -5]`
-- **B.** `[2, 4]`
-- **C.** `[1, -2, 3, -4, 5]`
+- **A.** `[2, 4]`
+- **B.** `[1, -2, 3, -4, 5]`
+- **C.** `[-1, 2, -3, 4, -5]`
 - **D.** Raises a `SyntaxError`
 
 <details><summary>Answer</summary>
 
-**Correct: A.** The `if/else` here sits *before* the `for` — that's Python's conditional (ternary) expression, not a filter. It runs for every element and picks which value to keep: `n` when `n` is even, `-n` otherwise. Nothing gets dropped, so the output is the same length as the input: `[-1, 2, -3, 4, -5]`.
+**Correct: C.** The `if/else` here sits *before* the `for` — that's Python's conditional (ternary) expression, not a filter. It runs for every element and picks which value to keep: `n` when `n` is even, `-n` otherwise. Nothing gets dropped, so the output is the same length as the input: `[-1, 2, -3, 4, -5]`.
 
-**B** is what you'd get from `[n for n in nums if n % 2 == 0]` — a genuine filter, with `if` *after* `for`. The version in the question has no filter at all; every element survives, just transformed differently depending on the condition.
+**A** is what you'd get from `[n for n in nums if n % 2 == 0]` — a genuine filter, with `if` *after* `for`. The version in the question has no filter at all; every element survives, just transformed differently depending on the condition.
 
-**C** swaps the branches — negating the odd numbers and passing the even ones through unchanged, the reverse of what's written. Read it literally: `n if n % 2 == 0 else -n` means "if `n` is even, keep `n` as-is; otherwise, use `-n`."
+**B** swaps the branches — negating the odd numbers and passing the even ones through unchanged, the reverse of what's written. Read it literally: `n if n % 2 == 0 else -n` means "if `n` is even, keep `n` as-is; otherwise, use `-n`."
 
 **D** — this is completely valid syntax. `expr1 if condition else expr2 for x in iterable` is the standard form for a comprehension with a conditional expression. It only breaks if you drop the `else` and try to use `if` both as a filter and a value-picker at once — see the trap in Question 3 for exactly that mistake. Worth practicing more of these on [comprehensions and generators](/learn/python-data-apis/comprehensions-and-generators) if the ternary-vs-filter distinction still feels shaky.
 
@@ -161,18 +161,18 @@ print(result)
 
 What does `result` equal?
 
-- **A.** Raises an `IndexError`
-- **B.** `"pen"`
-- **C.** `"laptop"`
+- **A.** `"laptop"`
+- **B.** Raises an `IndexError`
+- **C.** `"pen"`
 - **D.** `["laptop", "mouse"]`
 
 <details><summary>Answer</summary>
 
-**Correct: C.** Walk the chain one hop at a time: `data["user"]` gets the user dict, `["orders"]` gets the list of two order dicts, `[1]` picks the *second* order (`{"id": 102, "items": ["laptop", "mouse"]}`), `["items"]` gets that order's list, and `[0]` picks its first element: `"laptop"`. This step-by-step approach is the reliable way to read any nested lookup — see [nested JSON in memory](/learn/python-data-apis/nested-json-in-memory) for more practice tracing chains like this, and [data contracts and validation](/learn/python-data-apis/data-contracts-and-validation) for what to do when a real API response doesn't guarantee this shape holds.
+**Correct: A.** Walk the chain one hop at a time: `data["user"]` gets the user dict, `["orders"]` gets the list of two order dicts, `[1]` picks the *second* order (`{"id": 102, "items": ["laptop", "mouse"]}`), `["items"]` gets that order's list, and `[0]` picks its first element: `"laptop"`. This step-by-step approach is the reliable way to read any nested lookup — see [nested JSON in memory](/learn/python-data-apis/nested-json-in-memory) for more practice tracing chains like this, and [data contracts and validation](/learn/python-data-apis/data-contracts-and-validation) for what to do when a real API response doesn't guarantee this shape holds.
 
-**A** assumes `orders` doesn't have an index `1`. It does — there are two entries, at index `0` and index `1` — so `orders[1]` is perfectly valid. This would only raise `IndexError` if the list had one element or fewer.
+**B** assumes `orders` doesn't have an index `1`. It does — there are two entries, at index `0` and index `1` — so `orders[1]` is perfectly valid. This would only raise `IndexError` if the list had one element or fewer.
 
-**B** comes from reading `orders[1]` as "the first order." It isn't — Python indexes from `0`, so `orders[0]` is Priya's first order (pen and notebook) and `orders[1]` is her *second* order. `"pen"` is what you'd get from `data["user"]["orders"][0]["items"][0]` instead.
+**C** comes from reading `orders[1]` as "the first order." It isn't — Python indexes from `0`, so `orders[0]` is Priya's first order (pen and notebook) and `orders[1]` is her *second* order. `"pen"` is what you'd get from `data["user"]["orders"][0]["items"][0]` instead.
 
 **D** stops one step early — that's `data["user"]["orders"][1]["items"]`, the full items list for the second order, before the final `[0]` narrows it down to just the first element inside that list.
 

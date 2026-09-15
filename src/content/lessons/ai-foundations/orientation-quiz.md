@@ -2,7 +2,7 @@
 title: "Orientation: Check Your Map"
 track: "ai-foundations"
 status: live
-summary: "Six scenario-based MCQs (self-check quiz) for the Orientation module's 'Check Your Map' page, testing AI/ML/DL nesting, narrow vs. general AI, and foundation-model-vs-application d"
+summary: "You're mapping four systems onto the AI ⊃ ML ⊃ DL diagram in your head."
 duration: "7 min read"
 ---
 
@@ -73,16 +73,16 @@ D. Breadth of tasks isn't the same as general intelligence — it's still narrow
 
 Your team ships a customer-support tool: it calls GPT-4 through an API, adds a system prompt containing your return policy, retrieves relevant help-center articles, and wraps it in a chat UI. Which statement correctly separates the foundation model from the application?
 
-A. The whole system — prompt, retrieval, and UI included — counts as one foundation model, since it's packaged into a single shipped product.
-B. GPT-4 is the foundation model: the large model pretrained on broad data whose weights you never touch. Everything you built around it (prompt, retrieval, UI) is the application layer, and it inherits GPT-4's capabilities and failure modes rather than replacing them.
+A. GPT-4 is the foundation model: the large model pretrained on broad data whose weights you never touch. Everything you built around it (prompt, retrieval, UI) is the application layer, and it inherits GPT-4's capabilities and failure modes rather than replacing them.
+B. The whole system — prompt, retrieval, and UI included — counts as one foundation model, since it's packaged into a single shipped product.
 C. Your retrieval-augmented chat tool is the foundation model, because it's the piece users actually interact with.
 D. GPT-4 stops being a foundation model the moment you call it through an API, because API access implies it's been fine-tuned for your specific use case.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** The foundation model is wherever the heavy, general-purpose learning happened — the pretraining run that produced the weights. Everything you stack on top (prompt engineering, retrieval, UI, guardrails) is application work that shapes *how* that model is used, not a new model. That also means your app inherits GPT-4's blind spots — you can reduce them with good retrieval, but you can't prompt your way out of a capability the base model doesn't have. [Foundation models, explained](/learn/ai-foundations/foundation-models-explained) covers this split in depth; [what is RAG and when to use it](/learn/rag/what-is-rag-and-when-to-use-it) covers exactly the retrieval layer in your example.
+**Correct: A.** The foundation model is wherever the heavy, general-purpose learning happened — the pretraining run that produced the weights. Everything you stack on top (prompt engineering, retrieval, UI, guardrails) is application work that shapes *how* that model is used, not a new model. That also means your app inherits GPT-4's blind spots — you can reduce them with good retrieval, but you can't prompt your way out of a capability the base model doesn't have. [Foundation models, explained](/learn/ai-foundations/foundation-models-explained) covers this split in depth; [what is RAG and when to use it](/learn/rag/what-is-rag-and-when-to-use-it) covers exactly the retrieval layer in your example.
 
-**A** collapses a meaningful distinction. Bundling a foundation model into a shipped product doesn't make the product *itself* the foundation model — the term tracks where the general-purpose learning happened, not where the deployment happened. This matters practically: swap Claude in for GPT-4 behind the same prompt and retrieval, and you've changed the foundation model without touching "the product" people describe.
+**B** collapses a meaningful distinction. Bundling a foundation model into a shipped product doesn't make the product *itself* the foundation model — the term tracks where the general-purpose learning happened, not where the deployment happened. This matters practically: swap Claude in for GPT-4 behind the same prompt and retrieval, and you've changed the foundation model without touching "the product" people describe.
 
 **C** has the relationship backwards. The chat tool is the application built *on top of* a foundation model — swap the base model out and you still have "the same app," just running on different underlying capability. That's only coherent if the app and the model are distinct layers.
 

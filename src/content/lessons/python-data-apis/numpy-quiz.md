@@ -2,7 +2,7 @@
 title: "Quiz: NumPy Arrays"
 track: "python-data-apis"
 status: live
-summary: "A 6-question self-check quiz on NumPy arrays covering broadcasting shape prediction (including the row-vs-column outer-sum trap and left-vs-right alignment), choosing axis=0 vs axi"
+summary: "You've read about broadcasting and axis reductions — now find out whether you'd actually predict them right under pressure, before a silent shape mismatch costs you an afternoon of debugging."
 duration: "12 min read"
 ---
 
@@ -53,20 +53,20 @@ result = a + b
 
 What happens here?
 
-- **A.** It raises a `ValueError` — the trailing dimensions (`3` and `2`) don't match and neither is `1`
-- **B.** It works and returns `[[11, 12, 13], [24, 25, 26]]`, shape `(2, 3)` — `b`'s two values line up with `a`'s two rows
-- **C.** It works and returns a `(2, 2)` array, trimming `a` down to match `b`
-- **D.** It works and returns `[[11, 22, 13], [24, 15, 26]]`, shape `(2, 3)` — NumPy cycles `b`'s values across the columns to fill the gap
+- **A.** It works and returns `[[11, 12, 13], [24, 25, 26]]`, shape `(2, 3)` — `b`'s two values line up with `a`'s two rows
+- **B.** It works and returns a `(2, 2)` array, trimming `a` down to match `b`
+- **C.** It works and returns `[[11, 22, 13], [24, 15, 26]]`, shape `(2, 3)` — NumPy cycles `b`'s values across the columns to fill the gap
+- **D.** It raises a `ValueError` — the trailing dimensions (`3` and `2`) don't match and neither is `1`
 
 <details><summary>Answer</summary>
 
-**Correct: A.** Alignment always starts from the *last* axis and works backward — never from the first. `a` is `(2, 3)`, `b` is `(2,)`. Compare trailing axes: `3` vs `2`. Neither matches, and neither is `1`, so there's no rule that saves it. NumPy raises exactly this: `operands could not be broadcast together with shapes (2,3) (2,)`. The fix, if you meant "add 10 to row 0 and 20 to row 1," is to reshape `b` to `(2, 1)` first — `b.reshape(-1, 1)` — so it aligns on the *first* axis instead.
+**Correct: D.** Alignment always starts from the *last* axis and works backward — never from the first. `a` is `(2, 3)`, `b` is `(2,)`. Compare trailing axes: `3` vs `2`. Neither matches, and neither is `1`, so there's no rule that saves it. NumPy raises exactly this: `operands could not be broadcast together with shapes (2,3) (2,)`. The fix, if you meant "add 10 to row 0 and 20 to row 1," is to reshape `b` to `(2, 1)` first — `b.reshape(-1, 1)` — so it aligns on the *first* axis instead.
 
-**B** is the most common broadcasting misconception there is: pairing arrays by their *leading* axis because "2 matches 2." NumPy deliberately aligns from the right instead, which is exactly why a length-3 "per-feature" vector broadcasts naturally across any number of rows in question 1 — aligning from the left would break that every time the row count changed. It's a sensible-sounding rule that happens to be backward from the one NumPy actually uses.
+**A** is the most common broadcasting misconception there is: pairing arrays by their *leading* axis because "2 matches 2." NumPy deliberately aligns from the right instead, which is exactly why a length-3 "per-feature" vector broadcasts naturally across any number of rows in question 1 — aligning from the left would break that every time the row count changed. It's a sensible-sounding rule that happens to be backward from the one NumPy actually uses.
 
-**C** imagines broadcasting can shrink an array down to the smaller shape. Broadcasting only ever *grows* size-`1` axes to match — it never removes or truncates real data from an input.
+**B** imagines broadcasting can shrink an array down to the smaller shape. Broadcasting only ever *grows* size-`1` axes to match — it never removes or truncates real data from an input.
 
-**D** confuses broadcasting with `np.tile` or `np.resize`, which really do repeat values to fill a target length. Broadcasting has a strict compatibility rule (match, or one side is `1`) — it never invents repetition to paper over an actual mismatch like `3` vs `2`.
+**C** confuses broadcasting with `np.tile` or `np.resize`, which really do repeat values to fill a target length. Broadcasting has a strict compatibility rule (match, or one side is `1`) — it never invents repetition to paper over an actual mismatch like `3` vs `2`.
 
 </details>
 
@@ -152,22 +152,22 @@ centered = data - row_means
 
 The intent is to subtract each row's own mean from that row (row 0 minus `2.0`, row 1 minus `5.0`). What actually happens when this runs?
 
-- **A.** It works exactly as intended: `[[-1, 0, 1], [-1, 0, 1]]`
-- **B.** It runs without error but produces the wrong numbers silently
-- **C.** It raises a `TypeError`, because you can't subtract a 1-D array from a 2-D one
-- **D.** It raises a `ValueError`, because `row_means` has shape `(2,)` and can't align against `data`'s shape `(2, 3)`
+- **A.** It raises a `ValueError`, because `row_means` has shape `(2,)` and can't align against `data`'s shape `(2, 3)`
+- **B.** It works exactly as intended: `[[-1, 0, 1], [-1, 0, 1]]`
+- **C.** It runs without error but produces the wrong numbers silently
+- **D.** It raises a `TypeError`, because you can't subtract a 1-D array from a 2-D one
 
 <details><summary>Answer</summary>
 
-**Correct: D.** `data.mean(axis=1)` collapses axis 1, so `row_means` has shape `(2,)` — the mean *per row*, but stored as a flat vector with no memory of "which axis it came from." When you then compute `data - row_means`, broadcasting aligns from the right: `data` is `(2, 3)`, `row_means` is `(2,)` → padded to `(1, 2)`. Trailing axes: `3` vs `2` — mismatch, neither is `1`. `ValueError`.
+**Correct: A.** `data.mean(axis=1)` collapses axis 1, so `row_means` has shape `(2,)` — the mean *per row*, but stored as a flat vector with no memory of "which axis it came from." When you then compute `data - row_means`, broadcasting aligns from the right: `data` is `(2, 3)`, `row_means` is `(2,)` → padded to `(1, 2)`. Trailing axes: `3` vs `2` — mismatch, neither is `1`. `ValueError`.
 
 The fix is `data.mean(axis=1, keepdims=True)`, which gives shape `(2, 1)` instead of `(2,)` — that extra `1` is exactly the size-1 axis that's allowed to stretch across all 3 columns, landing each row's mean back on that row. `data.mean(axis=1).reshape(-1, 1)` does the same thing manually. This keepdims-for-broadcasting pattern is worth internalizing early — see [numpy-indexing-and-broadcasting](/learn/python-data-apis/numpy-indexing-and-broadcasting) and the worked [normalize-features example](/learn/python-data-apis/numpy-normalize-features-example) for the full pattern applied to real feature scaling.
 
-**A** is what you *want*, and it's exactly what you'd get with `keepdims=True` — but without it, this line never reaches that result; it errors out first.
+**B** is what you *want*, and it's exactly what you'd get with `keepdims=True` — but without it, this line never reaches that result; it errors out first.
 
-**B** describes a real and much scarier failure mode that just doesn't happen to trigger *here* — but it will on a square matrix. If `data` were `(3, 3)`, `data.mean(axis=1)` would also be shape `(3,)`, and `3` vs `3` *does* satisfy the broadcast rule — so `data - row_means` would run with no error at all, silently subtracting the per-row means as if they were a *row to subtract from every row* (i.e., treating them as column means instead). Same code, wrong axis semantics, zero warning. That's the real danger of skipping `keepdims`: on non-square data it crashes loudly; on square data it corrupts your numbers quietly. Always reach for `keepdims=True` on purpose rather than relying on a shape mismatch to catch you.
+**C** describes a real and much scarier failure mode that just doesn't happen to trigger *here* — but it will on a square matrix. If `data` were `(3, 3)`, `data.mean(axis=1)` would also be shape `(3,)`, and `3` vs `3` *does* satisfy the broadcast rule — so `data - row_means` would run with no error at all, silently subtracting the per-row means as if they were a *row to subtract from every row* (i.e., treating them as column means instead). Same code, wrong axis semantics, zero warning. That's the real danger of skipping `keepdims`: on non-square data it crashes loudly; on square data it corrupts your numbers quietly. Always reach for `keepdims=True` on purpose rather than relying on a shape mismatch to catch you.
 
-**C** gets the failure right in spirit but the exception type wrong — shape incompatibility during arithmetic is a `ValueError` in NumPy, not a `TypeError`. `TypeError` shows up for things like mixing incompatible *dtypes* in an operation that truly can't be coerced, not for shape mismatches.
+**D** gets the failure right in spirit but the exception type wrong — shape incompatibility during arithmetic is a `ValueError` in NumPy, not a `TypeError`. `TypeError` shows up for things like mixing incompatible *dtypes* in an operation that truly can't be coerced, not for shape mismatches.
 
 </details>
 

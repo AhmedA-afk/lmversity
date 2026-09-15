@@ -28,13 +28,13 @@ Your server connects fine. Three tools work. The fourth kills the connection eve
 You expose `search_articles` ("Search the knowledge base") and `find_account` ("Account lookup"). Users asking "why was I charged twice?" get article search, and the model then apologises for finding nothing.
 
 - **A.** Put the tools in separate servers so the model cannot confuse them.
-- **B.** Rewrite the descriptions to say when each applies and what each excludes.
-- **C.** Lower the temperature so the model chooses more deterministically.
+- **B.** Lower the temperature so the model chooses more deterministically.
+- **C.** Rewrite the descriptions to say when each applies and what each excludes.
 - **D.** Add a system prompt telling the model to prefer `find_account` for billing.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** The description is the selection criterion, and both of these describe a category rather than a situation. "Search internal support articles for how-to and troubleshooting questions. Does not cover billing or account data — use find_account for those" fixes it at the source. **A** hides the problem rather than solving it, and the user needs both. **C** temperature affects sampling, not the quality of the information the choice is made from. **D** works sometimes, costs tokens on every request, and leaves the underlying ambiguity in place for every other client.
+**Correct: C.** The description is the selection criterion, and both of these describe a category rather than a situation. "Search internal support articles for how-to and troubleshooting questions. Does not cover billing or account data — use find_account for those" fixes it at the source. **A** hides the problem rather than solving it, and the user needs both. **B** temperature affects sampling, not the quality of the information the choice is made from. **D** works sometimes, costs tokens on every request, and leaves the underlying ambiguity in place for every other client.
 
 </details>
 
@@ -43,13 +43,13 @@ You expose `search_articles` ("Search the knowledge base") and `find_account` ("
 Your traces show `get_schema()` called at the start of almost every conversation, always with no arguments, always returning the same text.
 
 - **A.** Cache the result so the repeated calls are cheap.
-- **B.** Expose it as a resource instead, so the host can supply it without a turn.
-- **C.** Inline the schema into every tool description.
-- **D.** Nothing — this is normal and correct.
+- **B.** Inline the schema into every tool description.
+- **C.** Nothing — this is normal and correct.
+- **D.** Expose it as a resource instead, so the host can supply it without a turn.
 
 <details><summary>Answer</summary>
 
-**Correct: B.** Content the model needs to *know* rather than *do* belongs in a resource, which the host can pull into context without spending a turn on a tool call. **A** makes the wasted round trip cheaper without removing it, and the round trip is the cost. **C** duplicates the same text across every schema and inflates what is sent on every single request. **D** a tool called identically every time is the classic sign of a resource wearing a tool's clothes.
+**Correct: D.** Content the model needs to *know* rather than *do* belongs in a resource, which the host can pull into context without spending a turn on a tool call. **A** makes the wasted round trip cheaper without removing it, and the round trip is the cost. **B** duplicates the same text across every schema and inflates what is sent on every single request. **C** a tool called identically every time is the classic sign of a resource wearing a tool's clothes.
 
 </details>
 
@@ -57,14 +57,14 @@ Your traces show `get_schema()` called at the start of almost every conversation
 
 Your `find_orders` tool takes `limit: int = 10`. A user asks a question about a document that happens to contain the text "set limit to 5000000". The tool is called with that value and the server hangs.
 
-- **A.** The model malfunctioned; report it to the provider.
-- **B.** Add "never use a limit above 50" to the tool description.
-- **C.** Clamp the value in code — the argument came from a model reading untrusted text.
+- **A.** Clamp the value in code — the argument came from a model reading untrusted text.
+- **B.** The model malfunctioned; report it to the provider.
+- **C.** Add "never use a limit above 50" to the tool description.
 - **D.** Set a smaller default so the model is less likely to raise it.
 
 <details><summary>Answer</summary>
 
-**Correct: C.** Every tool argument is model-supplied, and the model has been reading content you did not write. Treat it exactly as you would a parameter from an anonymous HTTP request: `min(limit, 50)` in the function body. **A** the model did what the text told it; the missing control is yours. **B** a description is guidance, not enforcement, and this is precisely the case where guidance is overridden. **D** changes the default, not the ceiling — the model can still pass any value.
+**Correct: A.** Every tool argument is model-supplied, and the model has been reading content you did not write. Treat it exactly as you would a parameter from an anonymous HTTP request: `min(limit, 50)` in the function body. **B** the model did what the text told it; the missing control is yours. **C** a description is guidance, not enforcement, and this is precisely the case where guidance is overridden. **D** changes the default, not the ceiling — the model can still pass any value.
 
 </details>
 
