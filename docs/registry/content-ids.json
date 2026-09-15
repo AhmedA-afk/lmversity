@@ -1,7 +1,7 @@
 {
  "version": 1,
  "next": {
-  "les": 2122,
+  "les": 2130,
   "que": 7,
   "sce": 6,
   "blo": 10,
@@ -11,7 +11,7 @@
   "rol": 12,
   "prc": 6,
   "pag": 22,
-  "trk": 25,
+  "trk": 26,
   "qgd": 4,
   "stb": 25
  },
@@ -9740,6 +9740,41 @@
   "lessons/production/llm-observability-foundations.md": {
    "id": "les-2122",
    "fp": "19fe0256f5f7f38e4aad3d0c0afd69eb3ccd0e4c"
+  },
+  "lessons/llm-security/audit-logs-and-accountability.md": {
+   "id": "les-2123",
+   "fp": "0edf83dbab3f1357134f81169616a3aabd537422"
+  },
+  "lessons/llm-security/guardrails-frameworks-in-practice.md": {
+   "id": "les-2124",
+   "fp": "e5117764937961f40dd28d1e90246d409738b4a4"
+  },
+  "lessons/llm-security/llm-supply-chain-security.md": {
+   "id": "les-2125",
+   "fp": "d738d0586bf1eb903bf4d2dcdd05a2f2b8cfb696"
+  },
+  "lessons/llm-security/nist-ai-rmf-and-mitre-atlas.md": {
+   "id": "les-2126",
+   "fp": "7e85101935b67deb9600e57546984bef0d567937"
+  },
+  "lessons/llm-security/owasp-llm-and-agentic-top-10.md": {
+   "id": "les-2127",
+   "fp": "ef4305b35941be5da288e1523469f8a17c28579e"
+  },
+  "lessons/llm-security/prompt-injection-testing-and-threat-models.md": {
+   "id": "les-2128",
+   "fp": "26e2d4b8f88a4d04850f579f0a50bb07ec669efe"
+  },
+  "lessons/llm-security/provider-moderation-and-safety-apis.md": {
+   "id": "les-2129",
+   "fp": "164d7b2ca04b8bc94c057165b33218a7515d2b16"
+  },
+  "lessons/llm-security/sandboxing-code-execution-and-browser-use.md": {
+   "id": "les-2130",
+   "fp": "e519521d7fcb223df6e28d6e50e593c81cd01e78"
+  },
+  "data:track/llm-security": {
+   "id": "trk-0026"
   }
  },
  "retired": {

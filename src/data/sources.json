@@ -568,6 +568,114 @@
     "claims": ["OTel auto-instrumentation for LLM providers and frameworks"],
     "status": "current"
   },
+  "owasp-genai": {
+    "title": "OWASP GenAI Security Project",
+    "publisher": "OWASP",
+    "accessedAt": "2026-09-15",
+    "url": "https://genai.owasp.org/",
+    "type": "official-docs",
+    "claims": ["Top 10 for LLM applications", "agentic application security guidance"],
+    "status": "current"
+  },
+  "nist-ai-rmf": {
+    "title": "AI Risk Management Framework",
+    "publisher": "NIST",
+    "accessedAt": "2026-09-15",
+    "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+    "type": "official-docs",
+    "claims": ["Govern/Map/Measure/Manage functions", "AI RMF profiles"],
+    "status": "current"
+  },
+  "mitre-atlas": {
+    "title": "MITRE ATLAS",
+    "publisher": "MITRE",
+    "accessedAt": "2026-09-15",
+    "url": "https://atlas.mitre.org/",
+    "type": "official-docs",
+    "claims": ["adversary tactics and techniques against AI systems", "case studies"],
+    "status": "current"
+  },
+  "openai-moderation": {
+    "title": "OpenAI Moderation guide",
+    "publisher": "OpenAI",
+    "accessedAt": "2026-09-15",
+    "url": "https://platform.openai.com/docs/guides/moderation",
+    "type": "official-docs",
+    "claims": ["moderation endpoint categories and usage"],
+    "status": "current"
+  },
+  "guardrails-ai-repo": {
+    "title": "Guardrails AI repository",
+    "publisher": "Guardrails AI",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/guardrails-ai/guardrails",
+    "type": "official-docs",
+    "claims": ["output validation, re-ask/fix loops, validators"],
+    "status": "current"
+  },
+  "nemo-guardrails-repo": {
+    "title": "NeMo Guardrails repository",
+    "publisher": "NVIDIA",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/NVIDIA-NeMo/Guardrails",
+    "type": "official-docs",
+    "claims": ["programmable conversational rails", "input/dialog/output/retrieval rails"],
+    "status": "current"
+  },
+  "purple-llama-repo": {
+    "title": "Purple Llama repository",
+    "publisher": "Meta",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/meta-llama/PurpleLlama",
+    "type": "official-docs",
+    "claims": ["Llama Guard safety classifier models", "responsible-AI tooling"],
+    "status": "current"
+  },
+  "garak-repo": {
+    "title": "garak — LLM vulnerability scanner",
+    "publisher": "NVIDIA",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/NVIDIA/garak",
+    "type": "official-docs",
+    "claims": ["probe families for LLM vulnerabilities", "detectors and reporting"],
+    "status": "current"
+  },
+  "promptfoo-redteam": {
+    "title": "Promptfoo red team documentation",
+    "publisher": "Promptfoo",
+    "accessedAt": "2026-09-15",
+    "url": "https://www.promptfoo.dev/docs/red-team/",
+    "type": "official-docs",
+    "claims": ["application-shaped adversarial test generation"],
+    "status": "current"
+  },
+  "e2b-docs": {
+    "title": "E2B documentation",
+    "publisher": "E2B",
+    "accessedAt": "2026-09-15",
+    "url": "https://e2b.dev/docs",
+    "type": "official-docs",
+    "claims": ["sandboxed code-execution environments for agents"],
+    "status": "current"
+  },
+  "gitleaks-repo": {
+    "title": "gitleaks repository",
+    "publisher": "Gitleaks",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/gitleaks/gitleaks",
+    "type": "official-docs",
+    "claims": ["secret scanning for repositories"],
+    "status": "current"
+  },
+  "sigstore-model-transparency": {
+    "title": "Sigstore model transparency",
+    "publisher": "Sigstore",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/sigstore/model-transparency",
+    "type": "official-docs",
+    "claims": ["model signing and artifact provenance"],
+    "status": "current"
+  },
   "google-adk-docs": {
     "title": "Agent Development Kit documentation",
     "publisher": "Google",

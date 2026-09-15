@@ -1050,16 +1050,16 @@ consolidation into a parent track, or a clearer curated-path role.
 
 ### Security, guardrails, and governance
 
-- [ ] OWASP guidance for LLM and agentic applications.
-- [ ] NIST AI Risk Management Framework and relevant profiles.
-- [ ] MITRE ATLAS where practical threat mapping adds value.
-- [ ] Provider moderation and safety APIs from current official docs.
-- [ ] Guardrails AI, NeMo Guardrails, and Llama Guard after evaluation.
-- [ ] Prompt-injection testing tools and threat-model templates.
-- [ ] Secret scanning, dependency scanning, model artifact integrity, and supply-chain review.
-- [ ] Sandboxing for code execution and browser use.
-- [ ] Identity, authorization, delegation, and confused-deputy prevention.
-- [ ] Audit logs, approval records, incident handling, and data deletion.
+- [x] OWASP guidance for LLM and agentic applications.
+- [x] NIST AI Risk Management Framework and relevant profiles.
+- [x] MITRE ATLAS where practical threat mapping adds value.
+- [x] Provider moderation and safety APIs from current official docs.
+- [x] Guardrails AI, NeMo Guardrails, and Llama Guard after evaluation.
+- [x] Prompt-injection testing tools and threat-model templates.
+- [x] Secret scanning, dependency scanning, model artifact integrity, and supply-chain review.
+- [x] Sandboxing for code execution and browser use.
+- [x] Identity, authorization, delegation, and confused-deputy prevention.
+- [x] Audit logs, approval records, incident handling, and data deletion.
 
 ## Phase 6C — CLI harness, web harness, MCP, and Agent Skills
 
@@ -2817,7 +2817,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-15 — Observability & eval tooling section complete (all 12 rows)
 
-- Commit: pending. 6 lessons added to the `production` track:
+- Commit: `feade3c`. 6 lessons added to the `production` track:
   `llm-observability-foundations` (shared vocabulary — traces/spans/
   sessions/prompt-versions/datasets/experiments/evaluators/dashboards —
   plus the operating rules: redaction, sampling, retention, env
@@ -2839,6 +2839,38 @@ validation, deployment status, measured result when available, blockers, and nex
   `check:links` 0 dead (5,297 routes); registry 2,448 items.
 - Next batch: security/guardrails/governance section (OWASP LLM/agentic,
   NIST AI RMF, MITRE ATLAS, …).
+
+### 2026-09-15 — Security, guardrails & governance section complete (all 10 rows)
+
+- Commit: pending. New `llm-security` track (n:25, Production group, 8
+  lessons): `owasp-llm-and-agentic-top-10` (taxonomy as checklist —
+  integration risk framing), `nist-ai-rmf-and-mitre-atlas` (management
+  layer vs threat layer), `provider-moderation-and-safety-apis` (the
+  cheap floor), `guardrails-frameworks-in-practice` (Guardrails AI
+  validation / NeMo conversational rails / Llama Guard self-hosted
+  classifier — chosen by failure mode), `prompt-injection-testing-and-
+  threat-models` (garak breadth + Promptfoo app-shaped red team + the
+  assets/boundaries/adversaries/actions template),
+  `llm-supply-chain-security` (code layer + model-artifact layer,
+  artifact inventory/SBOM), `sandboxing-code-execution-and-browser-use`
+  (untrusted-action isolation, egress, scoped creds), and
+  `audit-logs-and-accountability` (decision events, tamper-resistance,
+  approval records, deletion that deletes).
+- Checklist: all 10 rows ticked. Two rows ride existing coverage —
+  confused-deputy/identity is `the-authority-problem` +
+  `approval-gates-design` (tools-function-calling track); incident
+  handling is the production track's postmortem/on-call lessons.
+- Sources: 12 new verified records (OWASP GenAI, NIST AI RMF, MITRE
+  ATLAS, OpenAI Moderation, Guardrails AI, NeMo Guardrails, Purple
+  Llama, garak, Promptfoo red-team, E2B, gitleaks, sigstore
+  model-transparency).
+- Gotcha fixed: curriculum track field is `nodes`/`summary`, not
+  `items`/`desc` — wrong field name built a track with `nodes:
+  undefined` and crashed the lesson template's `track.nodes.filter`.
+  check:content didn't catch it (validates slug matching, not schema).
+- Validation: `check:content` clean (2,130); build 2,468 pages;
+  `check:links` 0 dead (5,315 routes); registry 2,457 items.
+- Next batch: Phase 6C harness foundations + CLI/web harness sections.
 
 ### 2026-09-14 — Master ecosystem backlog created
 

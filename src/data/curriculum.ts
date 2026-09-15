@@ -10523,6 +10523,63 @@ const unsortedTracks: Track[] = [
     ]
   },
   {
+    "id": "llm-security",
+    "n": "25",
+    "name": "LLM Security & Governance",
+    "group": "Production",
+    "meta": "8 lessons",
+    "summary": "Securing systems where the output acts — OWASP, governance frameworks, guardrails, injection testing, supply chain, sandboxing, and accountability.",
+    "nodes": [
+      {
+        "title": "OWASP Top 10 for LLM and agentic applications",
+        "slug": "owasp-llm-and-agentic-top-10",
+        "status": "live"
+      },
+      {
+        "title": "NIST AI RMF and MITRE ATLAS: governance frameworks and adversary tactics",
+        "slug": "nist-ai-rmf-and-mitre-atlas",
+        "status": "live",
+        "prereq": ["owasp-llm-and-agentic-top-10"]
+      },
+      {
+        "title": "Provider moderation and safety APIs: the cheap filter layer",
+        "slug": "provider-moderation-and-safety-apis",
+        "status": "live",
+        "prereq": ["owasp-llm-and-agentic-top-10"]
+      },
+      {
+        "title": "Guardrails AI, NeMo Guardrails, and Llama Guard: the filter layer in depth",
+        "slug": "guardrails-frameworks-in-practice",
+        "status": "live",
+        "prereq": ["provider-moderation-and-safety-apis"]
+      },
+      {
+        "title": "Prompt-injection testing tools and a threat-model template that works",
+        "slug": "prompt-injection-testing-and-threat-models",
+        "status": "live",
+        "prereq": ["owasp-llm-and-agentic-top-10"]
+      },
+      {
+        "title": "LLM supply-chain security: secrets, dependencies, and model artifacts",
+        "slug": "llm-supply-chain-security",
+        "status": "live",
+        "prereq": ["owasp-llm-and-agentic-top-10"]
+      },
+      {
+        "title": "Sandboxing code execution and browser use",
+        "slug": "sandboxing-code-execution-and-browser-use",
+        "status": "live",
+        "prereq": ["prompt-injection-testing-and-threat-models"]
+      },
+      {
+        "title": "Audit logs, approval records, and data deletion: the accountability layer",
+        "slug": "audit-logs-and-accountability",
+        "status": "live",
+        "prereq": ["sandboxing-code-execution-and-browser-use"]
+      }
+    ]
+  },
+  {
     "id": "fine-tuning",
     "n": "21",
     "name": "Fine-tuning & Optimization",

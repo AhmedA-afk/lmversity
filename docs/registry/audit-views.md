@@ -1,16 +1,16 @@
 # Content registry — audit views
 
-Generated 2026-09-15T14:06:35.447Z by `scripts/build-content-registry.mjs`.
-2448 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T14:15:01.771Z by `scripts/build-content-registry.mjs`.
+2457 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
 
-- lesson: 2069
+- lesson: 2077
 - quiz: 89
 - lab: 67
 - reference: 59
-- track: 34
+- track: 35
 - answer: 33
 - project: 31
 - page: 21
@@ -23,16 +23,16 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By status
 
-- live: 2448
+- live: 2457
 
 ## By search intent (heuristic)
 
-- concept: 1900
+- concept: 1908
 - comparison: 107
 - build: 98
 - practice: 89
 - reference: 60
-- course-hub: 34
+- course-hub: 35
 - answer: 33
 - worked-example: 29
 - troubleshooting: 24
@@ -47,7 +47,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By primary audience (heuristic)
 
-- ai-engineer: 1672
+- ai-engineer: 1681
 - beginner-engineer: 439
 - forward-deployed-engineer: 194
 - general: 125
@@ -88,6 +88,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 | harness-design | 26 | 26 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 65% | 100% | 4% | 505 | — | — |
 | evals-red-teaming | 28 | 25 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 21% | 100% | 4% | 595 | — | yes |
 | production | 34 | 33 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 53% | 82% | 3% | 510 | yes | — |
+| llm-security | 8 | 8 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 38% | 0% | 0% | 479 | — | — |
 | fine-tuning | 26 | 21 | 0 | 0 | 5 | 0 | 0 | 0 | 0 | 27% | 0% | 8% | 557 | — | — |
 | responsible-ai | 7 | 6 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 14% | 0% | 14% | 392 | — | — |
 | local-inference | 14 | 13 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 79% | 0% | 7% | 419 | — | — |
@@ -239,6 +240,11 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - 2 island lessons (no in-body links)
 - promise gap: no live node title covers "control the bill"
 
+### llm-security — 8 files, 0 modules — starts: "OWASP Top 10 for LLM and agentic applications"
+
+- dead-end finish: last live lesson is audit-logs-and-accountability (concept)
+- missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
+
 ### fine-tuning — 26 files, 7 modules — starts: "Decide: Fine-Tune, Prompt, or RAG?"
 
 - modules without practice ending: "Should you fine-tune at all" ends on synthetic-data-generation (concept); "Methods" ends on fine-tuning-run-hyperparameters (concept); "Training and evaluation" ends on evaluating-a-fine-tuned-model (concept); "Serving a fine-tuned model" ends on merging-and-versioning-adapters (concept) +3 more
@@ -272,21 +278,21 @@ and split always need a written human reason (see checklist).
 
 | disposition | items |
 |---|---:|
-| keep | 2061 |
+| keep | 2070 |
 | investigate | 382 |
 | expand | 5 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2223 | 1.91 | 0 | 196 | 2027 |
+| intentClarity | 2231 | 1.91 | 0 | 202 | 2029 |
 | correctnessSources | 45 | 1.27 | 0 | 33 | 12 |
-| completeness | 2370 | 1.64 | 39 | 764 | 1567 |
-| prerequisiteFit | 2305 | 2.00 | 3 | 0 | 2302 |
-| handsOn | 2223 | 1.49 | 543 | 53 | 1627 |
-| explanationQuality | 2223 | 1.96 | 20 | 56 | 2147 |
-| metadata | 2223 | 1.85 | 0 | 326 | 1897 |
-| linking | 2134 | 1.49 | 382 | 321 | 1431 |
-| freshnessHealth | 2448 | 0.76 | 841 | 1344 | 263 |
+| completeness | 2378 | 1.64 | 39 | 772 | 1567 |
+| prerequisiteFit | 2313 | 2.00 | 3 | 0 | 2310 |
+| handsOn | 2231 | 1.48 | 548 | 53 | 1630 |
+| explanationQuality | 2231 | 1.96 | 20 | 56 | 2155 |
+| metadata | 2231 | 1.85 | 0 | 334 | 1897 |
+| linking | 2142 | 1.49 | 382 | 321 | 1439 |
+| freshnessHealth | 2457 | 0.76 | 848 | 1346 | 263 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
@@ -359,7 +365,7 @@ and split always need a written human reason (see checklist).
 
 ## Duplicate candidates
 
-338 pairs by title/slug similarity (104 not already cross-linked) — candidates for the merge/redirect editorial pass, not verdicts. Pairs where one already links to the other are marked linked — often deliberate two-part lessons.
+340 pairs by title/slug similarity (106 not already cross-linked) — candidates for the merge/redirect editorial pass, not verdicts. Pairs where one already links to the other are marked linked — often deliberate two-part lessons.
 
 | item A | item B | jac | contain | stem | linked | scope |
 |---|---|---:|---:|---|---|---|
@@ -424,7 +430,7 @@ and split always need a written human reason (see checklist).
 | /learn/tools-function-calling/tool-calling-glossary-cheatsheet | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  | yes | same track |
 | /learn/context-engineering/cache-aware-context-design | /learn/context-engineering/ordering-for-cache-hits | 0.5 | 1 |  | yes | same track |
 
-_… 278 more pairs in content-registry.json (`duplicates`)_
+_… 280 more pairs in content-registry.json (`duplicates`)_
 
 ## Title-overpromise candidates
 
@@ -436,7 +442,7 @@ _… 278 more pairs in content-registry.json (`duplicates`)_
 
 ## Sourcing review flags
 
-196 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
+203 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
 
 | item | flags |
 |---|---|
@@ -501,22 +507,24 @@ _… 278 more pairs in content-registry.json (`duplicates`)_
 | /learn/context-engineering/why-context-is-the-real-bottleneck | 7 numeric claims with no sources section or external link |
 | /learn/deep-learning/sequence-generative/317-language-model-objectives-and-tokenization | 9 numeric claims with no sources section or external link |
 
-_… 136 more in content-registry.json (`sourcingFlags`)_
+_… 143 more in content-registry.json (`sourcingFlags`)_
 
 ## Freshness queues
 
 Review order: volatile classes first, oldest last-verified date first; undated items lead each queue. `verified`/`updated`/`published` supply the last-verified date — git-derived when frontmatter is absent.
 
-- periodic: 1344
-- pricing-sensitive: 342
-- release-sensitive: 322
+- periodic: 1346
+- pricing-sensitive: 343
+- release-sensitive: 324
 - durable: 263
-- certification-sensitive: 99
-- policy-sensitive: 78
+- certification-sensitive: 101
+- policy-sensitive: 80
 
-### certification-sensitive (99) — oldest-verified first
+### certification-sensitive (101) — oldest-verified first
 
 - /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access *(verified undated)*
+- /learn/llm-security/owasp-llm-and-agentic-top-10 — OWASP Top 10 for LLM and agentic applications *(verified undated)*
+- /learn/llm-security/sandboxing-code-execution-and-browser-use — Sandboxing code execution and browser use *(verified undated)*
 - /learn/tools-function-calling/building-a-database-tool — Lab: build a read-only database tool *(verified undated)*
 - /learn/harness-design/deny-floors-and-policy-layers — Deny-Floors: Rules No Prompt Can Override *(verified 2026-08-29)*
 - /learn/ai-foundations/reliable-ai/201-provenance-consent-and-data-rights — Provenance, Consent, and Data Rights *(verified 2026-08-30)*
@@ -544,15 +552,14 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-foundations/reliable-ai/223-environmental-impact-and-compute-governance — Environmental Impact and Compute Governance *(verified 2026-08-30)*
 - /learn/ai-foundations/reliable-ai/224-safety-cases-and-deployment-assurance — Safety Cases and Deployment Assurance *(verified 2026-08-30)*
 - /learn/ai-foundations/reliable-ai/225-case-study-health-and-clinical-support — Case Study: Health and Clinical Support *(verified 2026-08-30)*
-- /learn/ai-foundations/reliable-ai/226-case-study-finance-and-public-services — Case Study: Finance and Public Services *(verified 2026-08-30)*
-- /learn/ai-foundations/reliable-ai/227-case-study-generative-agents-and-critical-workflows — Case Study: Generative Agents in Critical Workflows *(verified 2026-08-30)*
-- … 69 more in content-registry.json
+- … 71 more in content-registry.json
 
-### pricing-sensitive (342) — oldest-verified first
+### pricing-sensitive (343) — oldest-verified first
 
 - /learn/agent-frameworks/mastra-typescript-agents — Mastra: the TypeScript agent framework *(verified undated)*
 - /learn/agent-frameworks/microsoft-agent-frameworks — Microsoft's agent frameworks: Semantic Kernel, AutoGen, and the convergence *(verified undated)*
 - /learn/agent-frameworks/openai-agents-sdk — OpenAI Agents SDK: agents, handoffs, and guardrails *(verified undated)*
+- /learn/llm-security/guardrails-frameworks-in-practice — Guardrails AI, NeMo Guardrails, and Llama Guard: the filter layer in depth *(verified undated)*
 - /learn/machine-learning/predictive-ml-vs-generative-ai — Separate predictive-ML choices from generative-AI choices *(verified undated)*
 - /learn/production/langfuse-observability — Langfuse: the open-source observability platform *(verified undated)*
 - /learn/rag/managed-vector-databases — Pinecone, Weaviate, Qdrant, Milvus: the dedicated vector databases *(verified undated)*
@@ -579,12 +586,13 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-foundations/orientation-quiz — Orientation: Check Your Map *(verified 2026-08-30)*
 - /learn/ai-foundations/practical-models-quiz — Choosing & Running: Make the Call *(verified 2026-08-30)*
 - /learn/ai-foundations/pretraining-vs-finetuning — Pretraining vs. Fine-Tuning: Two Different Jobs *(verified 2026-08-30)*
-- /learn/ai-foundations/supervised-learning-explained — Supervised Learning, Explained *(verified 2026-08-30)*
-- … 312 more in content-registry.json
+- … 313 more in content-registry.json
 
-### policy-sensitive (78) — oldest-verified first
+### policy-sensitive (80) — oldest-verified first
 
 - /learn/llm-foundations/read-a-model-card-lab — Lab: read a model card like an engineer *(verified undated)*
+- /learn/llm-security/audit-logs-and-accountability — Audit logs, approval records, and data deletion: the accountability layer *(verified undated)*
+- /learn/llm-security/llm-supply-chain-security — LLM supply-chain security: secrets, dependencies, and model artifacts *(verified undated)*
 - /learn/local-inference/the-local-privacy-boundary — The local privacy boundary *(verified undated)*
 - /learn/rag/pgvector-in-postgres — pgvector: vector search inside the Postgres you already run *(verified undated)*
 - /learn/rag/search-engines-with-vectors — Elasticsearch, OpenSearch, Vespa: the search-engine lineage *(verified undated)*
@@ -612,11 +620,9 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/machine-learning/ml-114-lab-from-question-to-evaluation-plan — Lab: from question to evaluation plan *(verified 2026-08-30)*
 - /learn/machine-learning/ml-512-randomized-experiments-and-online-ab-tests — Randomized experiments and online A/B tests *(verified 2026-08-30)*
 - /learn/machine-learning/ml-707-lab-content-ranking-with-feedback — Lab: content ranking with feedback *(verified 2026-08-30)*
-- /learn/machine-learning/problem-sets/10-comprehensive-classical-ml-qualifying-exam — Problem Set 10: Comprehensive Classical ML Qualifying Exam *(verified 2026-08-30)*
-- /learn/machine-learning/public-data-projects/adult-income-project — Public-data project: Adult income prediction *(verified 2026-08-30)*
-- … 48 more in content-registry.json
+- … 50 more in content-registry.json
 
-### release-sensitive (322) — oldest-verified first
+### release-sensitive (324) — oldest-verified first
 
 Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno, LangGraph *(verified undated)*
@@ -634,6 +640,8 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agent-frameworks/structured-output-libraries — Instructor, Outlines, OpenAI, vLLM, llama.cpp, Anthropic, SGLang, Gemini *(verified undated)*
 - /learn/agent-frameworks/vercel-ai-sdk — Mastra, PydanticAI, LangGraph *(verified undated)*
 - /learn/ai-literacy/meet-skills-connectors-and-agents — MCP *(verified undated)*
+- /learn/llm-security/prompt-injection-testing-and-threat-models — Promptfoo *(verified undated)*
+- /learn/llm-security/provider-moderation-and-safety-apis — OpenAI *(verified undated)*
 - /learn/local-inference/hardware-sizing-measurement-guide — llama.cpp, Ollama, vLLM *(verified undated)*
 - /learn/local-inference/huggingface-tgi-and-tei — Hugging Face, OpenAI, vLLM, llama.cpp *(verified undated)*
 - /learn/local-inference/huggingface-transformers-pipelines — Hugging Face, vLLM, llama.cpp, Ollama *(verified undated)*
@@ -647,16 +655,14 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/local-inference/sglang-serving-and-structured-generation — SGLang, vLLM, OpenAI, llama.cpp, Ollama *(verified undated)*
 - /learn/local-inference/vllm-production-serving — vLLM, OpenAI, Ollama, llama.cpp, Llama *(verified undated)*
 - /learn/local-inference/what-local-inference-actually-means — Ollama *(verified undated)*
-- /learn/production/eval-frameworks-deepeval-trulens-provider-native — DeepEval, TruLens, Promptfoo, Braintrust, Ragas, OpenAI, Anthropic, LangChain, LlamaIndex, Phoenix *(verified undated)*
-- /learn/production/helicone-gateway-observability — Helicone, Langfuse, LangSmith, OpenAI, Phoenix *(verified undated)*
-- … 292 more
+- … 294 more
 
 ## Missing-data queues
 
 ### no summary/meta description (0)
 
 
-### no published or updated date (62)
+### no published or updated date (70)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -683,6 +689,14 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-literacy/seven-first-ai-workflows-lab — Lab: seven first AI workflows for everyday work
 - /learn/llm-foundations/inspect-a-real-tokenizer-lab — Lab: inspect a real tokenizer
 - /learn/llm-foundations/read-a-model-card-lab — Lab: read a model card like an engineer
+- /learn/llm-security/audit-logs-and-accountability — Audit logs, approval records, and data deletion: the accountability layer
+- /learn/llm-security/guardrails-frameworks-in-practice — Guardrails AI, NeMo Guardrails, and Llama Guard: the filter layer in depth
+- /learn/llm-security/llm-supply-chain-security — LLM supply-chain security: secrets, dependencies, and model artifacts
+- /learn/llm-security/nist-ai-rmf-and-mitre-atlas — NIST AI RMF and MITRE ATLAS: governance frameworks and adversary tactics
+- /learn/llm-security/owasp-llm-and-agentic-top-10 — OWASP Top 10 for LLM and agentic applications
+- /learn/llm-security/prompt-injection-testing-and-threat-models — Prompt-injection testing tools and a threat-model template that works
+- /learn/llm-security/provider-moderation-and-safety-apis — Provider moderation and safety APIs: the cheap filter layer
+- /learn/llm-security/sandboxing-code-execution-and-browser-use — Sandboxing code execution and browser use
 - /learn/local-inference/hardware-sizing-measurement-guide — Size hardware for local inference by measuring it
 - /learn/local-inference/huggingface-tgi-and-tei — Hugging Face TGI and TEI: the ecosystem's own serving layer
 - /learn/local-inference/huggingface-transformers-pipelines — Hugging Face Transformers: pipelines and AutoModel
@@ -690,15 +704,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/local-inference/lm-studio-local-server — LM Studio: the GUI path to a local OpenAI-compatible server
 - /learn/local-inference/mlx-lm-on-apple-silicon — MLX and mlx-lm on Apple Silicon
 - /learn/local-inference/ollama-first-run — Ollama: install, pull, run, and the first API call
-- /learn/local-inference/ollama-modelfiles-and-apis — Ollama Modelfiles, embeddings, and tool calling
-- /learn/local-inference/onnx-runtime-on-device-inference — ONNX Runtime: inference that embeds in the app
-- /learn/local-inference/quantization-formats-and-tradeoffs-lab — Lab: pick a quantization level by measuring the tradeoff
-- /learn/local-inference/sglang-serving-and-structured-generation — SGLang: serving with RadixAttention and constrained generation
-- /learn/local-inference/the-local-privacy-boundary — The local privacy boundary
-- /learn/local-inference/vllm-production-serving — vLLM: serving a model to real traffic
-- /learn/local-inference/what-local-inference-actually-means — What 'running a model locally' actually means
-- /learn/machine-learning/predictive-ml-vs-generative-ai — Separate predictive-ML choices from generative-AI choices
-- … 22 more
+- … 30 more
 
 ### zero in-body internal links (template nav still applies) (433)
 
@@ -756,7 +762,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 ### lesson files with status coming (0)
 
 
-### release-sensitive, no date at all (54)
+### release-sensitive, no date at all (61)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -778,6 +784,13 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access
 - /learn/ai-literacy/meet-skills-connectors-and-agents — Meet skills, connectors, and agents — safely
 - /learn/llm-foundations/read-a-model-card-lab — Lab: read a model card like an engineer
+- /learn/llm-security/audit-logs-and-accountability — Audit logs, approval records, and data deletion: the accountability layer
+- /learn/llm-security/guardrails-frameworks-in-practice — Guardrails AI, NeMo Guardrails, and Llama Guard: the filter layer in depth
+- /learn/llm-security/llm-supply-chain-security — LLM supply-chain security: secrets, dependencies, and model artifacts
+- /learn/llm-security/owasp-llm-and-agentic-top-10 — OWASP Top 10 for LLM and agentic applications
+- /learn/llm-security/prompt-injection-testing-and-threat-models — Prompt-injection testing tools and a threat-model template that works
+- /learn/llm-security/provider-moderation-and-safety-apis — Provider moderation and safety APIs: the cheap filter layer
+- /learn/llm-security/sandboxing-code-execution-and-browser-use — Sandboxing code execution and browser use
 - /learn/local-inference/hardware-sizing-measurement-guide — Size hardware for local inference by measuring it
 - /learn/local-inference/huggingface-tgi-and-tei — Hugging Face TGI and TEI: the ecosystem's own serving layer
 - /learn/local-inference/huggingface-transformers-pipelines — Hugging Face Transformers: pipelines and AutoModel
@@ -791,14 +804,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/local-inference/sglang-serving-and-structured-generation — SGLang: serving with RadixAttention and constrained generation
 - /learn/local-inference/the-local-privacy-boundary — The local privacy boundary
 - /learn/local-inference/vllm-production-serving — vLLM: serving a model to real traffic
-- /learn/local-inference/what-local-inference-actually-means — What 'running a model locally' actually means
-- /learn/machine-learning/predictive-ml-vs-generative-ai — Separate predictive-ML choices from generative-AI choices
-- /learn/production/eval-frameworks-deepeval-trulens-provider-native — DeepEval, TruLens, and provider-native evals: the rest of the field
-- /learn/production/helicone-gateway-observability — Helicone: observability at the gateway, not the SDK
-- /learn/production/instrumenting-one-app-two-ways — Lab: instrument one app with two observability paths
-- /learn/production/langfuse-observability — Langfuse: the open-source observability platform
-- /learn/production/langsmith-phoenix-weave — LangSmith, Arize Phoenix, Weave: three platforms, three bets
-- … 14 more
+- … 21 more
 
 ## Role paths
 
