@@ -2298,7 +2298,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-16 — Phase 5: project-coverage audit (38 rows)
 
-- Commit: `PENDING`. Status: complete (audit + tick).
+- Commit: `ad92e9d`. Status: complete (audit + tick).
 - Scope: audited every Phase 5 coverage row (foundation 10, application
   12, advanced 14, role capstones 10) against the lab/project/capstone
   corpus; ticked rows backed by a real hands-on artifact, named in each
