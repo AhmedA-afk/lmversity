@@ -353,7 +353,8 @@ const md = ['# Acquisition & practice family audit — mechanical pass', '', `Ge
   const bPos = quizAnswerPos;
   md.push('## Findings', '');
   md.push(`- **Straight answers (${findings.answers.length})**: ${flagged(findings.answers).length} flagged — answer-first openings, FAQ and related metadata hold across the family.`);
-  md.push(`- **Guides (${findings.guides.length})**: all have \`related\` lesson lists and ordered steps; ${findings.guides.filter((g) => g.internal === 0).length}/${findings.guides.length} have **zero in-body internal links** (continuation lives only in the frontmatter block); ${findings.guides.filter((g) => g.codeBlocks === 0).map((g) => `\`${g.slug}\``).join(', ') || 'none'} have no code.`);
+  const noCode = findings.guides.filter((g) => g.codeBlocks === 0);
+  md.push(`- **Guides (${findings.guides.length})**: all have \`related\` lesson lists and ordered steps; ${findings.guides.filter((g) => g.internal === 0).length}/${findings.guides.length} have **zero in-body internal links** (continuation lives only in the frontmatter block); ${noCode.map((g) => `\`${g.slug}\``).join(', ') || 'none'} ${noCode.length === 1 ? 'has' : 'have'} no code.`);
   md.push(`- **Blog (${findings.blog.length})**: all dated; ${findings.blog.filter((b) => b.learnLinks === 0).map((b) => `\`${b.slug}\``).join(', ') || 'none'} never link into the curriculum.`);
   md.push(`- **Interview (${findings.interview.length})**: ${findings.interview.filter((i) => i.followUps >= i.questions && i.hasRubric).length}/${findings.interview.length} topics have a follow-up prompt on every question plus a weak-vs-strong rubric.`);
   md.push(`- **Scenarios (${findings.scenarios.length})**: ~${Math.round(findings.scenarios.reduce((s, r) => s + r.words, 0) / findings.scenarios.length)} words avg; missing sections: ${[...new Set(findings.scenarios.flatMap((s) => s.missing))].join(', ') || 'none'}.`);
@@ -367,7 +368,7 @@ const md = ['# Acquisition & practice family audit — mechanical pass', '', `Ge
   md.push('1. ~~Shuffle centralized-bank answer positions~~ — **done**: uniform spread + a lesson link per question.');
   md.push('2. ~~Scenario depth pass~~ — **done**: constraints/options/postmortem added to all six.');
   md.push('3. ~~Interview follow-ups + rubric~~ — **done**: follow-up prompt per question + "How to score your answers" rubric per topic.');
-  md.push('4. **Guide in-body links** — weave curriculum links into guide prose where a step references a concept a lesson teaches.');
+  md.push('4. ~~Guide in-body links~~ — **done**: every guide now links into the curriculum from body prose; `why-there-is-no-certificate` links to `/learn`.');
   const totalMarked = Object.values(bPos).reduce((a, b) => a + b, 0);
   const topPos = Object.entries(bPos).sort((a, b) => b[1] - a[1])[0];
   md.push(`5. **Quiz answer-position rebalance** — ${topPos ? `${Math.round((topPos[1] / totalMarked) * 100)}% of correct answers sit at ${topPos[0]}` : ''} across ${totalMarked} lesson-quiz questions; redistribute when files are next touched.`);

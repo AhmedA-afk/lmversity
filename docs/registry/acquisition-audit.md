@@ -1,13 +1,13 @@
 # Acquisition & practice family audit — mechanical pass
 
-Generated 2026-09-15T06:47:15.942Z by `scripts/audit-families.mjs`.
+Generated 2026-09-15T06:53:10.339Z by `scripts/audit-families.mjs`.
 Structural checks only; originality/correctness are scored in the review pass.
 
 ## Findings
 
 - **Straight answers (29)**: 0 flagged — answer-first openings, FAQ and related metadata hold across the family.
-- **Guides (9)**: all have `related` lesson lists and ordered steps; 9/9 have **zero in-body internal links** (continuation lives only in the frontmatter block); `rag-fine-tuning-or-a-longer-prompt` have no code.
-- **Blog (10)**: all dated; `why-there-is-no-certificate` never link into the curriculum.
+- **Guides (9)**: all have `related` lesson lists and ordered steps; 0/9 have **zero in-body internal links** (continuation lives only in the frontmatter block); `rag-fine-tuning-or-a-longer-prompt` has no code.
+- **Blog (10)**: all dated; none never link into the curriculum.
 - **Interview (7)**: 7/7 topics have a follow-up prompt on every question plus a weak-vs-strong rubric.
 - **Scenarios (6)**: ~451 words avg; missing sections: none.
 - **Centralized practice banks**: 48 questions across 6 tracks, 48 total lesson links.
@@ -21,7 +21,7 @@ Structural checks only; originality/correctness are scored in the review pass.
 1. ~~Shuffle centralized-bank answer positions~~ — **done**: uniform spread + a lesson link per question.
 2. ~~Scenario depth pass~~ — **done**: constraints/options/postmortem added to all six.
 3. ~~Interview follow-ups + rubric~~ — **done**: follow-up prompt per question + "How to score your answers" rubric per topic.
-4. **Guide in-body links** — weave curriculum links into guide prose where a step references a concept a lesson teaches.
+4. ~~Guide in-body links~~ — **done**: every guide now links into the curriculum from body prose; `why-there-is-no-certificate` links to `/learn`.
 5. **Quiz answer-position rebalance** — 66% of correct answers sit at B across 603 lesson-quiz questions; redistribute when files are next touched.
 6. **Per-option rationale gaps** — 11 quiz files where some answers state a letter without walking the options.
 
@@ -63,15 +63,15 @@ Structural checks only; originality/correctness are scored in the review pass.
 
 | item | steps | related | code | failure § | verify § | int links | words | flags |
 |---|---------------------|---|
-| build-a-rag-pipeline-over-your-own-documents | 6 | 4 | 5 | ✓ | ✓ | 0 | 761 | no in-body internal links (only the related block) |
-| build-a-tool-calling-agent-from-scratch | 5 | 4 | 3 | ✓ | — | 0 | 538 | no in-body internal links (only the related block) |
-| build-an-mcp-server-in-python | 6 | 4 | 8 | ✓ | — | 0 | 703 | no in-body internal links (only the related block) |
-| cut-your-llm-bill | 6 | 3 | 4 | ✓ | — | 0 | 803 | no in-body internal links (only the related block) |
-| defend-against-prompt-injection | 6 | 4 | 4 | — | ✓ | 0 | 778 | no in-body internal links (only the related block) |
-| get-reliable-json-out-of-an-llm | 5 | 3 | 7 | — | — | 0 | 621 | no in-body internal links (only the related block) |
-| rag-fine-tuning-or-a-longer-prompt | 5 | 4 | 0 | — | — | 0 | 859 | no code — a build guide without runnable steps; no in-body internal links (only the related block) |
-| ship-your-first-ai-feature-to-production | 6 | 3 | 2 | ✓ | ✓ | 0 | 834 | no in-body internal links (only the related block) |
-| write-your-first-eval-for-an-ai-feature | 5 | 3 | 4 | — | — | 0 | 686 | no in-body internal links (only the related block) |
+| build-a-rag-pipeline-over-your-own-documents | 6 | 4 | 5 | ✓ | ✓ | 4 | 773 | — |
+| build-a-tool-calling-agent-from-scratch | 5 | 4 | 3 | ✓ | — | 4 | 534 | — |
+| build-an-mcp-server-in-python | 6 | 4 | 8 | ✓ | — | 4 | 725 | — |
+| cut-your-llm-bill | 6 | 3 | 4 | ✓ | — | 3 | 833 | — |
+| defend-against-prompt-injection | 6 | 4 | 4 | — | ✓ | 3 | 795 | — |
+| get-reliable-json-out-of-an-llm | 5 | 3 | 7 | — | — | 3 | 638 | — |
+| rag-fine-tuning-or-a-longer-prompt | 5 | 4 | 0 | — | — | 3 | 881 | no code — a build guide without runnable steps |
+| ship-your-first-ai-feature-to-production | 6 | 3 | 2 | ✓ | ✓ | 3 | 851 | — |
+| write-your-first-eval-for-an-ai-feature | 5 | 3 | 4 | — | — | 3 | 703 | — |
 
 ## Blog (10)
 
@@ -85,7 +85,7 @@ Structural checks only; originality/correctness are scored in the review pass.
 | stopping-conditions-for-agents | ✓ | 3 | 2 | 3 | 537 | — |
 | the-context-window-got-bigger-and-it-did-not-fix-this | ✓ | 3 | 3 | 3 | 578 | — |
 | the-mcp-mistakes-that-show-up-at-3am | ✓ | 3 | 2 | 3 | 631 | — |
-| why-there-is-no-certificate | ✓ | 3 | 0 | 1 | 522 | no links into the curriculum |
+| why-there-is-no-certificate | ✓ | 3 | 1 | 2 | 520 | — |
 | your-rag-problem-is-a-retrieval-problem | ✓ | 3 | 2 | 3 | 700 | — |
 
 ## Interview topics (7)

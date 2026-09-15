@@ -38,7 +38,8 @@ The options, in descending order of preference:
 - **An honest error** that names the situation and does not lose the user's input.
 
 The one unacceptable option is a spinner that never resolves, and it is the default if you
-do not choose.
+do not choose. [Load shedding and graceful degradation](/learn/production/load-shedding-and-graceful-degradation)
+covers the fuller pattern.
 
 ```python
 async def summarise(text: str) -> Summary:
@@ -88,7 +89,8 @@ grows on its own. Redact at the boundary, set a TTL, and write down which is whi
 
 The **stop reason** is the field people forget and then need. A completion that ended
 because it hit the token limit looks like a normal short answer in the database and like a
-truncation bug to the user.
+truncation bug to the user. [Observability, cost and latency](/learn/production/observability-cost-and-latency)
+has the full field list.
 
 ## 4. Design the failure state users see
 
@@ -127,7 +129,9 @@ majority of real incidents.
 
 Add a **cost-per-request** alert next. It is the one that catches the subtle regressions —
 a prompt change that quietly doubled the context, a cache breakpoint that stopped matching,
-a retry loop that now fires on a class of input it never used to see.
+a retry loop that now fires on a class of input it never used to see. When the alert fires,
+[on-call playbooks for AI](/learn/production/on-call-playbooks-for-ai) covers
+the response side.
 
 ## The pre-launch checklist
 

@@ -30,7 +30,9 @@ work first.
 ## Step 0 — Measure, or you will optimise the wrong thing
 
 You cannot do this from the provider's monthly total. Log per request: input tokens, output
-tokens, cached tokens, model, endpoint, and a request type you assign yourself.
+tokens, cached tokens, model, endpoint, and a request type you assign yourself —
+[token and cost tracking](/learn/production/token-and-cost-tracking) is the
+lesson version of this instrumentation.
 
 ```python
 import logging, time
@@ -84,7 +86,8 @@ do not guess. The usual culprits:
 - **Politeness scaffolding** in the system prompt that no longer earns its tokens.
 
 This is the lever with the best quality side-effect: shorter, sharper context frequently
-performs better, not just cheaper.
+performs better, not just cheaper. [Context observability](/learn/context-engineering/context-observability-and-token-accounting)
+covers how to see which blocks are actually earning their tokens.
 
 ## Lever 3 — Route by difficulty
 
@@ -102,7 +105,8 @@ def choose_model(kind: str, tokens: int) -> str:
 ```
 
 Do this with your eval set open. Move one request type down a tier, run the eval, keep the
-change if the score holds. That is a twenty-minute experiment with a permanent payoff, and
+change if the score holds — [model routing by task complexity](/learn/production/model-routing-by-task-complexity)
+covers the failure modes of a router that sends too much downhill. That is a twenty-minute experiment with a permanent payoff, and
 it is defensible because you have the number.
 
 ## Lever 4 — Cache whole answers

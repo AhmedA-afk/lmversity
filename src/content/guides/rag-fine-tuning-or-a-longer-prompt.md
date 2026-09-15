@@ -56,7 +56,8 @@ seconds. Before anything else, try:
 
 If the material fits in the context window, is small, and changes rarely, you may be done.
 A 30-page policy document pasted into a system prompt with caching enabled is a completely
-legitimate architecture, and it is dramatically simpler than a retrieval pipeline. Do not
+legitimate architecture — see [retrieval vs context stuffing](/learn/context-engineering/retrieval-vs-context-stuffing)
+for where that line sits — and it is dramatically simpler than a retrieval pipeline. Do not
 build the pipeline out of embarrassment.
 
 ## Choose retrieval when
@@ -73,6 +74,8 @@ build the pipeline out of embarrassment.
 That last point is worth stating sharply: **a fine-tuned model cannot enforce per-user
 access control.** If some of your data is confidential to some of your users, retrieval is
 not a preference, it is the only one of the three that can work.
+[When RAG is the wrong tool](/learn/rag/when-rag-is-the-wrong-tool) covers the
+inverse cases where retrieval is the expensive choice.
 
 ## Choose fine-tuning when
 
@@ -86,7 +89,8 @@ not a preference, it is the only one of the three that can work.
 Fine-tuning teaches form far more reliably than it teaches facts. A model fine-tuned on
 your documents will learn to *sound* like your documents, and will still invent details
 with total confidence. If your goal was accuracy about the content, you built the wrong
-thing.
+thing. [Fine-tune vs prompt vs RAG](/learn/fine-tuning/fine-tune-vs-prompt-vs-rag)
+goes deeper on the boundary cases.
 
 ## The four questions that settle it
 

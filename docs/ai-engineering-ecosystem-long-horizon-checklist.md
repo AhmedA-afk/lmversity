@@ -1475,7 +1475,7 @@ validation, deployment status, measured result when available, blockers, and nex
 - No invented numbers or external claims; postmortems are internally consistent with the
   scenario's own stated design.
 - Validation: `npm run check:content` clean; `npm run check:links` clean;
-  `git diff --check` clean. Audit now reports 0 missing scenario sections. Commit: `79d4f2f`.
+  `git diff --check` clean. Audit now reports 0 missing scenario sections. Commit: `2d9dcec`.
 - Next batch: backlog item 3 — interview follow-up prompts + weak-vs-strong rubric
   (7 topic files, ~56 questions).
 
@@ -1497,9 +1497,30 @@ validation, deployment status, measured result when available, blockers, and nex
   done in the generated report.
 - Audit result: 7/7 topics — 8 questions, 8/8 follow-ups, rubric ✓, zero flags.
 - Validation: `npm run check:content` clean; `npm run check:links` clean
-  (2,392 pages); `git diff --check` clean. Commit: `74078bb`.
+  (2,392 pages); `git diff --check` clean. Commit: `e2c22e2`.
 - Next batch: backlog item 4 — guide in-body links (9 guides) plus the blog post
   `why-there-is-no-certificate` curriculum link.
+
+### 2026-09-15 — Guide in-body links and blog curriculum link
+
+- All 9 guides gained in-body curriculum links (3–4 each), drawn from each guide's
+  own `related` frontmatter list and placed where the prose references the concept
+  the lesson teaches — e.g. the MCP guide links `server-design-and-permissions`
+  from the destructive-tools paragraph; the eval guide links
+  `llm-judge-bias-and-calibration` from the judge failure-mode list.
+- `src/content/blog/why-there-is-no-certificate.mdx` now links to `/learn` twice
+  ("work through a track", "every track"), clearing the only blog post with zero
+  curriculum links.
+- `scripts/audit-families.mjs`: grammar fix for the guides finding line; backlog
+  item 4 marked done.
+- Audit result: guides 0/9 with zero in-body links (was 9/9); blog curriculum
+  links clean. Remaining guide flag: `rag-fine-tuning-or-a-longer-prompt` has no
+  code — it is a decision guide, not a build guide; deferred to the editorial pass
+  to either accept as-is or add a worked experiment snippet.
+- Validation: `npm run check:content` clean; `npm run check:links` clean
+  (2,392 pages); `git diff --check` clean. Commit: `25cc740`.
+- Next batch: backlog items 5–6 — lesson-quiz answer-position rebalance (B ~66%
+  across 603 questions) and the 11 files with thin per-option rationale.
 
 ### 2026-09-14 — Master ecosystem backlog created
 

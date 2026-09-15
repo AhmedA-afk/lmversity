@@ -24,7 +24,8 @@ which inputs? Without an answer you are not iterating, you are wandering — and
 cost is that you cannot tell an improvement from a change that fixed your three test cases
 and broke twenty you never look at.
 
-An eval is a small, boring dataset and a grader. It does not need to be sophisticated. It
+An eval is a small, boring dataset and a grader — [why evals matter](/learn/evals-red-teaming/why-evals-matter)
+is the argument in full. It does not need to be sophisticated. It
 needs to exist.
 
 ## Step 1 — Define correct, in writing
@@ -57,7 +58,9 @@ not sample randomly. Take:
 ```
 
 Keep it as JSONL in the repo, next to the code. It is a test fixture; treat it like one and
-review changes to it in pull requests.
+review changes to it in pull requests. When it grows past twenty rows,
+[building a golden dataset](/learn/evals-red-teaming/building-a-golden-dataset)
+covers curation and drift.
 
 ## Step 3 — The cheapest grader that works
 
@@ -148,7 +151,9 @@ reliably do PASS/FAIL.
 
 Known judge failure modes worth checking for: it prefers longer answers; it prefers answers
 written in its own style; it is more lenient on the first item in a list than the last; and
-it will happily rate a fluent, wrong answer above a terse, correct one.
+it will happily rate a fluent, wrong answer above a terse, correct one —
+[LLM judge bias and calibration](/learn/evals-red-teaming/llm-judge-bias-and-calibration)
+catalogs these.
 
 ## What this buys you
 

@@ -22,7 +22,7 @@ related:
 ---
 
 You have a folder of documents and you want a model to answer questions about them. The
-pattern is retrieval-augmented generation: find the passages that plausibly contain the
+pattern is [retrieval-augmented generation](/learn/rag/what-is-rag-and-when-to-use-it): find the passages that plausibly contain the
 answer, put them in the prompt, and require the model to answer only from what it was
 given. Nothing about it is magic, and every part of it is inspectable — which is the
 point, because most RAG systems fail in the retrieval half, not the generation half.
@@ -70,7 +70,9 @@ little in a support or compliance setting.
 
 Fixed-size character windows are the default in every quickstart and they are the default
 because they are easy, not because they are good. They slice tables in half and cut
-procedures mid-step. Split on structure first, then fall back to size.
+procedures mid-step. Split on structure first, then fall back to size — the
+[chunking strategies lesson](/learn/rag/chunking-strategies-for-documents) walks
+through the trade-off space.
 
 ```python
 import re
@@ -182,6 +184,8 @@ def build_prompt(question: str, hits: list[dict]) -> str:
 The explicit refusal string is doing real work. Without it the model will smooth over a
 retrieval miss with something plausible, and a plausible wrong answer is worse than a
 visible gap — you can monitor a refusal rate, you cannot monitor a confident fabrication.
+[Grounding answers with citations](/learn/rag/grounding-answers-with-citations)
+covers the citation formats that survive verification.
 
 ## Step 6 — Check the four things that break
 
@@ -212,5 +216,6 @@ add a reranker over the top 30 candidates. Only then consider a vector database,
 because of scale, not quality.
 
 Before any of that, write down five questions with their correct answers and the passage
-each answer should come from. That file is your eval set, and it is the difference between
-tuning and guessing.
+each answer should come from. That file is your eval set — see
+[evaluating RAG quality](/learn/rag/evaluating-rag-quality) — and it is the
+difference between tuning and guessing.

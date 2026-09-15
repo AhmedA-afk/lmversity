@@ -22,7 +22,9 @@ related:
 If you are parsing model output with a regex and a prayer, you already know the failure:
 it works for a week and then something returns a markdown fence, a trailing comma, or a
 cheerful "Here's the JSON you asked for!" before the payload. The fix is not a better
-prompt. It is moving the constraint out of the prose and into the decoder.
+prompt. It is moving the constraint out of the prose and into the decoder —
+[why structured output](/learn/structured-outputs/why-structured-output) makes
+the case properly.
 
 Here are the four approaches, worst to best, and the validation loop you need under all of
 them.
@@ -125,6 +127,8 @@ answer in prose because it decided the tool was not needed, and you are back to 
 Strict schema modes usually come with restrictions — commonly every property must be
 required, and open-ended maps are rejected. Design the schema for the constraint: make
 optional fields explicitly nullable rather than absent.
+[JSON mode basics](/learn/structured-outputs/json-mode-basics) maps which
+provider supports which constraint level.
 
 ## Level 3 — Validate anyway, always
 
@@ -148,7 +152,8 @@ def extract(document: str, retries: int = 1) -> Assessment:
 One repair attempt, not a loop. If the second try fails, the input is out of distribution
 or the schema is wrong, and retrying is just spending money to arrive at the same place
 more slowly. Log the failure with the input — that log is where your next schema fix comes
-from.
+from. [Validation and auto-repair](/learn/structured-outputs/validation-and-auto-repair)
+goes further into repair-loop design.
 
 ## The three things a schema cannot catch
 

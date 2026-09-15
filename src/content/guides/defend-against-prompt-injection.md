@@ -21,7 +21,7 @@ related:
   - "/learn/mcp/server-design-and-permissions"
 ---
 
-Prompt injection is the vulnerability class where text the model reads changes what the
+[Prompt injection](/learn/evals-red-teaming/prompt-injection-basics) is the vulnerability class where text the model reads changes what the
 model does. It matters exactly as much as your model's tools are dangerous: a chatbot with
 no tools has a content problem, an agent that can send email, spend money or write to a
 database has a security problem.
@@ -92,7 +92,8 @@ It uses the **session's** authority, not the model's intent — the model cannot
 the user could not do. And it is **allowlist-shaped**: external recipients are denied by
 default rather than blocked by a list of bad ones.
 
-Give each tool the narrowest possible scope. A read-only database user for the lookup tool
+Give each tool the narrowest possible scope — [permission and approval systems](/learn/harness-design/permission-and-approval-systems)
+is the deep dive. A read-only database user for the lookup tool
 is worth more than any amount of prompt hardening.
 
 ## Step 4 — Separate reading from acting
@@ -147,7 +148,9 @@ def test_injection_does_not_reach_tools():
 ```
 
 Track the break rate over time. It is one of the few security numbers in this space you can
-actually move and measure, and it will regress when you change models.
+actually move and measure, and it will regress when you change models. The
+[adversarial red-teaming process](/learn/evals-red-teaming/adversarial-red-teaming-process)
+lesson covers running this as a recurring practice rather than a one-off test.
 
 ## The honest summary
 

@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-15T06:47:15.941Z",
+ "generatedAt": "2026-09-15T06:53:10.337Z",
  "findings": {
   "answers": [
    {
@@ -330,12 +330,10 @@
     "codeBlocks": 5,
     "hasFailureSection": true,
     "hasVerifySection": true,
-    "internal": 0,
+    "internal": 4,
     "external": 0,
-    "words": 761,
-    "flags": [
-     "no in-body internal links (only the related block)"
-    ]
+    "words": 773,
+    "flags": []
    },
    {
     "slug": "build-a-tool-calling-agent-from-scratch",
@@ -344,12 +342,10 @@
     "codeBlocks": 3,
     "hasFailureSection": true,
     "hasVerifySection": false,
-    "internal": 0,
+    "internal": 4,
     "external": 0,
-    "words": 538,
-    "flags": [
-     "no in-body internal links (only the related block)"
-    ]
+    "words": 534,
+    "flags": []
    },
    {
     "slug": "build-an-mcp-server-in-python",
@@ -358,12 +354,10 @@
     "codeBlocks": 8,
     "hasFailureSection": true,
     "hasVerifySection": false,
-    "internal": 0,
+    "internal": 4,
     "external": 0,
-    "words": 703,
-    "flags": [
-     "no in-body internal links (only the related block)"
-    ]
+    "words": 725,
+    "flags": []
    },
    {
     "slug": "cut-your-llm-bill",
@@ -372,12 +366,10 @@
     "codeBlocks": 4,
     "hasFailureSection": true,
     "hasVerifySection": false,
-    "internal": 0,
+    "internal": 3,
     "external": 0,
-    "words": 803,
-    "flags": [
-     "no in-body internal links (only the related block)"
-    ]
+    "words": 833,
+    "flags": []
    },
    {
     "slug": "defend-against-prompt-injection",
@@ -386,12 +378,10 @@
     "codeBlocks": 4,
     "hasFailureSection": false,
     "hasVerifySection": true,
-    "internal": 0,
+    "internal": 3,
     "external": 0,
-    "words": 778,
-    "flags": [
-     "no in-body internal links (only the related block)"
-    ]
+    "words": 795,
+    "flags": []
    },
    {
     "slug": "get-reliable-json-out-of-an-llm",
@@ -400,12 +390,10 @@
     "codeBlocks": 7,
     "hasFailureSection": false,
     "hasVerifySection": false,
-    "internal": 0,
+    "internal": 3,
     "external": 0,
-    "words": 621,
-    "flags": [
-     "no in-body internal links (only the related block)"
-    ]
+    "words": 638,
+    "flags": []
    },
    {
     "slug": "rag-fine-tuning-or-a-longer-prompt",
@@ -414,12 +402,11 @@
     "codeBlocks": 0,
     "hasFailureSection": false,
     "hasVerifySection": false,
-    "internal": 0,
+    "internal": 3,
     "external": 0,
-    "words": 859,
+    "words": 881,
     "flags": [
-     "no code — a build guide without runnable steps",
-     "no in-body internal links (only the related block)"
+     "no code — a build guide without runnable steps"
     ]
    },
    {
@@ -429,12 +416,10 @@
     "codeBlocks": 2,
     "hasFailureSection": true,
     "hasVerifySection": true,
-    "internal": 0,
+    "internal": 3,
     "external": 0,
-    "words": 834,
-    "flags": [
-     "no in-body internal links (only the related block)"
-    ]
+    "words": 851,
+    "flags": []
    },
    {
     "slug": "write-your-first-eval-for-an-ai-feature",
@@ -443,12 +428,10 @@
     "codeBlocks": 4,
     "hasFailureSection": false,
     "hasVerifySection": false,
-    "internal": 0,
+    "internal": 3,
     "external": 0,
-    "words": 686,
-    "flags": [
-     "no in-body internal links (only the related block)"
-    ]
+    "words": 703,
+    "flags": []
    }
   ],
   "blog": [
@@ -545,13 +528,11 @@
     "published": true,
     "updated": false,
     "tags": 3,
-    "learnLinks": 0,
-    "internal": 1,
+    "learnLinks": 1,
+    "internal": 2,
     "external": 0,
-    "words": 522,
-    "flags": [
-     "no links into the curriculum"
-    ]
+    "words": 520,
+    "flags": []
    },
    {
     "slug": "your-rag-problem-is-a-retrieval-problem",

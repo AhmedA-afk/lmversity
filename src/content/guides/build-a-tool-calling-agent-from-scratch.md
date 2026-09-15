@@ -20,7 +20,7 @@ related:
   - "/learn/harness-design/state-and-checkpointing"
 ---
 
-An agent is a loop. The model gets a goal and a list of tools; it picks one; your code runs
+[An agent is a loop](/learn/agentic-ai/what-is-an-agent). The model gets a goal and a list of tools; it picks one; your code runs
 it; the result goes back in the conversation; repeat until the model stops asking for
 tools. That is the whole idea. Frameworks add retries, tracing, memory and orchestration on
 top, but if the loop is a black box to you, so is every bug in it.
@@ -84,7 +84,8 @@ SCHEMAS = [
 
 Two things are load-bearing here and neither is the code. The **descriptions** are the only
 thing the model uses to choose, so they should say *when* to reach for the tool, not just
-what it does. And the **path check** in `read_file` is not optional: the argument came from
+what it does — [designing a tool schema](/learn/tools-function-calling/designing-a-tool-schema)
+is entirely about this. And the **path check** in `read_file` is not optional: the argument came from
 a model that may have been reading a file that told it to read `../../.ssh/id_rsa`.
 
 ## Step 2 — The loop
@@ -131,7 +132,8 @@ def run_agent(goal: str, max_turns: int = 12) -> str:
     return "Stopped: hit the turn limit without finishing."
 ```
 
-That is a complete agent. Read it twice — every framework you will use is this, with
+That is a complete agent. Read it twice — every framework you will use is
+[the agent loop](/learn/agentic-ai/the-agent-loop) with
 instrumentation.
 
 ## Step 3 — Three stopping conditions, not one
@@ -184,6 +186,6 @@ enforces.
 ## What you now understand about frameworks
 
 You can read LangGraph, the Agents SDK or anything else and see exactly which part of this
-loop it is replacing. Use one when you want durable state, parallel tool execution,
+loop it is replacing. Use one when you want [durable state](/learn/harness-design/state-and-checkpointing), parallel tool execution,
 tracing, or a team convention — all real reasons. Do not use one because the loop looked
 hard, because it isn't, and the debugging is much easier when you wrote it.

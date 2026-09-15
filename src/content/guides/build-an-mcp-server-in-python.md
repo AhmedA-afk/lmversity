@@ -21,7 +21,7 @@ related:
   - "/learn/mcp/server-design-and-permissions"
 ---
 
-The Model Context Protocol solves an unglamorous problem: every assistant needs to reach
+The [Model Context Protocol](/learn/mcp/what-is-mcp) solves an unglamorous problem: every assistant needs to reach
 your tools, and without a standard, every assistant needs its own integration. MCP is the
 adapter. A server exposes capabilities; any compliant client can use them.
 
@@ -84,7 +84,9 @@ value came from a model that was reading text you did not write.
 ## Step 3 — A resource, for context the model should read
 
 Tools are for actions. Resources are for content the client can pull into context without
-an action. If the model does not need to *do* anything to get it, it should be a resource.
+an action. If the model does not need to *do* anything to get it, it should be a resource —
+[tools, resources and prompts](/learn/mcp/mcp-tools-resources-and-prompts)
+compares the three primitives and who controls each.
 
 ```python
 @mcp.resource("schema://orders")
@@ -147,7 +149,9 @@ For Claude Code, `claude mcp add orders -- python /absolute/path/to/server.py`.
 
 Use absolute paths. The client does not launch your server from the directory you think it
 does, and a relative path is the single most common reason a server silently fails to
-start.
+start. When you outgrow local stdio,
+[MCP transports](/learn/mcp/mcp-transports-stdio-vs-http) covers what changes
+over HTTP.
 
 ## Step 6 — The failure modes
 
@@ -168,7 +172,9 @@ progress notifications.
 **Anything destructive needs a human.** The model is deciding to call your tool based on
 text that may include content from an untrusted source — a document, a web page, an email.
 Read tools can be automatic. Write, delete, send and pay cannot. Put the confirmation in
-the server's own design rather than assuming the client provides one.
+the server's own design rather than assuming the client provides one —
+[server design and permissions](/learn/mcp/server-design-and-permissions) goes
+deeper on where the boundary lives.
 
 **Errors should be readable.** Return "no customer found with that email address" rather
 than letting an exception escape. The model is the consumer of that string and it will
