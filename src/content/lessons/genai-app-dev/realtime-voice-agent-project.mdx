@@ -1,0 +1,62 @@
+---
+title: "Project: realtime voice agent with interruption handling"
+track: "genai-app-dev"
+status: live
+summary: "Build a voice-first agent end to end: streaming speech in, streaming audio out, barge-in when the user interrupts, and the latency budget that decides whether it feels like a conversation or a walkie-talkie."
+duration: "25 min project"
+---
+
+## The short answer
+
+A voice agent is a chat agent where every component is on a clock. Speech-to-text, the model, and text-to-speech each add latency, and they sum — a 2-second total feels conversational, 5 seconds feels broken. This project builds the full pipeline with streaming at every stage, real interruption handling, and a measured latency budget instead of a guessed one.
+
+## Architecture
+
+```text
+mic → VAD (voice-activity detection) → streaming STT
+    → LLM (streaming tokens) → streaming TTS → speaker
+                 ↑                                     ↑
+        interruption watcher ──────────── cancels in-flight audio
+```
+
+Every arrow streams. The moment any stage buffers a complete unit — a full sentence of transcription, a full LLM response, a full audio clip — you've added its entire duration to the user's wait.
+
+## The latency budget
+
+Measure each leg separately before optimizing anything:
+
+| Stage | What to measure | Target feel |
+| --- | --- | --- |
+| VAD → STT final transcript | time from user stop-speaking to final text | the floor — nothing starts before this |
+| LLM time-to-first-token | from transcript sent to first token | dominates perceived speed |
+| TTS time-to-first-audio | from first sentence of tokens to audio out | overlap with remaining tokens |
+| **Total to first audio** | user stops talking → agent starts talking | ~1.5–2s feels like conversation |
+
+The optimization that matters most is usually *sentence-level pipelining*: send each completed LLM sentence to TTS immediately rather than waiting for the whole reply.
+
+## Interruption handling (barge-in)
+
+Users interrupt. When they do:
+
+1. VAD detects new speech during playback.
+2. Cancel the in-flight TTS audio immediately — don't let it finish the sentence.
+3. Cancel or discard the in-flight LLM stream; the reply it was generating is now stale context.
+4. Treat the interruption as the new user turn — and record in state that the previous reply was cut off, so the model doesn't later reference things the user never heard.
+
+The subtle bug: the model's transcript shows its full reply, but the user heard half. Mark truncated replies in the conversation state explicitly.
+
+## Project requirements
+
+- Streaming STT → LLM → TTS with per-stage latency logged.
+- Working barge-in: interrupt the agent mid-sentence and it yields within ~300ms.
+- Truncated-turn accounting in conversation state.
+- A latency report per turn (the four measurements above) printed to the console.
+- One graceful-degradation path: if TTS fails, fall back to showing the text.
+
+## Evaluation
+
+- 10 scripted conversations; measure total-to-first-audio on each. Report the p50 and p95, not the average.
+- Interrupt every conversation at least once; verify the agent acknowledges the interruption rather than continuing the stale reply.
+- One noisy-environment test: does VAD false-trigger on background sound, and does the agent recover?
+
+**Related:** [Streaming chat UX](/learn/genai-app-dev), [Handling multimodal input](/learn/genai-app-dev/handling-multimodal-input), [Latency and cost SLOs](/learn/production/latency-and-cost-slos)

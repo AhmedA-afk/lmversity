@@ -1,21 +1,21 @@
 # Content registry — audit views
 
-Generated 2026-09-15T14:32:27.387Z by `scripts/build-content-registry.mjs`.
-2482 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T14:50:29.725Z by `scripts/build-content-registry.mjs`.
+2461 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
 
-- lesson: 2098
+- lesson: 2107
 - quiz: 89
-- lab: 67
-- reference: 59
-- track: 38
+- lab: 69
+- reference: 55
 - answer: 33
 - project: 32
 - page: 21
 - role: 12
 - blog: 10
+- track: 10
 - guide: 9
 - interview: 7
 - scenario: 6
@@ -23,16 +23,15 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By status
 
-- live: 2482
+- live: 2461
 
 ## By search intent (heuristic)
 
-- concept: 1928
+- concept: 1937
 - comparison: 108
-- build: 99
+- build: 101
 - practice: 89
-- reference: 60
-- course-hub: 38
+- reference: 56
 - answer: 33
 - worked-example: 29
 - troubleshooting: 24
@@ -40,6 +39,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 - role-path: 12
 - nav: 12
 - read: 10
+- course-hub: 10
 - hub: 9
 - interview-prep: 7
 - scenario: 6
@@ -47,10 +47,10 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By primary audience (heuristic)
 
-- ai-engineer: 1706
+- ai-engineer: 1686
 - beginner-engineer: 439
 - forward-deployed-engineer: 194
-- general: 125
+- general: 124
 - job-candidate: 7
 - developer: 1
 - ml-engineer: 1
@@ -68,225 +68,11 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 | track | files | concept | worked ex. | mistakes | compared | cheatsheet | quiz | lab | capstone | % code | % check | % sources | med. words | quick guide | quiz bank |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ai-literacy | 59 | 43 | 2 | 0 | 2 | 2 | 7 | 1 | 2 | 61% | 0% | 2% | 1513 | — | — |
-| maths-foundations | 193 | 179 | 0 | 0 | 2 | 0 | 0 | 11 | 1 | 71% | 0% | 0% | 763 | — | — |
-| python-data-apis | 58 | 45 | 0 | 2 | 0 | 0 | 10 | 0 | 1 | 98% | 0% | 3% | 1615 | — | — |
-| ai-foundations | 160 | 127 | 9 | 0 | 10 | 0 | 10 | 0 | 4 | 68% | 0% | 1% | 1009 | — | yes |
-| llm-foundations | 133 | 113 | 0 | 0 | 10 | 0 | 7 | 2 | 1 | 48% | 92% | 0% | 793 | — | — |
-| classical-ai | 83 | 80 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 96% | 0% | 0% | 902 | — | — |
-| machine-learning | 209 | 185 | 0 | 0 | 2 | 0 | 0 | 19 | 3 | 19% | 0% | 6% | 407 | — | — |
-| deep-learning | 136 | 125 | 0 | 0 | 0 | 0 | 0 | 8 | 3 | 98% | 0% | 0% | 852 | — | — |
-| prompt-engineering | 143 | 117 | 1 | 1 | 8 | 5 | 8 | 1 | 2 | 69% | 0% | 0% | 696 | — | yes |
-| context-engineering | 132 | 101 | 0 | 2 | 13 | 7 | 8 | 0 | 1 | 53% | 0% | 3% | 846 | — | — |
-| structured-outputs | 124 | 103 | 4 | 0 | 4 | 5 | 7 | 0 | 1 | 77% | 0% | 3% | 684 | — | — |
-| hallucinations | 132 | 108 | 0 | 0 | 10 | 6 | 7 | 0 | 1 | 48% | 0% | 2% | 734 | yes | — |
-| genai-app-dev | 130 | 118 | 0 | 0 | 5 | 6 | 0 | 0 | 1 | 78% | 0% | 0% | 692 | — | — |
-| rag | 64 | 36 | 6 | 6 | 3 | 6 | 6 | 0 | 1 | 50% | 42% | 2% | 633 | yes | yes |
-| tools-function-calling | 126 | 93 | 1 | 7 | 11 | 5 | 7 | 1 | 1 | 74% | 0% | 0% | 691 | — | — |
-| mcp | 58 | 29 | 6 | 6 | 5 | 6 | 6 | 0 | 0 | 60% | 52% | 5% | 553 | yes | yes |
-| agentic-ai | 30 | 27 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 23% | 87% | 0% | 544 | — | yes |
-| harness-design | 27 | 27 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 63% | 96% | 4% | 505 | — | — |
-| evals-red-teaming | 28 | 25 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 21% | 100% | 4% | 595 | — | yes |
-| production | 34 | 33 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 53% | 82% | 3% | 510 | yes | — |
-| cli-agents | 7 | 6 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 29% | 0% | 0% | 495 | — | — |
-| web-agents | 7 | 7 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 43% | 0% | 0% | 491 | — | — |
-| agent-skills | 6 | 4 | 0 | 0 | 1 | 0 | 0 | 0 | 1 | 67% | 0% | 17% | 506 | — | — |
-| llm-security | 8 | 8 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 38% | 0% | 0% | 479 | — | — |
-| fine-tuning | 26 | 21 | 0 | 0 | 5 | 0 | 0 | 0 | 0 | 27% | 0% | 8% | 557 | — | — |
-| responsible-ai | 7 | 6 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 14% | 0% | 14% | 392 | — | — |
-| local-inference | 14 | 13 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 79% | 0% | 7% | 419 | — | — |
-| agent-frameworks | 18 | 18 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 89% | 0% | 0% | 385 | — | — |
 
 ## Track gap briefs
 
 Mechanical per-track audit. Practice-ending = last node of a module is quiz/lab/capstone/worked-example/drill;
 dead-end = the track's final live node is a plain concept; orphan boundary = a module `startsAt` slug absent from the track's nodes.
-
-### ai-literacy — 59 files, 9 modules — starts: "What AI can and can't do: the whole picture"
-
-- missing kinds: common-mistakes
-- 6 island lessons (no in-body links)
-- 2 duplicate-candidate pairs in track
-- promise gap: no live node title covers "no code required"
-
-### maths-foundations — 193 files, 17 modules — starts: "Vectors: The Basic Unit of Data"
-
-- modules without practice ending: "The essential maths for AI" ends on convexity-and-loss-landscapes (concept); "Single-variable calculus" ends on one-dimensional-optimisation-clinic (concept); "Decompositions and numerical linear algebra" ends on kernel-matrices-and-kernel-trick (concept); "Mathematical language and computation" ends on sequences-recurrences-polynomials-quadratics-and-growth-rates (concept) +12 more
-- dead-end finish: last live lesson is s4-6-causal-graphical-models-do-calculus-and-identifiability-limits (concept)
-- missing kinds: quiz, worked-example, common-mistakes, cheatsheet
-- 1 island lesson (no in-body links)
-- 10 duplicate-candidate pairs in track
-- promise gap: no live node title covers "The minimum maths"
-
-### python-data-apis — 58 files, 7 modules — starts: "The Whole Game: Messy Data to a Model-Ready Pipeline"
-
-- modules without practice ending: "Getting started" ends on python-data-pipeline-whole-game (concept); "NumPy" ends on selecting-filtering-indexing (concept)
-- missing kinds: worked-example, cheatsheet
-- 2 island lessons (no in-body links)
-- 3 duplicate-candidate pairs in track
-
-### ai-foundations — 160 files, 9 modules — starts: "How LLMs actually work"
-
-- modules without practice ending: "How models work" ends on ai-ml-dl-as-nested-fields (concept); "Inside the network" ends on ai-alignment-and-safety-basics (concept); "The wider picture" ends on why-nonlinearity-matters (concept)
-- dead-end finish: last live lesson is why-nonlinearity-matters (concept)
-- missing kinds: common-mistakes, cheatsheet
-- 42 island lessons (no in-body links)
-- 1 thin vs family median
-- 4 duplicate-candidate pairs in track
-
-### llm-foundations — 133 files, 6 modules — starts: "The Whole Game: One Token, End to End"
-
-- modules without practice ending: "From text to tokens" ends on what-are-embeddings (concept); "Training and generation" ends on instruction-tuning-and-rlhf (concept); "The model landscape" ends on multimodal-llms-explained (concept); "Architecture internals" ends on grouped-query-attention (concept)
-- missing kinds: worked-example, common-mistakes, cheatsheet
-- 2 thin vs family median
-- 20 duplicate-candidate pairs in track
-
-### classical-ai — 83 files, 4 modules — starts: "State Spaces: Representation, Actions, Goals, and Costs"
-
-- modules without practice ending: "Agents, robotics, and hybrid systems" ends on constraint-satisfaction (concept); "Original concept recaps" ends on uncertainty-and-decision (concept)
-- dead-end finish: last live lesson is uncertainty-and-decision (concept)
-- missing kinds: quiz, worked-example, common-mistakes, cheatsheet
-- 59 island lessons (no in-body links)
-- 2 duplicate-candidate pairs in track
-
-### machine-learning — 209 files, 12 modules — starts: "How to use the Classical ML course"
-
-- modules without practice ending: "Orientation and problem framing" ends on generalization-and-evaluation (concept); "Data, features, and decisions" ends on ml-115-case-study-triage-under-review-capacity (concept); "Maths, objectives, and generalisation" ends on regularization-and-bias-variance (concept); "Linear and generalised models" ends on ml-216-case-study-demand-forecast-with-uncertainty (concept) +7 more
-- dead-end finish: last live lesson is deep-lectures/907-time-series-ranking-and-recommender-systems-under-temporal-exposure-feedback (concept)
-- missing kinds: quiz, worked-example, common-mistakes, cheatsheet
-- 94 island lessons (no in-body links)
-- 13 duplicate-candidate pairs in track
-- promise gap: no live node title covers "model families"
-
-### deep-learning — 136 files, 6 modules — starts: "How to use the Deep Learning programme"
-
-- modules without practice ending: "Programme orientation" ends on dl-001-how-to-use-the-deep-learning-program (concept); "Sequences, transformers, generation, and RL" ends on sequence-generative/338-rlhf-preference-optimization-and-alignment-bridge (concept); "Concept recaps" ends on neural-networks-and-representations (concept)
-- dead-end finish: last live lesson is neural-networks-and-representations (concept)
-- missing kinds: quiz, worked-example, common-mistakes, cheatsheet
-- 61 island lessons (no in-body links)
-- 3 duplicate-candidate pairs in track
-
-### prompt-engineering — 143 files, 7 modules — starts: "The Whole Game: One Task From Vague Ask to Reliable Prompt"
-
-- modules without practice ending: "Prompt anatomy" ends on role-prompting (concept); "Examples and reasoning" ends on negative-instructions-pitfall (concept); "Reliability and iteration" ends on multi-turn-prompt-design (concept); "Prompts in production" ends on extended-thinking-and-reasoning-effort (concept) +2 more
-- 5 island lessons (no in-body links)
-- 23 duplicate-candidate pairs in track
-
-### context-engineering — 132 files, 5 modules — starts: "The Whole Game of Context Engineering"
-
-- modules without practice ending: "Assembling context" ends on context-window-testing-and-eval (concept); "How long contexts fail" ends on context-observability-and-token-accounting (concept)
-- missing kinds: worked-example
-- 26 duplicate-candidate pairs in track
-
-### structured-outputs — 124 files, 5 modules — starts: "The Whole Game of Structured Output"
-
-- modules without practice ending: "Making it reliable" ends on structured-output-failure-modes (concept); "Harder schema shapes" ends on schema-versioning-and-migration (concept)
-- missing kinds: common-mistakes
-- 10 duplicate-candidate pairs in track
-
-### hallucinations — 132 files, 0 modules — starts: "The Whole Game: From Fabrication to Trustworthy Systems"
-
-- missing kinds: worked-example, common-mistakes
-- 8 duplicate-candidate pairs in track
-- promise gap: no live node title covers "contain it"
-
-### genai-app-dev — 130 files, 6 modules — starts: "The Whole Game: Build a Support-Reply Drafter End to End"
-
-- modules without practice ending: "Your first feature" ends on designing-chat-ux (concept); "Cost, latency and limits" ends on rate-limits-and-retry-strategies (concept); "Reliability and safety" ends on quiz-shipping-operating (concept); "Beyond the first version" ends on prompt-versioning-rollback (concept) +1 more
-- missing kinds: quiz, worked-example, common-mistakes
-- 2 island lessons (no in-body links)
-- 19 duplicate-candidate pairs in track
-
-### rag — 64 files, 0 modules — starts: "RAG, End to End: The Whole Game"
-
-- 1 island lesson (no in-body links)
-- 5 duplicate-candidate pairs in track
-
-### tools-function-calling — 126 files, 5 modules — starts: "The Whole Game: A Tool Call From Question to Answer"
-
-- modules without practice ending: "Tool calling basics" ends on tool-choice-and-forcing-tool-use (concept); "Multi-step and parallel use" ends on testing-and-debugging-tool-calls (concept); "Schemas at scale" ends on streaming-partial-tool-calls (concept)
-- 29 duplicate-candidate pairs in track
-
-### mcp — 58 files, 0 modules — starts: "What Is MCP"
-
-- dead-end finish: last live lesson is server-design-and-permissions (concept)
-- missing kinds: capstone
-- 3 island lessons (no in-body links)
-- 19 duplicate-candidate pairs in track
-
-### agentic-ai — 30 files, 7 modules — starts: "What Makes Something an Agent"
-
-- modules without practice ending: "What an agent is" ends on react-pattern (concept); "Planning and memory" ends on error-handling-and-retries (concept); "Orchestration and control" ends on when-not-to-use-an-agent (concept); "Failure and evaluation" ends on stopping-conditions-for-agents (concept) +3 more
-- dead-end finish: last live lesson is agent-permissions-and-authorization (concept)
-- missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
-- 1 island lesson (no in-body links)
-- promise gap: no live node title covers "when to reach for one instead of a plain prompt"
-
-### harness-design — 27 files, 6 modules — starts: "The Harness: Everything Around the Model"
-
-- modules without practice ending: "What a harness is" ends on prompt-composition (concept); "Permissions and isolation" ends on subprocess-isolation-and-sandboxing (concept); "State and streaming" ends on context-window-management-in-a-harness (concept); "Extension and configuration" ends on tool-output-truncation (concept) +2 more
-- dead-end finish: last live lesson is distributed-harness-orchestration (concept)
-- missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
-- promise gap: no live node title covers "The engineering scaffold"; "that turns a raw model into a working"
-
-### evals-red-teaming — 28 files, 6 modules — starts: "Why Vibes-Based Iteration Breaks Down"
-
-- modules without practice ending: "Why evals matter" ends on writing-eval-metrics (concept); "Judges and regression suites" ends on eval-driven-iteration (concept); "Attacks" ends on automated-adversarial-testing (concept); "Making evals trustworthy" ends on goodharting-your-benchmark (concept) +2 more
-- dead-end finish: last live lesson is regression-gates-and-online-signals (concept)
-- missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
-- 2 island lessons (no in-body links)
-
-### production — 34 files, 0 modules — starts: "Log Every LLM Call as Structured Data"
-
-- dead-end finish: last live lesson is deployment-versioning-and-incidents (concept)
-- missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
-- 2 island lessons (no in-body links)
-- promise gap: no live node title covers "control the bill"
-
-### cli-agents — 7 files, 0 modules — starts: "Getting a CLI Agent Oriented: Repo Discovery, Instruction Files, and Context Control"
-
-- missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
-- promise gap: no live node title covers "Using Codex"; "Claude Code"; "Aider well"
-
-### web-agents — 7 files, 0 modules — starts: "What the Browser Exposes: DOM, Accessibility Tree, and Every Other Channel"
-
-- dead-end finish: last live lesson is extraction-and-evaluation (concept)
-- missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
-
-### agent-skills — 6 files, 0 modules — starts: "The Agent Skills Spec and Progressive Disclosure"
-
-- missing kinds: quiz, worked-example, common-mistakes, cheatsheet
-- promise gap: no live node title covers "the mechanism chooser"
-
-### llm-security — 8 files, 0 modules — starts: "OWASP Top 10 for LLM and agentic applications"
-
-- dead-end finish: last live lesson is audit-logs-and-accountability (concept)
-- missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
-
-### fine-tuning — 26 files, 7 modules — starts: "Decide: Fine-Tune, Prompt, or RAG?"
-
-- modules without practice ending: "Should you fine-tune at all" ends on synthetic-data-generation (concept); "Methods" ends on fine-tuning-run-hyperparameters (concept); "Training and evaluation" ends on evaluating-a-fine-tuned-model (concept); "Serving a fine-tuned model" ends on merging-and-versioning-adapters (concept) +3 more
-- dead-end finish: last live lesson is choosing-managed-vs-self-hosted-fine-tuning (comparison)
-- missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
-- promise gap: no live node title covers "shrink"
-
-### responsible-ai — 7 files, 0 modules — starts: "Risk before model: frame the system, not just the prompt"
-
-- dead-end finish: last live lesson is consent-contestability-and-impact (concept)
-- missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
-- 5 island lessons (no in-body links)
-- 1 duplicate-candidate pairs in track
-- promise gap: no live node title covers "Safety"; "building AI you can defend"
-
-### local-inference — 14 files, 0 modules — starts: "What 'running a model locally' actually means"
-
-- dead-end finish: last live lesson is the-local-privacy-boundary (concept)
-- missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
-
-### agent-frameworks — 18 files, 0 modules — starts: "The raw-SDK baseline every framework wraps"
-
-- dead-end finish: last live lesson is framework-comparison-and-escape-hatches (concept)
-- missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
 
 ## Scores and dispositions (mechanical pass)
 
@@ -296,82 +82,114 @@ and split always need a written human reason (see checklist).
 
 | disposition | items |
 |---|---:|
-| keep | 2095 |
-| investigate | 382 |
-| expand | 5 |
+| investigate | 2259 |
+| keep | 200 |
+| expand | 2 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2252 | 1.91 | 0 | 207 | 2045 |
+| intentClarity | 2261 | 1.91 | 0 | 209 | 2052 |
 | correctnessSources | 46 | 1.28 | 0 | 33 | 13 |
-| completeness | 2400 | 1.64 | 39 | 783 | 1578 |
-| prerequisiteFit | 2335 | 2.00 | 3 | 0 | 2332 |
-| handsOn | 2252 | 1.48 | 559 | 53 | 1640 |
-| explanationQuality | 2252 | 1.96 | 20 | 56 | 2176 |
-| metadata | 2252 | 1.84 | 0 | 351 | 1901 |
-| linking | 2163 | 1.50 | 382 | 321 | 1460 |
-| freshnessHealth | 2482 | 0.76 | 867 | 1352 | 263 |
+| completeness | 2411 | 1.64 | 41 | 790 | 1580 |
+| prerequisiteFit | 2346 | 0.15 | 2166 | 0 | 180 |
+| handsOn | 2261 | 1.48 | 566 | 53 | 1642 |
+| explanationQuality | 2261 | 1.96 | 20 | 56 | 2185 |
+| metadata | 2261 | 1.84 | 0 | 360 | 1901 |
+| linking | 2172 | 1.50 | 382 | 321 | 1469 |
+| freshnessHealth | 2461 | 0.75 | 870 | 1326 | 265 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
 
 ### Non-keep dispositions
 
-#### investigate: zero in-body internal links (382)
+#### investigate: live lesson not registered in curriculum (2163)
 
+- /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
+- /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
+- /learn/agent-frameworks/crewai-crews-and-flows — CrewAI: role-based crews with deterministic flows
+- /learn/agent-frameworks/dspy-programmatic-prompting — DSPy: programming, not prompting
+- /learn/agent-frameworks/framework-comparison-and-escape-hatches — Comparing frameworks — and the escape hatches that matter
+- /learn/agent-frameworks/google-adk — Google ADK: workflow agents and multi-agent teams
+- /learn/agent-frameworks/haystack-pipelines — Haystack: explicit pipelines for retrieval and agents
+- /learn/agent-frameworks/langchain-agents-and-integrations — LangChain: the integration layer, then agents
+- /learn/agent-frameworks/langgraph-durable-agents — LangGraph: durable agents as state machines
+- /learn/agent-frameworks/llamaindex-data-framework — LlamaIndex: the data framework that grew agents
+- /learn/agent-frameworks/mastra-typescript-agents — Mastra: the TypeScript agent framework
+- /learn/agent-frameworks/microsoft-agent-frameworks — Microsoft's agent frameworks: Semantic Kernel, AutoGen, and the convergence
+- /learn/agent-frameworks/no-code-ai-workflows — n8n, Zapier, Make, Pipedream: bounded no-code AI workflows
+- /learn/agent-frameworks/openai-agents-sdk — OpenAI Agents SDK: agents, handoffs, and guardrails
+- /learn/agent-frameworks/pydanticai-typed-agents — PydanticAI: agents that type-check
+- /learn/agent-frameworks/raw-sdk-agent-baseline — The raw-SDK baseline every framework wraps
+- /learn/agent-frameworks/structured-output-libraries — Instructor, Outlines, Guidance: the constrained-output libraries
+- /learn/agent-frameworks/vercel-ai-sdk — Vercel AI SDK: streaming, tools, and generative UI
+- /learn/agent-skills/agent-skills-spec-and-progressive-disclosure — The Agent Skills spec and progressive disclosure
+- /learn/agent-skills/evaluating-and-porting-skills — Evaluating skills with fixtures, and porting them across agents
+- /learn/agent-skills/skill-md-anatomy — SKILL.md anatomy: frontmatter, body, and bundled resources
+- /learn/agent-skills/skill-security-and-provenance — Skill provenance, review, and the safe-installation checklist
+- /learn/agent-skills/skill-vs-prompt-rule-hook-mcp-subagent — Skill vs prompt vs project rule vs hook vs MCP vs subagent
+- /learn/agent-skills/skills-projects-first-skill-and-capstone — Projects: build your first skill, then turn a workflow into a tested one
+- /learn/agentic-ai/agent-benchmarks — Benchmarking Agents: SWE-bench, WebArena, and GAIA
+- /learn/agentic-ai/agent-memory-short-vs-long-term — Short-Term vs Long-Term Memory
+- /learn/agentic-ai/agent-orchestration-frameworks — Choosing an Orchestration Framework
+- /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access
+- /learn/agentic-ai/agent-task-contracts — Write a task contract for an agent
+- /learn/agentic-ai/agent-to-agent-protocols — Agent-to-Agent Protocols: How Agents Will Talk to Each Other
 - /learn/agentic-ai/agents-vs-workflows — Choose an agent only when a workflow is not enough
-- /learn/ai-foundations/applied-ai/301-ai-product-discovery-outcomes-and-harm — AI Product Discovery: Outcomes, Users, and Harm
-- /learn/ai-foundations/applied-ai/302-choosing-rules-classical-ml-deep-learning-or-llm — Choosing Rules, Classical ML, Deep Learning, or an LLM
-- /learn/ai-foundations/applied-ai/303-data-pipelines-lineage-and-data-contracts — Data Pipelines, Lineage, and Data Contracts
-- /learn/ai-foundations/applied-ai/304-supervised-learning-product-loop — Supervised Learning in the Product Loop
-- /learn/ai-foundations/applied-ai/305-unsupervised-learning-discovery-and-guardrails — Unsupervised Learning for Discovery, Not Automatic Truth
-- /learn/ai-foundations/applied-ai/306-self-supervised-learning-data-and-transfer — Self-Supervised Learning: Data, Representations, and Transfer
-- /learn/ai-foundations/applied-ai/307-reinforcement-learning-product-suitability — Reinforcement Learning: Product Suitability and Safe Constraints
-- /learn/ai-foundations/applied-ai/309-embeddings-similarity-and-index-design — Embeddings, Similarity, and Index Design
-- /learn/ai-foundations/applied-ai/311-agents-tools-and-approval-boundaries — Agents, Tools, and Approval Boundaries
-- /learn/ai-foundations/applied-ai/312-multimodal-ai-inputs-fusion-and-evaluation — Multimodal AI: Inputs, Fusion, and Evaluation
-- /learn/ai-foundations/applied-ai/313-experimentation-ab-tests-and-decision-quality — Experimentation, A/B Tests, and Decision Quality
-- /learn/ai-foundations/applied-ai/314-evaluation-evidence-and-human-review — Evaluation Evidence and Human Review
-- /learn/ai-foundations/applied-ai/315-monitoring-drift-and-incident-response — Monitoring, Drift, and Incident Response
-- /learn/ai-foundations/applied-ai/316-healthcare-ai-clinical-workflows-and-safety — Applied Case: Healthcare AI and Clinical Workflow Safety
-- /learn/ai-foundations/applied-ai/317-education-ai-learning-and-assessment-integrity — Applied Case: Education AI, Learning, and Assessment Integrity
-- /learn/ai-foundations/applied-ai/318-finance-ai-controls-fairness-and-model-risk — Applied Case: Finance AI, Controls, Fairness, and Model Risk
-- /learn/ai-foundations/applied-ai/319-manufacturing-ai-quality-and-maintenance — Applied Case: Manufacturing AI for Quality and Maintenance
-- /learn/ai-foundations/applied-ai/320-public-sector-ai-procurement-and-accountability — Applied Case: Public-Sector AI, Procurement, and Accountability
-- /learn/ai-foundations/applied-ai/321-privacy-security-and-sensitive-data — Privacy, Security, and Sensitive Data in Applied AI
-- /learn/ai-foundations/applied-ai/322-deployment-release-strategy-and-fallbacks — Deployment, Release Strategy, and Safe Fallbacks
-- /learn/ai-foundations/applied-ai/323-applied-ai-architecture-review — Applied AI Architecture Review
-- /learn/ai-foundations/applied-ai/324-applied-ai-project-gates-and-model-card — Applied AI Project Gates and the Model Card
-- /learn/ai-foundations/reliable-ai/201-provenance-consent-and-data-rights — Provenance, Consent, and Data Rights
-- /learn/ai-foundations/reliable-ai/202-labels-annotation-and-ground-truth — Labels, Annotation, and the Limits of Ground Truth
-- /learn/ai-foundations/reliable-ai/203-benchmarks-evaluations-and-capability-claims — Benchmarks, Evaluations, and Defensible Capability Claims
-- /learn/ai-foundations/reliable-ai/204-distribution-shift-and-robustness — Distribution Shift, Robustness, and Monitoring
-- /learn/ai-foundations/reliable-ai/206-hallucination-grounding-and-verification — Hallucination, Grounding, and Verification
-- /learn/ai-foundations/reliable-ai/207-interpretability-and-explanation-boundaries — Interpretability, Explanations, and Their Boundaries
-- /learn/ai-foundations/reliable-ai/208-fairness-problem-formulation-and-measurement — Fairness: Problem Formulation and Measurement
-- /learn/ai-foundations/reliable-ai/209-fairness-mitigation-and-governance — Fairness Mitigation and Governance
-- /learn/ai-foundations/reliable-ai/210-privacy-threat-modeling-and-minimization — Privacy Threat Modeling and Data Minimization
-- /learn/ai-foundations/reliable-ai/211-privacy-preserving-learning-and-release — Privacy-Preserving Learning and Release
-- /learn/ai-foundations/reliable-ai/212-adversarial-ml-and-input-security — Adversarial ML and Input Security
-- /learn/ai-foundations/reliable-ai/215-human-feedback-preference-data-and-rlhf — Human Feedback, Preference Data, and RLHF
-- /learn/ai-foundations/reliable-ai/217-governance-risk-tiers-and-accountability — Governance, Risk Tiers, and Accountability
-- /learn/ai-foundations/reliable-ai/218-audits-evidence-and-independent-review — Audits, Evidence, and Independent Review
-- /learn/ai-foundations/reliable-ai/219-incident-response-rollback-and-learning — AI Incidents, Rollback, and Organisational Learning
-- /learn/ai-foundations/reliable-ai/220-human-in-the-loop-and-meaningful-oversight — Human-in-the-Loop and Meaningful Oversight
-- /learn/ai-foundations/reliable-ai/221-contestability-appeals-and-recource — Contestability, Appeals, and Recourse
-- … 342 more in content-registry.json
+- /learn/agentic-ai/autonomy-vs-control — Setting the Autonomy Dial
+- /learn/agentic-ai/blackboard-and-swarm-patterns — Blackboard and Swarm: Decentralized Multi-Agent Coordination
+- /learn/agentic-ai/choosing-an-agent-framework — LangGraph, CrewAI, AutoGen: What Each Framework Actually Buys You
+- /learn/agentic-ai/coding-agent-architecture — Inside a Coding Agent: How Claude Code and SWE-Agent Work
+- /learn/agentic-ai/common-agent-failure-modes — Diagnosing Agent Failure Modes
+- /learn/agentic-ai/computer-use-agents — Computer-Use Agents: Letting a Model Operate a GUI
+- /learn/agentic-ai/cost-aware-agent-loops — Cost-Aware Agents: Budgeting Tokens Across a Long-Running Loop
+- /learn/agentic-ai/error-handling-and-retries — Recovering When Tools Fail
+- /learn/agentic-ai/evaluating-agent-behavior-in-dev — Reading an Agent's Trace
+- … 2123 more in content-registry.json
 
-#### expand: thin vs family median (238w vs ~765w) (1)
+#### investigate: zero in-body internal links (96)
 
-- /learn/ai-foundations/choosing-a-model — Choosing a model in 2026
-
-#### expand: thin vs family median (277w vs ~765w) (1)
-
-- /learn/llm-foundations/next-token-prediction — Next-Token Prediction: The One Objective
-
-#### expand: thin vs family median (269w vs ~765w) (1)
-
-- /learn/llm-foundations/tokenization-explained — Tokenization: How Text Becomes Tokens
+- /roles/forward-deployed-engineer/ai/agents-loops-stop-conditions-and-fallbacks — Agents: loops, stop conditions, and safe fallbacks
+- /roles/forward-deployed-engineer/ai/chunking-embedding-and-hybrid-search — Chunking, embeddings and hybrid search
+- /roles/forward-deployed-engineer/ai/cost-latency-and-the-call-centre-budget — Cost, latency, and the call-centre budget
+- /roles/forward-deployed-engineer/ai/deterministic-rules-probabilistic-model — Deterministic rules, probabilistic model: where the line goes
+- /roles/forward-deployed-engineer/ai/guardrails-that-do-not-break-the-demo — Guardrails that do not break the demo
+- /roles/forward-deployed-engineer/ai/labelling-twenty-examples-with-a-domain-expert — Labelling twenty examples with a domain expert
+- /roles/forward-deployed-engineer/ai/mcp-servers-and-when-a-plain-function-is-simpler — MCP servers, and when a plain function is simpler
+- /roles/forward-deployed-engineer/ai/metrics-the-customer-will-accept — Metrics the customer will accept, and the ones they will not
+- /roles/forward-deployed-engineer/ai/permission-aware-retrieval — Permission-aware retrieval: filter before you rank
+- /roles/forward-deployed-engineer/ai/rag-in-one-page-and-where-it-breaks — RAG in one page, and where it breaks
+- /roles/forward-deployed-engineer/ai/rag-or-fine-tune-the-decision-with-numbers — RAG or fine-tune: the decision, with numbers
+- /roles/forward-deployed-engineer/ai/structured-outputs-you-can-validate — Structured outputs you can validate
+- /roles/forward-deployed-engineer/ai/system-prompts-and-parameterised-instructions — System prompts and parameterised instructions
+- /roles/forward-deployed-engineer/ai/the-ten-example-feasibility-test — The ten-example feasibility test
+- /roles/forward-deployed-engineer/ai/tool-calling-and-the-tools-an-expert-would-use — Tool calling, and the tools an expert would use
+- /roles/forward-deployed-engineer/ai/why-the-eval-comes-before-the-build — Why the eval comes before the build
+- /roles/forward-deployed-engineer/career/india-routes-platform-vendors-startups-remote — India routes: platform vendors, startups, remote with overlap
+- /roles/forward-deployed-engineer/career/negotiating-from-posted-data — Negotiating from posted data
+- /roles/forward-deployed-engineer/career/resume-and-linkedin-for-an-fde-seat — Résumé and LinkedIn for an FDE seat
+- /roles/forward-deployed-engineer/career/startup-loops-and-the-airline-cto-case — Startup loops, and the "you are the CTO of an airline" case
+- /roles/forward-deployed-engineer/career/the-first-person-case-study — The first-person case study: "I", not "we"
+- /roles/forward-deployed-engineer/career/the-portfolio-that-shows-outcomes — The portfolio that shows outcomes, not features
+- /roles/forward-deployed-engineer/career/the-take-home-with-a-recorded-walkthrough — The take-home with a recorded walkthrough
+- /roles/forward-deployed-engineer/career/what-interviewers-say-they-look-for — What interviewers say they look for
+- /roles/forward-deployed-engineer/career/your-first-90-days-as-an-fde — Your first 90 days as an FDE
+- /roles/forward-deployed-engineer/craft/logs-metrics-traces-what-to-emit — Logs, metrics, traces: what to emit so 3am you can find it
+- /roles/forward-deployed-engineer/craft/runbooks-and-the-ceo-demo-crisis — Runbooks, and staying calm during the CEO demo crisis
+- /roles/forward-deployed-engineer/craft/structured-errors-and-the-message-a-customer-reads — Structured errors, and the message the customer will actually read
+- /roles/forward-deployed-engineer/data/bronze-silver-gold-medallion-layers — Bronze, silver, gold: medallion layers for a small team
+- /roles/forward-deployed-engineer/data/data-residency-dpdp-gdpr-hipaa — Data residency: DPDP Act, GDPR, HIPAA, and what each changes
+- /roles/forward-deployed-engineer/data/data-without-movement-apis-and-mcp-as-a-data-layer — Data without movement: APIs and MCP as the data layer
+- /roles/forward-deployed-engineer/data/entities-properties-links-the-ontology-idea — Entities, properties, links: the ontology idea
+- /roles/forward-deployed-engineer/data/modelling-a-hospital-a-bank-a-factory — Modelling a hospital, a bank, a factory
+- /roles/forward-deployed-engineer/data/multi-party-data-competitors-on-one-platform — Multi-party data: competitors on one platform
+- /roles/forward-deployed-engineer/data/pdfs-scans-and-ocr-in-indian-enterprises — PDFs, scans and OCR: the Indian enterprise reality
+- /roles/forward-deployed-engineer/data/rbac-row-level-security-and-who-sees-what — RBAC, row-level security, and who sees what
+- /roles/forward-deployed-engineer/data/salesforce-and-crm-objects — Salesforce and CRM objects: the fields that are always wrong
+- /roles/forward-deployed-engineer/data/sap-erp-exports-and-the-flat-file — SAP and ERP exports: living with the flat file
+- /roles/forward-deployed-engineer/data/sharepoint-drive-and-document-stores — SharePoint, Drive, and document stores as a source of truth
+- /roles/forward-deployed-engineer/data/sso-saml-oidc-and-the-customers-idp — SSO, SAML, OIDC, and the customer's identity provider
+- … 56 more in content-registry.json
 
 #### expand: thin vs family median (191w vs ~525w) (1)
 
@@ -383,7 +201,7 @@ and split always need a written human reason (see checklist).
 
 ## Duplicate candidates
 
-343 pairs by title/slug similarity (109 not already cross-linked) — candidates for the merge/redirect editorial pass, not verdicts. Pairs where one already links to the other are marked linked — often deliberate two-part lessons.
+344 pairs by title/slug similarity (110 not already cross-linked) — candidates for the merge/redirect editorial pass, not verdicts. Pairs where one already links to the other are marked linked — often deliberate two-part lessons.
 
 | item A | item B | jac | contain | stem | linked | scope |
 |---|---|---:|---:|---|---|---|
@@ -448,7 +266,7 @@ and split always need a written human reason (see checklist).
 | /learn/tools-function-calling/taxonomy-of-tool-failures | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  | yes | same track |
 | /learn/tools-function-calling/tool-calling-across-providers | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  | yes | same track |
 
-_… 283 more pairs in content-registry.json (`duplicates`)_
+_… 284 more pairs in content-registry.json (`duplicates`)_
 
 ## Title-overpromise candidates
 
@@ -460,7 +278,7 @@ _… 283 more pairs in content-registry.json (`duplicates`)_
 
 ## Sourcing review flags
 
-221 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
+224 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
 
 | item | flags |
 |---|---|
@@ -525,16 +343,16 @@ _… 283 more pairs in content-registry.json (`duplicates`)_
 | /learn/context-engineering/just-in-time-context-loading-pattern | 4 numeric claims with no sources section or external link |
 | /learn/context-engineering/measuring-cache-savings | 26 numeric claims with no sources section or external link |
 
-_… 161 more in content-registry.json (`sourcingFlags`)_
+_… 164 more in content-registry.json (`sourcingFlags`)_
 
 ## Freshness queues
 
 Review order: volatile classes first, oldest last-verified date first; undated items lead each queue. `verified`/`updated`/`published` supply the last-verified date — git-derived when frontmatter is absent.
 
-- periodic: 1352
-- pricing-sensitive: 345
-- release-sensitive: 337
-- durable: 263
+- periodic: 1326
+- pricing-sensitive: 347
+- release-sensitive: 338
+- durable: 265
 - certification-sensitive: 103
 - policy-sensitive: 82
 
@@ -572,13 +390,15 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-foundations/reliable-ai/223-environmental-impact-and-compute-governance — Environmental Impact and Compute Governance *(verified 2026-08-30)*
 - … 73 more in content-registry.json
 
-### pricing-sensitive (345) — oldest-verified first
+### pricing-sensitive (347) — oldest-verified first
 
 - /learn/agent-frameworks/mastra-typescript-agents — Mastra: the TypeScript agent framework *(verified undated)*
 - /learn/agent-frameworks/microsoft-agent-frameworks — Microsoft's agent frameworks: Semantic Kernel, AutoGen, and the convergence *(verified undated)*
 - /learn/agent-frameworks/openai-agents-sdk — OpenAI Agents SDK: agents, handoffs, and guardrails *(verified undated)*
+- /learn/harness-design/web-harness-case-study — Case study: a web-navigation harness end to end *(verified undated)*
 - /learn/llm-security/guardrails-frameworks-in-practice — Guardrails AI, NeMo Guardrails, and Llama Guard: the filter layer in depth *(verified undated)*
 - /learn/machine-learning/predictive-ml-vs-generative-ai — Separate predictive-ML choices from generative-AI choices *(verified undated)*
+- /learn/production/deployment-variants-cloud-and-portable — Deployment variants: one managed-cloud path and one portable path *(verified undated)*
 - /learn/production/langfuse-observability — Langfuse: the open-source observability platform *(verified undated)*
 - /learn/rag/managed-vector-databases — Pinecone, Weaviate, Qdrant, Milvus: the dedicated vector databases *(verified undated)*
 - /learn/web-agents/agentic-browsers-overview — Agentic browsers: Browser Use, Stagehand, Browserbase, and computer-use tools *(verified undated)*
@@ -602,9 +422,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-foundations/inference-cost-and-latency-intuition — Why Inference Is Bottlenecked by Memory, Not Math *(verified 2026-08-30)*
 - /learn/ai-foundations/interpretability-methods-overview — Ways to Peek Inside the Box *(verified 2026-08-30)*
 - /learn/ai-foundations/learning-paradigms-quiz — Which Kind of Learning Is This? *(verified 2026-08-30)*
-- /learn/ai-foundations/open-vs-closed-and-hardware-tradeoffs — Open Weights or an API? Two Scenarios *(verified 2026-08-30)*
-- /learn/ai-foundations/orientation-quiz — Orientation: Check Your Map *(verified 2026-08-30)*
-- … 315 more in content-registry.json
+- … 317 more in content-registry.json
 
 ### policy-sensitive (82) — oldest-verified first
 
@@ -640,7 +458,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/machine-learning/ml-114-lab-from-question-to-evaluation-plan — Lab: from question to evaluation plan *(verified 2026-08-30)*
 - … 52 more in content-registry.json
 
-### release-sensitive (337) — oldest-verified first
+### release-sensitive (338) — oldest-verified first
 
 Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno, LangGraph *(verified undated)*
@@ -667,20 +485,20 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/cli-agents/permissions-sandboxes-and-git-workflow — Claude, Codex, Gemini *(verified undated)*
 - /learn/cli-agents/planning-modes-and-patch-review — Claude, Aider, Codex, Gemini *(verified undated)*
 - /learn/harness-design/agent-stack-vocabulary — MCP, Model Context Protocol *(verified undated)*
+- /learn/harness-design/harness-skill-and-mcp-integrations — MCP *(verified undated)*
 - /learn/llm-security/prompt-injection-testing-and-threat-models — Promptfoo *(verified undated)*
 - /learn/llm-security/provider-moderation-and-safety-apis — OpenAI *(verified undated)*
 - /learn/local-inference/hardware-sizing-measurement-guide — llama.cpp, Ollama, vLLM *(verified undated)*
 - /learn/local-inference/huggingface-tgi-and-tei — Hugging Face, OpenAI, vLLM, llama.cpp *(verified undated)*
 - /learn/local-inference/huggingface-transformers-pipelines — Hugging Face, vLLM, llama.cpp, Ollama *(verified undated)*
-- /learn/local-inference/llama-cpp-build-quantize-serve — llama.cpp, Ollama, LM Studio, OpenAI *(verified undated)*
-- … 307 more
+- … 308 more
 
 ## Missing-data queues
 
 ### no summary/meta description (0)
 
 
-### no published or updated date (91)
+### no published or updated date (102)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -708,6 +526,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agent-skills/skills-projects-first-skill-and-capstone — Projects: build your first skill, then turn a workflow into a tested one
 - /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access
 - /learn/agentic-ai/agent-task-contracts — Write a task contract for an agent
+- /learn/ai-foundations/choosing-an-ai-approach-system-selection — Choose between rules, ML, and agents: a system-selection case
 - /learn/ai-literacy/ai-across-languages-and-accessibility — Use AI across languages and accessibility needs
 - /learn/ai-literacy/meet-skills-connectors-and-agents — Meet skills, connectors, and agents — safely
 - /learn/ai-literacy/seven-first-ai-workflows-lab — Lab: seven first AI workflows for everyday work
@@ -718,11 +537,10 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/cli-agents/multi-agent-and-recovery — Multi-agent decomposition, failure recovery, and handoff notes
 - /learn/cli-agents/permissions-sandboxes-and-git-workflow — Permissions, sandbox boundaries, and git workflow with CLI agents
 - /learn/cli-agents/planning-modes-and-patch-review — Planning modes and patch review: the two halves of safe agent work
+- /learn/genai-app-dev/realtime-voice-agent-project — Project: realtime voice agent with interruption handling
 - /learn/harness-design/agent-stack-vocabulary — The agent stack vocabulary: model, loop, harness, tool, skill, MCP, instruction, hook, subagent, workflow
-- /learn/llm-foundations/inspect-a-real-tokenizer-lab — Lab: inspect a real tokenizer
-- /learn/llm-foundations/read-a-model-card-lab — Lab: read a model card like an engineer
-- /learn/llm-security/audit-logs-and-accountability — Audit logs, approval records, and data deletion: the accountability layer
-- … 51 more
+- /learn/harness-design/harness-skill-and-mcp-integrations — Wiring MCP servers and Agent Skills into a harness
+- … 62 more
 
 ### zero in-body internal links (template nav still applies) (433)
 
@@ -768,8 +586,49 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-foundations/reliable-ai/221-contestability-appeals-and-recource — Contestability, Appeals, and Recourse
 - … 393 more
 
-### live file not in curriculum (0)
+### live file not in curriculum (2163)
 
+- /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
+- /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
+- /learn/agent-frameworks/crewai-crews-and-flows — CrewAI: role-based crews with deterministic flows
+- /learn/agent-frameworks/dspy-programmatic-prompting — DSPy: programming, not prompting
+- /learn/agent-frameworks/framework-comparison-and-escape-hatches — Comparing frameworks — and the escape hatches that matter
+- /learn/agent-frameworks/google-adk — Google ADK: workflow agents and multi-agent teams
+- /learn/agent-frameworks/haystack-pipelines — Haystack: explicit pipelines for retrieval and agents
+- /learn/agent-frameworks/langchain-agents-and-integrations — LangChain: the integration layer, then agents
+- /learn/agent-frameworks/langgraph-durable-agents — LangGraph: durable agents as state machines
+- /learn/agent-frameworks/llamaindex-data-framework — LlamaIndex: the data framework that grew agents
+- /learn/agent-frameworks/mastra-typescript-agents — Mastra: the TypeScript agent framework
+- /learn/agent-frameworks/microsoft-agent-frameworks — Microsoft's agent frameworks: Semantic Kernel, AutoGen, and the convergence
+- /learn/agent-frameworks/no-code-ai-workflows — n8n, Zapier, Make, Pipedream: bounded no-code AI workflows
+- /learn/agent-frameworks/openai-agents-sdk — OpenAI Agents SDK: agents, handoffs, and guardrails
+- /learn/agent-frameworks/pydanticai-typed-agents — PydanticAI: agents that type-check
+- /learn/agent-frameworks/raw-sdk-agent-baseline — The raw-SDK baseline every framework wraps
+- /learn/agent-frameworks/structured-output-libraries — Instructor, Outlines, Guidance: the constrained-output libraries
+- /learn/agent-frameworks/vercel-ai-sdk — Vercel AI SDK: streaming, tools, and generative UI
+- /learn/agent-skills/agent-skills-spec-and-progressive-disclosure — The Agent Skills spec and progressive disclosure
+- /learn/agent-skills/evaluating-and-porting-skills — Evaluating skills with fixtures, and porting them across agents
+- /learn/agent-skills/skill-md-anatomy — SKILL.md anatomy: frontmatter, body, and bundled resources
+- /learn/agent-skills/skill-security-and-provenance — Skill provenance, review, and the safe-installation checklist
+- /learn/agent-skills/skill-vs-prompt-rule-hook-mcp-subagent — Skill vs prompt vs project rule vs hook vs MCP vs subagent
+- /learn/agent-skills/skills-projects-first-skill-and-capstone — Projects: build your first skill, then turn a workflow into a tested one
+- /learn/agentic-ai/agent-benchmarks — Benchmarking Agents: SWE-bench, WebArena, and GAIA
+- /learn/agentic-ai/agent-memory-short-vs-long-term — Short-Term vs Long-Term Memory
+- /learn/agentic-ai/agent-orchestration-frameworks — Choosing an Orchestration Framework
+- /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access
+- /learn/agentic-ai/agent-task-contracts — Write a task contract for an agent
+- /learn/agentic-ai/agent-to-agent-protocols — Agent-to-Agent Protocols: How Agents Will Talk to Each Other
+- /learn/agentic-ai/agents-vs-workflows — Choose an agent only when a workflow is not enough
+- /learn/agentic-ai/autonomy-vs-control — Setting the Autonomy Dial
+- /learn/agentic-ai/blackboard-and-swarm-patterns — Blackboard and Swarm: Decentralized Multi-Agent Coordination
+- /learn/agentic-ai/choosing-an-agent-framework — LangGraph, CrewAI, AutoGen: What Each Framework Actually Buys You
+- /learn/agentic-ai/coding-agent-architecture — Inside a Coding Agent: How Claude Code and SWE-Agent Work
+- /learn/agentic-ai/common-agent-failure-modes — Diagnosing Agent Failure Modes
+- /learn/agentic-ai/computer-use-agents — Computer-Use Agents: Letting a Model Operate a GUI
+- /learn/agentic-ai/cost-aware-agent-loops — Cost-Aware Agents: Budgeting Tokens Across a Long-Running Loop
+- /learn/agentic-ai/error-handling-and-retries — Recovering When Tools Fail
+- /learn/agentic-ai/evaluating-agent-behavior-in-dev — Reading an Agent's Trace
+- … 2123 more
 
 ### live curriculum node missing file (0)
 
@@ -780,7 +639,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 ### lesson files with status coming (0)
 
 
-### release-sensitive, no date at all (79)
+### release-sensitive, no date at all (82)
 
 - /learn/agent-frameworks/agno-teams-and-agentos — Agno: fast agents, teams, and the AgentOS runtime
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
@@ -813,6 +672,8 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/cli-agents/permissions-sandboxes-and-git-workflow — Permissions, sandbox boundaries, and git workflow with CLI agents
 - /learn/cli-agents/planning-modes-and-patch-review — Planning modes and patch review: the two halves of safe agent work
 - /learn/harness-design/agent-stack-vocabulary — The agent stack vocabulary: model, loop, harness, tool, skill, MCP, instruction, hook, subagent, workflow
+- /learn/harness-design/harness-skill-and-mcp-integrations — Wiring MCP servers and Agent Skills into a harness
+- /learn/harness-design/web-harness-case-study — Case study: a web-navigation harness end to end
 - /learn/llm-foundations/read-a-model-card-lab — Lab: read a model card like an engineer
 - /learn/llm-security/audit-logs-and-accountability — Audit logs, approval records, and data deletion: the accountability layer
 - /learn/llm-security/guardrails-frameworks-in-practice — Guardrails AI, NeMo Guardrails, and Llama Guard: the filter layer in depth
@@ -820,9 +681,7 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/llm-security/owasp-llm-and-agentic-top-10 — OWASP Top 10 for LLM and agentic applications
 - /learn/llm-security/prompt-injection-testing-and-threat-models — Prompt-injection testing tools and a threat-model template that works
 - /learn/llm-security/provider-moderation-and-safety-apis — Provider moderation and safety APIs: the cheap filter layer
-- /learn/llm-security/sandboxing-code-execution-and-browser-use — Sandboxing code execution and browser use
-- /learn/local-inference/hardware-sizing-measurement-guide — Size hardware for local inference by measuring it
-- … 39 more
+- … 42 more
 
 ## Role paths
 

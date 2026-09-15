@@ -1,0 +1,33 @@
+---
+title: "Case study: a deep-research harness"
+track: "harness-design"
+status: live
+summary: "Walk a research-agent harness through a multi-source question — plan, search, read, cite, synthesize — showing how budgeted context, source provenance, and synthesis gates differ from a plain search loop."
+duration: "10 min read"
+---
+
+## The scenario
+
+An analyst asks: "Compare the current EU AI Act enforcement timeline against what was proposed in the draft — what slipped?" A research agent must plan sub-questions, gather sources, keep provenance, and synthesize — without letting 40 search results swamp a finite context window.
+
+## The run, step by step
+
+**1. Plan before searching.** The harness's *planner* decomposes the question into sub-questions: enforcement dates in the enacted text, dates in the draft, what changed between them. Each sub-question gets a *budget* — max searches, max pages read — because unbounded research loops are the canonical runaway. Component: *task decomposition + budget ledger*.
+
+**2. Search with shaped results.** Each sub-question issues queries through the search tool — [shaped, dated, deduplicated](/learn/tools-function-calling/building-a-web-search-tool-lab). The harness keeps a *seen-URL set* so the agent can't read the same page twice under different queries.
+
+**3. Read selectively, not greedily.** This is where research harnesses differ from search loops: full pages are expensive. A *reader policy* fetches only results whose snippets look load-bearing, and extracts relevant spans rather than dumping whole pages into context. Component: *context budgeter* — the same discipline as [budgeted context management](/learn/context-engineering) applied to evidence.
+
+**4. Provenance as state.** Every extracted claim is stored with its source URL and retrieval date in a *source ledger* — structured harness state, not model memory. When the model later writes "enforcement begins August 2026," the harness can require that claim to reference a ledger entry. Unsourced claims fail the synthesis gate.
+
+**5. Synthesize through a gate.** The final report isn't the model free-writing. A *synthesis contract* requires: one claim per bullet, each bullet citing a ledger entry, plus a "changed vs unchanged" diff structure matching the question. The gate rejects unsourced or off-structure drafts and returns them for revision — twice, then it surfaces the partial result rather than burning budget forever.
+
+**6. Deliver with the ledger.** The output ships with the source list attached — the analyst can audit every claim to a URL. The whole run is traced for [evaluation](/learn/evals-red-teaming) replay.
+
+## What this case shows
+
+- Research harnesses are *budget machines*: per-question budgets, seen-sets, selective reading, and bounded revision loops all exist to stop unbounded gathering.
+- Provenance is harness state, not model honesty. The citation guarantee comes from the ledger + gate, not from asking nicely.
+- The deliverable's structure is contracted before synthesis — the model fills a shape; it doesn't invent one.
+
+**Related:** [Web harness case study](/learn/harness-design/web-harness-case-study), [Context window management](/learn/harness-design/context-window-management-in-a-harness), [State and checkpointing](/learn/harness-design/state-and-checkpointing)

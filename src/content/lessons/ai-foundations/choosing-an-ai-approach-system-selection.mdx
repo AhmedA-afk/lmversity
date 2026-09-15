@@ -1,0 +1,60 @@
+---
+title: "Choose between rules, ML, and agents: a system-selection case"
+track: "ai-foundations"
+status: live
+summary: "Work through three realistic system-selection cases to decide when a rule engine, a trained model, or an LLM agent is the right tool — and what each choice commits you to."
+duration: "9 min read"
+---
+
+## The short answer
+
+"Use AI" is not a system design. Every AI project starts by choosing *which kind of system* to build — a deterministic rules engine, a classical ML model, a retrieval-augmented LLM, or a tool-using agent — and each choice commits you to different evidence requirements, failure modes, and operating costs. The right answer is almost always *the simplest system that meets the requirement with evidence*.
+
+## Case 1: Refund approval
+
+**Requirement:** approve refunds under $50 automatically if the account is older than 90 days and has no open disputes.
+
+- A rules engine does this perfectly. It is deterministic, auditable line-by-line, free per decision, and regulators can read the policy directly.
+- An ML model adds nothing — there is no pattern to learn, only a policy to execute.
+- An LLM agent would be worse on every axis: slower, costlier, non-deterministic, and harder to audit.
+
+**Selection:** rules. The lesson: when the policy is fully written down, write it down as code — not as a prompt.
+
+## Case 2: Churn prediction
+
+**Requirement:** rank 40,000 customers by likelihood to churn in the next quarter so the retention team can prioritize outreach.
+
+- Rules can't capture "likelihood" — the signal lives in usage patterns, not policy.
+- A classical ML model (gradient boosting on usage features) fits: tabular data, a measurable outcome, a training set where labels exist.
+- An LLM could *discuss* a customer but produces no calibrated ranking and costs orders of magnitude more per row.
+
+**Selection:** supervised ML. The evidence requirement: you need historical labels (who churned) and a way to measure lift over the naive baseline before trusting the ranking.
+
+## Case 3: Support triage that reads and acts
+
+**Requirement:** read incoming support emails, pull the customer's order history, draft a reply, and escalate anything touching legal or safety.
+
+- Rules break on open-ended text. ML can classify but can't compose context-aware replies or call your order API.
+- An LLM agent fits — with boundaries: retrieval over the knowledge base for grounding, tool calls for order data, a deny-list for legal/safety categories, and human review on anything it escalates.
+
+**Selection:** LLM agent *inside* a harness, not a raw model. The deployment boundary matters as much as the model: the agent drafts and retrieves; it never issues refunds or touches accounts flagged legal without a human.
+
+## The selection discipline
+
+Across all three cases the same four questions do the work:
+
+1. **Is the policy fully written down?** Yes → rules. Rules are auditable and free.
+2. **Is there a measurable outcome with historical labels?** Yes → classical ML. Cheaper and more calibrated than an LLM.
+3. **Does the task need open-ended language, retrieval, or tool use?** Yes → LLM system, scoped to exactly that need.
+4. **What's the blast radius when it's wrong?** High → add human review, narrow permissions, and an abstention path regardless of which system you chose.
+
+## Deployment boundaries and responsible-AI checks
+
+The selection isn't done until you've drawn the boundary:
+
+- **What can it touch?** Read-only retrieval is cheap to approve; write actions (refunds, emails sent, records changed) need explicit authorization paths — see [Agent Permissions and Authorization](/learn/agentic-ai/agent-permissions-and-authorization).
+- **Who reviews edge cases?** Every system needs an abstention/escalation path designed before launch, not after the first incident.
+- **What's the evidence it works?** Rules get tested, models get evaluated on held-out data, agents get task-level evals — pick the evidence standard *at selection time*, because it constrains what you can responsibly deploy.
+- **Who is affected when it errs?** Fairness, privacy, and accessibility review isn't a post-launch patch — see [Responsible AI](/learn/responsible-ai).
+
+**Related:** [Predictive ML vs Generative AI](/learn/machine-learning/predictive-ml-vs-generative-ai), [When Not to Use an Agent](/learn/agentic-ai/when-not-to-use-an-agent), [AI Agents vs Chatbots](/learn/ai-foundations/ai-agents-vs-chatbots)

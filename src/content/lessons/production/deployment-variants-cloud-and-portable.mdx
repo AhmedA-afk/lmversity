@@ -1,0 +1,66 @@
+---
+title: "Deployment variants: one managed-cloud path and one portable path"
+track: "production"
+status: live
+summary: "Two concrete deployment shapes for the same LLM app — a managed-cloud path (serverless + edge) and a portable path (container + reverse proxy) — and what each one buys and costs you."
+duration: "11 min read"
+---
+
+## The short answer
+
+An LLM app deploys two ways in practice: the **managed-cloud path** — serverless functions, managed databases, edge routing — and the **portable path** — one container you can run on a VM, Kubernetes, or a laptop. Neither is "better": managed trades operational control for speed and scaling; portable trades convenience for independence and predictable cost. Most teams should be able to walk both paths for the same app, because the moment your provider's pricing or limits change, portability is the exit.
+
+## Path 1: Managed cloud (serverless shape)
+
+```text
+edge CDN → serverless API routes → managed LLM gateway
+              ↓
+        managed Postgres/Redis → object storage for artifacts
+```
+
+What it looks like in practice:
+
+- The app ships as API routes on a platform like Vercel or a Cloudflare Workers deployment — no servers to provision, autoscaling to zero.
+- Secrets live in the platform's env-var store; LLM API keys never ship to the client.
+- Streaming responses matter more here, not less: serverless functions have execution-time limits, and [streaming](/learn/genai-app-dev) keeps the connection alive while staying under the limit.
+- Database: managed Postgres. Cache/queues: managed Redis or the platform's KV.
+
+**What it buys:** deploys in minutes, no ops burden, global edge by default.
+**What it costs:** per-request pricing at scale, execution-time limits on long agent runs, and provider lock-in on the platform-specific bits (KV APIs, edge middleware). Long-running agent tasks need a separate worker tier or a queue — serverless request lifecycles won't hold a 20-minute agent loop.
+
+## Path 2: Portable container
+
+```text
+reverse proxy (nginx/caddy) → app container → LLM gateway or local model
+                                   ↓
+                         Postgres container / volume
+```
+
+What it looks like in practice:
+
+- One `Dockerfile` builds the app; `docker run` executes it anywhere — a $10 VM, a Kubernetes pod, or your laptop for a staging environment identical to prod.
+- Long-running work fits naturally: the same container runs the web process *and* a worker process consuming a queue, so agent tasks aren't constrained by request timeouts.
+- Secrets come from mounted env files or a secrets sidecar — never baked into the image.
+- The deploy is boring on purpose: pull image, restart container, health-check. [Canary and shadow releases](/learn/production/canary-and-shadow-releases) work identically.
+
+**What it buys:** runs anywhere, predictable fixed cost, no execution limits, identical dev/staging/prod environments.
+**What it costs:** you own uptime, scaling, patching, and the reverse-proxy TLS setup. No free global edge.
+
+## Choosing between them — and keeping both open
+
+The real engineering move isn't picking one forever; it's keeping the app's deployment surface small enough that both paths stay viable:
+
+- **No platform-specific APIs in business logic.** Edge KV calls and platform middleware belong in thin adapters you could rewrite in a day.
+- **Env-var configuration only.** If config is env vars, both paths configure identically.
+- **The LLM call already abstracts the provider.** A [gateway or provider-abstraction layer](/learn/production/llm-gateway-and-provider-abstraction) means "which model" is config, not code — extend the same discipline to "which platform."
+- **Queue the long work regardless.** Even on serverless, a queue + worker keeps agent tasks portable; the worker is a container either way.
+
+## Deployment checklist for either path
+
+- Health endpoint returning real status (not just 200).
+- Graceful shutdown: finish in-flight streams, close DB pools.
+- Secrets in env vars, verified absent from the image/bundle.
+- Rollback = redeploy previous image/version — test it once before you need it.
+- Observability wired before launch: [structured logging](/learn/production/structured-logging-for-llm-calls) and tracing survive the deploy, they aren't bolted on after.
+
+**Related:** [Deployment versioning and incidents](/learn/production/deployment-versioning-and-incidents), [Multi-provider failover](/learn/production/multi-provider-failover-and-redundancy), [Ship your first AI feature](/learn/production)

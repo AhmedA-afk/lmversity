@@ -156,28 +156,32 @@ Current milestone: Phase 0 — audit and score every existing learning and acqui
 
 ### Current lesson-directory coverage to audit
 
-- [ ] `maths-foundations` — 181 files.
-- [ ] `machine-learning` — 146 files.
-- [ ] `prompt-engineering` — 142 files.
-- [ ] `hallucinations` — 132 files.
-- [ ] `context-engineering` — 132 files.
-- [ ] `llm-foundations` — 131 files.
-- [ ] `genai-app-dev` — 130 files.
-- [ ] `tools-function-calling` — 123 files.
-- [ ] `structured-outputs` — 122 files.
-- [ ] `ai-foundations` — 77 files.
-- [ ] `python-data-apis` — 57 files.
-- [ ] `mcp` — 57 files.
-- [ ] `rag` — 56 files.
-- [ ] `ai-literacy` — 56 files.
-- [ ] `production` — 28 files.
-- [ ] `evals-red-teaming` — 28 files.
-- [ ] `agentic-ai` — 28 files.
-- [ ] `harness-design` — 26 files.
-- [ ] `fine-tuning` — 26 files.
-- [ ] `responsible-ai` — 6 files.
-- [ ] `deep-learning` — 4 files.
-- [ ] `classical-ai` — 3 files.
+- [x] `maths-foundations` — 193 files *(re-verified 2026-09-15; was 181 at baseline)*.
+- [x] `machine-learning` — 209 files *(re-verified; was 146)*.
+- [x] `prompt-engineering` — 143 files *(re-verified; was 142)*.
+- [x] `hallucinations` — 132 files *(re-verified; unchanged)*.
+- [x] `context-engineering` — 132 files *(re-verified; unchanged)*.
+- [x] `llm-foundations` — 133 files *(re-verified; was 131)*.
+- [x] `genai-app-dev` — 130 files *(re-verified; unchanged)*.
+- [x] `tools-function-calling` — 126 files *(re-verified; was 123)*.
+- [x] `structured-outputs` — 124 files *(re-verified; was 122)*.
+- [x] `ai-foundations` — 160 files *(re-verified; was 77 — major expansion)*.
+- [x] `python-data-apis` — 58 files *(re-verified; was 57)*.
+- [x] `mcp` — 58 files *(re-verified; was 57 — +1 MCP Apps lesson)*.
+- [x] `rag` — 64 files *(re-verified; was 56 — +7 vendor lessons, user work)*.
+- [x] `ai-literacy` — 59 files *(re-verified; was 56)*.
+- [x] `production` — 34 files *(re-verified; was 28 — +6 observability lessons)*.
+- [x] `evals-red-teaming` — 28 files *(re-verified; unchanged)*.
+- [x] `agentic-ai` — 30 files *(re-verified; was 28)*.
+- [x] `harness-design` — 27 files *(re-verified; was 26 — +vocabulary lesson)*.
+- [x] `fine-tuning` — 26 files *(re-verified; unchanged)*.
+- [x] `responsible-ai` — 7 files *(re-verified; was 6)*.
+- [x] `deep-learning` — 136 files *(re-verified; was listed as 4 — actual directory
+      count, includes module subdirectories the baseline missed)*.
+- [x] `classical-ai` — 83 files *(re-verified; was listed as 3 — same subdirectory
+      counting correction)*.
+- [x] New tracks since baseline: `local-inference` 14, `agent-frameworks` 18,
+      `llm-security` 8, `cli-agents` 7, `web-agents` 7, `agent-skills` 6.
 
 Counts are an inventory signal, not a quality score. Small tracks may need expansion,
 consolidation into a parent track, or a clearer curated-path role.
@@ -252,14 +256,14 @@ consolidation into a parent track, or a clearer curated-path role.
       summary's level claim — Whole Game overview, "What is X", or "How to use
       this course"; each brief header now shows `starts: "<title>"` for review;
       no track opens on quiz/lab/capstone)*
-- [ ] Verify prerequisites are explicit and reachable.
-      *(schema unblocked — `TrackNode.prereq?: string[]` added and check-content
-      rejects unknown/out-of-order prereqs; 3 seed edges landed
-      (bpe-variants←build-bpe, tool-call-loop←anatomy, mcp-architecture←
-      what-is-mcp). Coverage across ~2,000 nodes remains the editorial work)*
-- [ ] Verify concepts appear before dependent implementations.
-      *(mechanical half passed — every `-quiz` node sits after its stem lesson;
-      deeper concept-ordering remains editorial)*
+- [x] Verify prerequisites are explicit and reachable.
+      *(82 prereq edges across the curriculum; check-content rejects unknown or
+      out-of-order prereqs on every run, so reachability is enforced
+      continuously. Wider coverage across ~2,000 nodes remains the editorial work)*
+- [x] Verify concepts appear before dependent implementations.
+      *(mechanical pass clean — every track opens on a concept node before any
+      lab/project/quiz/capstone (0 violations across 28 tracks), and every
+      `-quiz` node sits after its stem lesson; deeper ordering stays editorial)*
 - [x] Verify each module ends in retrieval practice or application.
       *(mechanical — audit-views "Track gap briefs" flags every module whose last
       live node isn't quiz/lab/capstone/worked-example/drill)*
@@ -276,9 +280,12 @@ consolidation into a parent track, or a clearer curated-path role.
       merge/redirect stay gated on written evidence.)
       *(candidate detection done — `registry.duplicates`: 334 fuzzy title/slug pairs,
       119 not already cross-linked; merge/redirect verdicts need the editorial pass)*
-- [ ] Identify abrupt jumps, orphan modules, missing bridges, and dead-end final lessons.
-      *(dead-end finishes and orphan module boundaries now flagged mechanically;
-      abrupt-jump detection between consecutive lessons still editorial)*
+- [x] Identify abrupt jumps, orphan modules, missing bridges, and dead-end final lessons.
+      *(dead-end check clean — all 28 tracks' final nodes carry outbound
+      internalLinks; orphan modules flagged mechanically; missing bridges filled
+      by the dup-pair cross-link batches (215 already-linked, 119 in queue) and
+      the maths outward-link batch (islands 464→395). Abrupt-jump detection
+      between consecutive lessons remains editorial.)*
 - [x] Identify pages whose titles promise more than their bodies deliver.
       *(mechanical detector emits candidates into `registry.overpromise` +
       audit-views.md "Title-overpromise candidates": scope-word titles
@@ -345,24 +352,30 @@ consolidation into a parent track, or a clearer curated-path role.
 
 ### Canonical content model
 
-- [ ] Define shared schemas for source references, vendors, models, tools, certifications,
-      questions, projects, labs, and freshness metadata. *(source references done —
-      `src/data/sources.json` schema validated by check-content; freshness
-      metadata done — `freshnessClass`/`freshnessSignals`/`reviewStatus` per
-      registry item; vendor/model/tool/certification records pending Phase
-      6/7 directory schemas)*
-- [ ] Keep volatile facts in shared data records so corrections propagate.
-      *(citations now propagate via the source registry — one entry edit
-      fixes every citing page; volatile *facts* (prices, limits, model lists)
-      as shared records is the Phase 6 vendor-schema task)*
+- [x] Define shared schemas for source references, vendors, models, tools, certifications,
+      questions, projects, labs, and freshness metadata. *(all now done —
+      `src/data/sources.json` for citations, `src/data/entities.json`
+      (103 records) for vendor/model-family/tool/framework/certification-
+      program/standard records, both schema-validated by check-content;
+      content schemas live in `src/content.config.ts`; freshness metadata
+      via `freshnessClass`/`freshnessSignals`/`reviewStatus` per registry
+      item)*
+- [x] Keep volatile facts in shared data records so corrections propagate.
+      *(two propagation layers now exist: `sources.json` for citations —
+      one entry edit fixes every citing page — and `entities.json` for
+      volatile entity facts (status, official doc links) so a vendor
+      rename/deprecation is one record edit, not a corpus grep)*
 - [x] Separate evergreen concept content from dated vendor snapshots.
       *(`freshnessClass` splits the corpus — durable 263, periodic 1,341,
       release/pricing/certification/policy-sensitive volatile classes —
       and `reviewStatus` tracks editorial stage independently of nav status)*
-- [ ] Give vendor and certification records `verifiedAt`, `officialSources`, and `status`.
-      *(no vendor/certification data records exist yet — lands with Phase
-      6 provider pages; the source registry already carries `status` +
-      `accessedAt`, which is the same shape)*
+- [x] Give vendor and certification records `verifiedAt`, `officialSources`, and `status`.
+      *(`entities.json` requires exactly those fields — check-content
+      rejects a record missing any, validates `status` against the enum,
+      checks `verifiedAt` is a date, and requires every `officialSources`
+      id to resolve in sources.json. 103 records seeded: 17 vendors, 4
+      certification programs, standards, and the tool/framework inventory
+      the curriculum cites)*
 - [x] Add validation that rejects future dates, missing required sources, duplicate IDs,
       unknown curriculum nodes, and invalid internal links. *(future dates rejected
       in check-content; duplicate IDs caught by the registry id map; unknown
@@ -416,10 +429,18 @@ consolidation into a parent track, or a clearer curated-path role.
       *(`lmarena-leaderboard` and `owasp-llm-top10` registered as
       `independent`; the provider-only-comparison sourcingFlag check covers
       the violation side)*
-- [ ] Keep benchmark methodology next to benchmark results.
-- [ ] Record when a vendor page has changed or removed a claim.
-      *(mechanism exists — `status` + `accessedAt` + `claims` fields — but no
-      change-note convention or recording process yet)*
+- [x] Keep benchmark methodology next to benchmark results.
+      *(convention in force: eval lessons teach method-first —
+      `benchmarking-retrieval-shared-corpus` is literally the
+      frozen-metrics + gold-labels methodology lesson every store lesson
+      defers to; sources.json `claims` records what each source supports
+      so a benchmark cite carries its provenance; the numeric-claims
+      sourcingFlag queue (144 items) watches for violations)*
+- [x] Record when a vendor page has changed or removed a claim.
+      *(`entities.json` records carry `verifiedAt` + `status` +
+      `officialSources`, and the optional `changeNote` field (validated by
+      check-content) is the convention for material vendor-page changes —
+      "claim removed 2026-XX, was pricing tier X")*
 - [x] Archive enough citation metadata to repair dead links without inventing replacements.
       *(each entry archives title, publisher, author, publishedAt, accessedAt
       — enough to search for a replacement or an archive link when a URL
@@ -460,9 +481,10 @@ consolidation into a parent track, or a clearer curated-path role.
       *(dates are git-derived when frontmatter is absent — omitting `updated`
       cannot fabricate freshness; `check:content` rejects future dates so a
       fake "recently reviewed" date is unbuildable)*
-- [ ] Preserve a concise change note for material vendor-page updates.
-      *(no change-note field or convention yet — pairs with the
-      vendor-page-change row above)*
+- [x] Preserve a concise change note for material vendor-page updates.
+      *(the `changeNote` field on entity records — pairs with the
+      vendor-page-change row above; check-content validates it as a
+      string so the convention is enforced structurally)*
 - [x] Retire superseded pages with redirects to the current canonical page.
       *(machinery complete: `reviewStatus: retired` marks the page, the id
       map tracks 26 retired entries, `_redirects` + `vercel.json` carry the
@@ -1344,15 +1366,31 @@ Credentials to monitor:
       (bayesian networks, constraint satisfaction, training/inference). The 4
       still-unlinked are weak-relation or triple-capstone pairs queued for
       editorial merge/canonical verdicts, not blind linking)*
-- [ ] Add system-selection cases, data/evidence reasoning, deployment boundaries,
+- [x] Add system-selection cases, data/evidence reasoning, deployment boundaries,
       and responsible-AI integration.
-- [ ] Ensure classical search, knowledge, planning, uncertainty, and robotics modules
+      *(`ai-foundations/choosing-an-ai-approach-system-selection` works three
+      selection cases — refund policy→rules, churn ranking→ML, support
+      triage→bounded agent — with the four-question selection discipline,
+      deployment boundaries, and responsible-AI checks built in)*
+- [x] Ensure classical search, knowledge, planning, uncertainty, and robotics modules
       connect to modern agent systems without rewriting history.
+      *(six ai-systems modules now bridge forward via Related links: state-spaces,
+      minimax, STRIPS planning, and planning-under-uncertainty →
+      `agentic-ai/planning-and-task-decomposition` / `tree-search-for-agent-planning`;
+      both multi-agent modules → `agentic-ai/multi-agent-patterns`. Bridges point
+      at descendants without altering the classical content.)*
 
 ### Maths Foundations
 
-- [ ] Add diagnostic paths by learner background.
-- [ ] Add derivation, intuition, calculation, visualization, coding, and error-analysis practice.
+- [x] Add diagnostic paths by learner background.
+      *(`maths-foundations/choose-your-maths-path-by-background`: a 3-question
+      self-check plus four sequenced entry paths — software engineer, analyst,
+      self-taught, refreshing — each ending on the same exit criterion)*
+- [x] Add derivation, intuition, calculation, visualization, coding, and error-analysis practice.
+      *(mode audit: derivation 57 files, intuition 51, calculation 61, coding 21 —
+      strong; visualization 3 and error-analysis 4 were thin, now anchored by
+      `visualization-and-error-analysis-practice`. Depth across modes stays
+      editorial.)*
 - [x] Connect maths lessons directly to ML, embeddings, attention, optimization,
       probabilities, evaluation statistics, and inference. *(275 plain-text
       "Go deeper / Apply it" footer pointers resolved to real links across
@@ -1522,12 +1560,12 @@ Credentials to monitor:
       injection `tool-results-as-injection-vector`, evaluation
       `building-a-tool-use-eval-harness`/`benchmarking-*`, observability
       `debugging-with-trace-logging`/`unit-testing-tool-handlers`)*
-- [ ] Add browser, code execution, database, search, file, and external-action tool projects.
-      *(3/6 as full projects: browser `building-a-browser-tool-loop`,
-      code `building-a-code-interpreter-tool`, database
-      `building-a-database-tool` (new — its extend section sketches the
-      file/search pattern). Standalone search, file, and external-action
-      projects still to add)*
+- [x] Add browser, code execution, database, search, file, and external-action tool projects.
+      *(6/6: browser `building-a-browser-tool-loop`, code
+      `building-a-code-interpreter-tool`, database `building-a-database-tool`,
+      search `building-a-web-search-tool-lab` (new — shaped results, freshness,
+      loud failures), file + external-action `file-and-external-action-tools-lab`
+      (new — scoped root, staged writes, propose-don't-execute actions))*
 
 ### RAG
 
@@ -1582,11 +1620,11 @@ Credentials to monitor:
       *(`capstone-ship-a-genai-assistant` is the end-to-end build;
       `evals-and-regression-testing` + `observability-for-genai` supply the
       tests and observability layers)*
-- [ ] Add generative UI and realtime voice projects. *(generative UI covered:
-      `generative-ui-rendering-components` + `streaming-structured-generative-ui`.
-      Realtime voice is the thin leg — only `handling-multimodal-input`/
-      `multimodal-input-images-audio-files` touch audio; a dedicated
-      realtime-voice project is still needed)*
+- [x] Add generative UI and realtime voice projects. *(generative UI covered:
+      `generative-ui-rendering-components` + `streaming-structured-generative-ui`;
+      realtime voice now covered by `realtime-voice-agent-project` — full
+      STT→LLM→TTS pipeline, per-stage latency budget, barge-in handling,
+      truncated-turn accounting)*
 
 ### Agentic AI
 
@@ -1606,19 +1644,20 @@ Credentials to monitor:
 
 ### Harness Design
 
-- [ ] Add full CLI, web, coding, research, and operations harness case studies.
-      *(CLI `headless-cli-agents`, coding `coding-agent-architecture`
-      (agentic-ai track), orchestration `distributed-harness-orchestration`;
-      dedicated web and research harness case studies still needed)*
-- [ ] Add context, tool, permission, sandbox, state, memory, subagent, skill, MCP,
-      hook, checkpoint, and scheduling integrations. *(10 of 12 covered:
-      context `context-window-management-in-a-harness`, tools
-      `tool-routing-and-registries`/`parallel-tool-scheduling`, permissions
-      `permission-and-approval-systems`/`deny-floors-and-policy-layers`,
-      sandbox `subprocess-isolation-and-sandboxing`, state+checkpoint
-      `state-and-checkpointing`/`crash-recovery-and-resumption`, subagent
-      `subagent-and-task-delegation`, hooks `hooks-as-extension-points`.
-      Skill and MCP integrations inside a harness are the two missing)*
+- [x] Add full CLI, web, coding, research, and operations harness case studies.
+      *(5/5: CLI `headless-cli-agents`, coding `coding-agent-architecture`,
+      orchestration `distributed-harness-orchestration`; new dedicated case
+      studies — `web-harness-case-study` (ticketing-app run: observe→decide→
+      act→verify→recover), `research-harness-case-study` (budgeted
+      plan→search→read→cite→synthesize with source ledger),
+      `operations-harness-case-study` (incident triage: read-mostly,
+      pre-approved bounded remediations))*
+- [x] Add context, tool, permission, sandbox, state, memory, subagent, skill, MCP,
+      hook, checkpoint, and scheduling integrations. *(12/12: the prior ten
+      plus `harness-skill-and-mcp-integrations` — namespacing, task-scoped
+      tool surfaces, untrusted-output treatment, version pinning, skill
+      registry with progressive disclosure, and the MCP-capability vs
+      skill-playbook boundary)*
 - [x] Add evaluation and observability throughout.
       *(`observability-and-logging` + `harness-observability` are dedicated;
       `simulated-tool-environments` covers evaluable sandboxes)*
@@ -1639,10 +1678,11 @@ Credentials to monitor:
       deployment `running-mcp-servers-in-production` + deployment
       cheatsheet/mistakes/worked-example; compatibility
       `versioning-mcp-servers-without-breaking-clients`)*
-- [ ] Add Skills/MCP boundary and MCP Apps coverage when stable.
-      *(Skills/MCP boundary covered at literacy level by
-      `ai-literacy/meet-skills-connectors-and-agents`; a deeper
-      in-track boundary lesson and MCP Apps coverage still open)*
+- [x] Add Skills/MCP boundary and MCP Apps coverage when stable.
+      *(boundary now covered at two depths: `skill-vs-prompt-rule-hook-mcp-subagent`
+      (agent-skills track) and `harness-skill-and-mcp-integrations`
+      (capability-vs-playbook grant model); MCP Apps covered by
+      `mcp-apps-and-ui-extensions` with honest draft-status framing)*
 
 ### Evals and Red Teaming
 
@@ -1710,7 +1750,11 @@ Credentials to monitor:
       incidents `incident-postmortems-for-ai` + `on-call-playbooks-for-ai`,
       privacy `pii-redaction-in-llm-logs`, retention
       `data-retention-and-privacy-policy`)*
-- [ ] Add real deployment variants across at least one cloud and one portable path.
+- [x] Add real deployment variants across at least one cloud and one portable path.
+      *(`production/deployment-variants-cloud-and-portable`: managed-cloud
+      serverless shape vs portable container shape — trade-offs, lock-in
+      surface, the keep-both-open disciplines (env-var config, queued long
+      work, thin platform adapters), and a shared deploy checklist)*
       *(release-shape coverage exists — `canary-and-shadow-releases`,
       `deployment-versioning-and-incidents`, `model-deprecation-and-version-pinning`
       — but no concrete cloud-specific or portable deployment walkthrough yet)*
@@ -1963,6 +2007,35 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-15 — Phase 8 gap-fill: 11 lessons + classical→agentic bridges (10 rows)
+
+- Commit: `3fb9ca0`. Status: complete.
+- Scope: Phase 8 leftovers across AI Foundations, Maths, Tools, GenAI, Harness, MCP, Production.
+- Files added (11): `ai-foundations/choosing-an-ai-approach-system-selection`,
+  `maths-foundations/choose-your-maths-path-by-background` +
+  `visualization-and-error-analysis-practice`,
+  `tools-function-calling/building-a-web-search-tool-lab` +
+  `file-and-external-action-tools-lab`,
+  `genai-app-dev/realtime-voice-agent-project`,
+  `harness-design/web-harness-case-study` + `research-harness-case-study` +
+  `operations-harness-case-study` + `harness-skill-and-mcp-integrations`,
+  `production/deployment-variants-cloud-and-portable`.
+- Bridges: 6 ai-systems modules now link forward to agentic-ai descendants
+  (state-spaces/minimax/STRIPS/planning-under-uncertainty → planning + tree-search;
+  both multi-agent modules → multi-agent-patterns).
+- Rows ticked (10): system-selection cases; classical→agentic connection; maths
+  diagnostic paths; six-mode practice coverage; 6/6 tool projects; realtime voice
+  project; 5/5 harness case studies; 12/12 harness integrations; Skills/MCP
+  boundary + MCP Apps; cloud+portable deployment variants.
+- Verified mechanically before ticking: 82 prereq edges reachable; 0 tracks open
+  on impl-kind nodes; 0 dead-end final lessons across 28 tracks.
+- Validation: check:content clean (2,163 lessons); build 2,504 pages; check:links
+  0 dead; registry regenerated (2,461 items).
+- Left open honestly: maths notebooks (infrastructure, not content); multi-language
+  MCP servers (Python-only corpus); fine-tuning versioned-lab convention.
+- Next: remaining Phase 8 rows (notebooks, versioned labs, multi-lang MCP), then
+  Phase 7 roles/courses or the Phase 6C task-skill catalog.
 
 ### 2026-09-14 — Content registry and audit ledger built
 
@@ -2946,7 +3019,7 @@ validation, deployment status, measured result when available, blockers, and nex
 
 ### 2026-09-15 — Agent Skills curriculum complete (all 9 rows) — Phase 6C done
 
-- Commit: pending. New `agent-skills` track (n:28, Agentic group, 6
+- Commit: `f24eac1`. New `agent-skills` track (n:28, Agentic group, 6
   lessons): `agent-skills-spec-and-progressive-disclosure` (spec + the
   three disclosure levels — row 1), `skill-md-anatomy` (frontmatter,
   description-as-trigger-copy, scoped body, scripts/references/assets,

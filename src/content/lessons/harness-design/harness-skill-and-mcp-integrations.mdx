@@ -1,0 +1,45 @@
+---
+title: "Wiring MCP servers and Agent Skills into a harness"
+track: "harness-design"
+status: live
+summary: "How a harness integrates the two extension standards — MCP servers as tool channels and Agent Skills as knowledge packages — covering trust, namespacing, and when each belongs."
+duration: "9 min read"
+---
+
+## The short answer
+
+A harness gains capabilities through two different extension kinds: **MCP servers** give the agent new *tools* (typed calls with schemas), and **Agent Skills** give it new *knowledge* (packaged instructions and scripts loaded on demand). They look interchangeable — both "extend what the agent can do" — but they plug into different harness layers, trust differently, and fail differently. This lesson covers wiring each correctly.
+
+## MCP as a tool channel
+
+When your harness connects to an MCP server, the server's tools appear in the agent's tool list alongside native ones. The harness's jobs:
+
+- **Namespace them.** Prefix every MCP tool with its server name (`github__create_issue`) so two servers can't collide and the model can tell a filesystem tool from a network tool at a glance.
+- **Filter the surface.** A server may expose 30 tools; the task contract might need 3. The [tool registry](/learn/harness-design/tool-routing-and-registries) should expose a task-scoped subset, not the server's full menu — fewer tools means fewer wrong calls and a smaller attack surface.
+- **Treat output as untrusted.** MCP tool results are external content entering context — the same injection surface as web pages. Route them through the same treatment as [tool-results-as-injection](/learn/tools-function-calling/tool-results-as-injection-vector): mark them as data, never let them rewrite instructions.
+- **Version-pin the server.** An MCP server is a dependency; [version it like one](/learn/mcp/versioning-mcp-servers-without-breaking-clients). "Whatever the server currently exposes" is not a contract.
+
+## Skills as a knowledge channel
+
+A skill is not a tool — it's a `SKILL.md` plus resources the model reads when a task matches its trigger. The harness's jobs differ:
+
+- **Register skills, don't preload them.** The harness holds a skill registry — name + one-line trigger description — injected cheaply into context. Full skill bodies load *on trigger*, which is the whole point of progressive disclosure (see [the spec](/learn/agent-skills/agent-skills-spec-and-progressive-disclosure)).
+- **Vet before registering.** A skill is instructions your agent will follow — it's a code-review surface, not a data file. Apply the [skill audit checklist](/learn/agent-skills/skill-security-and-provenance): read the scripts, check permissions claimed vs needed, run fixtures before trusting.
+- **Scope skill permissions to the task.** A skill that wants filesystem access shouldn't get it because it exists — the task contract grants, the skill requests, the policy layer mediates. Same deny-floor discipline as [permission systems](/learn/harness-design/permission-and-approval-systems).
+
+## The boundary that confuses everyone
+
+The two overlap when a skill *contains* a script that *calls* MCP tools — a "PDF processing" skill whose script uses a PDF MCP server. The harness resolves this cleanly:
+
+- **MCP is the capability**: the PDF server exposes `extract_text`. It can be called by the model directly *or* by a skill's script.
+- **The skill is the playbook**: "for scanned PDFs, OCR first; merge multi-part docs; always preserve page numbers" — knowledge about *how* to use capabilities well.
+- So the harness grants the MCP tool to the *execution environment*, and grants the skill to the *context* — two different grants, two different audit entries.
+
+## Failure modes to test
+
+- **Tool shadowing:** a malicious MCP server names a tool `read_file` to shadow yours — namespacing prevents silent override.
+- **Skill injection:** a skill file containing "ignore previous instructions" — it's a prompt, treat it like hostile input and vet it.
+- **Version drift:** server updates change tool schemas mid-flight — pin and pin visibly.
+- **Grant leakage:** skill A needing network shouldn't inherit it because skill B has it — permissions are per-capability, not per-session.
+
+**Related:** [Skill vs prompt vs rule vs hook vs MCP](/learn/agent-skills/skill-vs-prompt-rule-hook-mcp-subagent), [MCP architecture](/learn/mcp/mcp-architecture-hosts-clients-servers), [Tool routing and registries](/learn/harness-design/tool-routing-and-registries)

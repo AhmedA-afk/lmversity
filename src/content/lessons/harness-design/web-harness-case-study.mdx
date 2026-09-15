@@ -1,0 +1,35 @@
+---
+title: "Case study: a web-navigation harness end to end"
+track: "harness-design"
+status: live
+summary: "Walk a real web-agent harness through one task — observe, decide, act, verify — showing how the DOM channel, act boundary, and recovery loop fit together in production shape."
+duration: "10 min read"
+---
+
+## The scenario
+
+A support-operations team needs an agent that logs into their internal ticketing web app (no API exists), finds tickets tagged `billing`, and exports them as CSV every morning. This case study walks the harness through one run, naming the component doing each job.
+
+## The run, step by step
+
+**1. Session acquisition.** The harness doesn't start a fresh browser — it attaches to a persistent authenticated context (cookies + storage state saved from a manual login, refreshed weekly). Component: *session manager*. This is the [act boundary](/learn/web-agents/sessions-credentials-and-act-boundaries)'s first edge: everything before attach is trusted setup; everything after is agent action.
+
+**2. Observe.** The agent gets an accessibility-tree snapshot of the page — not a screenshot, not raw HTML, but a token-cheap structured view of buttons, links, and form fields with stable refs. Component: *observation channel*. The DOM-as-interface choice is deliberate: 3,000 tokens of a11y tree vs 40,000 of HTML.
+
+**3. Decide.** The model receives the snapshot plus the task contract ("find all tickets tagged `billing`, export CSV"). It proposes: `click(ref=nav.tickets)`. Component: *planner* — one action per turn, never a batch, because the page state after each click is unknown until observed.
+
+**4. Act.** The executor resolves `ref=nav.tickets` to a locator and clicks. If the ref went stale (page re-rendered), the click fails loudly and the agent re-observes rather than guessing coordinates. Component: *act executor* with [locator strategy](/learn/web-agents/playwright-fundamentals-and-locators).
+
+**5. Verify.** After each action, the harness re-observes and checks a *progress predicate*: did the ticket list render? The agent isn't trusted to notice its own failures — the harness compares expected vs observed state. Component: *verifier*.
+
+**6. Recover.** The tickets page shows a session-expired modal. The planner's generic loop can't fix auth, so the harness's *recovery policy* fires: re-authenticate via the stored login flow once; if it fails twice, abort and page a human rather than retry-looping on a login wall.
+
+**7. Deliver.** The export click downloads a file — an external side effect the policy layer treats as an *artifact write*, allowed by the task contract. The run logs every observe-decide-act-verify step to a trace for later [evaluation](/learn/web-agents/extraction-and-evaluation).
+
+## What this case shows
+
+- The model sees almost nothing: a task, a snapshot, a proposal channel. All durability — sessions, retries, verification, logging — lives in the harness.
+- Every component is independently replaceable: swap the a11y snapshot for screenshots, the planner for a different model, the executor for a different driver — the *shape* stays.
+- The failure paths are designed, not emergent: stale ref → re-observe; auth wall → bounded recovery; repeated failure → abort with evidence.
+
+**Related:** [What the browser exposes](/learn/web-agents/what-the-browser-exposes), [Sessions and the act boundary](/learn/web-agents/sessions-credentials-and-act-boundaries), [Research harness case study](/learn/harness-design/research-harness-case-study)

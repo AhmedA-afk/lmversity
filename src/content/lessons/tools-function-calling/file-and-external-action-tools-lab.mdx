@@ -1,0 +1,63 @@
+---
+title: "Lab: file tools and external actions with a permission boundary"
+track: "tools-function-calling"
+status: live
+summary: "Build read/write file tools and an external-action tool (send, post, purchase) where the model proposes and a policy layer disposes — the pattern every real-world action tool needs."
+duration: "15 min lab"
+---
+
+## The short answer
+
+File tools and external-action tools share one shape: the model proposes an action, a policy layer decides whether it runs. Reading a file is cheap and reversible; sending an email or charging a card is neither. This lab builds both kinds with the boundary drawn explicitly — because a tool that can act on the world needs a human-authored rule about *when*.
+
+## Part 1: File tools — scope the root first
+
+```python
+ALLOWED_ROOT = Path("/workspace/user_uploads").resolve()
+
+def read_file(path: str) -> dict:
+    target = (ALLOWED_ROOT / path).resolve()
+    if not str(target).startswith(str(ALLOWED_ROOT)):
+        return {"error": "path_outside_allowed_root"}
+    if not target.exists():
+        return {"error": "file_not_found", "path": path}
+    return {"path": path, "content": target.read_text()[:20_000]}
+```
+
+Two lines do the safety work: `resolve()` collapses `../` tricks, and the prefix check confines the tool to one directory. A file tool without this is a path-traversal vulnerability with a friendly schema.
+
+## Part 2: Writes are staged, not committed
+
+A `write_file` tool should write to a *staging* area and return a diff summary — never overwrite in place. The pattern:
+
+```python
+def write_file(path: str, content: str) -> dict:
+    target = STAGING_ROOT / path
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_text(content)
+    return {"staged": path, "bytes": len(content),
+            "note": "staged for review; commit requires explicit approval"}
+```
+
+The model can draft as many writes as it wants; nothing reaches the real tree until the harness (or user) commits the stage.
+
+## Part 3: External actions — propose, don't execute
+
+For anything with real-world effect — send, post, purchase, delete — the tool's job is to build a *reviewable action record*, not to act:
+
+```python
+def send_email(to: str, subject: str, body: str) -> dict:
+    action = {"type": "send_email", "to": to, "subject": subject,
+              "body": body, "status": "pending_approval"}
+    return pending_actions.store(action)   # returns an id; nothing is sent
+```
+
+The approval step lives outside the model's reach — a UI button, a policy engine, an approval queue (see [Human Escalation Queues](/learn/production/human-escalation-queues-for-low-confidence-output)). This is the confused-deputy defense from [Prompt Injection Defenses](/learn/llm-security/prompt-injection-testing-and-threat-models): the model may be manipulated into *proposing* a bad action, but it cannot *authorize* one.
+
+## Failure drills
+
+- **Traversal:** ask the model to read `../../etc/passwd` — confirm the root check fires.
+- **Staged ≠ real:** verify a staged write is invisible to `read_file` on the real root until committed.
+- **Pending ≠ sent:** verify no external action executes without the approval path being invoked.
+
+**Related:** [Idempotent tool design](/learn/tools-function-calling/idempotent-tool-design), [Agent permissions and authorization](/learn/agentic-ai/agent-permissions-and-authorization), [Sandboxing code execution](/learn/llm-security/sandboxing-code-execution-and-browser-use)

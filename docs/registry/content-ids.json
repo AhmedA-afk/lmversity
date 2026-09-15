@@ -1,7 +1,7 @@
 {
  "version": 1,
  "next": {
-  "les": 2152,
+  "les": 2163,
   "que": 7,
   "sce": 6,
   "blo": 10,
@@ -166,7 +166,7 @@
   },
   "lessons/ai-foundations/ai-systems/103-state-spaces-and-search-problem-design.md": {
    "id": "les-0038",
-   "fp": "d3ea965301525aeb2e05518cb507472b5b271bc3"
+   "fp": "89f0311bc1ef49a9f95048018a6811d4fb3fa028"
   },
   "lessons/ai-foundations/ai-systems/104-breadth-first-search-and-layered-exploration.md": {
    "id": "les-0039",
@@ -194,7 +194,7 @@
   },
   "lessons/ai-foundations/ai-systems/110-adversarial-search-minimax-and-game-values.md": {
    "id": "les-0045",
-   "fp": "19a9725bffacb161fe4df5e569b35d3b51e2df46"
+   "fp": "ce5d11835a7232816f8d64c583f98c2794bca6cb"
   },
   "lessons/ai-foundations/ai-systems/111-alpha-beta-pruning-and-move-ordering.md": {
    "id": "les-0046",
@@ -214,11 +214,11 @@
   },
   "lessons/ai-foundations/ai-systems/115-classical-planning-strips-and-plan-graphs.md": {
    "id": "les-0050",
-   "fp": "a45bcde512a536f4db8bf62e9ec0d0c3bf8f43af"
+   "fp": "22fc16d498126175b69b3e5c6358e17a59b8b1a9"
   },
   "lessons/ai-foundations/ai-systems/116-planning-under-time-resources-and-uncertainty.md": {
    "id": "les-0051",
-   "fp": "5ad3aa638f899ea7ce2b6171e0e627479765729b"
+   "fp": "17a6eade1d08180beceee56e932f086f10b3be2b"
   },
   "lessons/ai-foundations/ai-systems/117-knowledge-representation-ontologies-and-rules.md": {
    "id": "les-0052",
@@ -266,11 +266,11 @@
   },
   "lessons/ai-foundations/ai-systems/128-multi-agent-coordination-communication-and-allocation.md": {
    "id": "les-0063",
-   "fp": "cc96db687f32a17dd65ab518d0f4020bda037209"
+   "fp": "407d89b3de500eb5680f516e8bff3b2e9be95833"
   },
   "lessons/ai-foundations/ai-systems/129-multi-agent-strategic-behavior-mechanisms-and-safety.md": {
    "id": "les-0064",
-   "fp": "f29a35d41eca8e6116985441bf6b0efaf8234cf8"
+   "fp": "1ffd558f24be07524d3ebb88b1e644186d4606c7"
   },
   "lessons/ai-foundations/ai-systems/130-ai-systems-capstone-assurance-case-and-oral-defense.md": {
    "id": "les-0065",
@@ -9349,84 +9349,6 @@
   "page:/ads.txt": {
    "id": "pag-0022"
   },
-  "data:track/ai-literacy": {
-   "id": "trk-0001"
-  },
-  "data:track/maths-foundations": {
-   "id": "trk-0002"
-  },
-  "data:track/python-data-apis": {
-   "id": "trk-0003"
-  },
-  "data:track/ai-foundations": {
-   "id": "trk-0004"
-  },
-  "data:track/llm-foundations": {
-   "id": "trk-0005"
-  },
-  "data:track/classical-ai": {
-   "id": "trk-0006"
-  },
-  "data:track/machine-learning": {
-   "id": "trk-0007"
-  },
-  "data:track/deep-learning": {
-   "id": "trk-0008"
-  },
-  "data:track/prompt-engineering": {
-   "id": "trk-0009"
-  },
-  "data:track/context-engineering": {
-   "id": "trk-0010"
-  },
-  "data:track/structured-outputs": {
-   "id": "trk-0011"
-  },
-  "data:track/hallucinations": {
-   "id": "trk-0012"
-  },
-  "data:quick-guide/hallucinations": {
-   "id": "qgd-0001"
-  },
-  "data:track/genai-app-dev": {
-   "id": "trk-0013"
-  },
-  "data:track/rag": {
-   "id": "trk-0014"
-  },
-  "data:quick-guide/rag": {
-   "id": "qgd-0002"
-  },
-  "data:track/tools-function-calling": {
-   "id": "trk-0015"
-  },
-  "data:track/mcp": {
-   "id": "trk-0016"
-  },
-  "data:quick-guide/mcp": {
-   "id": "qgd-0003"
-  },
-  "data:track/agentic-ai": {
-   "id": "trk-0017"
-  },
-  "data:track/harness-design": {
-   "id": "trk-0018"
-  },
-  "data:track/evals-red-teaming": {
-   "id": "trk-0019"
-  },
-  "data:track/production": {
-   "id": "trk-0020"
-  },
-  "data:quick-guide/production": {
-   "id": "qgd-0004"
-  },
-  "data:track/fine-tuning": {
-   "id": "trk-0021"
-  },
-  "data:track/responsible-ai": {
-   "id": "trk-0022"
-  },
   "data:role/developer": {
    "id": "rol-0002",
    "fp": null
@@ -9587,9 +9509,6 @@
    "id": "les-2085",
    "fp": "b722b1648ae2baf0ede0abfdf08bfa79fa4bada4"
   },
-  "data:track/local-inference": {
-   "id": "trk-0024"
-  },
   "lessons/local-inference/huggingface-tgi-and-tei.md": {
    "id": "les-2086",
    "fp": "efb1909b00a392ad96fef2b8a021c5e5b802271f"
@@ -9629,9 +9548,6 @@
   "lessons/agent-frameworks/raw-sdk-agent-baseline.md": {
    "id": "les-2095",
    "fp": "6b4597678cb20f64e8c1cc96cb15632a0728bb31"
-  },
-  "data:track/agent-frameworks": {
-   "id": "trk-0025"
   },
   "lessons/agent-frameworks/langchain-agents-and-integrations.md": {
    "id": "les-2096",
@@ -9773,9 +9689,6 @@
    "id": "les-2130",
    "fp": "e519521d7fcb223df6e28d6e50e593c81cd01e78"
   },
-  "data:track/llm-security": {
-   "id": "trk-0026"
-  },
   "lessons/cli-agents/cli-agent-labs.md": {
    "id": "les-2131",
    "fp": "2349598ce414418879bf4dc849aee60b16e2a504"
@@ -9808,9 +9721,6 @@
    "id": "les-2138",
    "fp": "63760a7e9687572365da7a81049b758373af13ca"
   },
-  "data:track/cli-agents": {
-   "id": "trk-0027"
-  },
   "lessons/web-agents/agentic-browsers-overview.md": {
    "id": "les-2139",
    "fp": "40e406d088a9a8e78c9459fb9e43d7a1fa56f8d3"
@@ -9838,9 +9748,6 @@
   "lessons/web-agents/what-the-browser-exposes.md": {
    "id": "les-2145",
    "fp": "a271b362baff99124708e7f14e4890411157d8da"
-  },
-  "data:track/web-agents": {
-   "id": "trk-0028"
   },
   "lessons/mcp/mcp-apps-and-ui-extensions.mdx": {
    "id": "les-2146",
@@ -9870,8 +9777,49 @@
    "id": "les-2152",
    "fp": "6849a9e842fca67f48952e5300743c68ba819d0d"
   },
-  "data:track/agent-skills": {
-   "id": "trk-0029"
+  "lessons/ai-foundations/choosing-an-ai-approach-system-selection.mdx": {
+   "id": "les-2153",
+   "fp": "09d21249b73ec3e3c0aa49edee19b2dc402e5e06"
+  },
+  "lessons/genai-app-dev/realtime-voice-agent-project.mdx": {
+   "id": "les-2154",
+   "fp": "8b18851adc52835e6d5a246cb425e26dbecdeb9d"
+  },
+  "lessons/harness-design/harness-skill-and-mcp-integrations.mdx": {
+   "id": "les-2155",
+   "fp": "021986b938c3687956b7774bf4c819ab49e1dd55"
+  },
+  "lessons/harness-design/operations-harness-case-study.mdx": {
+   "id": "les-2156",
+   "fp": "0e3632d0b691e0a373d0c811ab2776f758725159"
+  },
+  "lessons/harness-design/research-harness-case-study.mdx": {
+   "id": "les-2157",
+   "fp": "96e2d23cd451fe6fa84a41a19778a5b7936149a2"
+  },
+  "lessons/harness-design/web-harness-case-study.mdx": {
+   "id": "les-2158",
+   "fp": "ce087a72ddc80b6aa953890c363e83bd0fe7028c"
+  },
+  "lessons/maths-foundations/choose-your-maths-path-by-background.md": {
+   "id": "les-2159",
+   "fp": "31c666d6f2d97c08d586ac46b33d174bd2dc008e"
+  },
+  "lessons/maths-foundations/visualization-and-error-analysis-practice.md": {
+   "id": "les-2160",
+   "fp": "e5263225471a228d7fc564280974033552df6438"
+  },
+  "lessons/production/deployment-variants-cloud-and-portable.mdx": {
+   "id": "les-2161",
+   "fp": "3ecfdb639f5aae0a4f1a43e53ca35839a8b0a90f"
+  },
+  "lessons/tools-function-calling/building-a-web-search-tool-lab.mdx": {
+   "id": "les-2162",
+   "fp": "3d8f144e66129afbb57447bd0a847d28c0bd2757"
+  },
+  "lessons/tools-function-calling/file-and-external-action-tools-lab.mdx": {
+   "id": "les-2163",
+   "fp": "f66222f30067f2292d73bf16853431ed4e4751dd"
   }
  },
  "retired": {
@@ -9977,6 +9925,134 @@
   },
   "data:stub/ai-for-designers/capstone-design-a-trustworthy-ai-feature": {
    "id": "stb-0025",
+   "retiredAt": "2026-09-15"
+  },
+  "data:track/ai-literacy": {
+   "id": "trk-0001",
+   "retiredAt": "2026-09-15"
+  },
+  "data:track/maths-foundations": {
+   "id": "trk-0002",
+   "retiredAt": "2026-09-15"
+  },
+  "data:track/python-data-apis": {
+   "id": "trk-0003",
+   "retiredAt": "2026-09-15"
+  },
+  "data:track/ai-foundations": {
+   "id": "trk-0004",
+   "retiredAt": "2026-09-15"
+  },
+  "data:track/llm-foundations": {
+   "id": "trk-0005",
+   "retiredAt": "2026-09-15"
+  },
+  "data:track/classical-ai": {
+   "id": "trk-0006",
+   "retiredAt": "2026-09-15"
+  },
+  "data:track/machine-learning": {
+   "id": "trk-0007",
+   "retiredAt": "2026-09-15"
+  },
+  "data:track/deep-learning": {
+   "id": "trk-0008",
+   "retiredAt": "2026-09-15"
+  },
+  "data:track/prompt-engineering": {
+   "id": "trk-0009",
+   "retiredAt": "2026-09-15"
+  },
+  "data:track/context-engineering": {
+   "id": "trk-0010",
+   "retiredAt": "2026-09-15"
+  },
+  "data:track/structured-outputs": {
+   "id": "trk-0011",
+   "retiredAt": "2026-09-15"
+  },
+  "data:track/hallucinations": {
+   "id": "trk-0012",
+   "retiredAt": "2026-09-15"
+  },
+  "data:quick-guide/hallucinations": {
+   "id": "qgd-0001",
+   "retiredAt": "2026-09-15"
+  },
+  "data:track/genai-app-dev": {
+   "id": "trk-0013",
+   "retiredAt": "2026-09-15"
+  },
+  "data:track/rag": {
+   "id": "trk-0014",
+   "retiredAt": "2026-09-15"
+  },
+  "data:quick-guide/rag": {
+   "id": "qgd-0002",
+   "retiredAt": "2026-09-15"
+  },
+  "data:track/tools-function-calling": {
+   "id": "trk-0015",
+   "retiredAt": "2026-09-15"
+  },
+  "data:track/mcp": {
+   "id": "trk-0016",
+   "retiredAt": "2026-09-15"
+  },
+  "data:quick-guide/mcp": {
+   "id": "qgd-0003",
+   "retiredAt": "2026-09-15"
+  },
+  "data:track/agentic-ai": {
+   "id": "trk-0017",
+   "retiredAt": "2026-09-15"
+  },
+  "data:track/harness-design": {
+   "id": "trk-0018",
+   "retiredAt": "2026-09-15"
+  },
+  "data:track/evals-red-teaming": {
+   "id": "trk-0019",
+   "retiredAt": "2026-09-15"
+  },
+  "data:track/production": {
+   "id": "trk-0020",
+   "retiredAt": "2026-09-15"
+  },
+  "data:quick-guide/production": {
+   "id": "qgd-0004",
+   "retiredAt": "2026-09-15"
+  },
+  "data:track/fine-tuning": {
+   "id": "trk-0021",
+   "retiredAt": "2026-09-15"
+  },
+  "data:track/responsible-ai": {
+   "id": "trk-0022",
+   "retiredAt": "2026-09-15"
+  },
+  "data:track/local-inference": {
+   "id": "trk-0024",
+   "retiredAt": "2026-09-15"
+  },
+  "data:track/agent-frameworks": {
+   "id": "trk-0025",
+   "retiredAt": "2026-09-15"
+  },
+  "data:track/llm-security": {
+   "id": "trk-0026",
+   "retiredAt": "2026-09-15"
+  },
+  "data:track/cli-agents": {
+   "id": "trk-0027",
+   "retiredAt": "2026-09-15"
+  },
+  "data:track/web-agents": {
+   "id": "trk-0028",
+   "retiredAt": "2026-09-15"
+  },
+  "data:track/agent-skills": {
+   "id": "trk-0029",
    "retiredAt": "2026-09-15"
   }
  }

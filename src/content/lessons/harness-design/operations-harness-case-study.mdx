@@ -1,0 +1,37 @@
+---
+title: "Case study: an operations-runbook harness"
+track: "harness-design"
+status: live
+summary: "Walk an ops-agent harness through a nightly incident-triage run — alert in, diagnosis steps out, bounded remediation — showing why ops work needs the strictest act boundary of any harness type."
+duration: "10 min read"
+---
+
+## The scenario
+
+A platform team wants an agent to triage overnight alerts: read the alert, pull related metrics and logs, diagnose the likely cause, and either file a structured triage note or — for three pre-approved cases — run a bounded remediation (restart a worker, clear a queue, scale a replica).
+
+## Why ops is different
+
+A coding agent that errs produces a bad diff, caught in review. An ops agent that errs can take production down. So this harness inverts the usual default: **read-only by default, act only by explicit pre-approval, and every action is a runbook step with a rollback.**
+
+## The run, step by step
+
+**1. Alert intake.** The alert arrives as structured data — severity, service, symptom — not a page to scrape. Component: *intake adapter* normalizing pager/monitoring alerts into the harness's task format.
+
+**2. Read-only evidence gathering.** The agent has a generous set of *read* tools: metrics queries, log search, deploy history, runbook retrieval. All read tools share one property — they cannot mutate anything. This is where the agent spends most of its budget, and it's unrestricted because reads are safe.
+
+**3. Diagnosis with evidence required.** The model must produce a diagnosis *with pointers*: "error rate jumped at 02:14, correlating with deploy `abc123`" — each claim citing a tool result. A diagnosis without evidence pointers fails the gate, same discipline as the [research harness ledger](/learn/harness-design/research-harness-case-study).
+
+**4. The act boundary.** Three remediations are pre-approved — encoded as named actions with parameter limits (`restart_worker(service)` where `service` must be in an allowlist). Anything else — "I think we should fail over the database" — is outside the contract: the agent *files a recommendation*, and a human acts. The model cannot escalate its own permissions; see [deny floors and policy layers](/learn/harness-design/deny-floors-and-policy-layers).
+
+**5. Remediation with rollback and verification.** An approved action executes the runbook step, then *verifies*: did error rate fall within 5 minutes? If not, the rollback step runs automatically and the incident escalates to a human with the full trace attached.
+
+**6. Report.** Every run ends in a structured triage note — symptom, evidence, diagnosis, action taken (or recommended), outcome — filed to the incident tracker. Over time these notes become the [incident postmortem](/learn/production/incident-postmortems-for-ai) corpus and the eval set for improving the agent.
+
+## What this case shows
+
+- Permission asymmetry is the design: broad read access, narrow pre-approved writes, and a hard wall the model cannot cross.
+- Every action is a *runbook step with a verification check and a rollback* — the agent executes procedures, it doesn't improvise operations.
+- The harness produces auditable triage notes even when it can't act — read-only diagnosis with evidence is already valuable.
+
+**Related:** [Permission and approval systems](/learn/harness-design/permission-and-approval-systems), [Web harness case study](/learn/harness-design/web-harness-case-study), [Audit logs and accountability](/learn/llm-security/audit-logs-and-accountability)

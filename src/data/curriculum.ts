@@ -1289,8 +1289,16 @@ const unsortedTracks: Track[] = [
         "title": "Causal graphical models, do-calculus, and identifiability limits",
         "slug": "s4-6-causal-graphical-models-do-calculus-and-identifiability-limits",
         "status": "live"
-      }
-    ]
+      },
+        {
+          "title": "Choose your maths path by background",
+          "slug": "choose-your-maths-path-by-background"
+        },
+        {
+          "title": "Practice maths by drawing it and breaking it",
+          "slug": "visualization-and-error-analysis-practice"
+        },
+      ]
   },
   {
     "id": "python-data-apis",
@@ -2400,8 +2408,12 @@ const unsortedTracks: Track[] = [
         "title": "Why Stacking Linear Layers Gains You Nothing",
         "slug": "why-nonlinearity-matters",
         "status": "live"
-      }
-    ]
+      },
+        {
+          "title": "Choose between rules, ML, and agents: a system-selection case",
+          "slug": "choosing-an-ai-approach-system-selection"
+        },
+      ]
   },
   {
     "id": "llm-foundations",
@@ -8604,8 +8616,12 @@ const unsortedTracks: Track[] = [
         "title": "Capstone: Ship a Production GenAI Assistant",
         "slug": "capstone-ship-a-genai-assistant",
         "status": "live"
-      }
-    ]
+      },
+        {
+          "title": "Project: realtime voice agent with interruption handling",
+          "slug": "realtime-voice-agent-project"
+        },
+      ]
   },
   {
     "id": "rag",
@@ -9585,8 +9601,16 @@ const unsortedTracks: Track[] = [
         "title": "Capstone: Build a Complete Tool-Using Agent",
         "slug": "capstone-build-a-tool-using-agent",
         "status": "live"
-      }
-    ]
+      },
+        {
+          "title": "Lab: build a web search tool your model can actually use",
+          "slug": "building-a-web-search-tool-lab"
+        },
+        {
+          "title": "Lab: file tools and external actions with a permission boundary",
+          "slug": "file-and-external-action-tools-lab"
+        },
+      ]
   },
   {
     "id": "mcp",
@@ -10195,8 +10219,24 @@ const unsortedTracks: Track[] = [
         "title": "Orchestrating Concurrent Model Calls Across Processes",
         "slug": "distributed-harness-orchestration",
         "status": "live"
-      }
-    ]
+      },
+        {
+          "title": "Case study: a web-navigation harness end to end",
+          "slug": "web-harness-case-study"
+        },
+        {
+          "title": "Case study: a deep-research harness",
+          "slug": "research-harness-case-study"
+        },
+        {
+          "title": "Case study: an operations-runbook harness",
+          "slug": "operations-harness-case-study"
+        },
+        {
+          "title": "Wiring MCP servers and Agent Skills into a harness",
+          "slug": "harness-skill-and-mcp-integrations"
+        },
+      ]
   },
   {
     "id": "evals-red-teaming",
@@ -10531,8 +10571,12 @@ const unsortedTracks: Track[] = [
         "title": "Ship AI systems with versioning, rollback, and incident paths",
         "slug": "deployment-versioning-and-incidents",
         "status": "live"
-      }
-    ]
+      },
+        {
+          "title": "Deployment variants: one managed-cloud path and one portable path",
+          "slug": "deployment-variants-cloud-and-portable"
+        },
+      ]
   },
   {
     "id": "cli-agents",

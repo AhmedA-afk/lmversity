@@ -1,0 +1,75 @@
+---
+title: "Lab: build a web search tool your model can actually use"
+track: "tools-function-calling"
+status: live
+summary: "Build a web-search tool end to end: schema, result shaping for token budgets, freshness metadata, and the failure modes that make search tools return noise instead of answers."
+duration: "15 min lab"
+---
+
+## The short answer
+
+A search tool looks trivial — "query in, results out" — and fails in ways that silently poison the model's context: giant raw HTML results, no dates so stale pages outrank fresh ones, and errors that read like empty results. This lab builds a search tool with a shaped result contract, then breaks it on purpose so you can see each failure mode.
+
+## Step 1: The contract
+
+```python
+TOOL_SCHEMA = {
+    "name": "web_search",
+    "description": "Search the web for current information. Returns ranked "
+                   "results with title, URL, snippet, and published date when "
+                   "known. Use for facts that may have changed since training.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "query": {"type": "string",
+                      "description": "Search query; be specific, include key entities"},
+            "max_results": {"type": "integer", "default": 5, "minimum": 1, "maximum": 10},
+            "recency_days": {"type": "integer",
+                             "description": "Only return results newer than N days, if freshness matters"}
+        },
+        "required": ["query"]
+    }
+}
+```
+
+Note what the description does: it tells the model *when* to call ("facts that may have changed") and what it gets back (dated snippets, not pages). That contract is the tool.
+
+## Step 2: Shape results for the context window
+
+Raw search API responses are built for browsers, not contexts. Reduce every result to what the model reasons with:
+
+```python
+def shape_result(r):
+    return {
+        "title": r["title"],
+        "url": r["url"],
+        "snippet": r["snippet"][:300],          # hard cap — snippets balloon
+        "published": r.get("published_date"),    # None is fine; absence is honest
+    }
+```
+
+A search result with no date is *information* — the model should treat it as undated. Never fabricate one.
+
+## Step 3: Fail loudly, in model-readable terms
+
+```python
+try:
+    results = search_api(query, **args)
+except RateLimited:
+    return {"error": "search_rate_limited", "retry_after_seconds": 30}
+if not results:
+    return {"results": [], "note": "no results — consider rephrasing the query"}
+```
+
+Three distinct outcomes — results, empty, error — each worded so the model can act differently on each: answer, rephrase, or wait and retry. A silent `[]` for all three is the classic bug.
+
+## Step 4: Break it on purpose
+
+Run these failure drills before shipping:
+
+- **Long snippets:** feed a 4,000-char snippet, confirm the cap holds.
+- **Undated result:** verify the model treats it as undated rather than assuming "today".
+- **Rate limit mid-conversation:** does the model retry politely or hallucinate a result?
+- **Off-topic query:** model searches "apple" meaning fruit; results come back about the company. Is there a recovery path?
+
+**Related:** [Formatting large tool results](/learn/tools-function-calling/formatting-large-tool-results), [Tool results as an injection vector](/learn/tools-function-calling/tool-results-as-injection-vector), [Building a database tool](/learn/tools-function-calling/building-a-database-tool)
