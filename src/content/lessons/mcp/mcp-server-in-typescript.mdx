@@ -1,0 +1,64 @@
+---
+title: "Build an MCP server in TypeScript"
+track: "mcp"
+status: live
+summary: "Stand up the same minimal MCP server in TypeScript using the official SDK — and see what stays identical to the Python version versus what the language changes."
+duration: "15 min read"
+sources: ["mcp-typescript-sdk"]
+---
+
+import InlineCheck from '../../../components/kit/InlineCheck.astro';
+
+The rest of this track builds servers in Python with FastMCP. But MCP is a protocol, not a Python library — the same server exists in the official TypeScript SDK, and building it once in each language makes the protocol layer visible: everything that's identical between them is MCP; everything that differs is the SDK.
+
+## The same server, TypeScript edition
+
+```ts
+import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import { z } from "zod";
+
+const server = new McpServer({ name: "notes-server", version: "0.1.0" });
+
+server.tool(
+  "add_note",
+  "Store a note with a title and body",
+  { title: z.string(), body: z.string() },
+  async ({ title, body }) => {
+    // persist the note…
+    return { content: [{ type: "text", text: `saved: ${title}` }] };
+  }
+);
+
+const transport = new StdioServerTransport();
+await server.connect(transport);
+```
+
+## What maps 1:1 to the Python version
+
+- **The transport** — stdio here is the same JSON-RPC-over-stdio the Python `FastMCP` server speaks. The client cannot tell which language is on the other end.
+- **The tool contract** — name, description, input schema, and a `content: [{type: "text", ...}]` result are the protocol's shape in both languages.
+- **Resources and prompts** — `server.resource` and `server.prompt` mirror `mcp.resource()` and `mcp.prompt()` decorators.
+
+## What the language changes
+
+- **Schema validation:** TypeScript uses `zod` schemas where FastMCP infers from type hints. The wire format — JSON Schema — is identical; the declaration style isn't.
+- **Async model:** handlers are `async` functions returning content objects; Python's are decorated sync-or-async functions. The concurrency story (event loop vs asyncio) is a language property, not a protocol one.
+- **Packaging:** the server ships as an npm package and runs via `node`/`npx` — so client configs point at `npx your-server` instead of `python server.py`. Distribution and versioning follow npm conventions.
+
+## When you'd pick TypeScript
+
+- The server needs to run inside an existing Node.js toolchain or ship via `npx` to JavaScript teams.
+- You're extending a VS Code extension or an Electron host — same runtime, same process model.
+- Your org's typing/review infrastructure is zod/TypeScript-native.
+
+For everything else, Python and TypeScript servers are interchangeable at the protocol level — which is exactly the point of a protocol. The deeper protocol details are in [MCP architecture: hosts, clients, servers](/learn/mcp/mcp-architecture-hosts-clients-servers).
+
+<InlineCheck
+  question="A Python MCP client connects to your TypeScript server without any adapter. Why?"
+  options={['MCP is a wire protocol — JSON-RPC messages over stdio/HTTP; language is invisible on the wire as long as the message shapes match', 'Both SDKs happen to be written in TypeScript', 'The client auto-detects the server language and translates']}
+  answer={0}
+  explanation="Only the protocol's message shapes must match — which SDK produced them is invisible on the wire. That is the entire point of specifying a protocol instead of a library."
+/>
+
+**Related:** [Build your first MCP server in Python](/learn/mcp/first-mcp-server), [Building an MCP client](/learn/mcp/building-an-mcp-client), [Versioning MCP servers](/learn/mcp/versioning-mcp-servers-without-breaking-clients)

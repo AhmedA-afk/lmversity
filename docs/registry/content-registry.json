@@ -1,16 +1,16 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T14:50:29.725Z",
+  "generatedAt": "2026-09-15T14:57:26.259Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2461,
+  "itemCount": 2464,
   "counts": {
    "byFamily": {
-    "lesson": 2107,
+    "lesson": 2109,
     "project": 32,
     "quiz": 89,
     "reference": 55,
-    "lab": 69,
+    "lab": 70,
     "interview": 7,
     "scenario": 6,
     "blog": 10,
@@ -22,16 +22,16 @@
     "glossary": 1
    },
    "byStatus": {
-    "live": 2461
+    "live": 2464
    },
    "byKind": {
-    "concept": 1806,
+    "concept": 1808,
     "comparison": 103,
     "capstone": 32,
     "worked-example": 29,
     "quiz": 83,
     "cheatsheet": 48,
-    "lab": 69,
+    "lab": 70,
     "drill": 14,
     "common-mistakes": 24,
     "topic": 7,
@@ -66,7 +66,7 @@
     "context-engineering": 132,
     "deep-learning": 136,
     "evals-red-teaming": 28,
-    "fine-tuning": 26,
+    "fine-tuning": 27,
     "genai-app-dev": 131,
     "hallucinations": 132,
     "harness-design": 31,
@@ -74,8 +74,8 @@
     "llm-security": 8,
     "local-inference": 14,
     "machine-learning": 209,
-    "maths-foundations": 195,
-    "mcp": 58,
+    "maths-foundations": 196,
+    "mcp": 59,
     "production": 35,
     "prompt-engineering": 143,
     "python-data-apis": 58,
@@ -100,12 +100,12 @@
     "fde": 193
    },
    "byFreshness": {
-    "release-sensitive": 338,
+    "release-sensitive": 339,
     "pricing-sensitive": 347,
-    "periodic": 1326,
+    "periodic": 1327,
     "policy-sensitive": 82,
     "certification-sensitive": 103,
-    "durable": 265
+    "durable": 266
    }
   },
   "analyticsNote": "Analytics fields are null until Search Console / analytics exports are wired in.",
@@ -55715,7 +55715,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -58406,6 +58406,89 @@
     "metadata": 2,
     "linking": 2,
     "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2164",
+   "family": "lab",
+   "kind": "lab",
+   "title": "Lab: pin your fine-tuning stack so it still runs next quarter",
+   "slug": "fine-tuning/pinning-your-training-stack-lab",
+   "route": "/learn/fine-tuning/pinning-your-training-stack-lab",
+   "collection": "lessons",
+   "path": "src/content/lessons/fine-tuning/pinning-your-training-stack-lab.mdx",
+   "track": "fine-tuning",
+   "module": null,
+   "status": "live",
+   "summary": "Turn a working fine-tuning setup into a reproducible one: pinned versions, recorded commands, and a verification script that catches the day a provider or framework update silently breaks your recipe.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 312,
+   "headings": [
+    "The short answer",
+    "Step 1: Pin everything that can drift",
+    "Step 2: Record the run, not just the result",
+    "Step 3: The smoke script",
+    "Step 4: The upgrade protocol"
+   ],
+   "internalLinks": [
+    "/learn/fine-tuning/choosing-a-training-framework",
+    "/learn/fine-tuning/evaluating-a-fine-tuned-model",
+    "/learn/fine-tuning/lora-and-qlora-fine-tuning"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 3,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 3,
+    "numericClaims": 0,
+    "specFormat": true,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "build",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Turn a working fine-tuning setup into a reproducible one: pinned versions, recorded commands, and a verification script that catches the day a provider or framework update silently breaks your recipe.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/fine-tuning",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 0,
+    "prerequisiteFit": 0,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
     "demand": null
@@ -78991,7 +79074,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -80172,7 +80255,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -132407,6 +132490,87 @@
    }
   },
   {
+   "id": "les-2165",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Check every maths answer deterministically",
+   "slug": "maths-foundations/verifying-maths-results-deterministically",
+   "route": "/learn/maths-foundations/verifying-maths-results-deterministically",
+   "collection": "lessons",
+   "path": "src/content/lessons/maths-foundations/verifying-maths-results-deterministically.md",
+   "track": "maths-foundations",
+   "module": null,
+   "status": "live",
+   "summary": "A practice discipline: for every result you derive by hand, write a deterministic check — code, a parity test, or an independent method — so you know it right, not feel it right.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 293,
+   "headings": [
+    "The short answer",
+    "The three check types",
+    "The discipline"
+   ],
+   "internalLinks": [
+    "/learn/ai-literacy",
+    "/learn/maths-foundations/choose-your-maths-path-by-background",
+    "/learn/maths-foundations/visualization-and-error-analysis-practice"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 8,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "beginner-engineer",
+   "promisedOutcome": "A practice discipline: for every result you derive by hand, write a deterministic check — code, a parity test, or an independent method — so you know it right, not feel it right.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/maths-foundations",
+   "practiceType": "none",
+   "freshnessClass": "durable",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 0,
+    "prerequisiteFit": 0,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-1468",
    "family": "lesson",
    "kind": "concept",
@@ -135650,6 +135814,91 @@
    }
   },
   {
+   "id": "les-2166",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Build an MCP server in TypeScript",
+   "slug": "mcp/mcp-server-in-typescript",
+   "route": "/learn/mcp/mcp-server-in-typescript",
+   "collection": "lessons",
+   "path": "src/content/lessons/mcp/mcp-server-in-typescript.mdx",
+   "track": "mcp",
+   "module": null,
+   "status": "live",
+   "summary": "Stand up the same minimal MCP server in TypeScript using the official SDK — and see what stays identical to the Python version versus what the language changes.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 284,
+   "headings": [
+    "The same server, TypeScript edition",
+    "What maps 1:1 to the Python version",
+    "What the language changes",
+    "When you'd pick TypeScript"
+   ],
+   "internalLinks": [
+    "/learn/mcp/building-an-mcp-client",
+    "/learn/mcp/first-mcp-server",
+    "/learn/mcp/mcp-architecture-hosts-clients-servers",
+    "/learn/mcp/versioning-mcp-servers-without-breaking-clients"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 1,
+    "interactiveCheck": true,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 9,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Stand up the same minimal MCP server in TypeScript using the official SDK — and see what stays identical to the Python version versus what the language changes.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/mcp",
+   "practiceType": "inline-check",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: MCP"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 0,
+    "prerequisiteFit": 0,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "les-1504",
    "family": "quiz",
    "kind": "quiz",
@@ -137249,7 +137498,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -213704,6 +213953,25 @@
   },
   {
    "a": {
+    "route": "/learn/mcp/mcp-server-in-typescript",
+    "slug": "mcp/mcp-server-in-typescript",
+    "title": "Build an MCP server in TypeScript",
+    "track": "mcp"
+   },
+   "b": {
+    "route": "/guides/build-an-mcp-server-in-python",
+    "slug": "build-an-mcp-server-in-python",
+    "title": "Build an MCP server in Python and connect it to Claude",
+    "track": "guides"
+   },
+   "jaccard": 0.43,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
     "route": "/learn/agentic-ai/agent-memory-short-vs-long-term",
     "slug": "agentic-ai/agent-memory-short-vs-long-term",
     "title": "Short-Term vs Long-Term Memory",
@@ -214118,6 +214386,25 @@
    "containment": 0.75,
    "slugStem": false,
    "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/mcp/first-mcp-server",
+    "slug": "mcp/first-mcp-server",
+    "title": "Build your first MCP server in Python (20 min)",
+    "track": "mcp"
+   },
+   "b": {
+    "route": "/learn/mcp/mcp-server-in-typescript",
+    "slug": "mcp/mcp-server-in-typescript",
+    "title": "Build an MCP server in TypeScript",
+    "track": "mcp"
+   },
+   "jaccard": 0.38,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": true,
    "sameTrack": true
   },
   {
@@ -217729,6 +218016,15 @@
    "family": "lesson",
    "flags": [
     "5 numeric claims with no sources section or external link"
+   ]
+  },
+  {
+   "route": "/learn/mcp/mcp-server-in-typescript",
+   "slug": "mcp/mcp-server-in-typescript",
+   "title": "Build an MCP server in TypeScript",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
    ]
   },
   {

@@ -1397,6 +1397,10 @@ Credentials to monitor:
       maths/ML/DL/classical — maths files with no outward links: 167 → 48;
       remaining pointers name module-level targets that aren't pages)*
 - [ ] Add notebooks and deterministic answer checking.
+      *(deterministic checking now taught as a practice discipline by
+      `verifying-maths-results-deterministically` — compute/invariant/
+      second-route checks per exercise. Runnable .ipynb notebooks are not
+      supported by the content pipeline, so that half stays open)*
 
 ### Machine Learning
 
@@ -1668,9 +1672,11 @@ Credentials to monitor:
       *(`versioning-mcp-servers-without-breaking-clients` +
       `inspecting-and-testing-mcp-servers` cover version handling;
       `mcp-architecture-hosts-clients-servers` grounds the current spec)*
-- [ ] Add working servers and clients in more than one language where maintenance is feasible.
-      *(all code samples are Python/FastMCP — `first-mcp-server`,
-      `building-an-mcp-client`; a second language is still missing)*
+- [x] Add working servers and clients in more than one language where maintenance is feasible.
+      *(`mcp-server-in-typescript` builds the same minimal server on the
+      official TypeScript SDK — protocol elements that map 1:1 vs what the
+      language changes, and when TS is the right pick; Python corpus remains
+      primary)*
 - [x] Add authentication, authorization, security, registry, deployment, and compatibility labs.
       *(8 auth items incl. `mcp-auth-worked-example` + `mcp-auth-cheatsheet`;
       security `securing-mcp-servers-against-prompt-injection` +
@@ -1723,7 +1729,11 @@ Credentials to monitor:
       `inference-serving-optimization`, rollback via
       `merging-and-versioning-adapters` +
       `production/model-deprecation-and-version-pinning`)*
-- [ ] Keep framework and provider commands current through versioned labs.
+- [x] Keep framework and provider commands current through versioned labs.
+      *(`pinning-your-training-stack-lab` establishes the convention: pinned
+      requirements, recorded model strings/revisions, per-run logs, a 50-example
+      smoke script, and a one-at-a-time upgrade protocol — the mechanism that
+      keeps commands current rather than a one-time fix)*
       *(`choosing-a-training-framework` + `choosing-managed-vs-self-hosted-fine-tuning`
       exist; no versioned command-level labs yet — this is a freshness-process
       gap, not a coverage gap)*
@@ -2008,9 +2018,24 @@ Credentials to monitor:
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
 
+### 2026-09-15 — Phase 8 finish: TS MCP server + versioned-lab + deterministic-check lessons
+
+- Commit: `108f346`. Status: complete — Phase 8 closed except .ipynb notebook
+  infrastructure (documented open).
+- Files added (3): `mcp/mcp-server-in-typescript` (official TS SDK, sources:
+  `mcp-typescript-sdk`), `fine-tuning/pinning-your-training-stack-lab`,
+  `maths-foundations/verifying-maths-results-deterministically`.
+- Rows ticked (2) + 1 annotated: multi-language MCP servers; versioned-lab
+  convention. Notebooks row annotated — checking discipline covered, .ipynb
+  pipeline absent.
+- Build crash found+fixed: `InlineCheck` requires `options[]`/`answer:{int}`/
+  `explanation` — wrong-prop call crashed static generation (2,231 partial pages).
+  Validation: check:content 2,166 lessons; build 2,507 pages; links 0 dead;
+  registry 2,464 items.
+
 ### 2026-09-15 — Phase 8 gap-fill: 11 lessons + classical→agentic bridges (10 rows)
 
-- Commit: `3fb9ca0`. Status: complete.
+- Commit: `d6e5963`. Status: complete.
 - Scope: Phase 8 leftovers across AI Foundations, Maths, Tools, GenAI, Harness, MCP, Production.
 - Files added (11): `ai-foundations/choosing-an-ai-approach-system-selection`,
   `maths-foundations/choose-your-maths-path-by-background` +

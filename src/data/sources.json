@@ -1,13 +1,15 @@
 {
   "$schema": "Source registry — every external source a page may cite by id.\nFields: title, publisher, author?, publishedAt?, accessedAt, url,\ntype (official-docs|spec|model-card|system-card|paper|certification-guide|\nrepo|changelog|independent|article), claims (what the source supports),\nstatus (current|superseded|dead). Lessons cite ids via `sources:` frontmatter.",
-
   "google-people-first-content": {
     "title": "Creating helpful, reliable, people-first content",
     "publisher": "Google Search Central",
     "accessedAt": "2026-09-15",
     "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
     "type": "official-docs",
-    "claims": ["People-first content guidance", "E-E-A-T framing"],
+    "claims": [
+      "People-first content guidance",
+      "E-E-A-T framing"
+    ],
     "status": "current"
   },
   "google-spam-policies": {
@@ -16,7 +18,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://developers.google.com/search/docs/essentials/spam-policies",
     "type": "official-docs",
-    "claims": ["Scaled-content and programmatic-SEO rules"],
+    "claims": [
+      "Scaled-content and programmatic-SEO rules"
+    ],
     "status": "current"
   },
   "google-ai-features-search": {
@@ -25,7 +29,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
     "type": "official-docs",
-    "claims": ["AI search feature behavior for publishers"],
+    "claims": [
+      "AI search feature behavior for publishers"
+    ],
     "status": "current"
   },
   "google-search-console-start": {
@@ -34,7 +40,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://developers.google.com/search/docs/monitor-debug/search-console-start",
     "type": "official-docs",
-    "claims": ["Search Console setup and monitoring"],
+    "claims": [
+      "Search Console setup and monitoring"
+    ],
     "status": "current"
   },
   "google-course-structured-data": {
@@ -43,7 +51,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://developers.google.com/search/docs/appearance/structured-data/course",
     "type": "official-docs",
-    "claims": ["Course structured-data requirements"],
+    "claims": [
+      "Course structured-data requirements"
+    ],
     "status": "current"
   },
   "agentskills-spec": {
@@ -52,7 +62,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://agentskills.io/home",
     "type": "spec",
-    "claims": ["Agent Skills format and SKILL.md specification"],
+    "claims": [
+      "Agent Skills format and SKILL.md specification"
+    ],
     "status": "current"
   },
   "github-agent-skills-docs": {
@@ -61,7 +73,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://docs.github.com/en/copilot/concepts/agents/about-agent-skills",
     "type": "official-docs",
-    "claims": ["GitHub Copilot Agent Skills behavior"],
+    "claims": [
+      "GitHub Copilot Agent Skills behavior"
+    ],
     "status": "current"
   },
   "openai-academy-skills": {
@@ -70,7 +84,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://openai.com/academy/skills/",
     "type": "official-docs",
-    "claims": ["OpenAI skills feature scope"],
+    "claims": [
+      "OpenAI skills feature scope"
+    ],
     "status": "current"
   },
   "anthropic-skills-docs": {
@@ -79,7 +95,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://platform.claude.com/docs/en/managed-agents/skills",
     "type": "official-docs",
-    "claims": ["Anthropic Agent Skills behavior"],
+    "claims": [
+      "Anthropic Agent Skills behavior"
+    ],
     "status": "current"
   },
   "openai-codex-docs": {
@@ -88,7 +106,10 @@
     "accessedAt": "2026-09-15",
     "url": "https://developers.openai.com/",
     "type": "official-docs",
-    "claims": ["Codex product scope", "OpenAI developer platform"],
+    "claims": [
+      "Codex product scope",
+      "OpenAI developer platform"
+    ],
     "status": "current"
   },
   "anthropic-claude-code-docs": {
@@ -97,7 +118,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://code.claude.com/docs/en/quickstart",
     "type": "official-docs",
-    "claims": ["Claude Code capabilities and usage"],
+    "claims": [
+      "Claude Code capabilities and usage"
+    ],
     "status": "current"
   },
   "google-gemini-docs": {
@@ -106,7 +129,10 @@
     "accessedAt": "2026-09-15",
     "url": "https://ai.google.dev/",
     "type": "official-docs",
-    "claims": ["Gemini API surface", "Gemini CLI"],
+    "claims": [
+      "Gemini API surface",
+      "Gemini CLI"
+    ],
     "status": "current"
   },
   "meta-llama-resources": {
@@ -115,7 +141,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://ai.meta.com/llama/get-started/",
     "type": "official-docs",
-    "claims": ["Llama model family and access"],
+    "claims": [
+      "Llama model family and access"
+    ],
     "status": "current"
   },
   "cognition-devin-kb": {
@@ -124,7 +152,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://knowledge.cognition.ai/",
     "type": "official-docs",
-    "claims": ["Devin product capabilities"],
+    "claims": [
+      "Devin product capabilities"
+    ],
     "status": "current"
   },
   "xai-grok-docs": {
@@ -133,7 +163,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://docs.x.ai/developers/models",
     "type": "official-docs",
-    "claims": ["Grok model lineup and API"],
+    "claims": [
+      "Grok model lineup and API"
+    ],
     "status": "current"
   },
   "mistral-model-docs": {
@@ -142,7 +174,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://docs.mistral.ai/models",
     "type": "official-docs",
-    "claims": ["Mistral model lineup and API"],
+    "claims": [
+      "Mistral model lineup and API"
+    ],
     "status": "current"
   },
   "deepseek-api-docs": {
@@ -151,7 +185,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://www.deepseek.com/platform/",
     "type": "official-docs",
-    "claims": ["DeepSeek models and API"],
+    "claims": [
+      "DeepSeek models and API"
+    ],
     "status": "current"
   },
   "sarvam-api-docs": {
@@ -160,7 +196,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://docs.sarvam.ai/",
     "type": "official-docs",
-    "claims": ["Sarvam models for Indian languages"],
+    "claims": [
+      "Sarvam models for Indian languages"
+    ],
     "status": "current"
   },
   "google-gemma-docs": {
@@ -169,7 +207,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://ai.google.dev/gemma/docs/get_started",
     "type": "official-docs",
-    "claims": ["Gemma open model family"],
+    "claims": [
+      "Gemma open model family"
+    ],
     "status": "current"
   },
   "cohere-model-docs": {
@@ -178,7 +218,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://docs.cohere.com/docs/models",
     "type": "official-docs",
-    "claims": ["Cohere model lineup and API"],
+    "claims": [
+      "Cohere model lineup and API"
+    ],
     "status": "current"
   },
   "huggingface-inference-endpoints": {
@@ -187,7 +229,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://huggingface.co/docs/inference-endpoints/index",
     "type": "official-docs",
-    "claims": ["Hosted inference endpoint behavior"],
+    "claims": [
+      "Hosted inference endpoint behavior"
+    ],
     "status": "current"
   },
   "hf-transformers-docs": {
@@ -196,7 +240,11 @@
     "accessedAt": "2026-09-15",
     "url": "https://huggingface.co/docs/transformers/index",
     "type": "official-docs",
-    "claims": ["pipeline() task API", "AutoModel/AutoTokenizer loading", "device_map hardware placement"],
+    "claims": [
+      "pipeline() task API",
+      "AutoModel/AutoTokenizer loading",
+      "device_map hardware placement"
+    ],
     "status": "current"
   },
   "hf-tgi-docs": {
@@ -205,7 +253,11 @@
     "accessedAt": "2026-09-15",
     "url": "https://huggingface.co/docs/text-generation-inference/index",
     "type": "official-docs",
-    "claims": ["TGI serving, batching, streaming", "supported architectures", "OpenAI-compatible API"],
+    "claims": [
+      "TGI serving, batching, streaming",
+      "supported architectures",
+      "OpenAI-compatible API"
+    ],
     "status": "current"
   },
   "hf-tei-docs": {
@@ -214,7 +266,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://huggingface.co/docs/text-embeddings-inference/index",
     "type": "official-docs",
-    "claims": ["TEI embed/rerank/classify endpoints"],
+    "claims": [
+      "TEI embed/rerank/classify endpoints"
+    ],
     "status": "current"
   },
   "lmstudio-docs": {
@@ -223,7 +277,11 @@
     "accessedAt": "2026-09-15",
     "url": "https://lmstudio.ai/docs",
     "type": "official-docs",
-    "claims": ["LM Studio local server", "OpenAI-compatible endpoints", "lms CLI"],
+    "claims": [
+      "LM Studio local server",
+      "OpenAI-compatible endpoints",
+      "lms CLI"
+    ],
     "status": "current"
   },
   "sglang-docs": {
@@ -232,7 +290,11 @@
     "accessedAt": "2026-09-15",
     "url": "https://docs.sglang.ai",
     "type": "official-docs",
-    "claims": ["SGLang serving", "RadixAttention prefix reuse", "constrained/structured generation"],
+    "claims": [
+      "SGLang serving",
+      "RadixAttention prefix reuse",
+      "constrained/structured generation"
+    ],
     "status": "current"
   },
   "mlx-docs": {
@@ -241,7 +303,10 @@
     "accessedAt": "2026-09-15",
     "url": "https://ml-explore.github.io/mlx/build/html/index.html",
     "type": "official-docs",
-    "claims": ["MLX unified-memory array framework", "quantization and GGUF export ops"],
+    "claims": [
+      "MLX unified-memory array framework",
+      "quantization and GGUF export ops"
+    ],
     "status": "current"
   },
   "mlx-lm-repo": {
@@ -250,7 +315,10 @@
     "accessedAt": "2026-09-15",
     "url": "https://github.com/ml-explore/mlx-lm",
     "type": "repo",
-    "claims": ["mlx_lm.generate/server commands", "mlx-community model format"],
+    "claims": [
+      "mlx_lm.generate/server commands",
+      "mlx-community model format"
+    ],
     "status": "current"
   },
   "openai-agents-sdk-docs": {
@@ -259,7 +327,10 @@
     "accessedAt": "2026-09-15",
     "url": "https://openai.github.io/openai-agents-python/",
     "type": "official-docs",
-    "claims": ["Agents SDK primitives: agents, handoffs, guardrails, sessions", "Runner and tracing"],
+    "claims": [
+      "Agents SDK primitives: agents, handoffs, guardrails, sessions",
+      "Runner and tracing"
+    ],
     "status": "current"
   },
   "claude-agent-sdk-docs": {
@@ -268,7 +339,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://docs.claude.com/en/api/agent-sdk/overview",
     "type": "official-docs",
-    "claims": ["Agent SDK harness: built-in tools, subagents, MCP, permissions, sessions"],
+    "claims": [
+      "Agent SDK harness: built-in tools, subagents, MCP, permissions, sessions"
+    ],
     "status": "current"
   },
   "langchain-docs": {
@@ -277,7 +350,11 @@
     "accessedAt": "2026-09-15",
     "url": "https://docs.langchain.com/oss/python/langchain/overview",
     "type": "official-docs",
-    "claims": ["init_chat_model provider interface", "create_agent", "integration catalog"],
+    "claims": [
+      "init_chat_model provider interface",
+      "create_agent",
+      "integration catalog"
+    ],
     "status": "current"
   },
   "llamaindex-docs": {
@@ -286,7 +363,11 @@
     "accessedAt": "2026-09-15",
     "url": "https://docs.llamaindex.ai/en/stable/",
     "type": "official-docs",
-    "claims": ["loaders, indexes, query engines", "Workflows orchestration", "agents and agentic RAG"],
+    "claims": [
+      "loaders, indexes, query engines",
+      "Workflows orchestration",
+      "agents and agentic RAG"
+    ],
     "status": "current"
   },
   "pydanticai-docs": {
@@ -295,7 +376,11 @@
     "accessedAt": "2026-09-15",
     "url": "https://ai.pydantic.dev/",
     "type": "official-docs",
-    "claims": ["typed agents (deps_type, output_type)", "tools and RunContext", "graphs and evals"],
+    "claims": [
+      "typed agents (deps_type, output_type)",
+      "tools and RunContext",
+      "graphs and evals"
+    ],
     "status": "current"
   },
   "semantic-kernel-docs": {
@@ -304,7 +389,10 @@
     "accessedAt": "2026-09-15",
     "url": "https://learn.microsoft.com/en-us/semantic-kernel/overview/",
     "type": "official-docs",
-    "claims": ["Semantic Kernel plugins/planners/agents", "Microsoft agent framework direction"],
+    "claims": [
+      "Semantic Kernel plugins/planners/agents",
+      "Microsoft agent framework direction"
+    ],
     "status": "current"
   },
   "autogen-docs": {
@@ -313,7 +401,11 @@
     "accessedAt": "2026-09-15",
     "url": "https://microsoft.github.io/autogen/stable/",
     "type": "official-docs",
-    "claims": ["AutoGen multi-agent conversations", "GroupChat and AgentChat API", "redesign history"],
+    "claims": [
+      "AutoGen multi-agent conversations",
+      "GroupChat and AgentChat API",
+      "redesign history"
+    ],
     "status": "current"
   },
   "crewai-docs": {
@@ -322,7 +414,11 @@
     "accessedAt": "2026-09-15",
     "url": "https://docs.crewai.com/",
     "type": "official-docs",
-    "claims": ["Agents with role/goal/backstory", "Crews and processes", "Flows"],
+    "claims": [
+      "Agents with role/goal/backstory",
+      "Crews and processes",
+      "Flows"
+    ],
     "status": "current"
   },
   "mastra-docs": {
@@ -331,7 +427,11 @@
     "accessedAt": "2026-09-15",
     "url": "https://mastra.ai/en/docs",
     "type": "official-docs",
-    "claims": ["TypeScript agents and workflows", "suspend/resume", "memory, RAG, evals"],
+    "claims": [
+      "TypeScript agents and workflows",
+      "suspend/resume",
+      "memory, RAG, evals"
+    ],
     "status": "current"
   },
   "vercel-ai-sdk-docs": {
@@ -340,7 +440,11 @@
     "accessedAt": "2026-09-15",
     "url": "https://ai-sdk.dev/docs",
     "type": "official-docs",
-    "claims": ["generateText/streamText/generateObject", "useChat React hooks", "tool calling and generative UI"],
+    "claims": [
+      "generateText/streamText/generateObject",
+      "useChat React hooks",
+      "tool calling and generative UI"
+    ],
     "status": "current"
   },
   "dspy-docs": {
@@ -349,7 +453,11 @@
     "accessedAt": "2026-09-15",
     "url": "https://dspy.ai/",
     "type": "official-docs",
-    "claims": ["signatures and modules", "optimizers (MIPROv2, BootstrapFewShot)", "compile-based prompt optimization"],
+    "claims": [
+      "signatures and modules",
+      "optimizers (MIPROv2, BootstrapFewShot)",
+      "compile-based prompt optimization"
+    ],
     "status": "current"
   },
   "haystack-docs": {
@@ -358,7 +466,11 @@
     "accessedAt": "2026-09-15",
     "url": "https://docs.haystack.deepset.ai/docs/intro",
     "type": "official-docs",
-    "claims": ["component pipelines", "retrievers and document stores", "agent components"],
+    "claims": [
+      "component pipelines",
+      "retrievers and document stores",
+      "agent components"
+    ],
     "status": "current"
   },
   "instructor-docs": {
@@ -367,7 +479,10 @@
     "accessedAt": "2026-09-15",
     "url": "https://python.useinstructor.com/",
     "type": "official-docs",
-    "claims": ["response_model structured output", "validation and retry loop"],
+    "claims": [
+      "response_model structured output",
+      "validation and retry loop"
+    ],
     "status": "current"
   },
   "n8n-docs": {
@@ -376,7 +491,10 @@
     "accessedAt": "2026-09-15",
     "url": "https://docs.n8n.io/",
     "type": "official-docs",
-    "claims": ["workflow automation with AI nodes", "self-hostable"],
+    "claims": [
+      "workflow automation with AI nodes",
+      "self-hostable"
+    ],
     "status": "current"
   },
   "pgvector-repo": {
@@ -385,7 +503,10 @@
     "accessedAt": "2026-09-15",
     "url": "https://github.com/pgvector/pgvector",
     "type": "repo",
-    "claims": ["vector type and distance operators", "HNSW/IVFFlat indexes"],
+    "claims": [
+      "vector type and distance operators",
+      "HNSW/IVFFlat indexes"
+    ],
     "status": "current"
   },
   "pinecone-docs": {
@@ -394,7 +515,10 @@
     "accessedAt": "2026-09-15",
     "url": "https://docs.pinecone.io/",
     "type": "official-docs",
-    "claims": ["Pinecone serverless vector database", "namespaces and metadata filtering"],
+    "claims": [
+      "Pinecone serverless vector database",
+      "namespaces and metadata filtering"
+    ],
     "status": "current"
   },
   "weaviate-docs": {
@@ -403,7 +527,10 @@
     "accessedAt": "2026-09-15",
     "url": "https://weaviate.io/developers/weaviate",
     "type": "official-docs",
-    "claims": ["Weaviate modules and hybrid search", "self-hosted and managed options"],
+    "claims": [
+      "Weaviate modules and hybrid search",
+      "self-hosted and managed options"
+    ],
     "status": "current"
   },
   "qdrant-docs": {
@@ -412,7 +539,10 @@
     "accessedAt": "2026-09-15",
     "url": "https://qdrant.tech/documentation/",
     "type": "official-docs",
-    "claims": ["Qdrant payload filtering", "self-host and cloud deployment"],
+    "claims": [
+      "Qdrant payload filtering",
+      "self-host and cloud deployment"
+    ],
     "status": "current"
   },
   "milvus-docs": {
@@ -421,7 +551,10 @@
     "accessedAt": "2026-09-15",
     "url": "https://milvus.io/docs",
     "type": "official-docs",
-    "claims": ["Milvus distributed vector database", "index types and GPU support"],
+    "claims": [
+      "Milvus distributed vector database",
+      "index types and GPU support"
+    ],
     "status": "current"
   },
   "chroma-docs": {
@@ -430,7 +563,10 @@
     "accessedAt": "2026-09-15",
     "url": "https://docs.trychroma.com/",
     "type": "official-docs",
-    "claims": ["Chroma embedded and client modes", "collections API"],
+    "claims": [
+      "Chroma embedded and client modes",
+      "collections API"
+    ],
     "status": "current"
   },
   "lancedb-docs": {
@@ -439,7 +575,10 @@
     "accessedAt": "2026-09-15",
     "url": "https://lancedb.github.io/lancedb/",
     "type": "official-docs",
-    "claims": ["Lance columnar format", "embedded vector search and filtering"],
+    "claims": [
+      "Lance columnar format",
+      "embedded vector search and filtering"
+    ],
     "status": "current"
   },
   "elasticsearch-dense-vector-docs": {
@@ -448,7 +587,10 @@
     "accessedAt": "2026-09-15",
     "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/dense-vector.html",
     "type": "official-docs",
-    "claims": ["dense_vector field type", "kNN queries with filters"],
+    "claims": [
+      "dense_vector field type",
+      "kNN queries with filters"
+    ],
     "status": "current"
   },
   "vespa-docs": {
@@ -457,7 +599,10 @@
     "accessedAt": "2026-09-15",
     "url": "https://docs.vespa.ai/",
     "type": "official-docs",
-    "claims": ["Vespa multi-phase ranking", "tensor fields and ANN"],
+    "claims": [
+      "Vespa multi-phase ranking",
+      "tensor fields and ANN"
+    ],
     "status": "current"
   },
   "unstructured-docs": {
@@ -466,7 +611,10 @@
     "accessedAt": "2026-09-15",
     "url": "https://docs.unstructured.io/",
     "type": "official-docs",
-    "claims": ["document partitioning into typed elements", "format coverage"],
+    "claims": [
+      "document partitioning into typed elements",
+      "format coverage"
+    ],
     "status": "current"
   },
   "docling-docs": {
@@ -475,7 +623,10 @@
     "accessedAt": "2026-09-15",
     "url": "https://docling-project.github.io/docling/",
     "type": "official-docs",
-    "claims": ["layout-aware PDF parsing", "table structure recognition"],
+    "claims": [
+      "layout-aware PDF parsing",
+      "table structure recognition"
+    ],
     "status": "current"
   },
   "llamaparse-docs": {
@@ -484,7 +635,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://docs.cloud.llamaindex.ai/llamaparse/getting_started",
     "type": "official-docs",
-    "claims": ["managed document parsing service"],
+    "claims": [
+      "managed document parsing service"
+    ],
     "status": "current"
   },
   "cohere-rerank-docs": {
@@ -493,385 +646,10 @@
     "accessedAt": "2026-09-15",
     "url": "https://docs.cohere.com/docs/rerank-2",
     "type": "official-docs",
-    "claims": ["Cohere Rerank API", "reranking models"],
-    "status": "current"
-  },
-  "langfuse-docs": {
-    "title": "Langfuse documentation",
-    "publisher": "Langfuse",
-    "accessedAt": "2026-09-15",
-    "url": "https://langfuse.com/docs",
-    "type": "official-docs",
-    "claims": ["traces/observations/sessions", "prompt management, datasets, experiments", "self-hosting"],
-    "status": "current"
-  },
-  "langsmith-docs": {
-    "title": "LangSmith documentation",
-    "publisher": "LangChain",
-    "accessedAt": "2026-09-15",
-    "url": "https://docs.smith.langchain.com/",
-    "type": "official-docs",
-    "claims": ["LangSmith tracing and evaluation", "LangGraph integration", "prompt workflows"],
-    "status": "current"
-  },
-  "phoenix-docs": {
-    "title": "Arize Phoenix documentation",
-    "publisher": "Arize",
-    "accessedAt": "2026-09-15",
-    "url": "https://arize.com/docs/phoenix",
-    "type": "official-docs",
-    "claims": ["Phoenix OTel-native tracing", "open-source evals"],
-    "status": "current"
-  },
-  "weave-docs": {
-    "title": "W&B Weave documentation",
-    "publisher": "Weights & Biases",
-    "accessedAt": "2026-09-15",
-    "url": "https://weave-docs.wandb.ai/",
-    "type": "official-docs",
-    "claims": ["Weave LLM tracking and evaluation"],
-    "status": "current"
-  },
-  "helicone-docs": {
-    "title": "Helicone documentation",
-    "publisher": "Helicone",
-    "accessedAt": "2026-09-15",
-    "url": "https://docs.helicone.ai/",
-    "type": "official-docs",
-    "claims": ["gateway/proxy observability", "caching, rate limits, budgets"],
-    "status": "current"
-  },
-  "deepeval-docs": {
-    "title": "DeepEval documentation",
-    "publisher": "Confident AI",
-    "accessedAt": "2026-09-15",
-    "url": "https://deepeval.com/docs/getting-started",
-    "type": "official-docs",
-    "claims": ["pytest-shaped LLM eval metrics", "assert_test and G-Eval"],
-    "status": "current"
-  },
-  "trulens-docs": {
-    "title": "TruLens documentation",
-    "publisher": "TruEra",
-    "accessedAt": "2026-09-15",
-    "url": "https://www.trulens.org/getting_started/",
-    "type": "official-docs",
-    "claims": ["feedback functions on instrumented traces"],
-    "status": "current"
-  },
-  "openllmetry-repo": {
-    "title": "OpenLLMetry repository",
-    "publisher": "Traceloop",
-    "accessedAt": "2026-09-15",
-    "url": "https://github.com/traceloop/openllmetry",
-    "type": "official-docs",
-    "claims": ["OTel auto-instrumentation for LLM providers and frameworks"],
-    "status": "current"
-  },
-  "owasp-genai": {
-    "title": "OWASP GenAI Security Project",
-    "publisher": "OWASP",
-    "accessedAt": "2026-09-15",
-    "url": "https://genai.owasp.org/",
-    "type": "official-docs",
-    "claims": ["Top 10 for LLM applications", "agentic application security guidance"],
-    "status": "current"
-  },
-  "nist-ai-rmf": {
-    "title": "AI Risk Management Framework",
-    "publisher": "NIST",
-    "accessedAt": "2026-09-15",
-    "url": "https://www.nist.gov/itl/ai-risk-management-framework",
-    "type": "official-docs",
-    "claims": ["Govern/Map/Measure/Manage functions", "AI RMF profiles"],
-    "status": "current"
-  },
-  "mitre-atlas": {
-    "title": "MITRE ATLAS",
-    "publisher": "MITRE",
-    "accessedAt": "2026-09-15",
-    "url": "https://atlas.mitre.org/",
-    "type": "official-docs",
-    "claims": ["adversary tactics and techniques against AI systems", "case studies"],
-    "status": "current"
-  },
-  "openai-moderation": {
-    "title": "OpenAI Moderation guide",
-    "publisher": "OpenAI",
-    "accessedAt": "2026-09-15",
-    "url": "https://platform.openai.com/docs/guides/moderation",
-    "type": "official-docs",
-    "claims": ["moderation endpoint categories and usage"],
-    "status": "current"
-  },
-  "guardrails-ai-repo": {
-    "title": "Guardrails AI repository",
-    "publisher": "Guardrails AI",
-    "accessedAt": "2026-09-15",
-    "url": "https://github.com/guardrails-ai/guardrails",
-    "type": "official-docs",
-    "claims": ["output validation, re-ask/fix loops, validators"],
-    "status": "current"
-  },
-  "nemo-guardrails-repo": {
-    "title": "NeMo Guardrails repository",
-    "publisher": "NVIDIA",
-    "accessedAt": "2026-09-15",
-    "url": "https://github.com/NVIDIA-NeMo/Guardrails",
-    "type": "official-docs",
-    "claims": ["programmable conversational rails", "input/dialog/output/retrieval rails"],
-    "status": "current"
-  },
-  "purple-llama-repo": {
-    "title": "Purple Llama repository",
-    "publisher": "Meta",
-    "accessedAt": "2026-09-15",
-    "url": "https://github.com/meta-llama/PurpleLlama",
-    "type": "official-docs",
-    "claims": ["Llama Guard safety classifier models", "responsible-AI tooling"],
-    "status": "current"
-  },
-  "garak-repo": {
-    "title": "garak — LLM vulnerability scanner",
-    "publisher": "NVIDIA",
-    "accessedAt": "2026-09-15",
-    "url": "https://github.com/NVIDIA/garak",
-    "type": "official-docs",
-    "claims": ["probe families for LLM vulnerabilities", "detectors and reporting"],
-    "status": "current"
-  },
-  "promptfoo-redteam": {
-    "title": "Promptfoo red team documentation",
-    "publisher": "Promptfoo",
-    "accessedAt": "2026-09-15",
-    "url": "https://www.promptfoo.dev/docs/red-team/",
-    "type": "official-docs",
-    "claims": ["application-shaped adversarial test generation"],
-    "status": "current"
-  },
-  "e2b-docs": {
-    "title": "E2B documentation",
-    "publisher": "E2B",
-    "accessedAt": "2026-09-15",
-    "url": "https://e2b.dev/docs",
-    "type": "official-docs",
-    "claims": ["sandboxed code-execution environments for agents"],
-    "status": "current"
-  },
-  "gitleaks-repo": {
-    "title": "gitleaks repository",
-    "publisher": "Gitleaks",
-    "accessedAt": "2026-09-15",
-    "url": "https://github.com/gitleaks/gitleaks",
-    "type": "official-docs",
-    "claims": ["secret scanning for repositories"],
-    "status": "current"
-  },
-  "sigstore-model-transparency": {
-    "title": "Sigstore model transparency",
-    "publisher": "Sigstore",
-    "accessedAt": "2026-09-15",
-    "url": "https://github.com/sigstore/model-transparency",
-    "type": "official-docs",
-    "claims": ["model signing and artifact provenance"],
-    "status": "current"
-  },
-  "claude-code-docs": {
-    "title": "Claude Code documentation",
-    "publisher": "Anthropic",
-    "accessedAt": "2026-09-15",
-    "url": "https://code.claude.com/docs/en/overview",
-    "type": "official-docs",
-    "claims": ["CLI agent modes, permissions, hooks, subagents, MCP config"],
-    "status": "current"
-  },
-  "openai-codex-repo": {
-    "title": "OpenAI Codex CLI repository",
-    "publisher": "OpenAI",
-    "accessedAt": "2026-09-15",
-    "url": "https://github.com/openai/codex",
-    "type": "official-docs",
-    "claims": ["codex exec non-interactive mode", "sandbox/approval policies"],
-    "status": "current"
-  },
-  "gemini-cli-repo": {
-    "title": "Gemini CLI repository",
-    "publisher": "Google",
-    "accessedAt": "2026-09-15",
-    "url": "https://github.com/google-gemini/gemini-cli",
-    "type": "official-docs",
-    "claims": ["gemini -p non-interactive mode", "sandboxing flags"],
-    "status": "current"
-  },
-  "aider-docs": {
-    "title": "Aider documentation",
-    "publisher": "Aider",
-    "accessedAt": "2026-09-15",
-    "url": "https://aider.chat/docs/",
-    "type": "official-docs",
-    "claims": ["architect/editor model split", "--message non-interactive mode"],
-    "status": "current"
-  },
-  "playwright-docs": {
-    "title": "Playwright documentation",
-    "publisher": "Microsoft",
-    "accessedAt": "2026-09-15",
-    "url": "https://playwright.dev/docs/intro",
-    "type": "official-docs",
-    "claims": ["auto-waiting actions", "semantic locators (get_by_role)", "storage_state contexts", "tracing"],
-    "status": "current"
-  },
-  "cdp-docs": {
-    "title": "Chrome DevTools Protocol",
-    "publisher": "Chrome DevTools",
-    "accessedAt": "2026-09-15",
-    "url": "https://chromedevtools.github.io/devtools-protocol/",
-    "type": "official-docs",
-    "claims": ["protocol domains (Page, Network, DOM, Runtime)"],
-    "status": "current"
-  },
-  "chrome-devtools-mcp-repo": {
-    "title": "Chrome DevTools MCP repository",
-    "publisher": "ChromeDevTools",
-    "accessedAt": "2026-09-15",
-    "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-    "type": "official-docs",
-    "claims": ["MCP server exposing DevTools to agents"],
-    "status": "current"
-  },
-  "browser-use-repo": {
-    "title": "Browser Use repository",
-    "publisher": "Browser Use",
-    "accessedAt": "2026-09-15",
-    "url": "https://github.com/browser-use/browser-use",
-    "type": "official-docs",
-    "claims": ["agent loop driving Playwright from natural-language tasks"],
-    "status": "current"
-  },
-  "stagehand-repo": {
-    "title": "Stagehand repository",
-    "publisher": "Browserbase",
-    "accessedAt": "2026-09-15",
-    "url": "https://github.com/browserbase/stagehand",
-    "type": "official-docs",
-    "claims": ["act/extract/observe primitives over deterministic scripts"],
-    "status": "current"
-  },
-  "anthropic-computer-use": {
-    "title": "Anthropic computer use documentation",
-    "publisher": "Anthropic",
-    "accessedAt": "2026-09-15",
-    "url": "https://docs.claude.com/en/docs/agents-and-tools/computer-use",
-    "type": "official-docs",
-    "claims": ["screenshot + synthetic input desktop control"],
-    "status": "current"
-  },
-  "puppeteer-docs": {
-    "title": "Puppeteer documentation",
-    "publisher": "Chrome",
-    "accessedAt": "2026-09-15",
-    "url": "https://pptr.dev/",
-    "type": "official-docs",
-    "claims": ["CDP-first browser automation library"],
-    "status": "current"
-  },
-  "selenium-docs": {
-    "title": "Selenium documentation",
-    "publisher": "Selenium",
-    "accessedAt": "2026-09-15",
-    "url": "https://www.selenium.dev/documentation/",
-    "type": "official-docs",
-    "claims": ["WebDriver cross-browser standard"],
-    "status": "current"
-  },
-  "mcp-spec": {
-    "title": "Model Context Protocol specification",
-    "publisher": "Model Context Protocol",
-    "accessedAt": "2026-09-15",
-    "url": "https://modelcontextprotocol.io/specification",
-    "type": "official-docs",
-    "claims": ["MCP protocol architecture and primitives"],
-    "status": "current"
-  },
-  "mcp-ext-apps": {
-    "title": "MCP Apps extension (ext-apps)",
-    "publisher": "Model Context Protocol",
-    "accessedAt": "2026-09-15",
-    "url": "https://github.com/modelcontextprotocol/ext-apps",
-    "type": "official-docs",
-    "claims": ["interactive UI returned from tool results", "draft-stage extension"],
-    "status": "current"
-  },
-  "agent-skills-spec": {
-    "title": "Agent Skills specification",
-    "publisher": "Agent Skills",
-    "accessedAt": "2026-09-15",
-    "url": "https://agentskills.io/specification",
-    "type": "official-docs",
-    "claims": ["SKILL.md format, progressive disclosure", "open cross-vendor spec"],
-    "status": "current"
-  },
-  "anthropic-skills-repo": {
-    "title": "Anthropic skills repository",
-    "publisher": "Anthropic",
-    "accessedAt": "2026-09-15",
-    "url": "https://github.com/anthropics/skills",
-    "type": "official-docs",
-    "claims": ["reference skill packages and conventions"],
-    "status": "current"
-  },
-  "mcpui-site": {
-    "title": "MCP-UI project",
-    "publisher": "MCP-UI",
-    "accessedAt": "2026-09-15",
-    "url": "https://mcpui.dev/",
-    "type": "official-docs",
-    "claims": ["community UI-over-MCP pattern the Apps work builds on"],
-    "status": "current"
-  },
-  "google-adk-docs": {
-    "title": "Agent Development Kit documentation",
-    "publisher": "Google",
-    "accessedAt": "2026-09-15",
-    "url": "https://google.github.io/adk-docs/",
-    "type": "official-docs",
-    "claims": ["LlmAgent and workflow agents", "sessions and state", "Vertex AI deployment"],
-    "status": "current"
-  },
-  "onnxruntime-docs": {
-    "title": "ONNX Runtime documentation",
-    "publisher": "Microsoft",
-    "accessedAt": "2026-09-15",
-    "url": "https://onnxruntime.ai/docs/",
-    "type": "official-docs",
-    "claims": ["InferenceSession API", "execution providers", "ONNX quantization and graph optimization"],
-    "status": "current"
-  },
-  "ollama-docs": {
-    "title": "Ollama tool-calling and embedding API docs",
-    "publisher": "Ollama",
-    "accessedAt": "2026-09-15",
-    "url": "https://docs.ollama.com/capabilities/tool-calling",
-    "type": "official-docs",
-    "claims": ["Local model tool calling", "Ollama embedding API"],
-    "status": "current"
-  },
-  "langchain-langgraph-docs": {
-    "title": "LangGraph overview",
-    "publisher": "LangChain",
-    "accessedAt": "2026-09-15",
-    "url": "https://docs.langchain.com/oss/python/langgraph/overview",
-    "type": "official-docs",
-    "claims": ["LangGraph agent orchestration model"],
-    "status": "current"
-  },
-  "agno-docs": {
-    "title": "Agno agents and workflows overview",
-    "publisher": "Agno",
-    "accessedAt": "2026-09-15",
-    "url": "https://docs.agno.com/agents/overview",
-    "type": "official-docs",
-    "claims": ["Agno agent framework behavior"],
+    "claims": [
+      "Cohere Rerank API",
+      "reranking models"
+    ],
     "status": "current"
   },
   "langfuse-docs": {
@@ -880,7 +658,262 @@
     "accessedAt": "2026-09-15",
     "url": "https://langfuse.com/docs",
     "type": "official-docs",
-    "claims": ["LLM observability and evaluation concepts"],
+    "claims": [
+      "LLM observability and evaluation concepts"
+    ],
+    "status": "current"
+  },
+  "langsmith-docs": {
+    "title": "LangSmith documentation",
+    "publisher": "LangChain",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.smith.langchain.com/",
+    "type": "official-docs",
+    "claims": [
+      "LangSmith tracing and evaluation",
+      "LangGraph integration",
+      "prompt workflows"
+    ],
+    "status": "current"
+  },
+  "phoenix-docs": {
+    "title": "Arize Phoenix documentation",
+    "publisher": "Arize",
+    "accessedAt": "2026-09-15",
+    "url": "https://arize.com/docs/phoenix",
+    "type": "official-docs",
+    "claims": [
+      "Phoenix OTel-native tracing",
+      "open-source evals"
+    ],
+    "status": "current"
+  },
+  "weave-docs": {
+    "title": "W&B Weave documentation",
+    "publisher": "Weights & Biases",
+    "accessedAt": "2026-09-15",
+    "url": "https://weave-docs.wandb.ai/",
+    "type": "official-docs",
+    "claims": [
+      "Weave LLM tracking and evaluation"
+    ],
+    "status": "current"
+  },
+  "helicone-docs": {
+    "title": "Helicone documentation",
+    "publisher": "Helicone",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.helicone.ai/",
+    "type": "official-docs",
+    "claims": [
+      "gateway/proxy observability",
+      "caching, rate limits, budgets"
+    ],
+    "status": "current"
+  },
+  "deepeval-docs": {
+    "title": "DeepEval documentation",
+    "publisher": "Confident AI",
+    "accessedAt": "2026-09-15",
+    "url": "https://deepeval.com/docs/getting-started",
+    "type": "official-docs",
+    "claims": [
+      "pytest-shaped LLM eval metrics",
+      "assert_test and G-Eval"
+    ],
+    "status": "current"
+  },
+  "trulens-docs": {
+    "title": "TruLens documentation",
+    "publisher": "TruEra",
+    "accessedAt": "2026-09-15",
+    "url": "https://www.trulens.org/getting_started/",
+    "type": "official-docs",
+    "claims": [
+      "feedback functions on instrumented traces"
+    ],
+    "status": "current"
+  },
+  "openllmetry-repo": {
+    "title": "OpenLLMetry repository",
+    "publisher": "Traceloop",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/traceloop/openllmetry",
+    "type": "official-docs",
+    "claims": [
+      "OTel auto-instrumentation for LLM providers and frameworks"
+    ],
+    "status": "current"
+  },
+  "owasp-genai": {
+    "title": "OWASP GenAI Security Project",
+    "publisher": "OWASP",
+    "accessedAt": "2026-09-15",
+    "url": "https://genai.owasp.org/",
+    "type": "official-docs",
+    "claims": [
+      "Top 10 for LLM applications",
+      "agentic application security guidance"
+    ],
+    "status": "current"
+  },
+  "nist-ai-rmf": {
+    "title": "NIST AI Risk Management Framework",
+    "publisher": "NIST",
+    "accessedAt": "2026-09-15",
+    "url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
+    "type": "official-docs",
+    "claims": [
+      "AI risk-management framework core"
+    ],
+    "status": "current"
+  },
+  "mitre-atlas": {
+    "title": "MITRE ATLAS",
+    "publisher": "MITRE",
+    "accessedAt": "2026-09-15",
+    "url": "https://atlas.mitre.org/",
+    "type": "official-docs",
+    "claims": [
+      "adversary tactics and techniques against AI systems",
+      "case studies"
+    ],
+    "status": "current"
+  },
+  "openai-moderation": {
+    "title": "OpenAI Moderation guide",
+    "publisher": "OpenAI",
+    "accessedAt": "2026-09-15",
+    "url": "https://platform.openai.com/docs/guides/moderation",
+    "type": "official-docs",
+    "claims": [
+      "moderation endpoint categories and usage"
+    ],
+    "status": "current"
+  },
+  "guardrails-ai-repo": {
+    "title": "Guardrails AI repository",
+    "publisher": "Guardrails AI",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/guardrails-ai/guardrails",
+    "type": "official-docs",
+    "claims": [
+      "output validation, re-ask/fix loops, validators"
+    ],
+    "status": "current"
+  },
+  "nemo-guardrails-repo": {
+    "title": "NeMo Guardrails repository",
+    "publisher": "NVIDIA",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/NVIDIA-NeMo/Guardrails",
+    "type": "official-docs",
+    "claims": [
+      "programmable conversational rails",
+      "input/dialog/output/retrieval rails"
+    ],
+    "status": "current"
+  },
+  "purple-llama-repo": {
+    "title": "Purple Llama repository",
+    "publisher": "Meta",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/meta-llama/PurpleLlama",
+    "type": "official-docs",
+    "claims": [
+      "Llama Guard safety classifier models",
+      "responsible-AI tooling"
+    ],
+    "status": "current"
+  },
+  "garak-repo": {
+    "title": "garak — LLM vulnerability scanner",
+    "publisher": "NVIDIA",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/NVIDIA/garak",
+    "type": "official-docs",
+    "claims": [
+      "probe families for LLM vulnerabilities",
+      "detectors and reporting"
+    ],
+    "status": "current"
+  },
+  "promptfoo-redteam": {
+    "title": "Promptfoo red team documentation",
+    "publisher": "Promptfoo",
+    "accessedAt": "2026-09-15",
+    "url": "https://www.promptfoo.dev/docs/red-team/",
+    "type": "official-docs",
+    "claims": [
+      "application-shaped adversarial test generation"
+    ],
+    "status": "current"
+  },
+  "e2b-docs": {
+    "title": "E2B documentation",
+    "publisher": "E2B",
+    "accessedAt": "2026-09-15",
+    "url": "https://e2b.dev/docs",
+    "type": "official-docs",
+    "claims": [
+      "sandboxed code-execution environments for agents"
+    ],
+    "status": "current"
+  },
+  "gitleaks-repo": {
+    "title": "gitleaks repository",
+    "publisher": "Gitleaks",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/gitleaks/gitleaks",
+    "type": "official-docs",
+    "claims": [
+      "secret scanning for repositories"
+    ],
+    "status": "current"
+  },
+  "sigstore-model-transparency": {
+    "title": "Sigstore model transparency",
+    "publisher": "Sigstore",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/sigstore/model-transparency",
+    "type": "official-docs",
+    "claims": [
+      "model signing and artifact provenance"
+    ],
+    "status": "current"
+  },
+  "claude-code-docs": {
+    "title": "Claude Code documentation",
+    "publisher": "Anthropic",
+    "accessedAt": "2026-09-15",
+    "url": "https://code.claude.com/docs/en/overview",
+    "type": "official-docs",
+    "claims": [
+      "CLI agent modes, permissions, hooks, subagents, MCP config"
+    ],
+    "status": "current"
+  },
+  "openai-codex-repo": {
+    "title": "OpenAI Codex repository",
+    "publisher": "OpenAI",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/openai/codex",
+    "type": "repo",
+    "claims": [
+      "Codex CLI source and behavior"
+    ],
+    "status": "current"
+  },
+  "gemini-cli-repo": {
+    "title": "Gemini CLI repository",
+    "publisher": "Google",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/google-gemini/gemini-cli",
+    "type": "official-docs",
+    "claims": [
+      "gemini -p non-interactive mode",
+      "sandboxing flags"
+    ],
     "status": "current"
   },
   "aider-docs": {
@@ -889,7 +922,217 @@
     "accessedAt": "2026-09-15",
     "url": "https://aider.chat/docs/",
     "type": "official-docs",
-    "claims": ["Aider coding-assistant behavior"],
+    "claims": [
+      "Aider coding-assistant behavior"
+    ],
+    "status": "current"
+  },
+  "playwright-docs": {
+    "title": "Playwright documentation",
+    "publisher": "Microsoft",
+    "accessedAt": "2026-09-15",
+    "url": "https://playwright.dev/docs/intro",
+    "type": "official-docs",
+    "claims": [
+      "auto-waiting actions",
+      "semantic locators (get_by_role)",
+      "storage_state contexts",
+      "tracing"
+    ],
+    "status": "current"
+  },
+  "cdp-docs": {
+    "title": "Chrome DevTools Protocol",
+    "publisher": "Chrome DevTools",
+    "accessedAt": "2026-09-15",
+    "url": "https://chromedevtools.github.io/devtools-protocol/",
+    "type": "official-docs",
+    "claims": [
+      "protocol domains (Page, Network, DOM, Runtime)"
+    ],
+    "status": "current"
+  },
+  "chrome-devtools-mcp-repo": {
+    "title": "Chrome DevTools MCP repository",
+    "publisher": "ChromeDevTools",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+    "type": "official-docs",
+    "claims": [
+      "MCP server exposing DevTools to agents"
+    ],
+    "status": "current"
+  },
+  "browser-use-repo": {
+    "title": "Browser Use repository",
+    "publisher": "Browser Use",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/browser-use/browser-use",
+    "type": "official-docs",
+    "claims": [
+      "agent loop driving Playwright from natural-language tasks"
+    ],
+    "status": "current"
+  },
+  "stagehand-repo": {
+    "title": "Stagehand repository",
+    "publisher": "Browserbase",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/browserbase/stagehand",
+    "type": "official-docs",
+    "claims": [
+      "act/extract/observe primitives over deterministic scripts"
+    ],
+    "status": "current"
+  },
+  "anthropic-computer-use": {
+    "title": "Anthropic computer use documentation",
+    "publisher": "Anthropic",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.claude.com/en/docs/agents-and-tools/computer-use",
+    "type": "official-docs",
+    "claims": [
+      "screenshot + synthetic input desktop control"
+    ],
+    "status": "current"
+  },
+  "puppeteer-docs": {
+    "title": "Puppeteer documentation",
+    "publisher": "Chrome",
+    "accessedAt": "2026-09-15",
+    "url": "https://pptr.dev/",
+    "type": "official-docs",
+    "claims": [
+      "CDP-first browser automation library"
+    ],
+    "status": "current"
+  },
+  "selenium-docs": {
+    "title": "Selenium documentation",
+    "publisher": "Selenium",
+    "accessedAt": "2026-09-15",
+    "url": "https://www.selenium.dev/documentation/",
+    "type": "official-docs",
+    "claims": [
+      "WebDriver cross-browser standard"
+    ],
+    "status": "current"
+  },
+  "mcp-spec": {
+    "title": "Model Context Protocol specification",
+    "publisher": "Model Context Protocol",
+    "accessedAt": "2026-09-15",
+    "url": "https://modelcontextprotocol.io/specification",
+    "type": "official-docs",
+    "claims": [
+      "MCP protocol architecture and primitives"
+    ],
+    "status": "current"
+  },
+  "mcp-ext-apps": {
+    "title": "MCP Apps extension (ext-apps)",
+    "publisher": "Model Context Protocol",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/modelcontextprotocol/ext-apps",
+    "type": "official-docs",
+    "claims": [
+      "interactive UI returned from tool results",
+      "draft-stage extension"
+    ],
+    "status": "current"
+  },
+  "agent-skills-spec": {
+    "title": "Agent Skills specification",
+    "publisher": "Agent Skills",
+    "accessedAt": "2026-09-15",
+    "url": "https://agentskills.io/specification",
+    "type": "official-docs",
+    "claims": [
+      "SKILL.md format, progressive disclosure",
+      "open cross-vendor spec"
+    ],
+    "status": "current"
+  },
+  "anthropic-skills-repo": {
+    "title": "Anthropic skills repository",
+    "publisher": "Anthropic",
+    "accessedAt": "2026-09-15",
+    "url": "https://github.com/anthropics/skills",
+    "type": "official-docs",
+    "claims": [
+      "reference skill packages and conventions"
+    ],
+    "status": "current"
+  },
+  "mcpui-site": {
+    "title": "MCP-UI project",
+    "publisher": "MCP-UI",
+    "accessedAt": "2026-09-15",
+    "url": "https://mcpui.dev/",
+    "type": "official-docs",
+    "claims": [
+      "community UI-over-MCP pattern the Apps work builds on"
+    ],
+    "status": "current"
+  },
+  "google-adk-docs": {
+    "title": "Agent Development Kit documentation",
+    "publisher": "Google",
+    "accessedAt": "2026-09-15",
+    "url": "https://google.github.io/adk-docs/",
+    "type": "official-docs",
+    "claims": [
+      "LlmAgent and workflow agents",
+      "sessions and state",
+      "Vertex AI deployment"
+    ],
+    "status": "current"
+  },
+  "onnxruntime-docs": {
+    "title": "ONNX Runtime documentation",
+    "publisher": "Microsoft",
+    "accessedAt": "2026-09-15",
+    "url": "https://onnxruntime.ai/docs/",
+    "type": "official-docs",
+    "claims": [
+      "InferenceSession API",
+      "execution providers",
+      "ONNX quantization and graph optimization"
+    ],
+    "status": "current"
+  },
+  "ollama-docs": {
+    "title": "Ollama tool-calling and embedding API docs",
+    "publisher": "Ollama",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.ollama.com/capabilities/tool-calling",
+    "type": "official-docs",
+    "claims": [
+      "Local model tool calling",
+      "Ollama embedding API"
+    ],
+    "status": "current"
+  },
+  "langchain-langgraph-docs": {
+    "title": "LangGraph overview",
+    "publisher": "LangChain",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+    "type": "official-docs",
+    "claims": [
+      "LangGraph agent orchestration model"
+    ],
+    "status": "current"
+  },
+  "agno-docs": {
+    "title": "Agno agents and workflows overview",
+    "publisher": "Agno",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.agno.com/agents/overview",
+    "type": "official-docs",
+    "claims": [
+      "Agno agent framework behavior"
+    ],
     "status": "current"
   },
   "stagehand-docs": {
@@ -898,7 +1141,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://docs.stagehand.dev/v3/references/stagehand",
     "type": "official-docs",
-    "claims": ["Stagehand browser-agent API"],
+    "claims": [
+      "Stagehand browser-agent API"
+    ],
     "status": "current"
   },
   "browserbase-docs": {
@@ -907,7 +1152,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://docs.browserbase.com/use-cases/agents",
     "type": "official-docs",
-    "claims": ["Hosted browser-agent infrastructure"],
+    "claims": [
+      "Hosted browser-agent infrastructure"
+    ],
     "status": "current"
   },
   "aws-certification-directory": {
@@ -916,7 +1163,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://aws.amazon.com/certification/",
     "type": "certification-guide",
-    "claims": ["AWS certification lineup"],
+    "claims": [
+      "AWS certification lineup"
+    ],
     "status": "current"
   },
   "microsoft-credential-directory": {
@@ -925,7 +1174,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://learn.microsoft.com/en-us/credentials/browse/?credential_types=certification",
     "type": "certification-guide",
-    "claims": ["Microsoft certification lineup"],
+    "claims": [
+      "Microsoft certification lineup"
+    ],
     "status": "current"
   },
   "google-cloud-certifications": {
@@ -934,7 +1185,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://cloud.google.com/learn/certification",
     "type": "certification-guide",
-    "claims": ["Google Cloud certification lineup"],
+    "claims": [
+      "Google Cloud certification lineup"
+    ],
     "status": "current"
   },
   "nvidia-certifications": {
@@ -943,17 +1196,20 @@
     "accessedAt": "2026-09-15",
     "url": "https://www.nvidia.com/en-us/learn/certification/",
     "type": "certification-guide",
-    "claims": ["NVIDIA certification lineup"],
+    "claims": [
+      "NVIDIA certification lineup"
+    ],
     "status": "current"
   },
-
   "sklearn-groupshufflesplit-docs": {
     "title": "GroupShuffleSplit API reference",
     "publisher": "scikit-learn",
     "accessedAt": "2026-09-15",
     "url": "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupShuffleSplit.html",
     "type": "official-docs",
-    "claims": ["GroupShuffleSplit semantics for group-aware splits"],
+    "claims": [
+      "GroupShuffleSplit semantics for group-aware splits"
+    ],
     "status": "current"
   },
   "lmarena-leaderboard": {
@@ -962,7 +1218,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://lmarena.ai",
     "type": "independent",
-    "claims": ["Crowd-sourced pairwise model comparisons"],
+    "claims": [
+      "Crowd-sourced pairwise model comparisons"
+    ],
     "status": "current"
   },
   "vllm-repo": {
@@ -971,7 +1229,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://github.com/vllm-project/vllm",
     "type": "repo",
-    "claims": ["vLLM serving architecture and features"],
+    "claims": [
+      "vLLM serving architecture and features"
+    ],
     "status": "current"
   },
   "mergekit-repo": {
@@ -980,7 +1240,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://github.com/arcee-ai/mergekit",
     "type": "repo",
-    "claims": ["Model-merging methods SLERP/TIES/DARE"],
+    "claims": [
+      "Model-merging methods SLERP/TIES/DARE"
+    ],
     "status": "current"
   },
   "uci-adult-dataset": {
@@ -989,7 +1251,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://archive.ics.uci.edu/dataset/2/adult",
     "type": "dataset",
-    "claims": ["Adult census income dataset provenance and schema"],
+    "claims": [
+      "Adult census income dataset provenance and schema"
+    ],
     "status": "current"
   },
   "uci-bank-marketing-dataset": {
@@ -998,7 +1262,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://archive.ics.uci.edu/dataset/222/bank%2Bmarketing",
     "type": "dataset",
-    "claims": ["Bank marketing campaign dataset provenance"],
+    "claims": [
+      "Bank marketing campaign dataset provenance"
+    ],
     "status": "current"
   },
   "uci-bike-sharing-dataset": {
@@ -1007,7 +1273,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://archive.ics.uci.edu/dataset/275/bike%2Bsharing%2Bdataset",
     "type": "dataset",
-    "claims": ["Bike sharing demand dataset provenance"],
+    "claims": [
+      "Bike sharing demand dataset provenance"
+    ],
     "status": "current"
   },
   "uci-online-retail-dataset": {
@@ -1016,7 +1284,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://archive.ics.uci.edu/dataset/502/online%2Bretail",
     "type": "dataset",
-    "claims": ["Online retail transactions dataset provenance"],
+    "claims": [
+      "Online retail transactions dataset provenance"
+    ],
     "status": "current"
   },
   "grouplens-movielens-25m": {
@@ -1025,7 +1295,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://grouplens.org/datasets/movielens/25m/",
     "type": "dataset",
-    "claims": ["MovieLens ratings dataset provenance"],
+    "claims": [
+      "MovieLens ratings dataset provenance"
+    ],
     "status": "current"
   },
   "uci-aps-failure-dataset": {
@@ -1034,7 +1306,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://archive.ics.uci.edu/dataset/421/aps%2Bfailure%2Bat%2Bscania%2Btrucks",
     "type": "dataset",
-    "claims": ["APS failure dataset provenance and cost asymmetry"],
+    "claims": [
+      "APS failure dataset provenance and cost asymmetry"
+    ],
     "status": "current"
   },
   "uci-auto-mpg-dataset": {
@@ -1043,7 +1317,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://archive.ics.uci.edu/dataset/9/auto+mpg",
     "type": "dataset",
-    "claims": ["Auto MPG dataset provenance"],
+    "claims": [
+      "Auto MPG dataset provenance"
+    ],
     "status": "current"
   },
   "gallica-statlog-source": {
@@ -1052,7 +1328,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://gallica.bnf.fr/ark:/12148/bpt6k965753",
     "type": "paper",
-    "claims": ["Historical source for early regression work"],
+    "claims": [
+      "Historical source for early regression work"
+    ],
     "status": "current"
   },
   "uci-breast-cancer-dataset": {
@@ -1061,7 +1339,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic",
     "type": "dataset",
-    "claims": ["Breast cancer diagnostic dataset provenance"],
+    "claims": [
+      "Breast cancer diagnostic dataset provenance"
+    ],
     "status": "current"
   },
   "freund-schapire-adaboost-paper": {
@@ -1071,7 +1351,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://www.sciencedirect.com/science/article/pii/S002200009791504X",
     "type": "paper",
-    "claims": ["Original AdaBoost algorithm and weight updates"],
+    "claims": [
+      "Original AdaBoost algorithm and weight updates"
+    ],
     "status": "current"
   },
   "uci-covertype-dataset": {
@@ -1080,7 +1362,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://archive.ics.uci.edu/dataset/31/covertype",
     "type": "dataset",
-    "claims": ["Covertype dataset provenance"],
+    "claims": [
+      "Covertype dataset provenance"
+    ],
     "status": "current"
   },
   "breiman-random-forests-paper": {
@@ -1090,7 +1374,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf",
     "type": "paper",
-    "claims": ["Random forest algorithm and OOB error"],
+    "claims": [
+      "Random forest algorithm and OOB error"
+    ],
     "status": "current"
   },
   "uci-har-dataset": {
@@ -1099,7 +1385,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones",
     "type": "dataset",
-    "claims": ["HAR smartphone dataset provenance"],
+    "claims": [
+      "HAR smartphone dataset provenance"
+    ],
     "status": "current"
   },
   "cortes-vapnik-svm-paper": {
@@ -1110,7 +1398,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://doi.org/10.1007/BF00994018",
     "type": "paper",
-    "claims": ["Original SVM formulation and kernel choice"],
+    "claims": [
+      "Original SVM formulation and kernel choice"
+    ],
     "status": "current"
   },
   "cortes95-svm-pdf": {
@@ -1121,7 +1411,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://homepages.math.uic.edu/~lreyzin/papers/cortes95.pdf",
     "type": "paper",
-    "claims": ["SVM formulation — accessible mirror"],
+    "claims": [
+      "SVM formulation — accessible mirror"
+    ],
     "status": "current"
   },
   "turk-pentland-eigenfaces-paper": {
@@ -1132,7 +1424,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://direct.mit.edu/jocn/article/3/1/71/3025/Eigenfaces-for-Recognition",
     "type": "paper",
-    "claims": ["PCA/eigenfaces method"],
+    "claims": [
+      "PCA/eigenfaces method"
+    ],
     "status": "current"
   },
   "sklearn-olivetti-dataset": {
@@ -1141,7 +1435,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://scikit-learn.org/stable/datasets/real_world.html#olivetti-faces-dataset",
     "type": "official-docs",
-    "claims": ["Olivetti faces dataset provenance"],
+    "claims": [
+      "Olivetti faces dataset provenance"
+    ],
     "status": "current"
   },
   "att-faces-database": {
@@ -1150,7 +1446,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://www.cl.cam.ac.uk/research/dtg/attarchive/facedatabase.html",
     "type": "dataset",
-    "claims": ["Original faces dataset provenance"],
+    "claims": [
+      "Original faces dataset provenance"
+    ],
     "status": "current"
   },
   "mcp-inspector-repo": {
@@ -1159,7 +1457,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://github.com/modelcontextprotocol/inspector",
     "type": "repo",
-    "claims": ["MCP server inspection tool"],
+    "claims": [
+      "MCP server inspection tool"
+    ],
     "status": "current"
   },
   "mcp-registry": {
@@ -1168,7 +1468,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://registry.modelcontextprotocol.io",
     "type": "official-docs",
-    "claims": ["Official MCP server registry"],
+    "claims": [
+      "Official MCP server registry"
+    ],
     "status": "current"
   },
   "mcp-specification": {
@@ -1177,7 +1479,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://modelcontextprotocol.io/specification/2025-06-18/",
     "type": "spec",
-    "claims": ["MCP protocol specification"],
+    "claims": [
+      "MCP protocol specification"
+    ],
     "status": "current"
   },
   "mcp-spec-server-tools": {
@@ -1186,7 +1490,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://modelcontextprotocol.io/specification/2025-06-18/server/tools",
     "type": "spec",
-    "claims": ["MCP tools/list and tool-call protocol"],
+    "claims": [
+      "MCP tools/list and tool-call protocol"
+    ],
     "status": "current"
   },
   "litellm-repo": {
@@ -1195,7 +1501,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://github.com/BerriAI/litellm",
     "type": "repo",
-    "claims": ["LiteLLM gateway/provider-abstraction behavior"],
+    "claims": [
+      "LiteLLM gateway/provider-abstraction behavior"
+    ],
     "status": "current"
   },
   "portkey-docs": {
@@ -1204,7 +1512,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://portkey.ai/",
     "type": "official-docs",
-    "claims": ["Portkey gateway capabilities"],
+    "claims": [
+      "Portkey gateway capabilities"
+    ],
     "status": "current"
   },
   "httpbin-docs": {
@@ -1213,7 +1523,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://httpbin.org",
     "type": "official-docs",
-    "claims": ["HTTP request-echo test service"],
+    "claims": [
+      "HTTP request-echo test service"
+    ],
     "status": "current"
   },
   "open-meteo-docs": {
@@ -1222,7 +1534,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://open-meteo.com",
     "type": "official-docs",
-    "claims": ["Free weather API used in examples"],
+    "claims": [
+      "Free weather API used in examples"
+    ],
     "status": "current"
   },
   "hnswlib-repo": {
@@ -1231,16 +1545,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://github.com/nmslib/hnswlib",
     "type": "repo",
-    "claims": ["HNSW approximate nearest-neighbor index"],
-    "status": "current"
-  },
-  "nist-ai-rmf": {
-    "title": "NIST AI Risk Management Framework",
-    "publisher": "NIST",
-    "accessedAt": "2026-09-15",
-    "url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
-    "type": "official-docs",
-    "claims": ["AI risk-management framework core"],
+    "claims": [
+      "HNSW approximate nearest-neighbor index"
+    ],
     "status": "current"
   },
   "anthropic-docs": {
@@ -1249,7 +1556,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://docs.anthropic.com",
     "type": "official-docs",
-    "claims": ["Anthropic API and tool-use documentation"],
+    "claims": [
+      "Anthropic API and tool-use documentation"
+    ],
     "status": "current"
   },
   "openai-platform-docs": {
@@ -1258,7 +1567,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://platform.openai.com",
     "type": "official-docs",
-    "claims": ["OpenAI API surface and structured outputs"],
+    "claims": [
+      "OpenAI API surface and structured outputs"
+    ],
     "status": "current"
   },
   "owasp-llm-top10": {
@@ -1267,7 +1578,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
     "type": "independent",
-    "claims": ["LLM application risk taxonomy incl. prompt injection"],
+    "claims": [
+      "LLM application risk taxonomy incl. prompt injection"
+    ],
     "status": "current"
   },
   "attention-is-all-you-need": {
@@ -1278,7 +1591,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://arxiv.org/abs/1706.03762",
     "type": "paper",
-    "claims": ["Transformer architecture"],
+    "claims": [
+      "Transformer architecture"
+    ],
     "status": "current"
   },
   "llamacpp-grammars": {
@@ -1287,7 +1602,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://github.com/ggml-org/llama.cpp/blob/master/grammars/README.md",
     "type": "repo",
-    "claims": ["GBNF grammar-constrained decoding in llama.cpp"],
+    "claims": [
+      "GBNF grammar-constrained decoding in llama.cpp"
+    ],
     "status": "current"
   },
   "outlines-repo": {
@@ -1296,7 +1613,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://github.com/dottxt-ai/outlines",
     "type": "repo",
-    "claims": ["Structured generation library"],
+    "claims": [
+      "Structured generation library"
+    ],
     "status": "current"
   },
   "rfc8259-json": {
@@ -1306,7 +1625,9 @@
     "accessedAt": "2026-09-15",
     "url": "https://www.rfc-editor.org/rfc/rfc8259",
     "type": "spec",
-    "claims": ["JSON format specification"],
+    "claims": [
+      "JSON format specification"
+    ],
     "status": "current"
   },
   "wikipedia-ebnf": {
@@ -1315,16 +1636,17 @@
     "accessedAt": "2026-09-15",
     "url": "https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form",
     "type": "article",
-    "claims": ["EBNF grammar notation reference"],
+    "claims": [
+      "EBNF grammar notation reference"
+    ],
     "status": "current"
   },
-  "openai-codex-repo": {
-    "title": "OpenAI Codex repository",
-    "publisher": "OpenAI",
-    "accessedAt": "2026-09-15",
-    "url": "https://github.com/openai/codex",
+  "mcp-typescript-sdk": {
+    "title": "Model Context Protocol TypeScript SDK",
+    "publisher": "Model Context Protocol",
+    "url": "https://github.com/modelcontextprotocol/typescript-sdk",
     "type": "repo",
-    "claims": ["Codex CLI source and behavior"],
-    "status": "current"
+    "status": "current",
+    "accessedAt": "2026-09-15"
   }
 }

@@ -1,0 +1,65 @@
+---
+title: "Lab: pin your fine-tuning stack so it still runs next quarter"
+track: "fine-tuning"
+status: live
+summary: "Turn a working fine-tuning setup into a reproducible one: pinned versions, recorded commands, and a verification script that catches the day a provider or framework update silently breaks your recipe."
+duration: "15 min lab"
+---
+
+## The short answer
+
+Fine-tuning recipes rot faster than almost any other code: frameworks rename arguments, providers deprecate model strings, and a tutorial command that ran in March fails in September. The fix is boring and total — pin every version, record every command, and keep a smoke script that proves the stack still trains. This lab builds that habit on whatever fine-tuning setup you already have.
+
+## Step 1: Pin everything that can drift
+
+```text
+# requirements.txt — no floating versions
+torch==2.x.y
+transformers==4.x.y
+peft==0.x.y
+trl==0.x.y
+datasets==2.x.y
+bitsandbytes==0.x.y   # if using QLoRA
+```
+
+And the non-pip pins people forget:
+
+- **Model string:** `meta-llama/...-Instruct` is mutable on some hubs — pin a revision/commit hash where the hub supports it.
+- **Provider model name:** managed fine-tuning APIs accept model identifiers that get deprecated — record the exact string you trained on, not the family alias.
+- **Hardware + CUDA:** record GPU type, driver, and CUDA version — memory bugs reproduce on one combination and vanish on another.
+
+## Step 2: Record the run, not just the result
+
+A fine-tuning run that can't be described can't be repeated or audited. Keep a `runs/` log — one file per run:
+
+```yaml
+run: 2026-09-qlora-v3
+base_model: "<exact model string + revision>"
+stack: "torch 2.x / peft 0.x / trl 0.x / python 3.11"
+data: "dataset-name@commit-or-hash, 4,212 rows, dedup pass 3"
+command: "python train.py --config configs/qlora-v3.yaml"
+hyperparameters: { lr: 2e-4, epochs: 2, rank: 16, seq_len: 2048 }
+hardware: "1× A10G, cuda 12.x"
+eval: "see evals/qlora-v3.md"
+```
+
+The command line is in the record — a config you can't re-run is a rumor.
+
+## Step 3: The smoke script
+
+Write a `smoke_train.py` that runs the whole pipeline on 50 examples for a few steps:
+
+```python
+# deliberately tiny — proves the stack works, not that the model is good
+train_dataset = load_dataset(...)[:50]
+trainer.train()          # a handful of steps
+assert trainer.state.log_history[-1]["loss"] is not None
+```
+
+Run it in CI or before any real run after a dependency update. It catches the three classic silent breaks: a renamed argument that was being ignored, a dataset-format change that misaligns labels, and a provider deprecation that only fails at upload time.
+
+## Step 4: The upgrade protocol
+
+When you *do* upgrade a component: one at a time, re-run the smoke script, compare loss curves on a fixed subset, and record the new pins in the run log. "Everything updated at once and now loss is NaN" is the classic un-debuggable state — the protocol exists to prevent it.
+
+**Related:** [Choosing a training framework](/learn/fine-tuning/choosing-a-training-framework), [LoRA and QLoRA fine-tuning](/learn/fine-tuning/lora-and-qlora-fine-tuning), [Evaluating a fine-tuned model](/learn/fine-tuning/evaluating-a-fine-tuned-model)

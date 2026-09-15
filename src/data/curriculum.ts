@@ -1298,6 +1298,10 @@ const unsortedTracks: Track[] = [
           "title": "Practice maths by drawing it and breaking it",
           "slug": "visualization-and-error-analysis-practice"
         },
+        {
+          "title": "Check every maths answer deterministically",
+          "slug": "verifying-maths-results-deterministically"
+        },
       ]
   },
   {
@@ -9911,8 +9915,12 @@ const unsortedTracks: Track[] = [
         "title": "Design MCP servers with narrow capabilities",
         "slug": "server-design-and-permissions",
         "status": "live"
-      }
-    ]
+      },
+        {
+          "title": "Build an MCP server in TypeScript",
+          "slug": "mcp-server-in-typescript"
+        },
+      ]
   },
   {
     "id": "agentic-ai",
@@ -10919,8 +10927,12 @@ const unsortedTracks: Track[] = [
         "title": "Managed Fine-Tuning API vs. Self-Hosting the Run",
         "slug": "choosing-managed-vs-self-hosted-fine-tuning",
         "status": "live"
-      }
-    ]
+      },
+        {
+          "title": "Lab: pin your fine-tuning stack so it still runs next quarter",
+          "slug": "pinning-your-training-stack-lab"
+        },
+      ]
   },
   {
     "id": "responsible-ai",
