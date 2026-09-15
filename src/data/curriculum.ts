@@ -10728,7 +10728,7 @@ const unsortedTracks: Track[] = [
     "n": "24",
     "name": "Agent Frameworks",
     "group": "Agentic",
-    "meta": "4 lessons",
+    "meta": "7 lessons",
     "summary": "Framework-by-framework coverage of agent SDKs and orchestration libraries — each module shows the raw-SDK baseline first, then what the framework actually adds, and when plain code is enough.",
     "nodes": [
       {
@@ -10751,6 +10751,24 @@ const unsortedTracks: Track[] = [
       {
         "title": "Google ADK: workflow agents and multi-agent teams",
         "slug": "google-adk",
+        "status": "live",
+        "prereq": ["raw-sdk-agent-baseline"]
+      },
+      {
+        "title": "LangChain: the integration layer, then agents",
+        "slug": "langchain-agents-and-integrations",
+        "status": "live",
+        "prereq": ["raw-sdk-agent-baseline"]
+      },
+      {
+        "title": "LangGraph: durable agents as state machines",
+        "slug": "langgraph-durable-agents",
+        "status": "live",
+        "prereq": ["raw-sdk-agent-baseline"]
+      },
+      {
+        "title": "LlamaIndex: the data framework that grew agents",
+        "slug": "llamaindex-data-framework",
         "status": "live",
         "prereq": ["raw-sdk-agent-baseline"]
       }

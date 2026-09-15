@@ -1,7 +1,7 @@
 {
  "version": 1,
  "next": {
-  "les": 2095,
+  "les": 2098,
   "que": 7,
   "sce": 6,
   "blo": 10,
@@ -9632,6 +9632,18 @@
   },
   "data:track/agent-frameworks": {
    "id": "trk-0025"
+  },
+  "lessons/agent-frameworks/langchain-agents-and-integrations.md": {
+   "id": "les-2096",
+   "fp": "21d632e5361f0cf83232f4f10ef1617449e4a319"
+  },
+  "lessons/agent-frameworks/langgraph-durable-agents.md": {
+   "id": "les-2097",
+   "fp": "2ad0498d624ec14eb663fbceade645885a6b5fcb"
+  },
+  "lessons/agent-frameworks/llamaindex-data-framework.md": {
+   "id": "les-2098",
+   "fp": "5d547117a08a127457cf089aa6545820db8ce257"
   }
  },
  "retired": {

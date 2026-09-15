@@ -271,6 +271,24 @@
     "claims": ["Agent SDK harness: built-in tools, subagents, MCP, permissions, sessions"],
     "status": "current"
   },
+  "langchain-docs": {
+    "title": "LangChain overview",
+    "publisher": "LangChain",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.langchain.com/oss/python/langchain/overview",
+    "type": "official-docs",
+    "claims": ["init_chat_model provider interface", "create_agent", "integration catalog"],
+    "status": "current"
+  },
+  "llamaindex-docs": {
+    "title": "LlamaIndex documentation",
+    "publisher": "LlamaIndex",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.llamaindex.ai/en/stable/",
+    "type": "official-docs",
+    "claims": ["loaders, indexes, query engines", "Workflows orchestration", "agents and agentic RAG"],
+    "status": "current"
+  },
   "google-adk-docs": {
     "title": "Agent Development Kit documentation",
     "publisher": "Google",

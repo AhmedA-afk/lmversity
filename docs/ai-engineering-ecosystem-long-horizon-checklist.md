@@ -941,9 +941,15 @@ consolidation into a parent track, or a clearer curated-path role.
       a library: built-in tools, subagents, MCP, permissions, sessions)*
 - [x] Google Agent Development Kit. *(2026-09: `google-adk` — LlmAgent +
       Sequential/Parallel/Loop workflow agents, state, Vertex AI path)*
-- [ ] LangChain agents and integrations.
-- [ ] LangGraph state, nodes, edges, durable execution, interrupts, and checkpoints.
-- [ ] LlamaIndex ingestion, indexes, query engines, workflows, agents, and agentic RAG.
+- [x] LangChain agents and integrations.
+      *(2026-09: `langchain-agents-and-integrations` — init_chat_model
+      portability, integration catalog, create_agent→LangGraph, churn caveat)*
+- [x] LangGraph state, nodes, edges, durable execution, interrupts, and checkpoints.
+      *(2026-09: `langgraph-durable-agents` — StateGraph, reducers,
+      checkpointers, interrupt(), when durable execution is the actual need)*
+- [x] LlamaIndex ingestion, indexes, query engines, workflows, agents, and agentic RAG.
+      *(2026-09: `llamaindex-data-framework` — full stack from loaders to
+      FunctionAgent; positioned as data-first, not general orchestration)*
 - [ ] Agno agents, teams, workflows, knowledge, memory, guardrails, and AgentOS.
 - [ ] PydanticAI typed agents, dependencies, tools, structured results, graphs, and evals.
 - [ ] Microsoft Semantic Kernel and current Microsoft agent framework direction.
@@ -2681,6 +2687,22 @@ validation, deployment status, measured result when available, blockers, and nex
 - Next batch: LangChain/LangGraph/LlamaIndex, then the typed frameworks
   (PydanticAI/Agno/SK/AutoGen/CrewAI/Mastra), then specialized tooling
   (Vercel AI SDK/DSPy/Haystack/Instructor/no-code) + comparison capstone.
+
+### 2026-09-15 — Agent Frameworks: LangChain ecosystem + LlamaIndex
+
+- Commit: `df1f099`. 3 lessons: `langchain-agents-and-integrations`
+  (integration catalog + init_chat_model + create_agent→LangGraph, with the
+  API-churn caveat), `langgraph-durable-agents` (StateGraph/reducers/
+  checkpointers/interrupts — durable execution as the buying reason),
+  `llamaindex-data-framework` (loaders→indexes→query engines→Workflows→
+  agents, positioned data-first). Track now 7 lessons.
+- Checklist: LangChain, LangGraph, and LlamaIndex rows ticked. 13 framework
+  rows remain (Agno, PydanticAI, SK, AutoGen, CrewAI, Mastra, Vercel AI SDK,
+  DSPy, Haystack, Instructor, Outlines/Guidance, no-code, comparison).
+- Sources: 2 new verified records (docs.langchain.com, docs.llamaindex.ai);
+  reused existing langchain-langgraph-docs.
+- Validation: `check:content` clean (2,098); build 2,435 pages;
+  `check:links` 0 dead (5,249 routes); registry 2,424 items.
 
 ### 2026-09-14 — Master ecosystem backlog created
 

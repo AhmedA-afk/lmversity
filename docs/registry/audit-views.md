@@ -1,12 +1,12 @@
 # Content registry — audit views
 
-Generated 2026-09-15T13:45:40.024Z by `scripts/build-content-registry.mjs`.
-2421 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-15T13:48:39.594Z by `scripts/build-content-registry.mjs`.
+2424 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
 
-- lesson: 2043
+- lesson: 2046
 - quiz: 89
 - lab: 66
 - reference: 59
@@ -23,11 +23,11 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By status
 
-- live: 2421
+- live: 2424
 
 ## By search intent (heuristic)
 
-- concept: 1874
+- concept: 1877
 - comparison: 107
 - build: 97
 - practice: 89
@@ -47,7 +47,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By primary audience (heuristic)
 
-- ai-engineer: 1645
+- ai-engineer: 1648
 - beginner-engineer: 439
 - forward-deployed-engineer: 194
 - general: 125
@@ -91,7 +91,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 | fine-tuning | 26 | 21 | 0 | 0 | 5 | 0 | 0 | 0 | 0 | 27% | 0% | 8% | 557 | — | — |
 | responsible-ai | 7 | 6 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 14% | 0% | 14% | 392 | — | — |
 | local-inference | 14 | 13 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 79% | 0% | 7% | 419 | — | — |
-| agent-frameworks | 4 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 100% | 0% | 0% | 399 | — | — |
+| agent-frameworks | 7 | 7 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 100% | 0% | 0% | 394 | — | — |
 
 ## Track gap briefs
 
@@ -259,9 +259,9 @@ dead-end = the track's final live node is a plain concept; orphan boundary = a m
 - dead-end finish: last live lesson is the-local-privacy-boundary (concept)
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
 
-### agent-frameworks — 4 files, 0 modules — starts: "The raw-SDK baseline every framework wraps"
+### agent-frameworks — 7 files, 0 modules — starts: "The raw-SDK baseline every framework wraps"
 
-- dead-end finish: last live lesson is google-adk (concept)
+- dead-end finish: last live lesson is llamaindex-data-framework (concept)
 - missing kinds: quiz, worked-example, common-mistakes, cheatsheet, capstone
 
 ## Scores and dispositions (mechanical pass)
@@ -272,21 +272,21 @@ and split always need a written human reason (see checklist).
 
 | disposition | items |
 |---|---:|
-| keep | 2034 |
+| keep | 2037 |
 | investigate | 382 |
 | expand | 5 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2197 | 1.92 | 0 | 186 | 2011 |
+| intentClarity | 2200 | 1.92 | 0 | 186 | 2014 |
 | correctnessSources | 45 | 1.27 | 0 | 33 | 12 |
-| completeness | 2343 | 1.65 | 39 | 747 | 1557 |
-| prerequisiteFit | 2278 | 2.00 | 3 | 0 | 2275 |
-| handsOn | 2197 | 1.49 | 535 | 53 | 1609 |
-| explanationQuality | 2197 | 1.96 | 20 | 56 | 2121 |
-| metadata | 2197 | 1.86 | 0 | 300 | 1897 |
-| linking | 2108 | 1.49 | 382 | 321 | 1405 |
-| freshnessHealth | 2421 | 0.77 | 814 | 1344 | 263 |
+| completeness | 2346 | 1.65 | 39 | 748 | 1559 |
+| prerequisiteFit | 2281 | 2.00 | 3 | 0 | 2278 |
+| handsOn | 2200 | 1.49 | 535 | 53 | 1612 |
+| explanationQuality | 2200 | 1.96 | 20 | 56 | 2124 |
+| metadata | 2200 | 1.86 | 0 | 303 | 1897 |
+| linking | 2111 | 1.49 | 382 | 321 | 1408 |
+| freshnessHealth | 2424 | 0.77 | 817 | 1344 | 263 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
@@ -337,15 +337,15 @@ and split always need a written human reason (see checklist).
 - /learn/ai-foundations/reliable-ai/221-contestability-appeals-and-recource — Contestability, Appeals, and Recourse
 - … 342 more in content-registry.json
 
-#### expand: thin vs family median (238w vs ~774w) (1)
+#### expand: thin vs family median (238w vs ~773w) (1)
 
 - /learn/ai-foundations/choosing-a-model — Choosing a model in 2026
 
-#### expand: thin vs family median (277w vs ~774w) (1)
+#### expand: thin vs family median (277w vs ~773w) (1)
 
 - /learn/llm-foundations/next-token-prediction — Next-Token Prediction: The One Objective
 
-#### expand: thin vs family median (269w vs ~774w) (1)
+#### expand: thin vs family median (269w vs ~773w) (1)
 
 - /learn/llm-foundations/tokenization-explained — Tokenization: How Text Becomes Tokens
 
@@ -436,12 +436,15 @@ _… 277 more pairs in content-registry.json (`duplicates`)_
 
 ## Sourcing review flags
 
-169 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
+172 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
 
 | item | flags |
 |---|---|
 | /learn/agent-frameworks/claude-agent-sdk | release-sensitive page with no updated/review date |
 | /learn/agent-frameworks/google-adk | release-sensitive page with no updated/review date |
+| /learn/agent-frameworks/langchain-agents-and-integrations | release-sensitive page with no updated/review date |
+| /learn/agent-frameworks/langgraph-durable-agents | release-sensitive page with no updated/review date |
+| /learn/agent-frameworks/llamaindex-data-framework | release-sensitive page with no updated/review date |
 | /learn/agent-frameworks/openai-agents-sdk | pricing-sensitive page with no updated/review date |
 | /learn/agentic-ai/agent-permissions-and-authorization | certification-sensitive page with no updated/review date |
 | /learn/ai-foundations/building-an-eval-set-worked-example | 18 numeric claims with no sources section or external link |
@@ -497,11 +500,8 @@ _… 277 more pairs in content-registry.json (`duplicates`)_
 | /learn/genai-app-dev/instrumenting-with-tracing | 6 numeric claims with no sources section or external link |
 | /learn/genai-app-dev/perf-cost-cheatsheet | 6 numeric claims with no sources section or external link |
 | /learn/genai-app-dev/quiz-performance-cost | 33 numeric claims with no sources section or external link |
-| /learn/genai-app-dev/quiz-provider-layer | 8 numeric claims with no sources section or external link |
-| /learn/genai-app-dev/quiz-state-structured-tools | 11 numeric claims with no sources section or external link |
-| /learn/hallucinations/adversarial-and-leading-prompts | 4 numeric claims with no sources section or external link |
 
-_… 109 more in content-registry.json (`sourcingFlags`)_
+_… 112 more in content-registry.json (`sourcingFlags`)_
 
 ## Freshness queues
 
@@ -509,7 +509,7 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 
 - periodic: 1344
 - pricing-sensitive: 338
-- release-sensitive: 301
+- release-sensitive: 304
 - durable: 263
 - certification-sensitive: 99
 - policy-sensitive: 76
@@ -616,11 +616,14 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/machine-learning/public-data-projects/bank-marketing-project — Public-data project: Bank Marketing decision support *(verified 2026-08-30)*
 - … 46 more in content-registry.json
 
-### release-sensitive (301) — oldest-verified first
+### release-sensitive (304) — oldest-verified first
 
 Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/agent-frameworks/claude-agent-sdk — Claude, MCP, Anthropic, OpenAI *(verified undated)*
 - /learn/agent-frameworks/google-adk — Vertex, Gemini, OpenAI *(verified undated)*
+- /learn/agent-frameworks/langchain-agents-and-integrations — LangChain, LangGraph, OpenAI, Anthropic *(verified undated)*
+- /learn/agent-frameworks/langgraph-durable-agents — LangGraph, LangSmith, LangChain *(verified undated)*
+- /learn/agent-frameworks/llamaindex-data-framework — LlamaIndex, LangGraph *(verified undated)*
 - /learn/ai-literacy/meet-skills-connectors-and-agents — MCP *(verified undated)*
 - /learn/local-inference/hardware-sizing-measurement-guide — llama.cpp, Ollama, vLLM *(verified undated)*
 - /learn/local-inference/huggingface-tgi-and-tei — Hugging Face, OpenAI, vLLM, llama.cpp *(verified undated)*
@@ -646,20 +649,20 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/mcp/mcp-tools-resources-and-prompts — MCP *(verified 2026-08-29)*
 - /learn/mcp/what-is-mcp — MCP, Model Context Protocol, Anthropic *(verified 2026-08-29)*
 - /learn/prompt-engineering/delimiters-and-formatting — Claude *(verified 2026-08-29)*
-- /learn/tools-function-calling/designing-a-tool-schema — Claude, OpenAI *(verified 2026-08-29)*
-- /learn/agentic-ai/agent-benchmarks — Claude *(verified 2026-08-30)*
-- /learn/agentic-ai/agent-orchestration-frameworks — LangGraph, CrewAI, AutoGen, OpenAI, Claude *(verified 2026-08-30)*
-- … 271 more
+- … 274 more
 
 ## Missing-data queues
 
 ### no summary/meta description (0)
 
 
-### no published or updated date (35)
+### no published or updated date (38)
 
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
 - /learn/agent-frameworks/google-adk — Google ADK: workflow agents and multi-agent teams
+- /learn/agent-frameworks/langchain-agents-and-integrations — LangChain: the integration layer, then agents
+- /learn/agent-frameworks/langgraph-durable-agents — LangGraph: durable agents as state machines
+- /learn/agent-frameworks/llamaindex-data-framework — LlamaIndex: the data framework that grew agents
 - /learn/agent-frameworks/openai-agents-sdk — OpenAI Agents SDK: agents, handoffs, and guardrails
 - /learn/agent-frameworks/raw-sdk-agent-baseline — The raw-SDK baseline every framework wraps
 - /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access
@@ -750,10 +753,13 @@ Largest queue; full list in JSON. Oldest-verified sample:
 ### lesson files with status coming (0)
 
 
-### release-sensitive, no date at all (27)
+### release-sensitive, no date at all (30)
 
 - /learn/agent-frameworks/claude-agent-sdk — Claude Agent SDK: the Claude Code harness as a library
 - /learn/agent-frameworks/google-adk — Google ADK: workflow agents and multi-agent teams
+- /learn/agent-frameworks/langchain-agents-and-integrations — LangChain: the integration layer, then agents
+- /learn/agent-frameworks/langgraph-durable-agents — LangGraph: durable agents as state machines
+- /learn/agent-frameworks/llamaindex-data-framework — LlamaIndex: the data framework that grew agents
 - /learn/agent-frameworks/openai-agents-sdk — OpenAI Agents SDK: agents, handoffs, and guardrails
 - /learn/agentic-ai/agent-permissions-and-authorization — Give an agent permissions, not access
 - /learn/ai-literacy/meet-skills-connectors-and-agents — Meet skills, connectors, and agents — safely

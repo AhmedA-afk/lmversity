@@ -1,12 +1,12 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T13:45:40.024Z",
+  "generatedAt": "2026-09-15T13:48:39.594Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2421,
+  "itemCount": 2424,
   "counts": {
    "byFamily": {
-    "lesson": 2043,
+    "lesson": 2046,
     "project": 31,
     "quiz": 89,
     "reference": 59,
@@ -22,10 +22,10 @@
     "glossary": 1
    },
    "byStatus": {
-    "live": 2421
+    "live": 2424
    },
    "byKind": {
-    "concept": 1744,
+    "concept": 1747,
     "comparison": 102,
     "worked-example": 29,
     "capstone": 31,
@@ -58,7 +58,7 @@
     "endpoint": 4
    },
    "byTrack": {
-    "agent-frameworks": 5,
+    "agent-frameworks": 8,
     "agentic-ai": 31,
     "ai-foundations": 161,
     "ai-literacy": 60,
@@ -98,7 +98,7 @@
     "fde": 193
    },
    "byFreshness": {
-    "release-sensitive": 301,
+    "release-sensitive": 304,
     "pricing-sensitive": 338,
     "periodic": 1344,
     "certification-sensitive": 99,
@@ -259,11 +259,274 @@
    "promisedOutcome": "Google's Agent Development Kit builds multi-agent systems from LlmAgents plus deterministic workflow agents — Sequential, Parallel, Loop — with sessions, state, and deployment to Vertex AI.",
    "jobToBeDone": null,
    "prerequisite": null,
-   "nextAction": "/learn/agent-frameworks",
+   "nextAction": "/learn/agent-frameworks/langchain-agents-and-integrations",
    "practiceType": "none",
    "freshnessClass": "release-sensitive",
    "freshnessSignals": [
     "vendor/tool mentions: Vertex, Gemini, OpenAI"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2096",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "LangChain: the integration layer, then agents",
+   "slug": "agent-frameworks/langchain-agents-and-integrations",
+   "route": "/learn/agent-frameworks/langchain-agents-and-integrations",
+   "collection": "lessons",
+   "path": "src/content/lessons/agent-frameworks/langchain-agents-and-integrations.md",
+   "track": "agent-frameworks",
+   "module": null,
+   "status": "live",
+   "summary": "LangChain's real product is breadth — a provider-agnostic model interface and hundreds of tool/data integrations — with create_agent on top of LangGraph for the agent loop.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 356,
+   "headings": [
+    "The short answer",
+    "The three layers",
+    "What it adds over the raw loop",
+    "When plain code is enough",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agent-frameworks/langgraph-durable-agents",
+    "/learn/agent-frameworks/raw-sdk-agent-baseline",
+    "/learn/agentic-ai/choosing-an-agent-framework",
+    "/learn/rag/ingestion-chunking-and-retrieval"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 6,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "LangChain's real product is breadth — a provider-agnostic model interface and hundreds of tool/data integrations — with create_agent on top of LangGraph for the agent loop.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/agent-frameworks/langgraph-durable-agents",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: LangChain, LangGraph, OpenAI, Anthropic"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2097",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "LangGraph: durable agents as state machines",
+   "slug": "agent-frameworks/langgraph-durable-agents",
+   "route": "/learn/agent-frameworks/langgraph-durable-agents",
+   "collection": "lessons",
+   "path": "src/content/lessons/agent-frameworks/langgraph-durable-agents.md",
+   "track": "agent-frameworks",
+   "module": null,
+   "status": "live",
+   "summary": "LangGraph models an agent as a graph over typed state — nodes do work, edges route, checkpointers persist every step — which buys durable execution, human interrupts, and time-travel debugging.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 384,
+   "headings": [
+    "The short answer",
+    "The four pieces",
+    "What it adds over the raw loop",
+    "When plain code is enough",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agent-frameworks/google-adk",
+    "/learn/agent-frameworks/langchain-agents-and-integrations",
+    "/learn/agent-frameworks/raw-sdk-agent-baseline",
+    "/learn/agentic-ai/agent-orchestration-frameworks",
+    "/learn/agentic-ai/multi-agent-patterns",
+    "/learn/agentic-ai/state-memory-and-recovery"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 7,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "LangGraph models an agent as a graph over typed state — nodes do work, edges route, checkpointers persist every step — which buys durable execution, human interrupts, and time-travel debugging.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/agent-frameworks/llamaindex-data-framework",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: LangGraph, LangSmith, LangChain"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 2,
+    "handsOn": 2,
+    "explanationQuality": 2,
+    "metadata": 1,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2098",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "LlamaIndex: the data framework that grew agents",
+   "slug": "agent-frameworks/llamaindex-data-framework",
+   "route": "/learn/agent-frameworks/llamaindex-data-framework",
+   "collection": "lessons",
+   "path": "src/content/lessons/agent-frameworks/llamaindex-data-framework.md",
+   "track": "agent-frameworks",
+   "module": null,
+   "status": "live",
+   "summary": "LlamaIndex started as the RAG data framework — loaders, indexes, query engines — and grew Workflows and agents on top; its center of gravity is still data-to-answer, not general orchestration.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 402,
+   "headings": [
+    "The short answer",
+    "The stack, bottom to top",
+    "What it adds over the raw loop",
+    "When plain code is enough",
+    "The exercise",
+    "Go deeper"
+   ],
+   "internalLinks": [
+    "/learn/agent-frameworks/langgraph-durable-agents",
+    "/learn/agent-frameworks/raw-sdk-agent-baseline",
+    "/learn/rag/agentic-rag",
+    "/learn/rag/ingestion-chunking-and-retrieval"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": true,
+    "curriculumStatus": "live",
+    "codeBlocks": 1,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": true,
+    "listItems": 8,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "LlamaIndex started as the RAG data framework — loaders, indexes, query engines — and grew Workflows and agents on top; its center of gravity is still data-to-answer, not general orchestration.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/agent-frameworks",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: LlamaIndex, LangGraph"
    ],
    "owner": null,
    "reviewer": null,
@@ -9261,7 +9524,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (238w vs ~774w)",
+   "dispositionReason": "thin vs family median (238w vs ~773w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -69603,7 +69866,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -86928,7 +87191,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (277w vs ~774w)",
+   "dispositionReason": "thin vs family median (277w vs ~773w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -90646,7 +90909,7 @@
    "reviewer": null,
    "nextReview": null,
    "disposition": "expand",
-   "dispositionReason": "thin vs family median (269w vs ~774w)",
+   "dispositionReason": "thin vs family median (269w vs ~773w)",
    "blockers": [],
    "analytics": null,
    "scores": {
@@ -136337,7 +136600,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 2,
     "handsOn": 2,
     "explanationQuality": 2,
@@ -202861,14 +203124,14 @@
    ],
    "features": {
     "group": "Agentic",
-    "declaredMeta": "4 lessons",
-    "nodeCount": 4,
-    "liveNodes": 4,
+    "declaredMeta": "7 lessons",
+    "nodeCount": 7,
+    "liveNodes": 7,
     "comingNodes": 0,
     "headingOnlyNodes": 0,
-    "fileCount": 4,
+    "fileCount": 7,
     "kinds": {
-     "concept": 4
+     "concept": 7
     },
     "modules": 0,
     "quickGuide": false
@@ -208187,25 +208450,6 @@
   },
   {
    "a": {
-    "route": "/learn/hallucinations/teaching-models-to-say-i-dont-know",
-    "slug": "hallucinations/teaching-models-to-say-i-dont-know",
-    "title": "Teaching a Model to Say 'I Don't Know'",
-    "track": "hallucinations"
-   },
-   "b": {
-    "route": "/learn/structured-outputs/representing-uncertainty-in-schemas",
-    "slug": "structured-outputs/representing-uncertainty-in-schemas",
-    "title": "Letting the Model Say 'I Don't Know",
-    "track": "structured-outputs"
-   },
-   "jaccard": 0.67,
-   "containment": 0.8,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": false
-  },
-  {
-   "a": {
     "route": "/learn/genai-app-dev/quiz-state-structured-tools",
     "slug": "genai-app-dev/quiz-state-structured-tools",
     "title": "Quiz: State, Structured Output, and Tools",
@@ -208222,6 +208466,25 @@
    "slugStem": false,
    "alreadyLinked": true,
    "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/hallucinations/teaching-models-to-say-i-dont-know",
+    "slug": "hallucinations/teaching-models-to-say-i-dont-know",
+    "title": "Teaching a Model to Say 'I Don't Know'",
+    "track": "hallucinations"
+   },
+   "b": {
+    "route": "/learn/structured-outputs/representing-uncertainty-in-schemas",
+    "slug": "structured-outputs/representing-uncertainty-in-schemas",
+    "title": "Letting the Model Say 'I Don't Know",
+    "track": "structured-outputs"
+   },
+   "jaccard": 0.67,
+   "containment": 0.8,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": false
   },
   {
    "a": {
@@ -208586,6 +208849,63 @@
   },
   {
    "a": {
+    "route": "/learn/llm-foundations/residual-connections-and-layer-norm",
+    "slug": "llm-foundations/residual-connections-and-layer-norm",
+    "title": "Residual Connections and Layer Norm",
+    "track": "llm-foundations"
+   },
+   "b": {
+    "route": "/learn/llm-foundations/residual-stream-and-layer-norm",
+    "slug": "llm-foundations/residual-stream-and-layer-norm",
+    "title": "The Residual Stream and Layer Norm",
+    "track": "llm-foundations"
+   },
+   "jaccard": 0.6,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/deep-learning/core/119-data-augmentation-invariances-and-leakage",
+    "slug": "deep-learning/core/119-data-augmentation-invariances-and-leakage",
+    "title": "Data Augmentation, Invariances, and Leakage",
+    "track": "deep-learning"
+   },
+   "b": {
+    "route": "/learn/deep-learning/vision/210-data-augmentation-and-invariance",
+    "slug": "deep-learning/vision/210-data-augmentation-and-invariance",
+    "title": "Data augmentation, invariance, and leakage",
+    "track": "deep-learning"
+   },
+   "jaccard": 0.6,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
+    "route": "/learn/deep-learning/practice/401-data-contracts-and-schema-audits",
+    "slug": "deep-learning/practice/401-data-contracts-and-schema-audits",
+    "title": "Data contracts and schema audits",
+    "track": "deep-learning"
+   },
+   "b": {
+    "route": "/learn/machine-learning/ml-605-data-contracts-and-schema-evolution",
+    "slug": "machine-learning/ml-605-data-contracts-and-schema-evolution",
+    "title": "Data contracts and schema evolution",
+    "track": "machine-learning"
+   },
+   "jaccard": 0.6,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": false
+  },
+  {
+   "a": {
     "route": "/learn/prompt-engineering/decomposition-output-cheatsheet",
     "slug": "prompt-engineering/decomposition-output-cheatsheet",
     "title": "Decomposition and Structured-Output Cheatsheet",
@@ -208640,63 +208960,6 @@
    "slugStem": false,
    "alreadyLinked": true,
    "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/deep-learning/core/119-data-augmentation-invariances-and-leakage",
-    "slug": "deep-learning/core/119-data-augmentation-invariances-and-leakage",
-    "title": "Data Augmentation, Invariances, and Leakage",
-    "track": "deep-learning"
-   },
-   "b": {
-    "route": "/learn/deep-learning/vision/210-data-augmentation-and-invariance",
-    "slug": "deep-learning/vision/210-data-augmentation-and-invariance",
-    "title": "Data augmentation, invariance, and leakage",
-    "track": "deep-learning"
-   },
-   "jaccard": 0.6,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/deep-learning/practice/401-data-contracts-and-schema-audits",
-    "slug": "deep-learning/practice/401-data-contracts-and-schema-audits",
-    "title": "Data contracts and schema audits",
-    "track": "deep-learning"
-   },
-   "b": {
-    "route": "/learn/machine-learning/ml-605-data-contracts-and-schema-evolution",
-    "slug": "machine-learning/ml-605-data-contracts-and-schema-evolution",
-    "title": "Data contracts and schema evolution",
-    "track": "machine-learning"
-   },
-   "jaccard": 0.6,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/llm-foundations/residual-connections-and-layer-norm",
-    "slug": "llm-foundations/residual-connections-and-layer-norm",
-    "title": "Residual Connections and Layer Norm",
-    "track": "llm-foundations"
-   },
-   "b": {
-    "route": "/learn/llm-foundations/residual-stream-and-layer-norm",
-    "slug": "llm-foundations/residual-stream-and-layer-norm",
-    "title": "The Residual Stream and Layer Norm",
-    "track": "llm-foundations"
-   },
-   "jaccard": 0.6,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
   },
   {
    "a": {
@@ -209631,6 +209894,25 @@
   },
   {
    "a": {
+    "route": "/learn/classical-ai/agents-robotics/312-state-estimation-and-bayesian-filtering",
+    "slug": "classical-ai/agents-robotics/312-state-estimation-and-bayesian-filtering",
+    "title": "State estimation and Bayesian filtering",
+    "track": "classical-ai"
+   },
+   "b": {
+    "route": "/learn/classical-ai/knowledge-uncertainty/221-dynamic-bayesian-networks-pomdps-and-state-estimation",
+    "slug": "classical-ai/knowledge-uncertainty/221-dynamic-bayesian-networks-pomdps-and-state-estimation",
+    "title": "Dynamic Bayesian networks, POMDPs, and state estimation",
+    "track": "classical-ai"
+   },
+   "jaccard": 0.43,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
     "route": "/learn/agentic-ai/agent-memory-short-vs-long-term",
     "slug": "agentic-ai/agent-memory-short-vs-long-term",
     "title": "Short-Term vs Long-Term Memory",
@@ -209704,25 +209986,6 @@
    "slugStem": false,
    "alreadyLinked": false,
    "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/classical-ai/agents-robotics/312-state-estimation-and-bayesian-filtering",
-    "slug": "classical-ai/agents-robotics/312-state-estimation-and-bayesian-filtering",
-    "title": "State estimation and Bayesian filtering",
-    "track": "classical-ai"
-   },
-   "b": {
-    "route": "/learn/classical-ai/knowledge-uncertainty/221-dynamic-bayesian-networks-pomdps-and-state-estimation",
-    "slug": "classical-ai/knowledge-uncertainty/221-dynamic-bayesian-networks-pomdps-and-state-estimation",
-    "title": "Dynamic Bayesian networks, POMDPs, and state estimation",
-    "track": "classical-ai"
-   },
-   "jaccard": 0.43,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
   },
   {
    "a": {
@@ -210087,6 +210350,25 @@
   },
   {
    "a": {
+    "route": "/learn/machine-learning/ml-304-support-vector-machines-and-margins",
+    "slug": "machine-learning/ml-304-support-vector-machines-and-margins",
+    "title": "Support vector machines and margins",
+    "track": "machine-learning"
+   },
+   "b": {
+    "route": "/learn/machine-learning/reproductions/ml-884-reproduce-support-vector-machines-and-kernel-choice",
+    "slug": "machine-learning/reproductions/ml-884-reproduce-support-vector-machines-and-kernel-choice",
+    "title": "Reproduction study: support-vector machines and kernel choice",
+    "track": "machine-learning"
+   },
+   "jaccard": 0.38,
+   "containment": 0.75,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": true
+  },
+  {
+   "a": {
     "route": "/learn/llm-foundations/what-a-language-model-actually-computes",
     "slug": "llm-foundations/what-a-language-model-actually-computes",
     "title": "What a Language Model Actually Computes",
@@ -210315,25 +210597,6 @@
   },
   {
    "a": {
-    "route": "/learn/machine-learning/ml-304-support-vector-machines-and-margins",
-    "slug": "machine-learning/ml-304-support-vector-machines-and-margins",
-    "title": "Support vector machines and margins",
-    "track": "machine-learning"
-   },
-   "b": {
-    "route": "/learn/machine-learning/reproductions/ml-884-reproduce-support-vector-machines-and-kernel-choice",
-    "slug": "machine-learning/reproductions/ml-884-reproduce-support-vector-machines-and-kernel-choice",
-    "title": "Reproduction study: support-vector machines and kernel choice",
-    "track": "machine-learning"
-   },
-   "jaccard": 0.38,
-   "containment": 0.75,
-   "slugStem": false,
-   "alreadyLinked": false,
-   "sameTrack": true
-  },
-  {
-   "a": {
     "route": "/learn/genai-app-dev/json-schema-and-validation",
     "slug": "genai-app-dev/json-schema-and-validation",
     "title": "Schema, Validation, and Auto-Repair",
@@ -210543,6 +210806,25 @@
   },
   {
    "a": {
+    "route": "/learn/ai-literacy/data-model-output-loop",
+    "slug": "ai-literacy/data-model-output-loop",
+    "title": "See AI as a data, model, and output loop",
+    "track": "ai-literacy"
+   },
+   "b": {
+    "route": "/learn/ai-literacy/garbage-in-garbage-out-the-data-loop",
+    "slug": "ai-literacy/garbage-in-garbage-out-the-data-loop",
+    "title": "Garbage in, garbage out: the data-model-output loop",
+    "track": "ai-literacy"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": true
+  },
+  {
+   "a": {
     "route": "/learn/context-engineering/compaction-memory-quiz",
     "slug": "context-engineering/compaction-memory-quiz",
     "title": "Compaction and Memory Quiz",
@@ -210597,25 +210879,6 @@
    "slugStem": false,
    "alreadyLinked": false,
    "sameTrack": false
-  },
-  {
-   "a": {
-    "route": "/learn/ai-literacy/data-model-output-loop",
-    "slug": "ai-literacy/data-model-output-loop",
-    "title": "See AI as a data, model, and output loop",
-    "track": "ai-literacy"
-   },
-   "b": {
-    "route": "/learn/ai-literacy/garbage-in-garbage-out-the-data-loop",
-    "slug": "ai-literacy/garbage-in-garbage-out-the-data-loop",
-    "title": "Garbage in, garbage out: the data-model-output loop",
-    "track": "ai-literacy"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": true
   },
   {
    "a": {
@@ -212430,6 +212693,33 @@
    "route": "/learn/agent-frameworks/google-adk",
    "slug": "agent-frameworks/google-adk",
    "title": "Google ADK: workflow agents and multi-agent teams",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/agent-frameworks/langchain-agents-and-integrations",
+   "slug": "agent-frameworks/langchain-agents-and-integrations",
+   "title": "LangChain: the integration layer, then agents",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/agent-frameworks/langgraph-durable-agents",
+   "slug": "agent-frameworks/langgraph-durable-agents",
+   "title": "LangGraph: durable agents as state machines",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/agent-frameworks/llamaindex-data-framework",
+   "slug": "agent-frameworks/llamaindex-data-framework",
+   "title": "LlamaIndex: the data framework that grew agents",
    "family": "lesson",
    "flags": [
     "release-sensitive page with no updated/review date"
