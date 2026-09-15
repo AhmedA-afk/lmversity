@@ -2156,5 +2156,148 @@
       "Service status and incident history"
     ],
     "status": "current"
+  },
+  "meta-model-api-docs": {
+    "title": "Meta Model API documentation",
+    "publisher": "Meta",
+    "accessedAt": "2026-09-15",
+    "url": "https://llama.developer.meta.com/docs",
+    "type": "official-docs",
+    "claims": [
+      "Meta Model API surface, Muse family, Muse Code, protocols"
+    ],
+    "status": "current"
+  },
+  "mistral-pricing": {
+    "title": "Mistral AI pricing",
+    "publisher": "Mistral AI",
+    "accessedAt": "2026-09-15",
+    "url": "https://mistral.ai/pricing",
+    "type": "official-docs",
+    "claims": [
+      "Current API pricing"
+    ],
+    "status": "current"
+  },
+  "mistral-status": {
+    "title": "Mistral AI status page",
+    "publisher": "Mistral AI",
+    "accessedAt": "2026-09-15",
+    "url": "https://status.mistral.ai",
+    "type": "official-docs",
+    "claims": [
+      "Service status — returns 403 to automated probes; check in browser"
+    ],
+    "status": "current"
+  },
+  "xai-status": {
+    "title": "xAI status page",
+    "publisher": "xAI",
+    "accessedAt": "2026-09-15",
+    "url": "https://status.x.ai",
+    "type": "official-docs",
+    "claims": [
+      "Service status — returns 403 to automated probes; check in browser"
+    ],
+    "status": "current"
+  },
+  "deepseek-api-reference": {
+    "title": "DeepSeek API documentation",
+    "publisher": "DeepSeek",
+    "accessedAt": "2026-09-15",
+    "url": "https://api-docs.deepseek.com",
+    "type": "official-docs",
+    "claims": [
+      "Model aliases→versions, features, pricing structure, compatibility surfaces"
+    ],
+    "status": "current"
+  },
+  "deepseek-status": {
+    "title": "DeepSeek status page",
+    "publisher": "DeepSeek",
+    "accessedAt": "2026-09-15",
+    "url": "https://status.deepseek.com",
+    "type": "official-docs",
+    "claims": [
+      "Service status"
+    ],
+    "status": "current"
+  },
+  "zai-docs": {
+    "title": "Z.AI documentation",
+    "publisher": "Z.ai",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.z.ai",
+    "type": "official-docs",
+    "claims": [
+      "GLM model lineup, API surface, Coding Plan"
+    ],
+    "status": "current"
+  },
+  "zai-platform": {
+    "title": "Z.AI Open Platform",
+    "publisher": "Z.ai",
+    "accessedAt": "2026-09-15",
+    "url": "https://z.ai/model-api",
+    "type": "official-docs",
+    "claims": [
+      "Platform access, API keys, billing"
+    ],
+    "status": "current"
+  },
+  "cohere-pricing": {
+    "title": "Cohere pricing",
+    "publisher": "Cohere",
+    "accessedAt": "2026-09-15",
+    "url": "https://cohere.com/pricing",
+    "type": "official-docs",
+    "claims": [
+      "Current API pricing"
+    ],
+    "status": "current"
+  },
+  "cohere-status": {
+    "title": "Cohere status page",
+    "publisher": "Cohere",
+    "accessedAt": "2026-09-15",
+    "url": "https://status.cohere.com",
+    "type": "official-docs",
+    "claims": [
+      "Service status"
+    ],
+    "status": "current"
+  },
+  "ai21-docs": {
+    "title": "AI21 Labs documentation",
+    "publisher": "AI21 Labs",
+    "accessedAt": "2026-09-15",
+    "url": "https://docs.ai21.com",
+    "type": "official-docs",
+    "claims": [
+      "Jamba models, Maestro orchestration, API reference"
+    ],
+    "status": "current"
+  },
+  "ai21-status": {
+    "title": "AI21 status page",
+    "publisher": "AI21 Labs",
+    "accessedAt": "2026-09-15",
+    "url": "https://status.ai21.com",
+    "type": "official-docs",
+    "claims": [
+      "Service status"
+    ],
+    "status": "current"
+  },
+  "ai21-trust": {
+    "title": "AI21 Trust Center",
+    "publisher": "AI21 Labs",
+    "accessedAt": "2026-09-15",
+    "url": "https://trust.ai21.com",
+    "type": "official-docs",
+    "claims": [
+      "Security posture, certifications"
+    ],
+    "status": "current"
   }
 }

@@ -844,17 +844,33 @@ consolidation into a parent track, or a clearer curated-path role.
 - [x] Google hub: Gemini apps, Gemini API, AI Studio, Vertex AI, Gemini CLI, Agent
       Development Kit, multimodal/realtime products, and Gemma. *(`/providers/google` —
       Gemini 3.x lineup verified, two-surface auth/terms split covered)*
-- [ ] Meta hub: Meta AI, Meta Model API, Llama, Llama Guard, Muse Spark, and Muse Code.
-- [ ] xAI hub: Grok consumer products, API, model families, structured output, tools,
+- [x] Meta hub: Meta AI, Meta Model API, Llama, Llama Guard, Muse Spark, and Muse Code.
+      *(`/providers/meta` — verified: Model API serves Muse family over three
+      protocols (Responses/Chat/Messages), Muse Code CLI, open-weight Glimmer;
+      Llama lineage covered separately)*
+- [x] xAI hub: Grok consumer products, API, model families, structured output, tools,
       realtime or multimodal capabilities where current docs support them.
-- [ ] Mistral hub: Le Chat, API, generalist models, Codestral, OCR, audio, agents,
-      open-weight releases, and deployment options.
-- [ ] DeepSeek hub: consumer product, API, current model aliases, reasoning behavior,
+      *(`/providers/xai` — Grok 4.x lineup, Imagine image/video, Voice API,
+      documented alias conventions, long-context pricing tiers)*
+- [x] Mistral hub: Le Chat, API, generalist models, Codestral, OCR, audio, agents,
+      open-weight releases, and deployment options. *(`/providers/mistral` —
+      Medium 3.5 / Large 3 / Small 4 / Ministral 3 / Codestral / Voxtral / OCR
+      verified; per-release license flags + lifecycle-policy deprecation table)*
+- [x] DeepSeek hub: consumer product, API, current model aliases, reasoning behavior,
       open releases, license, model cards, and self-hosting paths.
-- [ ] Z.ai/Zhipu hub: GLM consumer and API products, current GLM families, coding products,
-      open releases, licenses, and regional availability.
-- [ ] Cohere hub: Command, Embed, Rerank, multilingual/Aya, enterprise deployment, and RAG.
-- [ ] AI21 Labs hub: current language models and enterprise APIs after official verification.
+      *(`/providers/deepseek` — published alias→version table, thinking-mode
+      switch, OpenAI+Anthropic compat surfaces, cache/off-peak pricing;
+      model cards live with the open releases, noted)*
+- [x] Z.ai/Zhipu hub: GLM consumer and API products, current GLM families, coding products,
+      open releases, licenses, and regional availability. *(`/providers/zai` —
+      GLM-5.3 lineup, GLM Coding Plan for third-party agent CLIs, open GLM
+      releases incl. Mistral-hosted; jurisdiction caveat stated plainly)*
+- [x] Cohere hub: Command, Embed, Rerank, multilingual/Aya, enterprise deployment, and RAG.
+      *(`/providers/cohere` — Command family + Rerank/Embed/Parse/Transcribe +
+      Aya + North Model Vault; multi-cloud distribution mapped)*
+- [x] AI21 Labs hub: current language models and enterprise APIs after official verification.
+      *(`/providers/ai21` — Jamba hybrid-architecture open models + Maestro
+      orchestration; small-vendor risk stated honestly)*
 
 ### India and multilingual providers
 
@@ -2127,6 +2143,33 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-15 — Phase 6: remaining frontier provider hubs (7 rows)
+
+- Commit: `65102f0`. Status: complete.
+- Content: `/providers/meta` (Model API three-protocol surface — Responses/
+  Chat/Messages, Muse Spark/Image/Voice-Transcribe, open-weight Glimmer,
+  Muse Code CLI), `/providers/xai` (Grok 4.x, Imagine, Voice, documented
+  alias conventions, long-context pricing), `/providers/mistral` (Medium 3.5/
+  Large 3/Small 4/Ministral 3/Codestral/Voxtral/OCR + per-release license
+  flags + lifecycle-policy deprecation table), `/providers/deepseek`
+  (alias→version table, thinking-mode, dual OpenAI/Anthropic compat,
+  cache/off-peak pricing), `/providers/zai` (GLM-5.3, Coding Plan for
+  third-party agent CLIs, jurisdiction caveat), `/providers/cohere`
+  (Command + Rerank/Embed/Parse/Transcribe + Aya + multi-cloud),
+  `/providers/ai21` (Jamba hybrid architecture + Maestro; small-vendor
+  risk stated).
+- Data: +13 source records (212 total); +10 entities incl. 2 vendors
+  (zai, ai21) and 8 model families (116 total).
+- Verification: every product map checked against live official docs
+  2026-09-15; status pages for Mistral/xAI return 403 to probes (noted
+  in source records).
+- Validation: check:content clean; build 2,521 pages; check:links 0 dead
+  (5,421 routes); registry 2,474 items.
+- Rows ticked (7): all remaining "Frontier API and product providers" rows.
+- Next: India/multilingual providers (Sarvam, AI4Bharat, Krutrim, Bhashini);
+  open-model family hubs; cloud platforms/gateways; coding-agent and
+  consumer-product sections.
 
 ### 2026-09-15 — Phase 6: provider-hub collection + first three hubs (15 rows)
 

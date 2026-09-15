@@ -1001,5 +1001,104 @@
       "google-gemini-deprecations"
     ],
     "changeNote": "2026-09-15: Gemini 3.x — 3.8 Flash newest stable; Stable/Preview/Legacy labels per model; endpoint strings gemini-<version>-<tier>."
+  },
+  "zai": {
+    "name": "Z.ai / Zhipu",
+    "kind": "vendor",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "zai-docs",
+      "zai-platform"
+    ]
+  },
+  "ai21": {
+    "name": "AI21 Labs",
+    "kind": "vendor",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "ai21-docs",
+      "ai21-trust"
+    ]
+  },
+  "meta-muse": {
+    "name": "Muse family",
+    "kind": "model-family",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "meta-model-api-docs"
+    ],
+    "changeNote": "2026-09-15: Spark (API, 1M ctx) / Image / Voice Transcribe / Glimmer (open weights, Apache 2.0)."
+  },
+  "meta-llama": {
+    "name": "Llama family",
+    "kind": "model-family",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "meta-llama-resources"
+    ]
+  },
+  "xai-grok": {
+    "name": "Grok family",
+    "kind": "model-family",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "xai-grok-docs"
+    ],
+    "changeNote": "2026-09-15: 4.x line — 4.6 newest (500k ctx); documented alias conventions (plain/-latest/-date)."
+  },
+  "mistral-family": {
+    "name": "Mistral families",
+    "kind": "model-family",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "mistral-model-docs"
+    ],
+    "changeNote": "2026-09-15: Medium 3.5 (Modified MIT), Large 3 + Small 4 + Ministral 3 (Apache 2.0), Codestral/Voxtral/OCR specialist lines; lifecycle policy publishes deprecation dates."
+  },
+  "deepseek-family": {
+    "name": "DeepSeek family",
+    "kind": "model-family",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "deepseek-api-reference"
+    ],
+    "changeNote": "2026-09-15: aliases deepseek-flash→V4.1-Flash, deepseek-v4-pro→V4-Pro-0813; thinking/non-thinking modes."
+  },
+  "zai-glm": {
+    "name": "GLM family",
+    "kind": "model-family",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "zai-docs"
+    ],
+    "changeNote": "2026-09-15: GLM-5.3 flagship, 5.3-FLASH multimodal coding, GLM-Image, CogVideoX-3; open GLM releases also hosted by Mistral."
+  },
+  "cohere-command": {
+    "name": "Command/Aya families",
+    "kind": "model-family",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "cohere-model-docs"
+    ],
+    "changeNote": "2026-09-15: Command A+ (MoE) flagship; Aya Expanse/Vision multilingual; Rerank/Embed/Parse/Transcribe endpoints; date-versioned IDs."
+  },
+  "ai21-jamba": {
+    "name": "Jamba family",
+    "kind": "model-family",
+    "status": "current",
+    "verifiedAt": "2026-09-15",
+    "officialSources": [
+      "ai21-docs"
+    ],
+    "changeNote": "2026-09-15: hybrid SSM-transformer open weights; Maestro is the orchestration layer above."
   }
 }

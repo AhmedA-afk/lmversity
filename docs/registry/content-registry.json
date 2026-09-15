@@ -1,15 +1,15 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T15:25:52.280Z",
+  "generatedAt": "2026-09-15T15:33:45.311Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2471,
+  "itemCount": 2478,
   "counts": {
    "byFamily": {
     "lesson": 2109,
     "project": 32,
     "quiz": 89,
-    "reference": 58,
+    "reference": 65,
     "lab": 70,
     "interview": 7,
     "scenario": 6,
@@ -22,7 +22,7 @@
     "glossary": 1
    },
    "byStatus": {
-    "live": 2471
+    "live": 2478
    },
    "byKind": {
     "concept": 1808,
@@ -40,7 +40,7 @@
     "howto": 20,
     "pillar": 4,
     "definition": 12,
-    "provider-hub": 3,
+    "provider-hub": 10,
     "lesson": 131,
     "reference": 7,
     "bootcamp": 6,
@@ -107,7 +107,7 @@
     "policy-sensitive": 82,
     "certification-sensitive": 104,
     "durable": 266,
-    "volatile": 3
+    "volatile": 10
    }
   },
   "analyticsNote": "Analytics fields are null until Search Console / analytics exports are wired in.",
@@ -74268,7 +74268,7 @@
    "scores": {
     "intentClarity": null,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": null,
     "explanationQuality": null,
@@ -76723,7 +76723,7 @@
    "scores": {
     "intentClarity": null,
     "correctnessSources": null,
-    "completeness": 1,
+    "completeness": 2,
     "prerequisiteFit": 0,
     "handsOn": null,
     "explanationQuality": null,
@@ -192948,6 +192948,88 @@
    }
   },
   {
+   "id": "pro-0004",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "AI21 Labs (Jamba / Maestro)",
+   "slug": "ai21",
+   "route": "/providers/ai21",
+   "collection": "providers",
+   "path": "src/content/providers/ai21.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "AI21's surface mapped: the Jamba open-model family and Maestro orchestration layer — a smaller provider whose honest story is hybrid-architecture models plus an agentic orchestration product.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 496,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "Official links",
+    "Getting started shape",
+    "Naming, aliases, deprecation",
+    "Data policy and enterprise controls",
+    "Minimal lab",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "ai21",
+    "covers": [
+     "api",
+     "open-model"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "ai21-docs",
+     "ai21-status",
+     "ai21-trust"
+    ],
+    "related": [
+     "/learn/local-inference/ollama-first-run",
+     "/learn/genai-app-dev/provider-layer-cheatsheet"
+    ],
+    "numericClaims": 1
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "AI21's surface mapped: the Jamba open-model family and Maestro orchestration layer — a smaller provider whose honest story is hybrid-architecture models plus an agentic orchestration product.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "vendor/tool mentions: vLLM"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "pro-0001",
    "family": "reference",
    "kind": "provider-hub",
@@ -193018,6 +193100,175 @@
    "freshnessSignals": [
     "pricing/cost mention",
     "vendor/tool mentions: Anthropic, Claude, MCP, Bedrock, Vertex, AWS"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0005",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Cohere",
+   "slug": "cohere",
+   "route": "/providers/cohere",
+   "collection": "providers",
+   "path": "src/content/providers/cohere.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Cohere's surface mapped: the Command model family, Rerank, Embed, Parse, Transcribe, Aya multilingual, North enterprise line — across its own platform plus Bedrock/Azure/Oracle — with when-to-choose guidance.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 601,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "Official links",
+    "Getting started shape",
+    "Naming, aliases, deprecation",
+    "Data policy and enterprise controls",
+    "Minimal lab",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "cohere",
+    "covers": [
+     "api",
+     "cloud-platform"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "cohere-model-docs",
+     "cohere-rerank-docs",
+     "cohere-pricing",
+     "cohere-status"
+    ],
+    "related": [
+     "/learn/rag",
+     "/learn/genai-app-dev/provider-layer-cheatsheet"
+    ],
+    "numericClaims": 6
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Cohere's surface mapped: the Command model family, Rerank, Embed, Parse, Transcribe, Aya multilingual, North enterprise line — across its own platform plus Bedrock/Azure/Oracle — with when-to-choose guidance.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "pricing/cost mention",
+    "vendor/tool mentions: Cohere, Bedrock, Azure, SageMaker, MCP"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0006",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "DeepSeek",
+   "slug": "deepseek",
+   "route": "/providers/deepseek",
+   "collection": "providers",
+   "path": "src/content/providers/deepseek.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "DeepSeek's surface mapped: the API with published alias→version mapping, thinking mode, OpenAI and Anthropic compatibility, off-peak pricing and context caching — plus open-release and self-hosting context.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 572,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "Official links",
+    "Getting started shape",
+    "Naming, aliases, deprecation",
+    "Data policy and enterprise controls",
+    "Minimal lab",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "deepseek",
+    "covers": [
+     "consumer-app",
+     "api",
+     "open-model"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "deepseek-api-docs",
+     "deepseek-api-reference",
+     "deepseek-status"
+    ],
+    "related": [
+     "/learn/genai-app-dev/provider-layer-cheatsheet",
+     "/learn/local-inference/ollama-first-run"
+    ],
+    "numericClaims": 5
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "DeepSeek's surface mapped: the API with published alias→version mapping, thinking mode, OpenAI and Anthropic compatibility, off-peak pricing and context caching — plus open-release and self-hosting context.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "pricing/cost mention",
+    "policy/license mention",
+    "vendor/tool mentions: DeepSeek, OpenAI, Anthropic"
    ],
    "owner": null,
    "reviewer": null,
@@ -193141,6 +193392,176 @@
    }
   },
   {
+   "id": "pro-0007",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Meta (Model API / Muse / Llama)",
+   "slug": "meta",
+   "route": "/providers/meta",
+   "collection": "providers",
+   "path": "src/content/providers/meta.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Meta's AI surface mapped: Meta Model API, the Muse model family (Spark, Image, Voice Transcribe, open-weight Glimmer), Muse Code, and the Llama open-model lineage — with auth, protocols, and when-to-choose guidance.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 691,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "Official links",
+    "Getting started shape",
+    "Naming, aliases, deprecation",
+    "Data policy and enterprise controls",
+    "Minimal lab",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "meta",
+    "covers": [
+     "consumer-app",
+     "coding-agent",
+     "api",
+     "open-model"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "meta-model-api-docs",
+     "meta-llama-resources",
+     "purple-llama-repo"
+    ],
+    "related": [
+     "/learn/local-inference/ollama-first-run",
+     "/learn/agent-frameworks/framework-comparison-and-escape-hatches",
+     "/learn/structured-outputs/cross-provider-structured-output-differences"
+    ],
+    "numericClaims": 2
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Meta's AI surface mapped: Meta Model API, the Muse model family (Spark, Image, Voice Transcribe, open-weight Glimmer), Muse Code, and the Llama open-model lineage — with auth, protocols, and when-to-choose guidance.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "pricing/cost mention",
+    "vendor/tool mentions: Llama, OpenAI, Anthropic, vLLM, SGLang, llama.cpp, AWS, Azure"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0008",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Mistral AI",
+   "slug": "mistral",
+   "route": "/providers/mistral",
+   "collection": "providers",
+   "path": "src/content/providers/mistral.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Mistral's surface mapped: La Plateforme API, Le Chat, the open-weight and commercial model families (Medium, Large, Small, Ministral, Codestral, Voxtral, OCR), its dated-ID convention and lifecycle policy — plus when-to-choose guidance.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 603,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "Official links",
+    "Getting started shape",
+    "Naming, aliases, deprecation",
+    "Minimal lab",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "mistral",
+    "covers": [
+     "consumer-app",
+     "api",
+     "open-model"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "mistral-model-docs",
+     "mistral-pricing",
+     "mistral-status"
+    ],
+    "related": [
+     "/learn/local-inference/ollama-first-run",
+     "/learn/genai-app-dev/provider-layer-cheatsheet"
+    ],
+    "numericClaims": 9
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Mistral's surface mapped: La Plateforme API, Le Chat, the open-weight and commercial model families (Medium, Large, Small, Ministral, Codestral, Voxtral, OCR), its dated-ID convention and lifecycle policy — plus when-to-choose guidance.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "pricing/cost mention",
+    "policy/license mention",
+    "vendor/tool mentions: Mistral, vLLM, llama.cpp, Ollama, OpenAI, Anthropic"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
    "id": "pro-0003",
    "family": "reference",
    "kind": "provider-hub",
@@ -193212,6 +193633,172 @@
    "freshnessSignals": [
     "pricing/cost mention",
     "vendor/tool mentions: OpenAI, ChatGPT, Codex, MCP, GPT-6"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0009",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "xAI (Grok)",
+   "slug": "xai",
+   "route": "/providers/xai",
+   "collection": "providers",
+   "path": "src/content/providers/xai.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "xAI's surface mapped: Grok consumer apps and the API — Grok 4.x text models, Imagine image/video, Voice API, server-side search tools — with the documented alias conventions, pricing tiers, and when-to-choose guidance.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 556,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "Official links",
+    "Getting started shape",
+    "Naming, aliases, deprecation",
+    "Data policy and enterprise controls",
+    "Minimal lab",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "xai",
+    "covers": [
+     "consumer-app",
+     "api"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "xai-grok-docs",
+     "xai-status"
+    ],
+    "related": [
+     "/learn/genai-app-dev/provider-layer-cheatsheet",
+     "/learn/structured-outputs/cross-provider-structured-output-differences"
+    ],
+    "numericClaims": 6
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "xAI's surface mapped: Grok consumer apps and the API — Grok 4.x text models, Imagine image/video, Voice API, server-side search tools — with the documented alias conventions, pricing tiers, and when-to-choose guidance.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "pricing/cost mention",
+    "policy/license mention",
+    "vendor/tool mentions: xAI, Grok, OpenAI"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "keep",
+   "dispositionReason": null,
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 2,
+    "prerequisiteFit": null,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 2,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "pro-0010",
+   "family": "reference",
+   "kind": "provider-hub",
+   "title": "Z.ai / Zhipu (GLM)",
+   "slug": "zai",
+   "route": "/providers/zai",
+   "collection": "providers",
+   "path": "src/content/providers/zai.md",
+   "track": null,
+   "module": null,
+   "status": "live",
+   "summary": "Z.ai's surface mapped: the GLM model family (GLM-5.3 flagship, multimodal Flash, image, video), the GLM Coding Plan for agent CLIs, OpenAI-compatible API, and the open-source GLM lineage — with when-to-choose guidance.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": "2026-09-15",
+   "verified": null,
+   "wordCount": 529,
+   "headings": [
+    "What this page covers",
+    "Product map",
+    "Official links",
+    "Getting started shape",
+    "Naming, aliases, deprecation",
+    "Data policy and enterprise controls",
+    "Minimal lab",
+    "When to choose it"
+   ],
+   "internalLinks": [],
+   "externalLinks": [],
+   "structuredData": [],
+   "features": {
+    "vendor": "zai",
+    "covers": [
+     "consumer-app",
+     "api",
+     "open-model"
+    ],
+    "verifiedAt": "2026-09-15",
+    "sources": [
+     "zai-docs",
+     "zai-platform"
+    ],
+    "related": [
+     "/learn/cli-agents",
+     "/learn/genai-app-dev/provider-layer-cheatsheet"
+    ],
+    "numericClaims": 1
+   },
+   "searchIntent": "reference",
+   "primaryAudience": "general",
+   "promisedOutcome": "Z.ai's surface mapped: the GLM model family (GLM-5.3 flagship, multimodal Flash, image, video), the GLM Coding Plan for agent CLIs, OpenAI-compatible API, and the open-source GLM lineage — with when-to-choose guidance.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": null,
+   "practiceType": null,
+   "freshnessClass": "volatile",
+   "freshnessSignals": [
+    "pricing/cost mention",
+    "vendor/tool mentions: OpenAI, Mistral, Claude, Cline, Anthropic"
    ],
    "owner": null,
    "reviewer": null,

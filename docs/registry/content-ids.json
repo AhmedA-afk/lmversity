@@ -14,7 +14,7 @@
   "trk": 29,
   "qgd": 4,
   "stb": 25,
-  "pro": 3
+  "pro": 10
  },
  "entries": {
   "lessons/agentic-ai/agent-benchmarks.mdx": {
@@ -9858,6 +9858,34 @@
   },
   "page:/providers": {
    "id": "pag-0025"
+  },
+  "providers/ai21.md": {
+   "id": "pro-0004",
+   "fp": "3582867b67d314678e12ad83712a89d985382744"
+  },
+  "providers/cohere.md": {
+   "id": "pro-0005",
+   "fp": "42848e38241dcee4fee745131405eda81201d2dd"
+  },
+  "providers/deepseek.md": {
+   "id": "pro-0006",
+   "fp": "e6bfd7e8698f79884a2ef86f3c467d400016811a"
+  },
+  "providers/meta.md": {
+   "id": "pro-0007",
+   "fp": "9f8ab21248e2218877e0fcc5e10d54d27a1545f8"
+  },
+  "providers/mistral.md": {
+   "id": "pro-0008",
+   "fp": "df5d5c1a768a165009be3ace096d2a758c11e13d"
+  },
+  "providers/xai.md": {
+   "id": "pro-0009",
+   "fp": "52e2e7aa56e64d4dcff65db07d8ef551c826f3b9"
+  },
+  "providers/zai.md": {
+   "id": "pro-0010",
+   "fp": "641ca7e8ebe84dd13e0517ae3d88bdae027764e0"
   }
  },
  "retired": {
