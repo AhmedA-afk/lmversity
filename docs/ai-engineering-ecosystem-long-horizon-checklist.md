@@ -1417,8 +1417,13 @@ template renders all six sections; `/roles` index gained a boundaries section.
       OCR/docs, datasets/benchmarks, speech across languages, low-resource
       strategies, cost/latency, support-assistant lab; Sarvam/AI4Bharat/
       Bhashini via provider hubs; evals via multilingual-evaluation-design)*
-- [ ] AI Automation for Operations — deterministic workflows, agents, approvals,
+- [x] AI Automation for Operations — deterministic workflows, agents, approvals,
       n8n/Zapier/Make/Pipedream candidates, auditability, and maintenance.
+      *(served: `ai-automation-ops` track (8) — deterministic→agentic
+      spectrum, judgment test per step, platform comparison, four validated
+      LLM-step patterns, approval gates/act boundary, run-history +
+      idempotency audit design, drift/maintenance, invoice-triage design
+      lab; Make help-center bot-blocked to fetch, retained with caveat)*
 - [x] AI for Data Analysts — querying, notebooks, spreadsheets, chart reasoning,
       verification, reproducibility, and privacy.
       *(served: data-scientist role path (extraction/structured-outputs/RAG/evals)
@@ -2252,6 +2257,25 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-16 — Phase 7: AI Automation for Operations (1 candidate row)
+
+- Commit: `PENDING`. Status: complete.
+- Scope: `ai-automation-ops` track — 8 lessons (deterministic→agentic
+  landscape, where-AI-belongs judgment test, n8n/Zapier/Make/Pipedream
+  comparison, four validated LLM-step patterns, approval gates + act
+  boundary, auditability/run-history/idempotency, drift + maintenance,
+  invoice-triage design lab). Registered n:32, group Building.
+- Files: 7 new lessons under `src/content/lessons/ai-automation-ops/`;
+  `curriculum.ts`; `sources.json` (+4 platform doc records).
+- Sources checked: docs.n8n.io, docs.zapier.com, pipedream.com/docs —
+  HTTP 200; make.com help 403 bot-blocked (retained with caveat).
+- Validation: `check:content` clean (2228 lessons); build 2631 pages;
+  `check:links` 2631 pages / 5641 routes, 0 dead; registry regenerated.
+- Blockers: none.
+- Next: all Phase 7 candidate-course rows are now served; remaining
+  Phase 7 work is the AI-for-Designers sub-checklist (334 rows, tracked
+  separately) and the shared coding-agent fixture comparison.
 
 ### 2026-09-16 — Phase 7: Multilingual/Indic AI track (1 candidate row)
 

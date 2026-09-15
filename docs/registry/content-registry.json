@@ -1,16 +1,16 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T16:49:07.562Z",
+  "generatedAt": "2026-09-15T16:53:47.992Z",
   "generator": "scripts/build-content-registry.mjs",
-  "itemCount": 2575,
+  "itemCount": 2583,
   "counts": {
    "byFamily": {
-    "lesson": 2153,
+    "lesson": 2160,
     "project": 33,
+    "lab": 75,
     "reference": 107,
     "quiz": 93,
-    "lab": 74,
     "interview": 7,
     "scenario": 6,
     "blog": 10,
@@ -22,17 +22,17 @@
     "glossary": 1
    },
    "byStatus": {
-    "live": 2575
+    "live": 2583
    },
    "byKind": {
-    "concept": 1843,
-    "comparison": 108,
+    "concept": 1849,
+    "comparison": 109,
     "capstone": 33,
+    "lab": 75,
     "worked-example": 33,
     "cheatsheet": 49,
     "common-mistakes": 26,
     "quiz": 87,
-    "lab": 74,
     "drill": 14,
     "topic": 7,
     "scenario": 6,
@@ -60,6 +60,7 @@
     "agent-frameworks": 18,
     "agent-skills": 6,
     "agentic-ai": 30,
+    "ai-automation-ops": 8,
     "ai-for-designers": 25,
     "ai-foundations": 161,
     "ai-literacy": 59,
@@ -105,9 +106,9 @@
     "fde": 193
    },
    "byFreshness": {
-    "release-sensitive": 350,
-    "pricing-sensitive": 352,
-    "periodic": 1360,
+    "release-sensitive": 352,
+    "pricing-sensitive": 356,
+    "periodic": 1362,
     "policy-sensitive": 92,
     "certification-sensitive": 104,
     "durable": 266,
@@ -4737,6 +4738,682 @@
     "metadata": 2,
     "linking": 2,
     "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2221",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Approvals and human-in-the-loop",
+   "slug": "ai-automation-ops/approvals-and-human-in-the-loop",
+   "route": "/learn/ai-automation-ops/approvals-and-human-in-the-loop",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-automation-ops/approvals-and-human-in-the-loop.md",
+   "track": "ai-automation-ops",
+   "module": null,
+   "status": "live",
+   "summary": "Design approval gates that actually gate — when automation must pause for a human, how to build the pause, and how to keep approvals from becoming rubber stamps.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 391,
+   "headings": [
+    "Classify actions by reversibility and blast radius",
+    "Building the pause",
+    "Preventing rubber-stamp decay"
+   ],
+   "internalLinks": [
+    "/learn/ai-automation-ops/auditability-and-run-history",
+    "/learn/ai-automation-ops/automation-design-lab",
+    "/learn/ai-for-designers/human-review-and-approval-boundaries"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 3,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Design approval gates that actually gate — when automation must pause for a human, how to build the pause, and how to keep approvals from becoming rubber stamps.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-automation-ops",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2222",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Auditability and run history",
+   "slug": "ai-automation-ops/auditability-and-run-history",
+   "route": "/learn/ai-automation-ops/auditability-and-run-history",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-automation-ops/auditability-and-run-history.md",
+   "track": "ai-automation-ops",
+   "module": null,
+   "status": "live",
+   "summary": "Make automations auditable — run logs that answer 'what happened and why', replayability, idempotent design, and the records an AI-assisted workflow must keep.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 388,
+   "headings": [
+    "What an auditable run records",
+    "Idempotency: the property that makes reruns safe",
+    "Replay: the audit superpower",
+    "The minimum bar"
+   ],
+   "internalLinks": [
+    "/learn/ai-automation-ops/approvals-and-human-in-the-loop",
+    "/learn/ai-automation-ops/llm-steps-in-automation",
+    "/learn/ai-automation-ops/maintaining-automations",
+    "/learn/ai-automation-ops/workflow-platforms-compared",
+    "/roles/forward-deployed-engineer/foundations/webhooks-idempotency-and-retries"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 5,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Make automations auditable — run logs that answer 'what happened and why', replayability, idempotent design, and the records an AI-assisted workflow must keep.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-automation-ops",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: n8n, Zapier, Pipedream"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2223",
+   "family": "lab",
+   "kind": "lab",
+   "title": "Lab: design an ops automation",
+   "slug": "ai-automation-ops/automation-design-lab",
+   "route": "/learn/ai-automation-ops/automation-design-lab",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-automation-ops/automation-design-lab.md",
+   "track": "ai-automation-ops",
+   "module": null,
+   "status": "live",
+   "summary": "Design a complete operations automation — step decomposition, AI-vs-rule decisions, approval gates, audit design, and a maintenance plan — on a realistic scenario.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 476,
+   "headings": [
+    "Step 1 — Decompose the process",
+    "Step 2 — Apply the judgment test per step",
+    "Step 3 — Place the act boundary and approval gates",
+    "Step 4 — Specify validation and fallbacks",
+    "Step 5 — Design the audit and maintenance plan",
+    "The grading rubric"
+   ],
+   "internalLinks": [
+    "/learn/ai-automation-ops/approvals-and-human-in-the-loop",
+    "/learn/ai-automation-ops/auditability-and-run-history",
+    "/learn/ai-automation-ops/llm-steps-in-automation",
+    "/learn/ai-automation-ops/maintaining-automations",
+    "/learn/ai-automation-ops/where-ai-belongs-in-a-workflow",
+    "/learn/ai-automation-ops/workflow-platforms-compared"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 10,
+    "numericClaims": 1,
+    "specFormat": true,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "build",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Design a complete operations automation — step decomposition, AI-vs-rule decisions, approval gates, audit design, and a maintenance plan — on a realistic scenario.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-automation-ops",
+   "practiceType": "none",
+   "freshnessClass": "pricing-sensitive",
+   "freshnessSignals": [
+    "pricing/cost mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": null,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": null,
+    "explanationQuality": null,
+    "metadata": null,
+    "linking": null,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2224",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "The automation landscape: deterministic to agentic",
+   "slug": "ai-automation-ops/automation-landscape-deterministic-to-agentic",
+   "route": "/learn/ai-automation-ops/automation-landscape-deterministic-to-agentic",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-automation-ops/automation-landscape-deterministic-to-agentic.md",
+   "track": "ai-automation-ops",
+   "module": null,
+   "status": "live",
+   "summary": "Map the spectrum from deterministic workflows to agentic automation, and learn why most operations work should stay on the deterministic end.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 358,
+   "headings": [
+    "The three tiers",
+    "The default rule",
+    "What this track covers"
+   ],
+   "internalLinks": [
+    "/learn/ai-automation-ops/where-ai-belongs-in-a-workflow",
+    "/learn/ai-automation-ops/workflow-platforms-compared",
+    "/learn/ai-for-designers/human-review-and-approval-boundaries"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 0,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Map the spectrum from deterministic workflows to agentic automation, and learn why most operations work should stay on the deterministic end.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-automation-ops",
+   "practiceType": "none",
+   "freshnessClass": "release-sensitive",
+   "freshnessSignals": [
+    "vendor/tool mentions: n8n, Zapier, Pipedream"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2225",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "LLM steps in automation",
+   "slug": "ai-automation-ops/llm-steps-in-automation",
+   "route": "/learn/ai-automation-ops/llm-steps-in-automation",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-automation-ops/llm-steps-in-automation.md",
+   "track": "ai-automation-ops",
+   "module": null,
+   "status": "live",
+   "summary": "The four LLM-in-workflow patterns — classify, extract, draft, route — with the validation each one needs before its output touches a downstream system.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 408,
+   "headings": [
+    "Pattern 1: Classify",
+    "Pattern 2: Extract",
+    "Pattern 3: Draft",
+    "Pattern 4: Route by meaning",
+    "The universal rules"
+   ],
+   "internalLinks": [
+    "/guides/get-reliable-json-out-of-an-llm",
+    "/learn/ai-automation-ops/approvals-and-human-in-the-loop",
+    "/learn/ai-automation-ops/auditability-and-run-history",
+    "/learn/ai-automation-ops/where-ai-belongs-in-a-workflow"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 14,
+    "numericClaims": 1,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "The four LLM-in-workflow patterns — classify, extract, draft, route — with the validation each one needs before its output touches a downstream system.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-automation-ops",
+   "practiceType": "none",
+   "freshnessClass": "pricing-sensitive",
+   "freshnessSignals": [
+    "pricing/cost mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2226",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Maintaining automations",
+   "slug": "ai-automation-ops/maintaining-automations",
+   "route": "/learn/ai-automation-ops/maintaining-automations",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-automation-ops/maintaining-automations.md",
+   "track": "ai-automation-ops",
+   "module": null,
+   "status": "live",
+   "summary": "Keep automations alive past week two — connector drift, prompt decay, model updates, monitoring, ownership, and the maintenance budget nobody plans for.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 452,
+   "headings": [
+    "The four drift modes",
+    "The monitoring that matters",
+    "Ownership and the maintenance budget"
+   ],
+   "internalLinks": [
+    "/learn/ai-automation-ops/auditability-and-run-history",
+    "/learn/ai-automation-ops/automation-design-lab",
+    "/learn/ai-automation-ops/llm-steps-in-automation"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 4,
+    "numericClaims": 1,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Keep automations alive past week two — connector drift, prompt decay, model updates, monitoring, ownership, and the maintenance budget nobody plans for.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-automation-ops",
+   "practiceType": "none",
+   "freshnessClass": "periodic",
+   "freshnessSignals": [],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 1,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2227",
+   "family": "lesson",
+   "kind": "concept",
+   "title": "Where AI belongs in a workflow",
+   "slug": "ai-automation-ops/where-ai-belongs-in-a-workflow",
+   "route": "/learn/ai-automation-ops/where-ai-belongs-in-a-workflow",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-automation-ops/where-ai-belongs-in-a-workflow.md",
+   "track": "ai-automation-ops",
+   "module": null,
+   "status": "live",
+   "summary": "Decide step by step which parts of an operations process need a model and which need a rule — the judgment test applied to real workflows.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 316,
+   "headings": [
+    "The judgment test",
+    "Where models earn their place",
+    "Where models don't belong",
+    "The exercise"
+   ],
+   "internalLinks": [
+    "/learn/ai-automation-ops/automation-design-lab",
+    "/learn/ai-automation-ops/automation-landscape-deterministic-to-agentic",
+    "/learn/ai-automation-ops/llm-steps-in-automation",
+    "/learn/genai-app-dev/output-validation-and-moderation"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 7,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "concept",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Decide step by step which parts of an operations process need a model and which need a rule — the judgment test applied to real workflows.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-automation-ops",
+   "practiceType": "none",
+   "freshnessClass": "pricing-sensitive",
+   "freshnessSignals": [
+    "pricing/cost mention"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
+    "originality": null,
+    "accessibility": null,
+    "demand": null
+   }
+  },
+  {
+   "id": "les-2228",
+   "family": "lesson",
+   "kind": "comparison",
+   "title": "Workflow platforms compared: n8n, Zapier, Make, Pipedream",
+   "slug": "ai-automation-ops/workflow-platforms-compared",
+   "route": "/learn/ai-automation-ops/workflow-platforms-compared",
+   "collection": "lessons",
+   "path": "src/content/lessons/ai-automation-ops/workflow-platforms-compared.md",
+   "track": "ai-automation-ops",
+   "module": null,
+   "status": "live",
+   "summary": "Choose an automation platform on the dimensions that matter — hosting model, connector depth, code escape hatches, AI features, and pricing shape.",
+   "author": "Ahmed Ansari",
+   "published": null,
+   "updated": null,
+   "verified": null,
+   "wordCount": 428,
+   "headings": [
+    "The honest comparison",
+    "The selection questions",
+    "The deeper option"
+   ],
+   "internalLinks": [
+    "/learn/ai-automation-ops/auditability-and-run-history",
+    "/learn/ai-automation-ops/automation-design-lab",
+    "/learn/ai-automation-ops/automation-landscape-deterministic-to-agentic",
+    "/learn/ai-automation-ops/llm-steps-in-automation"
+   ],
+   "externalLinks": [],
+   "structuredData": [
+    "LearningResource",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "features": {
+    "curriculumRegistered": false,
+    "curriculumStatus": null,
+    "codeBlocks": 0,
+    "interactiveCheck": false,
+    "diagram": false,
+    "workedExample": false,
+    "errorCase": false,
+    "sourcesSection": false,
+    "runnableSignals": false,
+    "listItems": 5,
+    "numericClaims": 0,
+    "specFormat": false,
+    "mathDense": false,
+    "linksToPractice": false
+   },
+   "searchIntent": "comparison",
+   "primaryAudience": "ai-engineer",
+   "promisedOutcome": "Choose an automation platform on the dimensions that matter — hosting model, connector depth, code escape hatches, AI features, and pricing shape.",
+   "jobToBeDone": null,
+   "prerequisite": null,
+   "nextAction": "/learn/ai-automation-ops",
+   "practiceType": "none",
+   "freshnessClass": "pricing-sensitive",
+   "freshnessSignals": [
+    "pricing/cost mention",
+    "vendor/tool mentions: n8n, Zapier, Pipedream, Copilot"
+   ],
+   "owner": null,
+   "reviewer": null,
+   "nextReview": null,
+   "disposition": "investigate",
+   "dispositionReason": "live lesson not registered in curriculum",
+   "blockers": [],
+   "analytics": null,
+   "scores": {
+    "intentClarity": 2,
+    "correctnessSources": null,
+    "completeness": 1,
+    "prerequisiteFit": 0,
+    "handsOn": 0,
+    "explanationQuality": 2,
+    "metadata": 2,
+    "linking": 2,
+    "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
     "demand": null
@@ -113362,7 +114039,7 @@
    "scores": {
     "intentClarity": null,
     "correctnessSources": null,
-    "completeness": 0,
+    "completeness": 1,
     "prerequisiteFit": 0,
     "handsOn": null,
     "explanationQuality": null,
@@ -224208,6 +224885,25 @@
   },
   {
    "a": {
+    "route": "/learn/ai-automation-ops/approvals-and-human-in-the-loop",
+    "slug": "ai-automation-ops/approvals-and-human-in-the-loop",
+    "title": "Approvals and human-in-the-loop",
+    "track": "ai-automation-ops"
+   },
+   "b": {
+    "route": "/learn/genai-app-dev/human-in-the-loop-review",
+    "slug": "genai-app-dev/human-in-the-loop-review",
+    "title": "When to Put a Human in the Loop",
+    "track": "genai-app-dev"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": false,
+   "sameTrack": false
+  },
+  {
+   "a": {
     "route": "/learn/structured-outputs/repair-loop-implementation",
     "slug": "structured-outputs/repair-loop-implementation",
     "title": "A Bounded Repair Loop",
@@ -224313,6 +225009,25 @@
     "slug": "classical-ai/search-planning/110-local-search-hill-climbing-plateaus-and-restarts",
     "title": "Local Search: Hill Climbing, Plateaus, and Restarts",
     "track": "classical-ai"
+   },
+   "jaccard": 0.5,
+   "containment": 0.67,
+   "slugStem": false,
+   "alreadyLinked": true,
+   "sameTrack": false
+  },
+  {
+   "a": {
+    "route": "/learn/genai-app-dev/provider-landscape-and-tradeoffs",
+    "slug": "genai-app-dev/provider-landscape-and-tradeoffs",
+    "title": "The Provider Landscape and Its Tradeoffs",
+    "track": "genai-app-dev"
+   },
+   "b": {
+    "route": "/learn/structured-outputs/cross-provider-landscape",
+    "slug": "structured-outputs/cross-provider-landscape",
+    "title": "The Cross-Provider Landscape",
+    "track": "structured-outputs"
    },
    "jaccard": 0.5,
    "containment": 0.67,
@@ -224908,25 +225623,6 @@
    "slugStem": false,
    "alreadyLinked": true,
    "sameTrack": true
-  },
-  {
-   "a": {
-    "route": "/learn/genai-app-dev/provider-landscape-and-tradeoffs",
-    "slug": "genai-app-dev/provider-landscape-and-tradeoffs",
-    "title": "The Provider Landscape and Its Tradeoffs",
-    "track": "genai-app-dev"
-   },
-   "b": {
-    "route": "/learn/structured-outputs/cross-provider-landscape",
-    "slug": "structured-outputs/cross-provider-landscape",
-    "title": "The Cross-Provider Landscape",
-    "track": "structured-outputs"
-   },
-   "jaccard": 0.5,
-   "containment": 0.67,
-   "slugStem": false,
-   "alreadyLinked": true,
-   "sameTrack": false
   },
   {
    "a": {
@@ -225964,6 +226660,60 @@
    "family": "lesson",
    "flags": [
     "certification-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/ai-automation-ops/auditability-and-run-history",
+   "slug": "ai-automation-ops/auditability-and-run-history",
+   "title": "Auditability and run history",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/ai-automation-ops/automation-design-lab",
+   "slug": "ai-automation-ops/automation-design-lab",
+   "title": "Lab: design an ops automation",
+   "family": "lab",
+   "flags": [
+    "pricing-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/ai-automation-ops/automation-landscape-deterministic-to-agentic",
+   "slug": "ai-automation-ops/automation-landscape-deterministic-to-agentic",
+   "title": "The automation landscape: deterministic to agentic",
+   "family": "lesson",
+   "flags": [
+    "release-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/ai-automation-ops/llm-steps-in-automation",
+   "slug": "ai-automation-ops/llm-steps-in-automation",
+   "title": "LLM steps in automation",
+   "family": "lesson",
+   "flags": [
+    "pricing-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/ai-automation-ops/where-ai-belongs-in-a-workflow",
+   "slug": "ai-automation-ops/where-ai-belongs-in-a-workflow",
+   "title": "Where AI belongs in a workflow",
+   "family": "lesson",
+   "flags": [
+    "pricing-sensitive page with no updated/review date"
+   ]
+  },
+  {
+   "route": "/learn/ai-automation-ops/workflow-platforms-compared",
+   "slug": "ai-automation-ops/workflow-platforms-compared",
+   "title": "Workflow platforms compared: n8n, Zapier, Make, Pipedream",
+   "family": "lesson",
+   "flags": [
+    "pricing-sensitive page with no updated/review date"
    ]
   },
   {

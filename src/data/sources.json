@@ -2120,14 +2120,13 @@
  "n8n-docs": {
   "title": "n8n documentation",
   "publisher": "n8n",
-  "accessedAt": "2026-09-15",
-  "url": "https://docs.n8n.io/",
+  "url": "https://docs.n8n.io",
   "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-16",
   "claims": [
-   "workflow automation with AI nodes",
-   "self-hostable"
-  ],
-  "status": "current"
+   "workflow nodes, LLM/agent nodes, self-hosting"
+  ]
  },
  "nemo-guardrails-repo": {
   "title": "NeMo Guardrails repository",
@@ -3101,6 +3100,39 @@
   "accessedAt": "2026-09-16",
   "claims": [
    "speech-to-text models and language support"
+  ]
+ },
+ "zapier-docs": {
+  "title": "Zapier developer docs",
+  "publisher": "Zapier",
+  "url": "https://docs.zapier.com",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-16",
+  "claims": [
+   "platform, triggers, AI features"
+  ]
+ },
+ "make-help": {
+  "title": "Make help center",
+  "publisher": "Make",
+  "url": "https://www.make.com/en/help",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-16",
+  "claims": [
+   "scenarios, modules, AI features — bot-blocked to automated fetch (403)"
+  ]
+ },
+ "pipedream-docs": {
+  "title": "Pipedream documentation",
+  "publisher": "Pipedream",
+  "url": "https://pipedream.com/docs",
+  "type": "official-docs",
+  "status": "current",
+  "accessedAt": "2026-09-16",
+  "claims": [
+   "code-first workflows, triggers, actions"
   ]
  }
 }

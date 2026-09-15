@@ -10653,6 +10653,24 @@ const unsortedTracks: Track[] = [
     ]
   },
   {
+    "id": "ai-automation-ops",
+    "n": "32",
+    "name": "AI Automation for Operations",
+    "group": "Building",
+    "meta": "8 lessons",
+    "summary": "Operations automation that survives contact with reality: the deterministic-to-agentic spectrum, where AI belongs, platform selection, validated LLM steps, approval gates, auditability, and a full design lab.",
+    "nodes": [
+      { "title": "The automation landscape: deterministic to agentic", "slug": "automation-landscape-deterministic-to-agentic", "status": "live" },
+      { "title": "Where AI belongs in a workflow", "slug": "where-ai-belongs-in-a-workflow", "status": "live" },
+      { "title": "Workflow platforms compared: n8n, Zapier, Make, Pipedream", "slug": "workflow-platforms-compared", "status": "live" },
+      { "title": "LLM steps in automation", "slug": "llm-steps-in-automation", "status": "live" },
+      { "title": "Approvals and human-in-the-loop", "slug": "approvals-and-human-in-the-loop", "status": "live" },
+      { "title": "Auditability and run history", "slug": "auditability-and-run-history", "status": "live" },
+      { "title": "Maintaining automations", "slug": "maintaining-automations", "status": "live" },
+      { "title": "Lab: design an ops automation", "slug": "automation-design-lab", "status": "live" }
+    ]
+  },
+  {
     "id": "multilingual-ai",
     "n": "31",
     "name": "Multilingual and Indic AI Engineering",

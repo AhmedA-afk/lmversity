@@ -1,7 +1,7 @@
 {
  "version": 1,
  "next": {
-  "les": 2220,
+  "les": 2228,
   "que": 7,
   "sce": 6,
   "blo": 10,
@@ -10273,6 +10273,38 @@
   "lessons/multilingual-ai/translation-vs-multilingual-native.md": {
    "id": "les-2220",
    "fp": "9a8774bc03e9016681edbced7c98d393c9acb36f"
+  },
+  "lessons/ai-automation-ops/approvals-and-human-in-the-loop.md": {
+   "id": "les-2221",
+   "fp": "4e76e627a7234a70c81cc7de12c6e984cbb8684e"
+  },
+  "lessons/ai-automation-ops/auditability-and-run-history.md": {
+   "id": "les-2222",
+   "fp": "66bce0f1ad8d089fc8459ca8188fe226d94e54ed"
+  },
+  "lessons/ai-automation-ops/automation-design-lab.md": {
+   "id": "les-2223",
+   "fp": "f8b971b73519cdb7c76218efbe50356e933785cf"
+  },
+  "lessons/ai-automation-ops/automation-landscape-deterministic-to-agentic.md": {
+   "id": "les-2224",
+   "fp": "690772f0ce6067557a6b21c492463ce719ce1909"
+  },
+  "lessons/ai-automation-ops/llm-steps-in-automation.md": {
+   "id": "les-2225",
+   "fp": "0de4efaadcafe0b9e9b7742522ca80551ef4a43e"
+  },
+  "lessons/ai-automation-ops/maintaining-automations.md": {
+   "id": "les-2226",
+   "fp": "baceedf074d3b136c25ab0cd2576d4c8c8e149e3"
+  },
+  "lessons/ai-automation-ops/where-ai-belongs-in-a-workflow.md": {
+   "id": "les-2227",
+   "fp": "2e85f90f2bbc4f5e997593c60a9914ac8c210af9"
+  },
+  "lessons/ai-automation-ops/workflow-platforms-compared.md": {
+   "id": "les-2228",
+   "fp": "a130046c2f994e37d0efa117b89e3a288cd27c67"
   }
  },
  "retired": {
