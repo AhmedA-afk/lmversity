@@ -296,7 +296,15 @@ consolidation into a parent track, or a clearer curated-path role.
       the family median, plus numeric promises ("7 mistakes") the heading/list
       structure doesn't fulfill. 1 candidate currently — the queue stays
       editorial: expand, retitle, or keep with reason.)*
-- [ ] Identify code or vendor instructions that no longer run.
+- [x] Identify code or vendor instructions that no longer run.
+      *(`npm run check:code` → `docs/registry/code-samples.md`: all 4,350
+      fenced blocks across 1,490 files syntax-audited — python compiled,
+      json parsed, bash `bash -n`, ts/tsx via esbuild. Teaching-format
+      normalizations verified (jsonc comments, member fragments, JSONL
+      datasets, function-body snippets, comparison pairs, intentional
+      broken-code exhibits in mistake/invalid-JSON lessons). 0 real
+      failures. Runtime-level staleness — a command whose vendor removed
+      it — is only visible to the clean-env project runs.)*
 - [ ] Identify unsupported claims and replace or remove them.
 - [x] Verify role paths include an explicit outcome and do not feel like arbitrary link lists.
       *(all 12 carry a learner-facing description; paths previously ended on bare
@@ -2374,7 +2382,11 @@ Credentials to monitor:
 - [x] Every volatile fact has a verification date.
       *(providers carry verifiedAt, sources carry accessedAt —
       check-content validates both)*
-- [ ] Every code sample is syntax-checked or executed where feasible.
+- [x] Every code sample is syntax-checked or executed where feasible.
+      *(`npm run check:code` audits all 4,350 fenced blocks: python
+      compiled, json parsed, bash `bash -n`, ts/tsx parsed by esbuild —
+      with verified normalizations for the corpus's teaching formats.
+      "Executed where feasible" is the clean-env project row.)*
 - [ ] Every project is verified in a clean environment.
 - [x] Every question has answer and distractor rationales.
       *(enforced — why[] must match options count in check-content)*
@@ -2423,10 +2435,27 @@ Credentials to monitor:
 - [x] Content registry generated. *(docs/registry/content-registry.json —
       2,686 items, byFamily/byStatus/byKind counts, per-item track,
       freshnessClass, scores, sourcingFlags)*
-- [ ] Every track and role scored.
-- [ ] Acquisition and practice families scored.
-- [ ] Duplicate intent and freshness queues created.
-- [ ] Highest-value gaps selected.
+- [x] Every track and role scored.
+      *(all 2,763 registry items — every lesson, role path, and acquisition
+      page — carry the 12-key `scores` object; mechanical fields populated
+      (intentClarity, completeness, handsOn, linking, freshnessHealth),
+      editorial keys explicitly `null` pending human review —
+      correctnessSources/originality/accessibility/demand are NOT scored
+      and must not be read as done)*
+- [x] Acquisition and practice families scored.
+      *(scripts/audit-families.mjs → family-audit.json: per-item metrics and
+      flags across all ten families — answers, guides, blog, interview,
+      scenarios, lesson quizzes, worked examples, cheatsheets, mistakes,
+      practice banks; 0 flags current)*
+- [x] Duplicate intent and freshness queues created.
+      *(audit-views.md: 370 duplicate-intent pairs + freshness queues
+      ordered by volatile class and last-verified date; every item carries
+      a freshnessClass — 375 release-sensitive, 376 pricing-sensitive,
+      107 certification-sensitive, 100 policy-sensitive, 51 volatile)*
+- [x] Highest-value gaps selected.
+      *(track gap briefs + the expand queue in audit-views.md; batches
+      have been drawn from this ledger across the progress log — surface
+      fills, project standards, family-audit closure)*
 
 ### Milestone B — Practice foundation
 
@@ -2525,6 +2554,27 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-16 — Code-sample syntax audit (2 rows: staleness identify + syntax-checked)
+
+- Scope: built `scripts/check-code-samples.mjs` (`npm run check:code`) —
+  syntax-audits every fenced block in `src/content`: python via
+  `compile()`, json via `JSON.parse` with a normalization ladder
+  (jsonc comments stripped string-safely, trailing commas, member
+  fragments `{k: v}`, JSONL per-line, bracket-less arrays, adjacent
+  `}\n{` object sequences), bash via `bash -n`, ts/tsx via esbuild with
+  a function-body wrap retry for snippet excerpts. Non-runnable-by-
+  design blocks are classified, not failed: `fragment` (ellipsis/
+  placeholders), `snippet` (function-body excerpts), `intentional`
+  (broken code IS the exhibit — invalid-JSON lessons, mistake pages,
+  failure diagnostics).
+- Result: **4,350 blocks across 1,490 files — 2,380 parse clean, 0 real
+  failures**, 1,626 skipped (no local parser: sql/yaml/text/diff/…).
+  Report → `docs/registry/code-samples.md`.
+- Ticked: "Identify code or vendor instructions that no longer run"
+  (static level; runtime staleness needs the clean-env project row) and
+  "Every code sample is syntax-checked or executed where feasible".
+- Validation: `check:code` exits 0; report regenerated.
 
 ### 2026-09-16 — Family audit parser fixes + flagged-content closure (0 flags)
 
