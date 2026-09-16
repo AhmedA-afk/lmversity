@@ -16,6 +16,8 @@ faq:
   - q: "Which one should a beginner learn first?"
     a: "Prompt engineering. It's the smaller, faster feedback loop and teaches the vocabulary — instructions, examples, system vs. user roles — that context engineering builds on once a system spans more than one call."
 related:
+  - /answers/what-is-prompt-engineering
+  - /answers/what-is-context-engineering
   - /learn/context-engineering/context-engineering-vs-prompting
   - /learn/context-engineering/the-context-engineering-vs-prompting-line
   - /learn/prompt-engineering

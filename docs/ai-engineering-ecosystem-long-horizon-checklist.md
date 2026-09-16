@@ -2621,6 +2621,27 @@ Credentials to monitor:
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
 
+### 2026-09-16 — Definitional-query gap fill (3 answers)
+
+- Scope: top-of-funnel definitional searches in the product's space.
+  Existing coverage audited against the query set: learn-ai-engineering-
+  free, how-to-become-an-ai-engineer, ai-engineer-roadmap, what-is-rag,
+  what-is-an-ai-agent, what-is-mcp, prompt-engineering-vs-context-
+  engineering — all already live with query-aligned titles.
+- Gaps filled: `what-is-prompt-engineering`, `what-is-context-
+  engineering`, `what-is-a-context-window` — answer-first format, FAQ
+  frontmatter (renders FAQPage JSON-LD), featured placement puts them
+  in the homepage answer rail, related-links wire into both tracks.
+- Cross-links: vs-comparison answer now points to both definitional
+  pages; answers index description names them.
+- Files: 3 new answers, answers index, vs-comparison related list.
+- Validation: `check:content` clean; build 2,816 pages; `check:links`
+  0 dead across 6,012 routes.
+- Deployment: pushed to main.
+- Honest limit: rankings are earned, not set — these pages make the
+  site *eligible* for the queries; position depends on index coverage,
+  impressions, and CTR data only Search Console can show.
+
 ### 2026-09-16 — Sourcing-queue triage: 187 → 138 flags
 
 - Scope: `sourcingFlags` review queue in the content registry — the
