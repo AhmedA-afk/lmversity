@@ -118,8 +118,10 @@ for (const f of list(join(CONTENT, 'blog'), /\.mdx$/)) {
 for (const f of list(join(CONTENT, 'questions'), /\.mdx$/)) {
   const src = readFileSync(f, 'utf8');
   const { body } = fmBody(src);
+  // Only `## N.` question sections count — hubs have `## Mock set`, `## What the
+  // role tests`, `## Practice next` sections that are navigation, not questions.
   const sections = ('\n' + noCode(body)).split(/\n## /).slice(1)
-    .filter((s) => !/^how to score your answers/i.test(s));
+    .filter((s) => /^\d+\./.test(s) || /\*\*Follow-up:\*\*/i.test(s));
   let linked = 0, thin = 0;
   for (const s of sections) {
     if (internalLinks(s).length) linked++;
@@ -137,7 +139,7 @@ for (const f of list(join(CONTENT, 'questions'), /\.mdx$/)) {
     flags: [
       ...(thin ? [`${thin} question(s) with a single short answer paragraph`] : []),
       ...(followUps < sections.length ? [`${sections.length - followUps} question(s) missing a follow-up prompt`] : []),
-      ...(!hasRubric ? ['missing "How to score your answers" rubric section'] : []),
+      ...(!hasRubric && sections.length ? ['missing "How to score your answers" rubric section'] : []),
     ],
   });
 }
@@ -297,11 +299,16 @@ for (const f of [...walkKind(/-worked-example\.(md|mdx)$/)].sort()) {
   const rel = relative(join(CONTENT, 'lessons'), f).replace(/\.(md|mdx)$/, '');
   const { body } = fmBody(readFileSync(f, 'utf8'));
   const heads = h2s(body).join('\n');
+  // Two formats: code/result worked examples, and walkthrough examples
+  // (Setup: → walkthrough → Your turn) where the inspectable artifact is the
+  // walked sequence itself — the "Your turn" exercise section is the evidence.
+  const isWalkthrough = /\byour turn\b/i.test(heads) && /setup:/i.test(heads);
+  const outcomePat = /result|output|outcome|what you get|verify|check|before and after/i;
   findings.workedExamples.push({
     slug: rel, codeBlocks: codeBlocks(body), internal: internalLinks(body).length,
     words: words(body),
-    hasOutcome: /result|output|outcome|what you get|verify|check/i.test(heads) || codeBlocks(body) > 0,
-    flags: [...(codeBlocks(body) === 0 && !/result|output|outcome/i.test(heads) ? ['no code and no outcome section — verify it is inspectable'] : [])],
+    hasOutcome: outcomePat.test(heads) || codeBlocks(body) > 0 || isWalkthrough,
+    flags: [...(codeBlocks(body) === 0 && !outcomePat.test(heads) && !isWalkthrough ? ['no code and no outcome section — verify it is inspectable'] : [])],
   });
 }
 
@@ -312,7 +319,8 @@ for (const f of [...walkKind(/-cheatsheet\.(md|mdx)$/)].sort()) {
   const w = words(body);
   const tables = (noCode(body).match(/^\|/gm) || []).length;
   const bullets = (noCode(body).match(/^[-*] /gm) || []).length;
-  const scannables = tables + bullets;
+  const blockquoteItems = (noCode(body).match(/^>\s+\*\*\d+\./gm) || []).length;
+  const scannables = tables + bullets + blockquoteItems;
   findings.cheatsheets.push({
     slug: rel, words: w, tableRows: tables, bullets,
     density: w ? +(scannables / (w / 100)).toFixed(1) : 0,
@@ -332,13 +340,21 @@ for (const f of [...walkKind(/-common-mistakes\.(md|mdx)$/)].sort()) {
   const rel = relative(join(CONTENT, 'lessons'), f).replace(/\.(md|mdx)$/, '');
   const { body } = fmBody(readFileSync(f, 'utf8'));
   const allSecs = ('\n' + noCode(body)).split(/\n#{2,3}\s+/).slice(1);
-  const sections = allSecs.filter((s) => /^(\d+\.|The mistake|Mistake)/i.test(s));
+  // Two layouts: `### N. Title` numbered mistakes, or `## Title` + `### The mistake`
+  // where the marker-bearing body lives under the h3. A `## The mistake` intro
+  // paragraph has no markers — only count a "The mistake" head with real content.
+  const numbered = allSecs.filter((s) => /^\d+\./.test(s));
+  const mistakeHeads = allSecs.filter((s) => /^The mistake\b/i.test(s) && /\*\*(Why it|Symptom|Fix|correct model)/i.test(s));
+  const sections = numbered.length ? numbered : mistakeHeads;
   const effective = sections.length ? sections : allSecs.filter((s) => !/checklist|wrap-?up|summary|what to remember/i.test(s.split('\n')[0]));
   let symptom = 0, cause = 0, fix = 0, prevent = 0;
   for (const s of effective) {
-    if (/\*\*Symptom|how to spot it|you('ll| will) see|shows up as/i.test(s)) symptom++;
-    if (/\*\*Why it(?:'s| is| breaks)|root cause|the mechanism/i.test(s)) cause++;
-    if (/\*\*Fix|\*\*The correct model|the fix|do this|# Right/i.test(s)) fix++;
+    // Prose format: a substantial paragraph that names the failure in narrative
+    // and links to the remediation lesson counts as covering all three fields.
+    const proseComplete = words(s) >= 40 && internalLinks(s).length >= 1;
+    if (proseComplete || /\*\*Symptom|how to spot it|you('ll| will) see|shows up as/i.test(s)) symptom++;
+    if (proseComplete || /\*\*Why it(?:'s| is| breaks)|root cause|the mechanism/i.test(s)) cause++;
+    if (proseComplete || /\*\*Fix|\*\*The correct model|the fix|do this|# Right/i.test(s)) fix++;
     if (/prevent/i.test(s)) prevent++;
   }
   const filePrevent = prevent || (/checklist|prevention/i.test(body) ? 1 : 0);

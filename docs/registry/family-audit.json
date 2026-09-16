@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-15T09:42:19.008Z",
+ "generatedAt": "2026-09-16T03:53:25.269Z",
  "findings": {
   "answers": [
    {
@@ -44,6 +44,17 @@
     "internal": 5,
     "external": 0,
     "words": 469,
+    "flags": []
+   },
+   {
+    "slug": "certification-vs-portfolio-vs-experience",
+    "firstParaWords": 8,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 4,
+    "internal": 2,
+    "external": 0,
+    "words": 279,
     "flags": []
    },
    {
@@ -121,6 +132,17 @@
     "internal": 8,
     "external": 0,
     "words": 1234,
+    "flags": []
+   },
+   {
+    "slug": "how-to-choose-an-ai-chat-product",
+    "firstParaWords": 23,
+    "answerFirst": true,
+    "faq": 1,
+    "related": 5,
+    "internal": 6,
+    "external": 0,
+    "words": 384,
     "flags": []
    },
    {
@@ -349,9 +371,9 @@
     "answerFirst": true,
     "faq": 1,
     "related": 6,
-    "internal": 13,
+    "internal": 14,
     "external": 0,
-    "words": 926,
+    "words": 934,
     "flags": []
    },
    {
@@ -367,6 +389,18 @@
    }
   ],
   "guides": [
+   {
+    "slug": "add-observability-to-an-ai-feature",
+    "steps": 6,
+    "related": 4,
+    "codeBlocks": 1,
+    "hasFailureSection": false,
+    "hasVerifySection": true,
+    "internal": 5,
+    "external": 0,
+    "words": 412,
+    "flags": []
+   },
    {
     "slug": "build-a-rag-pipeline-over-your-own-documents",
     "steps": 6,
@@ -401,6 +435,30 @@
     "internal": 4,
     "external": 0,
     "words": 725,
+    "flags": []
+   },
+   {
+    "slug": "build-your-first-browser-agent",
+    "steps": 6,
+    "related": 4,
+    "codeBlocks": 1,
+    "hasFailureSection": true,
+    "hasVerifySection": true,
+    "internal": 6,
+    "external": 0,
+    "words": 413,
+    "flags": []
+   },
+   {
+    "slug": "build-your-first-voice-agent",
+    "steps": 6,
+    "related": 4,
+    "codeBlocks": 1,
+    "hasFailureSection": false,
+    "hasVerifySection": false,
+    "internal": 7,
+    "external": 0,
+    "words": 382,
     "flags": []
    },
    {
@@ -440,18 +498,40 @@
     "flags": []
    },
    {
+    "slug": "migrate-between-raw-sdks-and-frameworks",
+    "steps": 6,
+    "related": 3,
+    "codeBlocks": 1,
+    "hasFailureSection": false,
+    "hasVerifySection": false,
+    "internal": 5,
+    "external": 0,
+    "words": 444,
+    "flags": []
+   },
+   {
     "slug": "rag-fine-tuning-or-a-longer-prompt",
     "steps": 5,
     "related": 4,
-    "codeBlocks": 0,
+    "codeBlocks": 1,
     "hasFailureSection": false,
     "hasVerifySection": false,
     "internal": 6,
     "external": 0,
     "words": 918,
-    "flags": [
-     "no code — a build guide without runnable steps"
-    ]
+    "flags": []
+   },
+   {
+    "slug": "run-your-first-local-model-app",
+    "steps": 6,
+    "related": 4,
+    "codeBlocks": 3,
+    "hasFailureSection": false,
+    "hasVerifySection": true,
+    "internal": 4,
+    "external": 0,
+    "words": 356,
+    "flags": []
    },
    {
     "slug": "ship-your-first-ai-feature-to-production",
@@ -480,6 +560,17 @@
   ],
   "blog": [
    {
+    "slug": "agent-skills-vs-prompts-rules-mcp-hooks-subagents",
+    "published": true,
+    "updated": false,
+    "tags": 3,
+    "learnLinks": 2,
+    "internal": 2,
+    "external": 0,
+    "words": 504,
+    "flags": []
+   },
+   {
     "slug": "agents-need-a-harness",
     "published": true,
     "updated": false,
@@ -488,6 +579,28 @@
     "internal": 2,
     "external": 0,
     "words": 191,
+    "flags": []
+   },
+   {
+    "slug": "building-multilingual-and-indic-ai-systems",
+    "published": true,
+    "updated": false,
+    "tags": 3,
+    "learnLinks": 9,
+    "internal": 12,
+    "external": 0,
+    "words": 418,
+    "flags": []
+   },
+   {
+    "slug": "designing-reliable-browser-automation",
+    "published": true,
+    "updated": false,
+    "tags": 3,
+    "learnLinks": 4,
+    "internal": 4,
+    "external": 0,
+    "words": 397,
     "flags": []
    },
    {
@@ -502,6 +615,17 @@
     "flags": []
    },
    {
+    "slug": "how-to-read-a-tool-call-trace",
+    "published": true,
+    "updated": false,
+    "tags": 3,
+    "learnLinks": 1,
+    "internal": 4,
+    "external": 0,
+    "words": 405,
+    "flags": []
+   },
+   {
     "slug": "lmversity-launch-note",
     "published": true,
     "updated": false,
@@ -510,6 +634,28 @@
     "internal": 1,
     "external": 0,
     "words": 220,
+    "flags": []
+   },
+   {
+    "slug": "local-models-privacy-latency-hardware-quality",
+    "published": true,
+    "updated": false,
+    "tags": 3,
+    "learnLinks": 2,
+    "internal": 4,
+    "external": 0,
+    "words": 519,
+    "flags": []
+   },
+   {
+    "slug": "observability-for-multi-step-ai-systems",
+    "published": true,
+    "updated": false,
+    "tags": 3,
+    "learnLinks": 2,
+    "internal": 4,
+    "external": 0,
+    "words": 416,
     "flags": []
    },
    {
@@ -546,6 +692,17 @@
     "flags": []
    },
    {
+    "slug": "teardown-playwright-mcp-tool-contracts",
+    "published": true,
+    "updated": false,
+    "tags": 4,
+    "learnLinks": 2,
+    "internal": 3,
+    "external": 1,
+    "words": 679,
+    "flags": []
+   },
+   {
     "slug": "the-context-window-got-bigger-and-it-did-not-fix-this",
     "published": true,
     "updated": false,
@@ -568,6 +725,28 @@
     "flags": []
    },
    {
+    "slug": "what-ai-coding-agents-can-and-cannot-safely-own",
+    "published": true,
+    "updated": false,
+    "tags": 3,
+    "learnLinks": 3,
+    "internal": 4,
+    "external": 0,
+    "words": 422,
+    "flags": []
+   },
+   {
+    "slug": "what-an-eval-catches-that-a-demo-misses",
+    "published": true,
+    "updated": false,
+    "tags": 3,
+    "learnLinks": 2,
+    "internal": 3,
+    "external": 0,
+    "words": 375,
+    "flags": []
+   },
+   {
     "slug": "why-there-is-no-certificate",
     "published": true,
     "updated": false,
@@ -576,6 +755,17 @@
     "internal": 2,
     "external": 0,
     "words": 520,
+    "flags": []
+   },
+   {
+    "slug": "workflow-agent-or-multi-agent",
+    "published": true,
+    "updated": false,
+    "tags": 3,
+    "learnLinks": 3,
+    "internal": 3,
+    "external": 0,
+    "words": 444,
     "flags": []
    },
    {
@@ -593,87 +783,273 @@
   "interview": [
    {
     "slug": "agents",
-    "questions": 9,
+    "questions": 8,
+    "withLinks": 4,
+    "thinAnswers": 0,
+    "followUps": 8,
+    "hasRubric": true,
+    "words": 1035,
+    "flags": []
+   },
+   {
+    "slug": "ai-foundations",
+    "questions": 7,
+    "withLinks": 2,
+    "thinAnswers": 0,
+    "followUps": 7,
+    "hasRubric": true,
+    "words": 922,
+    "flags": []
+   },
+   {
+    "slug": "ai-system-design",
+    "questions": 8,
+    "withLinks": 3,
+    "thinAnswers": 0,
+    "followUps": 8,
+    "hasRubric": true,
+    "words": 985,
+    "flags": []
+   },
+   {
+    "slug": "behavioral-and-project-defense",
+    "questions": 7,
+    "withLinks": 2,
+    "thinAnswers": 0,
+    "followUps": 7,
+    "hasRubric": true,
+    "words": 921,
+    "flags": []
+   },
+   {
+    "slug": "classical-ml",
+    "questions": 7,
+    "withLinks": 0,
+    "thinAnswers": 0,
+    "followUps": 7,
+    "hasRubric": true,
+    "words": 811,
+    "flags": []
+   },
+   {
+    "slug": "context-engineering",
+    "questions": 7,
+    "withLinks": 5,
+    "thinAnswers": 0,
+    "followUps": 7,
+    "hasRubric": true,
+    "words": 914,
+    "flags": []
+   },
+   {
+    "slug": "deep-learning",
+    "questions": 7,
+    "withLinks": 0,
+    "thinAnswers": 0,
+    "followUps": 7,
+    "hasRubric": true,
+    "words": 876,
+    "flags": []
+   },
+   {
+    "slug": "evals",
+    "questions": 8,
+    "withLinks": 3,
+    "thinAnswers": 0,
+    "followUps": 8,
+    "hasRubric": true,
+    "words": 991,
+    "flags": []
+   },
+   {
+    "slug": "interview-modes",
+    "questions": 0,
+    "withLinks": 0,
+    "thinAnswers": 0,
+    "followUps": 0,
+    "hasRubric": false,
+    "words": 504,
+    "flags": []
+   },
+   {
+    "slug": "llm-basics",
+    "questions": 8,
     "withLinks": 5,
     "thinAnswers": 0,
     "followUps": 8,
     "hasRubric": true,
-    "words": 776,
-    "flags": [
-     "1 question(s) missing a follow-up prompt"
-    ]
+    "words": 995,
+    "flags": []
    },
    {
-    "slug": "ai-system-design",
-    "questions": 9,
-    "withLinks": 4,
+    "slug": "maths-foundations",
+    "questions": 7,
+    "withLinks": 0,
+    "thinAnswers": 0,
+    "followUps": 7,
+    "hasRubric": true,
+    "words": 832,
+    "flags": []
+   },
+   {
+    "slug": "mcp",
+    "questions": 8,
+    "withLinks": 3,
     "thinAnswers": 0,
     "followUps": 8,
     "hasRubric": true,
-    "words": 748,
-    "flags": [
-     "1 question(s) missing a follow-up prompt"
-    ]
+    "words": 972,
+    "flags": []
    },
    {
-    "slug": "evals",
-    "questions": 9,
-    "withLinks": 4,
+    "slug": "production-and-observability",
+    "questions": 7,
+    "withLinks": 5,
     "thinAnswers": 0,
-    "followUps": 8,
+    "followUps": 7,
     "hasRubric": true,
-    "words": 753,
-    "flags": [
-     "1 question(s) missing a follow-up prompt"
-    ]
+    "words": 893,
+    "flags": []
    },
    {
-    "slug": "llm-basics",
-    "questions": 9,
+    "slug": "prompt-engineering",
+    "questions": 8,
     "withLinks": 6,
     "thinAnswers": 0,
     "followUps": 8,
     "hasRubric": true,
-    "words": 785,
-    "flags": [
-     "1 question(s) missing a follow-up prompt"
-    ]
+    "words": 986,
+    "flags": []
    },
    {
-    "slug": "mcp",
-    "questions": 9,
+    "slug": "rag",
+    "questions": 8,
     "withLinks": 4,
     "thinAnswers": 0,
     "followUps": 8,
     "hasRubric": true,
-    "words": 713,
-    "flags": [
-     "1 question(s) missing a follow-up prompt"
-    ]
+    "words": 930,
+    "flags": []
    },
    {
-    "slug": "prompt-engineering",
-    "questions": 9,
-    "withLinks": 7,
+    "slug": "role-ai-engineer",
+    "questions": 0,
+    "withLinks": 0,
     "thinAnswers": 0,
-    "followUps": 8,
-    "hasRubric": true,
-    "words": 752,
-    "flags": [
-     "1 question(s) missing a follow-up prompt"
-    ]
+    "followUps": 0,
+    "hasRubric": false,
+    "words": 348,
+    "flags": []
    },
    {
-    "slug": "rag",
-    "questions": 9,
-    "withLinks": 5,
+    "slug": "role-ai-platform-engineer",
+    "questions": 0,
+    "withLinks": 0,
     "thinAnswers": 0,
-    "followUps": 8,
+    "followUps": 0,
+    "hasRubric": false,
+    "words": 387,
+    "flags": []
+   },
+   {
+    "slug": "role-applied-ai-engineer",
+    "questions": 0,
+    "withLinks": 0,
+    "thinAnswers": 0,
+    "followUps": 0,
+    "hasRubric": false,
+    "words": 336,
+    "flags": []
+   },
+   {
+    "slug": "role-data-scientist",
+    "questions": 0,
+    "withLinks": 0,
+    "thinAnswers": 0,
+    "followUps": 0,
+    "hasRubric": false,
+    "words": 382,
+    "flags": []
+   },
+   {
+    "slug": "role-designer",
+    "questions": 0,
+    "withLinks": 0,
+    "thinAnswers": 0,
+    "followUps": 0,
+    "hasRubric": false,
+    "words": 428,
+    "flags": []
+   },
+   {
+    "slug": "role-forward-deployed-engineer",
+    "questions": 0,
+    "withLinks": 0,
+    "thinAnswers": 0,
+    "followUps": 0,
+    "hasRubric": false,
+    "words": 390,
+    "flags": []
+   },
+   {
+    "slug": "role-ml-engineer",
+    "questions": 0,
+    "withLinks": 0,
+    "thinAnswers": 0,
+    "followUps": 0,
+    "hasRubric": false,
+    "words": 357,
+    "flags": []
+   },
+   {
+    "slug": "role-product-manager",
+    "questions": 0,
+    "withLinks": 0,
+    "thinAnswers": 0,
+    "followUps": 0,
+    "hasRubric": false,
+    "words": 410,
+    "flags": []
+   },
+   {
+    "slug": "role-security-engineer",
+    "questions": 0,
+    "withLinks": 0,
+    "thinAnswers": 0,
+    "followUps": 0,
+    "hasRubric": false,
+    "words": 428,
+    "flags": []
+   },
+   {
+    "slug": "safety-and-security",
+    "questions": 7,
+    "withLinks": 4,
+    "thinAnswers": 0,
+    "followUps": 7,
     "hasRubric": true,
-    "words": 721,
-    "flags": [
-     "1 question(s) missing a follow-up prompt"
-    ]
+    "words": 951,
+    "flags": []
+   },
+   {
+    "slug": "structured-outputs",
+    "questions": 7,
+    "withLinks": 1,
+    "thinAnswers": 0,
+    "followUps": 7,
+    "hasRubric": true,
+    "words": 880,
+    "flags": []
+   },
+   {
+    "slug": "take-home-exercises",
+    "questions": 0,
+    "withLinks": 0,
+    "thinAnswers": 0,
+    "followUps": 0,
+    "hasRubric": false,
+    "words": 479,
+    "flags": []
    }
   ],
   "scenarios": [
@@ -689,7 +1065,10 @@
      "What went wrong",
      "Failure injection",
      "What to test first",
-     "Go further"
+     "Go further",
+     "Variants",
+     "Two ways to run this",
+     "Evaluation rubric"
     ],
     "covered": [
      "situation",
@@ -704,11 +1083,11 @@
     ],
     "missing": [],
     "internal": 4,
-    "words": 656,
+    "words": 886,
     "flags": []
    },
    {
-    "slug": "document-qa",
+    "slug": "browser-agent-permissions",
     "sections": [
      "The situation",
      "Constraints",
@@ -717,65 +1096,10 @@
      "The first decision",
      "Guided reasoning",
      "What went wrong",
-     "What to test first",
-     "Go further"
-    ],
-    "covered": [
-     "situation",
-     "constraints",
-     "missingInfo",
-     "options",
-     "decision",
-     "implementation",
-     "evaluation",
-     "failureInjection",
-     "postmortem"
-    ],
-    "missing": [],
-    "internal": 4,
-    "words": 529,
-    "flags": []
-   },
-   {
-    "slug": "eval-release",
-    "sections": [
-     "The situation",
-     "Constraints",
-     "Options on the table",
-     "The first decision",
-     "Guided reasoning",
-     "What went wrong",
-     "What to test first",
-     "Go further"
-    ],
-    "covered": [
-     "situation",
-     "constraints",
-     "missingInfo",
-     "options",
-     "decision",
-     "implementation",
-     "evaluation",
-     "failureInjection",
-     "postmortem"
-    ],
-    "missing": [],
-    "internal": 4,
-    "words": 451,
-    "flags": []
-   },
-   {
-    "slug": "mcp-team-server",
-    "sections": [
-     "The situation",
-     "Constraints",
-     "Options on the table",
-     "The first decision",
-     "Guided reasoning",
-     "What went wrong",
      "Failure injection",
-     "What to test first",
-     "Go further"
+     "Variants",
+     "Two ways to run this",
+     "Evaluation rubric"
     ],
     "covered": [
      "situation",
@@ -790,7 +1114,226 @@
     ],
     "missing": [],
     "internal": 3,
-    "words": 584,
+    "words": 874,
+    "flags": []
+   },
+   {
+    "slug": "coding-agent-rollout",
+    "sections": [
+     "The situation",
+     "Constraints",
+     "What you don't know",
+     "Options on the table",
+     "The first decision",
+     "Guided reasoning",
+     "What went wrong",
+     "Failure injection",
+     "Variants",
+     "Two ways to run this",
+     "Evaluation rubric"
+    ],
+    "covered": [
+     "situation",
+     "constraints",
+     "missingInfo",
+     "options",
+     "decision",
+     "implementation",
+     "evaluation",
+     "failureInjection",
+     "postmortem"
+    ],
+    "missing": [],
+    "internal": 2,
+    "words": 893,
+    "flags": []
+   },
+   {
+    "slug": "document-qa",
+    "sections": [
+     "The situation",
+     "Constraints",
+     "What you don't know",
+     "Options on the table",
+     "The first decision",
+     "Guided reasoning",
+     "What went wrong",
+     "What to test first",
+     "Go further",
+     "Variants",
+     "Two ways to run this",
+     "Evaluation rubric"
+    ],
+    "covered": [
+     "situation",
+     "constraints",
+     "missingInfo",
+     "options",
+     "decision",
+     "implementation",
+     "evaluation",
+     "failureInjection",
+     "postmortem"
+    ],
+    "missing": [],
+    "internal": 4,
+    "words": 748,
+    "flags": []
+   },
+   {
+    "slug": "eval-release",
+    "sections": [
+     "The situation",
+     "Constraints",
+     "Options on the table",
+     "The first decision",
+     "Guided reasoning",
+     "What went wrong",
+     "What to test first",
+     "Go further",
+     "Variants",
+     "Two ways to run this",
+     "Evaluation rubric"
+    ],
+    "covered": [
+     "situation",
+     "constraints",
+     "missingInfo",
+     "options",
+     "decision",
+     "implementation",
+     "evaluation",
+     "failureInjection",
+     "postmortem"
+    ],
+    "missing": [],
+    "internal": 4,
+    "words": 685,
+    "flags": []
+   },
+   {
+    "slug": "incident-response",
+    "sections": [
+     "The situation",
+     "Constraints",
+     "What you don't know",
+     "Options on the table",
+     "The first decision",
+     "Guided reasoning",
+     "What went wrong",
+     "Failure injection",
+     "Variants",
+     "Two ways to run this",
+     "Evaluation rubric"
+    ],
+    "covered": [
+     "situation",
+     "constraints",
+     "missingInfo",
+     "options",
+     "decision",
+     "implementation",
+     "evaluation",
+     "failureInjection",
+     "postmortem"
+    ],
+    "missing": [],
+    "internal": 2,
+    "words": 869,
+    "flags": []
+   },
+   {
+    "slug": "mcp-team-server",
+    "sections": [
+     "The situation",
+     "Constraints",
+     "Options on the table",
+     "The first decision",
+     "Guided reasoning",
+     "What went wrong",
+     "Failure injection",
+     "What to test first",
+     "Go further",
+     "Variants",
+     "Two ways to run this",
+     "Evaluation rubric"
+    ],
+    "covered": [
+     "situation",
+     "constraints",
+     "missingInfo",
+     "options",
+     "decision",
+     "implementation",
+     "evaluation",
+     "failureInjection",
+     "postmortem"
+    ],
+    "missing": [],
+    "internal": 3,
+    "words": 809,
+    "flags": []
+   },
+   {
+    "slug": "rag-migration",
+    "sections": [
+     "The situation",
+     "Constraints",
+     "What you don't know",
+     "Options on the table",
+     "The first decision",
+     "Guided reasoning",
+     "What went wrong",
+     "Failure injection",
+     "Variants",
+     "Two ways to run this",
+     "Evaluation rubric"
+    ],
+    "covered": [
+     "situation",
+     "constraints",
+     "missingInfo",
+     "options",
+     "decision",
+     "implementation",
+     "evaluation",
+     "failureInjection",
+     "postmortem"
+    ],
+    "missing": [],
+    "internal": 2,
+    "words": 885,
+    "flags": []
+   },
+   {
+    "slug": "regulated-decision-support",
+    "sections": [
+     "The situation",
+     "Constraints",
+     "What you don't know",
+     "Options on the table",
+     "The first decision",
+     "Guided reasoning",
+     "What went wrong",
+     "Failure injection",
+     "Variants",
+     "Two ways to run this",
+     "Evaluation rubric"
+    ],
+    "covered": [
+     "situation",
+     "constraints",
+     "missingInfo",
+     "options",
+     "decision",
+     "implementation",
+     "evaluation",
+     "failureInjection",
+     "postmortem"
+    ],
+    "missing": [],
+    "internal": 2,
+    "words": 896,
     "flags": []
    },
    {
@@ -804,7 +1347,10 @@
      "What went wrong",
      "Failure injection",
      "What to test first",
-     "Go further"
+     "Go further",
+     "Variants",
+     "Two ways to run this",
+     "Evaluation rubric"
     ],
     "covered": [
      "situation",
@@ -819,7 +1365,7 @@
     ],
     "missing": [],
     "internal": 4,
-    "words": 545,
+    "words": 772,
     "flags": []
    },
    {
@@ -833,7 +1379,10 @@
      "What went wrong",
      "Failure injection",
      "What to test first",
-     "Go further"
+     "Go further",
+     "Variants",
+     "Two ways to run this",
+     "Evaluation rubric"
     ],
     "covered": [
      "situation",
@@ -848,7 +1397,38 @@
     ],
     "missing": [],
     "internal": 4,
-    "words": 601,
+    "words": 841,
+    "flags": []
+   },
+   {
+    "slug": "voice-agent-latency",
+    "sections": [
+     "The situation",
+     "Constraints",
+     "What you don't know",
+     "Options on the table",
+     "The first decision",
+     "Guided reasoning",
+     "What went wrong",
+     "Failure injection",
+     "Variants",
+     "Two ways to run this",
+     "Evaluation rubric"
+    ],
+    "covered": [
+     "situation",
+     "constraints",
+     "missingInfo",
+     "options",
+     "decision",
+     "implementation",
+     "evaluation",
+     "failureInjection",
+     "postmortem"
+    ],
+    "missing": [],
+    "internal": 3,
+    "words": 890,
     "flags": []
    }
   ],
@@ -936,9 +1516,481 @@
     "avgOptions": "4.0",
     "flags": [],
     "firstAnswersIndex0or1": 0.5
+   },
+   {
+    "id": "classical-ai",
+    "questions": 8,
+    "answerPositions": {
+     "0": 4,
+     "1": 4
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "machine-learning",
+    "questions": 8,
+    "answerPositions": {
+     "1": 8
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "deep-learning",
+    "questions": 8,
+    "answerPositions": {
+     "1": 8
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "responsible-ai",
+    "questions": 8,
+    "answerPositions": {
+     "1": 8
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "production",
+    "questions": 8,
+    "answerPositions": {
+     "1": 8
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "agentic-ai",
+    "questions": 8,
+    "answerPositions": {
+     "0": 1,
+     "1": 7
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "harness-design",
+    "questions": 8,
+    "answerPositions": {
+     "1": 8
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "fine-tuning",
+    "questions": 8,
+    "answerPositions": {
+     "0": 1,
+     "1": 7
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "ai-literacy",
+    "questions": 8,
+    "answerPositions": {
+     "0": 2,
+     "1": 6
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "maths-foundations",
+    "questions": 8,
+    "answerPositions": {
+     "0": 8
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "3.5",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "python-data-apis",
+    "questions": 8,
+    "answerPositions": {
+     "1": 8
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "llm-foundations",
+    "questions": 8,
+    "answerPositions": {
+     "0": 5,
+     "1": 3
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "context-engineering",
+    "questions": 8,
+    "answerPositions": {
+     "1": 8
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "structured-outputs",
+    "questions": 8,
+    "answerPositions": {
+     "1": 8
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "hallucinations",
+    "questions": 8,
+    "answerPositions": {
+     "0": 1,
+     "1": 7
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "genai-app-dev",
+    "questions": 8,
+    "answerPositions": {
+     "1": 8
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "tools-function-calling",
+    "questions": 8,
+    "answerPositions": {
+     "1": 8
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "cli-agents",
+    "questions": 8,
+    "answerPositions": {
+     "1": 8
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "ai-automation-ops",
+    "questions": 8,
+    "answerPositions": {
+     "1": 8
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "multilingual-ai",
+    "questions": 8,
+    "answerPositions": {
+     "0": 1,
+     "1": 7
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "multimodal-ai",
+    "questions": 8,
+    "answerPositions": {
+     "1": 8
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "voice-ai",
+    "questions": 8,
+    "answerPositions": {
+     "1": 8
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "web-agents",
+    "questions": 8,
+    "answerPositions": {
+     "1": 8
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "agent-skills",
+    "questions": 8,
+    "answerPositions": {
+     "1": 8
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "llm-security",
+    "questions": 8,
+    "answerPositions": {
+     "1": 8
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "local-inference",
+    "questions": 8,
+    "answerPositions": {
+     "1": 8
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "agent-frameworks",
+    "questions": 8,
+    "answerPositions": {
+     "1": 8
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "ai-for-designers",
+    "questions": 8,
+    "answerPositions": {
+     "1": 8
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "maths-derivations",
+    "questions": 8,
+    "answerPositions": {
+     "0": 1,
+     "1": 7
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "ml-diagnosis",
+    "questions": 8,
+    "answerPositions": {
+     "1": 8
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "rag-evaluation",
+    "questions": 8,
+    "answerPositions": {
+     "1": 8
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "agent-traces",
+    "questions": 8,
+    "answerPositions": {
+     "1": 8
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "mcp-security",
+    "questions": 8,
+    "answerPositions": {
+     "1": 8
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "structured-output-failures",
+    "questions": 8,
+    "answerPositions": {
+     "1": 8
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "context-debugging",
+    "questions": 8,
+    "answerPositions": {
+     "1": 8
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
+   },
+   {
+    "id": "production-incidents",
+    "questions": 8,
+    "answerPositions": {
+     "1": 8
+    },
+    "withLessonLinks": 8,
+    "avgOptions": "4.0",
+    "flags": [],
+    "firstAnswersIndex0or1": 1
    }
   ],
   "lessonQuizzes": [
+   {
+    "slug": "ai-for-designers/ai-product-design-foundations-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 6,
+    "words": 784,
+    "flags": []
+   },
+   {
+    "slug": "ai-for-designers/behavior-before-interface-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 6,
+    "words": 722,
+    "flags": []
+   },
+   {
+    "slug": "ai-for-designers/prototype-and-evaluation-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 5,
+    "words": 667,
+    "flags": []
+   },
+   {
+    "slug": "ai-for-designers/trust-and-recovery-quiz",
+    "questions": 6,
+    "optCounts": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "answersMarked": 6,
+    "perOptionRationale": 6,
+    "internal": 6,
+    "words": 648,
+    "flags": []
+   },
    {
     "slug": "ai-foundations/capabilities-and-eval-quiz",
     "questions": 6,
@@ -1334,7 +2386,7 @@
     "answersMarked": 6,
     "perOptionRationale": 6,
     "internal": 6,
-    "words": 1338,
+    "words": 1497,
     "flags": []
    },
    {
@@ -1549,7 +2601,7 @@
     ],
     "answersMarked": 10,
     "perOptionRationale": 10,
-    "internal": 12,
+    "internal": 13,
     "words": 1575,
     "flags": []
    },
@@ -1569,7 +2621,7 @@
     "answersMarked": 8,
     "perOptionRationale": 8,
     "internal": 5,
-    "words": 1810,
+    "words": 1976,
     "flags": []
    },
    {
@@ -1900,7 +2952,7 @@
     "answersMarked": 10,
     "perOptionRationale": 10,
     "internal": 7,
-    "words": 1886,
+    "words": 2051,
     "flags": []
    },
    {
@@ -2226,7 +3278,7 @@
     "answersMarked": 6,
     "perOptionRationale": 6,
     "internal": 9,
-    "words": 1386,
+    "words": 1545,
     "flags": []
    },
    {
@@ -2457,6 +3509,70 @@
   ],
   "workedExamples": [
    {
+    "slug": "agent-frameworks/framework-leak-worked-example",
+    "codeBlocks": 0,
+    "internal": 3,
+    "words": 492,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "agent-skills/skill-authoring-worked-example",
+    "codeBlocks": 1,
+    "internal": 3,
+    "words": 366,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "agentic-ai/agent-run-worked-example",
+    "codeBlocks": 0,
+    "internal": 4,
+    "words": 417,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "ai-automation-ops/automation-ops-worked-example",
+    "codeBlocks": 0,
+    "internal": 4,
+    "words": 344,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "ai-for-designers/ai-feature-state-model-worked-example",
+    "codeBlocks": 0,
+    "internal": 5,
+    "words": 396,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "ai-for-designers/choosing-where-ai-belongs-worked-example",
+    "codeBlocks": 0,
+    "internal": 4,
+    "words": 521,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "ai-for-designers/test-an-ai-prototype-worked-example",
+    "codeBlocks": 0,
+    "internal": 4,
+    "words": 405,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "ai-for-designers/trust-patterns-worked-example",
+    "codeBlocks": 0,
+    "internal": 6,
+    "words": 358,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
     "slug": "ai-foundations/agents-vs-chatbots-worked-example",
     "codeBlocks": 14,
     "internal": 8,
@@ -2545,6 +3661,102 @@
     "flags": []
    },
    {
+    "slug": "classical-ai/a-star-worked-example",
+    "codeBlocks": 0,
+    "internal": 3,
+    "words": 403,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "cli-agents/cli-agent-workflow-worked-example",
+    "codeBlocks": 1,
+    "internal": 3,
+    "words": 362,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "context-engineering/context-budget-worked-example",
+    "codeBlocks": 0,
+    "internal": 3,
+    "words": 401,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "deep-learning/vanishing-gradient-worked-example",
+    "codeBlocks": 0,
+    "internal": 3,
+    "words": 362,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "evals-red-teaming/eval-regression-worked-example",
+    "codeBlocks": 0,
+    "internal": 3,
+    "words": 354,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "fine-tuning/fine-tune-regression-worked-example",
+    "codeBlocks": 0,
+    "internal": 3,
+    "words": 370,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "genai-app-dev/genai-feature-worked-example",
+    "codeBlocks": 0,
+    "internal": 3,
+    "words": 461,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "harness-design/harness-boundary-worked-example",
+    "codeBlocks": 0,
+    "internal": 3,
+    "words": 449,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "llm-security/prompt-injection-worked-example",
+    "codeBlocks": 0,
+    "internal": 3,
+    "words": 418,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "local-inference/local-inference-worked-example",
+    "codeBlocks": 0,
+    "internal": 3,
+    "words": 390,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "machine-learning/leakage-worked-example",
+    "codeBlocks": 0,
+    "internal": 3,
+    "words": 443,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "maths-foundations/gradient-descent-worked-example",
+    "codeBlocks": 6,
+    "internal": 3,
+    "words": 269,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
     "slug": "mcp/mcp-auth-worked-example",
     "codeBlocks": 6,
     "internal": 2,
@@ -2593,10 +3805,42 @@
     "flags": []
    },
    {
+    "slug": "multilingual-ai/multilingual-eval-worked-example",
+    "codeBlocks": 0,
+    "internal": 3,
+    "words": 361,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "multimodal-ai/document-pipeline-worked-example",
+    "codeBlocks": 0,
+    "internal": 3,
+    "words": 450,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "production/incident-triage-worked-example",
+    "codeBlocks": 0,
+    "internal": 3,
+    "words": 411,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
     "slug": "prompt-engineering/structured-prompt-worked-example",
     "codeBlocks": 3,
     "internal": 7,
     "words": 694,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "python-data-apis/api-pipeline-worked-example",
+    "codeBlocks": 1,
+    "internal": 3,
+    "words": 309,
     "hasOutcome": true,
     "flags": []
    },
@@ -2649,6 +3893,14 @@
     "flags": []
    },
    {
+    "slug": "responsible-ai/contestability-worked-example",
+    "codeBlocks": 0,
+    "internal": 3,
+    "words": 449,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
     "slug": "structured-outputs/from-prose-to-parsed-worked-example",
     "codeBlocks": 6,
     "internal": 8,
@@ -2687,9 +3939,79 @@
     "words": 667,
     "hasOutcome": true,
     "flags": []
+   },
+   {
+    "slug": "voice-ai/voice-latency-worked-example",
+    "codeBlocks": 0,
+    "internal": 3,
+    "words": 332,
+    "hasOutcome": true,
+    "flags": []
+   },
+   {
+    "slug": "web-agents/web-agent-boundary-worked-example",
+    "codeBlocks": 0,
+    "internal": 3,
+    "words": 432,
+    "hasOutcome": true,
+    "flags": []
    }
   ],
   "cheatsheets": [
+   {
+    "slug": "agent-frameworks/framework-cheatsheet",
+    "words": 348,
+    "tableRows": 12,
+    "bullets": 12,
+    "density": 6.9,
+    "internal": 4,
+    "flags": []
+   },
+   {
+    "slug": "agent-skills/agent-skills-cheatsheet",
+    "words": 330,
+    "tableRows": 7,
+    "bullets": 16,
+    "density": 7,
+    "internal": 3,
+    "flags": []
+   },
+   {
+    "slug": "agentic-ai/agentic-ai-cheatsheet",
+    "words": 310,
+    "tableRows": 7,
+    "bullets": 17,
+    "density": 7.7,
+    "internal": 8,
+    "flags": []
+   },
+   {
+    "slug": "ai-automation-ops/automation-ops-cheatsheet",
+    "words": 309,
+    "tableRows": 7,
+    "bullets": 14,
+    "density": 6.8,
+    "internal": 4,
+    "flags": []
+   },
+   {
+    "slug": "ai-for-designers/ai-interaction-state-cheatsheet",
+    "words": 289,
+    "tableRows": 0,
+    "bullets": 10,
+    "density": 3.5,
+    "internal": 3,
+    "flags": []
+   },
+   {
+    "slug": "ai-foundations/model-selection-cheatsheet",
+    "words": 312,
+    "tableRows": 7,
+    "bullets": 14,
+    "density": 6.7,
+    "internal": 7,
+    "flags": []
+   },
    {
     "slug": "ai-literacy/ai-literacy-master-cheatsheet",
     "words": 835,
@@ -2704,11 +4026,27 @@
     "words": 708,
     "tableRows": 6,
     "bullets": 6,
-    "density": 1.7,
+    "density": 2.1,
     "internal": 9,
-    "flags": [
-     "low list/table density — check scanability"
-    ]
+    "flags": []
+   },
+   {
+    "slug": "classical-ai/classical-ai-cheatsheet",
+    "words": 351,
+    "tableRows": 7,
+    "bullets": 17,
+    "density": 6.8,
+    "internal": 3,
+    "flags": []
+   },
+   {
+    "slug": "cli-agents/cli-agents-cheatsheet",
+    "words": 320,
+    "tableRows": 0,
+    "bullets": 21,
+    "density": 6.6,
+    "internal": 7,
+    "flags": []
    },
    {
     "slug": "context-engineering/context-engineering-master-cheatsheet",
@@ -2725,7 +4063,7 @@
     "tableRows": 18,
     "bullets": 5,
     "density": 3.8,
-    "internal": 9,
+    "internal": 10,
     "flags": []
    },
    {
@@ -2752,7 +4090,7 @@
     "tableRows": 20,
     "bullets": 10,
     "density": 4.4,
-    "internal": 10,
+    "internal": 11,
     "flags": []
    },
    {
@@ -2771,6 +4109,33 @@
     "bullets": 6,
     "density": 3.1,
     "internal": 10,
+    "flags": []
+   },
+   {
+    "slug": "deep-learning/deep-learning-cheatsheet",
+    "words": 347,
+    "tableRows": 6,
+    "bullets": 13,
+    "density": 5.5,
+    "internal": 3,
+    "flags": []
+   },
+   {
+    "slug": "evals-red-teaming/eval-cheatsheet",
+    "words": 325,
+    "tableRows": 7,
+    "bullets": 16,
+    "density": 7.1,
+    "internal": 3,
+    "flags": []
+   },
+   {
+    "slug": "fine-tuning/fine-tuning-cheatsheet",
+    "words": 357,
+    "tableRows": 7,
+    "bullets": 13,
+    "density": 5.6,
+    "internal": 4,
     "flags": []
    },
    {
@@ -2882,6 +4247,60 @@
     "flags": []
    },
    {
+    "slug": "harness-design/harness-cheatsheet",
+    "words": 306,
+    "tableRows": 8,
+    "bullets": 20,
+    "density": 9.2,
+    "internal": 8,
+    "flags": []
+   },
+   {
+    "slug": "llm-foundations/llm-foundations-cheatsheet",
+    "words": 314,
+    "tableRows": 7,
+    "bullets": 17,
+    "density": 7.6,
+    "internal": 5,
+    "flags": []
+   },
+   {
+    "slug": "llm-security/llm-security-cheatsheet",
+    "words": 351,
+    "tableRows": 9,
+    "bullets": 18,
+    "density": 7.7,
+    "internal": 7,
+    "flags": []
+   },
+   {
+    "slug": "local-inference/local-inference-cheatsheet",
+    "words": 351,
+    "tableRows": 14,
+    "bullets": 12,
+    "density": 7.4,
+    "internal": 4,
+    "flags": []
+   },
+   {
+    "slug": "machine-learning/ml-cheatsheet",
+    "words": 338,
+    "tableRows": 6,
+    "bullets": 14,
+    "density": 5.9,
+    "internal": 3,
+    "flags": []
+   },
+   {
+    "slug": "maths-foundations/maths-cheatsheet",
+    "words": 338,
+    "tableRows": 18,
+    "bullets": 5,
+    "density": 6.8,
+    "internal": 5,
+    "flags": []
+   },
+   {
     "slug": "mcp/mcp-auth-cheatsheet",
     "words": 310,
     "tableRows": 19,
@@ -2936,6 +4355,33 @@
     "flags": []
    },
    {
+    "slug": "multilingual-ai/multilingual-cheatsheet",
+    "words": 318,
+    "tableRows": 6,
+    "bullets": 13,
+    "density": 6,
+    "internal": 4,
+    "flags": []
+   },
+   {
+    "slug": "multimodal-ai/multimodal-cheatsheet",
+    "words": 321,
+    "tableRows": 7,
+    "bullets": 13,
+    "density": 6.2,
+    "internal": 4,
+    "flags": []
+   },
+   {
+    "slug": "production/production-cheatsheet",
+    "words": 350,
+    "tableRows": 10,
+    "bullets": 18,
+    "density": 8,
+    "internal": 7,
+    "flags": []
+   },
+   {
     "slug": "prompt-engineering/decomposition-output-cheatsheet",
     "words": 1004,
     "tableRows": 16,
@@ -2978,6 +4424,15 @@
     "bullets": 13,
     "density": 5.3,
     "internal": 8,
+    "flags": []
+   },
+   {
+    "slug": "python-data-apis/python-data-apis-cheatsheet",
+    "words": 343,
+    "tableRows": 8,
+    "bullets": 14,
+    "density": 6.4,
+    "internal": 3,
     "flags": []
    },
    {
@@ -3032,6 +4487,15 @@
     "bullets": 15,
     "density": 2.4,
     "internal": 6,
+    "flags": []
+   },
+   {
+    "slug": "responsible-ai/responsible-ai-cheatsheet",
+    "words": 320,
+    "tableRows": 8,
+    "bullets": 10,
+    "density": 5.6,
+    "internal": 3,
     "flags": []
    },
    {
@@ -3123,9 +4587,49 @@
     "density": 5,
     "internal": 5,
     "flags": []
+   },
+   {
+    "slug": "voice-ai/voice-ai-cheatsheet",
+    "words": 371,
+    "tableRows": 6,
+    "bullets": 17,
+    "density": 6.2,
+    "internal": 4,
+    "flags": []
+   },
+   {
+    "slug": "web-agents/web-agents-cheatsheet",
+    "words": 377,
+    "tableRows": 7,
+    "bullets": 16,
+    "density": 6.1,
+    "internal": 4,
+    "flags": []
    }
   ],
   "mistakes": [
+   {
+    "slug": "ai-for-designers/ai-product-design-common-mistakes",
+    "mistakes": 5,
+    "symptom": 5,
+    "cause": 5,
+    "fix": 5,
+    "prevent": 0,
+    "words": 349,
+    "internal": 10,
+    "flags": []
+   },
+   {
+    "slug": "ai-for-designers/ai-prototype-testing-common-mistakes",
+    "mistakes": 4,
+    "symptom": 4,
+    "cause": 4,
+    "fix": 4,
+    "prevent": 1,
+    "words": 308,
+    "internal": 6,
+    "flags": []
+   },
    {
     "slug": "context-engineering/budgeting-common-mistakes",
     "mistakes": 6,
@@ -3145,7 +4649,7 @@
     "fix": 6,
     "prevent": 1,
     "words": 979,
-    "internal": 9,
+    "internal": 10,
     "flags": []
    },
    {
@@ -3227,18 +4731,14 @@
    },
    {
     "slug": "python-data-apis/api-calling-common-mistakes",
-    "mistakes": 6,
+    "mistakes": 5,
     "symptom": 5,
     "cause": 5,
     "fix": 5,
     "prevent": 1,
     "words": 1581,
     "internal": 8,
-    "flags": [
-     "1 mistake(s) without a named symptom",
-     "1 mistake(s) without a cause",
-     "1 mistake(s) without a fix"
-    ]
+    "flags": []
    },
    {
     "slug": "python-data-apis/data-cleaning-common-mistakes",

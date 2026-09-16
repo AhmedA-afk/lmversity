@@ -38,6 +38,22 @@ Send audio chunks to ASR as they arrive — don't wait for utterance end. Handle
 
 On a final transcript, call the LLM *streaming* — and start TTS on the first sentence, not the full reply. Chunked synthesis is where perceived latency is won: the user hears audio while the rest of the sentence is still generating. Voice design and SSML tuning: [Speech synthesis and voice design](/learn/voice-ai/speech-synthesis-and-voice-design).
 
+```ts
+// Sentence-boundary streaming: TTS starts on the first complete sentence.
+asr.on("final", async (transcript) => {
+  const stream = llm.stream(transcript);
+  let sentence = "";
+  for await (const token of stream) {
+    sentence += token;
+    if (/[.!?]\s$/.test(sentence)) {          // sentence boundary
+      tts.enqueue(sentence);                   // synthesize immediately
+      sentence = "";
+    }
+  }
+  if (sentence.trim()) tts.enqueue(sentence);  // trailing fragment
+});
+```
+
 ## 5. Barge-in — the feature that makes it a conversation
 
 While TTS plays, keep VAD listening. On `speech-start` during playback: stop synthesis, cancel the in-flight LLM stream, and treat the new audio as the next turn. Without this you built a walkie-talkie. The full turn-taking model: [Realtime transport and turn-taking](/learn/voice-ai/realtime-transport-and-turn-taking).

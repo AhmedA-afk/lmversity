@@ -2526,6 +2526,36 @@ Credentials to monitor:
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
 
+### 2026-09-16 — Family audit parser fixes + flagged-content closure (0 flags)
+
+- Scope: `scripts/audit-families.mjs` — the acquisition/family audit was
+  reporting false positives because its section parsers didn't match the
+  formats actually in use. Fixes: interview files now count only `## N.`
+  question sections (hubs' `## Mock set`/`## Practice next` were being
+  audited as questions, and rubric was demanded of question-free hubs);
+  mistake pages now recognize both layouts — `### N. Title` numbered and
+  `## Title` + `### The mistake` (the generic `## The mistake` intro was
+  being counted as a mistake); worked examples accept `## The check`,
+  `## Before and after`, and the walkthrough format
+  (`Setup:` → steps → `Your turn`); cheatsheet density counts `>`-quoted
+  numbered items; mistake sections in the prose format (a substantial
+  paragraph with a remediation link, no `**Symptom.**` labels) count as
+  covered — this is the designer-track register, deliberate.
+- Content fixes the audit did surface genuinely: runnable snippets added
+  to 5 guides (OTel tracing, Playwright observe-decide-act loop,
+  streaming ASR→LLM→TTS, SDK/framework port seam, three-path eval
+  skeleton); the designer quiz's two thin answer blocks now walk all
+  options; two designer mistake sections gained remediation links to
+  match the file's own convention.
+- Result: **family audit 0 flags** across answers, guides, blog,
+  interview, scenarios, lesson quizzes, worked examples, cheatsheets,
+  and mistakes — the structural rows that claim "0 current findings" are
+  now literally true rather than approximate.
+- Validation: `audit:families` 0 flags; `check:content` clean (2,316
+  lessons); build 2,811 pages; `check:links` 0 dead across 6,002 routes.
+- Next: remaining open rows are editorial-scoring, external infra, and
+  the 1,000-question horizon — not mechanical.
+
 ### 2026-09-16 — Non-priority track surface fill + DoD row (1 row)
 
 - Scope: the nine non-priority curriculum tracks the six-surface audit

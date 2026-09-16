@@ -34,6 +34,34 @@ Instrument to answer: *what did the model see and return* (trace), *what did it 
 
 Wrap the whole request lifecycle in a single trace: user input → retrieval → prompt assembly → model call(s) → post-processing → response. Each step is a span with its own latency and metadata. The payoff is the waterfall — you see that 80% of the wait is retrieval, not the model, without guessing.
 
+```ts
+// One trace per request; each stage is a child span.
+import { trace } from "@opentelemetry/api";
+
+const tracer = trace.getTracer("ai-feature");
+
+export async function answer(req: Request) {
+  return tracer.startActiveSpan("ai.request", async (root) => {
+    root.setAttribute("app.version", process.env.APP_VERSION);
+    try {
+      const docs = await tracer.startActiveSpan("retrieve", (s) =>
+        retrieve(req).finally(() => s.end()));
+      const prompt = assemblePrompt(req, docs);
+      const reply = await tracer.startActiveSpan("model.call", (s) => {
+        s.setAttribute("llm.model", MODEL_ID);
+        s.setAttribute("llm.prompt_version", prompt.version);
+        return callModel(prompt).finally(() => s.end());
+      });
+      root.setAttribute("llm.usage.input_tokens", reply.usage.in);
+      root.setAttribute("llm.usage.output_tokens", reply.usage.out);
+      return reply;
+    } finally {
+      root.end();
+    }
+  });
+}
+```
+
 ## 4. Version everything
 
 Attach to every trace: the model identifier (exact version, not the alias), the prompt/template version, and your app version. When behavior changes and nothing in your code moved, this is how you find out the provider shipped a new snapshot. The discipline doubles as your rollback record — see [Langfuse observability](/learn/production/langfuse-observability) for prompt-version tracking in practice.

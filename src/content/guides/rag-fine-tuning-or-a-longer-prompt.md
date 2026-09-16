@@ -115,6 +115,16 @@ Take twenty real inputs with their correct outputs. Then, in one afternoon:
 2. Score it with the reference material pasted into the prompt.
 3. Score it with a crude retrieval step — even keyword search over the same corpus.
 
+```python
+# The experiment's skeleton — same items, three paths, one scorer.
+for item in eval_set:  # 20 real inputs + expected outputs
+    row = {"id": item.id}
+    row["baseline"]  = score(model(current_prompt(item)))
+    row["stuffed"]   = score(model(with_reference_material(item)))
+    row["retrieved"] = score(model(with_retrieved_chunks(item)))
+    results.append(row)
+```
+
 If step 2 fixes it, your problem was context, not capability. If step 3 gets close to step
 2, retrieval is your architecture and the rest is tuning. If neither moves the number, the
 gap is behavioural, and you have now earned the right to consider fine-tuning — with a

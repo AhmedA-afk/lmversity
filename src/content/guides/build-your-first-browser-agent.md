@@ -34,6 +34,18 @@ Use Playwright with role/text/test-id locators (`getByRole`, `getByLabel`) — p
 
 Per step: snapshot the accessibility tree or DOM (compact, structured — not a screenshot megabyte), hand the model the snapshot plus the goal plus the allowlist, get back one structured action, execute it, record the result. Keep the context window honest — prune old snapshots, keep the goal and the last few observations. The full loop pattern: [Building a browser tool loop](/learn/tools-function-calling/building-a-browser-tool-loop).
 
+```ts
+// The loop's skeleton — one proposed action per iteration.
+for (let step = 0; step < MAX_STEPS; step++) {
+  const snapshot = await page.accessibility.snapshot(); // compact, structured
+  const action = await model.decide({ goal, snapshot, allowlist, history });
+  log({ url: page.url(), action });                     // record before acting
+  if (action.class === "act") await requireApproval(action);
+  if (action.type === "done") break;
+  await execute(page, action);                          // click/fill/navigate
+}
+```
+
 ## 4. Capture sources and actions
 
 Log every step: what the agent observed (URL + snapshot digest), what it decided, what it did, what it extracted. For research tasks, capture the *source URL and quoted span* behind every extracted fact — an agent that can't show where a claim came from produces unverifiable output.

@@ -33,6 +33,18 @@ In a well-shaped codebase there's a thin layer where your code talks to the mode
 
 Port the seam, not the codebase. Write the framework-backed implementation of `callModel()` alongside the SDK one, switchable by config. The app keeps running on the old path while the new one proves itself — this is the same seam discipline as [gateway vs in-app abstraction](/learn/production/llm-gateway-and-provider-abstraction), applied to frameworks.
 
+```ts
+// The seam: one interface, two implementations, a config switch.
+interface ModelPort {
+  complete(req: ChatRequest): Promise<ChatReply>;   // your types, not theirs
+}
+
+const model: ModelPort =
+  config.driver === "framework"
+    ? new FrameworkAdapter(frameworkClient)           // the new path
+    : new RawSdkAdapter(sdkClient);                   // the proven path
+```
+
 ## 4. Port the semantics, not the calls
 
 The traps are in the details: message-role mapping differs; tool-call schemas serialize differently; structured-output features (JSON mode vs schema-enforced) have different guarantees per provider *and* per framework wrapper; streaming chunk shapes differ; system-prompt handling differs. Port each feature with its contract — "this field must be a validated enum" — then verify the contract, not the code path. [Structured outputs across providers](/learn/structured-outputs/cross-provider-structured-output-differences) catalogs the differences that will bite you.
