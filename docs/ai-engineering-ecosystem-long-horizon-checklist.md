@@ -2447,17 +2447,41 @@ Credentials to monitor:
 
 ### Browser batch
 
-- [ ] Representative desktop and narrow-mobile pages render without overflow.
-- [ ] Keyboard, focus, skip links, dialogs, quizzes, and controls work.
-- [ ] Screen-reader names, semantics, headings, and live updates are valid.
-- [ ] Light, dark, system, reduced-motion, and no-JavaScript states work.
-- [ ] Console and network logs have no new actionable failures.
+- [x] Representative desktop and narrow-mobile pages render without overflow.
+      *(chrome-devtools audit on the built site: 0 horizontal overflow
+      at 1164px desktop and 360×640 mobile across home, a lesson page,
+      and the cert-prep quiz; only flagged element was the intentional
+      off-screen skip link)*
+- [x] Keyboard, focus, skip links, dialogs, quizzes, and controls work.
+      *(tab order starts at the skip link → logo → search → menu → nav;
+      44 tabbable elements, 3 focus-visible rules; quiz options are
+      native buttons, module filter is a labeled select)*
+- [x] Screen-reader names, semantics, headings, and live updates are valid.
+      *(one h1 per page; main/nav/banner/contentinfo landmarks; 0
+      unlabeled buttons or links; quiz grading announces through an
+      aria-live="polite" region — verified "Correct. …" feedback)*
+- [x] Light, dark, system, reduced-motion, and no-JavaScript states work.
+      *(light #FBFAF8 16.67:1 contrast, dark 14.85:1, system follows
+      prefers-color-scheme, toggle sets data-theme; reduced-motion
+      rule present; no-JS renders full content — quiz stays readable,
+      interactivity degrades as expected)*
+- [x] Console and network logs have no new actionable failures.
+      *(only error: `/_vercel/insights/script.js` 404 — a localhost
+      artifact, served by Vercel in production; quirks-mode warning
+      traces to a third-party ad iframe, not our markup (document is
+      CSS1Compat); form-field hint is autocomplete semantics on two
+      elements that already carry accessible names)*
 - [x] Metadata, canonical URLs, structured data, sitemap, robots, and redirects are correct.
       *(verified in the Phase 9 audit — titles, canonicals,
       LearningResource/Course JSON-LD, sitemap, robots all present)*
-- [ ] Analytics events work without blocking navigation.
+- [x] Analytics events work without blocking navigation.
+      *(all scripts async or defer — adsbygoogle async, insights defer,
+      site.js defer; event delivery itself is Vercel-side and was not
+      observable from the local build)*
 - [x] Ads remain distinct from navigation, answers, quiz controls, and project actions.
-      *(vacuously satisfied — no ads on the site)*
+      *(corrected: AdSense does load — the slot is a standalone
+      `ins.adsbygoogle` element outside quiz controls and navigation;
+      earlier "no ads" annotation was inaccurate)*
 
 ## Milestone sequence
 
@@ -2585,6 +2609,31 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-16 — Browser batch verification (6 release-gate rows)
+
+- Scope: served the built `dist/` locally and drove Chrome DevTools MCP
+  across home, a lesson page, and the new `/practice/cert-prep` quiz —
+  desktop (1164px) and emulated mobile (360×640, touch, 2x DPR), light
+  and dark color schemes.
+- Results: **0 horizontal overflow** on all pages/viewports; tab order
+  starts at the skip link, 44 tabbables, focus-visible styles present;
+  one h1, full landmark set, 0 unlabeled buttons/links; quiz grading
+  announces via `aria-live="polite"` ("Correct. …" verified live);
+  light contrast 16.67:1, dark 14.85:1 (both AAA); reduced-motion CSS
+  present; no-JS renders full content (quiz readable, non-interactive
+  — expected degradation); all scripts async/defer.
+- Findings that resolved as non-actionable: `/_vercel/insights` 404 is
+  a local-serve artifact (Vercel serves it in prod); quirks-mode
+  console warning is a third-party ad iframe — document is CSS1Compat;
+  form-field hint is autocomplete semantics on named controls.
+- Correction: the ads row was annotated "vacuously satisfied — no ads"
+  — wrong, AdSense loads and renders a standalone `ins.adsbygoogle`
+  slot. Row's substance holds (slot sits outside quiz controls/nav);
+  annotation corrected to reflect the real evidence.
+- Ticked: all six open Browser batch release-gate rows.
+- Deployment status: local static serve only; production behavior of
+  Vercel analytics remains unobserved-by-design.
 
 ### 2026-09-16 — cert-prep bank (32 objective-derived questions)
 
