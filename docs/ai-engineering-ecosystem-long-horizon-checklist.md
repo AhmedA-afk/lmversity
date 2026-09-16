@@ -2316,7 +2316,15 @@ Credentials to monitor:
       *(policy: every committed batch is reviewed before commit — progress log records validation)*
 - [x] Noindex internal search, filter, session, and duplicate-result pages.
       *(search is client-side (no route); /saved noindexed; no filter/session routes)*
-- [ ] Merge or redirect pages whose search intent has converged.
+- [x] Merge or redirect pages whose search intent has converged.
+      *(corpus-wide title-collision sweep: 1 exact collision —
+      generative-ui-rendering-components retitled to "Declare-Then-Fill
+      vs Guess-Then-Classify" to match its actual body; 14 near-dup
+      pairs audited — all deliberate concept→depth companions (each
+      deep lesson explicitly defers to and builds on its short sibling);
+      the real gap was 9 missing forward links from short → deep, now
+      added. No merge/redirect needed — intents are layered, not
+      converged)*
 
 ### Internal discovery and return visits
 
@@ -2612,6 +2620,26 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-16 — Converged-intent sweep + title-collision fix
+
+- Scope: corpus-wide duplicate-intent audit for the "merge or redirect
+  converged intent" row — exact normalized-title collisions plus
+  near-dup pairs (token Jaccard ≥ 0.8) across all lessons.
+- Found: 1 exact collision (`generative-ui-rendering-components` shared
+  its sibling's title while teaching the design choice underneath it —
+  retitled to "Generative UI: Declare-Then-Fill vs Guess-Then-Classify",
+  matching its own summary and body; curriculum node + inbound link
+  text updated).
+- 14 near-dup pairs audited: all deliberate concept→depth companions —
+  every deep lesson explicitly defers to its short sibling ("already
+  covers the mechanics", "optional depth"). No merges warranted.
+- Real gap fixed: 9 short companions never linked forward to their deep
+  dive — added the forward link to each Related/Go-deeper line.
+- Ticked: "Merge or redirect pages whose search intent has converged"
+  (Phase 9) — sweep executed; intents are layered, not converged.
+- Validation: `check:content` clean (2,316); `check:links` 0 dead
+  (6,006 routes); `git diff --check` clean.
 
 ### 2026-09-16 — ai-system-design bank + difficulty-spread audit
 

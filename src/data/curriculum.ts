@@ -8202,7 +8202,7 @@ const unsortedTracks: Track[] = [
         "status": "live"
       },
       {
-        "title": "Generative UI: Rendering Components From Model Output",
+        "title": "Generative UI: Declare-Then-Fill vs Guess-Then-Classify",
         "slug": "generative-ui-rendering-components",
         "status": "live"
       },

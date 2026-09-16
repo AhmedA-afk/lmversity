@@ -1,5 +1,5 @@
 ---
-title: "Generative UI: Rendering Components From Model Output"
+title: "Generative UI: Declare-Then-Fill vs Guess-Then-Classify"
 track: "genai-app-dev"
 status: live
 summary: "Guessing structure from prose after the fact versus declaring it up front — and why one of these barely works."
