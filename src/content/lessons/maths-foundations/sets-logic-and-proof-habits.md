@@ -119,6 +119,6 @@ causal inference, and responsible-AI review add the next layers.
 
 ## Continue, go deeper, apply it
 
-- Continue: Mathematics Foundations checklist
-- Go deeper: Responsible AI risk framing
+- Continue: [Mathematics Foundations checklist](/learn/maths-foundations)
+- Go deeper: [Responsible AI risk framing](/learn/responsible-ai/risk-before-model)
 - Apply it: build the validation suite described above before starting M0.5.

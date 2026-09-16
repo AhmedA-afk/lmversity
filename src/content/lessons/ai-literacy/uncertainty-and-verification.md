@@ -139,6 +139,6 @@ governance for systems that matter.
 
 ## Continue, go deeper, apply it
 
-- Continue: Data, privacy, provenance, and policy
-- Go deeper: Datasets, rubrics, and judges
-- Apply it: Grounding, citations, and context budgets
+- Continue: [Data, privacy, provenance, and policy](/learn/ai-literacy/data-privacy-provenance-and-policy)
+- Go deeper: [Datasets, rubrics, and judges](/learn/evals-red-teaming/datasets-rubrics-and-judges)
+- Apply it: [Grounding, citations, and context budgets](/learn/rag/grounding-citations-and-context-budgets)

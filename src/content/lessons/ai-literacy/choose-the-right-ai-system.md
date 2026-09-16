@@ -151,6 +151,6 @@ decision safe. Those require deeper evaluation, governance, and domain review.
 
 ## Continue, go deeper, apply it
 
-- Continue: How language models produce text
-- Go deeper: Agents versus workflows
-- Apply it: Prompting
+- Continue: [How language models produce text](/learn/ai-literacy/how-language-models-produce-text)
+- Go deeper: [Agents versus workflows](/learn/agentic-ai/agents-vs-workflows)
+- Apply it: [Prompting](/learn/ai-literacy/prompting-quiz)

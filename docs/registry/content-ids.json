@@ -35,7 +35,7 @@
   },
   "lessons/agentic-ai/agents-vs-workflows.mdx": {
    "id": "les-0005",
-   "fp": "6d12098658815e42b77ca5cb123a648b4fb21641"
+   "fp": "59c1e4db06d2533ca042722a492fd86ee36a649c"
   },
   "lessons/agentic-ai/autonomy-vs-control.mdx": {
    "id": "les-0006",
@@ -791,7 +791,7 @@
   },
   "lessons/ai-literacy/choose-the-right-ai-system.md": {
    "id": "les-0194",
-   "fp": "bac54c5fac407453a25531d72da5acde2bd64962"
+   "fp": "ed85592ea3cc3736e275cecb040b88f06b5eaadc"
   },
   "lessons/ai-literacy/common-myths-about-ai-debunked.md": {
    "id": "les-0195",
@@ -807,11 +807,11 @@
   },
   "lessons/ai-literacy/data-model-output-loop.md": {
    "id": "les-0198",
-   "fp": "c9dc058d5bb205e5facc4e595b1c1232bb50bf0d"
+   "fp": "c3a52fc3fd6d82ec1130c4d3d7279abfa02a3945"
   },
   "lessons/ai-literacy/data-privacy-provenance-and-policy.md": {
    "id": "les-0199",
-   "fp": "1a9b288c70b4c855b91308327d972a060a06062e"
+   "fp": "9daf717bbb2daf5eb8e52093f861692ca21d3315"
   },
   "lessons/ai-literacy/deciding-when-and-which-ai-quiz.md": {
    "id": "les-0200",
@@ -851,7 +851,7 @@
   },
   "lessons/ai-literacy/how-language-models-produce-text.md": {
    "id": "les-0209",
-   "fp": "7ea00a6eb862ae3710d5d0449b460cb3b8cd176a"
+   "fp": "0566fd4e71535183905bd87149913452a09b3a3b"
   },
   "lessons/ai-literacy/how-to-ask-ai-clearly.md": {
    "id": "les-0210",
@@ -903,7 +903,7 @@
   },
   "lessons/ai-literacy/task-or-automation.md": {
    "id": "les-0222",
-   "fp": "48e78399905354167f71c60c7372bbba547e58e1"
+   "fp": "3b92847d917d643d1d3f6fc3061d4ab2315cf896"
   },
   "lessons/ai-literacy/the-real-limits-of-ai-today.md": {
    "id": "les-0223",
@@ -927,7 +927,7 @@
   },
   "lessons/ai-literacy/uncertainty-and-verification.md": {
    "id": "les-0228",
-   "fp": "291cc0cb956dea48ce3cda14b21c13b0398442b5"
+   "fp": "c322476a50ae9c1618d86394e5574a8caff437f9"
   },
   "lessons/ai-literacy/using-ai-honestly-and-responsibly.md": {
    "id": "les-0229",
@@ -2423,7 +2423,7 @@
   },
   "lessons/evals-red-teaming/datasets-rubrics-and-judges.mdx": {
    "id": "les-0602",
-   "fp": "1c867cbfc6bc3646c5528c5b2e0f2d874738737a"
+   "fp": "1b25c4d21e2d89add6396cb6dcdb42bc609a8c35"
   },
   "lessons/evals-red-teaming/eval-and-safety-metrics-dashboards.mdx": {
    "id": "les-0603",
@@ -2483,7 +2483,7 @@
   },
   "lessons/evals-red-teaming/regression-gates-and-online-signals.mdx": {
    "id": "les-0617",
-   "fp": "c42e80f889da81ecf5d0a50017c769e84abe6cc4"
+   "fp": "452ac56e54958cbe39264e4ee6b03e868c6725c0"
   },
   "lessons/evals-red-teaming/safety-vs-capability-evals.mdx": {
    "id": "les-0618",
@@ -2623,7 +2623,7 @@
   },
   "lessons/genai-app-dev/api-lifecycle-and-structured-output.md": {
    "id": "les-0652",
-   "fp": "867390f24a5418152298b1dd834cb49774d42ef3"
+   "fp": "4c7372e7cd7d7a161a48ad6e16a2e19f63351410"
   },
   "lessons/genai-app-dev/background-jobs-for-long-running-ai-tasks.mdx": {
    "id": "les-0653",
@@ -3079,7 +3079,7 @@
   },
   "lessons/genai-app-dev/tool-calling-and-authority.md": {
    "id": "les-0766",
-   "fp": "3f1de5e2f315a63a22a7350a83538f74aac217b2"
+   "fp": "4625d76754cc1d39c207b315999ad79c29974462"
   },
   "lessons/genai-app-dev/tool-calling-as-authority.md": {
    "id": "les-0767",
@@ -5807,7 +5807,7 @@
   },
   "lessons/maths-foundations/sets-logic-and-proof-habits.md": {
    "id": "les-1448",
-   "fp": "bc415a1a1a5e0886a5a80779d9af48873ed5eb02"
+   "fp": "d6a0967fef064774964f4f97083fefb6fff3ba0d"
   },
   "lessons/maths-foundations/similarity-search-design-clinic.md": {
    "id": "les-1449",
@@ -6075,7 +6075,7 @@
   },
   "lessons/mcp/primitives-lifecycle-and-transport.mdx": {
    "id": "les-1515",
-   "fp": "4045b8508bb8bf46222746dda59975ee8ad474b7"
+   "fp": "3502e65ede46c86c02268fd6a6916c5a9a2967fc"
   },
   "lessons/mcp/resource-subscriptions.mdx": {
    "id": "les-1516",
@@ -6095,7 +6095,7 @@
   },
   "lessons/mcp/server-design-and-permissions.mdx": {
    "id": "les-1520",
-   "fp": "4898e36b9c91db5f2d935b299d0113f0ab1e7ef3"
+   "fp": "5173e1c7e0e6e3057ad7b0aaafa20e508acb48e0"
   },
   "lessons/mcp/stateful-vs-stateless-servers.mdx": {
    "id": "les-1521",
@@ -6139,7 +6139,7 @@
   },
   "lessons/production/deployment-versioning-and-incidents.mdx": {
    "id": "les-1531",
-   "fp": "c41ec303941abb72000beaf4b6bd0503eec1544b"
+   "fp": "94b3e168644151020afe90995a90cf4fc692092a"
   },
   "lessons/production/eval-based-regression-testing.mdx": {
    "id": "les-1532",
@@ -6183,7 +6183,7 @@
   },
   "lessons/production/observability-cost-and-latency.mdx": {
    "id": "les-1542",
-   "fp": "f851117bf494a296224ab37185d3d1126f8f1980"
+   "fp": "6eaff45898dcf2281d6d9225db4489aa7a21c1c1"
   },
   "lessons/production/on-call-playbooks-for-ai.mdx": {
    "id": "les-1543",
@@ -6459,7 +6459,7 @@
   },
   "lessons/prompt-engineering/multimodal-and-localized-prompts.md": {
    "id": "les-1611",
-   "fp": "59a5f325accf5350a5c19f0b30b84ae422e9e119"
+   "fp": "b6e84a4eb4b651b2fd1fcb43da82bfcb55f38053"
   },
   "lessons/prompt-engineering/multimodal-prompt-worked.md": {
    "id": "les-1612",
@@ -6531,7 +6531,7 @@
   },
   "lessons/prompt-engineering/prompt-evaluation.md": {
    "id": "les-1629",
-   "fp": "b2ce0e15d8ae8dcf8f2cfb5bf3f5668849324a03"
+   "fp": "48bc2ac87e4b9d0d29c547ef75cfeaa47b6f6bb8"
   },
   "lessons/prompt-engineering/prompt-first-principles-cheatsheet.md": {
    "id": "les-1630",
@@ -6575,7 +6575,7 @@
   },
   "lessons/prompt-engineering/prompt-versioning-and-reuse.md": {
    "id": "les-1640",
-   "fp": "8125da80cf85df2c8ac684028e758b33a5691b42"
+   "fp": "f3f79688e3a4e8c24434ac8f582c50f6f3b42d95"
   },
   "lessons/prompt-engineering/prompt-versioning-like-code.md": {
    "id": "les-1641",
@@ -6595,7 +6595,7 @@
   },
   "lessons/prompt-engineering/reasoning-and-decomposition.md": {
    "id": "les-1645",
-   "fp": "216c09c3a5fa1f764bdb5e8e1aaa50740f28cc2c"
+   "fp": "471215c02fd5543959ac4b6f9fe80167d0926736"
   },
   "lessons/prompt-engineering/reasoning-as-scratchpad-intuition.md": {
    "id": "les-1646",
@@ -6715,7 +6715,7 @@
   },
   "lessons/prompt-engineering/task-framing.md": {
    "id": "les-1675",
-   "fp": "0af4ae10a76e64da3cd4e9bceb5db5d427008e2d"
+   "fp": "03c103845c3e384867170ec855f7d0a1509d0a27"
   },
   "lessons/prompt-engineering/temperature-and-determinism-for-prompters.md": {
    "id": "les-1676",
@@ -6863,7 +6863,7 @@
   },
   "lessons/python-data-apis/data-contracts-and-validation.md": {
    "id": "les-1712",
-   "fp": "0bd660e66548c43275342e3e11491bb698d15bc7"
+   "fp": "e13647cc90f42e0da1c96b2045a311aba3e7d3e6"
   },
   "lessons/python-data-apis/environments-tooling-quiz.md": {
    "id": "les-1713",
@@ -6971,7 +6971,7 @@
   },
   "lessons/python-data-apis/python-for-ai-services.md": {
    "id": "les-1739",
-   "fp": "6ef1559674148e872a660f0e08696cc650814430"
+   "fp": "d862431c5bd21e4d67f3a2acb7ef3a38de464001"
   },
   "lessons/python-data-apis/rate-limits-and-retries.md": {
    "id": "les-1740",
@@ -7095,7 +7095,7 @@
   },
   "lessons/rag/grounding-citations-and-context-budgets.mdx": {
    "id": "les-1770",
-   "fp": "f3dc19cfd59440db1a5654ce3f6b57277cccd3db"
+   "fp": "1e958703dfaf52b2e841155573f695bf8c7550cc"
   },
   "lessons/rag/hybrid-search-cheatsheet.md": {
    "id": "les-1771",
@@ -7259,23 +7259,23 @@
   },
   "lessons/responsible-ai/governance-artifacts.md": {
    "id": "les-1811",
-   "fp": "5640be04df06bd0a53e7cf1f49e364e38c480e7e"
+   "fp": "ef56687ff2f0efe08de7938b25b7adeba8b4d0cc"
   },
   "lessons/responsible-ai/privacy-fairness-and-accessibility.md": {
    "id": "les-1812",
-   "fp": "46a6006f4f025ba813ce036fcd530202174e8e0a"
+   "fp": "0496083a7adbd25c48591b23651dcdb2344b78a3"
   },
   "lessons/responsible-ai/privacy-fairness-provenance.md": {
    "id": "les-1813",
-   "fp": "183d6be94b7c385c3f441034aa675fa0627f1db7"
+   "fp": "88abb3b738d042ee335f4005e78cd93feb1e3791"
   },
   "lessons/responsible-ai/red-teaming-llm-apps.md": {
    "id": "les-1814",
-   "fp": "ef4ecd0561e70c08c55e2158859a6189dedd2009"
+   "fp": "f289f135953c7b17a03ba043481233c7a92b355a"
   },
   "lessons/responsible-ai/risk-before-model.md": {
    "id": "les-1815",
-   "fp": "c443484c65e2d8fd049aa4d813eb1c298bb03156"
+   "fp": "8a258743691ce4721ce5683510d5150323236c8a"
   },
   "lessons/structured-outputs/auto-repair-strategies.md": {
    "id": "les-1816",
@@ -10124,11 +10124,11 @@
   },
   "lessons/ai-for-designers/ai-prototype-testing-common-mistakes.md": {
    "id": "les-2183",
-   "fp": "2e71e7982f864ff1f946d6b06dd9baeab00e12be"
+   "fp": "85b347da2fa447cb17eca535522a5c0941980bd6"
   },
   "lessons/ai-for-designers/behavior-before-interface-quiz.md": {
    "id": "les-2184",
-   "fp": "4e017856d91fc1e12ab328e497470b82d8b678ed"
+   "fp": "b4e252ef3bea66553ade21ec2b469c4416cca9cd"
   },
   "lessons/ai-for-designers/capstone-design-a-trustworthy-ai-feature.md": {
    "id": "les-2185",

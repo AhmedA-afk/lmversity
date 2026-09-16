@@ -75,6 +75,6 @@ leaks information from the future. Those need domain and ML review.
 
 ## Continue, go deeper, apply it
 
-- Continue: Problem framing and baselines
-- Go deeper: Features, leakage, and missingness
+- Continue: [Problem framing and baselines](/learn/machine-learning/problem-framing-and-baselines)
+- Go deeper: [Features, leakage, and missingness](/learn/machine-learning/features-leakage-and-missingness)
 - Apply it: turn the contract into executable fixtures and a data-quality report.

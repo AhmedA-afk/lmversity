@@ -146,6 +146,6 @@ prove that a metric captures the outcome people care about.
 
 ## Continue, go deeper, apply it
 
-- Continue: Choose the right AI system
-- Go deeper: Features, leakage, and missingness
-- Apply it: Data contracts and validation
+- Continue: [Choose the right AI system](/learn/ai-literacy/choose-the-right-ai-system)
+- Go deeper: [Features, leakage, and missingness](/learn/machine-learning/features-leakage-and-missingness)
+- Apply it: [Data contracts and validation](/learn/python-data-apis/data-contracts-and-validation)

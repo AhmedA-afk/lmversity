@@ -78,6 +78,6 @@ recommendation. You still need evaluation, monitoring, and incident response.
 
 ## Continue, go deeper, apply it
 
-- Continue: Agents versus workflows
-- Go deeper: Server design and permissions
+- Continue: [Agents versus workflows](/learn/agentic-ai/agents-vs-workflows)
+- Go deeper: [Server design and permissions](/learn/mcp/server-design-and-permissions)
 - Apply it: write a tool policy that names the actor, resource, scope, and approval state.

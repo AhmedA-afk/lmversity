@@ -1,7 +1,7 @@
 {
  "meta": {
   "version": 1,
-  "generatedAt": "2026-09-15T21:06:42.598Z",
+  "generatedAt": "2026-09-16T04:23:13.275Z",
   "generator": "scripts/build-content-registry.mjs",
   "itemCount": 2763,
   "counts": {
@@ -3646,7 +3646,7 @@
    "published": "2026-08-30",
    "updated": "2026-09-15",
    "verified": null,
-   "wordCount": 401,
+   "wordCount": 393,
    "headings": [
     "The short answer",
     "Compare the shapes",
@@ -3658,7 +3658,10 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/agentic-ai/state-memory-and-recovery",
+    "/learn/genai-app-dev/tool-calling-and-authority"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -3705,7 +3708,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -7198,7 +7201,7 @@
    "published": null,
    "updated": null,
    "verified": null,
-   "wordCount": 301,
+   "wordCount": 308,
    "headings": [
     "1. Cherry-picked prompts",
     "2. Demo-only flows",
@@ -7207,6 +7210,8 @@
     "How to use this list"
    ],
    "internalLinks": [
+    "/learn/ai-for-designers/ai-feature-state-model-worked-example",
+    "/learn/ai-for-designers/choosing-where-ai-belongs-worked-example",
     "/learn/ai-for-designers/creating-a-realistic-ai-test-set",
     "/learn/ai-for-designers/designing-a-ux-evaluation-rubric",
     "/learn/ai-for-designers/prototype-and-evaluation-quiz",
@@ -7282,7 +7287,7 @@
    "published": null,
    "updated": null,
    "verified": null,
-   "wordCount": 682,
+   "wordCount": 722,
    "headings": [
     "1. The missing contract",
     "2. The overloaded call",
@@ -7340,7 +7345,7 @@
    "scores": {
     "intentClarity": 2,
     "correctnessSources": null,
-    "completeness": 0,
+    "completeness": 1,
     "prerequisiteFit": 0,
     "handsOn": 0,
     "explanationQuality": 2,
@@ -23420,7 +23425,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 972,
+   "wordCount": 963,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -23433,7 +23438,11 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/agentic-ai/agents-vs-workflows",
+    "/learn/ai-literacy/how-language-models-produce-text",
+    "/learn/ai-literacy/prompting-quiz"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -23480,7 +23489,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -23786,7 +23795,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 960,
+   "wordCount": 947,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -23799,7 +23808,11 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/ai-literacy/choose-the-right-ai-system",
+    "/learn/machine-learning/features-leakage-and-missingness",
+    "/learn/python-data-apis/data-contracts-and-validation"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -23815,7 +23828,7 @@
     "workedExample": true,
     "errorCase": false,
     "sourcesSection": false,
-    "runnableSignals": false,
+    "runnableSignals": true,
     "listItems": 15,
     "numericClaims": 1,
     "specFormat": true,
@@ -23846,7 +23859,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -23870,7 +23883,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 867,
+   "wordCount": 859,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -23883,7 +23896,10 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/python-data-apis/data-contracts-and-validation",
+    "/learn/responsible-ai/privacy-fairness-provenance"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -23899,7 +23915,7 @@
     "workedExample": true,
     "errorCase": false,
     "sourcesSection": false,
-    "runnableSignals": false,
+    "runnableSignals": true,
     "listItems": 12,
     "numericClaims": 0,
     "specFormat": true,
@@ -23932,7 +23948,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -24854,7 +24870,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 929,
+   "wordCount": 916,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -24867,7 +24883,11 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/ai-literacy/uncertainty-and-verification",
+    "/learn/deep-learning/neural-networks-and-representations",
+    "/learn/prompt-engineering/what-prompting-is"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -24914,7 +24934,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -26219,7 +26239,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 1520,
+   "wordCount": 1495,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -26240,7 +26260,12 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/ai-literacy/choose-the-right-ai-system",
+    "/learn/ai-literacy/data-model-output-loop",
+    "/learn/machine-learning/problem-framing-and-baselines",
+    "/learn/prompt-engineering/what-prompting-is"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -26287,7 +26312,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -26781,7 +26806,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 879,
+   "wordCount": 865,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -26794,7 +26819,11 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/ai-literacy/data-privacy-provenance-and-policy",
+    "/learn/evals-red-teaming/datasets-rubrics-and-judges",
+    "/learn/rag/grounding-citations-and-context-budgets"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -26841,7 +26870,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -60263,7 +60292,7 @@
    "published": "2026-08-30",
    "updated": "2026-09-15",
    "verified": null,
-   "wordCount": 362,
+   "wordCount": 354,
    "headings": [
     "The short answer",
     "Build the set",
@@ -60274,7 +60303,10 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/evals-red-teaming/regression-gates-and-online-signals",
+    "/learn/responsible-ai/adversarial-testing-lab"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -60321,7 +60353,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -61952,7 +61984,7 @@
    "published": "2026-08-30",
    "updated": "2026-09-15",
    "verified": null,
-   "wordCount": 370,
+   "wordCount": 364,
    "headings": [
     "The short answer",
     "Offline to online",
@@ -61963,7 +61995,10 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/evals-red-teaming/datasets-rubrics-and-judges",
+    "/learn/responsible-ai/governance-artifacts"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -62010,7 +62045,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -65312,7 +65347,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 361,
+   "wordCount": 353,
    "headings": [
     "The short answer",
     "The lifecycle",
@@ -65324,7 +65359,10 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/genai-app-dev/tool-calling-and-authority",
+    "/learn/production/observability-cost-and-latency"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -65371,7 +65409,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -75708,7 +75746,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 372,
+   "wordCount": 365,
    "headings": [
     "The short answer",
     "The authority boundary",
@@ -75720,7 +75758,10 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/agentic-ai/agents-vs-workflows",
+    "/learn/mcp/server-design-and-permissions"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -75767,7 +75808,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -138924,7 +138965,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 749,
+   "wordCount": 742,
    "headings": [
     "The short answer",
     "Why this matters",
@@ -138936,7 +138977,10 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/maths-foundations",
+    "/learn/responsible-ai/risk-before-model"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -138985,7 +139029,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -145075,7 +145119,7 @@
    "published": "2026-08-30",
    "updated": "2026-09-15",
    "verified": null,
-   "wordCount": 390,
+   "wordCount": 382,
    "headings": [
     "The short answer",
     "The primitives",
@@ -145087,7 +145131,10 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/genai-app-dev/tool-calling-and-authority",
+    "/learn/mcp/server-design-and-permissions"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -145137,7 +145184,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -145502,7 +145549,7 @@
    "published": "2026-08-30",
    "updated": "2026-09-15",
    "verified": null,
-   "wordCount": 386,
+   "wordCount": 377,
    "headings": [
     "The short answer",
     "Server checklist",
@@ -145514,7 +145561,10 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/evals-red-teaming/regression-gates-and-online-signals",
+    "/learn/production/deployment-versioning-and-incidents"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -145563,7 +145613,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -148527,7 +148577,7 @@
    "published": "2026-08-30",
    "updated": "2026-09-15",
    "verified": null,
-   "wordCount": 377,
+   "wordCount": 370,
    "headings": [
     "The short answer",
     "Version the behavior bundle",
@@ -148538,7 +148588,10 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/evals-red-teaming/regression-gates-and-online-signals",
+    "/learn/responsible-ai/governance-artifacts"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -148585,7 +148638,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -150246,7 +150299,7 @@
    "published": "2026-08-30",
    "updated": "2026-09-15",
    "verified": null,
-   "wordCount": 379,
+   "wordCount": 370,
    "headings": [
     "The short answer",
     "What to measure",
@@ -150257,7 +150310,10 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/production/deployment-versioning-and-incidents",
+    "/learn/rag/grounding-citations-and-context-budgets"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -150304,7 +150360,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -156565,7 +156621,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 404,
+   "wordCount": 398,
    "headings": [
     "The short answer",
     "A transfer checklist",
@@ -156577,7 +156633,10 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/prompt-engineering/prompt-evaluation",
+    "/learn/responsible-ai/privacy-fairness-and-accessibility"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -156624,7 +156683,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -158115,7 +158174,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 384,
+   "wordCount": 376,
    "headings": [
     "The short answer",
     "A useful test set",
@@ -158128,7 +158187,11 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/evals-red-teaming/automated-adversarial-testing",
+    "/learn/machine-learning/generalization-and-evaluation",
+    "/learn/prompt-engineering/prompt-library-capstone"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -158175,7 +158238,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -159064,7 +159127,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 422,
+   "wordCount": 412,
    "headings": [
     "The short answer",
     "What to version",
@@ -159076,7 +159139,10 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/evals-red-teaming/regression-gates-and-online-signals",
+    "/learn/genai-app-dev/api-lifecycle-and-structured-output"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -159123,7 +159189,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -159583,7 +159649,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 391,
+   "wordCount": 383,
    "headings": [
     "The short answer",
     "Choose the intermediate artifact",
@@ -159596,7 +159662,11 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/agentic-ai/tree-search-for-agent-planning",
+    "/learn/classical-ai/search-and-planning",
+    "/learn/prompt-engineering/prompt-evaluation"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -159643,7 +159713,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -162183,7 +162253,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 404,
+   "wordCount": 395,
    "headings": [
     "The short answer",
     "Frame the boundary",
@@ -162196,7 +162266,11 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/prompt-engineering/instructions-context-examples",
+    "/learn/prompt-engineering/structured-output",
+    "/learn/responsible-ai/risk-before-model"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -162243,7 +162317,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -165544,7 +165618,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 396,
+   "wordCount": 388,
    "headings": [
     "The short answer",
     "Contract fields",
@@ -165556,7 +165630,10 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/features-leakage-and-missingness",
+    "/learn/machine-learning/problem-framing-and-baselines"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -165605,7 +165682,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -168161,7 +168238,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 369,
+   "wordCount": 360,
    "headings": [
     "The short answer",
     "A useful shape",
@@ -168173,7 +168250,10 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/genai-app-dev/api-lifecycle-and-structured-output",
+    "/learn/python-data-apis/data-contracts-and-validation"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -168220,7 +168300,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -171328,7 +171408,7 @@
    "published": "2026-08-30",
    "updated": "2026-09-15",
    "verified": null,
-   "wordCount": 423,
+   "wordCount": 416,
    "headings": [
     "The short answer",
     "A grounding contract",
@@ -171340,7 +171420,10 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/deep-learning/attention-and-transformers",
+    "/learn/evals-red-teaming/datasets-rubrics-and-judges"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -171387,7 +171470,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -175530,7 +175613,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 392,
+   "wordCount": 383,
    "headings": [
     "The short answer",
     "A minimum artifact set",
@@ -175542,7 +175625,10 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/evals-red-teaming/regression-gates-and-online-signals",
+    "/learn/responsible-ai/privacy-fairness-and-accessibility"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -175591,7 +175677,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 0,
     "originality": null,
     "accessibility": null,
@@ -175615,7 +175701,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 351,
+   "wordCount": 343,
    "headings": [
     "The short answer",
     "Four examples",
@@ -175626,7 +175712,10 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/evals-red-teaming/datasets-rubrics-and-judges",
+    "/learn/prompt-engineering/multimodal-and-localized-prompts"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -175673,7 +175762,7 @@
     "handsOn": 0,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -175697,7 +175786,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 407,
+   "wordCount": 397,
    "headings": [
     "The short answer",
     "Four checks, four artifacts",
@@ -175710,7 +175799,11 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/machine-learning/generalization-and-evaluation",
+    "/learn/responsible-ai/red-teaming-llm-apps",
+    "/learn/responsible-ai/risk-before-model"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -175757,7 +175850,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -175781,7 +175874,7 @@
    "published": "2026-08-30",
    "updated": "2026-08-30",
    "verified": null,
-   "wordCount": 410,
+   "wordCount": 405,
    "headings": [
     "The short answer",
     "Threat-model the authority chain",
@@ -175794,7 +175887,10 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/prompt-engineering/prompt-evaluation",
+    "/learn/responsible-ai/adversarial-testing-lab"
+   ],
    "externalLinks": [],
    "structuredData": [
     "LearningResource",
@@ -175841,7 +175937,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 1,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -176131,7 +176227,7 @@
    "published": "2026-08-30",
    "updated": "2026-09-15",
    "verified": null,
-   "wordCount": 382,
+   "wordCount": 371,
    "headings": [
     "The short answer",
     "Map the system boundary",
@@ -176144,7 +176240,11 @@
     "What this does not solve",
     "Continue, go deeper, apply it"
    ],
-   "internalLinks": [],
+   "internalLinks": [
+    "/learn/responsible-ai/adversarial-testing-lab",
+    "/learn/responsible-ai/privacy-fairness-provenance",
+    "/learn/responsible-ai/red-teaming-llm-apps"
+   ],
    "externalLinks": [
     "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/"
    ],
@@ -176193,7 +176293,7 @@
     "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
-    "linking": 0,
+    "linking": 2,
     "freshnessHealth": 1,
     "originality": null,
     "accessibility": null,
@@ -204920,7 +205020,7 @@
      "/learn/production/instrumenting-one-app-two-ways",
      "/learn/production/token-and-cost-tracking"
     ],
-    "codeBlocks": 0,
+    "codeBlocks": 1,
     "listItems": 0,
     "numericClaims": 1,
     "featured": false
@@ -204949,7 +205049,7 @@
     "correctnessSources": null,
     "completeness": 1,
     "prerequisiteFit": null,
-    "handsOn": 0,
+    "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 1,
     "linking": 2,
@@ -205277,7 +205377,7 @@
      "/learn/web-agents/sessions-credentials-and-act-boundaries",
      "/learn/tools-function-calling/building-a-browser-tool-loop"
     ],
-    "codeBlocks": 0,
+    "codeBlocks": 1,
     "listItems": 0,
     "numericClaims": 0,
     "featured": false
@@ -205305,7 +205405,7 @@
     "correctnessSources": null,
     "completeness": 1,
     "prerequisiteFit": null,
-    "handsOn": 0,
+    "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
     "linking": 2,
@@ -205369,7 +205469,7 @@
      "/learn/voice-ai/realtime-transport-and-turn-taking",
      "/learn/voice-ai/voice-evaluation-and-testing"
     ],
-    "codeBlocks": 0,
+    "codeBlocks": 1,
     "listItems": 0,
     "numericClaims": 0,
     "featured": false
@@ -205395,7 +205495,7 @@
     "correctnessSources": null,
     "completeness": 1,
     "prerequisiteFit": null,
-    "handsOn": 0,
+    "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
     "linking": 2,
@@ -205721,7 +205821,7 @@
      "/learn/agent-frameworks/raw-sdk-agent-baseline",
      "/learn/agent-frameworks/framework-comparison-and-escape-hatches"
     ],
-    "codeBlocks": 0,
+    "codeBlocks": 1,
     "listItems": 0,
     "numericClaims": 0,
     "featured": false
@@ -205749,7 +205849,7 @@
     "correctnessSources": null,
     "completeness": 1,
     "prerequisiteFit": null,
-    "handsOn": 0,
+    "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 2,
     "linking": 2,
@@ -205812,7 +205912,7 @@
      "/learn/fine-tuning/fine-tune-vs-prompt-vs-rag",
      "/learn/context-engineering/retrieval-vs-context-stuffing"
     ],
-    "codeBlocks": 0,
+    "codeBlocks": 1,
     "listItems": 18,
     "numericClaims": 0,
     "featured": false
@@ -205840,7 +205940,7 @@
     "correctnessSources": null,
     "completeness": 2,
     "prerequisiteFit": null,
-    "handsOn": 0,
+    "handsOn": 2,
     "explanationQuality": 2,
     "metadata": 1,
     "linking": 2,

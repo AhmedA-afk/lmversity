@@ -60,6 +60,6 @@ Fair-looking metrics do not settle legal, social, or organizational questions. P
 
 ## Continue, go deeper, apply it
 
-- Continue: Red-teaming LLM applications
-- Go deeper: Generalization and evaluation
-- Apply it: Risk before model
+- Continue: [Red-teaming LLM applications](/learn/responsible-ai/red-teaming-llm-apps)
+- Go deeper: [Generalization and evaluation](/learn/machine-learning/generalization-and-evaluation)
+- Apply it: [Risk before model](/learn/responsible-ai/risk-before-model)

@@ -64,6 +64,6 @@ Passing a red-team batch does not prove safety. Attackers adapt, and a model-onl
 
 ## Continue, go deeper, apply it
 
-- Continue: Adversarial testing lab
-- Go deeper: Prompt evaluation
+- Continue: [Adversarial testing lab](/learn/responsible-ai/adversarial-testing-lab)
+- Go deeper: [Prompt evaluation](/learn/prompt-engineering/prompt-evaluation)
 - Apply it: write a least-privilege tool policy for your own assistant.

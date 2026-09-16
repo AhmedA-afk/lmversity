@@ -164,9 +164,9 @@ output controls a consequential action.
 
 ## Continue, go deeper, apply it
 
-- Continue: See AI as a data, model, and output loop
-- Go deeper: Problem framing and baselines
-- Apply it: Choose the right AI system
+- Continue: [See AI as a data, model, and output loop](/learn/ai-literacy/data-model-output-loop)
+- Go deeper: [Problem framing and baselines](/learn/machine-learning/problem-framing-and-baselines)
+- Apply it: [Choose the right AI system](/learn/ai-literacy/choose-the-right-ai-system)
 
 ## A practical decision tree
 
@@ -243,6 +243,6 @@ fair. Those become separate design and evaluation questions.
 
 ## Continue, go deeper, apply it
 
-- Continue: What prompting is
-- Go deeper: Problem framing and baselines
+- Continue: [What prompting is](/learn/prompt-engineering/what-prompting-is)
+- Go deeper: [Problem framing and baselines](/learn/machine-learning/problem-framing-and-baselines)
 - Apply it: turn one task into a one-page system brief with a human fallback.

@@ -134,5 +134,5 @@ impact uses need appropriate legal, security, privacy, and domain review.
 ## Continue, go deeper, apply it
 
 - Continue: Build your first bounded AI workflow
-- Go deeper: Privacy, fairness, and provenance
-- Apply it: Data contracts and validation
+- Go deeper: [Privacy, fairness, and provenance](/learn/responsible-ai/privacy-fairness-provenance)
+- Apply it: [Data contracts and validation](/learn/python-data-apis/data-contracts-and-validation)

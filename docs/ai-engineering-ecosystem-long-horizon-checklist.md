@@ -1813,10 +1813,13 @@ Credentials to monitor:
       `visualization-and-error-analysis-practice`. Depth across modes stays
       editorial.)*
 - [x] Connect maths lessons directly to ML, embeddings, attention, optimization,
-      probabilities, evaluation statistics, and inference. *(275 plain-text
-      "Go deeper / Apply it" footer pointers resolved to real links across
-      maths/ML/DL/classical — maths files with no outward links: 167 → 48;
-      remaining pointers name module-level targets that aren't pages)*
+      probabilities, evaluation statistics, and inference. *(345 plain-text
+      "Go deeper / Apply it" footer pointers resolved to real links —
+      275 across maths/ML/DL/classical + 70 across ai-literacy,
+      responsible-ai, evals-red-teaming, prompt-engineering, mcp, rag,
+      genai-app-dev, python-data-apis, production, agentic-ai;
+      zero-link lessons 391 → 362. Remaining plain pointers are prose
+      "Apply it" learner tasks, not route targets)*
 - [ ] Add notebooks and deterministic answer checking.
       *(deterministic checking now taught as a practice discipline by
       `verifying-maths-results-deterministically` — compute/invariant/
@@ -2383,7 +2386,7 @@ Credentials to monitor:
       nearest live module neighbours; provider hubs render breadcrumbs +
       related + source links; answer/guide/scenario/interview bodies all
       carry onward links (family audit: internal-link coverage reported
-      per item, 0 flagged). 491 items have no *in-body* links — density
+      per item, 0 flagged). 567 items have no *in-body* links — density
       is the expand-queue concern, not a missing next action)*
 - [x] Every volatile fact has a verification date.
       *(providers carry verifiedAt, sources carry accessedAt —
@@ -2560,6 +2563,30 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-16 — Cross-track footer pointer resolution (70 links, 29 files)
+
+- Scope: second pass of the plain-text "Continue / Go deeper / Apply it"
+  pointer resolution (the maths batch resolved 275 in-tracks). This pass
+  covered every zero-body-link lesson *outside* maths/ML/DL/classical:
+  ai-literacy, responsible-ai, evals-red-teaming, prompt-engineering,
+  mcp, rag, genai-app-dev, python-data-apis, production, agentic-ai.
+- Method: title → route index plus slug-tail normalization against the
+  content registry, with a 20-entry display-name alias map
+  ("Agents versus workflows" → `agentic-ai/agents-vs-workflows`,
+  "Red-team the system" → `responsible-ai/red-teaming-llm-apps`, …).
+  Prose "Apply it" learner tasks (write/draft/build/package…) are left
+  unlinked by design — they describe work, not pages.
+- Result: **70 pointers → real links across 29 files**; zero-body-link
+  lessons 391 → 362; zero-link items 596 → 567. The only remaining
+  "pointer" match is a `git merge --continue` code comment.
+- Ticked: annotation on "Connect maths lessons…" extended to record the
+  full-corpus resolution; DoD next-action row's zero-link count updated.
+- Validation: `check:content` clean (2,316); `check:links` 0 dead
+  (6,002 routes); `git diff --check` clean; every resolved route
+  verified against the built dist.
+- Next: remaining open rows are external-infra/editorial (Search
+  Console, analytics, clean-env project verification, human review).
 
 ### 2026-09-16 — Code-sample syntax audit (2 rows: staleness identify + syntax-checked)
 

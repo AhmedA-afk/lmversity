@@ -77,6 +77,6 @@ that needs retrieval, evaluation, monitoring, and a fallback.
 
 ## Continue, go deeper, apply it
 
-- Continue: Tool calling and authority
-- Go deeper: Observability, cost, and latency
+- Continue: [Tool calling and authority](/learn/genai-app-dev/tool-calling-and-authority)
+- Go deeper: [Observability, cost, and latency](/learn/production/observability-cost-and-latency)
 - Apply it: draw the lifecycle for one feature and add an error fixture for each boundary.

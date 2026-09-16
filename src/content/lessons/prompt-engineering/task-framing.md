@@ -65,6 +65,6 @@ Clear requirements do not make an impossible task possible. You may still need r
 
 ## Continue, go deeper, apply it
 
-- Continue: Instruction, context, and examples
-- Go deeper: Structured output
-- Apply it: Responsible risk framing
+- Continue: [Instruction, context, and examples](/learn/prompt-engineering/instructions-context-examples)
+- Go deeper: [Structured output](/learn/prompt-engineering/structured-output)
+- Apply it: [Responsible risk framing](/learn/responsible-ai/risk-before-model)

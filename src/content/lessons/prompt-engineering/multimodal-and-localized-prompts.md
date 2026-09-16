@@ -76,6 +76,6 @@ performance across languages and modalities.
 
 ## Continue, go deeper, apply it
 
-- Continue: Prompt evaluation
-- Go deeper: Privacy, fairness, and accessibility
+- Continue: [Prompt evaluation](/learn/prompt-engineering/prompt-evaluation)
+- Go deeper: [Privacy, fairness, and accessibility](/learn/responsible-ai/privacy-fairness-and-accessibility)
 - Apply it: add a modality or locale slice to a prompt evaluation set.

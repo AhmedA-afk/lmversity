@@ -1,6 +1,6 @@
 # Content registry — audit views
 
-Generated 2026-09-15T21:06:42.598Z by `scripts/build-content-registry.mjs`.
+Generated 2026-09-16T04:23:13.275Z by `scripts/build-content-registry.mjs`.
 2763 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
@@ -94,12 +94,12 @@ and split always need a written human reason (see checklist).
 |---|---:|---:|---:|---:|---:|
 | intentClarity | 2444 | 1.91 | 0 | 210 | 2234 |
 | correctnessSources | 52 | 1.27 | 0 | 38 | 14 |
-| completeness | 2658 | 1.64 | 46 | 866 | 1746 |
+| completeness | 2658 | 1.64 | 45 | 867 | 1746 |
 | prerequisiteFit | 2499 | 0.14 | 2319 | 0 | 180 |
-| handsOn | 2444 | 1.41 | 679 | 91 | 1674 |
+| handsOn | 2444 | 1.41 | 674 | 91 | 1679 |
 | explanationQuality | 2444 | 1.92 | 68 | 57 | 2319 |
 | metadata | 2444 | 1.85 | 0 | 375 | 2069 |
-| linking | 2301 | 1.52 | 392 | 329 | 1580 |
+| linking | 2301 | 1.53 | 363 | 348 | 1590 |
 | freshnessHealth | 2763 | 0.77 | 958 | 1482 | 323 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
@@ -556,9 +556,8 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-foundations/eval-and-model-mistakes — Common Mistakes: Evaluation and Model Claims
 - … 63 more
 
-### zero in-body internal links (template nav still applies) (491)
+### zero in-body internal links (template nav still applies) (462)
 
-- /learn/agentic-ai/agents-vs-workflows — Choose an agent only when a workflow is not enough
 - /learn/ai-foundations/applied-ai/301-ai-product-discovery-outcomes-and-harm — AI Product Discovery: Outcomes, Users, and Harm
 - /learn/ai-foundations/applied-ai/302-choosing-rules-classical-ml-deep-learning-or-llm — Choosing Rules, Classical ML, Deep Learning, or an LLM
 - /learn/ai-foundations/applied-ai/303-data-pipelines-lineage-and-data-contracts — Data Pipelines, Lineage, and Data Contracts
@@ -598,7 +597,8 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-foundations/reliable-ai/219-incident-response-rollback-and-learning — AI Incidents, Rollback, and Organisational Learning
 - /learn/ai-foundations/reliable-ai/220-human-in-the-loop-and-meaningful-oversight — Human-in-the-Loop and Meaningful Oversight
 - /learn/ai-foundations/reliable-ai/221-contestability-appeals-and-recource — Contestability, Appeals, and Recourse
-- … 451 more
+- /learn/ai-foundations/reliable-ai/222-societal-impact-labor-and-power — Societal Impact, Labour, and Power
+- … 422 more
 
 ### live file not in curriculum (2316)
 

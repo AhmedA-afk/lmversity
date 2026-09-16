@@ -63,6 +63,6 @@ Offline tests can miss new inputs, user adaptation, distribution shift, and fail
 
 ## Continue, go deeper, apply it
 
-- Continue: Prompt library capstone
-- Go deeper: Adversarial testing
-- Apply it: Generalization and evaluation
+- Continue: [Prompt library capstone](/learn/prompt-engineering/prompt-library-capstone)
+- Go deeper: [Adversarial testing](/learn/evals-red-teaming/automated-adversarial-testing)
+- Apply it: [Generalization and evaluation](/learn/machine-learning/generalization-and-evaluation)

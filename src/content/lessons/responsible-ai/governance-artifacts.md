@@ -75,6 +75,6 @@ monitoring, and rollback decisions.
 
 ## Continue, go deeper, apply it
 
-- Continue: Regression gates and online signals
-- Go deeper: Privacy, fairness, and accessibility
+- Continue: [Regression gates and online signals](/learn/evals-red-teaming/regression-gates-and-online-signals)
+- Go deeper: [Privacy, fairness, and accessibility](/learn/responsible-ai/privacy-fairness-and-accessibility)
 - Apply it: attach a test and named owner to every high-impact risk.

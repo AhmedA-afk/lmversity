@@ -78,6 +78,6 @@ provider availability.
 
 ## Continue, go deeper, apply it
 
-- Continue: Data contracts and validation
-- Go deeper: API lifecycle and structured output
+- Continue: [Data contracts and validation](/learn/python-data-apis/data-contracts-and-validation)
+- Go deeper: [API lifecycle and structured output](/learn/genai-app-dev/api-lifecycle-and-structured-output)
 - Apply it: package the fake-client tests as a small command-line lab.

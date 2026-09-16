@@ -149,6 +149,6 @@ governance problems.
 
 ## Continue, go deeper, apply it
 
-- Continue: Uncertainty, verification, and human judgment
-- Go deeper: Neural networks and representations
-- Apply it: What prompting actually is
+- Continue: [Uncertainty, verification, and human judgment](/learn/ai-literacy/uncertainty-and-verification)
+- Go deeper: [Neural networks and representations](/learn/deep-learning/neural-networks-and-representations)
+- Apply it: [What prompting actually is](/learn/prompt-engineering/what-prompting-is)

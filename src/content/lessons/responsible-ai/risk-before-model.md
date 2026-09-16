@@ -62,6 +62,6 @@ A risk register does not prove the system is safe. It records decisions and make
 
 ## Continue, go deeper, apply it
 
-- Continue: Privacy, fairness, and provenance
-- Go deeper: Red-team the system
-- Apply it: Adversarial testing lab
+- Continue: [Privacy, fairness, and provenance](/learn/responsible-ai/privacy-fairness-provenance)
+- Go deeper: [Red-team the system](/learn/responsible-ai/red-teaming-llm-apps)
+- Apply it: [Adversarial testing lab](/learn/responsible-ai/adversarial-testing-lab)

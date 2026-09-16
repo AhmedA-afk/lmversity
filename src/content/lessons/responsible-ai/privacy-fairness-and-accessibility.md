@@ -68,6 +68,6 @@ conflict. Context, affected communities, and governance decisions remain needed.
 
 ## Continue, go deeper, apply it
 
-- Continue: Datasets, rubrics, and judges
-- Go deeper: Multimodal and localized prompts
+- Continue: [Datasets, rubrics, and judges](/learn/evals-red-teaming/datasets-rubrics-and-judges)
+- Go deeper: [Multimodal and localized prompts](/learn/prompt-engineering/multimodal-and-localized-prompts)
 - Apply it: write a residual-risk note for one user group and one fallback.

@@ -69,6 +69,6 @@ Decomposition does not turn an unsupported premise into a fact and does not remo
 
 ## Continue, go deeper, apply it
 
-- Continue: Prompt evaluation
-- Go deeper: Search and planning
-- Apply it: Agent planning branch
+- Continue: [Prompt evaluation](/learn/prompt-engineering/prompt-evaluation)
+- Go deeper: [Search and planning](/learn/classical-ai/search-and-planning)
+- Apply it: [Agent planning branch](/learn/agentic-ai/tree-search-for-agent-planning)

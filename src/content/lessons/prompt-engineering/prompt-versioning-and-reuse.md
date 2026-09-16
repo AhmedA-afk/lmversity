@@ -78,6 +78,6 @@ change visible enough to investigate.
 
 ## Continue, go deeper, apply it
 
-- Continue: API lifecycle and structured output
-- Go deeper: Regression gates and online signals
+- Continue: [API lifecycle and structured output](/learn/genai-app-dev/api-lifecycle-and-structured-output)
+- Go deeper: [Regression gates and online signals](/learn/evals-red-teaming/regression-gates-and-online-signals)
 - Apply it: add version metadata and a rollback test to one prompt in your library.
