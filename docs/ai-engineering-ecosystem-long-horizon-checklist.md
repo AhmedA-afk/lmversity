@@ -333,18 +333,21 @@ consolidation into a parent track, or a clearer curated-path role.
 - [ ] Review all 7 interview topics and 56 questions for current terminology, role relevance,
       answer depth, follow-up prompts, and links into practice. (Partial: follow-up
       prompts + scoring rubric on all 56; every question block verified as
-      concise-answer + deeper-paragraph structure; each topic now ends with a
-      "Practice next" link into its matching /practice bank (ai-system-design →
-      the practice index — no bank exists yet); terminology/relevance/depth
-      quality remain editorial.)
+      concise-answer + deeper-paragraph structure; each topic ends with a
+      "Practice next" link into its matching /practice bank — ai-system-design
+      now has its own 8-question bank (design-decision scenarios with lesson
+      remediation); terminology/relevance/depth quality remain editorial.)
 - [x] Review all 6 scenarios for realism, constraints, competing options, implementation
       details, evaluation, and postmortem value. (Constraints, options-on-the-table,
       and postmortem sections added; audit verifies all seven required sections on
       every file.)
 - [ ] Review all 6 centralized practice tracks and 48 questions for distractor quality,
       explanation quality, difficulty spread, and curriculum coverage. (Partial:
-      every option carries per-option `why` feedback and all 48 questions link to a
-      remediation lesson; distractor quality and difficulty spread remain editorial.)
+      every option carries per-option `why` feedback and all questions link to a
+      remediation lesson; the corpus has grown to 44 banks / 376 questions and a
+      per-bank difficulty-spread audit shows every bank carries ≥2 difficulty
+      levels (failure banks intentionally skew advanced); distractor quality
+      remains editorial.)
 - [x] Review all lesson-level quizzes for duplicated questions and inconsistent answers.
       (Zero duplicate normalized stems across 603 questions; all answer markers
       re-derived and verified against content ground truth.)
@@ -2609,6 +2612,29 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-16 — ai-system-design bank + difficulty-spread audit
+
+- Scope: the interview review row flagged a real gap — the
+  ai-system-design topic's "Practice next" pointed at the generic
+  /practice index because no bank existed. Built the bank: 8
+  design-decision questions (escalation/eval before polish,
+  retrieval-time permission checks, loop budgets and stop states,
+  latency budgets, production-signal → eval loops, output validation
+  boundaries, consequence-tiered approval gates, the retrieval-miss
+  path), each remediating to the matching lesson.
+- Also fixed a doubled link-text bug in the topic's footer
+  ("the the practice banks practice bank").
+- Difficulty-spread audit across all 44 banks: every bank carries ≥2
+  difficulty levels; failure banks (agent-traces, mcp-security,
+  production-incidents…) intentionally skew advanced. Annotation
+  updated on the practice-review row.
+- Registered `ai-system-design` in BANK_ROLES_EXTRA for
+  ai-platform-engineer / ai-engineer / forward-deployed-engineer.
+- Validation: `check:content` clean; build 2,813 pages —
+  `/practice/ai-system-design` live; `check:links` 0 dead (6,006
+  routes); `verify:questions` clean.
+- Bank total: 376 questions across 44 banks.
 
 ### 2026-09-16 — Browser batch verification (6 release-gate rows)
 
