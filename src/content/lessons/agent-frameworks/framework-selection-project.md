@@ -3,6 +3,7 @@ title: "Project: Framework Selection Bake-Off"
 track: "agent-frameworks"
 status: live
 summary: "Implement the same bounded agent task in two frameworks and a raw SDK baseline, then defend the choice on evidence — not vibes."
+updated: "2026-09-16"
 duration: "1–2 weeks"
 ---
 

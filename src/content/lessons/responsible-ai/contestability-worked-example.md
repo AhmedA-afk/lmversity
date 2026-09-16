@@ -3,6 +3,7 @@ title: "Worked Example: A Contestability Path That Actually Works"
 track: "responsible-ai"
 status: live
 summary: "A benefits-eligibility tool's appeal flow walked end to end — the path that existed on paper, and the one a harmed user could actually follow."
+updated: "2026-09-16"
 duration: "10 min read"
 ---
 

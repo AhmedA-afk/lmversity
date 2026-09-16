@@ -3,6 +3,7 @@ title: "Worked Example: An Eval That Passed and Shipped a Regression"
 track: "evals-red-teaming"
 status: live
 summary: "A prompt change scored 94% and shipped — walk through how the aggregate hid a 30-point regression on one slice, and the per-dimension gate that catches it."
+updated: "2026-09-16"
 duration: "10 min read"
 ---
 

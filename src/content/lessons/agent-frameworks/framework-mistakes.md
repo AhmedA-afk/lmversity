@@ -3,6 +3,7 @@ title: "Agent Frameworks: Common Mistakes"
 track: "agent-frameworks"
 status: live
 summary: "The eight framework mistakes — picking before specifying, trusting the abstraction, and the demo that proves nothing."
+updated: "2026-09-16"
 duration: "8 min read"
 ---
 

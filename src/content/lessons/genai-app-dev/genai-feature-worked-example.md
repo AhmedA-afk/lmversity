@@ -3,6 +3,7 @@ title: "Worked Example: A GenAI Feature From Demo to Production"
 track: "genai-app-dev"
 status: live
 summary: "One support-summarization feature walked end to end — the demo that worked, the four production gaps, and the eval that caught them."
+updated: "2026-09-16"
 duration: "10 min read"
 ---
 

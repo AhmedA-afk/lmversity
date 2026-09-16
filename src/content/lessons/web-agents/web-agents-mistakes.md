@@ -3,6 +3,7 @@ title: "Web Agents: Common Mistakes"
 track: "web-agents"
 status: live
 summary: "The eight web-agent mistakes — page content trusted as instruction, sessions that outlive their task, and actions fired on unverified state."
+updated: "2026-09-16"
 duration: "8 min read"
 ---
 

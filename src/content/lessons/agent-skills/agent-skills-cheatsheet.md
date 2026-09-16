@@ -3,6 +3,7 @@ title: "Agent Skills Cheatsheet"
 track: "agent-skills"
 status: live
 summary: "The skill-authoring reference — what goes in SKILL.md, progressive disclosure, and the security checks before installing one."
+updated: "2026-09-16"
 duration: "6 min read"
 ---
 

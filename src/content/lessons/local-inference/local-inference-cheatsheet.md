@@ -3,6 +3,7 @@ title: "Local Inference Cheatsheet"
 track: "local-inference"
 status: live
 summary: "The local-LLM reference — which runtime for which job, the quantization tradeoff table, and the privacy boundary that's actually real."
+updated: "2026-09-16"
 duration: "6 min read"
 ---
 

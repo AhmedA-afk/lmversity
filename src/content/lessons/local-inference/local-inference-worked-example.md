@@ -3,6 +3,7 @@ title: "Worked Example: The Local Setup That Wasn't Private"
 track: "local-inference"
 status: live
 summary: "A 'local, private' assistant traced through the actual data flow — the model was local, the pipeline wasn't, and the check that caught it."
+updated: "2026-09-16"
 duration: "10 min read"
 ---
 

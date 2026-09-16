@@ -3,6 +3,7 @@ title: "LLM Foundations Cheatsheet"
 track: "llm-foundations"
 status: live
 summary: "The model-side vocabulary and decision table — tokens, context, sampling, and which failure belongs to which layer."
+updated: "2026-09-16"
 duration: "6 min read"
 ---
 

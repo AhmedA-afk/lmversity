@@ -3,6 +3,7 @@ title: "Multimodal AI Cheatsheet"
 track: "multimodal-ai"
 status: live
 summary: "The multimodal decision table — which modality pipeline for which job, and the cost/latency/eval checks that differ from text."
+updated: "2026-09-16"
 duration: "6 min read"
 ---
 

@@ -3,6 +3,8 @@ title: "Implementing Prompt Caching"
 track: "genai-app-dev"
 status: live
 summary: "Add cache breakpoints around a stable context, verify the hit rate, and layer an exact-match response cache on top."
+updated: "2026-09-16"
+sources: ["anthropic-pricing"]
 duration: "8 min read"
 ---
 

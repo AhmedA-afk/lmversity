@@ -3,6 +3,7 @@ title: "Worked Example: A Document Pipeline That Costs 10× What It Should"
 track: "multimodal-ai"
 status: live
 summary: "An invoice-processing pipeline walked end to end — the OCR-on-digital bug, the full-res images, and the per-stage eval that finds each waste."
+updated: "2026-09-16"
 duration: "10 min read"
 ---
 

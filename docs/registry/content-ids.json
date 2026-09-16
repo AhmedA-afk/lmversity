@@ -9,7 +9,7 @@
   "ans": 35,
   "fde": 193,
   "rol": 12,
-  "prc": 56,
+  "prc": 58,
   "pag": 27,
   "trk": 29,
   "qgd": 4,
@@ -1451,7 +1451,7 @@
   },
   "lessons/context-engineering/context-window-testing-and-eval.mdx": {
    "id": "les-0359",
-   "fp": "681aa607976756cbb940ff70e9bddd2664edb51a"
+   "fp": "5ed827eeb75c79b95b5d85d3bd143b7e400ad0fb"
   },
   "lessons/context-engineering/conversation-memory-and-state.mdx": {
    "id": "les-0360",
@@ -2691,7 +2691,7 @@
   },
   "lessons/genai-app-dev/designing-chat-ux.mdx": {
    "id": "les-0669",
-   "fp": "63c55e6f944b6402c2569549ec82bfe60504e4a0"
+   "fp": "b45479ca2b2c208b8bd56d96feccd1b14a99162e"
   },
   "lessons/genai-app-dev/error-handling-for-llm-calls.mdx": {
    "id": "les-0670",
@@ -2983,7 +2983,7 @@
   },
   "lessons/genai-app-dev/session-state-multi-turn.mdx": {
    "id": "les-0742",
-   "fp": "800f1ae814af442962f38aa4f85faf5a8422413c"
+   "fp": "f4323f23e0f744c727ad882b494778566b60e18f"
   },
   "lessons/genai-app-dev/shipping-end-to-end.md": {
    "id": "les-0743",
@@ -3047,7 +3047,7 @@
   },
   "lessons/genai-app-dev/streaming-structured-generative-ui.md": {
    "id": "les-0758",
-   "fp": "786d4b6aed3c2599e6ad9c393742feb32a35fc86"
+   "fp": "aac3d52a7035c2e3f85e6443d610502148249cd8"
   },
   "lessons/genai-app-dev/streaming-ux-cheatsheet.md": {
    "id": "les-0759",
@@ -3079,7 +3079,7 @@
   },
   "lessons/genai-app-dev/tool-calling-and-authority.md": {
    "id": "les-0766",
-   "fp": "4625d76754cc1d39c207b315999ad79c29974462"
+   "fp": "5c9d01a52c002fccad0fa5e294d1fbca49020530"
   },
   "lessons/genai-app-dev/tool-calling-as-authority.md": {
    "id": "les-0767",
@@ -3907,7 +3907,7 @@
   },
   "lessons/llm-foundations/grouped-query-attention.mdx": {
    "id": "les-0973",
-   "fp": "113becd266a4409c2ea12ebf0f781b0a0544deaa"
+   "fp": "e0c2ea054b9a72d8d240d653bca85b1148d86a31"
   },
   "lessons/llm-foundations/hallucination-taxonomy-and-mitigations.mdx": {
    "id": "les-0974",
@@ -5079,7 +5079,7 @@
   },
   "lessons/machine-learning/reproductions/ml-881-reproduce-least-squares-linear-regression.md": {
    "id": "les-1266",
-   "fp": "236eb66dd392b554bfdc8962abd1667a74b69347"
+   "fp": "f9048e41cca7d2ccaa824089263c76255c4d6dfd"
   },
   "lessons/machine-learning/reproductions/ml-882-reproduce-adaboost-weight-updates-and-noise-sensitivity.md": {
    "id": "les-1267",
@@ -6239,7 +6239,7 @@
   },
   "lessons/prompt-engineering/ab-testing-prompts-in-production.mdx": {
    "id": "les-1556",
-   "fp": "e522ea75c743a075c114877373246c79985d5368"
+   "fp": "f1edd9f515127b03124a522b26dc76bbb29060b2"
   },
   "lessons/prompt-engineering/acceptance-criteria-in-prompts.md": {
    "id": "les-1557",
@@ -6443,7 +6443,7 @@
   },
   "lessons/prompt-engineering/meta-prompting-with-models.mdx": {
    "id": "les-1607",
-   "fp": "fdac8beaa67a4b8311dddb3c260da0abbcbf5f99"
+   "fp": "eac5624797596a67788b1152c858692578cd396d"
   },
   "lessons/prompt-engineering/monolith-to-pipeline-worked.md": {
    "id": "les-1608",
@@ -6715,7 +6715,7 @@
   },
   "lessons/prompt-engineering/task-framing.md": {
    "id": "les-1675",
-   "fp": "03c103845c3e384867170ec855f7d0a1509d0a27"
+   "fp": "a4ad1f102055c8aac4f56fef2db2bdf915eb5d0a"
   },
   "lessons/prompt-engineering/temperature-and-determinism-for-prompters.md": {
    "id": "les-1676",
@@ -7331,7 +7331,7 @@
   },
   "lessons/structured-outputs/cross-provider-landscape.md": {
    "id": "les-1829",
-   "fp": "2101653106df7981a376a131ff9987655613079f"
+   "fp": "75565a9badd308764232d04432a88f513306267b"
   },
   "lessons/structured-outputs/cross-provider-structured-output-differences.mdx": {
    "id": "les-1830",
@@ -8127,7 +8127,7 @@
   },
   "lessons/tools-function-calling/structured-output-vs-tool-calls.mdx": {
    "id": "les-2028",
-   "fp": "f8f1a64813e9b11f9bb58553d0337706b2f3a229"
+   "fp": "4bf58fe06ca6b1c501fc01479c6c1bddd86c31cb"
   },
   "lessons/tools-function-calling/taxonomy-of-tool-failures.md": {
    "id": "les-2029",
@@ -8263,7 +8263,7 @@
   },
   "questions/ai-system-design.mdx": {
    "id": "que-0002",
-   "fp": "fb2f2263da5f01efbc2529f98c6d5fd8222e38a6"
+   "fp": "369e20ea5f5f19fe7cd569617807f7dd63bc8473"
   },
   "questions/evals.mdx": {
    "id": "que-0003",
@@ -8431,7 +8431,7 @@
   },
   "answers/how-to-use-claude-code.md": {
    "id": "ans-0012",
-   "fp": "bc13ffdffca6dd5be6c8bf51fd8091f9c5e60958"
+   "fp": "2f5a6e94c876a8a2097cbf3ad3aa46a4cf952f06"
   },
   "answers/how-to-use-openai-codex.md": {
    "id": "ans-0013",
@@ -8451,7 +8451,7 @@
   },
   "answers/openai-vs-chatgpt.md": {
    "id": "ans-0017",
-   "fp": "7ba62eea60b03db22e391463a32582df28a82550"
+   "fp": "fc2144bb67f53e3f0234baa417e656921cdcba7f"
   },
   "answers/prompt-engineering-vs-context-engineering.md": {
    "id": "ans-0018",
@@ -10974,6 +10974,12 @@
   "lessons/web-agents/web-agents-mistakes.md": {
    "id": "les-2316",
    "fp": "54befdce563ea3d9bb8a8a80b01623237fd09c94"
+  },
+  "data:practice/cert-prep": {
+   "id": "prc-0057"
+  },
+  "data:practice/ai-system-design": {
+   "id": "prc-0058"
   }
  },
  "retired": {

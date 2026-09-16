@@ -410,6 +410,7 @@ for (const file of [...walk(LESSONS, /\.(md|mdx)$/)].sort()) {
       workedExample: kind === 'worked-example' || /worked example|walkthrough/i.test(a.headings.map((h) => h.text).join(' ')),
       errorCase: kind === 'common-mistakes' || /mistake|error|fail|broken|debug|goes wrong|anti-?pattern/i.test(a.headings.map((h) => h.text).join(' ')),
       sourcesSection: /sources|further reading|references/i.test(a.headings.map((h) => h.text).join(' ')),
+      sources: Array.isArray(fm.sources) ? fm.sources.length : 0,
       runnableSignals: a.codeBlockCount > 0 && /\b(npm|pip|python3?|node|curl|ollama|docker)\b/i.test(body),
       listItems: a.listItems, numericClaims: a.numericClaims,
       specFormat: /rubric|protocol|required artefact|submission artefact|stage gate|deliverable|acceptance criteria|checkpoint/i.test(a.headings.map((h) => h.text).join(' ')),
@@ -1021,8 +1022,10 @@ for (const it of items) {
     flags.push('comparison sourced only to provider/first-party domains');
   const hasSourceSignal = f.sourcesSection || (f.sources ?? 0) > 0 || ext.length > 0;
   // pricing/release classes are where an unsourced number rots into a lie;
-  // a high claim density on those pages without any source signal is the risk
+  // a high claim density on those pages without any source signal is the risk.
+  // Quizzes are exempt: their digits are question/option content, not claims.
   if (['pricing-sensitive', 'release-sensitive'].includes(it.freshnessClass)
+      && it.kind !== 'quiz'
       && (f.numericClaims ?? 0) >= 4 && !hasSourceSignal)
     flags.push(`${f.numericClaims} numeric claims with no sources section or external link`);
   if (flags.length) sourcingFlags.push({ route: it.route, slug: it.slug, title: it.title, family: it.family, flags });

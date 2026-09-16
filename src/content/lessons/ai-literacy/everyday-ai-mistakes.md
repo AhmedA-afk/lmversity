@@ -3,6 +3,7 @@ title: "Common Mistakes: Everyday AI Use"
 track: "ai-literacy"
 status: live
 summary: "The eight ways ordinary AI use goes wrong — from trusting fluent text to pasting private data — and the habit that fixes each."
+updated: "2026-09-16"
 duration: "8 min read"
 ---
 

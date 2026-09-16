@@ -3,6 +3,7 @@ title: "Agent Skills: Common Mistakes"
 track: "agent-skills"
 status: live
 summary: "The eight skill-authoring and skill-installing mistakes — bloated bodies, vague triggers, unvetted bundles, and skills that should be rules."
+updated: "2026-09-16"
 duration: "8 min read"
 ---
 

@@ -3,6 +3,7 @@ title: "Worked Example: A Web Agent That Clicked the Wrong Button"
 track: "web-agents"
 status: live
 summary: "A form-submission agent that acted on unverified state — traced through the action boundary that should have caught it, and the read-before-act that did."
+updated: "2026-09-16"
 duration: "10 min read"
 ---
 

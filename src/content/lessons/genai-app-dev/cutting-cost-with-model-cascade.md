@@ -3,6 +3,8 @@ title: "Cutting Cost With a Model Cascade"
 track: "genai-app-dev"
 status: live
 summary: "Walk one ticket-triage feature through a cheap-model-first cascade and the arithmetic behind the cost drop."
+updated: "2026-09-16"
+sources: ["anthropic-pricing"]
 duration: "8 min read"
 ---
 

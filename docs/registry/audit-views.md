@@ -1,13 +1,13 @@
 # Content registry — audit views
 
-Generated 2026-09-16T04:23:13.275Z by `scripts/build-content-registry.mjs`.
-2763 public content items. Machine-readable source: `content-registry.json`.
+Generated 2026-09-16T05:34:24.250Z by `scripts/build-content-registry.mjs`.
+2765 public content items. Machine-readable source: `content-registry.json`.
 Heuristic fields (intent, audience, freshness) record their signals in JSON — overrule during scoring.
 
 ## By family
 
 - lesson: 2193
-- quiz: 143
+- quiz: 145
 - reference: 130
 - lab: 78
 - project: 62
@@ -23,15 +23,15 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By status
 
-- live: 2763
+- live: 2765
 
 ## By search intent (heuristic)
 
-- concept: 1894
-- practice: 143
+- concept: 1893
+- practice: 145
 - build: 140
 - reference: 131
-- comparison: 116
+- comparison: 117
 - worked-example: 104
 - troubleshooting: 70
 - answer: 35
@@ -47,7 +47,7 @@ Heuristic fields (intent, audience, freshness) record their signals in JSON — 
 
 ## By primary audience (heuristic)
 
-- ai-engineer: 1877
+- ai-engineer: 1879
 - beginner-engineer: 448
 - forward-deployed-engineer: 195
 - general: 193
@@ -87,20 +87,20 @@ and split always need a written human reason (see checklist).
 | disposition | items |
 |---|---:|
 | investigate | 2413 |
-| keep | 345 |
+| keep | 347 |
 | expand | 5 |
 
 | dimension | scored | mean | 0 | 1 | 2 |
 |---|---:|---:|---:|---:|---:|
-| intentClarity | 2444 | 1.91 | 0 | 210 | 2234 |
+| intentClarity | 2446 | 1.91 | 0 | 210 | 2236 |
 | correctnessSources | 52 | 1.27 | 0 | 38 | 14 |
 | completeness | 2658 | 1.64 | 45 | 867 | 1746 |
 | prerequisiteFit | 2499 | 0.14 | 2319 | 0 | 180 |
-| handsOn | 2444 | 1.41 | 674 | 91 | 1679 |
-| explanationQuality | 2444 | 1.92 | 68 | 57 | 2319 |
-| metadata | 2444 | 1.85 | 0 | 375 | 2069 |
-| linking | 2301 | 1.53 | 363 | 348 | 1590 |
-| freshnessHealth | 2763 | 0.77 | 958 | 1482 | 323 |
+| handsOn | 2446 | 1.41 | 676 | 91 | 1679 |
+| explanationQuality | 2446 | 1.92 | 70 | 57 | 2319 |
+| metadata | 2446 | 1.85 | 0 | 375 | 2071 |
+| linking | 2301 | 1.53 | 363 | 347 | 1591 |
+| freshnessHealth | 2765 | 0.77 | 958 | 1484 | 323 |
 | originality | 0 | — | — | — | — |
 | accessibility | 0 | — | — | — | — |
 | demand | 0 | — | — | — | — |
@@ -224,7 +224,6 @@ and split always need a written human reason (see checklist).
 | /learn/prompt-engineering/meta-prompting-to-draft-prompts | /learn/prompt-engineering/meta-prompting-with-models | 1 | 1 |  | yes | same track |
 | /learn/prompt-engineering/task-framing-intent-constraints-criteria | /learn/prompt-engineering/task-framing | 1 | 1 | yes | yes | same track |
 | /learn/llm-foundations/grouped-query-attention | /learn/llm-foundations/multi-query-and-grouped-query-attention | 1 | 1 |  | yes | same track |
-| /learn/genai-app-dev/generative-ui-rendering-components | /learn/genai-app-dev/generative-ui | 1 | 1 | yes | yes | same track |
 | /learn/tools-function-calling/structured-output-vs-tool-calls-when | /learn/tools-function-calling/structured-output-vs-tool-calls | 1 | 1 | yes | yes | same track |
 | /learn/genai-app-dev/session-and-state-management | /learn/genai-app-dev/session-state-multi-turn | 0.83 | 1 |  | yes | same track |
 | /learn/tools-function-calling/openapi-to-schema-conversion | /learn/tools-function-calling/openapi-to-tool-schema | 0.83 | 1 |  | yes | same track |
@@ -281,6 +280,7 @@ and split always need a written human reason (see checklist).
 | /learn/tools-function-calling/foundations-quiz | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  |  | same track |
 | /learn/tools-function-calling/parallel-tool-calls-mechanics | /learn/tools-function-calling/parallel-tool-calls | 0.5 | 1 | yes | yes | same track |
 | /learn/tools-function-calling/taxonomy-of-tool-failures | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  | yes | same track |
+| /learn/tools-function-calling/tool-calling-across-providers | /learn/tools-function-calling/what-is-tool-calling | 0.5 | 1 |  | yes | same track |
 
 _… 310 more pairs in content-registry.json (`duplicates`)_
 
@@ -291,18 +291,10 @@ _… 310 more pairs in content-registry.json (`duplicates`)_
 
 ## Sourcing review flags
 
-187 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
+138 items flagged for sourcing review — volatile pages without a review date, comparisons sourced only to provider domains, volatile pages with numeric claims and no source signal. Candidates, not verdicts.
 
 | item | flags |
 |---|---|
-| /learn/agent-frameworks/framework-cheatsheet | pricing-sensitive page with no updated/review date |
-| /learn/agent-frameworks/framework-leak-worked-example | release-sensitive page with no updated/review date |
-| /learn/agent-frameworks/framework-mistakes | release-sensitive page with no updated/review date |
-| /learn/agent-frameworks/framework-selection-project | release-sensitive page with no updated/review date |
-| /learn/agent-skills/agent-skills-cheatsheet | release-sensitive page with no updated/review date |
-| /learn/agent-skills/agent-skills-mistakes | release-sensitive page with no updated/review date |
-| /learn/agent-skills/skill-authoring-worked-example | release-sensitive page with no updated/review date |
-| /learn/ai-automation-ops/automation-ops-mistakes | release-sensitive page with no updated/review date |
 | /learn/ai-for-designers/ai-product-design-foundations-quiz | pricing-sensitive page with no updated/review date |
 | /learn/ai-for-designers/choosing-where-ai-belongs-worked-example | pricing-sensitive page with no updated/review date |
 | /learn/ai-for-designers/correction-undo-and-recovery-patterns | policy-sensitive page with no updated/review date |
@@ -312,33 +304,22 @@ _… 310 more pairs in content-registry.json (`duplicates`)_
 | /learn/ai-for-designers/research-synthesis-lab | policy-sensitive page with no updated/review date |
 | /learn/ai-for-designers/trust-and-recovery-quiz | policy-sensitive page with no updated/review date |
 | /learn/ai-foundations/building-an-eval-set-worked-example | 18 numeric claims with no sources section or external link |
-| /learn/ai-foundations/capabilities-and-eval-quiz | 28 numeric claims with no sources section or external link |
 | /learn/ai-foundations/choosing-a-model-decision-framework | 10 numeric claims with no sources section or external link |
-| /learn/ai-foundations/generalization-quiz | 10 numeric claims with no sources section or external link |
 | /learn/ai-foundations/how-llms-work-end-to-end-example | 13 numeric claims with no sources section or external link |
 | /learn/ai-foundations/narrow-vs-general-ai-in-practice | 4 numeric claims with no sources section or external link |
 | /learn/ai-foundations/open-vs-closed-and-hardware-tradeoffs | 33 numeric claims with no sources section or external link |
-| /learn/ai-foundations/practical-models-quiz | 42 numeric claims with no sources section or external link |
 | /learn/ai-foundations/scaling-laws | 7 numeric claims with no sources section or external link |
-| /learn/ai-foundations/tokens-and-cost-worked-example | 39 numeric claims with no sources section or external link |
 | /learn/ai-foundations/what-a-model-actually-is | 4 numeric claims with no sources section or external link |
 | /learn/ai-literacy/common-myths-about-ai-debunked | 6 numeric claims with no sources section or external link |
-| /learn/ai-literacy/cost-and-limits-quiz | 8 numeric claims with no sources section or external link |
-| /learn/ai-literacy/everyday-ai-mistakes | pricing-sensitive page with no updated/review date |
-| /learn/ai-literacy/judging-and-verifying-quiz | 42 numeric claims with no sources section or external link |
 | /learn/ai-literacy/the-real-limits-of-ai-today | 5 numeric claims with no sources section or external link |
 | /learn/ai-literacy/what-not-to-paste-into-ai | 10 numeric claims with no sources section or external link |
 | /learn/ai-literacy/what-using-ai-actually-costs | 4 numeric claims with no sources section or external link |
 | /learn/ai-literacy/when-ai-gets-numbers-and-math-wrong | 103 numeric claims with no sources section or external link |
 | /learn/classical-ai/search-planning/112-adversarial-search-games-utilities-and-minimax | 4 numeric claims with no sources section or external link |
-| /learn/context-engineering/budgeting-and-observability-quiz | 48 numeric claims with no sources section or external link |
-| /learn/context-engineering/compaction-memory-quiz | 15 numeric claims with no sources section or external link |
 | /learn/context-engineering/cost-latency-quality-tradeoff-curve | 48 numeric claims with no sources section or external link |
 | /learn/context-engineering/deduping-overlapping-tool-results | 10 numeric claims with no sources section or external link |
 | /learn/context-engineering/dissecting-a-live-context-payload | 23 numeric claims with no sources section or external link |
 | /learn/context-engineering/dynamic-budget-reallocation | 32 numeric claims with no sources section or external link |
-| /learn/context-engineering/failure-modes-quiz | 5 numeric claims with no sources section or external link |
-| /learn/context-engineering/foundations-quiz | 9 numeric claims with no sources section or external link |
 | /learn/context-engineering/instrumenting-token-spend-in-production | 8 numeric claims with no sources section or external link |
 | /learn/context-engineering/just-in-time-context-loading-pattern | 4 numeric claims with no sources section or external link |
 | /learn/context-engineering/measuring-cache-savings | 26 numeric claims with no sources section or external link |
@@ -346,7 +327,6 @@ _… 310 more pairs in content-registry.json (`duplicates`)_
 | /learn/context-engineering/prompt-caching-mechanics | 6 numeric claims with no sources section or external link |
 | /learn/context-engineering/reading-a-context-budget-pie | 33 numeric claims with no sources section or external link |
 | /learn/context-engineering/retrieving-then-filtering-pipeline | 4 numeric claims with no sources section or external link |
-| /learn/context-engineering/selection-ordering-quiz | 10 numeric claims with no sources section or external link |
 | /learn/context-engineering/the-budget-allocation-mental-model | 15 numeric claims with no sources section or external link |
 | /learn/context-engineering/the-whole-game-of-context-engineering | 6 numeric claims with no sources section or external link |
 | /learn/context-engineering/token-accounting-per-turn-ledger | 48 numeric claims with no sources section or external link |
@@ -355,14 +335,34 @@ _… 310 more pairs in content-registry.json (`duplicates`)_
 | /learn/deep-learning/sequence-generative/317-language-model-objectives-and-tokenization | 9 numeric claims with no sources section or external link |
 | /learn/deep-learning/sequence-generative/320-language-model-evaluation-calibration-and-behavior | 9 numeric claims with no sources section or external link |
 | /learn/deep-learning/vision/223-pruning-sparsity-and-quantization | 6 numeric claims with no sources section or external link |
+| /learn/evals-red-teaming/eval-regression-worked-example | 13 numeric claims with no sources section or external link |
+| /learn/evals-red-teaming/flaky-eval-mitigation | 5 numeric claims with no sources section or external link |
+| /learn/fine-tuning/context-length-extension-rope-scaling | 8 numeric claims with no sources section or external link |
+| /learn/fine-tuning/fine-tune-regression-worked-example | 15 numeric claims with no sources section or external link |
+| /learn/genai-app-dev/cost-and-capability-based-routing | 18 numeric claims with no sources section or external link |
+| /learn/genai-app-dev/feature-flagging-ai-features | 6 numeric claims with no sources section or external link |
+| /learn/genai-app-dev/instrumenting-with-tracing | 6 numeric claims with no sources section or external link |
+| /learn/genai-app-dev/perf-cost-cheatsheet | 6 numeric claims with no sources section or external link |
+| /learn/genai-app-dev/quiz-performance-cost | 33 numeric claims with no sources section or external link |
+| /learn/genai-app-dev/quiz-provider-layer | 8 numeric claims with no sources section or external link |
+| /learn/genai-app-dev/quiz-state-structured-tools | 11 numeric claims with no sources section or external link |
+| /learn/hallucinations/adversarial-and-leading-prompts | 4 numeric claims with no sources section or external link |
+| /learn/hallucinations/escalation-human-in-the-loop | 5 numeric claims with no sources section or external link |
+| /learn/hallucinations/intrinsic-vs-extrinsic-hallucination | 7 numeric claims with no sources section or external link |
+| /learn/hallucinations/latency-cost-reliability-tradeoffs | 15 numeric claims with no sources section or external link |
+| /learn/hallucinations/uncertainty-in-practice-triage | 5 numeric claims with no sources section or external link |
+| /learn/harness-design/sandboxing-technology-choices | 4 numeric claims with no sources section or external link |
+| /learn/llm-foundations/bpe-vs-wordpiece-vs-unigram | 16 numeric claims with no sources section or external link |
+| /learn/llm-foundations/byte-pair-encoding | 6 numeric claims with no sources section or external link |
+| /learn/llm-foundations/context-window-mechanics-and-limits | 33 numeric claims with no sources section or external link |
 
-_… 127 more in content-registry.json (`sourcingFlags`)_
+_… 78 more in content-registry.json (`sourcingFlags`)_
 
 ## Freshness queues
 
 Review order: volatile classes first, oldest last-verified date first; undated items lead each queue. `verified`/`updated`/`published` supply the last-verified date — git-derived when frontmatter is absent.
 
-- periodic: 1482
+- periodic: 1484
 - pricing-sensitive: 376
 - release-sensitive: 375
 - durable: 272
@@ -372,9 +372,6 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 
 ### certification-sensitive (107) — oldest-verified first
 
-- /learn/web-agents/web-agent-project — Project: A Bounded Web Agent for a Real Task *(verified undated)*
-- /learn/web-agents/web-agents-cheatsheet — Web Agents Cheatsheet *(verified undated)*
-- /learn/web-agents/web-agents-mistakes — Web Agents: Common Mistakes *(verified undated)*
 - /learn/ai-foundations/reliable-ai/201-provenance-consent-and-data-rights — Provenance, Consent, and Data Rights *(verified 2026-08-30)*
 - /learn/ai-foundations/reliable-ai/202-labels-annotation-and-ground-truth — Labels, Annotation, and the Limits of Ground Truth *(verified 2026-08-30)*
 - /learn/ai-foundations/reliable-ai/203-benchmarks-evaluations-and-capability-claims — Benchmarks, Evaluations, and Defensible Capability Claims *(verified 2026-08-30)*
@@ -402,20 +399,15 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-foundations/reliable-ai/225-case-study-health-and-clinical-support — Case Study: Health and Clinical Support *(verified 2026-08-30)*
 - /learn/ai-foundations/reliable-ai/226-case-study-finance-and-public-services — Case Study: Finance and Public Services *(verified 2026-08-30)*
 - /learn/ai-foundations/reliable-ai/227-case-study-generative-agents-and-critical-workflows — Case Study: Generative Agents in Critical Workflows *(verified 2026-08-30)*
+- /learn/ai-foundations/reliable-ai/228-reliable-ai-capstone-and-technical-defense — Reliable AI Capstone and Technical Defense *(verified 2026-08-30)*
+- /learn/ai-literacy/fact-check-an-ai-answer-step-by-step — Fact-checking an AI answer, step by step *(verified 2026-08-30)*
+- /learn/ai-literacy/run-a-real-task-end-to-end-with-verification — Capstone: run a real task end to end, verified *(verified 2026-08-30)*
 - … 77 more in content-registry.json
 
 ### pricing-sensitive (376) — oldest-verified first
 
-- /learn/agent-frameworks/framework-cheatsheet — Agent Frameworks Cheatsheet *(verified undated)*
 - /learn/ai-for-designers/ai-product-design-foundations-quiz — Quiz: AI product design foundations *(verified undated)*
 - /learn/ai-for-designers/choosing-where-ai-belongs-worked-example — Choosing where AI belongs: a worked example *(verified undated)*
-- /learn/ai-literacy/everyday-ai-mistakes — Common Mistakes: Everyday AI Use *(verified undated)*
-- /learn/evals-red-teaming/eval-regression-worked-example — Worked Example: An Eval That Passed and Shipped a Regression *(verified undated)*
-- /learn/fine-tuning/fine-tune-regression-worked-example — Worked Example: A Fine-Tune That Fixed One Thing and Broke Three *(verified undated)*
-- /learn/genai-app-dev/genai-feature-worked-example — Worked Example: A GenAI Feature From Demo to Production *(verified undated)*
-- /learn/multimodal-ai/document-pipeline-worked-example — Worked Example: A Document Pipeline That Costs 10× What It Should *(verified undated)*
-- /learn/multimodal-ai/multimodal-cheatsheet — Multimodal AI Cheatsheet *(verified undated)*
-- /learn/multimodal-ai/multimodal-mistakes — Multimodal AI: Common Mistakes *(verified undated)*
 - /learn/ai-foundations/choosing-a-model — Choosing a model in 2026 *(verified 2026-08-29)*
 - /learn/ai-foundations/tokens-context-cost — Tokens, context & cost *(verified 2026-08-29)*
 - /learn/prompt-engineering/chain-of-thought-prompting — Chain-of-Thought: Getting the Model to Show Its Work *(verified 2026-08-29)*
@@ -436,6 +428,14 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-literacy/what-ai-can-and-cant-do-overview — What AI can and can't do: the whole picture *(verified 2026-08-30)*
 - /learn/ai-literacy/what-happens-to-what-you-type — What happens to what you type into AI *(verified 2026-08-30)*
 - /learn/ai-literacy/what-not-to-paste-into-ai — What you should never paste into AI *(verified 2026-08-30)*
+- /learn/ai-literacy/what-using-ai-actually-costs — What using AI actually costs you *(verified 2026-08-30)*
+- /learn/ai-literacy/when-ai-gets-numbers-and-math-wrong — When AI gets numbers and math wrong *(verified 2026-08-30)*
+- /learn/ai-literacy/when-ai-helps-and-when-it-hurts — When AI helps and when it just gets in the way *(verified 2026-08-30)*
+- /learn/ai-literacy/where-ai-knowledge-comes-from-and-stops — Where AI's knowledge comes from — and where it stops *(verified 2026-08-30)*
+- /learn/context-engineering/build-a-budgeted-context-managed-agent — Capstone: Build a Budgeted, Context-Managed Agent *(verified 2026-08-30)*
+- /learn/context-engineering/cache-aware-context-design-deep — Cache-Aware Context Design *(verified 2026-08-30)*
+- /learn/context-engineering/cache-invalidation-mistakes — Cache and Merge Mistakes *(verified 2026-08-30)*
+- /learn/context-engineering/deduping-overlapping-tool-results — Deduping Overlapping Tool Results *(verified 2026-08-30)*
 - … 346 more in content-registry.json
 
 ### policy-sensitive (100) — oldest-verified first
@@ -446,10 +446,6 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/ai-for-designers/prototype-and-evaluation-quiz — Quiz: prototype and evaluation *(verified undated)*
 - /learn/ai-for-designers/research-synthesis-lab — Lab: build a source-traceable research synthesis board *(verified undated)*
 - /learn/ai-for-designers/trust-and-recovery-quiz — Quiz: trust and recovery *(verified undated)*
-- /learn/responsible-ai/contestability-worked-example — Worked Example: A Contestability Path That Actually Works *(verified undated)*
-- /learn/responsible-ai/responsible-ai-cheatsheet — Responsible AI Cheatsheet *(verified undated)*
-- /learn/responsible-ai/responsible-ai-mistakes — Common Mistakes: Responsible AI in Practice *(verified undated)*
-- /learn/responsible-ai/responsible-release-project — Project: A Responsible-AI Release — Risk Register, Model Card, Red-Team Sign-Off *(verified undated)*
 - /privacy — Privacy *(verified undated)*
 - /terms — Terms *(verified undated)*
 - /learn/ai-foundations/open-weight-vs-closed-models — Open-Weight vs. Closed Models *(verified 2026-08-30)*
@@ -470,26 +466,15 @@ Review order: volatile classes first, oldest last-verified date first; undated i
 - /learn/machine-learning/public-data-projects/adult-income-project — Public-data project: Adult income prediction *(verified 2026-08-30)*
 - /learn/machine-learning/public-data-projects/aps-failure-project — Public-data project: APS Failure under imbalance *(verified 2026-08-30)*
 - /learn/machine-learning/public-data-projects/bank-marketing-project — Public-data project: Bank Marketing decision support *(verified 2026-08-30)*
+- /learn/machine-learning/public-data-projects/bike-sharing-project — Public-data project: Bike Sharing forecasting *(verified 2026-08-30)*
+- /learn/machine-learning/public-data-projects/ml-891-adult-income-decision-audit — Public-data project: Adult income decision audit *(verified 2026-08-30)*
+- /learn/machine-learning/public-data-projects/ml-892-bank-marketing-temporal-campaign — Public-data project: Bank marketing campaign under time and contact constraints *(verified 2026-08-30)*
+- /learn/machine-learning/public-data-projects/ml-894-online-retail-cohort-and-anomaly-study — Public-data project: Online Retail cohort, demand, and anomaly study *(verified 2026-08-30)*
 - … 70 more in content-registry.json
 
 ### release-sensitive (375) — oldest-verified first
 
 Largest queue; full list in JSON. Oldest-verified sample:
-- /learn/agent-frameworks/framework-leak-worked-example — CrewAI, LangGraph *(verified undated)*
-- /learn/agent-frameworks/framework-mistakes — LangGraph *(verified undated)*
-- /learn/agent-frameworks/framework-selection-project — LangGraph, CrewAI, Agno, PydanticAI, OpenAI, Mastra, Claude *(verified undated)*
-- /learn/agent-skills/agent-skills-cheatsheet — MCP *(verified undated)*
-- /learn/agent-skills/agent-skills-mistakes — Codex, MCP *(verified undated)*
-- /learn/agent-skills/skill-authoring-worked-example — MCP *(verified undated)*
-- /learn/ai-automation-ops/automation-ops-mistakes — Zapier, n8n *(verified undated)*
-- /learn/llm-foundations/llm-foundations-cheatsheet — Perplexity *(verified undated)*
-- /learn/llm-security/llm-security-cheatsheet — MCP *(verified undated)*
-- /learn/llm-security/llm-security-mistakes — MCP *(verified undated)*
-- /learn/local-inference/local-inference-cheatsheet — Ollama, MLX, llama.cpp, vLLM, SGLang, ONNX *(verified undated)*
-- /learn/local-inference/local-inference-mistakes — Ollama, llama.cpp, vLLM, SGLang *(verified undated)*
-- /learn/local-inference/local-inference-worked-example — Ollama *(verified undated)*
-- /learn/mcp/mcp-production-server-project — MCP *(verified undated)*
-- /learn/web-agents/web-agent-boundary-worked-example — Playwright *(verified undated)*
 - /learn/genai-app-dev/streaming-responses-to-the-ui — Anthropic, OpenAI *(verified 2026-08-29)*
 - /learn/prompt-engineering/delimiters-and-formatting — Claude *(verified 2026-08-29)*
 - /learn/ai-foundations/foundation-models-explained — GPT-4, Claude, Gemini *(verified 2026-08-30)*
@@ -505,6 +490,21 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/context-engineering/scratchpad-and-working-memory-patterns — Claude *(verified 2026-08-30)*
 - /learn/context-engineering/structured-memory-stores-compared — Redis *(verified 2026-08-30)*
 - /learn/context-engineering/structured-memory-stores — Redis, Pinecone, Weaviate, pgvector *(verified 2026-08-30)*
+- /learn/deep-learning/vision/223-pruning-sparsity-and-quantization — Unstructured *(verified 2026-08-30)*
+- /learn/fine-tuning/catastrophic-forgetting-and-overfitting — Perplexity *(verified 2026-08-30)*
+- /learn/fine-tuning/choosing-a-training-framework — Hugging Face *(verified 2026-08-30)*
+- /learn/fine-tuning/context-length-extension-rope-scaling — Llama, Mistral *(verified 2026-08-30)*
+- /learn/fine-tuning/dataset-decontamination-and-deduplication — Hugging Face *(verified 2026-08-30)*
+- /learn/fine-tuning/distributed-training-with-fsdp-and-deepspeed — Hugging Face *(verified 2026-08-30)*
+- /learn/fine-tuning/knowledge-distillation — GPT-4, Claude *(verified 2026-08-30)*
+- /learn/fine-tuning/learning-rate-schedules-and-warmup — Hugging Face *(verified 2026-08-30)*
+- /learn/fine-tuning/lora-rank-and-target-module-selection — Llama *(verified 2026-08-30)*
+- /learn/fine-tuning/memory-optimization-gradient-checkpointing-flash-attention — Hugging Face *(verified 2026-08-30)*
+- /learn/fine-tuning/merging-and-versioning-adapters — vLLM *(verified 2026-08-30)*
+- /learn/fine-tuning/quantization-gguf-awq-gptq — llama.cpp *(verified 2026-08-30)*
+- /learn/genai-app-dev/background-jobs-for-long-running-ai-tasks — Redis *(verified 2026-08-30)*
+- /learn/genai-app-dev/client-side-inference — Hugging Face, ONNX, OpenAI *(verified 2026-08-30)*
+- /learn/genai-app-dev/handling-api-keys-and-secrets — OpenAI, Anthropic, AWS *(verified 2026-08-30)*
 - … 345 more
 
 ## Missing-data queues
@@ -512,20 +512,12 @@ Largest queue; full list in JSON. Oldest-verified sample:
 ### no summary/meta description (0)
 
 
-### no published or updated date (103)
+### no published or updated date (73)
 
-- /learn/agent-frameworks/framework-cheatsheet — Agent Frameworks Cheatsheet
-- /learn/agent-frameworks/framework-leak-worked-example — Worked Example: The Task the Framework Couldn't Express
-- /learn/agent-frameworks/framework-mistakes — Agent Frameworks: Common Mistakes
-- /learn/agent-frameworks/framework-selection-project — Project: Framework Selection Bake-Off
-- /learn/agent-skills/agent-skills-cheatsheet — Agent Skills Cheatsheet
-- /learn/agent-skills/agent-skills-mistakes — Agent Skills: Common Mistakes
-- /learn/agent-skills/skill-authoring-worked-example — Worked Example: Authoring a Skill That Actually Fires
 - /learn/agentic-ai/agent-loop-mistakes — Common Mistakes: Agent Loop Design
 - /learn/agentic-ai/agent-run-worked-example — Worked Example: An Agent Run, Step by Step
 - /learn/agentic-ai/agentic-ai-cheatsheet — Agentic AI Cheatsheet
 - /learn/ai-automation-ops/automation-ops-cheatsheet — AI Automation for Ops Cheatsheet
-- /learn/ai-automation-ops/automation-ops-mistakes — AI Automation for Ops: Common Mistakes
 - /learn/ai-automation-ops/automation-ops-worked-example — Worked Example: An Invoice-Triage Automation That Earned Its Autonomy
 - /learn/ai-for-designers/ai-feature-state-model-worked-example — AI feature state model: a worked example
 - /learn/ai-for-designers/ai-for-designers-course-guide — AI for Designers: course guide, lanes, and your first case study
@@ -554,7 +546,15 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-for-designers/trust-and-recovery-quiz — Quiz: trust and recovery
 - /learn/ai-for-designers/trust-patterns-worked-example — Trust patterns: a redesign worked example
 - /learn/ai-foundations/eval-and-model-mistakes — Common Mistakes: Evaluation and Model Claims
-- … 63 more
+- /learn/ai-foundations/model-selection-cheatsheet — AI Foundations Cheatsheet
+- /learn/classical-ai/a-star-worked-example — Worked Example: A* on a Grid — Where the Heuristic Matters
+- /learn/classical-ai/classical-ai-cheatsheet — Classical AI Cheatsheet
+- /learn/classical-ai/classical-ai-mistakes — Common Mistakes: Classical AI and Search
+- /learn/cli-agents/cli-agent-setup-project — Project: A Governed CLI-Agent Setup for a Real Repo
+- /learn/cli-agents/cli-agent-workflow-worked-example — Worked Example: A Headless Agent Run With Real Bounds
+- /learn/cli-agents/cli-agents-cheatsheet — CLI Agents Cheatsheet
+- /learn/cli-agents/cli-agents-mistakes — CLI Agents: Common Mistakes
+- … 33 more
 
 ### zero in-body internal links (template nav still applies) (462)
 
@@ -653,16 +653,8 @@ Largest queue; full list in JSON. Oldest-verified sample:
 ### lesson files with status coming (0)
 
 
-### release-sensitive, no date at all (40)
+### release-sensitive, no date at all (10)
 
-- /learn/agent-frameworks/framework-cheatsheet — Agent Frameworks Cheatsheet
-- /learn/agent-frameworks/framework-leak-worked-example — Worked Example: The Task the Framework Couldn't Express
-- /learn/agent-frameworks/framework-mistakes — Agent Frameworks: Common Mistakes
-- /learn/agent-frameworks/framework-selection-project — Project: Framework Selection Bake-Off
-- /learn/agent-skills/agent-skills-cheatsheet — Agent Skills Cheatsheet
-- /learn/agent-skills/agent-skills-mistakes — Agent Skills: Common Mistakes
-- /learn/agent-skills/skill-authoring-worked-example — Worked Example: Authoring a Skill That Actually Fires
-- /learn/ai-automation-ops/automation-ops-mistakes — AI Automation for Ops: Common Mistakes
 - /learn/ai-for-designers/ai-product-design-foundations-quiz — Quiz: AI product design foundations
 - /learn/ai-for-designers/choosing-where-ai-belongs-worked-example — Choosing where AI belongs: a worked example
 - /learn/ai-for-designers/correction-undo-and-recovery-patterns — Correction, undo, and recovery patterns
@@ -671,28 +663,6 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /learn/ai-for-designers/prototype-and-evaluation-quiz — Quiz: prototype and evaluation
 - /learn/ai-for-designers/research-synthesis-lab — Lab: build a source-traceable research synthesis board
 - /learn/ai-for-designers/trust-and-recovery-quiz — Quiz: trust and recovery
-- /learn/ai-literacy/everyday-ai-mistakes — Common Mistakes: Everyday AI Use
-- /learn/evals-red-teaming/eval-regression-worked-example — Worked Example: An Eval That Passed and Shipped a Regression
-- /learn/fine-tuning/fine-tune-regression-worked-example — Worked Example: A Fine-Tune That Fixed One Thing and Broke Three
-- /learn/genai-app-dev/genai-feature-worked-example — Worked Example: A GenAI Feature From Demo to Production
-- /learn/llm-foundations/llm-foundations-cheatsheet — LLM Foundations Cheatsheet
-- /learn/llm-security/llm-security-cheatsheet — LLM Security Cheatsheet
-- /learn/llm-security/llm-security-mistakes — LLM Security: Common Mistakes
-- /learn/local-inference/local-inference-cheatsheet — Local Inference Cheatsheet
-- /learn/local-inference/local-inference-mistakes — Local Inference: Common Mistakes
-- /learn/local-inference/local-inference-worked-example — Worked Example: The Local Setup That Wasn't Private
-- /learn/mcp/mcp-production-server-project — Project: A Production MCP Server — Auth, Versioning, Telemetry
-- /learn/multimodal-ai/document-pipeline-worked-example — Worked Example: A Document Pipeline That Costs 10× What It Should
-- /learn/multimodal-ai/multimodal-cheatsheet — Multimodal AI Cheatsheet
-- /learn/multimodal-ai/multimodal-mistakes — Multimodal AI: Common Mistakes
-- /learn/responsible-ai/contestability-worked-example — Worked Example: A Contestability Path That Actually Works
-- /learn/responsible-ai/responsible-ai-cheatsheet — Responsible AI Cheatsheet
-- /learn/responsible-ai/responsible-ai-mistakes — Common Mistakes: Responsible AI in Practice
-- /learn/responsible-ai/responsible-release-project — Project: A Responsible-AI Release — Risk Register, Model Card, Red-Team Sign-Off
-- /learn/web-agents/web-agent-boundary-worked-example — Worked Example: A Web Agent That Clicked the Wrong Button
-- /learn/web-agents/web-agent-project — Project: A Bounded Web Agent for a Real Task
-- /learn/web-agents/web-agents-cheatsheet — Web Agents Cheatsheet
-- /learn/web-agents/web-agents-mistakes — Web Agents: Common Mistakes
 - /privacy — Privacy
 - /terms — Terms
 
@@ -768,6 +738,8 @@ Largest queue; full list in JSON. Oldest-verified sample:
 - /practice/structured-output-failures — 8 questions, 8 lesson links
 - /practice/context-debugging — 8 questions, 8 lesson links
 - /practice/production-incidents — 8 questions, 8 lesson links
+- /practice/cert-prep — 32 questions, 32 lesson links
+- /practice/ai-system-design — 8 questions, 8 lesson links
 
 ## Non-lesson collections
 

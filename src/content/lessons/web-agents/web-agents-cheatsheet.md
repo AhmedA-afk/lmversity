@@ -3,6 +3,7 @@ title: "Web Agents Cheatsheet"
 track: "web-agents"
 status: live
 summary: "The browser-agent reference — which automation layer for which job, the permission boundary, and the injection surface nobody tests."
+updated: "2026-09-16"
 duration: "6 min read"
 ---
 

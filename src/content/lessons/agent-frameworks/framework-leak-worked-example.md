@@ -3,6 +3,7 @@ title: "Worked Example: The Task the Framework Couldn't Express"
 track: "agent-frameworks"
 status: live
 summary: "A role-based agent framework asked to do conditional branching — the abstraction leak, the escape hatch, and the decision it should have driven."
+updated: "2026-09-16"
 duration: "10 min read"
 ---
 

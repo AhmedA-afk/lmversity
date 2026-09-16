@@ -3,6 +3,7 @@ title: "Common Mistakes: Responsible AI in Practice"
 track: "responsible-ai"
 status: live
 summary: "The eight ways responsible-AI work becomes paperwork — the model card written after launch, the risk register nobody owns, and the red team that found nothing."
+updated: "2026-09-16"
 duration: "8 min read"
 ---
 

@@ -3,6 +3,7 @@ title: "LLM Security: Common Mistakes"
 track: "llm-security"
 status: live
 summary: "The eight LLM-security mistakes — the prompt as the boundary, trusted tool output, and the audit trail that records nothing."
+updated: "2026-09-16"
 duration: "8 min read"
 ---
 

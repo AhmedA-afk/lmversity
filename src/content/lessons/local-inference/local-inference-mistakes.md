@@ -3,6 +3,7 @@ title: "Local Inference: Common Mistakes"
 track: "local-inference"
 status: live
 summary: "The eight local-LLM mistakes — the quant that fit but failed, the memory math that forgot the KV cache, and the privacy claim that wasn't."
+updated: "2026-09-16"
 duration: "8 min read"
 ---
 

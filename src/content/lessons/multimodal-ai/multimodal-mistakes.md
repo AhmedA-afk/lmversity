@@ -3,6 +3,7 @@ title: "Multimodal AI: Common Mistakes"
 track: "multimodal-ai"
 status: live
 summary: "The eight multimodal mistakes that turn a working demo into an expensive or wrong production system — and the fix for each."
+updated: "2026-09-16"
 duration: "8 min read"
 ---
 

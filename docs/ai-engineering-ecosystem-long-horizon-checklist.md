@@ -2621,6 +2621,29 @@ Credentials to monitor:
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
 
+### 2026-09-16 — Sourcing-queue triage: 187 → 138 flags
+
+- Scope: `sourcingFlags` review queue in the content registry — the
+  "identify unsupported claims" identification output.
+- Fixed: 30 six-surface files authored this session lacked `updated:` —
+  stamped 2026-09-16. 4 lessons asserting real Claude prices added
+  `sources: ["anthropic-pricing"]` (renders a reader-visible Sources
+  section) + `updated:`.
+- Detector fixes (both real bugs, not flag-gaming): `features.sources`
+  was never populated for lesson items, so `sources:` frontmatter
+  counted for nothing in the flag check — now mapped. Quizzes exempted
+  from the numeric-claims flag (their digits are question/option
+  content, not factual claims).
+- Reviewed-clear: 5 flagged files whose dollar figures are fictional
+  scenario content (order totals, a word problem, a sample support
+  message), verified by reading each.
+- Remaining 130 numeric flags are the genuine editorial queue — each
+  needs a per-claim review (illustrative vs assert) before sourcing.
+- Files: `scripts/build-content-registry.mjs`, 34 lesson frontmatters,
+  regenerated registry + audit views.
+- Validation: `check:content` clean (2,316); `git diff --check` clean.
+- Deployment: not deployed.
+
 ### 2026-09-16 — External-source probe + citation repair
 
 - Scope: first full run of `check:external-sources` against all 289

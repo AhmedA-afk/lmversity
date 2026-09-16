@@ -3,6 +3,7 @@ title: "Project: A Production MCP Server — Auth, Versioning, Telemetry"
 track: "mcp"
 status: live
 summary: "Take an MCP server past the demo — scoped auth, schema versioning, capability checks, and the telemetry that answers 'who called what, and did it work.'"
+updated: "2026-09-16"
 duration: "25 min read"
 ---
 

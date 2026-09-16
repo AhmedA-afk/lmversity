@@ -3,6 +3,7 @@ title: "AI Automation for Ops: Common Mistakes"
 track: "ai-automation-ops"
 status: live
 summary: "The eight automation mistakes — LLMs where rules belong, approval theater, and runs nobody can reconstruct."
+updated: "2026-09-16"
 duration: "8 min read"
 ---
 

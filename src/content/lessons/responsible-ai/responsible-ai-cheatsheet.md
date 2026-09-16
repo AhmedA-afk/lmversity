@@ -3,6 +3,7 @@ title: "Responsible AI Cheatsheet"
 track: "responsible-ai"
 status: live
 summary: "The release-gate reference — which artifact answers which obligation, and the checks that keep the process from being paperwork."
+updated: "2026-09-16"
 duration: "6 min read"
 ---
 

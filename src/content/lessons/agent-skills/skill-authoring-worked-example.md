@@ -3,6 +3,7 @@ title: "Worked Example: Authoring a Skill That Actually Fires"
 track: "agent-skills"
 status: live
 summary: "A 'weekly report' skill built end to end — the description that makes it findable, the body that stays lean, and the resource file that carries the detail."
+updated: "2026-09-16"
 duration: "10 min read"
 ---
 

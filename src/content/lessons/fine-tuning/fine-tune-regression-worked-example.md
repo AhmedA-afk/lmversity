@@ -3,6 +3,7 @@ title: "Worked Example: A Fine-Tune That Fixed One Thing and Broke Three"
 track: "fine-tuning"
 status: live
 summary: "A model fine-tuned for JSON output — walk through the eval that showed the win and the three regressions the single metric hid."
+updated: "2026-09-16"
 duration: "10 min read"
 ---
 

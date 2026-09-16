@@ -3,6 +3,8 @@ title: "Batching LLM Calls for Throughput and Cost"
 track: "python-data-apis"
 status: live
 summary: "Five thousand reviews, one API call at a time, is a script that finishes just in time for you to not care about the result anymore — and if it dies at review 4,200, you start over from zero."
+updated: "2026-09-16"
+sources: ["anthropic-pricing"]
 duration: "18 min read"
 ---
 

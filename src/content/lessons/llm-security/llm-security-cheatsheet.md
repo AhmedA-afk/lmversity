@@ -3,6 +3,7 @@ title: "LLM Security Cheatsheet"
 track: "llm-security"
 status: live
 summary: "The LLM-security reference — the OWASP top items as decisions, where each control lives, and the tests that prove the boundary."
+updated: "2026-09-16"
 duration: "6 min read"
 ---
 

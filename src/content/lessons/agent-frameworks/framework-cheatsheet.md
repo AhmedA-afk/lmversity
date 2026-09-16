@@ -3,6 +3,7 @@ title: "Agent Frameworks Cheatsheet"
 track: "agent-frameworks"
 status: live
 summary: "The framework-selection table — which abstraction each one sells, where it leaks, and the questions that decide between them."
+updated: "2026-09-16"
 duration: "6 min read"
 ---
 

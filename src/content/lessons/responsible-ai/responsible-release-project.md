@@ -3,6 +3,7 @@ title: "Project: A Responsible-AI Release — Risk Register, Model Card, Red-Tea
 track: "responsible-ai"
 status: live
 summary: "Run a model feature through a real release gate — risk assessment, model card, red-team evidence, and a contestability path a user could actually follow."
+updated: "2026-09-16"
 duration: "25 min read"
 ---
 

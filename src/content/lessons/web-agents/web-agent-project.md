@@ -3,6 +3,7 @@ title: "Project: A Bounded Web Agent for a Real Task"
 track: "web-agents"
 status: live
 summary: "Build a browser agent for a task a script can't fully enumerate — with read-before-act, a permission boundary, and an extraction eval."
+updated: "2026-09-16"
 duration: "1–2 weeks"
 ---
 
