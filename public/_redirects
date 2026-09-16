@@ -13,3 +13,11 @@ https://www.lmversity.com/*  https://lmversity.com/:splat  301!
 # Internal authoring docs mistakenly published as lessons; moved to docs/internal/.
 /learn/maths-foundations/lesson-index          /learn/maths-foundations  301
 /learn/maths-foundations/research-benchmarks   /learn/maths-foundations  301
+
+# Answer-slug variants — consolidate link equity on the canonical slug.
+/answers/what-is-context-window       /answers/what-is-a-context-window      301
+/answers/how-to-become-ai-engineer    /answers/how-to-become-an-ai-engineer  301
+/answers/learn-ai-engineering         /answers/learn-ai-engineering-free     301
+/answers/ai-engineer-guide            /answers/ai-engineer-roadmap           301
+/answers/prompt-engineering           /answers/what-is-prompt-engineering    301
+/answers/context-engineering          /answers/what-is-context-engineering   301

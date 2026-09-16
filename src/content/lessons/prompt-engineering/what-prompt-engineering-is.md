@@ -69,4 +69,4 @@ Prompt engineering cannot compensate indefinitely for the wrong model, missing r
 - Go deeper: Prompt patterns
 - Apply it: Prompt evaluation
 
-**Related:** [Descriptions Are Prompt Engineering](/learn/tools-function-calling/descriptions-are-prompts)
+**Related:** [Descriptions Are Prompt Engineering](/learn/tools-function-calling/descriptions-are-prompts) · [What is prompt engineering? (the straight answer)](/answers/what-is-prompt-engineering)

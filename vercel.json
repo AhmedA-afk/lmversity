@@ -202,6 +202,36 @@
       "source": "/learn/maths-foundations/research-benchmarks",
       "destination": "/learn/maths-foundations",
       "permanent": true
+    },
+    {
+      "source": "/answers/what-is-context-window",
+      "destination": "/answers/what-is-a-context-window",
+      "permanent": true
+    },
+    {
+      "source": "/answers/how-to-become-ai-engineer",
+      "destination": "/answers/how-to-become-an-ai-engineer",
+      "permanent": true
+    },
+    {
+      "source": "/answers/learn-ai-engineering",
+      "destination": "/answers/learn-ai-engineering-free",
+      "permanent": true
+    },
+    {
+      "source": "/answers/ai-engineer-guide",
+      "destination": "/answers/ai-engineer-roadmap",
+      "permanent": true
+    },
+    {
+      "source": "/answers/prompt-engineering",
+      "destination": "/answers/what-is-prompt-engineering",
+      "permanent": true
+    },
+    {
+      "source": "/answers/context-engineering",
+      "destination": "/answers/what-is-context-engineering",
+      "permanent": true
     }
   ]
 }
