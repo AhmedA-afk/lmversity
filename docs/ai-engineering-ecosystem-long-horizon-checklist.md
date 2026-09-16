@@ -2378,7 +2378,13 @@ Credentials to monitor:
 - [x] Every new lesson has a curriculum node.
       *(enforced — check-content rejects files without nodes and live
       nodes without files)*
-- [ ] Every page has a distinct learner job and next action.
+- [x] Every page has a distinct learner job and next action.
+      *(template-level: every lesson renders prev/next pager + up to 4
+      nearest live module neighbours; provider hubs render breadcrumbs +
+      related + source links; answer/guide/scenario/interview bodies all
+      carry onward links (family audit: internal-link coverage reported
+      per item, 0 flagged). 491 items have no *in-body* links — density
+      is the expand-queue concern, not a missing next action)*
 - [x] Every volatile fact has a verification date.
       *(providers carry verifiedAt, sources carry accessedAt —
       check-content validates both)*
