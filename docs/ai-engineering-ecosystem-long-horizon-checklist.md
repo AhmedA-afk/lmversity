@@ -1742,7 +1742,16 @@ External providers to review:
 - [x] Map LMVersity lessons and labs to published exam objectives without claiming endorsement. *(`lmversity[]` track mappings per record; page frames it as coverage, not endorsement)*
 - [x] Identify uncovered objectives and decide whether to teach, link externally, or exclude.
       *(`lmversity[]` mapping is the link decision per cert; uncovered domains noted on records)*
-- [ ] Create practice questions from objectives without copying or reconstructing exam items.
+- [x] Create practice questions from objectives without copying or reconstructing exam items.
+      *(new `cert-prep` bank at /practice/cert-prep — 32 original scenario
+      questions, 2 per curriculum-aligned domain across AIF-C01 (10),
+      AI-900 (6), NCA-GENL (6), PMLE (10); every question's `objective`
+      names its cert domain and `lesson` remediates to the matching
+      LMVersity lesson. Vendor-console domains — NVIDIA tooling, Azure
+      vision/speech services, Snowflake Cortex, OCI, watsonx, Databricks —
+      are out of curriculum scope per the uncovered-objectives row:
+      the bank teaches portable skills, official prep paths cover
+      vendor specifics)*
 - [x] Add hands-on projects because exam preparation alone does not prove implementation skill. *(every cert maps to tracks bearing projects/capstones; the registry page states cert ≠ implementation skill explicitly)*
 - [x] Add a “certification versus portfolio versus experience” decision guide. *(new answer page `answers/certification-vs-portfolio-vs-experience`)*
 
@@ -2576,6 +2585,29 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-16 — cert-prep bank (32 objective-derived questions)
+
+- Scope: new `cert-prep` quiz bank — practice questions derived from
+  published certification domains (AIF-C01, AI-900, NCA-GENL, PMLE),
+  2 questions per curriculum-aligned domain. Original scenario
+  questions testing the underlying skill — no exam-item
+  reconstruction. Each question's `objective` names its cert domain
+  ("PMLE · Serving and MLOps — monitor input drift") and `lesson`
+  remediates to the matching LMVersity lesson; `tags.provider` marks
+  the credential vendor.
+- Exclusions (honest scope): vendor-console domains — NVIDIA tooling,
+  Azure vision/speech services, Snowflake Cortex, OCI GenAI, watsonx,
+  Databricks — are outside the vendor-neutral curriculum; official
+  prep paths remain the recorded route for those objectives.
+- Registered in `BANK_ROLES_EXTRA` for ai-engineer, ml-engineer,
+  data-scientist, student role sessions.
+- Ticked: "Create practice questions from objectives…" (Phase 7).
+- Validation: `check:content` clean (2,316); build 2,812 pages —
+  `/practice/cert-prep` live; `check:links` 0 dead (6,004 routes);
+  `verify:questions` still clean (0 ambiguous option pairs incl. the
+  new bank).
+- Bank total: 368 questions across 43 banks.
 
 ### 2026-09-16 — Deterministic question verification (`npm run verify:questions`)
 
