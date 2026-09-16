@@ -315,7 +315,7 @@
   "name": "SnowPro Specialty: Generative AI",
   "org": "Snowflake",
   "status": "current",
-  "examCode": "COA-C01 (Generative AI specialty — confirm code on official page)",
+  "examCode": "GES-C02",
   "level": "specialty",
   "audience": "Data/AI practitioners building on Snowflake Cortex AI",
   "domains": [
@@ -325,12 +325,12 @@
   ],
   "delivery": "proctored exam",
   "officialSource": "cert-snowflake-genai",
-  "verifiedAt": "2026-09-15",
+  "verifiedAt": "2026-09-16",
   "prerequisites": "SnowPro core or equivalent Snowflake experience recommended",
   "languages": [
    "English"
   ],
-  "volatile": "Official page bot-protected (HTTP 403 to automated fetch) — verify exam code and objectives on the live page before registering",
+  "volatile": "Exam versioned (GES-C01 retired, GES-C02 current as of 2026-09-16) — confirm current exam code and objectives on the official page before registering",
   "lmversity": [
    "production",
    "genai-app-dev"

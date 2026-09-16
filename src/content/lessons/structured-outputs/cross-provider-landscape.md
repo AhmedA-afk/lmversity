@@ -63,7 +63,7 @@ Every extraction pipeline that supports more than one model hits this the first 
 Provider capabilities in this space change faster than any page can track — before you design to a limit, check the current source:
 
 - **OpenAI** — [Structured Outputs guide](https://platform.openai.com/docs/guides/structured-outputs): strict mode, supported schema subset, refusal shape.
-- **Anthropic** — [Tool use overview](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview): tool-schema mediation and its guarantees.
+- **Anthropic** — [Tool use overview](https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview): tool-schema mediation and its guarantees.
 - **Google Gemini** — [Structured output docs](https://ai.google.dev/gemini-api/docs/structured-output): the restricted OpenAPI subset `response_schema` accepts.
 - **Grammar-constrained decoding** — [llama.cpp grammar README](https://github.com/ggml-org/llama.cpp/blob/master/grammars/README.md): the GBNF grammar format OSS engines compile to.
 

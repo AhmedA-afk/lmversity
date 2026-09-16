@@ -38,7 +38,7 @@ Claude Code is Anthropic's agentic coding tool, run from a terminal or inside an
 
 ## What Claude Code actually is
 
-Claude Code is a harness built around a model: it gives the model tools to read and write files, search code, and run shell commands, and lets it work through a task across many steps instead of producing a single reply. It ships as a command-line tool you run in a terminal, with integrations available for common IDEs. Exact install commands, supported platforms, and the current shape of IDE integrations change, so check docs.anthropic.com for the current instructions rather than relying on an older guide or a cached blog post.
+Claude Code is a harness built around a model: it gives the model tools to read and write files, search code, and run shell commands, and lets it work through a task across many steps instead of producing a single reply. It ships as a command-line tool you run in a terminal, with integrations available for common IDEs. Exact install commands, supported platforms, and the current shape of IDE integrations change, so check code.claude.com/docs for the current instructions rather than relying on an older guide or a cached blog post.
 
 ## A first session, done well
 
@@ -54,7 +54,7 @@ For anything more than a trivial change, ask for a plan before any files are tou
 
 ## Permissions: understand before you loosen them
 
-By default, a well-configured session should ask before running commands or writing outside what you've approved. You can grant broader permissions for a session or a project, but do that deliberately. Decide in advance what an agent should never be allowed to run unsupervised, such as destructive git commands, deployment scripts, or anything touching production credentials, rather than approving prompts by habit until they stop appearing. The exact configuration options for permissions live in docs.anthropic.com and are worth reading once rather than guessing at.
+By default, a well-configured session should ask before running commands or writing outside what you've approved. You can grant broader permissions for a session or a project, but do that deliberately. Decide in advance what an agent should never be allowed to run unsupervised, such as destructive git commands, deployment scripts, or anything touching production credentials, rather than approving prompts by habit until they stop appearing. The exact configuration options for permissions live in code.claude.com/docs and are worth reading once rather than guessing at.
 
 ## Reviewing diffs like you mean it
 
@@ -90,4 +90,4 @@ LMVersity's free Harness Design and Agentic AI tracks explain how tools like Cla
 - [/learn/mcp/what-is-mcp](/learn/mcp/what-is-mcp) — the protocol Claude Code and other tools use to connect external tools
 - [/blog/agents-need-a-harness](/blog/agents-need-a-harness) — why an agent alone is not enough
 
-For the current install command, supported IDEs, and permission configuration, see [docs.anthropic.com](https://docs.anthropic.com).
+For the current install command, supported IDEs, and permission configuration, see [code.claude.com/docs](https://code.claude.com/docs/en/overview).

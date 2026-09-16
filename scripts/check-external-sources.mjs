@@ -15,28 +15,36 @@ const FILE = join(ROOT, 'src/data/sources.json');
 const TIMEOUT_MS = 10_000;
 const CONCURRENCY = 6;
 
+// A declared-bot UA gets blocked or connection-reset by many doc hosts
+// (Cloudflare/Akamai), which over-reports dead sources. A browser UA
+// matches what readers actually send; 403s that remain are real bot-walls
+// for automation and get retried with a GET anyway.
+const UA =
+  'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36';
+
 const raw = JSON.parse(readFileSync(FILE, 'utf8'));
 const entries = Object.entries(raw).filter(([id]) => !id.startsWith('$'));
 
 async function probe(id, s) {
   try {
-    const res = await fetch(s.url, {
+    let res = await fetch(s.url, {
       method: 'HEAD',
       redirect: 'follow',
       signal: AbortSignal.timeout(TIMEOUT_MS),
-      headers: { 'user-agent': 'lmversity-source-check/1.0' },
+      headers: { 'user-agent': UA },
     });
-    // Some servers reject HEAD — fall back to a ranged GET before failing
-    if (res.status === 405 || res.status === 501) {
+    // Some servers reject HEAD or answer it differently from GET — retry
+    // with a ranged GET before treating the status as meaningful.
+    if (res.status === 405 || res.status === 501 || res.status === 404 || res.status === 400) {
       const g = await fetch(s.url, {
         method: 'GET',
         redirect: 'follow',
         signal: AbortSignal.timeout(TIMEOUT_MS),
-        headers: { 'user-agent': 'lmversity-source-check/1.0', range: 'bytes=0-512' },
+        headers: { 'user-agent': UA, range: 'bytes=0-512' },
       });
-      return { id, url: s.url, status: g.status, ok: g.ok, note: 'HEAD rejected; GET probed' };
+      res = g;
     }
-    return { id, url: s.url, status: res.status, ok: res.ok };
+    return { id, url: s.url, status: res.status, ok: res.ok, finalUrl: res.url !== s.url ? res.url : undefined };
   } catch (e) {
     return { id, url: s.url, status: 0, ok: false, note: String(e.cause?.code ?? e.message ?? e) };
   }

@@ -6,7 +6,7 @@ status: "live"
 summary: "Rebuild ordinary least squares from the historical method, verify its geometry, and report when its assumptions fail."
 duration: "90 min study + 4–6 hr project"
 updated: "2026-08-30"
-sources: ["uci-auto-mpg-dataset", "gallica-statlog-source"]
+sources: ["uci-auto-mpg-dataset", "legendre-1805-internet-archive"]
 ---
 
 ## Research question
@@ -17,7 +17,7 @@ Can you reproduce the defining behaviour of ordinary least squares (OLS): among 
 
 ## Primary source and claim
 
-Adrien-Marie Legendre introduced the method of least squares in *Nouvelles méthodes pour la détermination des orbites des comètes* (1805). A digitised primary edition is available from the [Bibliothèque nationale de France](https://gallica.bnf.fr/ark:/12148/bpt6k965753). The modern matrix statement to reproduce is: for a full-column-rank design matrix `X`, the minimiser of the residual sum of squares satisfies `X^T(y - X beta_hat) = 0`; therefore fitted residuals have zero sample correlation with every included column of `X` (up to numerical tolerance).
+Adrien-Marie Legendre introduced the method of least squares in *Nouvelles méthodes pour la détermination des orbites des comètes* (1805). A digitised primary edition is available from the [Internet Archive](https://archive.org/details/bub_gb_FRcOAAAAQAAJ). The modern matrix statement to reproduce is: for a full-column-rank design matrix `X`, the minimiser of the residual sum of squares satisfies `X^T(y - X beta_hat) = 0`; therefore fitted residuals have zero sample correlation with every included column of `X` (up to numerical tolerance).
 
 Do not claim that the original astronomical results have been replicated. Your project reproduces the estimator and tests its stated finite-sample properties on a documented modern dataset.
 

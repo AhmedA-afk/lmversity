@@ -72,4 +72,4 @@ None of LMVersity's tracks are about any single vendor's product line, since the
 - [GenAI App Dev track](/learn/genai-app-dev) — building products on top of a model's API, vendor by vendor.
 - [Your First LLM API Call](/learn/genai-app-dev/your-first-llm-api-call) — the concrete, hands-on version of "developer uses the API."
 
-For the specifics of any single company's current models, pricing, or terms, check that company's own documentation directly rather than relying on this page or any other secondary source, since those details change often. Official references include OpenAI's platform documentation at platform.openai.com and Anthropic's at docs.anthropic.com.
+For the specifics of any single company's current models, pricing, or terms, check that company's own documentation directly rather than relying on this page or any other secondary source, since those details change often. Official references include OpenAI's platform documentation at platform.openai.com and Anthropic's at platform.claude.com/docs.

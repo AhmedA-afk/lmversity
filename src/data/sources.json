@@ -136,8 +136,8 @@
   "anthropic-docs": {
     "title": "Anthropic documentation",
     "publisher": "Anthropic",
-    "accessedAt": "2026-09-15",
-    "url": "https://docs.anthropic.com",
+    "accessedAt": "2026-09-16",
+    "url": "https://platform.claude.com/docs/en/home",
     "type": "official-docs",
     "claims": [
       "Anthropic API and tool-use documentation"
@@ -147,8 +147,8 @@
   "anthropic-model-deprecations": {
     "title": "Model deprecations",
     "publisher": "Anthropic",
-    "accessedAt": "2026-09-15",
-    "url": "https://docs.anthropic.com/en/docs/about-claude/model-deprecations",
+    "accessedAt": "2026-09-16",
+    "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
     "type": "official-docs",
     "claims": [
       "Model deprecation schedule and migration guides"
@@ -158,8 +158,8 @@
   "anthropic-models-overview": {
     "title": "Models overview",
     "publisher": "Anthropic",
-    "accessedAt": "2026-09-15",
-    "url": "https://docs.anthropic.com/en/docs/about-claude/models/overview",
+    "accessedAt": "2026-09-16",
+    "url": "https://platform.claude.com/docs/en/models/overview",
     "type": "official-docs",
     "claims": [
       "Current Claude lineup, IDs, context windows, retirement dates"
@@ -169,8 +169,8 @@
   "anthropic-pricing": {
     "title": "Pricing",
     "publisher": "Anthropic",
-    "accessedAt": "2026-09-15",
-    "url": "https://docs.anthropic.com/en/docs/about-claude/pricing",
+    "accessedAt": "2026-09-16",
+    "url": "https://platform.claude.com/docs/en/about-claude/pricing",
     "type": "official-docs",
     "claims": [
       "Current API pricing"
@@ -180,8 +180,8 @@
   "anthropic-privacy": {
     "title": "Anthropic Privacy Center",
     "publisher": "Anthropic",
-    "accessedAt": "2026-09-15",
-    "url": "https://privacy.anthropic.com",
+    "accessedAt": "2026-09-16",
+    "url": "https://privacy.claude.com/en/",
     "type": "official-docs",
     "claims": [
       "Privacy and data-usage policies"
@@ -246,10 +246,10 @@
   "anthropic-vision-docs": {
     "title": "Vision",
     "publisher": "Anthropic",
-    "url": "https://docs.anthropic.com/en/docs/build-with-claude/vision",
+    "url": "https://platform.claude.com/docs/en/build-with-claude/vision",
     "type": "official-docs",
     "status": "current",
-    "accessedAt": "2026-09-15",
+    "accessedAt": "2026-09-16",
     "claims": [
       "Claude vision capabilities, image input"
     ]
@@ -485,12 +485,12 @@
   "cert-snowflake-genai": {
     "title": "SnowPro Specialty: Generative AI",
     "publisher": "Snowflake",
-    "url": "https://www.snowflake.com/en/certifications/",
+    "url": "https://learn.snowflake.com/en/certifications/",
     "type": "certification-guide",
     "status": "current",
-    "accessedAt": "2026-09-15",
+    "accessedAt": "2026-09-16",
     "claims": [
-      "Snowflake generative-AI specialty credential (page bot-protected, HTTP 403 to automated fetch)"
+      "Snowflake generative-AI specialty credential (GES-C02; listed on the SnowPro certifications hub)"
     ]
   },
   "chroma-docs": {
@@ -1108,17 +1108,6 @@
     "type": "paper",
     "claims": [
       "Original AdaBoost algorithm and weight updates"
-    ],
-    "status": "current"
-  },
-  "gallica-statlog-source": {
-    "title": "Gallica scan of original source material",
-    "publisher": "BnF Gallica",
-    "accessedAt": "2026-09-15",
-    "url": "https://gallica.bnf.fr/ark:/12148/bpt6k965753",
-    "type": "paper",
-    "claims": [
-      "Historical source for early regression work"
     ],
     "status": "current"
   },
@@ -1839,8 +1828,8 @@
   "lmstudio-docs": {
     "title": "LM Studio documentation",
     "publisher": "LM Studio",
-    "accessedAt": "2026-09-15",
-    "url": "https://lmstudio.ai/docs",
+    "accessedAt": "2026-09-16",
+    "url": "https://lmstudio.ai/docs/app",
     "type": "official-docs",
     "claims": [
       "LM Studio local server",
@@ -1962,8 +1951,8 @@
   "meta-llama-resources": {
     "title": "Llama developer resources",
     "publisher": "Meta",
-    "accessedAt": "2026-09-15",
-    "url": "https://ai.meta.com/llama/get-started/",
+    "accessedAt": "2026-09-16",
+    "url": "https://developer.meta.com/ai/docs/overview/",
     "type": "official-docs",
     "claims": [
       "Llama model family and access"
@@ -1973,8 +1962,8 @@
   "meta-model-api-docs": {
     "title": "Meta Model API documentation",
     "publisher": "Meta",
-    "accessedAt": "2026-09-15",
-    "url": "https://llama.developer.meta.com/docs",
+    "accessedAt": "2026-09-16",
+    "url": "https://ai.developer.meta.com/docs/overview/",
     "type": "official-docs",
     "claims": [
       "Meta Model API surface, Muse family, Muse Code, protocols"
@@ -3145,6 +3134,17 @@
       "Playwright MCP tool contracts and parameters",
       "Accessibility-snapshot observation model",
       "Read-only tool annotations"
+    ],
+    "status": "current"
+  },
+  "legendre-1805-internet-archive": {
+    "title": "Internet Archive scan of the 1805 F. Didot edition",
+    "publisher": "Internet Archive",
+    "accessedAt": "2026-09-16",
+    "url": "https://archive.org/details/bub_gb_FRcOAAAAQAAJ",
+    "type": "paper",
+    "claims": [
+      "Historical source for early regression work"
     ],
     "status": "current"
   }

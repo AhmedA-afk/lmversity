@@ -2621,6 +2621,40 @@ Credentials to monitor:
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
 
+### 2026-09-16 — External-source probe + citation repair
+
+- Scope: first full run of `check:external-sources` against all 289
+  entries in `src/data/sources.json`, then per-finding verification in
+  real Chrome (chrome-bridge) to separate dead links from bot-walls.
+- Findings: 25 flagged on the raw probe → triaged to 11 real moves +
+  14 bot-walls verified live in a real browser (Oracle, OpenAI,
+  ai.google.dev ×8, Meta, sciencedirect, MIT Press, status pages).
+- Fixed (verified redirect targets or current canonical homes):
+  - `anthropic-docs`, `-pricing`, `-vision-docs`, `-model-deprecations`,
+    `-models-overview` → `platform.claude.com` (docs.anthropic.com now
+    redirects wholesale); `anthropic-privacy` → `privacy.claude.com`
+  - `lmstudio-docs` → `lmstudio.ai/docs/app` (docs root moved)
+  - `cert-snowflake-genai` → `learn.snowflake.com/en/certifications/`
+    (old snowflake.com URL 404s; per-cert page 404s in-app — verified
+    in real Chrome). Cert registry examCode corrected COA-C01 → GES-C02
+    (C01 retired per the live hub page).
+  - `meta-model-api-docs` → `ai.developer.meta.com/docs/overview/`;
+    `meta-llama-resources` → `developer.meta.com/ai/docs/overview/`
+  - `gallica-statlog-source` → renamed `legendre-1805-internet-archive`;
+    gallica.bnf.fr is connection-reset on this network — repointed to
+    the Internet Archive scan of the identical 1805 F. Didot edition
+  - 4 inline `docs.anthropic.com` references in answers/lessons updated
+    to `code.claude.com/docs` / `platform.claude.com`
+- Checker hardened: browser UA + GET retry on HEAD-400/404 + `finalUrl`
+  reporting cut the false-positive rate (25 raw → 21, all verifiable
+  bot-walls or network flakes; 0 real dead links remain unfixed).
+- Files: `scripts/check-external-sources.mjs`, `src/data/sources.json`,
+  `src/data/certifications.json`, 4 content files.
+- Validation: `check:content` clean (2,316); `git diff --check` clean.
+- Deployment: not deployed.
+- Next: rerun probe periodically; the remaining 403s are automation
+  bot-walls, not reader-facing breaks.
+
 ### 2026-09-16 — Converged-intent sweep + title-collision fix
 
 - Scope: corpus-wide duplicate-intent audit for the "merge or redirect
