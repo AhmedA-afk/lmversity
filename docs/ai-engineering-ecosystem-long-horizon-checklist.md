@@ -583,7 +583,20 @@ consolidation into a parent track, or a clearer curated-path role.
       *(all/none-of-the-above banned by check-content lint; joke
       distractors rejected by the review bar — corpus contains none)*
 - [ ] Reject questions with multiple defensible answers unless multiple-select is explicit.
-- [ ] Require deterministic verification for calculations and code-output questions.
+      *(option-pair similarity screen in `npm run verify:questions` —
+      Jaccard > 0.7 on normalized option text flags near-duplicate
+      options: 0 across 336 bank questions. Semantic defensibility —
+      two differently-worded options both arguably right — remains
+      review judgment)*
+- [x] Require deterministic verification for calculations and code-output questions.
+      *(`npm run verify:questions` — `scripts/verify-questions.mjs` bundles
+      quizzes.ts and recomputes every `format:'calculation'` question's
+      claimed answer: 7/7 verified (perplexity=e^NLL, temperature ratios,
+      FP16/Q4 memory math, n²d attention cost, softmax+CE gradient by
+      finite differences). A calculation question with no registered
+      checker exits 1 as UNVERIFIED — the check fails closed. No bank
+      question currently embeds a runnable code+output pair; runnable
+      fixtures for debugging questions stay open below)*
 - [ ] Require runnable fixtures for implementation and debugging questions.
 - [x] Require independent technical review before `live` status.
       *(`status` field gates live; `reviewer` + `reviewHistory` record
@@ -2563,6 +2576,25 @@ Credentials to monitor:
 
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
+
+### 2026-09-16 — Deterministic question verification (`npm run verify:questions`)
+
+- Scope: `scripts/verify-questions.mjs` — bundles `src/data/quizzes.ts`
+  via esbuild, then (a) recomputes every `format:'calculation'`
+  question's claimed answer and (b) screens all single-answer questions
+  for near-duplicate option pairs (Jaccard > 0.7 on normalized text —
+  the detectable half of "multiple defensible answers").
+- Result: **7/7 calculation questions verified** — perplexity=e^NLL,
+  temperature ratio e^(Δ/T), FP16/Q4 memory math, n²d attention cost,
+  softmax+CE gradient confirmed by finite differences. A calculation
+  question with no registered checker exits 1 (fails closed). 0
+  ambiguous option pairs across 336 questions; 0 questions embed
+  runnable code+output pairs (that half has no instances yet — the
+  runnable-fixtures row stays open).
+- Ticked: "deterministic verification for calculations and code-output
+  questions"; evidence annotation added to the defensible-answers row
+  (semantic half remains review judgment, honestly unticked).
+- Validation: `node scripts/verify-questions.mjs` exits 0.
 
 ### 2026-09-16 — Cross-track footer pointer resolution (70 links, 29 files)
 

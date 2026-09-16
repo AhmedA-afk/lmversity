@@ -18,6 +18,7 @@
     "check:content": "node scripts/check-content.mjs",
     "check:sources": "node scripts/check-external-sources.mjs",
     "check:code": "node scripts/check-code-samples.mjs",
+    "verify:questions": "node scripts/verify-questions.mjs",
     "registry": "node scripts/build-content-registry.mjs",
     "audit:families": "node scripts/audit-families.mjs",
     "dates": "node scripts/build-content-dates.mjs",
