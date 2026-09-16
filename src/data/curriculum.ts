@@ -2871,7 +2871,7 @@ const unsortedTracks: Track[] = [
         "status": "live"
       },
       {
-        "title": "Context Window Mechanics and Limits",
+        "title": "What Actually Limits the Context Window",
         "slug": "context-window-mechanics-and-limits",
         "status": "live"
       },
@@ -2926,7 +2926,7 @@ const unsortedTracks: Track[] = [
         "status": "live"
       },
       {
-        "title": "Grokking and Double Descent Mechanics",
+        "title": "How Grokking and Double Descent Actually Work",
         "slug": "grokking-and-double-descent-mechanics",
         "status": "live"
       },
@@ -2996,7 +2996,7 @@ const unsortedTracks: Track[] = [
         "status": "live"
       },
       {
-        "title": "Multi-Query and Grouped-Query Attention",
+        "title": "From MHA to MQA: Why Grouped-Query Attention Won",
         "slug": "multi-query-and-grouped-query-attention",
         "status": "live"
       },

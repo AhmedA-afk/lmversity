@@ -17,6 +17,7 @@ faq:
 related:
   - /learn/agentic-ai/what-is-an-agent
   - /learn/agentic-ai/the-agent-loop
+  - /answers/what-is-an-agent-loop
   - /learn/agentic-ai/agents-vs-workflows
   - /learn/agentic-ai/when-not-to-use-an-agent
   - /learn/tools-function-calling/what-is-tool-calling

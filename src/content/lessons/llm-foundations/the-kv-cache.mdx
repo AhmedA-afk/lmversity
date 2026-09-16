@@ -56,4 +56,4 @@ This cost is exactly why techniques like [grouped-query attention](/learn/llm-fo
 
 Every token an LLM has already "seen" gets its key and value computed exactly once. The KV cache is the reason autoregressive generation is a viable product and not a research curiosity — it turns an O(n²)-per-token replay into an O(n) append, at the price of memory that has become one of the central engineering constraints in serving LLMs at scale.
 
-**Related:** [The Attention Mechanism, Explained](/learn/llm-foundations/attention-mechanism-explained), [Causal Masking: Why LLMs Can't Peek Ahead](/learn/llm-foundations/causal-masking), [Grouped-Query and Multi-Query Attention](/learn/llm-foundations/grouped-query-attention)
+**Related:** [The Attention Mechanism, Explained](/learn/llm-foundations/attention-mechanism-explained), [Causal Masking: Why LLMs Can't Peek Ahead](/learn/llm-foundations/causal-masking), [Grouped-Query and Multi-Query Attention](/learn/llm-foundations/grouped-query-attention), [What is a KV cache?](/answers/what-is-a-kv-cache)

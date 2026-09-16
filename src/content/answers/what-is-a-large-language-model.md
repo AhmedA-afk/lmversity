@@ -18,6 +18,7 @@ related:
   - /learn/llm-foundations/quick-guide
   - /learn/ai-foundations/how-llms-work
   - /learn/ai-foundations/foundation-models-explained
+  - /answers/what-is-a-foundation-model
   - /learn/ai-foundations/why-llms-hallucinate
   - /learn/ai-foundations/what-llms-can-and-cannot-do
 ---

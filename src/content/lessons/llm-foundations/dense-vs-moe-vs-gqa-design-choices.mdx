@@ -27,7 +27,7 @@ The full KV cache cost from [KV Cache Memory: MHA vs GQA vs MQA](/learn/llm-foun
 
 ## Dense + GQA
 
-**How it works.** Query heads are split into a handful of groups (commonly 8), each sharing one key/value pair — the middle-of-the-spectrum design from [Multi-Query and Grouped-Query Attention](/learn/llm-foundations/multi-query-and-grouped-query-attention).
+**How it works.** Query heads are split into a handful of groups (commonly 8), each sharing one key/value pair — the middle-of-the-spectrum design from [From MHA to MQA: Why Grouped-Query Attention Won](/learn/llm-foundations/multi-query-and-grouped-query-attention).
 
 **When it wins.** This is the closest thing to a modern default: it recovers nearly all of full MHA's quality while cutting KV cache memory by the group-count ratio, which is usually worth far more in practice than the small quality gap it gives up.
 
@@ -95,4 +95,4 @@ All the experts must be loaded into memory or spread across devices regardless o
 If you're training a model from scratch and serving cost at long context or high concurrency is a real constraint — which it is for almost anyone shipping a production model today — GQA is close to a free lunch relative to full MHA, and there's little reason not to default to it. MQA is worth reaching for only when serving cost is so dominant a concern that the extra quality gap versus GQA is an acceptable trade, since GQA already captures most of the memory win at a smaller quality cost. Reaching for sparse MoE is a different kind of decision entirely — it isn't a serving-memory optimization the way GQA is, it's a way to buy more total model capacity without paying its full compute cost, at the price of a genuinely harder training process and a memory footprint that doesn't shrink just because fewer experts run per token. In practice, these choices aren't mutually exclusive: as Mixtral shows, GQA and MoE solve different problems and are routinely combined in the same model.
 </Callout>
 
-**Related:** [Multi-Query and Grouped-Query Attention](/learn/llm-foundations/multi-query-and-grouped-query-attention), [Mixture of Experts: Routing](/learn/llm-foundations/mixture-of-experts-routing), [KV Cache Memory: MHA vs GQA vs MQA](/learn/llm-foundations/kv-cache-memory-mha-vs-gqa), [Misreading Parameter Counts](/learn/llm-foundations/misreading-parameter-counts)
+**Related:** [From MHA to MQA: Why Grouped-Query Attention Won](/learn/llm-foundations/multi-query-and-grouped-query-attention), [Mixture of Experts: Routing](/learn/llm-foundations/mixture-of-experts-routing), [KV Cache Memory: MHA vs GQA vs MQA](/learn/llm-foundations/kv-cache-memory-mha-vs-gqa), [Misreading Parameter Counts](/learn/llm-foundations/misreading-parameter-counts)

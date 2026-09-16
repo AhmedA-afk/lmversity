@@ -2621,6 +2621,40 @@ Credentials to monitor:
 Add new entries at the top. Include scope, owners, skills used, sources checked, files changed,
 validation, deployment status, measured result when available, blockers, and next batch.
 
+### 2026-09-16 — First Search Console data: intent-grouped + title-dedup + 4 answers
+
+- Scope: first real GSC export (3 months, Web). 1.65k impressions, 1
+  click, avg position 16.5 — page 2 across the board, so the lever is
+  lifting already-ranking pages, not more coverage. 186 queries grouped
+  by intent and cross-referenced against the registry.
+- Findings: surfaces are the deep technical long tail (maths, LLM
+  internals, ML ops) — softmax, positional encoding, law of total
+  probability, GQA, norms, d-separation. ~90% of meaningful queries map
+  to an existing page whose title already matches. One outlier query
+  (ai32675, 550 imp = a third of all impressions) treated as noise.
+- Fixes shipped from the data:
+  - 4 new definitional answers for uncovered clusters: what-is-an-agent-
+    loop (~8 imp across 4 variants), what-is-a-foundation-model (7),
+    what-is-a-tokenizer (~5), what-is-a-kv-cache (~4). Answer-first +
+    FAQPage JSON-LD + featured where warranted.
+  - Title-collision dedup on 3 same-track companion pairs Google can't
+    distinguish: multi-query-and-grouped-query-attention → "From MHA to
+    MQA: Why Grouped-Query Attention Won"; context-window-mechanics-
+    and-limits → "What Actually Limits the Context Window"; grokking-
+    and-double-descent-mechanics → "How Grokking and Double Descent
+    Actually Work". Frontmatter + curriculum + 11 inbound-link texts.
+  - Missing short→deep forward links added on the 2 short companions;
+    inbound lesson→answer links on the 4 source lessons; 3 sibling
+    answers cross-linked.
+- Validation: build 2,820 pages; check:links 0 dead (6,020 routes);
+  check:content clean (2,316 lessons).
+- Deployment: not deployed — commit pending; Vercel picks up on push.
+- Measured result: baseline recorded — 1.65k imp/3mo, pos 16.5, CTR
+  0.1%. Recheck the same queries in 4–6 weeks for position movement.
+- Next batch: GSC query→page mapping (which page holds each impression)
+  once the Pages report is exported; FAQ-on-lessons for the highest-
+  impression ranking pages.
+
 ### 2026-09-16 — Definitional-query gap fill (3 answers)
 
 - Scope: top-of-funnel definitional searches in the product's space.

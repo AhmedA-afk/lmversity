@@ -53,7 +53,7 @@ bytes    = 1,342,177,280 × 2
          = 2.5 GiB
 ```
 
-**Why this step?** Only `num_kv_heads` changed — from 64 to 8, an 8x reduction — and the cache shrinks by exactly that factor: 20 GiB / 8 = 2.5 GiB. Nothing else in the formula moved, which is the whole point of [Multi-Query and Grouped-Query Attention](/learn/llm-foundations/multi-query-and-grouped-query-attention): the KV-head count is the only lever you're pulling.
+**Why this step?** Only `num_kv_heads` changed — from 64 to 8, an 8x reduction — and the cache shrinks by exactly that factor: 20 GiB / 8 = 2.5 GiB. Nothing else in the formula moved, which is the whole point of [From MHA to MQA: Why Grouped-Query Attention Won](/learn/llm-foundations/multi-query-and-grouped-query-attention): the KV-head count is the only lever you're pulling.
 
 </Step>
 
@@ -119,4 +119,4 @@ The fixes that pick up from here run in a few directions: [FlashAttention](/lear
 - On a realistic 70B-class architecture, GQA-8 cuts an 8k-context cache from 20 GiB to 2.5 GiB per sequence — an 8x concurrency win at the same memory budget, matching the group-count reduction exactly.
 - The savings are a constant multiplicative factor; cache size still grows linearly with context length regardless of attention variant, which is why long-context serving stacks GQA with other techniques rather than relying on it alone.
 
-**Related:** [Multi-Query and Grouped-Query Attention](/learn/llm-foundations/multi-query-and-grouped-query-attention), [The KV Cache: How LLMs Avoid Recomputing the Past](/learn/llm-foundations/the-kv-cache), [Prefill vs. Decode: Memory-Bound](/learn/llm-foundations/prefill-vs-decode-memory-bound), [Quantization and Inference Serving](/learn/llm-foundations/quantization-and-inference-serving)
+**Related:** [From MHA to MQA: Why Grouped-Query Attention Won](/learn/llm-foundations/multi-query-and-grouped-query-attention), [The KV Cache: How LLMs Avoid Recomputing the Past](/learn/llm-foundations/the-kv-cache), [Prefill vs. Decode: Memory-Bound](/learn/llm-foundations/prefill-vs-decode-memory-bound), [Quantization and Inference Serving](/learn/llm-foundations/quantization-and-inference-serving)
