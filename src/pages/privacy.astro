@@ -7,7 +7,7 @@ const providerName = { plausible: 'Plausible', umami: 'Umami', vercel: 'Vercel W
 ---
 <Layout
   title="Privacy"
-  description="What LMVersity stores, what it does not, and where your reading progress actually lives. No accounts, no first-party cookies, no personal data on any server."
+  description="How LMVersity handles reading progress, advertising cookies, analytics and consent. No accounts and no server-side reader profiles."
   breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Privacy', url: '/privacy' }]}
 >
   <article class="wrap">
@@ -24,10 +24,10 @@ const providerName = { plausible: 'Plausible', umami: 'Umami', vercel: 'Vercel W
     <div class="prose">
       <h2>The short version</h2>
       <p>
-        LMVersity is a static site. There is no account system, no login, no
-        comment box, no newsletter form and no server-side database holding
-        anything about readers. Nothing you do here is associated with an
-        identity, because there is no identity to associate it with.
+        LMVersity is a free learning platform with no account system, login,
+        comment box, newsletter form or server-side database holding anything
+        about readers. Nothing you do here is associated with an identity,
+        because there is no identity to associate it with.
       </p>
 
       <h2>What is stored, and where</h2>
@@ -55,11 +55,11 @@ const providerName = { plausible: 'Plausible', umami: 'Umami', vercel: 'Vercel W
       <h2>Cookies</h2>
       {site.ads.client ? (
         <p>
-          The site itself sets none. The advertising script described below is
-          served by Google and may set cookies or use similar identifiers for ad
-          delivery and measurement; that is the only source of cookies on this
-          domain. <code>localStorage</code> is not a cookie: it is never attached to
-          a request, so it cannot be read by this server or by anyone else.
+          LMVersity does not write first-party cookies. The advertising script
+          described below is served by Google and may set cookies or use similar
+          identifiers for ad delivery and measurement. <code>localStorage</code> is
+          not a cookie: it is never attached to a request, so it cannot be read
+          by this server or by anyone else.
         </p>
       ) : (
         <p>

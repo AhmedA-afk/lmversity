@@ -11719,7 +11719,7 @@ const unsortedTracks: Track[] = [
     "n": "25",
     "name": "AI for Designers",
     "group": "Building",
-    "meta": "25 lessons",
+    "meta": "132 lessons",
     "summary": "A free course for designers: use AI well inside your design work, and design AI features people can trust — ending in an evaluated case study and an engineer-ready handoff.",
     "nodes": [
       {
@@ -11870,9 +11870,546 @@ const unsortedTracks: Track[] = [
         "slug": "capstone-design-a-trustworthy-ai-feature",
         "status": "live",
         "prereq": ["prototype-and-evaluation-quiz"]
+      },
+      {
+        "title": "Plan AI-assisted research without outsourcing judgment",
+        "slug": "ai-assisted-research-planning",
+        "status": "coming"
+      },
+      {
+        "title": "Work with interview transcripts safely: privacy, redaction, retention",
+        "slug": "working-with-interview-transcripts-safely",
+        "status": "coming"
+      },
+      {
+        "title": "Synthesize with traceable evidence",
+        "slug": "synthesis-with-traceable-evidence",
+        "status": "coming"
+      },
+      {
+        "title": "Lab: build a source-traceable research synthesis board",
+        "slug": "research-synthesis-lab",
+        "status": "live",
+        "prereq": ["synthesis-with-traceable-evidence"]
+      },
+      {
+        "title": "Assisted vs manual synthesis: a worked example",
+        "slug": "ai-research-synthesis-worked-example",
+        "status": "coming"
+      },
+      {
+        "title": "Research synthesis with AI: common mistakes",
+        "slug": "research-synthesis-common-mistakes",
+        "status": "coming"
+      },
+      {
+        "title": "AI-assisted research workflow cheatsheet",
+        "slug": "ai-research-workflow-cheatsheet",
+        "status": "coming"
+      },
+      {
+        "title": "Quiz: AI-assisted research",
+        "slug": "ai-assisted-research-quiz",
+        "status": "coming"
+      },
+      {
+        "title": "Use AI for divergent ideation without outsourcing selection",
+        "slug": "using-ai-for-divergent-ideation",
+        "status": "coming"
+      },
+      {
+        "title": "Turn constraints into a creative brief AI can work from",
+        "slug": "turning-design-constraints-into-a-creative-brief",
+        "status": "coming"
+      },
+      {
+        "title": "Prompt for design critique: role, criteria, context, limits",
+        "slug": "prompting-for-design-critique",
+        "status": "coming"
+      },
+      {
+        "title": "Lab: document a divergence-and-convergence trail",
+        "slug": "ideation-trail-lab",
+        "status": "coming"
+      },
+      {
+        "title": "Generate, critique, revise: a worked example",
+        "slug": "generate-critique-revise-worked-example",
+        "status": "coming"
+      },
+      {
+        "title": "Novelty vs usefulness in AI ideation",
+        "slug": "novelty-vs-usefulness-in-ai-ideation",
+        "status": "coming"
+      },
+      {
+        "title": "AI ideation: common mistakes",
+        "slug": "ai-ideation-common-mistakes",
+        "status": "coming"
+      },
+      {
+        "title": "AI ideation and critique cheatsheet",
+        "slug": "ai-ideation-cheatsheet",
+        "status": "coming"
+      },
+      {
+        "title": "Quiz: AI ideation and critique",
+        "slug": "ai-ideation-and-critique-quiz",
+        "status": "coming"
+      },
+      {
+        "title": "AI for UX writing and content design",
+        "slug": "ai-for-ux-writing-and-content-design",
+        "status": "coming"
+      },
+      {
+        "title": "Generate structured content, not loose copy",
+        "slug": "generating-structured-content-not-loose-copy",
+        "status": "coming"
+      },
+      {
+        "title": "Write design-system documentation with AI",
+        "slug": "design-system-documentation-with-ai",
+        "status": "coming"
+      },
+      {
+        "title": "Run a component inventory and consistency review with AI",
+        "slug": "component-inventory-and-consistency-review",
+        "status": "coming"
+      },
+      {
+        "title": "Review localization and inclusive language with AI",
+        "slug": "localization-and-inclusive-language-review",
+        "status": "coming"
+      },
+      {
+        "title": "Lab: write a structured content specification",
+        "slug": "structured-content-spec-lab",
+        "status": "coming"
+      },
+      {
+        "title": "A content workflow: worked example",
+        "slug": "content-workflow-worked-example",
+        "status": "coming"
+      },
+      {
+        "title": "AI content design: common mistakes",
+        "slug": "ai-content-design-common-mistakes",
+        "status": "coming"
+      },
+      {
+        "title": "Quiz: AI content workflows",
+        "slug": "ai-content-workflow-quiz",
+        "status": "coming"
+      },
+      {
+        "title": "Choose chat, form, canvas, or command for the task",
+        "slug": "choosing-chat-form-canvas-or-command",
+        "status": "coming"
+      },
+      {
+        "title": "Design good AI inputs: examples, constraints, attachments, context",
+        "slug": "designing-good-ai-inputs",
+        "status": "coming"
+      },
+      {
+        "title": "Suggest prompts without cluttering the empty state",
+        "slug": "suggested-prompts-without-empty-state-clutter",
+        "status": "coming"
+      },
+      {
+        "title": "Multimodal input patterns for designers",
+        "slug": "multimodal-input-patterns-for-designers",
+        "status": "coming"
+      },
+      {
+        "title": "Ask before generating: a worked example",
+        "slug": "clarification-before-generation-worked-example",
+        "status": "coming"
+      },
+      {
+        "title": "AI input patterns cheatsheet",
+        "slug": "ai-input-patterns-cheatsheet",
+        "status": "coming"
+      },
+      {
+        "title": "AI input patterns: common mistakes",
+        "slug": "ai-input-patterns-common-mistakes",
+        "status": "coming"
+      },
+      {
+        "title": "Quiz: AI input patterns",
+        "slug": "ai-input-patterns-quiz",
+        "status": "coming"
+      },
+      {
+        "title": "Design for AI latency: acknowledge, progress, cancel, partial work",
+        "slug": "designing-for-ai-latency",
+        "status": "coming"
+      },
+      {
+        "title": "Streaming vs staged results, compared",
+        "slug": "streaming-vs-staged-results-compared",
+        "status": "coming"
+      },
+      {
+        "title": "Keep layout stable under partial output",
+        "slug": "partial-output-and-layout-stability",
+        "status": "coming"
+      },
+      {
+        "title": "Stop, retry, and regenerate patterns",
+        "slug": "stop-retry-and-regenerate-patterns",
+        "status": "coming"
+      },
+      {
+        "title": "A long-running AI task: worked example",
+        "slug": "long-running-ai-task-worked-example",
+        "status": "coming"
+      },
+      {
+        "title": "Latency and progress cheatsheet",
+        "slug": "latency-and-progress-cheatsheet",
+        "status": "coming"
+      },
+      {
+        "title": "Latency and progress: common mistakes",
+        "slug": "latency-and-progress-common-mistakes",
+        "status": "coming"
+      },
+      {
+        "title": "Quiz: latency and progress",
+        "slug": "latency-progress-quiz",
+        "status": "coming"
+      },
+      {
+        "title": "Choose prose, structure, or components for AI output",
+        "slug": "choosing-prose-structure-or-components",
+        "status": "coming"
+      },
+      {
+        "title": "Design structured AI output users can scan and act on",
+        "slug": "designing-structured-ai-output",
+        "status": "coming"
+      },
+      {
+        "title": "Disclose generated results progressively",
+        "slug": "progressive-disclosure-for-generated-results",
+        "status": "coming"
+      },
+      {
+        "title": "Make output editable and its provenance visible",
+        "slug": "editable-output-and-provenance",
+        "status": "coming"
+      },
+      {
+        "title": "Lab: prototype a generative UI surface",
+        "slug": "generative-ui-prototype-lab",
+        "status": "coming"
+      },
+      {
+        "title": "A generative UI: worked example",
+        "slug": "generative-ui-worked-example",
+        "status": "coming"
+      },
+      {
+        "title": "Generated output: common mistakes",
+        "slug": "generated-output-common-mistakes",
+        "status": "coming"
+      },
+      {
+        "title": "Generative UI patterns cheatsheet",
+        "slug": "generative-ui-patterns-cheatsheet",
+        "status": "coming"
+      },
+      {
+        "title": "Quiz: generative output",
+        "slug": "generative-output-quiz",
+        "status": "coming"
+      },
+      {
+        "title": "Design visible agent plans",
+        "slug": "designing-visible-agent-plans",
+        "status": "coming"
+      },
+      {
+        "title": "Show tool use, progress, and status honestly",
+        "slug": "tool-use-progress-and-status",
+        "status": "coming"
+      },
+      {
+        "title": "Design permissions, confirmation, and approval for agents",
+        "slug": "permissions-confirmation-and-approval",
+        "status": "coming"
+      },
+      {
+        "title": "Design for paused, blocked, and recovering agents",
+        "slug": "designing-for-paused-blocked-and-recovering-agents",
+        "status": "coming"
+      },
+      {
+        "title": "Give users control over agent memory",
+        "slug": "agent-memory-and-user-control",
+        "status": "coming"
+      },
+      {
+        "title": "Lab: model an agent's activity, permissions, and recovery",
+        "slug": "agent-activity-model-lab",
+        "status": "coming"
+      },
+      {
+        "title": "Agent vs workflow for designers, compared",
+        "slug": "agent-vs-workflow-for-designers-compared",
+        "status": "coming"
+      },
+      {
+        "title": "Redesign an over-autonomous agent: worked example",
+        "slug": "redesign-an-overautonomous-agent-worked-example",
+        "status": "coming"
+      },
+      {
+        "title": "Agent interfaces: common mistakes",
+        "slug": "agent-interface-common-mistakes",
+        "status": "coming"
+      },
+      {
+        "title": "Quiz: agent interaction",
+        "slug": "agent-interaction-quiz",
+        "status": "coming"
+      },
+      {
+        "title": "Turn user needs into AI eval scenarios",
+        "slug": "turning-user-needs-into-ai-eval-scenarios",
+        "status": "coming"
+      },
+      {
+        "title": "Write quality rubrics for subjective output",
+        "slug": "quality-rubrics-for-subjective-output",
+        "status": "coming"
+      },
+      {
+        "title": "Use pairwise comparison for design decisions",
+        "slug": "pairwise-comparison-for-design-decisions",
+        "status": "coming"
+      },
+      {
+        "title": "Lab: run a pairwise evaluation that settles a decision",
+        "slug": "pairwise-evaluation-lab",
+        "status": "coming"
+      },
+      {
+        "title": "Evaluate the system, not just the model",
+        "slug": "evaluating-the-system-not-just-the-model",
+        "status": "coming"
+      },
+      {
+        "title": "Collect online feedback without dark patterns",
+        "slug": "online-feedback-without-dark-patterns",
+        "status": "coming"
+      },
+      {
+        "title": "An AI design eval plan: worked example",
+        "slug": "ai-design-eval-plan-worked-example",
+        "status": "coming"
+      },
+      {
+        "title": "AI design evaluation cheatsheet",
+        "slug": "ai-design-evaluation-cheatsheet",
+        "status": "coming"
+      },
+      {
+        "title": "Quiz: AI design evaluation",
+        "slug": "ai-design-evaluation-quiz",
+        "status": "coming"
+      },
+      {
+        "title": "Set privacy boundaries in AI design workflows",
+        "slug": "privacy-boundaries-in-ai-design-workflows",
+        "status": "coming"
+      },
+      {
+        "title": "Design disclosure and consent for AI features",
+        "slug": "designing-disclosure-and-consent",
+        "status": "coming"
+      },
+      {
+        "title": "Check bias and representation in generated output",
+        "slug": "bias-and-representation-in-generated-output",
+        "status": "coming"
+      },
+      {
+        "title": "Design for misuse and adversarial input",
+        "slug": "designing-for-misuse-and-adversarial-input",
+        "status": "coming"
+      },
+      {
+        "title": "Make streaming and live-generated content accessible",
+        "slug": "accessibility-of-streaming-and-live-generated-content",
+        "status": "coming"
+      },
+      {
+        "title": "Screen reader, focus, and announcement patterns for AI",
+        "slug": "screen-reader-focus-and-announcement-patterns-for-ai",
+        "status": "coming"
+      },
+      {
+        "title": "Respect motion, cognitive load, and user control",
+        "slug": "motion-cognitive-load-and-user-control",
+        "status": "coming"
+      },
+      {
+        "title": "Lab: audit an AI experience for inclusion and access",
+        "slug": "inclusive-ai-audit-lab",
+        "status": "coming"
+      },
+      {
+        "title": "An inclusive AI experience: worked example",
+        "slug": "inclusive-ai-experience-worked-example",
+        "status": "coming"
+      },
+      {
+        "title": "Responsible AI design: common mistakes",
+        "slug": "responsible-ai-design-common-mistakes",
+        "status": "coming"
+      },
+      {
+        "title": "Quiz: responsible and accessible AI design",
+        "slug": "responsible-and-accessible-ai-design-quiz",
+        "status": "coming"
+      },
+      {
+        "title": "Write the AI interaction spec",
+        "slug": "the-ai-interaction-spec",
+        "status": "coming"
+      },
+      {
+        "title": "The designer-engineer contract for AI features",
+        "slug": "designer-engineer-contract-for-ai-features",
+        "status": "coming"
+      },
+      {
+        "title": "Map design states to API events",
+        "slug": "mapping-design-states-to-api-events",
+        "status": "coming"
+      },
+      {
+        "title": "Specify instrumentation for AI user journeys",
+        "slug": "instrumentation-for-ai-user-journeys",
+        "status": "coming"
+      },
+      {
+        "title": "Hand off a streaming assistant: worked example",
+        "slug": "handoff-a-streaming-assistant-worked-example",
+        "status": "coming"
+      },
+      {
+        "title": "AI interaction spec template and fill guide",
+        "slug": "ai-interaction-spec-template",
+        "status": "coming"
+      },
+      {
+        "title": "AI design handoff: common mistakes",
+        "slug": "ai-design-handoff-common-mistakes",
+        "status": "coming"
+      },
+      {
+        "title": "AI interaction spec cheatsheet",
+        "slug": "ai-interaction-spec-cheatsheet",
+        "status": "coming"
+      },
+      {
+        "title": "Quiz: AI design handoff",
+        "slug": "ai-design-handoff-quiz",
+        "status": "coming"
+      },
+      {
+        "title": "Capstone pathway: research assistant",
+        "slug": "capstone-research-assistant-pathway",
+        "status": "coming"
+      },
+      {
+        "title": "Capstone pathway: creative copilot",
+        "slug": "capstone-creative-copilot-pathway",
+        "status": "coming"
+      },
+      {
+        "title": "Capstone pathway: bounded task agent",
+        "slug": "capstone-bounded-task-agent-pathway",
+        "status": "coming"
+      },
+      {
+        "title": "Capstone reference solution, with tradeoffs shown",
+        "slug": "capstone-reference-solution",
+        "status": "coming"
+      },
+      {
+        "title": "Capstone self-review rubric",
+        "slug": "capstone-self-review-rubric",
+        "status": "coming"
+      },
+      {
+        "title": "Capstone peer-critique rubric",
+        "slug": "capstone-peer-critique-rubric",
+        "status": "coming"
+      },
+      {
+        "title": "Portfolio case-study outline for AI features",
+        "slug": "portfolio-case-study-outline",
+        "status": "coming"
+      },
+      {
+        "title": "Interview presentation outline and critique questions",
+        "slug": "interview-presentation-outline",
+        "status": "coming"
+      },
+      {
+        "title": "Template: AI opportunity brief",
+        "slug": "opportunity-brief-template",
+        "status": "coming"
+      },
+      {
+        "title": "Template: AI behavior contract",
+        "slug": "behavior-contract-template",
+        "status": "coming"
+      },
+      {
+        "title": "Worksheet: prompt and context for designers",
+        "slug": "prompt-context-worksheet",
+        "status": "coming"
+      },
+      {
+        "title": "Template: source-traceable synthesis sheet",
+        "slug": "synthesis-evidence-sheet",
+        "status": "coming"
+      },
+      {
+        "title": "Checklist: uncertainty and trust patterns",
+        "slug": "trust-patterns-checklist",
+        "status": "coming"
+      },
+      {
+        "title": "Template: agent authority and approval map",
+        "slug": "authority-approval-map-template",
+        "status": "coming"
+      },
+      {
+        "title": "Template: AI prototype scenario set",
+        "slug": "scenario-set-template",
+        "status": "coming"
+      },
+      {
+        "title": "Template: accessibility test plan for generated interfaces",
+        "slug": "accessibility-test-plan-template",
+        "status": "coming"
+      },
+      {
+        "title": "Checklist: designer-to-engineer handoff",
+        "slug": "handoff-checklist",
+        "status": "coming"
       }
     ]
-  }
+  },
+
 ];
 
 // The catalogue is intentionally pedagogical: after literacy, maths, and data

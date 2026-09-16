@@ -6,7 +6,9 @@ import { roleArtAlt } from '../../data/role-art';
 import { existsSync } from 'node:fs';
 
 export function getStaticPaths() {
-  return roles.map((r) => ({ params: { role: r.id } }));
+  // Designer has a dedicated course hub at /roles/designer. Keep all other
+  // role pages on this compact path template.
+  return roles.filter((r) => r.id !== 'designer').map((r) => ({ params: { role: r.id } }));
 }
 
 const { role: roleId } = Astro.params;
@@ -42,8 +44,8 @@ const branches = (role.branches ?? []).map((b) => ({
 }));
 ---
 <Layout
-  title={`AI for ${role.name}s`}
-  description={role.description}
+  title={`Free AI learning path for ${role.name}s`}
+  description={`${role.description} Free to use, with no account required.`}
   type="collection"
   breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Roles', url: '/roles' }, { name: `AI for ${role.name}s`, url: `/roles/${role.id}` }]}
   itemList={steps.filter((s) => s.hasPage).map((s) => ({ name: s.title, url: s.href }))}

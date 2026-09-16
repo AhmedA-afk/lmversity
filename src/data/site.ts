@@ -15,7 +15,7 @@ export const site = {
   url: 'https://lmversity.com',
   tagline: 'Learn to actually build with AI.',
   description:
-    'A free, hands-on learning platform for the agentic-AI era. A structured path from your first prompt to production agents.',
+    'Free, hands-on AI learning for people who want to move from their first prompt to reliable products, agents, and real-world systems.',
   locale: 'en',
   /** ISO date the site first went live. Shown in the colophon. */
   founded: '2026',
@@ -73,11 +73,11 @@ export const site = {
     client: 'ca-pub-2004809158099634',
     slots: { lesson: '', guide: '', blog: '', stats: '' } as { lesson: string; guide: string; blog: string; stats: string },
     /**
-     * Set true once a Google-certified CMP (AdSense → Privacy & Messaging,
-     * e.g. Funding Choices) is configured for EEA/UK/CH traffic. Drives the
-     * consent sentence on /privacy so it never asserts a flow that isn't live.
+     * A Google-certified CMP is configured in AdSense → Privacy & Messaging
+     * for EEA/UK/CH traffic. This drives the matching consent notice on
+     * /privacy.
      */
-    consent: false,
+    consent: true,
   },
 
   /** Repository, for "edit this page" links. Empty hides them. */

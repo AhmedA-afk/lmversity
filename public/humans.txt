@@ -22,7 +22,7 @@
   Standards:   HTML5, CSS3, ECMAScript 2020
   Components:  Astro, MDX
   Type:        Source Serif 4, IBM Plex Sans, IBM Plex Mono — self-hosted
-  Software:    Written in a text editor, built statically, served as files
+  Software:    Written in a text editor and built for fast, focused learning
 
-  No tracking cookies. No account required. No paywall.
+  No account required. No paywall. Advertising cookies are described at /privacy.
   Progress is stored in your own browser and never leaves it.

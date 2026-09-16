@@ -1,6 +1,6 @@
 # AI for Designers — course build checklist
 
-Last updated: 2026-09-14
+Last updated: 2026-09-15
 
 Owner: Devin
 
@@ -136,7 +136,7 @@ Deliverables:
 - [x] `CODE` Add a new top-level track with id `ai-for-designers` to
       `src/data/curriculum.ts`.
 - [x] `CODE` Set the track to `coming` while the MVP is incomplete.
-- [ ] `CODE` Add the new lesson directory at `src/content/lessons/ai-for-designers/`.
+- [x] `CODE` Add the new lesson directory at `src/content/lessons/ai-for-designers/`.
 - [ ] `CODE` Update the existing `designer` role path to use the dedicated track when its
       opening sequence is live.
 - [ ] `CODE` Preserve useful cross-track links instead of duplicating existing lessons.
@@ -180,17 +180,17 @@ case study. Publish it before expanding into the full catalogue.
 
 ### Module 1 — What AI changes in design
 
-- [ ] `CONTENT` `ai-for-designers-course-guide` — orientation, two course lanes,
+- [x] `CONTENT` `ai-for-designers-course-guide` — orientation, two course lanes,
       prerequisites, deliverables, and completion path.
-- [ ] `CONTENT` `designer-mental-model-for-generative-ai` — inputs, context, generated
+- [x] `CONTENT` `designer-mental-model-for-generative-ai` — inputs, context, generated
       output, variation, and the surrounding product system.
-- [ ] `CONTENT` `deterministic-vs-probabilistic-interfaces-compared` — how behavior,
+- [x] `CONTENT` `deterministic-vs-probabilistic-interfaces-compared` — how behavior,
       testing, copy, and expectations change.
-- [ ] `CONTENT` `choosing-where-ai-belongs-worked-example` — evaluate a feature idea
+- [x] `CONTENT` `choosing-where-ai-belongs-worked-example` — evaluate a feature idea
       against user need, evidence, uncertainty, and recoverability.
-- [ ] `CONTENT` `ai-product-design-common-mistakes` — magic-box framing, happy-path-only
+- [x] `CONTENT` `ai-product-design-common-mistakes` — magic-box framing, happy-path-only
       flows, fake certainty, hidden automation, and missing recovery.
-- [ ] `CONTENT` `ai-product-design-foundations-quiz` — scenario-based knowledge check.
+- [x] `CONTENT` `ai-product-design-foundations-quiz` — scenario-based knowledge check.
 
 Module artifact:
 
@@ -199,16 +199,16 @@ Module artifact:
 
 ### Module 2 — Design the behavior before the screen
 
-- [ ] `CONTENT` `designing-the-ai-behavior-contract` — purpose, inputs, outputs,
+- [x] `CONTENT` `designing-the-ai-behavior-contract` — purpose, inputs, outputs,
       boundaries, tone, evidence, permissions, and escalation.
-- [ ] `CONTENT` `mapping-ai-capabilities-to-user-tasks` — separate retrieval,
+- [x] `CONTENT` `mapping-ai-capabilities-to-user-tasks` — separate retrieval,
       transformation, generation, prediction, and action.
-- [ ] `CONTENT` `ai-feature-state-model-worked-example` — idle, collecting input,
+- [x] `CONTENT` `ai-feature-state-model-worked-example` — idle, collecting input,
       working, partial output, complete, uncertain, blocked, failed, cancelled, and corrected.
-- [ ] `CONTENT` `ai-interaction-state-cheatsheet` — reusable state inventory.
-- [ ] `CONTENT` `prompt-as-interaction-spec` — prompts as part of system behavior, with
+- [x] `CONTENT` `ai-interaction-state-cheatsheet` — reusable state inventory.
+- [x] `CONTENT` `prompt-as-interaction-spec` — prompts as part of system behavior, with
       engineering and policy constraints kept visible.
-- [ ] `CONTENT` `behavior-before-interface-quiz` — choose appropriate states and controls.
+- [x] `CONTENT` `behavior-before-interface-quiz` — choose appropriate states and controls.
 
 Module artifact:
 
@@ -216,15 +216,15 @@ Module artifact:
 
 ### Module 3 — Trustworthy AI interactions
 
-- [ ] `CONTENT` `designing-for-uncertainty` — calibrated wording, evidence, alternatives,
+- [x] `CONTENT` `designing-for-uncertainty` — calibrated wording, evidence, alternatives,
       and when the system should abstain.
-- [ ] `CONTENT` `sources-confidence-and-explanations-compared` — what each pattern can
+- [x] `CONTENT` `sources-confidence-and-explanations-compared` — what each pattern can
       and cannot communicate.
-- [ ] `CONTENT` `correction-undo-and-recovery-patterns` — make wrong output repairable.
-- [ ] `CONTENT` `human-review-and-approval-boundaries` — separate recommendation,
+- [x] `CONTENT` `correction-undo-and-recovery-patterns` — make wrong output repairable.
+- [x] `CONTENT` `human-review-and-approval-boundaries` — separate recommendation,
       confirmation, and action.
-- [ ] `CONTENT` `trust-patterns-worked-example` — redesign an overconfident assistant flow.
-- [ ] `CONTENT` `trust-and-recovery-quiz` — failure-state decisions rather than recall.
+- [x] `CONTENT` `trust-patterns-worked-example` — redesign an overconfident assistant flow.
+- [x] `CONTENT` `trust-and-recovery-quiz` — failure-state decisions rather than recall.
 
 Module artifact:
 
@@ -233,17 +233,17 @@ Module artifact:
 
 ### Module 4 — Prototype and evaluate
 
-- [ ] `CONTENT` `prototype-ai-behavior-without-a-model` — scripted, Wizard-of-Oz, and
+- [x] `CONTENT` `prototype-ai-behavior-without-a-model` — scripted, Wizard-of-Oz, and
       branch-based prototypes with honest disclosure.
-- [ ] `CONTENT` `creating-a-realistic-ai-test-set` — representative tasks, difficult cases,
+- [x] `CONTENT` `creating-a-realistic-ai-test-set` — representative tasks, difficult cases,
       sensitive cases, and known failure modes.
-- [ ] `CONTENT` `designing-a-ux-evaluation-rubric` — usefulness, clarity, control,
+- [x] `CONTENT` `designing-a-ux-evaluation-rubric` — usefulness, clarity, control,
       recovery, trust, and accessibility criteria.
-- [ ] `CONTENT` `test-an-ai-prototype-worked-example` — run scenarios, record outcomes,
+- [x] `CONTENT` `test-an-ai-prototype-worked-example` — run scenarios, record outcomes,
       distinguish model failures from interaction failures.
-- [ ] `CONTENT` `ai-prototype-testing-common-mistakes` — cherry-picked prompts,
+- [x] `CONTENT` `ai-prototype-testing-common-mistakes` — cherry-picked prompts,
       demo-only flows, changing criteria, and missing baselines.
-- [ ] `CONTENT` `prototype-and-evaluation-quiz`.
+- [x] `CONTENT` `prototype-and-evaluation-quiz`.
 
 Module artifact:
 
@@ -251,13 +251,13 @@ Module artifact:
 
 ### MVP capstone
 
-- [ ] `CONTENT` `capstone-design-a-trustworthy-ai-feature` — complete brief, behavior
+- [x] `CONTENT` `capstone-design-a-trustworthy-ai-feature` — complete brief, behavior
       model, key screens, failure states, evaluation, and handoff.
-- [ ] `CONTENT` Provide three bounded capstone briefs from different domains.
-- [ ] `CONTENT` Include a learner-defined brief option with a scope check.
-- [ ] `CONTENT` Publish a capstone rubric with pass, revise, and unsupported-claim criteria.
+- [x] `CONTENT` Provide three bounded capstone briefs from different domains.
+- [x] `CONTENT` Include a learner-defined brief option with a scope check.
+- [x] `CONTENT` Publish a capstone rubric with pass, revise, and unsupported-claim criteria.
 - [ ] `CONTENT` Publish one complete worked capstone with its evidence and tradeoffs visible.
-- [ ] `CONTENT` Add a portfolio-writing prompt that separates the learner's decisions from
+- [x] `CONTENT` Add a portfolio-writing prompt that separates the learner's decisions from
       the model-generated material.
 
 MVP acceptance criteria:
@@ -598,6 +598,33 @@ Course success evidence:
 ## Progress log
 
 Add new entries at the top.
+
+### 2026-09-15 — Full-course R&D: Stages B–E designed, 107 nodes registered, lab exemplar live
+
+- Status: design complete in `docs/ai-for-designers-full-course-design.md` — five stages,
+  132 nodes total (25 live + 107 `coming`), module outcomes, three recurring fictional
+  customers (Kaveri Health, Deccan Freightways, Meridian Bank), 12-piece portfolio map,
+  9-batch execution plan. Studied FDE depth from `src/data/fde.ts` (183 nodes) and labs.
+- Content: `research-synthesis-lab` live (Deccan Freightways, 12 authored excerpts,
+  redaction log, timed 3 h steps, artifact) as the template every future lab must match.
+- Code: `[...lesson].astro` now link-gates nav on built files — `coming` nodes render
+  as dim "Soon" text in sidebar/related/pager (same rule as the track index), so the
+  107 registered plan nodes create zero dead links.
+- Validation: `check:content` clean (2229 matched); `build` green (2655 pages);
+  `check:links` 1 dead target remaining, pre-existing and unrelated
+  (blog → `evals-red-teaming/evaluating-agent-behavior-in-dev`, a page that lives under
+  `agentic-ai`; left untouched as in-flight work).
+- Infra note: two builds failed on corrupted caches (`node_modules/.astro` ENOENT,
+  stale `dist/chunks`); clearing `node_modules/.astro`, `.astro`, `dist` fixed it.
+- Next: build batch 1 (B1 remaining 7 nodes) per the execution plan in the design doc.
+
+### 2026-09-15 — MVP Modules 1–4 + capstone drafted (25 lessons)
+
+- Status: all 25 MVP lesson files written and registered; deterministic gates green. Independent editorial/technical review still open before marking the MVP complete.
+- Scope: `src/content/lessons/ai-for-designers/` (25 new .md files, Modules 1–4 + capstone); `src/data/curriculum.ts` gained the `ai-for-designers` track (n=25, group Building, all nodes `live` with prereq chain). `src/data/modules.ts` boundaries already matched the MVP modules — no edit needed.
+- Notes: track shell from the 2026-09-14 log was absent from `curriculum.ts` in the working tree, so it was recreated as `live` (MVP forms a complete path) rather than `coming`. No invented numbers/dates/claims; scenarios marked illustrative. Quiz answer positions spread across options; every file ends with an artifact/exercise/next step.
+- Validation: `npm run check:content` clean (2210 files matched); `npm run build` green (2611 pages); `npm run check:links` clean (5606 routes, 0 dead).
+- Next: independent review pass; worked-capstone reference solution; `/roles/designer` repoint; flagship guide + templates; Phase 3–5 expansion modules.
 
 ### 2026-09-14 — Phase 0 research + track shell landed
 

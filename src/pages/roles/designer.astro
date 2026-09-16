@@ -1,0 +1,195 @@
+---
+import Layout from '../../components/Layout.astro';
+import { getTrack } from '../../data/curriculum';
+import { groupTrack } from '../../data/modules';
+import { roleArtAlt } from '../../data/role-art';
+import { existsSync } from 'node:fs';
+
+const track = getTrack('ai-for-designers')!;
+const modules = groupTrack(track)!;
+const liveNodes = track.nodes.filter((node) => node.status === 'live');
+const firstLive = liveNodes[0];
+const capstone = track.nodes.find((node) => node.slug === 'capstone-design-a-trustworthy-ai-feature');
+const hasArt = existsSync(new URL('../../../public/img/roles/role-designer.webp', import.meta.url));
+const artAlt = roleArtAlt.designer;
+
+const moduleDetails = modules.map((module) => {
+  const live = module.nodes.filter((node) => node.status === 'live');
+  return {
+    ...module,
+    live,
+    planned: module.nodes.length - live.length,
+    href: live[0] ? `/learn/${track.id}/${live[0].slug}` : undefined,
+  };
+});
+---
+<Layout
+  title="AI for Designers: a free product-design course"
+  description={track.summary}
+  type="course"
+  breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Roles', url: '/roles' }, { name: 'AI for Designers', url: '/roles/designer' }]}
+  itemList={liveNodes.map((node) => ({ name: node.title, url: `/learn/${track.id}/${node.slug}` }))}
+  course={{ level: 'Beginner to advanced', lessonCount: track.nodes.length, sections: modules.map((module) => module.name) }}
+>
+  <section class="hero container">
+    <a href="/roles" class="back mono">← Roles</a>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h1>AI for Designers</h1>
+        <p class="lede">Design AI systems people can understand, question, correct, and recover from.</p>
+        <p class="description">This is a practical course for product, UX, interaction, research, content, and design-system practitioners. It teaches both sides of the work: using AI well in your design practice, and designing trustworthy AI features for other people.</p>
+        <div class="facts mono" aria-label="Course details">
+          <span>{liveNodes.length} lessons live</span>
+          <span>{track.nodes.length} lessons in the full course</span>
+          <span>No-code core path</span>
+          <span>Free, no account</span>
+        </div>
+        <div class="actions">
+          {firstLive && <a href={`/learn/${track.id}/${firstLive.slug}`} class="btn btn-primary">Start the foundation →</a>}
+          {capstone?.status === 'live' && <a href={`/learn/${track.id}/${capstone.slug}`} class="btn btn-ghost">See the capstone</a>}
+        </div>
+      </div>
+      {hasArt && artAlt && <img class="art" src="/img/roles/role-designer.webp" alt={artAlt} width="1024" height="1024" loading="eager" decoding="async" />}
+    </div>
+  </section>
+
+  <section class="container premise" aria-labelledby="premise-title">
+    <div>
+      <h2 id="premise-title">The interface is not the intelligence.</h2>
+      <p>AI changes the behavior beneath an interface: the system can vary, be uncertain, use tools, or make a plausible mistake. Designing the screen without designing those conditions first leaves people to discover the rules after something goes wrong.</p>
+    </div>
+    <div class="principles">
+      <p><strong>Make the behavior legible.</strong> State what the system is doing, what it knows, and where its confidence ends.</p>
+      <p><strong>Keep people in control.</strong> Put review, approval, correction, undo, and escalation where the consequence calls for them.</p>
+      <p><strong>Test the failure, not only the demo.</strong> A trustworthy prototype has cases, a rubric, and an honest recovery path.</p>
+    </div>
+  </section>
+
+  <section class="container lanes" aria-labelledby="lanes-title">
+    <h2 id="lanes-title">Two connected lanes</h2>
+    <p class="section-intro">The course moves between your own design practice and the product experiences you shape. The point is not to make either lane theoretical; each one leaves material you can inspect and improve.</p>
+    <div class="lane-grid">
+      <article>
+        <h3>AI in the design practice</h3>
+        <p>Plan research, synthesize evidence, explore ideas, critique work, and create content with a clear record of what AI produced and what you decided.</p>
+      </article>
+      <article>
+        <h3>Designing AI products</h3>
+        <p>Choose the right interaction, define the behavior contract, make uncertainty visible, set human boundaries, and hand a tested feature to engineering.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="container roadmap" aria-labelledby="roadmap-title">
+    <div class="roadmap-head">
+      <div>
+        <h2 id="roadmap-title">The course roadmap</h2>
+        <p class="section-intro">Start with the live foundation now. The rest of the sequence is visible so you can see where the path is going, but planned modules never masquerade as available lessons.</p>
+      </div>
+      <a class="all-lessons" href={`/learn/${track.id}`}>Open the course catalog →</a>
+    </div>
+    <ol class="module-list">
+      {moduleDetails.map((module, index) => (
+        <li class:list={['module', { available: module.live.length > 0 }]}>
+          <div class="module-heading">
+            <span class="number mono">{String(index + 1).padStart(2, '0')}</span>
+            <div>
+              {module.href ? <a href={module.href}><h3>{module.name}</h3></a> : <h3>{module.name}</h3>}
+              <p class="module-state mono">{module.live.length > 0 ? `${module.live.length} live${module.planned ? ` · ${module.planned} planned` : ''}` : `${module.nodes.length} planned`}</p>
+            </div>
+            {module.href && <a class="open mono" href={module.href}>Open →</a>}
+          </div>
+          {module.live.length > 0 && (
+            <ul class="lesson-list">
+              {module.live.map((node) => <li><a href={`/learn/${track.id}/${node.slug}`}>{node.title}</a></li>)}
+            </ul>
+          )}
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="container outcome" aria-labelledby="outcome-title">
+    <div>
+      <h2 id="outcome-title">End with something a team can use.</h2>
+      <p>The live foundation ends in an evaluated AI-feature case study. You define the behavior before visual polish, create a realistic test set, write a UX evaluation rubric, test the prototype, and leave an implementation-ready handoff.</p>
+    </div>
+    {capstone?.status === 'live' && <a href={`/learn/${track.id}/${capstone.slug}`} class="outcome-link">Open the trustworthy AI-feature capstone <span aria-hidden="true">→</span></a>}
+  </section>
+
+  <section class="container fit" aria-labelledby="fit-title">
+    <h2 id="fit-title">Start where you are</h2>
+    <div class="fit-grid">
+      <p><strong>New to AI?</strong> Start at the foundation. It introduces the mental model before asking you to design behavior around it.</p>
+      <p><strong>Already use AI in design work?</strong> Begin with the behavior contract and trust modules; they turn a useful workflow into a product decision.</p>
+      <p><strong>Working with an AI product team?</strong> Use the prototype, evaluation, and capstone sequence to create a shared artifact for design and engineering.</p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero { padding-block: 48px 18px; }
+  .back { font-size: 12px; color: var(--muted); }
+  .back:hover { color: var(--accent); text-decoration: none; }
+  .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) 250px; align-items: start; gap: 56px; margin-top: 28px; }
+  h1, h2, h3 { letter-spacing: -.025em; }
+  h1 { font-size: clamp(42px, 6vw, 66px); line-height: .98; max-width: 10ch; }
+  .lede { margin-top: 22px; max-width: 23ch; font: 400 clamp(22px, 2.7vw, 31px)/1.17 'Source Serif 4', 'Source Serif 4 Fallback', Georgia, serif; letter-spacing: -.025em; color: var(--brand-cool); }
+  .description { max-width: 66ch; margin-top: 20px; color: var(--muted); font-size: 16px; line-height: 1.68; }
+  .facts { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 23px; color: var(--faint); font-size: 11px; letter-spacing: .035em; }
+  .facts span + span { padding-left: 18px; border-left: 1px solid var(--rule); }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+  .art { width: 250px; height: 250px; border: 1px solid var(--rule); border-radius: 10px; }
+  .premise { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 80px; padding-top: 64px; }
+  h2 { font-size: clamp(27px, 3.5vw, 39px); line-height: 1.06; max-width: 17ch; }
+  .premise > div > p { margin-top: 18px; max-width: 60ch; color: var(--muted); font-size: 15px; line-height: 1.72; }
+  .principles { border-top: 1px solid var(--rule); }
+  .principles p { padding-block: 18px; margin: 0; border-bottom: 1px solid var(--rule); font-size: 14px; line-height: 1.62; color: var(--muted); }
+  .principles strong, .fit strong { color: var(--text); font-weight: 500; }
+  .lanes { padding-top: 76px; }
+  .section-intro { max-width: 68ch; margin-top: 14px; color: var(--muted); font-size: 15px; line-height: 1.66; }
+  .lane-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin-top: 28px; border: 1px solid var(--rule); background: var(--rule); }
+  .lane-grid article { padding: 28px; background: var(--paper); }
+  .lane-grid h3 { font-size: 22px; }
+  .lane-grid p { margin-top: 12px; color: var(--muted); font-size: 14px; line-height: 1.65; }
+  .roadmap { padding-top: 76px; }
+  .roadmap-head { display: flex; justify-content: space-between; gap: 32px; align-items: end; }
+  .all-lessons { flex: none; padding-block: 7px; border-bottom: 1px solid var(--rule); font-size: 13px; color: var(--text); }
+  .all-lessons:hover { color: var(--accent); text-decoration: none; border-color: currentColor; }
+  .module-list { list-style: none; padding: 0; margin: 32px 0 0; border-top: 1px solid var(--rule); }
+  .module { padding: 22px 4px; border-bottom: 1px solid var(--rule); }
+  .module-heading { display: grid; grid-template-columns: 34px 1fr auto; align-items: start; gap: 16px; }
+  .number { color: var(--faint); font-size: 11px; padding-top: 6px; }
+  .module h3 { color: var(--muted); font-size: 20px; transition: color .16s ease; }
+  .module.available h3 { color: var(--text); }
+  .module.available a:hover h3 { color: var(--accent); }
+  .module-heading a { color: inherit; }
+  .module-heading a:hover { text-decoration: none; }
+  .module-state { margin-top: 5px; font-size: 10.5px; color: var(--faint); letter-spacing: .035em; }
+  .open { padding-top: 6px; font-size: 11px; color: var(--accent) !important; }
+  .lesson-list { list-style: none; display: grid; gap: 7px; margin: 15px 0 0 50px; padding: 0; }
+  .lesson-list a { font-size: 13.5px; line-height: 1.5; color: var(--muted); }
+  .lesson-list a:hover { color: var(--accent); }
+  .outcome { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, .75fr); gap: 64px; margin-top: 76px; padding-block: 44px; border-block: 1px solid var(--rule); }
+  .outcome p { max-width: 64ch; margin-top: 16px; color: var(--muted); font-size: 15px; line-height: 1.7; }
+  .outcome-link { align-self: end; display: flex; justify-content: space-between; gap: 20px; padding: 16px 0; border-block: 1px solid var(--rule); color: var(--text); font-size: 15px; line-height: 1.4; }
+  .outcome-link:hover { color: var(--accent); text-decoration: none; }
+  .fit { padding-block: 60px 20px; }
+  .fit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 28px; }
+  .fit-grid p { margin: 0; padding-top: 14px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 14px; line-height: 1.65; }
+  @media (max-width: 760px) {
+    .hero-grid, .premise, .outcome { grid-template-columns: 1fr; gap: 28px; }
+    .art { width: 140px; height: 140px; order: -1; }
+    .facts span + span { padding-left: 0; border-left: 0; }
+    .roadmap-head { display: block; }
+    .all-lessons { display: inline-block; margin-top: 20px; }
+    .lane-grid, .fit-grid { grid-template-columns: 1fr; }
+    .outcome { margin-top: 56px; }
+  }
+  @media (max-width: 480px) {
+    .hero { padding-top: 36px; }
+    .module-heading { grid-template-columns: 25px 1fr; gap: 11px; }
+    .open { grid-column: 2; padding-top: 0; }
+    .lesson-list { margin-left: 36px; }
+  }
+</style>

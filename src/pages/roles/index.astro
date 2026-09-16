@@ -7,8 +7,8 @@ const fdeLive = (await getCollection('fde')).length;
 const fdeTotal = fdeNodeCount();
 ---
 <Layout
-  title="AI role paths"
-  description="AI for your job — 11 role paths that resequence the curriculum for developers, ML engineers, PMs, founders, designers, marketers, security engineers and students."
+  title="Free AI learning paths by role"
+  description="Free AI learning paths for developers, ML engineers, data scientists, product managers, founders, designers, marketers, security engineers and students. Each path puts the relevant LMVersity lessons in a practical order."
   breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Roles', url: '/roles' }]}
   itemList={[{ name: fdeRole.name, url: `/roles/${fdeRole.id}` }, ...roles.map((r) => ({ name: r.name, url: `/roles/${r.id}` }))]}
 >

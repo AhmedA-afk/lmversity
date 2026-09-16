@@ -3,6 +3,7 @@ import Wordmark from './Wordmark.astro';
 
 const nav = [
   { label: 'Learn', href: '/learn' },
+  { label: 'Roles', href: '/roles' },
   { label: 'Guides', href: '/guides' },
   { label: 'Practice', href: '/practice' },
   { label: 'Interview', href: '/interview' },
@@ -47,7 +48,6 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
         <div class="mobile">
           <nav aria-label="Mobile">
             {nav.map((n) => (<a href={n.href} class:list={['mlink', { active: isActive(n.href) }]}>{n.label}</a>))}
-            <a href="/roles" class="mlink">Role paths</a>
             <a href="/saved" class="mlink">Saved</a>
             <a href="/scenarios" class="mlink">Scenarios</a>
             <a href="/stats" class="mlink">Stats</a>

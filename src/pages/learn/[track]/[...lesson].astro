@@ -24,7 +24,12 @@ const track = getTrack(trackId!);
 const { Content, headings } = await render(entry);
 const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
 
-const pageNodes = track ? track.nodes.filter((n) => n.slug) : [];
+const allLessons = await getCollection('lessons');
+// A node only earns a link when its lesson file actually exists — `coming`
+// nodes render as plain text in nav, never as dead anchors (same rule as the
+// track index page). check:content enforces live ⟺ file, so this is belt and braces.
+const liveIds = new Set(allLessons.map((l) => l.id));
+const pageNodes = track ? track.nodes.filter((n) => n.slug && n.status === 'live' && liveIds.has(`${trackId}/${n.slug}`)) : [];
 const curIndex = pageNodes.findIndex((n) => n.slug === slug);
 const prev = pageNodes[curIndex - 1];
 const next = pageNodes[curIndex + 1];
@@ -39,12 +44,12 @@ const currentModule = modules?.find((m) => m.nodes.some((n) => n.slug === slug))
 const relatedPool = currentModule ? currentModule.nodes.filter((n) => n.slug) : pageNodes;
 const neighbours = relatedPool
   .filter((n) => n.slug !== slug && n.slug !== prev?.slug && n.slug !== next?.slug)
+  .filter((n) => n.status === 'live' && liveIds.has(`${trackId}/${n.slug}`))
   .map((n) => ({ node: n, distance: Math.abs(pageNodes.findIndex((x) => x.slug === n.slug) - curIndex) }))
   .sort((a, b) => a.distance - b.distance)
   .slice(0, 4)
   .map((n) => n.node);
 
-const allLessons = await getCollection('lessons');
 const summaryFor = new Map(allLessons.map((l) => [l.id, l.data.summary ?? '']));
 
 // Frontmatter dates win; otherwise fall back to real git-history dates.
@@ -101,7 +106,7 @@ const citedSources = (entry.data.sources ?? [])
                   <ul class="side-list">
                     {mod.nodes.map((nd) => (
                       <li data-side-item>
-                        {nd.slug ? (
+                        {nd.slug && nd.status === 'live' && liveIds.has(`${track.id}/${nd.slug}`) ? (
                           <a
                             href={`/learn/${track.id}/${nd.slug}`}
                             class:list={['sl', { current: nd.slug === slug }]}
@@ -112,7 +117,7 @@ const citedSources = (entry.data.sources ?? [])
                             <span>{nd.title}</span>
                           </a>
                         ) : (
-                          <span class="sl dim"><span>{nd.title}</span></span>
+                          <span class="sl dim"><span>{nd.title}</span> <span class="mono">· Soon</span></span>
                         )}
                       </li>
                     ))}
@@ -123,7 +128,7 @@ const citedSources = (entry.data.sources ?? [])
               <ul class="side-list" data-side-group>
                 {track.nodes.map((nd) => (
                   <li data-side-item>
-                    {nd.slug ? (
+                    {nd.slug && nd.status === 'live' && liveIds.has(`${track.id}/${nd.slug}`) ? (
                       <a
                         href={`/learn/${track.id}/${nd.slug}`}
                         class:list={['sl', { current: nd.slug === slug }]}
@@ -134,7 +139,7 @@ const citedSources = (entry.data.sources ?? [])
                         <span>{nd.title}</span>
                       </a>
                     ) : (
-                      <span class="sl dim"><span>{nd.title}</span></span>
+                      <span class="sl dim"><span>{nd.title}</span> <span class="mono">· Soon</span></span>
                     )}
                   </li>
                 ))}

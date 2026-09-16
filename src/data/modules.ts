@@ -24,6 +24,18 @@ export const moduleMap: Record<string, ModuleBoundary[]> = {
     { name: 'Trustworthy AI interactions', startsAt: 'designing-for-uncertainty' },
     { name: 'Prototype and evaluate', startsAt: 'prototype-ai-behavior-without-a-model' },
     { name: 'Capstone', startsAt: 'capstone-design-a-trustworthy-ai-feature' },
+    { name: 'Research and synthesis', startsAt: 'ai-assisted-research-planning' },
+    { name: 'Ideation, critique, and iteration', startsAt: 'using-ai-for-divergent-ideation' },
+    { name: 'Content, systems, and production work', startsAt: 'ai-for-ux-writing-and-content-design' },
+    { name: 'Input and intent', startsAt: 'choosing-chat-form-canvas-or-command' },
+    { name: 'Waiting, streaming, and progress', startsAt: 'designing-for-ai-latency' },
+    { name: 'Output and generative UI', startsAt: 'choosing-prose-structure-or-components' },
+    { name: 'Agents, tools, and autonomy', startsAt: 'designing-visible-agent-plans' },
+    { name: 'Evaluation as a design practice', startsAt: 'turning-user-needs-into-ai-eval-scenarios' },
+    { name: 'Responsible and inclusive design', startsAt: 'privacy-boundaries-in-ai-design-workflows' },
+    { name: 'Engineering handoff', startsAt: 'the-ai-interaction-spec' },
+    { name: 'Capstone pathways and portfolio', startsAt: 'capstone-research-assistant-pathway' },
+    { name: 'Templates and checklists', startsAt: 'opportunity-brief-template' },
   ],
 
   'ai-literacy': [
